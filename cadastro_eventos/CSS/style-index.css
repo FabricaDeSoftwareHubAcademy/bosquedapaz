@@ -1,0 +1,395 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('menu-adm.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.principal {
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
+}
+.principal .box {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(248, 245, 246, 0.65);
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+h2{
+    font-size: 30px;
+}
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: -40px;
+    top: 6vh;
+    z-index: -3;
+}
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: -50px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    z-index: -3;
+}
+.box .form-box{
+    min-height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: violet; */
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+}
+.form-box form{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #007E70; */
+    min-width: 360px;
+    justify-content: space-around;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    padding: 2px;
+}
+.form-box .input-group label{
+    color: #3d3d3d;
+    font-weight: bold;
+    display: flex;
+}
+.form-box .input-group input{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+    box-shadow: 1px 2px 0px 0px;
+}
+#dia{
+    width: 100px;
+}
+#mes{
+    width: 100px;
+}
+#ano{
+    width: 100px;
+}
+.form-box .input-group .modal{
+    display: flex;
+    padding-bottom: 7px;  
+    padding-right: 2px;
+    gap: 5px;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.bottoms-box{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around; 
+}
+.bottoms-box .bottoms-group{
+    display: flex;
+    flex-direction: column;
+}
+.bottoms-group #banner{
+    height: 200px;
+}
+#uploadevento{
+    background-color:transparent;
+    border: transparent;
+    cursor: pointer;
+}
+#uploadatracao{
+    background-color: transparent;
+    border: transparent; 
+    cursor: pointer;
+}
+.add-group{
+    display: flex;
+    flex-direction: column;
+}
+.alterarimagem{
+    background-color: #007E70;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#add{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.box .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    padding-right: 50px; 
+}
+.btns .voltar {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.voltar .btn-voltar {
+    width: 40px;
+}
+.btns .btn-cancelar-salvar {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 10px;
+}
+.btn-cancelar-salvar .btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 150px;
+    height: 40px;
+    background-color: #FF3877;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.btn-cancelar-salvar .btn-salvar {
+    background-color: #007E70;
+    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
+}
+.btn-cancelar-salvar .btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 950px) {
+    .bottoms-box{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .add-group{
+        display: flex;
+        flex-direction: row;
+        scale: 0.8;
+    }
+    .bottoms-group #banner{
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .principal .box{
+        padding: 0px;
+    }
+    .bottoms-box{
+        flex-direction: row;
+        height: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .bottom-box .bottoms-group{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottoms-group #banner{
+        height: 100px;
+    }
+    .bottoms-group label{
+        font-size: 12px;
+    }
+    .alterarimagem{
+        font-size: 12px;
+        width: 100%;
+    }
+    .add-group{
+        scale: 0.6;
+        display: flex;
+        flex-direction: column;   
+    }
+    .box .form-box{
+        flex-direction: column;
+        display: flex;
+        width: 100%; 
+    }
+    .form-box{
+        display: flex;
+        
+    }
+    .form-box form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;  
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        /* height: 50px; */
+        /* padding: px; */
+        width: 370px;
+    }
+    .form-box .input-group label{
+        color: #3d3d3d;
+        font-weight: bold;
+        display: flex;
+    }
+    .form-box .input-group input{
+        width: 360px;
+        height: 6px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        border: 2px solid transparent;
+        font-size: 15px;
+        color: #616161;
+        box-shadow: 1px 2px 0px 0px;
+    }
+    .form-box .input-group .modal{
+        display: flex;
+        width: 98%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .box .btns{
+        display: flex;
+        flex-direction: row;
+        padding-right: 0px;
+        
+    }
+    .btns .btn-cancelar-salvar{
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+        
+    }
+    .btn-cancelar-salvar{
+        scale: 0.8;
+    }
+    .btn-cancelar-salvar .btn {
+        border: none;
+        padding: 10px 20px;
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 410px){
+    .input-group{
+        scale: 0.9; 
+    }
+    .form-box form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+    }
+    .form-box .input-group input{
+        width: 340px;
+        padding-bottom: 8px;
+    }
+    .form-box .input-group .modal{
+        display: flex;
+        width: 93%;
+    }
+}
+@media only screen and (max-height: 650px){
+    .principal .box{
+        width: 90%;
+        height: 80%;
+    }
+    .box .form-box{
+        flex-direction: row;
+        display: flex;
+        width: 100%; 
+    }
+    .form-box{
+        display: flex;
+    }
+    .form-box form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        width: 370px;
+    }
+    .form-box .input-group label{
+        color: #3d3d3d;
+        font-weight: bold;
+        display: flex;
+    }
+    .form-box .input-group input{
+        width: 360px;
+        height: 6px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        border: 2px solid transparent;
+        font-size: 15px;
+        color: #616161;
+        box-shadow: 1px 2px 0px 0px;
+    }
+    .form-box .input-group .modal{
+        display: flex;
+        width: 98%;
+    }
+    .bottoms-group #banner{
+        height: 150px;
+    }
+    .add-group{
+        scale: 0.8;
+    }
+}
+
