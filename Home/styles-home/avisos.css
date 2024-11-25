@@ -1,0 +1,274 @@
+/* avisos */
+.avisos {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 71%);
+    background-color: var(--color-fundo-verde);
+}
+
+.box-aviso {
+    position: relative;
+    bottom: 50px;
+    width: 600px;
+    height: 400px;
+}
+
+.box-aviso img {
+    width: 100%;
+    height: 100%;
+}
+
+.box-text {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box-text button {
+    font-weight: 600;
+}
+
+.box-text img {
+    display: none;
+}
+
+.box-text h4 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.box-text p {
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+}
+
+.box-text button {
+    width: 50%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #39B5F6;
+    color: #fff;
+    font-size: 2em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #0000002d;
+}
+
+/* eventos passados */
+.passadas {
+    background-color: transparent;
+}
+
+.avisos .text-avisos h4, .avisos .text-avisos p,
+.avisos .text-ultimas h4, .avisos .text-ultimas p {
+    color: white;
+}
+
+
+.box-text h4, .box-text p {
+    color: black;
+}
+
+.box-text button {
+    background-color: var(--color-fundo-verde);
+}
+
+/* ultimas edições */
+.ultimas {
+    background-color: #3DB4F4;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.edicoes {
+    margin-top: 200px;
+    width: 800px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img {
+    width: 300px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img img {
+    width: 100%;
+    height: 70%;
+}
+
+.img p {
+    text-align: center;
+    width: 50%;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.box-text button {
+    background-color: #FFA929;
+}
+
+@media(max-width: 1500px) {
+
+    .avisos {
+        height: 400px;
+    }
+
+    .avisos .box-aviso {
+        width: 300px;
+        height: 200px;
+    }
+    .avisos .box-text {
+        width: 260px;
+        height: 200px;
+        margin: -100px;
+    }
+    
+    .avisos .box-text h4 {
+        font-size: 1.5em;
+    }
+    
+    .avisos .box-text p {
+        font-size: 1em;
+    }
+
+    .avisos .box-text button {
+        width: 60%;
+        height: 30px;
+        font-size: 1.5em;
+    }
+
+    .passadas .box-aviso {
+        margin-top: 100px;
+    }
+    
+    .ultimas .edicoes {
+        margin-left: 20px;
+        width: 450px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .ultimas .edicoes .img {
+        width: 200px;
+        height: 100%;
+        margin-right: 10px;
+        justify-content: space-between;
+    }
+    
+    .ultimas .edicoes .img p {
+        width: 200px;
+        font-size: 1.2em;
+    }
+}
+
+@media(max-width: 950px) {
+    .avisos {
+        justify-content: space-evenly;
+    }
+
+    .avisos .box-text {
+        width: 180px;
+        margin: 10px;
+    }
+
+    .avisos .box-text h4 {
+        font-size: 1em;
+    }
+    .avisos .box-text p {
+        width: 70%;
+        font-size: 0.9em;
+    }
+    .avisos .box-text button {
+        font-size: 0.9em;
+    }
+
+    .avisos .box-aviso {
+        margin-top: 50px;
+        width: 250px;
+        height: 200px;
+    }
+
+    .ultimas .edicoes {
+        margin-top: 150px;
+        width: auto;
+        height: 250px;
+    }
+    
+    .ultimas .edicoes #edicao-img-1 {
+        display: none;
+    }
+
+    .ultimas .edicoes .img {
+        height: 100%;
+    }
+
+    .ultimas .edicoes .img img {
+        height: 180px;
+        width: 150px;
+    }
+
+    .ultimas .edicoes .img p {
+        font-size: 1em;
+    }
+
+    .ultimas .text-ultimas {
+        margin: 10px;
+        width: 200px;
+    }
+}
+
+@media(max-width: 750px) {
+
+    .avisos {
+        height: 400px;
+    }
+
+    .avisos .box-aviso {
+        display: none;
+    }
+
+    .avisos .box-text {
+        margin-top: -50px;
+    }
+
+    .avisos .box-text img {
+        display: block;
+        width: 220px;
+        height: 150px;
+        margin: 20px 0;
+    }
+
+    .avisos .box-text p{
+        display: none;
+    }
+
+    .ultimas {
+        margin-top: -50px;
+    }
+
+    .ultimas .text-ultimas {
+        margin-top: 20px;
+    }
+
+    .ultimas .text-ultimas img {
+        height: 200px;
+        width: 150px;
+    }
+
+}

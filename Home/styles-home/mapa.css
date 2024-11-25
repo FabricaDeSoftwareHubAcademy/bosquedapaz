@@ -1,0 +1,27 @@
+/* mapa do gabriel */
+.mapa-gabriel {
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+    width: 80%;
+    height: 800px;
+}
+
+.mapa-gabriel h1 {
+    font-size: 2em;
+    
+}
+
+.mapaDoGabriel {
+    margin-top: 20px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+
+.mapaDoGabriel p {
+    font-size: 4em;
+}
