@@ -63,18 +63,19 @@
 }
 
 .fundo {
-    margin-top: 100px;
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-    background-color: var(--color-fundo-verde);
+    margin-top: 70px;
+    clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);;
+    background-color: #0D592E;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
+    position: relative;
 }
 
 .imagem {
-    margin-top: 100px;
     position: absolute;
+    top: 70px;
     width: 100%;
-    height: 65vh;
+    height: 85%;
     background-color: transparent;
 }
 
@@ -145,11 +146,14 @@ main {
 
 
     .carossel .fundo {
-        height: 50vh;
+        height: 80vh;
+        width: 100%;
+        height: 70vh;
     }
-    
+
     .imagem {
-        height: 40vh;
+        top: 50px;
+        height: 85%;
     }
 
     .seja-expositor .box-imagens {
@@ -169,13 +173,14 @@ main {
 
 
     .carossel .fundo {
-        height: 40vh;
-        margin-top: 100px;
+        height: 80vh;
+        width: 100%;
+        height: 55vh;
     }
-    
+
     .imagem {
-        height: 35vh;
-        margin-top: 130px;
+        top: 40px;
+        height: 85%;
     }
 }
 
@@ -184,13 +189,14 @@ main {
 
 
     .carossel .fundo {
-        height: 40vh;
-        margin-top: 100px;
+        height: 80vh;
+        width: 100%;
+        height: 47vh;
     }
-    
+
     .imagem {
-        height: 30vh;
-        margin-top: 100px;
+        top: 40px;
+        height: 85%;
     }
 
     main .informacoes .info {
@@ -253,17 +259,17 @@ main {
 
 /* responsividade para 950px */
 @media(max-width: 750px) {
-
-
+    
     .carossel .fundo {
         margin-top: 100px;
-        height: 29vh;
+        height: 37vh;
         width: 100vw;
     }
-
+    
     .carossel .imagem {
+        top: 40px;
+        height: 85%;
         width: 100vw;
-        height: 25vh;
     }
 
     main .text {
@@ -414,42 +420,6 @@ main {
         height: 250px;
     } 
 
-    .avisos {
-        height: 400px;
-    }
-
-    .avisos .box-aviso {
-        display: none;
-    }
-
-    .avisos .box-text {
-        margin-top: -50px;
-    }
-
-    .avisos .box-text img {
-        display: block;
-        width: 220px;
-        height: 150px;
-        margin: 20px 0;
-    }
-
-    .avisos .box-text p{
-        display: none;
-    }
-
-    .ultimas {
-        margin-top: -50px;
-    }
-
-    .ultimas .text-ultimas {
-        margin-top: 20px;
-    }
-
-    .ultimas .text-ultimas img {
-        height: 200px;
-        width: 150px;
-    }
-
     .rodape .box-footer {
         display: block;
         padding-top: 10px;
@@ -475,14 +445,13 @@ main {
 
 @media screen and (max-width: 510px) {
     .carossel .fundo {
-        margin-top: 100px;
+        height: 80vh;
+        width: 100%;
         height: 25vh;
-        width: 100vw;
     }
 
     .carossel .imagem {
-        margin-top: 170px;
-        width: 100vw;
-        height: 30vh;
+        top: 20px;
+        height: 85%;
     }
 }

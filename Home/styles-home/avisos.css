@@ -1,17 +1,27 @@
 /* avisos */
+.todos-avisos {
+    margin-top: 50px;
+}
+
 .avisos {
     width: 100%;
-    height: 700px;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 71%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
     background-color: var(--color-fundo-verde);
 }
 
+.content-avisos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .box-aviso {
-    position: relative;
-    bottom: 50px;
     width: 600px;
     height: 400px;
 }
@@ -22,8 +32,8 @@
 }
 
 .box-text {
-    width: 600px;
-    height: 400px;
+    gap: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +41,7 @@
 }
 
 .box-text button {
+    cursor: pointer;
     font-weight: 600;
 }
 
@@ -45,7 +56,7 @@
 }
 
 .box-text p {
-    width: 50%;
+    width: 70%;
     font-size: 2em;
     text-align: center;
     color: #fff;
@@ -65,6 +76,8 @@
 
 /* eventos passados */
 .passadas {
+    margin-top: -90px;
+    clip-path: none;
     background-color: transparent;
 }
 
@@ -84,14 +97,16 @@
 
 /* ultimas edições */
 .ultimas {
+    margin-top: -90px;
     background-color: #3DB4F4;
-    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
 }
 
 .edicoes {
-    margin-top: 200px;
-    width: 800px;
-    height: 700px;
+    gap: 20px;
+    width: auto;
+    height: 500px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,7 +115,7 @@
 
 .img {
     width: 300px;
-    height: 70%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +130,7 @@
 .img p {
     text-align: center;
     width: 50%;
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #fff;
 }
 
@@ -126,52 +141,58 @@
 @media(max-width: 1500px) {
 
     .avisos {
-        height: 400px;
+        height: 500px;
     }
 
-    .avisos .box-aviso {
-        width: 300px;
-        height: 200px;
+    .box-aviso {
+        width: 290px;
+        height: 190px;
+        margin-bottom: 100px;
     }
-    .avisos .box-text {
-        width: 260px;
-        height: 200px;
-        margin: -100px;
+
+    .box-text {
+        width: 290px;
+    }
+
+    .text-avisos {
+        margin-bottom: 100px;
     }
     
-    .avisos .box-text h4 {
+    .box-text h4 {
         font-size: 1.5em;
     }
     
-    .avisos .box-text p {
+    .box-text p {
+        width: 80%;
         font-size: 1em;
     }
 
-    .avisos .box-text button {
-        width: 60%;
-        height: 30px;
-        font-size: 1.5em;
+    .box-text button {
+        width: auto;
+        height: auto;
+        padding: 5px 10px;
+        font-size: 1.2em;
     }
 
-    .passadas .box-aviso {
+    .box-aviso {
         margin-top: 100px;
     }
     
-    .ultimas .edicoes {
+    .edicoes {
         margin-left: 20px;
         width: 450px;
         height: 300px;
         margin-bottom: 30px;
     }
     
-    .ultimas .edicoes .img {
+    .img {
         width: 200px;
         height: 100%;
         margin-right: 10px;
         justify-content: space-between;
     }
     
-    .ultimas .edicoes .img p {
+    .img p {
         width: 200px;
         font-size: 1.2em;
     }
@@ -179,33 +200,34 @@
 
 @media(max-width: 950px) {
     .avisos {
-        justify-content: space-evenly;
+        height: 500px;
     }
 
-    .avisos .box-text {
-        width: 180px;
-        margin: 10px;
+    .box-text {
+        width: 290px;
     }
 
-    .avisos .box-text h4 {
+    .box-text h4 {
         font-size: 1em;
     }
-    .avisos .box-text p {
+    .box-text p {
         width: 70%;
         font-size: 0.9em;
     }
-    .avisos .box-text button {
+    .box-text button {
         font-size: 0.9em;
     }
 
-    .avisos .box-aviso {
+    .box-aviso {
         margin-top: 50px;
-        width: 250px;
+    }
+
+    .box-aviso {
+        width: 290px;
         height: 200px;
     }
 
     .ultimas .edicoes {
-        margin-top: 150px;
         width: auto;
         height: 250px;
     }
@@ -229,37 +251,30 @@
 
     .ultimas .text-ultimas {
         margin: 10px;
-        width: 200px;
+        width: 290px;
     }
 }
 
 @media(max-width: 750px) {
 
     .avisos {
+        margin-top: 0px;
         height: 400px;
     }
 
-    .avisos .box-aviso {
+    .box-aviso {
         display: none;
     }
 
-    .avisos .box-text {
-        margin-top: -50px;
-    }
 
-    .avisos .box-text img {
+    .box-text img {
         display: block;
         width: 220px;
         height: 150px;
-        margin: 20px 0;
     }
 
-    .avisos .box-text p{
+    .box-text p{
         display: none;
-    }
-
-    .ultimas {
-        margin-top: -50px;
     }
 
     .ultimas .text-ultimas {
