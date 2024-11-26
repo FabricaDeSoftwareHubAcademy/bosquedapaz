@@ -1,0 +1,164 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('menu-adm.css');
+
+body {
+    width: 100vw;
+    min-height: calc(100vh - 110px);
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.principal {
+    width: 100vw;
+    min-height: calc(99vh - 100px);
+    /* margin-top: -50px; */
+    z-index: 1;
+    padding-top: 0px;
+}
+
+.principal .box {
+    width: 90%;
+    height: 100%;
+    background-color: rgba(248, 245, 246, 0.65);
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    /* transition: all 0.8s ease; */
+}
+
+/* .principal .box:hover {
+    backdrop-filter: blur(20px);    
+} */
+
+
+.bola-verde1 {
+    position: absolute;
+    left: 0px;
+    top: 15vh;
+    z-index: -3;
+}
+
+.bola-verde2 {
+    position: absolute;
+    right: 0px;
+    top: 15vh;
+    z-index: -3;
+}
+
+.bola-rosa {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -3;
+}
+
+.box .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    padding-right: 50px;
+}
+
+.btns .voltar {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar .btn-voltar {
+    width: 40px;
+}
+
+.btns .btn-cancelar-salvar {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 10px;
+}
+
+.btn-cancelar-salvar .btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 150px;
+    height: 40px;
+    background-color: #FF3877;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+.btn-cancelar-salvar .btn-salvar {
+    background-color: #007E70;
+    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
+}
+
+.btn-cancelar-salvar .btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+@media(max-width: 1050px) {
+    .bola-verde1{
+        width: 80px;
+        left: 0px;
+    }
+
+    .bola-verde2 {
+        width: 90px;
+        right: 0px;
+    }
+
+    .bola-rosa {
+        width: 200px;
+        right: 0px;
+        bottom: 0px;
+    }
+}
+
+@media(max-width: 650px) {
+    .bola-verde1{
+        display: none;
+    }
+
+    .bola-verde2 {
+        display: none;
+    }
+
+    .bola-rosa {
+        display: none;
+    }
+
+    .btn-cancelar-salvar .btn  {
+        width: 90px;
+    }
+
+    .btn-cancelar-salvar .btn a  {
+        font-size: 1rem;
+    }
+}
