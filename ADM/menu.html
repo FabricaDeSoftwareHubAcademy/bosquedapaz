@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu adm</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../ADM/css/menu.css">
 
 </head>
 <body>
     <header class="menu-adm">
         <div class="logo">
-            <img src="../img/logo.png" alt="Logo da Feira" class="img-logo">
+            <img src="../ADM/img/logo.png" alt="Logo da Feira" class="img-logo">
         </div>
 
         <nav class="nav-bar">
@@ -60,12 +60,24 @@
             <button class="btn-login"><a href="">Login</a></button>
         </nav>
 
-        <div class="sandwich-menu" onclick="menuShow()">
-            <img src="../img/menu.png" alt="menu" class="menu">
+        <div class="menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="../ADM/img/menu.png" alt="Menu"></button>
         </div>
+        <div class="mobile-menu"> <!-- navegação -->
+            <ul class="nav-item">
+                <li class="nav-item"><a href="#">Início</a></li>
+                <li class="nav-item"><a href="#">Parceiros</a></li>
+                <li class="nav-item"><a href="#">Fale Conosco</a></li>
+                <li class="nav-item"><a href="#">Quem Somos?</a></li>
+            </ul>
 
-        <div class="login">
-            <img src="../img/login.png" alt="Botão de login" class="img-login">
+            <div class="btn-login"> <!-- area login -->
+                <button class="btnlogin">Login</button>
+            </div>
+            
+                    <div class="login">
+                        <img src="../ADM/img/login.png" alt="Botão de login" class="img-login">
+                    </div>
         </div>
     </header>
 
