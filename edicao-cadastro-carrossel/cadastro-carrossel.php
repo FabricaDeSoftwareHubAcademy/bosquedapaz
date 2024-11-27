@@ -10,75 +10,7 @@
     <link rel="stylesheet" href="styles-carrossel/cadastro-carrossel.css">
 </head>
 <body>
-    <!-- começo cebecalho -->
-    <header class="menu-adm">
-        
-        <!-- logo da feira -->
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo da Feira" class="img-logo">
-        </div>
-
-        <!-- itens de navegação -->
-        <nav class="nav-bar">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#">Área Administrativa</a></li>
-                <li class="nav-item">Eventos
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Cadastrar Evento</a></li>
-                            <li><a href="" class="item-submenu">Gerenciar Evento</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item">Expositores
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Cadatrar Expositor</a></li>
-                        <li><a href="" class="item-submenu">Cadatrar expositor kids</a></li>
-                        <li><a href="" class="item-submenu">Cadatrar  artista</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">Carrossel
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">cadastrar Carrosel</a></li>
-                        <li><a href="" class="item-submenu">Editar Carrosel</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">Categorias
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Todas Categorias</a></li>
-                        <li><a href="" class="item-submenu">cadastrar Categorias</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">Relatórios
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">relatório de usuarios</a></li>
-                        <li><a href="" class="item-submenu">validação de expositores</a></li>
-                        <li><a href="" class="item-submenu">relatório de expositores</a></li>
-                        <li><a href="" class="item-submenu">relatório de eventos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">Parceiros
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">cadastrar parceiros</a></li>
-                        <li><a href="" class="item-submenu">editar parceiros</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <!-- btn login para o menu mobile -->
-            <button class="btn-login"><a href="">Login</a></button>
-            
-        </nav>
-
-        <!-- exibir menu mobile -->
-        <div class="sandwich-menu" onclick="menuShow()">
-            <img src="img/menu.png" alt="menu" class="menu">
-        </div>
-
-        <!-- login normal -->
-        <div class="login">
-            <img src="img/login.png" alt="Botão de login" class="img-login">
-        </div>
-    </header>
-
+    <?php include "../menu/menu.html"?>
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
