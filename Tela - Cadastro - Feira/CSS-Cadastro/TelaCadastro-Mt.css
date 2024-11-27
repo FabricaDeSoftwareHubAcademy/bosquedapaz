@@ -229,6 +229,10 @@ form{
     font-size: 30px;
 }
 
+.h12-mt{
+  display: none;
+}
+
 
 /* Elementos da box - outros elementos */
 .formares-mt{
@@ -262,7 +266,7 @@ a:hover{
     p{
         font-size: 12px;
         position: absolute;
-        top: 600px;
+        top: 94%;
         left: 22%;
     }
 
@@ -431,6 +435,7 @@ a:hover{
     .button-cad-mt{
         width: 250px;
         right: 170px;
+        margin-top: 590px;
     }
 
     form{
@@ -447,6 +452,10 @@ a:hover{
         height: 800px;
         top: 50px;
         background-color: transparent;
+    }
+    p{
+        top: 805px;
+        left: 30%;
     }
 }
 
@@ -480,14 +489,33 @@ a:hover{
 
     .divIMg-mt{
         background-color: #ff387700;
-        right: 00px;
+        right: 0px;
+        width: 400px;
+        flex-direction: column;
     }
-    .h1-mt{
-        display: none;
+    .divIMg-mt img{
+        width: 100%;
+        height: auto;
     }
     p{
-        left: 65px;
+        left: 8%;
+    }
+    .formaCadastro-2{
+        top: 85vh;
+    }
+    .h1-mt{ 
+        display: none;
     }
 
+    .h12-mt{
+        display: inline;
+        font-size: 35px;
+        position: relative;
+        bottom: 80px;
+        left: 15px;
+    }
+    .formaCadastro-4{
+        top: 76vh;
+    }
 }
 
