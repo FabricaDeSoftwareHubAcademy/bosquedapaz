@@ -6,6 +6,7 @@
     <title>Modelo de tela</title>
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="styles-carrossel/editar-carrossel.css">
+    <link rel="stylesheet" href="../menu/menu-adm.css">
 </head>
 <body>
     <?php include "../menu/menu.html"?>

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.principal {
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
+}
+
+.principal .box {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(248, 245, 246, 0.65);
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: -40px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: -50px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    z-index: -3;
+}
+
+@media(max-width: 1050px) {
+    .bolas-fundo .bola-verde1{
+        width: 80px;
+        left: -20px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 90px;
+        right: -25px;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 200px;
+        right: -50px;
+        bottom: -50px;
+    }
+}
+
+@media(max-width: 650px) {
+    .bolas-fundo .bola-verde1{
+        display: none;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        display: none;
+    }
+
+    .bolas-fundo .bola-rosa {
+        display: none;
+    }
+
+}
