@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de tela</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header class="menu-adm">
+        <div class="logo">  
+            <img src="../img/logo.png" alt="Logo da Feira" class="img-logo">
+        </div>
+ 
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">Área Administrativa</a></li>
+                <li class="nav-item"><a href="#">Eventos</a>
+                        <ul class="submenu">
+                            <li><a href="" class="item-submenu">Cadastrar Evento</a></li>
+                            <li><a href="" class="item-submenu">Gerenciar Evento</a></li>
+                        </ul>
+                </li>
+                <li class="nav-item"><a href="#">Expositores</a>
+                    <ul class="submenu">
+                        <li><a href="" class="item-submenu">Cadatrar Expositor</a></li>
+                        <li><a href="" class="item-submenu">Cadatrar expositor kids</a></li>
+                        <li><a href="" class="item-submenu">Cadatrar  artista</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">Carrossel</a>
+                    <ul class="submenu">
+                        <li><a href="" class="item-submenu">cadastrar Carrosel</a></li>
+                        <li><a href="" class="item-submenu">Editar Carrosel</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">Categorias</a>
+                    <ul class="submenu">
+                        <li><a href="" class="item-submenu">Todas Categorias</a></li>
+                        <li><a href="" class="item-submenu">cadastrar Categorias</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">Relatórios</a>
+                    <ul class="submenu">
+                        <li><a href="" class="item-submenu">relatório de usuarios</a></li>
+                        <li><a href="" class="item-submenu">validação de expositores</a></li>
+                        <li><a href="" class="item-submenu">relatório de expositores</a></li>
+                        <li><a href="" class="item-submenu">relatório de eventos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">Parceiros</a>
+                    <ul class="submenu">
+                        <li><a href="" class="item-submenu">cadastrar parceiros</a></li>
+                        <li><a href="" class="item-submenu">editar parceiros</a></li>
+                    </ul>
+                </li>
+            </ul>
+ 
+            <button class="btn-login"><a href="">Login</a></button>
+        </nav>
+ 
+        <div class="sandwich-menu" onclick="menuShow()">
+            <img src="../img/menu.png" alt="menu" class="menu">
+        </div>
+ 
+        <div class="login">
+            <img src="../img/login.png" alt="Botão de login" class="img-login">
+        </div>
+    </header>
+ 
+ 
+    <main class="principal">
+        <div class="box">
+            <h1 class="title">Cadastro de expositores</h1>
+            <div class="caixa-formulario">
+                <div class="input1">
+                    <label>Nome completo:</label>
+                    <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="input2">
+                    <label>Qual seu produto:</label>
+                    <input type="text" name="" id="" placeholder="Informe seu produto" required>
+                </div>
+                <div class="input3">
+                    <label>Qual cidade reside:</label>
+                    <input type="text" name="" id="" placeholder="Informe sua cidade" required>
+                </div>
+                <div class="input4">
+                    <label>Nome da marca ou loja:</label>
+                    <input type="text" name="" id="" placeholder="Digite o nome da sua marca ou loja" required>
+                </div>
+            </div>
+            <div class="caixa-contato">
+                <div class="whats-ctt">
+                    <label>Whatsapp para contato:</label>
+                    <input type="text" name="" id="" placeholder="(67)" required>
+                </div>
+                <div class="categoria-prod">
+                    <label>Categoria dos produtos</label>
+                    <input type="text" name="" id="" placeholder="-" required>
+                </div>
+                <div class="input-img">
+                    <label>Upload de fotos</label>
+                    <button class="style-button">
+                        <img src="../img/foto.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="formulario">
+                <label >Se você possui um trailer, foodtruck ou barraca de comida:
+                    Qual é a medida EXATA dele?</label>
+                    <input type="text" name="" id="" placeholder="ex: 3m²">
+            </div>
+            <div class="formulario-input">
+                <label >Precisa de energia para vender seus produtos?
+                    Se sim, para quais voltagens e quais equipamentos:</label>
+                <input type="text" name="" id="" placeholder="ex: 300Kw">    
+            </div>
+ 
+           
+            <div class="botoes-salvar">
+                <label for="modal-checkbox" id="salvar-btn" class="salvar-btn">Salvar</label>
+            </div>
+
+            
+            <input type="checkbox" id="modal-checkbox" hidden>
+            <div class="modal-container">
+                <div class="modal-content">
+                    <h1>Confirmar?</h1>
+                    <div class="botoes">
+                        <label for="modal-checkbox" class="salvar">Salvar</label>
+                        <label for="modal-checkbox" class="cancelar">Cancelar</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+    
+ 
+            <div class="botoes-cancelar">
+                <button onclick="" class="btn-cancelar">Cancelar</button>
+            </div>
+            
+            
+ 
+            <div class="edital-feira">
+                <button><a href="#">Edital da feira</a></button>
+            </div>
+ 
+            <p class="termos">*Aceito os termos do Edital:</p>
+            <div class="expositor-kids">
+                <button><a href="#">Expositor kids</a></button>
+            </div>
+            <div class="artistas">
+                <button><a href="#">Artistas</a></button>
+            </div>
+ 
+            <div class="caixa-checkbox">
+                <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
+                <label for="checkbox-sim" class="text-checkbox">- Sim</label>
+            
+                <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
+                <label for="checkbox-nao" class="text-checkbox">- Não</label>
+            </div>
+            
+
+    </main>
+ 
+    <div class="bolas-fundo">
+ 
+        <img src="../img/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../img/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../img/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+    </div>
+ 
+    <script src="../js/mais.js"></script>
+</body>
+</html>
+ 
+ 
+ 

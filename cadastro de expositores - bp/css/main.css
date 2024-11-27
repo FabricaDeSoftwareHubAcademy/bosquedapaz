@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    overflow-y: auto;
+     
+}
+ 
+ 
+.bola-verde1{
+    position: absolute;
+    top: 15%;
+    left: -10px;
+    z-index: 1;
+}
+ 
+.bola-verde2{
+    position: absolute;
+    top: 18%;
+    left: 95%;
+    z-index: 1;
+}
+ 
+.bola-rosa{
+    position: absolute;
+    top: 83%;
+    left: 89%;
+    z-index: 1;
+}
+ 
+.box{
+    display: flex;
+    padding: 120px;
+    width: 1750px;
+    height: auto;
+    background-color: red;
+    margin-left: 6%;
+    margin: 50px;
+    position: relative;
+    top: -25px;
+    background: rgba(170, 165, 165, 0.17);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    z-index: 2;
+}
+ .title{
+    height: 10%;
+    width: 37%;
+    position: relative;
+    left: 57vh;
+    top: -10vh;
+    font-size: 30px;
+    /* z-index: 1; */
+    /* background-color: red */
+    ;
+    text-transform: uppercase;
+}
+.caixa-formulario{
+    position: absolute;
+    top: 100px;
+    
+   
+}
+.caixa-formulario input{
+    width: 50vh;
+    height: 5vh;
+    margin: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+ 
+.caixa-formulario label{
+    position: absolute;
+    left: 26px;
+}
+
+.caixa-contato{
+    z-index: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13%;
+    left: 43%;
+}
+.caixa-contato input{
+    width: 190px;
+    height: 5vh;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;  
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1; 
+}
+ 
+
+.caixa-contato label{
+    display: block;
+    position: relative;
+    left: 8%;
+}
+
+
+
+.input-img{
+
+    position: relative;
+    top: -10px;
+    left: 10%;
+}
+.input-img button {
+    height: 130px;
+    width: 140px;
+    display: flex;
+    border: none;
+    position: relative;
+    left: 10%;
+    border-bottom: 1.5px solid rgb(202, 202, 202);
+    border-right: 1.5px solid rgb(202, 202, 202);
+}
+ 
+.formulario {
+    width: 300px;  /* Define a largura desejada para o container */
+    position: absolute;
+    left: 68%;
+    top: 13%;
+}
+
+.formulario input{
+    width: 250px;
+    height: 5vh;
+    /* margin: 20px; */
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.formulario label {
+    display: block;              
+    overflow: hidden;          
+    width: 100%;                
+}
+ 
+.formulario-input label {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.formulario-input input{
+    width: 250px;
+    height: 5vh;
+    /* margin: 20px; */
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.formulario-input {
+    position:absolute;
+    top: 38%;
+    left: 68%;
+    width: 300px;
+    border: none;
+}
+   
+.botoes-salvar{
+    position: absolute;
+    left: 73%;
+    top: 64%;
+
+}
+
+label#salvar-btn {
+    display: inline-block;  
+    background-color: #4CAF50;
+    color: white;
+    padding: 9px 50px;
+    background-color: #FF3877;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+    /* box-shadow: 0px 4px 6px #027C8D; */
+}
+
+/* label#salvar-btn:hover {
+    background-color: #45a049;
+} */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked + .modal-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.botoes label {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.botoes label.salvar {
+    background-color: #4CAF50;
+    width: 130px;
+}
+
+
+
+.botoes-cancelar{
+    position: absolute;
+    left: 62%;
+    top: 64%;
+}
+
+.btn-cancelar{
+    display: inline-block;  
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px 40px;
+    background-color: #007E70;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    /* box-shadow: 0px 4px 6px #027C8D; */
+}
+
+
+
+
+.edital-feira{
+    height: 50px;
+    left: 50px;
+}
+
+.edital-feira a{
+    text-decoration: none;
+    color: white;
+}
+ 
+.edital-feira button{
+    position: absolute;
+    top: 68%;
+    left: 9%;
+    height: 35px;
+    width: 190px;
+    border-radius: 10px;
+    border: none;
+    background-color: #007E70;
+    color: white;
+    font-size: 18px;
+}
+ 
+.termos{
+    height: 20px;
+    width: 250px;
+    color: red;
+    position: relative;
+    top: 57vh;
+    left: -50vh;
+   
+}   
+ 
+
+.expositor-kids{
+    height: 45px;
+    width: 150px;
+}
+
+.expositor-kids a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+ 
+.expositor-kids button{
+    height: 35px;
+    width: 185px; 
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+    position: absolute;
+    top: 83%;
+    left: 54.4%;
+}
+ 
+.artistas{
+    height: 45px;
+    width: 150px;
+}
+
+.artistas a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px ;
+}
+.artistas button{
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+    position: absolute;
+    top: 83%;
+    left: 43%;
+}
+ 
+ 
+.caixa-checkbox {
+    display: flex;      
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 36.4%; 
+    margin-left: -53%;
+}
+
+.caixa-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+    
+
+
+/* .salvar-btn {
+    height: 510px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #007E70;
+    border: none;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px #027C8D;
+} */
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .bola-verde1 {
+        width: 70px;
+        height: 80px;
+        position: fixed;
+        left: 2%;
+        top: 10%;
+    }
+
+    .bola-verde2 {
+        /* margin-left: -30px;
+        margin-top: 50px; */
+        width: 70px;
+        height: 90px;
+        position: fixed;
+        left: 85%;
+        top: 30%;
+    }
+
+    .bola-rosa {
+        width: 90px;
+        height: 100px;
+        /* margin-top: 72px;
+        margin-left: -45px; */
+        position: fixed;
+        left: 80%;
+        top: 85%;
+    }
+
+    .box {
+        margin-left: -2px;
+        margin-top: 13%;
+        width: 396px;
+        height: 780px;
+        position: fixed;
+        top: 6%;
+    }
+
+    .title {
+        min-width: 260px;
+        max-width: 100%;
+        height: 20px;
+        white-space: nowrap;
+        font-size: 18px;
+        position: relative;
+        left: -43%;
+    }
+    
+    .caixa-formulario{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .caixa-formulario input{
+        width: 75%;
+        height: 40px;
+    }
+
+    .caixa-contato{  
+        margin-left: -40%;
+        margin-top: 75%; 
+        display: flex;
+        align-items: flex-start;
+    }
+
+    
+
+
+
+
+
+    
+
+  
+}
+
+    
