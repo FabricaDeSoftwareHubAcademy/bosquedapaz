@@ -1,6 +1,7 @@
-.box {
+.principal {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .parte-superior {
@@ -8,7 +9,7 @@
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    position: relative;
+    position: relative; 
 }
 
 .content-fp {
@@ -39,11 +40,11 @@
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    justify-content: center;
     gap: 20px;
 }
 
 .lado {
-    background-color: antiquewhite;
     width: 700px;
     height: auto;
     display: flex;
@@ -84,7 +85,7 @@
 
 .lado-direito {
     background-color: transparent;
-    
+    padding-left: 130px;
 }
 
 .list-cont {

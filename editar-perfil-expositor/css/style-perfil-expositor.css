@@ -11,7 +11,9 @@
 .principal {
     width: 100vw;
     height: 90vh;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .principal .box {
@@ -39,40 +41,40 @@
 
 .bolas-fundo .bola-verde1 {
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: 6vh;
     z-index: -3;
 }
 
 .bolas-fundo .bola-verde2 {
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: 6vh;
     z-index: -3;
 }
 
 .bolas-fundo .bola-rosa {
     position: absolute;
-    right: -100px;
-    bottom: -100px;
+    right: 0px;
+    bottom: 0px;
     z-index: -3;
 }
 
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1{
         width: 80px;
-        left: -20px;
+        left: 0px;
     }
 
     .bolas-fundo .bola-verde2 {
         width: 90px;
-        right: -25px;
+        right: 0px;
     }
 
     .bolas-fundo .bola-rosa {
         width: 200px;
-        right: -50px;
-        bottom: -50px;
+        right: 0px;
+        bottom: 0px;
     }
 }
 
