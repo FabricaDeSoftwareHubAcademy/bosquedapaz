@@ -18,13 +18,15 @@
         <!-- box principal -->
         <div class="box">
             <div class="parte-superior">
-                <div class="content-fp"><img src="img/foto-perfil.png" alt="foto de perfil" class="foto-perfil"></div>
                 <img src="img/img-banner.png" alt="imagem do banner" class="img-banner">
             </div>
-
+            
             <div class="informacoes">
                 <div class="lado lado-esquerdo">
-                    <h1 class="nome">Nome da Empresa</h1>
+                    <div class="content-fp">
+                        <img src="img/foto-perfil.png" alt="foto de perfil" class="foto-perfil">
+                        <h1 class="nome">Nome da Empresa</h1>
+                    </div>
                     <div class="content-sob-empre">
                         <h2 class="text sobre-empresa">Sobre Empresa</h2>
                         <p class="text-sob-empre">Nossa jornada começou com uma simples ideia: tornar os momentos especiais de nossos pets ainda mais memoráveis. Sabemos que nossos cães são parte fundamental de nossas vidas e acreditamos que eles merecem um tratamento especial, especialmente em seu dia especial.</p>
