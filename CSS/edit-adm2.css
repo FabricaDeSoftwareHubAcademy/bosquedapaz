@@ -14,6 +14,7 @@
     width: 100vw;
     height: 100vh;
     align-items: center;
+    
 }
 .form-box{
     /* min-height: 80%;
@@ -27,6 +28,7 @@
     background-color: rgba(255,255,255,0.5);
     border-radius: 0 20px 20px 0;
     backdrop-filter: blur(10px);
+    
     
 }
 .form-box h2{
@@ -65,9 +67,10 @@
 
 .form-box form{
     margin: 20px 0;
-    /* height: 100%;
-    width: 40%;
-    display: flex;
+    height: 100%;
+    float: left;
+    /*width: 40%;
+    /*display: flex;
     flex-direction: column;
     min-width: 360px;
     justify-content: space-around; */
@@ -132,9 +135,6 @@
     bottom: -100px;
     z-index: -3;
 }
-
-
-
 
 .form-box .input-group input:focus{
     border-color: #5c023c;
