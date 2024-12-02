@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../../Home/styles-home/menu.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+.titulo{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.principal{
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
+    margin-top: 6%;
+}
+
+.principal .box{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(248, 245, 246, 0.65);
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.form-box{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    /* height: 100vh; */
+    justify-content: center;
+    gap: 50px;
+    align-items: baseline;
+    position: relative;
+}
+
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: -40px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: -60px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    z-index: -3;
+}
+
+.input-pesquisar{
+    display: flex;
+}
+
+.div-tabela{
+    display: flex;
+    width: 80%;
+    height: 70%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-eventos{
+    width: 100%;
+    height: 1%;
+    border-collapse: collapse;
+}
+
+.tab-eventos thead{
+    background-color: rgb(32, 54, 139 );
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+
+}
+
+.tab-eventos thead tr th{
+    text-align: center;
+}
+
+.tab-eventos tbody tr td{
+    text-align: center
+    ;
+}
