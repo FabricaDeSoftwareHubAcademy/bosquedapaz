@@ -81,6 +81,9 @@
 
 .input-pesquisar{
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .div-tabela{
@@ -99,6 +102,7 @@
 }
 
 .tab-eventos thead{
+    /* border-radius: 10px 10px 0px 0px; */
     background-color: rgb(32, 54, 139 );
     color: rgb(255, 255, 255);
     font-size: 16px;
@@ -110,6 +114,56 @@
 }
 
 .tab-eventos tbody tr td{
-    text-align: center
-    ;
+    text-align: center;
+    height: 37px;
 }
+
+.input-pesquisar input{
+    width: 60%;
+    /* padding: 50px; */
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2.93px solid rgb(32,54,159);
+    border-right: 2.93px solid rgb(32,54,159);
+}
+
+.input-pesquisar button{
+    width: 178px;
+    height: 49px;
+    font-size: 28px;
+    color: white;
+    background-color: rgb(32,54,159);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.input-pesquisar h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white; /* Cor clara */
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #e6e6e6; /* Cor mais escura */
+  }
+
+  
