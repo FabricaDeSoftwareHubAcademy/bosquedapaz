@@ -41,7 +41,7 @@
 /* lista de expositor */
 .expositores .expositor-lista {
     margin-top: 0px;
-    width: 100%;
+    width: 80%;
     height: 50%;
     padding-top: 100px;
     gap: 20px;

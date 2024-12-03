@@ -117,7 +117,7 @@ main {
 
 /* informações sobre a feira */
 .informacoes {
-    margin: 100px auto;
+    margin: 0px 0px 50px 0px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -126,7 +126,7 @@ main {
 }
 
 .info {
-    width: 200px;
+    width: 300px;
     padding: 10px 20px;
     display: flex;
     flex-direction: row;
@@ -143,7 +143,7 @@ main {
 }
 
 .p-prin {
-    font-size: 20px;
+    font-size: 30px;
     width: 100%;
     font-weight: 600;
     margin-left: 10px;
@@ -151,7 +151,7 @@ main {
 }
 
 .p-compl{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     margin-left: 10px;
     margin-top: -10px;
