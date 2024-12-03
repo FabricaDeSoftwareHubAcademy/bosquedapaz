@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    overflow: hidden;
 }
 .principal {
     display: flex;
@@ -39,8 +40,9 @@
     display: flex;
     flex-direction: row;
     padding-top: 150px;
-    width: 1400px;
-    height: 900px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(248, 245, 246, 0.65);
     flex-wrap: wrap;
     /* background-color: rgba(248, 245, 246, 0.65);
     margin: auto;
