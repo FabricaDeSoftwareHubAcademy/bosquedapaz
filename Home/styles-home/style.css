@@ -73,28 +73,46 @@
 
 .imagem {
     position: absolute;
-    top: 70px;
+    top: 90px;
     width: 100%;
     height: 85%;
     background-color: transparent;
 }
 
+.text-carrossel {
+    max-width: 80%;
+    height: auto;
+    max-height: 200px;
+    position: absolute;
+    background-color: transparent;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.title-welcome, .text-welcome-c {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+
 /* estilizando main */
 
 main {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 90%;
+    justify-content: center;
+    width: 100%;
     margin: auto;
     margin-top: 100px;
-    flex-direction: column;
 }
 
-.text {
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-}
 
 
 /* informações sobre a feira */
@@ -104,7 +122,7 @@ main {
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    width: 100%;
+    max-width: 1400px;
 }
 
 .info {
@@ -146,7 +164,6 @@ main {
 
 
     .carossel .fundo {
-        height: 80vh;
         width: 100%;
         height: 70vh;
     }
@@ -173,9 +190,8 @@ main {
 
 
     .carossel .fundo {
-        height: 80vh;
         width: 100%;
-        height: 55vh;
+        height: 45vh;
     }
 
     .imagem {
@@ -189,14 +205,25 @@ main {
 
 
     .carossel .fundo {
-        height: 80vh;
         width: 100%;
-        height: 47vh;
+        height: 42vh;
     }
 
     .imagem {
         top: 40px;
         height: 85%;
+    }
+
+    .text-carrossel {
+        bottom: 350px;
+    }
+
+    .title-welcome {
+        font-size: 1.1rem;
+    }
+
+    .text-welcome-c {
+        font-size: .9rem;
     }
 
     main .informacoes .info {
@@ -254,6 +281,22 @@ main {
 
     .rodape .box-footer .list-contato div p {
         font-size: 0.8em;
+    }
+}
+
+@media(max-width: 825px) {
+    .carossel .fundo {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .imagem {
+        top: 40px;
+        height: 85%;
+    }
+
+    .text-carrossel {
+        bottom: 430px;
     }
 }
 
@@ -453,5 +496,28 @@ main {
     .carossel .imagem {
         top: 20px;
         height: 85%;
+    }
+
+
+    .text-carrossel {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .title-welcome {
+        font-size: .9rem;
+    }
+
+    .text-welcome-c {
+        font-size: .7rem;
+    }
+
+    .categoria {
+        margin-top: 150px;
     }
 }
