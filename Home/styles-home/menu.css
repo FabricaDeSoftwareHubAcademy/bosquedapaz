@@ -127,11 +127,10 @@
 }
 
 .login {
-    margin-right: 30px;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-}
+}   
 
 .login img {
     width: 100%;
@@ -220,12 +219,13 @@
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
     .menu {
-        justify-content: space-evenly;
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
     }
     .logo{
-        margin-left: -20px;
+        width: 150px;
         padding: 0px;
     }
 
@@ -290,10 +290,10 @@
 
     .pequisa-mobile {
         height: 100%;
-        width: auto;
+        width: 200px;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     
     .pesquisa {
@@ -340,6 +340,9 @@
 }
 
 @media screen and (max-width: 510px) {
+    .menu {
+        padding: 0px;
+    }
     .logo {
         width: 100px;
     }
