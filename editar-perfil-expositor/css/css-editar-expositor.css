@@ -19,7 +19,6 @@
     justify-content: baseline;
     gap: 20px;
     padding: 5px;
-    z-index: 2;
 }
 
 .foto-perfil {
@@ -123,14 +122,48 @@
     font-size: 1.2rem;
     color: white;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
 .btn-volt {
     background-color: #FF3877;
 }
 
+.href {
+    text-decoration: none;
+    color: white;
+}
+
 .btn-edit {
     background-color: #007E70;
+}
+
+.modal-form-perfil {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    border: none;
+    background-color: transparent;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .lado {
+        width: 400px;
+    }
+
+    .lado-esquerdo {
+        margin-left: 0px;
+    }
+
+    .img-banner {
+        width: 950px;
+    }
+
+    .img-caleria {
+        width: 350px;
+    }
 }
 
 @media screen and (max-width: 1350px) {
@@ -173,9 +206,14 @@
         justify-content: left;
         flex-wrap: wrap;
         overflow: scroll;
+        padding-left: 10px;
     }
     .img-banner {
         width: 850px;
+    }
+
+    .lado {
+        width: 350px;
     }
 
     .lado-esquerdo {
@@ -207,8 +245,4 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .img-caleria {
-        width: 270px;
-    }
-}
+

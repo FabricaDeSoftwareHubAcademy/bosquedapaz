@@ -81,6 +81,7 @@
 .nav-item a {
     color: black;
     text-decoration: none;
+    transition: all ease-in .2s;
 }
 
 
@@ -102,6 +103,10 @@
 
 .submenu a::after{
     display: none;
+}
+
+.submenu a:hover {
+    color: #FC1269;
 }
 
 .btn-login {

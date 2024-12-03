@@ -6,8 +6,9 @@
     <title>Editar perfil</title>
     <link rel="stylesheet" href="../menu/menu-adm.css">
     <link rel="stylesheet" href="css/style-perfil-expositor.css">
-    <link rel="stylesheet" href="css/elem-perfil-expo.css">
+    <link rel="stylesheet" href="css/css-editar-expositor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../modais/css-modais/css-m-form-e-perfil-expo.css">
 </head>
 <body>
     <?php include "../menu/menu.html"; ?>
@@ -59,13 +60,17 @@
                     <h2 class="text galeria">Galeria de Imagens</h2>
                     <img src="img/img-galeria.png" alt="imagem" class="img-caleria">
                     <div class="btns">
-                        <button class="btn-volt btn-ac">Voltar</button>
-                        <button class="btn-edit btn-ac">Editar</button>
+                        <button class="btn-volt btn-ac" id="btn-voltar"><a href="#" class="href">Voltar</a></button>
+                        <button class="btn-edit btn-ac open-modal" data-modal="modal-form-editar">Editar</button>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        <dialog class="modal-form-perfil" id="modal-form-editar">
+            <?php require_once "../modais/modal-editar-expositor.html" ?>
+        </dialog>
     </main>
 
     <!-- bolas de fundo -->
@@ -77,5 +82,6 @@
 
     <!-- link do JavaScript -->
     <script src="js/main.js"></script>
+    <script src="../modais/js-modais/js-editar-expositor.js"></script>
 </body>
 </html>
