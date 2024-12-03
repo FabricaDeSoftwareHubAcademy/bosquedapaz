@@ -204,14 +204,19 @@ body {
 } */
  
 .status {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  width: 60px; 
+  height: 30px; 
+  border-radius: 10px; 
+  font-size: 0.8rem; 
   font-weight: bold;
   color: #fff;
   cursor: pointer;
   border: none;
- 
+  margin: 8px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .status.ativo {
