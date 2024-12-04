@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/css-adm/editar-carrossel.css">
 </head>
 <body>
-    <?php include "../../assets/menu.html"?>
+    <?php include "../../assets/adm/menu-adm.html"?>
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
