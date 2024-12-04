@@ -295,7 +295,7 @@
         </div>
 
         <dialog class="modal-ver-per-expo" id="modal-ver-per-expo">
-            <?php include "modais/m-perfil-expo.html"; ?>
+            <?php include "assets/modais/m-perfil-expo.html"; ?>
         </dialog>
         <div class="ver-mais-expositor"><!-- botão mais expositores -->
             <button>VER MAIS EXPOSITORES</button>
