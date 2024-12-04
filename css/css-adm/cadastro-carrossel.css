@@ -47,6 +47,21 @@
     transition: all .1s ease-in-out;
 }
 
+.text-up-imgs {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+}
+
 .up-img {
     font-size: 2.5rem;
     color: #007E70;
@@ -62,7 +77,11 @@
 }
 
 .editar {
-    width: 30px;
+    font-size: 1.2rem;
+}
+
+.btn-editar:hover .editar {
+    color: #007E70;;
 }
 
 @media screen and (max-width: 860px) {

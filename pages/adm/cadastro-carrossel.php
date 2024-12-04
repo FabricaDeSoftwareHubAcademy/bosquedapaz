@@ -26,36 +26,44 @@
 
                 <div class="uploads">
 
-                    <div class="up">
-                        <i class="fa-solid fa-upload up-img"></i>
-                    </div>
+                    <label class="up" tabindex="0">
+                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
+                        <span class="text-up-imgs">
+                            <i class="fa-solid fa-upload up-img"></i>
+                        </span>
+                    </label>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
-
                 <div class="uploads">
 
-                    <div class="up">
-                        <i class="fa-solid fa-upload up-img"></i>
-                    </div>
+                    <label class="up" tabindex="0">
+                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
+                        <span class="text-up-imgs">
+                            <i class="fa-solid fa-upload up-img"></i>
+                        </span>
+                    </label>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
-
                 <div class="uploads">
 
-                    <div class="up">
-                        <i class="fa-solid fa-upload up-img"></i>
-                    </div>
+                    <label class="up" tabindex="0">
+                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
+                        <span class="text-up-imgs">
+                            <i class="fa-solid fa-upload up-img"></i>
+                        </span>
+                    </label>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
+
             </section>
 
             <!-- botoes parte de baixo -->
@@ -86,5 +94,6 @@
 
     <!-- link do JavaScript -->
     <script src="../../js/js-menu/js-menu.js"></script>
+    <script src="../../js/js-adm/js-cadastro-carrossel.js"></script>
 </body>
 </html>
