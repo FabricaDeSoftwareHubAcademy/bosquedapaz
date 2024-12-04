@@ -56,3 +56,49 @@
             <!-- mobile menu -->
         </header>
     <!-- fim header -->
+
+    <!-- inicio carrosel -->
+    <section class="carossel">
+        <div class="fundo"> <!-- fundo da imagem -->
+            
+            <div class="imagem"> <!-- imagem -->
+                <section class="slider">
+                    <div class="slider-content">
+                        <input type="radio" name="btn-radio" id="radio1">
+                        <input type="radio" name="btn-radio" id="radio2">
+                        <input type="radio" name="btn-radio" id="radio3">
+                        
+                        <div class="slide-box primeiro">
+                        <img src="imgs/img-home/imagem-carrosel-1.png" alt="" class="img-desktop">
+                        </div>
+            
+                        <div class="slide-box">
+                            <img src="imgs/img-home/imagem-carrossel-2.png" alt="" class="img-desktop">
+                        </div>
+                        
+                        <div class="slide-box">
+                            <img src="imgs/img-home/imagem-carrossel-3.png" alt="" class="img-desktop">
+                        </div>
+                        
+                        <div class="nav-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                        </div>
+            
+                        <div class="nav-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="text-carrossel"> <!-- texto de apresentação -->
+            <h1 class="title-welcome">BEM-VINDO Á FEIRA BOSQUE DA PAZ!</h1>
+            <p class="text-welcome-c">Venha viver uma experiência única em meio à natureza, onde a cultura local, 
+                artesanato autêntico, delícias gastronômicas e a alegria de nossa comunidade se encontram!</p>
+        </div>
+    </section>
+    <!-- inicio carrosel -->

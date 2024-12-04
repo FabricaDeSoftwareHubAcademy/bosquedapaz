@@ -4,19 +4,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
     height: auto;
     margin-bottom: 100px;
 }
 
-.expositores h2 {
+.expositores .title-expositor {
     font-size: 2.5em;
     padding: 30px;
 }
 
 /* linhas em volta */
-.expositores h2::before{
+.expositores .title-expositor::before{
     content: "";
     display: inline;
     border-top: 4px solid #E26C35;
@@ -25,7 +25,7 @@
     padding-left: 60px;
     margin-right: -45px;
 }
-.expositores h2::after{
+.expositores .title-expositor::after{
     content: "";
     display: inline;
     border-bottom: 4px solid #E26C35;
@@ -126,10 +126,11 @@
     background-color: var(--color-rua4);
 }
 
-.informacoes-expositor h3 {
+.informacoes-expositor .nome-expo {
     margin-top: 80px;
     font-size: 1.1rem;
 }
+
 
 #informacao {
     padding: 0;

@@ -1,18 +1,11 @@
-function menuShow() {
-    let menuMobile = document.querySelector('.menu-adm .nav-bar');
-    if (menuMobile.classList.contains('open')) {
-        menuMobile.classList.remove('open')
-    } else {
-        menuMobile.classList.add('open')
-    }
-}
-
 const openButtons = document.querySelectorAll('.open-modal');
 
 openButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modalId = button.getAttribute('data-modal');
+        console.log(modalId);
         const modal = document.getElementById(modalId);
+        console.log(modal);
         modal.showModal();
     })
 })

@@ -8,6 +8,7 @@
 @import url('avisos.css');
 @import url('mapa.css');
 @import url('rodape.css');
+@import url('css-modais/css-m-perfil-expositor.css');
 
 :root {
     --color-artesanato: rgba(13, 71, 161, 0.30);
@@ -157,6 +158,16 @@ main {
     margin-top: -10px;
 }
 
+
+.modal-ver-per-expo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+}
 
 
 /* responsividade para 1500px */
