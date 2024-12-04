@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de tela</title>
+    <title>Editar Carrossel</title>
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="../../css/css-adm/editar-carrossel.css">
-    <link rel="stylesheet" href="../../css/menu-adm.css">
 </head>
 <body>
     <?php include "../../assets/menu.html"?>
@@ -25,33 +24,33 @@
                 <div class="uploads">
 
                     <div class="up">
-                        <img src="../../imgs/img-home/img-carrosel-1.png" alt="Imagem do carrossel 1" class="up-img">
+                        <img src="../../imgs/img-cadastro-carrosel/img-carrosel-1.png" alt="Imagem do carrossel 1" class="up-img">
                     </div>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-editar-expositor/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
                     </button>
                 </div>
 
                 <div class="uploads">
 
                     <div class="up">
-                        <img src="../../imgs/img-home/img-carrossel-2.png" alt="Imagem do carrossel 2" class="up-img">
+                        <img src="../../imgs/img-cadastro-carrosel/img-carrossel-2.png" alt="Imagem do carrossel 2" class="up-img">
                     </div>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-editar-expositor/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
                     </button>
                 </div>
 
                 <div class="uploads">
 
                     <div class="up">
-                        <img src="../../imgs/img-home/img-carrossel-3.png" alt="Imagem do carrossel 3" class="up-img">
+                        <img src="../../imgs/img-cadastro-carrosel/img-carrossel-3.png" alt="Imagem do carrossel 3" class="up-img">
                     </div>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-editar-expositor/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
                     </button>
                 </div>
             </section>
@@ -59,7 +58,7 @@
             <!-- botoes parte de baixo -->
             <div class="btns">
                 <a href="" class="voltar">
-                    <img src="../../imgs/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img src="../../imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">

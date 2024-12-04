@@ -1,3 +1,9 @@
+@import url('style-padrao.css');
+
+.all-content {
+    margin: auto;
+}
+
 .principal {
     display: flex;
     align-items: center;
@@ -110,7 +116,7 @@
     border-radius: 10px;
 }
 
-.btns {
+.buttons {
     padding: 10px;
 }
 
