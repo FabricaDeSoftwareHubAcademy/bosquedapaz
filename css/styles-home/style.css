@@ -8,7 +8,6 @@
 @import url('avisos.css');
 @import url('mapa.css');
 @import url('rodape.css');
-@import url('css-modais/css-m-perfil-expositor.css');
 
 :root {
     --color-artesanato: rgba(13, 71, 161, 0.30);
@@ -74,7 +73,7 @@
 
 .imagem {
     position: absolute;
-    top: 90px;
+    top: 70px;
     width: 100%;
     height: 85%;
     background-color: transparent;
@@ -167,6 +166,9 @@ main {
     left: 0;
     margin: auto;
     z-index: 3;
+    border: none;
+    width: 1200px;
+    border-radius: 5px;
 }
 
 

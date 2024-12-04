@@ -39,7 +39,7 @@
                         <p class="rua rua2"><span>RUA:</span> Laranja</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         <p class="rua rua3"><span>RUA:</span> Verde</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <p class="rua rua4"><span>RUA:</span> Roxa</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                         <p class="rua rua1" ><span>RUA:</span> Amarela</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                         <p class="rua rua2"><span>RUA:</span> Laranja</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                         <p class="rua rua3"><span>RUA:</span> Verde</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -153,7 +153,7 @@
                         <p class="rua rua4"><span>RUA:</span> Roxa</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                         <p class="rua rua1" ><span>RUA:</span> Amarela</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -190,7 +190,7 @@
                         <p class="rua rua2"><span>RUA:</span> Laranja</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@
                         <p class="rua rua3"><span>RUA:</span> Verde</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                         <p class="rua rua4"><span>RUA:</span> Roxa</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -246,7 +246,7 @@
                         <p class="rua rua1" ><span>RUA:</span> Amarela</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -265,7 +265,7 @@
                         <p class="rua rua2"><span>RUA:</span> Laranja</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -284,7 +284,7 @@
                         <p class="rua rua3"><span>RUA:</span> Verde</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>
@@ -303,7 +303,7 @@
                         <p class="rua rua4"><span>RUA:</span> Roxa</p>
                     </div>
                     <div class="botao">
-                        <button>VER</button>
+                        <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
                     </div>
                 </div>
             </div>

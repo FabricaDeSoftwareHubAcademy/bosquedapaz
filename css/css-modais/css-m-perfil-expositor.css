@@ -1,6 +1,7 @@
 
 .all-content {
     margin: auto;
+    background-color: rgba(246, 246, 246, 0.794);
 }
 
 .parte-superior {
@@ -9,6 +10,22 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .content-fp {
@@ -67,13 +84,13 @@
 }
 
 .text-cor-r {
-    background-color: #5CB74A;
     width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     font-weight: 600;
+    background-color: var(--color-rua3);
 }
 
 .lado-direito {

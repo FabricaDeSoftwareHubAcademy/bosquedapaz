@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicial</title>
     <link rel="stylesheet" href="css/styles-home/style.css">
+    <link rel="stylesheet" href="css/css-modais/css-m-perfil-expositor.css">
 </head>
 <!-- inicio body -->
 <body class="home">
