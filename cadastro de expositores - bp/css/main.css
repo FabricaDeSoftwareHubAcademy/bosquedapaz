@@ -94,13 +94,14 @@ body {
     left: 43%;
 }
 .caixa-contato input{
+
     width: 190px;
     height: 5vh;
     margin: 20px;
     border-radius: 5px;
     border: none;  
     border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1; 
+    border-right: 2px solid #9d9fa1;
 }
  
 
@@ -231,7 +232,7 @@ label#salvar-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(88, 88, 88, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,7 +277,7 @@ input[type="checkbox"]:checked + .modal-container {
 
 .botoes label.salvar {
     background-color: #4CAF50;
-    width: 130px;
+    width: 100px;
 }
 
 
@@ -305,17 +306,17 @@ input[type="checkbox"]:checked + .modal-container {
 
 
 
-.edital-feira{
+.edital{
     height: 50px;
     left: 50px;
 }
 
-.edital-feira a{
+.edital a{
     text-decoration: none;
     color: white;
 }
  
-.edital-feira button{
+.edital{
     position: absolute;
     top: 68%;
     left: 9%;
@@ -339,18 +340,13 @@ input[type="checkbox"]:checked + .modal-container {
 }   
  
 
-.expositor-kids{
-    height: 45px;
-    width: 150px;
-}
-
 .expositor-kids a{
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
  
-.expositor-kids button{
+.expositor-kids{
     height: 35px;
     width: 185px; 
     border: none;
@@ -373,7 +369,7 @@ input[type="checkbox"]:checked + .modal-container {
     color: white;
     font-size: 18px ;
 }
-.artistas button{
+.artistas{
     height: 35px;
     width: 185px;
     border: none;
@@ -409,26 +405,7 @@ input[type="checkbox"]:checked + .modal-container {
     left: 50px;
 }
 
-
-/* .salvar-btn {
-    height: 510px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #007E70;
-    border: none;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-    box-shadow: 0px 4px 6px #027C8D;
-} */
-
-
-
-
-
-
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     body {
         font-size: 14px;
         padding: 10px;
@@ -440,37 +417,36 @@ input[type="checkbox"]:checked + .modal-container {
         width: 70px;
         height: 80px;
         position: fixed;
-        left: 2%;
+        left: -2%;
         top: 10%;
     }
 
     .bola-verde2 {
-        /* margin-left: -30px;
-        margin-top: 50px; */
         width: 70px;
         height: 90px;
         position: fixed;
-        left: 85%;
+        left: 80%;
         top: 30%;
     }
 
     .bola-rosa {
         width: 90px;
         height: 100px;
-        /* margin-top: 72px;
-        margin-left: -45px; */
         position: fixed;
-        left: 80%;
-        top: 85%;
+        left: 75%;
+        top: 90%;
     }
-
+    
     .box {
-        margin-left: -2px;
-        margin-top: 13%;
-        width: 396px;
-        height: 780px;
-        position: fixed;
+        /* background-color: red; */
+        margin-top: 25%;
+        margin-left: -1px;
+        width: 44vh;
+        height: 250%;
         top: 6%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .title {
@@ -480,13 +456,14 @@ input[type="checkbox"]:checked + .modal-container {
         white-space: nowrap;
         font-size: 18px;
         position: relative;
-        left: -43%;
+        left: -24%;
     }
     
     .caixa-formulario{
         width: 100%;
         height: auto;
-        margin-left: 0;
+        margin-left: -80px;
+        margin-top: -5px;
     }
 
     .caixa-formulario input{
@@ -495,21 +472,139 @@ input[type="checkbox"]:checked + .modal-container {
     }
 
     .caixa-contato{  
-        margin-left: -40%;
-        margin-top: 75%; 
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        margin-left: -38%;
+        margin-top: 55%;
     }
 
+    .caixa-contato input{
+        width: 79%;
+        height: 40px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-bottom: 2px solid #9d9fa1;
+        border-right: 2px solid #9d9fa1;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    .caixa-contato .input-img label{
+        display: flex;
+        align-self: start;
+        margin-left: 16px;
+    }
+
+    .formulario{
+        margin-top: 84vh;
+        margin-left: -24vh;
+    }
+
+    .formulario input{
+        width: 95%;
+        height: 40px;
+    }
+
+    .formulario-input{
+        /* background-color: red; */
+        margin-left: -24vh;
+        margin-top: 30vh;
+    }
+
+    .formulario-input input{
+        width: 95%;
+        height: 40px;
+    }
+
+    .box .edital{
+        margin-top: 27vh;
+        /* margin-left: 0vh; */
+    }
+
+
+    .box .termos{
+        width: 100%;
+        position: relative;
+        left: -8vh;
+        top: 122vh;
+        white-space: nowrap; /* Evita a quebra de linha */
+        /* font-size: 14px;  */
+    }
+
+    .caixa-checkbox {
+        margin-top: 119.5vh;
+        margin-left: 16vh;
+        display: flex;
+        gap: 10px; 
+        align-items: center; 
+    }
     
-
-
-
-
-
+    .caixa-checkbox input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
     
+    .caixa-checkbox label {
+        margin-left: -10px;
+        font-size: 15px;
+        display: inline-block; 
+        vertical-align: middle; 
+    }
 
-  
+    .box .expositor-kids{
+        width: 130px;
+        margin-left: -17vh;
+        margin-top: -7vh;
+    }
+    .expositor-kids a{
+        font-size: 16px;
+    }
+    
+    .artistas{
+        width: 130px;
+        margin-left: 4vh;
+        margin-top: -7vh;
+    }
+    .artistas a{
+        font-size: 16px;
+    }
+
+    .box .botoes-salvar{
+        margin-left: -28vh;
+        margin-top: 47vh;
+    }
+
+    .salvar-btn{
+        width: 150px;
+        height: 50px;
+    }
+    
+    label#salvar-btn.salvar-btn{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botoes-cancelar{
+        margin-left: -5vh;
+        margin-top: 47vh;
+    }
+
+    .botoes-cancelar button{
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
     
