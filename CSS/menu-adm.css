@@ -203,6 +203,9 @@
         border-top: 2px solid rgba(0, 0, 0, 0.301);
         border-bottom: 2px solid rgba(0, 0, 0, 0.301);
     }
+    .dogs{
+        display: none;
+    }
 }
 
 @media(max-width: 650px) {
@@ -218,6 +221,9 @@
     }
 
     .login {
+        display: none;
+    }
+    .dogs{
         display: none;
     }
 
