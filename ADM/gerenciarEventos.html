@@ -105,7 +105,9 @@
                                 <a href=""><img src="imgADM/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
-                                <a href=""><img src="imgADM/Frame.png" alt="Adicionar Fotos"></a>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="imgADM/Frame.png" alt="Adicionar Fotos">
+                                </button>
                             </td>
                         </tr>
                         <tr>
@@ -122,7 +124,9 @@
                                 <a href=""><img src="imgADM/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
-                                <a href=""><img src="imgADM/Frame.png" alt="Adicionar Fotos"></a>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="imgADM/Frame.png" alt="Adicionar Fotos">
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -133,8 +137,15 @@
             </div>
         </div>
     </main>
-
-
+    <div class="modal" id="modal-fotos">
+        <div class="modal-content">
+            <span class="close-modal" data-modal="modal-fotos">&times;</span>
+            <h3>Adicionar Fotos ao Evento</h3>
+            <input type="file" multiple>
+            <button class="submit-fotos">Adicionar Fotos</button>
+        </div>
+    </div>
+    
     <div class="bolas-fundo">
         <img src="../ADM/imgADM/Group 455.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../ADM/imgADM/Group 456.png" alt="Bola Fundo 2" class="bola-verde2">
@@ -142,6 +153,7 @@
     </div>
 
     <script src="../Home/js/main.js" defer></script>
+    <script src="js/modalFotos.js" defer></script>
 </body>
 
 </html>
