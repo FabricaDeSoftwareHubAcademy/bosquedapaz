@@ -37,31 +37,11 @@
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
-                <div class="uploads">
+                
+                <div class="uploads upload-text">
 
-                    <label class="up" tabindex="0">
-                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
-                        <span class="text-up-imgs">
-                            <i class="fa-solid fa-upload up-img"></i>
-                        </span>
-                    </label>
-
-                    <button class="btn-editar">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </div>
-                <div class="uploads">
-
-                    <label class="up" tabindex="0">
-                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
-                        <span class="text-up-imgs">
-                            <i class="fa-solid fa-upload up-img"></i>
-                        </span>
-                    </label>
-
-                    <button class="btn-editar">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
+                    <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
+                    <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
                 </div>
 
             </section>

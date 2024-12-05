@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Carrossel</title>
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="../../css/css-adm/editar-carrossel.css">
 </head>
@@ -28,7 +30,7 @@
                     </div>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
+                    <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
 
@@ -39,7 +41,7 @@
                     </div>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
 
@@ -50,8 +52,14 @@
                     </div>
 
                     <button class="btn-editar">
-                        <img src="../../imgs/img-cadastro-carrosel/img-pe.png" alt="imagem de laipiz" class="editar">
+                        <i class="fa-solid fa-pen editar"></i>
                     </button>
+                </div>
+
+                <div class="uploads upload-text">
+
+                    <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
+                    <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
                 </div>
             </section>
 

@@ -71,6 +71,45 @@
     color: black;
 }
 
+.upload-text {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.label-input {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.input-text {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid #007E70;
+    border-right: 3px solid #007E70;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.input-text:hover {
+    border-bottom: 0px solid #007E70;
+    border-right: 0px solid #007E70;
+    border-top: 3px solid #007E70;
+    border-left: 3px solid #007E70;
+    transition: all .1s ease-in-out;
+}
+
+.input-text:hover .label-input {
+    color: #007E70;
+}
+
 .btn-editar {
     width: 30px;
     cursor: pointer;
@@ -90,7 +129,6 @@
         height: auto;
         max-height: 320px;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         padding: 10px;
@@ -98,8 +136,8 @@
     }
 
     .uploads {
-        width: 110px;
-        height: 135px;
+        width: 180px;
+        height: 190px;
         display: flex;
         gap: 5px;
         flex-direction: column;
@@ -108,8 +146,8 @@
     }
     
     .up {
-        width: 110px;
-        height: 110px;
+        width: 180px;
+        height: 190px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -122,6 +160,11 @@
     .up-img {
         font-size: 1.5rem;
         color: #007E70;
+    }
+
+    .upload-text {
+        width: 230px;
+        height: 100px;
     }
 
     .btn-editar {
