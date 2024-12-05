@@ -30,13 +30,15 @@
                             <h2 class="text sobre-empresa">Sobre Empresa</h2>
                             <p class="text-sob-empre">Nossa jornada começou com uma simples ideia: tornar os momentos especiais de nossos pets ainda mais memoráveis. Sabemos que nossos cães são parte fundamental de nossas vidas e acreditamos que eles merecem um tratamento especial, especialmente em seu dia especial.</p>
                         </div>
-                        <div class="content-num-barr">
-                            <h2 class="text num-barraca">Numero da Barraca</h2>
-                            <p class="text-num-barr">N° 86</p>
-                        </div>
-                        <div class="content-cor-r">
-                            <h2 class="text cor-rua">Cor da Rua</h2>
-                            <p class="text-cor-r">cor</p>
+                        <div class="cor-rua">
+                            <div class="content-num-barr">
+                                <h2 class="text num-barraca">Numero da Barraca</h2>
+                                <p class="text-num-barr">N° 86</p>
+                            </div>
+                            <div class="content-cor-r">
+                                <h2 class="text cor-rua">Cor da Rua</h2>
+                                <p class="text-cor-r">cor</p>
+                            </div>
                         </div>
                         <!-- <div class="content-metod-pag">
                             <h2 class="text metod-pag">Método Pagamento</h2>
@@ -46,16 +48,20 @@
                         </div> -->
                     </div>
                     <div class="lado lado-direito">
-                        <div class="content-info-p">
-                            <h2 class="text info-pessoais">Informações Pessoais</h2>
-                            <ul class="list-cont">
-                                <li class="li-cont"><i class="fa-brands fa-instagram icon"></i> @cakepetcg</li>
-                                <li class="li-cont"><i class="fa-solid fa-phone icon"></i> (67) 99914-5079</li>
-                                <li class="li-cont"><i class="fa-regular fa-envelope icon"></i> cakepetcg@contato.com</li>
-                            </ul>
+                        <div class="info-galeria">
+                            <div class="content-info-p">
+                                <h2 class="text info-pessoais">Informações Pessoais</h2>
+                                <ul class="list-cont">
+                                    <li class="li-cont"><i class="fa-brands fa-instagram icon"></i> @cakepetcg</li>
+                                    <li class="li-cont"><i class="fa-solid fa-phone icon"></i> (67) 99914-5079</li>
+                                    <li class="li-cont"><i class="fa-regular fa-envelope icon"></i> cakepetcg@contato.com</li>
+                                </ul>
+                            </div>
+                            <div class="content-galeria">
+                                <h2 class="text galeria">Galeria de Imagens</h2>
+                                <img src="../../imgs/img-editar-expositor/img-galeria.png" alt="imagem" class="img-caleria">
+                            </div>
                         </div>
-                        <h2 class="text galeria">Galeria de Imagens</h2>
-                        <img src="../../imgs/img-editar-expositor/img-galeria.png" alt="imagem" class="img-caleria">
                         <div class="buttons">
                             <button class="btn-volt btn-ac" id="btn-voltar"><a href="#" class="href">Voltar</a></button>
                             <button class="btn-edit btn-ac open-modal" data-modal="modal-form-editar">Editar</button>

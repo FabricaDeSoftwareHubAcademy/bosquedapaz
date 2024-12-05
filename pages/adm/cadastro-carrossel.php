@@ -33,7 +33,7 @@
                         </span>
                     </label>
 
-                    <button class="btn-editar">
+                    <button class="btn-editar open-modal" data-modal="m-nova-img">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
@@ -43,6 +43,10 @@
                     <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
                     <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
                 </div>
+
+                <dialog class="m-nova-img" id="m-nova-img">
+                    <?php include "../../assets/modais/m-nova-img-carrossel.html"; ?>
+                </dialog>
 
             </section>
 
@@ -75,5 +79,6 @@
     <!-- link do JavaScript -->
     <script src="../../js/js-menu/js-menu.js"></script>
     <script src="../../js/js-adm/js-cadastro-carrossel.js"></script>
+    <script src="../../js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>

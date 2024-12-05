@@ -58,6 +58,12 @@
     
 }
 
+.cor-rua {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .nome {
     font-size: 1.7rem;
     font-weight: 600;
@@ -85,6 +91,12 @@
 
 .lado-direito {
     background-color: transparent;
+}
+
+.info-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .list-cont {
@@ -207,19 +219,20 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1150px) {
     .informacoes {
-        justify-content: left;
-        flex-wrap: wrap;
-        overflow: scroll;
+        flex-direction: column;
         padding-left: 10px;
+        width: 100%;
+        gap: 0px;
     }
     .img-banner {
         width: 850px;
     }
 
     .lado {
-        width: 350px;
+        width: auto;
+        max-width: 600px;
     }
 
     .lado-esquerdo {
@@ -251,4 +264,82 @@
     }
 }
 
+@media screen and (max-width: 850px) {
+    .informacoes {
+        flex-direction: column;
+        padding-left: 10px;
+        width: 100%;
+        gap: 0px;
+    }
+    .img-banner {
+        width: 670px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .informacoes {
+        flex-direction: column;
+        padding-left: 10px;
+        width: 100%;
+        gap: 0px;
+    }
+    .img-banner {
+        width: 600px;
+    }
+
+    .cor-rua {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .info-galeria {
+        flex-direction: row;
+        gap: 30px;
+        
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .informacoes {
+        flex-direction: column;
+        padding-left: 0px;
+        width: 100%;
+        gap: 0px;
+        overflow: scroll;
+    }
+
+    .parte-superior {
+        width: 100%;
+        padding: 0px;
+        justify-content: start;
+    }
+
+    .img-banner {
+        width: 300px;
+        height: 70px;
+        margin: 0px;
+    }
+    
+    .lado {
+        margin: 0px;
+    }
+
+    .content-fp {
+        margin: 0px;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .cor-rua {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .info-galeria {
+        flex-direction: row;
+        gap: 30px;
+        
+    }
+
+}
 

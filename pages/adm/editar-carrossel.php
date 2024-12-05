@@ -24,43 +24,47 @@
             <section class="up-imgs">
 
                 <div class="uploads">
-
+                    
                     <div class="up">
                         <img src="../../imgs/img-cadastro-carrosel/img-carrosel-1.png" alt="Imagem do carrossel 1" class="up-img">
                     </div>
-
-                    <button class="btn-editar">
-                    <i class="fa-solid fa-pen editar"></i>
+                    
+                    <button class="btn-editar open-modal" data-modal="m-nova-img">
+                        <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
-
+                
                 <div class="uploads">
-
+                    
                     <div class="up">
                         <img src="../../imgs/img-cadastro-carrosel/img-carrossel-2.png" alt="Imagem do carrossel 2" class="up-img">
                     </div>
-
-                    <button class="btn-editar">
+                    
+                    <button class="btn-editar open-modal" data-modal="m-nova-img">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
-
+                
                 <div class="uploads">
-
+                    
                     <div class="up">
                         <img src="../../imgs/img-cadastro-carrosel/img-carrossel-3.png" alt="Imagem do carrossel 3" class="up-img">
                     </div>
-
-                    <button class="btn-editar">
+                    
+                    <button class="btn-editar open-modal" data-modal="m-nova-img">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
                 </div>
-
+                
                 <div class="uploads upload-text">
-
+                    
                     <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
                     <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
                 </div>
+                
+                <dialog class="m-nova-img" id="m-nova-img">
+                    <?php include "../../assets/modais/m-nova-img-carrossel.html"; ?>
+                </dialog>
             </section>
 
             <!-- botoes parte de baixo -->
@@ -91,5 +95,6 @@
 
     <!-- link do JavaScript -->
     <script src="../../js/js-menu/js-menu.js"></script>
+    <script src="../../js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>
