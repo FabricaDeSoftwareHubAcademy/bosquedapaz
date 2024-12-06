@@ -218,7 +218,6 @@
         justify-content: center;
         padding: 10px;
         gap: 10px;
-        overflow: scroll;
     }
 
     .uploads {
@@ -248,5 +247,11 @@
 
     .editar {
         width: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .up-imgs {
+        overflow-y: scroll;
     }
 }

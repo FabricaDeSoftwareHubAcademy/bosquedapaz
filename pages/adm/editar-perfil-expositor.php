@@ -85,6 +85,7 @@
     </div>
 
     <!-- link do JavaScript -->
+    <script src="../../js/js-menu/js-menu.js"></script>
     <script src="../../js/js-modais/js-abrir-modal.js"></script>
     <script src="../../js/js-modais/js-editar-expositor.js"></script>
 </body>

@@ -324,7 +324,7 @@
     }
 
     .img-banner {
-        width: 300px;
+        width: 360px;
         height: 70px;
         margin: 0px;
     }
@@ -354,5 +354,33 @@
         
     }
 
+}
+
+@media screen and (max-width: 380px) {
+    .img-banner {
+        width: 280px;
+        height: 50px;
+    }
+
+    .content-fp {
+        padding: 0px;
+    }
+
+    .content-sob-empre {
+        height: 180px;
+    }
+
+    .text-sob-empre {
+        width: 90%;
+        padding: 0px;
+    }
+
+    .img-caleria {
+        width: 280px;
+    }
+
+    .buttons {
+        padding: 0px;
+    }
 }
 
