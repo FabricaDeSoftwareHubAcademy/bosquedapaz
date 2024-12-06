@@ -79,28 +79,6 @@
     background-color: transparent;
 }
 
-.text-carrossel {
-    max-width: 80%;
-    height: auto;
-    max-height: 200px;
-    position: absolute;
-    background-color: transparent;
-    z-index: 2;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-}
-
-.title-welcome, .text-welcome-c {
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-
-
 /* estilizando main */
 
 main {
