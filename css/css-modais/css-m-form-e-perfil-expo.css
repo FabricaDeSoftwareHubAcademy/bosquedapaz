@@ -144,9 +144,10 @@
 
 @media screen and (max-width: 1100px) {
     .formulario {
+        width: 800px;
         background-color: white;
-        flex-direction: column;
-        overflow: scroll;
+        flex-direction: row;
+        align-items: start;
         height: auto;
     }
 
@@ -161,7 +162,7 @@
 
     .input_desc {
         width: 300px;
-        height: 100px;
+        height: 200px;
     }
 
     .parti-2 {
@@ -170,7 +171,78 @@
         height: auto;
     }
 }
+@media screen and (max-width: 850px) {
+    .formulario {
+        width: 700px;
+        background-color: white;
+        flex-direction: row;
+        align-items: start;
+        height: auto;
+    }
 
-@media screen and (max-width: 860px) {
+    .input_desc {
+        width: 270px;
+        height: 200px;
+    }
 
+    .imagens {
+        width: 300px;
+        height: 200px;
+        background-color: rgba(240, 240, 240, 0.8);
+    }
+
+}
+@media screen and (max-width: 780px) {
+    .formulario {
+        width: 450px;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .parti-1, .parti-2 {
+        width: 300px;
+    }
+
+    .input_desc {
+        width: 270px;
+        height: 200px;
+    }
+
+    .imagens {
+        width: 270px;
+        height: 200px;
+        background-color: rgba(240, 240, 240, 0.8);
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .modal-editar {
+        width: 100%;
+        height: 100%;
+    }
+    .formulario {
+        width: 320px;
+        height: auto;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+
+    }
+    .parti-1, .parti-2 {
+        width: 300px;
+    }
+
+    .input_desc {
+        width: 270px;
+        height: 70px;
+    }
+
+    .imagens {
+        width: 270px;
+        height: 100px;
+        background-color: rgba(240, 240, 240, 0.8);
+    }
 }

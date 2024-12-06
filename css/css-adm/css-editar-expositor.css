@@ -300,6 +300,15 @@
 }
 
 @media screen and (max-width: 450px) {
+    .principal {
+        overflow-y: scroll;
+        padding-bottom: 30px;
+    }
+
+    .principal .box {
+        height: auto;
+    }
+
     .informacoes {
         flex-direction: column;
         padding-left: 0px;
@@ -330,14 +339,18 @@
         flex-direction: column;
     }
 
+    .foto-perfil {
+        width: 90px;
+    }
+
     .cor-rua {
-        flex-direction: row;
-        gap: 80px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .info-galeria {
-        flex-direction: row;
-        gap: 30px;
+        flex-direction: column;
+        gap: 10px;
         
     }
 
