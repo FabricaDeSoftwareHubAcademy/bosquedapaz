@@ -220,12 +220,16 @@ h2{
         width: 100%;  
     }
     .input-group{
-        /* display: flex; */
+        
         flex-direction: column;
         gap: 5px;
-        /* width: 370px; */
+        
     }
     .form-box .input-group label{
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 5px;
         color: #3d3d3d;
         font-weight: bold;
         display: flex;
@@ -282,6 +286,12 @@ h2{
     .form-box .input-group input{
         width: 340px;
         padding-bottom: 8px;
+    }
+    .form-box .input-group label{
+        font-size: 10px;
+    }
+    .form-box .input-group select{
+        font-size: 12px;
     }
    
 }
