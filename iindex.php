@@ -16,12 +16,12 @@
     <!-- inicio main -->
     <main>
         
-        <!-- importando informações da feira -->
-        <?php include "assets/home/info-sobre-feira.html"; ?>
         
         <!-- importando categoria -->
         <?php include "assets/home/categoria.html"; ?>
-
+        
+        <!-- importando informações da feira -->
+        <?php include "assets/home/info-sobre-feira.html"; ?>
 
         <!-- incluindo expositores -->
         <?php include "assets/home/lista-expositor.php"; ?>

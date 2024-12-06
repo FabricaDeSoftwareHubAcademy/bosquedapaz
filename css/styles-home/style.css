@@ -95,17 +95,17 @@ main {
 
 /* informações sobre a feira */
 .informacoes {
-    margin: 0px 0px 50px 0px;
+    margin: 50px auto 0px auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    max-width: 1400px;
+    gap: 20px;
+    max-width: 80%;
 }
 
 .info {
-    width: 300px;
-    padding: 10px 20px;
+    width: 270px;
     display: flex;
     flex-direction: row;
 }
@@ -135,6 +135,23 @@ main {
     margin-top: -10px;
 }
 
+.iu {
+    width: 180px;
+    height: 100px;
+}
+
+.iu .imu {
+    width: 100px;
+    height: 100px;
+}
+
+.eu {
+    width: 70px;
+}
+
+.pu {
+    width: 70px;
+}
 
 .modal-ver-per-expo {
     margin: auto;
