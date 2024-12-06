@@ -1,6 +1,7 @@
 <?php
 $ips_permitidos = [
-    "192.168.56.1",
+    '127.0.0.1',      // IPv4 local (localhost)
+    '::1',            // IPv6 local (localhost)
 ];
 
 $ip_visitante = $_SERVER['REMOTE_ADDR'];
