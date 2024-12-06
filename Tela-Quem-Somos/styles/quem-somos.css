@@ -369,6 +369,7 @@ a{
     justify-content: center;
     text-align: center;
     font-size: 3.5rem;
+    right: 0%;
    
     
   }
@@ -502,35 +503,6 @@ a{
 
 
 
-
-
-@media(max-width:400px){
-    .section-bosque-quem-somos .div-text-sobre .titulo, .titulo span{
-        display: flex;
-        flex-direction: column;
-        font-size: 2.5rem;
-    }
-    .section-bosque-quem-somos .div-text-sobre .somos-apaixonados{
-        
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        font-size: 1.2rem;
-    }
-    .section-expositor-quem-somos .expositor, .expositor-p, .botão-expositor{
-        display: flex;
-        position: relative;
-        bottom: 10cm;
-        
-    }
-}
-
-
-
-
-
-
-
 @media (max-width: 450px){
 
 
@@ -591,7 +563,7 @@ a{
         flex-direction: column;
         width: 100%;
         align-items: center;
-           box-shadow: 1px 1px 0px 0px orangered;
+           box-shadow: 2px 2px 0px 0px orangered;
 
         
     }
@@ -614,7 +586,7 @@ a{
         flex-direction: column;
         position: relative;
         font-size: 2.5rem;
-        right: 4%;
+        right: 1%;
         margin-top: 120px;
     }
    
