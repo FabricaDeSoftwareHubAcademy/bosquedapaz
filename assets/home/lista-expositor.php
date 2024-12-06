@@ -6,7 +6,7 @@
     <title>Lista expositor</title>
 </head>
 <body>
-    <section class="expositores">
+    <section class="expositores" id="expositores">
         <h2 class="title-expositor">NOSSOS EXPOSITORES</h2>
         <p class="text-ver-expositores">Veja como são nossos expositores e venha explorar, apoiar e compartilhar uma experiência inesquecível conosco!</p>
         <div class="expositor-lista">
@@ -318,6 +318,5 @@
             
     </section>
     <!-- fim seja expositor -->
-
 
     <script src="../js/js-modais/js-abrir-modal.js"></script>
