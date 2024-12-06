@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('menu-adm.css');
+@import url('menu-home.css');
 
 * {
     margin: 0;
@@ -79,7 +79,7 @@ body {
 
 .circulo2-guilherme {
     position: absolute;
-    top: 825px;
+    top: 795px;
     left: 70px;
     z-index: 1;
     width: 70px;
