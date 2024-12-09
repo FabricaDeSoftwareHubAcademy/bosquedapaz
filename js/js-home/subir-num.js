@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", setTimeout( n = () => {
     const ncs = document.querySelectorAll('.ncs');
     const speed = 200;
 
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         var elements = document.querySelector('#inc');
-        elements.addEventListener('mouseover', updateCount());
+        elements.addEventListener('mousehover', updateCount());
         // updateCount();
     });
-})
+}, 3000)
+)
