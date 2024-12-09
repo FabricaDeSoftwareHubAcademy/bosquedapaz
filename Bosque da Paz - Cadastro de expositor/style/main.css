@@ -1,0 +1,689 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+     
+}
+ 
+ 
+.bola-verde1{
+    position: absolute;
+    top: 15%;
+    left: -5px;
+    z-index: 1;
+    
+}
+ 
+.bola-verde2{
+    position: absolute;
+    top: 18%;
+    left: 92.6%;
+    z-index: 1;
+}
+ 
+.bola-rosa{
+    position: absolute;
+    top: 77.2%;
+    left: 88.3%;
+    z-index: 1;
+    
+}
+
+
+ 
+.box{
+    display: flex;
+    padding: 100px;
+    width: 1750px;
+    height: auto;
+    background-color: red;
+    margin-left: 6%;
+    margin: 50px;
+    position: relative;
+    top:-30px;
+    background: rgba(170, 165, 165, 0.17);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    z-index: 2;
+}
+ .title{
+    height: 10%;
+    width: 37%;
+    position: relative;
+    left: 57vh;
+    top: -10vh;
+    font-size: 30px;
+
+    text-transform: uppercase;
+}
+.caixa-formulario{
+    position: absolute;
+    top: 100px;
+    
+   
+}
+.caixa-formulario input{
+    width: 50vh;
+    height: 5vh;
+    margin: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+ 
+.caixa-formulario label{
+    position: absolute;
+    left: 26px;
+}
+
+.caixa-contato{
+    z-index: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13%;
+    left: 43%;
+}
+.caixa-contato input{
+
+    width: 190px;
+    height: 5vh;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;  
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+ 
+
+.caixa-contato label{
+    display: block;
+    position: relative;
+    left: 8%;
+}
+
+
+
+.input-img{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.input-img label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    margin-left: -47px;
+}
+
+.style-button{
+    height: 130px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius:5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+
+
+.upload{
+    font-size: 6rem;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 15%;
+    color: black;
+}
+ 
+.formulario {
+    width: 300px;  
+    position: absolute;
+    left: 68%;
+    top: 13%;
+}
+
+.formulario input{
+    width: 250px;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.formulario label {
+    display: block;              
+    overflow: hidden;          
+    width: 100%;                
+}
+ 
+.formulario-input label {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.formulario-input input{
+    width: 250px;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.formulario-input {
+    position:absolute;
+    top: 38%;
+    left: 68%;
+    width: 300px;
+    border: none;
+}
+   
+.botoes-salvar{
+    position: absolute;
+    left: 73%;
+    top: 64%;
+
+}
+
+label#salvar-btn {
+    display: inline-block;  
+    background-color: #4CAF50;
+    color: white;
+    padding: 9px 50px;
+    background-color: #FF3877;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+    
+}
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 88, 88, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked + .modal-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.botoes label {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.botoes label.salvar {
+    background-color: #4CAF50;
+    width: 100px;
+}
+
+
+
+.botoes-cancelar{
+    position: absolute;
+    left: 62%;
+    top: 64%;
+}
+
+.btn-cancelar{
+    display: inline-block;  
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px 40px;
+    background-color: #007E70;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    
+}
+
+
+
+
+.edital{
+    height: 50px;
+    left: 50px;
+}
+
+.edital a{
+    text-decoration: none;
+    color: white;
+}
+ 
+.edital{
+    position: absolute;
+    top: 68%;
+    left: 9%;
+    height: 35px;
+    width: 190px;
+    border-radius: 10px;
+    border: none;
+    background-color: #007E70;
+    color: white;
+    font-size: 18px;
+}
+ 
+.termos{
+    height: 20px;
+    width: 250px;
+    color: red;
+    position: relative;
+    top: 55vh;
+    left: -59vh;
+   
+}   
+ 
+
+.expositor-kids a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+ 
+.expositor-kids{
+    height: 35px;
+    width: 185px; 
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+    position: absolute;
+    top: 83%;
+    left: 54.4%;
+}
+ 
+.artistas{
+    height: 45px;
+    width: 150px;
+}
+
+.artistas a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px ;
+}
+.artistas{
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+    position: absolute;
+    top: 83%;
+    left: 43%;
+}
+ 
+ 
+.caixa-checkbox {
+    display: flex;      
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 36.4%; 
+    margin-left: -53%;
+}
+
+.caixa-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.voltar{
+    position: absolute;
+    top: 93%;
+    font-size: 1.5rem;
+    color: black;
+    left: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .bola-verde1 {
+        width: 70px;
+        height: 80px;
+        position: fixed;
+        left: -2%;
+        top: 10%;
+    }
+
+    .bola-verde2 {
+        width: 70px;
+        height: 90px;
+        position: fixed;
+        left: 80%;
+        top: 30%;
+    }
+
+    .bola-rosa {
+        width: 90px;
+        height: 100px;
+        position: fixed;
+        left: 75%;
+        top: 90%;
+    }
+    
+    .box {
+        margin-top: 25%;
+        margin-left: -1px;
+        width: 44vh;
+        height: 300%;
+        top: 6%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title {
+        min-width: 260px;
+        max-width: 100%;
+        height: 20px;
+        white-space: nowrap;
+        font-size: 18px;
+        position: relative;
+        left: -24%;
+    }
+    
+    .caixa-formulario{
+        width: 100%;
+        height: auto;
+        margin-left: -80px;
+        margin-top: -5px;
+    }
+
+    .caixa-formulario input{
+        width: 75%;
+        height: 40px;
+    }
+
+    .caixa-contato{  
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        margin-left: -38%;
+        margin-top: 63%;
+    }
+
+    .caixa-contato input{
+        width: 79%;
+        height: 40px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-bottom: 2px solid #9d9fa1;
+        border-right: 2px solid #9d9fa1;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+
+    .caixa-contato .input-img label{
+        display: flex;
+        align-self: start;
+        margin-left: 5px;
+        margin-top: -30px;
+    }
+
+    .style-button{
+        position: relative;
+        top: -3px;
+    }
+
+    .formulario{
+        margin-top: 84vh;
+        margin-left: -24vh;
+    }
+
+    .formulario input{
+        width: 95%;
+        height: 40px;
+    }
+
+    .formulario-input{
+        
+        margin-left: -24vh;
+        margin-top: 30vh;
+    }
+
+    .formulario-input input{
+        width: 95%;
+        height: 40px;
+    }
+
+    .box .edital{
+        margin-top: 27vh;
+        
+    }
+
+
+    .box .termos{
+        width: 100%;
+        position: relative;
+        left: -8vh;
+        top: 122vh;
+        white-space: nowrap; 
+      
+    }
+
+    .caixa-checkbox {
+        margin-top: 119.5vh;
+        margin-left: 16vh;
+        display: flex;
+        gap: 10px; 
+        align-items: center; 
+    }
+    
+    .caixa-checkbox input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+    
+    .caixa-checkbox label {
+        margin-left: -10px;
+        font-size: 15px;
+        display: inline-block; 
+        vertical-align: middle; 
+    }
+
+    .box .expositor-kids{
+        width: 130px;
+        margin-left: -17vh;
+        margin-top: -7vh;
+    }
+    .expositor-kids a{
+        font-size: 16px;
+    }
+    
+    .artistas{
+        width: 130px;
+        margin-left: 4vh;
+        margin-top: -7vh;
+    }
+    .artistas a{
+        font-size: 16px;
+    }
+
+    .box .botoes-salvar{
+        margin-left: -28vh;
+        margin-top: 47vh;
+    }
+
+    .salvar-btn{
+        width: 150px;
+        height: 50px;
+    }
+    
+    label#salvar-btn.salvar-btn{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botoes-cancelar{
+        margin-left: -5vh;
+        margin-top: 47vh;
+    }
+
+    .botoes-cancelar button{
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+/* IPHONE SE */
+@media screen and (max-width: 370px) {
+    .box{
+        width: 92%;
+        height: 95em;
+    }
+    .title{
+        margin-left: -50px;
+    }
+    .caixa-contato{
+        margin-top: 74%;
+        margin-left:-120px;
+    }
+    .formulario-input{
+        margin-top: 130%;
+        margin-left: -165px;
+    }
+    .formulario-input input{
+        width: 80%;
+    }
+    .formulario-input label{
+        font-size: 13px;
+    }
+    .formulario{
+        margin-left: -165px;
+        margin-top: 190%;
+        width: 77%;
+    }
+    .expositor-kids{
+        /* background-color: red; */
+        position: absolute;
+        top: 86%;
+        left: 45%;
+    }
+    .artistas{
+        position: absolute;
+        top: 86%;
+        left: 45%;
+    }
+
+    .edital{
+        position: absolute;
+        top: 73%;
+        left:10%;
+        width: 40%;
+        font-size: 16px;
+    }
+    .termos{
+        width: 100%;
+        margin-top: 190%;
+        margin-left: -50px;  
+    }
+
+    .caixa-checkbox{
+        width: 70px;
+        position: relative;
+        top: -2px;
+        left: -30px;
+        
+    }
+    .caixa-checkbox label{
+        font-size: 14px;
+    }
+
+    .botoes-salvar .salvar-btn{
+        width:90%;
+        height: 40px;
+        margin-left: -10px;
+        margin-top: 80px;
+    }
+
+    .botoes-cancelar .btn-cancelar{
+        width:70%;
+        height: 40px;
+        margin-top: 80px;
+        margin-left: 12px;
+    }
+
+
+}

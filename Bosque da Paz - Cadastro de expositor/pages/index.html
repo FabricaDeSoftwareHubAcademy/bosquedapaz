@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de tela</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/menu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <!-- inicio menu -->
+            <nav class="menu">
+    
+                <div class="logo"><!-- logo -->
+                    <a href="index.html"><img src="../img/logo.png" alt="Logo"></a>
+                </div>
+    
+                <div class="nav-bar"> <!-- navegação -->
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Parceiros</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Quem Somos?</a></li>
+                    </ul>
+                    
+                    <div class="pesquisar-login">
+                        <div class="pesquisar"> <!-- area de pesquisa -->
+                            <input class="input" type="text" placeholder="Pesquisar por...">
+                            <div class="bola"  onclick="inputShow2()">
+                            </div>
+                        </div>
+                        <div class="login"> <!-- area login -->
+                            <a href="#"><img src="../img/login.png" alt="Login"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="pequisa-mobile">
+                    <div class="pesquisa"> <!-- area de pesquisa -->
+                        <input class="input" type="text" placeholder="Pesquisar por...">
+                        <div class="bola"  onclick="inputShow()">
+                        </div>
+                    </div>
+                    <div class="menu-icon">
+                        <button onclick="menuShow()"><img class="icon" src="../../Home/img/menu.png" alt="Menu"></button>
+                    </div>
+                </div>
+            </nav>
+            <!-- fim menu -->
+    
+            <!-- mobile menu -->
+            <div class="mobile-menu"> <!-- navegação -->
+                <ul class="nav-item">
+                    <li class="nav-item"><a href="#">Início</a></li>
+                    <li class="nav-item"><a href="#">Parceiros</a></li>
+                    <li class="nav-item"><a href="#">Fale Conosco</a></li>
+                    <li class="nav-item"><a href="#">Quem Somos?</a></li>
+                </ul>
+    
+                <div class="btn-login"> <!-- area login -->
+                    <button class="btnlogin">Login</button>
+                </div>
+            </div>
+            <!-- mobile menu -->
+        </header>
+ 
+ 
+        <main class="principal">
+            <div class="box">
+                <h1 class="title">Cadastro de expositores</h1>
+                <div class="caixa-formulario">
+                    <div class="input1">
+                        <label>Nome completo:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="input2">
+                        <label>Qual seu produto:</label>
+                        <input type="text" name="" id="" placeholder="Informe seu produto" required>
+                    </div>
+                    <div class="input3">
+                        <label>Qual cidade reside:</label>
+                        <input type="text" name="" id="" placeholder="Informe sua cidade" required>
+                    </div>
+                    <div class="input4">
+                        <label>Nome da marca ou loja:</label>
+                        <input type="text" name="" id="" placeholder="Digite o nome da sua marca ou loja" required>
+                    </div>
+                </div>
+                <div class="caixa-contato">
+                    <div class="whats-ctt">
+                        <label>Whatsapp para contato:</label>
+                        <input type="text" name="" id="" placeholder="(67)" required>
+                    </div>
+                    <div class="categoria-prod">
+                        <label>Categoria dos produtos</label>
+                        <input type="text" name="" id="" placeholder="-" required>
+                    </div>
+                    <div class="input-img">
+                        <label>Upload de fotos</label>
+                        <button class="style-button">
+                            <a href="#" class="upload"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                        </button>
+                    </div>
+                </div>
+                <div class="formulario">
+                    <label >Se você possui um trailer, foodtruck ou barraca de comida:
+                        Qual é a medida EXATA dele?</label>
+                        <input type="text" name="" id="" placeholder="ex: 3m²">
+                </div>
+                <div class="formulario-input">
+                    <label >Precisa de energia para vender seus produtos?
+                        Se sim, para quais voltagens e quais equipamentos:</label>
+                    <input type="text" name="" id="" placeholder="ex: 300Kw">    
+                </div>
+     
+               
+                <div class="botoes-salvar">
+                    <label for="modal-checkbox" id="salvar-btn" class="salvar-btn">Salvar</label>
+                </div>
+    
+                <input type="checkbox" id="modal-checkbox" hidden>
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <h1>Confirmar?</h1>
+                        <div class="botoes">
+                            <label for="modal-checkbox" class="salvar">Salvar</label>
+                            <label for="modal-checkbox" class="cancelar">Cancelar</label>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+        
+     
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+                
+                
+                
+                
+                <button class="edital"><a href="#">Edital da feira</a></button>
+                    
+
+                <p class="termos">*Aceito os termos do Edital:</p>
+                
+                <div class="caixa-checkbox">
+                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
+                    <label for="checkbox-sim" class="text-checkbox">Sim</label>
+                    
+                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
+                    <label for="checkbox-nao" class="text-checkbox"> Não</label>
+                </div>
+                
+
+                <button class="expositor-kids"><a href="#">Expositor kids</a></button>
+               
+                
+                <button class="artistas"><a href="#">Artistas</a></button>
+                
+                <!-- <a href="#" class="voltar"><i class="fa-solid fa-arrow-left"></i></a> -->
+            </div>
+    
+        </main>
+     
+        <div class="bolas-fundo">
+     
+            <img src="../img/Elemento1.FolhaVerde.png" alt="Bola Fundo 1" class="bola-verde1">
+            <img src="../img/Elemento2.FolhaVerde.png" alt="Bola Fundo 2" class="bola-verde2">
+            <img src="../img/Elemento3.ElipseRosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        </div>
+     
+        <script src="../js/mais.js"></script>
+        <script src="../../Home/js/main.js" defer></script>
+    </body>
+    </html>
