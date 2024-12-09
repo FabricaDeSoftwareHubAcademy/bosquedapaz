@@ -2,8 +2,7 @@
 // Lista de IPs permitidos
 $allowed_ips = [
     '127.0.0.1', // IP do localhost
-    '192.168.1.100', // IP permitido
-    '192.168.1.101' // Outro IP permitido
+    '10.28.1.147' // IP Guilherme
 ];
 
 // Obter o IP do visitante
