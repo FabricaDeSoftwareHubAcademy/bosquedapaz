@@ -14,7 +14,7 @@
     <?php include "assets/home/carrossel-home.html"; ?>
     
     <!-- inicio main -->
-    <main>
+    <main id="main">
         
         
         <!-- importando categoria -->
@@ -41,5 +41,6 @@
     <script src="js/js-home/main.js" defer></script>
     <script src="js/js-home/carrossel.js" defer></script>
     <script src="js/js-modais/js-abrir-modal.js" defer></script>
+    <script src="js/js-home/subir-num.js"></script>
 </body>
 </html>
