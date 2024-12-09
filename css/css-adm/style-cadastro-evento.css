@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('menu-adm.css');
+@import url('../menu-adm.css');
 
 * {
     margin: 0;
@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+    /* background-color: aqua; */
 }
 h2{
     font-size: 30px;
@@ -55,6 +56,10 @@ h2{
     bottom: -100px;
     z-index: -3;
 }
+.box{
+    /* background-color: #007E70; */
+
+}
 .box .form-box{
     min-height: 80%;
     display: flex;
@@ -67,12 +72,32 @@ h2{
 }
 .form-box form{
     height: 100%;
-    width: 40%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     /* background-color: #007E70; */
     min-width: 360px;
     
+    
+}
+#form1{
+    /* background-color: chartreuse; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    justify-content: baseline;
+    
+    
+}
+#form2{
+    /* background-color: blueviolet; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    justify-content: baseline;
 }
 .input-group{
     display: flex;
@@ -85,10 +110,28 @@ h2{
     font-weight: bold;
     display: flex;
 }
+.form-box .input-group-file label{
+    color: #3d3d3d;
+    font-weight: bold;
+    display: flex;
+}
 .form-box .input-group input{
     width: 100%;
     height: 40px;
     background-color: white;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    /* padding: 15px; */
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+    box-shadow: 1px 2px 0px 0px;
+}
+.form-box .input-group select{
+    width: 100%;
+    height: 40px;
+    /* background-color: white; */
     border-radius: 10px;
     outline: none;
     border: 2px solid transparent;
@@ -98,6 +141,29 @@ h2{
     transition: all 0.4s ease;
     box-shadow: 1px 2px 0px 0px;
 }
+.input-group #file{
+    /* background-color: coral; */
+    display: flex;
+    padding-top: 8px;
+    width: 100%;    
+}
+.btn-add{
+    display: flex;
+    margin-left: 70%;
+}
+.btn-atracao {
+    background-color: #007E70;
+    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
+    border-radius:8px ;
+}
+.btn-atracao a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
 #dia{
     width: 100px;
 }
@@ -154,6 +220,8 @@ h2{
     border: transparent;
     cursor: pointer;
 }
+
+
 
 .box .btns {
     display: flex;
@@ -261,20 +329,30 @@ h2{
     .form-box{
         display: flex;
         
+            
     }
     .form-box form{
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;  
+        width: 100%;
+        /* gap: 6px; */
     }
     .input-group{
         display: flex;
         flex-direction: column;
         /* height: 50px; */
-        /* padding: px; */
-        width: 370px;
+        padding: 0px;
+        width: 99%;
+        
+    }
+    .input-group #file{
+        /* background-color: coral; */
+        display: flex;
+        padding-top: 0px;
+        width: 100%;
+        height: 50%;
         
     }
     .form-box .input-group label{
@@ -283,7 +361,19 @@ h2{
         display: flex;
     }
     .form-box .input-group input{
-        width: 360px;
+        width: 100%;
+        height: 6px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        border: 2px solid transparent;
+        font-size: 15px;
+        color: #616161;
+        box-shadow: 1px 2px 0px 0px;
+
+    }
+    .form-box .input-group select{
+        width: 100%;
         height: 6px;
         background-color: white;
         border-radius: 5px;
@@ -293,9 +383,26 @@ h2{
         color: #616161;
         box-shadow: 1px 2px 0px 0px;
     }
+    
     .form-box .input-group .modal{
         display: flex;
         width: 98%;
+    }
+    #form1{
+        display: flex;
+        width: 100%;
+        gap: 0px;
+    }
+    #form2{
+        display: flex;
+        width: 100%;
+        gap: 0px;
+    }
+    #tabela {
+        margin-left: 10%;
+    }
+    table{
+        margin-left: 10%;
     }
     h2{
         font-size: 20px;
@@ -329,67 +436,34 @@ h2{
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 100%;
-        padding-left: 20px;
-    }
-    .form-box .input-group input{
-        width: 340px;
-        padding-bottom: 8px;
-    }
-    .form-box .input-group .modal{
-        display: flex;
-        width: 93%;
-    }
-}
-@media only screen and (max-height: 650px){
-    .principal .box{
         width: 90%;
-        height: 80%;
-    }
-    .box .form-box{
-        flex-direction: row;
-        display: flex;
-        width: 100%; 
-    }
-    .form-box{
-        display: flex;
-    }
-    .form-box form{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .input-group{
-        display: flex;
-        flex-direction: column;
-        width: 370px;
-    }
-    .form-box .input-group label{
-        color: #3d3d3d;
-        font-weight: bold;
-        display: flex;
     }
     .form-box .input-group input{
-        width: 360px;
-        height: 6px;
-        background-color: white;
-        border-radius: 5px;
-        padding: 10px;
-        border: 2px solid transparent;
-        font-size: 15px;
-        color: #616161;
-        box-shadow: 1px 2px 0px 0px;
+        width: 100%;
+        /* padding-bottom: 8px; */
     }
-    .form-box .input-group .modal{
-        display: flex;
-        width: 98%;
+    .btn-add{
+        margin-right: 20px;
     }
-    .bottoms-group #banner{
-        height: 150px;
+    
+}
+@media only screen and (max-height: 670px){
+    .input-group{
+        font-size: 0.7rem;
+        
     }
-    .add-group{
-        scale: 0.8;
+    .btn-add{
+        margin-right: 20px;
     }
+    #tabela{
+        font-size: 0.8rem;
+        margin-top: 0px;
+        overflow: visible;
+    }
+    table{
+        font-size: 0.8rem;
+        padding-top: 0px;
+    }
+    
 }
 
