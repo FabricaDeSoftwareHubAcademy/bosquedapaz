@@ -14,14 +14,14 @@
     <?php include "assets/home/carrossel-home.html"; ?>
     
     <!-- inicio main -->
-    <main>
+    <main id="main">
         
-        <!-- importando informações da feira -->
-        <?php include "assets/home/info-sobre-feira.html"; ?>
         
         <!-- importando categoria -->
         <?php include "assets/home/categoria.html"; ?>
-
+        
+        <!-- importando informações da feira -->
+        <?php include "assets/home/info-sobre-feira.html"; ?>
 
         <!-- incluindo expositores -->
         <?php include "assets/home/lista-expositor.php"; ?>
@@ -41,5 +41,6 @@
     <script src="js/js-home/main.js" defer></script>
     <script src="js/js-home/carrossel.js" defer></script>
     <script src="js/js-modais/js-abrir-modal.js" defer></script>
+    <script src="js/js-home/subir-num.js"></script>
 </body>
 </html>

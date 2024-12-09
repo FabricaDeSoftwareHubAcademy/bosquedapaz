@@ -4,6 +4,21 @@
     flex-direction: column;
 }
 
+.text-carrossel {
+    max-width: 80%;
+    height: auto;
+    max-height: 200px;
+    background-color: transparent;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-welcome, .text-welcome-c {
+    color: black;
+    /* text-shadow: black 0.1em 0.1em 0.2em; */
+}
+
 .categoria #fundo-categoia {
     /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); */
     width: 100%;
