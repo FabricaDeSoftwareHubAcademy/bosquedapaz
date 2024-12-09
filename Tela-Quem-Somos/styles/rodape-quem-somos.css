@@ -1,0 +1,103 @@
+/* rodape */
+.rodape {
+    background-color: #CD1650;
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+}
+
+.box-footer {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    height: 90%;
+}
+
+.box-footer .list-rodape {
+    border-top: 2px solid #fff;
+    height:  auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.box-footer .list-rodape h5 {
+    font-size: 2em;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.box-footer .list-rodape ul {
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+.box-footer .list-sobre ul a {
+    color: #fff;
+}
+
+.box-footer .list-contato div {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rodape .copyright {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    padding: 10px;
+    color: #fff;
+    border-top: 2px solid #fff;
+}
+
+@media( max-width: 1500px){
+    .rodape .box-footer .list-rodape {
+        height: 300px;
+    }
+
+    .rodape .box-footer .list-rodape h5 {
+        font-size: 1.3em;
+    }
+
+    .rodape .box-footer .list-rodape ul {
+        font-size: 0.8em;
+    }
+
+    .rodape .box-footer .list-contato div img {
+        width: 40px;
+    }
+
+    .rodape .box-footer .list-contato div p {
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 750px) {
+    .rodape .box-footer {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .rodape .box-footer .list-rodape {
+        margin: 0 auto;
+        height: auto;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .rodape .box-footer .list-contato > div {
+        margin-left: 50px;
+        width: auto;
+    }
+
+    .rodape .copyright {
+        font-size: 0.8em;
+    }
+}
