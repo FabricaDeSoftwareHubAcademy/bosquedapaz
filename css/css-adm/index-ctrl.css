@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.imagem-fundo1{
+    position: absolute;
+    top: 120px;
+    left: -50px;
+    z-index: -1;
+}
+.imagem-fundo2{
+    position: absolute;
+    right: -10px;
+    bottom: 0px;
+    z-index: -1;
+}
+.imagem-fundo3{
+    position: absolute;
+    top: 120px;
+    right: -50px;
+    z-index: -1;
+}
+.box-ctrl{
+    width: 95vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 12px;
+    background-color: rgba(235, 235, 235, 0.65);
+    z-index: 3;
+}
+.area-dados-btn-voltar{
+    display: flex;
+    height: 50%;
+    width: 95%;
+    background-color: aqua;
+}
+.area-geral{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.area-grafico{
+    display: flex;
+    width: 87%;
+    height: 800px;
+}
+.title-ctrl{
+    font-size: 36px;
+    padding: 30px;
+    font-weight: 600;
+}
+.area-dados-feirantes{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: row;
+}
+.feirantes{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+.feirantes-espera{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+.feirantes-pagou{
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+}
+.feirantes-devendo{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+#grafico{
+    display: flex;
+    font-size: 26px;
+    font-weight: 500;
+}
+.btn-voltar{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    margin-top: 630px;
+    cursor: pointer;
+}
+.cards-feirantes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#listra1{
+    background-color: red;
+    height: 100%;
+    width: 15px;
+}
+#listra2{
+    background-color: rgb(0, 166, 0);
+    height: 100%;
+    width: 15px;
+}
+#listra3{
+    background-color: blue;
+    height: 100%;
+    width: 15px;
+}
+#listra4{
+    background-color: yellow;
+    height: 100%;
+    width: 15px;
+}
+.numeros{
+    font-size: 36px;
+}
+.dados{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-right: 20px;
+    flex-direction: column;
+}
+.card{
+    display: flex;
+    height: 60%;
+    width: 350px;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.card:hover{
+    background-color: rgb(238, 238, 238);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+.bi{
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    display: flex;
+}
+@media screen and (max-width: 1629px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .card{
+        display: flex;
+        height: 60%;
+        width: 350px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px gray;
+    }
+    .feirantes{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .feirantes-espera{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .area-grafico{
+        display: flex;
+        width: 87%;
+        height: 800px;
+    }
+    .dados{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        /* margin-right: 20px; */
+        flex-direction: column;
+    }
+    .card:hover{
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width: 1473px){
+    .area-grafico{
+        display: flex;
+        width: 87%;
+        height: 800px;
+    }
+    .cards-feirantes{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: scroll;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+    }
+    .card{
+        display: flex;
+        height: 60%;
+        width: 300px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px gray;
+    }
+    .area-dados-feirantes{
+        display: flex;
+        height: 50%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+}
+@media screen and (max-width : 1335px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: 95%;
+    }
+    .area-geral{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        display: flex;
+        height: 40%;
+        width: 250px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        border-radius: 12px;
+        background-color: white;
+    }
+    .area-dados-feirantes{
+        display: flex;
+        height: 50%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .imagem-fundo2{
+        display: none;
+        position: absolute;
+        right: -10px;
+        bottom: 0px;
+        z-index: -1;
+    }
+    .dados{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .feirantes{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .feirantes-espera{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .area-grafico{
+        display: flex;
+        width: 95%;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 1107px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes{
+        color: black;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .feirantes-espera{
+        color: black;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width :1043px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes{
+        color: black;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .bi{
+        width: 40px;
+        height: 40px;
+    }
+    .feirantes-espera{
+        color: black;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .numeros{
+        font-size: 20px;
+    }
+    .area-grafico{
+        display: flex;
+        width: 95%;
+        height: 800px;
+    }
+    .imagem-fundo3{
+        display: none;
+    }
+}
+@media screen and (max-width: 995px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes{
+        color: black;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .feirantes-espera{
+        color: black;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width: 975px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .area-grafico{
+        display: flex;
+        width: 100%;
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 944px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    .feirantes-devendo{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 888px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 9px;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width: 792px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 8px;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width: 650px){
+    .imagem-fundo1{
+        display: none;
+    }
+    .box-ctrl{
+        margin-left: 20px;
+    }
+    .cards-feirantes{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 496px){
+    .title-ctrl{
+        font-size: 28px;
+    }
+    .cards-feirantes{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 430px){
+    .cards-feirantes{
+        flex-direction: column;
+    }
+    .box-ctrl{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 414px){
+    .cards-feirantes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+    .feirantes-devendo{
+        color: black;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .feirantes-pagou{
+        color: black;
+        font-size: 8px;
+        font-weight: 400;
+    }
+    .numeros{
+        font-size: 20px;
+    }
+    .area-grafico{
+        height: 100%;
+        width: 90%;
+    }
+    .imagem-fundo1{
+        display: none;
+        position: absolute;
+        top: 120px;
+        left: -50px;
+        z-index: -1;
+    }
+    .imagem-fundo2{
+        display: none;
+        position: absolute;
+        right: -10px;
+        bottom: 0px;
+        z-index: -1;
+    }
+    .imagem-fundo3{
+        display: none;
+        position: absolute;
+        top: 120px;
+        right: -50px;
+        z-index: -1;
+    }
+    .title-ctrl{
+        font-size: 24px;
+        padding: 10px;
+        font-weight: 600;
+    }
+    .box-ctrl{
+        width: 350px;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 40px;
+        border-radius: 12px;
+        background-color: rgba(235, 235, 235, 0.65);
+        z-index: 3;
+    }
+}
+@media screen and (max-width: 390px){
+    .box-ctrl{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 375px){
+    .feirantes-espera{
+        font-size: 11px;
+    }
+    .box-ctrl{
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+}
+
