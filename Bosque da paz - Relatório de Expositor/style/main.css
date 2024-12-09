@@ -244,3 +244,54 @@ body {
     color: black;
     left: 50px;
 }
+
+@media screen and (max-width: 768px){
+  .bola-azul1{
+    width: 55px;
+  }
+  .bola-azul2{
+    width: 55px;  
+    left: 90%;
+  }
+  .bola-azul3{
+    top: 94%;
+    left: 87%;
+    width: 55px;
+  }
+
+  .box {
+    width: 95%;
+    height: 770px;
+    left: -40px;
+    top: -20px;
+  }
+
+  .title{
+    font-size: 20px;
+    left: 80px;
+    top: 25px;
+    width: 250px;
+    height: 40px;
+  }
+  .input-btn{
+    width: 10px;
+    height: 20px;
+    font-size: 16px;
+    left: 10%;
+    top: 55px;
+  }
+  .input-btn .input-group{
+    width: 100px;
+  }
+  .input-btn .form-label{
+    font-size: 16px;
+    width: 130px;
+  }
+
+  .tabela-container{
+    margin-left: -120px;
+  }
+}
+ 
+
+  
