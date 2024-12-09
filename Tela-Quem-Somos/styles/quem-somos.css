@@ -300,16 +300,33 @@
     justify-content: center;
     width: 20%;
     height: 10%;
-    background-color: #000000;
+   
+    
+    background-color: #ffffff;
     font-weight: bold;
     text-decoration: none; 
     position: relative;
     right: 2%;
     border-radius: 9px;
-    box-shadow: 4px 2px 0px 0px rgb(238, 0, 255);
+   
     
    
     
+}
+.botão-expositor .botão{
+    color: #8b3ac4;
+    text-transform: uppercase;
+    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134), rgb(0, 145, 255));
+    background-size: 500% 100%;
+    animation: degrade-animado 10s infinite alternate;
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+   
+   
+   
+
 }
 
 
