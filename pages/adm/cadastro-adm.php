@@ -16,16 +16,16 @@
 
             <!-- /* Formas da tela */ -->
             <div class="formaCadastro-1">
-                <img src="img-cadastroMT/FormaCadastro-01.png" alt="">
+                <img src="../../imgs/img-cadastro-adm/FormaCadastro-01.png" alt="">
             </div>
             <div class="formaCadastro-2">
-                <img src="img-cadastroMT/FormaCadastro-02.png" alt="">
+                <img src="../../imgs/img-cadastro-adm/FormaCadastro-02.png" alt="">
             </div>
             <div class="formaCadastro-3">
-                <img src="img-cadastroMT/FormaCadastro-03.svg" alt="">
+                <img src="../../imgs/img-cadastro-adm/FormaCadastro-03.png" alt="">
             </div>
             <div class="formaCadastro-4">
-                <img src="img-cadastroMT/FormaCadastro-04.svg" alt="">
+                <img src="../../imgs/img-cadastro-adm/FormaCadastro-04.png" alt="">
             </div>
             
             <!-- /* Box */ -->
@@ -89,7 +89,7 @@
                     <h1 class="h1-mt">CADASTRO</h1>
                     <div class="divIMg-mt">
                         <h1 class="h12-mt">CADASTRO</h1>
-                        <img src="img-cadastroMT/a.svg" alt="">
+                        <img src="../../imgs/img-cadastro-adm/a.svg" alt="">
                     </div>
                 </div>
             </div>
