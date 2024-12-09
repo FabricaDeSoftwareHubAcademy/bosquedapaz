@@ -82,11 +82,11 @@
 .section-bosque-quem-somos .div-text-sobre h1, .h1 span{
     position: relative;
     right: 1cm;
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     display: flex;
     flex-direction: row;
-    height: 20cm;
-    background-color: rgb(255, 255, 255);
+    height: 10cm;
+
 }
 .div-text-sobre h1 span{
     color: #ff5029;
@@ -302,16 +302,18 @@
     height: 10%;
     background-color: #000000;
     font-weight: bold;
-    color: #ffffff;
     text-decoration: none; 
     position: relative;
     right: 2%;
     border-radius: 9px;
-    box-shadow: 2px 2px 0px 0px rgb(238, 0, 255);
+    box-shadow: 4px 2px 0px 0px rgb(238, 0, 255);
     
    
     
 }
+
+
+
 .botão-expositor:hover{
     transition: .2s ;
     cursor: pointer;
@@ -349,6 +351,18 @@ a{
   .div-img-animation .imagem1, .imagem2 ,.imagem3{
     display: none;
   }
+
+    .section-bosque-quem-somos .div-text-sobre{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+    }
+
+
  
   .section-bosque-quem-somos .div-text-sobre .somos-apaixonados{
    
@@ -356,7 +370,12 @@ a{
     flex-direction: column;
     text-align: justify;
     font-size: 1.5rem;
-    width: 100%;
+    width: 120%;
+
+
+
+   
+    
 
     
   }
@@ -365,11 +384,13 @@ a{
     
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     justify-content: center;
     text-align: center;
     font-size: 3.5rem;
-    right: 0%;
+    right: 0.5%;
+ 
+    
    
     
   }
@@ -493,12 +514,27 @@ a{
         display: flex;
         font-size: 2.5rem;
         position: relative;
-        right: 1%;
-        top: 5%;
+        right: 0%;
+     
         margin-bottom: 2%;
         
+        
     }
+    .section-bosque-quem-somos .div-text-sobre h1, .h1 span{
+        padding-left: 5px;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
