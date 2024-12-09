@@ -317,7 +317,6 @@
     color: #8b3ac4;
     text-transform: uppercase;
     background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134), rgb(0, 145, 255));
-    background-size: 500% 100%;
     animation: degrade-animado 10s infinite alternate;
     background-clip: none;
     -webkit-background-clip: text;
