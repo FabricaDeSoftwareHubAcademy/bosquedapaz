@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap');
  
 /* Reset e estilização básica */
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: #f9f9f9;
   overflow-x: hidden;
+  
 }
  
 /* Bolas decorativas */
@@ -42,7 +47,7 @@ body {
     height: auto;
     background-color: red;
     margin-left: 6%;
-    margin: 50px;
+    margin: 50px auto;
     position: relative;
     top: 5px;
     background: rgba(170, 165, 165, 0.17);
@@ -168,11 +173,12 @@ body {
 
 .tabela-container {
     max-height: 500px;
-    overflow-y: auto;
+    overflow-x: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 500%;
-    height: auto;
+    max-width: 100%;
+    height: 90%;
+    margin: 0 auto;
     position: relative;
     top: 90px;
     
@@ -246,50 +252,75 @@ body {
 }
 
 @media screen and (max-width: 768px){
+  body{
+    overflow: hidden;
+  }
   .bola-azul1{
     width: 55px;
   }
   .bola-azul2{
     width: 55px;  
-    left: 90%;
+    left: 78%;
   }
   .bola-azul3{
-    top: 94%;
-    left: 87%;
+    top: 86%;
+    left: 79%;
     width: 55px;
   }
 
   .box {
-    width: 95%;
-    height: 770px;
-    left: -40px;
+    width: 86%;
+    height: 710px;
+    left: -20px;
     top: -20px;
   }
 
   .title{
     font-size: 20px;
-    left: 80px;
+    left: 55px;
     top: 25px;
     width: 250px;
     height: 40px;
   }
   .input-btn{
-    width: 10px;
-    height: 20px;
     font-size: 16px;
     left: 10%;
     top: 55px;
   }
+
+  .input-btn input{
+    width: 200px;
+  }
   .input-btn .input-group{
     width: 100px;
   }
-  .input-btn .form-label{
-    font-size: 16px;
-    width: 130px;
+  .form-label{
+    display: none;
   }
 
+  .relatorio{
+    width: 100%;
+    font-size: 0.8rem;
+    width: 500px;
+  }
   .tabela-container{
-    margin-left: -120px;
+    border-radius: 8px;
+    width: 93%;
+    position: absolute;
+    left: 15px;
+    top: 20%;
+  }
+  
+  .relatorio td{
+    padding: 4px;
+    width: 50px;
+  }
+  .relatorio thead tr{
+    font-size: 0.85rem;
+    width: 40%;
+  }
+  .box a{
+    margin-left: -25px;
   }
 }
  
