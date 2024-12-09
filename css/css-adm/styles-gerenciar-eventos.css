@@ -1,0 +1,414 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../../css/menu-adm.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+.titulo{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.principal{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    margin-top: 3%;
+}
+
+.principal .box{
+    width: 90%;
+    height: 80%;
+    background-color: rgba(248, 245, 246, 0.65);
+    margin: auto;
+    /* margin-top: 3%; */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.form-box{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    /* height: 100vh; */
+    justify-content: center;
+    gap: 50px;
+    align-items: baseline;
+    position: relative;
+}
+
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: 0px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: 0px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -3;
+    top: 55%;
+}
+
+.input-pesquisar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-tabela{
+    display: flex;
+    width: 80%;
+    height: 70%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-eventos{
+    width: 100%;
+    height: 1%;
+    border-collapse: collapse;
+}
+
+.tab-eventos thead{
+    /* border-radius: 10px 10px 0px 0px; */
+    background-color: rgb(32, 54, 139 );
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+
+}
+
+.tab-eventos thead tr th{
+    text-align: center;
+}
+
+.tab-eventos tbody tr td{
+    text-align: center;
+    height: 37px;
+}
+
+.input-pesquisar input{
+    width: 60%;
+    /* padding: 50px; */
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2.93px solid rgb(32,54,159);
+    border-right: 2.93px solid rgb(32,54,159);
+}
+
+.input-pesquisar button{
+    width: 178px;
+    height: 49px;
+    font-size: 28px;
+    color: white;
+    background-color: rgb(32,54,159);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.input-pesquisar h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white; /* Cor clara */
+  }
+  
+table tbody tr:nth-child(even) {
+    background-color: #e6e6e6; /* Cor mais escura */
+  }
+
+  
+
+tbody tr td .finalizado{
+    color: white;
+    background-color: rgb(40, 180, 71);
+    border: none;
+    width: 105px;
+    height: 26px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+tbody tr td .em_curso{
+    color: white;
+    background-color: rgb(255, 202, 44);
+    border: none;
+    width: 105px;
+    height: 26px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.botoes {
+    position: relative;
+    bottom: 20px;
+    left: 31.5%;
+    display: flex;
+    gap: 50px;
+}
+
+.botoes a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.botoes a button{
+    width: 100%;
+    display: flex;
+}
+
+.novo-evento{
+    height: 34px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(255, 56, 119);
+    font-size: 19px;
+    padding: 1px 8px 4px 8px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    /* width: 150px; */
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.modal input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.modal .submit-fotos {
+    background-color: rgb(32, 54, 139);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal .submit-fotos:hover {
+    background-color: rgb(40, 60, 180);
+}
+
+
+.open-modal{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+  @media only screen and (max-width: 768px) {
+    .principal {
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* margin-top: 10%; */
+    }
+
+    .principal .box {
+        width: 90%;
+        height: 85%;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+    }
+
+    .form-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    .botoes {
+        left: 0;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        justify-content: center;
+        /* padding-left: 50px; */
+    }
+
+    .botoes a button {
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .bolas-fundo img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    .bolas-fundo .bola-verde1 {
+        width: 150px;
+        left: -30px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 100px;
+        left: 77%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 250px;
+        left: 250px;
+        top: 60%;
+    }
+
+    header .nav-bar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header .nav-bar .nav-item {
+        text-align: center;
+    }
+
+    header .btn-login a {
+        padding: 10px;
+    }
+
+    .div-tabela{
+        width: 100%;
+        height: 80%;
+    }
+
+    .input-pesquisar{
+        width: 100%;
+        height: 100%;
+    }
+
+    .input-pesquisar button{
+        width: 25%;
+        font-size: 12px;
+    }
+
+    .input-pesquisar h3 {
+        font-size: 16px;
+    }
+
+    .finalizado {
+        width: 90%;
+        font-size: 12px
+    }
+
+    .em_curso {
+        width: 80%;
+        font-size: 15px
+    }
+}

@@ -1,0 +1,679 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../../../bosquedapaz/css/menu-home.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-principal{
+    width: 100%;
+    height: 850px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bola-1{
+    position: fixed;
+    top: 20vh;
+    right: 80vw;
+    width: 20vw;
+    z-index: 2;
+}
+
+.bola-1 img{
+    width: 40%;
+    height: auto;
+}
+
+.bola-2{
+    position: fixed;
+    top: 16vh;
+    right: -30px;
+    z-index: 2;
+}
+
+.bola-2 img{
+    width: 90%;
+    height: auto;
+}
+
+.bola-3{
+    position: fixed;
+    left: 1700px;
+    top: 73vh;
+    width: 20vw;
+    z-index: 2;
+}
+
+.bola-3 img{
+    width: 100%;
+    height: auto;
+}
+
+.box-principal{
+    width: 85%;
+    height: 90%;
+    background-color: #F8F5F6;
+    justify-content: space-between;
+    align-items: self-start;
+    display: flex;
+    z-index: 2;
+}
+
+    /* Área Primeiro Card */
+
+.area-card-principal {
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+    
+.card-principal {
+    width: 70%;
+    height: 65%;
+    background-color: white;
+    border: 1px solid #3F49EA; /* Borda azul */
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.utilidades-card-principal{
+    position: relative;
+    top: 10%;
+    left: 8%;
+    font-size: 1.3rem;
+    color: #3F49EA;
+}
+
+.h1-container-principal{
+    transform: rotate(210deg);
+    top: 35%;
+    position: relative;
+    font-size: 0.9rem;
+    left: 24%;
+    width: 307px;
+}
+
+.container-card-principal{
+    width: 130%;
+    height: 51%;
+    background-color: #3F49EA;
+    position: relative;
+    top: 21%;
+    transform: rotate(150deg);
+    right: 1%;
+}
+
+.linha-card-principal{
+    height: 130%;
+    border-right: 10px solid rgb(255, 255, 255);
+    border-radius: 0px 10px;
+    position: fixed;
+    top: 25%;
+    right: 65%;
+    transform: rotate(89.5deg);
+}
+
+.linha-azul-card-principal{
+    position: absolute;
+    width: 300px;
+    height: 10px;
+    background-color: #3F49EA; 
+    transform: rotate(-30deg); 
+    top: 378px; 
+    right: 191px;
+    border-radius: 0px 10px;
+}
+
+.img-card-principal{
+    position: relative;
+    left: 6%;
+    top: 5%;
+}
+
+    /* Área Do Segundo Card E Diante */
+
+.area-card-segundario{
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    gap: 59px;
+}
+
+.card-segundario{
+    width: 26%;
+    height: 48%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    right: 4%;
+    border: 1px solid #FF3877;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cantainer-card-segundario{
+    width: 149%;
+    height: 52%;
+    background-color: #FF3877;
+    position: relative;
+    top: 23%;
+    transform: rotate(150deg);
+    left: 0%;
+}
+
+.img-card-segundario{
+    position: relative;
+    top: 5%;
+    left: 9%;
+}
+
+.utilidades-card-segundario{
+    font-size: 1.3rem;
+    position: relative;
+    left: 27%;
+    top: 12%;
+    color: #FF3877;
+}
+
+.linha-branca-card-segundario{
+    height: 90%;
+    border-right: 10px solid rgb(255, 255, 255);
+    border-radius: 0px 10px;
+    position: fixed;
+    top: 45%;
+    right: 75%;
+    transform: rotate(89.5deg);
+}
+
+.linha-rosa-card-segundario{
+    position: absolute;
+    width: 186px;
+    height: 10px;
+    background-color: #FF3877; 
+    transform: rotate(-30deg); 
+    top: 292px; 
+    right: 105px;
+    border-radius: 0px 10px;
+}
+
+.btn-cantainer-card-segundario{
+    width: 37%;
+    height: 18%;
+    background-color: #ffffff; 
+    color: #FF3877; 
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px; 
+    cursor: pointer; 
+    position: relative;
+    top: 61%;
+    left: 45%;
+    transform: rotate(210deg);
+}
+
+    /* Área Dos Modais */
+    
+.dlog-modal-card-ProEv{
+    width: 50%;
+    height: 55%;
+    background-color: white;
+    position: absolute;
+    top: 26%;
+    left: 22%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+ 
+.div-decorativa-modal{
+    width: 30%;
+    height: 30%;
+    background-color: #FF3877;
+    transform: rotate(-25deg);
+    position: absolute;
+    bottom: 88%;
+    right: 79%;
+    z-index: -1;
+    #linha-dec1-modal{
+        height: 150px;
+        border-right: 10px solid white;
+        transform: rotate(85deg);
+        position: absolute;
+        top: 30%;
+        right: 45%;
+        border-radius: 10px;
+    }
+}
+ 
+.div-decorativa2-modal{
+    width: 60%;
+    height: 50%;
+    background-color: #FF3877;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    z-index: -1;
+    #linha-dec2-modal{
+        height: 250px;
+        border-right: 10px solid white;
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: 42%;
+        left: 80%;
+        border-radius: 10px;
+    }
+    #linha-dec3-modal{
+        height: 150px;
+        border-right: 10px solid white;
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: 20%;
+        left: 80%;
+        border-radius: 10px;
+    }
+    #linha-dec4-modal{
+        height: 250px;
+        border-right: 10px solid white;
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: 22%;
+        left: 60%;
+        border-radius: 10px;
+    }
+}
+ 
+.div-infs-evento-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    top: 0;
+    left: 0;
+}
+ 
+.areatl-img-modal-ProEv{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.area-img-modal-ProEv{
+    width: 85%;
+    height: 55%;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 7%;
+}
+ 
+.area-img-modal-ProEv img{
+    width: 100%;
+    height: auto;
+}
+ 
+.area-text-modal-ProEv{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(137, 43, 226, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+}
+ 
+.title-atracao-modal{
+    font-size: 35px;
+    color: #FF3877;
+    position: absolute;
+    bottom: 67%;
+    left: 60%;
+}
+ 
+.p-atracao-modal{
+    width: 310px;
+    position: absolute;
+    top: 37%;
+}
+ 
+#b-sari-modal{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 95%;
+    top: 2%;
+    cursor: pointer;
+}
+
+/* .card-res-segundario{
+    display: none;
+    width: 26%;
+    height: 48%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    right: 4%;
+    border: 1px solid #FF3877;
+    border-radius: 10px;
+}
+
+.cantainer-card-res-segundario{
+    width: 149%;
+    height: 52%;
+    background-color: #FF3877;
+    position: relative;
+    top: 23%;
+    transform: rotate(150deg);
+    left: 0%;
+}
+
+.img-card-res-segundario{
+    position: relative;
+    left: 6%;
+    top: 5%;
+}
+
+.utilidades-card-res-segundario{
+    font-size: 1.3rem;
+    position: relative;
+    left: 27%;
+    top: 10%;
+    color: #FF3877;
+}
+
+.linha-branca-card-res-segundario{
+    height: 90%;
+    border-right: 10px solid rgb(255, 255, 255);
+    border-radius: 0px 10px;
+    position: fixed;
+    top: 45%;
+    right: 75%;
+    transform: rotate(89.5deg);
+}
+
+.linha-rosa-card-res-segundario{
+    position: absolute;
+    width: 186px;
+    height: 10px;
+    background-color: #FF3877; 
+    transform: rotate(-30deg); 
+    top: 292px; 
+    right: 105px;
+    border-radius: 0px 10px;
+}
+
+.btn-cantainer-card-res-segundario{
+    width: 37%;
+    height: 18%;
+    background-color: #ffffff; 
+    color: #FF3877; 
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px; 
+    cursor: pointer; 
+    position: relative;
+    top: 61%;
+    left: 45%;
+    transform: rotate(210deg);
+} */
+
+
+@media screen and (max-width:720px) {
+    body{
+        overflow: scroll;
+        height: 100vh;
+    }
+
+    .box-principal{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .area-card-principal{
+        /* display: none; */
+        width: 100%;
+        height: 64%;
+    }
+
+    .card-principal{
+        height: 68%;
+        width: 50%;
+        top: -7%;
+    }
+
+    .img-card-principal{
+        width: 87%;
+        height: 35%;
+        position: absolute;
+    }
+
+    .utilidades-card-principal{
+        font-size: 0.9rem;
+        top: 45%;
+        left: 24%;
+    }
+
+    .h1-container-principal{
+        display: none;
+    } 
+
+    .container-card-principal{
+        width: 136%;
+        height: 69%;
+        top: 55%;
+        left: 3%;
+    }
+
+    .linha-card-principal{
+        height: 88%;
+        width: 35%;
+        top: 19%;
+    }
+
+    .linha-azul-card-principal{
+        top: 109%;
+        right: 43%;
+    }
+    
+    .area-card-segundario{
+        flex-direction: column;
+        background-color: transparent;
+        height: 125%;
+        width: 100%;
+        align-items: center;
+        gap: 3%;
+    }
+
+    .card-segundario{
+        width: 46%;
+        height: 50%;
+        left: -1%;
+        top: -3%;
+    }
+
+    .utilidades-card-segundario{
+        font-size: 0.9rem;
+        top: 38%;
+        left: 24%;
+    }
+
+    .btn-cantainer-card-segundario {
+        width: 40%;
+        height: 25px;
+        position: relative;
+        top: 41%;
+        left: 40%;
+        font-size: 12px;
+    }
+
+    .cantainer-card-segundario{
+        left: 2%;
+        top: 47%
+    }
+
+    .linha-branca-card-segundario{
+        width: 10%;
+        height: 97%;
+        top: 28%;
+        right: 58%;
+    }
+
+    .linha-rosa-card-segundario{
+        top: 86%;
+        right: 35%;
+    }
+
+    .content-principal{
+        height: 50%;
+        background-color: aqua;
+    }
+    /* .card-res-segundario{
+        display: block;
+        width: 60%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .img-card-res-segundario{
+        width: 10%;
+        height: 10%;
+    }
+
+    .cantainer-card-res-segundario{
+        background-color: #3F49EA;
+    } */
+    
+
+    .img-card-segundario{
+        width: 83%;
+        height: 32%;
+        position: absolute;
+    }
+
+    .bola-2{
+        width: 10%;
+        height: 10%;
+        right: -10px;
+        top: 20%;
+    }
+
+    /* Modal */
+    
+    .dlog-modal-card-ProEv{
+        
+
+        width: 89%;
+        height: 35%;
+        background-color: white;
+        position: absolute;
+        top: 38%;
+        left: 5.5%;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+     
+    .div-decorativa-modal{
+        #linha-dec1-modal{
+            display: none;
+        }
+    } 
+
+    .div-decorativa2-modal{
+        #linha-dec2-modal{
+            display: none;
+        }
+        #linha-dec3-modal{
+            display: none;
+        }
+        #linha-dec4-modal{
+            display: none;
+        }
+        top: 88%;
+        left: 58%;
+    }
+
+    .div-infs-evento-modal{
+
+    }
+/* 
+    .areatl-img-modal-ProEv{
+        background-color: #FF3877;
+    }
+
+    .area-text-modal-ProEv{
+        background-color: aqua;
+    } */
+
+    .p-atracao-modal{
+        font-size: 10px;
+    }
+
+    .title-atracao-modal{
+        font-size: 18px;
+    }
+
+    .div-decorativa-modal{
+        bottom: 93%;
+        right: 85%;
+    }
+
+
+    .div-infs-evento-modal{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 255, 255, 0);
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: self-start;
+        top: 0;
+        left: 0;
+    }
+     
+
+     
+    .p-atracao-modal{
+        font-size: 7px;
+        width: 131px;
+        left: 61%;
+    }
+     
+    #b-sari-modal{
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        left: 88%;
+        top: 2%;
+        cursor: pointer;
+    } 
+}
