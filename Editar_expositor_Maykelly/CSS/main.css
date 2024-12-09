@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow: hidden;
+    overflow-y: auto;
         
 }
 
@@ -147,7 +147,7 @@
 
 .imagens{
     position: relative;
-     top: 69%;
+    top: 69%;
     left: 2%;
 }
 
@@ -363,4 +363,95 @@ input[type="checkbox"]:checked + .modal-container {
     position: absolute;
     top: 90%;
     left: 3%;
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        overflow-y: auto;
+    }
+    .bola-fundo2{
+        width: 55px;
+    }
+    .bola-fundo3{
+        left: 87%;
+        width: 55px;
+    }
+    .bola-azul1{
+        left: 87%;
+        top: 94%;
+        width: 55px;
+    }
+
+    .box{
+        width: 91%;
+        height: 1370px;
+        left: -30px;
+        /* flex-direction: column; */
+    }
+   
+
+    .title{
+        width: 46%;
+        height: 36px;
+        font-size: 20px;
+        margin-left: -60px;
+    }
+
+    .input-formulario, .input-formulario2, .input-formulario3{
+        width: 100%;
+        /* position: static; */
+        left: 5px;
+        /* margin: 10px auto; */
+    }
+
+    .input-formulario2{
+        top: 28%;
+    }
+
+    .input-formulario3{
+        top: 47%;
+        gap: 20px;
+    }
+    .imagens{
+        position: absolute;
+        top: 73%;
+    }
+
+    .img-produtos{
+        display: flex;
+        position:absolute;
+        left: 8px; 
+        top: 75%;
+        flex-wrap: wrap;
+    }
+    .img-produtos img{
+        width: 55px;
+    }
+
+    .toggle-btn{
+        left: 30px;
+        top: 85%;
+    }
+    .status{
+        left: 30px;
+        top: 82%;
+    }
+
+    .botoes-salvar{
+        left: 32px;
+        top: 95%;
+    }
+    .botao-cancelar button{
+        left: 54%;
+        top: 95%;
+    }
+
+    .img-expo{
+        display: none;
+    }
+
+    .voltar{
+        display: none;
+    }
 }
