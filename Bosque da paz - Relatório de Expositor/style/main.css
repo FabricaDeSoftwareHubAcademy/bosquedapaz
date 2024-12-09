@@ -176,9 +176,9 @@ body {
     overflow-x: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
-    max-width: 100%;
-    height: 90%;
-    margin: 0 auto;
+    width:100%;
+    height: 100%;
+  
     position: relative;
     top: 90px;
     
@@ -251,6 +251,8 @@ body {
     left: 50px;
 }
 
+
+
 @media screen and (max-width: 768px){
   body{
     overflow: hidden;
@@ -260,18 +262,18 @@ body {
   }
   .bola-azul2{
     width: 55px;  
-    left: 78%;
+    left: 86.8%;
   }
   .bola-azul3{
-    top: 86%;
-    left: 79%;
+    top: 94%;
+    left: 86.7%;
     width: 55px;
   }
 
   .box {
     width: 86%;
-    height: 710px;
-    left: -20px;
+    height: 770px;
+    left: 5px;
     top: -20px;
   }
 
@@ -299,7 +301,6 @@ body {
   }
 
   .relatorio{
-    width: 100%;
     font-size: 0.8rem;
     width: 500px;
   }
@@ -321,8 +322,79 @@ body {
   }
   .box a{
     margin-left: -25px;
+    font-size: 16px;
   }
 }
  
+@media screen and (max-width: 1024px) {
+  body{
+    overflow: hidden;
+  }
+  .bola-azul1,.bola-azul2,.bola-azul3{
+    width: 75px;
+  }
+  .bola-azul2{
+    left: 90.2%;
+  }
+  .bola-azul3{
+    top: 93%;
+    left: 90.2%;
+  }
+
+  .box {
+    width: 86%;
+    height: 900px;
+    left: 5px;
+    top: -20px;
+  }
+
+  .title{
+    font-size: 20px;
+    left: 35%;
+    top: 25px;
+    width: 250px;
+    height: 40px;
+  }
+  .input-btn{
+    font-size: 16px;
+    left: 10%;
+    top: 55px;
+  }
+
+  .input-btn input{
+    width: 200px;
+  }
+  .input-btn .input-group{
+    width: 100px;
+  }
+  .form-label{
+    display: none;
+  }
+
+  .relatorio{
+    font-size: 0.8rem;
+    width: 500px;
+  }
+  .tabela-container{
+    border-radius: 8px;
+    width: 93%;
+    position: absolute;
+    left: 15px;
+    top: 20%;
+  }
+  
+  .relatorio td{
+    padding: 4px;
+    width: 50px;
+  }
+  .relatorio thead tr{
+    font-size: 0.85rem;
+    width: 40%;
+  }
+  .box a{
+    margin-left: -25px;
+    font-size: 16px;
+  }
+}
 
   
