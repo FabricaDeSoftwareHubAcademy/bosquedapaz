@@ -1,0 +1,725 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+.cabecalho {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+    margin-bottom: 10px;
+    position: fixed;
+    z-index: 3;
+    background-color: #fff;
+}
+
+.logo {
+    width: 150px;
+    margin: 5px 0px 0px 20px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.menu .menu-icon {
+    width: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu .menu-icon button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.menu .menu-icon img {
+    width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.nav-bar ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar ul li {
+    font-size: 1em;
+    padding-right: 20px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+
+.pesquisar-login {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pesquisar {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-right: 50px;
+}
+
+.pesquisar input {
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: -25px;
+    padding-left: 5px;
+}
+
+.pesquisar .bola {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #0D592E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/Lupa.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.login {
+    margin-right: 30px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.login img {
+    width: 100%;
+}
+
+.pesquisa {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.forma-1-edpass{
+    position: absolute;
+    top: 15vh; 
+    right: 80vw; 
+    z-index: 1;
+    width: 20vw; 
+}
+
+
+.forma-2-edpass{
+    position: absolute;
+    top: 77vh;
+    right: 80vw;
+    z-index: 1;
+    width: 20vw; 
+}
+
+.forma-3-edpass{
+    position: absolute;
+    top: 10vh;
+    left: 89vw;
+    z-index: 1;
+    width: 20vw;
+    height: 100vh;
+}
+
+.forma-4-edpass{
+    position: absolute;
+    top: 75vh;
+    left: 85vw;
+    z-index: 1;
+}
+
+.box-edpass{
+    width: 85%;
+    height: 750px;
+    max-width: 2000px;
+    z-index: 2;
+    backdrop-filter: blur(0px);
+    background-color: rgba(248, 245, 246, 0.705);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all .5s ease;
+    position: absolute;
+}
+
+.section-b{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+@media(max-width: 1500px) {
+    .logo {
+        width: 150px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cabecalho .logo img {
+        width: 100%;
+    }
+
+    .cabecalho .nav-bar ul {
+        font-size: 0.9em;
+    }
+
+    .cabecalho .pesquisar {
+        width: 50px;
+        height: 40px;
+    }
+
+    .cabecalho .pesquisar .input {
+        display: none;
+    }
+
+    .cabecalho .pesquisar .bola {
+        height: 50px;
+        width: 50px;
+    }
+
+    .cabecalho .login {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cabecalho .login img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pesquisar-login .pesquisar {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin-right: 30px;
+        width: auto;
+        height: 100%;
+    }
+
+    .pesquisar-login .pesquisar .bola {
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        background-color: #0D592E;
+        display: flex;
+    }
+
+    .pesquisar-login .pesquisar .input {
+        width: 110px;
+        height: 35px;
+        font-size: 0.6em;
+        font-weight: 600;
+        color: #000;
+        border-radius: 5px;
+        margin-right: -15px;
+        padding-left: 10px;
+    }
+
+    .pesquisar-login .pesquisar .inputOpen {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .menu {
+        justify-content: space-evenly;
+    }
+    .logo{
+        margin-left: -20px;
+        padding: 0px;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .menu .menu-icon {
+        display: block;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        height: 300px;
+        background-color: #fff;
+        position: fixed;
+        top: -20px;
+        margin-top: 90px;
+        z-index: 3;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-menu ul {
+        text-align: center;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+        text-decoration: none;
+    }
+
+    .mobile-menu .nav-item a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .mobile-menu .btn-login {
+        text-align: center;
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .btn-login .btnlogin {
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        background-color: #0D592E;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .pequisa-mobile {
+        height: 100%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .pesquisa {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin-right: 30px;
+        width: auto;
+        height: 100%;
+    }
+
+    .pesquisa input {
+        display: none;
+    }
+
+    .bola {
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        background-color: #0D592E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../img/Lupa.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+
+    .pesquisa .input {
+        width: 110px;
+        height: 35px;
+        font-size: 0.6em;
+        font-weight: 600;
+        color: #000;
+        border-radius: 5px;
+        margin-right: -15px;
+        padding-left: 10px;
+    }
+
+    .pesquisa .inputOpen {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .logo {
+        width: 100px;
+    }
+    .pequisa-mobile {
+        justify-content: center;
+    }
+
+    .menu .menu-icon {
+        width: 30px;
+    }
+
+    .bola {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+.ed{
+    margin-top: -50rem;
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    z-index: 2;
+}
+
+.area-card-edpass{
+    width: 80%;
+    height: 630px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 190px;
+    justify-items: center;
+}
+
+.cardRosa-edpass{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 530px;
+    background-image: url('../img/edpassCardrosa.svg');
+    background-position: 0%;
+    background-size: cover;
+    background-position: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    transition: all .3s ease;
+    justify-items: center;
+}
+
+.cardVerde-edpass{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 530px;
+    background-image: url('../img/edpassCardverde.svg');
+    background-position: 0%;
+    background-size: cover;
+    background-position: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    transition: all .3s ease;
+    justify-items: center;
+}
+
+.card-img-edpass img{
+    width: 97%;
+    height: 160px;
+    object-fit: cover;
+    margin: 5px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.card-content-edpass{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    line-height: 1.0;
+}
+
+.card-edpass:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.card1-edpass:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.area-texto-edpass{
+    overflow: auto;
+    width: 100%;
+    max-height: 120px;
+    margin-top: 10px;
+}
+
+.title-card-edpass{
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 15px auto;
+    margin-top: -5px;
+}
+
+.text-card-edpass{
+    font-size: 14px;
+    line-height: 1.3;
+    overflow: hidden;
+    color: #505050;
+    scrollbar-gutter: stable both-edges;
+    text-align: center;
+}
+
+::-webkit-scrollbar{
+    width: 2px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #ffffff00;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #a1a0a3;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #6b6869;
+}
+
+#btn-cardVerde1-edpass, #btn-cardVerde2-edpass{
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    color: #007E70;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #007E70;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+#btn-cardVerde1-edpass:hover, #btn-cardVerde2-edpass:hover{
+    color: white;
+    background-color: #007E70;
+    cursor: pointer;
+}
+
+#btn-cardRosa1-edpass, #btn-cardRosa2-edpass{
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    color: #FF3877;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #FF3877;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+#btn-cardRosa1-edpass:hover, #btn-cardRosa2-edpass:hover{
+    color: white;
+    background-color: #FF3877;
+    cursor: pointer;
+}
+
+/* modal */
+
+/* .modalRosa1-edpass, .modalRosa2-edpass{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/edpassModalRosa.svg);
+    justify-content: center;
+    align-items: center;
+}
+
+.modalVerde1-edpass, .modalVerde2-edpass{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/edpassModalVerde.svg);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-edpass{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    display: flex;
+    gap: 20px;
+}
+
+.modal-img-edpass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gg-img-edpass{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.modal-img-p-edpass{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.modal-texto-edpass{
+    flex: 1;
+}
+
+.btn-ModalVerde-edpass{
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    color: #007E70;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #007E70;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.btn-ModalVerde-edpass:hover{
+    color: white;
+    background-color: #007E70;
+    cursor: pointer;
+}
+
+.btn-ModalRosa-edpass{
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    color: #FF3877;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #FF3877;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.btn-ModalRosa-edpass:hover{
+    color: white;
+    background-color: #FF3877;
+    cursor: pointer;
+} */
+
+
+/* #fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide{
+    opacity: 0;
+
+} */
