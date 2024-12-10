@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --franch-rose:#FF3877;
+    --royal-blue: #162868;
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+
+.img-superior-direita-recsenha{
+    position: fixed;
+    left: 169vh;
+    top: 8vw;
+    width: 20vw;
+}
+
+.img-superior-esquerda-recsenha{
+    position: fixed;
+    left: 0vh;
+    top: 6vw;
+    width: 20vw;
+}
+
+.img-inferior-direita-recsenha{
+    position: fixed;
+    left: 158vh;
+    top: 36vw;
+    width: 20vw;
+}
+
+.img-inferior-esquerda-recsenha{
+    position: fixed;
+    left: 0vh;
+    top: 40vw;
+    width: 20vw;
+}
+
+.section-recsenha{
+    width: 100%;
+    height: 967px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-recsenha{
+    background-color: rgba(248, 245, 246, 0.705);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 85%;
+    flex-wrap: wrap;
+    height: 800px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: all .5s ease;
+    z-index: 1;
+    #linha-bet-recsenha{
+        height: 640px;
+        position: fixed;
+        border-right: 3px solid #FF3877;
+        left: 50%;
+        border-radius: 20px;
+        /* margin-top: 60px; */
+    }
+}
+
+/* .box-recsenha:hover{
+    background-color: #f0f0f013;
+    backdrop-filter: blur(30px);
+
+    #linha-bet-recsenha{
+        border-right: 3px solid #162868;
+    }
+} */
+
+.area-recsenha{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    margin-left: 4%;
+    /* background-color: red; */
+}
+
+.div-redefinicao{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    /* background-color: rgb(138, 21, 124); */
+}
+
+.div-text-recsenha{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 18px;
+    /* background-color: aqua; */
+}
+
+.form-recsenha{
+    display: flex;
+    flex-direction: column;
+    /* background-color: purple; */
+    justify-content: center;
+    align-items: center;
+}
+
+.form-recsenha .text-endereco-email{
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 29%;
+}
+
+.area-input-recsenha{
+    display: flex;
+    /* justify-content: center; */
+    width: 55%;
+    height: 38px;
+    align-items: center;
+    position: relative;
+}
+
+.area-input-recsenha i{
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    left: 7px;
+    font-size: 18px;
+}
+
+.area-input-recsenha .input-recsenha{
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding-left: 35px;
+    border-width: 0 0.5px 0.5px 0;
+    border-style: solid;
+    border-color: #162868;
+    padding-top: 2px;
+    box-shadow: 1px 2px 3px 2px #162868;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-recsenha::placeholder{
+    color: rgb(30, 30, 30);
+    font-size: 15.2px;
+}
+
+.div-botoes-recsenha{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+}
+
+.div-botao-cancelar-recsenha{
+    /* background-color: rebeccapurple; */
+    width: 140px;
+    height: 42px;
+}
+
+.div-botao-enviar-recsenha{
+    /* background-color: firebrick; */
+    width: 140px;
+    height: 42px;
+}
+
+.botao-cancelar-recsenha{
+    background-color: #FF3877;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all .5s ease;
+    box-shadow: 1px 3px 5px 2px #7d7d7d;
+}
+
+.botao-cancelar-recsenha:hover{
+    box-shadow: 1px 3px 5px 3.5px #162868;
+}
+
+.botao-enviar-recsenha{
+    background-color: #162868;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all .5s ease;
+    box-shadow: 1px 3px 5px 2px rgb(125, 125, 125);
+}
+
+.botao-enviar-recsenha:hover{
+    box-shadow: 1px 3px 5px 3.5px #FF3877;
+}
+
+.area-img-recsenha{
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    left: 8%;
+    /* border-width: 1px 1px 1px 1px; */
+    /* border-color: black; */
+    /* border-style: solid; */
+}
+
+.area-img-recsenha .text-h1-recsenha{
+    display: flex;
+    /* background-color: green; */
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.area-img-recsenha .img-recsenha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: auto;
+    /* background-color: purple; */
+}
+
+.img-recsenha .img-recsenha-svg-recsenha{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.img-recsenha .img-recsenha-svg-recsenha:hover{
+    transform: scale(1.05);
+}
+
+ /* modal */
+
+/* .dialog-recsenha{
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+} */
+
+@media screen and (max-width: 667px)  {
+    
+    .img-superior-direita-recsenha{
+        display: flex;
+        position: fixed;
+        width: 120px;
+        height: 120px;
+        left: 42vh;
+    }
+
+    .img-superior-esquerda-recsenha{
+        display: flex;
+        width: 120px;
+        height: 120px;
+        position: fixed;
+    }
+
+    .img-inferior-direita-recsenha{
+        position: fixed;
+        left: 37vh;
+        top: 49vh;
+        margin-top: 33vh;
+        width: 120px;
+        height: 120px;
+        display: flex;
+    }
+
+    .img-inferior-esquerda-recsenha{
+        display: flex;
+        position: fixed;
+        top: 82vh;
+        height: 120px;
+        width: 120px;
+    }
+
+    .area-recsenha{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        /* background-color: red; */
+        width: 80%;
+        left: 6%;
+        top: 50%;
+    }
+
+    .form-recsenha .input-recsenha{
+        display: flex;
+        width: 200px;
+        align-items: center;
+    }
+
+    .div-redefinicao{
+        display: flex;
+        position: fixed;
+        top: 28%;
+        /* background-color: red; */
+        left: 20%;
+    }
+
+    .div-text-recsenha{
+        display: flex;
+        position: fixed;
+        top: 33%;
+        width: 80%;
+        height: 10%;
+        left: 9.9%;
+        font-size: 16px;
+        /* background-color: red; */
+    }
+
+    #linha-bet-recsenha{
+        display: none;
+    }
+
+    .img-recsenha-svg-recsenha{
+        display: none;
+    }
+
+    .area-img-recsenha .text-h1-recsenha{
+        display: none;
+    }
+
+    .box-recsenha{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 52%;
+        margin-bottom: 80%;
+
+    }
+
+    .form-recsenha{
+        display: flex;
+    }
+
+    .area-input-recsenha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: green; */
+        width: 90%;
+    }
+
+    .area-input-recsenha .bi-envelope{
+        display: flex;
+    }
+
+    .area-input-recsenha .input-recsenha{
+        display: flex;
+        width: 100%;
+    }
+
+    .div-botoes-recsenha{
+        display: flex;
+        gap: 20px;
+        /* background-color: red; */
+    }
+
+    .div-botao-cancelar-recsenha{
+        display: flex;
+        width: 40%;
+    }
+
+    .div-botao-enviar-recsenha{
+        display: flex;
+        width: 40%;
+    }
+
+}
+
+@media screen and (min-width: 520px)  {
+    .box-recsenha:hover{
+        background-color: #f0f0f013;
+        backdrop-filter: blur(30px);
+    
+        #linha-bet-recsenha{
+            border-right: 3px solid #162868;
+        }
+    }
+}
+
+@media screen and (min-width:668px) and (max-width: 1024px) {
+    .body-recsenha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-recsenha{
+        display: flex;
+        height: 90%;
+        width: 650px;
+        justify-content: center;
+    }
+
+    #linha-bet-recsenha{
+        display: none;
+    }
+
+    .div-redefinicao{
+        display: flex;
+        justify-content: center;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .div-text-recsenha{
+        display: flex;
+        justify-content: center;
+        font-size: 19px;
+    }
+
+    .area-recsenha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-recsenha{
+        display: flex;
+    }
+
+    .form-recsenha .text-endereco-email{
+        display: flex;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .area-input-recsenha{
+        display: flex;
+        background-color: red;
+        width: 71%;
+        height: 46px;
+    }
+
+    .div-botoes-recsenha{
+        /* background-color: red; */
+        gap: 40px;
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        height: 48px;
+    }
+
+    .div-botao-cancelar-recsenha{
+        display: flex;
+        /* background-color: green; */
+        height: 100%;
+        width: 70%;
+    }
+
+    .div-botao-enviar-recsenha{
+        display: flex;
+        /* background-color: purple; */
+        height: 100%;
+        width: 70%;
+    }
+
+    .area-img-recsenha{
+        display: none;
+    }
+
+    .img-superior-esquerda-recsenha{
+        display: flex;
+        width: 220px;
+        height: 220px;
+    }
+
+    .img-inferior-esquerda-recsenha{
+        display: flex;
+        top: 76%;
+        width: 250px;
+        height: 250px;
+    }
+
+    .img-superior-direita-recsenha{
+        display: flex;
+        width: 200px;
+        height: 200px;
+        left: 79%;
+    }
+
+    .img-inferior-direita-recsenha{
+        display: flex;
+        width: 210px;
+        height: 210px;
+        left: 71%;
+        top: 80vh;
+    }
+}
