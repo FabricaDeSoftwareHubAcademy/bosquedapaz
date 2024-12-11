@@ -139,52 +139,38 @@
     border-bottom: 1.5px solid black;
 }
 
-#informacao .rua1::after {
-    content: "";
-    position: relative;
-    top: -13px;
-    left: 8px;
-    display: inline;
-    border-bottom: 10px solid var(--color-rua1);
-    background-color: none;
-    padding-left: 55px;
+.rua {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2px;
 }
 
-#informacao .rua2::after {
-    content: "";
-    position: relative;
-    top: -13px;
-    left: 8px;
-    display: inline;
-    border-bottom: 10px solid var(--color-rua2);
-    background-color: none;
-    padding-left: 55px;
-}
-
-#informacao .rua3::after {
-    content: "";
-    position: relative;
-    top: -13px;
-    left: 8px;
-    display: inline;
-    border-bottom: 10px solid var(--color-rua3);
-    background-color: none;
-    padding-left: 55px;
-}
-
-#informacao .rua4::after {
-    content: "";
-    position: relative;
-    top: -13px;
-    left: 8px;
-    display: inline;
-    border-bottom: 10px solid var(--color-rua4);
-    background-color: none;
-    padding-left: 55px;
-}
-
-#informacao .rua span {
+.rua-s {
     font-weight: 600;
+}
+
+.corr{
+    width: 85px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.ra-s {
+    background-color: var(--color-rua1);
+}
+.rl-s {
+    background-color: var(--color-rua2);
+}
+
+.rv-s {
+    background-color: var(--color-rua3);
+}
+
+.rr-s {
+    background-color: var(--color-rua4);
 }
 
 .text-info {
@@ -215,7 +201,6 @@
 }
 
 .ver-mais-expositor {
-    width: 100%;
     margin-top: 100px;
     display: flex;
     align-items: center;
@@ -223,11 +208,9 @@
     text-align: center;
 }
 
-.ver-mais-expositor button {
-    width: 400px;
-    height: 50px;
-    border: none;
-    outline: none;
+.link-mais-expo {
+    padding: 5px 15px;
+    text-decoration: none;
     background-color: #F36621;
     color: #fff;
     font-size: 1.7em;
@@ -235,6 +218,14 @@
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0px 0px 10px #0000002d;
+    transition: all ease-in .1s;
+}
+
+.link-mais-expo:hover {
+    background-color: #fff;
+    color: #F36621;
+    box-shadow: none;
+    border: 1px solid black;
 }
 
 /* estilizando seja expositor */
