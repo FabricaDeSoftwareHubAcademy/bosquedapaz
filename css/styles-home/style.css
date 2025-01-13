@@ -88,7 +88,7 @@ main {
     justify-content: center;
     width: 100%;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 
@@ -377,13 +377,18 @@ main {
         font-size: 0.7em;
     }
 
-    main .expositores h2 {
+    .expositores .title-expositor {
         font-size: 1.5em;
+        padding: 10px 0px;
+        padding-right: 5px;
     }
 
-    main .expositores p {
-        font-size: 0.7em;
-        width: 70%;
+    .expositores .text-ver-expositores {
+        font-size: 1.2rem;
+    }
+
+    .expositores .expositor-lista {
+        padding-top: 0px;
     }
 
     .expositor {
@@ -400,10 +405,6 @@ main {
     .imagem {
         width: 140px;
         height: 140px;
-    }
-
-    .expositor .informacoes-expositor {
-        height: auto;
     }
 
     .expositor .informacoes-expositor h3 {

@@ -18,6 +18,10 @@
     --color-rua4: #B313FF;
     --color-branca: white;
 }
+.cabecalho {
+    position: fixed;
+    z-index: 4;
+}
 
 .all-box {
     display: flex;
@@ -26,6 +30,7 @@
     justify-content: center;
     width: 80%;
     margin: auto;
+    padding-top: 70px;
 }
 
 .esco-cat {
