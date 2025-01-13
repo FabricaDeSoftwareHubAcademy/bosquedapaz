@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url(menu-adm.css);
-@import url(menu.css);
-
+@import url(../../css/menu-adm.css);
 
 * {
     padding: 0;
@@ -12,7 +10,6 @@
 
 body {
     background-color: #f7f7f7;
-    overflow: hidden;
 }
 
 .box-container {
@@ -78,39 +75,39 @@ body {
     background-color: rgb(226, 226, 226);
 }
 
-.inputGroup:focus {
-    transform: scale(1.05);
+/* .inputGroup:focus {
+    transform: scale(1.01);
     border: 2px solid gray;
     background-color: rgb(255, 255, 255);
     border-radius: 0px;
-}
+} */
 
 .visitantes {
-    background-image: url("../images/visitantes.svg");
+    background-image: url("../../imgs/img-edicao-dados/visitantes.svg");
     background-size: 25px;
     background-repeat: no-repeat;
-    background-position: 15px center;
+    background-position: 10px center;
 }
 
 .expositores {
-    background-image: url("../images/expositores.svg");
+    background-image: url("../../imgs/img-edicao-dados/expositores.svg");
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: 15px center;
 }
 
 .artistas {
-    background-image: url("../images/artistas.svg");
+    background-image: url("../../imgs/img-edicao-dados/artistas.svg");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 15px center;
 }
 
 .paises {
-    background-image: url("../images/paisesVisitantes.svg");
+    background-image: url("../../imgs/img-edicao-dados/paisesVisitantes.svg");
     background-size: 40px;
     background-repeat: no-repeat;
-    background-position: 4px center;
+    background-position: 8px center;
 }
 
 .container-botoes {
