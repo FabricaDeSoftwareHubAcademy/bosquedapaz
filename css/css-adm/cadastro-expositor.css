@@ -46,8 +46,7 @@ body {
     border-radius: 15px;
     backdrop-filter: blur(3px);
     box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
-    z-index: 2;
+    z-index: 2; 
 }
  .title{
     height: 10%;
@@ -157,6 +156,15 @@ body {
     width: 100%;
 }
 
+.opcao{
+    width: 250px;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
 .formulario-input input{
     width: 250px;
     height: 5vh;
@@ -251,8 +259,8 @@ input[type="checkbox"]:checked + .modal-container {
 }
 
 .botoes label.salvar {
-    background-color: #a74caf;
-    width: 130px;
+    background-color: #FF3877;
+    width: 110px;
 }
 
 
@@ -377,23 +385,6 @@ input[type="checkbox"]:checked + .modal-container {
     cursor: pointer;
 }
 
-    
-
-
-/* .salvar-btn {
-    height: 510px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #007E70;
-    border: none;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-    box-shadow: 0px 4px 6px #027C8D;
-} */
-
-
-
 
 .fa-solid, .fas{
     position: absolute;
@@ -403,88 +394,48 @@ input[type="checkbox"]:checked + .modal-container {
 
 
 
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-        min-height: 100vh;
-        overflow-y: auto;
-    }
+@media (max-width: 1024px) {
 
-    .bola-verde1 {
-        width: 70px;
-        height: 80px;
-        position: fixed;
-        left: 2%;
-        top: 10%;
-    }
-
-    .bola-verde2 {
-        /* margin-left: -30px;
-        margin-top: 50px; */
-        width: 70px;
-        height: 90px;
-        position: fixed;
-        left: 85%;
-        top: 30%;
-    }
-
-    .bola-rosa {
-        width: 90px;
-        height: 100px;
-        /* margin-top: 72px;
-        margin-left: -45px; */
-        position: fixed;
-        left: 80%;
-        top: 85%;
-    }
-
-    .box {
-        margin-left: -2px;
-        margin-top: 13%;
-        width: 396px;
-        height: 780px;
-        position: fixed;
-        top: 6%;
-    }
-
-    .title {
-        min-width: 260px;
-        max-width: 100%;
-        height: 20px;
-        white-space: nowrap;
-        font-size: 18px;
-        position: relative;
-        left: -43%;
+    body{
+        font-size: 16px;
     }
     
-    .caixa-formulario{
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-
-    .caixa-formulario input{
-        width: 75%;
-        height: 40px;
-    }
-
-    .caixa-contato{  
-        margin-left: -40%;
-        margin-top: 75%; 
+    
+    .box{
+        width: 920px;
+        height: 1200px;
+        flex-direction: column;
         display: flex;
-        align-items: flex-start;
+        padding: 50px;
     }
 
-    
+    .title{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        left: 0%;
+    }
 
+    .caixa-formulario{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        left: 60%;
+    }
 
-
-
-
+    .caixa-contato{
+        display: flex;
+        flex-direction: column;
+        left: 35%;
+        top: 37%;
+    }
     
 
   
 }
 
+    
     

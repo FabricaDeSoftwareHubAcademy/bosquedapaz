@@ -364,3 +364,8 @@ input[type="checkbox"]:checked + .modal-container {
     top: 90%;
     left: 3%;
 }
+
+@media (max-width:1024px) {
+    
+    
+}
