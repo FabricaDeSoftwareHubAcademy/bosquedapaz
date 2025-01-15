@@ -137,7 +137,7 @@ main {
 }
 
 .iu {
-    width: 180px;
+    width: 270px;
 }
 
 .imu {
@@ -177,16 +177,6 @@ main {
         height: 85%;
     }
 
-    .seja-expositor .box-imagens {
-        display: none;
-    }
-
-    .seja-expositor {
-        margin-top: -100px;
-        align-items: center;
-        justify-content: center;
-    }
-
 }
 
 @media (max-width: 1150px) {
@@ -205,13 +195,6 @@ main {
         bottom: auto;
     }
 
-    .info {
-        width: 250px;
-    }
-
-    .p-prin {
-        font-size: 24px;
-    }
 }
 
 
@@ -229,36 +212,8 @@ main {
         height: 85%;
     }
 
-
-
-    .title-welcome {
-        font-size: 1.1rem;
-    }
-
-    .text-welcome-c {
-        font-size: .9rem;
-    }
-
-    .item {
-        width: 100px;
-        height: 150px;
-    }
-
-
-    .rodape .box-footer .list-rodape h5 {
-        font-size: 1.3em;
-    }
-
-    .rodape .box-footer .list-rodape ul {
-        font-size: 0.8em;
-    }
-
-    .rodape .box-footer .list-contato div img {
-        width: 40px;
-    }
-
-    .rodape .box-footer .list-contato div p {
-        font-size: 0.8em;
+    .informacoes {
+        gap: 5px;
     }
 }
 
@@ -279,6 +234,10 @@ main {
     }
 
     /* informacaoe numeros */
+
+    .informacoes {
+        gap: 5px;
+    }
 
     .info {
         width: 150px;

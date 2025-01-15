@@ -219,7 +219,7 @@
 
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1050px) {
     .menu {
         justify-content: space-between;
         padding: 0px 20px 0px 20px;
@@ -290,10 +290,10 @@
 
     .pequisa-mobile {
         height: 100%;
-        width: 200px;
+        width: 60%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: right;
     }
     
     .pesquisa {

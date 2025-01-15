@@ -208,8 +208,30 @@
     margin-top: -15px;
 }
 
+@media screen and (max-width: 1050px) {
+    .categoria-title {
+        font-size: 2.2em;
+    }
+
+    .text-categoria {
+        width: 80%;
+    }
+
+    .title-welcome {
+        font-size: 1.5em;
+    }
+}
+
 
 @media(max-width: 500px) {
+    .title-welcome {
+        font-size: 1.1em;
+    }
+
+    .text-welcome-c {
+        font-size: .9em;
+    }
+
     .categoria-title {
         font-size: 1.2em;
     } 
