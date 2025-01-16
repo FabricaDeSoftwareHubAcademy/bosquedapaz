@@ -33,10 +33,12 @@
 
 .box{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     padding: 130px;
     width: 1700px;
     height: 770px;
-    /* background-color: red; */
     margin-left: 6%;
     margin: 50px;
     position: relative;
@@ -47,6 +49,7 @@
     box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
     z-index: 2;
+
 }
 
 .title{
@@ -55,17 +58,36 @@
     font-size: 32px;
     height: 50px;
     width: 300px;
-    position: absolute;
+    
     left: 43%;
     top: 18%;
     text-transform: uppercase;
+}
+
+.caixa-formulario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    width: 100%;
+    gap: 20px;
+
+}
+
+.botoes{
+    width: 100%;
+    background-color: red;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .input-formulario{
     display: flex;
     flex-direction: column;
     gap: 8px;
-    position: absolute;
     left:25%;
         
 }
@@ -91,7 +113,6 @@
     display: flex;
     flex-direction: column;
     gap: 9px;
-    position: absolute;
     left: 49.5%;
 }
 
@@ -115,7 +136,6 @@
     display: flex;
     flex-direction: column;
     gap: 9px;
-    position: absolute;
     left: 65%;
     top: 17%;
 }
@@ -140,7 +160,6 @@
     width: 250px;
     height: auto;
     border-radius: 10px;
-    position: absolute;
     left: 7%;
     top: 18%;
 }
@@ -163,7 +182,6 @@
 }
 
 .botoes-salvar{ 
-    position: absolute;
     left: 73%;
     top: 70%;
 }
@@ -243,7 +261,6 @@ input[type="checkbox"]:checked + .modal-container {
 
 
 .botoes-cancelar{
-    position: absolute;
     left: 62%;
     top: 64%;
 }
@@ -267,7 +284,6 @@ input[type="checkbox"]:checked + .modal-container {
 .botao-cancelar button{
     background-color: #B1253F;
     padding: 7px 20px;
-    position: absolute;
     left: 64%;
     top: 70%;
     border: none;
@@ -284,13 +300,11 @@ input[type="checkbox"]:checked + .modal-container {
 
 
 .status{
-    position: absolute;
     top: 55%;
     left: 65%;
 }
 
 .toggle-btn {
-    position: absolute;
     left: 66%;
     top: 59%;
     display: inline-block;
@@ -304,7 +318,6 @@ input[type="checkbox"]:checked + .modal-container {
 }
   
 .btn-status{
-    position: absolute;
     top: 0%;
     left: 0;
     width: 100%;
@@ -316,7 +329,6 @@ input[type="checkbox"]:checked + .modal-container {
 }
   
 .ativar {
-    position: absolute;
     top: 5px;
     left: 5px;
     width: 30px;
@@ -329,7 +341,6 @@ input[type="checkbox"]:checked + .modal-container {
   
 .toggle-btn::before {
     content: "";
-    position: absolute;
     top: -25px;
     right: -35px;
     font-size: 12px;
@@ -360,7 +371,6 @@ input[type="checkbox"]:checked + .modal-container {
 }
 
 .fa-solid, .fas{
-    position: absolute;
     top: 90%;
     left: 3%;
 }
