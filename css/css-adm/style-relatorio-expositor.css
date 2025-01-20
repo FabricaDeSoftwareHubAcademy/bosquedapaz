@@ -51,29 +51,31 @@ body {
     box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
     z-index: 2;
+    flex-direction: column;
 
 }
  
 .title{
-    width: 150%;
-    height: 20%;
-    position: absolute;
-    left: 37%;
-    top: 10px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
  
-.form-label{
+/* .form-label{
     font-size: 20px;
-}
+} */
 
 
 .input-btn {
-    display: flex;
-    margin: 20px 0;
-    position: absolute;
-    left: 30%;
-    top: 13%;
-    gap: 15px;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-label {
@@ -127,14 +129,6 @@ body {
 }
 
  
-
-
-
-
-
-
-
-
 /* Tabela */
 .relatorio {
   width: 100%;
@@ -167,20 +161,20 @@ body {
  
 
 .tabela-container {
-    max-height: 500px;
-    overflow-y: auto;
+    
+    /* overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 500%;
-    height: auto;
-    position: relative;
-    top: 90px;
-    
+    width: 100%; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
    
   /* Barra de rolagem */
 .tabela-container::-webkit-scrollbar {
-    width: 8px;
+    width: 50px;
 }
 
 .tabela-container::-webkit-scrollbar-thumb {
@@ -233,7 +227,7 @@ body {
 
 
 .voltar{
-    position: absolute;
+    
     top: 93%;
     font-size: 1.5rem;
     color: black;
