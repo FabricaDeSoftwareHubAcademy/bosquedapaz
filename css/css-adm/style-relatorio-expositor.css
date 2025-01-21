@@ -51,15 +51,19 @@ body {
     box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
     z-index: 2;
-
+    flex-direction: column;
+    
 }
  
 .title{
-    width: 150%;
-    height: 20%;
-    position: absolute;
-    left: 37%;
-    top: 10px;
+  width: 100%;
+  background-color: red;
+}
+
+.title-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
  
 .form-label{
@@ -70,8 +74,7 @@ body {
 .input-btn {
     display: flex;
     margin: 20px 0;
-    position: absolute;
-    left: 30%;
+      left: 30%;
     top: 13%;
     gap: 15px;
 }
@@ -233,8 +236,7 @@ body {
 
 
 .voltar{
-    position: absolute;
-    top: 93%;
+      top: 93%;
     font-size: 1.5rem;
     color: black;
     left: 50px;
