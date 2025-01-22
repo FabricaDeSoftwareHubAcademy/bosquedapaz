@@ -25,7 +25,7 @@
 
 .img-superior-direita{
     position: fixed;
-    right: -139px;
+    right: -143px;
     top: 8vw;
     width: 20vw;
 }
@@ -39,15 +39,15 @@
 
 .img-inferior-direita{
     position: fixed;
-    right: -37px;
-    bottom: -7px;
+    right: -41px;
+    top: 35vw;
     width: 20vw;
 }
 
 .img-inferior-esquerda{
     position: fixed;
     left: 0vh;
-    top: 40vw;
+    top: 39vw;
     width: 20vw;
 }
 
@@ -92,6 +92,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.forms-login{
+    width: 50%;
+}
+
+.forms-login input{
+    /* background-color: black; */
+    height: 39px;
 }
 
 .area-img-login{
