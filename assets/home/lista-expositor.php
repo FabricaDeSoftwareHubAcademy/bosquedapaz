@@ -20,7 +20,7 @@
                         <h3 class="nome-expo">RETALHOS E CHITA</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua1" ><span>RUA:</span> Amarela</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -39,7 +39,7 @@
                         <h3 class="nome-expo">AKJ PRIME</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua2"><span>RUA:</span> Laranja</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -58,7 +58,7 @@
                         <h3 class="nome-expo">CAKE PET CG</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua3"><span>RUA:</span> Verde</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -77,7 +77,7 @@
                         <h3 class="nome-expo">DECORART ARTESANATO</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua4"><span>RUA:</span> Roxa</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rr-s">Roxa</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -95,7 +95,7 @@
                         <h3 class="nome-expo">RETALHOS E CHITA</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua1" ><span>RUA:</span> Amarela</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -114,7 +114,7 @@
                         <h3 class="nome-expo">AKJ PRIME</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua2"><span>RUA:</span> Laranja</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -133,7 +133,7 @@
                         <h3 class="nome-expo">CAKE PET CG</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua3"><span>RUA:</span> Verde</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -152,7 +152,7 @@
                         <h3 class="nome-expo">DECORART ARTESANATO</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua4"><span>RUA:</span> Roxa</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rr-s">Roxa</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -170,7 +170,7 @@
                         <h3 class="nome-expo">RETALHOS E CHITA</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua1" ><span>RUA:</span> Amarela</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -189,7 +189,7 @@
                         <h3 class="nome-expo">AKJ PRIME</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua2"><span>RUA:</span> Laranja</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -208,7 +208,7 @@
                         <h3 class="nome-expo">CAKE PET CG</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua3"><span>RUA:</span> Verde</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -227,7 +227,7 @@
                         <h3 class="nome-expo">DECORART ARTESANATO</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua4"><span>RUA:</span> Roxa</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rr-s">Roxa</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -245,7 +245,7 @@
                         <h3 class="nome-expo">RETALHOS E CHITA</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Artesanato</span></p>
-                            <p class="rua rua1" ><span>RUA:</span> Amarela</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -264,7 +264,7 @@
                         <h3 class="nome-expo">AKJ PRIME</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua2"><span>RUA:</span> Laranja</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -283,7 +283,7 @@
                         <h3 class="nome-expo">CAKE PET CG</h3>
                         <div id="informacao">
                             <p class="text-info">CATEGORIA: <span>Gastronomia</span></p>
-                            <p class="rua rua3"><span>RUA:</span> Verde</p>
+                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
                         </div>
                         <div class="botao">
                             <button class="open-modal" data-modal="modal-ver-per-expo">VER</button>
@@ -298,7 +298,7 @@
             <?php include "assets/modais/m-perfil-expo.html"; ?>
         </dialog>
         <div class="ver-mais-expositor"><!-- botão mais expositores -->
-            <button>VER MAIS EXPOSITORES</button>
+            <a href="pages/client/todos-expositores.php" class="link-mais-expo">VER MAIS EXPOSITORES</a>
         </div>
     </section>
 
