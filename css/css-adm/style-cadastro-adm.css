@@ -517,5 +517,87 @@ a:hover{
     .formaCadastro-4{
         top: 76vh;
     }
+}    
+
+@media (min-width: 1024px) and (max-height: 600px) {
+    .button-cad-mt{
+        width: 130px;
+        height: 25px;
+        margin-top: 560px;
+        right: 160px;
+    }
+    .box-cadastro-mt{
+        width: 75%;
+        height: 550px;
+        overflow-y: scroll;
+    }
+
+    .areaForm-cad-mt{
+        /* background-color: #FF3877; */
+        margin-top: 120px;
+    }
+
+    .titulo-areato-mt{
+        display: block;
+        margin-bottom: 460px;
+        font-size: 30px;
+    }
+    p{
+        left: 33%;
+        top: 650px;
+    }
 }
+
+@media (min-width: 1280px) and (max-height: 800px) {
+    .titulo-areato-mt{
+        display: block;
+        margin-bottom: 600px;
+        font-size: 40px;
+    }
+
+    form{
+        left: 185px;
+    }
+
+    p{
+        left: 38%;
+    }
+
+    .button-cad-mt{
+        right: 155px;
+        margin-top: 598px;
+    }
+    
+}
+
+@media (min-width: 414px) and (max-height: 896px){
+    p{
+        top: 715px;
+    }
+}
+
+@media (min-width: 390px) and (max-height: 844px){
+    p{
+        top: 700px;
+    }
+}
+
+@media (min-width: 430px) and (max-height: 932px){
+    p{
+        top: 735px;
+    }
+}
+
+@media (min-width: 412px) and (max-height: 915px){
+    p{
+        top: 720px;
+    }
+}
+
+@media (min-width: 912px) and (min-height: 1368px){
+    p{
+        left: 33%;
+    }
+}
+
 

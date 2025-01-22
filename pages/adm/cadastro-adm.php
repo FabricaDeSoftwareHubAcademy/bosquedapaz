@@ -22,10 +22,10 @@
                 <img src="../../imgs/img-cadastro-adm/FormaCadastro-02.png" alt="">
             </div>
             <div class="formaCadastro-3">
-                <img src="../../imgs/img-cadastro-adm/FormaCadastro-03.png" alt="">
+                <img src="../../imgs/img-cadastro-adm/FormaCadastro-03.svg" alt="">
             </div>
             <div class="formaCadastro-4">
-                <img src="../../imgs/img-cadastro-adm/FormaCadastro-04.png" alt="">
+                <img src="../../imgs/img-cadastro-adm/FormaCadastro-04.svg" alt="">
             </div>
             
             <!-- /* Box */ -->

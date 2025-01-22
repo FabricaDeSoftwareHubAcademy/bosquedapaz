@@ -303,5 +303,29 @@ tr:nth-child(even) {
     .table-lisEsp{
         top: 60px;
     }
-
 }
+
+@media (min-width: 1024px) and (max-height: 600px) {
+    .b-LisEsp3{
+        top: 75vh;
+    }
+
+    .box-LisEsp-mat{
+        width: 90%;
+        height: 450px;
+        bottom: 200px;
+    }
+}
+
+@media (min-width: 1280px) and (max-height: 800px){
+    .b-LisEsp3{
+        top: 75vh;
+    }
+
+    .box-LisEsp-mat{
+        width: 90%;
+        height: 650px;
+        bottom: 105px;
+    }
+}
+
