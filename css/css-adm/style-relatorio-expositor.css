@@ -38,9 +38,9 @@ body {
 .box {
     display: flex;
     padding: 140px;
-    width: 1750px;
+    width: 95%;
     height: auto;
-    background-color: red;
+    /* background-color: red; */
     margin-left: 6%;
     margin: 50px;
     position: relative;
@@ -51,47 +51,48 @@ body {
     box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
     z-index: 2;
+    flex-direction: column;
+    gap: 20px;
 
 }
  
 .title{
-    width: 150%;
-    height: 20%;
-    position: absolute;
-    left: 37%;
-    top: 10px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
 }
  
-.form-label{
+/* .form-label{
     font-size: 20px;
-}
+} */
 
 
 .input-btn {
-    display: flex;
-    margin: 20px 0;
-    position: absolute;
-    left: 30%;
-    top: 13%;
-    gap: 15px;
+  width: 100%;
+   /* background-color: blue; */
+   display: flex;
+   justify-content: center;
 }
 
 .form-label {
-  font-size: 16px;
   color: #333;
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 23px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  position: relative;
+  top: 8px;
+  left: -10px;
 }
 
 
-.input-group {
+/* .input-group {
   display: flex;
   align-items: center;
   gap: 10px;
 }
- 
+  */
 
 
 .input-group input {
@@ -99,16 +100,11 @@ body {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  outline: none;
+  /* outline: none; */
   width: 380px;
-  height: 50px  ;
-  transition: border-color 0.3s ease;
+  height: 50px;
+  /* transition: border-color 0.3s ease; */
 }
- 
-.input-group input:focus {
-  border-color: #003366; /* Cor de foco */
-}
-
 
 .input-group button {
   padding: 13px 20px;
@@ -118,21 +114,13 @@ body {
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  /* cursor: pointer; */
+  transition: background-color 0.1s ease;
 }
 
 .input-group button:hover {
   background-color: #1f21b4; /* Cor ao passar o mouse */
 }
-
- 
-
-
-
-
-
-
 
 
 /* Tabela */
@@ -141,7 +129,6 @@ body {
   border-collapse: collapse;
   font-size: 0.9rem;
   background: white;
-  
 }
  
 .relatorio thead tr {
@@ -171,7 +158,7 @@ body {
     overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 500%;
+    width: 100%;
     height: auto;
     position: relative;
     top: 90px;
@@ -204,14 +191,7 @@ body {
 } */
  
 .status {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-  border: none;
- 
+  border-radius: 10px;
 }
 
 .status.ativo {
@@ -221,11 +201,19 @@ body {
 .status.inativo {
   background-color: #ff6b6b;
 }
- 
+
+
+td.status.ativo,
+td.status.inativo {
+  display: flex;
+  justify-content: center;
+}
 
 /* Ícone de edição */
 .editar {
-  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
 }
 .editar a{
     color: black;
@@ -233,7 +221,6 @@ body {
 
 
 .voltar{
-    position: absolute;
     top: 93%;
     font-size: 1.5rem;
     color: black;
