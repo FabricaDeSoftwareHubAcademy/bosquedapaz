@@ -31,13 +31,14 @@ body {
     left: 89%;
     z-index: 1;
 }
+
  
 .box{
     display: flex;
     padding: 120px;
     width: 1750px;
     height: auto;
-    background-color: red;
+    /* background-color: red; */
     margin-left: 6%;
     margin: 50px;
     position: relative;
@@ -48,158 +49,161 @@ body {
     box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
     z-index: 2;
+    flex-direction: column;
+    gap: 20px;
+    
 }
  .title{
-    height: 10%;
-    width: 37%;
-    position: relative;
-    left: 57vh;
-    top: -10vh;
-    font-size: 30px;
-    /* z-index: 1; */
-    /* background-color: red */
-    ;
-    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    /* background-color: blue; */
 }
-.caixa-formulario{
-    position: absolute;
-    top: 100px;
+.formularios{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
     
-   
 }
-.caixa-formulario input{
-    width: 50vh;
+
+.formularios div{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formularios input{
+    width: 40vh;
     height: 5vh;
-    margin: 20px;
+    margin: 10px;   
     padding-left: 10px;
     border-radius: 5px;
     border: none;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
 }
- 
+
 .caixa-formulario label{
-    position: absolute;
-    left: 26px;
+    font-size: 14px;
+    margin-bottom: -10px;
+    margin-left: 10px;
 }
 
-.caixa-contato{
-    z-index: 3;
-    padding: 20px;
+.caixa-contato input{
+    width: 170px;
+    margin: 20px;
+}
+
+.formularios{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border: none;
+}
+
+.formularios div{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 13%;
-    left: 43%;
 }
+
+.formularios input{
+    width: 40vh;
+    height: 5vh;
+    margin: 10px;   
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.caixa-formulario label{
+    font-size: 14px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+
 .caixa-contato input{
-    width: 190px;
-    height: 5vh;
+    width: 170px;
     margin: 20px;
-    border-radius: 5px;
-    border: none;  
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1; 
 }
- 
 
-.caixa-contato label{
-    display: block;
+.caixa-contato label {
+    font-size: 14px; /* Tamanho da fonte */
+    margin-bottom: -8px; /* Espaço entre a label e o input */
+    margin-left: 20px;
+}
+
+.form-opc{
     position: relative;
-    left: 8%;
+    top: -40px;
 }
 
-
-
-.input-img{
-
-    position: relative;
-    top: -10px;
-    left: 10%;
+.form-opc label{
+    font-size: 14px; /* Tamanho da fonte */
+    margin-bottom: -8px; /* Espaço entre a label e o input */
+    margin-left: 10px;
 }
-.input-img button {
-    height: 130px;
-    width: 140px;
+
+.upload{
     display: flex;
-    border: none;
-    position: relative;
-    left: 10%;
-    border-bottom: 1.5px solid rgb(202, 202, 202);
-    border-right: 1.5px solid rgb(202, 202, 202);
-}
- 
-.formulario {
-    width: 300px;  /* Define a largura desejada para o container */
-    position: absolute;
-    left: 68%;
-    top: 13%;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: black;
+    margin-top: 15px;
 }
 
-.formulario input{
-    width: 250px;
-    height: 5vh;
-    /* margin: 20px; */
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-.formulario label {
-    display: block;              
-    overflow: hidden;          
-    width: 100%;                
-}
- 
-.formulario-input label {
-    display: block;
-    overflow: hidden;
+.form-finalizar{
     width: 100%;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
 }
 
-.formulario-input input{
-    width: 250px;
-    height: 5vh;
-    /* margin: 20px; */
-    border-radius: 5px;
+
+
+.edital-feira a{
+    text-decoration: none;
+    color: white;
+}
+ 
+.edital-feira button{
+    height: 35px;
+    width: 190px;
+    border-radius: 10px;
     border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
+    background-color: #007E70;
+    font-size: 18px;
 }
 
-.formulario-input {
-    position:absolute;
-    top: 38%;
-    left: 68%;
-    width: 300px;
-    border: none;
-}
-   
-.botoes-salvar{
-    position: absolute;
-    left: 73%;
-    top: 64%;
-
-}
 
 label#salvar-btn {
     display: inline-block;  
-    background-color: #4CAF50;
+    background-color: #FF3877;
     color: white;
     padding: 9px 50px;
-    background-color: #FF3877;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     font-size: 23px;
     text-transform: uppercase;
-    /* box-shadow: 0px 4px 6px #027C8D; */
 }
 
-/* label#salvar-btn:hover {
-    background-color: #45a049;
-} */
 
 .modal-container {
     position: fixed;
@@ -238,10 +242,11 @@ input[type="checkbox"]:checked + .modal-container {
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
+  
 }
 
 .botoes label {
-    background-color: #007BFF;
+    background-color: #007E70;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -251,17 +256,16 @@ input[type="checkbox"]:checked + .modal-container {
 }
 
 .botoes label.salvar {
-    background-color: #4CAF50;
-    width: 130px;
+    background-color: #FF3877;
+    width: 110px;
 }
 
-
-
+.botoes-salvar,
 .botoes-cancelar{
-    position: absolute;
-    left: 62%;
-    top: 64%;
+    position: relative;
+    left: 60%;
 }
+
 
 .btn-cancelar{
     display: inline-block;  
@@ -275,81 +279,25 @@ input[type="checkbox"]:checked + .modal-container {
     color: white;
     font-size: 18px;
     text-transform: uppercase;
-    /* box-shadow: 0px 4px 6px #027C8D; */
+    
 }
 
 
-
-
-.edital-feira{
-    height: 50px;
-    left: 50px;
+.form-termos{
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
 }
 
-.edital-feira a{
-    text-decoration: none;
-    color: white;
-}
- 
-.edital-feira button{
-    position: absolute;
-    top: 68%;
-    left: 9%;
-    height: 35px;
-    width: 190px;
-    border-radius: 10px;
-    border: none;
-    background-color: #007E70;
-    color: white;
-    font-size: 18px;
-}
- 
-.termos{
-    height: 20px;
-    width: 250px;
-    color: red;
-    position: relative;
-    top: 57vh;
-    left: -50vh;
-   
-}   
- 
-
-.expositor-kids{
-    height: 45px;
-    width: 150px;
-}
-
-.expositor-kids a{
+.form-termos a{
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
- 
-.expositor-kids button{
-    height: 35px;
-    width: 185px; 
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-    background-color: #007E70;
-    position: absolute;
-    top: 83%;
-    left: 54.4%;
-}
- 
-.artistas{
-    height: 45px;
-    width: 150px;
-}
 
-.artistas a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px ;
-}
-.artistas button{
+.form-termos button{
     height: 35px;
     width: 185px;
     border: none;
@@ -357,129 +305,39 @@ input[type="checkbox"]:checked + .modal-container {
     color: white;
     font-size: 16px;
     background-color: #007E70;
-    position: absolute;
-    top: 83%;
-    left: 43%;
 }
- 
- 
-.caixa-checkbox {
-    display: flex;      
-    align-items: center; 
-    gap: 10px; 
-    margin-top: 36.4%; 
-    margin-left: -53%;
+
+.termos{
+    height: 20px;
+    width: 250px;
+    color: red;
+}   
+
+.expositor-kids{
+    height: 50px;
+    width: 200px;
+    position: relative;
+    left: 26%;
+}
+
+.artistas{
+    height: 45px;
+    width: 200px;
+    
 }
 
 .caixa-checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
-    
-
-
-/* .salvar-btn {
-    height: 510px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #007E70;
-    border: none;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-    box-shadow: 0px 4px 6px #027C8D;
-} */
-
-
-
-
-
-
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-        min-height: 100vh;
-        overflow-y: auto;
-    }
-
-    .bola-verde1 {
-        width: 70px;
-        height: 80px;
-        position: fixed;
-        left: 2%;
-        top: 10%;
-    }
-
-    .bola-verde2 {
-        /* margin-left: -30px;
-        margin-top: 50px; */
-        width: 70px;
-        height: 90px;
-        position: fixed;
-        left: 85%;
-        top: 30%;
-    }
-
-    .bola-rosa {
-        width: 90px;
-        height: 100px;
-        /* margin-top: 72px;
-        margin-left: -45px; */
-        position: fixed;
-        left: 80%;
-        top: 85%;
-    }
-
-    .box {
-        margin-left: -2px;
-        margin-top: 13%;
-        width: 396px;
-        height: 780px;
-        position: fixed;
-        top: 6%;
-    }
-
-    .title {
-        min-width: 260px;
-        max-width: 100%;
-        height: 20px;
-        white-space: nowrap;
-        font-size: 18px;
-        position: relative;
-        left: -43%;
-    }
-    
-    .caixa-formulario{
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-
-    .caixa-formulario input{
-        width: 75%;
-        height: 40px;
-    }
-
-    .caixa-contato{  
-        margin-left: -40%;
-        margin-top: 75%; 
-        display: flex;
-        align-items: flex-start;
-    }
-
-    
-
-
-
-
-
-    
-
-  
+.caixa-checkbox label{
+    font-size: 18px;
 }
 
-    
+
+.voltar{
+    color: black;
+    font-size: 20px;
+}
