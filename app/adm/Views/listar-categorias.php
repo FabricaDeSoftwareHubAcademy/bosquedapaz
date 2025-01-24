@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Categorias</title>
-        <link rel="stylesheet" href="../../css/css-adm/style-listar-categoria.css" >
+        <link rel="stylesheet" href="../Public/css/style-listar-categoria.css" >
         <link rel="stylesheet" href="../cadastro.css/menu-adm.css">
     </head>
     
