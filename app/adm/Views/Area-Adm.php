@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Administrativa</title>
-    <link rel="stylesheet" href="../../css/menu-adm.css">
-    <link rel="stylesheet" href="../../css/css-adm/Area-Adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/Area-Adm.css">
 </head>
 <body>
 
