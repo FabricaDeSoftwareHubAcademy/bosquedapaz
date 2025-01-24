@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Eventos</title>
-    <link rel="stylesheet" href="../../css/css-adm/style-cadastro-evento.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-evento.css">
 </head>
 
 <body>
-<?php include "../../assets/adm/menu-adm.html"?>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
 
     <main class="principal">
@@ -112,7 +112,7 @@
             </div>
             <div class="btns">
                 <a href="" class="voltar">
-                    <img src="../../imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">
@@ -129,9 +129,9 @@
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../js/js-menu/js-menu.js"></script>

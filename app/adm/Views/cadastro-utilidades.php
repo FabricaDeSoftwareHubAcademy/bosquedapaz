@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Utilidade Públicas</title>
-    <link rel="stylesheet" href="../../css/css-adm/style-cadastroutilidades.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastroutilidades.css">
 </head>
 
 <body>
-<?php include "../../assets/adm/menu-adm.html"?>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
 
     <main class="principal">
@@ -43,10 +43,10 @@
                 </form>
                 
                 <div class="vetor">
-                    <img src="../../imgs/img-cadastro-eventos/img-vetor.png" alt="">
+                    <img src="../../../Public/imgs/img-cadastro-eventos/img-vetor.png" alt="">
                 </div>
                 <div class="box-img">
-                    <img src="../../imgs/img-cadastro-eventos/img-edicao-utilidade.png" alt="">
+                    <img src="../../../Public/imgs/img-cadastro-eventos/img-edicao-utilidade.png" alt="">
                 </div>
             </div>
             <div class="form-box2"></div>
@@ -54,7 +54,7 @@
 
             <div class="btns">
                 <a href="" class="voltar">
-                    <img src="../../imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">
@@ -71,9 +71,9 @@
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../js/js-menu/js-menu.js"></script>
