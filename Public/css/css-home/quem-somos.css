@@ -55,17 +55,17 @@
 
 .section-bosque-quem-somos .div-img-animation .imagem1{
     margin-top: 120px;
-    /* margin-bottom: 100px; */
+  
     height: 550px;
 }
 .section-bosque-quem-somos .div-img-animation .imagem2{
     margin-top: 80px;
-    /* margin-bottom: 70px; */
+
     height: 550px;
 }
 .section-bosque-quem-somos .div-img-animation .imagem3{
     margin-top: 50px;
-    /* margin-bottom: 40px; */
+   
     height: 550px;
   
 }
@@ -90,7 +90,7 @@
 }
 .div-text-sobre h1 span{
     color: #ff5029;
-    padding-left: 15px;
+    padding-left: 5px;
    
 }
 .section-bosque-quem-somos .div-text-sobre{
@@ -363,7 +363,6 @@ a{
 }
 
 
-
 @media (max-width: 1500px) {
   .div-img-animation .imagem1, .imagem2 ,.imagem3{
     display: none;
@@ -448,6 +447,9 @@ a{
     position: relative;
     width: 100%;
 
+    left: 1%;
+    margin-top: -3.7%;
+
   }
 
   .section-expositor-quem-somos .expositor-p{
@@ -469,6 +471,8 @@ a{
     align-items: center;
     text-align: center;
     justify-content: center;
+    left: 0%;
+   
     
    
     
@@ -519,176 +523,350 @@ a{
 
  
 
-}
+} 
+ 
 
-
-
-
-
-@media(max-width:770){
-    .section-bosque-quem-somos .div-text-sobre .titulo{
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@media (max-width:1100px ) {
+    .botão-expositor{
         
-        display: flex;
-        font-size: 2.5rem;
-        position: relative;
-        right: 0%;
-     
-        margin-bottom: 2%;
-        
-        
-    }
-    .section-bosque-quem-somos .div-text-sobre h1, .h1 span{
-        padding-left: 5px;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 450px){
-
-
-    .section-bosque-quem-somos .div-text-sobre .titulo{
-   
         display: flex;
         flex-direction: column;
-        position: relative;
-        font-size: 3rem;
-        margin-bottom: 10%;
-    }
-    .section-bosque-quem-somos .div-text-sobre .titulo span{
-       
-        display: flex;
-        flex-direction: row;
-        font-size: 3rem;
-    }
-    .section-expositor-quem-somos .expositor{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 3cm;
-        font-size: 1.7rem;
-      
+        margin-top: 100px;
+
     }
     .section-expositor-quem-somos .expositor-p{
         
         display: flex;
         flex-direction: column;
         position: relative;
-        bottom: 1cm;
-      
+        top: 15%;
     }
-    .section-expositor-quem-somos .botão-expositor{
-      
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        bottom: 0.9cm;
-        align-items: center;
-        width: 30%;
-        box-shadow: 2px 2px 0px 0px rgb(242, 0, 255);
 
-
+    .section-nosso-time-quem-somos .div-nt h2{
        
-        
-    
-    }
-    .section-expositor-quem-somos,.section-bosque-quem-somos,.section-nosso-time-quem-somos{
-        animation: none;
-        
-    }
-
-    .section-colaboradoras-quem-somos .fotos{
-        border-radius: 30%;
-        
+        margin-top: -7%;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
-           box-shadow: 2px 2px 0px 0px orangered;
-
-        
-    }
-
-
-   
-}
-
-
-
-
-
-
-@media (max-width: 430px){
-
-
-    .section-bosque-quem-somos .div-text-sobre .titulo{
-   
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        font-size: 2.5rem;
-        right: 1%;
-        margin-top: 120px;
-    }
-   
-
-    .section-bosque-quem-somos .div-text-sobre .titulo span{
-        font-size: 2.5rem;
-    }
-
-    .section-bosque-quem-somos .div-text-sobre p{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        font-size: 2rem;
-    }
-
-
-    .section-expositor-quem-somos .expositor{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 3cm;
-        font-size: 1.7rem;
-      
-    }
-    .section-expositor-quem-somos .expositor-p{
-        
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        bottom: 1cm;
-      
-    }
-    .section-expositor-quem-somos .botão-expositor{
-      
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        bottom: 0.9cm;
-        align-items: center;
-        width: 30%;
-
-
-       
-        
     
     }
   
+    .section-expositor-quem-somos .expositor-p{
+        
+        margin-top: 5%;
+    }
+    .section-expositor-quem-somos .botão-expositor{
+        margin-top: 2%;
+    }
+   
+   
+}
 
+@media(max-width: 1050px){
+    .section-expositor-quem-somos .expositor-p{
+        margin-top: 100px;
+    }
+    .section-expositor-quem-somos .botão-expositor{
+        background-color: #08AEC0;
+        margin-top: 100px;
+        display: flex;
+    }
+    .section-expositor-quem-somos{
       
+        display: flex;
+        flex-direction: column;
+    }
+}
+ 
+ 
+
+
+@media (max-width: 950px ){
+    .section-bosque-quem-somos{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .section-bosque-quem-somos .titulo{
+        left: 0%;
+    }
+    .section-expositor-quem-somos .botão-expositor{
+     
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 15%;
+       
+    }
+    .section-expositor-quem-somos .expositor{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 3%;
+        
+        width: 100%;
+    }
+    .section-expositor-quem-somos .expositor-p{
+        
+        display: flex;
+        position: relative;
+        margin-top: 20%;
+    }
+
+}
+ 
+@media (max-width: 800px ){
+    .section-bosque-quem-somos{
+        display: flex;
+        flex-direction: column;
+     
+       
+    }
+    .section-bosque-quem-somos .titulo{
+        left: -1%;
+       
+    }
+ 
+    .section-expositor-quem-somos .expositor-p .acesse{
+       
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+        position: relative;
+        bottom: 50%;
+       
+    }
+    .section-expositor-quem-somos .botão-expositor{
+        display: flex;
+       
+        position: relative;
+        margin-top: 3%;
+ 
+    }
+ 
+ 
+}
+ 
+@media (max-width: 750px ){
+    .section-bosque-quem-somos .titulo{
+        display: flex;
+        flex-direction: column;
+        left: 0%;
+    }
+    .section-bosque-quem-somos .somos-apaixonados{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .section-nosso-time-quem-somos .div-nt h2 {
+       display: flex;
+       flex-direction: column;
+     
+        margin-bottom: 100%;
+        position: relative;
+        bottom: 5%; 
+       
+    }
+    .section-expositor-quem-somos .expositor{
+        display: flex;
+        flex-direction: column;
+       
+        font-size: 1.5rem;
+        position: relative;
+        margin-bottom: -20%;
+        position: relative;
+        top: 50px;
+    }
+    .section-colaboradoras-quem-somos .image-text-carina .fotos{
+            width: 250px;
+            height: auto;
+       
+ 
+    }
+    .section-colaboradoras-quem-somos .image-text-denise .fotos{
+        width: 250px;
+        height: auto;
+   
+ 
+}
+.section-colaboradoras-quem-somos .image-text-fernanda .fotos{
+    width: 250px;
+    height: auto;
+ 
+ 
+}
+.section-colaboradoras-quem-somos .image-text-nájila .fotos{
+    width: 250px;
+    height: auto;
+ 
+ 
+}
+   
+    .section-colaboradoras-quem-somos .image-text-carina .denise{
+        display: flex;
+        position: relative;
+        left: 0%;
+ 
+     }
+     .section-colaboradoras-quem-somos .image-text-carina .fernanda{
+        display: flex;
+        position: relative;
+        left: 0%;
+ 
+     }
+     .section-colaboradoras-quem-somos .image-text-carina .nájila{
+        display: flex;
+        position: relative;
+        left: 0%;
+ 
+     }
+ 
+}
+
+@media(max-width: 550px){
+    .section-expositor-quem-somos .expositor-p{
+      
+        margin-top: 35%;
+    }
+    .section-expositor-quem-somos .expositor{
+        
+        position: relative;
+        top: 20%;
+    }
+}
+
+
+
+@media(max-width: 450px){
+    .section-expositor-quem-somos .expositor-p{
+      
+        margin-top: 45%;
+    }
+    .section-expositor-quem-somos .expositor{
+        
+        position: relative;
+        top: 20%;
+    }
+    .section-expositor-quem-somos .botão-expositor{
+        width: 25%;
+    }
+
+}
+@media (max-width: 390px ){
+ 
+ 
+    .section-bosque-quem-somos .div-text-sobre .titulo{
+   
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-size: 1.8rem;
+     
+       
+    }
+   
+ 
+    .section-bosque-quem-somos .div-text-sobre .titulo span{
+        font-size: 1.8rem;
+    }
+ 
+    .section-bosque-quem-somos .div-text-sobre .somos-apaixonados{
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        font-size: 1rem;
+    }
+ 
+   
+ 
+    .section-expositor-quem-somos .expositor{ 
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      
+        
+       
+    }
+    .section-expositor-quem-somos .expositor-p{
+        font-size: 1rem;
+        position: relative;
+      
+    }
+    .section-expositor-quem-somos .botão-expositor{
+        display: flex;
+        position: relative;
+        margin-top: -4%;
+        width: 30%;
+       
+    }
+    .section-nosso-time-quem-somos .div-nt h2{
+       
+        font-size: 1.8rem;
+    }
+    .section-expositor-quem-somos .expositor-p .acesse{
+        
+        width: 100%;
+    }
+    .section-colaboradoras-quem-somos .fotos{
+        border-radius: 40%;
+    }
+    
+ 
+}
+
+@media (max-width: 370px ){
+    .section-expositor-quem-somos .botão-expositor{
+        display: flex;
+        position: relative;
+        margin-top: -10%;
+        width: 30%;
+       
+    }
+}
+
+
+@media (max-width: 350px ){
+    .section-expositor-quem-somos .botão-expositor{
+        display: flex;
+        position: relative;
+        margin-top: 5%;
+        width: 30%;
+       
+    }
+    .section-expositor-quem-somos .expositor-p{
+        display: flex;
+        position: relative;
+        margin-top: 50%;
+        
+    }
+
+}
+
+@media (max-width: 330px ){
+    .section-expositor-quem-somos .botão-expositor{
+        display: flex;
+        position: relative;
+        margin-top: -7%;
+        width: 40%;
+       
+    }
+    .section-expositor-quem-somos .expositor-p{
+        display: flex;
+        position: relative;
+        margin-top: 45%;
+        
+    }
 
 
 }
+/*dimensões ipad pro--ERRO-----*/
+
+
