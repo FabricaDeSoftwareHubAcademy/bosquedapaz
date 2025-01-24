@@ -94,6 +94,10 @@
     flex-direction: column;
 }
 
+.forms-login{
+    width: 49%;
+}
+
 .area-img-login{
     width: 50%;
     height: 800px;
