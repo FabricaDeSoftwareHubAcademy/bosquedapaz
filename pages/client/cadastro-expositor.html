@@ -116,8 +116,13 @@
                     </div>
 
                     <div class="categoria-prod">
-                        <label>Categoria dos produtos</label>
-                        <input type="text" name="" id="" placeholder="-" required>
+                        <label for="categoria-input">Categoria dos produtos</label>
+                        <input list="categorias" id="categoria-input" placeholder="-" autocomplete="off">
+                        <datalist id="categorias">
+                            <option value="Gastronomia"></option>
+                            <option value="Moda"></option>
+                            <option value="Antiguidade"></option>
+                        </datalist>
                     </div>
 
                     <div class="input-img">
