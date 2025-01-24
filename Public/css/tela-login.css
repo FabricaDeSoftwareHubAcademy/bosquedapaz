@@ -25,7 +25,7 @@
 
 .img-superior-direita{
     position: fixed;
-    right: -139px;
+    right: -151px;
     top: 8vw;
     width: 20vw;
 }
@@ -39,7 +39,7 @@
 
 .img-inferior-direita{
     position: fixed;
-    right: -37px;
+    right: -49px;
     bottom: -7px;
     width: 20vw;
 }

@@ -17,7 +17,7 @@ body{
 
 .img-superior-direita-recsenha{
     position: fixed;
-    right: 0vh;
+    right: -151px;
     top: 8vw;
     width: 20vw;
 }
@@ -31,8 +31,8 @@ body{
 
 .img-inferior-direita-recsenha{
     position: fixed;
-    right: 0%;
-    top: 36vw;
+    right: -49px;
+    bottom: -7px;
     width: 20vw;
 }
 
