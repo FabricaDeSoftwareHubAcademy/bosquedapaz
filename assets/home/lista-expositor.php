@@ -416,6 +416,10 @@
             </div>
             
         </div>
+
+        <div class="ver-mais-expositor"><!-- botão mais expositores -->
+            <a href="pages/client/todos-expositores.php" class="link-mais-expo">VER MAIS EXPOSITORES</a>
+        </div>
     </section>
     
     <dialog class="modal-ver-per-expo" id="modal-ver-per-expo">

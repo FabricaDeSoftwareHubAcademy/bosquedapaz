@@ -195,6 +195,9 @@ main {
         bottom: auto;
     }
 
+    .informacoes {
+        max-width: 75%;
+    }
 }
 
 
@@ -237,6 +240,7 @@ main {
 
     .informacoes {
         gap: 5px;
+        max-width: 85%;
     }
 
     .info {

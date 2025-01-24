@@ -127,7 +127,7 @@
     margin-top: 20px;
     font-weight: bold;
     font-size: 1em;
-    width: 155px;
+    width: auto;
 }
 
 /* mudando cor categoria */
@@ -220,6 +220,21 @@
     .title-welcome {
         font-size: 1.5em;
     }
+
+    .item {
+        margin: 10px;
+        width: 105px;
+    }
+    
+    .img-fundo {
+        width: 85px;
+        height: 85px;
+    }
+
+    .name-categoria {
+        font-size: .8em;
+        min-width: 100%;
+    }
 }
 
 
@@ -233,7 +248,7 @@
     }
 
     .categoria-title {
-        font-size: 1.2em;
+        font-size: 1.1em;
     } 
 
     .text-categoria {
