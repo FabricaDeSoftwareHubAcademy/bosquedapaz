@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Public/css/css-home/proximos-eventos.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/proximos-eventos.css">
     <title>Próximo Evento</title>
 </head>
 <body>
-    <?php include "../../assets/home/menu-home-client.html"; ?>
+    <?php include "../../../Public/assets/home/menu-home-client.html"; ?>
     <!-- Area Principal -->
     <section class="area-principal-ProEv">
 
         <!-- Imgs Decorativas -->
         <div class="formas-decorativas-ProEv1">
-            <img src="../../imgs/Proximos-Eventos-img/forma-proev-1.svg" alt="">
+            <img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-1.svg" alt="">
         </div>
         <div class="formas-decorativas-ProEv2">
-            <img src="../../imgs/Proximos-Eventos-img/forma-proev-2.svg" alt="">
+            <img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-2.svg" alt="">
         </div>
         <div class="formas-decorativas-ProEv3">
-            <img src="../../imgs/Proximos-Eventos-img/forma-proev-3.svg" alt="">
+            <img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-3.svg" alt="">
         </div>
 
         <!-- Box/Elementos Box Decorativa -->
@@ -34,7 +34,7 @@
                 <div class="div-banner-atracao-ProEv">
                     <div id="linha-decorativa-dd"></div>
                     <div class="area-img-banner-ProEv">
-                        <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                     </div>
                 </div>
                 <h3 class="Nome-atracao-proev">Tapioca Forró</h3>
@@ -52,7 +52,7 @@
                     <div class="div-infs-evento-modalres">
                         <div class="areatl-img-modalres-ProEv">
                             <div class="area-img-modalres-ProEv">
-                                <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                             </div>
                         </div>
                         <div class="area-text-modalres-ProEv">
@@ -64,7 +64,7 @@
                                 turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                         </div>
                         <button id="b-sari-modalres" class="close-modal" data-modal="modalres-card-ProEv">
-                            <img src="../../imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
+                            <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
                         </button>
                     </div>
                 </dialog>
@@ -74,7 +74,7 @@
                 <div class="div-banner-atracao-ProEv">
                     <div id="linha-decorativa-dd"></div>
                     <div class="area-img-banner-ProEv">
-                        <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                     </div>
                 </div>
                 <h3 class="Nome-atracao-proev">Sampari</h3>
@@ -92,7 +92,7 @@
                     <div class="div-infs-evento-modalres2">
                         <div class="areatl-img-modalres2-ProEv">
                             <div class="area-img-modalres2-ProEv">
-                                <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                             </div>
                         </div>
                         <div class="area-text-modalres2-ProEv">
@@ -104,7 +104,7 @@
                                 turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                         </div>
                         <button id="b-sari-modalres2" class="close-modal" data-modal="modalres2-card-ProEv">
-                            <img src="../../imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
+                            <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
                         </button>
                     </div>
                 </dialog>
@@ -117,7 +117,7 @@
             <div class="area-info-evento-ProEv">
                 <div class="div-img-do-ev-ProEv">
                     <div class="banner-evento-ProEv">
-                        <img src="../../imgs/Proximos-Eventos-img/img-evento-proev.png" alt="">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-evento-proev.png" alt="">
                     </div>
                     <div class="infs-evento-ProEv">
                         <h1 class="data-do-ev-ProEv">Dia 10/08</h1>
@@ -139,7 +139,7 @@
                         <div class="div-banner-atracao-ProEv">
                             <div id="linha-decorativa-dd"></div>
                             <div class="area-img-banner-ProEv">
-                                <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                             </div>
                         </div>
                         <h3 class="Nome-atracao-proev">Tapioca Forró</h3>
@@ -161,7 +161,7 @@
                             <div class="div-infs-evento-modal">
                                 <div class="areatl-img-modal-ProEv">
                                     <div class="area-img-modal-ProEv">
-                                        <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                                     </div>
                                 </div>
                                 <div class="area-text-modal-ProEv">
@@ -173,7 +173,7 @@
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                                 </div>
                                 <button id="b-sari-modal" class="close-modal" data-modal="modal-card-ProEv">
-                                    <img src="../../imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
+                                    <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
                                 </button>
                             </div>
                         </dialog>
@@ -183,7 +183,7 @@
                         <div class="div-banner-atracao-ProEv">
                             <div id="linha-decorativa-dd"></div>
                             <div class="area-img-banner-ProEv">
-                                <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                             </div>
                         </div>
                         <h3 class="Nome-atracao-proev">Sampari</h3>
@@ -205,7 +205,7 @@
                             <div class="div-infs-evento-modal2">
                                 <div class="areatl-img-modal2-ProEv">
                                     <div class="area-img-modal2-ProEv">
-                                        <img src="../../imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
                                     </div>
                                 </div>
                                 <div class="area-text-modal2-ProEv">
@@ -217,7 +217,7 @@
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                                 </div>
                                 <button id="b-sari-modal2" class="close-modal" data-modal="modal2-card-ProEv">
-                                    <img src="../../imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
+                                    <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
                                 </button>
                             </div>
                         </dialog>
@@ -227,6 +227,6 @@
         </div>
     </section>
 
-    <script src="../../js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>

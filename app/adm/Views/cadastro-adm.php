@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/css-adm/style-cadastro-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-adm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -16,16 +16,16 @@
 
             <!-- /* Formas da tela */ -->
             <div class="formaCadastro-1">
-                <img src="../../imgs/img-cadastro-adm/FormaCadastro-01.png" alt="">
+                <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt="">
             </div>
             <div class="formaCadastro-2">
-                <img src="../../imgs/img-cadastro-adm/FormaCadastro-02.png" alt="">
+                <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-02.png" alt="">
             </div>
             <div class="formaCadastro-3">
-                <img src="../../imgs/img-cadastro-adm/FormaCadastro-03.png" alt="">
+                <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt="">
             </div>
             <div class="formaCadastro-4">
-                <img src="../../imgs/img-cadastro-adm/FormaCadastro-04.png" alt="">
+                <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt="">
             </div>
             
             <!-- /* Box */ -->
@@ -89,7 +89,7 @@
                     <h1 class="h1-mt">CADASTRO</h1>
                     <div class="divIMg-mt">
                         <h1 class="h12-mt">CADASTRO</h1>
-                        <img src="../../imgs/img-cadastro-adm/a.svg" alt="">
+                        <img src="../../../Public/imgs/img-cadastro-adm/a.svg" alt="">
                     </div>
                 </div>
             </div>

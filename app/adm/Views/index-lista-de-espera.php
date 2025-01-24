@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/menu-adm.css">
-    <link rel="stylesheet" href="../../css/css-adm/lista-de-espera.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>Lista de Colaborador</title>
 </head>
 
 <body class="corpo-lisEsp">
-    <?php include "../../assets/adm/menu-adm.html"; ?>
+    <?php include "../../../Public/assets/adm/menu-adm.html"; ?>
     
     <section class="area-LisEsp-principal">
         <div class="b-LisEsp1">
-            <img src="../../imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
+            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
         </div>
 
         <div class="b-LisEsp2">
-            <img src="../../imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
+            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
         </div>
 
         <div class="b-LisEsp3">
-            <img src="../../imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
+            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
         </div>
 
         <div class="box-LisEsp-mat">
@@ -158,7 +158,7 @@
             </table>
         </div>
     </section>
-    <script src="../../js/js-adm/../js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 
 </body>
