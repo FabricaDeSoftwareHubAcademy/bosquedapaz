@@ -54,32 +54,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-.carossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-}
-
-.fundo {
-    margin-top: 70px;
-    clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);;
-    background-color: #0D592E;
-    width: 100%;
-    height: 90vh;
-    position: relative;
-}
-
-.imagem {
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    height: 85%;
-    background-color: transparent;
-}
-
-/* estilizando main */
 
 main {
     display: flex;
@@ -166,29 +140,9 @@ main {
 /* responsividade para 1500px */
 @media(max-width: 1500px) {
 
-
-    .carossel .fundo {
-        width: 100%;
-        height: 70vh;
-    }
-
-    .imagem {
-        top: 50px;
-        height: 85%;
-    }
-
 }
 
 @media (max-width: 1150px) {
-    .carossel .fundo {
-        width: 100%;
-        height: 40vh;
-    }
-
-    .imagem {
-        top: 60px;
-        height: 85%;
-    }
 
     .text-carrossel {
         top: 300px;
@@ -204,17 +158,6 @@ main {
 /* responsividade para 950px */
 @media (max-width: 950px) {
 
-
-    .carossel .fundo {
-        width: 100%;
-        height: 38vh;
-    }
-
-    .imagem {
-        top: 50px;
-        height: 85%;
-    }
-
     .informacoes {
         gap: 5px;
     }
@@ -223,18 +166,6 @@ main {
 
 /* responsividade para mobile (500px) */
 @media(max-width: 500px) {
-    
-    .carossel .fundo {
-        margin-top: 100px;
-        height: 37vh;
-        width: 100vw;
-    }
-    
-    .carossel .imagem {
-        top: 40px;
-        height: 80%;
-        width: 100vw;
-    }
 
     /* informacaoe numeros */
 
