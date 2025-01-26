@@ -996,6 +996,7 @@
 
     <script src="../../js/js-modais/js-abrir-modal.js"></script>
     <script src="../../js/js-home/escolher-categoria.js"></script>
+    <script src="../../js/js-home/main.js"></script>
 
     <?php include "../../assets/home/rodape.html"; ?>
 </body>
