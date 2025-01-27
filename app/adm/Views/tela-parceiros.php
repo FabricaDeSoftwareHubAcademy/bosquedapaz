@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página para gerenciar parceiros e suas informações.">
     <title>Modelo de Tela</title>
-    <link rel="stylesheet" href="../css/TelaParceiros.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/tela-parceiros.css">
 </head>
+
 <body>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
 
     <main class="principal">
         <div class="box">
             <h1 class="tela-titulo">ÁREA PARCEIROS</h1>
 
-            
-            
-            
             <div class="todo-conteudos">
                 <div class="div-parceiros parceiros-pref">
                     <img src="../img/pref-cg.png" alt="Imagem de parceiro 1" class="img-pref">
@@ -44,9 +43,9 @@
     </main>
 
     <div class="bolas-fundo">
-        <img src="../img/bola-verde1.png" alt="" class="bola-verde1">
-        <img src="../img/bola-verde2.png" alt="" class="bola-verde2">
-        <img src="../img/bola-rosa.png" alt="" class="bola-rosa">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/Elemento3.ElipseRosa.png" alt="" class="bola-rosa">
     </div>
 
     <script src="../js/main.js"></script>
