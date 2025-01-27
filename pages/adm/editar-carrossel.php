@@ -23,48 +23,35 @@
             <!-- local de uploads de imgs para o carrossel -->
             <section class="up-imgs">
 
-                <div class="uploads">
+                <label class="uploads" id="label">
+                    <input type="file" name="img1" class="input" id="input1">
                     
-                    <div class="up">
-                        <img src="../../imgs/img-cadastro-carrosel/img-carrosel-1.png" alt="Imagem do carrossel 1" class="up-img">
-                    </div>
+                    <img src="../../imgs/img-home/imagem-carrossel-1.jpg" alt="Imagem do carrossel 1" class="up-img">
                     
-                    <button class="btn-editar open-modal" data-modal="m-nova-img">
+                    <button class="btn-editar open-modal">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
-                </div>
+                </label>
                 
-                <div class="uploads">
+                <label class="uploads" id="label">
+                    <input type="file" name="img2" class="input" id="input2">
                     
-                    <div class="up">
-                        <img src="../../imgs/img-cadastro-carrosel/img-carrossel-2.png" alt="Imagem do carrossel 2" class="up-img">
-                    </div>
+                    <img src="../../imgs/img-home/imagem-carrossel-2.jpg" alt="Imagem do carrossel 2" class="up-img">
                     
-                    <button class="btn-editar open-modal" data-modal="m-nova-img">
+                    <button class="btn-editar open-modal">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
-                </div>
+                </label>
                 
-                <div class="uploads">
+                <label class="uploads">
+                    <input type="file" name="img3" class="input" id="input3">
                     
-                    <div class="up">
-                        <img src="../../imgs/img-cadastro-carrosel/img-carrossel-3.png" alt="Imagem do carrossel 3" class="up-img">
-                    </div>
+                    <img src="../../imgs/img-home/imagem-carrossel-3.jpg" alt="Imagem do carrossel 3" class="up-img">
                     
-                    <button class="btn-editar open-modal" data-modal="m-nova-img">
+                    <button class="btn-editar open-modal">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
-                </div>
-                
-                <div class="uploads upload-text">
-                    
-                    <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
-                    <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
-                </div>
-                
-                <dialog class="m-nova-img" id="m-nova-img">
-                    <?php include "../../assets/modais/m-nova-img-carrossel.html"; ?>
-                </dialog>
+                </label>
             </section>
 
             <!-- botoes parte de baixo -->
@@ -95,6 +82,6 @@
 
     <!-- link do JavaScript -->
     <script src="../../js/js-menu/js-menu.js"></script>
-    <script src="../../js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../js/js-adm/js-editar-carrossel.js"></script>
 </body>
 </html>

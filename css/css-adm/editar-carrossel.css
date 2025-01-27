@@ -23,139 +23,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.up {
-    width: 305px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    transition: all .2s ease-in-out;
-}
-
-.up:hover {
-    transition: all .1s ease-in-out;
-}
-
-.upload-text {
-    width: 250px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: initial;
-    justify-content: center;
-    gap: 10px;
-    padding: 5px;
-}
-
-.label-input {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.input-text {
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 3px solid #007E70;
-    border-right: 3px solid #007E70;
-    padding: 5px;
-    transition: all .2s ease-in-out;
-}
-
-.input-text:hover {
-    border-bottom: 0px solid #007E70;
-    border-right: 0px solid #007E70;
-    border-top: 3px solid #007E70;
-    border-left: 3px solid #007E70;
-    transition: all .1s ease-in-out;
-}
-
-.input-text:hover .label-input {
-    color: #007E70;
-}
-
-.m-nova-img {
-    border-radius: 5px;
-    padding: 20px;
-    border: none;
-    position: absolute;
-    margin: auto;
-}
-
-.upl-img {
-    width: 210px;
-    height: 250px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.up-nova {
-    width: 205px;
-    height: 205px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    border-bottom: 3px solid #007E70;
-    border-right: 3px solid #007E70;
-    background-color: white;
     cursor: pointer;
-    transition: all .2s ease-in-out;
 }
 
-.up-nova:hover {
-    border-bottom: 0px solid #007E70;
-    border-right: 0px solid #007E70;
-    border-top: 3px solid #007E70;
-    border-left: 3px solid #007E70;
-    transition: all .1s ease-in-out;
+.uploads.active > .up-img {
+    opacity: 0.7;
 }
 
-.icon-up-imgs {
+.input {
+    opacity: 0;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
 }
 
 .up-img {
-    font-size: 2rem;
-    color: #007E70;
-}
-
-.up-nova:hover .up-img{
-    color: black
-}
-
-.input-img {
-    display: none;
-}
-
-.btn-confirmar {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007E70;
-    color: white;
-    font-weight: 600;
-}
-.btn-confirmar:hover {
-    border: 1px solid black;
-    background-color: white;
-    color: #007E70;
+    width: 100%;
 }
 
 .btn-editar {
     width: 30px;
     cursor: pointer;
+    z-index: -1;
 }
 
 .editar {
