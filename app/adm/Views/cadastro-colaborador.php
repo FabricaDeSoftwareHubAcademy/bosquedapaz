@@ -9,7 +9,8 @@
     
 </head>
 <body>
-    <header class="menu-adm">
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <!-- <header class="menu-adm">
         <div class="logo">
             <img src="../../../Public/imgs/img-cadastro-colaborador/logo.png" alt="Logo da Feira" class="img-logo">
         </div>
@@ -68,7 +69,7 @@
         <div class="login">
             <img src="../../../Public/imgs/img-cadastro-colaborador/login.png" alt="Botão de login" class="img-login">
         </div>
-    </header>
+    </header> -->
 
     <main class="principal">
         <div class="box">
@@ -162,7 +163,7 @@
                 </form>
             </div>
             <div class="btns">
-                <a href="../Views/Area-Adm.php" class="voltar">
+                <a href="../Views/gerenciar-adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-cadastro-colaborador/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             <div class="dogs">

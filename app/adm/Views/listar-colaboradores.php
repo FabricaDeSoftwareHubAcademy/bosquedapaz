@@ -15,7 +15,8 @@
     />
 </head>
 <body>
-    <header class="menu-adm">
+  <?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <!-- <header class="menu-adm">
         <div class="logo">
             <img src="../../../Public/imgs/img-listar-colaboradores/logo.png" alt="Logo da Feira" class="img-logo">
         </div>
@@ -73,8 +74,8 @@
         <div class="login">
             <img src="../../../Public/imgs/img-listar-colaboradores/login.png" alt="Botão de login" class="img-login">
         </div>
-    </header>
-
+    </header> -->
+    
     <main class="principal">
         <div class="box">
             <h2>LISTAR COLABORADORES</h2>
@@ -105,7 +106,7 @@
                       <td class="fone-col">(67) 98123-4567</td>
                       <td><button class="status active">Ativo</button></td>
                       <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                       </td>
@@ -117,7 +118,7 @@
                       <td class="fone-col">(67) 98234-5678</td>
                       <td><button class="status inactive">Inativo</button></td>
                       <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                       </td>
@@ -129,7 +130,7 @@
                       <td class="fone-col">(67) 98945-6789</td>
                       <td><button class="status active">Ativo</button></td>
                       <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                       </td>
@@ -141,7 +142,7 @@
                         <td class="fone-col">(67) 98845-6789</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -153,7 +154,7 @@
                         <td class="fone-col">(67) 98345-6789</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -165,7 +166,7 @@
                         <td class="fone-col">(67) 97345-6623</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -177,7 +178,7 @@
                         <td class="fone-col">(67) 98885-6888</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -189,7 +190,7 @@
                         <td class="fone-col">(67) 99942-1110</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -201,7 +202,7 @@
                         <td class="fone-col">(67) 99210-2566</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -213,7 +214,7 @@
                         <td class="fone-col">(67) 96841-5517</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -225,7 +226,7 @@
                         <td class="fone-col">(67) 90208-5623</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -237,7 +238,7 @@
                         <td class="fone-col">(67) 98345-6789</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.html">
+                          <a href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
                         </td>
@@ -245,7 +246,7 @@
                   </tbody>
                 </table>
         <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
+            <a href="gerenciar-adm.php" class="voltar">
             <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>  
