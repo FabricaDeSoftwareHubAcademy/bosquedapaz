@@ -28,6 +28,7 @@
                 <img src="../../../Public/imgs/img-area-adm/Captura de tela 2024-09-25 163826.png" alt="">
             </div>
 
+            <a href="">
             <div class="area-botao-gabriel">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
@@ -36,35 +37,39 @@
                         <div class="icon-gabriel"></div>
                     </div>
                 </div>
-
+                </a>
+                <a href="">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
                         <p>Expositores</p>
                     </div>
                 </div>
-
+                </a>
+                <a href="">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                         <p>Relatório</p>
                     </div>
                 </div>
-
+                </a>
+                <a href="">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
                         <p>Categorias</p>
                     </div>
                 </div>
-
+                </a>
+                <a href="">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
                         <p>Carrossel</p>
                     </div>
                 </div>
-
+                </a>
                 <a href="../../../app/adm/Views/gerenciar-eventos.php">
                 <div class="Botoes-gabriel">
                         <div class="area-icon-gabriel">
@@ -73,21 +78,22 @@
                         </div>
                     </div>
                 </a>
-
+                <a href="">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Central de Controle.png" alt="">
                         <p>Central Controle </p>
                     </div>
                 </div>
-
+                </a>
+                <a href="../../../app/adm/Views/gerenciar-adm.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
                         <p>Gerenciar ADM</p>
                     </div>
                 </div>
-
+                </a>
             </div>
 
         </div>
