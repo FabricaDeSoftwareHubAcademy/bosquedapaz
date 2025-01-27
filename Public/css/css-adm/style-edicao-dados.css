@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #e7e7e7;
     overflow: hidden;
 }
 
@@ -19,9 +19,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     width: 90%;
-    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.568); 
     margin-top: 5%;
     margin-left: 5%;
 }
@@ -29,8 +28,7 @@ body {
 .container-image {
     flex: 1;
     max-width: 50%;
-    background-color: aliceblue;
-    /* box-shadow: 1px 0px 4px grey; */
+    background-color: #20368B;
 }
 
 .imagem {
