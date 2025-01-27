@@ -22,7 +22,7 @@
                 <div class="nav-bar"> <!-- navegação -->
                     <ul>
                         <li><a href="../../../iindex.php">Início</a></li>
-                        <li><a href="#">Parceiros</a></li>
+                        <li><a href="../../adm/Views/tela-parceiros.php">Parceiros</a></li>
                         <li><a href="../../client/Views/fale-conosco.php">Fale Conosco</a></li>
                         <li><a href="../../client/Views/quem-somos.php">Quem Somos?</a></li>
                     </ul>
@@ -57,7 +57,7 @@
             <div class="mobile-menu"> <!-- navegação -->
                 <ul class="nav-item">
                     <li class="nav-item"><a href="../../../iindex.php">Início</a></li>
-                    <li class="nav-item"><a href="#">Parceiros</a></li>
+                    <li class="nav-item"><a href="../app/adm/tela-parceiros.php">Parceiros</a></li>
                     <li class="nav-item"><a href="../app/client/fale-conosco.php">Fale Conosco</a></li>
                     <li class="nav-item"><a href="../../app/client/Views/quem-somos.html">Quem Somos?</a></li>
                 </ul>
