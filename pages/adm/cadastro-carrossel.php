@@ -24,29 +24,27 @@
             <!-- local de uploads de imgs para o carrossel -->
             <section class="up-imgs">
 
-                <div class="uploads">
+                <label for="file" class="uploads up" id="input1">
+                    <input type="file" name="img" id="imagens-input" class="input-img" multiple>
+                    
+                    <i class="fa-solid fa-upload up-img"></i>
 
-                    <label class="up" tabindex="0">
-                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
-                        <span class="text-up-imgs">
-                            <i class="fa-solid fa-upload up-img"></i>
-                        </span>
-                    </label>
-
-                    <button class="btn-editar open-modal" data-modal="m-nova-img">
+                    <button class="btn-editar">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
+                </label>
+
+                <div class="new-imgs" id="zone-imgs">
+                    <div class="img" id="img1"></div>
+                    <div class="img" id="img2"></div>
+                    <div class="img" id="img3"></div>
                 </div>
-                
+                <!--                 
                 <div class="uploads upload-text">
 
                     <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
                     <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
-                </div>
-
-                <dialog class="m-nova-img" id="m-nova-img">
-                    <?php include "../../assets/modais/m-nova-img-carrossel.html"; ?>
-                </dialog>
+                </div> -->
 
             </section>
 
