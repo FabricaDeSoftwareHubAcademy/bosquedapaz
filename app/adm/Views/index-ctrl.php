@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central de Controle ADM</title>
-    <link rel="stylesheet" href="../../css/css-adm/index-ctrl.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/index-ctrl.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
     <?php
-    include "../../assets/adm/menu-adm.html";
+    include "../../../Public/assets/adm/menu-adm.html";
     ?>
     <main class="box-ctrl">
         <h1 class="title-ctrl">CENTRAL DE CONTROLE</h1>
@@ -107,9 +107,9 @@
     </div>
 </div>
     </main>
-    <img class="imagem-fundo1" src="../../imgs/imagens-bolas/bola-verde1.png" alt="">
-    <img class="imagem-fundo2" src="../../imgs/imagens-bolas/bola-rosa.png" alt="">
-    <img class="imagem-fundo3" src="../../imgs/imagens-bolas/bola-verde2.png" alt="">
+    <img class="imagem-fundo1" src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="">
+    <img class="imagem-fundo2" src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="">
+    <img class="imagem-fundo3" src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="">
     <script src="../../js/js-menu/js-menu.js"></script>
 </body>
 </html>
