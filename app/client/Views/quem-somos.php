@@ -24,7 +24,7 @@
                         <li><a href="../../../iindex.php">Início</a></li>
                         <li><a href="#">Parceiros</a></li>
                         <li><a href="../../client/Views/fale-conosco.php">Fale Conosco</a></li>
-                        <li><a href="../../client/Views/quem-somos.html">Quem Somos?</a></li>
+                        <li><a href="../../client/Views/quem-somos.php">Quem Somos?</a></li>
                     </ul>
                     
                     <div class="pesquisar-login">
@@ -58,8 +58,8 @@
                 <ul class="nav-item">
                     <li class="nav-item"><a href="../../../iindex.php">Início</a></li>
                     <li class="nav-item"><a href="#">Parceiros</a></li>
-                    <li class="nav-item"><a href="../Views/fale-conosco.php">Fale Conosco</a></li>
-                    <li class="nav-item"><a href="../Views/quem-somos.html">Quem Somos?</a></li>
+                    <li class="nav-item"><a href="../app/client/fale-conosco.php">Fale Conosco</a></li>
+                    <li class="nav-item"><a href="../../app/client/Views/quem-somos.html">Quem Somos?</a></li>
                 </ul>
     
                 <div class="btn-login"> <!-- area login -->
@@ -184,8 +184,8 @@
             <div class="list-rodape list-sobre">
                 <h5>SOBRE</h5>
                 <ul>
-                    <li><a href="../../../app/client/Views/quem-somos.php">Sobre nós</a></li>
-                    <li><a href="#">Contate-nos</a></li>
+                    <li><a href="../../client/Views/quem-somos.php">Sobre nós</a></li>
+                    <li><a href="../../client/Views/fale-conosco.php">Contate-nos</a></li>
                     <li><a href="#">Equipe de Dev</a></li>
                     <li><a href="../../../app/adm/Views/cadastro-expositor.html">Seja um Expositor</a></li>
                 </ul>
