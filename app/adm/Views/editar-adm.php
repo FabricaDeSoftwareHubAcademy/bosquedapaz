@@ -9,7 +9,11 @@
     
 </head>
 <body>
-    <header class="menu-adm">
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <div class="sandwich-menu" onclick="mostrarMenu()">
+            <img src="../../../Public/imgs/Proximos-Eventos-img/menu.png" alt="menu" class="menu">
+        </div>
+    <!-- <header class="menu-adm">
         <div class="logo">
             <img src="../../../Public/imgs/img-editar-adm/logo.png" alt="Logo da Feira" class="img-logo">
         </div>
@@ -61,14 +65,12 @@
             <button class="btn-login"><a href="">Login</a></button>
         </nav>
 
-        <div class="sandwich-menu" onclick="mostrarMenu()">
-            <img src="../../../Public/imgs/img-editar-adm/menu.png" alt="menu" class="menu">
-        </div>
+        
 
         <div class="login">
             <img src="../../../Public/imgs/img-editar-adm/login.png" alt="Botão de login" class="img-login">
         </div>
-    </header>
+    </header> -->
 
     <main class="principal">
         <div class="box">
@@ -100,7 +102,7 @@
                     </div>
                     
                     <div class="btns">
-                        <a href="listar-colaboradores.html" class="voltar">
+                        <a href="gerenciar-adm.php" class="voltar">
                             <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                         </a>
                         <div class="btn-cancelar-salvar">
