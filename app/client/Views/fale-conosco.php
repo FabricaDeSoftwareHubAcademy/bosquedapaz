@@ -1,16 +1,15 @@
+<?php include "../../../Public/assets/home/menu-home.html"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato ao Suporte</title>
-    <link rel="stylesheet" href="../../css/faleconosco.css">
+    <link rel="stylesheet" href="../../../Public/css/faleconosco.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/menu.css">
 </head>
 <body>
-    <?php include "../../assets/home/menu-home-client.html"; ?>
     <main>
-
-
         <div class="caixa-guilherme">
             <div class="box-guilherme">
                 <h1>Fale Conosco!</h1>
@@ -23,19 +22,19 @@
 
         
         <div class="circulo-guilherme">
-            <img src="../../imgs/img-area-contate/boneco-contate.png" alt="Bosque da Paz">
+            <img src="../../../Public/imgs/img-area-contate/boneco-contate.png" alt="Bosque da Paz">
         </div>
         <div class="circulo2-guilherme">
-            <img src="../../imgs/img-area-contate/seta-voltar.png" alt="Bosque da Paz">
+            <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Bosque da Paz">
         </div>
         <div class="imagem-guilherme">
-            <img src="../../imgs/imagens-bolas/azul-sem-fundo1.png" alt="Bosque da Paz">
+            <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo1.png" alt="Bosque da Paz">
         </div>
         <div class="imagem2-guilherme">
-            <img src="../../imgs/imagens-bolas/azul-sem-fundo2.png" alt="Bosque da Paz">
+            <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="Bosque da Paz">
         </div>
         <div class="imagem3-guilherme">
-            <img src="../../imgs/imagens-bolas/azul-sem-fundo3.png" alt="Bosque da Paz">
+            <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="Bosque da Paz">
         </div>
 
 

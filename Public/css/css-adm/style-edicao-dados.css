@@ -61,12 +61,13 @@ body {
 
 .container-formulario {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 30px;
 }
 
 .inputGroup {
-    width: 100%;
+    width: 500px;
     padding: 15px 60px;
     padding-left: 50px;
     outline: none;
@@ -78,36 +79,29 @@ body {
     background-color: rgb(226, 226, 226);
 }
 
-.inputGroup:focus {
-    transform: scale(1.05);
-    border: 2px solid gray;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-}
-
 .visitantes {
-    background-image: url("../images/visitantes.svg");
+    background-image: url("../../../Public/imgs/img-edicao-dados/visitantes.svg");
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: 15px center;
 }
 
 .expositores {
-    background-image: url("../images/expositores.svg");
+    background-image: url("../../../Public/imgs/img-edicao-dados/expositores.svg");
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: 15px center;
 }
 
 .artistas {
-    background-image: url("../images/artistas.svg");
+    background-image: url("../../../Public/imgs/img-edicao-dados/artistas.svg");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 15px center;
 }
 
 .paises {
-    background-image: url("../images/paisesVisitantes.svg");
+    background-image: url("../../../Public/imgs/img-edicao-dados/paisesVisitantes.svg");
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: 4px center;
@@ -128,20 +122,18 @@ body {
     transition: all .3s ease;
 }
 
-.botao:hover {
-    transform: scale(1.05);
-}
-
 .enviar {
-    background-color: rgb(87, 212, 87);
+    background-color: #20368B;
+    color: white;
 }
 
 .voltar {
-    background-color: rgb(255, 108, 108);
+    background-color: #fe748d;
+    color: white;
 }
 
 .enviar:hover {
-    background-color: forestgreen;
+    background-color: #04124c;
     color: white;
     cursor: pointer;
 }

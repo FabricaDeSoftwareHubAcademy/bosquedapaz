@@ -1,77 +1,20 @@
+<?php include "../../../Public/assets/home/menu-home.html"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Edital</title>
-    <link rel="stylesheet" href="../CSS/edital.css">
+    <link rel="stylesheet" href="../../../Public/css/style-edital.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/menu.css">
 </head>
 <body>
 
-    <header class="menu-adm">
-        <div class="logo">
-            <img src="../images/logo.png" alt="Logo da Feira" class="img-logo">
-        </div>
-
-        <nav class="nav-bar">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#">Área Administrativa</a></li>
-                <li class="nav-item"><a href="#">Eventos</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Cadastrar Evento</a></li>
-                            <li><a href="" class="item-submenu">Gerenciar Evento</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Expositores</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Cadatrar Expositor</a></li>
-                            <li><a href="" class="item-submenu">Cadatrar expositor kids</a></li>
-                            <li><a href="" class="item-submenu">Cadatrar  artista</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Carrossel</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">cadastrar Carrosel</a></li>
-                            <li><a href="" class="item-submenu">Editar Carrosel</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Categorias</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Todas Categorias</a></li>
-                            <li><a href="" class="item-submenu">cadastrar Categorias</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Relatórios</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">relatório de usuarios</a></li>
-                            <li><a href="" class="item-submenu">validação de expositores</a></li>
-                            <li><a href="" class="item-submenu">relatório de expositores</a></li>
-                            <li><a href="" class="item-submenu">relatório de eventos</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Parceiros</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">cadastrar parceiros</a></li>
-                            <li><a href="" class="item-submenu">editar parceiros</a></li>
-                        </ul>
-                </li>
-            </ul>
-
-            <button class="btn-login"><a href="">Login</a></button>
-        </nav>
-
-        <div class="sandwich-menu" onclick="menuShow()">
-            <img src="../images/menu.png" alt="menu" class="menu">
-        </div>
-
-        <div class="login">
-            <img src="../images/login.png" alt="Botão de login" class="img-login">
-        </div>
-    </header>
+    
 
     <div class="edital-container">
         <div class="imagem-container">
-            <img src="../images/image7.png" alt="Imagem do Edital">
+            <img src="../../../Public/imgs/img-edital/image7.png" alt="Imagem do Edital">
             <div class="texto">
                 <h1>Bosque da Paz</h1>
                 <h2>Edital</h2>
@@ -121,8 +64,7 @@
         </div>
     </div>
 
-    <script src="../JS/modal.js"></script>
-    <script src="../JS/checkbox.js"></script>
-    <script src="../JS/main.js"></script>
+    <script src="../../../Public/js/js-adm/modal-edital.js"></script>
+    <script src="../../../Public/js/js-adm/checkbox-edital.js"></script>
 </body>
 </html>
