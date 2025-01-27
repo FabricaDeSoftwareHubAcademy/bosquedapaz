@@ -21,15 +21,23 @@
             <div class="formaCadastro-2">
                 <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-02.png" alt="">
             </div>
+            
             <div class="formaCadastro-3">
                 <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt="">
             </div>
+
+            
             <div class="formaCadastro-4">
                 <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt="">
             </div>
             
+            
             <!-- /* Box */ -->
-            <div class="box-cadastro-mt">       
+            <div class="box-cadastro-mt">  
+                <div class="setaV-cadastro">
+                    <img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt="">
+                </div> 
+               
                 <div id="linha-vertical"></div>
 
                 <!-- /* Elementos da box - Form */ -->
@@ -81,9 +89,8 @@
                         <button class="button-cad-mt">Cancelar</button>
                         <button class="button-cad-mt" id="b-2-mt">Cadastre-se</button>
                     </div>
-                    
                 </div>
-                
+
                 <!-- /* Elementos da box - img */ -->
                 <div class="areaImg-cad-mt">
                     <h1 class="h1-mt">CADASTRO</h1>
@@ -93,7 +100,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
 </body>
