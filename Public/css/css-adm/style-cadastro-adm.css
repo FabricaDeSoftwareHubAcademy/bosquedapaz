@@ -94,6 +94,13 @@ body {
     }
 }
 
+.setaV-cadastro {
+    position: relative;
+    top: 70vh;
+    display: block;
+    cursor: pointer;
+}
+
 
 /* Elementos da box - Form */
 .area-total-Form-Cad-mt{
@@ -262,7 +269,6 @@ a:hover{
 
 /* Responsividade */
 @media screen and (max-width: 720px){
-
     p{
         font-size: 12px;
         position: absolute;
@@ -273,6 +279,12 @@ a:hover{
     a{
         text-decoration: none;
         color: #162868;
+    }
+
+    .setaV-cadastro{
+        display: block;
+        top: 44vh;
+        right: 15vw;
     }
 
     .formaCadastro-2{
@@ -374,6 +386,12 @@ a:hover{
 
     #linha-vertical{
         display: none;
+    }
+
+    .setaV-cadastro{
+        display: block;
+        top: 40vh;
+        right: 15vw;
     }
 
     .box-cadastro-mt{
@@ -478,8 +496,7 @@ a:hover{
     }
     .area-input-mat{
         margin-bottom: 5px;
-    }
-    
+    }    
 }
 
 @media screen and (min-height: 1366px){
@@ -517,6 +534,10 @@ a:hover{
     .formaCadastro-4{
         top: 76vh;
     }
+    .setaV-cadastro{
+        display: block;
+        top: 50vh;
+    }
 }
 
 @media (min-width: 1024px) and (max-height: 600px) {
@@ -546,6 +567,9 @@ a:hover{
         left: 33%;
         top: 650px;
     }
+    /* .setaV-cadastro{
+        right: 50vh;
+    } */
 }
 
 @media (min-width: 1280px) and (max-height: 800px) {
@@ -592,11 +616,21 @@ a:hover{
     p{
         top: 720px;
     }
+    .setaV-cadastro{
+        display: block;
+        top: 45vh;
+        right: 18vw;
+    }
 }
 
 @media (min-width: 912px) and (min-height: 1368px){
     p{
         left: 33%;
+    }
+    .setaV-cadastro{
+        display: block;
+        top: 30vh;
+        right: 18vw;
     }
 }
 
