@@ -1,0 +1,28 @@
+.bolhas-guilherme {
+    position: absolute;
+    display: flex;
+}
+
+.bolhas-guilherme span {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff6c;
+    margin: 0px 4px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px #ffffff10, 0px 0px 50px #ffffff50, 0px 0px 100px #ffffff50;
+    animation: animar calc(70s / var(--i)) linear infinite;
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bolhas-guilherme span:nth-of-type(even) {
+    background-color: #ffffff50;
+    box-shadow: 0px 0px 0px 10px #ffffff20, 0px 0px 50px #ffffff50, 0px 0px 100px #ffffff50;
+}

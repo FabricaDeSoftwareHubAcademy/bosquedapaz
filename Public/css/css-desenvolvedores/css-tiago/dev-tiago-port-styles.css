@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk',sans-serif;
+}
+:root{
+    --amaranth-purple: #AF1B3F;
+    --rich-black: #101720;
+    --baby-powder: #FBFCF8;
+    --saffron: #EAC435;
+    --celadon: #ACF7C1;
+}
+body{
+    background-color: var(--rich-black)/*#0b1215 #0d1717 #101720 #171717 #011222 #020d19 #0c0c0c*/;
+    overflow-x: hidden;
+}
+.header-tiago{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    z-index: 10;
+}
+.autor-tiago .logo-tiago{
+    margin-left: 100px;
+    color: #AF1B3F;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 32px;
+}
+.sobrenome-tiago{
+    color: #EAC435;
+}
+.nav-tiago{
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+.nav-tiago .itens-tiago{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    margin-top: 10px;
+}
+.nav-tiago li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+}
+/* .areaprincipal {
+    width: 100vw;
+    height: 60vh;
+} */
+.imagemprincipal-tiago {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/rednebula.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    box-shadow: inset -10px 100px 500px var(--rich-black);
+}
+.titulo-tiago{
+    display: flex;
+    justify-content: center;
+    color: #AF1B3F;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.conteudo-tiago{
+    color: white;
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    height: auto;
+    margin-top: 5%;
+    font-size: 24px;
+}
+.texto-tiago{
+    width: 60%;
+}
+.hab-tiago{
+    margin-top: 25%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--saffron);
+    font-size: 30px;
+    flex-direction: column;
+}
+.skills-bag-tiago {
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+    align-items: center;
+}
+.skills-bag-tiago i {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.div-python-tiago{
+    width: 150px;
+    height: 150px;
+    background-color: var(--baby-powder);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-python-tiago .fa-python{
+    color: var(--amaranth-purple);
+    display: flex;
+    font-size: 40px;
+}
+.div-js-tiago{
+    width: 150px;
+    height: 150px;
+    background-color: var(--baby-powder);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-js-tiago .fa-js{
+    color: var(--saffron);
+}
+.div-html-tiago{
+    width: 150px;
+    height: 150px;
+    background-color: var(--baby-powder);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa-html5{
+    color: #fb5607;
+}
+.div-css-tiago{
+    width: 150px;
+    height: 150px;
+    background-color: var(--baby-powder);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa-css3-alt{
+    color: #0466c8;
+}
+.div-figma-tiago{
+    width: 150px;
+    height: 150px;
+    background-color: var(--baby-powder);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa-figma{
+    color: var(--rich-black);
+}
+
+.fa-figma:hover {
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+.div-figma-tiago:hover {
+    transform: scale(1.1);
+    background-color: grey;
+    transition: all .3s ease;
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    background-color: black;
+}
+ 
+/* Minha navbar */
+.navbar {
+    background-color: black;
+    overflow: hidden;
+}
+ 
+.navbar ul {
+    list-style-type: none;
+    padding: 30px;
+    margin: 0;
+    display: flex;
+}
+ 
+.navbar li {
+    flex: 1;
+}
+ 
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 25px;
+}
+ 
+.navbar a:hover {
+    color: gold;
+}
+ 
+/* Título e subtítulo */
+.central-text {
+    text-align: center;
+    margin-top: 50px;
+    width: 900px;
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    margin-top: 120px;
+}
+ 
+ 
+/*gambiarra*/
+ 
+.central-text h1 {
+    color: chartreuse; /* Cor do título */
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    overflow: hidden; /* Oculta o título até que seja revelado */
+    display: inline-block; /* Permite que o overflow funcione corretamente */
+}
+ 
+.central-text p {
+    font-size: 20px;
+    color: chartreuse;  
+    white-space: normal; /* Permite que o texto quebre linha */
+    margin-top: 20px; /* Espaçamento entre título e texto */
+    max-height: none; /* Remove o limite de altura */
+    overflow: hidden; /* Oculta o texto que excede o limite de altura */
+}
+ 
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: chartreuse;
+    }
+}
+ 

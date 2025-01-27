@@ -1,0 +1,54 @@
+.home-yan{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    padding: 30px 12% 0;
+}
+.home-content-yan{
+    max-width: 800px;
+}
+.home-content-yan h3{
+    font-size: 42px;
+}
+.home-content-yan h1{
+    font-size: 62px;
+    line-height: 1.2;
+    
+}
+.home-content-yan p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.home-img-yan img{
+    border-radius: 50%;
+    width: 550px;
+}
+
+
+@media screen and (max-width: 720px) {
+    .home-yan {
+        flex-direction: column; 
+        gap: 2rem; 
+        padding: 20px 5%; 
+        text-align: center; 
+    }
+    .home-content-yan h3 {
+        font-size: 28px; 
+    }
+    .home-content-yan h1 {
+        font-size: 36px; 
+        line-height: 1.1;
+    }
+    .home-content-yan p {
+        font-size: 16px; 
+        margin: 20px 0 25px;
+    }
+    .home-img-yan img{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
