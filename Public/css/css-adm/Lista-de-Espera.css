@@ -68,7 +68,7 @@ html,
     width: 85%;
     height: 750px;
     background-color: #f8f5f6c3;
-    z-index: 3;
+    z-index: 2;
     border-radius: 10px;
     overflow-y: auto;
     bottom: 20px;
@@ -304,4 +304,28 @@ tr:nth-child(even) {
         top: 60px;
     }
 
+}
+
+@media (min-width: 1024px) and (max-height: 600px) {
+    .b-LisEsp3{
+        top: 75vh;
+    }
+
+    .box-LisEsp-mat{
+        width: 90%;
+        height: 450px;
+        bottom: 200px;
+    }
+}
+
+@media (min-width: 1280px) and (max-height: 800px){
+    .b-LisEsp3{
+        top: 75vh;
+    }
+
+    .box-LisEsp-mat{
+        width: 90%;
+        height: 650px;
+        bottom: 105px;
+    }
 }

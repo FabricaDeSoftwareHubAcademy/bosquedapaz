@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    overflow-y: auto;
+     
+}
+ 
+ 
+.bola-verde1{
+    position: absolute;
+    top: 15%;
+    left: -10px;
+    z-index: 1;
+}
+ 
+.bola-verde2{
+    position: absolute;
+    top: 18%;
+    left: 95%;
+    z-index: 1;
+}
+ 
+.bola-rosa{
+    position: absolute;
+    top: 83%;
+    left: 89%;
+    z-index: 1;
+}
+
+ 
+.box{
+    display: flex;
+    padding: 120px;
+    width: 1750px;
+    height: auto;
+    /* background-color: red; */
+    margin-left: 6%;
+    margin: 50px;
+    position: relative;
+    top: -25px;
+    background: rgba(170, 165, 165, 0.17);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 30px rgba(219, 211, 211, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    z-index: 2;
+    flex-direction: column;
+    
+}
+ .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    /* background-color: blue; */
+}
+.formularios{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    
+}
+
+.formularios div{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formularios input{
+    width: 40vh;
+    height: 5vh;
+    margin: 10px;   
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.caixa-formulario label{
+    font-size: 14px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+
+.caixa-contato input{
+    width: 170px;
+    margin: 20px;
+}
+
+.formularios{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.formularios div{
+    display: flex;
+    flex-direction: column;
+}
+
+.formularios input{
+    width: 40vh;
+    height: 5vh;
+    margin: 10px;   
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.caixa-formulario label{
+    font-size: 14px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+
+.caixa-contato input{
+    width: 170px;
+    margin: 20px;
+}
+
+.caixa-contato label {
+    font-size: 14px; /* Tamanho da fonte */
+    margin-bottom: -8px; /* Espaço entre a label e o input */
+    margin-left: 20px;
+}
+
+.form-opc{
+    position: relative;
+    top: -40px;
+}
+
+.form-opc label{
+    font-size: 14px; /* Tamanho da fonte */
+    margin-bottom: -8px; /* Espaço entre a label e o input */
+    margin-left: 10px;
+}
+
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: black;
+    margin-top: 15px;
+}
+
+.form-finalizar{
+    width: 100%;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+}
+
+
+
+.edital-feira a{
+    text-decoration: none;
+    color: white;
+}
+ 
+.edital-feira button{
+    height: 35px;
+    width: 190px;
+    border-radius: 10px;
+    border: none;
+    background-color: #007E70;
+    font-size: 18px;
+}
+
+
+label#salvar-btn {
+    display: inline-block;  
+    background-color: #FF3877;
+    color: white;
+    padding: 9px 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked + .modal-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  
+}
+
+.botoes label {
+    background-color: #007E70;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.botoes label.salvar {
+    background-color: #FF3877;
+    width: 110px;
+}
+
+.botoes-salvar,
+.botoes-cancelar{
+    position: relative;
+    left: 60%;
+}
+
+
+.btn-cancelar{
+    display: inline-block;  
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px 40px;
+    background-color: #007E70;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    
+}
+
+
+.form-termos{
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+.form-termos a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.form-termos button{
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+}
+
+.termos{
+    height: 20px;
+    width: 250px;
+    color: red;
+}   
+
+.expositor-kids{
+    height: 50px;
+    width: 200px;
+    position: relative;
+    left: 26%;
+}
+
+.artistas{
+    height: 45px;
+    width: 200px;
+    
+}
+
+.caixa-checkbox input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.caixa-checkbox label{
+    font-size: 18px;
+}
+
+
+.voltar{
+    color: black;
+    font-size: 20px;
+}

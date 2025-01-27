@@ -1,0 +1,137 @@
+/* modal */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    z-index: 9;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 65%;
+    background-image: url(../img/ModalRosaEdpass.svg);
+    background-size: cover;
+    border-radius: 20px;
+    display: none;
+}
+
+.modal-content-edpass {
+    background-color: rgb(185, 147, 147);
+    height: 85%;
+    width: 85%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.modal-img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.gg-img {
+    width: 90%;
+    height: 90%;
+}
+
+.area-img-p {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.p-img {
+    width: 24%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.txt-content-modal{
+    overflow: auto;
+    width: 40%;
+    height: 100%;
+    background-color: red;
+    max-height: 120px;
+    margin-top: 10px;
+}
+
+.title-modal{
+    width: 40%;
+    font-size: 1.2rem;
+    margin: 15px auto;
+    margin-top: -5px;
+    justify-content: right;
+}
+
+.area-texto{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.modal-texto{
+    font-size: 14px;
+    line-height: 1.3;
+    overflow: hidden;
+    color: #505050;
+    scrollbar-gutter: stable both-edges;
+}
+
+
+::-webkit-scrollbar{
+    width: 2px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #ffffff00;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #a1a0a3;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #6b6869;
+}
+
+.close {
+    color: #000000;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #666364;
+    text-decoration: none;
+}

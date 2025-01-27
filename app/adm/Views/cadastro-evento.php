@@ -134,7 +134,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>
