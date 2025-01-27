@@ -65,12 +65,14 @@
                     </div>
                 </div>
 
+                <a href="../../../app/adm/Views/gerenciar-eventos.php">
                 <div class="Botoes-gabriel">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
-                        <p>Eventos</p>
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                            <p>Eventos</p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
