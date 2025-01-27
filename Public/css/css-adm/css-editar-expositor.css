@@ -1,4 +1,5 @@
 @import url('style-padrao.css');
+@import url('../css-home/menu.css');
 
 .all-content {
     margin: auto;
@@ -8,6 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 100px;
+    height: 100vh;
 }
 
 .parte-superior {

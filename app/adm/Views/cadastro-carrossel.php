@@ -7,11 +7,11 @@
     <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link com style padrao da pagina adm -->
-    <link rel="stylesheet" href="../../css/css-adm/cadastro-carrossel.css">
-    <!-- <link rel="stylesheet" href="../../css/menu-adm.css"> -->
+    <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-carrossel.css">
+    <!-- <link rel="stylesheet" href="../../../Public/css/menu-adm.css"> -->
 </head>
 <body>
-    <?php include "../../assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
@@ -24,36 +24,34 @@
             <!-- local de uploads de imgs para o carrossel -->
             <section class="up-imgs">
 
-                <div class="uploads">
+                <label for="file" class="uploads up" id="input1">
+                    <input type="file" name="img" id="imagens-input" class="input-img" multiple>
+                    
+                    <i class="fa-solid fa-upload up-img"></i>
 
-                    <label class="up" tabindex="0">
-                        <input type="file" name="img" id="imagens-input" accept="images/*" class="input-img">
-                        <span class="text-up-imgs">
-                            <i class="fa-solid fa-upload up-img"></i>
-                        </span>
-                    </label>
-
-                    <button class="btn-editar open-modal" data-modal="m-nova-img">
+                    <button class="btn-editar">
                         <i class="fa-solid fa-pen editar"></i>
                     </button>
+                </label>
+
+                <div class="new-imgs" id="zone-imgs">
+                    <div class="img" id="img1"></div>
+                    <div class="img" id="img2"></div>
+                    <div class="img" id="img3"></div>
                 </div>
-                
+                <!--                 
                 <div class="uploads upload-text">
 
                     <label class="label-input" tabindex="0">Digite o texto do Carrossel</label>
                     <input type="Text" name="text-car" id="input-text"  class="input-text" placeholder="Digite aqui">
-                </div>
-
-                <dialog class="m-nova-img" id="m-nova-img">
-                    <?php include "../../assets/modais/m-nova-img-carrossel.html"; ?>
-                </dialog>
+                </div> -->
 
             </section>
 
             <!-- botoes parte de baixo -->
             <div class="btns">
                 <a href="" class="voltar">
-                    <img src="../../imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">
@@ -71,14 +69,14 @@
 
     <!-- bolas de fundo -->
     <div class="bolas-fundo">
-        <img src="../../imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <!-- link do JavaScript -->
-    <script src="../../js/js-menu/js-menu.js"></script>
-    <script src="../../js/js-adm/js-cadastro-carrossel.js"></script>
-    <script src="../../js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-cadastro-carrossel.js"></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>

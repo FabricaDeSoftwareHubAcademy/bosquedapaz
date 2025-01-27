@@ -1,72 +1,168 @@
-.slider {
-    margin: 0 auto 100px;
-    width: 100%;
-    height: 100%;
-    padding: 0 !important;
+.carossel {
     overflow: hidden;
 }
 
-.slider-content {
-    width: 400%;
-    height: auto;
-    display: flex;
-}
-
-.slider-content input {
-    display: none;
-}
-
-.slide-box {
-    width: 25%;
-    height: auto;
+.fundo {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D592E;
+    padding-top: 70px;
     position: relative;
-    text-align: center;
-    transition: 1s;
+    overflow: hidden;
 }
 
-.slide-box img {
-    object-fit: fill;
-    width: 100%;
-}
-
-.nav-auto, .nav-manual {
-    position: absolute;
-    width: 100%;
-    margin-top: 43%;
+.conteiner-slider {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
-.nav-auto div, .nav-manual .manual-btn {
-    border: 1px solid var(--color-primary-6);
-    padding: 10px;
+.slider-all {
+    width: 100%;
+    height: 97%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.slider-swap {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right: 35px;
+    position: absolute;
+    z-index: 2;
+}
+
+.swap {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
     border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-in;
 }
 
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
-    margin-right: 10px;
+.arrow-swap {
+    font-size: 1.8em;
 }
 
-.nav-manual .manual-btn:hover {
-    background-color: var(--color-primary-6);
+.swap:hover {
+    background-color: #fff;
 }
 
-#radio1:checked ~ .nav-auto .auto-btn1,
-#radio2:checked ~ .nav-auto .auto-btn2,
-#radio3:checked ~ .nav-auto .auto-btn3 {
-    background-color: var(--color-primary-6);
+.slider-all .slider-item {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../imgs/img-home/imagem-carrossel-1.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    /* z-index: 1; */
 }
 
-#radio1:checked ~ .primeiro {
-    margin-left: 0%;
+.slider-all .slider-item:nth-child(2) {
+    background-image: url("../../imgs/img-home/imagem-carrossel-1.JPG");
+    z-index: 1;
+}
+.slider-all .slider-item:nth-child(3) {
+    background-image: url("../../imgs/img-home/imagem-carrossel-2.JPG");
+    z-index: 0;
+}
+.slider-all .slider-item:nth-child(4) {
+    background-image: url("../../imgs/img-home/imagem-carrossel-3.JPG");
+    z-index: -1;
 }
 
-#radio2:checked ~ .primeiro {
-    margin-left: -25%;
+.slider-balls {
+    width: 100%;
+    height: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-#radio3:checked ~ .primeiro {
-    margin-left: -50%;
+.ball {
+    width: 50px;
+    height: 5px;
+    /* border-radius: 50%; */
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+#radio1:checked ~ .ball1,
+#radio2:checked ~ .ball2,
+#radio3:checked ~ .ball3 {
+    animation: animated 1s forwards normal;
+}
+
+@keyframes animated {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: #FDF148;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .fundo {
+        height: 55vh;
+        padding-top: 70px;
+    }
+    .slider-all {
+        height: 95%;
+    }
+    .slider-balls {
+        height: 5%;
+    }
+
+    .swap {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .arrow-swap {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .fundo {
+        height: 40vh;
+        padding-top: 70px;
+    }
+
+    .slider-swap {
+        padding-right: 20px;
+    }
+
+    .swap {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .arrow-swap {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .fundo {
+        height: 50vh;
+    }
 }

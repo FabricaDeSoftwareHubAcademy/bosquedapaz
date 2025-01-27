@@ -62,10 +62,22 @@ html,
     width: 100%;
     height: auto;
 }
+.seta-LisEsp3 {
+    position: fixed;
+    top: 92vh;
+    left: 3vw;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.seta-LisEsp3 img {
+    width: 100%;
+    height: auto;
+}
 
 
 .box-LisEsp-mat {
-    width: 85%;
+    width: 90%;
     height: 750px;
     background-color: #f8f5f6c3;
     z-index: 2;
@@ -172,6 +184,10 @@ tr:nth-child(even) {
     background-color: rgba(233, 233, 233, 1)
 }
 
+.seta-LisEsp3-res{
+    display: none;
+}
+
 @media screen and (max-width: 720px) {
     .area-LisEsp-principal {
         height: 650px;
@@ -200,6 +216,23 @@ tr:nth-child(even) {
     .b-LisEsp3 {
         top: 94vh;
     }
+
+    .seta-LisEsp3{
+        display: none;
+    }
+
+    .seta-LisEsp3-res{
+        top: 3vh;
+        left: 3vw;
+        position: relative;
+        display: block;
+    }
+
+    .seta-LisEsp3-res img{
+        width: 7%;
+        height: auto;
+    }
+ 
 
     .area-pesquisa-lisEsp input {
         width: 60%;
@@ -246,6 +279,21 @@ tr:nth-child(even) {
         height: 100%;
     }
 
+    .seta-LisEsp3{
+        display: none;
+    }
+
+    .seta-LisEsp3-res{
+        display: block;
+        top: 3vh;
+        left: 3vw;
+        position: relative;
+    }
+    .seta-LisEsp3-res{
+        width: 8%;
+        height: auto;
+    }
+
     .box-LisEsp-mat{
         width: 98%;
         height: 80%;
@@ -283,6 +331,10 @@ tr:nth-child(even) {
         width: 95%;
         height: 70%;
     }
+
+    .seta-LisEsp3{
+        display: none;
+    }
     
     .b-LisEsp3{
         top: 90vh;
@@ -303,6 +355,9 @@ tr:nth-child(even) {
     .table-lisEsp{
         top: 60px;
     }
+    .seta-LisEsp3{
+        display: block;
+    }
 
 }
 
@@ -316,6 +371,9 @@ tr:nth-child(even) {
         height: 450px;
         bottom: 200px;
     }
+    .seta-LisEsp3{
+        left: 1vw;
+    }
 }
 
 @media (min-width: 1280px) and (max-height: 800px){
@@ -327,5 +385,21 @@ tr:nth-child(even) {
         width: 90%;
         height: 650px;
         bottom: 105px;
+    }
+    .seta-LisEsp3{
+        left: 1vw;
+    }
+}
+
+@media (min-width: 912px) and (max-height: 1368px){
+    .seta-LisEsp3-res{
+        display: none;
+    }
+}
+
+@media (min-width: 540px) and (max-height: 720px){
+    .seta-LisEsp3-res img{
+        width: 5%;
+        height: auto;        
     }
 }

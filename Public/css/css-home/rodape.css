@@ -23,27 +23,28 @@
     padding-bottom: 15px;
 }
 
-.list-rodape h5 {
+.title-list-rodape {
     font-size: 2em;
     margin: 0px auto;
     margin-top: 30px;
 }
 
-.list-rodape ul {
+.list-ul {
     margin: 0 auto;
     font-size: 1.2em;
+    list-style: none;
 }
 
-.list-sobre ul a {
+.link-rodape {
     color: #fff;
 }
 
-.list-contato div {
-    width: 90%;
+.link-contato-rodape {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .copyright {
@@ -62,4 +63,44 @@
     font-size: 2rem;
     margin-right: 5px;
     color: #fff;
+}
+
+@media (max-width: 1050px) {
+    .list-rodape {
+        height: auto;
+        width: 90%;
+    }
+    .title-list-rodape {
+        font-size: 1.5em;
+    }
+
+    .list-ul {
+        font-size: 1em;
+    }
+
+    .list-rodape {
+        align-items: center;
+    }
+
+}
+
+@media(max-width: 500px) {
+    .box-footer {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-rodape {
+        height: auto;
+        width: 90%;
+    }
+
+    .list-contato {
+        align-items: center;
+    }
+
+    .link-contato-rodape {
+        width: 75%;
+    }
 }
