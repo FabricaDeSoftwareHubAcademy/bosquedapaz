@@ -67,217 +67,203 @@
             <!-- mobile menu -->
         </header>
 
-        <main>
+        <main class="principal">
             <div class="box">
-                <h1 class="title">Relatório de expositores</h1>
-                <div class="input-btn">
-                    <p class="form-label">Procurar por</p>
-                    <div class="input-group">
-                        <input type="text" name="" id="" placeholder="Status">
-                        <button>Buscar</button>
+                <h2>RELATÓRIO EXPOSITOR</h2>
+                <div class="container">
+                    <div class="search-bar">
+                      <label for="status">Procurar</label>
+                      <input type="text" id="status" placeholder="Expositor" />
+                      <button class="search-button">BUSCAR</button>
                     </div>
-                </div>
-                    
-                     
-                <div class="tabela-container">
-                    <table class="relatorio">
-                        <thead>
-                            <tr>
-                                <th>Usuário</th>
-                                <th>Nome</th>
-                                <th>Categoria</th>
-                                <th>N°Barraca</th>
-                                <th>Status</th>
-                                <th>Editar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>Carla de Souza Costa</td>
-                                <td>Gastronomia</td>
-                                <td>22</td>
-                                <!-- <td><span class="status ativo">Ativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>Juan Quintela</td>
-                                <td>Artesanato</td>
-                                <td>15</td>
-                                <!-- <td><span class="status ativo">Ativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
+                
+                    <table class="collaborators-table">
+                      <thead>
+                        <tr>
+                          <th class="usuario-col">Usuário</th>
+                          <th>Nome</th>
+                          <th class="email-col">E-mail</th>
+                          <th class="fone-col">Telefone</th>
+                          <th class="barraca-col">N. Barraca</th>
+                          <th>Status</th>
+                          <th>Editar</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Rascunho  -->
+                        <tr>
+                          <td class="usuario-col">01</td>
+                          <td>Carla  Costa</td>
+                          <td class="email-col">carla.costa123@gmail.com</td>
+                          <td class="fone-col">(67) 98123-4567</td>
+                          <td class="barraca-col">6</td>
+                          <td><button class="status active">Ativo</button></td>
+                          <td>
+                              <a href="editar-adm.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="usuario-col">02</td>
+                          <td>Juan Quintela</td>
+                          <td class="email-col">juan.quintela987@gmail.com</td>
+                          <td class="fone-col">(67) 98234-5678</td>
+                          <td class="barraca-col">12</td>
+                          <td><button class="status inactive">Inativo</button></td>
+                          <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="usuario-col">03</td>
+                          <td>Julia Souza</td>
+                          <td class="email-col">julia.souza456@gmail.com</td>
+                          <td class="fone-col">(67) 98945-6789</td>
+                          <td class="barraca-col">10</td>
 
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>Dilma Figueiro</td>
-                                <td>Gastronomia</td>
-                                <td>301</td>
-                                <!-- <td><span class="status inativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
+                          <td><button class="status active">Ativo</button></td>
+                          <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td class="usuario-col">13</td>
+                            <td>Pedro Alves</td>
+                            <td class="email-col">pedro.alves789@gmail.com</td>
+                            <td class="fone-col">(67) 98845-6789</td>
+                          <td class="barraca-col">6</td>
 
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>Jania Livramento</td>
-                                <td>Gastronomia</td>
-                                <td>52</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
+                            <td><button class="status inactive">Inativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">05</td>
+                            <td>Nara Helena</td>
+                            <td class="email-col">nara.helena126@gmail.com</td>
+                            <td class="fone-col">(67) 98345-6789</td>
+                          <td class="barraca-col">45</td>
 
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>Juan Quintela </td>
-                                <td>Artesanato</td>
-                                <td>89</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>06</td>
-                                <td>Carla de Souza  </td>
-                                <td>Artesanato</td>
-                                <td>72</td>
-                                <!-- <td><span class="status inativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>07</td>
-                                <td>Maria Eliza</td>
-                                <td>Literatura</td>
-                                <td>301</td>
-                                <!-- <td><span class="status inativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>08</td>
-                                <td>Nara Helena </td>
-                                <td>Literatura</td>
-                                <td>74</td>
-                                <!-- <td><span class="status inativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
-                            </tr>
-                            <tr>
-                                <td>09</td>
-                                <td>Emanuelle Valladares </td>
-                                <td>Gastronomia</td>
-                                <td>55</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Kauã Gomes  </td>
-                                <td>Artesanato</td>
-                                <td>100</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td>Mara Nazare </td>
-                                <td>Antiguidades</td>
-                                <td>99</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td>Carol Souza</td>
-                                <td>Gastronomia</td>
-                                <td>12</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>13</td>
-                                <td>Julia Tavares</td>
-                                <td>Gastronomia</td>
-                                <td>35</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>Lorena de Souza</td>
-                                <td>Antiguidades</td>
-                                <td>4</td>
-                                <!-- <td><span class="status inativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td>Cralos Emanuel</td>
-                                <td>Gastronomia</td>
-                                <td>54</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>16</td>
-                                <td>Fernanda Castro</td>
-                                <td>Artesanato</td>
-                                <td>15</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>17</td>
-                                <td>Leandro Emanuel</td>
-                                <td>Antiguidades</td>
-                                <td>5</td>
-                                <!-- <td><span class="status ativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
-                            <tr>
-                                <td>18</td>
-                                <td>Milena Silva</td>
-                                <td>Gastronomia</td>
-                                <td>78</td>
-                                <!-- <td><span class="status inativo">Inativo</span></td> -->
-                                <td class="status ativo" onclick="toggleStatus(this)">Ativo</td> 
-                                <td><i class="editar">&#9998;</i></td>
- 
-                            </tr>
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">06</td>
+                            <td>Fernanda Santos</td>
+                            <td class="email-col">fernanda.santos126@gmail.com</td>
+                            <td class="fone-col">(67) 97345-6623</td>
+                          <td class="barraca-col">24</td>
 
-                        </tbody>
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">07</td>
+                            <td>Emanuelle Valadares</td>
+                            <td class="email-col">manu.vala777@gmail.com</td>
+                            <td class="fone-col">(67) 98885-6888</td>
+                          <td class="barraca-col">26</td>
+
+                            <td><button class="status inactive">Inativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">08</td>
+                            <td>Kauan Ribeiro</td>
+                            <td class="email-col">kauan.ribeiro753@gmail.com</td>
+                            <td class="fone-col">(67) 99942-1110</td>
+                          <td class="barraca-col">23</td>
+
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">09</td>
+                            <td>Vini Count</td>
+                            <td class="email-col">count.vini99@gmail.com</td>
+                            <td class="fone-col">(67) 99210-2566</td>
+                          <td class="barraca-col">75</td>
+
+                            <td><button class="status inactive">Inativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">10</td>
+                            <td>Isabela Oliveira</td>
+                            <td class="email-col">isa.bela555@gmail.com</td>
+                            <td class="fone-col">(67) 96841-5517</td>
+                          <td class="barraca-col">2</td>
+
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">11</td>
+                            <td>Kelvin Bach</td>
+                            <td class="email-col">kelvin.bach0208@gmail.com</td>
+                            <td class="fone-col">(67) 90208-5623</td>
+                          <td class="barraca-col">44</td>
+
+                            <td><button class="status inactive">Inativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td class="usuario-col">12</td>
+                            <td>Paulo Henrique</td>
+                            <td class="email-col">paulo.henrique33@gmail.com</td>
+                            <td class="fone-col">(67) 98345-6789</td>
+                          <td class="barraca-col">7</td>
+
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                              <a href="edicao-expositor.html">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </td>
+                          </tr>  
+                      </tbody>
                     </table>
-                </div>
-                <a href="#" class="voltar"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div>  
             </div>
         </main>
 
@@ -287,6 +273,6 @@
                 <img class="bola-azul3"   src="../img/Elemento3.ElipseAzul.png" alt="">
             </div>
 
-    <script src="../../../Public/js/js-adm/troca-status.js"></script>
+    <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
 </body>
 </html>
