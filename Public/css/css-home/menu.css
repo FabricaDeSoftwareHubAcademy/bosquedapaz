@@ -19,7 +19,7 @@
     margin-bottom: 10px;
     position: fixed;
     z-index: 3;
-    background-color: #fff;
+    background-color: white;
 }
 
 .logo {
@@ -27,7 +27,7 @@
     margin: 5px 0px 0px 20px;
 }
 
-.logo img {
+.img-logo {
     width: 100%;
 }
 
@@ -40,23 +40,21 @@
     height: 100%;
 }
 
-.menu .menu-icon {
-    width: 40px;
+.menu-icon {
+    width: 50px;
+    height: 50px;
     display: none;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    margin-right: 20px;
 }
 
-.menu .menu-icon button {
+.btn-sandwich {
     width: 100%;
     height: 100%;
     border: none;
     background-color: transparent;
 }
 
-.menu .menu-icon img {
+.img-sandwich {
     width: 100%;
 }
 
@@ -67,7 +65,7 @@
     height: 100%;
 }
 
-.nav-bar ul {
+.lista-menu {
     list-style: none;
     width: 100%;
     height: 100%;
@@ -77,12 +75,12 @@
     justify-content: center;
 }
 
-.nav-bar ul li {
+.li-menu {
     font-size: 1em;
     padding-right: 20px;
 }
 
-.nav-bar ul li a {
+.link-menu {
     text-decoration: none;
     font-weight: 500;
     color: black;
@@ -104,15 +102,16 @@
     margin-right: 50px;
 }
 
-.pesquisar input {
+.input {
     width: 70%;
     height: 40px;
     border-radius: 5px;
     margin-right: -25px;
     padding-left: 5px;
+    border: 2px solid #000;
 }
 
-.pesquisar .bola {
+.bola {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -132,7 +131,7 @@
     width: 50px;
 }   
 
-.login img {
+.img-login {
     width: 100%;
 }
 
@@ -153,39 +152,39 @@
         justify-content: center;
     }
 
-    .cabecalho .logo img {
+    .img-logo {
         width: 100%;
     }
 
-    .cabecalho .nav-bar ul {
+    .lista-menu {
         font-size: 0.9em;
     }
 
-    .cabecalho .pesquisar {
+    .pesquisar {
         width: 50px;
         height: 40px;
     }
 
-    .cabecalho .pesquisar .input {
+    .input {
         display: none;
     }
 
-    .cabecalho .pesquisar .bola {
+    .bola {
         height: 50px;
         width: 50px;
     }
 
-    .cabecalho .login {
+    .login {
         width: 50px;
         height: 50px;
     }
 
-    .cabecalho .login img {
+    .img-login{
         width: 50px;
         height: 50px;
     }
 
-    .pesquisar-login .pesquisar {
+    .pesquisar {
         display: flex;
         align-items: center;
         width: auto;
@@ -194,7 +193,7 @@
         height: 100%;
     }
 
-    .pesquisar-login .pesquisar .bola {
+    .bola {
         border-radius: 50%;
         width: 45px;
         height: 45px;
@@ -202,7 +201,7 @@
         display: flex;
     }
 
-    .pesquisar-login .pesquisar .input {
+    .input {
         width: 110px;
         height: 35px;
         font-size: 0.6em;
@@ -213,13 +212,17 @@
         padding-left: 10px;
     }
 
-    .pesquisar-login .pesquisar .inputOpen {
+    .inputOpen {
         display: block;
     }
 
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1050px) {
+    .cabecalho {
+        height: 70px;
+    }
+
     .menu {
         justify-content: space-between;
         padding: 0px 20px 0px 20px;
@@ -233,7 +236,7 @@
         display: none;
     }
 
-    .menu .menu-icon {
+    .menu-icon {
         display: block;
     }
 
@@ -248,33 +251,32 @@
         border-bottom: 2px solid rgba(0, 0, 0, 0.4);
     }
 
-    .mobile-menu ul {
-        text-align: center;
-        margin-left: 0;
+    .nav-ul {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 1rem;
     }
 
-    .mobile-menu .nav-item {
+    .nav-item  {
+        text-align: center;
+        margin-left: 0;
         display: block;
-        padding-top: 1.2rem;
+        padding-top: 1.1rem;
         text-decoration: none;
-    }
-
-    .mobile-menu .nav-item a {
-        text-decoration: none;
+        padding-bottom: 1rem;
         color: #000;
     }
 
-    .mobile-menu .btn-login {
-        text-align: center;
-        display: block;
-        padding: 1rem 2rem;
+    .btn-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
     }
 
-    .mobile-menu .btn-login .btnlogin {
+    .btnlogin {
         width: 100px;
         height: 30px;
         border-radius: 5px;
@@ -290,10 +292,10 @@
 
     .pequisa-mobile {
         height: 100%;
-        width: 200px;
+        width: 60%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: right;
     }
     
     .pesquisa {
@@ -305,8 +307,16 @@
         height: 100%;
     }
 
-    .pesquisa input {
+    .input {
         display: none;
+        width: 110px;
+        height: 35px;
+        font-size: 0.6em;
+        font-weight: 600;
+        color: #000;
+        border-radius: 5px;
+        margin-right: -15px;
+        padding-left: 10px;
     }
 
     .bola {
@@ -323,18 +333,7 @@
         background-size: 50%;
     }
 
-    .pesquisa .input {
-        width: 110px;
-        height: 35px;
-        font-size: 0.6em;
-        font-weight: 600;
-        color: #000;
-        border-radius: 5px;
-        margin-right: -15px;
-        padding-left: 10px;
-    }
-
-    .pesquisa .inputOpen {
+    .inputOpen {
         display: block;
     }
 }
@@ -347,13 +346,19 @@
         width: 100px;
     }
     .pequisa-mobile {
-        justify-content: center;
+        justify-content: right;
+        padding-right: 15px;
     }
 
-    .menu .menu-icon {
-        width: 30px;
+    .menu-icon {
+        width: 35px;
+        height: 35px;
     }
-
+    
+    .img-sandwich {
+        width: 100%;
+    }
+    
     .bola {
         width: 35px;
         height: 35px;

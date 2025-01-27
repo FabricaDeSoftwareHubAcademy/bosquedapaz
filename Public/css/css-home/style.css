@@ -54,32 +54,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-.carossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-}
-
-.fundo {
-    margin-top: 70px;
-    clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);;
-    background-color: #0D592E;
-    width: 100%;
-    height: 90vh;
-    position: relative;
-}
-
-.imagem {
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    height: 85%;
-    background-color: transparent;
-}
-
-/* estilizando main */
 
 main {
     display: flex;
@@ -88,7 +62,7 @@ main {
     justify-content: center;
     width: 100%;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 
@@ -101,7 +75,8 @@ main {
     justify-content: space-between;
     flex-direction: row;
     gap: 20px;
-    max-width: 80%;
+    max-width: 85%;
+    flex-wrap: wrap;
 }
 
 .info {
@@ -110,7 +85,7 @@ main {
     flex-direction: row;
 }
 
-.info img {
+.img-info {
     width: 40%;
 }
 
@@ -136,11 +111,10 @@ main {
 }
 
 .iu {
-    width: 180px;
-    height: 100px;
+    width: 270px;
 }
 
-.iu .imu {
+.imu {
     width: 100px;
     height: 100px;
 }
@@ -166,51 +140,17 @@ main {
 /* responsividade para 1500px */
 @media(max-width: 1500px) {
 
-
-    .carossel .fundo {
-        width: 100%;
-        height: 70vh;
-    }
-
-    .imagem {
-        top: 50px;
-        height: 85%;
-    }
-
-    .seja-expositor .box-imagens {
-        display: none;
-    }
-
-    .seja-expositor {
-        margin-top: -100px;
-        align-items: center;
-        justify-content: center;
-    }
-
 }
 
 @media (max-width: 1150px) {
-    .carossel .fundo {
-        width: 100%;
-        height: 40vh;
-    }
-
-    .imagem {
-        top: 60px;
-        height: 85%;
-    }
 
     .text-carrossel {
         top: 300px;
         bottom: auto;
     }
 
-    .info {
-        width: 250px;
-    }
-
-    .p-prin {
-        font-size: 24px;
+    .informacoes {
+        max-width: 75%;
     }
 }
 
@@ -218,319 +158,40 @@ main {
 /* responsividade para 950px */
 @media (max-width: 950px) {
 
-
-    .carossel .fundo {
-        width: 100%;
-        height: 38vh;
-    }
-
-    .imagem {
-        top: 50px;
-        height: 85%;
-    }
-
-
-
-    .title-welcome {
-        font-size: 1.1rem;
-    }
-
-    .text-welcome-c {
-        font-size: .9rem;
-    }
-
-    main .informacoes .info {
-        width: 200px;
-        padding: 5px 10px;
-    }
-    
-    main .informacoes .info .especi .p-prin {
-        font-size: 1em;
-    }
-
-    main .informacoes .info .especi .p-compl{
-        font-size: 0.9em;
-    }
-
-    .text-categoria h2 {
-        font-size: 1.8em;
-        padding: 10px;
-    }
-
-    .text-categoria p {
-        margin-top: 10px;
-        font-size: 1em;
-        width: 70%;
-    }
-
-    .categoria .categorias .item {
-        width: 100px;
-        height: 150px;
-    }
-
-    .item .img-fundo {
-        height: 100px;
-    }
-
-    .item p {
-        font-size: 0.8em;
-    }
-
-    .rodape .box-footer .list-rodape {
-        height: 300px;
-    }
-
-    .rodape .box-footer .list-rodape h5 {
-        font-size: 1.3em;
-    }
-
-    .rodape .box-footer .list-rodape ul {
-        font-size: 0.8em;
-    }
-
-    .rodape .box-footer .list-contato div img {
-        width: 40px;
-    }
-
-    .rodape .box-footer .list-contato div p {
-        font-size: 0.8em;
+    .informacoes {
+        gap: 5px;
     }
 }
 
-/* @media(max-width: 850px) {
-    .carossel .fundo {
-        width: 100%;
-        height: 40vh;
+
+/* responsividade para mobile (500px) */
+@media(max-width: 500px) {
+
+    /* informacaoe numeros */
+
+    .informacoes {
+        gap: 5px;
+        max-width: 85%;
     }
 
-    .imagem {
-        top: 40px;
-        height: 85%;
+    .info {
+        width: 150px;
     }
 
-    .text-carrossel {
-        bottom: 430px;
-    }
-} */
-
-/* responsividade para 950px */
-@media(max-width: 750px) {
-    
-    .carossel .fundo {
-        margin-top: 100px;
-        height: 37vh;
-        width: 100vw;
-    }
-    
-    .carossel .imagem {
-        top: 40px;
-        height: 85%;
-        width: 100vw;
+    .img-info {
+        width: 35%;
     }
 
-    main .text {
-        margin-bottom: 50px;
+    .p-prin {
+        font-size: 18px;
     }
 
-    main .text h1{
-        font-size: 1.5em;
+    .p-compl{
+        font-size: 16px;
     }
 
-    main .text p {
-        font-size: 0.8em;
-    }
-
-    main .informacoes {
-        display: none;
-    }
-
-    main .categoria #fundo-categoia {
-        height: 300px;
-    }
-
-    .categoria .text-categoria h2{
-        font-size: 1em;
-    }
-
-    .categoria .text-categoria p {
-        font-size: 0.7em;
-    }
-
-    .categoria .categorias {
-        margin-top: 350px;
-        height: auto;
-    }
-
-    .categorias .parte .item {
-        margin: 15px;
-        width: 80px;
-        height: 100px;
-    }
-
-    .categorias .item .img-fundo {
-        margin: 0 auto;
+    .imu {
         width: 50px;
         height: 50px;
-    }
-
-    .categorias .item p {
-        font-size: 0.7em;
-    }
-
-    main .expositores h2 {
-        font-size: 1.5em;
-    }
-
-    main .expositores p {
-        font-size: 0.7em;
-        width: 70%;
-    }
-
-    .expositor {
-        margin: 15px;
-        width: 150px;
-        height: 350px;
-    }
-
-    .imagem-expositor {
-        width: 100%;
-        height: 150px;
-    }
-
-    .imagem {
-        width: 140px;
-        height: 140px;
-    }
-
-    .expositor .informacoes-expositor {
-        height: auto;
-    }
-
-    .expositor .informacoes-expositor h3 {
-        font-size: 0.7em;
-    }
-
-    .expositor .informacoes-expositor #informacao {
-        font-size: 1em;
-    }
-    .expositor .informacoes-expositor #informacao p {
-        width: 100%;
-    }
-
-    .expositor .informacoes-expositor .botao {
-        margin: 0;
-    }
-
-    .informacoes-expositor .botao button {
-        font-size: 1em;
-        width: 60px;
-        height: 30px;
-    }
-
-    .expositores .ver-mais-expositor {
-        margin-top: 50px;
-    }
-
-    .expositores .ver-mais-expositor button {
-        width: 300px;
-        font-size: 1.2em;
-    }
-
-    .seja-expositor {
-        height: 400px;
-    }
-
-    .seja-expositor .box-seja-expositor {
-        width: 350px;
-        height: 250px;
-    }
-
-    .seja-expositor .box-seja-expositor h3 {
-        font-size: 1.2em;
-        width: 70%;
-        margin-left: 40px;
-    }
-
-    .seja-expositor .box-seja-expositor p {
-        font-size: 0.8em;
-        width: auto;
-        margin: 15px;
-        margin-left: 40px;
-    }
-
-    .seja-expositor .box-seja-expositor button {
-        width: 100px;
-        font-size: 1.2em;
-    }
-
-    .seja-expositor .sombra {
-        position: absolute;
-        top: 30px;
-        width: 350px;
-        height: 250px;
-        animation: none;
-    }
-
-    .box-content-seja-expositor:hover .sombra  {
-        width: 350px;
-        height: 250px;
-    } 
-
-    .rodape .box-footer {
-        display: block;
-        padding-top: 10px;
-    }
-
-    .rodape .box-footer .list-rodape {
-        margin: 0 auto;
-        height: auto;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-    }
-
-    .rodape .box-footer .list-contato > div {
-        margin-left: 50px;
-        width: auto;
-    }
-
-    .rodape .copyright {
-        font-size: 0.8em;
-    }
-
-}
-
-@media screen and (max-width: 510px) {
-    .carossel .fundo {
-        height: 80vh;
-        width: 100%;
-        height: 25vh;
-    }
-
-    .carossel .imagem {
-        top: 20px;
-        height: 85%;
-    }
-
-
-    .text-carrossel {
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        top: 320px;
-    }
-
-    .title-welcome {
-        font-size: .9rem;
-    }
-
-    .text-welcome-c {
-        font-size: .7rem;
-    }
-
-    .categoria {
-        margin-top: 150px;
     }
 }

@@ -10,6 +10,10 @@
     margin-bottom: 100px;
 }
 
+.expositores-mobal {
+    display: none;
+}
+
 .expositores .title-expositor {
     font-size: 2.5em;
     padding: 30px;
@@ -36,14 +40,16 @@
 }
 .expositores .text-ver-expositores{
     font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
 }
 
 /* lista de expositor */
-.expositores .expositor-lista {
+.expositor-lista {
     margin-top: 0px;
     width: 80%;
     height: 50%;
-    padding-top: 100px;
+    padding-top: 10px;
     gap: 20px;
     display: flex;
     flex-direction: row;
@@ -64,7 +70,7 @@
     width: 100%;
     height: 190px;
     border-radius: 50%;
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,14 +80,14 @@
     transition: all 1s ease;
 }
 
-.imagem-expositor img {
+.img-perfil-card {
     width: 90%;
 }
 
 .informacoes-expositor {
     background-color: #F8F8F8;
     width: 100%;
-    height: 65%;
+    height: 66%;
     position: absolute;
     bottom: 0px;
     z-index: 1;
@@ -126,8 +132,7 @@
     background-color: var(--color-rua4);
 }
 
-.informacoes-expositor .nome-expo {
-    margin-top: 80px;
+.nome-expo {
     font-size: 1.1rem;
 }
 
@@ -180,7 +185,7 @@
     flex-direction: column;
 }
 
-.text-info span {
+.span-cat {
     font-weight: 500;
 }
 
@@ -190,7 +195,7 @@
     /* background-color: #05A09C; */
 }
 
-.botao button {
+.btn-ver-perfil {
     border: none;
     background-color: #F7F183;
     padding: 5px 15px;
@@ -266,13 +271,13 @@
     width: 80%;
 }
 
-.box-seja-expositor h3 {
+.title-seja-expositor {
     font-size: 2em;
     font-weight: bold;
     color: white;
 }
 
-.box-seja-expositor p {
+.text-seja-expositor {
     width: 90%;
     font-size: 1.3em;
     margin: 40px;
@@ -280,7 +285,7 @@
     color: white;
 }
 
-.box-seja-expositor button {
+.btn-casdastro-expositor {
     padding: 5px;
     width: 200px;
     height: 40px;
@@ -341,42 +346,125 @@
 }
 
 
-.box-imagens {
-    height: 100%;
-    width: 50%;
+@media screen and (max-width: 1100px) {
+    .expositores {
+        display: none;
+    }
+
+    .expositores-mobal {
+        display: flex;
+    }
+
+    .seja-expositor {
+        margin-top: -70px;
+        padding: 0px;
+        height: 500px;
+    }
+
+    .box-content-seja-expositor {
+        padding: 0px;
+    }
+
+    .box-seja-expositor {
+        width: 460px;
+        height: 400px;
+        margin: 0px;
+        text-align: initial;
+    }
+
+    .box-content-expositor {
+        margin-left: 25px;
+    }
+
+    .sombra {
+        top: -15px;
+        left: 5px;
+        width: 460px;
+        height: 405px;
+        animation: none;
+    }
+
+    .box-content-seja-expositor:hover .sombra {
+        width: 460px;
+    }
+
+    .text-seja-expositor {
+        margin: 10px 0px;
+    }
 }
 
-.box-imagens {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 20px;
-    display: none;
+@media(max-width: 500px) {
+    .expositor {
+        width: 170px;
+        height: 380px;
+    }
+
+    .expositor-lista {
+        width: 85%;
+    }
+
+    .imagem-expositor {
+        height: 170px;
+    }
+
+    .nome-expo {
+        font-size: 1rem;
+    }
+
+    .ver-mais-expositor {
+        margin-top: 50px;
+    }
+
+    .link-mais-expo {
+        font-size: 1.4em;
+    }
+
+    .seja-expositor {
+        margin-top: -70px;
+        padding: 0px;
+        height: 350px;
+    }
+
+    .box-content-seja-expositor {
+        padding: 0px;
+    }
+
+    .box-seja-expositor {
+        width: 310px;
+        height: 270px;
+        margin: 0px;
+        text-align: initial;
+    }
+
+    .box-content-expositor {
+        margin-left: 25px;
+    }
+
+    .sombra {
+        top: -10px;
+        left: 5px;
+        width: 310px;
+        height: 265px;
+        animation: none;
+    }
+
+    .box-content-seja-expositor:hover .sombra {
+        width: 310px;
+    }
+
+    .title-seja-expositor {
+        font-size: 1.2em;
+        margin: 0px;
+    }
+
+    .text-seja-expositor {
+        font-size: .95em;
+        margin: 10px 0px;
+    }
+
+    .btn-casdastro-expositor {
+        width: 100px;
+        font-size: 1em;
+        margin: auto;
+    }
 }
-
-.box-imagens .img {
-    width: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-right: 5px;
-    /* background-color: aqua; */
-}
-
-
-.box-imagens .img img {
-    width: 200px;
-    height: 250px;
-    margin-bottom: 30px;
-}
-
-.box-imagens .img ul {
-    color: #05A09C;
-    width: 70%;
-    margin-top: -50px;
-    font-size: 1.5em;
-}
-
-
