@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    gap: 20px;
+    gap: 5px;
 }
 
 
@@ -77,7 +77,7 @@
 
 .caixa-formulario{
     width: 100%;
-    height: 70%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,9 +106,12 @@
 
 .botoes-finalizar{
     width: 100%;
+    height: auto;
     background-color: red;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .input-formulario2{
@@ -164,12 +167,23 @@
 
 .imagens{
     width: 40%;
-    height: 40%;
-       
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
+
+.text-img {
+    background-color: #007E70;
+}
+
+.img-produtos {
+    background-color: #007BFF;
+}
+
 .img-produtos img {
-    width: 100px; 
-    height: auto; 
+    width: 80px; 
+    height: 80px; 
     margin: 2px; 
 }
 
