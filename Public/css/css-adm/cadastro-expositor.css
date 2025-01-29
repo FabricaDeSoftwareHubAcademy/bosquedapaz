@@ -340,7 +340,7 @@ input[type="checkbox"]:checked + .modal-container {
     }
 
     .bolas-fundo .bola-rosa {
-        width: 200px;
+       width: 200px;
         right: -50px;
         bottom: -50px;
     }
