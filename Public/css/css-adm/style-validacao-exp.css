@@ -1,201 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('menu-adm.css');
-@import url('menu.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url(../../css/menu-adm.css);
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.box-ajust-guilherme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    flex-direction: column;
+
+    background-color: #dddddd;
+    
 }
 
-.box-guilherme {
-    z-index: 0;
-    position: absolute;
-    top: 8.1rem;
-    height: 85vh;
-    width: 90%;
-    background-color: rgba(230, 230, 230, 0.5);
-    border-radius: 0.625rem;
+.box {
+    width: 95%;
+    height: 95vh;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    
+    border-radius: 5px;
+    background-color: #ffffffa8;
 }
 
-.box-content-guilherme {
+.secao-imagens {
+    /* width: 10px; */
+    height: 100%;
+    /* box-shadow: 1px 0px rgba(122, 122, 122, 0.507); */
+    flex: 2;
+    /* background-color: red; */
+}
+
+.imagem-expositor {
+    height: 45%;
+    width: 100%;
+
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 3rem;
-    left: 15.625rem;
-    margin: 0px 0px;
-    font-size: 1.25rem;
+    align-items: center;
+    flex-direction: column;
+    
+    /* background-color: blue; */
 }
 
-.foto-expositor-guilherme h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.375rem;
-    font-weight: 400;
-    margin: 0.9375rem 0px;
-}
-
-.foto-expositor-guilherme {
-    position: absolute;
-    top: 3rem;
-    left: 7.8125rem;
-}
-
-.foto-expositor-guilherme img {
+.imagem-expositor img {
+    width: 50%;
     height: auto;
-    width: 25vh;
-    border-radius: 0.625rem;
+
+    border-radius: 10px;
+    transition: all .3s ease;
 }
 
-.marca-txt-guilherme h1 {
+.imagem-expositor img:hover {
+    transform: scale(1.04);
+}
+
+.imagem-expositor h1 {
+    position: relative; 
+    top: -2%;
+}
+
+.imagens-marca {
+    height: 55%;
+    width: 100%;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* background-color: green; */
+}
+
+.imagens {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    /* background-color: pink; */
+    
     position: relative;
-    top: 32.5rem;
-    font-size: 1.375rem;
+    top: -6%
+}
+
+.imagens img {
+    width: calc(33.33% - 20px);
+    height: auto;
+
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.imagens img:hover {
+    transform: scale(1.04);
+}
+
+.imagens-marca h1 {
+    position: relative;
+    top: -7%;
+}
+
+.secao-informacoes {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    flex: 4;
+    /* background-color: pink; */
+}
+
+.informacoes-expositor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 95%;
+    position: relative;
+    top: -5%;
+}
+
+.informacoes-titulo {
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.formulario-informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.formulario-informacoes div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+    /* background-color: red; */
+}
+
+.formulario-informacoes label {
+    display: block;
+    font-size: 14px;
     font-weight: 400;
-    margin: 0.9375rem 0px;
+    /* background-color: red; */
 }
 
-.foto-marca1-guilherme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 31.875rem;
-    gap: 1.25rem;
-}
-
-.foto-marca1-guilherme img {
-    height: 12vh;
-    width: 12vh;
-    border-radius: 0.9375rem;
-}
-
-.foto-marca2-guilherme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 31.875rem;
-    gap: 1.25rem;
-}
-
-.foto-marca2-guilherme img {
-    height: 12vh;
-    width: 12vh;
-    border-radius: 0.9375rem;
-}
-
-.imagens-content-guilherme {
-    position: absolute;
-    top: -8.4375rem;
-    left: 3.125rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.voltar-guilherme {
-    position: absolute;
-    top: 55.625rem;
-    left: -1.5625rem;
-    cursor: pointer;
-}
-
-.caixa-formulario-guilherme {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 6.25rem;
-    left: -0.625rem;
-    gap: 1.25rem;
-}
-
-.formulario-guilherme {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.formulario-guilherme input {
-    width: 50vh;
-    height: 4vh;
-    margin: 0.125rem 0px;
-    padding-left: 0.9375rem;
+.formulario-informacoes input {
+    width: 100%; 
+    min-height: 30px; 
+    padding: 5px;
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
     outline: none;
     box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box; 
+    margin-bottom: 20px;
 }
 
-.formulario-guilherme input:disabled {
-    background-color: white;
-}
-
-.formulario-guilherme label {
-    padding-left: 0.625rem;
-    margin: 0.625rem 0px;
-}
-
-.caixa-formulario2-guilherme {
-    position: absolute;
-    top: -0.0625rem;
-    left: 73.75rem;
-}
-
-.formulario-marca-guilherme {
+.informacoes-marca {
+    width: 60%;
     display: flex;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    gap: 30px;
     position: relative;
-    top: 3.75rem;
-    left: 17.5rem;
+    top: -5%;
 }
 
-.formulario-marca-guilherme img {
-    position: absolute;
-    top: -0.5rem;
-    left: -12.5rem;
-    width: 9.375rem;
-    height: 9.375rem;
-}
-
-.linha-guilherme {
-    position: absolute;
-    top: -6.25rem;
-    left: 33.125rem;
-    height: 70vh;
-    width: 0.125rem;
-    background-color: rgb(182, 182, 182);
-}
-
-.botoes-guilherme {
+.formulario-marca {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    position: absolute;
-    top: 35rem;
-    right: 26.25rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    /* background-color: blue; */
 }
 
-.botao-validar-guilherme {
-    padding: 0.625rem 2.1875rem;
+.formulario-marca label {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    /* background-color: red; */
+}
+
+.formulario-marca input {
+    width: 100%; 
+    min-height: 30px; 
+    padding: 5px;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.1rem 0px rgb(182, 182, 182);
+    box-sizing: border-box; 
+    /* background-color: red; */
+}
+
+.logo-marca img {
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.botao-validar {
+    padding: 0.6rem 2.15rem;
     border: none;
     cursor: pointer;
     color: white;
@@ -205,13 +247,8 @@ body {
     background-color: #5275ff;
 }
 
-.botao-validar-guilherme:hover {
-    background-color: #20368B;
-    border-radius: 0.3125rem;
-}
-
-.botao-rejeitar-guilherme {
-    padding: 0.625rem 2.1875rem;
+.botao-recusar {
+    padding: 0.6rem 2rem;
     border: none;
     cursor: pointer;
     color: white;
@@ -221,281 +258,295 @@ body {
     background-color: #fe748d;
 }
 
-.botao-rejeitar-guilherme:hover {
-    background-color: #B1253F;
-    border-radius: 0.3125rem;
+.botao-validar:hover {
+    background-color: #20368B;
+    border-radius: 0.3rem;
 }
 
-.modal-guilherme {
+.botao-recusar:hover {
+    background-color: #B1253F;
+    border-radius: 0.3rem;
+}
+
+.btnVoltar, .detalhe1, .detalhe2, .detalhe3 {
+    position: absolute;
+    /* background-color: red; */
+
+}
+
+.btnVoltar {
+    width: 30px;
+    height: 30px;
+    left: 60px;
+    top: 92%;
+    transition: all .3s ease;
+}
+
+.btnVoltar:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.detalhe1 {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.detalhe2 {
+    top: -80px;
+    right: 0px;
+    z-index: -1;
+}
+
+.detalhe3 {
+    width: 120px;
+    right: 0;
+    top: 522px;
+    z-index: -1;
+}
+
+.modal-validar, .modal-recusar, .modal-validar-sucesso, .modal-recusar-sucesso {
     display: none;
-    position: fixed;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.modal-validar:target, .modal-recusar:target, .modal-validar-sucesso:target, .modal-recusar-sucesso:target {
+     display: flex;
+}
+
+.modal-content {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.modal-guilherme:target {
-    display: flex;
-}
-
-.modal-content-guilherme {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    width: 30vw;
+    height: 20vh;
     background-color: white;
-    border-radius: 0.625rem;
-    text-align: center;
-    box-shadow: 0 0.25rem 0.5rem rgba(230, 230, 230, 0.2);
-    width: 50vh;
-    height: 15vh;
+    border-radius: 5px;
 }
 
-.modal-content-guilherme h2 {
-    margin-top: -30px;
+.modal-content h1 {
+    font-size: 24px;
 }
 
-.modal-botoes-guilherme {
-    margin-top: -2rem;
-}
-
-.modal-botoes-guilherme a {
-    text-decoration: none;
-    padding: 0.8125rem 1.25rem;
-    width: 15vh;
-    height: 50px;
-    border-radius: 0.625rem;
-    margin: 0 0.625rem;
-    display: inline-block;
-    justify-content: center;
-    position: relative;
-    top: 2.5rem;
-}
-
-.botao-confirmar-guilherme {
-    padding: 0.625rem 2.1875rem;
-    background-color: #4CAF50;
-    color: white;
-}
-
-.botao-voltar-guilherme {
-    padding: 0.625rem 2.1875rem;
-    background-color: #F44336;
-    color: white;
-}
-
-.botao-fechar-guilherme {
+.modal-botoes {
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #F44336;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.btn-modal {
+    width: 120px;
+    height: 40px;
+    border: none;
+    margin-top: 10%;
+}
+
+.btn-validar {
+    background-color: #5275ff;
     color: white;
-    text-decoration: none;
-    padding: 0.8125rem 1.25rem;
-    width: 15vh;
-    height: 50px;
-    border-radius: 0.625rem;
-    position: relative;
-    top: 20px;
+    transition: all .3s ease;
 }
 
-@media (max-width: 1200px) {
-    .box-guilherme {
-        width: 100%;
-        top: 2rem;
-    }
-
-    .box-content-guilherme {
-        left: 5rem;
-    }
-
-    .foto-expositor-guilherme {
-        left: 5rem;
-    }
-
-    .foto-expositor-guilherme img {
-        width: 20vh;
-    }
-
-    .marca-txt-guilherme h1 {
-        top: 25rem;
-    }
-
-    .botoes-guilherme {
-        top: 30rem;
-        right: 20rem;
-    }
+.btn-validar:hover {
+    cursor: pointer;
+    background-color: #20368B;
 }
 
-@media (max-width: 768px) {
-    
-    body {
-        overflow-x: hidden;
-    }
-
-    .box-guilherme {
-        height: 1730px;
-        top: 100px;
-        z-index: 1;
-        /* overflow-y: hidden; */
-    }
-
-    .box-content-guilherme h1 {
-        margin-left: -150px;
-        margin-top: -30px;
-        font-size: 1.5rem;
-    }
-
-    .marca-txt-guilherme {
-        margin-top: 30px;
-    }
-    
-    .foto-expositor-guilherme h1 {
-        margin-top: 15%;
-        margin-left: 15px;
-    }
-    
-    .foto-expositor-guilherme img {
-        width: 30vh;
-        margin-left: 5%;
-    }
-    
-    .caixa-formulario-guilherme {
-        top: 620px;
-    }
-
-    .caixa-formulario2-guilherme {
-        left: 10px;
-        top: 285px;
-    }
-
-    .formulario-guilherme {
-        margin-left: 20px;
-    }
-
-    .formulario-marca-guilherme, .formulario-marca-guilherme img {
-        top: 510px;
-        left: 0px;
-    }
-
-    .formulario-marca-guilherme img {
-        top: -155px;
-        left: 115px;
-    }
-    
-    .marca-txt-guilherme h1 {
-        top: 440px;
-        left: -20px;
-    }
-
-    .foto-marca1-guilherme, .foto-marca2-guilherme {
-        top: 420px;
-        left: -25px;
-    }
-
-    .foto-marca1-guilherme img {
-        height: 100px;
-        width: 95px;
-    }
-    
-    .foto-marca2-guilherme img {
-        height: 100px;
-        width: 95px;
-    }
-    
-    .botoes-guilherme {
-        top: 900px;
-        width: 300px;
-        left: 47.5px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .botao-validar-guilherme, .botao-rejeitar-guilherme {
-        width: 300px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .linha-guilherme {
-        display: none;
-    }
-
-    .voltar-guilherme {
-        top: 1820px;
-        left: -30px;
-    }
-
-    .modal-content-guilherme {
-        width: 80%;
-        height: 20%;
-        margin-left: -80px;
-    }
-
-    .modal-content-guilherme h2 {
-        margin-top: -30px;
-        font-size: 20px;
-    }
-
-    .modal-botoes-guilherme {
-        margin-top: -30px;
-    }
-
-    .modal-botoes-guilherme .botao-confirmar-guilherme, .modal-botoes-guilherme .botao-voltar-guilherme {
-        width: 300px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal-botoes-guilherme .botao-confirmar-guilherme {
-        margin-bottom: 10px;
-    }
-
-    .modal-contentVal-guilherme {
-        width: 40%;
-        height: 40%;
-;
-    }
+.btn-voltar {
+    background-color: #b3b3b3;
+    color: white;
+    transition: all .3s ease;
 }
 
-/* @media (max-width: 480px) {
+.btn-voltar:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+}
+
+.btn-recusar {
+    background-color: #fe748d;
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn-recusar:hover {
+    cursor: pointer;
+    background-color: #B1253F;
+}
+
+.btn-ok {
+    background-color: rgb(2, 196, 2);
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn-ok:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+@media (max-width: 576px) {
     .box {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .secao-imagens,
+    .secao-informacoes {
+        flex: none;
         width: 100%;
+        box-shadow: none;
     }
 
-    .box-content {
-        left: 0;
+    .imagem-expositor {
+        position: relative;
+        top: 10px;
     }
 
-    .foto-expositor {
-        left: 0;
+    .imagem-expositor h1 {
+        position: relative;
+        top: -10px;
     }
 
-    .foto-expositor img {
-        width: 10vh;
+    .imagens {
+        position: relative;
+        top: 30px;
     }
 
-    .marca-txt h1 {
-        top: 15rem;
+    .imagens-marca h1 {
+        position: relative;
+        top: 25px;
+    }
+
+    .informacoes-titulo {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .formulario-informacoes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .informacoes-marca {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
     }
 
     .botoes {
-        top: 20rem;
-        right: 0;
-        gap: 1rem;
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .botao-validar, .botao-rejeitar {
-        width: 80%;
+    .botao-validar,
+    .botao-recusar {
+        width: 300px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .imagem-expositor img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor img:hover {
+        transform: none;
+    }
+
+    .imagens img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar:hover {
+        transform: none;
+    }
+    
+    .btnVoltar {
+        width: 30px;
+        height: 30px;
+        left: 40px;
+        top: 5px;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
     }
 
     .modal-content {
-        width: 90%;
+        width: 90vw;
+    }
+
+    .modal-content h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar {
+        background-color: #B1253F;
+    }
+
+    .btn-validar {
+        background-color: #20368B;
+    }
+
+    .btn-voltar {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+    }
+
+    .modal-validar:target, .modal-recusar:target, .modal-validar-sucesso:target, .modal-recusar-sucesso:target {
+        height: 196%
+    }
+
+    .modal-content {
+        position: relative;
+        top: -350px;
     }
 }
-  */
