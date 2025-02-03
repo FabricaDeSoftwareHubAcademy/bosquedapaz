@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('style-padrao.css');
+@import url('../css-modais/css-m-form-e-perfil-expo.css');
+
+.up-imgs {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 40px;
+}
+
+.uploads {
+    width: 310px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.uploads.active > .up-img {
+    opacity: 0.7;
+}
+
+.input {
+    opacity: 0;
+    width: 100%;
+}
+
+.up-img {
+    width: 100%;
+}
+
+.btn-editar {
+    width: 30px;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.editar {
+    font-size: 1.2rem;
+}
+
+.btn-editar:hover .editar {
+    color: #007E70;;
+}
+
+@media screen and (max-width: 1190px) {
+    .up-imgs {
+        width: 100%;
+        height: auto;
+        max-height: 380px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .uploads {
+        width: 250px;
+        height: auto;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .up {
+        width: 250px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .principal .box {
+        gap: 0px;
+    }
+
+    .titulo {
+        padding: 10px;
+    }
+
+    .up-imgs {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .uploads {
+        width: 280px;
+        height: auto;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .up {
+        width: 280px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 0px;
+        border: none;
+    }
+
+    .btn-editar {
+        width: 20px;
+    }
+
+    .editar {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .up-imgs {
+        overflow-y: scroll;
+    }
+}

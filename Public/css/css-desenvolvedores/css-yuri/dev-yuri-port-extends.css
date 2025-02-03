@@ -1,0 +1,9 @@
+@import './variables-yuri.css';
+@import './globals-yuri.css';
+
+@import './components/navbar-yuri.css';
+@import './components/header-yuri.css';
+@import './components/about-yuri.css';
+@import './components/skills-yuri.css';
+@import './components/projects-yuri.css';
+@import './components/footer-yuri.css';

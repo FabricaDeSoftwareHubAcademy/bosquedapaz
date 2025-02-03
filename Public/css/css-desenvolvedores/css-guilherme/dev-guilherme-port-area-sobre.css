@@ -1,0 +1,170 @@
+@import url(./styles.css);
+
+.sobre-guilherme {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.card-sobremim-guilherme {
+    display: flex;
+    margin-left: .5%;
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    max-width: 100vw;
+    max-height: 900px;
+    width: 95%;
+    height: 85%;
+    position: relative;
+    gap: 95px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.card-sobremim-guilherme:hover {
+    background-color: rgba(66, 66, 66, 0.5);
+}
+
+.imagem-eu-guilherme {
+    position: relative;
+    top: 80px;
+    left: 50px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.imagem-eu-guilherme img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.card-contents-guilherme {
+    padding: 20px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.card-contents-guilherme .titulo-guilherme {
+    font-size: 3rem;
+    font-family: "Archivo Black", sans-serif;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    color: #ffffff;
+}
+
+.content-guilherme {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 1300px) {
+    .imagem-eu-guilherme {
+        display: none;
+    }
+
+    .card-sobremim-guilherme {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .card-contents-guilherme .titulo-guilherme {
+        font-size: 2.5rem;
+    }
+
+    .content-guilherme {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .imagem-eu-guilherme {
+        display: none;
+    }
+
+    .card-sobremim-guilherme {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        height: auto;
+    }
+
+    .card-contents-guilherme .titulo-guilherme {
+        font-size: 2.5rem;
+    }
+
+    .content-guilherme {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .card-sobremim-guilherme {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .imagem-eu-guilherme {
+        display: none;
+    }
+
+    .card-contents-guilherme {
+        width: 90%;
+        text-align: center;
+    }
+
+    .card-contents-guilherme .titulo-guilherme {
+        font-size: 2.5rem;
+    }
+
+    .content-guilherme {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-sobremim-guilherme {
+        padding: 15px;
+        height: auto;
+    }
+
+    .sobre-guilherme {
+        width: 100vw;
+    }
+
+    .imagem-eu img {
+        display: none;
+    }
+
+    .card-contents-guilherme {
+        width: 100%;
+    }
+
+    .card-contents-guilherme .titulo-guilherme {
+        display: none;
+    }
+
+    .content-guilherme {
+        font-size: 1.1rem;
+    }
+}

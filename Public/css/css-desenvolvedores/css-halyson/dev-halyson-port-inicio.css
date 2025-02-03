@@ -1,0 +1,44 @@
+.banner-halyson {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-preta-halyson);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text-halyson {
+    background-color: transparent;
+    width: 450px;
+    height: 100px;
+    border: 2px solid var(--color-branca-halyson);
+    border-radius: 5px;
+    padding: 5px 10px;
+    z-index: 3;
+}
+
+.text-banner-halyson {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    color: var(--color-branca-halyson);
+}
+
+.span-text-halyson {
+    font-size: 1.8rem;
+}
+
+.img-banner-halyson {
+    width: 100%;
+    height: 100%;
+    color: var(--color-preta-halyson);
+    position: absolute;
+    background-image: url('../../img/img-halyson/fundo-halyson.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.20;
+}

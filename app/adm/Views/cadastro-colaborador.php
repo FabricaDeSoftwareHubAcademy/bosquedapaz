@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosque da Paz</title>
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro_colaborador.css">
+    
+</head>
+<body>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
+    <main class="principal">
+        <div class="box">
+            <h2>CADASTRO DE COLABORADOR</h2>
+            <div class="form-box">
+                <form action="#">
+                    <div class="input-group">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Data de nascimento:</label>
+                        <select class="select-dia">
+                            <option value="">Dia</option>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                        </select>
+    
+                        <select class="select-mes" name="mes">
+                            <option value="">Mês</option>
+                                <option>Janeiro</option>
+                                <option>Fevereiro</option>
+                                <option>Março</option>
+                                <option>Abril</option>
+                                <option>Maio</option>
+                                <option>Junho</option>
+                                <option>Julho</option>
+                                <option>Agosto</option>
+                                <option>Setembro</option>
+                                <option>Outubro</option>
+                                <option>Novembro</option>
+                                <option>Dezembro</option>  
+                        </select>
+                        <select class="select-ano" name="ano">
+                            <option value="">Ano</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                                <option>2026</option>
+                                <option>2027</option>
+                                <option>2028</option>
+                                <option>2029</option>
+                                <option>2030</option>
+                                <option>2031</option>
+                                <option>2032</option>        
+                        </select>
+                    </div>
+                     <div class="input-group">
+                        <label>Telefone:</label>
+                        <input type="number" name="ddi" placeholder="+55">
+                        <input type="number" name="telefone" id="telefone"  placeholder="Digite o seu número">
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" id="email"  placeholder="Digite o seu e-mail">
+                    </div>
+                     <div class="input-group">
+                        <label>Profissão:</label>
+                        <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão">
+                    </div>
+                </form>
+            </div>
+            <div class="btns">
+                <a href="../Views/gerenciar-adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-cadastro-colaborador/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            <div class="dogs">
+                <img src="../../../Public/imgs/img-cadastro-colaborador/walking-dogs (1).png" alt="dog walker" class="img-dog">
+            </div> 
+                <div class="btn-cancelar-salvar">
+                    <button class="btn btn-cancelar">
+                        <a href="">Cancelar</a>
+                    </button>
+
+                    <button class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+        <div class="bolas-fundo">
+        <img src="../../../Public/imgs/img-cadastro-colaborador/Group 445.svg" alt="FolhaAzul" class="folhaAzul1-yan">
+        <img src="../../../Public/imgs/img-cadastro-colaborador/Elemento2.FolhaRosa.png" alt="FolhaAzul2" class="folhaAzul2-yan">
+        <img src="../../../Public/imgs/img-cadastro-colaborador/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
+    </div>
+       
+</body>
+</html>

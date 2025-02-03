@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+ 
+ 
+ 
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'questrial', sans-serif;
+}
+ 
+:root {
+    --principal: #EE00FF;
+    --second: #fff
+}
+ 
+ 
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+ 
+body {
+    background: black;
+    color: white;
+}
+ 
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgb(10, 10, 10);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+ 
+.logo {
+    font-size: 3rem;
+    color: var(--second);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+ 
+.logo:hover {
+    transform: scale(1.1);
+}
+ 
+.logo span {
+    color: var(--principal);
+    text-shadow: 0 0 25px var(--principal);
+}
+ 
+.contato a {
+    background-color: var(--principal);
+    padding: 13px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    color: var(--second);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+ 
+.contato:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+ 
+.nav-bar {
+    position: relative;
+    left: -5%;
+}
+
+.nav-bar a {
+    font-size: 1.8rem;
+    color: var(--second);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    color: var(--second);
+    border-bottom: 3px solid var(--principal);
+}
+
+ 
+#menu-icons {
+    font-size: 3.6rem;
+    color: var(--principal);
+    display: none;
+}
+ 
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+ 
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+ 
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+ 
+span {
+    color: var(--principal);
+}
+ 
+.logo span {
+    color: var(--principal);
+}
+ 
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+ 
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+ 
+.home-img {
+    border-radius: 40%;
+}
+ 
+.home-img img {
+    height: 700px;
+    position: relative;
+    top: 3rem;
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--principal);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+ 
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--principal),
+        0 0 50px var(--principal),
+        0 0 100px var(--principal);
+}
+ 
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+ 
+ 
+ 
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--principal);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+    /* background-color: #fff; */
+    color: #fff;
+}
+ 
+.social-icons a:hover {
+    color: var(--second);
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--principal);
+    background-color: var(--principal);
+}
+ 
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+ 
+.text-animation span {
+    position: relative;
+}
+ 
+.text-animation span::before {
+    content: "Front end";
+    color: var(--principal);
+    animation: words 20s infinite;
+}
+ 
+.text-animation span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--second);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+ 
+ 
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--principal);
+    }
+}
+ 
+@keyframes words {
+ 
+    0%,
+    20% {
+        content: "Front end";
+    }
+ 
+    21%,
+    40% {
+        content: "Back end";
+    }
+ 
+    41%,
+    60% {
+        content: "UI / UX design";
+    }
+ 
+    61%,
+    80% {
+        content: "Desenvolvedora";
+    }
+ 
+    81%,
+    100% {
+        content: "Software tester";
+    }
+}
+ 
+@keyframes typing {
+ 
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+ 
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+ 
+}
+ 
+ 
+ 
+ 

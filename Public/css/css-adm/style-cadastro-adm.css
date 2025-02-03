@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+body {
+    overflow: auto;
+}
+
+
+/* Section da tela */
+.section-cadastro-mt{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* Formas da tela */
+.formaCadastro-1 {
+    position: fixed;
+    top: 15vh; 
+    right: 80vw; 
+    z-index: 1;
+    width: 20vw; 
+}
+
+
+.formaCadastro-2{
+    position: absolute;
+    top: 80vh;
+    right: 80vw;
+    z-index: 1;
+    width: 20vw; 
+}
+
+.formaCadastro-3{
+    position: absolute;
+    top: 10vh;
+    left: 90vw;
+    z-index: 1;
+    width: 20vw;
+    height: 100vh;
+}
+
+.formaCadastro-4{
+    position: fixed;
+    top: 75vh;
+    left: 85vw;
+    z-index: 1;
+    width: 20vw; 
+}
+
+
+/* Box */
+.box-cadastro-mt{
+    width: 85%;
+    height: 750px;
+    max-width: 2000px;
+    z-index: 2;
+    backdrop-filter: blur(0px);
+    background-color: rgba(248, 245, 246, 0.705);
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all .5s ease;
+    #linha-vertical {
+        height: 640px;
+        border-right: 3px solid #FF3877;
+        position: fixed;
+        left: 50%;
+        top: 8%;
+    }
+}
+
+.box-cadastro-mt:hover{
+    background-color: #f0f0f013;
+    backdrop-filter: blur(30px);
+
+    #linha-vertical{
+        border-right: 3px solid #162868;
+    }
+}
+
+.setaV-cadastro {
+    position: relative;
+    top: 70vh;
+    display: block;
+    cursor: pointer;
+}
+
+
+/* Elementos da box - Form */
+.area-total-Form-Cad-mt{
+    width: 50%;
+    height: 750px;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.areaForm-cad-mt{
+    width: 700px;
+    height: 650px;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    margin-bottom: 100px;
+}
+
+.label-cad-mt{
+    display: block;
+    margin-left: 10px;
+}
+
+form{
+    background-color: #ff387700;
+    width: 350px;
+    height: 530px;
+    position: relative;
+    left: 160px;
+    bottom: 0px;
+}
+
+
+.area-input-mat{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 10px;
+}
+
+.area-input-mat i{
+    position: absolute;
+    left: 20px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+
+
+.input-cad-mt {
+    width: 95%;                
+    height: 35px;
+    border: none;     
+    border-radius: 6px;
+    padding-left: 35px;         
+    padding-right: 50px;        
+    box-shadow: 2px 2px 4px #162868; 
+    margin-top: 5px;   
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.input-cad-mt:focus{
+    outline: 2px solid #162868;
+}
+
+.button-cad-mt{
+    margin-top: 580px;
+    position: relative;
+    right: 180px;
+    width: 180px;
+    height: 35px;
+    border: none;
+    margin-right: 25px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #FF3877;
+    box-shadow: 0 6px 4px #162868;
+    cursor: pointer;
+}
+
+
+#b-2-mt{
+    background-color: #162868;
+    box-shadow: 0 6px 4px #FF3877;
+}
+
+
+/* Elementos da box - img */
+.areaImg-cad-mt{
+    width: 50%;
+    height: 750px;
+    background-color: rgba(137, 43, 226, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divIMg-mt:hover{
+    transform: scale(1.04);
+}
+
+#linha-vertical:hover{
+    background-color: rgba(0, 0, 255, 0);
+}
+
+.divIMg-mt{
+    width: 600px;
+    height: 600px;
+    background-color: rgba(165, 42, 42, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
+    right: 120px;
+    transition: all .2s ease;
+}
+
+.h1-mt{
+    margin-bottom: 600px;
+    position: relative;
+    left: 300px;
+    font-size: 30px;
+}
+
+.h12-mt{
+  display: none;
+}
+
+
+/* Elementos da box - outros elementos */
+.formares-mt{
+    display: none;
+}
+
+.titulo-areato-mt{
+    display: none;
+}
+
+p{
+    font-size: 16px;
+    position: absolute;
+    top: 690px;
+    left: 16%;
+}
+
+a{
+    text-decoration: none;
+    color: #162868;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 720px){
+    p{
+        font-size: 12px;
+        position: absolute;
+        top: 94%;
+        left: 22%;
+    }
+
+    a{
+        text-decoration: none;
+        color: #162868;
+    }
+
+    .setaV-cadastro{
+        display: block;
+        top: 44vh;
+        right: 15vw;
+    }
+
+    .formaCadastro-2{
+        display: block;
+        top: 89vh;
+        right: 85vw;
+    }
+
+    .formaCadastro-2 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .formaCadastro-3{
+        display: block;
+        top: 10vh;
+    }
+
+    .formaCadastro-3 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .formaCadastro-4{
+        display: block;
+        top: 93vh;
+        left: 81vw;
+    }
+
+    .formaCadastro-4 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .formaCadastro-1{
+        display: block;
+        right: 85vw;
+    }
+
+    .formaCadastro-1 img{
+        width: 100%;
+        height: auto;
+    }
+
+    #linha-vertical{
+        display: none;
+    }
+
+    .areaImg-cad-mt{
+        display: none;
+    }
+
+    .box-cadastro-mt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 95%;
+        width: 90%;
+    }
+
+    form{
+        background-color: #16286800;
+        top: 50px;
+    }
+
+    .button-cad-mt{
+        margin-top: 580px;
+        right: 160px;
+        width: 120px;
+    }
+
+    .input-cad-mt{
+        width: 85%;
+        height: 28px;
+    }
+
+    .titulo-areato-mt{
+        display: block;
+        margin-bottom: 570px;
+    }
+    .area-input-mat{
+        margin-bottom: 5px;
+    }
+    .label-cad-mt{
+        font-size: 15px;
+    }
+    .input-cad-mt{
+        margin-top: 8px;
+    }
+    .area-input-mat i{
+        left: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .areaImg-cad-mt{
+        display: none;
+    }
+
+    #linha-vertical{
+        display: none;
+    }
+
+    .setaV-cadastro{
+        display: block;
+        top: 40vh;
+        right: 15vw;
+    }
+
+    .box-cadastro-mt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 900px;
+    }
+
+    .formaCadastro-1 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .formaCadastro-2{
+        top: 82vh;
+    }
+
+    .formaCadastro-2 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .formaCadastro-3{
+        top: 10vh;
+        left: 80vw;
+    }
+
+    .formaCadastro-3 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .formaCadastro-4{
+        top: 72vh;
+        left: 80vw;
+    }
+
+    .formaCadastro-4 img{
+        width: 400px;
+    }
+
+    .button-cad-mt{
+        margin-top: 650px;
+    }
+
+    .titulo-areato-mt{
+        display: block;
+        margin-bottom: 680px;
+        font-size: 30px;
+    }
+
+    .input-cad-mt{
+        width: 95%;
+        height: 35px;
+    }
+
+    .button-cad-mt{
+        width: 250px;
+        right: 170px;
+        margin-top: 590px;
+    }
+
+    form{
+        background-color: #16286800;
+        left: 170px;
+        bottom: 0px;
+        width: 600px;
+    }
+
+    .titulo-areato-mt{
+        font-size: 40px;
+    }
+    .areaForm-cad-mt{
+        height: 800px;
+        top: 50px;
+        background-color: transparent;
+    }
+    p{
+        top: 805px;
+        left: 30%;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .areaImg-cad-mt{
+        display: none;
+    }
+    #linha-vertical{
+        display: none;
+    }
+    .box-cadastro-mt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 95%;
+    }
+    form{
+        height: 500px;
+        top: 30px;
+    }
+    .area-input-mat{
+        margin-bottom: 5px;
+    }    
+}
+
+@media screen and (min-height: 1366px){
+    .areaImg-cad-mt{
+        background-color: #16286800;
+    }
+
+    .divIMg-mt{
+        background-color: #ff387700;
+        right: 0px;
+        width: 400px;
+        flex-direction: column;
+    }
+    .divIMg-mt img{
+        width: 100%;
+        height: auto;
+    }
+    p{
+        left: 8%;
+    }
+    .formaCadastro-2{
+        top: 85vh;
+    }
+    .h1-mt{ 
+        display: none;
+    }
+
+    .h12-mt{
+        display: inline;
+        font-size: 35px;
+        position: relative;
+        bottom: 80px;
+        left: 15px;
+    }
+    .formaCadastro-4{
+        top: 76vh;
+    }
+    .setaV-cadastro{
+        display: block;
+        top: 50vh;
+    }
+}
+
+@media (min-width: 1024px) and (max-height: 600px) {
+    .button-cad-mt{
+        width: 130px;
+        height: 25px;
+        margin-top: 560px;
+        right: 160px;
+    }
+    .box-cadastro-mt{
+        width: 75%;
+        height: 550px;
+        overflow-y: scroll;
+    }
+
+    .areaForm-cad-mt{
+        /* background-color: #FF3877; */
+        margin-top: 120px;
+    }
+
+    .titulo-areato-mt{
+        display: block;
+        margin-bottom: 460px;
+        font-size: 30px;
+    }
+    p{
+        left: 33%;
+        top: 650px;
+    }
+    /* .setaV-cadastro{
+        right: 50vh;
+    } */
+}
+
+@media (min-width: 1280px) and (max-height: 800px) {
+    .titulo-areato-mt{
+        display: block;
+        margin-bottom: 600px;
+        font-size: 40px;
+    }
+
+    form{
+        left: 185px;
+    }
+
+    p{
+        left: 38%;
+    }
+
+    .button-cad-mt{
+        right: 155px;
+        margin-top: 598px;
+    }
+    
+}
+
+@media (min-width: 414px) and (max-height: 896px){
+    p{
+        top: 715px;
+    }
+}
+
+@media (min-width: 390px) and (max-height: 844px){
+    p{
+        top: 700px;
+    }
+}
+
+@media (min-width: 430px) and (max-height: 932px){
+    p{
+        top: 735px;
+    }
+}
+
+@media (min-width: 412px) and (max-height: 915px){
+    p{
+        top: 720px;
+    }
+    .setaV-cadastro{
+        display: block;
+        top: 45vh;
+        right: 18vw;
+    }
+}
+
+@media (min-width: 912px) and (min-height: 1368px){
+    p{
+        left: 33%;
+    }
+    .setaV-cadastro{
+        display: block;
+        top: 30vh;
+        right: 18vw;
+    }
+}
+

@@ -1,0 +1,47 @@
+.icones-guilherme {
+    width: 350px;
+    height: 80px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+.icones-guilherme i {
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--default-branco);
+    transition: all .3s ease;
+}
+
+.icones-guilherme:hover {
+    width: 390px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.364);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icones-guilherme:hover i {
+    color: var(--default-branco);
+}
+
+.icones-guilherme .fa-instagram:hover {
+    cursor: pointer;
+    background-color: var(--cor-principal);
+    color: var(--default-branco);
+}
+
+.icones-guilherme .fa-linkedin:hover {
+    cursor: pointer;
+    background-color: var(--color-linkedin);
+    color: var(--default-branco);
+}
+
+.icones-guilherme .fa-github:hover {
+    cursor: pointer;
+    background-color: var(--default-branco);
+    color: var(--default-preto);
+}
