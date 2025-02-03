@@ -111,7 +111,7 @@
                 </div> -->
             </div>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="manage-events.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
