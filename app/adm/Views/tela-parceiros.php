@@ -28,9 +28,11 @@
                                      
                     <div class="geral">
                         <img src="../../../Public/imgs/img-parceiros.css/linha-central.png" alt="linha-central" class="linha-central">
-                        <div class="button-cadastrar">
-                            <button class="button">CADASTRAR</button>
-                        </div>
+                        <a href="../../../app/adm/Views/cadastro-parceiros.php">
+                            <div class="button-cadastrar">
+                                <button class="button">CADASTRAR</button>
+                            </div>
+                        </a>
                         <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="imagem-parceiros" class="img-g">
                     </div>
                     
