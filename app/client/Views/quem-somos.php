@@ -10,70 +10,9 @@
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home-client.html"; ?>
-    <!-- inicio header -->
-    <header class="cabecalho">
-        <!-- inicio menu -->
-            <nav class="menu">
     
-                <div class="logo"><!-- logo -->
-                    <a href="../../../iindex.php"><img src="../../../Public/imgs/img-home/logo.png" alt="Logo"></a>
-                </div>
-    
-                <div class="nav-bar"> <!-- navegação -->
-                    <ul>
-                        <li><a href="../../../iindex.php">Início</a></li>
-                        <li><a href="../../adm/Views/tela-parceiros.php">Parceiros</a></li>
-                        <li><a href="../../client/Views/fale-conosco.php">Fale Conosco</a></li>
-                        <li><a href="../../client/Views/quem-somos.php">Quem Somos?</a></li>
-                    </ul>
-                    
-                    <div class="pesquisar-login">
-                        <div class="pesquisar"> <!-- area de pesquisa -->
-                            <input class="input" type="text" placeholder="Pesquisar por...">
-                            <div class="bola"  onclick="inputShow2()">
-                               
-                            </div>
-                        </div>
-                        <div class="login"> <!-- area login -->
-                            <a href="#"><img src="../../../Public/imgs/img-home/login.png" alt="Login"></a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="pequisa-mobile">
-                    <div class="pesquisa"> <!-- area de pesquisa -->
-                        <input class="input" type="text" placeholder="Pesquisar por...">
-                        <div class="bola"  onclick="inputShow()">
-                        </div>
-                    </div>
-                    <div class="menu-icon">
-                        <button onclick="menuShow()"><img class="icon" src="../../../Public/imgs/img-home/menu.png" alt="Menu"></button>
-                    </div>
-                </div>
-            </nav>
-            <!-- fim menu -->
-    
-            <!-- mobile menu -->
-            <div class="mobile-menu"> <!-- navegação -->
-                <ul class="nav-item">
-                    <li class="nav-item"><a href="../../../iindex.php">Início</a></li>
-                    <li class="nav-item"><a href="../app/adm/tela-parceiros.php">Parceiros</a></li>
-                    <li class="nav-item"><a href="../app/client/fale-conosco.php">Fale Conosco</a></li>
-                    <li class="nav-item"><a href="../../app/client/Views/quem-somos.html">Quem Somos?</a></li>
-                </ul>
-    
-                <div class="btn-login"> <!-- area login -->
-                    <button class="btnlogin">Login</button>
-                </div>
-            </div>
-            <!-- mobile menu -->
-        </header>
-    <!-- fim header -->
 
-
-
-
-    <!----------------------------------------------->
+   
 
 
 

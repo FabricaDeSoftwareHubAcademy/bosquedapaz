@@ -165,17 +165,16 @@
     content: '';
     position: absolute;
     top: 50%;
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-    height: 2px; /* Espessura do traço */
-    background-color: #FFFFFF; /* Cor do traço */
+    width: 50px; 
+    height: 2px; 
+    background-color: #FFFFFF; 
 }
 
 .section-nosso-time-quem-somos .div-nt h2:before {
-    left: -70px; /* Ajuste a distância conforme necessário */
-}
+    left: -70px; }
 
 .section-nosso-time-quem-somos .div-nt h2:after {
-    right: -70px; /* Ajuste a distância conforme necessário */
+    right: -70px; 
 }
 
 .section-nosso-time-quem-somos .div-nt h2 {
@@ -258,17 +257,17 @@
     content: '';
     position: absolute;
     top: 50%;
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-    height: 2px; /* Espessura do traço */
-    background-color: #FFFFFF; /* Cor do traço */
+    width: 50px; 
+    height: 2px; 
+    background-color: #FFFFFF; 
 }
 
 .section-expositor-quem-somos .expositor h3:before {
-    left: -70px; /* Ajuste a distância conforme necessário */
+    left: -70px; 
 }
 
 .section-expositor-quem-somos .expositor h3:after {
-    right: -70px; /* Ajuste a distância conforme necessário */
+    right: -70px; 
 }
 
 
