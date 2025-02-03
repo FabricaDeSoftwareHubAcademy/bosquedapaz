@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('../../Public/css/css-home/menu.css');
+@import url(../../Public/css/css-home/menu.css);
 * {
     padding: 0;
     margin: 0;
@@ -8,9 +8,9 @@
 }
 
 body {
-    background-color: #dddddd;
+    background-color: #e1e1e1;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
 
     display: flex;
     justify-content: center;
@@ -18,12 +18,13 @@ body {
 }
 
 .box-guilherme {
-    background-color: #f0f0f094;
+    background-color: #ecececb0;
     max-width: 1800px;
     min-height: 80vh;
     width: 100%;
-    height: 100%;
     margin-top: 5%;
+    height: auto;
+    
 
     display: flex;
     justify-content: space-between;
@@ -44,8 +45,8 @@ body {
 
 .titulo-formulario-guilherme {
     /* background-color: red; */
-    margin-top: 12%;
-    margin-bottom: -5%;
+    margin-top: 15%;
+    margin-bottom: -10%;
     font-size: 32px;
 }
 
@@ -53,7 +54,7 @@ body {
     /* background-color: red; */
     width: 100%;
     height: 75%;
-
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -91,7 +92,7 @@ body {
 
 .campo-3-guilherme {
     width: 70%;
-    height: 150px;
+    height: 140px;
     padding-top: 10px;
 }
 
@@ -242,7 +243,7 @@ body {
     .box-guilherme {
         flex-direction: column-reverse;
         width: 90%;
-        background-color: #ffffffd9;
+        background-color: #ffffffe7;
         padding-bottom: 20px;
     }
 
