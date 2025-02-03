@@ -4,69 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de Expositores</title>
-    <link rel="stylesheet" href="../css/validacao-exp.css">
+    <link rel="stylesheet" href="../../css/css-adm/style-validacao-exp.css">
 </head>
 <body>
-    <header class="menu-adm">
-        <div class="logo">
-            <img src="../images/logo.png" alt="Logo da Feira" class="img-logo">
-        </div>
 
-        <nav class="nav-bar">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#">Área Administrativa</a></li>
-                <li class="nav-item"><a href="#">Eventos</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Cadastrar Evento</a></li>
-                            <li><a href="" class="item-submenu">Gerenciar Evento</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Expositores</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Cadatrar Expositor</a></li>
-                            <li><a href="" class="item-submenu">Cadatrar expositor kids</a></li>
-                            <li><a href="" class="item-submenu">Cadatrar  artista</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Carrossel</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">cadastrar Carrosel</a></li>
-                            <li><a href="" class="item-submenu">Editar Carrosel</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Categorias</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">Todas Categorias</a></li>
-                            <li><a href="" class="item-submenu">cadastrar Categorias</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Relatórios</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">relatório de usuarios</a></li>
-                            <li><a href="" class="item-submenu">validação de expositores</a></li>
-                            <li><a href="" class="item-submenu">relatório de expositores</a></li>
-                            <li><a href="" class="item-submenu">relatório de eventos</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item"><a href="#">Parceiros</a>
-                        <ul class="submenu">
-                            <li><a href="" class="item-submenu">cadastrar parceiros</a></li>
-                            <li><a href="" class="item-submenu">editar parceiros</a></li>
-                        </ul>
-                </li>
-            </ul>
-
-            <button class="btn-login"><a href="">Login</a></button>
-        </nav>
-
-        <div class="sandwich-menu" onclick="menuShow()">
-            <img src="../images/menu.png" alt="menu" class="menu">
-        </div>
-
-        <div class="login">
-            <img src="../images/login.png" alt="Botão de login" class="img-login">
-        </div>
-    </header>
+<?php include "../../assets/adm/menu-adm.html"?>
 
     <div class="box-ajust-guilherme">
         <div class="box-guilherme">
@@ -75,24 +17,24 @@
             </div>
             <div class="foto-expositor-guilherme">
                 <h1>Foto do Expositor</h1>
-                <img src="../images/fotoexpositor.png" alt="" class="fotoexp-guilherme">
+                <img src="../../imgs/img-validacao-expositor/fotoexpositor.png" alt="" class="fotoexp-guilherme">
             </div>
             <div class="imagens-content-guilherme">
                 <div class="marca-txt-guilherme">
                     <h1>Imagens da Marca</h1>
                 </div>
                 <div class="foto-marca1-guilherme">
-                    <img src="../images/fotomarca.png" alt="">
-                    <img src="../images/fotomarca2.png" alt="">
-                    <img src="../images/fotomarca3.png" alt="">
+                    <img src="../../imgs/img-validacao-expositor/fotomarca.png" alt="">
+                    <img src="../../imgs/img-validacao-expositor/fotomarca2.png" alt="">
+                    <img src="../../imgs/img-validacao-expositor/fotomarca3.png" alt="">
                 </div>
                 <div class="foto-marca2-guilherme">
-                    <img src="../images/fotomarca4.png" alt="">
-                    <img src="../images/fotomarca5.png" alt="">
-                    <img src="../images/fotomarca6.png" alt="">
+                    <img src="../../imgs/img-validacao-expositor/fotomarca4.png" alt="">
+                    <img src="../../imgs/img-validacao-expositor/fotomarca5.png" alt="">
+                    <img src="../../imgs/img-validacao-expositor/fotomarca6.png" alt="">
                 </div>
                 <div class="voltar-guilherme">
-                    <img src="../images/voltar.svg" alt="">
+                    <img src="../../imgs/img-validacao-expositor/voltar.svg" alt="">
                 </div>
             </div>
             <div class="caixa-formulario-guilherme">
@@ -116,7 +58,7 @@
                         <label>Nome da Marca:</label>
                         <input type="text" name="" id="" disabled>
                     </div>
-                    <img src="../images/logomarca.svg" alt="">
+                    <img src="../../imgs/img-validacao-expositor/logomarca.svg" alt="">
                 </div>
 
                 <div class="caixa-formulario2-guilherme">
