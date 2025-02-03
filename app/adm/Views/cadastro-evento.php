@@ -117,7 +117,7 @@
 
                 <div class="btn-cancelar-salvar">
                     <button class="btn btn-cancelar">
-                        <a href="">Cancelar</a>
+                        <a href="./Area-Adm.php">Cancelar</a>
                     </button>
 
                     <button class="btn btn-salvar">

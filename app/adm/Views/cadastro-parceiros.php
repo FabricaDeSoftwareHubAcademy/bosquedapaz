@@ -1,57 +1,82 @@
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página para gerenciar parceiros e suas informações.">
-        <title>Cadastrar Parceiros</title>
-        <link rel="stylesheet" href="../../../Public/css/css-adm/cadastrar-parceiros.css"> 
-        <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    </head>
 
-    
-    <body>
-        <main class="principal">
-            <div class="box">
-                <h1 class="tela-titulo">CADASTRAR PARCEIROS</h1>
-                <div class="geral">
-                    <div class="ec">
-                        <div class="lado-esquerdo">
-                            <h3 class="palavra-nome">Nome:</h3>
-                            <input class="input-nome" type="text">
-                            <h3 class="descrição-palavra">Descrição:<span class="opcional-palavra">(opcional)</span></h3>
-                            <input class="descrição" type="text">                   
-                        </div>
-                        
-                        <div class="meio-centro">                  
-                            <h3 class="logo-palavra">Logo:</h3>
-                            <img src="../../../Public/imgs/img-parceiros.css/editar-imagem.png" alt="Editar Imagem" class="editar-imagem">                 
-                        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Utilidade Públicas</title>
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-parceiro.css">
+</head>
+
+<body>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
+
+    <main class="principal">
+        <div class="box">
+            <h2>CADASTRO DE PARCEIROS</h2>
+            <div class="form-box">
+                <form action="#">
+                    <div class="input-group">
+                        <label>Nome do parceiro:</label>
+                        <input type="text" name="titulo" id="titulo"
+                            placeholder="Escreva o título da utilidade pública">
                     </div>
-                        
-                    <div class="imagens-esquerda">                  
-                        <img src="../../../Public/imgs/img-parceiros.css/linha-central.png" alt="Linha Central" class="linha-central">                   
-                        <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="Imagem Parceiros" class="imagem-parceiros">
+                    <div class="input-group">
+                        <label>Descrição do parceiro:</label>
+                        <input type="text" name="descricao" id="descricao"
+                            placeholder="Escreva a descrição da utilidade pública">
                     </div>
+                    <!-- <div class="input-group">
+                        <label>Data início</label>
+                        <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                    </div>
+                    <div class="input-group">
+                        <label>Data fim</label>
+                        <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                    </div> -->
+                    <div class="input-group">
+                        <label>Imagem do parceiro:</label>
+                        <input type="file" name="file" id="file"
+                            required>
+                    </div>
+                </form>
+                
+                <div class="vetor">
+                    <img src="../../../Public/imgs/img-cadastro-eventos/img-vetor.png" alt="">
                 </div>
+                <div class="box-img">
+                    <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="">
+                </div>
+            </div>
+            <div class="form-box2"></div>
             
-                <div class="botoes">
-                    <button class="btn-default-cadastrar">
-                        CADASTRAR
-                    </button>                  
+
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                </a>
+
+                <div class="btn-cancelar-salvar">
+                    <button class="btn btn-cancelar">
+                        <a href="">Cancelar</a>
+                    </button>
+
+                    <button class="btn btn-salvar">
+                        <a href="">Salvar</a>
                 </div>
-            </div>  
-        </main>
-
-        <div class="bolas-fundo">
-                <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
-                <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
-                <img src="../../../Public/imgs/imagens-bolas/Elemento3.ElipseRosa.png" alt="" class="bola-rosa">
+            </div>
         </div>
+        </div>
+    </main>
 
-        <script src="../js/main.js"></script>
+    <div class="bolas-fundo">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+    </div>
 
-    </body>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+</body>
+
 </html>
