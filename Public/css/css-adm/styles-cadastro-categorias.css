@@ -209,6 +209,10 @@ h3{
     color: white;
 }
 
+.voltar{
+    background-color: none;
+}
+
 .tabela input{
     width: 70%;
     padding: 5px;

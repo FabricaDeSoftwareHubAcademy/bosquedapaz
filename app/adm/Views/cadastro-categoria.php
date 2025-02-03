@@ -1,5 +1,5 @@
 <?php 
-    include "../../assets/adm/menu-adm.html"; 
+    include "../../../Public/assets/adm/menu-adm.html"; 
 ?>
 
 <!DOCTYPE html>
@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Categorias</title>
-    <link rel="stylesheet" href="../../css/css-adm/styles-cadastro-categorias.css">
-    <link rel="stylesheet" href="../../css/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/styles-cadastro-categorias.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
 </head>
 <body>
     <main class="principal">
@@ -22,32 +22,39 @@
                         <h3>Nome:</h3>
                         <input type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
                         <h3>Cor da Categoria:</h3>
-                        <img src="../../imgs/cadastro-categorias/roleta.svg" alt="Tabela Cores"class="roleta">
+                        <img src="../../../Public/imgs/cadastro-categorias/roleta.svg" alt="Tabela Cores"class="roleta">
                         <h3>Fill:</h3>
                         <input type="text" name="corcat" id="corcat" placeholder="000000">
                     </div>
                 <div class="separacao">
                         <h3>Icone:</h3>
                         <div class="fotos">
-                            <img src="../../imgs/cadastro-categorias/upload-regular-96.png" alt="Upload" class="upload">
+                            <img src="../../../Public/imgs/cadastro-categorias/upload-regular-96.png" alt="Upload" class="upload">
                         </div>
                 </div>
                 <div class="botoes">
+                    <button class="voltar">
+                        <a href="Area-Adm.php" class="voltar">
+                            <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                        </a>
+                    </button>
                     <button class="cancelar">Cancelar</button>
                     <button class="salvar">Salvar</button>
                 </div>
+                <!-- <div class="btns">
+                </div> -->
             </div>
         </div>
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     
 
-    <script src="../../js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
 </body>
 </html>
