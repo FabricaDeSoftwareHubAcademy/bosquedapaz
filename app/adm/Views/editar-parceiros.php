@@ -1,5 +1,3 @@
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -12,39 +10,55 @@
     </head>
 
     <body>
-        <main class="principal">
-            <div class="box">
-                <h1 class="tela-titulo">EDITAR PARCEIROS</h1>
-                <div class="geral">
-                    <div class="ec">
-                        <div class="lado-esquerdo">                       
-                            <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Card Um" class="img-pref">
-                            <h3 class="descrição-palavra">Descrição:<span class="opcional-palavra">(opcional)</span></h3>
-                            <input class="descrição" type="text">
-                        </div>
-                        
-                        <div class="meio-centro">                      
-                            <h3 class="logo-palavra">Logo:</h3>
-                            <img src="../../../Public/imgs/img-parceiros.css/editar-imagem.png" alt="Editar Imagem" class="editar-imagem">                     
-                        </div>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <main class="principal">
+        <div class="box">
+            <h2>EDITAR PARCEIROS</h2>
+            <div class="form-box">
+                <form action="#">
+                    <div class="img-parceiro">
+                        <label>Logo Atual:</label>
+                        <img class="parceiro-img" src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="">
                     </div>
+                    <div class="input-group">
+                        <label>Editar descrição do parceiro:</label>
+                        <input type="text" name="descricao" id="descricao"
+                            placeholder="Escreva a descrição da utilidade pública">
+                    </div>
+                    <div class="input-group">
+                        <label>Nova imagem do parceiro:</label>
+                        <input type="file" name="file" id="file"
+                            required>
+                    </div>
+                </form>
+                
+                <div class="vetor">
+                    <img src="../../../Public/imgs/img-cadastro-eventos/img-vetor.png" alt="">
                 </div>
-                        
-                <div class="imagens-esquerda">                     
-                    <img src="../../../Public/imgs/img-parceiros.css/linha-central.png" alt="Linha Central" class="linha-central">      
-                    <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="Imagem Parceiros" class="imagem-parceiros">                      
-                </div>
-            
-                <div class="botoes">
-                    <button class="btn-default-cancelar">
-                        CANCELAR
-                    </button>
-                    <button class="btn-default-salvar">
-                        SALVAR
-                    </button>                
+                <div class="box-img">
+                    <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="">
                 </div>
             </div>
-        </main>
+            <div class="form-box2"></div>
+            
+
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                </a>
+
+                <div class="btn-cancelar-salvar">
+                    <button class="btn btn-cancelar">
+                        <a href="">Cancelar</a>
+                    </button>
+
+                    <button class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
 
         <div class="bolas-fundo">
                 <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
