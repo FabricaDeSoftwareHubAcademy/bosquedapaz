@@ -35,6 +35,13 @@
                 <div class="img-boneco">
                     <img src="../../../Public/imgs/editar-categorias/Instagram 1.svg" alt="">
                 </div>
+                <a href="Area-Adm.php" class="voltar-link">
+                    <div class="b-voltar">
+                    <button class="voltar">
+                            <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                        </button>
+                    </div>
+                </a>
                 <div class="botoes">
                     <button class="cancelar">Cancelar</button>
                     <button class="salvar">Salvar</button>

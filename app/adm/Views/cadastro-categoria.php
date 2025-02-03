@@ -32,12 +32,14 @@
                             <img src="../../../Public/imgs/cadastro-categorias/upload-regular-96.png" alt="Upload" class="upload">
                         </div>
                 </div>
-                <div class="botoes">
+                <a href="Area-Adm.php" class="voltar-link">
+                    <div class="b-voltar">
                     <button class="voltar">
-                        <a href="Area-Adm.php" class="voltar">
                             <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                        </a>
-                    </button>
+                        </button>
+                    </div>
+                </a>
+                <div class="botoes">
                     <button class="cancelar">Cancelar</button>
                     <button class="salvar">Salvar</button>
                 </div>
