@@ -45,7 +45,7 @@
                 <div class="contatos-guilherme">
                     <h1 class="contato-guilherme telefone"><strong>TELEFONE: </strong>(67) 4002-9822.</h1>
                     <h1 class="contato-guilherme email"><strong>E-MAIL: </strong><a href="https://www.letras.mus.br/palmeiras/397875/">contato@feirabosque.com.br</a></h1>
-                    <h1 class="contato-guilherme localizacao"><strong>LOCALIZAÇÃO: </strong> Rua Kame Takaiassu, Carandá Bosque, MS.</h1>
+                    <h1 class="contato-guilherme localizacao"><strong>LOCALIZAÇÃO: </strong> R. Kame Takaiassu, Carandá Bosque, MS.</h1>
                 </div>
             </div>
         </section>

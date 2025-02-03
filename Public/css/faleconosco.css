@@ -243,7 +243,7 @@ body {
     .box-guilherme {
         flex-direction: column-reverse;
         width: 90%;
-        background-color: #ffffffe7;
+        background-color: #ffffffbe;
         padding-bottom: 20px;
     }
 
@@ -319,7 +319,7 @@ body {
     }
     
     .botao-voltar-guilherme {
-        top: 20px;
-        left: 20px;
+        top: 65px;
+        left: 40px;
     }
 }
