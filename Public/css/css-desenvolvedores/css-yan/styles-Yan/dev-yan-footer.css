@@ -1,0 +1,80 @@
+.footer-yan{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+.footer-yan .social-yan{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer-yan .social-yan a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition:  0.3s ease;
+}
+.footer-yan .social-yan a:hover{
+    transform: scale(1.2)translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+.footer-yan ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer-yan ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition:  0.3s ease;
+}
+.footer-yan ul li a:hover{
+    border-bottom: 3px solid orangered;
+}
+.footer-yan ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer-yan .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+
+}
+
+@media screen and (max-width: 720px) {
+    .footer-yan {
+        padding: 20px 0; 
+    }
+    .footer-yan .social-yan a {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        margin: 0 5px;        
+    }
+    .footer-yan ul {
+        font-size: 16px; 
+    }
+    .footer-yan ul li {
+        padding: 0 10px; 
+    }
+    .footer-yan .copyright-yan {
+        font-size: 10px;
+    }
+}

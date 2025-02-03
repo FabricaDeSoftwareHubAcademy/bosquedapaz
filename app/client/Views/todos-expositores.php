@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas de expositores</title>
-    <link rel="stylesheet" href="../../css/styles-home/lista-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/lista-expositor.css">
 </head>
 
 <body>
 
-    <?php include "../../assets/home/menu-home-client.html"; ?>
+    <?php include "../../../Public/assets/home/menu-home-client.html"; ?>
 
     <div class="all-box">
         <div class="esco-cat">
@@ -28,7 +28,7 @@
         <div class="expositor-lista">
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -45,7 +45,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -62,7 +62,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -79,7 +79,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -96,7 +96,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -113,7 +113,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -130,7 +130,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -147,7 +147,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -164,7 +164,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -181,7 +181,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -198,7 +198,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -215,7 +215,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -232,7 +232,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -249,7 +249,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -269,7 +269,7 @@
         <div class="expositor-lista">
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -286,7 +286,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -303,7 +303,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -320,7 +320,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -337,7 +337,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -354,7 +354,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -371,7 +371,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -388,7 +388,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -405,7 +405,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -422,7 +422,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -439,7 +439,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -456,7 +456,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -473,7 +473,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -490,7 +490,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -510,7 +510,7 @@
         <div class="expositor-lista">
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -527,7 +527,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -544,7 +544,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -561,7 +561,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -578,7 +578,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -595,7 +595,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -612,7 +612,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -629,7 +629,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -646,7 +646,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -663,7 +663,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -680,7 +680,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -697,7 +697,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -714,7 +714,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -731,7 +731,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -751,7 +751,7 @@
         <div class="expositor-lista">
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -768,7 +768,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -785,7 +785,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -802,7 +802,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -819,7 +819,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -836,7 +836,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -853,7 +853,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -870,7 +870,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -887,7 +887,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -904,7 +904,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -921,7 +921,7 @@
             </div>
             <div class="expositor expositor3">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
+                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -938,7 +938,7 @@
             </div>
             <div class="expositor expositor4">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -955,7 +955,7 @@
             </div>
             <div class="expositor expositor1">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
+                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -972,7 +972,7 @@
             </div>
             <div class="expositor expositor2">
                 <div class="imagem-expositor">
-                    <img src="../../imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
+                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime">
                 </div>
                 <div class="informacoes-expositor">
                     <div class="info-expo">
@@ -991,13 +991,14 @@
     </div>
 
     <dialog class="modal-ver-per-expo" id="modal-ver-per-expo">
-        <?php include "../../assets/modais/m-perfil-expo-t.html"; ?>
+        <?php include "../../../Public/assets/modais/m-perfil-expo-t.html"; ?>
     </dialog>
 
-    <script src="../../js/js-modais/js-abrir-modal.js"></script>
-    <script src="../../js/js-home/escolher-categoria.js"></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-home/escolher-categoria.js"></script>
+    <script src="../../../Public/js/js-home/main.js"></script>
 
-    <?php include "../../assets/home/rodape.html"; ?>
+    <?php include "../../../Public/assets/home/rodape.html"; ?>
 </body>
 
 </html>

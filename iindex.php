@@ -4,43 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicial</title>
-    <link rel="stylesheet" href="css/styles-home/style.css">
-    <link rel="stylesheet" href="css/css-modais/css-m-perfil-expositor.css">
+    <link rel="stylesheet" href="Public/css/css-home/style.css">
+    <link rel="stylesheet" href="Public/css/css-modais/css-m-perfil-expositor.css">
 </head>
 <!-- inicio body -->
 <body class="home">
     <!-- incluindo o menu -->
-    <?php include "assets/home/menu-home.html"; ?>
-    <?php include "assets/home/carrossel-home.html"; ?>
+    <?php include "Public/assets/home/menu-home.html"; ?>
+    <?php include "Public/assets/home/carrossel-home.html"; ?>
     
     <!-- inicio main -->
     <main id="main">
         
         
         <!-- importando categoria -->
-        <?php include "assets/home/categoria.html"; ?>
+        <?php include "Public/assets/home/categoria.html"; ?>
         
         <!-- importando informações da feira -->
-        <?php include "assets/home/info-sobre-feira.html"; ?>
+        <?php include "Public/assets/home/info-sobre-feira.html"; ?>
 
         <!-- incluindo expositores -->
-        <?php include "assets/home/lista-expositor.php"; ?>
+        <?php include "Public/assets/home/lista-expositor.php"; ?>
 
     </main>
 <!-- fim main -->
 
     <!-- importando avisos -->
-    <?php include "assets/home/avisos.html"; ?>
+    <?php include "Public/assets/home/avisos.html"; ?>
 
     <!-- importando mapa -->
-    <?php include "assets/home/mapa.html"; ?>
+    <?php include "Public/assets/home/mapa.html"; ?>
 
     <!-- importando o rodape -->
-    <?php include "assets/home/rodape.html"; ?>
+    <?php include "Public/assets/home/rodape.html"; ?>
 
-    <script src="js/js-home/main.js" defer></script>
-    <script src="js/js-home/carrossel.js" defer></script>
-    <script src="js/js-modais/js-abrir-modal.js" defer></script>
-    <script src="js/js-home/subir-num.js"></script>
+    <script src="Public/js/js-home/main.js" defer></script>
+    <script src="Public/js/js-home/carrossel.js" defer></script>
+    <script src="Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <script src="Public/js/js-home/subir-num.js"></script>
 </body>
 </html>

@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif ;
+    text-decoration: none;
+}
+body{
+    background-image: url(../../img/img-thiego/thiego_port_background.png);
+    background-attachment: fixed;
+}
+/* Header */
+header{
+    width: 100%;
+    padding: 28px 8%;
+    top: 0;
+    position: sticky;
+    background-color: #ff6e27;
+    z-index: 3;
+    box-shadow: 0px 0px 10px 2px rgb(190, 22, 190);
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-logo{
+    font-size: 25px;
+    color: aliceblue;
+    display: flex;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-item a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 20px;
+}
+#nav-logo a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 30px;
+    justify-content:flex-end;
+}
+/*HOME*/
+
+.home{
+    display: flex;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    justify-content: flex-start;
+      
+}
+.cta{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+    padding-left: 5%;
+
+}
+.cta .titulo{
+    font-size: 4rem;
+    color: aliceblue;
+
+}
+.cta h2{
+    font-size: 2rem;
+    color: aliceblue;
+    margin-top: 20%;
+
+}
+.cta .descricao{
+    font-size: 1.2rem;
+    color: #ff6e27;
+}
+
+.habilidades{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 5%;   
+}
+.habilidades i{
+    font-size: 50px;
+    color: #ff6e27;
+}
+.habilidades i a{
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 720px) {
+    .home{
+        min-height: calc(100vh - 100px);
+    }    
+    .cta{
+        margin-top: 17%;
+        width: 100%;
+        text-align: center;
+        align-items: center; 
+    }
+    .cta .title{
+        font-size: 2.5rem;
+    }
+    .cta .descricao{
+        font-size: 2rem;
+    }
+    .quemsou{
+        min-height: calc(100vh - 100px);
+        display: flex;
+        margin-top: 10%;   
+    } 
+    .box-texto{
+        display: flex;
+        min-width: 100%;
+        height: 120vh;
+        text-align: center;   
+    }
+    .box-texto .titulo-texto{
+        font-size: 2.5rem;
+        margin-top: 15%;
+    }
+    .box-texto .texto{
+        font-size: 2rem;
+    }
+    .navbar{
+        min-width: 100%;
+    }
+    .nav-item a{
+        font-size: 14px;
+    }
+    .nav-list{
+        display: flex;
+        list-style: none;
+        width: 100%;
+    }
+    .projetos{
+        min-height: 100%;
+    }
+    .projetos-box{
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+    .projetos-box h1{
+        display: flex;
+        margin-top: 15%;
+    }
+    .cards{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .contato{
+        min-height: 100%;
+        margin-top: 20%;   
+    }
+    .contato-box{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-top: 40%;
+        min-width: 100%;
+        justify-content: center;
+    }
+    .contato-titulo{
+        font-size: 2.5rem;
+        color: aliceblue;
+        margin-top: 15%;
+    }
+    .contato-box div{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .cta h2{
+        margin-top: 1%;
+    }
+} 
+
+/* Quem Sou */
+
+.quemsou{
+    display: flex;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    justify-content: flex-start;
+      
+}
+
+.box-texto{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    padding-left: 5%;
+}
+.titulo-texto{
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+.box-texto .texto{
+    font-size: 1.2rem;
+    color: #ff6e27;
+}
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5%;
+    margin-top: 20%;
+    
+}
+.projetos-box{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 28px; */
+    margin-top: 5%; 
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 5%;
+    /* margin-left: 10%; */
+    /* flex-wrap: wrap; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 18px;
+    width: 400px;
+    padding: 20px;
+    background-color: #ff6f27c0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 2px rgb(190, 22, 190);
+}
+
+.projetos-titulo{
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+
+.projetos-subtitulo{
+    font-size: 1.2rem;
+    color: #ff6e27;
+}
+
+.card-image {
+    border-radius: 50px;
+    display: flex;
+    width: 60%;
+}
+.card-buttom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.card-buttom .btn-default{
+    background-color: rgb(190, 22, 190);
+    border-radius: 5px;
+    cursor: pointer;
+    color: aliceblue;
+    justify-content: center;
+    border: none;
+    width: 80%;  
+}
+.btn .btn-default p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+.card-buttom a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+/* Contato */
+.contato{
+    display: flex;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    justify-content: flex-start;
+    margin-top: 15%;
+      
+}
+.contato-box{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 3%;
+    padding-left: 5%;
+    
+}
+.contato-titulo{
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+.contato-texto{
+    font-size: 1.2rem;
+    color: #ff6e27;
+}
+.contato-box div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contato-box div i{
+    color: #ff6e27;
+    font-size: 50px;
+}
+.certificados{
+
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 1%;
+}
+.contato-box h3{
+    display: flex;
+    margin-top: 25%;
+    color: aliceblue;
+    justify-content: center;
+}
+/* Footer */
+
+footer {
+    background-color:aliceblue;
+    box-shadow: 0px 0px 20px 2px #ff6e27;
+}
+
+.footer-itens {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8% 24px 8%;
+}
+.footer-itens div i{
+    color: #ff6e27;
+}
+
+.copyright {
+    color: #ff6e27;
+    font-weight: 500;
+}

@@ -1,0 +1,58 @@
+.skills-halyson {
+    background-color: var(--color-preta-halyson);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tittle-skills-halyson {
+    color: var(--color-branca-halyson);
+    padding: 20px 30px;
+}
+
+.box-skill-halyson {
+    width: 500px;
+    height: auto;
+    margin-left: 150px;
+    padding: 20px 10px;
+}
+
+.card-skills-halyson {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.progress-halyson {
+    width: 4%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.ball-halyson {
+    width: 13px;
+    height: 15px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: var(--color-verde-halyson);
+}
+
+.ball-inicio-halyson {
+    background-color: var(--color-azul-halyson);
+}
+
+.ball-fim-halyson {
+    background-color: var(--color-vermelha-2-halyson);
+}
+
+.pipe-halyson {
+    width: 3px;
+    height: 100%;
+    margin-top: -5px;
+    z-index: 1;
+    background-color: var(--color-branca-halyson);
+}

@@ -1,0 +1,156 @@
+@import url(./styles.css);
+
+.format-container-guilherme {
+    width: 1142px;
+    margin: 0 auto;
+    height: 80%;
+}
+
+body {
+    background-color: #000000;
+}
+
+.habilidades-guilherme {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.habilidades-guilherme .titulo-guilherme {
+    color: var(--default-branco);
+    font-size: 3rem;
+    font-family: "Archivo Black", sans-serif;
+    margin-bottom: 20px;
+}
+
+.courses-box-guilherme {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 80px;
+    margin-bottom: 10%;
+}
+
+.courses-item-guilherme {
+    flex-basis: calc(30% - 20px);
+    margin: 0;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.course-icon-guilherme {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    color: var(--default-branco);
+}
+
+
+.courses-link-guilherme {
+    display: block;
+    padding: 20px 10px;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+.courses-link-guilherme:hover .courses-bg-guilherme {
+    transform: scale(8);
+}
+
+.courses-title-guilherme {
+    min-height: 60px;
+    margin: 0 0 15px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFF;
+    z-index: 2;
+    position: relative;
+    color: var(--default-branco);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Archivo Black", sans-serif;
+    gap: 30px;
+}
+
+
+.courses-bg-guilherme {
+    height: 100px;
+    width: 100px;
+    background-color: var(--cor-principal);
+    z-index: 1;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+/* .courses-item:nth-child(2n) .courses-bg {
+    background-color: var(--cor-principal);
+}
+
+.courses-item:nth-child(3n) .courses-bg {
+    background-color: #e44002;
+}
+
+.courses-item:nth-child(4n) .courses-bg {
+    background-color: #952aff;
+}
+
+.courses-item:nth-child(5n) .courses-bg {
+    background-color: #cd3e94;
+}
+
+.courses-item:nth-child(6n) .courses-bg {
+    background-color: #4c49ea;
+} */
+
+@media only screen and (max-width: 979px) {
+    .courses-item-guilherme {
+        flex-basis: calc(45% - 20px);
+    }
+
+    .courses-title-guilherme {
+        font-size: 20px;
+    }
+
+    .format-container-guilherme {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .format-container-guilherme {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .courses-item-guilherme {
+        flex-basis: 100%;
+    }
+
+    .habilidades-guilherme .titulo-guilherme {
+        font-size: 2rem;
+    }
+
+    .courses-title-guilherme {
+        min-height: 60px;
+        line-height: 1;
+        font-size: 20px;
+    }
+
+    .courses-link-guilherme {
+        padding: 15px 20px;
+    }
+
+    .courses-item-date-box-guilherme {
+        font-size: 16px;
+    }
+}

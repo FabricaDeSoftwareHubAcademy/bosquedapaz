@@ -1,0 +1,18 @@
+@import url('portifolio.css');
+ 
+.social-icons {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+ 
+.social-icons a {
+    color: white;
+    margin-left: 5px;
+    font-size: 80px;
+    text-decoration: none;
+}
+ 
+.social-icons a:hover {
+    color: gold
+}

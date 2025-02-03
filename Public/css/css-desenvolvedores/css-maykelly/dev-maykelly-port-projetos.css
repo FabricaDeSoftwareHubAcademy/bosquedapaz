@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'questrial', sans-serif;
+}
+ 
+:root{
+    --principal: #FF00A1;
+    --second:#fff,
+}
+ 
+.projetos h1{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+ 
+.cards-projetos {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    margin-top: 20px;
+   
+}
+ 
+.cards-projetos div {
+    display: flex;
+    width:260px;
+    height: 330px;
+    margin-top: 40px;
+    box-shadow: 0px 4px 20px var(--principal);
+    transition: transform 0.3s ease;
+}
+ 
+.projeto1,
+.projeto2 {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+ 
+.projeto1 a{
+    color: black;
+    font-size: 3.1rem;
+    font-weight: bold;
+    margin-left: 22%;
+    margin-top: 60%;
+    display: flex;
+    align-items: center;
+ 
+}
+ 
+.projeto2 a{
+    color: black;
+    font-size: 3.1rem;
+    font-weight: bold;
+    margin-left: 23%;
+    margin-top: 60%;
+    display: flex;
+    align-items: center;
+ 
+}
+ 
+.cards-projetos div:hover {
+    transform: scale(1.1);
+}
+
+
+.projeto1 img{
+    width: 90%;
+    height: 150px;
+    max-height: 160px; /* Define uma altura máxima */
+    margin-top: 10px;
+    border-radius: 4px;
+    object-fit: contain; /* Garante que a imagem se ajuste */
+    margin-left:-72%;
+    margin-top: 12%;
+}
+
+.projeto2 img{
+    width: 90%;
+    height: 150px;
+    max-height: 160px; /* Define uma altura máxima */
+    margin-top: 10px;
+    border-radius: 4px;
+    object-fit: contain; /* Garante que a imagem se ajuste */
+    margin-left:-70%;
+    margin-top: 12%;
+}

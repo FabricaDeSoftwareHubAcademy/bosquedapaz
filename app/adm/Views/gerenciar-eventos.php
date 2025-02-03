@@ -1,5 +1,5 @@
 <?php 
-    include "../../assets/adm/menu-adm.html"; 
+    include "../../../Public/assets/adm/menu-adm.html"; 
 ?>
 
 
@@ -8,8 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/css-adm/styles-gerenciar-eventos.css">
-    <link rel="stylesheet" href="../../css/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/styles-gerenciar-eventos.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <title>Gerenciar Eventos</title>
 </head>
 
@@ -49,11 +49,11 @@
                                 <button class="finalizado">Finalizado</button>
                             </td>
                             <td>
-                                <a href=""><img src="../../imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
                                 <button class="open-modal" data-modal="modal-fotos">
-                                    <img src="../../imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
                                 </button>
                             </td>
                         </tr>
@@ -68,11 +68,11 @@
                                 <button class="em_curso">Em Curso</button>
                             </td>
                             <td>
-                                <a href=""><img src="../../imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
                                 <button class="open-modal" data-modal="modal-fotos">
-                                    <img src="../../imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
                                 </button>
                             </td>
                         </tr>
@@ -80,7 +80,7 @@
                 </table>
             </div>
             <div class="botoes">
-                <a href="cadastro-evento.html"><button class="novo-evento">Novo Evento</button></a>
+                <a href="../../../app/adm/Views/cadastro-evento.php"><button class="novo-evento">Novo Evento</button></a>
             </div>
         </div>
     </main>
@@ -95,13 +95,13 @@
     </div>
     
     <div class="bolas-fundo">
-    <img src="../../imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../js/js-menu/js-menu.js" defer></script>
-    <script src="../../js/js-adm/modal-gerenciar-eventos.js" defer></script>
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
 </body>
 
 </html>

@@ -41,8 +41,6 @@
                     <button class="cancelar">Cancelar</button>
                     <button class="salvar">Salvar</button>
                 </div>
-                <!-- <div class="btns">
-                </div> -->
             </div>
         </div>
     </main>

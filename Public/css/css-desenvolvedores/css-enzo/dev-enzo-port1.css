@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.body-enzo{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.box-enzo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 200px;
+}
+.card-enzo{
+    display: flex;
+    width: 400px;
+    height: 700px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(163, 163, 163, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px 5px rgba(255, 255, 255, 0.379);
+}
+.card-enzo:hover{
+    background-color: rgba(195, 195, 195, 0.3);
+    margin-top: -10px;
+}
+.header-enzo{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    flex-direction: row;
+    padding: 20px 20px;
+    background-color: rgb(74, 74, 74);
+}
+.cabecalho-enzo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    width: 100%;
+    height: 100%;
+}
+.icon-user-cabecalho{
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+.icon-user-cabecalho:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.imagem-eu{
+    display: flex;
+    width: 300px;
+    height: 500px;
+    margin-top: 50px;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px 5px rgb(89, 255, 0);
+    border-radius: 12px;
+}
+.descricao-enzo{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(89, 255, 0);
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal; 
+}
+.icon-cabecalho{
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0);
+}
+.area-frase-enzo{
+    display: flex;
+    margin-bottom: 500px;
+    width: 655px;
+    height: 75px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    /* background-color: aqua; */
+}
+.title-enzo{
+    color: white;
+    font-size: 48px;
+}
+.area-menu{
+    display: flex;
+    /* width: 75%; */
+    height: 20px;
+    background-color: aquamarine;
+    padding: 0px 10px;  
+}
+.contato-menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.contato-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.menu-enzo{
+    display: flex;
+    width: 45vh;
+    flex-direction: row;
+    gap: 100px;
+    /* background-color: brown; */
+}
+.nome-enzo{
+    color: rgb(89, 255, 0);
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contato-enzo{
+    text-decoration: none;
+    color: white;
+}
+.texto-enzo{
+    color: white;
+    font-size: 30px;
+}
+.box-content-enzo{
+    display: flex;
+    justify-content: space-between;
+}
+.habilidades-enzo{
+    color: white;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.habilidades-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.button-habilidades{
+    text-decoration: none;
+    color: white;
+}
+.button-habilidades:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}

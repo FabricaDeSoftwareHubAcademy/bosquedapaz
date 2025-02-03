@@ -85,6 +85,10 @@ h2 {
     background-color: rgb(32,54,139);
     color: white;
 }
+.collaborators-table a {
+    text-decoration: none;
+    color: inherit;
+}
   
 .collaborators-table th, .collaborators-table td {
     padding: 12px 15px;

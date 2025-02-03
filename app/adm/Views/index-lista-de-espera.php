@@ -25,8 +25,17 @@
         <div class="b-LisEsp3">
             <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
         </div>
+        <div class="seta-LisEsp3">
+            <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+        </div>
 
         <div class="box-LisEsp-mat">
+        
+        <div class="seta-LisEsp3-res">
+            <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+        </div>
+            
+
             <h1>Lista de Espera</h1>
             <div class="area-pesquisa-lisEsp">
                 <input type="text" id="search" name="q" placeholder="Pesquisar..." />
@@ -152,8 +161,6 @@
                             <td><i class="bi bi-search"></i></td>
                         </a>
                     </tr>
-                    
-
                 </tbody>
             </table>
         </div>

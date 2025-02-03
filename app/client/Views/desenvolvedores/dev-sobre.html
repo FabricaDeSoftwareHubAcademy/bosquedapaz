@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../Public/css/css-desenvolvedores/dev-portifolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Navbar Simples</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="dev-portifolio.html">INICIO</a></li>
+            <li><a href="dev-conhecimentos.html">CONHECIMENTOS</a></li>
+            <li><a href="dev-sobre.html">SOBRE</a></li>
+            <li><a href="dev-contato.html">CONTATO</a></li>
+        </ul>
+    </nav>
+    
+    <div class="central-text">
+        <h1></h1> <!-- Título será digitado aqui -->
+        <p></p>  <!-- Texto será digitado aqui -->
+    </div>
+ 
+    <script>
+        const titleElement = document.querySelector('.central-text h1');
+        const textElement = document.querySelector('.central-text p');
+        
+        const title = "SOBRE MIM";
+        const text = `Sou estudante de Engenharia de Software no SENAC e estagiário na Secretaria de Saúde de Campo Grande, onde aplico meus conhecimentos em desenvolvimento de sistemas. Tenho habilidades básicas em JavaScript e PHP, incluindo frameworks como Laravel e Livewire, além de conhecimentos em Python e experiência com design de interfaces no Figma. Planejo iniciar a faculdade de Ciências da Computação no próximo ano, buscando ampliar ainda mais minhas habilidades na tecnologia. Estou sempre em busca de novos desafios para me tornar um profissional completo no desenvolvimento de software.`;
+ 
+        let indexTitle = 0;
+        let indexText = 0;
+ 
+        function typeTitle() {
+            if (indexTitle < title.length) {
+                titleElement.textContent += title.charAt(indexTitle);
+                indexTitle++;
+                setTimeout(typeTitle, 50); // Ajuste a velocidade da digitação
+            } else {
+                typeText(); // Inicia a digitação do texto após o título
+            }
+        }
+ 
+        function typeText() {
+            if (indexText < text.length) {
+                const char = text.charAt(indexText);
+                textElement.innerHTML += (char === '\n') ? '<br><br>' : char; // Adiciona <br><br> para linha em branco
+                indexText++;
+                setTimeout(typeText, 20); // Ajuste a velocidade da digitação
+            }
+        }
+ 
+        typeTitle();
+    </script>
+</body>
+</html>

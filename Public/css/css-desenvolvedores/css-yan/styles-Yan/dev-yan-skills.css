@@ -1,0 +1,74 @@
+.skills {
+    background: rgb(241, 241, 241);
+}
+.skilets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+.skill-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+    margin-top: 0;
+}
+.skill-info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.skil-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px; 
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skil-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px orangered, 0 0 50px orangered;
+}
+.skill-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.skil-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.skil-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+@media screen and (max-width: 720px) {
+    .skilets {
+        flex-direction: column; 
+        align-items: center;
+        gap: 16px; 
+        margin-top: 20px;
+    }
+    .skil-card {
+        width: 90%; 
+        max-width: 300px;
+        min-height: auto; 
+    }
+    
+    .skill-title {
+        font-size: 28px; 
+    }
+    .skill-img {
+        width: 80px; 
+        height: 80px; 
+    }
+}

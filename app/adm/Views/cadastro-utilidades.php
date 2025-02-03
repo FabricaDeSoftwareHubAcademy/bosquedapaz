@@ -53,7 +53,7 @@
             
 
             <div class="btns">
-                <a href="" class="voltar">
+                <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                 </a>
 
