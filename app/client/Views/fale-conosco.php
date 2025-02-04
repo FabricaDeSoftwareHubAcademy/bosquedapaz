@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../../Public/css/faleconosco.css">
 
 </head>
-<body>
+<body class="body-fale-conosco">
     <div class="box-guilherme">
         <section class="secao-formulario-guilherme">
             <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>
