@@ -1,17 +1,15 @@
+<?php include "../../../Public/assets/home/menu-home.html"?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Área de Suporte</title>
     <link rel="stylesheet" href="../../../Public/css/faleconosco.css">
-    
-</head>
-<?php include "../../../Public/assets/home/menu-home.html" ?>
 
-<body class="body-fale-conosco">
+</head>
+<body>
     <div class="box-guilherme">
         <section class="secao-formulario-guilherme">
             <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>
@@ -26,7 +24,7 @@
 
                     <label>Mensagem</label>
                     <textarea name="campo3" class="campo-3-guilherme" placeholder="Digite aqui sua mensagem." required></textarea>
-
+                    
                     <button class="botao-enviar-guilherme">Enviar</button>
                 </form>
             </div>
@@ -60,5 +58,4 @@
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="deco3" class="decoracao3-guilherme">
     </div>
 </body>
-
 </html>
