@@ -219,6 +219,7 @@ h3{
     left: -19px;
     display: flex;
     gap: 50px;
+    cursor: default;
 
 }
 
@@ -231,6 +232,10 @@ h3{
 .voltar-link .btn-voltar{
     width: 70%;
     height: 50%;
+}
+
+.btn-voltar{
+    cursor: pointer;
 }
 
 .tabela input{
