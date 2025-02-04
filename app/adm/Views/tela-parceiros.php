@@ -27,10 +27,10 @@
                     </div>
                                      
                     <div class="geral">
-                        <img src="../../../Public/imgs/img-parceiros.css/linha-central.png" alt="linha-central" class="linha-central">
-                        <a href="../../../app/adm/Views/cadastro-parceiros.php">
+                        <img src="../../../Public/imgs/img-parceiros.css/linha-central.png" alt="linha-central" class="linha-central">                    
                             <div class="button-cadastrar">
-                                <button class="button">CADASTRAR</button>
+                                <a href="../../../app/adm/Views/cadastro-parceiros.php">
+                                <button class="button">CADASTRAR</button >
                             </div>
                         </a>
                         <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="imagem-parceiros" class="img-g">
