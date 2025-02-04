@@ -1,270 +1,325 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url("../../Public/css/menu-home.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(../../Public/css/css-home/menu.css);
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body {  
-    overflow-y: hidden;
-}
+body {
+    background-color: #e1e1e1;
+    width: 100%;
+    min-height: 80vh;
 
-.caixa-guilherme {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 40px;
+    /* align-items: center */
 }
 
 .box-guilherme {
-    width: 1800px;
-    height: 750px;
-    background-color: rgba(248, 248, 248, 0.85);
-    border-radius: 10px;
+    background-color: #ecececb0;
+    max-width: 1800px;
+    min-height: 80vh;
+    width: 100%;
+    margin-top: 5%;
+    height: auto;
+    
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
 }
 
-.box-guilherme h1 {
+.secao-formulario-guilherme, .secao-informacoes-guilherme {
+    flex: 1;
+}
+
+.secao-formulario-guilherme {
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-formulario-guilherme {
+    /* background-color: red; */
+    margin-top: 15%;
+    margin-bottom: -10%;
+    font-size: 32px;
+}
+
+.area-formulario-guilherme {
+    /* background-color: red; */
+    width: 100%;
+    height: 75%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 30px;
+    /* align-items: center; */
 }
 
-.txt1-guilherme {
-    position: absolute;
-    top: 40%;
-    left: 1185px;
-    font-size: 16px;
-    color: black;
-    text-align: center;
-}
+.formulario-guilherme {
+    /* background-color: green; */
+    width: 100%;
+    height: 100%;
 
-.txt2-guilherme {
-    position: absolute;
-    top: 55%;
-    left: 1100px;
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
-    text-align: center;
-}
-
-.negrito-guilherme {
-    font-weight: 800;
-    font-size: 16px;
-}
-
-.circulo-guilherme {
-    position: absolute;
-    top: 28%;
-    left: 1345px;
-    z-index: 1;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgb(214, 214, 214);
-    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-.circulo-guilherme img {
-    width: 80px;
-    height: 80px;
+.formulario-guilherme label {
+    /* background-color: red; */
+    width: 69%;
+    margin-bottom: 2px;
 }
 
-.circulo2-guilherme {
-    position: absolute;
-    top: 795px;
-    left: 70px;
-    z-index: 1;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circulo2-guilherme img {
-    width: 60px;
+.formulario-guilherme input, textarea {
+    background-color: rgb(250, 250, 250);
+    width: 70%;
     height: 50px;
+
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(182, 182, 182);
+    border-right: 1px solid rgb(182, 182, 182);
+    margin-bottom: 15px;
+}
+
+.campo-3-guilherme {
+    width: 70%;
+    height: 140px;
+    padding-top: 10px;
+}
+
+.botao-enviar-guilherme {
+    background-color: #132868;
+    width: 45%;
+    height: 40px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
     transition: all .3s ease;
 }
 
-.circulo2-guilherme img:hover {
-    transform: scale(1.18);
-    cursor: pointer;
-}
-
-.imagem-guilherme {
-    position: absolute;
-    top: 10%;
-    left: 0px;
-    z-index: -1;
-}
-
-.imagem2-guilherme {
-    position: absolute;
-    top: 90px;
-    right: 400px;
-    z-index: -1;
-    width: 0px;
-}
-
-.imagem3-guilherme {
-    position: absolute;
-    top: 75%;
-    right: 400px;
-    z-index: -1;
-    width: 0px;
-}
-
-.form-box-guilherme {
-    position: absolute;
-    top: 25%;
-    left: 250px;
-    width: 35%;
-}
-
-.form-box-guilherme .formulario-do-cadastro-guilherme label {
-    display: block;
-    padding-left: 5px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.form-box-guilherme .formulario-do-cadastro-guilherme input {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid transparent;
-    outline: none;
-    padding: 15px;
-    font-size: 15px;
-    color: black;
-    transition: all 0.4s ease;
-    margin-bottom: 40px;
-    box-sizing: border-box;
-    border-right: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-}
-
-.form-box-guilherme .formulario-do-cadastro-guilherme input::placeholder {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.form-box-guilherme .formulario-do-cadastro-guilherme input:focus {
-    background-color: rgb(255, 255, 255);
-    transform: scale(1.04);
-}
-
-.form-box-guilherme .formulario-do-cadastro-guilherme #mensagem {
-    padding: 120px;
-    padding-top: 20px;
-    padding-left: 10px;
-}
-
-.enviar-guilherme {
-    position: absolute;
-    top: 750px;
-    left: 20%;
-    width: 350px;
-    height: 50px;
-    font-size: 14px;
-    font-weight: bolder;
-    color: white;
-    border: none;
-    background-color: #132868;
-    transition: all .2s ease;
-}
-
-.enviar-guilherme:hover {
+.botao-enviar-guilherme:hover {
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(2, 124, 141, 0.8);
 }
 
-@media (max-width: 768px) {
-    body {
-        max-width: 100vw;
-        overflow: scroll;
-    }
+.secao-informacoes-guilherme {
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.informacao-introducao-guilherme {
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 17%;
+    margin-bottom: 5%;
+}
+
+.msg-guilherme {
+    /* background-color: green; */
+    width: 85%;
+    
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.informacao-contatos-guilherme {
+    /* background-color: gray; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.informacao-titulo-guilherme h1 {
+    margin-bottom: 2%;
+    font-size: 22px;
+}
+
+.contatos-guilherme {
+    /* background-color: red; */
+    text-align: center;
+}
+
+.contato-guilherme {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.email-guilherme a {
+    color: rgb(0, 89, 255);
+}
+
+.email-guilherme a:hover {
+    color: rgb(116, 165, 255);
+}
+
+.fundo-guilherme {
+    background-color: #dddddd99;
+    width: 110px;
+    height: 110px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.informacao-introducao-guilherme img {
+    width: 80px;
+    height: auto;
+
+    position: relative;
+    top: -3px;
+    left: 1px;
+}
+
+.botao-voltar-guilherme, .decoracao1-guilherme, .decoracao2-guilherme, .decoracao3-guilherme {
+    position: absolute;
+}
+
+.botao-voltar-guilherme {
+    width: 50px;
+    height: auto;
+    transition: all .3s ease;
+    left: 83px;
+    top: 83%;
+}
+
+.botao-voltar-guilherme:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.decoracao1-guilherme {
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.decoracao2-guilherme {
+    width: 170px;
+    height: auto;
+    right: 0px;
+    top: 0;
+    z-index: -1;
+}
+
+.decoracao3-guilherme {
+    width: 170px;
+    height: auto;
+    right: 0px;
+    top: 80%;
+    z-index: -1;
+    /* background-color: red; */
+}
+
+@media (max-width: 576px) {
     .box-guilherme {
-        width: 400px;
-        height: 175vh;
+        flex-direction: column-reverse;
+        width: 90%;
+        background-color: #ffffffbe;
+        padding-bottom: 20px;
     }
 
-    .circulo-guilherme {
-        position: absolute;
-        top: 135px;
-        left: 140px;
+    .secao-formulario-guilherme, .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
     }
 
-    .circulo2-guilherme {
-        position: absolute;
-        top: 1210px;
-        left: 10px;
+    .titulo-formulario-guilherme {
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
-    .txt1-guilherme {
-        font-size: 15px;
-        position: absolute;
-        top: 130px;
-        left: 0px;
+    .area-formulario-guilherme {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
     }
 
-    .txt2-guilherme {
-        font-size: 14px;
-        position: absolute;
-        top: 250px;
-        left: 0px;
+    .formulario-guilherme label {
+        width: 90%;
     }
 
-    .box-guilherme h1 {
-        position: relative;
-        top: 400px;
+    .formulario-guilherme input, .formulario-guilherme textarea {
+        width: 90%;
     }
 
-    .form-box-guilherme {
-        position: absolute;
-        top: 650px;
-        left: 40px;
-        width: 300px;
+    .campo-3-guilherme {
+        width: 90%;
+        height: 100px;
+        padding-top: 10px;
     }
 
-    .enviar-guilherme {
-        position: absolute;
-        top: 1150px;
-        left: 70px;
-        width: 250px;
-    }
-
-    .imagem-guilherme {
-        left: 250px;
-    }
-
-    .imagem2-guilherme {
-        /* display: none; */
-        top: 0px;
-        left: -125px;
+    .botao-enviar-guilherme {
+        width: 80%;
+        height: 40px;
+        margin-top: 5%;
     }
     
-    .imagem3-guilherme {
-        /* display: none; */
-        top: 1050px;
-        left: -150px;
-        background-color: red;
+    .botao-enviar-guilherme:hover {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .secao-informacoes-guilherme {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
     }
 
-    .enviar-guilherme:hover {
-        box-shadow: 0px 0px 0px 0px;
+    .informacao-introducao-guilherme {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 
+    .msg-guilherme {
+        font-size: 18px;
+    }
+
+    .informacao-contatos-guilherme {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacao-titulo-guilherme h1 {
+        font-size: 18px;
+    }
+
+    .contato-guilherme {
+        font-size: 16px;
+    }
+    
+    .botao-voltar-guilherme {
+        top: 65px;
+        left: 40px;
     }
 }
