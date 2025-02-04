@@ -420,6 +420,23 @@ input[type="checkbox"]:checked + .modal-container {
         display: none;
     }
 
+    .form-termos{
+        display: none;
+    }
+    .edital-resp{
+        display: block;
+    }
+
+    .edital-feira{
+        position: relative;
+        left: ;
+    }
+
+    .edital-resp .edital-feira button{
+        width: 120px;
+        font-size: 16px;
+        display: flex;
+    }
     /* .btns .voltar {
         display: none;
     }
