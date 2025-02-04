@@ -7,7 +7,7 @@
     <title>Próximo Evento</title>
 </head>
 <body>
-    <?php include "../../../Public/assets/home/menu-home-client.html"; ?>
+    <?php include "../../../Public/assets/home/menu-home.html"; ?>
     <!-- Area Principal -->
     <section class="area-principal-ProEv">
 
