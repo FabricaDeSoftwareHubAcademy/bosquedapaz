@@ -1,8 +1,3 @@
-<?php 
-    include "../../../Public/assets/adm/menu-adm.html"; 
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,6 +9,9 @@
 </head>
 
 <body>
+<?php 
+    include "../../../Public/assets/adm/menu-adm.html"; 
+?>
     <main class="principal">
         <div class="box">
             <h1 class="titulo">Gerenciar Eventos</h1>
@@ -79,6 +77,13 @@
                     </tbody>
                 </table>
             </div>
+            <a href="Area-Adm.php" class="voltar-link">
+                <div class="b-voltar">
+                    <button class="voltar">
+                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                    </button>
+                </div>
+            </a>
             <div class="botoes">
                 <a href="../../../app/adm/Views/cadastro-evento.php"><button class="novo-evento">Novo Evento</button></a>
             </div>
