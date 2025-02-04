@@ -4,19 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/quem-somos.css">
-    <link rel="stylesheet" href="../../../Public/css/css-home/menu.css">
-    <link rel="stylesheet" href="../../../Public/css/css-home/rodape.css">
     <title>Quem Somos</title>
 </head>
 <body>
-    <?php include "../../../Public/assets/home/menu-home-client.html"; ?>
-    
-
-   
-
-
-
-
+    <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <main class="section-bosque-quem-somos">
         <div class="div-text-sobre">

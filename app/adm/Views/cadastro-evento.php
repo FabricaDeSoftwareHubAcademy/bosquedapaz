@@ -111,13 +111,13 @@
                 </div> -->
             </div>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="manage-events.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">
                     <button class="btn btn-cancelar">
-                        <a href="">Cancelar</a>
+                        <a href="./Area-Adm.php">Cancelar</a>
                     </button>
 
                     <button class="btn btn-salvar">

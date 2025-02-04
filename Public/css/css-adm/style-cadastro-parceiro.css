@@ -86,14 +86,9 @@ h2{
 }
 .btn-cancelar-salvar .btn {
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 8px;
-    width: 150px;
-    height: 40px;
     background-color: #FF3877;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 }
 .btn-cancelar-salvar .btn-salvar {
@@ -193,8 +188,9 @@ h2{
     
     .form-box form{   
         width: 100%;
-        height: 100%;
+        height: 85%;
         gap: 0px;
+        justify-content: space-around;
     }
     
     .form-box .uploadimg{
@@ -212,6 +208,8 @@ h2{
         font-size: 0.8rem;
     }
     
-    
+    .box .btns {
+        padding-right: 0px;
+    }
     
 }
