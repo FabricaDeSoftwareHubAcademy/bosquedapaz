@@ -328,6 +328,14 @@ input[type="checkbox"]:checked + .modal-container {
     left: -45%;
 }
 
+.edital-resp{
+    display: none;
+}
+
+.finalizar-resp{
+    display: none;
+}
+
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1{
         width: 80px;
@@ -408,14 +416,9 @@ input[type="checkbox"]:checked + .modal-container {
         margin-top: 30px;
     }
 
-   
-
-    
-     
-    
-    
-
-
+    .form-finalizar{
+        display: none;
+    }
 
     /* .btns .voltar {
         display: none;
