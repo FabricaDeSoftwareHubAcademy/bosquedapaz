@@ -1,200 +1,246 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('../../css/menu-adm.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url(../../css/menu-adm.css);
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.box-ajust-guilherme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    flex-direction: column;
+
+    background-color: #e2e2e2;
+    
 }
 
 .box-guilherme {
-    z-index: 0;
-    position: absolute;
-    top: 8.1rem;
+    width: 95%;
     height: 85vh;
-    width: 90%;
-    background-color: rgba(230, 230, 230, 0.5);
-    border-radius: 0.625rem;
+    margin-top: 1%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    
+    border-radius: 5px;
+    background-color: #ffffff44;
 }
 
-.box-content-guilherme {
+.secao-imagens-guilherme {
+    /* width: 10px; */
+    height: 100%;
+    /* box-shadow: 1px 0px rgba(122, 122, 122, 0.507); */
+    flex: 2;
+    /* background-color: red; */
+}
+
+.imagem-expositor-guilherme {
+    height: 45%;
+    width: 100%;
+
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 3rem;
-    left: 15.625rem;
-    margin: 0px 0px;
-    font-size: 1.25rem;
+    align-items: center;
+    flex-direction: column;
+    
+    /* background-color: blue; */
 }
 
-.foto-expositor-guilherme h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.375rem;
-    font-weight: 400;
-    margin: 0.9375rem 0px;
-}
-
-.foto-expositor-guilherme {
-    position: absolute;
-    top: 3rem;
-    left: 7.8125rem;
-}
-
-.foto-expositor-guilherme img {
+.imagem-expositor-guilherme img {
+    width: 250px;
     height: auto;
-    width: 25vh;
-    border-radius: 0.625rem;
+
+    border-radius: 10px;
+    transition: all .3s ease;
 }
 
-.marca-txt-guilherme h1 {
+.imagem-expositor-guilherme img:hover {
+    transform: scale(1.04);
+}
+
+.imagem-expositor-guilherme h1 {
+    position: relative; 
+    top: -2%;
+}
+
+.imagens-marca-guilherme {
+    height: 55%;
+    width: 100%;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* background-color: green; */
+}
+
+.imagens-guilherme {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* background-color: pink; */
+    
     position: relative;
-    top: 32.5rem;
-    font-size: 1.375rem;
+    top: -4%
+}
+
+.imagens-guilherme img {
+    width: calc(33.33% - 40px);
+    height: auto;
+
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.imagens-guilherme img:hover {
+    transform: scale(1.04);
+}
+
+.imagens-marca-guilherme h1 {
+    position: relative;
+    top: -6%;
+}
+
+.secao-informacoes-guilherme {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    flex: 4;
+    /* background-color: pink; */
+}
+
+.informacoes-expositor-guilherme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 85%;
+    position: relative;
+    top: -5%;
+}
+
+.informacoes-titulo-guilherme {
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme label {
+    display: block;
+    font-size: 14px;
     font-weight: 400;
-    margin: 0.9375rem 0px;
+    /* background-color: red; */
 }
 
-.foto-marca1-guilherme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 31.875rem;
-    gap: 1.25rem;
-}
-
-.foto-marca1-guilherme img {
-    height: 12vh;
-    width: 12vh;
-    border-radius: 0.9375rem;
-}
-
-.foto-marca2-guilherme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 31.875rem;
-    gap: 1.25rem;
-}
-
-.foto-marca2-guilherme img {
-    height: 12vh;
-    width: 12vh;
-    border-radius: 0.9375rem;
-}
-
-.imagens-content-guilherme {
-    position: absolute;
-    top: -8.4375rem;
-    left: 3.125rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.voltar-guilherme {
-    position: absolute;
-    top: 55.625rem;
-    left: -1.5625rem;
-    cursor: pointer;
-}
-
-.caixa-formulario-guilherme {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 6.25rem;
-    left: -0.625rem;
-    gap: 1.25rem;
-}
-
-.formulario-guilherme {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.formulario-guilherme input {
-    width: 50vh;
-    height: 4vh;
-    margin: 0.125rem 0px;
-    padding-left: 0.9375rem;
+.formulario-informacoes-guilherme input {
+    width: 100%; 
+    min-height: 45px; 
+    padding: 5px;
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
     outline: none;
     box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box; 
+    margin-bottom: 20px;
 }
 
-.formulario-guilherme input:disabled {
-    background-color: white;
-}
-
-.formulario-guilherme label {
-    padding-left: 0.625rem;
-    margin: 0.625rem 0px;
-}
-
-.caixa-formulario2-guilherme {
-    position: absolute;
-    top: -0.0625rem;
-    left: 73.75rem;
+.informacoes-marca-guilherme {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    top: -5%;
+    /* background-color: rgb(255, 140, 0); */
 }
 
 .formulario-marca-guilherme {
     display: flex;
-    text-align: center;
-    position: relative;
-    top: 3.75rem;
-    left: 17.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    height: 50%;
+    /* background-color: blue; */
 }
 
-.formulario-marca-guilherme img {
-    position: absolute;
-    top: -0.5rem;
-    left: -12.5rem;
-    width: 9.375rem;
-    height: 9.375rem;
+.formulario-marca-guilherme label {
+    display: block;
+    width: 90%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    /* background-color: red; */
 }
 
-.linha-guilherme {
-    position: absolute;
-    top: -6.25rem;
-    left: 33.125rem;
-    height: 70vh;
-    width: 0.125rem;
-    background-color: rgb(182, 182, 182);
+.formulario-marca-guilherme input {
+    width: 100%; 
+    min-height: 45px; 
+    padding: 5px;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box; 
+    /* background-color: red; */
+}
+
+.logo-marca-guilherme img {
+    width: 150px;
+    height: 150px;
+    /* background-color: red; */
 }
 
 .botoes-guilherme {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-    gap: 1rem;
-    position: absolute;
-    top: 35rem;
-    right: 26.25rem;
+    width: 30%;
+    gap: 30px;
+    /* background-color: red; */
 }
 
 .botao-validar-guilherme {
-    padding: 0.625rem 2.1875rem;
+    padding: 0.6rem 3rem;
     border: none;
     cursor: pointer;
     color: white;
@@ -204,13 +250,8 @@ body {
     background-color: #5275ff;
 }
 
-.botao-validar-guilherme:hover {
-    background-color: #20368B;
-    border-radius: 0.3125rem;
-}
-
-.botao-rejeitar-guilherme {
-    padding: 0.625rem 2.1875rem;
+.botao-recusar-guilherme {
+    padding: 0.6rem 3rem;
     border: none;
     cursor: pointer;
     color: white;
@@ -220,281 +261,319 @@ body {
     background-color: #fe748d;
 }
 
-.botao-rejeitar-guilherme:hover {
-    background-color: #B1253F;
-    border-radius: 0.3125rem;
+.botao-validar-guilherme:hover {
+    background-color: #20368B;
+    border-radius: 0.3rem;
 }
 
-.modal-guilherme {
+.botao-recusar-guilherme:hover {
+    background-color: #B1253F;
+    border-radius: 0.3rem;
+}
+
+.btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+    position: absolute;
+    /* background-color: red; */
+}
+
+.btnVoltar-guilherme {
+    width: 30px;
+    height: 30px;
+    left: 70px;
+    top: 94.5%;
+    transition: all .3s ease;
+}
+
+.btnVoltar-guilherme:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.detalhe1 {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.detalhe2 {
+    top: -80px;
+    right: 0px;
+    z-index: -1;
+}
+
+.detalhe3 {
+    width: 120px;
+    right: 0;
+    top: 87.1%;
+    z-index: -1;
+}
+
+.modal-validar-guilherme, .modal-recusar-guilherme, .modal-validar-sucesso-guilherme, .modal-recusar-sucesso-guilherme {
     display: none;
-    position: fixed;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.486);
 }
 
-.modal-guilherme:target {
-    display: flex;
+.modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+     display: flex;
 }
 
 .modal-content-guilherme {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 0.625rem;
-    text-align: center;
-    box-shadow: 0 0.25rem 0.5rem rgba(230, 230, 230, 0.2);
-    width: 50vh;
+    flex-direction: column;
+    width: 25vw;
     height: 15vh;
+    background-color: white;
+    border-radius: 5px;
 }
 
-.modal-content-guilherme h2 {
-    margin-top: -30px;
+.modal-content-guilherme h1 {
+    font-size: 24px;
 }
 
 .modal-botoes-guilherme {
-    margin-top: -2rem;
-}
-
-.modal-botoes-guilherme a {
-    text-decoration: none;
-    padding: 0.8125rem 1.25rem;
-    width: 15vh;
-    height: 50px;
-    border-radius: 0.625rem;
-    margin: 0 0.625rem;
-    display: inline-block;
-    justify-content: center;
-    position: relative;
-    top: 2.5rem;
-}
-
-.botao-confirmar-guilherme {
-    padding: 0.625rem 2.1875rem;
-    background-color: #4CAF50;
-    color: white;
-}
-
-.botao-voltar-guilherme {
-    padding: 0.625rem 2.1875rem;
-    background-color: #F44336;
-    color: white;
-}
-
-.botao-fechar-guilherme {
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #F44336;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.btn-modal-guilherme {
+    width: 120px;
+    height: 40px;
+    border: none;
+    margin-top: 10%;
+}
+
+.btn-validar-guilherme {
+    background-color: #5275ff;
     color: white;
-    text-decoration: none;
-    padding: 0.8125rem 1.25rem;
-    width: 15vh;
-    height: 50px;
-    border-radius: 0.625rem;
-    position: relative;
-    top: 20px;
+    transition: all .3s ease;
 }
 
-@media (max-width: 1200px) {
-    .box-guilherme {
-        width: 100%;
-        top: 2rem;
-    }
-
-    .box-content-guilherme {
-        left: 5rem;
-    }
-
-    .foto-expositor-guilherme {
-        left: 5rem;
-    }
-
-    .foto-expositor-guilherme img {
-        width: 20vh;
-    }
-
-    .marca-txt-guilherme h1 {
-        top: 25rem;
-    }
-
-    .botoes-guilherme {
-        top: 30rem;
-        right: 20rem;
-    }
+.btn-validar-guilherme:hover {
+    cursor: pointer;
+    background-color: #20368B;
 }
 
-@media (max-width: 768px) {
-    
-    body {
-        overflow-x: hidden;
-    }
+.btn-voltar-guilherme {
+    background-color: #b3b3b3;
+    color: white;
+    transition: all .3s ease;
+}
 
+.btn-voltar-guilherme:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+}
+
+.btn-recusar-guilherme {
+    background-color: #fe748d;
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn-recusar-guilherme:hover {
+    cursor: pointer;
+    background-color: #B1253F;
+}
+
+.btn-ok-guilherme {
+    background-color: rgb(2, 196, 2);
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn-ok-guilherme:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+@media (max-width: 576px) {
     .box-guilherme {
-        height: 1730px;
-        top: 100px;
-        z-index: 1;
-        /* overflow-y: hidden; */
-    }
-
-    .box-content-guilherme h1 {
-        margin-left: -150px;
-        margin-top: -30px;
-        font-size: 1.5rem;
-    }
-
-    .marca-txt-guilherme {
-        margin-top: 30px;
-    }
-    
-    .foto-expositor-guilherme h1 {
-        margin-top: 15%;
-        margin-left: 15px;
-    }
-    
-    .foto-expositor-guilherme img {
-        width: 30vh;
-        margin-left: 5%;
-    }
-    
-    .caixa-formulario-guilherme {
-        top: 620px;
-    }
-
-    .caixa-formulario2-guilherme {
-        left: 10px;
-        top: 285px;
-    }
-
-    .formulario-guilherme {
-        margin-left: 20px;
-    }
-
-    .formulario-marca-guilherme, .formulario-marca-guilherme img {
-        top: 510px;
-        left: 0px;
-    }
-
-    .formulario-marca-guilherme img {
-        top: -155px;
-        left: 115px;
-    }
-    
-    .marca-txt-guilherme h1 {
-        top: 440px;
-        left: -20px;
-    }
-
-    .foto-marca1-guilherme, .foto-marca2-guilherme {
-        top: 420px;
-        left: -25px;
-    }
-
-    .foto-marca1-guilherme img {
-        height: 100px;
-        width: 95px;
-    }
-    
-    .foto-marca2-guilherme img {
-        height: 100px;
-        width: 95px;
-    }
-    
-    .botoes-guilherme {
-        top: 900px;
-        width: 300px;
-        left: 47.5px;
+        width: 90%;
         flex-direction: column;
-        align-items: center;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
     }
 
-    .botao-validar-guilherme, .botao-rejeitar-guilherme {
-        width: 300px;
-        display: flex;
-        justify-content: center;
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
     }
 
-    .linha-guilherme {
-        display: none;
-    }
-
-    .voltar-guilherme {
-        top: 1820px;
-        left: -30px;
-    }
-
-    .modal-content-guilherme {
-        width: 80%;
-        height: 20%;
-        margin-left: -80px;
-    }
-
-    .modal-content-guilherme h2 {
-        margin-top: -30px;
+    h1 {
         font-size: 20px;
     }
 
-    .modal-botoes-guilherme {
-        margin-top: -30px;
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
     }
 
-    .modal-botoes-guilherme .botao-confirmar-guilherme, .modal-botoes-guilherme .botao-voltar-guilherme {
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 20px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
         width: 300px;
-        height: 40px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 30px;
+        height: 30px;
+        left: 40px;
+        top: 120px;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 90vw;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        background-color: #B1253F;
+    }
+
+    .btn-validar-guilherme {
+        background-color: #20368B;
+    }
+
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme {
+        position: relative;
+        top: -350px;
+    }
+    .informacoes-expositor-guilherme {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .modal-botoes-guilherme .botao-confirmar-guilherme {
-        margin-bottom: 10px;
-    }
-
-    .modal-contentVal-guilherme {
-        width: 40%;
-        height: 40%;
-;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
     }
 }
-
-/* @media (max-width: 480px) {
-    .box {
-        width: 100%;
-    }
-
-    .box-content {
-        left: 0;
-    }
-
-    .foto-expositor {
-        left: 0;
-    }
-
-    .foto-expositor img {
-        width: 10vh;
-    }
-
-    .marca-txt h1 {
-        top: 15rem;
-    }
-
-    .botoes {
-        top: 20rem;
-        right: 0;
-        gap: 1rem;
-    }
-
-    .botao-validar, .botao-rejeitar {
-        width: 80%;
-    }
-
-    .modal-content {
-        width: 90%;
-    }
-}
-  */
