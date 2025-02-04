@@ -35,7 +35,7 @@
             <!-- /* Box */ -->
             <div class="box-cadastro-mt">  
                 <div class="setaV-cadastro">
-                    <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+                    <a href="../../../app/adm/Views/gerenciar-adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
                 </div> 
                
                 <div id="linha-vertical"></div>

@@ -27,21 +27,18 @@
                 </div>
                 <form action="#">
                     <div class="input-group">
-                        <label>Nome Completo:</label>
+                        <label>Nome:</label>
                         <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
                     </div>                   
-                     <div class="input-group">
-                        <label>Telefone:</label>
-                        <input type="number" name="telefone" id="telefone" placeholder="Digite o seu número de telefone" required>
-                    </div>
                     <div class="input-group">
                         <label>E-mail:</label>
                         <input type="email" name="email" id="email"  placeholder="Digite o seu e-mail" required>
                     </div> 
                     <div class="input-group">
-                        <label>Profissão:</label>
-                        <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
-                    </div>
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" id="cpf"  placeholder="Digite o seu CPF" required>
+                    </div> 
+                    
                     
                     <div class="btns">
                         <a href="gerenciar-adm.php" class="voltar">
