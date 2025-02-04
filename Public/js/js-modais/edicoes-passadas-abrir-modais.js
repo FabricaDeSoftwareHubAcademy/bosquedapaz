@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btns = document.querySelectorAll('.btn-ver-mais');
-    const modals = document.querySelectorAll('.modal');
-    const closes = document.querySelectorAll('.close');
+    const btns = document.querySelectorAll('.btn-ver-mais-edpass');
+    const modals = document.querySelectorAll('.modal-edpass');
+    const closes = document.querySelectorAll('.close-edpass');
     const overlay = document.getElementById('overlay');
 
     btns.forEach(btn => {
