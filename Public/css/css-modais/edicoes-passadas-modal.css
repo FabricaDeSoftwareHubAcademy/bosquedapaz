@@ -32,6 +32,9 @@
     display: none;
 }
 
+#modal1-edpass,#modal-
+
+
 #modal1-edpass,#modal4-edpass{
     background-image: url(../../imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
 }
@@ -84,7 +87,7 @@
 
 .title-modal1-edpass{
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.7 rem;
     color: #FF3877;
     text-align: left;
     margin-top: 20px;
@@ -93,7 +96,7 @@
 
 .title-modal2-edpass{
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #007E70;
     text-align: left;
     margin-top: 20px;
