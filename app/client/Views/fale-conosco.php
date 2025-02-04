@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/menu.css">
 </head>
 <body>
-    <?php include "../../assets/home/menu-home-client.html"; ?>
     <main>
 
 
