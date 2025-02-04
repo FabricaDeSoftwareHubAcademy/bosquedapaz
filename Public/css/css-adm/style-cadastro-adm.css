@@ -250,37 +250,9 @@ form{
     display: none;
 }
 
-p{
-    font-size: 16px;
-    position: absolute;
-    top: 690px;
-    left: 16%;
-}
-
-a{
-    text-decoration: none;
-    color: #162868;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
-
 /* Responsividade */
+/* Responsividade Celular*/
 @media screen and (max-width: 720px){
-    p{
-        font-size: 12px;
-        position: absolute;
-        top: 94%;
-        left: 22%;
-    }
-
-    a{
-        text-decoration: none;
-        color: #162868;
-    }
-
     .setaV-cadastro{
         display: block;
         top: 44vh;
@@ -379,6 +351,7 @@ a:hover{
     }
 }
 
+/* Responsividade Ipad Mini*/
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .areaImg-cad-mt{
         display: none;
@@ -471,10 +444,6 @@ a:hover{
         top: 50px;
         background-color: transparent;
     }
-    p{
-        top: 805px;
-        left: 30%;
-    }
 }
 
 @media screen and (max-height: 800px) {
@@ -496,9 +465,10 @@ a:hover{
     }
     .area-input-mat{
         margin-bottom: 5px;
-    }    
+    }  
 }
 
+/* Responsividade Ipad Pro*/
 @media screen and (min-height: 1366px){
     .areaImg-cad-mt{
         background-color: #16286800;
@@ -513,9 +483,6 @@ a:hover{
     .divIMg-mt img{
         width: 100%;
         height: auto;
-    }
-    p{
-        left: 8%;
     }
     .formaCadastro-2{
         top: 85vh;
@@ -540,6 +507,7 @@ a:hover{
     }
 }
 
+/* Responsividade Next Hub*/
 @media (min-width: 1024px) and (max-height: 600px) {
     .button-cad-mt{
         width: 130px;
@@ -563,15 +531,9 @@ a:hover{
         margin-bottom: 460px;
         font-size: 30px;
     }
-    p{
-        left: 33%;
-        top: 650px;
-    }
-    /* .setaV-cadastro{
-        right: 50vh;
-    } */
 }
 
+/* Responsividade Next Pro*/
 @media (min-width: 1280px) and (max-height: 800px) {
     .titulo-areato-mt{
         display: block;
@@ -583,10 +545,6 @@ a:hover{
         left: 185px;
     }
 
-    p{
-        left: 38%;
-    }
-
     .button-cad-mt{
         right: 155px;
         margin-top: 598px;
@@ -594,28 +552,8 @@ a:hover{
     
 }
 
-@media (min-width: 414px) and (max-height: 896px){
-    p{
-        top: 715px;
-    }
-}
-
-@media (min-width: 390px) and (max-height: 844px){
-    p{
-        top: 700px;
-    }
-}
-
-@media (min-width: 430px) and (max-height: 932px){
-    p{
-        top: 735px;
-    }
-}
-
+/* Responsividade Sansung Galaxy A51/71 */
 @media (min-width: 412px) and (max-height: 915px){
-    p{
-        top: 720px;
-    }
     .setaV-cadastro{
         display: block;
         top: 45vh;
@@ -623,10 +561,8 @@ a:hover{
     }
 }
 
+/* Responsividade Surface Pro 7 */
 @media (min-width: 912px) and (min-height: 1368px){
-    p{
-        left: 33%;
-    }
     .setaV-cadastro{
         display: block;
         top: 30vh;

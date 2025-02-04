@@ -50,7 +50,7 @@
 
             <!-- botoes parte de baixo -->
             <div class="btns">
-                <a href="" class="voltar">
+                <a href="gerenciar-carrossel.php" class="voltar">
                     <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 

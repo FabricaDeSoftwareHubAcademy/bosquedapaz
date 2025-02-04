@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Administrativa</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-carrossel.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -24,60 +24,51 @@
     
         <!-- Área Dos Botões -->
 
-    <main class="principal-gerenciar">
+    <main class="principal-carrossel">
         
-        <div class="box-gerenciar">
-        <div class="nome-area-gerenciar">
-                <h1>Gerenciar ADM</h1>
+        <div class="box-carrossel">
+        <div class="nome-area-carrossel">
+                <h1>Gerenciar Carrossel</h1>
             </div>
 
-                <div class="seta-voltar-gerenciar">
+                <div class="seta-voltar-carrossel">
                 <a href="Area-adm.php">
                 <img src="../../../Public/imgs/img-area-adm/Captura de tela 2024-09-25 163826.png" alt="">
                 </a>
                 </div>
 
-                <div class="Botoes-gerenciar">
-                    <a href="cadastro-adm.php" class="link-area-icon">
-                    <div class="area-icon-gerenciar">
-                        <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                        <p>Cadastrar ADM</p>
+                <div class="Botoes-carrossel">
+                    <a href="cadastro-carrossel.php" class="link-area-icon">
+                    <div class="area-icon-carrossel">
+                        <img src="../../../Public/imgs/img-area-adm/Vector carrossel.png" alt="">
+                        <p>Cadastrar carrossel</p>
                     </div>
                 </div>
                 </a>
-                <div class="Botoes-gerenciar">
-                    <a href="editar-adm.php" class="link-area-icon">
-                    <div class="area-icon-gerenciar">
-                        <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                        <p>Editar ADM </p>
+                <div class="Botoes-carrossel">
+                    <a href="editar-carrossel.php" class="link-area-icon">
+                    <div class="area-icon-carrossel">
+                        <img src="../../../Public/imgs/img-area-adm/Vector carrossel.png" alt="">
+                        <p>Editar carrossel </p>
                     </div>
                 </div>
                     </a>
 
-                <div class="Botoes-gerenciar">
-                <a href="listar-colaboradores.php" class="link-area-icon">
-                <div class="area-icon-gerenciar">
-                <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                <p>Listar ADM</p>
-                </div>
-                </a>
 </div>
-
-
             </div>
 
         </div>
     </main>
 
-    <div class="Bola-1-gerenciar">
+    <div class="Bola-1-carrossel">
         <img src="../../../Public/imgs/img-area-adm/bola-1.png" alt="">
     </div>
 
-    <div class="Bola-2-gerenciar">
+    <div class="Bola-2-carrossel">
         <img src="../../../Public/imgs/img-area-adm/bola-2.png" alt="">
     </div>
 
-    <div class="Bola-3-gerenciar">
+    <div class="Bola-3-carrossel">
         <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
     </div>
 
