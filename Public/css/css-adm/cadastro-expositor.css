@@ -291,6 +291,22 @@ input[type="checkbox"]:checked + .modal-container {
     background-color: #007E70;
 }
 
+.expo-resp a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.expo-resp button{
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+}
+
 .termos{
     height: 20px;
     width: 250px;
@@ -326,6 +342,16 @@ input[type="checkbox"]:checked + .modal-container {
     font-size: 20px;
     position: relative;
     left: -45%;
+}
+
+.edital-resp{
+    display: none;
+}
+.expo-resp{
+    display: none;
+}
+.salvar-resp{
+    display: none;
 }
 
 @media(max-width: 1050px) {
@@ -408,7 +434,50 @@ input[type="checkbox"]:checked + .modal-container {
         margin-top: 30px;
     }
 
-   
+    .form-termos{
+        display: none;
+    }
+    .form-finalizar{
+        display: none;
+    }
+
+    .edital-resp{
+        display: flex;
+        flex-direction: row;
+    }
+    .edital-resp button{
+        width: 285%;
+        font-size: 14px;
+    }
+    .termos{
+        width: 150%;
+        font-size: 14px;
+        position: relative;
+        left: 90px;
+    }
+    .caixa-checkbox{
+        width: 100%;
+        position: relative;
+        top: 30px;
+        left: -80px;
+    }
+    .caixa-checkbox input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .caixa-checkbox label{
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .expo-resp{
+        display: block;
+    }
+    .salvar-resp{
+        display: block;
+    }
 
     
      

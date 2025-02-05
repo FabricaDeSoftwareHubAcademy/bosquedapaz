@@ -1,7 +1,3 @@
-<?php 
-    include "../../../Public/assets/adm/menu-adm.html"; 
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,6 +8,9 @@
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
 </head>
 <body>
+<?php 
+    include "../../../Public/assets/adm/menu-adm.html"; 
+?>
     <main class="principal">
         <div class="box">
             <h1 class="titulo">Cadastro de Categorias</h1>
@@ -32,15 +31,17 @@
                             <img src="../../../Public/imgs/cadastro-categorias/upload-regular-96.png" alt="Upload" class="upload">
                         </div>
                 </div>
+                <a href="Area-Adm.php" class="voltar-link">
+                    <div class="b-voltar">
+                        <button class="voltar">
+                            <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                        </button>
+                    </div>
+                </a>
                 <div class="botoes">
                     <button class="cancelar">Cancelar</button>
                     <button class="salvar">Salvar</button>
                 </div>
-                <!-- <div class="btns">
-                    <a href="" class="voltar">
-                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                    </a>
-                </div> -->
             </div>
         </div>
     </main>

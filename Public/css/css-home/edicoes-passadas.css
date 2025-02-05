@@ -148,7 +148,7 @@
     display: none;
 }
 
-.forma-1-edpass{
+.forma-1-edpass {
     position: absolute;
     top: 15vh; 
     right: 80vw; 
@@ -157,7 +157,7 @@
 }
 
 
-.forma-2-edpass{
+.forma-2-edpass {
     position: absolute;
     top: 77vh;
     right: 80vw;
@@ -165,7 +165,7 @@
     width: 20vw; 
 }
 
-.forma-3-edpass{
+.forma-3-edpass {
     position: absolute;
     top: 10vh;
     left: 89vw;
@@ -174,14 +174,14 @@
     height: 100vh;
 }
 
-.forma-4-edpass{
+.forma-4-edpass {
     position: absolute;
     top: 75vh;
     left: 85vw;
     z-index: 1;
 }
 
-.box-edpass{
+.box-edpass {
     width: 85%;
     height: 750px;
     max-width: 2000px;
@@ -192,15 +192,14 @@
     align-items: center;
     border-radius: 12px;
     padding: 20px;
+    margin-top: 4%;
     box-sizing: border-box;
-    transition: all .5s ease;
     position: absolute;
 }
 
-.section-b-edpass{
+.section-b-edpass {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -421,59 +420,24 @@
 
 }
 
-.ed-edpass{
-    margin-top: -50rem;
+.ed-edpass {
+    margin-top: -47rem;
     position: relative;
     text-align: center;
     font-size: 35px;
     z-index: 2;
 }
 
-.area-card-edpass{
+.area-card-edpass {
     width: 80%;
     height: 630px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     margin-top: 10px;
-    margin-left: 190px;
+    margin-left: 175px;
     justify-items: center;
 }
-
-/* .cardRosa-edpass{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 530px;
-    background-image: url('../../imgs/edicoes-passadas-img/edpassCardrosa.svg');
-    background-position: 0%;
-    background-size: cover;
-    background-position: cover;
-    border-radius: 20px;
-    position: relative;
-    z-index: 2;
-    transition: all .3s ease;
-    transform: scale(1.05);
-    justify-items: center;
-    
-}
-
-.cardVerde-edpass{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 530px;
-    background-image: url('../../imgs/edicoes-passadas-img/edpassCardverde.svg');
-    background-position: 0%;
-    background-size: cover;
-    background-position: cover;
-    border-radius: 20px;
-    position: relative;
-    z-index: 2;
-    transition: all .3s ease;
-    transform: scale(1.05);
-    justify-items: center;
-} */
 
 .cardRosa-edpass {
     display: flex;
@@ -510,7 +474,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.card-img-edpass img{
+.card-img-edpass img {
     width: 97%;
     height: 160px;
     object-fit: cover;
@@ -519,14 +483,14 @@
     border-radius: 5px;
 }
 
-.card-content-edpass{
+.card-content-edpass {
     display: flex;
     flex-direction: column;
     padding: 15px;
     line-height: 1.0;
 }
 
-.card-edpass:hover{
+.card-edpass:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -536,21 +500,21 @@
     cursor: pointer;
 }
 
-.area-texto-edpass{
+.area-texto-edpass {
     overflow: auto;
     width: 100%;
     max-height: 120px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-.title-card-edpass{
+.title-card-edpass {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 15px auto;
     margin-top: -5px;
 }
 
-.text-card-edpass{
+.text-card-edpass {
     font-size: 14px;
     line-height: 1.3;
     overflow: hidden;
@@ -558,7 +522,7 @@
     scrollbar-gutter: stable both-edges;
 }
 
-#btn-cardVerde-edpass{
+#btn-cardVerde-edpass {
     display: inline-block;
     width: 80%;
     padding: 10px;
@@ -579,7 +543,7 @@
     border: 1px solid #ffffff;
 }
 
-#btn-cardRosa-edpass{
+#btn-cardRosa-edpass  {
     display: inline-block;
     width: 80%;
     padding: 10px;
@@ -594,7 +558,7 @@
     text-align: center;
 }
 
-#btn-cardRosa-edpass:hover{
+#btn-cardRosa-edpass:hover {
     color: white;
     background-color: #FF3877;
     cursor: pointer;
