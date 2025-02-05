@@ -62,7 +62,7 @@
                 </div>
                 </a>
                 <div class="Botoes-expositores">
-                    <a href="RelatorioExpositor.html" class="link-area-icon">
+                    <a href="listar-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
                         <p>Listar expositores</p>
