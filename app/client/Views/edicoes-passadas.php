@@ -9,62 +9,9 @@
     <script src="../../../Public/js/js-modais/edicoes-passadas-abrir-modais.js" defer></script>
 </head>
 <body class="body-edpass">
-    <header class="cabecalho">
-        <!-- inicio menu -->
-            <nav class="menu">
+<?php include "../../../Public/assets/home/menu-home.html"; ?>
     
-                <div class="logo"><!-- logo -->
-                    <a href="../../../iindex.php"><img src="../../../Public/imgs/img-home/logo.png" alt="Logo"></a>
-                </div>
-    
-                <div class="nav-bar"> <!-- navegação -->
-                    <ul>
-                        <li><a href="../../../iindex.php">Início</a></li>
-                        <li><a href="../../../app/adm/Views/tela-parceiros.php">Parceiros</a></li>
-                        <li><a href="../Views/fale-conosco.php">Fale Conosco</a></li>
-                        <li><a href="../Views/quem-somos.php">Quem Somos?</a></li>
-                    </ul>
-                    
-                    <div class="pesquisar-login">
-                        <div class="pesquisar"> <!-- area de pesquisa -->
-                            <input class="input" type="text" placeholder="Pesquisar por...">
-                            <div class="bola"  onclick="inputShow2()">
-                            </div>
-                        </div>
-                        <div class="login"> <!-- area login -->
-                            <a href="#"><img src="../../../Public/imgs/img-home/login.png" alt="Login"></a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="pequisa-mobile">
-                    <div class="pesquisa"> <!-- area de pesquisa -->
-                        <input class="input" type="text" placeholder="Pesquisar por...">
-                        <div class="bola"  onclick="inputShow()">
-                        </div>
-                    </div>
-                    <div class="menu-icon">
-                        <button onclick="menuShow()"><img class="icon" src="../../../Public/imgs/img-home/menu.png" alt="Menu"></button>
-                    </div>
-                </div>
-            </nav>
-            <!-- fim menu -->
-    
-            <!-- mobile menu -->
-            <div class="mobile-menu"> <!-- navegação -->
-                <ul class="nav-item">
-                    <li class="nav-item"><a href="#">Início</a></li>
-                    <li class="nav-item"><a href="#">Parceiros</a></li>
-                    <li class="nav-item"><a href="#">Fale Conosco</a></li>
-                    <li class="nav-item"><a href="#">Quem Somos?</a></li>
-                </ul>
-    
-                <div class="btn-login"> <!-- area login -->
-                    <button class="btnlogin">Login</button>
-                </div>
-            </div>
-            <!-- mobile menu -->
-    </header>
+   
 
     <!-- formas -->
     <main class="main-edpass">
