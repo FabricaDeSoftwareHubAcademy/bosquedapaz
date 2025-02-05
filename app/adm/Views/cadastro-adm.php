@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <title>Cadastro</title>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
 </head>
 <body>
     <main>

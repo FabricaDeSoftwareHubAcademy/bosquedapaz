@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(../menu-adm.css);
 
 *{
     padding: 0;
@@ -76,6 +77,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     transition: all .5s ease;
+    position: relative;
+    bottom: 6%;
     #linha-vertical {
         height: 640px;
         border-right: 3px solid #FF3877;
@@ -363,7 +366,7 @@ form{
 
     .setaV-cadastro{
         display: block;
-        top: 40vh;
+        top: 38vh;
         right: 15vw;
     }
 
@@ -372,7 +375,7 @@ form{
         align-items: center;
         justify-content: center;
         width: 90%;
-        height: 900px;
+        height: 850px;
     }
 
     .formaCadastro-1 img{
@@ -509,6 +512,11 @@ form{
 
 /* Responsividade Next Hub*/
 @media (min-width: 1024px) and (max-height: 600px) {
+
+    .formaCadastro-1{
+        z-index: -1;
+    }
+
     .button-cad-mt{
         width: 130px;
         height: 25px;
@@ -517,7 +525,7 @@ form{
     }
     .box-cadastro-mt{
         width: 75%;
-        height: 550px;
+        height: 500px;
         overflow-y: scroll;
     }
 
@@ -543,11 +551,16 @@ form{
 
     form{
         left: 185px;
+        background-color: #16286800;
     }
 
     .button-cad-mt{
         right: 155px;
-        margin-top: 598px;
+        margin-top: 600px;
+    }
+
+    .box-cadastro-mt{
+        height: 650px;
     }
     
 }
