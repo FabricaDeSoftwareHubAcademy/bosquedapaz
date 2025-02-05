@@ -26,7 +26,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    gap: 20px;
 }
 
 .btn-editar {
@@ -70,7 +69,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
     border: none;
@@ -151,6 +150,10 @@
     gap: 20px;
 }
 
+.edital-feira{
+    position: relative;
+    left: 10%;
+}
 
 
 .edital-feira a{
@@ -248,7 +251,7 @@ input[type="checkbox"]:checked + .modal-container {
 .botoes-salvar,
 .botoes-cancelar{
     position: relative;
-    left: 60%;
+    left: 50%;
 }
 
 
@@ -311,6 +314,8 @@ input[type="checkbox"]:checked + .modal-container {
     height: 20px;
     width: 250px;
     color: red;
+    position: relative;
+    left: 10%;
 }   
 
 .expositor-kids{
@@ -326,6 +331,11 @@ input[type="checkbox"]:checked + .modal-container {
     
 }
 
+.caixa-checkbox{
+    position: relative;
+    left: 10%;
+}
+
 .caixa-checkbox input[type="checkbox"] {
     width: 25px;
     height: 25px;
@@ -334,6 +344,9 @@ input[type="checkbox"]:checked + .modal-container {
 
 .caixa-checkbox label{
     font-size: 18px;
+    position: relative;
+    top: -10%;
+    
 }
 
 
@@ -444,6 +457,9 @@ input[type="checkbox"]:checked + .modal-container {
     .edital-resp{
         display: flex;
         flex-direction: row;
+        /* justify-content: center;
+        align-items: center;
+        gap: 40px; */
     }
     .edital-resp button{
         width: 285%;
@@ -453,13 +469,14 @@ input[type="checkbox"]:checked + .modal-container {
         width: 150%;
         font-size: 14px;
         position: relative;
-        left: 90px;
+        left: 35%;
+        top: -10px;
     }
     .caixa-checkbox{
         width: 100%;
         position: relative;
-        top: 30px;
-        left: -80px;
+        top: 10px;
+        left: -60px;
     }
     .caixa-checkbox input[type="checkbox"] {
         width: 20px;
@@ -473,8 +490,28 @@ input[type="checkbox"]:checked + .modal-container {
     }
     
     .expo-resp{
-        display: block;
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 10px;
+        gap: 10px;
     }
+
+    .expositor-kids{
+        position: relative;
+        left: 20px;
+    }
+
+    .artistas button{
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .expositor-kids button{
+        width: 90%;
+        font-size: 12px;
+    }
+
     .salvar-resp{
         display: block;
     }
