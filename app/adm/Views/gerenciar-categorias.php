@@ -36,15 +36,6 @@
                 <img src="../../../Public/imgs/img-area-adm/Captura de tela 2024-09-25 163826.png" alt="">
                 </a>
                 </div>
-
-                <div class="Botoes-categ">
-                    <a href="listar-categorias.php" class="link-area-icon">
-                    <div class="area-icon-categ">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                        <p>Listar categorias</p>
-                    </div>
-                </div>
-                </a>
                 <div class="Botoes-categ">
                     <a href="cadastro-categoria.php" class="link-area-icon">
                     <div class="area-icon-categ">
@@ -53,14 +44,24 @@
                     </div>
                 </div>
                     </a>
+                    <div class="Botoes-categ">
+                    <a href="cadastro-categoria.php" class="link-area-icon">
+                    <div class="area-icon-categ">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                        <p>Listar categorias </p>
+                    </div>
+                </div>
+                    </a>
 
                 <div class="Botoes-categ">
-                <a href="editar-categorias.php" class="link-area-icon">
-                <div class="area-icon-categ">
-                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                <p>Editar categoria</p>
+                    <a href="listar-categorias.php" class="link-area-icon">
+                    <div class="area-icon-categ">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                        <p>Visualizar categorias</p>
+                    </div>
                 </div>
                 </a>
+                
 </div>
 
 

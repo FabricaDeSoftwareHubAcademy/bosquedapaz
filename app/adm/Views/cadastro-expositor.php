@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -116,8 +118,14 @@
                     </div>
 
                     <div class="categoria-prod">
-                        <label>Categoria dos produtos</label>
-                        <input type="text" name="" id="" placeholder="-" required>
+                        <label for="optionInput3">Categorias</label>
+                        <input list="options3" id="optionInput3" name="option3" placeholder="Selecione">
+    
+                        <datalist id="options3">
+                            <option value="gastronomia">
+                            <option value="artesanato">
+                            <option value="moda">
+                        </datalist>
                     </div>
 
                     <div class="input-img">
@@ -132,7 +140,7 @@
 
                     <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca de comida:<br>
                         Qual é a medida EXATA dele?</label>
-                    <input list="options1" id="optionInput1" name="option1" placeholder="Digite ou selecione uma opção">
+                    <input list="options1" id="optionInput1" name="option1" placeholder="Selecione">
 
                     <datalist id="options1">
                         <option value="3m²">
@@ -142,7 +150,7 @@
 
                     <label for="optionInput2">Precisa de energia para vender seus produtos?<br>
                         Se sim, para quais voltagens e quais equipamentos:</label>
-                    <input list="options2" id="optionInput2" name="option2" placeholder="Digite ou selecione uma opção">
+                    <input list="options2" id="optionInput2" name="option2" placeholder="selecione">
 
                     <datalist id="options2">
                         <option value="300Kw">
