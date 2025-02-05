@@ -464,11 +464,21 @@ body {
         gap: 15px;
     }
 
+    .formulario-marca-guilherme input {
+        width: 230px;
+        /* background-color: red; */
+    }
+
+    .formulario-marca-guilherme label {
+        width: 220px;
+    }
+
     .informacoes-marca-guilherme {
         gap: 0px;
         flex-direction: column;
         width: 100%;
         margin-bottom: 25px;
+        /* background-color: blue; */
     }
 
     .botoes-guilherme {
@@ -538,6 +548,7 @@ body {
 
     .modal-content-guilherme {
         width: 90vw;
+        height: 20vh;
     }
 
     .modal-content-guilherme h1 {
@@ -566,6 +577,684 @@ body {
         position: relative;
         top: -350px;
     }
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 40px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme h1 {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-informacoes-guilherme label {
+        font-size: 24px;
+    }
+
+    .formulario-informacoes-guilherme input {
+        height: 60px;
+    }
+
+    .logo-marca-guilherme img {
+        margin-top: 5%;
+    }
+
+    .informacoes-marca-guilherme label {
+        width: 390px;
+        margin-top: 5%;
+        font-size: 24px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+    .informacoes-marca-guilherme input {
+        height: 60px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 400px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 60px;
+        height: auto;
+        left: 8vw;
+        top: 23vw;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 70vw;
+        position: relative;
+        top: -350px;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #B1253F;
+    }
+    
+    .btn-validar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #20368B;
+    }
+
+    .btn-ok-guilherme {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 30px;
+    }
+
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 40px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme h1 {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-informacoes-guilherme label {
+        font-size: 24px;
+    }
+
+    .formulario-informacoes-guilherme input {
+        height: 60px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+    .logo-marca-guilherme img {
+        margin-top: 5%;
+    }
+
+    .informacoes-marca-guilherme label {
+        margin-top: 5%;
+        font-size: 24px;
+        width: 390px;
+    }
+
+    .informacoes-marca-guilherme input {
+        height: 60px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 400px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 60px;
+        height: auto;
+        left: 8vw;
+        top: 23vw;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 70vw;
+        position: relative;
+        top: -350px;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #B1253F;
+    }
+    
+    .btn-validar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #20368B;
+    }
+
+    .btn-ok-guilherme {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 30px;
+    }
+
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 40px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme h1 {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-informacoes-guilherme label {
+        font-size: 24px;
+    }
+
+    .formulario-informacoes-guilherme input {
+        height: 60px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+    .logo-marca-guilherme img {
+        margin-top: 5%;
+    }
+
+    .informacoes-marca-guilherme label {
+        margin-top: 5%;
+        font-size: 24px;
+        width: 390px;
+    }
+
+    .informacoes-marca-guilherme input {
+        height: 60px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 400px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 60px;
+        height: auto;
+        left: 8vw;
+        top: 23vw;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 70vw;
+        position: relative;
+        top: -350px;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #B1253F;
+    }
+    
+    .btn-validar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #20368B;
+    }
+
+    .btn-ok-guilherme {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 30px;
+    }
+
     .informacoes-expositor-guilherme {
         display: flex;
         justify-content: center;
