@@ -75,16 +75,18 @@
                 </div>
                 <p>Sustentabilidade</p>
             </div>
-            <div class="item">
-                <div class="bolota" id="b10">
-                    <img src="../../../Public/assets/icons/icones-categorias/plus-circle.png" alt="" class="icon-item">
-                </div>
-                <p>Nova Categoria</p>
-            </div>
+                <a href="editar-categorias.php" class="item">
+        <div class="bolota" id="b10">
+            <img src="../../../Public/assets/icons/icones-categorias/plus-circle.png" alt="" class="icon-item">
         </div>
-        <div>
-        <img src="../../assets/icons/icones-categorias/voltar.png" alt="" class="icon-voltar">
-        </div>
+        <p>Nova Categoria</p>
+    </a>
+
+    <div class="btns">
+            <a href="gerenciar-categorias.php" class="voltar">
+            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            </a>
+        </div> 
     </main>
     <script src="../../js/js-menu/js-menu.js"></script>
 </body>
