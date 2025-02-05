@@ -3,73 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório Expositor</title>
-    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
+    <title>Listar Expositores</title>
+    <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
+    <!-- <link rel="stylesheet" href="../../../Public/css/menu-home.css"> -->
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-relatorio-expositor.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="cabecalho">
-        <!-- inicio menu -->
-            <nav class="menu">
-    
-                <div class="logo"><!-- logo -->
-                    <a href="index.html"><img src="../img/logo.png" alt="Logo"></a>
-                </div>
-    
-                <div class="nav-bar"> <!-- navegação -->
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Parceiros</a></li>
-                        <li><a href="#">Fale Conosco</a></li>
-                        <li><a href="#">Quem Somos?</a></li>
-                    </ul>
-                    
-                    <div class="pesquisar-login">
-                        <div class="pesquisar"> <!-- area de pesquisa -->
-                            <input class="input" type="text" placeholder="Pesquisar por...">
-                            <div class="bola"  onclick="inputShow2()">
-                            </div>
-                        </div>
-                        <div class="login"> <!-- area login -->
-                            <a href="#"><img src="../img/login.png" alt="Login"></a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="pequisa-mobile">
-                    <div class="pesquisa"> <!-- area de pesquisa -->
-                        <input class="input" type="text" placeholder="Pesquisar por...">
-                        <div class="bola"  onclick="inputShow()">
-                        </div>
-                    </div>
-                    <div class="menu-icon">
-                        <button onclick="menuShow()"><img class="icon" src="../img/menu.png" alt="Menu"></button>
-                    </div>
-                </div>
-            </nav>
-            <!-- fim menu -->
-    
-            <!-- mobile menu -->
-            <div class="mobile-menu"> <!-- navegação -->
-                <ul class="nav-item">
-                    <li class="nav-item"><a href="#">Início</a></li>
-                    <li class="nav-item"><a href="#">Parceiros</a></li>
-                    <li class="nav-item"><a href="#">Fale Conosco</a></li>
-                    <li class="nav-item"><a href="#">Quem Somos?</a></li>
-                </ul>
-    
-                <div class="btn-login"> <!-- area login -->
-                    <button class="btnlogin">Login</button>
-                </div>
-            </div>
-            <!-- mobile menu -->
-        </header>
+
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
+
+  <script src="../js/main.js"></script>
 
         <main class="principal">
             <div class="box">
-                <h2>RELATÓRIO EXPOSITOR</h2>
+                <h2>LISTAR EXPOSITOR</h2>
                 <div class="container">
                     <div class="search-bar">
                       <label for="status">Procurar</label>
@@ -260,7 +209,7 @@
                       </tbody>
                     </table>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="gerenciar-expositores.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>  
@@ -273,6 +222,6 @@
                 <img class="bola-azul3"   src="../img/Elemento3.ElipseAzul.png" alt="">
             </div>
 
-    <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
+  
 </body>
 </html>
