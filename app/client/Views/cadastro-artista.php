@@ -24,41 +24,38 @@
                             <input type="file" name="foto-per" id="foto-per" class="foto-per">
                             <label for="" class="label-foper">arraste sua foto aqui</label>
                         </div>
-                        <div class="inputs-pessoa">
-                            <div class="area-input">
-                                <label for="" class="label-input">Nome:</label>
-                                <input type="text" name="nome" id="nome" class="input-dados">
+                        <div class="div-input-pessoa">
+                            <div class="inputs-pessoa">
+                                <div class="area-input">
+                                    <label for="" class="label-input">Nome:</label>
+                                    <input type="text" name="nome" id="nome" class="input-dados">
+                                </div>
+                                <div class="area-input">
+                                    <label for="" class="label-input">Endereço:</label>
+                                    <input type="text" name="endereco" id="endereco" class="input-dados">
+                                </div>
+                                <div class="area-input">
+                                    <label for="" class="label-input">E-mail:</label>
+                                    <input type="tel" name="email" id="email " class="input-dados">
+                                </div>
                             </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Endereço:</label>
-                                <input type="text" name="endereco" id="endereco" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">E-mail:</label>
-                                <input type="tel" name="email" id="email " class="input-dados">
-                            </div>
-                        </div>
-                        <div class="inputs-pessoa">
-                            <div class="area-input">
-                                <label for="" class="label-input">Telefone:</label>
-                                <input type="tel" name="telefone" id="telefone" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Link Instagram:</label>
-                                <input type="text" name="link_instagram " id="link_instagram " class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Nome de usuário:</label>
-                                <input type="text" name="usuario" id="usuario" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Senha:</label>
-                                <input type="text" name="senha" id="senha" class="input-dados">
+                            <div class="inputs-pessoa">
+                                <div class="area-input">
+                                    <label for="" class="label-input">Telefone:</label>
+                                    <input type="tel" name="telefone" id="telefone" class="input-dados">
+                                </div>
+                                <div class="area-input">
+                                    <label for="" class="label-input">Link Instagram:</label>
+                                    <input type="text" name="link_instagram " id="link_instagram " class="input-dados">
+                                </div>
+                                <div class="area-input">
+                                    <label for="" class="label-input">Nome de usuário:</label>
+                                    <input type="text" name="usuario" id="usuario" class="input-dados">
+                                </div>
+                                <div class="area-input">
+                                    <label for="" class="label-input">Senha:</label>
+                                    <input type="text" name="senha" id="senha" class="input-dados">
+                                </div>
                             </div>
                         </div>
                     </div>
