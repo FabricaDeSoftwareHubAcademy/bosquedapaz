@@ -10,7 +10,7 @@
 
 <body>
 
-    <?php include "../../../Public/assets/home/menu-home-client.html"; ?>
+    <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <div class="all-box">
         <div class="esco-cat">
