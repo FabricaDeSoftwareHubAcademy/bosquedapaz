@@ -19,85 +19,27 @@
                 <div class="container">
                     <div class="search-bar">
                       <label for="status">Procurar</label>
-                      <input type="text" id="status" placeholder="Expositor" />
+                      <input type="text" id="status" placeholder="Parceiros" />
                       <button class="search-button">BUSCAR</button>
                     </div>
                 
                     <table class="collaborators-table">
                       <thead>
                         <tr>
-                          <th class="usuario-col">Usuário</th>
+                          <th class="usuario-col">ID</th>
                           <th>Nome</th>
-                          <th class="email-col">E-mail</th>
-                          <th class="fone-col">Telefone</th>
-                          <th class="barraca-col">N. Barraca</th>
+                          <th class="email-col">Descrição</th>
                           <th>Status</th>
                           <th>Editar</th>
                         </tr>
                       </thead>
                       <tbody>
                         <!-- Rascunho  -->
+                       
                         <tr>
-                          <td class="usuario-col">01</td>
-                          <td>Carla  Costa</td>
-                          <td class="email-col">carla.costa123@gmail.com</td>
-                          <td class="fone-col">(67) 98123-4567</td>
-                          <td class="barraca-col">6</td>
-                          <td><button class="status active">Ativo</button></td>
-                          <td>
-                              <a href="editar-adm.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="usuario-col">02</td>
-                          <td>Juan Quintela</td>
-                          <td class="email-col">juan.quintela987@gmail.com</td>
-                          <td class="fone-col">(67) 98234-5678</td>
-                          <td class="barraca-col">12</td>
-                          <td><button class="status inactive">Inativo</button></td>
-                          <td>
-                              <a href="edicao-expositor.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="usuario-col">03</td>
-                          <td>Julia Souza</td>
-                          <td class="email-col">julia.souza456@gmail.com</td>
-                          <td class="fone-col">(67) 98945-6789</td>
-                          <td class="barraca-col">10</td>
-
-                          <td><button class="status active">Ativo</button></td>
-                          <td>
-                              <a href="edicao-expositor.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                          </td>
-                        </tr>
-                        <tr>
-                            <td class="usuario-col">13</td>
-                            <td>Pedro Alves</td>
-                            <td class="email-col">pedro.alves789@gmail.com</td>
-                            <td class="fone-col">(67) 98845-6789</td>
-                          <td class="barraca-col">6</td>
-
-                            <td><button class="status inactive">Inativo</button></td>
-                            <td>
-                              <a href="edicao-expositor.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </td>
-                          </tr>
-                        <tr>
-                            <td class="usuario-col">05</td>
-                            <td>Nara Helena</td>
-                            <td class="email-col">nara.helena126@gmail.com</td>
-                            <td class="fone-col">(67) 98345-6789</td>
-                          <td class="barraca-col">45</td>
-
+                            <td class="usuario-col">1</td>
+                            <td>SENAC Serviço Nacional de Aprendizagem Comercial</td>
+                            <td class="email-col"></td>                       
                             <td><button class="status active">Ativo</button></td>
                             <td>
                               <a href="edicao-expositor.html">
@@ -106,12 +48,10 @@
                             </td>
                           </tr>
                         <tr>
-                            <td class="usuario-col">06</td>
-                            <td>Fernanda Santos</td>
-                            <td class="email-col">fernanda.santos126@gmail.com</td>
-                            <td class="fone-col">(67) 97345-6623</td>
-                          <td class="barraca-col">24</td>
-
+                        <tr>
+                            <td class="usuario-col">2</td>
+                            <td>Shopping Bosque dos Ipês</td>
+                            <td class="email-col"></td>
                             <td><button class="status active">Ativo</button></td>
                             <td>
                               <a href="edicao-expositor.html">
@@ -120,12 +60,9 @@
                             </td>
                           </tr>
                         <tr>
-                            <td class="usuario-col">07</td>
-                            <td>Emanuelle Valadares</td>
-                            <td class="email-col">manu.vala777@gmail.com</td>
-                            <td class="fone-col">(67) 98885-6888</td>
-                          <td class="barraca-col">26</td>
-
+                            <td class="usuario-col">3</td>
+                            <td>SEBRAE Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
+                            <td class="email-col"></td>
                             <td><button class="status inactive">Inativo</button></td>
                             <td>
                               <a href="edicao-expositor.html">
@@ -134,12 +71,9 @@
                             </td>
                           </tr>
                         <tr>
-                            <td class="usuario-col">08</td>
-                            <td>Kauan Ribeiro</td>
-                            <td class="email-col">kauan.ribeiro753@gmail.com</td>
-                            <td class="fone-col">(67) 99942-1110</td>
-                          <td class="barraca-col">23</td>
-
+                            <td class="usuario-col">4</td>
+                            <td>Prefeitura Municipal De Campo Grande MS</td>
+                            <td class="email-col"></td>
                             <td><button class="status active">Ativo</button></td>
                             <td>
                               <a href="edicao-expositor.html">
@@ -147,55 +81,9 @@
                               </a>
                             </td>
                           </tr>
-                        <tr>
-                            <td class="usuario-col">09</td>
-                            <td>Vini Count</td>
-                            <td class="email-col">count.vini99@gmail.com</td>
-                            <td class="fone-col">(67) 99210-2566</td>
-                          <td class="barraca-col">75</td>
-
-                            <td><button class="status inactive">Inativo</button></td>
-                            <td>
-                              <a href="edicao-expositor.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </td>
-                          </tr>
-                        <tr>
-                            <td class="usuario-col">10</td>
-                            <td>Isabela Oliveira</td>
-                            <td class="email-col">isa.bela555@gmail.com</td>
-                            <td class="fone-col">(67) 96841-5517</td>
-                          <td class="barraca-col">2</td>
-
-                            <td><button class="status active">Ativo</button></td>
-                            <td>
-                              <a href="edicao-expositor.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </td>
-                          </tr>
-                        <tr>
-                            <td class="usuario-col">11</td>
-                            <td>Kelvin Bach</td>
-                            <td class="email-col">kelvin.bach0208@gmail.com</td>
-                            <td class="fone-col">(67) 90208-5623</td>
-                          <td class="barraca-col">44</td>
-
-                            <td><button class="status inactive">Inativo</button></td>
-                            <td>
-                              <a href="edicao-expositor.html">
-                                  <i class="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </td>
-                          </tr>
-                        <tr>
-                            <td class="usuario-col">12</td>
-                            <td>Paulo Henrique</td>
-                            <td class="email-col">paulo.henrique33@gmail.com</td>
-                            <td class="fone-col">(67) 98345-6789</td>
-                          <td class="barraca-col">7</td>
-
+                            <td class="usuario-col">5</td>
+                            <td>SECTUR Campo Grande</td>
+                            <td class="email-col"></td>
                             <td><button class="status active">Ativo</button></td>
                             <td>
                               <a href="edicao-expositor.html">
