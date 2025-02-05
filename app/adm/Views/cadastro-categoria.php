@@ -22,8 +22,8 @@
                         <input type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
                         <h3>Cor da Categoria:</h3>
                         <img src="../../../Public/imgs/cadastro-categorias/roleta.svg" alt="Tabela Cores"class="roleta">
-                        <h3>Fill:</h3>
-                        <input type="text" name="corcat" id="corcat" placeholder="000000">
+                        <h3>RGB:</h3>
+                        <input class="botao-cor" name="cor_sala" type="color">
                     </div>
                 <div class="separacao">
                         <h3>Icone:</h3>

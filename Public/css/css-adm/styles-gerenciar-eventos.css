@@ -111,12 +111,14 @@
 }
 
 .tab-eventos thead tr th{
+    font-size: 80%;
     text-align: center;
 }
 
 .tab-eventos tbody tr td{
+    width: 10%;
     text-align: center;
-    height: 37px;
+    height: 15%;
 }
 
 .input-pesquisar input{
@@ -160,10 +162,12 @@
 }
 
 table tbody tr:nth-child(odd) {
+    font-size: 80%;
     background-color: white; /* Cor clara */
   }
   
 table tbody tr:nth-child(even) {
+    font-size: 80%;
     background-color: #e6e6e6; /* Cor mais escura */
   }
 
@@ -173,22 +177,22 @@ tbody tr td .finalizado{
     color: white;
     background-color: rgb(40, 180, 71);
     border: none;
-    width: 105px;
+    width: 35%;
     height: 26px;
     text-align: center;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 75%;
 }
 
 tbody tr td .em_curso{
     color: white;
     background-color: rgb(255, 202, 44);
     border: none;
-    width: 105px;
+    width: 35%;
     height: 26px;
     text-align: center;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 75%;
 }
 
 
@@ -216,9 +220,9 @@ tbody tr td .em_curso{
     width: 50%;
     height: 12%;
     align-items: center;
-    position: absolute;
-    bottom: 16px;
-    left: 100px;
+    position: relative;
+    bottom: -50px;
+    left: -25%;
     display: flex;
     gap: 50px;
     cursor: default;
@@ -232,7 +236,7 @@ tbody tr td .em_curso{
     justify-self: left;
 }
 .voltar-link .btn-voltar{
-    width: 70%;
+    width: 60%;
     height: 50%;
 }
 
@@ -374,15 +378,19 @@ tbody tr td .em_curso{
     }
 
     .voltar-link{
-        bottom: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: -10.5%;
         right: 15px;
-        left: 15px;
+        /* left: 30%; */
     }
 
     .b-voltar{
+        position: absolute;
         width: 40%;
         /* height: 50%; */
-        bottom: -18.5%;
+        /* bottom: -18.5%; */
         left: 5%;
     }
 
@@ -454,13 +462,13 @@ tbody tr td .em_curso{
         font-size: 16px;
     }
 
-    .finalizado {
-        width: 90%;
-        font-size: 12px
+    tbody tr td .finalizado {
+        width: 80%;
+        font-size: 80%;
     }
 
-    .em_curso {
+    tbody tr td .em_curso {
         width: 80%;
-        font-size: 15px
+        font-size: 80%;
     }
 }
