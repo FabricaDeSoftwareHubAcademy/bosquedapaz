@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 
-.uploads.active > .up-img {
+.uploads.active>.up-img {
     opacity: 0.7;
 }
 
@@ -50,7 +50,8 @@
 }
 
 .btn-editar:hover .editar {
-    color: #007E70;;
+    color: #007E70;
+    ;
 }
 
 @media screen and (max-width: 1190px) {
@@ -75,7 +76,7 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     .up {
         width: 250px;
         height: auto;
@@ -116,7 +117,7 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     .up {
         width: 280px;
         height: auto;

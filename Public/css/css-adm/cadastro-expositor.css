@@ -65,7 +65,7 @@
 }
 
 
-.formularios{
+.formularios {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -75,15 +75,15 @@
     border: none;
 }
 
-.formularios div{
+.formularios div {
     display: flex;
     flex-direction: column;
 }
 
-.formularios input{
+.formularios input {
     width: 40vh;
     height: 5vh;
-    margin: 10px;   
+    margin: 10px;
     padding-left: 10px;
     border-radius: 5px;
     border: none;
@@ -91,49 +91,52 @@
     border-right: 2px solid #9d9fa1;
 }
 
-.caixa-formulario label{
+.caixa-formulario label {
     font-size: 14px;
     margin-bottom: -10px;
     margin-left: 10px;
 }
 
-.caixa-contato input{
+.caixa-contato input {
     width: 170px;
     margin: 20px;
 }
 
 .caixa-contato label {
-    font-size: 14px; 
+    font-size: 14px;
     margin-bottom: -8px;
     margin-left: 20px;
 }
-.carregar-src{
+
+.carregar-src {
     background-color: rgb(126, 126, 126);
     width: 120px;
     height: 30px;
     border: none;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
-.carregar-src a{
+
+.carregar-src a {
     color: white;
     text-decoration: none;
 }
 
-.carregar-src{
+.carregar-src {
     display: none;
 }
-.form-opc{
+
+.form-opc {
     position: relative;
     top: -40px;
 }
 
-.form-opc label{
+.form-opc label {
     font-size: 14px;
     margin-bottom: -8px;
     margin-left: 10px;
 }
 
-.upload{
+.upload {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +145,7 @@
     margin-top: 15px;
 }
 
-.form-finalizar{
+.form-finalizar {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -150,18 +153,18 @@
     gap: 20px;
 }
 
-.edital-feira{
+.edital-feira {
     position: relative;
     left: 10%;
 }
 
 
-.edital-feira a{
+.edital-feira a {
     text-decoration: none;
     color: white;
 }
- 
-.edital-feira button{
+
+.edital-feira button {
     height: 35px;
     width: 190px;
     border-radius: 10px;
@@ -172,7 +175,7 @@
 
 
 label#salvar-btn {
-    display: inline-block;  
+    display: inline-block;
     background-color: #FF3877;
     color: white;
     padding: 9px 50px;
@@ -201,7 +204,7 @@ label#salvar-btn {
     z-index: 5;
 }
 
-input[type="checkbox"]:checked + .modal-container {
+input[type="checkbox"]:checked+.modal-container {
     opacity: 1;
     pointer-events: auto;
 }
@@ -222,7 +225,7 @@ input[type="checkbox"]:checked + .modal-container {
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
-  
+
 }
 
 .botoes label {
@@ -236,7 +239,7 @@ input[type="checkbox"]:checked + .modal-container {
 }
 
 .salvar {
-    display: inline-block;  
+    display: inline-block;
     background-color: #FF3877;
     color: white;
     padding: 9px 50px;
@@ -249,14 +252,14 @@ input[type="checkbox"]:checked + .modal-container {
 }
 
 .botoes-salvar,
-.botoes-cancelar{
+.botoes-cancelar {
     position: relative;
     left: 50%;
 }
 
 
-.btn-cancelar{
-    display: inline-block;  
+.btn-cancelar {
+    display: inline-block;
     background-color: #4CAF50;
     color: white;
     padding: 13px 40px;
@@ -267,24 +270,24 @@ input[type="checkbox"]:checked + .modal-container {
     color: white;
     font-size: 18px;
     text-transform: uppercase;
-    
+
 }
 
 
-.form-termos{
+.form-termos {
     width: 100%;
     display: flex;
     justify-content: start;
     flex-direction: row;
 }
 
-.form-termos a{
+.form-termos a {
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
 
-.form-termos button{
+.form-termos button {
     height: 35px;
     width: 185px;
     border: none;
@@ -294,13 +297,13 @@ input[type="checkbox"]:checked + .modal-container {
     background-color: #007E70;
 }
 
-.expo-resp a{
+.expo-resp a {
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
 
-.expo-resp button{
+.expo-resp button {
     height: 35px;
     width: 185px;
     border: none;
@@ -310,28 +313,28 @@ input[type="checkbox"]:checked + .modal-container {
     background-color: #007E70;
 }
 
-.termos{
+.termos {
     height: 20px;
     width: 250px;
     color: red;
     position: relative;
     left: 10%;
-}   
+}
 
-.expositor-kids{
+.expositor-kids {
     height: 50px;
     width: 200px;
     position: relative;
     left: 26%;
 }
 
-.artistas{
+.artistas {
     height: 45px;
     width: 200px;
-    
+
 }
 
-.caixa-checkbox{
+.caixa-checkbox {
     position: relative;
     left: 10%;
 }
@@ -342,33 +345,35 @@ input[type="checkbox"]:checked + .modal-container {
     cursor: pointer;
 }
 
-.caixa-checkbox label{
+.caixa-checkbox label {
     font-size: 18px;
     position: relative;
     top: -10%;
-    
+
 }
 
 
-.voltar{
+.voltar {
     color: black;
     font-size: 20px;
     position: relative;
     left: -45%;
 }
 
-.edital-resp{
+.edital-resp {
     display: none;
 }
-.expo-resp{
+
+.expo-resp {
     display: none;
 }
-.salvar-resp{
+
+.salvar-resp {
     display: none;
 }
 
 @media(max-width: 1050px) {
-    .bolas-fundo .bola-verde1{
+    .bolas-fundo .bola-verde1 {
         width: 80px;
         left: -20px;
     }
@@ -379,18 +384,18 @@ input[type="checkbox"]:checked + .modal-container {
     }
 
     .bolas-fundo .bola-rosa {
-       width: 200px;
+        width: 200px;
         right: -50px;
         bottom: -50px;
     }
 
-    .box{
+    .box {
         display: flex;
     }
 }
 
 @media(max-width: 650px) {
-    .bolas-fundo .bola-verde1{
+    .bolas-fundo .bola-verde1 {
         display: none;
     }
 
@@ -405,11 +410,11 @@ input[type="checkbox"]:checked + .modal-container {
     .title {
         font-size: 12px;
     }
-    
-    .principal{
+
+    .principal {
         overflow-y: auto;
     }
-       
+
     .box {
         height: auto;
         display: flex;
@@ -418,78 +423,85 @@ input[type="checkbox"]:checked + .modal-container {
         padding: 0;
     }
 
-    .formularios{
+    .formularios {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .caixa-contato{
+    .caixa-contato {
         width: 100%;
         margin-left: -5%;
     }
-    .caixa-contato input{
+
+    .caixa-contato input {
         width: 95%;
     }
 
-    .upload{
+    .upload {
         display: none;
     }
 
-    .carregar-src{
+    .carregar-src {
         display: block;
         position: relative;
         left: 45%;
         top: -13px;
     }
 
-    .form-opc{
+    .form-opc {
         margin-top: 30px;
     }
 
-    .form-termos{
-        display: none;
-    }
-    .form-finalizar{
+    .form-termos {
         display: none;
     }
 
-    .edital-resp{
+    .form-finalizar {
+        display: none;
+    }
+
+    .edital-resp {
         display: flex;
         flex-direction: row;
         /* justify-content: center;
         align-items: center;
         gap: 40px; */
     }
-    .edital-resp button{
+
+    .edital-resp button {
         width: 285%;
         font-size: 14px;
     }
-    .termos{
+
+    .termos {
         width: 150%;
         font-size: 14px;
         position: relative;
         left: 35%;
         top: -10px;
     }
-    .caixa-checkbox{
+
+    .caixa-checkbox {
         width: 100%;
         position: relative;
         top: 10px;
         left: -60px;
     }
+
     .caixa-checkbox input[type="checkbox"] {
         width: 20px;
         height: 20px;
         cursor: pointer;
     }
-    .caixa-checkbox label{
+
+    .caixa-checkbox label {
         font-size: 14px;
         justify-content: center;
         align-items: center;
     }
-    
-    .expo-resp{
+
+    .expo-resp {
         width: 100%;
         display: flex;
         position: relative;
@@ -497,30 +509,30 @@ input[type="checkbox"]:checked + .modal-container {
         gap: 10px;
     }
 
-    .expositor-kids{
+    .expositor-kids {
         position: relative;
         left: 29px;
     }
 
-    .artistas button{
+    .artistas button {
         width: 90%;
         font-size: 12px;
         position: relative;
         left: 5px;
     }
 
-    .expositor-kids button{
+    .expositor-kids button {
         width: 90%;
         font-size: 12px;
     }
 
-    .salvar-resp{
+    .salvar-resp {
         display: flex;
         position: relative;
         top: 20px;
     }
 
-    .salvar-resp{
+    .salvar-resp {
         display: flex;
         flex-direction: row;
         position: relative;
@@ -528,13 +540,13 @@ input[type="checkbox"]:checked + .modal-container {
         gap: 5px;
     }
 
-    .voltar{
+    .voltar {
         position: relative;
         top: 30px;
     }
-     
-    
-    
+
+
+
 
 
 

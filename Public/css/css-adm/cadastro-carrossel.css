@@ -39,6 +39,7 @@
     position: relative;
     transition: all .2s ease-in-out;
 }
+
 .up:hover {
     border-bottom: 0px solid #007E70;
     border-right: 0px solid #007E70;
@@ -69,7 +70,8 @@
     display: flex;
     margin: auto;
 }
-.up:hover .up-img{
+
+.up:hover .up-img {
     color: black;
 }
 
@@ -171,7 +173,7 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     .up {
         width: 180px;
         height: 190px;

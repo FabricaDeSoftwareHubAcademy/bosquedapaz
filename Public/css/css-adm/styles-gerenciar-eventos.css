@@ -11,19 +11,19 @@
     overflow: hidden;
 }
 
-.titulo{
+.titulo {
     text-transform: uppercase;
     font-size: 30px;
 }
 
-.principal{
+.principal {
     width: 100vw;
     height: 100vh;
     z-index: 1;
     margin-top: 3%;
 }
 
-.principal .box{
+.principal .box {
     width: 90%;
     height: 80%;
     background-color: rgba(248, 245, 246, 0.65);
@@ -39,7 +39,7 @@
 }
 
 
-.form-box{
+.form-box {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -122,7 +122,7 @@
     width: 100%;
 }
 
-.tab-eventos thead tr, 
+.tab-eventos thead tr,
 .tab-eventos tbody tr {
     display: table;
     width: 100%;
@@ -134,7 +134,7 @@
     height: 15%;
 }
 
-.input-pesquisar input{
+.input-pesquisar input {
     width: 60%;
     /* padding: 50px; */
     height: 50px;
@@ -151,16 +151,16 @@
     transition: border-color 0.3s ease;
     border-top: none;
     border-left: none;
-    border-bottom: 2.93px solid rgb(32,54,159);
-    border-right: 2.93px solid rgb(32,54,159);
+    border-bottom: 2.93px solid rgb(32, 54, 159);
+    border-right: 2.93px solid rgb(32, 54, 159);
 }
 
-.input-pesquisar button{
+.input-pesquisar button {
     width: 178px;
     /* height: 49px; */
     font-size: 28px;
     color: white;
-    background-color: rgb(32,54,159);
+    background-color: rgb(32, 54, 159);
     border-radius: 10px;
     border: none;
     display: flex;
@@ -169,24 +169,26 @@
     /* margin-bottom: 8px; */
 }
 
-.input-pesquisar h3{
+.input-pesquisar h3 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 table tbody tr:nth-child(odd) {
     font-size: 80%;
-    background-color: white; /* Cor clara */
-  }
-  
+    background-color: white;
+    /* Cor clara */
+}
+
 table tbody tr:nth-child(even) {
     font-size: 80%;
-    background-color: #e6e6e6; /* Cor mais escura */
-  }
+    background-color: #e6e6e6;
+    /* Cor mais escura */
+}
 
-  
 
-tbody tr td .finalizado{
+
+tbody tr td .finalizado {
     color: white;
     background-color: rgb(40, 180, 71);
     border: none;
@@ -197,7 +199,7 @@ tbody tr td .finalizado{
     font-size: 75%;
 }
 
-tbody tr td .em_curso{
+tbody tr td .em_curso {
     color: white;
     background-color: rgb(255, 202, 44);
     border: none;
@@ -218,19 +220,19 @@ tbody tr td .em_curso{
     gap: 50px;
 }
 
-.botoes a{
+.botoes a {
     display: flex;
     flex-direction: row;
     text-decoration: none;
 }
 
-.botoes a button{
+.botoes a button {
     height: 100%;
     width: 100%;
     display: flex;
 }
 
-.voltar-link{
+.voltar-link {
     width: 50%;
     height: 12%;
     align-items: center;
@@ -243,22 +245,23 @@ tbody tr td .em_curso{
 
 }
 
-.voltar{
+.voltar {
     background-color: transparent;
     border: none;
     justify-content: left;
     justify-self: left;
 }
-.voltar-link .btn-voltar{
+
+.voltar-link .btn-voltar {
     width: 60%;
     height: 50%;
 }
 
-.btn-voltar{
+.btn-voltar {
     cursor: pointer;
 }
 
-.novo-evento{
+.novo-evento {
     height: 34px;
     border-radius: 8px;
     color: white;
@@ -271,7 +274,7 @@ tbody tr td .em_curso{
     /* width: 150px; */
 }
 
-.buscar{
+.buscar {
     cursor: pointer;
 }
 
@@ -334,13 +337,13 @@ tbody tr td .em_curso{
 }
 
 
-.open-modal{
+.open-modal {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .principal {
         width: 100%;
         height: 100vh;
@@ -391,7 +394,7 @@ tbody tr td .em_curso{
         border-radius: 8px;
     }
 
-    .voltar-link{
+    .voltar-link {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -400,7 +403,7 @@ tbody tr td .em_curso{
         /* left: 30%; */
     }
 
-    .b-voltar{
+    .b-voltar {
         position: absolute;
         width: 40%;
         /* height: 50%; */
@@ -408,7 +411,7 @@ tbody tr td .em_curso{
         left: 5%;
     }
 
-    .voltar-link .voltar{
+    .voltar-link .voltar {
         left: -19px;
         width: 100%;
         height: 100%;
@@ -457,17 +460,17 @@ tbody tr td .em_curso{
         padding: 10px;
     }
 
-    .div-tabela{
+    .div-tabela {
         width: 100%;
         height: 80%;
     }
 
-    .input-pesquisar{
+    .input-pesquisar {
         width: 100%;
         height: 100%;
     }
 
-    .input-pesquisar button{
+    .input-pesquisar button {
         width: 25%;
         font-size: 12px;
     }
