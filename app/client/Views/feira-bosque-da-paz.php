@@ -34,6 +34,7 @@
 
     <!-- importando mapa -->
     <?php include "../../../Public/assets/home/mapa.html"; ?>
+    <?php include "../../../Public/assets/home/parceiros.html"; ?>
 
     <!-- importando o rodape -->
     <?php include "../../../Public/assets/home/rodape.html"; ?>

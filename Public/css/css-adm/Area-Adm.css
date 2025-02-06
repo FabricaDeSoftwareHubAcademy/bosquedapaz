@@ -126,12 +126,22 @@
 }
 
 @media screen and (max-width: 720px) {
-    .area-botao-gabriel{
+    .area-icon-gabriel{
         width: 100%;
         padding: 20px;
         gap: 20px;
         display: flex;
+        height: 100%;
     }
+
+    .area-botao-gabriel{
+        gap: 0px;
+        padding: 0px;
+        width: 100%;
+
+
+    }
+
     .Botoes-gabriel{
         width: 100px;
         height: 100px;

@@ -1358,6 +1358,7 @@
     .box-principal-ProEv{
         height: 100%;
         top: 12%;
+        background-color: aqua;
     }
 
     .box-decorativa-ProEv{
@@ -1366,7 +1367,7 @@
 }
 
 /* Responsividade Ipad Pro: */
-@media (min-width: 1024px) and (min-height: 1366px){
+@media screen and (min-height: 1366px){
     .area-principal-ProEv{
         height: 1255px;
     }
@@ -1452,27 +1453,27 @@
         height: 40%;
         #linha-decorativa-ProEv{
             height: 180px;
-            bottom: 28%;
+            bottom: 30%;
             right: 55%;
         }
     }
 
     .div-decoratica-do-card-ProEv{
-        bottom: 28%;
+        bottom: 26%;
         left: 2%;
     }
 
     .card-atracao-ProEv{
         #linha-decorativa2-ProEv{
-            height: 150px;
-            top: 80%;
+            height: 185px;
+            top: 100%;
             left: 26%;
         }
     }
 
     .button-saibamais-ProEv{
-        top: 32%;
-        left: 24%;
+        top: 35%;
+        left: 34%;
     }
 
     .atracao-ProEv{
@@ -1495,7 +1496,7 @@
 
     .Nome-atracao-proev{
         font-size: 30px;
-        top: 2%;
+        top: 5%;
     }
 
 

@@ -132,8 +132,12 @@
 
 
                     <div class="btns-salve-reset">
-                        <button type="reset" class="btn-form btn-cancel">Cancelar</button>
-                        <button type="submit"class="btn-form btn-save">Cadastra-se</button>
+                        <button type="reset" class="btn-form btn-cancel">
+                        <a href="escolher-cadastro.php" class="link-cas-expositor">Cancelar</a>
+                        </button>
+                        <button type="submit"class="btn-form btn-save">
+                        <a href="../../../index.php" class="link-cas-expositor">Cadastra-se</a>
+                        </button>
                     </div>
                 </form>
             </div>

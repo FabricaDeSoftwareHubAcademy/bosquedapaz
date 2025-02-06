@@ -57,5 +57,7 @@
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="deco2" class="decoracao2-guilherme">
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="deco3" class="decoracao3-guilherme">
     </div>
+
+    <script src="../../../Public/js/js-home/main.js"></script>
 </body>
 </html>

@@ -18,15 +18,30 @@
             <h1 class="titulo">Escolha a modalidade</h1>
 
             <div class="all-content">
-                <a href="cadastro-expositor.php" class="link-cadastro-expositor">
-                    <div class="caixa"><img src="../../../Public/imgs/img-home/expositor.png" alt="" class="img-escolha"></div>
-                </a>
-                <a href="cadastro-expositor-kids.php" class="link-cadastro-expositor">
-                    <div class="caixa"><img src="../../../Public/imgs/img-home/expositor-kid.png" alt="" class="img-escolha"></div>
-                </a>
-                <a href="cadastro-artista.php" class="link-cadastro-expositor">
-                    <div class="caixa"><img src="../../../Public/imgs/img-home/expossitor-artista.png" alt="" class="img-escolha"></div>
-                </a>
+                <div class="content-card">
+                    <h2 class="title-escolha">Cadastro expositor</h2>
+                    <a href="cadastro-expositor.php" class="link-cadastro-expositor">
+                        <div class="caixa">
+                            <img src="../../../Public/imgs/img-home/expositor.png" alt="" class="img-escolha">
+                        </div>
+                    </a>
+                </div>
+                <div class="content-card">
+                    <h2 class="title-escolha">Cadastro expositor Kids</h2>
+                    <a href="cadastro-expositor-kids.php" class="link-cadastro-expositor">
+                        <div class="caixa">
+                            <img src="../../../Public/imgs/img-home/expositor-kid.png" alt="" class="img-escolha">
+                        </div>
+                    </a>
+                </div>
+                <div class="content-card">
+                    <h2 class="title-escolha">Cadastro artista</h2>
+                    <a href="cadastro-artista.php" class="link-cadastro-expositor">
+                        <div class="caixa">
+                            <img src="../../../Public/imgs/img-home/expossitor-artista.png" alt="" class="img-escolha">
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
