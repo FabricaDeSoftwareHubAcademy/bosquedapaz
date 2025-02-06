@@ -572,7 +572,8 @@
         flex-direction: column;
         width: 80%;
         height: 100%;
-        background-size: cover;
+        background-color: white;
+        border: 0.5px solid #FF3877;
         border-radius: 20px;
         position: relative;
         z-index: 2;
@@ -586,7 +587,8 @@
         flex-direction: column;
         width: 80%;
         height: 100%;
-        background-size: cover;
+        background-color: white;
+        border: 0.5px solid #007E70;
         border-radius: 20px;
         position: relative;
         z-index: 2;
