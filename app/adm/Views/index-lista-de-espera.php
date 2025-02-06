@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Lista de Colaborador</title>
+    <title>Lista de Espera</title>
 </head>
 
 <body class="corpo-lisEsp">

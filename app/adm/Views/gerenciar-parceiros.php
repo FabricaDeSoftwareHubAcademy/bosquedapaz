@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Administrativa</title>
+    <title>Gerenciar Parceiros</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-parceiros.css">
     <link
@@ -40,7 +40,7 @@
                     <a href="editar-parceiros.php" class="link-area-icon">
                     <div class="area-icon-parceiros">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
-                        <p>Editar Parceiros </p>
+                        <p>Cadastrar Parceiros </p>
                     </div>
                 </div>
                     </a>
