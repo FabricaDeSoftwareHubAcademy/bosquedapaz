@@ -13,22 +13,27 @@
     <?php include "../../../Public/assets/adm/menu-adm.html"?>
     <main class="principal">
         <div class="box">
-            <h2>EDITAR PARCEIROS</h2>
+            <h2>CADASTRAR PARCEIROS</h2>
             <div class="form-box">
                 <form action="#">
-                    <div class="img-parceiro">
-                        <label>Logo Atual:</label>
-                        <img class="parceiro-img" src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="">
-                    </div>
                     <div class="input-group">
-                        <label>Editar descrição do parceiro:</label>
+                        <label>Nome do Parceiro:</label>
                         <input type="text" name="descricao" id="descricao"
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>
                     <div class="input-group">
-                        <label>Nova imagem do parceiro:</label>
+                        <label>Descrição do parceiro:</label>
+                        <input type="text" name="descricao" id="descricao"
+                            placeholder="Escreva a descrição da utilidade pública">
+                    </div>
+                    <div class="input-group">
+                        <label>Escolher Imagem:</label>
                         <input type="file" name="file" id="file"
                             required>
+                    </div>
+                    <div class="img-parceiro">
+                        <label>Logo Atual:</label>
+                        <img class="parceiro-img" src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="">
                     </div>
                 </form>
                 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da Paz</title>
+    <title>Listar Colaboradores</title>
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-colaboradores.css">
     <link
