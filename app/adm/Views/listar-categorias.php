@@ -1,94 +1,183 @@
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
-    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Categorias</title>
-        <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-categoria.css" >
-        <link rel="stylesheet" href="../Public/assets/adm/menu-adm.html">
+        <meta name="description" content="Página para gerenciar parceiros e suas informações.">
+        <title>Parceiros</title>
+        <link rel="stylesheet" href="../../../Public/css/css-adm/tela-parceiros.css">
+        <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
-    
-    
+
     <body>
-   <?php
-   include "../../../Public/assets/adm/menu-adm.html";
-   ?>
-    
-    <img class="imagem-enzo-fundo" src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="">
-    <img class="imagem-enzo-fundo2" src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="">
-    <img class="imagem-enzo-fundo3" src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="">
-    <main class="box">
-        <h1 class="title">TODAS AS CATEGORIAS</h1>
-        <div class="box-item">
-            <div class="item">
-                <div class="bolota" id="b1">
-                    <img src="../../../Public/assets/icons/icones-categorias/Paint Brush (1).png" alt="" class="icon-item">
-                </div>
-                <p>Artesanato</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b2">
-                    <img src="../../../Public/assets/icons/icones-categorias/Parchment.png" alt="" class="icon-item">
-                </div>
-                <p>Antiguidade</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b3">
-                    <img src="../../../Public/assets/icons/icones-categorias/NFT Collection.png" alt="" class="icon-item">
-                </div>
-                <p>Colecionismo</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b4">
-                    <img src="../../../Public/assets/icons/icones-categorias/Vial.png" alt="" class="icon-item">
-                </div>
-                <p>Cosmetologia</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b5">
-                    <img src="../../../Public/assets/icons/icones-categorias/Real Food for Meals.png" alt="" class="icon-item">
-                </div>
-                <p>Gastronomia</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b6">
-                    <img src="../../../Public/assets/icons/icones-categorias/Books.png" alt="" class="icon-item">
-                </div>
-                <p>Literatura</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b7">
-                    <img src="../../../Public/assets/icons/icones-categorias/Scissors.png" alt="" class="icon-item">
-                </div>
-                <p>Moda Autoral</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b8">
-                    <img src="../../../Public/assets/icons/icones-categorias/Potted Plant.png" alt="" class="icon-item">
-                </div>
-                <p>Plantas</p>
-            </div>
-            <div class="item">
-                <div class="bolota" id="b9">
-                    <img src="../../../Public/assets/icons/icones-categorias/Recycle.png" alt="" class="icon-item">
-                </div>
-                <p>Sustentabilidade</p>
-            </div>
-                <a href="cadastro-categoria.php" class="item">
-        <div class="bolota" id="b10">
-            <img src="../../../Public/assets/icons/icones-categorias/plus-circle.png" alt="" class="icon-item">
-        </div>
-        <p>Nova Categoria</p>
-    </a>
+    <header class="cabecalho">
+        <main class="principal">
+            <div class="box">
+                <h2>CATEGORIAS</h2>
+                <div class="container">
+                    <div class="search-bar">
+                        <label for="status">Procurar</label>
+                        <input type="text" id="status" placeholder="Categorias" />
+                        <button class="search-button">BUSCAR</button>
+                    </div>
+                
+                    <table class="collaborators-table">
+                        <thead>
+                            <tr>
+                            <th class="usuario-col">ID</th>
+                            <th>Nome</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                        <tr>
+                            <td class="usuario-col">1</td>
+                            <td>Artesanato</td>                    
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                                <a class="edit-icon">
+                                    <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                </a>
+                                <a class="delete-icon">
+                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                </a>
+                            </td>
+                        </tr>
+                            <tr>
+                            <tr>
+                                <td class="usuario-col">2</td>
+                                <td>Antiguidade</td>
+                                <td><button class="status active">Ativo</button></td>
+                                <td>
+                                    <a class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">3</td>
+                                <td>Colecionismo</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td>
+                                    <a class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>    
+                                    <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">4</td>
+                                <td>Cosmetologia</td>
+                                <td><button class="status active">Ativo</button></td>
+                                <td>
+                                    <a class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                                <td class="usuario-col">5</td>
+                                <td>Gastronomia</td>
+                                <td><button class="status inactive">Ativo</button></td>
+                                <td>
+                                    <a class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td class="usuario-col">1</td>
+                            <td>Literatura</td>                    
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                                <a class="edit-icon">
+                                    <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                </a>
+                                <a class="delete-icon">
+                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="usuario-col">1</td>
+                            <td>Moda Autoral</td>                    
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                                <a class="edit-icon">
+                                    <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                </a>
+                                <a class="delete-icon">
+                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="usuario-col">1</td>
+                            <td>Plantas</td>                    
+                            <td><button class="status inactive">Ativo</button></td>
+                            <td>
+                                <a class="edit-icon">
+                                    <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                </a>
+                                <a class="delete-icon">
+                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="usuario-col">1</td>
+                            <td>Sustentabilidade</td>                    
+                            <td><button class="status active">Ativo</button></td>
+                            <td>
+                                <a class="edit-icon">
+                                    <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                </a>
+                                <a class="delete-icon">
+                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                </a>
+                            </td>
+                        </tr>  
+                        </tbody>
+                    </table>
+            <div class="btns">
+                <a href="gerenciar-parceiros.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div> 
 
-    <div class="btns">
-            <a href="gerenciar-categorias.php" class="voltar">
-            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div> 
-    </main>
-    <script src="../../js/js-menu/js-menu.js"></script>
+            <dialog id="edit-modal" class="modal-edit">
+                <h2>Confirmar alteração</h2>
+                <input type="text" value="SENAC Serviço Nacional de Aprendizagem Comercial">
+                <p>Tem certeza que deseja fazer isso?</p>
+                <div>
+                    <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
+                    <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
+                </div>
+            </dialog>
+            
+        </main>
+
+            <div class="bolas-fundo">
+                <img class="bola-azul1"   src="../img/Elemento1.FolhaAzul.png" alt="">
+                <img class="bola-azul2"   src="../img/Elemento2.FolhaAzul.png" alt="">
+                <img class="bola-azul3"   src="../img/Elemento3.ElipseAzul.png" alt="">
+            </div>
+
+    <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
-
 </html>

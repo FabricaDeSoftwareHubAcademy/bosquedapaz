@@ -55,7 +55,7 @@
                 </a>
 
                 <div class="Botoes-relat">
-                <a href="RelatorioExpositor.html" class="link-area-icon">
+                <a href="RelatorioExpositor.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                 <p>Relatório Usuários</p>
