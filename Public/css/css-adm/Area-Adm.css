@@ -134,16 +134,21 @@
         height: 100%;
     }
 
+    .nome-area-gabriel h1{
+        
+    }
+
     .box-gabriel{
         top: 1%;
+        flex-direction: column;
     }
 
     .area-botao-gabriel{
         gap: 0px;
         padding: 0px;
         width: 100%;
-
-
+        top: 10%;
+        position: relative;
     }
 
     .Botoes-gabriel{
@@ -191,6 +196,8 @@
     .area-icon-gabriel p{
         top: 130px;
         font-size: 10.5px;
+        z-index: 1;
+        top: 78%;
     }
 
     .seta-voltar-gabriel{

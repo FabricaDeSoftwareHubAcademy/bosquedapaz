@@ -13,7 +13,7 @@
 
         <?php include "../../../Public/assets/adm/menu-adm.html"?>
 
-    <script src="../js/main.js"></script>
+    <script src="../../Public/js/js-home/main.js/"></script>
     
         <!-- Área Dos Botões -->
 
