@@ -147,7 +147,7 @@
     text-align: center;
     border-radius: 12px;
     background-color: white;
-    box-shadow: 1px 1px 1px 1px gray;
+    box-shadow: 1px 1px 1px 1px rgba(212, 212, 212, 0.318);
 }
 .card:hover{
     background-color: rgb(238, 238, 238);
