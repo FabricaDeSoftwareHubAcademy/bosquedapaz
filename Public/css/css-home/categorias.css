@@ -11,7 +11,7 @@
     background-color: transparent;
     margin: auto;
     text-align: center;
-    margin-bottom: 50px;
+    margin: 50px 0px 100px 0px;
 }
 
 .title-welcome, .text-welcome-c {
@@ -80,7 +80,7 @@
     height: auto;
     margin: auto;
     border-radius: 20px;
-    margin-top: 50px;
+    margin: 50px auto 100px auto;
     display: block;
 }
 

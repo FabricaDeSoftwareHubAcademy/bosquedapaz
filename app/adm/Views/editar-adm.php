@@ -27,7 +27,7 @@
                 </div>
                 <form action="#">
                     <div class="input-group">
-                        <label>Nome Completo:</label>
+                        <label>Nome:</label>
                         <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
                     </div>                   
                      <div class="input-group">

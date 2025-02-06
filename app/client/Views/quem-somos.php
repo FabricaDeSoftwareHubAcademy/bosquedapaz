@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/quem-somos.css">
+    
     <title>Quem Somos</title>
 </head>
 <body>
@@ -88,61 +89,7 @@
 
     <!--------------------------------->
 
+    <?php include "../../../Public/assets/home/rodape.html"; ?>
 
-
-    
-    <footer class="rodape">
-        <div class="box-footer">
-
-            <!-- lista categorias -->
-            <div class="list-rodape list-categoria">
-                <h5>CATEGORIAS</h5>
-                <ul>
-                    <li>Artesanato</li>
-                    <li>Antiguidade</li>
-                    <li>Colecionismo</li>
-                    <li>Cosmetologia</li>
-                    <li>Gastronomia</li>
-                    <li>Literatura</li>
-                    <li>Moda Autoral</li>
-                    <li>Plantas</li>
-                    <li>Sustentabilidade</li>
-                </ul>
-            </div>
-
-            <!-- lista sobre nós -->
-            <div class="list-rodape list-sobre">
-                <h5>SOBRE</h5>
-                <ul>
-                    <li><a href="../../client/Views/quem-somos.php">Sobre nós</a></li>
-                    <li><a href="../../client/Views/fale-conosco.php">Contate-nos</a></li>
-                    <li><a href="#">Equipe de Dev</a></li>
-                    <li><a href="../../../app/adm/Views/cadastro-expositor.html">Seja um Expositor</a></li>
-                </ul>
-            </div>
-
-            <!-- lista entrar contato -->
-            <div class="list-rodape list-contato">
-                <h5>CONTATO</h5>
-                <div>
-                    <img src="../../../Public/imgs/img-home/Instagram.png" alt="icon Instagram">
-                    <p>@feirabosquedapaz</p>
-                </div>
-                <div>
-                    <img src="../../../Public/imgs/img-home/Mail.png" alt="icon E-mail">
-                    <p>bosquedapaz@gmail.com</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="copyright"> <!-- copyright -->
-            <p>Copyright  ©2024. Feira Bosque da Paz. All Rights Reserved.</p>
-        </div>
-    </footer>
-<!-- fim footer -->
-
-    <script src="../../../Public/js/js-home/main.js" defer></script>
-    <script src="../../../Public/js/js-home/carrossel.js" defer></script>
 </body>
 </html>

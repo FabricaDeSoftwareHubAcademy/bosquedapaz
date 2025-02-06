@@ -82,7 +82,7 @@ html,
     background-color: #f8f5f6c3;
     z-index: 2;
     border-radius: 10px;
-    overflow-y: auto;
+    overflow-y: hidden;
     bottom: 20px;
     position: relative;
 }
@@ -133,59 +133,57 @@ html,
 
 .area-table-lisEsp {
     width: 100%;
-    height: 600px;
+    height: 600px; 
     background-color: rgba(0, 0, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     padding-right: 10px;
-
-}
-
-.table-lisEsp{
-    width: 96%;
-    border-collapse: collapse;
+    overflow-x: auto;
     position: relative;
-    top: 20px;
-    z-index: 4;
-    left: 2%;
 }
 
-th,
-td {
-    padding: 10px;
-    text-align: center;
+.table-lisEsp {
+    background-color: rgba(0, 255, 255, 0);
+    width: 96%;
+    display: block;
+    overflow-y: auto;
+    max-height: 500px; 
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
-tr{
-    cursor: pointer;
+.table-lisEsp td a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-th {
-    background-color: rgba(32, 54, 139, 1);
+.table-lisEsp thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     color: white;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.table-lisEsp th{
+    background-color: rgb(32, 54, 139, 1);
 }
 
-i {
-    color: #000000;
-    cursor: pointer;
+.table-lisEsp th,
+.table-lisEsp td {
+    width: 10%;
+    padding: 6px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-tr:nth-child(odd) {
+.table-lisEsp tr:nth-child(odd) {
     background-color: #ffffff;
 }
 
-tr:nth-child(even) {
-    background-color: rgba(233, 233, 233, 1)
-}
-
-.seta-LisEsp3-res{
-    display: none;
+.table-lisEsp tr:nth-child(even) {
+    background-color: rgba(233, 233, 233, 1);
 }
 
 @media screen and (max-width: 720px) {
@@ -253,10 +251,23 @@ tr:nth-child(even) {
         font-size: 12px;
     }
 
-    th,
-    td {
-        font-size: 8px;
-        padding: 8px;
+    .table-lisEsp{
+        table-layout: fixed;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .table-lisEsp td,
+    .table-lisEsp th{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .table-lisEsp td a{
+        font-size: 10px;
     }
 
     i {
@@ -268,10 +279,6 @@ tr:nth-child(even) {
         width: 0px;
     }
 
-    .table-lisEsp{
-        left: 2%;
-        top: 5%;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -319,7 +326,6 @@ tr:nth-child(even) {
     .table-lisEsp{
         top: 5%;
     }
-
 }
 
 @media screen and (min-height: 1366px){

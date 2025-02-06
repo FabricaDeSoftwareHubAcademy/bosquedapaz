@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+
 }
 
 .section-principal{
@@ -18,6 +19,11 @@
     justify-content: center;
 }
 
+.utilidades{
+    position: relative;
+    left: 225%;
+    width: 300px;
+}
 .bola-1{
     position: fixed;
     top: 20vh;
@@ -76,10 +82,12 @@
     align-items: center;
     position: relative;
     display: flex;
+    top: 3%;
+    right: 14%;
 }
     
 .card-principal {
-    width: 70%;
+    width: 85%;
     height: 65%;
     background-color: white;
     border: 1px solid #3F49EA; /* Borda azul */
@@ -139,14 +147,14 @@
 
 .img-card-principal{
     position: relative;
-    left: 6%;
+    left: 5%;
     top: 5%;
 }
 
     /* Área Do Segundo Card E Diante */
 
 .area-card-segundario{
-    width: 60%;
+    width: 61%;
     height: 100%;
     background-color: transparent;
     justify-content: center;
@@ -154,6 +162,8 @@
     position: relative;
     display: flex;
     gap: 59px;
+    top: 3%;
+    right: 9%;
 }
 
 .card-segundario{
@@ -172,7 +182,7 @@
     height: 52%;
     background-color: #FF3877;
     position: relative;
-    top: 23%;
+    top: 28%;
     transform: rotate(150deg);
     left: 0%;
 }
@@ -180,7 +190,8 @@
 .img-card-segundario{
     position: relative;
     top: 5%;
-    left: 9%;
+    left: 7%;
+    width: 87%;
 }
 
 .utilidades-card-segundario{
@@ -207,7 +218,7 @@
     height: 10px;
     background-color: #FF3877; 
     transform: rotate(-30deg); 
-    top: 292px; 
+    top: 300px; 
     right: 105px;
     border-radius: 0px 10px;
 }
@@ -738,8 +749,16 @@
 
 @media screen and (max-width:720px) {
     body{
-        overflow: scroll;
+        overflow-y: scroll;
         height: 100vh;
+        overflow-x: hidden
+    }
+
+    .utilidades{
+        font-size: 1.0rem;
+        left: 21%;
+        position: relative;
+        top: 87%;
     }
 
     .box-principal{
@@ -751,6 +770,9 @@
         /* display: none; */
         width: 100%;
         height: 64%;
+        right: 2%;
+        position: relative;
+        top: 1%;
     }
 
     .card-principal{
@@ -800,6 +822,8 @@
         width: 100%;
         align-items: center;
         gap: 3%;
+        left: -2%;
+        top: 1%;
     }
 
     .card-segundario{
@@ -966,4 +990,476 @@
         top: 2%;
         cursor: pointer;
     } 
+}
+
+@media (min-width: 768px) and (max-height: 1024px){
+    body{
+        overflow-y: scroll;
+        height: 100vh;
+        overflow-x: hidden
+    }
+
+    .utilidades{
+        font-size: 1.0rem;
+        left: 21%;
+        position: relative;
+        top: 87%;
+    }
+
+    .box-principal{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        top: 5%;
+        position: relative;
+    }
+
+    .area-card-principal{
+        width: 95%;
+        height: 64%;
+        right: 2%;
+        position: relative;
+        bottom: 14;
+    }
+
+    .card-principal{
+        height: 68%;
+        width: 35%;
+        top: -7%;
+    }
+
+    .img-card-principal{
+        width: 87%;
+        height: 35%;
+        position: absolute;
+    }
+
+    .utilidades-card-principal{
+        font-size: 0.9rem;
+        top: 45%;
+        left: 24%;
+    }
+
+    .h1-container-principal{
+        display: none;
+    } 
+
+    .container-card-principal{
+        width: 136%;
+        height: 69%;
+        top: 55%;
+        left: 3%;
+    }
+
+    .linha-card-principal{
+        height: 131%;
+        width: 35%;
+        top: -11%;
+    }
+
+    .linha-azul-card-principal{
+        top: 103%;
+        right: 41%;
+    }
+    
+    .area-card-segundario{
+        flex-direction: column;
+        background-color: transparent;
+        height: 125%;
+        width: 64%;
+        align-items: center;
+        gap: 3%;
+        left: -2%;
+        top: 0%;
+    }
+
+    .card-segundario{
+        width: 46%;
+        height: 50%;
+        left: -1%;
+        top: -3%;
+    }
+
+    .utilidades-card-segundario{
+        font-size: 0.9rem;
+        top: 38%;
+        left: 24%;
+    }
+
+    .btn-cantainer-card-segundario {
+        width: 35%;
+        height: 25px;
+        position: relative;
+        top: 34%;
+        left: 36%;
+        font-size: 11px;
+    }
+
+    .cantainer-card-segundario{
+        left: 2%;
+        top: 47%
+    }
+
+    .linha-branca-card-segundario{
+        width: 10%;
+        height: 97%;
+        top: 28%;
+        right: 58%;
+    }
+
+    .linha-rosa-card-segundario{
+        top: 85%;
+        right: 35%;
+    }
+
+    .content-principal{
+        height: 50%;
+        background-color: aqua;
+    }
+    
+    .img-card-segundario{
+        width: 83%;
+        height: 32%;
+        position: absolute;
+    }
+
+    .bola-2{
+        width: 10%;
+        height: 10%;
+        right: -10px;
+        top: 20%;
+    }
+
+/* 
+    .card-res-segundario{
+        display: block;
+        width: 60%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .img-card-res-segundario{
+        width: 10%;
+        height: 10%;
+    }
+
+    .cantainer-card-res-segundario{
+        background-color: #3F49EA;
+    }
+ */
+
+}
+
+@media (min-width: 820px) and (max-height: 1180px){
+    body{
+        overflow-y: scroll;
+        height: 100vh;
+        overflow-x: hidden
+    }
+
+    .utilidades{
+        font-size: 1.0rem;
+        left: 21%;
+        position: relative;
+        top: 87%;
+    }
+
+    .box-principal{
+        flex-direction: column;
+        align-items: center;
+        height: 115%;
+        top: 11%;
+        position: relative;
+    }
+
+    .area-card-principal{
+        width: 95%;
+        height: 64%;
+        right: 2%;
+        position: relative;
+        bottom: 14;
+    }
+
+    .card-principal{
+        height: 68%;
+        width: 35%;
+        top: -7%;
+    }
+
+    .img-card-principal{
+        width: 87%;
+        height: 35%;
+        position: absolute;
+    }
+
+    .utilidades-card-principal{
+        font-size: 0.9rem;
+        top: 45%;
+        left: 24%;
+    }
+
+    .h1-container-principal{
+        display: none;
+    } 
+
+    .container-card-principal{
+        width: 136%;
+        height: 69%;
+        top: 55%;
+        left: 3%;
+    }
+
+    .linha-card-principal{
+        height: 131%;
+        width: 35%;
+        top: -11%;
+    }
+
+    .linha-azul-card-principal{
+        top: 97%;
+        right: 41%;
+    }
+    
+    .area-card-segundario{
+        flex-direction: column;
+        background-color: transparent;
+        height: 125%;
+        width: 64%;
+        align-items: center;
+        gap: 3%;
+        left: -2%;
+        top: 0%;
+    }
+
+    .card-segundario{
+        width: 46%;
+        height: 50%;
+        left: -1%;
+        top: -3%;
+    }
+
+    .utilidades-card-segundario{
+        font-size: 0.9rem;
+        top: 38%;
+        left: 24%;
+    }
+
+    .btn-cantainer-card-segundario {
+        width: 35%;
+        height: 25px;
+        position: relative;
+        top: 34%;
+        left: 36%;
+        font-size: 11px;
+    }
+
+    .cantainer-card-segundario{
+        left: 2%;
+        top: 47%
+    }
+
+    .linha-branca-card-segundario{
+        width: 10%;
+        height: 97%;
+        top: 28%;
+        right: 58%;
+    }
+
+    .linha-rosa-card-segundario{
+        top: 78%;
+        right: 35%;
+    }
+
+    .content-principal{
+        height: 50%;
+        background-color: aqua;
+    }
+    
+    .img-card-segundario{
+        width: 83%;
+        height: 32%;
+        position: absolute;
+    }
+
+    .bola-2{
+        width: 10%;
+        height: 10%;
+        right: -10px;
+        top: 20%;
+    }
+
+/* 
+    .card-res-segundario{
+        display: block;
+        width: 60%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .img-card-res-segundario{
+        width: 10%;
+        height: 10%;
+    }
+
+    .cantainer-card-res-segundario{
+        background-color: #3F49EA;
+    }
+ */
+}
+
+@media screen and (min-height: 1366px){
+    body{
+        overflow-y: scroll;
+        height: 100vh;
+        overflow-x: hidden
+    }
+
+    .utilidades{
+        font-size: 1.0rem;
+        left: 21%;
+        position: relative;
+        top: 87%;
+    }
+
+    .box-principal{
+        flex-direction: column;
+        align-items: center;
+        height: 135%;
+        top: 20%;
+        position: relative;
+    }
+
+    .area-card-principal{
+        width: 95%;
+        height: 64%;
+        right: 2%;
+        position: relative;
+        bottom: 14;
+    }
+
+    .card-principal{
+        height: 68%;
+        width: 35%;
+        top: -7%;
+    }
+
+    .img-card-principal{
+        width: 87%;
+        height: 35%;
+        position: absolute;
+    }
+
+    .utilidades-card-principal{
+        font-size: 0.9rem;
+        top: 45%;
+        left: 24%;
+    }
+
+    .h1-container-principal{
+        display: none;
+    } 
+
+    .container-card-principal{
+        width: 136%;
+        height: 69%;
+        top: 55%;
+        left: 3%;
+    }
+
+    .linha-card-principal{
+        height: 131%;
+        width: 35%;
+        top: -11%;
+    }
+
+    .linha-azul-card-principal{
+        top: 92%;
+        right: 41%;
+    }
+    
+    .area-card-segundario{
+        flex-direction: column;
+        background-color: transparent;
+        height: 125%;
+        width: 64%;
+        align-items: center;
+        gap: 3%;
+        left: -2%;
+        top: 0%;
+    }
+
+    .card-segundario{
+        width: 46%;
+        height: 50%;
+        left: -1%;
+        top: -3%;
+    }
+
+    .utilidades-card-segundario{
+        font-size: 0.9rem;
+        top: 38%;
+        left: 24%;
+    }
+
+    .btn-cantainer-card-segundario {
+        width: 35%;
+        height: 25px;
+        position: relative;
+        top: 30%;
+        left: 38%;
+        font-size: 11px;
+    }
+
+    .cantainer-card-segundario{
+        left: 2%;
+        top: 48%
+    }
+
+    .linha-branca-card-segundario{
+        width: 10%;
+        height: 97%;
+        top: 28%;
+        right: 58%;
+    }
+
+    .linha-rosa-card-segundario{
+        top: 74%;
+        right: 35%;
+    }
+
+    .content-principal{
+        height: 50%;
+        background-color: aqua;
+    }
+    
+    .img-card-segundario{
+        width: 83%;
+        height: 32%;
+        position: absolute;
+    }
+
+    .bola-2{
+        width: 10%;
+        height: 10%;
+        right: -10px;
+        top: 20%;
+    }
+
+/* 
+    .card-res-segundario{
+        display: block;
+        width: 60%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .img-card-res-segundario{
+        width: 10%;
+        height: 10%;
+    }
+
+    .cantainer-card-res-segundario{
+        background-color: #3F49EA;
+    }
+ */
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
 
 *{
     padding: 0;
@@ -76,6 +77,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     transition: all .5s ease;
+    position: relative;
+    bottom: 6%;
     #linha-vertical {
         height: 640px;
         border-right: 3px solid #FF3877;
@@ -99,6 +102,11 @@ body {
     top: 70vh;
     display: block;
     cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.setaV-cadastro:hover{
+    transform: scale(1.1);
 }
 
 
@@ -115,7 +123,7 @@ body {
 
 .areaForm-cad-mt{
     width: 700px;
-    height: 650px;
+    height: 100%;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: center;
@@ -144,7 +152,7 @@ form{
     width: 100%;
     height: 50px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
@@ -155,7 +163,10 @@ form{
     transform: translateY(-50%);
 }
 
-
+.area-input-mat  #iconOlho{
+    margin-left: 80%;
+    color: rgba(0, 0, 0, 0.714);
+}
 
 .input-cad-mt {
     width: 95%;                
@@ -189,6 +200,11 @@ form{
     background-color: #FF3877;
     box-shadow: 0 6px 4px #162868;
     cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.button-cad-mt:hover{
+    transform: scale(1.1);
 }
 
 
@@ -250,41 +266,18 @@ form{
     display: none;
 }
 
-p{
-    font-size: 16px;
-    position: absolute;
-    top: 690px;
-    left: 16%;
-}
-
-a{
-    text-decoration: none;
-    color: #162868;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
-
 /* Responsividade */
+/* Responsividade Celular*/
 @media screen and (max-width: 720px){
-    p{
-        font-size: 12px;
-        position: absolute;
-        top: 94%;
-        left: 22%;
-    }
-
-    a{
-        text-decoration: none;
-        color: #162868;
-    }
-
     .setaV-cadastro{
         display: block;
-        top: 44vh;
+        top: 41vh;
         right: 15vw;
+    }
+
+    .setaV-cadastro img{
+        width: 80%;
+        height: auto;
     }
 
     .formaCadastro-2{
@@ -341,18 +334,21 @@ a:hover{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 95%;
+        height: 85%;
         width: 90%;
+        /* background-color: #306816; */
     }
 
     form{
         background-color: #16286800;
         top: 50px;
+        left: 150px;
+        height: 466px;
     }
 
     .button-cad-mt{
-        margin-top: 580px;
-        right: 160px;
+        margin-top: 78%;
+        right: 180px;
         width: 120px;
     }
 
@@ -363,7 +359,9 @@ a:hover{
 
     .titulo-areato-mt{
         display: block;
-        margin-bottom: 570px;
+        margin-bottom: 550px;
+        right: 15px;
+        position: relative;
     }
     .area-input-mat{
         margin-bottom: 5px;
@@ -379,6 +377,25 @@ a:hover{
     }
 }
 
+@media (min-width: 390px) and (max-width: 431px){
+    .button-cad-mt{
+        margin-top: 95%;
+    }
+
+    .setaV-cadastro{
+        display: block;
+        top: 40vh;
+        right: 15vw;
+        /* background-color: #162868; */
+    }
+
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsividade Ipad Mini*/
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .areaImg-cad-mt{
         display: none;
@@ -390,7 +407,7 @@ a:hover{
 
     .setaV-cadastro{
         display: block;
-        top: 40vh;
+        top: 38vh;
         right: 15vw;
     }
 
@@ -399,7 +416,7 @@ a:hover{
         align-items: center;
         justify-content: center;
         width: 90%;
-        height: 900px;
+        height: 850px;
     }
 
     .formaCadastro-1 img{
@@ -453,14 +470,15 @@ a:hover{
     .button-cad-mt{
         width: 250px;
         right: 170px;
-        margin-top: 590px;
+        margin-top: 500px;
     }
 
     form{
         background-color: #16286800;
         left: 170px;
-        bottom: 0px;
+        bottom: 50px;
         width: 600px;
+        height: 600px;
     }
 
     .titulo-areato-mt{
@@ -471,9 +489,15 @@ a:hover{
         top: 50px;
         background-color: transparent;
     }
-    p{
-        top: 805px;
-        left: 30%;
+
+    .area-input-mat{
+        background-color: #ff387700;
+        top: 40px;
+    }
+
+    .label-cad-mt{
+        position: relative;
+        top: 40px;
     }
 }
 
@@ -496,9 +520,10 @@ a:hover{
     }
     .area-input-mat{
         margin-bottom: 5px;
-    }    
+    }  
 }
 
+/* Responsividade Ipad Pro*/
 @media screen and (min-height: 1366px){
     .areaImg-cad-mt{
         background-color: #16286800;
@@ -513,9 +538,6 @@ a:hover{
     .divIMg-mt img{
         width: 100%;
         height: auto;
-    }
-    p{
-        left: 8%;
     }
     .formaCadastro-2{
         top: 85vh;
@@ -540,7 +562,13 @@ a:hover{
     }
 }
 
+/* Responsividade Next Hub*/
 @media (min-width: 1024px) and (max-height: 600px) {
+
+    .formaCadastro-1{
+        z-index: -1;
+    }
+
     .button-cad-mt{
         width: 130px;
         height: 25px;
@@ -549,7 +577,7 @@ a:hover{
     }
     .box-cadastro-mt{
         width: 75%;
-        height: 550px;
+        height: 500px;
         overflow-y: scroll;
     }
 
@@ -563,15 +591,9 @@ a:hover{
         margin-bottom: 460px;
         font-size: 30px;
     }
-    p{
-        left: 33%;
-        top: 650px;
-    }
-    /* .setaV-cadastro{
-        right: 50vh;
-    } */
 }
 
+/* Responsividade Next Pro*/
 @media (min-width: 1280px) and (max-height: 800px) {
     .titulo-areato-mt{
         display: block;
@@ -581,41 +603,27 @@ a:hover{
 
     form{
         left: 185px;
-    }
-
-    p{
-        left: 38%;
+        background-color: #16286800;
     }
 
     .button-cad-mt{
         right: 155px;
-        margin-top: 598px;
+        margin-top: 600px;
+    }
+
+    .box-cadastro-mt{
+        height: 650px;
+    }
+
+    .titulo-areato-mt{
+        top: 10px;
+        position: relative;
     }
     
 }
 
-@media (min-width: 414px) and (max-height: 896px){
-    p{
-        top: 715px;
-    }
-}
-
-@media (min-width: 390px) and (max-height: 844px){
-    p{
-        top: 700px;
-    }
-}
-
-@media (min-width: 430px) and (max-height: 932px){
-    p{
-        top: 735px;
-    }
-}
-
+/* Responsividade Sansung Galaxy A51/71 */
 @media (min-width: 412px) and (max-height: 915px){
-    p{
-        top: 720px;
-    }
     .setaV-cadastro{
         display: block;
         top: 45vh;
@@ -623,10 +631,8 @@ a:hover{
     }
 }
 
+/* Responsividade Surface Pro 7 */
 @media (min-width: 912px) and (min-height: 1368px){
-    p{
-        left: 33%;
-    }
     .setaV-cadastro{
         display: block;
         top: 30vh;

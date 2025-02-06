@@ -1,6 +1,6 @@
 /* modal */
 
-.modal-overlay {
+.modal-overlay-edpass {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,13 +13,13 @@
     z-index: 9;
 }
 
-.modal-overlay.active {
+.modal-overlay-edpass.active {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease, visibility 0s 0s;
 }
 
-.modal {
+.modal-edpass {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -27,16 +27,25 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../img/ModalRosaEdpass.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
 }
 
+#modal1-edpass,#modal-
+
+
+#modal1-edpass,#modal4-edpass{
+    background-image: url(../../imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
+}
+
+#modal2-edpass,#modal3-edpass{
+    background-image: url(../../imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
+}
+
 .modal-content-edpass {
-    background-color: rgb(185, 147, 147);
     height: 85%;
-    width: 85%;
+    width: 80%;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -45,71 +54,80 @@
     display: flex;
 }
 
-.modal-img {
+.modal-img-edpass {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: start;
 }
 
-.gg-img {
+.gg-img-edpass {
     width: 90%;
     height: 90%;
+    border-radius: 3px;
 }
 
-.area-img-p {
+.area-img-p-edpass {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
 }
 
-.p-img {
-    width: 24%;
+.p-img-edpass{
+    width: 22%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
-.txt-content-modal{
-    overflow: auto;
+.txt-content-modal-edpass {
     width: 40%;
-    height: 100%;
-    background-color: red;
-    max-height: 120px;
-    margin-top: 10px;
+    height: auto; 
+    max-height: none; 
+    margin-top: 40px; 
+    justify-content: center;
+    text-align: center;
 }
 
-.title-modal{
-    width: 40%;
-    font-size: 1.2rem;
-    margin: 15px auto;
-    margin-top: -5px;
-    justify-content: right;
-}
-
-.area-texto{
+.title-modal1-edpass{
     width: 100%;
-    height: 100%;
-    background-color: red;
+    font-size: 1.7 rem;
+    color: #FF3877;
+    text-align: left;
+    margin-top: 20px;
+    text-transform: uppercase;
 }
 
-.modal-texto{
-    font-size: 14px;
-    line-height: 1.3;
-    overflow: hidden;
-    color: #505050;
+.title-modal2-edpass{
+    width: 100%;
+    font-size: 1.7rem;
+    color: #007E70;
+    text-align: left;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.area-texto-modal-edpass {
+    height: 50%; 
+    margin-top: 20px; 
     scrollbar-gutter: stable both-edges;
+    overflow-y: auto; 
 }
 
+.modal-texto-edpass{
+    height: 90%; 
+    font-size: 16px;
+    line-height: 1.4;
+    overflow-y: auto; 
+    color: #505050;
+    text-align: left;
+    padding: 10px; 
+}
 
 ::-webkit-scrollbar{
     width: 2px;
-    height: 10px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track{
     background: #ffffff00;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -117,11 +135,7 @@
     border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background: #6b6869;
-}
-
-.close {
+.close-edpass {
     color: #000000;
     font-size: 40px;
     position: absolute;
@@ -130,8 +144,8 @@
     cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.close-edpass:hover,
+.close-edpass:focus {
     color: #666364;
     text-decoration: none;
 }

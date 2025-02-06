@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +18,7 @@
         <div class="box">
             <h2>CADASTRO DE EVENTOS</h2>
             <div class="form-box">
-                <form action="#">
+                <form action="#" method = "POST">
                     <div id="form1">
                         <div class="input-group">
                             <label>Nome do evento:</label>
@@ -24,7 +26,7 @@
                                 required>
                         </div>
                         <div class="input-group">
-                            <label>Data início</label>
+                            <label>Data do Evento</label>
                             <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
                         </div>
                         <div class="input-group">
@@ -32,56 +34,49 @@
                             <input type="text" name="descricaodoevento" id="descricaodoevento"
                                 placeholder="Digite uma breve descrição do evento" required>
                         </div>
-                        <div class="input-group">
-                            <label>Responsável pelo evento:</label>
-                            <select name="plataforma" required="required">
-                                <option value="">TESTE</option>
-                                <option value="xbox">**************************</option>
-                                <option value="ps5">***************************</option>
-                                <option value="nsw">***************************</option>
-                                <option value="pcg">***************************</option>
-                            </select>
-                        </div>
-                        <div class="input-group">
-                            <label>Link externo:</label>
-                            <input type="text" name="link" id="link" placeholder="Digite um link de redirecionamento"
-                                required>
-                        </div>
+                        
+                        
                         <div class="input-group">
                             <label>Imagem do evento:</label>
                             <input type="file" name="file" id="file"
                                 required>
                         </div>
+                        <img class = "preview" src="" alt="" id="preview-image">
                     </div>
                     <div id="form2">
 
                         <div class="input-group">
                             <label>Nome da atração:</label>
-                            <input type="text" name="descricaodaatracao" id="descricaodaatracao"
+                            <input type="text" name="nomeatracao" id="descricaodaatracao"
                                 placeholder="Digite o nome da atração">
                         </div>
                         <div class="input-group">
                             <label>Descrição da atração:</label>
-                            <input type="text" name="descricaodaatracao" id="descricaodaatracao"
+                            <input type="text" name="descatracao" id="descricaodaatracao"
                                 placeholder="Digite uma breve descrição da atração">
                         </div>
                         <div class="input-group">
                             <label>Imagem da atração:</label>
-                            <input type="file" name="file" id="file"
+                            <input type="file" name="file" id="file2"
                                 required>
                         </div>
+
+                        
+
                         <div class="btn-add">
-                            <button class="btn-atracao">
+                            <button type="submit" name= "btn-atracao" class="btn-atracao">
                                 <a href="">Adicionar Atração</a>
                         </div>
                         <label id = "tabela">Atrações cadastradas:</label>
                         <table>
                             <tr>
-                                <td>Nome da atração</td>
+                                
                                 
                             </tr>
 
                         </table>
+
+                        <img class = "preview2" src="" alt="" id="preview-image2">
 
                         
                         
@@ -111,13 +106,13 @@
                 </div> -->
             </div>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="manage-events.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">
                     <button class="btn btn-cancelar">
-                        <a href="">Cancelar</a>
+                        <a href="./Area-Adm.php">Cancelar</a>
                     </button>
 
                     <button class="btn btn-salvar">
@@ -135,6 +130,7 @@
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
 </body>
 
 </html>

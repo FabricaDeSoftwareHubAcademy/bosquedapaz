@@ -28,7 +28,7 @@
         
         <div class="box-gerenciar">
         <div class="nome-area-gerenciar">
-                <h1>Área Administrativa</h1>
+                <h1>Gerenciar ADM</h1>
             </div>
 
                 <div class="seta-voltar-gerenciar">
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="Botoes-gerenciar">
-                    <a href="cadastro-colaborador.php" class="link-area-icon">
+                    <a href="cadastro-adm.php" class="link-area-icon">
                     <div class="area-icon-gerenciar">
                         <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
                         <p>Cadastrar ADM</p>

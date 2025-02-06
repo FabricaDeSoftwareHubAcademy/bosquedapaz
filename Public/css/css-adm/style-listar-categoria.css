@@ -81,6 +81,29 @@
     height: 80%;
     padding: 20px;
 }
+.box-item a{
+    text-decoration: none;
+    color: inherit;
+}
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btns .voltar {
+        position: absolute;
+        bottom: 20px;
+        left: 90px;
+        padding: 10px 15px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+}
 #b1{
     background-color: rgba(13, 72, 161, 0.30);
     transition: all 0.3s ease;
