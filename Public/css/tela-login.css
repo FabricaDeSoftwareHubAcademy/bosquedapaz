@@ -18,7 +18,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: grey;
+    background-color: rgb(224, 53, 53);
     position: relative;
 }
  
@@ -72,6 +72,7 @@
 .box-login{
     width: 85%;
     height: 800px;
+    backdrop-filter: blur(0px);
     background-color: rgba(248, 245, 246, 0.705);
     border-radius: 15px;
     display: flex;
