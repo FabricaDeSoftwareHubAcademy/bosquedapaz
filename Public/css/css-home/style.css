@@ -8,6 +8,7 @@
 @import url('avisos.css');
 @import url('mapa.css');
 @import url('rodape.css');
+@import url('css-parceiros-home.css');
 
 :root {
     --color-artesanato: rgba(13, 71, 161, 0.30);

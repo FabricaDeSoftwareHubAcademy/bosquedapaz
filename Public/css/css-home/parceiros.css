@@ -38,30 +38,58 @@
     align-items: center;
 }
 
-.content {
-    width: 50%;
-    height: 100%;
-    display: flex;
-}
-
-.con-logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding: 0px 100px;
-}
-
-.img-parceiro {
-    width: 150px;
-    height: 150px;
-}
-
-.img-g {
+.content-card {
     width: 100%;
     height: 100%;
-    object-fit: scale-down;
+    display: flex;
+}
+
+.content-card {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 1600px;
+    overflow-x: scroll;
+}
+
+.card-parceiro {
+    min-width: 350px;
+    width: 300px;
+    height: 35vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: white;
+    transition: all .2s ease-in;
+}
+
+.card-parceiro:hover {
+    margin-top: -50px;
+}
+
+.area-img {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-logo-parceiro {
+    width: 100%;
+    object-fit: cover;
+}
+
+.tittle-nome-parceiro {
+    font-size: 1.5em;
 }
 
 .bolas-fundo {
@@ -93,20 +121,46 @@
 }
 
 @media(max-width: 1440px) {
-    .img-parceiro {
-        width: 120px;
-        height: 120px;
+    .principal {
+        height: auto;
     }
-    
-    .con-logos {
+    .principal .box {
+        height: auto;
+    }
+
+    .all-content {
+        height: auto;
+    }
+
+    .content-card {
         width: 100%;
+        flex-wrap: wrap;
+        padding: 0px;
+        overflow-x: hidden;
     }
-    
-    .con-img {
-        display: none;
+
+    .card-parceiro {
+        height: 370px;
+    }
+
+    .card-parceiro:hover {
+        margin-top: 0px;
+    }
+
+    .bolas-fundo {
+        height:auto;
     }
 }
 @media(max-width: 650px) {
+    .card-parceiro {
+        min-width: 265px;
+        height: 270px;
+    }
+
+    .tittle-nome-parceiro{
+        font-size: 1em;
+    }
+
     .bolas-fundo .bola-verde1{
         display: none;
     }
