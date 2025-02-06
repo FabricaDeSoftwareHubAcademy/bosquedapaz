@@ -19,67 +19,7 @@
 </head>
 
 <body>
-    <header class="menu-adm">
-        <div class="logo">
-            <img src="../img/logo.png" alt="Logo da Feira" class="img-logo">
-        </div>
-
-        <nav class="nav-bar">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#">Área Administrativa</a></li>
-                <li class="nav-item"><a href="#">Eventos</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Cadastrar Evento</a></li>
-                        <li><a href="" class="item-submenu">Gerenciar Evento</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Expositores</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Cadatrar Expositor</a></li>
-                        <li><a href="" class="item-submenu">Cadatrar expositor kids</a></li>
-                        <li><a href="" class="item-submenu">Cadatrar artista</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Carrossel</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">cadastrar Carrosel</a></li>
-                        <li><a href="" class="item-submenu">Editar Carrosel</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Categorias</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Todas Categorias</a></li>
-                        <li><a href="" class="item-submenu">cadastrar Categorias</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Relatórios</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">relatório de usuarios</a></li>
-                        <li><a href="" class="item-submenu">validação de expositores</a></li>
-                        <li><a href="" class="item-submenu">relatório de expositores</a></li>
-                        <li><a href="" class="item-submenu">relatório de eventos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Parceiros</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">cadastrar parceiros</a></li>
-                        <li><a href="" class="item-submenu">editar parceiros</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <button class="btn-login"><a href="">Login</a></button>
-        </nav>
-
-        <div class="sandwich-menu" onclick="menuShow()">
-            <img src="../img/menu.png" alt="menu" class="menu">
-        </div>
-
-        <div class="login">
-            <img src="../img/login.png" alt="Botão de login" class="img-login">
-        </div>
-    </header>
-
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
     <main class="principal">
 
@@ -250,8 +190,8 @@
                     <div class="modal-content">
                         <h1>Confirmar?</h1>
                         <div class="botoes">
-                            <label for="modal-checkbox" class="salvar">Salvar</label>
-                            <label for="modal-checkbox" class="cancelar">Cancelar</label>
+                            <label for="modal-checkbox" class="salvar"><label for="">Salvar</label></label>
+                            <label for="modal-checkbox" class="cancelar"><label for="">Cancelar</label></label>
                         </div>
                     </div>
                 </div>
@@ -262,7 +202,11 @@
             </div>
 
 
-            <a href="#" class="voltar"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="btns">
+            <a href="gerenciar-expositores.php" class="voltar">
+            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            </a>
+        </div>
 
         </div>
     </main>
