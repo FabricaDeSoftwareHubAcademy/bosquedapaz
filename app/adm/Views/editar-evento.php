@@ -14,7 +14,7 @@
 
     <main class="principal">
         <div class="box">
-            <h2>EDITAR EVENTO</h2>
+            <h2>EDITAR EVENTOS</h2>
             <div class="form-box">
                 <form action="#">
                     <div id="form1">
