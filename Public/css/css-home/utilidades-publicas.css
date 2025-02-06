@@ -810,14 +810,14 @@
     }
 
     .linha-azul-card-principal{
-        top: 109%;
+        top: 117%;
         right: 43%;
     }
     
     .area-card-segundario{
         flex-direction: column;
         background-color: transparent;
-        height: 138%;
+        height: 140%;
         width: 100%;
         align-items: center;
         gap: 3%;
@@ -835,16 +835,16 @@
     .utilidades-card-segundario{
         font-size: 0.9rem;
         top: 2%;
-        left: 24%;
+        left: 12%;
     }
 
     .btn-cantainer-card-segundario {
-        width: 40%;
-        height: 25px;
+        width: 36%;
+        height: 22px;
         position: relative;
         top: 41%;
         left: 40%;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .cantainer-card-segundario{
@@ -855,13 +855,13 @@
     .linha-branca-card-segundario{
         width: 10%;
         height: 97%;
-        top: 28%;
+        top: 32%;
         right: 58%;
     }
 
     .linha-rosa-card-segundario{
-        top: 92%;
-        right: 35%;
+        top: 98%;
+        right: 46%;
     }
 
     .content-principal{
