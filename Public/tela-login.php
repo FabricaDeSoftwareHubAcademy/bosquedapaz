@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -12,7 +11,7 @@
     <main>
         <!-- Section Pricipal da Tela -->
         <section class="section-principal-login">
-
+ 
             <!-- Imagens -->
             <div class="img-superior-direita">
                 <img src="../Imagens/imagem-superior-direito.svg" alt="">
@@ -26,48 +25,48 @@
             <div class="img-inferior-esquerda">
                 <img src="../Imagens/imagem-inferior-esquerdo.svg" alt="">
             </div>
-
+ 
             <!-- Box Principal -->
             <div class="box-login">
                 <div id="linha-login"></div>
-                
+               
                 <div class="botao-voltar">
                     <a href="tela-esqueceu-a-senha.html" class="volte">
                         <img src="../Imagens/arrow-circle-left.svg" alt="">
                     </a>
                 </div>
-
+ 
                 <!-- Area Form -->
                 <div class="area-form-login">
                     <form action="#" class="forms-login">
-
+ 
                         <label>E-mail</label>
                         <div class="area-input-login">
                             <i class="bi bi-envelope"></i>
                             <input class="input-login" type="email" name="email" id="email" placeholder="Digite seu email" required>
                         </div>
-
+ 
                         <label>Senha</label>
                         <div class="area-input-login">
                             <i class="bi bi-lock"></i>
                             <input class="input-login" type="password" name="password" id="password" placeholder="Digite sua senha" required>
                         </div>
                     </form>
-
+ 
                     <div class="div-esqueceu-senha-login">
                         <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.html">Esqueceu a senha?</a>
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
-                    
+                   
                     <button class="botao-login">Login</button>
-                    
+                   
                 </div>
-                
-
+               
+ 
                 <!-- Area da Imagem -->
                 <div class="area-img-login">
                     <h1 class="area-img-login-h1-tiago">LOGIN</h1>
-                    
+                   
                     <div class="a-img-login">
                         <img src="../Imagens/dog-walking-79-12053-1.svg" alt="">
                     </div>
@@ -75,6 +74,6 @@
             </div>
         </section>
     </main>
-    
+   
 </body>
 </html>

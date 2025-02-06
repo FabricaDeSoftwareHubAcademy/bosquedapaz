@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-adm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Cadastro</title>
+    <title>Cadastro ADM</title>
 </head>
 <body>
 <?php include "../../../Public/assets/adm/menu-adm.html"?>
