@@ -202,6 +202,11 @@
     gap: 20px;
 }
 
+.link-cas-expositor {
+    color: white;
+    text-decoration: none;
+}
+
 .btn-form {
     padding: 5px 10px;
     border: none;

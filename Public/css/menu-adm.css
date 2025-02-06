@@ -88,21 +88,26 @@ body {
     transition: all ease-in .2s;
 }
 
+.submenu {
+    margin-top: 10px;
+    position: absolute;
+    background-color: white;
+    padding: 15px 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    list-style: none;
+    transition: 5s;
+}
 
 .submenu {
     display: none;
 }
 
-.submenu {
+.submenu li {
     margin-top: 10px;
-    position: absolute;
-    background-color: white;
-    padding: 10px 5px;
-    gap: 15px;
-    text-transform: capitalize;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    transition: 5s;
 }
 
 .submenu a::after{

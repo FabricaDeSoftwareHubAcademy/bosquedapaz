@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,9 +14,9 @@
 
     <main class="principal">
         <div class="box">
-            <h2>CADASTRO DE EVENTOS</h2>
+            <h2>EDITAR EVENTOS</h2>
             <div class="form-box">
-                <form action="#" method = "POST">
+                <form action="#">
                     <div id="form1">
                         <div class="input-group">
                             <label>Nome do evento:</label>
@@ -47,36 +45,31 @@
 
                         <div class="input-group">
                             <label>Nome da atração:</label>
-                            <input type="text" name="nomeatracao" id="descricaodaatracao"
+                            <input type="text" name="descricaodaatracao" id="descricaodaatracao"
                                 placeholder="Digite o nome da atração">
                         </div>
                         <div class="input-group">
                             <label>Descrição da atração:</label>
-                            <input type="text" name="descatracao" id="descricaodaatracao"
+                            <input type="text" name="descricaodaatracao" id="descricaodaatracao"
                                 placeholder="Digite uma breve descrição da atração">
                         </div>
                         <div class="input-group">
                             <label>Imagem da atração:</label>
-                            <input type="file" name="file" id="file2"
+                            <input type="file" name="file" id="file"
                                 required>
                         </div>
-
-                        
-
                         <div class="btn-add">
-                            <button type="submit" name= "btn-atracao" class="btn-atracao">
+                            <button class="btn-atracao">
                                 <a href="">Adicionar Atração</a>
                         </div>
                         <label id = "tabela">Atrações cadastradas:</label>
                         <table>
                             <tr>
-                                
+                                <td>Nome da atração</td>
                                 
                             </tr>
 
                         </table>
-
-                        <img class = "preview2" src="" alt="" id="preview-image2">
 
                         
                         

@@ -31,6 +31,120 @@ h2 {
     font-size: 30px;
 }
 
+
+/* Estilo do ícone de editar */
+.edit-icon i {
+    color: #333;  /* Cor do ícone de editar */
+    margin-right: 12px;  /* Espaçamento à direita do ícone */
+    font-size: 18px;  /* Tamanho do ícone (ajuste conforme necessário) */
+}
+
+/* Estilo do ícone de excluir */
+.delete-icon i {
+    color: #333;  /* Cor do ícone de excluir */
+    font-size: 18px;  /* Tamanho do ícone (ajuste conforme necessário) */
+}
+
+/* Remover o sublinhado dos links */
+.edit-icon, .delete-icon {
+    text-decoration: none;  /* Remove o sublinhado */
+}
+
+/* Cor ao passar o mouse (hover) */
+.edit-icon:hover i, .delete-icon:hover i {
+    color: #007bff;  /* Cor de hover para os ícones (ajuste conforme necessário) */
+}
+
+/* Estilização para o Modal usando a classe .modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1000; /* Coloca o modal acima de outros conteúdos */
+    overflow: hidden;
+}
+
+/* Títulos dentro do modal */
+.modal h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo do campo de entrada de texto */
+.modal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo do parágrafo dentro do modal */
+.modal-edit {
+    margin: auto;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.modal-edit input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Suaviza o foco */
+}
+
+/* Estilização dos botões dentro do modal */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+/* Botão de Cancelar */
+.cancel-btn {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+
+/* Botão de Confirmar */
+.confirm-btn {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+/* Hover nos botões */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Estilo do backdrop (fundo escuro atrás do modal) */
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.521); /* Escurece o fundo atrás do modal */
+}
+
+
+
 .container {
     width: 90%;
     margin: 20px auto;
@@ -50,7 +164,12 @@ h2 {
     font-size: 20px;
     margin-right: 10px;
 }
-  
+
+.edicao-expositor {
+    height: 500px;
+    width: 399px;
+}
+
 .search-bar input {
     padding: 8px;
     border: 1px solid #ccc;

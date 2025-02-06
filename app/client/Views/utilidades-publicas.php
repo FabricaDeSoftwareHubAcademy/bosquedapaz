@@ -1,4 +1,4 @@
-<?php include "../../../Public/assets/home/menu-home-client.html"; ?>
+<?php include "../../../Public/assets/home/menu-home.html"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +20,10 @@
         
         <div class="box-principal">
 
+            <div class="titulo">
+                <h1 class="utilidades">Utilidades Públicas</h1>
+            </div>
+
             <div class="area-card-principal">
 
                 <div class="card-principal">
@@ -37,7 +41,7 @@
             </div>
 
             <div class="area-card-segundario">
-            
+               
                 <!-- <div class="card-res-segundario">
                     <img src="../../imgs/imagens-utilidades/image 96 1 1.png" alt="" class="img-card-res-segundario">
                     <h1 class="utilidades-card-res-segundario">Utilidades</h1>

@@ -22,26 +22,89 @@
             <h1 class="titulo">Parceiros</h1>
 
             <div class="all-content">
-                <div class="content con-logos">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 1" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 2" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 3" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 4" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 5" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 6" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 1" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 2" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 3" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 4" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 5" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 6" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 1" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 2" class="img-parceiro">
-                        <img src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="Imagem de parceiro 3" class="img-parceiro">
+                <div class="content-card">
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">Shopping Bosque dos Ipês</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">Prefeitura Municipal De Campo Grande MS</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">SEBRAE Serviço Brasileiro de Apoio às Micro e Pequenas Empresa</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-senac.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">SENAC Serviço Nacional de Aprendizagem Comercial</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-setur.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">SECTUR Campo Grande</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">Shopping Bosque dos Ipês</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">Prefeitura Municipal De Campo Grande MS</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">SEBRAE Serviço Brasileiro de Apoio às Micro e Pequenas Empresa</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-senac.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">SENAC Serviço Nacional de Aprendizagem Comercial</h2>
+                        </div>
+                    </div>
+                    <div class="card-parceiro">
+                        <div class="area-img">
+                            <img src="../../../Public/imgs/img-home/logo-setur.png" alt="" class="img-logo-parceiro">
+                        </div>
+                        <div class="area-nome">
+                            <h2 class="tittle-nome-parceiro">SECTUR Campo Grande</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="content con-img">
-                <img src="../../../Public/imgs/img-parceiros.css/foto-parceiros.png" alt="imagem-parceiros" class="img-g">
-                </div>
+
             </div>
         </div>
     </main>
@@ -54,6 +117,6 @@
     </div>
 
     <!-- link do JavaScript -->
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-home/main.js"></script>
 </body>
 </html>
