@@ -1,10 +1,3 @@
-<?php
-
-$nome = $_POST["nomeatracao"]
-
-
-?>
-
 
 
 <!DOCTYPE html>
@@ -77,7 +70,7 @@ $nome = $_POST["nomeatracao"]
                         <label id = "tabela">Atrações cadastradas:</label>
                         <table>
                             <tr>
-                                <!-- <td><?php echo $_POST["nomeatracao"]; ?></td> -->
+                                
                                 
                             </tr>
 
