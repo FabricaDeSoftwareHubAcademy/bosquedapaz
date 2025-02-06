@@ -23,6 +23,11 @@
                     </div>
                     <div class="input-group">
                         <label>Descrição do parceiro:</label>
+                        <input type="text" name="descricao" id="descricao"
+                            placeholder="Escreva a descrição da utilidade pública">
+                    </div>
+                    <div class="input-group">
+                        <label>Escolher Imagem:</label>
                         <input type="file" name="file" id="file"
                             required>
                     </div>
