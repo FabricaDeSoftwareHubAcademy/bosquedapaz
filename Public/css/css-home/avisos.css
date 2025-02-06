@@ -40,7 +40,7 @@
     justify-content: space-around;
 }
 
-.box-text button {
+.btn-saiba {
     cursor: pointer;
     font-weight: 600;
 }
@@ -62,16 +62,31 @@
     color: #fff;
 }
 
-.box-text button {
+.link-saiba-mais {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-saiba {
     width: 50%;
     height: 50px;
     border: none;
     outline: none;
-    background-color: #39B5F6;
+    background-color: #FFA929;
     color: #fff;
     font-size: 2em;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #0000002d;
+    transition: all .2s ease-in-out;
+}
+
+.btn-saiba:hover {
+    background-color: transparent;
+    color: black;
+    border: 2px solid #FFA929;
 }
 
 /* eventos passados */
@@ -91,9 +106,6 @@
     color: black;
 }
 
-.box-text button {
-    background-color: var(--color-fundo-verde);
-}
 
 /* ultimas edições */
 .ultimas {
@@ -134,10 +146,6 @@
     color: #fff;
 }
 
-.box-text button {
-    background-color: #FFA929;
-}
-
 @media(max-width: 1500px) {
 
     .avisos {
@@ -167,7 +175,7 @@
         font-size: 1em;
     }
 
-    .box-text button {
+    .btn-saiba {
         width: auto;
         height: auto;
         padding: 5px 10px;
@@ -214,7 +222,7 @@
         width: 70%;
         font-size: 0.9em;
     }
-    .box-text button {
+    .btn-saiba {
         font-size: 0.9em;
     }
 

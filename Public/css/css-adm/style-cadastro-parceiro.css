@@ -56,6 +56,8 @@ h2{
     bottom: -100px;
     z-index: -3;
 }
+
+
 .box .btns {
     display: flex;
     flex-direction: row;

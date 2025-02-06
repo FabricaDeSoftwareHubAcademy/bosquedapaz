@@ -442,7 +442,7 @@
 .cardRosa-edpass {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 80%;
     height: 530px;
     background-image: url(../../imgs/edicoes-passadas-img/edpassCardrosa.svg);
     background-size: cover;
@@ -457,7 +457,7 @@
 .cardVerde-edpass {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 80%;
     height: 530px;
     background-image: url(../../imgs/edicoes-passadas-img/edpassCardverde.svg);
     background-size: cover;

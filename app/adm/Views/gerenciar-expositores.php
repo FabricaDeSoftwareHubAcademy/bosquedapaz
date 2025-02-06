@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="Botoes-expositores">
-                    <a href="cadastro-expositor.html" class="link-area-icon">
+                    <a href="cadastro-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
                         <p>Cadastrar expositor</p>
@@ -46,18 +46,26 @@
                 </div>
                 </a>
                 <div class="Botoes-expositores">
-                    <a href="edicao-expositor.html" class="link-area-icon">
+                    <a href="edicao-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
                         <p>Editar expositor </p>
                     </div>
                 </div>
                     </a>
-                <div class="Botoes-expositores">
+                <!-- <div class="Botoes-expositores">
                     <a href="editar-perfil-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
                         <p>Editar perfil empresa</p>
+                    </div>
+                </div> -->
+                </a>
+                <div class="Botoes-expositores">
+                    <a href="listar-expositor.php" class="link-area-icon">
+                    <div class="area-icon-expositores">
+                        <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
+                        <p>Listar expositores</p>
                     </div>
                 </div>
                 </a>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,67 +19,7 @@
 </head>
 
 <body>
-    <header class="menu-adm">
-        <div class="logo">
-            <img src="../img/logo.png" alt="Logo da Feira" class="img-logo">
-        </div>
-
-        <nav class="nav-bar">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#">Área Administrativa</a></li>
-                <li class="nav-item"><a href="#">Eventos</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Cadastrar Evento</a></li>
-                        <li><a href="" class="item-submenu">Gerenciar Evento</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Expositores</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Cadatrar Expositor</a></li>
-                        <li><a href="" class="item-submenu">Cadatrar expositor kids</a></li>
-                        <li><a href="" class="item-submenu">Cadatrar artista</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Carrossel</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">cadastrar Carrosel</a></li>
-                        <li><a href="" class="item-submenu">Editar Carrosel</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Categorias</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">Todas Categorias</a></li>
-                        <li><a href="" class="item-submenu">cadastrar Categorias</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Relatórios</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">relatório de usuarios</a></li>
-                        <li><a href="" class="item-submenu">validação de expositores</a></li>
-                        <li><a href="" class="item-submenu">relatório de expositores</a></li>
-                        <li><a href="" class="item-submenu">relatório de eventos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#">Parceiros</a>
-                    <ul class="submenu">
-                        <li><a href="" class="item-submenu">cadastrar parceiros</a></li>
-                        <li><a href="" class="item-submenu">editar parceiros</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <button class="btn-login"><a href="">Login</a></button>
-        </nav>
-
-        <div class="sandwich-menu" onclick="menuShow()">
-            <img src="../img/menu.png" alt="menu" class="menu">
-        </div>
-
-        <div class="login">
-            <img src="../img/login.png" alt="Botão de login" class="img-login">
-        </div>
-    </header>
-
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
     <main class="principal">
 
@@ -116,8 +58,14 @@
                     </div>
 
                     <div class="categoria-prod">
-                        <label>Categoria dos produtos</label>
-                        <input type="text" name="" id="" placeholder="-" required>
+                        <label for="optionInput3">Categorias</label>
+                        <input list="options3" id="optionInput3" name="option3" placeholder="Selecione">
+    
+                        <datalist id="options3">
+                            <option value="gastronomia">
+                            <option value="artesanato">
+                            <option value="moda">
+                        </datalist>
                     </div>
 
                     <div class="input-img">
@@ -132,7 +80,7 @@
 
                     <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca de comida:<br>
                         Qual é a medida EXATA dele?</label>
-                    <input list="options1" id="optionInput1" name="option1" placeholder="Digite ou selecione uma opção">
+                    <input list="options1" id="optionInput1" name="option1" placeholder="Selecione">
 
                     <datalist id="options1">
                         <option value="3m²">
@@ -142,7 +90,7 @@
 
                     <label for="optionInput2">Precisa de energia para vender seus produtos?<br>
                         Se sim, para quais voltagens e quais equipamentos:</label>
-                    <input list="options2" id="optionInput2" name="option2" placeholder="Digite ou selecione uma opção">
+                    <input list="options2" id="optionInput2" name="option2" placeholder="selecione">
 
                     <datalist id="options2">
                         <option value="300Kw">
@@ -200,9 +148,65 @@
                     <button><a href="#">Artistas</a></button>
                 </div>
 
-
             </div>
-            <a href="#" class="voltar"><i class="fa-solid fa-arrow-left"></i></a>
+
+            <!-- fazendo div para responsividade -->
+
+            <!-- div de edital da feira junto com o chekbox -->
+            <div class="edital-resp">
+                <div class="edital-feira">
+                    <button><a href="#">Edital da feira</a></button>
+                </div>
+                
+                <p class="termos">*Aceito os termos do Edital:</p>
+
+                <div class="caixa-checkbox">
+                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
+                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
+
+                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
+                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
+                </div>
+            </div>
+
+            <!-- div para separar o expositor kids/artistas -->
+            <div class="expo-resp">
+                <div class="expositor-kids">
+                    <button><a href="#">Expositor kids</a></button>
+                </div>
+                <div class="artistas">
+                    <button><a href="#">Artistas</a></button>
+                </div>
+            </div>
+
+            <!-- div para salvar e cancelar -->
+            <div class="salvar-resp">
+                <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
+
+                <input type="checkbox" id="modal-checkbox" hidden>
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <h1>Confirmar?</h1>
+                        <div class="botoes">
+                            <label for="modal-checkbox" class="salvar"><label for="">Salvar</label></label>
+                            <label for="modal-checkbox" class="cancelar"><label for="">Cancelar</label></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+            </div>
+
+
+            <div class="btns">
+            <a href="gerenciar-expositores.php" class="voltar">
+            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            </a>
+        </div>
 
         </div>
     </main>

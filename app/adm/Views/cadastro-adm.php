@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-adm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <title>Cadastro</title>
 </head>
 <body>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
     <main>
         <!-- /* Section da tela */ -->
         <section class="section-cadastro-mt">
@@ -71,12 +72,14 @@
                             <div class="area-input-mat">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input-cad-mt" type="password" name="senha" id="senha" placeholder="Digite sua senha" required><br><br>
+                                <i id="iconOlho" class="bi bi-eye-slash"></i>
                             </div>
                             
                             <label class="label-cad-mt" for="confSenha">Confirmar Senha</label>
                             <div class="area-input-mat">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input-cad-mt" class="label-cad-mt" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required><br>
+                                <i id="iconOlho" class="bi bi-eye-slash"></i>
                             </div>
                         </form>
                         <button class="button-cad-mt">Cancelar</button>

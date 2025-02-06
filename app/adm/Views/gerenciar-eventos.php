@@ -47,7 +47,7 @@
                                 <button class="finalizado">Finalizado</button>
                             </td>
                             <td>
-                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                                <a href="editar-evento.php"><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
                                 <button class="open-modal" data-modal="modal-fotos">
@@ -66,7 +66,7 @@
                                 <button class="em_curso">Em Curso</button>
                             </td>
                             <td>
-                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                                <a href="editar-evento.php"><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
                                 <button class="open-modal" data-modal="modal-fotos">

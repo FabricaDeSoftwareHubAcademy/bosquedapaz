@@ -36,15 +36,6 @@
                 <img src="../../../Public/imgs/img-area-adm/Captura de tela 2024-09-25 163826.png" alt="">
                 </a>
                 </div>
-
-                <div class="Botoes-relat">
-                    <a href="" class="link-area-icon">
-                    <div class="area-icon-relat">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                        <p>Relatório Usuários</p>
-                    </div>
-                </div>
-                </a>
                 <div class="Botoes-relat">
                     <a href="index-lista-de-espera.php" class="link-area-icon">
                     <div class="area-icon-relat">
@@ -55,10 +46,19 @@
                     </a>
 
                 <div class="Botoes-relat">
-                <a href="RelatorioExpositor.html" class="link-area-icon">
+                    <a href="" class="link-area-icon">
+                    <div class="area-icon-relat">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                        <p>Relatório Expositor </p>
+                    </div>
+                </div>
+                </a>
+
+                <div class="Botoes-relat">
+                <a href="RelatorioExpositor.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                <p>Relatório Expositor</p>
+                <p>Relatório Usuários</p>
                 </div>
                 </a>
 </div>

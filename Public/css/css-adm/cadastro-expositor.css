@@ -26,7 +26,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    gap: 20px;
 }
 
 .btn-editar {
@@ -70,7 +69,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
     border: none;
@@ -151,6 +150,10 @@
     gap: 20px;
 }
 
+.edital-feira{
+    position: relative;
+    left: 10%;
+}
 
 
 .edital-feira a{
@@ -248,7 +251,7 @@ input[type="checkbox"]:checked + .modal-container {
 .botoes-salvar,
 .botoes-cancelar{
     position: relative;
-    left: 60%;
+    left: 50%;
 }
 
 
@@ -291,10 +294,28 @@ input[type="checkbox"]:checked + .modal-container {
     background-color: #007E70;
 }
 
+.expo-resp a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.expo-resp button{
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+}
+
 .termos{
     height: 20px;
     width: 250px;
     color: red;
+    position: relative;
+    left: 10%;
 }   
 
 .expositor-kids{
@@ -310,6 +331,11 @@ input[type="checkbox"]:checked + .modal-container {
     
 }
 
+.caixa-checkbox{
+    position: relative;
+    left: 10%;
+}
+
 .caixa-checkbox input[type="checkbox"] {
     width: 25px;
     height: 25px;
@@ -318,6 +344,9 @@ input[type="checkbox"]:checked + .modal-container {
 
 .caixa-checkbox label{
     font-size: 18px;
+    position: relative;
+    top: -10%;
+    
 }
 
 
@@ -326,6 +355,16 @@ input[type="checkbox"]:checked + .modal-container {
     font-size: 20px;
     position: relative;
     left: -45%;
+}
+
+.edital-resp{
+    display: none;
+}
+.expo-resp{
+    display: none;
+}
+.salvar-resp{
+    display: none;
 }
 
 @media(max-width: 1050px) {
@@ -408,9 +447,91 @@ input[type="checkbox"]:checked + .modal-container {
         margin-top: 30px;
     }
 
-    
+    .form-termos{
+        display: none;
+    }
+    .form-finalizar{
+        display: none;
+    }
 
+    .edital-resp{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center;
+        align-items: center;
+        gap: 40px; */
+    }
+    .edital-resp button{
+        width: 285%;
+        font-size: 14px;
+    }
+    .termos{
+        width: 150%;
+        font-size: 14px;
+        position: relative;
+        left: 35%;
+        top: -10px;
+    }
+    .caixa-checkbox{
+        width: 100%;
+        position: relative;
+        top: 10px;
+        left: -60px;
+    }
+    .caixa-checkbox input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .caixa-checkbox label{
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+    }
     
+    .expo-resp{
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 10px;
+        gap: 10px;
+    }
+
+    .expositor-kids{
+        position: relative;
+        left: 29px;
+    }
+
+    .artistas button{
+        width: 90%;
+        font-size: 12px;
+        position: relative;
+        left: 5px;
+    }
+
+    .expositor-kids button{
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .salvar-resp{
+        display: flex;
+        position: relative;
+        top: 20px;
+    }
+
+    .salvar-resp{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -48%;
+        gap: 5px;
+    }
+
+    .voltar{
+        position: relative;
+        top: 30px;
+    }
      
     
     
