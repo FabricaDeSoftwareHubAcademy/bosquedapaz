@@ -48,7 +48,7 @@
             
 
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="gerenciar-parceiros.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                 </a>
 
