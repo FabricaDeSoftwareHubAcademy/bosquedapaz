@@ -17,6 +17,7 @@ html,body{
     width: 100%;
     margin: 0;
     padding: 0;
+    /* background-color: grey; */
 }
 
 .img-superior-direita-recsenha{
@@ -54,6 +55,11 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.botao-voltar{
+    margin-top: 46%;
+    margin-left: 1%;
 }
 
 .box-recsenha{

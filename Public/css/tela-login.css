@@ -18,51 +18,56 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: black; */
+    /* background-color: grey; */
     position: relative;
 }
 
 .section-principal-login{
-    width: 100%;
-    height: 967px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* background-color: black; */
     position: relative;
 }
 
 .img-superior-direita{
-    position: fixed;
-    right: -151px;
+    position: absolute;
+    right: 0%;
     top: 8vw;
-    width: 20vw;
+    /* background-color: red; */
 }
 
 .img-superior-esquerda{
-    position: fixed;
-    left: 0vh;
+    position: absolute;
+    left: 0vw;
     top: 6vw;
-    width: 20vw;
+    /* background-color: red; */
 }
 
 .img-inferior-direita{
-    position: fixed;
-    right: -49px;
+    position: absolute;
+    right: 0%;
     top: 35vw;
-    width: 20vw;
+    /* background-color: red; */
 }
 
 .img-inferior-esquerda{
-    position: fixed;
-    left: 0vh;
-    top: 39vw;
-    width: 20vw;
+    position: absolute;
+    left: 0vw;
+    height: 25%;
+    bottom: 0;
+    /* background-color: red; */
 }
 
+.botao-voltar{
+    display: flex;
+    position: relative;
+    top: 95%;
+}
 
 .box-login{
     width: 85%;
@@ -82,7 +87,6 @@
         border-right: 3px solid #FF3877;
         left: 50%;
         border-radius: 20px;
-        /* top: 15%; */
         margin-top: 60px;
     }
 }
@@ -111,7 +115,6 @@
 }
 
 .forms-login input{
-    /* background-color: black; */
     height: 39px;
 }
 
@@ -181,10 +184,6 @@
     border-style: solid;
     border-color: #162868;
 }
- 
-/* .input-login:focus{
-    outline: 2px solid #162868;
-} */
 
 .botao-login{
     width: 150px;
@@ -218,18 +217,18 @@
     width: 100px;
 }
 
+.div-esqueceu-senha-login{
+    margin-left: 26%;
+}
+
 .div-esqueceu-senha-login .esqueceu-a-senha-p{
-    margin-top: 65px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 400;
     display: flex;
-    justify-content: center;
     border: none;
     text-decoration: none;
-    color: black;
-    right: 66%;
-    /* background-color: red; */
+    color: black;;
 }
 
 .div-esqueceu-senha-login:hover .linha-embaixo-recsenha-tiago {
@@ -237,20 +236,23 @@
 }
 
 @media screen and (max-width: 576px) {
+    .body-login{
+        background-color: grey;
+    }
+    
     #linha-login{
         display: none;
     }
 
-    /* body{
-        background-color: grey;
-    } */
+    .botao-voltar{
+        display: none;
+    }
     
     .box-login{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60%;
-        margin-bottom: 80%;     
+        height: 80%;
     }
 
     .img-inferior-esquerda{
@@ -313,25 +315,28 @@
     }
 
     .area-img-login .area-img-login-h1-tiago{
-        bottom: 75%;
+        bottom: 0%;
         position: relative;
     }
 }
 
-@media screen and (min-width:414px) and (max-width:896px){
+@media screen and (min-width:414px) and (max-width:414px){
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
-        /* background-color: grey; */
+    }
+
+    .botao-voltar{
+        display: none;
     }
 
     .box-login{
         display: flex;
-        width: 100%;
+        width: 80%;
         height: 75%;
         top: 12%;
-        position: relative;
+        position: fixed;
     }
 
     .img-inferior-direita{
@@ -371,18 +376,21 @@
 
 @media screen and (min-width:390px) and (max-width:390px) {
     .body-login{
-        /* background-color: grey; */
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .botao-voltar{
+        display: none;
     }
 
     .box-login{
         display: flex;
         pointer-events: none;
         position: relative;
-        top: 13%;
-        width: 100%;
+        top: 16%;
+        width: 86%;
         height: 70%;
     }
 
@@ -390,7 +398,6 @@
         display: flex;
         width: 150px;
         height: 150px;
-        /* position: relative; */
     }
 
     .img-inferior-direita{
@@ -406,20 +413,33 @@
         top: 83%;
         left: 0;
     }
+
+    .forms-login{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:430px) and (max-width:430px) {
     .body-login{
-        background-color: grey;
         display: flex;
         justify-content: center;
         align-items: center;
+        /* background-color: grey; */
+    }
+
+    .botao-voltar{
+        display: none;
     }
 
     .box-login{
+        justify-content: center;
+        align-items: center;
         display: flex;
         pointer-events: none;
-        width: 100%;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        position: fixed;
     }
 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
@@ -429,37 +449,50 @@
     }
 
     .img-inferior-direita{
-        left: 63.2%;
+        left: 64%;
+        top: 51%;
+    }
+
+    .img-superior-direita{
+        left: 72%;
     }
 
     .img-inferior-esquerda{
         display: flex;
         top: 84%;
+    }
+
+    .forms-login{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
-@media screen and (min-width:412px) and (max-width:915px) {
+@media screen and (min-width:412px) and (max-width:412px) {
     .body-login{
         display: flex;
-        background-color: grey;
         justify-content: center;
         align-items: center;
-        /* position: relative; */
+    }
+
+    .botao-voltar{
+        display: none;
     }
 
     .box-login{
         display: flex;
-        width: 100%;
+        width: 80%;
+        height: 80%;
         top: 12%;
         pointer-events: none;
-        position: relative;
+        position: fixed;
     }
 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
         display: flex;
         width: 150px;
         height: 150px;
-        /* position: relative; */
     }
 
     .img-inferior-esquerda{
@@ -469,6 +502,67 @@
 
     .img-inferior-direita{
         display: flex;
+        left: 64%;
+        top: 51%;
+    }
+
+    .img-superior-direita{
+        left: 72%;
+    }
+
+    .forms-login{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:360px) {
+    .body-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botao-voltar{
+        display: none;
+    }
+
+    .botao-voltar{
+        display: none;
+    }
+
+    .box-login{
+        display: flex;
+        width: 80%;
+        height: 80%;
+        margin-top: 80%;
+    }
+
+    .img-inferior-esquerda{
+        display: flex;
+        top: 84%;
+    }
+
+    .img-inferior-direita{
+        display: flex;
+        left: 65%;
+        top: 51%;
+    }
+
+    .img-superior-direita{
+        left: 73%;
+    }
+
+    .forms-login{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .area-img-login-h1-tiago{
+        display: flex;
+        top: 50%;
     }
 }
 
@@ -477,12 +571,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* background-color: grey; */
     }
     
     #linha-login{
         bottom: 18.5%;
         background-color: #FF3877;
+    }
+
+    .div-esqueceu-senha-login{
+        /* background-color: green; */
+        margin-left: 45%;
     }
 
     .box-login{
@@ -492,34 +590,42 @@
         transition: none;
         pointer-events: none;
         background-color: rgba(248, 245, 246, 0.705);
+        z-index: 3;
+    }
+
+    .section-principal-login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* background-color: pink; */
     }
 
     .img-superior-esquerda{
         display: flex;
-        width: 200px;
-        height: auto;
     }
 
     .img-inferior-esquerda{
         display: flex;
         top: 77%;
-        width: 200px;
-        height: auto;
     }
 
     .img-inferior-direita{
+        /* background-color: red; */
+        top: 80%;
         display: flex;
-        left: 73%;
-        top: 81%;
-        width: 200px;
-        height: 200px;
+        width: 28%;
+        height: 20%;
+        position: absolute;
+        right: 0%;
     }
 
     .img-superior-direita{
         display: flex;
-        left: 74%;
-        width: 250px;
-        height: 250px;
+        position: absolute;
+        right: 0%;
+        /* background-color: red; */
     }
 
     .area-img-login{
@@ -527,4 +633,128 @@
         top: 10%;
         width: 45%;
     }
+
+    .forms-login{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .area-form-login{
+        position: absolute;
+        width: 41%;
+    }
 }
+
+@media screen and (min-width:820px) and (max-width:1180px) {
+    .body-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #linha-login{
+        bottom: 22.5%;
+    }
+
+    .box-login{
+        display: flex;
+        align-items: center;
+    }
+
+    .img-inferior-esquerda, .img-superior-esquerda, .img-inferior-direita, .img-superior-direita{
+        display: flex;
+        width: 230px;
+        height: 230px;
+    }
+
+    .img-inferior-esquerda{
+        top: 81%;
+    }
+
+    .img-superior-direita{
+        left: 77%;
+    }
+
+    .img-inferior-direita{
+        left: 71%;
+        top: 81%;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1366px) {
+    .body-login{
+        display: flex;
+        background-color: gray;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #linha-login{
+        top: 15%;
+    }
+
+    .box-login{
+        display: flex;
+        position: fixed;
+        top: 20%;
+        width: 90%;
+    }
+
+    .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
+        background-color: red;
+    }
+}
+
+@media screen and (min-width:912px) and (max-width:912px) {
+    .body-login{
+        display: flex;
+        /* background-color: gray; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
+        display: flex;
+        width: 300px;
+        height: 300px;
+    }
+
+    .img-inferior-esquerda{
+        top: 79%;
+    }
+
+    .img-inferior-direita{
+        top: 79%;
+        left: 65%;
+    }
+
+    .img-superior-direita{
+        left: 73%;
+    }
+}
+
+/* @media screen and (min-width:1024px) and (max-width:1400px) {
+
+    .box-login{
+        position: fixed;
+        top: 6%;
+    }
+
+    .img-inferior-esquerda{
+        top: 74%;
+    }
+
+    .img-inferior-direita{
+        left: 76%;
+        top: 66%;
+    }
+
+    .img-superior-direita{
+        left: 83%;
+    }
+
+    .forms-login{
+        width: 70%;
+    }
+} */
