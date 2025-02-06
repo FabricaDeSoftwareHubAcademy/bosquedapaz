@@ -495,7 +495,7 @@ main .sobre{
 
 
 
-@media(max-width: 992px){
+@media(max-width: 500px){
 
     .section-div img {
         display: none;
