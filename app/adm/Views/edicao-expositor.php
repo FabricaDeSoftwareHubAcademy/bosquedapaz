@@ -76,14 +76,16 @@
                     </div>
 
                 </div>
+                <div class="status">
 
-                <p class="status">Inativar/Ativar</p>
-                <label class="toggle-btn">
-                    <input type="checkbox">
-                    <div class="btn-status">
-                        <div class="ativar"></div>
-                    </div>
-                </label>
+                    <p class="status">Inativar/Ativar</p>
+                    <label class="toggle-btn">
+                        <input type="checkbox">
+                        <div class="btn-status">
+                            <div class="ativar"></div>
+                        </div>
+                    </label>
+                </div>
             </div>
 
             

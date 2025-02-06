@@ -113,6 +113,10 @@
 
         <!-- Box Peincipal -->
         <div class="box-principal-ProEv">
+            <div class="area-setaProEv">
+                <a href="../../../index.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+            </div>
+           
             <!-- Area das Informações do Evento -->
             <div class="area-info-evento-ProEv">
                 <div class="div-img-do-ev-ProEv">

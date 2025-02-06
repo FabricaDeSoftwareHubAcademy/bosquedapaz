@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Administrativa</title>
+    <title>Gerenciar Categorias</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-categorias.css">
     <link
@@ -45,7 +45,7 @@
                 </div>
                     </a>
                     <div class="Botoes-categ">
-                    <a href="cadastro-categoria.php" class="link-area-icon">
+                    <a href="listar-categorias.php" class="link-area-icon">
                     <div class="area-icon-categ">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
                         <p>Listar categorias </p>
@@ -54,7 +54,7 @@
                     </a>
 
                 <div class="Botoes-categ">
-                    <a href="listar-categorias.php" class="link-area-icon">
+                    <a href="visualizar-categorias.php" class="link-area-icon">
                     <div class="area-icon-categ">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
                         <p>Visualizar categorias</p>

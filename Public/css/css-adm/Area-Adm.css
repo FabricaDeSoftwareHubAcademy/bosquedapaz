@@ -134,6 +134,10 @@
         height: 100%;
     }
 
+    .box-gabriel{
+        top: 1%;
+    }
+
     .area-botao-gabriel{
         gap: 0px;
         padding: 0px;
@@ -179,7 +183,9 @@
     }
 
     .area-icon-gabriel img{
-        width: 25%;
+        width: 75%;
+        left: 3%;
+        position: relative;
     }
 
     .area-icon-gabriel p{
@@ -190,7 +196,7 @@
     .seta-voltar-gabriel{
         width: 25px;
         height: 25px;
-        top: 89vh;
-        left: 10vw;
+        top: 91vh;
+        left: 7vw;
     }
 }

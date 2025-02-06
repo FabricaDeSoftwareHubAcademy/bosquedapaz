@@ -10,9 +10,14 @@
     --franch-rose:#FF3877;
     --royal-blue: #162868;
 }
-body{
+html,body{
     overflow: hidden;
-    height: 100vh;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: grey; */
 }
 
 .img-superior-direita-recsenha{
@@ -32,14 +37,14 @@ body{
 .img-inferior-direita-recsenha{
     position: fixed;
     right: -49px;
-    bottom: -7px;
+    top: 35vw;
     width: 20vw;
 }
 
 .img-inferior-esquerda-recsenha{
     position: fixed;
     left: 0vh;
-    top: 40vw;
+    top: 39vw;
     width: 20vw;
 }
 
@@ -50,6 +55,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.botao-voltar{
+    margin-top: 46%;
+    margin-left: 1%;
 }
 
 .box-recsenha{
@@ -308,7 +318,7 @@ body{
 
     .img-inferior-direita-recsenha{
         position: fixed;
-        left: 37vh;
+        right: 0;
         top: 49vh;
         margin-top: 33vh;
         width: 120px;
@@ -430,7 +440,7 @@ body{
     }
 }
 
-@media screen and (min-width:668px) and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     .body-recsenha{
         display: flex;
         justify-content: center;

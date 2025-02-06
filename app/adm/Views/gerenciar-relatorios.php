@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Administrativa</title>
+    <title>Gerenciar Relatórios</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-relatorio.css">
     <link
@@ -55,7 +55,7 @@
                 </a>
 
                 <div class="Botoes-relat">
-                <a href="RelatorioExpositor.html" class="link-area-icon">
+                <a href="RelatorioExpositor.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                 <p>Relatório Usuários</p>

@@ -49,7 +49,7 @@
 
 .principal .box {
     width: 90%;
-    height: 80%;
+    height: auto;
     background-color: rgba(248, 245, 246, 0.65);
     margin: auto;
     margin-top: 40px;
@@ -297,6 +297,13 @@
     left: 3%;
 }
 
+.status{
+    display: none;
+}
+
+
+
+
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1{
         width: 80px;
@@ -337,6 +344,7 @@
         align-items: center;
         justify-content: center;
         padding: 0;
+        height: auto;
     }
 
     .img-expo{
@@ -349,13 +357,32 @@
         gap: 10px;
     }
 
-    
-
     .input-formulario,
     .input-formulario2{
         width: 90%;
     }
 
+    .img-produtos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
 
-   
+    .img-produtos img{
+        width: 50px;
+        height: auto;
+    }
+
+    .form-status{
+        position: relative;
+        left: -30%;
+    }
+
+    .form-finalizar{
+        position: relative;
+        left: -30%;
+        top: 20px;
+    }
+
+  
 }
