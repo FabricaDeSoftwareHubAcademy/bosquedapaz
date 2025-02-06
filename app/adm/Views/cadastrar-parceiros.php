@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página para gerenciar parceiros e suas informações.">
+        <title>Editar Parceiros</title>
+        <link rel="stylesheet" href="../../../Public/css/css-adm/editar-parceiros.css"> 
+            <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Utilidade Públicas</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-parceiro.css">
-</head>
-
-<body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
-
-
+    <body>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
     <main class="principal">
         <div class="box">
-            <h2>CADASTRO DE PARCEIROS</h2>
+            <h2>CADASTRAR PARCEIROS</h2>
             <div class="form-box">
                 <form action="#">
                     <div class="input-group">
-                        <label>Nome do parceiro:</label>
-                        <input type="text" name="titulo" id="titulo"
-                            placeholder="Escreva o título da utilidade pública">
+                        <label>Nome do Parceiro:</label>
+                        <input type="text" name="descricao" id="descricao"
+                            placeholder="Escreva a descrição da utilidade pública">
                     </div>
                     <div class="input-group">
                         <label>Descrição do parceiro:</label>
                         <input type="text" name="descricao" id="descricao"
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>
-                    <!-- <div class="input-group">
-                        <label>Data início</label>
-                        <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                    </div>
                     <div class="input-group">
-                        <label>Data fim</label>
-                        <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
-                    </div> -->
-                    <div class="input-group">
-                        <label>Imagem do parceiro:</label>
+                        <label>Escolher Imagem:</label>
                         <input type="file" name="file" id="file"
                             required>
+                    </div>
+                    <div class="img-parceiro">
+                        <label>Logo Atual:</label>
+                        <img class="parceiro-img" src="../../../Public/imgs/img-parceiros.css/pref-cg.png" alt="">
                     </div>
                 </form>
                 
@@ -53,7 +48,7 @@
             
 
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="gerenciar-parceiros.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                 </a>
 
@@ -70,13 +65,13 @@
         </div>
     </main>
 
-    <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
-    </div>
+        <div class="bolas-fundo">
+                <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
+                <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+                <img src="../../../Public/imgs/imagens-bolas/Elemento3.ElipseRosa.png" alt="" class="bola-rosa">
+        </div>
 
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-</body>
+        <script src="../js/main.js"></script>
 
+    </body>
 </html>

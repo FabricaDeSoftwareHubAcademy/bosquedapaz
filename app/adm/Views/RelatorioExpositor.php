@@ -44,7 +44,7 @@
                           <td class="barraca-col">6</td>
                           <td><button class="status active">Ativo</button></td>
                           <td>
-                              <a href="editar-adm.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                           </td>
@@ -57,7 +57,7 @@
                           <td class="barraca-col">12</td>
                           <td><button class="status inactive">Inativo</button></td>
                           <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                           </td>
@@ -71,7 +71,7 @@
 
                           <td><button class="status active">Ativo</button></td>
                           <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                           </td>
@@ -85,7 +85,7 @@
 
                             <td><button class="status inactive">Inativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -99,7 +99,7 @@
 
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -113,7 +113,7 @@
 
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -127,7 +127,7 @@
 
                             <td><button class="status inactive">Inativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -141,7 +141,7 @@
 
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -155,7 +155,7 @@
 
                             <td><button class="status inactive">Inativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -169,7 +169,7 @@
 
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -183,7 +183,7 @@
 
                             <td><button class="status inactive">Inativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>
@@ -197,7 +197,7 @@
 
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                              <a href="edicao-expositor.html">
+                              <a href="edicao-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                             </td>

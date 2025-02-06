@@ -75,7 +75,7 @@
         </div>
         
         <div class="botão-expositor">
-            <a class="botão" href="../../../app/adm/Views/cadastro-expositor.html">CLIQUE AQUI!</a>
+            <a class="botão" href="../../../app/client/Views/edital-expositor.php">CLIQUE AQUI!</a>
         </div>
     </section>
 
