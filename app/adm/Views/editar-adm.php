@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da Paz</title>
+    <title>Editar ADM</title>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css">
     
