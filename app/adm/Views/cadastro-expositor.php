@@ -250,8 +250,8 @@
                     <div class="modal-content">
                         <h1>Confirmar?</h1>
                         <div class="botoes">
-                            <label for="modal-checkbox" class="salvar">Salvar</label>
-                            <label for="modal-checkbox" class="cancelar">Cancelar</label>
+                            <label for="modal-checkbox" class="salvar"><label for="">Salvar</label></label>
+                            <label for="modal-checkbox" class="cancelar"><label for="">Cancelar</label></label>
                         </div>
                     </div>
                 </div>

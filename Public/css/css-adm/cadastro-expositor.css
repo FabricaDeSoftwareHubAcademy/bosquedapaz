@@ -499,12 +499,14 @@ input[type="checkbox"]:checked + .modal-container {
 
     .expositor-kids{
         position: relative;
-        left: 20px;
+        left: 29px;
     }
 
     .artistas button{
         width: 90%;
         font-size: 12px;
+        position: relative;
+        left: 5px;
     }
 
     .expositor-kids button{
@@ -513,10 +515,23 @@ input[type="checkbox"]:checked + .modal-container {
     }
 
     .salvar-resp{
-        display: block;
+        display: flex;
+        position: relative;
+        top: 20px;
     }
 
-    
+    .salvar-resp{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -48%;
+        gap: 5px;
+    }
+
+    .voltar{
+        position: relative;
+        top: 30px;
+    }
      
     
     
