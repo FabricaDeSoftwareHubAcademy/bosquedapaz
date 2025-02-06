@@ -4,18 +4,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Define a altura da página como 100% da altura da tela */
+    height: 80vh;
+    /* Define a altura da página como 100% da altura da tela */
     background-color: #ffffff;
 }
 
-.nome-area-gabriel h1{
+.nome-area-gabriel h1 {
     color: black;
     position: absolute;
     top: 150px;
     right: 820px;
 }
 
-.Bola-1-gabriel{
+.Bola-1-gabriel {
     position: fixed;
     top: 15vh;
     right: 80vw;
@@ -23,7 +24,7 @@
     width: 20vw;
 }
 
-.Bola-2-gabriel{
+.Bola-2-gabriel {
     position: fixed;
     top: 20vh;
     left: 90vw;
@@ -31,7 +32,7 @@
     width: 20vw;
 }
 
-.Bola-3-gabriel{
+.Bola-3-gabriel {
     position: fixed;
     top: 65vh;
     left: 80vw;
@@ -53,21 +54,21 @@
     z-index: 2;
 }
 
-.seta-voltar-gabriel{
+.seta-voltar-gabriel {
     position: relative;
     position: absolute;
     top: 800px;
     left: 150px;
-    transition: transform 0.3s ease; 
-    cursor: pointer; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
     display: flex;
 }
 
-.seta-voltar-gabriel:hover{
+.seta-voltar-gabriel:hover {
     transform: scale(1.1);
 }
 
-.area-botao-gabriel{
+.area-botao-gabriel {
     width: 70%;
     height: 100%;
     background-color: #f8f5f64b;
@@ -78,7 +79,7 @@
     padding: 100px;
 }
 
-.Botoes-gabriel{
+.Botoes-gabriel {
     width: 200px;
     height: 200px;
     background-color: white;
@@ -87,20 +88,20 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; 
+    gap: 10px;
     max-width: 500px;
-    margin: auto; 
+    margin: auto;
     position: relative;
-    transition: transform 0.3s ease; 
-    cursor: pointer; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 
-.Botoes-gabriel:hover{
+.Botoes-gabriel:hover {
     transform: scale(1.1);
 }
 
-.area-icon-gabriel{
+.area-icon-gabriel {
     width: 200px;
     height: 200px;
     display: flex;
@@ -113,12 +114,12 @@
     transition: all .3s ease;
 }
 
-.area-icon-gabriel img{
+.area-icon-gabriel img {
     width: 40%;
     height: auto;
 }
 
-.area-icon-gabriel p{
+.area-icon-gabriel p {
     position: absolute;
     top: 160px;
     color: #162868;
@@ -126,7 +127,7 @@
 }
 
 @media screen and (max-width: 720px) {
-    .area-icon-gabriel{
+    .area-icon-gabriel {
         width: 100%;
         padding: 20px;
         gap: 20px;
@@ -134,16 +135,20 @@
         height: 100%;
     }
 
+<<<<<<< Updated upstream
     .nome-area-gabriel h1{
         
     }
 
     .box-gabriel{
+=======
+    .box-gabriel {
+>>>>>>> Stashed changes
         top: 1%;
         flex-direction: column;
     }
 
-    .area-botao-gabriel{
+    .area-botao-gabriel {
         gap: 0px;
         padding: 0px;
         width: 100%;
@@ -151,56 +156,57 @@
         position: relative;
     }
 
-    .Botoes-gabriel{
+    .Botoes-gabriel {
         width: 100px;
         height: 100px;
     }
-    .Bola-1-gabriel{
+
+    .Bola-1-gabriel {
         display: block;
         top: 20vh;
         right: 88vw;
     }
 
-    .Bola-1-gabriel img{
+    .Bola-1-gabriel img {
         width: 100%;
         height: auto;
     }
 
-    .Bola-2-gabriel{
+    .Bola-2-gabriel {
         display: block;
         top: 20vh;
         right: 80vw;
     }
 
-    .Bola-2-gabriel img{
+    .Bola-2-gabriel img {
         width: 100%;
         height: auto;
     }
 
-    .Bola-3-gabriel{
+    .Bola-3-gabriel {
         display: block;
         top: 91vh;
     }
 
-    .Bola-3-gabriel img{
+    .Bola-3-gabriel img {
         width: 100%;
         height: auto;
     }
 
-    .area-icon-gabriel img{
+    .area-icon-gabriel img {
         width: 75%;
         left: 3%;
         position: relative;
     }
 
-    .area-icon-gabriel p{
+    .area-icon-gabriel p {
         top: 130px;
         font-size: 10.5px;
         z-index: 1;
         top: 78%;
     }
 
-    .seta-voltar-gabriel{
+    .seta-voltar-gabriel {
         width: 25px;
         height: 25px;
         top: 91vh;

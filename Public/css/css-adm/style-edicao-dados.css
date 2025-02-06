@@ -21,7 +21,7 @@ body {
     align-items: center;
     background-color: #ffffff;
     width: 90%;
-    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.568); 
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.568);
     margin-top: 5%;
     margin-left: 5%;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 @media (max-width: 375px) {
-    
+
     body {
         overflow-x: hidden;
     }
@@ -248,7 +248,7 @@ body {
         width: 100%;
         text-align: center;
     }
-    
+
     .enviar {
         background-color: forestgreen;
         color: white;

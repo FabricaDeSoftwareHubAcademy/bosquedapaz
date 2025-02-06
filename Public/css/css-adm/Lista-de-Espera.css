@@ -62,6 +62,7 @@ html,
     width: 100%;
     height: auto;
 }
+
 .seta-LisEsp3 {
     position: fixed;
     top: 92vh;
@@ -133,7 +134,7 @@ html,
 
 .area-table-lisEsp {
     width: 100%;
-    height: 600px; 
+    height: 600px;
     background-color: rgba(0, 0, 255, 0);
     display: flex;
     align-items: center;
@@ -148,12 +149,12 @@ html,
     width: 96%;
     display: block;
     overflow-y: auto;
-    max-height: 500px; 
+    max-height: 500px;
     table-layout: fixed;
     border-collapse: collapse;
 }
 
-.table-lisEsp td a{
+.table-lisEsp td a {
     color: black;
     text-decoration: none;
     font-size: 15px;
@@ -166,7 +167,7 @@ html,
     color: white;
 }
 
-.table-lisEsp th{
+.table-lisEsp th {
     background-color: rgb(32, 54, 139, 1);
 }
 
@@ -191,7 +192,7 @@ html,
         height: 650px;
     }
 
-    .area-LisEsp-principal{
+    .area-LisEsp-principal {
         background-color: rgba(0, 255, 255, 0);
         height: 90%;
     }
@@ -215,22 +216,22 @@ html,
         top: 94vh;
     }
 
-    .seta-LisEsp3{
+    .seta-LisEsp3 {
         display: none;
     }
 
-    .seta-LisEsp3-res{
+    .seta-LisEsp3-res {
         top: 3vh;
         left: 3vw;
         position: relative;
         display: block;
     }
 
-    .seta-LisEsp3-res img{
+    .seta-LisEsp3-res img {
         width: 7%;
         height: auto;
     }
- 
+
 
     .area-pesquisa-lisEsp input {
         width: 60%;
@@ -251,14 +252,14 @@ html,
         font-size: 12px;
     }
 
-    .table-lisEsp{
+    .table-lisEsp {
         table-layout: fixed;
         width: 100%;
         font-size: 10px;
     }
 
     .table-lisEsp td,
-    .table-lisEsp th{
+    .table-lisEsp th {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: normal;
@@ -266,7 +267,7 @@ html,
         word-break: break-word;
     }
 
-    .table-lisEsp td a{
+    .table-lisEsp td a {
         font-size: 10px;
     }
 
@@ -281,131 +282,135 @@ html,
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
-    .area-LisEsp-principal{
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .area-LisEsp-principal {
         height: 100%;
     }
 
-    .seta-LisEsp3{
+    .seta-LisEsp3 {
         display: none;
     }
 
-    .seta-LisEsp3-res{
+    .seta-LisEsp3-res {
         display: block;
         top: 3vh;
         left: 3vw;
         position: relative;
     }
-    .seta-LisEsp3-res{
+
+    .seta-LisEsp3-res {
         width: 8%;
         height: auto;
     }
 
-    .box-LisEsp-mat{
+    .box-LisEsp-mat {
         width: 98%;
         height: 80%;
         bottom: 50px;
     }
 
-    .box-LisEsp-mat h1{
+    .box-LisEsp-mat h1 {
         margin-left: 29%;
         top: 20px;
         font-size: 35px;
     }
 
-    .area-pesquisa-lisEsp{
+    .area-pesquisa-lisEsp {
         width: 80%;
         left: 10%;
         top: 3%;
     }
 
-    .b-LisEsp3{
+    .b-LisEsp3 {
         top: 91vh;
     }
 
-    .table-lisEsp{
+    .table-lisEsp {
         top: 5%;
     }
 }
 
-@media screen and (min-height: 1366px){
-    .area-LisEsp-principal{
+@media screen and (min-height: 1366px) {
+    .area-LisEsp-principal {
         height: 100%;
     }
 
-    .box-LisEsp-mat{
+    .box-LisEsp-mat {
         width: 95%;
         height: 70%;
     }
 
-    .seta-LisEsp3{
+    .seta-LisEsp3 {
         display: none;
     }
-    
-    .b-LisEsp3{
+
+    .b-LisEsp3 {
         top: 90vh;
     }
 
-    .box-LisEsp-mat h1{
+    .box-LisEsp-mat h1 {
         font-size: 40px;
         margin-left: 30%;
         top: 30px;
     }
 
-    .area-pesquisa-lisEsp{
+    .area-pesquisa-lisEsp {
         width: 80%;
         top: 35px;
         left: 10%;
     }
 
-    .table-lisEsp{
+    .table-lisEsp {
         top: 60px;
     }
-    .seta-LisEsp3{
+
+    .seta-LisEsp3 {
         display: block;
     }
 
 }
 
 @media (min-width: 1024px) and (max-height: 600px) {
-    .b-LisEsp3{
+    .b-LisEsp3 {
         top: 75vh;
     }
 
-    .box-LisEsp-mat{
+    .box-LisEsp-mat {
         width: 90%;
         height: 450px;
         bottom: 200px;
     }
-    .seta-LisEsp3{
+
+    .seta-LisEsp3 {
         left: 1vw;
     }
 }
 
-@media (min-width: 1280px) and (max-height: 800px){
-    .b-LisEsp3{
+@media (min-width: 1280px) and (max-height: 800px) {
+    .b-LisEsp3 {
         top: 75vh;
     }
 
-    .box-LisEsp-mat{
+    .box-LisEsp-mat {
         width: 90%;
         height: 650px;
         bottom: 105px;
     }
-    .seta-LisEsp3{
+
+    .seta-LisEsp3 {
         left: 1vw;
     }
 }
 
-@media (min-width: 912px) and (max-height: 1368px){
-    .seta-LisEsp3-res{
+@media (min-width: 912px) and (max-height: 1368px) {
+    .seta-LisEsp3-res {
         display: none;
     }
 }
 
-@media (min-width: 540px) and (max-height: 720px){
-    .seta-LisEsp3-res img{
+@media (min-width: 540px) and (max-height: 720px) {
+    .seta-LisEsp3-res img {
         width: 5%;
-        height: auto;        
+        height: auto;
     }
 }
