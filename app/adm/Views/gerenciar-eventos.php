@@ -74,6 +74,310 @@
                                 </button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                teste
+                            </td>
+                            <td>
+                                <button class="em_curso">Em Curso</button>
+                            </td>
+                            <td>
+                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                            </td>
+                            <td>
+                                <button class="open-modal" data-modal="modal-fotos">
+                                    <img src="../../../Public/imgs/gerenciar-eventos/Frame.png" alt="Adicionar Fotos">
+                                </button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
