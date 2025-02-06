@@ -147,6 +147,13 @@ h2{
     padding-top: 8px;
     width: 100%;    
 }
+.preview{
+    object-fit: contain;
+    max-height: 40%;
+    max-width: 50%;
+    margin-left: 25%;
+    
+}
 .btn-add{
     display: flex;
     margin-left: 70%;
