@@ -8,11 +8,13 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 .principal {
     width: 100vw;
     height: 90vh;
     z-index: 1;
 }
+
 .principal .box {
     width: 90%;
     height: 90%;
@@ -27,9 +29,11 @@
     padding: 20px;
     /* background-color: aqua; */
 }
-h2{
+
+h2 {
     font-size: 30px;
 }
+
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -37,12 +41,14 @@ h2{
     top: -90vh;
     z-index: -3;
 }
+
 .bolas-fundo .bola-verde1 {
     position: absolute;
     left: -40px;
     top: 6vh;
     z-index: -3;
 }
+
 .bolas-fundo .bola-verde2 {
     position: absolute;
     right: -50px;
@@ -56,7 +62,8 @@ h2{
     bottom: -100px;
     z-index: -3;
 }
-.box .form-box{
+
+.box .form-box {
     min-height: 80%;
     display: flex;
     flex-direction: row;
@@ -66,7 +73,8 @@ h2{
     width: 100%;
     height: 40%;
 }
-.form-box form{
+
+.form-box form {
     height: 100%;
     width: 100%;
     display: flex;
@@ -74,20 +82,22 @@ h2{
     justify-content: space-around;
     /* background-color: #007E70; */
     min-width: 360px;
-    
-    
+
+
 }
-#form1{
+
+#form1 {
     /* background-color: chartreuse; */
     width: 40%;
     display: flex;
     flex-direction: column;
     gap: 4%;
     justify-content: baseline;
-    
-    
+
+
 }
-#form2{
+
+#form2 {
     /* background-color: blueviolet; */
     width: 40%;
     display: flex;
@@ -95,23 +105,27 @@ h2{
     gap: 4%;
     justify-content: baseline;
 }
-.input-group{
+
+.input-group {
     display: flex;
     flex-direction: column;
     height: 70px;
     padding: 2px;
 }
-.form-box .input-group label{
+
+.form-box .input-group label {
     color: #3d3d3d;
     font-weight: bold;
     display: flex;
 }
-.form-box .input-group-file label{
+
+.form-box .input-group-file label {
     color: #3d3d3d;
     font-weight: bold;
     display: flex;
 }
-.form-box .input-group input{
+
+.form-box .input-group input {
     width: 100%;
     height: 40px;
     background-color: white;
@@ -124,7 +138,8 @@ h2{
     transition: all 0.4s ease;
     box-shadow: 1px 2px 0px 0px;
 }
-.form-box .input-group select{
+
+.form-box .input-group select {
     width: 100%;
     height: 40px;
     /* background-color: white; */
@@ -137,17 +152,19 @@ h2{
     transition: all 0.4s ease;
     box-shadow: 1px 2px 0px 0px;
 }
-.input-group #file{
+
+.input-group #file {
     /* background-color: coral; */
     display: flex;
     padding-top: 8px;
-    width: 100%;    
+    width: 100%;
 }
-.preview{
+
+.preview {
     object-fit: contain;
     max-height: 40%;
     max-width: 50%;
-    margin-left: 25%;  
+    margin-left: 25%;
 }
 
 /* .preview2{
@@ -156,16 +173,18 @@ h2{
     border: solid 1px;
 
 } */
-.btn-add{
+.btn-add {
     display: flex;
     margin-left: 70%;
 }
+
 .btn-atracao {
     background-color: #007E70;
     box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
-    border-radius:8px ;
+    border-radius: 8px;
 }
-.btn-atracao a{
+
+.btn-atracao a {
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -173,58 +192,67 @@ h2{
     text-transform: uppercase;
 }
 
-#dia{
+#dia {
     width: 100px;
 }
-#mes{
+
+#mes {
     width: 100px;
 }
-#ano{
+
+#ano {
     width: 100px;
 }
-.form-box .input-group .modal{
+
+.form-box .input-group .modal {
     display: flex;
-    padding-bottom: 7px;  
+    padding-bottom: 7px;
     padding-right: 2px;
     gap: 5px;
     justify-content: space-between;
     width: 100%;
-    
+
 }
-.bottoms-box{
+
+.bottoms-box {
     width: 60%;
     display: flex;
     align-items: center;
     height: 100%;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
-.bottoms-box .bottoms-group{
+
+.bottoms-box .bottoms-group {
     display: flex;
     flex-direction: column;
 }
 
-#uploadevento{
-    background-color:transparent;
+#uploadevento {
+    background-color: transparent;
     border: transparent;
     cursor: pointer;
 }
-#uploadatracao{
+
+#uploadatracao {
     background-color: transparent;
-    border: transparent; 
+    border: transparent;
     cursor: pointer;
 }
-.add-group{
+
+.add-group {
     display: flex;
     flex-direction: column;
 }
-.alterarimagem{
+
+.alterarimagem {
     background-color: #007E70;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-#add{
+
+#add {
     background-color: transparent;
     border: transparent;
     cursor: pointer;
@@ -239,8 +267,9 @@ h2{
     justify-content: space-between;
     width: 100%;
     height: 8%;
-    padding-right: 50px; 
+    padding-right: 50px;
 }
+
 .btns .voltar {
     height: 100%;
     padding: 10px;
@@ -248,9 +277,11 @@ h2{
     align-items: center;
     justify-content: center;
 }
+
 .voltar .btn-voltar {
     width: 40px;
 }
+
 .btns .btn-cancelar-salvar {
     width: auto;
     height: 100%;
@@ -260,6 +291,7 @@ h2{
     gap: 30px;
     padding: 10px;
 }
+
 .btn-cancelar-salvar .btn {
     border: none;
     padding: 10px 20px;
@@ -272,10 +304,12 @@ h2{
     justify-content: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 }
+
 .btn-cancelar-salvar .btn-salvar {
     background-color: #007E70;
     box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
 }
+
 .btn-cancelar-salvar .btn a {
     text-decoration: none;
     color: white;
@@ -283,26 +317,31 @@ h2{
     font-size: 1rem;
     text-transform: uppercase;
 }
+
 @media only screen and (max-width: 950px) {
-    .bottoms-box{
+    .bottoms-box {
         flex-direction: column;
         display: flex;
         justify-content: space-evenly;
     }
-    .add-group{
+
+    .add-group {
         display: flex;
         flex-direction: row;
         scale: 0.8;
     }
-    .bottoms-group #banner{
+
+    .bottoms-group #banner {
         height: 150px;
     }
 }
+
 @media only screen and (max-width: 650px) {
-    .principal .box{
+    .principal .box {
         padding: 0px;
     }
-    .bottoms-box{
+
+    .bottoms-box {
         flex-direction: row;
         height: 60%;
         width: 100%;
@@ -310,37 +349,45 @@ h2{
         justify-content: center;
         gap: 10px;
     }
-    .bottom-box .bottoms-group{
+
+    .bottom-box .bottoms-group {
         display: flex;
         flex-direction: column;
     }
-    .bottoms-group #banner{
+
+    .bottoms-group #banner {
         height: 100px;
     }
-    .bottoms-group label{
+
+    .bottoms-group label {
         font-size: 12px;
     }
-    .alterarimagem{
+
+    .alterarimagem {
         font-size: 12px;
         width: 100%;
     }
-    .add-group{
+
+    .add-group {
         scale: 0.6;
         display: flex;
-        flex-direction: column;   
+        flex-direction: column;
     }
-    .box .form-box{
+
+    .box .form-box {
         flex-direction: column;
         display: flex;
-        width: 100%; 
-        
+        width: 100%;
+
     }
-    .form-box{
+
+    .form-box {
         display: flex;
-        
-            
+
+
     }
-    .form-box form{
+
+    .form-box form {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -348,28 +395,32 @@ h2{
         width: 100%;
         /* gap: 6px; */
     }
-    .input-group{
+
+    .input-group {
         display: flex;
         flex-direction: column;
         /* height: 50px; */
         padding: 0px;
         width: 99%;
-        
+
     }
-    .input-group #file{
+
+    .input-group #file {
         /* background-color: coral; */
         display: flex;
         padding-top: 0px;
         width: 100%;
         height: 50%;
-        
+
     }
-    .form-box .input-group label{
+
+    .form-box .input-group label {
         color: #3d3d3d;
         font-weight: bold;
         display: flex;
     }
-    .form-box .input-group input{
+
+    .form-box .input-group input {
         width: 100%;
         height: 6px;
         background-color: white;
@@ -381,7 +432,8 @@ h2{
         box-shadow: 1px 2px 0px 0px;
 
     }
-    .form-box .input-group select{
+
+    .form-box .input-group select {
         width: 100%;
         height: 6px;
         background-color: white;
@@ -392,87 +444,103 @@ h2{
         color: #616161;
         box-shadow: 1px 2px 0px 0px;
     }
-    
-    .form-box .input-group .modal{
+
+    .form-box .input-group .modal {
         display: flex;
         width: 98%;
     }
-    #form1{
+
+    #form1 {
         display: flex;
         width: 100%;
         gap: 0px;
     }
-    #form2{
+
+    #form2 {
         display: flex;
         width: 100%;
         gap: 0px;
     }
+
     #tabela {
         margin-left: 10%;
     }
-    table{
+
+    table {
         margin-left: 10%;
     }
-    h2{
+
+    h2 {
         font-size: 20px;
     }
-    .box .btns{
+
+    .box .btns {
         display: flex;
         flex-direction: row;
         padding-right: 0px;
-        
+
     }
-    .btns .btn-cancelar-salvar{
+
+    .btns .btn-cancelar-salvar {
         display: flex;
         justify-content: space-between;
         gap: 10%;
-        
+
     }
-    .btn-cancelar-salvar{
+
+    .btn-cancelar-salvar {
         scale: 0.8;
     }
+
     .btn-cancelar-salvar .btn {
         border: none;
         padding: 10px 20px;
         padding: 0px;
     }
 }
-@media only screen and (max-width: 410px){
-    .input-group{
-        scale: 0.9; 
+
+@media only screen and (max-width: 410px) {
+    .input-group {
+        scale: 0.9;
     }
-    .form-box form{
+
+    .form-box form {
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 90%;
     }
-    .form-box .input-group input{
+
+    .form-box .input-group input {
         width: 100%;
         /* padding-bottom: 8px; */
     }
-    .btn-add{
+
+    .btn-add {
         margin-right: 20px;
     }
-    
+
 }
-@media only screen and (max-height: 670px){
-    .input-group{
+
+@media only screen and (max-height: 670px) {
+    .input-group {
         font-size: 0.7rem;
-        
+
     }
-    .btn-add{
+
+    .btn-add {
         margin-right: 20px;
     }
-    #tabela{
+
+    #tabela {
         font-size: 0.8rem;
         margin-top: 0px;
         overflow: visible;
     }
-    table{
+
+    table {
         font-size: 0.8rem;
         padding-top: 0px;
     }
-    
-}
 
+}

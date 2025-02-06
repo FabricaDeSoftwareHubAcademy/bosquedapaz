@@ -58,7 +58,7 @@
 .lado-esquerdo {
     margin-left: 80px;
     background-color: transparent;
-    
+
 }
 
 .cor-rua {
@@ -229,6 +229,7 @@
         width: 100%;
         gap: 0px;
     }
+
     .img-banner {
         width: 850px;
     }
@@ -274,10 +275,12 @@
         width: 100%;
         gap: 0px;
     }
+
     .img-banner {
         width: 670px;
     }
 }
+
 @media screen and (max-width: 780px) {
     .informacoes {
         flex-direction: column;
@@ -285,6 +288,7 @@
         width: 100%;
         gap: 0px;
     }
+
     .img-banner {
         width: 600px;
     }
@@ -297,7 +301,7 @@
     .info-galeria {
         flex-direction: row;
         gap: 30px;
-        
+
     }
 
 }
@@ -331,7 +335,7 @@
         height: 70px;
         margin: 0px;
     }
-    
+
     .lado {
         margin: 0px;
     }
@@ -354,7 +358,7 @@
     .info-galeria {
         flex-direction: column;
         gap: 10px;
-        
+
     }
 
 }
@@ -386,4 +390,3 @@
         padding: 0px;
     }
 }
-

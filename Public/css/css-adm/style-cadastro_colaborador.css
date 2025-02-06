@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../menu-adm.css');
 
@@ -8,11 +7,13 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 .principal {
     width: 100vw;
     height: 90vh;
     z-index: 1;
 }
+
 .principal .box {
     width: 90%;
     height: 90%;
@@ -26,9 +27,11 @@
     justify-content: space-around;
     padding: 20px;
 }
-h2{
+
+h2 {
     font-size: 30px;
 }
+
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -36,12 +39,14 @@ h2{
     top: -90vh;
     z-index: -3;
 }
+
 .bolas-fundo .folhaAzul1-yan {
     position: absolute;
     left: -40px;
     top: 6vh;
     z-index: -3;
 }
+
 .bolas-fundo .folhaAzul2-yan {
     position: absolute;
     right: -50px;
@@ -55,7 +60,8 @@ h2{
     bottom: -100px;
     z-index: -3;
 }
-.box .form-box{
+
+.box .form-box {
     min-height: 80%;
     display: flex;
     flex-direction: column;
@@ -64,7 +70,8 @@ h2{
     width: 100%;
     height: 40%;
 }
-.form-box form{
+
+.form-box form {
     height: 100%;
     width: 40%;
     display: flex;
@@ -72,22 +79,25 @@ h2{
     min-width: 360px;
     justify-content: space-around;
 }
-.input-group{
+
+.input-group {
     display: flex;
     flex-direction: wrap;
     gap: 10px;
     justify-content: center;
     align-items: center;
 }
-.form-box .input-group label{
+
+.form-box .input-group label {
     color: #3d3d3d;
     width: 25%;
     float: left;
     display: block;
     margin-bottom: 5px;
-    margin-right: auto;    
+    margin-right: auto;
 }
-.form-box .input-group input{
+
+.form-box .input-group input {
     position: relative;
     margin-bottom: 15px;
     width: 100%;
@@ -105,11 +115,11 @@ h2{
     float: left;
 }
 
-.form-box .input-group select{
+.form-box .input-group select {
     font-family: 'poppins', sans-serif;
     padding: 6px 14px;
     width: 30%;
-    margin:0 5px;
+    margin: 0 5px;
     border: 1px solid #dcdcdc;
     border-right: 2px solid rgb(212, 210, 210);
     border-bottom: 2px solid rgb(212, 210, 210);
@@ -119,13 +129,18 @@ h2{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
-.form-box .input-group input:focus{
+
+.form-box .input-group input:focus {
     border-color: #5c023c;
 }
-.input-group select:focus{
+
+.input-group select:focus {
     border-color: #5c023c;
 }
-.select-dia, .select-mes, .select-ano{
+
+.select-dia,
+.select-mes,
+.select-ano {
     min-width: 90px;
     max-width: 120px;
     width: 30%;
@@ -142,8 +157,9 @@ h2{
     justify-content: space-between;
     width: 100%;
     height: 8%;
-    padding-right: 50px; 
+    padding-right: 50px;
 }
+
 .btns .voltar {
     height: 100%;
     padding: 10px;
@@ -151,20 +167,24 @@ h2{
     align-items: center;
     justify-content: center;
 }
-.dogs{
+
+.dogs {
     position: absolute;
     left: 150px;
     top: 48vh;
-    z-index: 3;    
+    z-index: 3;
 }
-.dogs img{
+
+.dogs img {
     width: 420px;
     height: 100%;
     filter: blur(0.5px);
 }
+
 .voltar .btn-voltar {
     width: 40px;
 }
+
 .btns .btn-cancelar-salvar {
     width: auto;
     height: 100%;
@@ -174,6 +194,7 @@ h2{
     gap: 30px;
     padding: 10px;
 }
+
 .btn-cancelar-salvar .btn {
     border: none;
     padding: 10px 20px;
@@ -186,10 +207,12 @@ h2{
     justify-content: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 }
+
 .btn-cancelar-salvar .btn-salvar {
     background-color: rgb(9, 9, 158);
     box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
 }
+
 .btn-cancelar-salvar .btn a {
     text-decoration: none;
     color: white;
@@ -199,33 +222,37 @@ h2{
 }
 
 @media only screen and (max-width: 650px) {
-    .principal .box{
+    .principal .box {
         padding: 0px;
     }
-    
-    .box .form-box{
+
+    .box .form-box {
         flex-direction: column;
         display: flex;
-        width: 100%; 
+        width: 100%;
     }
-    .form-box{
+
+    .form-box {
         display: flex;
-        
+
     }
-    .form-box form{
+
+    .form-box form {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;  
+        width: 100%;
     }
-    .input-group{
-        
+
+    .input-group {
+
         flex-direction: column;
         gap: 5px;
-        
+
     }
-    .form-box .input-group label{
+
+    .form-box .input-group label {
         font-size: 12px;
         text-align: center;
         width: 100%;
@@ -234,7 +261,8 @@ h2{
         font-weight: bold;
         display: flex;
     }
-    .form-box .input-group input{
+
+    .form-box .input-group input {
         width: 360px;
         height: 6px;
         background-color: white;
@@ -245,95 +273,116 @@ h2{
         color: #616161;
         box-shadow: 1px 2px 0px 0px;
     }
-    .form-box .input-group select{
+
+    .form-box .input-group select {
         width: 80%;
     }
-    h2{
+
+    h2 {
         font-size: 20px;
     }
-    .dogs img{
+
+    .dogs img {
         display: none;
     }
-    .box .btns{
+
+    .box .btns {
         display: flex;
         flex-direction: row;
         padding-right: 0px;
-        
+
     }
-    .btns .btn-cancelar-salvar{
+
+    .btns .btn-cancelar-salvar {
         display: flex;
         justify-content: space-between;
         gap: 10%;
-        
+
     }
-    .btn-cancelar-salvar{
+
+    .btn-cancelar-salvar {
         scale: 0.8;
     }
+
     .btn-cancelar-salvar .btn {
         border: none;
         padding: 10px 20px;
         padding: 0px;
     }
 }
-@media only screen and (max-width: 410px){
-    .input-group{
-        scale: 0.9; 
+
+@media only screen and (max-width: 410px) {
+    .input-group {
+        scale: 0.9;
     }
-    .dogs img{
+
+    .dogs img {
         display: none;
     }
-    .form-box form{
+
+    .form-box form {
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 100%;
         padding-left: 20px;
     }
-    .form-box .input-group input{
+
+    .form-box .input-group input {
         width: 340px;
         padding-bottom: 8px;
     }
-    .form-box .input-group label{
+
+    .form-box .input-group label {
         font-size: 10px;
     }
-    .form-box .input-group select{
+
+    .form-box .input-group select {
         font-size: 12px;
     }
-   
+
 }
-@media only screen and (max-height: 650px){
-    .principal .box{
+
+@media only screen and (max-height: 650px) {
+    .principal .box {
         width: 90%;
         height: 80%;
     }
-    .box .form-box{
+
+    .box .form-box {
         flex-direction: row;
         display: flex;
-        width: 100%; 
+        width: 100%;
     }
-    .dogs img{
+
+    .dogs img {
         display: none;
     }
-    .form-box{
+
+    .form-box {
         display: flex;
     }
-    .form-box form{
+
+    .form-box form {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
     }
-    .input-group{
+
+    .input-group {
         display: flex;
         flex-direction: column;
         width: 370px;
     }
-    .form-box .input-group label{
+
+    .form-box .input-group label {
         color: #3d3d3d;
         font-weight: bold;
         display: flex;
     }
-    .form-box .input-group input{
+
+    .form-box .input-group input {
         width: 360px;
         height: 6px;
         background-color: white;
@@ -345,4 +394,3 @@ h2{
         box-shadow: 1px 2px 0px 0px;
     }
 }
-
