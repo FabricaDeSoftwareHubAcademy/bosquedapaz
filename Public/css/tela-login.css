@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+ 
 *{
     margin: 0px;
     padding: 0px;
@@ -10,7 +10,7 @@
     --franch-rose:#FF3877;
     --royal-blue: #162868;
 }
-
+ 
 .body-login,html{
     overflow: hidden;
     overflow-x: hidden;
@@ -18,10 +18,10 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: grey; */
+    background-color: grey;
     position: relative;
 }
-
+ 
 .section-principal-login{
     width: 100vw;
     height: 100vh;
@@ -33,28 +33,28 @@
     overflow: hidden;
     position: relative;
 }
-
+ 
 .img-superior-direita{
     position: absolute;
     right: 0%;
     top: 8vw;
     /* background-color: red; */
 }
-
+ 
 .img-superior-esquerda{
     position: absolute;
     left: 0vw;
     top: 6vw;
     /* background-color: red; */
 }
-
+ 
 .img-inferior-direita{
     position: absolute;
     right: 0%;
     top: 35vw;
     /* background-color: red; */
 }
-
+ 
 .img-inferior-esquerda{
     position: absolute;
     left: 0vw;
@@ -62,13 +62,13 @@
     bottom: 0;
     /* background-color: red; */
 }
-
+ 
 .botao-voltar{
     display: flex;
     position: relative;
     top: 95%;
 }
-
+ 
 .box-login{
     width: 85%;
     height: 800px;
@@ -90,16 +90,16 @@
         margin-top: 60px;
     }
 }
-
+ 
 .box-login:hover{
     background-color: #f0f0f013;
     backdrop-filter: blur(30px);
-
+ 
     #linha-login{
         border-right: 3px solid #162868;
     }
 }
-
+ 
 .area-form-login{
     width: 50%;
     height: 800px;
@@ -109,15 +109,15 @@
     justify-content: center;
     flex-direction: column;
 }
-
+ 
 .forms-login{
     width: 50%;
 }
-
+ 
 .forms-login input{
     height: 39px;
 }
-
+ 
 .area-img-login{
     width: 50%;
     height: 800px;
@@ -127,7 +127,7 @@
     justify-content: center;
     flex-direction: column;
 }
-
+ 
 .a-img-login{
     width: 90%;
     height: 600px;
@@ -136,22 +136,22 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 .a-img-login img{
     width: 100%;
     height: auto;
     transition: all 0.5s ease;
 }
-
+ 
 .a-img-login img:hover{
     transform: scale(1.05);
-    
+   
 }
-
+ 
 .area-img-login .area-img-login-h1-tiago{
    font-size: 40px;
 }
-
+ 
 .area-input-login{
     width: 100%;
     height: 50px;
@@ -166,7 +166,7 @@
     top: 45%;
     transform: translateY(-50%);
 }
-
+ 
 .input-login {
     width: 95%;
     height: 35px;
@@ -184,7 +184,7 @@
     border-style: solid;
     border-color: #162868;
 }
-
+ 
 .botao-login{
     width: 150px;
     height: 45px;
@@ -200,11 +200,11 @@
     transition: all .5s ease;
     box-shadow: 1px 3px 5px 2px #7d7d7d;
 }
-
+ 
 .botao-login:hover{
     box-shadow: 1px 3px 5px 3.5px #FF3877;
 }
-
+ 
 .linha-embaixo-recsenha-tiago{
     display: flex;
     width: 25px;
@@ -212,15 +212,15 @@
     background-color: #FF3877;
     transition: all .5s ease;
 }
-
+ 
 .linha-embaixo-recsenha-tiago:hover {
     width: 100px;
 }
-
+ 
 .div-esqueceu-senha-login{
     margin-left: 26%;
 }
-
+ 
 .div-esqueceu-senha-login .esqueceu-a-senha-p{
     cursor: pointer;
     font-size: 16px;
@@ -230,31 +230,31 @@
     text-decoration: none;
     color: black;;
 }
-
+ 
 .div-esqueceu-senha-login:hover .linha-embaixo-recsenha-tiago {
     width: 155px;
 }
-
+ 
 @media screen and (max-width: 576px) {
     /* .body-login{
         background-color: grey;
     } */
-    
+   
     #linha-login{
         display: none;
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-    
+   
     .box-login{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 80%;
     }
-
+ 
     .img-inferior-esquerda{
         display: flex;
         position: fixed;
@@ -262,7 +262,7 @@
         height: 120px;
         width: 120px;
     }
-    
+   
     .img-inferior-direita{
         position: fixed;
         left: 38vh;
@@ -272,36 +272,36 @@
         height: 120px;
         display: flex;
     }
-
+ 
     .img-superior-esquerda{
         display: flex;
         width: 120px;
         height: 120px;
         position: fixed;
     }
-    
+   
     .img-superior-direita{
         display: flex;
         position: fixed;
         width: 120px;
         height: 120px;
         left: 42vh;
-
+ 
     }
-    
+   
     .forms-login{
         display: flex;
         flex-direction: column;
         width: 85%;
     }
-    
+   
     .area-form-login{
         width: 90%;
         display: flex;
         flex-direction: column;
-        
+       
     }
-
+ 
     .area-img-login{
         display: flex;
         flex-direction: column;
@@ -309,28 +309,28 @@
         top: 15%;
         position: absolute;
     }
-
+ 
     .area-img-login .a-img-login{
         display: none;
     }
-
+ 
     .area-img-login .area-img-login-h1-tiago{
         bottom: 0%;
         position: relative;
     }
 }
-
+ 
 @media screen and (min-width:414px) and (max-width:414px){
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-
+ 
     .box-login{
         display: flex;
         width: 80%;
@@ -338,7 +338,7 @@
         top: 12%;
         position: fixed;
     }
-
+ 
     .img-inferior-direita{
         display: flex;
         left: 62%;
@@ -346,14 +346,14 @@
         width: 150px;
         height: 150px;
     }
-
+ 
     .img-superior-direita{
         display: flex;
         left: 71%;
         width: 150px;
         height: 150px;
     }
-
+ 
     .img-inferior-esquerda{
         display: flex;
         left: 0%;
@@ -361,30 +361,30 @@
         height: 160px;
         top: 83%;
     }
-    
+   
     .img-superior-esquerda{
         display: flex;
         width: 160px;
         height: 160px;
-        
+       
     }
-
+ 
     .forms-login{
         width: 100%;
     }
 }
-
+ 
 @media screen and (min-width:390px) and (max-width:390px) {
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-
+ 
     .box-login{
         display: flex;
         pointer-events: none;
@@ -393,32 +393,32 @@
         width: 86%;
         height: 70%;
     }
-
+ 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
         display: flex;
         width: 150px;
         height: 150px;
     }
-
+ 
     .img-inferior-direita{
         left: 59%;
         top: 50%;
     }
-
+ 
     .img-superior-direita{
         left: 69%;
     }
-
+ 
     .img-inferior-esquerda{
         top: 83%;
         left: 0;
     }
-
+ 
     .forms-login{
         width: 100%;
     }
 }
-
+ 
 @media screen and (min-width:430px) and (max-width:430px) {
     .body-login{
         display: flex;
@@ -426,11 +426,11 @@
         align-items: center;
         /* background-color: grey; */
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-
+ 
     .box-login{
         justify-content: center;
         align-items: center;
@@ -441,45 +441,45 @@
         top: 10%;
         position: fixed;
     }
-
+ 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
         display: flex;
         width: 150px;
         height: 150px;
     }
-
+ 
     .img-inferior-direita{
         left: 64%;
         top: 51%;
     }
-
+ 
     .img-superior-direita{
         left: 72%;
     }
-
+ 
     .img-inferior-esquerda{
         display: flex;
         top: 84%;
     }
-
+ 
     .forms-login{
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 }
-
+ 
 @media screen and (min-width:412px) and (max-width:412px) {
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-
+ 
     .box-login{
         display: flex;
         width: 80%;
@@ -488,101 +488,101 @@
         pointer-events: none;
         position: fixed;
     }
-
+ 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
         display: flex;
         width: 150px;
         height: 150px;
     }
-
+ 
     .img-inferior-esquerda{
         display: flex;
         top: 84%;
     }
-
+ 
     .img-inferior-direita{
         display: flex;
         left: 64%;
         top: 51%;
     }
-
+ 
     .img-superior-direita{
         left: 72%;
     }
-
+ 
     .forms-login{
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 }
-
+ 
 @media screen and (min-width:360px) and (max-width:360px) {
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-
+ 
     .botao-voltar{
         display: none;
     }
-
+ 
     .box-login{
         display: flex;
         width: 80%;
         height: 80%;
         margin-top: 80%;
     }
-
+ 
     .img-inferior-esquerda{
         display: flex;
         top: 84%;
     }
-
+ 
     .img-inferior-direita{
         display: flex;
         left: 65%;
         top: 51%;
     }
-
+ 
     .img-superior-direita{
         left: 73%;
     }
-
+ 
     .forms-login{
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-
+ 
     .area-img-login-h1-tiago{
         display: flex;
         top: 50%;
     }
 }
-
+ 
 @media screen and (min-width:768px) and (max-width:1024px) {
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+   
     #linha-login{
         bottom: 18.5%;
         background-color: #FF3877;
     }
-
+ 
     .div-esqueceu-senha-login{
         /* background-color: green; */
         margin-left: 45%;
     }
-
+ 
     .box-login{
         display: flex;
         top: 0.5%;
@@ -592,7 +592,7 @@
         background-color: rgba(248, 245, 246, 0.705);
         z-index: 3;
     }
-
+ 
     .section-principal-login{
         display: flex;
         flex-direction: column;
@@ -601,16 +601,16 @@
         position: relative;
         /* background-color: pink; */
     }
-
+ 
     .img-superior-esquerda{
         display: flex;
     }
-
+ 
     .img-inferior-esquerda{
         display: flex;
         top: 77%;
     }
-
+ 
     .img-inferior-direita{
         /* background-color: red; */
         top: 80%;
@@ -620,68 +620,68 @@
         position: absolute;
         right: 0%;
     }
-
+ 
     .img-superior-direita{
         display: flex;
         position: absolute;
         right: 0%;
         /* background-color: red; */
     }
-
+ 
     .area-img-login{
         display: flex;
         top: 10%;
         width: 45%;
     }
-
+ 
     .forms-login{
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-
+ 
     .area-form-login{
         position: absolute;
         width: 41%;
     }
 }
-
+ 
 @media screen and (min-width:820px) and (max-width:1180px) {
     .body-login{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+ 
     #linha-login{
         bottom: 22.5%;
     }
-
+ 
     .box-login{
         display: flex;
         align-items: center;
     }
-
+ 
     .img-inferior-esquerda, .img-superior-esquerda, .img-inferior-direita, .img-superior-direita{
         display: flex;
         width: 230px;
         height: 230px;
     }
-
+ 
     .img-inferior-esquerda{
         top: 81%;
     }
-
+ 
     .img-superior-direita{
         left: 77%;
     }
-
+ 
     .img-inferior-direita{
         left: 71%;
         top: 81%;
     }
 }
-
+ 
 @media screen and (min-width:1024px) and (max-width:1366px) {
     .body-login{
         display: flex;
@@ -689,23 +689,23 @@
         justify-content: center;
         align-items: center;
     }
-
+ 
     #linha-login{
         top: 15%;
     }
-
+ 
     .box-login{
         display: flex;
         position: fixed;
         top: 20%;
         width: 90%;
     }
-
+ 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
         background-color: red;
     }
 }
-
+ 
 @media screen and (min-width:912px) and (max-width:912px) {
     .body-login{
         display: flex;
@@ -713,47 +713,47 @@
         justify-content: center;
         align-items: center;
     }
-
+ 
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
         display: flex;
         width: 300px;
         height: 300px;
     }
-
+ 
     .img-inferior-esquerda{
         top: 79%;
     }
-
+ 
     .img-inferior-direita{
         top: 79%;
         left: 65%;
     }
-
+ 
     .img-superior-direita{
         left: 73%;
     }
 }
-
+ 
 /* @media screen and (min-width:1024px) and (max-width:1400px) {
-
+ 
     .box-login{
         position: fixed;
         top: 6%;
     }
-
+ 
     .img-inferior-esquerda{
         top: 74%;
     }
-
+ 
     .img-inferior-direita{
         left: 76%;
         top: 66%;
     }
-
+ 
     .img-superior-direita{
         left: 83%;
     }
-
+ 
     .forms-login{
         width: 70%;
     }

@@ -22,15 +22,15 @@
             <div class="img-inferior-esquerda-recsenha">
                 <img src="../Imagens/imagem-inferior-esquerdo.svg" alt="">
             </div>
-
+ 
             <div class="box-recsenha">
-
+ 
                 <div class="botao-voltar">
                     <a href="tela-login.html" class="volte">
                         <img src="../Imagens/arrow-circle-left.svg" alt="">
                     </a>
                 </div>
-                
+               
                 <div id="linha-bet-recsenha"></div>
                 <div class="area-recsenha">
                     <div class="center-recsenha">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="area-img-recsenha">
                     <h1 class="text-h1-recsenha">REDEFINIÇÃO DE SENHA</h1>
-
+ 
                     <div class="img-recsenha">
                         <img class="img-recsenha-svg-recsenha" src="../Imagens/message-sent.svg" alt="">
                     </div>
