@@ -236,9 +236,9 @@
 }
 
 @media screen and (max-width: 576px) {
-    .body-login{
+    /* .body-login{
         background-color: grey;
-    }
+    } */
     
     #linha-login{
         display: none;
@@ -685,7 +685,7 @@
 @media screen and (min-width:1024px) and (max-width:1366px) {
     .body-login{
         display: flex;
-        background-color: gray;
+        /* background-color: gray; */
         justify-content: center;
         align-items: center;
     }
