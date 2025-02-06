@@ -161,6 +161,12 @@
     /* display: none; */
 }
 
+.area-setaProEv{
+    position: relative;
+    top: 93%;
+    left: 3%;
+}
+
 /* Area das Informações do Evento */
 .area-info-evento-ProEv{
     width: 50%;
@@ -890,6 +896,11 @@
 /* Responsividades: */
 /* Responsividade Celular: */
 @media screen and (max-width: 720px){
+    .area-setaProEv{
+        position: relative;
+        top: 3%;
+    }
+
     .area-principal-ProEv{
         flex-direction: column;
     }
@@ -1358,7 +1369,7 @@
     .box-principal-ProEv{
         height: 100%;
         top: 12%;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .box-decorativa-ProEv{
