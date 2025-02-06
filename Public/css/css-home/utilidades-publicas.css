@@ -767,7 +767,6 @@
     }
 
     .area-card-principal{
-        /* display: none; */
         width: 100%;
         height: 64%;
         right: 2%;
@@ -789,7 +788,7 @@
 
     .utilidades-card-principal{
         font-size: 0.9rem;
-        top: 45%;
+        top: 44%;
         left: 24%;
     }
 
@@ -818,7 +817,7 @@
     .area-card-segundario{
         flex-direction: column;
         background-color: transparent;
-        height: 125%;
+        height: 138%;
         width: 100%;
         align-items: center;
         gap: 3%;
@@ -835,7 +834,7 @@
 
     .utilidades-card-segundario{
         font-size: 0.9rem;
-        top: 38%;
+        top: 2%;
         left: 24%;
     }
 
@@ -850,7 +849,7 @@
 
     .cantainer-card-segundario{
         left: 2%;
-        top: 47%
+        top: -3%
     }
 
     .linha-branca-card-segundario{
@@ -861,7 +860,7 @@
     }
 
     .linha-rosa-card-segundario{
-        top: 86%;
+        top: 92%;
         right: 35%;
     }
 
@@ -869,7 +868,7 @@
         height: 50%;
         background-color: aqua;
     }
-    /* .card-res-segundario{
+     .card-res-segundario{
         display: block;
         width: 60%;
         position: relative;
@@ -938,14 +937,14 @@
     .div-infs-evento-modal{
 
     }
-/* 
+
     .areatl-img-modal-ProEv{
         background-color: #FF3877;
     }
 
     .area-text-modal-ProEv{
         background-color: aqua;
-    } */
+    }
 
     .p-atracao-modal{
         font-size: 10px;
@@ -990,321 +989,6 @@
         top: 2%;
         cursor: pointer;
     } 
-}
-
-@media (min-width: 768px) and (max-height: 1024px){
-    body{
-        overflow-y: scroll;
-        height: 100vh;
-        overflow-x: hidden
-    }
-
-    .utilidades{
-        font-size: 1.0rem;
-        left: 21%;
-        position: relative;
-        top: 87%;
-    }
-
-    .box-principal{
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        top: 5%;
-        position: relative;
-    }
-
-    .area-card-principal{
-        width: 95%;
-        height: 64%;
-        right: 2%;
-        position: relative;
-        bottom: 14;
-    }
-
-    .card-principal{
-        height: 68%;
-        width: 35%;
-        top: -7%;
-    }
-
-    .img-card-principal{
-        width: 87%;
-        height: 35%;
-        position: absolute;
-    }
-
-    .utilidades-card-principal{
-        font-size: 0.9rem;
-        top: 45%;
-        left: 24%;
-    }
-
-    .h1-container-principal{
-        display: none;
-    } 
-
-    .container-card-principal{
-        width: 136%;
-        height: 69%;
-        top: 55%;
-        left: 3%;
-    }
-
-    .linha-card-principal{
-        height: 131%;
-        width: 35%;
-        top: -11%;
-    }
-
-    .linha-azul-card-principal{
-        top: 103%;
-        right: 41%;
-    }
-    
-    .area-card-segundario{
-        flex-direction: column;
-        background-color: transparent;
-        height: 125%;
-        width: 64%;
-        align-items: center;
-        gap: 3%;
-        left: -2%;
-        top: 0%;
-    }
-
-    .card-segundario{
-        width: 46%;
-        height: 50%;
-        left: -1%;
-        top: -3%;
-    }
-
-    .utilidades-card-segundario{
-        font-size: 0.9rem;
-        top: 38%;
-        left: 24%;
-    }
-
-    .btn-cantainer-card-segundario {
-        width: 35%;
-        height: 25px;
-        position: relative;
-        top: 34%;
-        left: 36%;
-        font-size: 11px;
-    }
-
-    .cantainer-card-segundario{
-        left: 2%;
-        top: 47%
-    }
-
-    .linha-branca-card-segundario{
-        width: 10%;
-        height: 97%;
-        top: 28%;
-        right: 58%;
-    }
-
-    .linha-rosa-card-segundario{
-        top: 85%;
-        right: 35%;
-    }
-
-    .content-principal{
-        height: 50%;
-        background-color: aqua;
-    }
-    
-    .img-card-segundario{
-        width: 83%;
-        height: 32%;
-        position: absolute;
-    }
-
-    .bola-2{
-        width: 10%;
-        height: 10%;
-        right: -10px;
-        top: 20%;
-    }
-
-/* 
-    .card-res-segundario{
-        display: block;
-        width: 60%;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .img-card-res-segundario{
-        width: 10%;
-        height: 10%;
-    }
-
-    .cantainer-card-res-segundario{
-        background-color: #3F49EA;
-    }
- */
-
-}
-
-@media (min-width: 820px) and (max-height: 1180px){
-    body{
-        overflow-y: scroll;
-        height: 100vh;
-        overflow-x: hidden
-    }
-
-    .utilidades{
-        font-size: 1.0rem;
-        left: 21%;
-        position: relative;
-        top: 87%;
-    }
-
-    .box-principal{
-        flex-direction: column;
-        align-items: center;
-        height: 115%;
-        top: 11%;
-        position: relative;
-    }
-
-    .area-card-principal{
-        width: 95%;
-        height: 64%;
-        right: 2%;
-        position: relative;
-        bottom: 14;
-    }
-
-    .card-principal{
-        height: 68%;
-        width: 35%;
-        top: -7%;
-    }
-
-    .img-card-principal{
-        width: 87%;
-        height: 35%;
-        position: absolute;
-    }
-
-    .utilidades-card-principal{
-        font-size: 0.9rem;
-        top: 45%;
-        left: 24%;
-    }
-
-    .h1-container-principal{
-        display: none;
-    } 
-
-    .container-card-principal{
-        width: 136%;
-        height: 69%;
-        top: 55%;
-        left: 3%;
-    }
-
-    .linha-card-principal{
-        height: 131%;
-        width: 35%;
-        top: -11%;
-    }
-
-    .linha-azul-card-principal{
-        top: 97%;
-        right: 41%;
-    }
-    
-    .area-card-segundario{
-        flex-direction: column;
-        background-color: transparent;
-        height: 125%;
-        width: 64%;
-        align-items: center;
-        gap: 3%;
-        left: -2%;
-        top: 0%;
-    }
-
-    .card-segundario{
-        width: 46%;
-        height: 50%;
-        left: -1%;
-        top: -3%;
-    }
-
-    .utilidades-card-segundario{
-        font-size: 0.9rem;
-        top: 38%;
-        left: 24%;
-    }
-
-    .btn-cantainer-card-segundario {
-        width: 35%;
-        height: 25px;
-        position: relative;
-        top: 34%;
-        left: 36%;
-        font-size: 11px;
-    }
-
-    .cantainer-card-segundario{
-        left: 2%;
-        top: 47%
-    }
-
-    .linha-branca-card-segundario{
-        width: 10%;
-        height: 97%;
-        top: 28%;
-        right: 58%;
-    }
-
-    .linha-rosa-card-segundario{
-        top: 78%;
-        right: 35%;
-    }
-
-    .content-principal{
-        height: 50%;
-        background-color: aqua;
-    }
-    
-    .img-card-segundario{
-        width: 83%;
-        height: 32%;
-        position: absolute;
-    }
-
-    .bola-2{
-        width: 10%;
-        height: 10%;
-        right: -10px;
-        top: 20%;
-    }
-
-/* 
-    .card-res-segundario{
-        display: block;
-        width: 60%;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .img-card-res-segundario{
-        width: 10%;
-        height: 10%;
-    }
-
-    .cantainer-card-res-segundario{
-        background-color: #3F49EA;
-    }
- */
 }
 
 @media screen and (min-height: 1366px){
@@ -1445,7 +1129,7 @@
         top: 20%;
     }
 
-/* 
+
     .card-res-segundario{
         display: block;
         width: 60%;
@@ -1461,5 +1145,5 @@
     .cantainer-card-res-segundario{
         background-color: #3F49EA;
     }
- */
+
 }
