@@ -31,6 +31,12 @@
             <div class="box-login">
                 <div id="linha-login"></div>
 
+                <div class="botao-voltar">
+                    <a href="../../iindex.php" class="volte">
+                        <img src="../Public/imgs/arrow-circle-left.svg" alt="">
+                    </a>
+                </div>
+
                 <!-- Area Form -->
                 <div class="area-form-login">
                     <form action="#" class="forms-login">
@@ -48,10 +54,7 @@
                         </div>
                     </form>
 
-                    <a href="../app/adm/Views/Area-Adm.php">
-                        <button class="botao-login">Login</button>
-                    </a>
-                    
+                    <button class="botao-login">Login</button>
 
                     <div class="div-esqueceu-senha-login">
                         <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.html">Esqueceu a senha?</a>

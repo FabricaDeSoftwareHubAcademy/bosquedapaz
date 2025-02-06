@@ -43,7 +43,7 @@
                     </div>
                     <div class="div-botoes-recsenha">
                         <div class="div-botao-cancelar-recsenha">
-                            <a class="botao-cancelar-recsenha" href="tela-login.html">Cancelar</a>
+                            <a class="botao-cancelar-recsenha" href="tela-login.php">Cancelar</a>
                             <!-- <button class="botao-cancelar-recsenha">Cancelar</button> -->
                         </div>
                         <div class="div-botao-enviar-recsenha">
