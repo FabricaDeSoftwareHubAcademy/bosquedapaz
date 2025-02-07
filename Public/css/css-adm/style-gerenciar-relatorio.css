@@ -7,18 +7,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; 
+    height: 80vh;
     background-color: #ffffff;
 }
 
-.nome-area-relat h1{
+.nome-area-relat h1 {
     color: black;
     position: absolute;
     top: 150px;
     right: 820px;
 }
 
-.Bola-1-relat{
+.Bola-1-relat {
     position: fixed;
     top: 15vh;
     right: 80vw;
@@ -26,7 +26,7 @@
     width: 20vw;
 }
 
-.Bola-2-relat{
+.Bola-2-relat {
     position: fixed;
     top: 20vh;
     left: 90vw;
@@ -34,7 +34,7 @@
     width: 20vw;
 }
 
-.Bola-3-relat{
+.Bola-3-relat {
     position: fixed;
     top: 65vh;
     left: 80vw;
@@ -56,21 +56,21 @@
     z-index: 2;
 }
 
-.seta-voltar-relat{
+.seta-voltar-relat {
     position: relative;
     position: absolute;
     top: 800px;
     left: 150px;
-    transition: transform 0.3s ease; 
-    cursor: pointer; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
     display: flex;
 }
 
-.seta-voltar-relat:hover{
+.seta-voltar-relat:hover {
     transform: scale(1.1);
 }
 
-.area-botao-relat{
+.area-botao-relat {
     width: 70%;
     height: 100%;
     background-color: #f8f5f64b;
@@ -81,7 +81,7 @@
     padding: 100px;
 }
 
-.Botoes-relat{
+.Botoes-relat {
     width: 200px;
     height: 200px;
     background-color: white;
@@ -90,26 +90,28 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; 
+    gap: 10px;
     max-width: 500px;
-    margin: auto; 
+    margin: auto;
     position: relative;
     border: 4px solid #162868;
     border-radius: 10px;
-    transition: transform 0.3s ease; 
-    cursor: pointer; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 
-.Botoes-relat:hover{
+.Botoes-relat:hover {
     transform: scale(1.1);
 }
+
 .link-area-icon {
-    text-decoration: none; 
-    color: inherit; 
-    display: inline-block; 
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
-.area-icon-relat{
+
+.area-icon-relat {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,72 +121,74 @@
     gap: 10px;
 }
 
-.area-icon-relat img{
+.area-icon-relat img {
     max-width: 100%;
     height: auto;
 }
 
-.area-icon-relat p{
-    margin: 0; 
-    text-align: center; 
+.area-icon-relat p {
+    margin: 0;
+    text-align: center;
     color: #162868;
     position: relative;
 }
 
 
 @media screen and (max-width: 720px) {
-    .area-botao-relat{
+    .area-botao-relat {
         width: 100%;
         padding: 20px;
         gap: 20px;
         display: flex;
     }
-    .Botoes-relat{
+
+    .Botoes-relat {
         width: 100px;
         height: 100px;
     }
-    .Bola-1-relat{
+
+    .Bola-1-relat {
         display: block;
         top: 20vh;
         right: 88vw;
     }
 
-    .Bola-1-relat img{
+    .Bola-1-relat img {
         width: 100%;
         height: auto;
     }
 
-    .Bola-2-relat{
+    .Bola-2-relat {
         display: block;
         top: 20vh;
         right: 80vw;
     }
 
-    .Bola-2-relat img{
+    .Bola-2-relat img {
         width: 100%;
         height: auto;
     }
 
-    .Bola-3-relat{
+    .Bola-3-relat {
         display: block;
         top: 91vh;
     }
 
-    .Bola-3-relat img{
+    .Bola-3-relat img {
         width: 100%;
         height: auto;
     }
 
-    .area-icon-relat img{
+    .area-icon-relat img {
         width: 25%;
     }
 
-    .area-icon-relat p{
+    .area-icon-relat p {
         top: 130px;
         font-size: 10.5px;
     }
 
-    .seta-voltar-relat{
+    .seta-voltar-relat {
         width: 25px;
         height: 25px;
         top: 89vh;

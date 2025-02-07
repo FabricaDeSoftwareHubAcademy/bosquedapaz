@@ -8,11 +8,13 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 .principal {
     width: 100vw;
     height: 90vh;
     z-index: 1;
 }
+
 .principal .box {
     width: 90%;
     height: 90%;
@@ -26,9 +28,11 @@
     justify-content: space-around;
     padding: 20px;
 }
-h2{
+
+h2 {
     font-size: 30px;
 }
+
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -36,12 +40,14 @@ h2{
     top: -90vh;
     z-index: -3;
 }
+
 .bolas-fundo .bola-verde1 {
     position: absolute;
     left: -40px;
     top: 6vh;
     z-index: -3;
 }
+
 .bolas-fundo .bola-verde2 {
     position: absolute;
     right: -50px;
@@ -55,6 +61,7 @@ h2{
     bottom: -100px;
     z-index: -3;
 }
+
 .box .btns {
     display: flex;
     flex-direction: row;
@@ -62,8 +69,9 @@ h2{
     justify-content: space-between;
     width: 100%;
     height: 8%;
-    padding-right: 50px; 
+    padding-right: 50px;
 }
+
 .btns .voltar {
     height: 100%;
     padding: 10px;
@@ -71,9 +79,11 @@ h2{
     align-items: center;
     justify-content: center;
 }
+
 .voltar .btn-voltar {
     width: 40px;
 }
+
 .btns .btn-cancelar-salvar {
     width: auto;
     height: 100%;
@@ -83,6 +93,7 @@ h2{
     gap: 30px;
     padding: 10px;
 }
+
 .btn-cancelar-salvar .btn {
     border: none;
     padding: 10px 20px;
@@ -95,10 +106,12 @@ h2{
     justify-content: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 }
+
 .btn-cancelar-salvar .btn-salvar {
     background-color: #007E70;
     box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
 }
+
 .btn-cancelar-salvar .btn a {
     text-decoration: none;
     color: white;
@@ -106,7 +119,8 @@ h2{
     font-size: 1rem;
     text-transform: uppercase;
 }
-.form-box{
+
+.form-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,7 +129,8 @@ h2{
     width: 100%;
     height: 80%;
 }
-.form-box form{
+
+.form-box form {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -125,20 +140,23 @@ h2{
     width: 40%;
     gap: 20px;
 }
-.input-group{
+
+.input-group {
     display: flex;
     flex-direction: column;
     height: 70px;
     padding: 2px;
     /* background-color: #007E70; */
-    
+
 }
-.form-box .input-group label{
+
+.form-box .input-group label {
     color: #3d3d3d;
     font-weight: bold;
     display: flex;
 }
-.form-box .input-group input{
+
+.form-box .input-group input {
     width: 100%;
     height: 30px;
     background-color: white;
@@ -151,73 +169,83 @@ h2{
     transition: all 0.4s ease;
     box-shadow: 1px 2px 0px 0px;
 }
-.input-group{
+
+.input-group {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 2px;
 }
-.input-group #file{
-    
+
+.input-group #file {
+
     padding-top: 0px;
-        
+
 }
 
-.form-box .uploadimg{
+.form-box .uploadimg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: transparent;
-    border: none;    
-    
+    border: none;
+
 }
-.uploadimg .upload{
+
+.uploadimg .upload {
     border: transparent;
     background-color: transparent;
     cursor: pointer;
-    
+
 }
-.form-box .box-img{
+
+.form-box .box-img {
     display: flex;
     flex-direction: row;
-    justify-content:end;
-    height: 70%;     
+    justify-content: end;
+    height: 70%;
 }
+
 @media only screen and (max-width: 950px) {
-    h2{
+    h2 {
         font-size: 1rem;
     }
-    .bottoms-group #banner{
+
+    .bottoms-group #banner {
         height: 150px;
     }
+
     .form-box .vetor {
-        display: none;   
+        display: none;
     }
-    .box-img img{
-        display: none;   
+
+    .box-img img {
+        display: none;
     }
-    
-    .form-box form{   
+
+    .form-box form {
         width: 100%;
         height: 100%;
         gap: 0px;
     }
-    
-    .form-box .uploadimg{
+
+    .form-box .uploadimg {
         height: 100%;
         scale: 0.8;
-        
+
 
     }
-    .uploadimg .upload{  
-        
+
+    .uploadimg .upload {
+
         height: 100%;
-        
+
     }
-    .input-group label{
+
+    .input-group label {
         font-size: 0.8rem;
     }
-    
-    
-    
+
+
+
 }

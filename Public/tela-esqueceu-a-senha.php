@@ -11,19 +11,26 @@
     <main>
         <section class="section-recsenha">
             <div class="img-superior-direita-recsenha">
-                <img src="imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
+                <img src="../Imagens/imagem-superior-direito.svg" alt="">
             </div>
             <div class="img-superior-esquerda-recsenha">
-                <img src="imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
+                <img src="../Imagens/imagem-superior-esquerdo.svg" alt="">
             </div>
             <div class="img-inferior-direita-recsenha">
-                <img src="imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
+                <img src="../Imagens/imagem-inferior-direito.svg" alt="">
             </div>
             <div class="img-inferior-esquerda-recsenha">
-                <img src="imgs/imagens-bolas/imagem-inferior-esquerdo.svg" alt="">
+                <img src="../Imagens/imagem-inferior-esquerdo.svg" alt="">
             </div>
-
+ 
             <div class="box-recsenha">
+ 
+                <div class="botao-voltar">
+                    <a href="tela-login.html" class="volte">
+                        <img src="../Imagens/arrow-circle-left.svg" alt="">
+                    </a>
+                </div>
+               
                 <div id="linha-bet-recsenha"></div>
                 <div class="area-recsenha">
                     <div class="center-recsenha">
@@ -56,14 +63,13 @@
                 </div>
                 <div class="area-img-recsenha">
                     <h1 class="text-h1-recsenha">REDEFINIÇÃO DE SENHA</h1>
-
+ 
                     <div class="img-recsenha">
-                        <img class="img-recsenha-svg-recsenha" src="imgs/img-login/message-sent.svg" alt="">
+                        <img class="img-recsenha-svg-recsenha" src="../Imagens/message-sent.svg" alt="">
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <!-- <script src="../JS/modal-recsenha.js"></script> -->
 </body>
 </html>

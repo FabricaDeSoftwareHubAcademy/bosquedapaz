@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Administrativa</title>
+    <title>Gerenciar Parceiros</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-parceiros.css">
     <link
@@ -36,6 +36,14 @@
                 <img src="../../../Public/imgs/img-area-adm/Captura de tela 2024-09-25 163826.png" alt="">
                 </a>
                 </div>
+                <div class="Botoes-parceiros">
+                    <a href="cadastrar-parceiros.php" class="link-area-icon">
+                    <div class="area-icon-parceiros">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                        <p>Cadastrar Parceiros </p>
+                    </div>
+                </div>
+                    </a>
 
                 <div class="Botoes-parceiros">
                     <a href="tela-parceiros.php" class="link-area-icon">
@@ -45,22 +53,15 @@
                     </div>
                 </div>
                 </a>
-                <div class="Botoes-parceiros">
+                <!-- <div class="Botoes-parceiros">
                     <a href="cadastro-parceiros.php" class="link-area-icon">
                     <div class="area-icon-parceiros">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Cadastrar Parceiros</p>
                     </div>
                 </div>
-                </a>
-                <div class="Botoes-parceiros">
-                    <a href="editar-parceiros.php" class="link-area-icon">
-                    <div class="area-icon-parceiros">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
-                        <p>Editar Parceiros </p>
-                    </div>
-                </div>
-                    </a>
+                </a> -->
+                
 
 </div>
             </div>

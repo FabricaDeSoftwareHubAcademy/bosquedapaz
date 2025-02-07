@@ -129,7 +129,7 @@
 }
 
 @media(max-width: 1050px) {
-    .bolas-fundo .bola-verde1{
+    .bolas-fundo .bola-verde1 {
         width: 80px;
         left: -20px;
     }
@@ -147,7 +147,7 @@
 }
 
 @media(max-width: 650px) {
-    .bolas-fundo .bola-verde1{
+    .bolas-fundo .bola-verde1 {
         display: none;
     }
 

@@ -11,19 +11,19 @@
     overflow: hidden;
 }
 
-.titulo{
+.titulo {
     text-transform: uppercase;
     font-size: 30px;
 }
 
-.principal{
+.principal {
     width: 100vw;
     height: 100vh;
     z-index: 1;
     margin-top: 3%;
 }
 
-.principal .box{
+.principal .box {
     width: 90%;
     height: 80%;
     background-color: rgba(248, 245, 246, 0.65);
@@ -39,7 +39,7 @@
 }
 
 
-.form-box{
+.form-box {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -80,46 +80,61 @@
     top: 55%;
 }
 
-.input-pesquisar{
-    display: flex;
+.input-pesquisar {
+    height: 100%;
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.div-tabela{
-    display: flex;
-    width: 80%;
-    height: 70%;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
-.tab-eventos{
+.div-tabela {
+    display: flex;
+    width: 90%;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    /* background: white; */
+    padding: 10px;
+}
+
+.tab-eventos {
     width: 100%;
-    height: 1%;
     border-collapse: collapse;
 }
 
-.tab-eventos thead{
-    /* border-radius: 10px 10px 0px 0px; */
-    background-color: rgb(32, 54, 139 );
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-
+.tab-eventos thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(32, 54, 139);
+    color: white;
+    z-index: 2;
 }
 
-.tab-eventos thead tr th{
+.tab-eventos tbody {
+    display: block;
+    max-height: 50vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.tab-eventos thead tr,
+.tab-eventos tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tab-eventos tbody tr td {
     text-align: center;
+    height: 15%;
 }
 
-.tab-eventos tbody tr td{
-    text-align: center;
-    height: 37px;
-}
-
-.input-pesquisar input{
+.input-pesquisar input {
     width: 60%;
     /* padding: 50px; */
     height: 50px;
@@ -136,59 +151,63 @@
     transition: border-color 0.3s ease;
     border-top: none;
     border-left: none;
-    border-bottom: 2.93px solid rgb(32,54,159);
-    border-right: 2.93px solid rgb(32,54,159);
+    border-bottom: 2.93px solid rgb(32, 54, 159);
+    border-right: 2.93px solid rgb(32, 54, 159);
 }
 
-.input-pesquisar button{
+.input-pesquisar button {
     width: 178px;
-    height: 49px;
+    /* height: 49px; */
     font-size: 28px;
     color: white;
-    background-color: rgb(32,54,159);
+    background-color: rgb(32, 54, 159);
     border-radius: 10px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 
-.input-pesquisar h3{
+.input-pesquisar h3 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: white; /* Cor clara */
-  }
-  
+    font-size: 80%;
+    background-color: white;
+    /* Cor clara */
+}
+
 table tbody tr:nth-child(even) {
-    background-color: #e6e6e6; /* Cor mais escura */
-  }
+    font-size: 80%;
+    background-color: #e6e6e6;
+    /* Cor mais escura */
+}
 
-  
 
-tbody tr td .finalizado{
+
+tbody tr td .finalizado {
     color: white;
     background-color: rgb(40, 180, 71);
     border: none;
-    width: 105px;
+    width: 35%;
     height: 26px;
     text-align: center;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 75%;
 }
 
-tbody tr td .em_curso{
+tbody tr td .em_curso {
     color: white;
     background-color: rgb(255, 202, 44);
     border: none;
-    width: 105px;
+    width: 35%;
     height: 26px;
     text-align: center;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 75%;
 }
 
 
@@ -201,46 +220,48 @@ tbody tr td .em_curso{
     gap: 50px;
 }
 
-.botoes a{
+.botoes a {
     display: flex;
     flex-direction: row;
     text-decoration: none;
 }
 
-.botoes a button{
+.botoes a button {
+    height: 100%;
     width: 100%;
     display: flex;
 }
 
-.voltar-link{
+.voltar-link {
     width: 50%;
     height: 12%;
     align-items: center;
-    position: absolute;
-    bottom: 16px;
-    left: 100px;
+    position: relative;
+    bottom: -50px;
+    left: -25%;
     display: flex;
     gap: 50px;
     cursor: default;
 
 }
 
-.voltar{
+.voltar {
     background-color: transparent;
     border: none;
     justify-content: left;
     justify-self: left;
 }
-.voltar-link .btn-voltar{
-    width: 70%;
+
+.voltar-link .btn-voltar {
+    width: 60%;
     height: 50%;
 }
 
-.btn-voltar{
+.btn-voltar {
     cursor: pointer;
 }
 
-.novo-evento{
+.novo-evento {
     height: 34px;
     border-radius: 8px;
     color: white;
@@ -253,7 +274,7 @@ tbody tr td .em_curso{
     /* width: 150px; */
 }
 
-.buscar{
+.buscar {
     cursor: pointer;
 }
 
@@ -316,13 +337,13 @@ tbody tr td .em_curso{
 }
 
 
-.open-modal{
+.open-modal {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .principal {
         width: 100%;
         height: 100vh;
@@ -373,20 +394,24 @@ tbody tr td .em_curso{
         border-radius: 8px;
     }
 
-    .voltar-link{
-        bottom: 12px;
+    .voltar-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: -10.5%;
         right: 15px;
-        left: 15px;
+        /* left: 30%; */
     }
 
-    .b-voltar{
+    .b-voltar {
+        position: absolute;
         width: 40%;
         /* height: 50%; */
-        bottom: -18.5%;
+        /* bottom: -18.5%; */
         left: 5%;
     }
 
-    .voltar-link .voltar{
+    .voltar-link .voltar {
         left: -19px;
         width: 100%;
         height: 100%;
@@ -435,17 +460,17 @@ tbody tr td .em_curso{
         padding: 10px;
     }
 
-    .div-tabela{
+    .div-tabela {
         width: 100%;
         height: 80%;
     }
 
-    .input-pesquisar{
+    .input-pesquisar {
         width: 100%;
         height: 100%;
     }
 
-    .input-pesquisar button{
+    .input-pesquisar button {
         width: 25%;
         font-size: 12px;
     }
@@ -454,13 +479,13 @@ tbody tr td .em_curso{
         font-size: 16px;
     }
 
-    .finalizado {
-        width: 90%;
-        font-size: 12px
+    tbody tr td .finalizado {
+        width: 80%;
+        font-size: 60%;
     }
 
-    .em_curso {
+    tbody tr td .em_curso {
         width: 80%;
-        font-size: 15px
+        font-size: 60%;
     }
 }

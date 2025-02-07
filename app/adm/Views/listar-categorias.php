@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Página para gerenciar parceiros e suas informações.">
-        <title>Parceiros</title>
+        <title>Listar Categorias</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/tela-parceiros.css">
         <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,7 +39,7 @@
                             <td>Artesanato</td>                    
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                                <a class="edit-icon">
+                                <a href="editar-categorias.php" class="edit-icon">
                                     <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                 </a>
                                 <a class="delete-icon">
@@ -53,7 +53,7 @@
                                 <td>Antiguidade</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
-                                    <a class="edit-icon">
+                                    <a href="editar-categorias.php" class="edit-icon">
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>
                                     <a class="delete-icon">
@@ -66,7 +66,7 @@
                                 <td>Colecionismo</td>
                                 <td><button class="status inactive">Inativo</button></td>
                                 <td>
-                                    <a class="edit-icon">
+                                    <a href="editar-categorias.php" class="edit-icon">
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>    
                                     <a class="delete-icon">
@@ -79,7 +79,7 @@
                                 <td>Cosmetologia</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
-                                    <a class="edit-icon">
+                                    <a href="editar-categorias.php" class="edit-icon">
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>
                                     <a class="delete-icon">
@@ -89,9 +89,9 @@
                             </tr>
                                 <td class="usuario-col">5</td>
                                 <td>Gastronomia</td>
-                                <td><button class="status inactive">Ativo</button></td>
+                                <td><button class="status inactive">Inativo</button></td>
                                 <td>
-                                    <a class="edit-icon">
+                                    <a href="editar-categorias.php" class="edit-icon">
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>
                                     <a class="delete-icon">
@@ -100,11 +100,11 @@
                                 </td>
                             </tr>
                             <tr>
-                            <td class="usuario-col">1</td>
+                            <td class="usuario-col">6</td>
                             <td>Literatura</td>                    
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                                <a class="edit-icon">
+                                <a href="editar-categorias.php" class="edit-icon">
                                     <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                 </a>
                                 <a class="delete-icon">
@@ -113,11 +113,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="usuario-col">1</td>
+                            <td class="usuario-col">7</td>
                             <td>Moda Autoral</td>                    
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                                <a class="edit-icon">
+                                <a href="editar-categorias.php" class="edit-icon">
                                     <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                 </a>
                                 <a class="delete-icon">
@@ -126,11 +126,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="usuario-col">1</td>
+                            <td class="usuario-col">8</td>
                             <td>Plantas</td>                    
-                            <td><button class="status inactive">Ativo</button></td>
+                            <td><button class="status inactive">Inativo</button></td>
                             <td>
-                                <a class="edit-icon">
+                                <a href="editar-categorias.php" class="edit-icon">
                                     <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                 </a>
                                 <a class="delete-icon">
@@ -139,11 +139,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="usuario-col">1</td>
+                            <td class="usuario-col">9</td>
                             <td>Sustentabilidade</td>                    
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                                <a class="edit-icon">
+                                <a href="editar-categorias.php" class="edit-icon">
                                     <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                 </a>
                                 <a class="delete-icon">

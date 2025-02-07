@@ -11,20 +11,20 @@
     overflow: hidden;
 }
 
-.titulo{
+.titulo {
     text-transform: uppercase;
     font-size: 30px;
     padding-bottom: 2%;
 }
 
-.principal{
+.principal {
     width: 100vw;
     height: 90vh;
     z-index: 1;
     margin-top: 1%;
 }
 
-.principal .box{
+.principal .box {
     width: 90%;
     height: 85%;
     background-color: rgba(248, 245, 246, 0.65);
@@ -68,7 +68,7 @@
     z-index: -3;
 }
 
-.form-box{
+.form-box {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -79,12 +79,12 @@
     position: relative;
 }
 
-h3{
+h3 {
     font-size: 18px;
     text-align: left;
 }
 
-.tabela{
+.tabela {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,11 +95,11 @@ h3{
     /* background-color: whitesmoke; */
 }
 
-.fotos{
+.fotos {
     /* width: 353.15px;
     height: 339.96; */
-    border-bottom: 3px solid rgb(0,126,112);
-    border-right: 3px solid rgb(0,126,112);
+    border-bottom: 3px solid rgb(0, 126, 112);
+    border-right: 3px solid rgb(0, 126, 112);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -107,7 +107,7 @@ h3{
     border-radius: 10px;
 }
 
-.tabela .roleta{
+.tabela .roleta {
     width: 60%;
     height: 40%;
     /* justify-content: space-around; */
@@ -116,18 +116,18 @@ h3{
 }
 
 
-.upload{
+.upload {
     width: 80%;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.texto1{
+.texto1 {
     margin: 70px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +135,7 @@ h3{
 
 
 
-.separacao{
+.separacao {
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,7 +153,7 @@ h3{
     gap: 50px;
 }
 
-.voltar-link{
+.voltar-link {
     width: 50%;
     height: 8%;
     align-items: center;
@@ -166,18 +166,19 @@ h3{
 
 }
 
-.voltar{
+.voltar {
     background-color: transparent;
     border: none;
     justify-content: left;
     justify-self: left;
 }
-.voltar-link .btn-voltar{
+
+.voltar-link .btn-voltar {
     width: 70%;
     height: 50%;
 }
 
-.btn-voltar{
+.btn-voltar {
     cursor: pointer;
 }
 
@@ -201,7 +202,7 @@ h3{
     color: white;
 }
 
-.tabela input{
+.tabela input {
     width: 70%;
     padding: 5px;
     margin-top: 5px;
@@ -215,8 +216,8 @@ h3{
     transition: border-color 0.3s ease;
     border-top: none;
     border-left: none;
-    border-bottom: 2.93px solid rgb(185,185,185);
-    border-right: 2.93px solid rgb(185,185,185);
+    border-bottom: 2.93px solid rgb(185, 185, 185);
+    border-right: 2.93px solid rgb(185, 185, 185);
 }
 
 
@@ -314,14 +315,14 @@ h3{
         align-items: center;
     }
 
-    .b-voltar{
+    .b-voltar {
         width: 40%;
         /* height: 50%; */
         bottom: -18.5%;
         left: 5%;
     }
 
-    .voltar-link .voltar{
+    .voltar-link .voltar {
         left: -19px;
         width: 100%;
         height: 100%;
@@ -369,21 +370,17 @@ h3{
         padding: 10px;
     }
 
-    .img-boneco{
+    .img-boneco {
         display: none;
     }
-    h3{
+
+    h3 {
         font-size: 18px;
         padding: 5px;
     }
 
-    .upload{
+    .upload {
         width: 50%;
         height: 80%;
     }
 }
-
-
-
-
-
