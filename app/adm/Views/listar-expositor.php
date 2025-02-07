@@ -49,9 +49,10 @@
                           <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                    </a>
+                              </a>
+                              <a class="delete-icon">
+                                  <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                </a>
                           </td>
                         </tr>
                         <tr>
@@ -64,8 +65,9 @@
                           <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                           </td>
                         </tr>
@@ -80,8 +82,9 @@
                           <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                           </td>
                         </tr>
@@ -96,8 +99,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -112,8 +116,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -128,8 +133,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -144,8 +150,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -160,8 +167,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -176,8 +184,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -192,8 +201,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -208,8 +218,9 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                              </a>
+                              <a class="delete-icon">
+                                      <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>
                           </tr>
@@ -224,7 +235,8 @@
                             <td>
                               <a class="edit-icon" href="editar-expositor.php">
                                   <i class="fa-solid fa-pen-to-square"></i>
-                              </a><a class="delete-icon">
+                              </a>
+                              <a class="delete-icon">
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                     </a>
                             </td>

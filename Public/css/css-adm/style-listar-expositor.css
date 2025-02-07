@@ -31,104 +31,6 @@
 h2 {
     font-size: 30px;
 }
-
-.edit-icon i {
-    color: #333;
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-.delete-icon i {
-    color: #333;
-    font-size: 18px;
-}
-
-.delete-icon {
-    text-decoration: none;
-
-}
-
-.delete-icon:hover i {
-    color: #007bff;
-}
-
-.modal {
-    display: none;
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1000;
-    overflow: hidden;
-}
-
-.modal h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-}
-.modal input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.modal-edit {
-    margin: auto;
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-}
-
-.modal-edit input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px 5px;
-}
-
-.cancel-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.confirm-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-button:hover {
-    opacity: 0.8;
-}
-
-.modal::backdrop {
-    background: rgba(0, 0, 0, 0.521);
-}
-
 .container {
     width: 90%;
     margin: 20px auto;
@@ -236,6 +138,102 @@ button:hover {
 
 .edit-icon:hover {
     color: #003d8c;
+}
+.edit-icon i {
+    color: #333;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.delete-icon i {
+    color: #333;
+    font-size: 18px;
+}
+
+.delete-icon {
+    text-decoration: none;
+
+}
+
+.delete-icon:hover i {
+    color: #007bff;
+}
+
+.modal {
+    display: none;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.modal h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.modal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.modal-edit {
+    margin: auto;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.modal-edit input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.521);
 }
 
 .bolas-fundo {
