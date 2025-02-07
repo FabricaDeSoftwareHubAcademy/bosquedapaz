@@ -28,11 +28,11 @@
                 <table class="tab-eventos">
                     <thead>
                         <tr>
-                            <th>Nome do Evento</th>
-                            <th>Data</th>
-                            <th>Status</th>
-                            <th>Editar</th>
-                            <th>Fotos</th>
+                            <th class="ne">Nome do Evento</th>
+                            <th class="data">Data</th>
+                            <th class="st">Status</th>
+                            <th class="ed">Editar</th>
+                            <th class="ft">Fotos</th>
                         </tr>
                     </thead>
                     <tbody id="">

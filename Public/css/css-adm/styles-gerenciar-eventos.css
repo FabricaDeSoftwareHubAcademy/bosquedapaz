@@ -343,7 +343,181 @@ tbody tr td .em_curso {
     cursor: pointer;
 }
 
+.ne, .data, .st, .ed, .ft{
+    width: 20%;
+}
+.ne{
+    width: 20%;
+}
+
+.data{
+    padding-right: 0.8%;
+    width: 20%;
+}
+
+.st{
+    padding-right: 1.5%;
+    width: 20%;
+}
+
+.ed{
+    padding-right: 1.9%;
+    width: 20%;
+}
+
+.ft{
+    padding-right: 2.2%;
+    width: 20%;
+}
+
 @media only screen and (max-width: 768px) {
+    .principal {
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* margin-top: 10%; */
+    }
+
+    .principal .box {
+        width: 90%;
+        height: 85%;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+    }
+
+    .form-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    .botoes {
+        left: -1px;
+        display: flex;
+        position: relative;
+        /* flex-direction: column; */
+        gap: 10px;
+        align-items: center;
+        /* width: 100%; */
+        margin-top: 20px;
+        justify-content: center;
+        /* padding-left: 50px; */
+    }
+
+    .botoes a button {
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .voltar-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: -9.5%;
+        right: 15px;
+        /* left: 30%; */
+    }
+
+    .b-voltar {
+        position: absolute;
+        width: 40%;
+        /* height: 50%; */
+        /* bottom: 27%; */
+        left: 5%;
+    }
+
+    .voltar-link .voltar {
+        left: -19px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .bolas-fundo img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    .bolas-fundo .bola-verde1 {
+        width: 150px;
+        left: -30px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 100px;
+        left: 77%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 250px;
+        left: 250px;
+        top: 60%;
+    }
+
+    header .nav-bar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header .nav-bar .nav-item {
+        text-align: center;
+    }
+
+    header .btn-login a {
+        padding: 10px;
+    }
+
+    .div-tabela {
+        width: 100%;
+        height: 80%;
+    }
+
+    .input-pesquisar {
+        width: 100%;
+        height: 100%;
+    }
+
+    .input-pesquisar button {
+        width: 25%;
+        font-size: 12px;
+    }
+
+    .input-pesquisar h3 {
+        font-size: 16px;
+    }
+
+    tbody tr td .finalizado {
+        width: 80%;
+        font-size: 60%;
+    }
+
+    tbody tr td .em_curso {
+        width: 80%;
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
     .principal {
         width: 100%;
         height: 100vh;
