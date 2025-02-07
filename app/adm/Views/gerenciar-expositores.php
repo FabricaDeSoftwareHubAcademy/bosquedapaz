@@ -46,26 +46,10 @@
                 </div>
                 </a>
                 <div class="Botoes-expositores">
-                    <a href="edicao-expositor.php" class="link-area-icon">
-                    <div class="area-icon-expositores">
-                        <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Editar expositor </p>
-                    </div>
-                </div>
-                    </a>
-                <!-- <div class="Botoes-expositores">
-                    <a href="editar-perfil-expositor.php" class="link-area-icon">
-                    <div class="area-icon-expositores">
-                        <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Editar perfil empresa</p>
-                    </div>
-                </div> -->
-                </a>
-                <div class="Botoes-expositores">
                     <a href="listar-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Listar expositores</p>
+                        <p>Listar expositor</p>
                     </div>
                 </div>
                 </a>
