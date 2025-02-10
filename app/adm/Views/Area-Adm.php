@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 </a>
-                <a href="../../../app/adm/Views/gerenciar-carrossel.php">
+                <a href="../../../app/adm/Views/editar-carrossel.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
