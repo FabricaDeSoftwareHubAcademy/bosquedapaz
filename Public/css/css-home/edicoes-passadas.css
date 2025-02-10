@@ -156,15 +156,6 @@
     width: 20vw; 
 }
 
-
-.forma-2-edpass {
-    position: absolute;
-    top: 77vh;
-    right: 80vw;
-    z-index: 1;
-    width: 20vw; 
-}
-
 .forma-3-edpass {
     position: absolute;
     top: 10vh;
@@ -195,6 +186,12 @@
     margin-top: 4%;
     box-sizing: border-box;
     position: absolute;
+}
+
+#btn-voltar-edpass{
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 45px;
 }
 
 .section-b-edpass {
@@ -650,7 +647,7 @@
         border-radius: 5px;
     }
 
-    .forma-1-edpass, .forma-2-edpass, .forma-3-edpass, .forma-4-edpass {
+    .forma-1-edpass, .forma-3-edpass, .forma-4-edpass {
          display: none;
     }
 
