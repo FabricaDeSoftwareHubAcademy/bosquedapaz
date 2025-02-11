@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 </a>
-                <a href="../../../app/adm/Views/manage-events.php">
+                <a href="manage-events.php">
                 <div class="Botoes-gabriel">
                         <div class="area-icon-gabriel">
                             <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="../../../app/adm/Views/index-ctrl.php">
+                <a href="index-ctrl.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Central de Controle.png" alt="">
