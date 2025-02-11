@@ -52,7 +52,7 @@
     </div>
 
     <div class="decoracoes-guilherme">
-        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="btnVoltar" class="botao-voltar-guilherme">
+        <a href="../../../index.php"><img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="btnVoltar" class="botao-voltar-guilherme"></a>
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo1.png" alt="deco1" class="decoracao1-guilherme">
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="deco2" class="decoracao2-guilherme">
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="deco3" class="decoracao3-guilherme">

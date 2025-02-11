@@ -18,7 +18,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(224, 53, 53);
+    background-color: rgb(187, 187, 187);
     position: relative;
 }
  
@@ -93,7 +93,7 @@
 }
  
 .box-login:hover{
-    background-color: #f0f0f013;
+    background-color: #f0f0f08f;
     backdrop-filter: blur(30px);
  
     #linha-login{
