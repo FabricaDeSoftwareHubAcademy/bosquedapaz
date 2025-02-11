@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Validação de Expositor</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-validacao-exp.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-validacao-expositor.css">
 
 </head>
 <body>
