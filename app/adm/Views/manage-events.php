@@ -46,14 +46,6 @@
                 </div>
                 </a>
                 <div class="Botoes-manage-events">
-                    <a href="editar-evento.php" class="link-area-icon">
-                    <div class="area-icon-manage-events">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
-                        <p>Editar evento</p>
-                    </div>
-                </div>
-                </a>
-                <div class="Botoes-manage-events">
                     <a href="gerenciar-eventos.php" class="link-area-icon">
                     <div class="area-icon-manage-events">
                         <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">

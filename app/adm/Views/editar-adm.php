@@ -44,7 +44,7 @@
                     </div>
                     
                     <div class="btns">
-                        <a href="gerenciar-adm.php" class="voltar">
+                        <a href="listar-adm.php" class="voltar">
                             <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                         </a>
                         <div class="btn-cancelar-salvar">

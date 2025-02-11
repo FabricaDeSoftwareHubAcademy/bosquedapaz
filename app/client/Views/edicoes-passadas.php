@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDIÇÕES PASSADAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../../Public/css/css-home/edicoes-passadas.css">
     <link rel="stylesheet" href="../../../Public/css/css-modais/edicoes-passadas-modal.css">
     <script src="../../../Public/js/js-modais/edicoes-passadas-abrir-modais.js" defer></script>
@@ -20,15 +21,15 @@
             <div class="forma-1-edpass">
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma1.svg" alt="elemento1">
             </div>
-            <div class="forma-2-edpass">
-                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma2.svg" alt="elemento2">
-            </div>
             <div class="forma-3-edpass">
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma3.svg" alt="elemento3">
             </div>
             <div class="forma-4-edpass">
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma4.svg" alt="elemento4">
             </div>
+            <button id="btn-voltar-edpass">
+                <img href="../../../Public/home/avisos.html#voltar-edpass" src="../../../Public/imgs/edicoes-passadas-img/arrow-circle-left.png" alt="">
+            </button>
         </section>
 
         <div>

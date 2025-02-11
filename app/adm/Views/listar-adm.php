@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Colaboradores</title>
+    <title>Listar ADM</title>
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-colaboradores.css">
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -19,7 +20,7 @@
     
     <main class="principal">
         <div class="box">
-            <h2>LISTAR COLABORADORES</h2>
+            <h2>LISTAR ADM</h2>
             <div class="container">
                 <div class="search-bar">
                   <label for="status">Procurar</label>
@@ -35,7 +36,7 @@
                       <th class="email-col">E-mail</th>
                       <th class="fone-col">Telefone</th>
                       <th>Status</th>
-                      <th>Editar</th>
+                      <th>Ações</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -46,9 +47,12 @@
                       <td class="fone-col">(67) 98123-4567</td>
                       <td><button class="status active">Ativo</button></td>
                       <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                       </td>
                     </tr>
                     <tr>
@@ -58,9 +62,12 @@
                       <td class="fone-col">(67) 98234-5678</td>
                       <td><button class="status inactive">Inativo</button></td>
                       <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                       </td>
                     </tr>
                     <tr>
@@ -70,9 +77,12 @@
                       <td class="fone-col">(67) 98945-6789</td>
                       <td><button class="status active">Ativo</button></td>
                       <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                       </td>
                     </tr>
                     <tr>
@@ -82,9 +92,12 @@
                         <td class="fone-col">(67) 98845-6789</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -94,9 +107,12 @@
                         <td class="fone-col">(67) 98345-6789</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -106,9 +122,12 @@
                         <td class="fone-col">(67) 97345-6623</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -118,9 +137,12 @@
                         <td class="fone-col">(67) 98885-6888</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -130,9 +152,12 @@
                         <td class="fone-col">(67) 99942-1110</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -142,9 +167,12 @@
                         <td class="fone-col">(67) 99210-2566</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -154,9 +182,12 @@
                         <td class="fone-col">(67) 96841-5517</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -166,9 +197,12 @@
                         <td class="fone-col">(67) 90208-5623</td>
                         <td><button class="status inactive">Inativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>
                     <tr>
@@ -178,9 +212,12 @@
                         <td class="fone-col">(67) 98345-6789</td>
                         <td><button class="status active">Ativo</button></td>
                         <td>
-                          <a href="editar-adm.php">
+                          <a class="edit-icon" href="editar-adm.php">
                               <i class="fa-solid fa-pen-to-square"></i>
                           </a>
+                          <a class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    </a>
                         </td>
                       </tr>  
                   </tbody>
@@ -191,12 +228,20 @@
             </a>
         </div>  
         </div>
+        <dialog id="edit-modal" class="modal-edit">
+                <h2>Confirmar exclusão</h2>
+                <p>Tem certeza que deseja fazer isso?</p>
+                <div>
+                    <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
+                    <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
+                </div>
+            </dialog>
+
     </main>
     <div class="bolas-fundo">
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
     </div>
-    
 </body>
 </html>

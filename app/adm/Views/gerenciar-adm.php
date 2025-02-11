@@ -46,16 +46,7 @@
                 </div>
                 </a>
                 <div class="Botoes-gerenciar">
-                    <a href="editar-adm.php" class="link-area-icon">
-                    <div class="area-icon-gerenciar">
-                        <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                        <p>Editar ADM </p>
-                    </div>
-                </div>
-                    </a>
-
-                <div class="Botoes-gerenciar">
-                <a href="listar-colaboradores.php" class="link-area-icon">
+                <a href="listar-adm.php" class="link-area-icon">
                 <div class="area-icon-gerenciar">
                 <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
                 <p>Listar ADM</p>
