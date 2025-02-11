@@ -98,12 +98,12 @@ body {
 
 .botao-enviar-guilherme {
     background-color: #132868;
-    width: 45%;
-    height: 40px;
+    width: 40%;
+    height: 50px;
 
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     transition: all .3s ease;
