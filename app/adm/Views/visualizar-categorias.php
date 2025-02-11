@@ -75,7 +75,7 @@
                 </div>
                 <p>Sustentabilidade</p>
             </div>
-                <a href="cadastro-categoria.php" class="item">
+                <a href="cadastrar-categoria.php" class="item">
         <div class="bolota" id="b10">
             <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">
         </div>

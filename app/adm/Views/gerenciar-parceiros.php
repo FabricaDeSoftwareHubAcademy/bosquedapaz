@@ -46,7 +46,7 @@
                     </a>
 
                 <div class="Botoes-parceiros">
-                    <a href="tela-parceiros.php" class="link-area-icon">
+                    <a href="listar-parceiros.php" class="link-area-icon">
                     <div class="area-icon-parceiros">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Listar Parceiros</p>
