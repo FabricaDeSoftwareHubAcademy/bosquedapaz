@@ -72,8 +72,8 @@
             </div>
 
             <div class="botoes-guilherme">
-                <a href="#modal-validar-guilherme"><button class="botao-validar-guilherme" id="BtnValidar-guilherme">Validar</button></a>
                 <a href="#modal-recusar-guilherme"><button class="botao-recusar-guilherme" id="btnRecusar-guilherme">Recusar</button></a>
+                <a href="#modal-validar-guilherme"><button class="botao-validar-guilherme" id="BtnValidar-guilherme">Validar</button></a>
             </div>
         </section>
 

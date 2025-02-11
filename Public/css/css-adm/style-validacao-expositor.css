@@ -247,7 +247,7 @@ body {
     font-size: 1.125rem;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-    background-color: #5275ff;
+    background-color: #007E70;
 }
 
 .botao-recusar-guilherme {
@@ -258,17 +258,7 @@ body {
     font-size: 1.125rem;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-    background-color: #fe748d;
-}
-
-.botao-validar-guilherme:hover {
-    background-color: #20368B;
-    border-radius: 0.3rem;
-}
-
-.botao-recusar-guilherme:hover {
-    background-color: #B1253F;
-    border-radius: 0.3rem;
+    background-color: #FF3877;
 }
 
 .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
@@ -356,14 +346,10 @@ body {
 }
 
 .btn-validar-guilherme {
-    background-color: #5275ff;
+    background-color: #007E70;
     color: white;
     transition: all .3s ease;
-}
-
-.btn-validar-guilherme:hover {
     cursor: pointer;
-    background-color: #20368B;
 }
 
 .btn-voltar-guilherme {
@@ -380,14 +366,10 @@ body {
 }
 
 .btn-recusar-guilherme {
-    background-color: #fe748d;
+    background-color: #FF3877;
     color: white;
     transition: all .3s ease;
-}
-
-.btn-recusar-guilherme:hover {
     cursor: pointer;
-    background-color: #B1253F;
 }
 
 .btn-ok-guilherme {
