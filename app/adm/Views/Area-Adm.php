@@ -25,12 +25,12 @@
             </div>
 
             <div class="seta-voltar-gabriel">
-                <a href="../../../Public/tela-login.html">
+                <a href="../../../Public/tela-login.php">
                 <img src="../../../Public/imgs/img-area-adm/Captura de tela 2024-09-25 163826.png" alt="">
                 </a>
             </div>
 
-            <a href="../../../app/adm/Views/gerenciar-parceiros.php">
+            <a href="gerenciar-parceiros.php">
             <div class="area-botao-gabriel">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 </a>
-                <a href="../../../app/adm/Views/gerenciar-expositores.php">
+                <a href="gerenciar-expositores.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 </a>
-                <a href="../../../app/adm/Views/gerenciar-relatorios.php">
+                <a href="gerenciar-relatorios.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 </a>
-                <a href="../../../app/adm/Views/editar-carrossel.php">
+                <a href="editar-carrossel.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
