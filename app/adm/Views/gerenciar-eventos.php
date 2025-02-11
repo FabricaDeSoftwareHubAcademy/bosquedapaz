@@ -370,7 +370,7 @@
                                 <button class="em_curso">Em Curso</button>
                             </td>
                             <td>
-                                <a href=""><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
+                                <a href="editar-evento.php"><img src="../../../Public/imgs/gerenciar-eventos/Edit.png" alt="Botão-Editar"></a>
                             </td>
                             <td>
                                 <button class="open-modal" data-modal="modal-fotos">
@@ -389,7 +389,7 @@
                 </div>
             </a>
             <div class="botoes">
-                <a href="../../../app/adm/Views/cadastro-evento.php"><button class="novo-evento">Novo Evento</button></a>
+                <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
             </div>
         </div>
     </main>

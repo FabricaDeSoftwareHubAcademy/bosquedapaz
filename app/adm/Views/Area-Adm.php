@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 </a>
-                <a href="manage-events.php">
+                <a href="gerenciar-eventos.php">
                 <div class="Botoes-gabriel">
                         <div class="area-icon-gabriel">
                             <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
