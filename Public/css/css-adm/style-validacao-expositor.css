@@ -248,6 +248,7 @@ body {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     background-color: #007E70;
+    border-radius: 10px;
 }
 
 .botao-recusar-guilherme {
@@ -259,6 +260,7 @@ body {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     background-color: #FF3877;
+    border-radius: 10px;
 }
 
 .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
@@ -356,6 +358,7 @@ body {
     background-color: #b3b3b3;
     color: white;
     transition: all .3s ease;
+    border-radius: 10px;
 }
 
 .btn-voltar-guilherme:hover {
@@ -370,12 +373,14 @@ body {
     color: white;
     transition: all .3s ease;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .btn-ok-guilherme {
     background-color: rgb(2, 196, 2);
     color: white;
     transition: all .3s ease;
+    border-radius: 10px;
 }
 
 .btn-ok-guilherme:hover {
