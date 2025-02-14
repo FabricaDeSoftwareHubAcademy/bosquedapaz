@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.body-enzo{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.box-enzo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 200px;
+}
+.card-enzo{
+    display: flex;
+    width: 75%;
+    height: 700px;
+    padding: 10px 0px 10px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: rgba(163, 163, 163, 0.3);
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 5px rgba(255, 255, 255, 0.379);
+}
+.header-enzo{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    flex-direction: row;
+    padding: 20px 20px;
+    background-color: rgb(74, 74, 74);
+}
+.cabecalho-enzo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    width: 100%;
+    height: 100%;
+}
+.icon-cabecalho{
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0);
+}
+.area-menu{
+    display: flex;
+    /* width: 75%; */
+    height: 20px;
+    background-color: aquamarine;
+    padding: 0px 10px;  
+}
+.contato-menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.contato-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.menu-enzo{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 90%;
+}
+.contato-enzo{
+    text-decoration: none;
+    color: white;
+}
+.voltar-seta{
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.voltar-seta:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.title-box{
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    color: rgb(89, 255, 0);
+}
+.title-box:hover{
+    transition: all 0.3s ease;
+    color: rgb(75, 215, 0);
+}
+.habilidades-descricao{
+    color: white;
+    font-size: 28px;
+    padding: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.area-linguagens{
+    width: 100%;
+}
+.linguagens-enzo{
+    display: flex;
+    color: white;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    align-items: end;
+    padding: 0px 15px;
+}
+.py-enzo{
+    font-size: 2.5rem;
+    color: white;
+    padding: 10px 15px;
+}
+.js-enzo{
+    font-size: 2.5rem;
+    color: white;
+    padding: 10px 15px;
+}
+.html-enzo{
+    font-size: 2.5rem;
+    color: white;
+    padding: 10px 15px;
+}
+.css-enzo{
+    font-size: 2.5rem;
+    color: white;
+    padding: 10px 15px;
+}
+.mysql-enzo{
+    font-size: 2.5rem;
+    color: white;
+    padding: 10px 15px;
+}
+.py-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.js-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.mysql-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.html-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.css-enzo:hover{
+    transition: all 0.3s ease;
+    color: rgb(173, 173, 173);
+}
+.projetos-enzo{
+    display: flex;
+    color: rgb(89, 255, 0);
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    align-items: end;
+    padding: 0px 15px;
+}
+.bosque-enzo{
+    display: flex;
+    color: white;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    align-items: end;
+    padding: 0px 15px;
+}
+.digix-enzo{
+    display: flex;
+    color: white;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    align-items: end;
+    padding: 0px 15px;
+}
+.insta-enzo{
+    display: flex;
+    color: white;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    align-items: end;
+    padding: 0px 15px;
+}
+.senac-enzo{
+    display: flex;
+    color: white;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    align-items: end;
+    padding: 0px 15px;
+}

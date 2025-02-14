@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(../../Public/css/css-home/menu.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #e1e1e1;
+    width: 100%;
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center */
+}
+
+.box-guilherme {
+    background-color: #ecececb0;
+    max-width: 1800px;
+    min-height: 80vh;
+    width: 100%;
+    margin-top: 5%;
+    height: auto;
+    
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+.secao-formulario-guilherme, .secao-informacoes-guilherme {
+    flex: 1;
+}
+
+.secao-formulario-guilherme {
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-formulario-guilherme {
+    /* background-color: red; */
+    margin-top: 15%;
+    margin-bottom: -10%;
+    font-size: 32px;
+}
+
+.area-formulario-guilherme {
+    /* background-color: red; */
+    width: 100%;
+    height: 75%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.formulario-guilherme {
+    /* background-color: green; */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-guilherme label {
+    /* background-color: red; */
+    width: 69%;
+    margin-bottom: 2px;
+}
+
+.formulario-guilherme input, textarea {
+    background-color: rgb(250, 250, 250);
+    width: 70%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(182, 182, 182);
+    border-right: 1px solid rgb(182, 182, 182);
+    margin-bottom: 15px;
+}
+
+.campo-3-guilherme {
+    width: 70%;
+    height: 140px;
+    padding-top: 10px;
+}
+
+.botao-enviar-guilherme {
+    background-color: #132868;
+    width: 40%;
+    height: 50px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.botao-enviar-guilherme:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(2, 124, 141, 0.8);
+}
+
+.secao-informacoes-guilherme {
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.informacao-introducao-guilherme {
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 17%;
+    margin-bottom: 5%;
+}
+
+.msg-guilherme {
+    /* background-color: green; */
+    width: 85%;
+    
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.informacao-contatos-guilherme {
+    /* background-color: gray; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.informacao-titulo-guilherme h1 {
+    margin-bottom: 2%;
+    font-size: 22px;
+}
+
+.contatos-guilherme {
+    /* background-color: red; */
+    text-align: center;
+}
+
+.contato-guilherme {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.email-guilherme a {
+    color: rgb(0, 89, 255);
+}
+
+.email-guilherme a:hover {
+    color: rgb(116, 165, 255);
+}
+
+.fundo-guilherme {
+    background-color: #dddddd99;
+    width: 110px;
+    height: 110px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.informacao-introducao-guilherme img {
+    width: 80px;
+    height: auto;
+
+    position: relative;
+    top: -3px;
+    left: 1px;
+}
+
+.botao-voltar-guilherme, .decoracao1-guilherme, .decoracao2-guilherme, .decoracao3-guilherme {
+    position: absolute;
+}
+
+.botao-voltar-guilherme {
+    width: 50px;
+    height: auto;
+    transition: all .3s ease;
+    left: 83px;
+    top: 83%;
+}
+
+.botao-voltar-guilherme:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.decoracao1-guilherme {
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.decoracao2-guilherme {
+    width: 170px;
+    height: auto;
+    right: 0px;
+    top: 0;
+    z-index: -1;
+}
+
+.decoracao3-guilherme {
+    width: 170px;
+    height: auto;
+    right: 0px;
+    top: 80%;
+    z-index: -1;
+    /* background-color: red; */
+}
+
+@media (max-width: 576px) {
+    .box-guilherme {
+        flex-direction: column-reverse;
+        width: 90%;
+        background-color: #ecececbe;
+        padding-bottom: 20px;
+        margin-top: 25%;
+    }
+
+    .secao-formulario-guilherme, .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+    }
+
+    .titulo-formulario-guilherme {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 22px;
+    }
+
+    .area-formulario-guilherme {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulario-guilherme label {
+        width: 90%;
+    }
+
+    .formulario-guilherme input, .formulario-guilherme textarea {
+        width: 90%;
+    }
+
+    .campo-3-guilherme {
+        width: 90%;
+        height: 100px;
+        padding-top: 10px;
+    }
+
+    .botao-enviar-guilherme {
+        width: 80%;
+        height: 40px;
+        margin-top: 5%;
+    }
+    
+    .botao-enviar-guilherme:hover {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .secao-informacoes-guilherme {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .informacao-introducao-guilherme {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .msg-guilherme {
+        font-size: 18px;
+    }
+
+    .informacao-contatos-guilherme {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacao-titulo-guilherme h1 {
+        font-size: 18px;
+    }
+
+    .contato-guilherme {
+        font-size: 16px;
+    }
+    
+    .botao-voltar-guilherme {
+        width: 70px;
+        height: auto;
+        top: 27vw;
+        left: 8vw;
+    }
+
+    .fundo-guilherme {
+        width: 100px;
+        height: 100px;
+    }
+
+    .fundo-guilherme img {
+        width: 70px;
+        height: auto;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .box-guilherme {
+        margin-top: 10%;
+        flex-direction: column-reverse;
+        width: 90%;
+        background-color: #ecececbe;
+        padding-bottom: 20px;
+    }
+
+    .secao-formulario-guilherme, .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+    }
+
+    .titulo-formulario-guilherme {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 40px;
+        /* background-color: red; */
+    }
+
+    .area-formulario-guilherme {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulario-guilherme label {
+        width: 90%;
+        font-size: 28px;
+    }
+    
+    .formulario-guilherme input {
+        width: 90%;
+        font-size: 20px;
+        height: 80px;
+    }
+
+    .campo-3-guilherme {
+        width: 90%;
+        height: 140px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .botao-enviar-guilherme {
+        width: 50%;
+        height: 60px;
+        margin-top: 5%;
+        font-size: 22px;
+    }
+    
+    .botao-enviar-guilherme:hover {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .secao-informacoes-guilherme {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .msg-guilherme {
+        font-size: 32px;
+        /* background-color: red; */
+    }
+
+    .informacao-contatos-guilherme {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    .informacao-titulo-guilherme h1 {
+        font-size: 32px;
+    }
+
+    .contato-guilherme {
+        font-size: 28px;
+    }
+    
+    .botao-voltar-guilherme {
+        top: 17vw;
+        left: 6.5vw;
+        width: 80px;
+        height: auto;
+    }
+
+    .fundo-guilherme {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 5%;
+    }
+
+    .fundo-guilherme img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .box-guilherme {
+        margin-top: 10%;
+        flex-direction: column-reverse;
+        width: 90%;
+        background-color: #ecececbe;
+        padding-bottom: 20px;
+    }
+
+    .secao-formulario-guilherme, .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+    }
+
+    .titulo-formulario-guilherme {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 40px;
+        /* background-color: red; */
+    }
+
+    .area-formulario-guilherme {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulario-guilherme label {
+        width: 90%;
+        font-size: 28px;
+    }
+    
+    .formulario-guilherme input {
+        width: 90%;
+        font-size: 20px;
+        height: 80px;
+    }
+
+    .campo-3-guilherme {
+        width: 90%;
+        height: 140px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .botao-enviar-guilherme {
+        width: 50%;
+        height: 60px;
+        margin-top: 5%;
+        font-size: 22px;
+    }
+    
+    .botao-enviar-guilherme:hover {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .secao-informacoes-guilherme {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .msg-guilherme {
+        font-size: 32px;
+        /* background-color: red; */
+    }
+
+    .informacao-contatos-guilherme {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    .informacao-titulo-guilherme h1 {
+        font-size: 32px;
+    }
+
+    .contato-guilherme {
+        font-size: 28px;
+    }
+    
+    .botao-voltar-guilherme {
+        top: 17vw;
+        left: 6.5vw;
+        width: 80px;
+        height: auto;
+    }
+
+    .fundo-guilherme {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 5%;
+    }
+
+    .fundo-guilherme img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .box-guilherme {
+        margin-top: 10%;
+        flex-direction: column-reverse;
+        width: 90%;
+        background-color: #ecececbe;
+        padding-bottom: 20px;
+    }
+
+    .secao-formulario-guilherme, .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+    }
+
+    .titulo-formulario-guilherme {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 56px;
+        /* background-color: red; */
+    }
+
+    .area-formulario-guilherme {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulario-guilherme label {
+        width: 90%;
+        font-size: 36px;
+        margin-top: 3%;
+    }
+
+    .formulario-guilherme input {
+        width: 90%;
+        font-size: 26px;
+        height: 80px;
+        /* background-color: red; */
+    }
+
+    .campo-3-guilherme {
+        width: 90%;
+        height: 200px;
+        font-size: 26px;
+        padding-top: 10px;
+    }
+
+    .botao-enviar-guilherme {
+        width: 40%;
+        height: 70px;
+        font-size: 26px;
+        margin-top: 5%;
+    }
+    
+    .botao-enviar-guilherme:hover {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .secao-informacoes-guilherme {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .msg-guilherme {
+        font-size: 36px;
+    }
+
+    .informacao-contatos-guilherme {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    .informacao-titulo-guilherme h1 {
+        font-size: 36px;
+    }
+
+    .contato-guilherme {
+        font-size: 36px;
+    }
+
+    .fundo-guilherme {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 5%;
+    }
+    
+    .fundo-guilherme img {
+        width: 150px;
+        height: auto;
+    }
+    
+    .botao-voltar-guilherme {
+        top: 12vw;
+        left: 6.5vw;
+        width: 120px;
+        height: auto;
+    }
+}

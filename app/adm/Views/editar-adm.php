@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar ADM</title>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css">
+    
+</head>
+<body>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <div class="sandwich-menu" onclick="mostrarMenu()">
+            <img src="../../../Public/imgs/Proximos-Eventos-img/menu.png" alt="menu" class="menu">
+        </div>
+
+    <main class="principal">
+        <div class="box">
+            <div id="linha-login"></div>
+            <div class="img-box">
+                <img src="../../../Public/imgs/img-editar-adm/teste-removebg-preview.png" alt="">
+            </div>
+            <div class="form-box">
+                <h2>EDITAR ADM</h2>
+                <div class="form-image">
+                    <img src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Imagem colab">
+                </div>
+                <form action="#">
+                    <div class="input-group">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+                    </div>                   
+                     <div class="input-group">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" id="telefone" placeholder="Digite o seu número de telefone" required>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" id="email"  placeholder="Digite o seu e-mail" required>
+                    </div> 
+                    <div class="input-group">
+                        <label>Profissão:</label>
+                        <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
+                    </div>
+                    
+                    <div class="btns">
+                        <a href="listar-adm.php" class="voltar">
+                            <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        </a>
+                        <div class="btn-cancelar-salvar">
+                            <button type="button" class="btn btn-cancelar">
+                                <a href="">Cancelar</a>
+                            </button>
+        
+                            <button type="submit" class="btn btn-salvar">
+                                <a href="">Salvar</a>
+                        </div>
+                    </div>
+                </form>   
+            </div>    
+        </div>
+    </main>
+    <div class="bolas-fundo">
+        <img src="../../../Public/imgs/img-editar-adm/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
+        <img src="../../../Public/imgs/img-editar-adm/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
+        <img src="../../../Public/imgs/img-editar-adm/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
+    </div>
+</body>
+</html>

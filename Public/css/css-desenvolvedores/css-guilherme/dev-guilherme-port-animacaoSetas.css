@@ -1,0 +1,48 @@
+.setas-scroll-guilherme {
+    position: relative;
+    height: 4em;
+    margin-top: 50px;
+}
+
+.seta-guilherme {
+    border: solid var(--cor-principal);
+    border-width: 0px 5px 5px 0px;
+    display: inline-block;
+    padding: 12px;
+    position: absolute;
+    top: 0px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.seta-guilherme:nth-child(2) {
+    animation: seta1 1.5s ease-in-out infinite;
+}
+
+.seta-guilherme:nth-child(3) {
+    animation: seta2 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll {
+    0% {
+        bottom: 80%;
+        opacity: 1;
+    }
+    100% {
+        bottom: 20%;
+        opacity: 0;
+    }
+}
+
+@keyframes seta1 {
+    100% {
+        opacity: 0;
+        top: 100%;
+    }
+}
+
+@keyframes seta2 {
+    100% {
+        opacity: 0;
+        top: 50%;
+    }
+}

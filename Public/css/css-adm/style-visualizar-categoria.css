@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 36px;
+    /* margin-top: -100px; */
+    font-weight: 600;
+}
+
+.imagem-enzo-fundo {
+    position: absolute;
+    top: 120px;
+    left: -50px;
+    z-index: -1;
+}
+
+.imagem-enzo-fundo2 {
+    position: absolute;
+    right: -10px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.imagem-enzo-fundo3 {
+    position: absolute;
+    top: 120px;
+    right: -50px;
+    z-index: -1;
+}
+
+.box {
+    width: 95vw;
+    height: 85vh;
+    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 12px;
+    background-color: rgba(235, 235, 235, 0.65);
+    z-index: 3;
+}
+
+.box-item {
+    width: 70%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    width: 210px;
+    height: 210px;
+    font-size: 24px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bolota {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.icon-item {
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+}
+
+.box-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btns .voltar {
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#b1 {
+    background-color: rgba(13, 72, 161, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b1:hover {
+    background-color: rgba(16, 85, 189, 0.603);
+    margin-top: -10px;
+}
+
+#b2 {
+    background-color: rgba(255, 183, 0, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b2:hover {
+    background-color: rgba(192, 138, 3, 0.536);
+    margin-top: -10px;
+}
+
+#b3 {
+    background-color: rgba(113, 9, 183, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b3:hover {
+    background-color: rgba(118, 13, 187, 0.504);
+    margin-top: -10px;
+}
+
+#b4 {
+    background-color: rgba(217, 3, 103, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b4:hover {
+    background-color: rgba(192, 6, 93, 0.49);
+    margin-top: -10px;
+}
+
+#b5 {
+    background-color: rgba(251, 84, 7, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b5:hover {
+    background-color: rgba(202, 70, 9, 0.532);
+    margin-top: -10px;
+}
+
+#b6 {
+    background-color: rgba(23, 128, 118, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b6:hover {
+    background-color: rgba(24, 128, 118, 0.534);
+    margin-top: -10px;
+}
+
+#b7 {
+    background-color: rgba(17, 112, 96, 0.3);
+    transition: all 0.3s ease;
+}
+
+#b7:hover {
+    background-color: rgba(21, 133, 114, 0.451);
+    margin-top: -10px;
+}
+
+#b8 {
+    background-color: rgba(25, 169, 78, 0.3);
+    transition: all 0.3s ease;
+}
+
+#b8:hover {
+    background-color: rgba(26, 162, 76, 0.522);
+    margin-top: -10px;
+}
+
+#b9 {
+    background-color: rgba(108, 88, 76, 0.30);
+    transition: all 0.3s ease;
+}
+
+#b9:hover {
+    background-color: rgba(116, 94, 83, 0.438);
+    margin-top: -10px;
+}
+
+#b10 {
+    background-color: rgb(0, 126, 111);
+    transition: all 0.3s ease;
+}
+
+#b10:hover {
+    background-color: rgb(0, 106, 94);
+    margin-top: -10px;
+}
+
+.icon-voltar {
+    display: flex;
+    margin-right: 1700px;
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bolota {
+        display: flex;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        flex-direction: row;
+    }
+
+    .icon-item {
+        width: 80%;
+        height: 80%;
+        /* padding: 20px; */
+    }
+
+    .box-item {
+        width: 70%;
+        height: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        overflow: scroll;
+        justify-content: space-evenly;
+    }
+
+    .box {
+        width: 85%;
+        height: 85vh;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 24px;
+        background-color: rgba(235, 235, 235, 0.65);
+        z-index: 3;
+    }
+
+    .imagem-enzo-fundo {
+        display: none;
+    }
+
+    .imagem-enzo-fundo2 {
+        display: none;
+    }
+
+    .imagem-enzo-fundo3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .bolota {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        flex-direction: column;
+    }
+
+    .icon-item {
+        width: 80%;
+        height: 80%;
+        /* padding: 20px; */
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .bolota {
+        display: flex;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        flex-direction: column;
+    }
+
+    .icon-item {
+        width: 80%;
+        height: 80%;
+        /* padding: 20px; */
+    }
+
+    .box-item {
+        width: 70%;
+        height: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+        justify-content: space-evenly;
+    }
+}

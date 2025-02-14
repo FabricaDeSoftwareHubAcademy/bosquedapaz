@@ -1,0 +1,27 @@
+.rodape-halyson {
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-preta-halyson);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tittle-rodape-halyson {
+    color: var(--color-branca-halyson);
+}
+
+.icons-rodape-halyson {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.icons-rede-rodape-halyson {
+    font-size: 2.5rem;
+    color: var(--color-branca-halyson);
+}

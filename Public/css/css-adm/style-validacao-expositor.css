@@ -1,0 +1,1250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url(../../css/menu-adm.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    flex-direction: column;
+
+    background-color: #e2e2e2;
+    
+}
+
+.box-guilherme {
+    width: 95%;
+    height: 85vh;
+    margin-top: 1%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    
+    border-radius: 5px;
+    background-color: #ffffff44;
+}
+
+.secao-imagens-guilherme {
+    /* width: 10px; */
+    height: 100%;
+    /* box-shadow: 1px 0px rgba(122, 122, 122, 0.507); */
+    flex: 2;
+    /* background-color: red; */
+}
+
+.imagem-expositor-guilherme {
+    height: 45%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    /* background-color: blue; */
+}
+
+.imagem-expositor-guilherme img {
+    width: 250px;
+    height: auto;
+
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.imagem-expositor-guilherme img:hover {
+    transform: scale(1.04);
+}
+
+.imagem-expositor-guilherme h1 {
+    position: relative; 
+    top: -2%;
+}
+
+.imagens-marca-guilherme {
+    height: 55%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* background-color: green; */
+}
+
+.imagens-guilherme {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* background-color: pink; */
+    
+    position: relative;
+    top: -4%
+}
+
+.imagens-guilherme img {
+    width: calc(33.33% - 40px);
+    height: auto;
+
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.imagens-guilherme img:hover {
+    transform: scale(1.04);
+}
+
+.imagens-marca-guilherme h1 {
+    position: relative;
+    top: -6%;
+}
+
+.secao-informacoes-guilherme {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    flex: 4;
+    /* background-color: pink; */
+}
+
+.informacoes-expositor-guilherme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 85%;
+    position: relative;
+    top: -5%;
+}
+
+.informacoes-titulo-guilherme {
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    /* background-color: red; */
+}
+
+.formulario-informacoes-guilherme input {
+    width: 100%; 
+    min-height: 45px; 
+    padding: 5px;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+}
+
+.informacoes-marca-guilherme {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    top: -5%;
+    /* background-color: rgb(255, 140, 0); */
+}
+
+.formulario-marca-guilherme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    height: 50%;
+    /* background-color: blue; */
+}
+
+.formulario-marca-guilherme label {
+    display: block;
+    width: 90%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    /* background-color: red; */
+}
+
+.formulario-marca-guilherme input {
+    width: 100%; 
+    min-height: 45px; 
+    padding: 5px;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box; 
+    /* background-color: red; */
+}
+
+.logo-marca-guilherme img {
+    width: 150px;
+    height: 150px;
+    /* background-color: red; */
+}
+
+.botoes-guilherme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.botao-validar-guilherme {
+    padding: 0.6rem 3rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #007E70;
+}
+
+.botao-recusar-guilherme {
+    padding: 0.6rem 3rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #FF3877;
+}
+
+.btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+    position: absolute;
+    /* background-color: red; */
+}
+
+.btnVoltar-guilherme {
+    width: 30px;
+    height: 30px;
+    left: 70px;
+    top: 94.5%;
+    transition: all .3s ease;
+}
+
+.btnVoltar-guilherme:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.detalhe1 {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.detalhe2 {
+    top: -80px;
+    right: 0px;
+    z-index: -1;
+}
+
+.detalhe3 {
+    width: 120px;
+    right: 0;
+    top: 87.1%;
+    z-index: -1;
+}
+
+.modal-validar-guilherme, .modal-recusar-guilherme, .modal-validar-sucesso-guilherme, .modal-recusar-sucesso-guilherme {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+     display: flex;
+}
+
+.modal-content-guilherme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25vw;
+    height: 15vh;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.modal-content-guilherme h1 {
+    font-size: 24px;
+}
+
+.modal-botoes-guilherme {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.btn-modal-guilherme {
+    width: 120px;
+    height: 40px;
+    border: none;
+    margin-top: 10%;
+}
+
+.btn-validar-guilherme {
+    background-color: #007E70;
+    color: white;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.btn-voltar-guilherme {
+    background-color: #b3b3b3;
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn-voltar-guilherme:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+}
+
+.btn-recusar-guilherme {
+    background-color: #FF3877;
+    color: white;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.btn-ok-guilherme {
+    background-color: rgb(2, 196, 2);
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn-ok-guilherme:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+@media (max-width: 576px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 20px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 230px;
+        /* background-color: red; */
+    }
+
+    .formulario-marca-guilherme label {
+        width: 220px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+        /* background-color: blue; */
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 300px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 30px;
+        height: 30px;
+        left: 40px;
+        top: 120px;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 90vw;
+        height: 20vh;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        background-color: #B1253F;
+    }
+
+    .btn-validar-guilherme {
+        background-color: #20368B;
+    }
+
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme {
+        position: relative;
+        top: -350px;
+    }
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 40px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme h1 {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-informacoes-guilherme label {
+        font-size: 24px;
+    }
+
+    .formulario-informacoes-guilherme input {
+        height: 60px;
+    }
+
+    .logo-marca-guilherme img {
+        margin-top: 5%;
+    }
+
+    .informacoes-marca-guilherme label {
+        width: 390px;
+        margin-top: 5%;
+        font-size: 24px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+    .informacoes-marca-guilherme input {
+        height: 60px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 400px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 60px;
+        height: auto;
+        left: 8vw;
+        top: 23vw;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 70vw;
+        position: relative;
+        top: -350px;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #B1253F;
+    }
+    
+    .btn-validar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #20368B;
+    }
+
+    .btn-ok-guilherme {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 30px;
+    }
+
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 40px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme h1 {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-informacoes-guilherme label {
+        font-size: 24px;
+    }
+
+    .formulario-informacoes-guilherme input {
+        height: 60px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+    .logo-marca-guilherme img {
+        margin-top: 5%;
+    }
+
+    .informacoes-marca-guilherme label {
+        margin-top: 5%;
+        font-size: 24px;
+        width: 390px;
+    }
+
+    .informacoes-marca-guilherme input {
+        height: 60px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 400px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 60px;
+        height: auto;
+        left: 8vw;
+        top: 23vw;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 70vw;
+        position: relative;
+        top: -350px;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #B1253F;
+    }
+    
+    .btn-validar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #20368B;
+    }
+
+    .btn-ok-guilherme {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 30px;
+    }
+
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .box-guilherme {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    .secao-imagens-guilherme,
+    .secao-informacoes-guilherme {
+        flex: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .imagem-expositor-guilherme {
+        position: relative;
+        top: 10px;
+    }
+
+    .imagem-expositor-guilherme h1 {
+        position: relative;
+        top: -10px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme {
+        position: relative;
+        top: 30px;
+    }
+
+    .imagens-marca-guilherme h1 {
+        position: relative;
+        top: 25px;
+        font-size: 28px;
+    }
+
+    .imagens-guilherme img {
+        width: calc(33.33% - 40px);
+        height: auto;
+    
+        border-radius: 10px;
+        transition: all .3s ease;
+    }
+
+    .informacoes-titulo-guilherme h1 {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .formulario-informacoes-guilherme {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formulario-informacoes-guilherme label {
+        font-size: 24px;
+    }
+
+    .formulario-informacoes-guilherme input {
+        height: 60px;
+    }
+
+    .formulario-marca-guilherme input {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+    .logo-marca-guilherme img {
+        margin-top: 5%;
+    }
+
+    .informacoes-marca-guilherme label {
+        margin-top: 5%;
+        font-size: 24px;
+        width: 390px;
+    }
+
+    .informacoes-marca-guilherme input {
+        height: 60px;
+    }
+
+    .informacoes-marca-guilherme {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .botoes-guilherme {
+        width: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao-validar-guilherme,
+    .botao-recusar-guilherme {
+        width: 400px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .imagem-expositor-guilherme img {
+        width: 30%;
+        height: auto;
+    }
+
+    .imagem-expositor-guilherme img:hover {
+        transform: none;
+    }
+
+    .imagens-guilherme img:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme, .detalhe1, .detalhe2, .detalhe3 {
+        position: absolute;
+    }
+
+    .btnVoltar-guilherme:hover {
+        transform: none;
+    }
+    
+    .btnVoltar-guilherme {
+        width: 60px;
+        height: auto;
+        left: 8vw;
+        top: 23vw;
+    }
+    
+    .detalhe1 {
+        width: 50px;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe2 {
+        width: 50px;
+        height: auto;
+        top: -30px;
+        right: 0px;
+        z-index: -1;
+    }
+    
+    .detalhe3 {
+        width: 50px;
+        height: auto;
+        right: 20px;
+        top: 120%;
+        z-index: -1;
+    }
+
+    .modal-content-guilherme {
+        width: 70vw;
+        position: relative;
+        top: -350px;
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 20px;
+    }
+
+    .btn-recusar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #B1253F;
+    }
+    
+    .btn-validar-guilherme {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+        background-color: #20368B;
+    }
+
+    .btn-ok-guilherme {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .btn-voltar-guilherme {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+    }
+
+    .modal-validar-guilherme:target, .modal-recusar-guilherme:target, .modal-validar-sucesso-guilherme:target, .modal-recusar-sucesso-guilherme:target {
+        height: 196%
+    }
+
+    .modal-content-guilherme h1 {
+        font-size: 30px;
+    }
+
+    .informacoes-expositor-guilherme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        width: 95%;
+        position: relative;
+        top: 0%;
+    }
+}

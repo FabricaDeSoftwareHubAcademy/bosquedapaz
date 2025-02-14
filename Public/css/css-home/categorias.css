@@ -1,0 +1,275 @@
+.categoria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-carrossel {
+    max-width: 80%;
+    height: auto;
+    max-height: 200px;
+    background-color: transparent;
+    margin: auto;
+    text-align: center;
+    margin: 50px 0px 100px 0px;
+}
+
+.title-welcome, .text-welcome-c {
+    color: black;
+    /* text-shadow: black 0.1em 0.1em 0.2em; */
+}
+
+.categoria #fundo-categoia {
+    /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); */
+    width: 100%;
+    height: 400px;
+    background-color: #643287;
+}
+
+.content-categoria {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-title {
+    font-size: 3em;
+    padding: 10px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.categoria-title::before{
+    content: "";
+    display: inline;
+    border-top: 4px solid #F4F37B;
+    border-left: 4px solid #F4F37B;
+    background-color: none;
+    padding-left: 60px;
+    margin-right: -40px;
+    transition: all 0.5s ease;
+}
+.categoria-title::after{
+    content: "";
+    display: inline;
+    border-bottom: 4px solid #F4F37B;
+    border-right: 4px solid #F4F37B;
+    background-color: none;
+    padding-left: 60px;
+    margin-left: -40px;
+    transition: all 0.5s ease;
+}
+
+.text-categoria {
+    margin-top: 10px;
+    font-size: 1.3em;
+    width: 50%;
+    text-align: center;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+/* estilizando lista categorias */
+
+.categorias {
+    background-color: #F8F8F8;
+    max-width: 1000px;
+    width: 85%;
+    height: auto;
+    margin: auto;
+    border-radius: 20px;
+    margin: 50px auto 100px auto;
+    display: block;
+}
+
+.parte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.item {
+    width: 120px;
+    height: 150px;
+    text-align: center;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.img-fundo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(13, 71, 161, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+.img-categoria {
+    width: 60%;
+}
+
+.name-categoria {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: .9em;
+    width: auto;
+}
+
+/* mudando cor categoria */
+
+.artesanato {
+    background-color: var(--color-artesanato);
+}
+
+.artesanato:hover {
+    background-color: var(--color-artesanato-bg);
+}
+
+.antiguidade {
+    background-color: var(--color-antiguidade);
+}
+
+.antiguidade:hover {
+    background-color: var(--color-antiguidade-bg);
+}
+
+.colecionismo {
+    background-color: var(--color-colecionismo);
+}
+
+.colecionismo:hover {
+    background-color: var(--color-colecionismo-bg);
+}
+
+.cosmetica {
+    background-color: var(--color-cosmetica);
+}
+
+.cosmetica:hover {
+    background-color: var(--color-cosmetica-bg);
+}
+
+.gastronomia {
+    background-color: var(--color-gastronomia);
+}
+
+.gastronomia:hover {
+    background-color: var(--color-gastronomia-bg);
+}
+
+.literatura {
+    background-color: var(--color-literatura);
+}
+
+.literatura:hover {
+    background-color: var(--color-literatura-bg);
+}
+
+.moda {
+    background-color: var(--color-moda);
+}
+
+.moda:hover {
+    background-color: var(--color-moda-bg);
+}
+
+.planta {
+    background-color: var(--color-planta);
+}
+
+.planta:hover {
+    background-color: var(--color-planta-bg);
+}
+
+.sustenta {
+    background-color: var(--color-sustenta);
+}
+
+.sustenta:hover{
+    background-color: var(--color-sustenta-bg);
+}
+
+.img-fundo:hover {
+    margin-top: -15px;
+}
+
+@media screen and (max-width: 1050px) {
+    .categoria-title {
+        font-size: 2.2em;
+    }
+
+    .text-categoria {
+        width: 80%;
+    }
+
+    .title-welcome {
+        font-size: 1.5em;
+    }
+
+    .item {
+        margin: 10px;
+        width: 105px;
+    }
+    
+    .img-fundo {
+        width: 85px;
+        height: 85px;
+    }
+
+    .name-categoria {
+        font-size: .8em;
+        min-width: 100%;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .title-welcome {
+        font-size: 1.1em;
+    }
+
+    .text-welcome-c {
+        font-size: .9em;
+    }
+
+    .categoria-title {
+        font-size: 1.1em;
+    } 
+
+    .text-categoria {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .categoria #fundo-categoia {
+        height: 250px;
+    }
+
+    .item {
+        margin: 5px;
+    }
+
+    .img-fundo {
+        width: 85px;
+        height: 85px;
+    }
+
+    .name-categoria {
+        font-size: .7em;
+    }
+}
