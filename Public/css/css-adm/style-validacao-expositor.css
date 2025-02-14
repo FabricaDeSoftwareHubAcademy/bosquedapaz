@@ -352,20 +352,16 @@ body {
     color: white;
     transition: all .3s ease;
     cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .btn-voltar-guilherme {
-    background-color: #b3b3b3;
+    background-color: #FF3877;
     color: white;
     transition: all .3s ease;
     border-radius: 10px;
-}
-
-.btn-voltar-guilherme:hover {
-    cursor: pointer;
-    background-color: white;
-    border: 2px solid black;
-    color: rgb(0, 0, 0);
+    font-size: 20px;
 }
 
 .btn-recusar-guilherme {
@@ -374,18 +370,15 @@ body {
     transition: all .3s ease;
     cursor: pointer;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .btn-ok-guilherme {
-    background-color: rgb(2, 196, 2);
+    background-color: #007E70;
     color: white;
     transition: all .3s ease;
     border-radius: 10px;
-}
-
-.btn-ok-guilherme:hover {
-    cursor: pointer;
-    background-color: green;
+    font-size: 20px;
 }
 
 @media (max-width: 576px) {

@@ -92,8 +92,8 @@
         <div class="modal-content-guilherme">
             <h1>Deseja validar o expositor?</h1>
             <div class="modal-botoes-guilherme">
-                <a href="#modal-validar-sucesso-guilherme"><button class="btn-modal-guilherme btn-validar-guilherme">Validar</button></a>
                 <a href="#"><button class="btn-modal-guilherme btn-voltar-guilherme">Voltar</button></a>
+                <a href="#modal-validar-sucesso-guilherme"><button class="btn-modal-guilherme btn-validar-guilherme">Validar</button></a>
             </div>
         </div>
     </div>
@@ -102,8 +102,8 @@
         <div class="modal-content-guilherme">
             <h1>Deseja recusar o expositor?</h1>
             <div class="modal-botoes-guilherme">
-                <a href="#modal-recusar-sucesso-guilherme"><button class="btn-modal-guilherme btn-recusar-guilherme">Recusar</button></a>
                 <a href="#"><button class="btn-modal-guilherme btn-voltar-guilherme">Voltar</button></a>
+                <a href="#modal-recusar-sucesso-guilherme"><button class="btn-modal-guilherme btn-recusar-guilherme">Recusar</button></a>
             </div>
         </div>
     </div>
