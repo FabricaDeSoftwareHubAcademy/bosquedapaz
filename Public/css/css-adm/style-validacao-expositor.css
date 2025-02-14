@@ -346,7 +346,7 @@ body {
 }
 
 .btn-validar-guilherme {
-    background-color: #007E70;
+    background-color: #007E70;;
     color: white;
     transition: all .3s ease;
     cursor: pointer;
@@ -373,14 +373,14 @@ body {
 }
 
 .btn-ok-guilherme {
-    background-color: rgb(2, 196, 2);
+    background-color: #007E70;;
     color: white;
     transition: all .3s ease;
 }
 
 .btn-ok-guilherme:hover {
     cursor: pointer;
-    background-color: green;
+    background-color: #00473f;;
 }
 
 @media (max-width: 576px) {
