@@ -152,6 +152,8 @@
                             <div id="linha-decorativa2-ProEv"></div>
                             <button class="button-saibamais-ProEv open-modal" data-modal="modal-card-ProEv">Saiba Mais</button>
                         </div>
+
+                        <div id="overlay" class="overlay"></div>
                         <!-- Modal1 -->
                         <dialog class="dlog-modal-card-ProEv" id="modal-card-ProEv">
                             <div class="div-decorativa-modal">
@@ -173,6 +175,9 @@
                                     <p class="p-atracao-modal">Lorem ipsum dolor sit amet consectetur. 
                                         Fames metus ac egestas turpis ipsum Lorem 
                                         ipsum dolor sit amet consectetur. Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.
+                                        Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                                 </div>
@@ -196,6 +201,8 @@
                             <div id="linha-decorativa2-ProEv"></div>
                             <button class="button-saibamais-ProEv open-modal" data-modal="modal2-card-ProEv">Saiba Mais</button>
                         </div>
+
+                        <div id="overlaay" class="overlaay"></div>
                         <!-- Modal2 -->
                         <dialog class="dlog-modal2-card-ProEv" id="modal2-card-ProEv">
                             <div class="div-decorativa-modal2">
@@ -218,6 +225,9 @@
                                         Fames metus ac egestas turpis ipsum Lorem 
                                         ipsum dolor sit amet consectetur. Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.
+                                        Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                                 </div>
                                 <button id="b-sari-modal2" class="close-modal" data-modal="modal2-card-ProEv">
@@ -231,6 +241,6 @@
         </div>
     </section>
 
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 </body>
 </html>
