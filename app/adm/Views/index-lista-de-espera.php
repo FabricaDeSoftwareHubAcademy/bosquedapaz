@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <title>Lista de Espera</title>
 </head>
 

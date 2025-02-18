@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Eventos</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-evento.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
 </head>
 
 <body>

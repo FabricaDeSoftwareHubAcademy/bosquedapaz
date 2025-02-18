@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Área de Suporte</title>
+    <title>Fale Conosco</title>
     <link rel="stylesheet" href="../../../Public/css/faleconosco.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 </head>
 <body>

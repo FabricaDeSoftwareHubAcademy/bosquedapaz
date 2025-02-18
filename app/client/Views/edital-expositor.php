@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Edital</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/css-edital-expositor.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"; ?>

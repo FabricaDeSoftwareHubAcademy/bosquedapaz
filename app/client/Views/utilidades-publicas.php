@@ -1,16 +1,17 @@
 
 <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
-
-<?php include "../../../Public/assets/home/menu-home.html"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
     <link rel="stylesheet" href="../../../Public/css/css-home/utilidades-publicas.css">
     <!-- <link rel="stylesheet" href="../../../bosquedapaz/css/styles-home/menu.css"> -->
     <link rel="stylesheet" href="../../../Public/css/menu-home.css">
+    
     <title>Gerenciar Eventos</title>
 </head>
 

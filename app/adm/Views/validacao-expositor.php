@@ -7,6 +7,7 @@
     
     <title>Validação de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validacao-expositor.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 </head>
 <body>

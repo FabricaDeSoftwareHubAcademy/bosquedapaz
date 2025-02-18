@@ -6,6 +6,7 @@
     <title>Gerenciar Relatórios</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-relatorio.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"

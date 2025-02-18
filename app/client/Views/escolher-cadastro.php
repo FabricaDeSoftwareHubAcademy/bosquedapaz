@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de expositor</title>
+    <title>Cadastro de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/escolher-cadastro.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
