@@ -23,7 +23,7 @@
                 <div class="area-inputs-ec">
                     <div class="total-input-ec">
                         <div class="icon-input-ec">
-                            <i class="bi bi-person-plus"></i>
+                            <i id="icon-ec" class="bi bi-person-plus"></i>
                         </div>
                         <div class="text-input-ec">
                             <p>Cadastro de Espoxitor</p>
@@ -32,7 +32,7 @@
 
                     <div class="total-input-ec">
                         <div class="icon-input-ec">
-                            <i class="bi bi-person-plus"></i>
+                            <i id="icon-ec" class="bi bi-person-plus"></i>
                         </div>
                         <div class="text-input-ec">
                             <p>Cadastro de Espoxitor Kids</p>
@@ -41,7 +41,7 @@
 
                     <div class="total-input-ec">
                         <div class="icon-input-ec">
-                            <i class="bi bi-music-note-list"></i>
+                            <i id="icon-ec" class="bi bi-music-note-list"></i>
                         </div>
                         <div class="text-input-ec">
                             <p>Cadastro de Artista</p>

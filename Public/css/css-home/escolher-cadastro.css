@@ -21,23 +21,32 @@
 .principal .box {
     width: 90%;
     height: 90%;
-    background-color: rgba(248, 245, 246, 0.65);
+    backdrop-filter: blur(0px);
+    background-color: rgba(248, 245, 246, 0.705);
     border-radius: 12px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding: 10px 0px;
     gap: 10px;
+    transition: all .5s ease-in-out;
+
+    #linha-vertical-ec{
+        height: 640px;
+        border-right: 3px solid rgba(0, 126, 112, 1);
+        position: fixed;
+        left: 50%;
+        top: 8%;
+    }
 }
 
-#linha-vertical-ec{
-    height: 90%;
-    width: 4px;
-    border-radius: 10%;
-    background-color: rgba(0, 126, 112, 1);
-    position: relative;
-    left: 50%;
-    top: 5%;
+.principal .box:hover{
+    background-color: #f0f0f013;
+    backdrop-filter: blur(30px);
+
+    #linha-vertical-ec{
+        border-right: 3px solid #FF3877;
+    }
 }
 
 .area-infs-ec{
@@ -52,6 +61,8 @@
 
 .area-infs-ec h1{
     font-size: 40px;
+    position: relative;
+    top: 5%;
 }
 
 .area-inputs-ec{
@@ -80,6 +91,10 @@
 
 .total-input-ec:hover{
     transform: scale(1.05);
+    border: 2px solid #FF3877;
+    #icon-ec{
+        color: #FF3877;
+    }
 }
 
 .icon-input-ec{
@@ -131,14 +146,15 @@
 
 .bolas-fundo .bola-verde1 {
     position: absolute;
-    top: 6vh;
+    top: 16vh;
     z-index: -3;
 }
+
 
 .bolas-fundo .bola-verde2 {
     position: absolute;
     right: 0px;
-    top: 6vh;
+    top: 16vh;
     z-index: -3;
 }
 
