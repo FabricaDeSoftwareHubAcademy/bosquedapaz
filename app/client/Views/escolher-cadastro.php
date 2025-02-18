@@ -23,7 +23,7 @@
                 <div class="area-inputs-ec">
                     <div class="total-input-ec">
                         <div class="icon-input-ec">
-                            <i id="icon-ec" class="bi bi-person-plus"></i>
+                            <i id="icon-ec" class="bi bi-shop-window"></i>
                         </div>
                         <div class="text-input-ec">
                             <p>Cadastro de Espoxitor</p>
@@ -52,7 +52,7 @@
 
 
             <div class="area-img-ec">
-                <img src="../../../Public/imgs/img-escolher-cadastro/imc-ec.svg" alt="">
+                <img src="../../../Public/imgs/img-escolher-cadastro/img-ec.svg" alt="">
             </div>
         </div>
     </main>

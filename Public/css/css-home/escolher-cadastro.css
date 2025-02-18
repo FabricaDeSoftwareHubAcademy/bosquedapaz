@@ -43,10 +43,6 @@
 .principal .box:hover{
     background-color: #f0f0f013;
     backdrop-filter: blur(30px);
-
-    #linha-vertical-ec{
-        border-right: 3px solid #FF3877;
-    }
 }
 
 .area-infs-ec{
@@ -77,8 +73,8 @@
 }
 
 .total-input-ec{
-    width: 95%;
-    height: 15%;
+    width: 90%;
+    height: 14%;
     background-color: white;
     display: flex;
     align-items: flex-start;
