@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/escolher-cadastro.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
@@ -14,34 +16,43 @@
         
         <!-- box principal -->
         <div class="box">
-            
-            <h1 class="titulo">Escolha a modalidade</h1>
+            <div id="linha-vertical-ec"></div>
+            <div class="area-infs-ec">
+                <h1>Escolher Cadastro</h1>
 
-            <div class="all-content">
-                <div class="content-card">
-                    <h2 class="title-escolha">Cadastro expositor</h2>
-                    <a href="cadastro-expositor.php" class="link-cadastro-expositor">
-                        <div class="caixa">
-                            <img src="../../../Public/imgs/img-home/expositor.png" alt="" class="img-escolha">
+                <div class="area-inputs-ec">
+                    <div class="total-input-ec">
+                        <div class="icon-input-ec">
+                            <i class="bi bi-person-plus"></i>
                         </div>
-                    </a>
-                </div>
-                <div class="content-card">
-                    <h2 class="title-escolha">Cadastro expositor Kids</h2>
-                    <a href="cadastro-expositor-kids.php" class="link-cadastro-expositor">
-                        <div class="caixa">
-                            <img src="../../../Public/imgs/img-home/expositor-kid.png" alt="" class="img-escolha">
+                        <div class="text-input-ec">
+                            <p>Cadastro de Espoxitor</p>
                         </div>
-                    </a>
-                </div>
-                <div class="content-card">
-                    <h2 class="title-escolha">Cadastro artista</h2>
-                    <a href="cadastro-artista.php" class="link-cadastro-expositor">
-                        <div class="caixa">
-                            <img src="../../../Public/imgs/img-home/expossitor-artista.png" alt="" class="img-escolha">
+                    </div>
+
+                    <div class="total-input-ec">
+                        <div class="icon-input-ec">
+                            <i class="bi bi-person-plus"></i>
                         </div>
-                    </a>
+                        <div class="text-input-ec">
+                            <p>Cadastro de Espoxitor Kids</p>
+                        </div>
+                    </div>
+
+                    <div class="total-input-ec">
+                        <div class="icon-input-ec">
+                            <i class="bi bi-music-note-list"></i>
+                        </div>
+                        <div class="text-input-ec">
+                            <p>Cadastro de Artista</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+
+            <div class="area-img-ec">
+                <img src="../../../Public/imgs/img-escolher-cadastro/imc-ec.svg" alt="">
             </div>
         </div>
     </main>
