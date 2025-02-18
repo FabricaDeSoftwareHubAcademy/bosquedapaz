@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Eventos</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-evento.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-evento.css">
 </head>
 
 <body>
@@ -106,7 +106,7 @@
                 </div> -->
             </div>
             <div class="btns">
-                <a href="manage-events.php" class="voltar">
+                <a href="gerenciar-eventos.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 

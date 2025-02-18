@@ -37,7 +37,7 @@
                 </a>
                 </div>
                 <div class="Botoes-categ">
-                    <a href="cadastro-categoria.php" class="link-area-icon">
+                    <a href="cadastrar-categoria.php" class="link-area-icon">
                     <div class="area-icon-categ">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
                         <p>Cadastrar categorias </p>

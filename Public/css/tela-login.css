@@ -18,7 +18,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: grey;
+    background-color: rgb(187, 187, 187);
     position: relative;
 }
  
@@ -72,6 +72,7 @@
 .box-login{
     width: 85%;
     height: 800px;
+    backdrop-filter: blur(0px);
     background-color: rgba(248, 245, 246, 0.705);
     border-radius: 15px;
     display: flex;
@@ -92,7 +93,7 @@
 }
  
 .box-login:hover{
-    background-color: #f0f0f013;
+    background-color: #f0f0f08f;
     backdrop-filter: blur(30px);
  
     #linha-login{
