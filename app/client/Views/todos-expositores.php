@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listas de expositores</title>
+    <title>Listas de Expositores</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/lista-expositor.css">
 </head>
 
