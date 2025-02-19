@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/lista-de-espera.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>Lista de Espera</title>
 </head>
