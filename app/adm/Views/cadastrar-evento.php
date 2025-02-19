@@ -45,67 +45,9 @@
                         </div>
                         <img class = "preview" src="" alt="" id="preview-image">
                     </div>
-                    <div id="form2">
-
-                        <div class="input-group">
-                            <label>Nome da atração:</label>
-                            <input type="text" name="nomeatracao" id="descricaodaatracao"
-                                placeholder="Digite o nome da atração">
-                        </div>
-                        <div class="input-group">
-                            <label>Descrição da atração:</label>
-                            <input type="text" name="descatracao" id="descricaodaatracao"
-                                placeholder="Digite uma breve descrição da atração">
-                        </div>
-                        <div class="input-group">
-                            <label>Imagem da atração:</label>
-                            <input type="file" name="file" id="file2"
-                                required>
-                        </div>
-
-                        
-
-                        <div class="btn-add">
-                            <button type="submit" name= "btn-atracao" class="btn-atracao">
-                                <a href="">Adicionar Atração</a>
-                        </div>
-                        <label id = "tabela">Atrações cadastradas:</label>
-                        <table>
-                            <tr>
-                                
-                                
-                            </tr>
-
-                        </table>
-
-                        <img class = "preview2" src="" alt="" id="preview-image2">
-
-                        
-                        
-                        
-                    </div>
+                    
                 </form>
-                <!-- <div class="bottoms-box">
-                    <div class="bottoms-group">
-                        <label>Banner do Evento:</label>
-                        <button id="uploadevento"><img id="banner" src="../Images/Upload de imagens.png"
-                                alt=""></button>
-                        <button class="alterarimagem">ALTERAR IMAGEM</button>
-                    </div>
-                    <div class="bottoms-group">
-                        <label>Banner Atrações:</label>
-                        <button id="uploadatracao"><img id="banner" src="../Images/Upload de imagens.png"
-                                alt=""></button>
-                        <button class="alterarimagem">ALTERAR IMAGEM</button>
-                    </div>
-                    <div class="bottoms-group">
-                        <div class="add-group">
-                            <button id="add"> <img src="../Images/Group 442.png" alt=""></button>
-                            <button id="add"> <img src="../Images/Group 442.png" alt=""></button>
-                            <button id="add"> <img src="../Images/Group 442.png" alt=""></button>
-                        </div>
-                    </div>
-                </div> -->
+                
             </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">

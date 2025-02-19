@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Eventos</title>
+    <title>Cadastro de Atração</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-evento.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
@@ -13,42 +15,41 @@
 <body>
 <?php include "../../../Public/assets/adm/menu-adm.html"?>
 
-
     <main class="principal">
         <div class="box">
-            <h2>EDITAR EVENTO</h2>
+            <h2>CADASTRO DE ATRAÇÃO</h2>
             <div class="form-box">
-                <form action="#">
+                <form action="#" method = "POST">
                     <div id="form1">
+
                         <div class="input-group">
-                            <label>Nome do evento:</label>
+                            <label>Nome da atração:</label>
                             <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                 required>
                         </div>
+                        
                         <div class="input-group">
-                            <label>Data do Evento</label>
-                            <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                        </div>
-                        <div class="input-group">
-                            <label>Descrição do evento:</label>
+                            <label>Descrição da atração:</label>
                             <input type="text" name="descricaodoevento" id="descricaodoevento"
                                 placeholder="Digite uma breve descrição do evento" required>
                         </div>
-                        
-                        
+                                               
                         <div class="input-group">
-                            <label>Imagem do evento:</label>
-                            <input type="file" name="file" id="file"
-                                required>
+                            <label>Imagem do atração:</label>
+                            <input type="file" name="file" id="file" required>
                         </div>
-                        <img class = "preview" src="" alt="" id="preview-image">
+
+                        <div class ="preview-img">
+                            <img class = "preview" src="" alt="" id="preview-image">
+                        </div>
+
                     </div>
                     
                 </form>
                 
             </div>
             <div class="btns">
-                <a href="manage-events.php" class="voltar">
+                <a href="gerenciar-eventos.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
