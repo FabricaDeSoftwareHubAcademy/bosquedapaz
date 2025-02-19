@@ -28,7 +28,7 @@
         
         <div class="box-parceiros">
         <div class="nome-area-parceiros">
-                <h1>Área Administrativa</h1>
+                <h1>ÁREA ADMINISTRATIVA</h1>
             </div>
 
                 <div class="seta-voltar-parceiros">

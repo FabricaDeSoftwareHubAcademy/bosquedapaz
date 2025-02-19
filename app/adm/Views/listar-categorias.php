@@ -160,7 +160,7 @@
             </div> 
 
             <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar exclusão</h2>
+                <h2>Confirmar Exclusão</h2>
                 <!-- <input type="text" value=""> -->
                 <p>Tem certeza que deseja fazer isso?</p>
                 <div>

@@ -38,10 +38,10 @@
                 </div>
                 <form class="formulario-informacoes-guilherme">
                     <div>
-                        <label>Nome completo do expositor</label>
+                        <label>Nome Completo do Expositor</label>
                         <input type="text" name="campo1" id="campo-1" disabled>
 
-                        <label>Categoria dos produtos</label>
+                        <label>Categoria dos Produtos</label>
                         <input type="text" name="campo2" id="campo-2" disabled>
                         
                         <label>Precisa de energia? Caso afirmativo, voltagem 110 ou 220? Caso negativo, deixe em branco.</label>
@@ -49,10 +49,10 @@
                     </div>
                     
                     <div>
-                        <label>WhatsApp para contato</label>
+                        <label>WhatsApp para Contato</label>
                         <input type="text" name="campo4" id="campo-4" disabled>
 
-                        <label>Cidade de residência</label>
+                        <label>Cidade de Residência</label>
                         <input type="text" name="campo3" id="campo-3" disabled>
 
                         <label>Possui trailer, barraca ou foodtruck? Se sim, informe as medidas. Caso negativo, deixe em branco.</label>
@@ -66,7 +66,7 @@
                     <img src="../../../Public/imgs/img-validacao-expositor/logomarca.svg" alt="logomarca" id="logomarca-guilherme">
                 </div>
                 <form class="formulario-marca-guilherme">
-                    <label>Nome da marca</label>
+                    <label>Nome da Marca</label>
                     <input type="text" name="campo7" id="campo-7" disabled>
                 </form>
             </div>

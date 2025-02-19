@@ -34,7 +34,7 @@
                 <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
             </div>
 
-            <h1>Lista de Espera</h1>
+            <h1>LISTA DE ESPERA</h1>
             <div class="area-pesquisa-lisEsp">
                 <input type="text" id="search" name="q" placeholder="Pesquisar..." />
                 <button>BUSCAR</button>

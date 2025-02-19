@@ -36,7 +36,7 @@
                         <tbody> 
                         <tr>
                             <td class="usuario-col">1</td>
-                            <td>SENAC Serviço Nacional de Aprendizagem Comercial</td>                    
+                            <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>                    
                             <td><button class="status active">Ativo</button></td>
                             <td>
                                 <a class="edit-icon">
@@ -63,7 +63,7 @@
                             </tr>
                             <tr>
                                 <td class="usuario-col">3</td>
-                                <td>SEBRAE Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
+                                <td>SEBRAE-Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
                                 <td><button class="status inactive">Inativo</button></td>
                                 <td>
                                     <a class="edit-icon">
@@ -108,7 +108,7 @@
             </div> 
 
             <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar alteração</h2>
+                <h2>Confirmar Alteração</h2>
                 <input type="text" value="SENAC Serviço Nacional de Aprendizagem Comercial">
                 <p>Tem certeza que deseja fazer isso?</p>
                 <div>

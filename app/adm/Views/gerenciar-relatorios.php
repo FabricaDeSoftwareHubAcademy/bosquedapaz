@@ -28,7 +28,7 @@
         
         <div class="box-relat">
         <div class="nome-area-relat">
-                <h1>Relatórios</h1>
+                <h1>RELATÓRIOS</h1>
             </div>
 
                 <div class="seta-voltar-relat">

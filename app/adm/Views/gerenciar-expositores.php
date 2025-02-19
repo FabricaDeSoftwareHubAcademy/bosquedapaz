@@ -41,7 +41,7 @@
                     <a href="cadastro-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Cadastrar expositor</p>
+                        <p>Cadastrar Expositor</p>
                     </div>
                 </div>
                 </a>
@@ -49,7 +49,7 @@
                     <a href="listar-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Listar expositor</p>
+                        <p>Listar Expositor</p>
                     </div>
                 </div>
                 </a>

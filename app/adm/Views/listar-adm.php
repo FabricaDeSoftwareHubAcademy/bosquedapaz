@@ -229,7 +229,7 @@
         </div>  
         </div>
         <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar exclusão</h2>
+                <h2>Confirmar Exclusão</h2>
                 <p>Tem certeza que deseja fazer isso?</p>
                 <div>
                     <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
