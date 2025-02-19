@@ -127,7 +127,7 @@ html,
     font-size: 1.2rem;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-left: 20px;
     font-weight: 600;
 }
@@ -146,12 +146,24 @@ html,
 
 .table-lisEsp {
     background-color: rgba(0, 255, 255, 0);
-    width: 96%;
+    width: 88%;
     display: block;
     overflow-y: auto;
     max-height: 500px;
     table-layout: fixed;
     border-collapse: collapse;
+    position: relative;
+    bottom: 8%;
+}
+
+.table-lisEsp tbody tr td i{
+    font-size: 30px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+
+.table-lisEsp td i:hover{
+    color: rgba(32, 54, 139, 1);
 }
 
 .table-lisEsp td a {
@@ -169,6 +181,11 @@ html,
 
 .table-lisEsp th {
     background-color: rgb(32, 54, 139, 1);
+    height: 50px;
+}
+
+.table-lisEsp td{
+    height: 80px;
 }
 
 .table-lisEsp th,
@@ -177,14 +194,20 @@ html,
     padding: 6px;
     text-align: center;
     box-sizing: border-box;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
-.table-lisEsp tr:nth-child(odd) {
-    background-color: #ffffff;
+.table-lisEsp tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
-.table-lisEsp tr:nth-child(even) {
-    background-color: rgba(233, 233, 233, 1);
+.table-lisEsp tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-lisEsp tbody tr:hover{
+    background-color: #f1f1f1;
 }
 
 @media screen and (max-width: 720px) {
