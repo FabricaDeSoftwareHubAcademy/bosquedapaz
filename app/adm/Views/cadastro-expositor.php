@@ -26,7 +26,7 @@
         <div class="box">
 
             <div class="title">
-                <h1 class="title-text">Cadastro de expositores</h1>
+                <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
             <div class="formularios">
@@ -37,15 +37,15 @@
                         <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="input2">
-                        <label>Qual seu produto:</label>
+                        <label>Seu Produto:</label>
                         <input type="text" name="" id="" placeholder="Informe seu produto" required>
                     </div>
                     <div class="input3">
-                        <label>Qual cidade reside:</label>
+                        <label>Qual Cidade Reside:</label>
                         <input type="text" name="" id="" placeholder="Informe sua cidade" required>
                     </div>
                     <div class="input4">
-                        <label>Nome da marca ou loja:</label>
+                        <label>Nome da Marca/Loja:</label>
                         <input type="text" name="" id="" placeholder="Digite o nome da sua marca ou loja" required>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                 <div class="caixa-contato">
 
                     <div class="whats-ctt">
-                        <label>Whatsapp para contato:</label>
+                        <label>Whatsapp para Contato:</label>
                         <input type="text" name="" id="" placeholder="(67)" required>
                     </div>
 
@@ -69,9 +69,9 @@
                     </div>
 
                     <div class="input-img">
-                        <label>Upload de fotos:</label>
+                        <label>Upload de Fotos:</label>
                         <a href="#" class="upload"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
-                        <button class="carregar-src"><a href="#">Carregar fotos</a></button>
+                        <button class="carregar-src"><a href="#">Carregar Fotos</a></button>
                     </div>
 
                 </div>
@@ -79,7 +79,7 @@
                 <div class="form-opc">
 
                     <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca de comida:<br>
-                        Qual é a medida EXATA dele?</label>
+                        Qual a medida EXATA dele?</label>
                     <input list="options1" id="optionInput1" name="option1" placeholder="Selecione">
 
                     <datalist id="options1">
@@ -105,7 +105,7 @@
             <div class="form-finalizar">
 
                 <div class="edital-feira">
-                    <button><a href="#">Edital da feira</a></button>
+                    <button><a href="#">Edital da Feira</a></button>
                 </div>
 
                 <div class="botoes-salvar">
@@ -131,7 +131,7 @@
 
             <div class="form-termos">
 
-                <p class="termos">*Aceito os termos do Edital:</p>
+                <p class="termos">*Aceito os Termos do Edital:</p>
 
                 <div class="caixa-checkbox">
                     <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="expositor-kids">
-                    <button><a href="#">Expositor kids</a></button>
+                    <button><a href="#">Expositor Kids</a></button>
                 </div>
                 <div class="artistas">
                     <button><a href="#">Artistas</a></button>
@@ -155,10 +155,10 @@
             <!-- div de edital da feira junto com o chekbox -->
             <div class="edital-resp">
                 <div class="edital-feira">
-                    <button><a href="#">Edital da feira</a></button>
+                    <button><a href="#">Edital da Feira</a></button>
                 </div>
                 
-                <p class="termos">*Aceito os termos do Edital:</p>
+                <p class="termos">*Aceito os Termos do Edital:</p>
 
                 <div class="caixa-checkbox">
                     <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
@@ -172,7 +172,7 @@
             <!-- div para separar o expositor kids/artistas -->
             <div class="expo-resp">
                 <div class="expositor-kids">
-                    <button><a href="#">Expositor kids</a></button>
+                    <button><a href="#">Expositor Kids</a></button>
                 </div>
                 <div class="artistas">
                     <button><a href="#">Artistas</a></button>

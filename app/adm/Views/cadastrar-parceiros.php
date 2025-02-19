@@ -22,7 +22,7 @@
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>
                     <div class="input-group">
-                        <label>Descrição do parceiro:</label>
+                        <label>Descrição do Parceiro:</label>
                         <input type="text" name="descricao" id="descricao"
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>

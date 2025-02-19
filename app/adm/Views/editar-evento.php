@@ -19,7 +19,7 @@
                 <form action="#">
                     <div id="form1">
                         <div class="input-group">
-                            <label>Nome do evento:</label>
+                            <label>Nome do Evento:</label>
                             <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                 required>
                         </div>
@@ -28,14 +28,14 @@
                             <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
                         </div>
                         <div class="input-group">
-                            <label>Descrição do evento:</label>
+                            <label>Descrição do Evento:</label>
                             <input type="text" name="descricaodoevento" id="descricaodoevento"
                                 placeholder="Digite uma breve descrição do evento" required>
                         </div>
                         
                         
                         <div class="input-group">
-                            <label>Imagem do evento:</label>
+                            <label>Imagem do Evento:</label>
                             <input type="file" name="file" id="file"
                                 required>
                         </div>
@@ -44,17 +44,17 @@
                     <div id="form2">
 
                         <div class="input-group">
-                            <label>Nome da atração:</label>
+                            <label>Nome da Atração:</label>
                             <input type="text" name="descricaodaatracao" id="descricaodaatracao"
                                 placeholder="Digite o nome da atração">
                         </div>
                         <div class="input-group">
-                            <label>Descrição da atração:</label>
+                            <label>Descrição da Atração:</label>
                             <input type="text" name="descricaodaatracao" id="descricaodaatracao"
                                 placeholder="Digite uma breve descrição da atração">
                         </div>
                         <div class="input-group">
-                            <label>Imagem da atração:</label>
+                            <label>Imagem da Atração:</label>
                             <input type="file" name="file" id="file"
                                 required>
                         </div>
@@ -62,10 +62,10 @@
                             <button class="btn-atracao">
                                 <a href="">Adicionar Atração</a>
                         </div>
-                        <label id = "tabela">Atrações cadastradas:</label>
+                        <label id = "tabela">Atrações Cadastradas:</label>
                         <table>
                             <tr>
-                                <td>Nome da atração</td>
+                                <td>Nome da Atração</td>
                                 
                             </tr>
 

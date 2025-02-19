@@ -21,7 +21,7 @@
 
         <div class="box">
             <div class="title">
-                <h1 class="title-text">Editar Expositor</h1>
+                <h1 class="title-text">EDITAR EXPOSITOR</h1>
             </div>
             <div class="caixa-formulario">
                 <div class="img-expo">
@@ -29,9 +29,9 @@
                 </div>
 
                 <div class="input-formulario">
-                    <label>Nome completo</label>
+                    <label>Nome Completo</label>
                     <input type="text" name="" id="" placeholder="Carla de Souza Costa">
-                    <label>Nome da marca ou loja</label>
+                    <label>Nome da Marca/Loja</label>
                     <input type="text" name="" id="" placeholder="Carla Artesanatos e Ciah">
                     <label>Categoria</label>
                     <input type="text" name="" id="" placeholder="Artesanato">
@@ -42,13 +42,13 @@
                     <input type="text" name="" id="" placeholder="01">
                     <label>NºBarraca:</label>
                     <input type="text" name="" id="" placeholder="01">
-                    <label>Whatsapp para contato</label>
+                    <label>Whatsapp para Contato</label>
                     <input type="text" name="" id="" placeholder="(67)9934ki25674">
                 </div>
 
                 <div class="input-formulario3">
                     <label>Se você possui um trailer, foodtruck ou <br> barraca de comida: <br>
-                        Qual é a medida EXATA dele?</label>
+                        Qual a medida EXATA dele?</label>
                     <input type="text" name="" id="" placeholder="9m²">
                     <label>Precisa de energia para vender seus produtos? <br>
                         Se sim, para quais <br>voltagens e quais equipamentos:</label>
@@ -60,7 +60,7 @@
 
             <div class="form-status">
                 <div class="imagens">
-                    <p class="text-img">imagens:</p>
+                    <p class="text-img">Imagens:</p>
 
                     <div class="img-produtos">
                         <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos1.png" alt=""
@@ -95,7 +95,7 @@
 
                 <div class="botao-salvar">
                     <button>
-                        <a href="#">salvar</a>
+                        <a href="#">Salvar</a>
                     </button>
                 </div>
     

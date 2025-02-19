@@ -28,7 +28,7 @@
         
         <div class="box-gerenciar">
         <div class="nome-area-gerenciar">
-                <h1>Gerenciar ADM</h1>
+                <h1>GERENCIAR ADM</h1>
             </div>
 
                 <div class="seta-voltar-gerenciar">

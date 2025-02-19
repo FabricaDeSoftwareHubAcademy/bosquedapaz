@@ -14,7 +14,7 @@
 ?>
     <main class="principal">
         <div class="box">
-            <h1 class="titulo">Gerenciar Eventos</h1>
+            <h1 class="titulo">GERENCIAR EVENTOS</h1>
             <div class="form-box">
                 <div class="input-pesquisar">
                     <!-- <div class="input-group">

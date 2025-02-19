@@ -18,25 +18,25 @@
             <div class="form-box">
                 <form action="#">
                     <div class="input-group">
-                        <label>Título da utilidade pública:</label>
+                        <label>Título da Utilidade Pública:</label>
                         <input type="text" name="titulo" id="titulo"
                             placeholder="Escreva o título da utilidade pública">
                     </div>
                     <div class="input-group">
-                        <label>Descrição da utilidade pública:</label>
+                        <label>Descrição da Utilidade Pública:</label>
                         <input type="text" name="descricao" id="descricao"
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>
                     <div class="input-group">
-                        <label>Data início</label>
+                        <label>Data Início</label>
                         <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
                     </div>
                     <div class="input-group">
-                        <label>Data fim</label>
+                        <label>Data Fim</label>
                         <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
                     </div>
                     <div class="input-group">
-                        <label>Imagem da atração:</label>
+                        <label>Imagem da Atração:</label>
                         <input type="file" name="file" id="file"
                             required>
                     </div>

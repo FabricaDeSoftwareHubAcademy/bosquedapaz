@@ -14,7 +14,7 @@
 
     <main class="principal">
         <div class="box">
-            <h1 class="titulo">Edição de Categorias</h1>
+            <h1 class="titulo">EDIÇÃO DE CATEGORIAS</h1>
             <div class="form-box">
                     <div class="tabela">
                         <!-- <div class="input-group">
