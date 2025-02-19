@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ediçao de Expositor</title>
+    <title>Edição de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-expo-adm.css">
 

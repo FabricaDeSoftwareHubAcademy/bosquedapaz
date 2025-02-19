@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDIÇÕES PASSADAS</title>
+    <title>Edições Passadas</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/edicoes-passadas.css">
     <link rel="stylesheet" href="../../../Public/css/css-modais/edicoes-passadas-modal.css">
     <script src="../../../Public/js/js-modais/edicoes-passadas-abrir-modais.js" defer></script>
