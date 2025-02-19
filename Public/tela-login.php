@@ -54,7 +54,7 @@
                     </form>
  
                     <div class="div-esqueceu-senha-login">
-                        <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.html">Esqueceu a senha?</a>
+                        <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.php">Esqueceu a senha?</a>
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
