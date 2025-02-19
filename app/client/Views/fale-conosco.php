@@ -1,4 +1,4 @@
-<?php include "../../../Public/assets/home/menu-home.html"?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    <?php include "../../../Public/assets/home/menu-home.html"?>
     <div class="box-guilherme">
         <section class="secao-formulario-guilherme">
             <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>

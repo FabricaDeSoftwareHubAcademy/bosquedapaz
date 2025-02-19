@@ -1,4 +1,4 @@
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,6 +14,7 @@
     </head>
 
     <body>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
     <header class="cabecalho">
         <main class="principal">
             <div class="box">
