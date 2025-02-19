@@ -80,7 +80,7 @@
 .area-cards{
     width: 99%;
     height: 80%;
-    background-color: aqua;
+    background-color:  transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,21 +102,95 @@
 .area-img{
     width: 100%;
     height: 50%;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .area-button{
     width: 100%;
     height: 50%;
-    background-color: rgb(26, 228, 116);
+    background-color: rgb(255, 255, 255);
 }
 
 .dec-img{
     width: 20%;
     height: 14%;
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     transform: rotate(142deg);
+    position: fixed;
+    z-index: 3;
+    top: -46%;
+    left: -45%;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
     position: relative;
-    top: -4%;
-    left: -6%;
+    top: 4%;
+}
+
+.img img{
+    width: 73%;
+    height: auto;
+}
+
+.dec-button{
+    width: 128%;
+    height: 83%;
+    transform: rotate(-24deg);
+    position: relative;
+    top: 52%;
+    left: 0%;
+    background-color: #FF3877;
+}
+
+.dec-menor-button{
+    height: 259px;
+    border-right: 15px solid #FF3877;
+    border-radius: 10px;
+    position: relative;
+    bottom: 136%;
+    right: 46%;
+    transform: rotate(66deg);
+}
+
+.dec-menor-dentro-button{
+    height: 198px;
+    border-right: 15px solid white;
+    border-radius: 10px;
+    left: 49%;
+    bottom: 119%;
+    position: relative;
+    transform: rotate(-114deg);
+}
+
+.area-button h1{
+    position: absolute;
+    bottom: 38%;
+    left: 16%;
+    font-size: 164%;
+}
+
+.botao-saiba-mais{
+    transform: rotate(0deg);
+    border: none;
+    background-color: white;
+    color: rgba(0, 126, 112, 1);
+    width: 11%;
+    height: 30px;
+    position: absolute;
+    left: 15%;
+    top: 70%;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
 }

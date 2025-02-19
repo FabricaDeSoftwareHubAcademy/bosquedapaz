@@ -33,29 +33,59 @@
                 <div class="cards">
                     <div class="area-img">
                         <div class="dec-img"></div>
+                        <div class="img">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                        </div>
                     </div>
-                    <div class="area-button"></div>
+                    <div class="area-button">
+                        <h1>Primavera</h1>
+                        <button class="botao-saiba-mais">Saiba Mais</button>
+                        <div class="dec-button"></div>
+                        <div class="dec-menor-button"></div>
+                        <div class="dec-menor-dentro-button"></div>
+                    </div>
                 </div>
 
                 <div class="cards">
                     <div class="area-img">
                         <div class="dec-img"></div>
+                        <div class="img">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 162213.png" alt="">
+                        </div>
                     </div>
-                    <div class="area-button"></div>
+                    <div class="area-button">
+                        <div class="dec-button"></div>
+                        <div class="dec-menor-button"></div>
+                        <div class="dec-menor-dentro-button"></div>
+                    </div>
                 </div>
 
                 <div class="cards">
                     <div class="area-img">
                         <div class="dec-img"></div>
+                        <div class="img">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                        </div>
                     </div>
-                    <div class="area-button"></div>
+                    <div class="area-button">
+                        <div class="dec-button"></div>
+                        <div class="dec-menor-button"></div>
+                        <div class="dec-menor-dentro-button"></div>
+                    </div>
                 </div>
 
                 <div class="cards">
                     <div class="area-img">
                         <div class="dec-img"></div>
+                        <div class="img">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                        </div>
                     </div>
-                    <div class="area-button"></div>
+                    <div class="area-button">
+                        <div class="dec-button"></div>
+                        <div class="dec-menor-button"></div>
+                        <div class="dec-menor-dentro-button"></div>
+                    </div>
                 </div>
 
             </div>
