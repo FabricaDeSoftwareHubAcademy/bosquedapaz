@@ -13,9 +13,8 @@
     <main class="principal">
         <!-- box principal -->
         <div class="box">
-            <div class="seta-ec">
-            <a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></a>
-            </div>
+            <div class="seta-ec"><a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></a></div>
+            
             <div id="linha-vertical-ec"></div>
             <div class="area-infs-ec">
                 <h1>Escolher Cadastro</h1>

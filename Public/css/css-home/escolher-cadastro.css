@@ -175,10 +175,12 @@
     .area-total-button{
         width: 100%;
         font-size: 16px;
+        right: 8%;
     }
 
     .area-infs-ec{
         width: 90%;
+        gap: 35px;
     }
 
     .text-input-ec p{
@@ -200,6 +202,7 @@
 
     .area-infs-ec h1{
         font-size: 25px;
+        right: 8%;
     }
 }
 
@@ -228,7 +231,9 @@
         position: relative;
         right: 2%;
         #linha-vertical-ec{
-            left: 60%;
+            left: 64%;
+            height: 400px;
+            top: 25%;
         }
     }
 
@@ -270,23 +275,22 @@
     }
 
     .principal .box{
-        height: 70%;
+        height: 80%;
         position: relative;
-        right: 2%;
         #linha-vertical-ec{
+            height: 500px;
             left: 63%;
-            /* height: 750px; */
-            top: 15%;
+            top: 20%;
         }
     }
 
     .area-total-button{
         width: 90%;
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .text-input-ec p{
-        right: 16%;
+        right: 5%;
     }
 
     .icon-input-ec{
