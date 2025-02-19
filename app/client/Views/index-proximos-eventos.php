@@ -179,6 +179,8 @@
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur.
                                         Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                                 </div>
                                 <button id="b-sari-modal" class="close-modal" data-modal="modal-card-ProEv">
@@ -227,6 +229,8 @@
                                         dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur.
                                         Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
                                 </div>

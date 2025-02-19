@@ -117,29 +117,29 @@
     overflow: hidden;
     #linha-decorativa-ProEv{
         height: 150px;
-        border-right: 10px solid rgba(0, 126, 112, 1);
+        border-right: 12px solid rgba(0, 126, 112, 1);
         border-radius: 10px;
         position: relative;
-        bottom: 24%;
-        right: 70%;
-        transform: rotate(60deg);
+        bottom: 25%;
+        right: 46%;
+        transform: rotate(70deg);
     }
 }
 
 .div-decoratica-do-cardres-ProEv{
     width: 120%;
     height: 40%;
-    transform: rotate(-30deg);
-    position: absolute;
-    top: 75%;
-    left: 7%;
+    transform: rotate(-20deg);
+    position: relative;
+    bottom: 30%;
+    left: 2%;
     background-color: rgba(0, 126, 112, 1);
     #linha-decorativa2-ProEv{
-        height: 100px;
-        border-right: 10px solid white;
+        height: 130px;
+        border-right: 10px solid rgb(255, 255, 255);
         border-radius: 10px;
-        left: 30%;
-        top: 55%;
+        left: 23%;
+        top: 32%;
         position: relative;
         transform: rotate(-90deg);
     }
@@ -702,7 +702,7 @@
 /* Modal-res */
 .dlog-modalres-card-ProEv{
     width: 50%;
-    height: 55%;
+    height: 80%;
     background-color: white;
     position: absolute;
     top: 26%;
@@ -711,9 +711,6 @@
     border-radius: 10px;
     overflow: hidden;
 }
-
-
-
 
 .div-infs-evento-modalres{
     width: 100%;
@@ -1014,19 +1011,21 @@
         font-size: 20px;
     }
     .buttonres-saibamais-ProEv{
-        transform: rotate(30deg);
+        transform: rotate(20deg);
         border: none;
         background-color: white;
         color: rgba(0, 126, 112, 1);
-        width: 55%;
-        height: 25px;
+        border: 1px solid rgba(0, 126, 112, 1);
+        width: 65%;
+        height: 30px;
         position: absolute;
-        left: 18%;
-        top: 26%;
+        left: 15%;
+        top: 0%;
         border-radius: 8px;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         cursor: pointer;
+        transition: all .2s ease-in-out;
     }
 
      /* Modal Res */
