@@ -163,6 +163,10 @@
     z-index: -3;
 }
 
+#p-ed-kids{
+    right: 26%;
+}
+
 @media screen and (max-width: 720px) {
     .area-img-ec{
         display: none;
@@ -203,6 +207,10 @@
     .area-infs-ec h1{
         font-size: 25px;
         right: 8%;
+    }
+
+    #p-ed-kids{
+        right: 6%;
     }
 }
 
@@ -251,7 +259,11 @@
 
     .text-input-ec{
         width: 80%;
-    }    
+    }  
+    
+    #p-ed-kids{
+        right: 2%;
+    }
 }
 
 @media (min-width: 820px) and (min-height: 1180px){
@@ -285,8 +297,8 @@
     }
 
     .area-total-button{
-        width: 90%;
-        font-size: 22px;
+        width: 95%;
+        font-size: 20px;
     }
 
     .text-input-ec p{
@@ -303,6 +315,10 @@
 
     .icon-input-ec i{
         font-size: 35px;
+    }
+
+    #p-ed-kids{
+        right: 0%;
     }
 }
 
@@ -349,6 +365,10 @@
     .bolas-fundo img{
         width: 15%;
     }
+
+    #p-ed-kids{
+        right: 20%;
+    }
 }
 
 @media (min-width: 1280px) and (max-height: 800px){
@@ -390,5 +410,9 @@
 
     .icon-input-ec i{
         font-size: 30px;
+    }
+
+    #p-ed-kids{
+        right: 20%;
     }
 }

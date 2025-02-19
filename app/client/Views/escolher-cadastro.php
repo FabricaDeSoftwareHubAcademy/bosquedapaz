@@ -31,7 +31,7 @@
                         <i id="icon-ec" class="bi bi-person-plus"></i>
                     </div>
                     <div class="text-input-ec">
-                        <p>Cadastro de Expositor</p>
+                        <p id="p-ed-kids">Cadastro de Expositor Kids</p>
                     </div>
                 </a>
                 <a href="cadastro-artista.php" class="area-total-button">
