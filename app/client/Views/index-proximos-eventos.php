@@ -179,9 +179,7 @@
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur.
                                         Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
-                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.Lorem ipsum 
-                                        dolor sit amet consectetur. Fames metus ac egestas 
-                                        turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
                                 <button id="b-sari-modal" class="close-modal" data-modal="modal-card-ProEv">
                                     <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
@@ -230,9 +228,7 @@
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur.
                                         Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
-                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.Lorem ipsum 
-                                        dolor sit amet consectetur. Fames metus ac egestas 
-                                        turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
                                 <button id="b-sari-modal2" class="close-modal" data-modal="modal2-card-ProEv">
                                     <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
