@@ -39,7 +39,7 @@
 
 
 .principal {
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -182,7 +182,13 @@ h2 {
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+    width: auto;
+    max-width: 100%;
     
+}
+.btn {
+    width: auto;
+    max-width: 100%;
 }
 
 .btn-cancelar-salvar .btn {
@@ -234,7 +240,7 @@ h2 {
     }
 
     .btn-cancelar-salvar {
-        flex-direction: column;
+     
         align-items: center;
     }
     .btn {
@@ -249,12 +255,35 @@ h2 {
 
     .btn {
         width: 100%;
-    }   
+        padding: 10px;
+    }
+
+    .box .form-box {
+        width: 100%;
+        flex-wrap: wrap; 
+    }
+
+    .form-box form {
+        gap: 10px; 
+    }
+    
+    
+    .principal .box {
+        padding: 15px;
+        width: 100%;
+        max-width: 100%; 
+    }
+
+    
+    .form-box {
+        width: 100%; 
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 768px) {
     .form-container {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
     }
 
