@@ -39,20 +39,26 @@
                         <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="input2">
-                        <label>Seu Produto:</label>
-                        <input type="text" name="" id="" placeholder="Informe seu produto" required>
+                        <label>E-mail:</label>
+                        <input type="text" name="" id="" placeholder="E-mail completo" required>
                     </div>
+                    
                     <div class="input3">
-                        <label>Qual Cidade Reside:</label>
-                        <input type="text" name="" id="" placeholder="Informe sua cidade" required>
-                    </div>
-                    <div class="input4">
                         <label>Nome da Marca/Loja:</label>
                         <input type="text" name="" id="" placeholder="Digite o nome da sua marca ou loja" required>
                     </div>
+                    <div class="input4">
+                        <label>Qual Cidade Reside:</label>
+                        <input type="text" name="" id="" placeholder="Digite sua cidade" required>
+                    </div>
+                   
                 </div>
 
                 <div class="caixa-contato">
+                    <div class="cpf">
+                        <label>CPF/CNPJ:</label>
+                        <input type="text" name="" id="" placeholder="CPF/CNPJ " required>
+                    </div>
 
                     <div class="whats-ctt">
                         <label>Whatsapp para Contato:</label>
@@ -70,17 +76,16 @@
                         </datalist>
                     </div>
 
-                    <div class="input-img">
-                        <label>Upload de Fotos:</label>
-                        <a href="#" class="upload"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
-                        <button class="carregar-src"><a href="#">Carregar Fotos</a></button>
-                    </div>
+                    
 
                 </div>
 
                 <div class="form-opc">
-
-                    <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca de comida:<br>
+                    <div class="input5">
+                        <label>Descrição:</label>
+                        <input type="text" name="" id="" placeholder="Digite uma descrição sobre seu trabalho" required>
+                    </div>
+                    <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca:<br>
                         Qual a medida EXATA dele?</label>
                     <input list="options1" id="optionInput1" name="option1" placeholder="Selecione">
 
@@ -100,40 +105,47 @@
                         <option value="1000Kw">
                     </datalist>
 
+                    <div class="input-group">
+                        <label>Escolher Imagem:</label>
+                        <input type="file" name="file" id="file"
+                            required>
+                    </div>
                 </div>
 
             </div>
 
             <div class="form-finalizar">
 
-                <div class="edital-feira">
+                <!-- <div class="edital-feira">
                     <button><a href="#">Edital da Feira</a></button>
+                </div> -->
+
+                
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
 
                 <div class="botoes-salvar">
                     <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
                 </div>
 
-                <input type="checkbox" id="modal-checkbox" hidden>
-                <div class="modal-container">
+                <div id="modal" class="modal">
                     <div class="modal-content">
-                        <h1>Confirmar?</h1>
-                        <div class="botoes">
-                            <label for="modal-checkbox" class="salvar">Salvar</label>
-                            <label for="modal-checkbox" class="cancelar">Cancelar</label>
+                        <span class="close">&times;</span>
+                        <p>Deseja realmente salvar as alterações?</p>
+                        <div class="modal-botoes">
+                            <button class="btn-confirmar">Confirmar</button>
+                            <button class="btn-cancelar-modal">Cancelar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
 
             </div>
 
             <div class="form-termos">
 
-                <p class="termos">*Aceito os Termos do Edital:</p>
+                <!-- <p class="termos">*Aceito os Termos do Edital:</p>
 
                 <div class="caixa-checkbox">
                     <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
@@ -141,7 +153,7 @@
 
                     <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
                     <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div>
+                </div> -->
 
                 <div class="expositor-kids">
                     <button><a href="#">Expositor Kids</a></button>
@@ -182,8 +194,13 @@
             </div>
 
             <!-- div para salvar e cancelar -->
-            <div class="salvar-resp">
-                <div class="botoes-salvar">
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+                
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
                     <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
                 </div>
 
@@ -198,14 +215,13 @@
                     </div>
                 </div>
 
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
+               
             </div>
 
 
-            <div class="btns">
-              <a href="gerenciar-expositores.php" class="voltar">
+        </div>
+        <div class="btns">
+            <a href="gerenciar-expositores.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
@@ -220,7 +236,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../js/mais.js"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
 </body>
 

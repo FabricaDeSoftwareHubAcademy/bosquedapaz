@@ -56,7 +56,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    gap: 5px;
+    gap: 40px;
 }
 
 .title {
@@ -175,6 +175,8 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    position: relative;
+    left: -20%;
 }
 
 .img-produtos img {
@@ -191,7 +193,7 @@
 }
 
 .botao-salvar button {
-    background-color: #25b164;
+    background-color: #FF3877;
     padding: 7px 30px;
     border: none;
     border-radius: 7px;
@@ -206,13 +208,14 @@
 }
 
 .botao-cancelar button {
-    background-color: #B1253F;
+    background-color: #252eb1;
     padding: 7px 20px;
     left: 64%;
     top: 70%;
     border: none;
     border-radius: 7px;
 }
+
 
 .botao-cancelar a {
     font-size: 20px;
@@ -298,6 +301,11 @@
 
 .status {
     display: none;
+}
+
+.btns{
+    position: relative;
+    left: -45%;
 }
 
 

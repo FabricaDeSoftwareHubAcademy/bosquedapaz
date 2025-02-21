@@ -31,30 +31,30 @@
                 </div>
 
                 <div class="input-formulario">
-                    <label>Nome Completo</label>
-                    <input type="text" name="" id="" placeholder="Carla de Souza Costa">
+                    <label>Nome Completo:</label>
+                    <input type="text" name="" id="" value="Carla dias">
                     <label>Nome da Marca/Loja</label>
-                    <input type="text" name="" id="" placeholder="Carla Artesanatos e Ciah">
+                    <input type="text" name="" id="" value="Carla Artesanatos e Ciah">
                     <label>Categoria</label>
-                    <input type="text" name="" id="" placeholder="Artesanato">
+                    <input type="text" name="" id="" value="Artesanato">
                 </div>
 
                 <div class="input-formulario2">
                     <label>Usuário</label>
-                    <input type="text" name="" id="" placeholder="01">
+                    <input type="text" name="" id="" value="01">
                     <label>NºBarraca:</label>
-                    <input type="text" name="" id="" placeholder="01">
+                    <input type="text" name="" id="" value="01">
                     <label>Whatsapp para Contato</label>
-                    <input type="text" name="" id="" placeholder="(67)9934ki25674">
+                    <input type="text" name="" id="" value="(67)9934ki25674">
                 </div>
 
                 <div class="input-formulario3">
                     <label>Se você possui um trailer, foodtruck ou <br> barraca de comida: <br>
                         Qual a medida EXATA dele?</label>
-                    <input type="text" name="" id="" placeholder="9m²">
+                    <input type="text" name="" id="" value="9m²">
                     <label>Precisa de energia para vender seus produtos? <br>
                         Se sim, para quais <br>voltagens e quais equipamentos:</label>
-                    <input type="text" name="" id="" placeholder="Não">
+                    <input type="text" name="" id="" value="Não">
                 </div>
 
             </div>
@@ -95,25 +95,27 @@
 
             <div class="form-finalizar">
 
-                <div class="botao-salvar">
-                    <button>
-                        <a href="#">Salvar</a>
-                    </button>
-                </div>
-    
                 <div class="botao-cancelar">
                     <button>
                         <a href="#">Cancelar</a>
                     </button>
                 </div>
+                <div class="botao-salvar">
+                    <button>
+                        <a href="#">Salvar</a>
+                    </button>
+                </div>
+
+                
+    
             </div>
 
             
-        </div>
-        <div class="btns">
-            <a href="listar-expositor.php" class="voltar">
-            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
+            <div class="btns">
+                <a href="listar-expositor.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div>
         </div>
 
     </main>
