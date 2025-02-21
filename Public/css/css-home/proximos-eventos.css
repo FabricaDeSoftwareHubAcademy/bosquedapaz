@@ -86,23 +86,13 @@
 }
 
 .titulo-principal-ProEv {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
     color: white;
     position: relative;
-    top: 25%;
-    right: 22%;
+    top: 6%;
+    right: 23%;
     transform: rotate(19deg);
-}
-
-.bolota-decorativa-Pro-Ev {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: rgba(255, 56, 119, 1);
-    position: relative;
-    top: 25%;
-    right: 26%;
 }
 
 .card-respon-ProEv {
@@ -181,19 +171,19 @@
 
 .div-img-do-ev-ProEv {
     width: 90%;
-    height: 50%;
+    height: 60%;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: self-start;
     justify-content: space-between;
     position: relative;
-    top: 20%;
-    left: 15%;
+    top: 10%;
+    left: 10%;
 }
 
 
 .banner-evento-ProEv {
-    width: 50%;
+    width: 65%;
     height: 100%;
     background-color: rgba(127, 255, 212, 0);
     align-items: center;
@@ -223,13 +213,16 @@
 .data-do-ev-ProEv {
     font-size: 50px;
     color: rgba(0, 126, 112, 1);
-
+    position: relative;
+    top: 5%;
 }
 
 .horario-do-ev-ProEv {
     font-size: 18px;
     color: rgba(0, 126, 112, 1);
     margin-right: 5%;
+    position: relative;
+    top: 5%;
 }
 
 .local-do-ev-ProEv {
@@ -237,6 +230,8 @@
     width: 250px;
     padding-top: 10px;
     margin-left: 10%;
+    position: relative;
+    top: 5%;
 }
 
 

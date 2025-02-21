@@ -25,8 +25,7 @@
         <!-- Box/Elementos Box Decorativa -->
         <div class="box-decorativa-ProEv">
             <div class="div-decorativa-ProEv">
-                <h1 class="titulo-principal-ProEv">Evento</h1>
-                <div class="bolota-decorativa-Pro-Ev"></div>
+                <h1 class="titulo-principal-ProEv">Proxímo Evento</h1>
             </div>
         
             <!-- Card da Responsividade -->
