@@ -4,127 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+   
     <title>Validação de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validacao-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
 </head>
 <body>
-    <div class="box-guilherme">
+    <div class="index-container-vexp">
 
-        <section class="secao-imagens-guilherme">
-            <div class="imagem-expositor-guilherme">
-                <h1>Foto do Expositor</h1>
-                <img src="../../../Public/imgs/img-validacao-expositor/fotoexpositor.png" alt="fotodoexpositor">
+        <section class="secao-expositor-vexp">
+            <div class="area-logomarca-vexp">
+                <h1 class="texto-logomarca-vexp">Logo da Empresa</h1>
+                <img src="../../../Public/imgs/img-validacao-expositor/logomarca.png" alt="logomarca" class="logomarca-imagem-vexp">
             </div>
-
-            <div class="imagens-marca-guilherme">
-                <h1>Imagens da Marca</h1>
-                <div class="imagens-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/fotomarca.png" alt="fotomarca1" id="i1-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/fotomarca2.png" alt="fotomarca2" id="i2-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/fotomarca3.png" alt="fotomarca3" id="i3-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/fotomarca4.png" alt="fotomarca4" id="i4-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/fotomarca5.png" alt="fotomarca5" id="i5-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/fotomarca6.png" alt="fotomarca6" id="i6-guilherme">
+            <div class="area-produtos-vexp">
+                <h1 class="texto-produtos-vexp">Foto dos Produtos</h1>
+                <div class="imagens-produtos-vexp">
+                    <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-1.jpeg" alt="" class="produto1">
+                    <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-2.jpeg" alt="" class="produto2">
+                    <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-3.jpeg" alt="" class="produto3">
+                    <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-4.jpeg" alt="" class="produto4">
+                    <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-5.jpeg" alt="" class="produto5">
+                    <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-6.jpeg" alt="" class="produto6">
                 </div>
             </div>
         </section>
+ 
+        <section class="secao-informacoes-vexp">
+            <h1 class="texto-informacoes-vexp">Informações do Expositor</h1>
+            <form class="formulario-informacoes-vexp">
+                <div class="grid-container-vexp">
 
-        <section class="secao-informacoes-guilherme">
-            <div class="informacoes-expositor-guilherme">
-                <div class="informacoes-titulo-guilherme">
-                    <h1>Validação de Expositor</h1>
-                </div>
-                <form class="formulario-informacoes-guilherme">
-                    <div>
-                        <label>Nome Completo do Expositor</label>
-                        <input type="text" name="campo1" id="campo-1" disabled>
-
-                        <label>Categoria dos Produtos</label>
-                        <input type="text" name="campo2" id="campo-2" disabled>
-                        
-                        <label>Precisa de energia? Caso afirmativo, voltagem 110 ou 220? Caso negativo, deixe em branco.</label>
-                        <input type="text" name="campo6" id="campo-6" disabled>
+                    <div class="input-group-vexp">
+                        <label for="nome-expositor">Nome</label>
+                        <input type="text" name="nome_expositor" id="nome-expositor" placeholder="Mariana Quintana Debortelli" disabled>
                     </div>
-                    
-                    <div>
-                        <label>WhatsApp para Contato</label>
-                        <input type="text" name="campo4" id="campo-4" disabled>
 
-                        <label>Cidade de Residência</label>
-                        <input type="text" name="campo3" id="campo-3" disabled>
-
-                        <label>Possui trailer, barraca ou foodtruck? Se sim, informe as medidas. Caso negativo, deixe em branco.</label>
-                        <input type="text" name="campo5" id="campo-5" disabled>
+                    <div class="input-group-vexp">
+                        <label for="whatsapp-expositor">Whatsapp para Contato</label>
+                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="67 99956-6551" disabled>
                     </div>
-                </form>
-            </div>
+            
+                    <div class="input-group-vexp">
+                        <label for="email-expositor">Email</label>
+                        <input type="email" name="email_expositor" id="email-expositor" placeholder="mariana@hotmail.com" disabled>
+                    </div>
 
-            <div class="informacoes-marca-guilherme">
-                <div class="logo-marca-guilherme">
-                    <img src="../../../Public/imgs/img-validacao-expositor/logomarca.svg" alt="logomarca" id="logomarca-guilherme">
+                    <div class="input-group-vexp">
+                        <label for="cnpj-expositor">CNPJ da Empresa</label>
+                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="56.133.133/0001-50" disabled>
+                    </div>
+            
+                    <div class="input-group-vexp">
+                        <label for="categoria-expositor">Categoria</label>
+                        <input type="text" name="categoria_expositor" id="categoria-expositor" placeholder="Artesanato" disabled>
+                        <a href="#trocar-categoria-vexp">Alterar categoria</a>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">CPF do Expositor</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="831.591.143-31" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">Cidade</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Campo Grande - MS" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">Endereço</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Afonso Pena N° 1332" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">Formas de Pagamento</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Cartão de crédito/débito e PIX" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">Nome da Marca</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="CakePet CG" disabled>
+                    </div>
                 </div>
-                <form class="formulario-marca-guilherme">
-                    <label>Nome da Marca</label>
-                    <input type="text" name="campo7" id="campo-7" disabled>
-                </form>
-            </div>
-
-            <div class="botoes-guilherme">
-                <a href="#modal-recusar-guilherme"><button class="botao-recusar-guilherme" id="btnRecusar-guilherme">Recusar</button></a>
-                <a href="#modal-validar-guilherme"><button class="botao-validar-guilherme" id="BtnValidar-guilherme">Validar</button></a>
+            </form>
+            
+            <div class="area-botoes-vexp">
+                <a href="#modal-recusar-vexp"><button class="botao-recusar-vexp">Recusar</button></a>
+                <a href="#modal-validar-vexp"><button class="botao-validar-vexp">Validar</button></a>
             </div>
         </section>
-
     </div>
 
-    <div class="decoracoes-guilherme">
+    <!-- modal para recusar expositor -->
+    <div class="acao-recusar-vexp" id="modal-recusar-vexp">
+        <div class="acao-content-recusar-vexp">
+            <h1 class="acao-texto-recusar-vexp">Deseja recusar o expositor?</h1>
+            <div class="acao-botoes-recusar-vexp">
+                <a href=""><button class="botao-cancelar-vexp">Cancelar</button></a>
+                <a href="#recusado-sucesso-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- recusado com sucesso -->
+    <div class="mensagem-recusar-vexp" id="recusado-sucesso-vexp">
+        <div class="mensagem-content-recusar-vexp">
+            <h1 class="mensagem-texto-recusar-vexp">Expositor recusado.</h1>
+            <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
+        </div>
+    </div>
+ 
+    <!-- modal para validar expositor -->
+    <div class="acao-validar-vexp" id="modal-validar-vexp">
+        <div class="acao-content-validar-vexp">
+            <h1 class="acao-texto-validar-vexp">Preencha os dados do novo expositor.</h1>
+            <div class="acoes-container-validar-vexp">
+                <div class="acao-numeroBarraca-vexp">
+                    <label>Número da Barraca</label>
+                    <input type="text" name="numero_barraca" id="numero-barraca" placeholder="000">
+                </div>
+                <div class="acao-corRua-vexp">
+                    <label>Cor da Rua</label>
+                    <select name="cor_rua" id="cor-rua">
+                        <option value="vazio"></option>
+                        <option value="amarela">Amarela</option>
+                        <option value="laranja">Laranja</option>
+                        <option value="roxa">Roxa</option>
+                        <option value="verde">Verde</option>
+                    </select>
+                </div>
+            </div>
+            <div class="acao-botoes-validar-vexp">
+                <a href=""><button class="botao-cancelar-vexp">Cancelar</button></a>
+                <a href="#validacao-sucesso-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- validado com sucesso -->
+    <div class="mensagem-validar-vexp" id="validacao-sucesso-vexp">
+        <div class="mensagem-content-validar-vexp">
+            <h1 class="mensagem-texto-validar-vexp">Expositor validado!</h1>
+            <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
+        </div>
+    </div>
+
+    <!-- modal trocar categoria -->
+    <div class="trocar-categoria-vexp" id="trocar-categoria-vexp">
+        <div class="trocar-categoria-content-vexp">
+            <h1 class="trocar-categoria-texto-vexp">Defina a Categoria</h1>
+            <div class="trocar-categoria-acoes-vexp">
+                <div class="trocar-categoria-acao-vexp">
+                    <label>Categoria</label>
+                    <select name="categoria" id="categoria-vexp">
+                        <option value="artesanato">Artesanato</option>
+                        <option value="antiguidade">Antiguidade</option>
+                        <option value="colecionismo">Colecionismo</option>
+                        <option value="comestologia">Comestologia</option>
+                        <option value="gastronomia">Gastronomia</option>
+                        <option value="literatura">Literatura</option>
+                        <option value="moda-autoral">Moda Autoral</option>
+                        <option value="plantas">Plantas</option>
+                        <option value="sustentabilidades">Sustentabilidade</option>
+                    </select>
+                </div>
+            </div>
+            <div class="trocar-categoria-botoes-vexp">
+                <a href="#"><button class="botao-cancelar-vexp">Cancelar</button></a>
+                <a href="#trocar-categoria-sucesso-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal trocar categoria sucesso -->
+    <div class="sucesso-trocar-categoria-vexp" id="trocar-categoria-sucesso-vexp">
+        <div class="trocar-sucesso-content-vexp">
+            <h1 class="trocar-sucesso-texto-vexp">Categoria alterada.</h1>
+            <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
+        </div>
+    </div>  
+
+    <div class="decoracoes-vexp">
         <a href="gerenciar-relatorios.php">
         <img src="../../../Public/imgs/img-validacao-expositor/voltar.svg" alt="setaVoltar" class="btnVoltar-guilherme">
         </a>
         <img src="../../../Public/imgs/img-validacao-expositor/detalhe1.svg" alt="" class="detalhe1">
         <img src="../../../Public/imgs/img-validacao-expositor/detalhe2.svg" alt="" class="detalhe2">
         <img src="../../../Public/imgs/img-validacao-expositor/detalhe3.svg" alt="" class="detalhe3">
-    </div>
-
-    <div class="modal-validar-guilherme" id="modal-validar-guilherme">
-        <div class="modal-content-guilherme">
-            <h1>Deseja validar o expositor?</h1>
-            <div class="modal-botoes-guilherme">
-                <a href="#modal-validar-sucesso-guilherme"><button class="btn-modal-guilherme btn-validar-guilherme">Validar</button></a>
-                <a href="#"><button class="btn-modal-guilherme btn-voltar-guilherme">Voltar</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-recusar-guilherme" id="modal-recusar-guilherme">
-        <div class="modal-content-guilherme">
-            <h1>Deseja recusar o expositor?</h1>
-            <div class="modal-botoes-guilherme">
-                <a href="#modal-recusar-sucesso-guilherme"><button class="btn-modal-guilherme btn-recusar-guilherme">Recusar</button></a>
-                <a href="#"><button class="btn-modal-guilherme btn-voltar-guilherme">Voltar</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-validar-sucesso-guilherme" id="modal-validar-sucesso-guilherme">
-        <div class="modal-content-guilherme">
-            <h1>Validado com sucesso!</h1>
-            <div class="modal-botoes-guilherme">
-                <a href="#"><button class="btn-modal-guilherme btn-ok-guilherme">Ok</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-recusar-sucesso-guilherme" id="modal-recusar-sucesso-guilherme">
-        <div class="modal-content-guilherme">
-            <h1>Recusado com sucesso!</h1>
-            <div class="modal-botoes-guilherme">
-                <a href="#"><button class="btn-modal-guilherme btn-ok-guilherme">Ok</button></a>
-            </div>
-        </div>
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
