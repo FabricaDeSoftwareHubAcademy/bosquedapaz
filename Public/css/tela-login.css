@@ -18,7 +18,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: grey; */
+    background-color: #e1e1e1;
     position: relative;
 }
  
@@ -89,7 +89,7 @@
     #linha-login{
         height: 82%;
         position: fixed;
-        border-right: 3px solid #FF3877;
+        border-right: 1.5px solid #ec6a93;
         left: 50%;
         border-radius: 20px;
         margin-top: 60px;

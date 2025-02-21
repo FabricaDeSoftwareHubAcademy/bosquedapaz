@@ -10,14 +10,14 @@
     --franch-rose:#FF3877;
     --royal-blue: #162868;
 }
-html,body{
+html,.body-recsenha{
     overflow: hidden;
     overflow-x: hidden;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: grey; */
+    background-color: #e1e1e1;
 }
  
 .img-superior-direita-recsenha{
@@ -26,12 +26,20 @@ html,body{
     top: 8%;
     /* background-color: red; */
 }
+
+.img-superior-direita-recsenha .imgg-superior-direita-recsenha{
+    display: flex;
+}
  
 .img-superior-esquerda-recsenha{
     position: absolute;
     left: 0%;
     top: 6%;
     /* background-color: red; */
+}
+
+.img-superior-esquerda-recsenha .imgg-inferior-esquerda-recsenha{
+    display: flex;
 }
  
 .img-inferior-direita-recsenha{
@@ -66,10 +74,10 @@ html,body{
     justify-content: center;
 }
  
-.botao-voltar{
+/* .botao-voltar{
     margin-top: 46%;
     margin-left: 1%;
-}
+} */
  
 .box-recsenha{
     background-color: rgba(248, 245, 246, 0.705);
@@ -86,7 +94,7 @@ html,body{
     #linha-bet-recsenha{
         height: 640px;
         position: fixed;
-        border-right: 3px solid #FF3877;
+        border-right: 1.5px solid #ec6a93;
         left: 50%;
         border-radius: 20px;
         /* margin-top: 60px; */
@@ -320,6 +328,8 @@ html,body{
     }
 
     .area-recsenha{
-        /* background-color: green; */
+        background-color: green;
+        width: 90%;
+        bottom: 90%;
     }
 }
