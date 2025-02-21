@@ -21,23 +21,23 @@
                 <form action="#">
                     <div id="form1">
                         <div class="input-group">
-                            <label>Nome do evento:</label>
+                            <label>Nome:</label>
                             <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                 required>
                         </div>
                         <div class="input-group">
-                            <label>Data do Evento</label>
+                            <label>Data:</label>
                             <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
                         </div>
                         <div class="input-group">
-                            <label>Descrição do evento:</label>
+                            <label>Descrição:</label>
                             <input type="text" name="descricaodoevento" id="descricaodoevento"
                                 placeholder="Digite uma breve descrição do evento" required>
                         </div>
                         
                         
                         <div class="input-group">
-                            <label>Imagem do evento:</label>
+                            <label>Imagem:</label>
                             <input type="file" name="file" id="file"
                                 required>
                         </div>

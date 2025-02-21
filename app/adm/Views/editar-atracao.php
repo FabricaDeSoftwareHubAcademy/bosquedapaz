@@ -17,7 +17,7 @@
 
     <main class="principal">
         <div class="box">
-            <h2>CADASTRO DE ATRAÇÃO</h2>
+            <h2>EDITAR ATRAÇÃO</h2>
             <div class="form-box">
                 <form action="#" method = "POST">
                     <div id="form1">

@@ -6,6 +6,7 @@
     <title>Prévia Tela Esqueceu a Senha</title>
     <link rel="stylesheet" href="../Public/css/esqueceu-a-senha-recsenha.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/icons/folha.ico" >
 </head>
 <body class="body-recsenha">
     <main>
