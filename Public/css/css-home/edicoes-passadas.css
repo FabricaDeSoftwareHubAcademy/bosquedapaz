@@ -14,140 +14,6 @@
     overflow: hidden;
 }
 
-.cabecalho {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.24);
-    margin-bottom: 10px;
-    position: fixed;
-    z-index: 3;
-    background-color: #fff;
-}
-
-.logo {
-    width: 150px;
-    margin: 5px 0px 0px 20px;
-}
-
-.logo img {
-    width: 100%;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-}
-
-.menu .menu-icon {
-    width: 40px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.menu .menu-icon button {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-}
-
-.menu .menu-icon img {
-    width: 100%;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-}
-
-.nav-bar ul {
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-bar ul li {
-    font-size: 1em;
-    padding-right: 20px;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
-    font-weight: 500;
-    color: black;
-}
-
-.pesquisar-login {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.pesquisar {
-    display: flex;
-    align-items: center;
-    width: auto;
-    margin-right: 50px;
-}
-
-.pesquisar input {
-    width: 70%;
-    height: 40px;
-    border-radius: 5px;
-    margin-right: -25px;
-    padding-left: 5px;
-}
-
-.pesquisar .bola {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: #0D592E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../../imgs/edicoes-passadas-img/Lupa.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-}
-
-.login {
-    margin-right: 30px;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-}
-
-.login img {
-    width: 100%;
-}
-
-.pesquisa {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
 .forma-1-edpass {
     position: absolute;
     top: 15vh; 
@@ -190,8 +56,11 @@
 
 #btn-voltar-edpass{
     font-size: 30px;
-    margin-left: 25px;
-    margin-top: 45px;
+    margin-right: 78%;
+    margin-top: 38%;
+    z-index: 10;
+    border: none;
+    background-color: red;
 }
 
 .section-b-edpass {
@@ -203,222 +72,8 @@
     position: relative;
 }
 
-
-@media(max-width: 1500px) {
-    .logo {
-        width: 150px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cabecalho .logo img {
-        width: 100%;
-    }
-
-    .cabecalho .nav-bar ul {
-        font-size: 0.9em;
-    }
-
-    .cabecalho .pesquisar {
-        width: 50px;
-        height: 40px;
-    }
-
-    .cabecalho .pesquisar .input {
-        display: none;
-    }
-
-    .cabecalho .pesquisar .bola {
-        height: 50px;
-        width: 50px;
-    }
-
-    .cabecalho .login {
-        width: 50px;
-        height: 50px;
-    }
-
-    .cabecalho .login img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .pesquisar-login .pesquisar {
-        display: flex;
-        align-items: center;
-        width: auto;
-        margin-right: 30px;
-        width: auto;
-        height: 100%;
-    }
-
-    .pesquisar-login .pesquisar .bola {
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-        background-color: #0D592E;
-        display: flex;
-    }
-
-    .pesquisar-login .pesquisar .input {
-        width: 110px;
-        height: 35px;
-        font-size: 0.6em;
-        font-weight: 600;
-        color: #000;
-        border-radius: 5px;
-        margin-right: -15px;
-        padding-left: 10px;
-    }
-
-    .pesquisar-login .pesquisar .inputOpen {
-        display: block;
-    }
-
-}
-
-@media screen and (max-width: 750px) {
-    .menu {
-        justify-content: space-evenly;
-    }
-    .logo{
-        margin-left: -20px;
-        padding: 0px;
-    }
-
-    .nav-bar {
-        display: none;
-    }
-
-    .menu .menu-icon {
-        display: block;
-    }
-
-    .mobile-menu {
-        width: 100%;
-        height: 300px;
-        background-color: #fff;
-        position: fixed;
-        top: -20px;
-        margin-top: 90px;
-        z-index: 3;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-    }
-
-    .mobile-menu ul {
-        text-align: center;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 1rem;
-    }
-
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-        text-decoration: none;
-    }
-
-    .mobile-menu .nav-item a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .mobile-menu .btn-login {
-        text-align: center;
-        display: block;
-        padding: 1rem 2rem;
-    }
-
-    .mobile-menu .btn-login .btnlogin {
-        width: 100px;
-        height: 30px;
-        border-radius: 5px;
-        border: none;
-        color: #fff;
-        font-weight: 600;
-        background-color: #0D592E;
-    }
-
-    .open {
-        display: block;
-    }
-
-    .pequisa-mobile {
-        height: 100%;
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    .pesquisa {
-        display: flex;
-        align-items: center;
-        width: auto;
-        margin-right: 30px;
-        width: auto;
-        height: 100%;
-    }
-
-    .pesquisa input {
-        display: none;
-    }
-
-    .bola {
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-        background-color: #0D592E;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url("../../imgs/img-home/Lupa.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-    }
-
-    .pesquisa .input {
-        width: 110px;
-        height: 35px;
-        font-size: 0.6em;
-        font-weight: 600;
-        color: #000;
-        border-radius: 5px;
-        margin-right: -15px;
-        padding-left: 10px;
-    }
-
-    .pesquisa .inputOpen {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 510px) {
-    .logo {
-        width: 100px;
-    }
-    .pequisa-mobile {
-        justify-content: center;
-    }
-
-    .menu .menu-icon {
-        width: 30px;
-    }
-
-    .bola {
-        width: 35px;
-        height: 35px;
-    }
-
-}
-
 .ed-edpass {
-    margin-top: -47rem;
+    margin-top: 70rem;
     position: relative;
     text-align: center;
     font-size: 35px;
@@ -439,8 +94,8 @@
 .cardRosa-edpass {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 85%;
+    width: 75%;
+    height: 80%;
     background-image: url(../../imgs/edicoes-passadas-img/edpassCardrosa.svg);
     background-size: cover;
     border-radius: 20px;
@@ -454,8 +109,8 @@
 .cardVerde-edpass {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 85%;
+    width: 75%;
+    height: 80%;
     background-image: url(../../imgs/edicoes-passadas-img/edpassCardverde.svg);
     background-size: cover;
     border-radius: 20px;
@@ -500,8 +155,8 @@
 .area-texto-edpass {
     overflow: auto;
     width: 100%;
-    max-height: 120px;
-    margin-top: 20px;
+    max-height: 100px;
+    margin-top: 10px;
 }
 
 .title-card-edpass {
@@ -519,10 +174,10 @@
     scrollbar-gutter: stable both-edges;
 }
 
-#btn-cardVerde-edpass {
+#btn-cardVerde-edpass{
     display: inline-block;
-    width: 80%;
-    padding: 10px;
+    width: 70%;
+    padding: 8px;
     z-index: 2;
     border-radius: 10px;
     color: #007E70;
@@ -530,7 +185,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     border: 1px solid #007E70;
-    margin: 50px auto 0;
+    margin: 35% 15%;
     text-align: center;
 }
 #btn-cardVerde-edpass:hover{
@@ -540,10 +195,10 @@
     border: 1px solid #ffffff;
 }
 
-#btn-cardRosa-edpass  {
+#btn-cardRosa-edpass{
     display: inline-block;
-    width: 80%;
-    padding: 10px;
+    width: 70%;
+    padding: 8px;
     z-index: 2;
     border-radius: 10px;
     color: #FF3877;
@@ -551,11 +206,11 @@
     font-size: 1.2rem;
     font-weight: bold;
     border: 1px solid #FF3877;
-    margin: 50px auto 0;
+    margin: 35% 15%;
     text-align: center;
 }
 
-#btn-cardRosa-edpass:hover {
+#btn-cardRosa-edpass:hover{
     color: white;
     background-color: #FF3877;
     cursor: pointer;

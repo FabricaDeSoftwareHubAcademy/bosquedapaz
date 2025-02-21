@@ -6,6 +6,7 @@
     <title>Gerenciar Categorias</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-categorias.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -28,7 +29,7 @@
         
         <div class="box-categ">
         <div class="nome-area-categ">
-                <h1>Gerenciar Categorias</h1>
+                <h1>GERENCIAR CATEGORIAS</h1>
             </div>
 
                 <div class="seta-voltar-categ">
@@ -40,7 +41,7 @@
                     <a href="cadastrar-categoria.php" class="link-area-icon">
                     <div class="area-icon-categ">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                        <p>Cadastrar categorias </p>
+                        <p>Cadastrar Categorias </p>
                     </div>
                 </div>
                     </a>
@@ -48,7 +49,7 @@
                     <a href="listar-categorias.php" class="link-area-icon">
                     <div class="area-icon-categ">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                        <p>Listar categorias </p>
+                        <p>Listar Categorias </p>
                     </div>
                 </div>
                     </a>
@@ -57,7 +58,7 @@
                     <a href="visualizar-categorias.php" class="link-area-icon">
                     <div class="area-icon-categ">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                        <p>Visualizar categorias</p>
+                        <p>Visualizar Categorias</p>
                     </div>
                 </div>
                 </a>

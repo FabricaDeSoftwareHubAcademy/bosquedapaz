@@ -1,15 +1,17 @@
-<?php include "../../../Public/assets/home/menu-home.html"?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Área de Suporte</title>
+    <title>Fale Conosco</title>
     <link rel="stylesheet" href="../../../Public/css/faleconosco.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 </head>
 <body>
+    <?php include "../../../Public/assets/home/menu-home.html"?>
     <div class="box-guilherme">
         <section class="secao-formulario-guilherme">
             <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>

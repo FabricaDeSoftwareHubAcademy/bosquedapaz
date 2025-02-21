@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-adm/styles-gerenciar-eventos.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <title>Gerenciar Eventos</title>
 </head>
 
@@ -14,7 +15,7 @@
 ?>
     <main class="principal">
         <div class="box">
-            <h1 class="titulo">Gerenciar Eventos</h1>
+            <h1 class="titulo">GERENCIAR EVENTOS</h1>
             <div class="form-box">
                 <div class="input-pesquisar">
                     <!-- <div class="input-group">

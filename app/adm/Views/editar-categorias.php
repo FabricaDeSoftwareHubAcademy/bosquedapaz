@@ -6,6 +6,8 @@
     <title>Editar Categorias</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/styles-editar-categorias.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
 </head>
 <body>
 <?php 
@@ -14,7 +16,7 @@
 
     <main class="principal">
         <div class="box">
-            <h1 class="titulo">Edição de Categorias</h1>
+            <h1 class="titulo">EDIÇÃO DE CATEGORIAS</h1>
             <div class="form-box">
                     <div class="tabela">
                         <!-- <div class="input-group">

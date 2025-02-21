@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/proximos-eventos.css">
     <title>Próximo Evento</title>
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
@@ -25,8 +26,7 @@
         <!-- Box/Elementos Box Decorativa -->
         <div class="box-decorativa-ProEv">
             <div class="div-decorativa-ProEv">
-                <h1 class="titulo-principal-ProEv">Evento</h1>
-                <div class="bolota-decorativa-Pro-Ev"></div>
+                <h1 class="titulo-principal-ProEv">Proxímo Evento</h1>
             </div>
         
             <!-- Card da Responsividade -->
@@ -152,6 +152,8 @@
                             <div id="linha-decorativa2-ProEv"></div>
                             <button class="button-saibamais-ProEv open-modal" data-modal="modal-card-ProEv">Saiba Mais</button>
                         </div>
+
+                        <div id="overlay" class="overlay"></div>
                         <!-- Modal1 -->
                         <dialog class="dlog-modal-card-ProEv" id="modal-card-ProEv">
                             <div class="div-decorativa-modal">
@@ -174,7 +176,10 @@
                                         Fames metus ac egestas turpis ipsum Lorem 
                                         ipsum dolor sit amet consectetur. Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
-                                        turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.
+                                        Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
                                 <button id="b-sari-modal" class="close-modal" data-modal="modal-card-ProEv">
                                     <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
@@ -196,6 +201,8 @@
                             <div id="linha-decorativa2-ProEv"></div>
                             <button class="button-saibamais-ProEv open-modal" data-modal="modal2-card-ProEv">Saiba Mais</button>
                         </div>
+
+                        <div id="overlaay" class="overlaay"></div>
                         <!-- Modal2 -->
                         <dialog class="dlog-modal2-card-ProEv" id="modal2-card-ProEv">
                             <div class="div-decorativa-modal2">
@@ -218,7 +225,10 @@
                                         Fames metus ac egestas turpis ipsum Lorem 
                                         ipsum dolor sit amet consectetur. Lorem ipsum 
                                         dolor sit amet consectetur. Fames metus ac egestas 
-                                        turpis ipsum Lorem ipsum dolor sit amet consectetur. </p>
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.
+                                        Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
                                 <button id="b-sari-modal2" class="close-modal" data-modal="modal2-card-ProEv">
                                     <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
@@ -231,6 +241,6 @@
         </div>
     </section>
 
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 </body>
 </html>

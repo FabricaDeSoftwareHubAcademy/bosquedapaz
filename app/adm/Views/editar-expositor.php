@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ediçao de Expositor</title>
+    <title>Edição de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-expo-adm.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -21,7 +23,7 @@
 
         <div class="box">
             <div class="title">
-                <h1 class="title-text">Editar Expositor</h1>
+                <h1 class="title-text">EDITAR EXPOSITOR</h1>
             </div>
             <div class="caixa-formulario">
                 <div class="img-expo">
@@ -29,30 +31,30 @@
                 </div>
 
                 <div class="input-formulario">
-                    <label>Nome completo</label>
-                    <input type="text" name="" id="" placeholder="Carla de Souza Costa">
-                    <label>Nome da marca ou loja</label>
-                    <input type="text" name="" id="" placeholder="Carla Artesanatos e Ciah">
+                    <label>Nome Completo:</label>
+                    <input type="text" name="" id="" value="Carla dias">
+                    <label>Nome da Marca/Loja</label>
+                    <input type="text" name="" id="" value="Carla Artesanatos e Ciah">
                     <label>Categoria</label>
-                    <input type="text" name="" id="" placeholder="Artesanato">
+                    <input type="text" name="" id="" value="Artesanato">
                 </div>
 
                 <div class="input-formulario2">
                     <label>Usuário</label>
-                    <input type="text" name="" id="" placeholder="01">
+                    <input type="text" name="" id="" value="01">
                     <label>NºBarraca:</label>
-                    <input type="text" name="" id="" placeholder="01">
-                    <label>Whatsapp para contato</label>
-                    <input type="text" name="" id="" placeholder="(67)9934ki25674">
+                    <input type="text" name="" id="" value="01">
+                    <label>Whatsapp para Contato</label>
+                    <input type="text" name="" id="" value="(67)9934ki25674">
                 </div>
 
                 <div class="input-formulario3">
                     <label>Se você possui um trailer, foodtruck ou <br> barraca de comida: <br>
-                        Qual é a medida EXATA dele?</label>
-                    <input type="text" name="" id="" placeholder="9m²">
+                        Qual a medida EXATA dele?</label>
+                    <input type="text" name="" id="" value="9m²">
                     <label>Precisa de energia para vender seus produtos? <br>
                         Se sim, para quais <br>voltagens e quais equipamentos:</label>
-                    <input type="text" name="" id="" placeholder="Não">
+                    <input type="text" name="" id="" value="Não">
                 </div>
 
             </div>
@@ -60,7 +62,7 @@
 
             <div class="form-status">
                 <div class="imagens">
-                    <p class="text-img">imagens:</p>
+                    <p class="text-img">Imagens:</p>
 
                     <div class="img-produtos">
                         <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos1.png" alt=""
@@ -93,25 +95,27 @@
 
             <div class="form-finalizar">
 
-                <div class="botao-salvar">
-                    <button>
-                        <a href="#">salvar</a>
-                    </button>
-                </div>
-    
                 <div class="botao-cancelar">
                     <button>
                         <a href="#">Cancelar</a>
                     </button>
                 </div>
+                <div class="botao-salvar">
+                    <button>
+                        <a href="#">Salvar</a>
+                    </button>
+                </div>
+
+                
+    
             </div>
 
             
-        </div>
-        <div class="btns">
-            <a href="listar-expositor.php" class="voltar">
-            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
+            <div class="btns">
+                <a href="listar-expositor.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div>
         </div>
 
     </main>

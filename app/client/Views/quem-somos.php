@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/quem-somos.css">
-    
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <title>Quem Somos</title>
 </head>
 <body>
@@ -75,7 +75,7 @@
         </div>
         
         <div class="botão-expositor">
-            <a class="botão" href="../../../app/client/Views/edital-expositor.php">CLIQUE AQUI!</a>
+            <a class="botão" href="../../../app/client/views/edital-expositor.php">CLIQUE AQUI!</a>
         </div>
     </section>
 

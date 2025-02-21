@@ -1,4 +1,4 @@
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,9 +10,11 @@
         <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-categoria.css">
         <!-- <link rel="stylesheet" href="../../../Public/css/menu-adm.css"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     </head>
 
     <body>
+    <?php include "../../../Public/assets/adm/menu-adm.html"?>
     <header class="cabecalho">
         <main class="principal">
             <div class="box">
@@ -160,7 +162,7 @@
             </div> 
 
             <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar exclusão</h2>
+                <h2>Confirmar Exclusão</h2>
                 <!-- <input type="text" value=""> -->
                 <p>Tem certeza que deseja fazer isso?</p>
                 <div>
