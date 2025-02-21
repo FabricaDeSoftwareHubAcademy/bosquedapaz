@@ -18,7 +18,7 @@
             <div id="linha-vertical-ec"></div>
             <div class="area-infs-ec">
                 <h1>Escolher Cadastro</h1>
-                <a href="cadastro-expositor.php" class="area-total-button">
+                <a href="cadastro-expositor.php" class="area-total-button" id='button-ec-1'>
                     <div class="icon-input-ec">
                         <i id="icon-ec" class="bi bi-shop-window"></i>
                     </div>
@@ -26,7 +26,7 @@
                         <p>Cadastro de Expositor</p>
                     </div>
                 </a>
-                <a href="cadastro-expositor-kids.php" class="area-total-button">
+                <a href="cadastro-expositor-kids.php" class="area-total-button" id='button-ec-2'>
                     <div class="icon-input-ec">
                         <i id="icon-ec" class="bi bi-person-plus"></i>
                     </div>
@@ -34,7 +34,7 @@
                         <p id="p-ed-kids">Cadastro de Expositor Kids</p>
                     </div>
                 </a>
-                <a href="cadastro-artista.php" class="area-total-button">
+                <a href="cadastro-artista.php" class="area-total-button" id='button-ec-3'>
                     <div class="icon-input-ec">
                         <i id="icon-ec" class="bi bi-music-note-list"></i>
                     </div>

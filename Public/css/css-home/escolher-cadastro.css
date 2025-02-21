@@ -69,18 +69,16 @@
 }
 
 .area-total-button {
-    width: 75%;
+    width: 60%;
     height: 10%;
     background-color: white;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 60px;
     transition: all .2s ease-in-out ;
-    border: 2px solid rgba(0, 126, 112, 1);
     cursor: pointer;
     text-decoration: none;
-    color: black;
     font-size: 20px;
     transition: all .2s ease-in-out;
     position: relative;
@@ -88,12 +86,30 @@
 }
 
 .area-total-button:hover{
-    border: 2px solid #FF3877;
     transform: scale(1.1);
-    #icon-ec{
-        color: #FF3877;
-    }
 }
+
+#button-ec-1{
+    border-radius: 10px;
+    background-color: #3B9BDC;
+    box-shadow: 1px 1px 5px rgba(36, 35, 35, 0.582);
+    border: none; 
+}
+
+#button-ec-2{
+    border-radius: 10px;
+    background-color: #22BC9D;
+    box-shadow: 1px 1px 5px rgba(36, 35, 35, 0.582);
+    border: none; 
+}
+
+#button-ec-3{
+    border-radius: 10px;
+    background-color: #F2C518;
+    box-shadow: 1px 1px 5px rgba(36, 35, 35, 0.582);
+    border: none; 
+}
+
 
 
 .icon-input-ec{
@@ -106,22 +122,24 @@
 }
 
 .icon-input-ec i{
-    color: rgba(0, 126, 112, 1);
-    font-size: 25px;
+    color: white;
+    font-size: 30px;
 }
 
 .text-input-ec{
-    width: 90%;
+    width: 60%;
     height: 100%;
     background-color: rgba(255, 0, 242, 0);
     justify-content: center;
     align-items: center;
     display: flex;
+    color: white;
 }
 
 .text-input-ec p{
-    position: relative;
-    right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
