@@ -93,23 +93,13 @@
 
 .input-group input{
     width: 40vh;
-    height: 30px;
+    height: 47px;
     margin: 10px;
     padding-left: 10px;
     border-radius: 5px;
     border: none;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
-    /* width: 100%;
-    height: 30px;
-    background-color: white;
-    border-radius: 10px;
-    outline: none;
-    border: 2px solid transparent;
-    font-size: 15px;
-    color: #616161;
-    transition: all 0.4sease;
-    box-shadow: 1px 2px 0px 0px; */
 }
 .caixa-formulario label {
     font-size: 14px;
@@ -330,7 +320,7 @@ label#salvar-btn {
     display: inline-block;
     background-color: #FF3877;
     color: white;
-    padding: 9px 50px;
+    padding: 11px 40px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -352,13 +342,13 @@ label#salvar-btn {
     display: inline-block;
     background-color: #5c4caf;
     color: white;
-    padding: 13px 40px;
+    /* padding: 13px 40px; */
     background-color: #007E70;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    font-size: 18px;
+    font-size: 23px;
     text-transform: uppercase;
 
 }
@@ -470,6 +460,73 @@ label#salvar-btn {
 .salvar-resp {
     display: none;
 }
+
+
+
+.custom-dropdown {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.custom-dropdown input {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 0 0 4px 4px;
+}
+
+.custom-dropdown input:focus + .dropdown-list {
+    display: block;
+}
+
+.dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.dropdown-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-list li:active {
+    background-color: #e0e0e0;
+}
+
+/* Ajuste para quando a opção for selecionada */
+.custom-dropdown input[value]:not([value=""]) {
+    background-color: #f0f0f0;
+}
+
+
+
+
 
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1 {
@@ -644,30 +701,10 @@ label#salvar-btn {
         top: 30px;
     }
 
-
-
-
-
-
-    /* .btns .voltar {
-        display: none;
+    .botoes{
+        display: block;
     }
 
-    .btn-voltar {
-        display: none;
-    }
+    
 
-    .btn-cancelar-salvar {
-        width: 100%;
-    }
-
-    .btn-cancelar-salvar .btn {
-        width: 90px;
-        padding: 15px 5px;
-        height: 0px;
-    }
-
-    .btn-cancelar-salvar .btn a {
-        font-size: .8rem;
-    } */
 }
