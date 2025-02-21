@@ -14,22 +14,16 @@
                 <img class="imgg-superior-direita-recsenha" src="../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
             </div>
             <div class="img-superior-esquerda-recsenha">
-                <img src="../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
+                <img class="imgg-superior-esquerda-recsenha" src="../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
             </div>
             <div class="img-inferior-direita-recsenha">
-                <img src="../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
+                <img class="imgg-inferior-direita-recsenha" src="../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
             </div>
             <div class="img-inferior-esquerda-recsenha">
                 <img class="imgg-inferior-esquerda-recsenha" src="../Public/imgs/imagens-bolas/imagem-inferior-esquerdo.svg" alt="">
             </div>
  
             <div class="box-recsenha">
- 
-                <div class="botao-voltar">
-                    <a href="tela-login.php" class="volte">
-                        <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
-                    </a>
-                </div>
                
                 <div id="linha-bet-recsenha"></div>
                 <div class="area-recsenha">
@@ -60,6 +54,11 @@
                             <button class="close-modal" data-modal="modal-recsenha"></button>
                         </dialog> -->
                     </div>
+                    <div class="botao-voltar">
+                    <a href="tela-login.php" class="volte">
+                        <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
+                    </a>
+                </div>
                 </div>
                 <div class="area-img-recsenha">
                     <h1 class="text-h1-recsenha">REDEFINIÇÃO DE SENHA</h1>
