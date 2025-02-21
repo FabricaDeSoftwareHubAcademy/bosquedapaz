@@ -55,10 +55,10 @@
                         </dialog> -->
                     </div>
                     <div class="botao-voltar">
-                    <a href="tela-login.php" class="volte">
-                        <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
-                    </a>
-                </div>
+                        <a href="tela-login.php" class="volte">
+                            <img class="img-voltar" src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
+                        </a>
+                    </div>
                 </div>
                 <div class="area-img-recsenha">
                     <h1 class="text-h1-recsenha">REDEFINIÇÃO DE SENHA</h1>

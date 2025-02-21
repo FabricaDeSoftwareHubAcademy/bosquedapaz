@@ -10,6 +10,7 @@
     --franch-rose:#FF3877;
     --royal-blue: #162868;
 }
+
 html,.body-recsenha{
     overflow: hidden;
     overflow-x: hidden;
@@ -18,6 +19,7 @@ html,.body-recsenha{
     margin: 0;
     padding: 0;
     background-color: #e1e1e1;
+    position: relative;
 }
  
 .img-superior-direita-recsenha{
@@ -47,7 +49,8 @@ html,.body-recsenha{
     right: 0%;
     bottom: 0%;
     height: 32%;
-    /* background-color: red; */
+    height: fit-content;
+    width: fit-content;
 }
 
 .img-inferior-direita-recsenha .imgg-inferior-direita-recsenha{
@@ -66,20 +69,28 @@ html,.body-recsenha{
 }
  
 .section-recsenha{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* background-color: green; */
+    position: relative;
     align-items: center;
     justify-content: center;
 }
  
-/* .botao-voltar{
-    margin-top: 46%;
-    margin-left: 1%;
-} */
+.botao-voltar{
+    position: absolute;
+    left: 8.5%;
+    height: 4%;
+    width: 2%;
+    bottom: 10%;
+    /* background-color: red; */
+}
  
 .box-recsenha{
+    position: absolute;
     background-color: rgba(248, 245, 246, 0.705);
     display: flex;
     /* justify-content: center; */
@@ -309,9 +320,24 @@ html,.body-recsenha{
         display: none;
     }
 
-    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
+    .imgg-superior-direita-recsenha{
+        display: flex;
         width: 120px;
-        height: 120px;
+    }
+
+    .imgg-superior-esquerda-recsenha{
+        display: flex;
+        width: 120px;
+    }
+
+    .imgg-inferior-esquerda-recsenha{
+        display: flex;
+        width: 120px;
+    }
+
+    .imgg-inferior-direita-recsenha{
+        display: flex;
+        width: 120px;
     }
 
     .img-recsenha-svg-recsenha{
@@ -323,13 +349,47 @@ html,.body-recsenha{
         display: flex;
         height: 90%;
         top: 5%;
-        position: fixed;
+        position: absolute;
         width: 90%;
     }
 
     .area-recsenha{
-        background-color: green;
+        position: relative;
+        /* background-color: green; */
         width: 90%;
-        bottom: 90%;
+        top: 12%;
+    }
+
+    .input-recsenha{
+        width: 100%;
+    }
+
+    .div-text-recsenha{
+        width: 100%;
+        display: flex;
+        /* background-color: lightblue; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-recsenha{
+        background-color: rebeccapurple;
+        width: 100%;
+    }
+
+    .text-endereco-email{
+        display: flex;
+        margin-right: 0%;
+    }
+
+    .input-recsenha{
+        width: 100%;
+    }
+
+    .text-h1-recsenha{
+        display: flex;
+        top: 17%;
+        position: fixed;
+        left: 11%;
     }
 }
