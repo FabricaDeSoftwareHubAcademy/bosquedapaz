@@ -6,6 +6,8 @@
     <title>Cadastro de Categorias</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
 </head>
 <body>
 <?php 

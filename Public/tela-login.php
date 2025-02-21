@@ -6,6 +6,8 @@
     <title>Prévia Tela Login</title>
     <link rel="stylesheet" href="../Public/css/tela-login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/icons/folha.ico" >
+
 </head>
 <body class="body-login">
     <main>

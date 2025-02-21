@@ -9,6 +9,7 @@
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="../../../Public/css/css-home/parceiros.css">
     <!-- <link rel="stylesheet" href="../../../Public/css/menu-adm.css"> -->
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"?>
