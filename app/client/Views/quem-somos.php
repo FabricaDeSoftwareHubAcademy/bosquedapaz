@@ -52,10 +52,6 @@
                 <span class="profission">Advogada</span>
             </div>
 
-            <div class="image-text-nájila">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora4.png" alt="">
-                <p class="nájila"> Nájla Fogaça</p>
-                <span class="profission">Fisioterapeuta</p>
             </div>
     </section>
 
