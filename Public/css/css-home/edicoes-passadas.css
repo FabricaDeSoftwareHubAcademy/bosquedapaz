@@ -174,10 +174,10 @@
     scrollbar-gutter: stable both-edges;
 }
 
-#btn-cardVerde-edpass {
+#btn-cardVerde-edpass{
     display: inline-block;
-    width: 80%;
-    padding: 10px;
+    width: 70%;
+    padding: 8px;
     z-index: 2;
     border-radius: 10px;
     color: #007E70;
@@ -185,7 +185,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     border: 1px solid #007E70;
-    margin: 50px auto 0;
+    margin: 35% 15%;
     text-align: center;
 }
 #btn-cardVerde-edpass:hover{
@@ -195,10 +195,10 @@
     border: 1px solid #ffffff;
 }
 
-#btn-cardRosa-edpass  {
+#btn-cardRosa-edpass{
     display: inline-block;
-    width: 80%;
-    padding: 10px;
+    width: 70%;
+    padding: 8px;
     z-index: 2;
     border-radius: 10px;
     color: #FF3877;
@@ -206,11 +206,11 @@
     font-size: 1.2rem;
     font-weight: bold;
     border: 1px solid #FF3877;
-    margin: 50px auto 0;
+    margin: 35% 15%;
     text-align: center;
 }
 
-#btn-cardRosa-edpass:hover {
+#btn-cardRosa-edpass:hover{
     color: white;
     background-color: #FF3877;
     cursor: pointer;
