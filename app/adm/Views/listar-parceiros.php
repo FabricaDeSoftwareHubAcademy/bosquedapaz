@@ -46,7 +46,7 @@
                                     <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                 </a>
                                 <a class="delete-icon">
-                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                    <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
                                 </a>
                             </td>
                         </tr>
@@ -60,7 +60,7 @@
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>
                                     <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -73,7 +73,7 @@
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>    
                                     <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -86,7 +86,7 @@
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>
                                     <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -98,27 +98,45 @@
                                         <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
                                     </a>
                                     <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
                                     </a>
                                 </td>
                             </tr>  
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+
             <div class="btns">
                 <a href="gerenciar-parceiros.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div> 
 
+            <!-- Modal de Edição -->
             <dialog id="edit-modal" class="modal-edit">
                 <h2>Confirmar Alteração</h2>
-                <input type="text" value="SENAC Serviço Nacional de Aprendizagem Comercial">
-                <p>Tem certeza que deseja fazer isso?</p>
+                <input type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
+                <p>Tem certeza que deseja editar este parceiro?</p>
                 <div>
                     <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
                     <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
                 </div>
             </dialog>
+
+            <!-- Modal de Exclusão -->
+            <dialog id="delete-modal" class="modal-delete">
+                <h2>Confirmar Exclusão</h2>
+                <p>Tem certeza que deseja excluir este parceiro? Esta ação não pode ser desfeita.</p>
+                <div>
+                    <button id="delete-cancel" class="cancel-btn close-modal" data-modal="delete-modal">Cancelar</button>
+                    <button id="delete-confirm" class="confirm-btn close-modal" data-modal="delete-modal">Confirmar</button>
+                </div>
+            </dialog>
+
+
+         
             
         </main>
 
