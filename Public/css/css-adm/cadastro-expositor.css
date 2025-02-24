@@ -449,6 +449,82 @@ label#salvar-btn {
 
 }
 
+
+
+.tipo-expo{
+    position: relative;
+    top: 20px;
+}
+
+.energia{
+    position: relative;
+    top: 6px;
+}
+
+.equipamentos{
+    position: relative;
+    top: -7px;
+}
+
+.file{
+    position: relative;
+    top: -20px;
+}
+
+.input-group label{
+    position: relative;
+    top: -20px;
+}
+
+.energia-label{
+    position: relative;
+    top: 6px;
+}
+
+.tipo-expo-label{
+    position: relative;
+    top: 23px;
+}
+
+.input-prod{
+    position: relative;
+    top: 6px;
+}
+
+.prod-label{
+    position: relative;
+    top: 10px;
+}
+
+.marca-input{
+    position: relative;
+    top: 5px;
+}
+
+.marca-label{
+    position: relative;
+    top: 6px
+}
+
+.categoria-input{
+    position: relative;
+    top: 7px;
+}
+
+.categorias-label{
+    position: relative;
+    top: 50px;
+}
+
+
+.link-input{
+    position: relative;
+    top: -5px;
+}
+
+
+
+
 .edital-resp {
     display: none;
 }
