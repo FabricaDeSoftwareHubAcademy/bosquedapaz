@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/utilidades-publicas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../../../bosquedapaz/css/styles-home/menu.css"> -->
     <link rel="stylesheet" href="../../../Public/css/menu-home.css">
     <title>Gerenciar Eventos</title>
@@ -27,7 +28,7 @@
         </div>
 
         <div class="box-principal-utl">
-            <h1>Utilidades Publicas</h1>
+            <h1 id="titulo-ult">Utilidades Publicas</h1>
             <div class="area-cards">
 
                 <div class="cards" id="border-card-azul">

@@ -71,6 +71,15 @@
     flex-direction: column;
 }
 
+#titulo-ult{
+    position: relative;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
 .box-principal-utl h1{
     position: relative;
     font-size: 30px;
@@ -233,4 +242,102 @@
 
 #dec2-azul-utl{
     border-right: 15px solid #3F49EA;
+}
+
+@media (max-width:720px){
+    .box-principal-utl{
+        height: 170%;
+        top: 35%;
+        position: relative;
+    }
+
+    .cards{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        width: 57%;
+    }
+
+    #titulo-ult{
+        position: relative;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 13%;
+        top: -1;
+    }
+
+    .box-principal-utl h1{
+        display: none;
+    }
+
+    .img img{
+        width: 69%;
+        top: 5%;
+        position: relative;
+    }
+
+    .area-cards{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        top: -2%;
+        height: 93%;
+    }
+
+    .dec-menor-button{
+        display: none;
+    }
+
+    .dec-menor-dentro-button{
+        display: none;
+    }
+
+    .botao-saiba-mais{
+        width: 68%;
+        height: -4%;
+        z-index: 1;
+        top: 50%;
+        font-size: 11px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 18%;
+    }
+
+    .dec-button{
+    width: 128%;
+    height: 91%;
+    transform: rotate(-24deg);
+    position: relative;
+    top: -1%;
+    left: 0%;
+    background-color: #FF3877;
+    }
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
