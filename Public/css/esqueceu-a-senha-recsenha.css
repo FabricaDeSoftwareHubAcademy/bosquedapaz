@@ -10,6 +10,7 @@
     --franch-rose:#FF3877;
     --royal-blue: #162868;
 }
+
 html,.body-recsenha{
     overflow: hidden;
     overflow-x: hidden;
@@ -18,6 +19,7 @@ html,.body-recsenha{
     margin: 0;
     padding: 0;
     background-color: #e1e1e1;
+    position: relative;
 }
  
 .img-superior-direita-recsenha{
@@ -47,7 +49,8 @@ html,.body-recsenha{
     right: 0%;
     bottom: 0%;
     height: 32%;
-    /* background-color: red; */
+    height: fit-content;
+    width: fit-content;
 }
 
 .img-inferior-direita-recsenha .imgg-inferior-direita-recsenha{
@@ -66,20 +69,28 @@ html,.body-recsenha{
 }
  
 .section-recsenha{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* background-color: green; */
+    position: relative;
     align-items: center;
     justify-content: center;
 }
  
-/* .botao-voltar{
-    margin-top: 46%;
-    margin-left: 1%;
-} */
+.botao-voltar{
+    position: absolute;
+    left: 1%;
+    height: 4%;
+    width: 2%;
+    bottom: 2%;
+    /* background-color: red; */
+}
  
 .box-recsenha{
+    position: absolute;
     background-color: rgba(248, 245, 246, 0.705);
     display: flex;
     /* justify-content: center; */
@@ -146,11 +157,12 @@ html,.body-recsenha{
     align-items: center;
 }
  
-.form-recsenha .text-endereco-email{
+.text-endereco-email{
+    position: relative;
     display: flex;
     font-size: 16px;
+    right: 14%;
     font-weight: 500;
-    margin-right: 29%;
 }
  
 .area-input-recsenha{
@@ -301,17 +313,32 @@ html,.body-recsenha{
 }
  
 @media (max-width:575.98px){
-    .body-recsenha{
+    /* .body-recsenha{
         background-color: grey;
-    }
+    } */
 
     #linha-bet-recsenha{
         display: none;
     }
 
-    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
+    .imgg-superior-direita-recsenha{
+        display: flex;
         width: 120px;
-        height: 120px;
+    }
+
+    .imgg-superior-esquerda-recsenha{
+        display: flex;
+        width: 120px;
+    }
+
+    .imgg-inferior-esquerda-recsenha{
+        display: flex;
+        width: 120px;
+    }
+
+    .imgg-inferior-direita-recsenha{
+        display: flex;
+        width: 120px;
     }
 
     .img-recsenha-svg-recsenha{
@@ -323,13 +350,103 @@ html,.body-recsenha{
         display: flex;
         height: 90%;
         top: 5%;
-        position: fixed;
+        position: absolute;
         width: 90%;
     }
 
     .area-recsenha{
-        background-color: green;
+        position: absolute;
+        /* background-color: green; */
         width: 90%;
-        bottom: 90%;
+        top: 28%;
+        left: 1%;
+    }
+
+    .area-input-recsenha{
+        /* background-color: red; */
+        width: 90%;
+    }
+
+    .input-recsenha{
+        width: 100%;
+    }
+
+    .div-text-recsenha{
+        width: 100%;
+        display: flex;
+        /* background-color: lightblue; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-recsenha{
+        /* background-color: rgb(195, 195, 17); */
+        width: 100%;
+    }
+
+    .text-endereco-email{
+        background-color: rebeccapurple;
+        display: flex;
+        right: 40%;
+    }
+
+    .input-recsenha{
+        width: 100%;
+    }
+
+    .text-h1-recsenha{
+        display: flex;
+        top: 17%;
+        position: fixed;
+        left: 11%;
+    }
+
+    .botao-cancelar-recsenha{
+        width: 85%;
+    }
+
+    .botao-enviar-recsenha{
+        width: 85%;
+    }
+
+    .div-botoes-recsenha{
+        gap: 1%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        left: 3%;
+    }
+
+    .botao-voltar{
+        width: 35px;
+        height: 35px;
+        bottom: 1.5%;
+        left: 2%;
+        /* background-color: green; */
+    }
+
+    .img-voltar{
+        /* background-color: red; */
+        bottom: 1%;
+        left: 1%;
+    }
+}
+
+ @media (min-width:576px){
+    .body-recsenha{
+        background: lightgreen;
+    }
+}
+
+@media (min-width:768px){
+    .body-recsenha{
+        background-color: lightcoral;
+    }
+}
+
+ @media (min-width:992px){
+    .body-recsenha{
+        background-color: lightblue;
     }
 }
