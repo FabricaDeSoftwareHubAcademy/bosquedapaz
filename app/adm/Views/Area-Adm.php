@@ -6,6 +6,7 @@
     <title>Área Administrativa</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/Area-Adm.css">
+    <link rel="icon" href="../../imgs/img-home/logo.png" type="image/x-icon">
 </head>
 <body>
 
