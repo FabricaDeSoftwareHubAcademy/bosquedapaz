@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Página para gerenciar parceiros e suas informações.">
-        <title>Cadastrar Parceiros</title>
+        <title>Adm - Bosque da Paz</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/cadastrar-parceiros.css"> 
         <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
         <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >

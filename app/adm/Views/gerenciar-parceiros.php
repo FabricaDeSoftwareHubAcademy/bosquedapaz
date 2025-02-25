@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar Parceiros</title>
+    <title>Adm - Bosque da Paz</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-parceiros.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >

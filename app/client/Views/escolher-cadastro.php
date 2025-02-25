@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Expositor</title>
+    <title>Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/escolher-cadastro.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">

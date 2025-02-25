@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/styles-gerenciar-eventos.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-    <title>Gerenciar Eventos</title>
+    <title>Adm - Bosque da Paz</title>
 </head>
 
 <body>

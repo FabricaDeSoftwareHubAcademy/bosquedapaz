@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/utilidades-publicas.css">
     <!-- <link rel="stylesheet" href="../../../bosquedapaz/css/styles-home/menu.css"> -->
     <link rel="stylesheet" href="../../../Public/css/menu-home.css"> 
-    <title>Gerenciar Eventos</title>
+    <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
