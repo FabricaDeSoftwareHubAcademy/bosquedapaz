@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="Botoes-expositores">
-                    <a href="cadastro-expositor.php" class="link-area-icon">
+                    <a href="../../../app/client/Views/escolher-cadastro.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
                         <p>Cadastrar Expositor</p>

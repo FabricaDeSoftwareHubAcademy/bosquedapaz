@@ -260,10 +260,10 @@
     }
 
     .box {
-        width: 85%;
+        width: 95%;
         height: 85vh;
         margin: auto;
-        margin-top: 20px;
+        margin-top: 5px;
         border-radius: 24px;
         background-color: rgba(235, 235, 235, 0.65);
         z-index: 3;
