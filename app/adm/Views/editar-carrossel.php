@@ -25,35 +25,44 @@
             <!-- local de uploads de imgs para o carrossel -->
             <section class="up-imgs">
 
-                <label class="uploads" id="label">
-                    <input type="file" name="img1" class="input" id="input1">
+                <div class="div-nome">
+                    <h1 class="num">Imagem 1</h1>
+                    <label class="uploads" id="label">
+                        <input type="file" name="img1" class="input" id="input1">
                     
-                    <img src="../../../Public/imgs/img-home/imagem-carrossel-1.jpg" alt="Imagem do carrossel 1" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-1.jpg" alt="Imagem do carrossel 1" class="up-img">
                     
-                    <button class="btn-editar open-modal">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </label>
+                        <button class="btn-editar open-modal">
+                            <i class="fa-solid fa-pen editar"></i>
+                        </button>
+                    </label>
+                </div>
                 
-                <label class="uploads" id="label">
-                    <input type="file" name="img2" class="input" id="input2">
+                <div class="div-nome">
+                    <h1 class="num">Imagem 2</h1>
+                    <label class="uploads" id="label">
+                        <input type="file" name="img2" class="input" id="input2">
                     
-                    <img src="../../../Public/imgs/img-home/imagem-carrossel-2.jpg" alt="Imagem do carrossel 2" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-2.jpg" alt="Imagem do carrossel 2" class="up-img">
                     
-                    <button class="btn-editar open-modal">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </label>
+                        <button class="btn-editar open-modal">
+                            <i class="fa-solid fa-pen editar"></i>
+                        </button>
+                    </label>
+                </div>
                 
-                <label class="uploads">
-                    <input type="file" name="img3" class="input" id="input3">
+                <div class="div-nome">
+                    <h1 class="num">Imagem 3</h1>
+                    <label class="uploads">
+                        <input type="file" name="img3" class="input" id="input3">
                     
-                    <img src="../../../Public/imgs/img-home/imagem-carrossel-3.jpg" alt="Imagem do carrossel 3" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-3.jpg" alt="Imagem do carrossel 3" class="up-img">
                     
-                    <button class="btn-editar open-modal">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </label>
+                        <button class="btn-editar open-modal">
+                            <i class="fa-solid fa-pen editar"></i>
+                        </button>
+                    </label>
+                </div>
             </section>
 
             <!-- botoes parte de baixo -->
