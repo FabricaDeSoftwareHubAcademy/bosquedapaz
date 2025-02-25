@@ -1,15 +1,17 @@
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Validação de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validacao-expositor.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
-<body>
+
+<body class="body-vexp">
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
     <div class="index-container-vexp">
 
         <section class="secao-expositor-vexp">
@@ -29,7 +31,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section class="secao-informacoes-vexp">
             <h1 class="texto-informacoes-vexp">Informações do Expositor</h1>
             <form class="formulario-informacoes-vexp">
@@ -41,24 +43,28 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="whatsapp-expositor">Whatsapp para Contato</label>
-                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="67 99956-6551" disabled>
+                        <label for="whatsapp-expositor">Tipo de Exposição</label>
+                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="Barraca" disabled>
                     </div>
-            
+
                     <div class="input-group-vexp">
                         <label for="email-expositor">Email</label>
                         <input type="email" name="email_expositor" id="email-expositor" placeholder="mariana@hotmail.com" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="cnpj-expositor">CNPJ da Empresa</label>
-                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="56.133.133/0001-50" disabled>
+                        <label for="cnpj-expositor">Precisa de Energia</label>
+                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="Sim" disabled>
                     </div>
-            
+
                     <div class="input-group-vexp">
-                        <label for="categoria-expositor">Categoria</label>
-                        <input type="text" name="categoria_expositor" id="categoria-expositor" placeholder="Artesanato" disabled>
-                        <a href="#trocar-categoria-vexp">Alterar categoria</a>
+                        <label for="categoria-expositor">Whatsapp para Contato</label>
+                        <input type="text" name="categoria_expositor" id="categoria-expositor" placeholder="67 99956-6551" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="cnpj-expositor">Energia</label>
+                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="220kw" disabled>
                     </div>
 
                     <div class="input-group-vexp">
@@ -77,17 +83,27 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">Formas de Pagamento</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Cartão de crédito/débito e PIX" disabled>
+                        <label for="nome-marca">Nome da Marca</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Play Artesanato" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">Nome da Marca</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="CakePet CG" disabled>
+                        <label for="instagram-expositor">Instagram da Marca</label>
+                        <div style="position: relative;">
+                            <input type="text" name="instagram_expositor" id="instagram-expositor" value="Clique aqui" disabled>
+                            <a href="https://instagram.com/playartesanato" target="_blank" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-decoration: none; color: black;"></a>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">Categoria</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Artesanato" disabled>
+                        <a href="#trocar-categoria-vexp">Alterar categoria</a>
                     </div>
                 </div>
             </form>
-            
+
             <div class="area-botoes-vexp">
                 <a href="#modal-recusar-vexp"><button class="botao-recusar-vexp">Recusar</button></a>
                 <a href="#modal-validar-vexp"><button class="botao-validar-vexp">Validar</button></a>
@@ -113,7 +129,7 @@
             <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
         </div>
     </div>
- 
+
     <!-- modal para validar expositor -->
     <div class="acao-validar-vexp" id="modal-validar-vexp">
         <div class="acao-content-validar-vexp">
@@ -182,17 +198,18 @@
             <h1 class="trocar-sucesso-texto-vexp">Categoria alterada.</h1>
             <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
         </div>
-    </div>  
+    </div>
 
     <div class="decoracoes-vexp">
         <a href="gerenciar-relatorios.php">
-        <img src="../../../Public/imgs/img-validacao-expositor/voltar.svg" alt="setaVoltar" class="btnVoltar-guilherme">
+            <img src="../../../Public/imgs/img-validacao-expositor/voltar.svg" alt="setaVoltar" class="botao-voltar-vexp">
         </a>
-        <img src="../../../Public/imgs/img-validacao-expositor/detalhe1.svg" alt="" class="detalhe1">
-        <img src="../../../Public/imgs/img-validacao-expositor/detalhe2.svg" alt="" class="detalhe2">
-        <img src="../../../Public/imgs/img-validacao-expositor/detalhe3.svg" alt="" class="detalhe3">
+        <img src="../../../Public/imgs/img-validacao-expositor/detalhe1.svg" alt="" class="decoracao1-vexp">
+        <img src="../../../Public/imgs/img-validacao-expositor/detalhe2.svg" alt="" class="decoracao2-vexp">
+        <img src="../../../Public/imgs/img-validacao-expositor/detalhe3.svg" alt="" class="decoracao3-vexp">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
+
 </html>
