@@ -6,6 +6,7 @@
     <title>Gerenciar Parceiros</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-parceiros.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -28,7 +29,7 @@
         
         <div class="box-parceiros">
         <div class="nome-area-parceiros">
-                <h1>Área Administrativa</h1>
+                <h1>ÁREA ADMINISTRATIVA</h1>
             </div>
 
                 <div class="seta-voltar-parceiros">

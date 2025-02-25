@@ -7,6 +7,7 @@
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -229,7 +230,7 @@
         </div>  
         </div>
         <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar exclusão</h2>
+                <h2>Confirmar Exclusão</h2>
                 <p>Tem certeza que deseja fazer isso?</p>
                 <div>
                     <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>

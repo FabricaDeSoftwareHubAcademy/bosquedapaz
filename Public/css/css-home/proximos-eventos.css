@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../menu-home.css');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 
 /* Area Principal */
-.area-principal-ProEv{
+.area-principal-ProEv {
     width: 100%;
     height: 843px;
     background-color: rgba(0, 255, 255, 0);
@@ -20,7 +20,7 @@
 }
 
 /* Imgs Decorativas */
-.formas-decorativas-ProEv1{
+.formas-decorativas-ProEv1 {
     position: fixed;
     top: 30vh;
     right: 83vw;
@@ -28,12 +28,12 @@
     z-index: -1;
 }
 
-.formas-decorativas-ProEv1 img{
+.formas-decorativas-ProEv1 img {
     width: 50%;
     height: auto;
 }
 
-.formas-decorativas-ProEv2{
+.formas-decorativas-ProEv2 {
     position: fixed;
     top: 20vh;
     left: 92vw;
@@ -41,12 +41,12 @@
     z-index: -1;
 }
 
-.formas-decorativas-ProEv2 img{
+.formas-decorativas-ProEv2 img {
     width: 60%;
     height: auto;
 }
 
-.formas-decorativas-ProEv3{
+.formas-decorativas-ProEv3 {
     position: fixed;
     top: 80vh;
     left: 85vw;
@@ -54,13 +54,13 @@
     z-index: -1;
 }
 
-.formas-decorativas-ProEv3 img{
+.formas-decorativas-ProEv3 img {
     width: 100%;
     height: auto;
 }
 
 /* Box/Emementos da Box Decorativas */
-.box-decorativa-ProEv{
+.box-decorativa-ProEv {
     width: 90%;
     height: 92%;
     background-color: rgba(0, 255, 255, 0);
@@ -71,7 +71,7 @@
     overflow: hidden;
 }
 
-.div-decorativa-ProEv{
+.div-decorativa-ProEv {
     width: 110%;
     height: 80%;
     background-color: rgba(0, 126, 112, 1);
@@ -85,27 +85,17 @@
     flex-direction: column;
 }
 
-.titulo-principal-ProEv{
-    font-size: 90px;
+.titulo-principal-ProEv {
+    font-size: 40px;
     font-weight: 600;
     color: white;
     position: relative;
-    top: 25%;
-    right: 22%;
+    top: 6%;
+    right: 23%;
     transform: rotate(19deg);
 }
 
-.bolota-decorativa-Pro-Ev{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: rgba(255, 56, 119, 1);
-    position: relative;
-    top: 25%;
-    right: 26%;
-}
-
-.card-respon-ProEv{
+.card-respon-ProEv {
     width: 40%;
     height: 85%;
     border-radius: 10px;
@@ -115,31 +105,33 @@
     position: relative;
     top: 5%;
     overflow: hidden;
-    #linha-decorativa-ProEv{
+
+    #linha-decorativa-ProEv {
         height: 150px;
-        border-right: 10px solid rgba(0, 126, 112, 1);
+        border-right: 12px solid rgba(0, 126, 112, 1);
         border-radius: 10px;
         position: relative;
-        bottom: 24%;
-        right: 70%;
-        transform: rotate(60deg);
+        bottom: 25%;
+        right: 46%;
+        transform: rotate(70deg);
     }
 }
 
-.div-decoratica-do-cardres-ProEv{
+.div-decoratica-do-cardres-ProEv {
     width: 120%;
     height: 40%;
-    transform: rotate(-30deg);
-    position: absolute;
-    top: 75%;
-    left: 7%;
+    transform: rotate(-20deg);
+    position: relative;
+    bottom: 30%;
+    left: 2%;
     background-color: rgba(0, 126, 112, 1);
-    #linha-decorativa2-ProEv{
-        height: 100px;
-        border-right: 10px solid white;
+
+    #linha-decorativa2-ProEv {
+        height: 130px;
+        border-right: 10px solid rgb(255, 255, 255);
         border-radius: 10px;
-        left: 30%;
-        top: 55%;
+        left: 23%;
+        top: 32%;
         position: relative;
         transform: rotate(-90deg);
     }
@@ -147,7 +139,7 @@
 
 
 /* Box Peincipal */
-.box-principal-ProEv{
+.box-principal-ProEv {
     width: 90%;
     height: 92%;
     background-color: rgba(255, 255, 255, 0);
@@ -161,14 +153,14 @@
     /* display: none; */
 }
 
-.area-setaProEv{
+.area-setaProEv {
     position: relative;
     top: 93%;
     left: 3%;
 }
 
 /* Area das Informações do Evento */
-.area-info-evento-ProEv{
+.area-info-evento-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
@@ -177,37 +169,38 @@
     justify-content: center;
 }
 
-.div-img-do-ev-ProEv{
-    width: 70%;
-    height: 50%;
+.div-img-do-ev-ProEv {
+    width: 90%;
+    height: 60%;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: self-start;
     justify-content: space-between;
     position: relative;
-    top: 20%;
-    left: 15%;
-    transition: all 0.5s ease;
+    top: 10%;
+    left: 10%;
 }
 
-.div-img-do-ev-ProEv:hover{
-    transform: scale(1.05);
-}
 
-.banner-evento-ProEv{
-    width: 50%;
+.banner-evento-ProEv {
+    width: 65%;
     height: 100%;
     background-color: rgba(127, 255, 212, 0);
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease-in;
 }
 
-.banner-evento-ProEv img{
+.banner-evento-ProEv:hover {
+    transform: scale(1.1);
+}
+
+.banner-evento-ProEv img {
     width: 100%;
     height: auto;
 }
 
-.infs-evento-ProEv{
+.infs-evento-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -217,28 +210,33 @@
     flex-direction: column;
 }
 
-.data-do-ev-ProEv{
+.data-do-ev-ProEv {
     font-size: 50px;
     color: rgba(0, 126, 112, 1);
-    
+    position: relative;
+    top: 5%;
 }
 
-.horario-do-ev-ProEv{
+.horario-do-ev-ProEv {
     font-size: 18px;
     color: rgba(0, 126, 112, 1);
     margin-right: 5%;
+    position: relative;
+    top: 5%;
 }
 
-.local-do-ev-ProEv{
+.local-do-ev-ProEv {
     color: rgba(0, 126, 112, 1);
     width: 250px;
     padding-top: 10px;
     margin-left: 10%;
+    position: relative;
+    top: 5%;
 }
 
 
 /* Area das Atrações do Evento */
-.area-atracao-evento-ProEv{
+.area-atracao-evento-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -248,14 +246,14 @@
     flex-direction: column;
 }
 
-.atracao-ProEv{
-    font-size: 50px;
+.atracao-ProEv {
+    font-size: 30px;
     position: relative;
-    top: 22%;
+    top: 10%;
     color: rgba(0, 126, 112, 1);
 }
 
-.div-cards-atracoes-ProEv{
+.div-cards-atracoes-ProEv {
     width: 100%;
     height: 60%;
     background-color: rgba(0, 255, 255, 0);
@@ -268,33 +266,34 @@
 }
 
 /* Cards */
-.card-atracao-ProEv{
-    width: 25%;
-    height: 75%;
+.card-atracao-ProEv {
+    width: 35%;
+    height: 90%;
     background-color: rgba(0, 255, 13, 0);
     border-radius: 10px;
     transition: all 0.5s ease;
     text-align: center;
     border: 1px solid rgba(0, 126, 112, 1);
     overflow: hidden;
-    #linha-decorativa-ProEv{
-        height: 150px;
-        border-right: 10px solid rgba(0, 126, 112, 1);
+    position: relative;
+    bottom: 10%;
+
+    #linha-decorativa-ProEv {
+        height: 200px;
+        border-right: 15px solid rgba(0, 126, 112, 1);
         border-radius: 10px;
         position: relative;
-        bottom: 30%;
+        bottom: 34%;
         right: 46%;
-        transform: rotate(60deg);
+        transform: rotate(70deg);
     }
 }
 
-.card-atracao-ProEv:hover{
-    transform: scale(1.1)
+.card-atracao-ProEv:hover {
+    transform: scale(1.05)
 }
 
-
-
-.div-banner-atracao-ProEv{
+.div-banner-atracao-ProEv {
     width: 100%;
     height: 50%;
     background-color: rgba(255, 255, 0, 0);
@@ -304,7 +303,8 @@
     position: relative;
     flex-direction: column;
     top: 0px;
-    #linha-decorativa-dd{
+
+    #linha-decorativa-dd {
         height: 150px;
         border-right: 20px solid rgba(0, 126, 112, 1);
         bottom: 10%;
@@ -312,80 +312,105 @@
         border-radius: 10px;
         transform: rotate(50deg);
         right: 45%;
+        display: none;
     }
 }
 
-.area-img-banner-ProEv{
-    width: 90%;
+.area-img-banner-ProEv {
+    width: 95%;
     height: 400px;
     background-color: rgba(255, 0, 0, 0);
     border-radius: 5px;
-    bottom: 10%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.Nome-atracao-proev{
+.Nome-atracao-proev {
     color: rgba(0, 126, 112, 1);
     position: relative;
-    font-size: 25px;
+    font-size: 30px;
     /* top: 6%;
     left: 14%; */
 }
 
-.area-img-banner-ProEv img{
+.area-img-banner-ProEv img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
-.div-decoratica-do-card-ProEv{
+.div-decoratica-do-card-ProEv {
     width: 120%;
     height: 40%;
-    transform: rotate(-30deg);
+    transform: rotate(-20deg);
     position: relative;
     bottom: 30%;
-    left: 5%;
+    left: 2%;
     background-color: rgba(0, 126, 112, 1);
-    #linha-decorativa2-ProEv{
-        height: 120px;
-        border-right: 10px solid white;
+
+    #linha-decorativa2-ProEv {
+        height: 200px;
+        border-right: 15px solid rgb(255, 255, 255);
         border-radius: 10px;
         left: 23%;
-        top: 60%;
+        top: 55%;
         position: relative;
         transform: rotate(-90deg);
     }
 }
 
-.button-saibamais-ProEv{
-    transform: rotate(30deg);
+.button-saibamais-ProEv {
+    transform: rotate(20deg);
     border: none;
     background-color: white;
     color: rgba(0, 126, 112, 1);
-    width: 50%;
-    height: 30px;
+    border: 1px solid rgba(0, 126, 112, 1);
+    width: 65%;
+    height: 50px;
     position: absolute;
-    left: 18%;
-    top: 26%;
+    left: 15%;
+    top: 0%;
     border-radius: 8px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.button-saibamais-ProEv:hover {
+    background-color: rgba(0, 126, 112, 1);
+    color: white;
+    border: 1px solid white;
 }
 
 /* Modal-1 */
-.dlog-modal-card-ProEv{
-    width: 50%;
-    height: 55%;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 999;
+    display: none;
+}
+
+.dlog-modal-card-ProEv {
+    width: 75%;
+    height: 80%;
     background-color: white;
     position: absolute;
-    top: 26%;
-    left: 22%;
+    top: 12%;
+    left: 12%;
     border: none;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 1000;
 }
 
-.div-decorativa-modal{
+.div-decorativa-modal {
     width: 30%;
     height: 30%;
     background-color: rgba(0, 126, 112, 1);
@@ -394,7 +419,8 @@
     bottom: 88%;
     right: 79%;
     z-index: -1;
-    #linha-dec1-modal{
+
+    #linha-dec1-modal {
         height: 150px;
         border-right: 10px solid white;
         transform: rotate(85deg);
@@ -405,7 +431,7 @@
     }
 }
 
-.div-decorativa2-modal{
+.div-decorativa2-modal {
     width: 60%;
     height: 50%;
     background-color: rgba(0, 126, 112, 1);
@@ -414,7 +440,8 @@
     top: 80%;
     left: 50%;
     z-index: -1;
-    #linha-dec2-modal{
+
+    #linha-dec2-modal {
         height: 250px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -423,7 +450,8 @@
         left: 80%;
         border-radius: 10px;
     }
-    #linha-dec3-modal{
+
+    #linha-dec3-modal {
         height: 150px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -432,7 +460,8 @@
         left: 80%;
         border-radius: 10px;
     }
-    #linha-dec4-modal{
+
+    #linha-dec4-modal {
         height: 250px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -443,7 +472,7 @@
     }
 }
 
-.div-infs-evento-modal{
+.div-infs-evento-modal {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 255, 255, 0);
@@ -456,7 +485,7 @@
     left: 0;
 }
 
-.areatl-img-modal-ProEv{
+.areatl-img-modal-ProEv {
     width: 60%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -465,7 +494,7 @@
     justify-content: center;
 }
 
-.area-img-modal-ProEv{
+.area-img-modal-ProEv {
     width: 85%;
     height: 55%;
     background-color: rgba(255, 0, 0, 0);
@@ -476,12 +505,12 @@
     left: 7%;
 }
 
-.area-img-modal-ProEv img{
+.area-img-modal-ProEv img {
     width: 100%;
     height: auto;
 }
 
-.area-text-modal-ProEv{
+.area-text-modal-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
@@ -493,21 +522,21 @@
     gap: 20px;
 }
 
-.title-atracao-modal{
-    font-size: 35px;
+.title-atracao-modal {
+    font-size: 40px;
     color: rgba(0, 126, 112, 1);
     position: absolute;
     bottom: 67%;
-    left: 60%;
+    left: 67%;
 }
 
-.p-atracao-modal{
-    width: 310px;
+.p-atracao-modal {
+    width: 500px;
     position: absolute;
     top: 37%;
 }
 
-#b-sari-modal{
+#b-sari-modal {
     background-color: transparent;
     border: none;
     position: absolute;
@@ -516,20 +545,32 @@
     cursor: pointer;
 }
 
+.overlaay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 999;
+    display: none;
+}
+
 /* Modal-2 */
-.dlog-modal2-card-ProEv{
-    width: 50%;
-    height: 55%;
+.dlog-modal2-card-ProEv {
+    width: 75%;
+    height: 80%;
     background-color: white;
     position: absolute;
-    top: 26%;
-    left: 22%;
+    top: 12%;
+    left: 12%;
     border: none;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 1000;
 }
 
-.div-decorativa-modal2{
+.div-decorativa-modal2 {
     width: 30%;
     height: 30%;
     background-color: rgba(0, 126, 112, 1);
@@ -538,7 +579,8 @@
     bottom: 88%;
     right: 79%;
     z-index: -1;
-    #linha-dec1-modal{
+
+    #linha-dec1-modal {
         height: 150px;
         border-right: 10px solid white;
         transform: rotate(85deg);
@@ -549,7 +591,7 @@
     }
 }
 
-.div-decorativa2-modal2{
+.div-decorativa2-modal2 {
     width: 60%;
     height: 50%;
     background-color: rgba(0, 126, 112, 1);
@@ -558,7 +600,8 @@
     top: 80%;
     left: 50%;
     z-index: -1;
-    #linha-dec2-modal2{
+
+    #linha-dec2-modal2 {
         height: 250px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -567,7 +610,8 @@
         left: 80%;
         border-radius: 10px;
     }
-    #linha-dec3-modal2{
+
+    #linha-dec3-modal2 {
         height: 150px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -576,7 +620,8 @@
         left: 80%;
         border-radius: 10px;
     }
-    #linha-dec4-modal2{
+
+    #linha-dec4-modal2 {
         height: 250px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -587,7 +632,7 @@
     }
 }
 
-.div-infs-evento-modal2{
+.div-infs-evento-modal2 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 255, 255, 0);
@@ -600,7 +645,7 @@
     left: 0;
 }
 
-.areatl-img-modal2-ProEv{
+.areatl-img-modal2-ProEv {
     width: 60%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -609,7 +654,7 @@
     justify-content: center;
 }
 
-.area-img-modal2-ProEv{
+.area-img-modal2-ProEv {
     width: 85%;
     height: 55%;
     background-color: rgba(255, 0, 0, 0);
@@ -620,12 +665,12 @@
     left: 7%;
 }
 
-.area-img-modal2-ProEv img{
+.area-img-modal2-ProEv img {
     width: 100%;
     height: auto;
 }
 
-.area-text-modal2-ProEv{
+.area-text-modal2-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
@@ -637,21 +682,21 @@
     gap: 20px;
 }
 
-.title-atracao-modal2{
-    font-size: 35px;
+.title-atracao-modal2 {
+    font-size: 40px;
     color: rgba(0, 126, 112, 1);
     position: absolute;
     bottom: 67%;
-    left: 60%;
+    left: 67%;
 }
 
-.p-atracao-modal2{
-    width: 310px;
+.p-atracao-modal2 {
+    width: 500px;
     position: absolute;
     top: 37%;
 }
 
-#b-sari-modal2{
+#b-sari-modal2 {
     background-color: transparent;
     border: none;
     position: absolute;
@@ -661,9 +706,9 @@
 }
 
 /* Modal-res */
-.dlog-modalres-card-ProEv{
+.dlog-modalres-card-ProEv {
     width: 50%;
-    height: 55%;
+    height: 80%;
     background-color: white;
     position: absolute;
     top: 26%;
@@ -673,10 +718,7 @@
     overflow: hidden;
 }
 
-
-
-
-.div-infs-evento-modalres{
+.div-infs-evento-modalres {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 255, 255, 0);
@@ -689,7 +731,7 @@
     left: 0;
 }
 
-.areatl-img-modalres-ProEv{
+.areatl-img-modalres-ProEv {
     width: 60%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -698,7 +740,7 @@
     justify-content: center;
 }
 
-.area-img-modalres-ProEv{
+.area-img-modalres-ProEv {
     width: 85%;
     height: 55%;
     background-color: rgba(255, 0, 0, 0);
@@ -709,12 +751,12 @@
     left: 7%;
 }
 
-.area-img-modalres-ProEv img{
+.area-img-modalres-ProEv img {
     width: 100%;
     height: auto;
 }
 
-.area-text-modalres-ProEv{
+.area-text-modalres-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
@@ -726,7 +768,7 @@
     gap: 20px;
 }
 
-.title-atracao-modalres{
+.title-atracao-modalres {
     font-size: 35px;
     color: rgba(0, 126, 112, 1);
     position: absolute;
@@ -734,13 +776,13 @@
     left: 60%;
 }
 
-.p-atracao-modalres{
+.p-atracao-modalres {
     width: 310px;
     position: absolute;
     top: 37%;
 }
 
-#b-sari-modalres{
+#b-sari-modalres {
     background-color: transparent;
     border: none;
     position: absolute;
@@ -750,7 +792,7 @@
 }
 
 /* Modal-res2 */
-.dlog-modalres2-card-ProEv{
+.dlog-modalres2-card-ProEv {
     width: 50%;
     height: 55%;
     background-color: white;
@@ -762,7 +804,7 @@
     overflow: hidden;
 }
 
-.div-decorativa-modalres2{
+.div-decorativa-modalres2 {
     width: 30%;
     height: 30%;
     background-color: rgba(0, 126, 112, 1);
@@ -771,7 +813,8 @@
     bottom: 88%;
     right: 79%;
     z-index: -1;
-    #linha-dec1-modal{
+
+    #linha-dec1-modal {
         height: 150px;
         border-right: 10px solid white;
         transform: rotate(85deg);
@@ -782,7 +825,7 @@
     }
 }
 
-.div-decorativa2-modalres2{
+.div-decorativa2-modalres2 {
     width: 60%;
     height: 50%;
     background-color: rgba(0, 126, 112, 1);
@@ -791,7 +834,8 @@
     top: 80%;
     left: 50%;
     z-index: -1;
-    #linha-dec2-modal2{
+
+    #linha-dec2-modal2 {
         height: 250px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -800,7 +844,8 @@
         left: 80%;
         border-radius: 10px;
     }
-    #linha-dec3-modalres2{
+
+    #linha-dec3-modalres2 {
         height: 150px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -809,7 +854,8 @@
         left: 80%;
         border-radius: 10px;
     }
-    #linha-dec4-modalres2{
+
+    #linha-dec4-modalres2 {
         height: 250px;
         border-right: 10px solid white;
         transform: rotate(90deg);
@@ -820,7 +866,7 @@
     }
 }
 
-.div-infs-evento-modalres2{
+.div-infs-evento-modalres2 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 255, 255, 0);
@@ -833,7 +879,7 @@
     left: 0;
 }
 
-.areatl-img-modalres2-ProEv{
+.areatl-img-modalres2-ProEv {
     width: 60%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -842,7 +888,7 @@
     justify-content: center;
 }
 
-.area-img-modalres2-ProEv{
+.area-img-modalres2-ProEv {
     width: 85%;
     height: 55%;
     background-color: rgba(255, 0, 0, 0);
@@ -853,12 +899,12 @@
     left: 7%;
 }
 
-.area-img-modalres2-ProEv img{
+.area-img-modalres2-ProEv img {
     width: 100%;
     height: auto;
 }
 
-.area-text-modalres2-ProEv{
+.area-text-modalres2-ProEv {
     width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
@@ -870,7 +916,7 @@
     gap: 20px;
 }
 
-.title-atracao-modalres2{
+.title-atracao-modalres2 {
     font-size: 35px;
     color: rgba(0, 126, 112, 1);
     position: absolute;
@@ -878,13 +924,13 @@
     left: 60%;
 }
 
-.p-atracao-modalres2{
+.p-atracao-modalres2 {
     width: 310px;
     position: absolute;
     top: 37%;
 }
 
-#b-sari-modalres2{
+#b-sari-modalres2 {
     background-color: transparent;
     border: none;
     position: absolute;
@@ -895,19 +941,21 @@
 
 /* Responsividades: */
 /* Responsividade Celular: */
-@media screen and (max-width: 720px){
-    .area-setaProEv{
+@media screen and (max-width: 720px) {
+    .area-setaProEv {
         position: relative;
         top: 3%;
     }
 
-    .area-principal-ProEv{
+    .area-principal-ProEv {
         flex-direction: column;
     }
-    .div-decorativa-ProEv{
+
+    .div-decorativa-ProEv {
         display: none;
     }
-    .box-decorativa-ProEv{
+
+    .box-decorativa-ProEv {
         background-color: #f8f5f6c3;
         border-radius: 0px 0px 10px 10px;
         height: 48%;
@@ -917,20 +965,24 @@
         justify-content: center;
         gap: 10px;
     }
-    .box-principal-ProEv{
-        height: 50%; 
+
+    .box-principal-ProEv {
+        height: 50%;
         background-color: #f8f5f6c3;
         border-radius: 10px 10px 0px 0px;
         top: 2%;
     }
-    .area-atracao-evento-ProEv{
+
+    .area-atracao-evento-ProEv {
         display: none;
     }
-    .area-info-evento-ProEv{
+
+    .area-info-evento-ProEv {
         background-color: rgba(0, 255, 255, 0);
         width: 100%;
     }
-    .div-img-do-ev-ProEv{
+
+    .div-img-do-ev-ProEv {
         background-color: rgba(255, 228, 196, 0);
         width: 100%;
         height: 100%;
@@ -941,110 +993,125 @@
         align-items: center;
         justify-content: center;
     }
-    .banner-evento-ProEv{
+
+    .banner-evento-ProEv {
         width: 70%;
     }
-    .div-img-do-ev-ProEv img{
+
+    .div-img-do-ev-ProEv img {
         position: relative;
         top: 20%;
     }
-    .infs-evento-ProEv{
+
+    .infs-evento-ProEv {
         background-color: rgba(0, 255, 255, 0);
         width: 100%;
     }
-    .data-do-ev-ProEv{
+
+    .data-do-ev-ProEv {
         font-size: 35px;
         position: relative;
         top: 10%;
     }
-    .horario-do-ev-ProEv{
+
+    .horario-do-ev-ProEv {
         top: 10%;
         position: relative;
     }
-    .local-do-ev-ProEv{
+
+    .local-do-ev-ProEv {
         display: none;
     }
-    .card-respon-ProEv{
+
+    .card-respon-ProEv {
         display: block;
         height: 70%;
         width: 45%;
         top: 0%;
         text-align: center;
     }
-    .Nome-atracao-proev{
+
+    .Nome-atracao-proev {
         font-size: 20px;
     }
-    .buttonres-saibamais-ProEv{
-        transform: rotate(30deg);
+
+    .buttonres-saibamais-ProEv {
+        transform: rotate(20deg);
         border: none;
         background-color: white;
         color: rgba(0, 126, 112, 1);
-        width: 55%;
-        height: 25px;
+        border: 1px solid rgba(0, 126, 112, 1);
+        width: 65%;
+        height: 30px;
         position: absolute;
-        left: 18%;
-        top: 26%;
+        left: 15%;
+        top: 0%;
         border-radius: 8px;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         cursor: pointer;
+        transition: all .2s ease-in-out;
     }
 
-     /* Modal Res */
-     .dlog-modalres-card-ProEv{
+    /* Modal Res */
+    .dlog-modalres-card-ProEv {
         width: 90%;
         height: 25%;
         left: 5%;
         top: 35%;
     }
 
-    .div-decorativa-modalres{
+    .div-decorativa-modalres {
         bottom: 90%;
         height: 10%;
-        #linha-dec1-modal{
+
+        #linha-dec1-modal {
             display: none;
         }
     }
 
-    .div-decorativa2-modalres{
+    .div-decorativa2-modalres {
         top: 90%;
         left: 52%;
-        #linha-dec2-modalres{
+
+        #linha-dec2-modalres {
             display: none;
         }
-        #linha-dec3-modalres{
+
+        #linha-dec3-modalres {
             display: none;
         }
-        #linha-dec4-modalres{
+
+        #linha-dec4-modalres {
             display: none;
         }
     }
 
-    .title-atracao-modalres{
+    .title-atracao-modalres {
         font-size: 16px;
     }
 
-    .p-atracao-modalres{
+    .p-atracao-modalres {
         font-size: 7px;
         width: 150px;
         /* left: 55%;     */
     }
 
-    .area-img-modalres-ProEv{
+    .area-img-modalres-ProEv {
         left: 2%;
     }
 
-    #b-sari-modalres{
+    #b-sari-modalres {
         left: 90%;
         top: 5%;
     }
 
-    #b-sari-modalres img{
+    #b-sari-modalres img {
         width: 70%;
         height: auto;
     }
 
-    .div-decorativa2-modalres{
+    .div-decorativa2-modalres {
         width: 50%;
         height: 30%;
         background-color: rgba(0, 126, 112, 1);
@@ -1053,7 +1120,8 @@
         left: 65%;
         transform: rotate(-25deg);
     }
-    .div-decorativa-modalres{
+
+    .div-decorativa-modalres {
         width: 30%;
         height: 30%;
         background-color: rgba(0, 126, 112, 1);
@@ -1065,23 +1133,24 @@
 
 
     /* Modal Res2 */
-    .dlog-modalres2-card-ProEv{
-       width: 90%;
-       height: 25%;
-       left: 5%;
-       top: 35%;
-   }
-
-   .div-decorativa2-modalres2{
-    width: 50%;
-    height: 30%;
-    background-color: rgba(0, 126, 112, 1);
-    position: relative;
-    top: 55%;
-    left: 65%;
-    transform: rotate(-25deg);
+    .dlog-modalres2-card-ProEv {
+        width: 90%;
+        height: 25%;
+        left: 5%;
+        top: 35%;
     }
-    .div-decorativa-modalres2{
+
+    .div-decorativa2-modalres2 {
+        width: 50%;
+        height: 30%;
+        background-color: rgba(0, 126, 112, 1);
+        position: relative;
+        top: 55%;
+        left: 65%;
+        transform: rotate(-25deg);
+    }
+
+    .div-decorativa-modalres2 {
         width: 30%;
         height: 30%;
         background-color: rgba(0, 126, 112, 1);
@@ -1091,79 +1160,79 @@
         transform: rotate(-25deg);
     }
 
-   .title-atracao-modalres2{
-       font-size: 18px;
-   }
+    .title-atracao-modalres2 {
+        font-size: 18px;
+    }
 
-   .p-atracao-modalres2{
+    .p-atracao-modalres2 {
         font-size: 7px;
         width: 150px;
-   }
+    }
 
-   .area-img-modalres2-ProEv{
-       left: 2%;
-   }
+    .area-img-modalres2-ProEv {
+        left: 2%;
+    }
 
-   #b-sari-modalres2{
-       left: 90%;
-       top: 5%;
-   }
+    #b-sari-modalres2 {
+        left: 90%;
+        top: 5%;
+    }
 
-   #b-sari-modalres2 img{
-    width: 70%;
-    height: auto;
+    #b-sari-modalres2 img {
+        width: 70%;
+        height: auto;
     }
 }
 
 /* Responsividade Ipad Mini: */
-@media screen and (min-width: 768px) and (max-width: 1023px){
-    .area-principal-ProEv{
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .area-principal-ProEv {
         height: 950px;
         background-color: rgba(0, 0, 255, 0);
     }
 
-    .formas-decorativas-ProEv3{
+    .formas-decorativas-ProEv3 {
         top: 88vh;
     }
 
-    .box-decorativa-ProEv{
+    .box-decorativa-ProEv {
         background-color: rgba(0, 255, 255, 0);
         height: 95%;
         top: 6%;
     }
 
-    .div-decorativa-ProEv{
+    .div-decorativa-ProEv {
         right: 22%;
         bottom: 62%;
         transform: rotate(-20deg);
     }
 
-    .box-principal-ProEv{
+    .box-principal-ProEv {
         height: 95%;
         top: 6%;
     }
 
-    .titulo-principal-ProEv{
+    .titulo-principal-ProEv {
         font-size: 60px;
         top: 35%;
         right: 25%;
         transform: rotate(20.5deg);
     }
 
-    .bolota-decorativa-Pro-Ev{
+    .bolota-decorativa-Pro-Ev {
         display: none;
     }
 
-    .box-principal-ProEv{
+    .box-principal-ProEv {
         background-color: rgba(0, 0, 0, 0);
         border: 1px solid rgba(0, 126, 112, 1);
     }
 
-    .area-info-evento-ProEv{
+    .area-info-evento-ProEv {
         background-color: rgba(137, 43, 226, 0);
     }
 
-    .div-img-do-ev-ProEv{
+    .div-img-do-ev-ProEv {
         background-color: rgba(0, 255, 255, 0);
         flex-direction: column;
         top: 10%;
@@ -1171,21 +1240,21 @@
         height: 60%;
     }
 
-    .banner-evento-ProEv{
+    .banner-evento-ProEv {
         background-color: rgba(0, 0, 255, 0);
         width: 100%;
     }
 
-    .infs-evento-ProEv{
+    .infs-evento-ProEv {
         background-color: rgba(58, 226, 43, 0);
         width: 100%;
     }
 
-    .area-atracao-evento-ProEv{
+    .area-atracao-evento-ProEv {
         background-color: rgba(153, 0, 255, 0);
     }
 
-    .div-cards-atracoes-ProEv{
+    .div-cards-atracoes-ProEv {
         background-color: rgba(0, 255, 255, 0);
         height: 85%;
         top: 6%;
@@ -1193,145 +1262,160 @@
         flex-direction: column;
     }
 
-    .card-atracao-ProEv{
+    .card-atracao-ProEv {
         width: 70%;
         height: 40%;
-        #linha-decorativa-ProEv{
-            bottom: 37%;
+        top: 0%;
+
+        #linha-decorativa-ProEv {
+            bottom: 48%;
             right: 52%;
         }
     }
 
-    .div-decoratica-do-card-ProEv{
+    .div-decoratica-do-card-ProEv {
         position: relative;
-        bottom: 39%;
+        bottom: 55%;
     }
 
-    .card-atracao-ProEv{
-        #linha-decorativa2-ProEv{
-            top: 88%;
+    .card-atracao-ProEv {
+        #linha-decorativa2-ProEv {
+            top: 40%;
             left: 26%;
         }
     }
 
-    .div-banner-atracao-ProEv{
+    .div-banner-atracao-ProEv {
         background-color: rgba(0, 255, 255, 0);
-        #linha-decorativa-dd{
+
+        #linha-decorativa-dd {
             display: none;
         }
     }
 
-    .div-banner-atracao-ProEv img{
+    .div-banner-atracao-ProEv img {
         position: relative;
         top: 18%;
-        
+
     }
 
-    .button-saibamais-ProEv{
-        width: 40%;
-        top: 28%;
-        left: 25%;
+    .button-saibamais-ProEv {
+        width: 65%;
+        height: 40px;
+        top: 5%;
+        left: 15%;
     }
 
-    .atracao-ProEv{
-        font-size: 40px;
+    .atracao-ProEv {
+        font-size: 25px;
         top: 11%;
     }
 
+    .area-img-banner-ProEv img {
+        top: 4%;
+    }
 
     /* Modal */
-    .dlog-modal-card-ProEv{
-        width: 80%;
-        height: 40%;
-        left: 10%;
+    .dlog-modal-card-ProEv {
+        width: 95%;
+        height: 45%;
+        left: 3%;
         top: 30%;
     }
 
-    .div-decorativa-modal{
+    .div-decorativa-modal {
         bottom: 90%;
-        #linha-dec1-modal{
+
+        #linha-dec1-modal {
             display: none;
         }
     }
 
-    .div-decorativa2-modal{
+    .div-decorativa2-modal {
         top: 90%;
         left: 52%;
-        #linha-dec2-modal{
+
+        #linha-dec2-modal {
             display: none;
         }
-        #linha-dec3-modal{
+
+        #linha-dec3-modal {
             display: none;
         }
-        #linha-dec4-modal{
+
+        #linha-dec4-modal {
             display: none;
         }
     }
 
-    .title-atracao-modal{
+    .title-atracao-modal {
         font-size: 28px;
     }
 
-    .p-atracao-modal{
+    .p-atracao-modal {
         font-size: 14px;
-        width: 250px;
+        width: 320px;
         /* left: 55%;     */
     }
 
-    .area-img-modal-ProEv{
+    .area-img-modal-ProEv {
         left: 2%;
     }
 
-    #b-sari-modal{
+    #b-sari-modal {
         left: 90%;
         top: 8%;
     }
 
-     /* Modal2 */
-     .dlog-modal2-card-ProEv{
-        width: 80%;
-        height: 40%;
-        left: 10%;
+    /* Modal2 */
+    .dlog-modal2-card-ProEv {
+        width: 95%;
+        height: 45%;
+        left: 3%;
         top: 30%;
     }
 
-    .div-decorativa-modal2{
+    .div-decorativa-modal2 {
         bottom: 90%;
-        #linha-dec1-modal{
+
+        #linha-dec1-modal {
             display: none;
         }
     }
 
-    .div-decorativa2-modal2{
+    .div-decorativa2-modal2 {
         top: 90%;
         left: 52%;
-        #linha-dec2-modal2{
+
+        #linha-dec2-modal2 {
             display: none;
         }
-        #linha-dec3-modal2{
+
+        #linha-dec3-modal2 {
             display: none;
         }
-        #linha-dec4-modal2{
+
+        #linha-dec4-modal2 {
             display: none;
         }
     }
 
-    .title-atracao-modal2{
+    .title-atracao-modal2 {
         font-size: 28px;
         left: 68%;
     }
 
-    .p-atracao-modal2{
+    .p-atracao-modal2 {
         font-size: 14px;
-        width: 250px;
-        /* left: 65%;     */
+        width: 320px;
+        /* left: 55%;     */
     }
 
-    .area-img-modal2-ProEv{
+    .area-img-modal2-ProEv {
         left: 2%;
     }
 
-    #b-sari-modal2{
+    #b-sari-modal2 {
         left: 92%;
         top: 5%;
     }
@@ -1339,93 +1423,91 @@
 }
 
 /* Responsividade Ipad Air: */
-@media (min-width: 820px) and (min-height: 1180px){
-    .div-decoratica-do-card-ProEv{
-        bottom: 36%;
-    }
+@media (min-width: 820px) and (min-height: 1180px) {
+    .div-decoratica-do-card-ProEv {
+        bottom: 50%;
 
-    .card-respon-ProEv{
-        #linha-decorativa-ProEv{
-            bottom: 32%;
+        #linha-decorativa2-ProEv {
+            top: 47%;
         }
     }
 
-    .button-saibamais-ProEv{
+    .button-saibamais-ProEv {
         font-size: 15px;
-        width: 40%;
-        top: 25%;
-        left: 26%;
+        width: 60%;
+        top: 8%;
+        left: 16%;
     }
 
-    .card-respon-ProEv{
-        text-align: center;
+    .card-atracao-ProEv {
+        #linha-decorativa-ProEv {
+            bottom: 45%;
+        }
     }
 
-    .Nome-atracao-proev{
+    .Nome-atracao-proev {
         top: 0;
         left: 0;
     }
 
-    .box-principal-ProEv{
+    .box-principal-ProEv {
         height: 100%;
         top: 12%;
-        /* background-color: aqua; */
     }
 
-    .box-decorativa-ProEv{
+    .box-decorativa-ProEv {
         top: 12%;
     }
 }
 
 /* Responsividade Ipad Pro: */
-@media screen and (min-height: 1366px){
-    .area-principal-ProEv{
+@media screen and (min-height: 1366px) {
+    .area-principal-ProEv {
         height: 1255px;
     }
 
-
-    .formas-decorativas-ProEv3{
+    .formas-decorativas-ProEv3 {
         top: 88vh;
     }
 
-    .box-decorativa-ProEv{
+    .box-decorativa-ProEv {
         background-color: rgba(0, 255, 255, 0);
         height: 95%;
         top: 6%;
     }
 
-    .div-decorativa-ProEv{
+    .div-decorativa-ProEv {
         right: 22%;
         bottom: 62%;
         transform: rotate(-21deg);
     }
 
-    .box-principal-ProEv{
+    .box-principal-ProEv {
         height: 95%;
         top: 7%;
     }
 
-    .titulo-principal-ProEv{
+    .titulo-principal-ProEv {
         font-size: 80px;
         top: 35%;
         right: 22%;
         transform: rotate(20.5deg);
     }
 
-    .bolota-decorativa-Pro-Ev{
+    .bolota-decorativa-Pro-Ev {
         display: none;
     }
 
-    .box-principal-ProEv{
+    .box-principal-ProEv {
         background-color: rgba(0, 0, 0, 0);
         border: 1px solid rgba(0, 126, 112, 1);
     }
 
-    .area-info-evento-ProEv{
+    .area-info-evento-ProEv {
         background-color: rgba(137, 43, 226, 0);
     }
 
-    .div-img-do-ev-ProEv{
+    .div-img-do-ev-ProEv {
         background-color: rgba(0, 255, 255, 0);
         flex-direction: column;
         top: 10%;
@@ -1433,206 +1515,211 @@
         height: 60%;
     }
 
-    .banner-evento-ProEv{
+    .banner-evento-ProEv {
         background-color: rgba(0, 0, 255, 0);
         width: 100%;
     }
 
-    .infs-evento-ProEv{
+    .infs-evento-ProEv {
         background-color: rgba(58, 226, 43, 0);
         width: 100%;
     }
 
-    .area-atracao-evento-ProEv{
+    .area-atracao-evento-ProEv {
         background-color: rgba(153, 0, 255, 0);
     }
 
-    .div-cards-atracoes-ProEv{
+    .div-cards-atracoes-ProEv {
         background-color: rgba(0, 255, 255, 0);
-        height: 90%;
-        top: 6%;
+        height: 80%;
+        top: 0%;
         gap: 30px;
         flex-direction: column;
     }
 
-    .atracao-ProEv{
-        top: 0%;
-    }
-
-    .card-atracao-ProEv{
+    .card-atracao-ProEv {
         width: 70%;
         height: 40%;
-        #linha-decorativa-ProEv{
+        top: 5%;
+        #linha-decorativa-ProEv {
             height: 180px;
-            bottom: 30%;
+            bottom: 40%;
             right: 55%;
         }
     }
 
-    .div-decoratica-do-card-ProEv{
-        bottom: 26%;
+    .div-decoratica-do-card-ProEv {
+        bottom: 35%;
         left: 2%;
     }
 
-    .card-atracao-ProEv{
-        #linha-decorativa2-ProEv{
+    .card-atracao-ProEv {
+        #linha-decorativa2-ProEv {
             height: 185px;
-            top: 100%;
+            top: 70%;
             left: 26%;
         }
     }
 
-    .button-saibamais-ProEv{
-        top: 35%;
-        left: 34%;
+    .button-saibamais-ProEv {
+        top: 0%;
+        left: 18%;
     }
 
-    .atracao-ProEv{
-        font-size: 40px;
-        top: 11%;
+    .atracao-ProEv {
+        font-size: 30px;
+        top: 9%;
     }
 
-    .div-banner-atracao-ProEv{
+    .div-banner-atracao-ProEv {
         background-color: rgba(0, 255, 255, 0);
-        #linha-decorativa-dd{
+
+        #linha-decorativa-dd {
             bottom: 6%;
             right: 47%;
         }
     }
 
-    .div-banner-atracao-ProEv img{
+    .div-banner-atracao-ProEv img {
         position: relative;
         top: 12%;
     }
 
-    .Nome-atracao-proev{
+    .Nome-atracao-proev {
         font-size: 30px;
         top: 5%;
     }
 
 
     /* Modal */
-    .dlog-modal-card-ProEv{
-        width: 70%;
-        height: 30%;
-        left: 15%;
-        top: 40%;
+    .dlog-modal-card-ProEv {
+        width: 85%;
+        height: 35%;
+        left: 7%;
+        top: 35%;
     }
 
-    .div-decorativa-modal{
+    .div-decorativa-modal {
         bottom: 90%;
-        #linha-dec1-modal{
+
+        #linha-dec1-modal {
             display: none;
         }
     }
 
-    .div-decorativa2-modal{
+    .div-decorativa2-modal {
         top: 90%;
         left: 52%;
-        #linha-dec2-modal{
+
+        #linha-dec2-modal {
             display: none;
         }
-        #linha-dec3-modal{
+
+        #linha-dec3-modal {
             display: none;
         }
-        #linha-dec4-modal{
+
+        #linha-dec4-modal {
             display: none;
         }
     }
 
-    .title-atracao-modal{
+    .title-atracao-modal {
         font-size: 30px;
     }
 
-    .p-atracao-modal{
+    .p-atracao-modal {
         font-size: 15px;
-        width: 300px;
+        width: 355px;
         /* left: 55%;     */
     }
 
-    .area-img-modal-ProEv{
+    .area-img-modal-ProEv {
         left: 2%;
     }
 
-    #b-sari-modal{
+    #b-sari-modal {
         left: 90%;
         top: 5%;
     }
 
-     /* Modal2 */
-     .dlog-modal2-card-ProEv{
-        width: 70%;
-        height: 30%;
-        left: 15%;
-        top: 40%;
+    /* Modal2 */
+    .dlog-modal2-card-ProEv {
+        width: 85%;
+        height: 35%;
+        left: 7%;
+        top: 35%;
     }
 
-    .div-decorativa-modal2{
+    .div-decorativa-modal2 {
         bottom: 90%;
-        #linha-dec1-modal{
+
+        #linha-dec1-modal {
             display: none;
         }
     }
 
-    .div-decorativa2-modal2{
+    .div-decorativa2-modal2 {
         top: 90%;
         left: 52%;
-        #linha-dec2-modal2{
+
+        #linha-dec2-modal2 {
             display: none;
         }
-        #linha-dec3-modal2{
+
+        #linha-dec3-modal2 {
             display: none;
         }
-        #linha-dec4-modal2{
+
+        #linha-dec4-modal2 {
             display: none;
         }
     }
 
-    .title-atracao-modal2{
+    .title-atracao-modal2 {
         font-size: 30px;
         left: 68%;
     }
 
-    .p-atracao-modal2{
+    .p-atracao-modal2 {
         font-size: 15px;
-        width: 300px;
-        /* left: 65%;     */
+        width: 355px;
+        /* left: 55%;     */
     }
 
-    .area-img-modal2-ProEv{
+    .area-img-modal2-ProEv {
         left: 2%;
     }
 
-    #b-sari-modal2{
+    #b-sari-modal2 {
         left: 92%;
         top: 5%;
     }
 }
 
-@media (min-width: 1024px) and (max-height: 600px){
+@media (min-width: 1024px) and (max-height: 600px) {
 
-    .box-principal-ProEv{
+    .box-principal-ProEv {
         border: 2px solid rgba(0, 126, 112, 1);
     }
 
-    .div-decorativa-ProEv{
+    .div-decorativa-ProEv {
         bottom: 65%;
         transform: rotate(-14deg);
     }
 
-    .titulo-principal-ProEv{
-        transform: rotate(13deg);
-        top: 48%;
-    }
-
-    .bolota-decorativa-Pro-Ev{
-        width: 160px;
-        height: 160px;
+    .titulo-principal-ProEv {
+        transform: rotate(14deg);
         top: 40%;
-        right: 40%;
+        font-size: 40px;
+        right: 35%;
     }
 
-    .div-img-do-ev-ProEv{
+    .bolota-decorativa-Pro-Ev {
+        display: none;
+    }
+
+    .div-img-do-ev-ProEv {
         background-color: rgba(0, 0, 255, 0);
         flex-direction: column;
         height: 80%;
@@ -1640,243 +1727,79 @@
         left: 0;
     }
 
-    .banner-evento-ProEv{
-        background-color: blueviolet;
+    .banner-evento-ProEv {
+        background-color: rgba(137, 43, 226, 0);
         width: 100%;
         height: 50%;
     }
 
-    .infs-evento-ProEv{
-        background-color: rgba(128, 255, 0, 0);
-        width: 100%;
-        height: 50%;
+    .infs-evento-ProEv {
+        display: none;
     }
 
-    .atracao-ProEv{
+    .atracao-ProEv {
         top: -4%;
     }
 
-    .area-atracao-evento-ProEv{
+    .area-atracao-evento-ProEv {
         background-color: rgba(0, 255, 255, 0);
     }
 
-    .div-cards-atracoes-ProEv{
+    .div-cards-atracoes-ProEv {
         background-color: rgba(0, 0, 255, 0);
-        top: -8%;
+        top: 0%;
     }
 
-    .card-atracao-ProEv{
+    .card-atracao-ProEv {
         width: 40%;
         height: 75%;
     }
 
-    .div-decoratica-do-card-ProEv{
+    .Nome-atracao-proev{
+        font-size: 23px;
+    }
+
+    .div-decoratica-do-card-ProEv {
         width: 125%;
-        #linha-decorativa2-ProEv{
-            top: 50%;
+        bottom: 40%;
+
+        #linha-decorativa2-ProEv {
+            top: 10%;
         }
     }
 
-    .card-atracao-ProEv{
-        #linha-decorativa-ProEv{
-            bottom: 27%;
+    .card-atracao-ProEv {
+        #linha-decorativa-ProEv {
+            bottom: 32%;
         }
+    }
+
+    .button-saibamais-ProEv{
+        height: 26%;
     }
 
     /* modal 1 */
-    .dlog-modal-card-ProEv{
+    .dlog-modal-card-ProEv {
         width: 80%;
-        height: 60%;
+        height: 70%;
         left: 10%;
         top: 20%;
-    }    
+    }
 
-    .div-decorativa-modal{
-        #linha-dec1-modal{
+    .div-decorativa-modal {
+        #linha-dec1-modal {
             display: none;
         }
     }
 
-    .div-decorativa2-modal{
+    .div-decorativa2-modal {
         top: 95%;
-        #linha-dec2-modal{
+
+        #linha-dec2-modal {
             display: none;
         }
 
-        #linha-dec4-modal{
-            height: 200px;
-            bottom: 30%;
-            left: 90%;
-        }
-    }
-
-    /* Modal 2 */
-    .dlog-modal2-card-ProEv{
-        width: 80%;
-        height: 60%;
-        left: 10%;
-        top: 20%;
-    }    
-
-    .div-decorativa-modal2{
-        #linha-dec1-modal2{
-            display: none;
-        }
-    }
-
-    .div-decorativa2-modal2{
-        top: 95%;
-        #linha-dec2-modal2{
-            display: none;
-        }
-
-        #linha-dec4-modal2{
-            height: 200px;
-            bottom: 30%;
-            left: 90%;
-        }
-    }
-}
-
-
-
-
-
-
-
-@media (min-width: 1280px) and (max-height: 800px){
-
-    .box-principal-ProEv{
-        border: 2px solid rgba(0, 126, 112, 1);
-    }
-
-    .div-decorativa-ProEv{
-        bottom: 60%;
-        transform: rotate(-14deg);
-    }
-
-    .titulo-principal-ProEv{
-        transform: rotate(13.5deg);
-        top: 45%;
-    }
-
-    .bolota-decorativa-Pro-Ev{
-        width: 160px;
-        height: 160px;
-        top: 40%;
-        right: 40%;
-    }
-
-    .div-img-do-ev-ProEv{
-        background-color: rgba(0, 0, 255, 0);
-        flex-direction: column;
-        height: 80%;
-        top: 20%;
-        left: 0;
-    }
-
-    .banner-evento-ProEv{
-        background-color: blueviolet;
-        width: 100%;
-        height: 50%;
-    }
-
-    .infs-evento-ProEv{
-        background-color: rgba(128, 255, 0, 0);
-        width: 100%;
-        height: 50%;
-    }
-
-    .local-do-ev-ProEv{
-        display: none;
-    }
-
-    .atracao-ProEv{
-        top: 8%;
-    }
-
-    .area-atracao-evento-ProEv{
-        background-color: rgba(0, 255, 255, 0);
-    }
-
-    .div-cards-atracoes-ProEv{
-        background-color: rgba(0, 0, 255, 0);
-        top: 5%;
-    }
-
-    .card-atracao-ProEv{
-        width: 40%;
-        height: 80%;
-    }
-
-    .div-decoratica-do-card-ProEv{
-        width: 125%;
-        left: 0;
-        #linha-decorativa2-ProEv{
-            top: 63%;
-            height: 140px;
-        }
-    }
-
-    .card-atracao-ProEv{
-        #linha-decorativa-ProEv{
-            bottom: 31%;
-            right: 50%;
-        }
-    }
-
-    /* modal 1 */
-    .dlog-modal-card-ProEv{
-        width: 80%;
-        height: 60%;
-        left: 10%;
-        top: 20%;
-    }    
-
-    .div-decorativa-modal{
-        #linha-dec1-modal{
-            display: none;
-        }
-    }
-
-    .div-decorativa2-modal{
-        top: 85%;
-        #linha-dec2-modal{
-            bottom: 38%;
-        }
-
-        #linha-dec3-modal{
-           left: 85%;
-        }
-
-        #linha-dec4-modal{
-            height: 200px;
-            bottom: 28%;
-            left: 60%;
-        }
-    }
-
-    /* Modal 2 */
-    .dlog-modal2-card-ProEv{
-        width: 80%;
-        height: 60%;
-        left: 10%;
-        top: 20%;
-    }    
-
-    .div-decorativa-modal2{
-        #linha-dec1-modal2{
-            display: none;
-        }
-    }
-
-    .div-decorativa2-modal2{
-        top: 95%;
-        #linha-dec2-modal2{
-            display: none;
-        }
-
-        #linha-dec4-modal2{
+        #linha-dec4-modal {
             height: 200px;
             bottom: 30%;
             left: 90%;
@@ -1884,22 +1807,214 @@
     }
 
     .title-atracao-modal{
-        bottom: 70%;
-        left: 65%;
+        font-size: 25px;
     }
 
     .p-atracao-modal{
-        width: 323px;
+        width: 300px;
+        font-size: 12px;
+    }
+
+    /* Modal 2 */
+    .dlog-modal2-card-ProEv {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 20%;
+    }
+
+    .div-decorativa-modal2 {
+        #linha-dec1-modal2 {
+            display: none;
+        }
+    }
+
+    .div-decorativa2-modal2 {
+        top: 95%;
+
+        #linha-dec2-modal2 {
+            display: none;
+        }
+
+        #linha-dec4-modal2 {
+            height: 200px;
+            bottom: 30%;
+            left: 90%;
+        }
     }
 
     .title-atracao-modal2{
+        font-size: 25px;
+    }
+
+    .p-atracao-modal2{
+        width: 300px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1280px) and (max-height: 800px) {
+
+    .box-principal-ProEv {
+        border: 2px solid rgba(0, 126, 112, 1);
+    }
+
+    .div-decorativa-ProEv {
+        bottom: 60%;
+        transform: rotate(-14deg);
+    }
+
+    .titulo-principal-ProEv {
+        transform: rotate(13.5deg);
+        top: 45%;
+    }
+
+    .bolota-decorativa-Pro-Ev {
+        width: 160px;
+        height: 160px;
+        top: 40%;
+        right: 40%;
+    }
+
+    .div-img-do-ev-ProEv {
+        background-color: rgba(0, 0, 255, 0);
+        flex-direction: column;
+        height: 80%;
+        top: 20%;
+        left: 0;
+    }
+
+    .banner-evento-ProEv {
+        background-color: rgba(137, 43, 226, 0);
+        width: 100%;
+        height: 50%;
+    }
+
+    .banner-evento-ProEv img{
+        width: 85%;
+    }
+
+    .infs-evento-ProEv {
+        background-color: rgba(128, 255, 0, 0);
+        width: 100%;
+        height: 50%;
+        display: none;
+    }
+
+    .local-do-ev-ProEv {
+        display: none;
+    }
+
+    .atracao-ProEv {
+        top: 5%;
+    }
+
+    .area-atracao-evento-ProEv {
+        background-color: rgba(0, 255, 255, 0);
+    }
+
+    .div-cards-atracoes-ProEv {
+        background-color: rgba(0, 0, 255, 0);
+        top: 10%;
+    }
+
+    .card-atracao-ProEv {
+        width: 40%;
+        height: 80%;
+    }
+
+    .div-decoratica-do-card-ProEv {
+        width: 125%;
+        left: 0;
+        bottom: 40%;
+        #linha-decorativa2-ProEv {
+            top: 55%;
+            height: 140px;
+        }
+    }
+
+    .card-atracao-ProEv {
+        #linha-decorativa-ProEv {
+            bottom: 35%;
+            right: 50%;
+        }
+    }
+
+    /* modal 1 */
+    .dlog-modal-card-ProEv {
+        width: 80%;
+        height: 70%;
+        left: 10%;
+        top: 20%;
+    }
+
+    .div-decorativa-modal {
+        #linha-dec1-modal {
+            display: none;
+        }
+    }
+
+    .div-decorativa2-modal {
+        top: 85%;
+
+        #linha-dec2-modal {
+            bottom: 38%;
+        }
+
+        #linha-dec3-modal {
+            left: 85%;
+        }
+
+        #linha-dec4-modal {
+            height: 200px;
+            bottom: 28%;
+            left: 60%;
+        }
+    }
+
+    /* Modal 2 */
+    .dlog-modal2-card-ProEv {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 20%;
+    }
+
+    .div-decorativa-modal2 {
+        #linha-dec1-modal2 {
+            display: none;
+        }
+    }
+
+    .div-decorativa2-modal2 {
+        top: 95%;
+
+        #linha-dec2-modal2 {
+            display: none;
+        }
+
+        #linha-dec4-modal2 {
+            height: 200px;
+            bottom: 30%;
+            left: 90%;
+        }
+    }
+
+    .title-atracao-modal {
         bottom: 70%;
         left: 65%;
     }
 
-    .p-atracao-modal2{
+    .p-atracao-modal {
+        width: 323px;
+    }
+
+    .title-atracao-modal2 {
+        bottom: 70%;
+        left: 65%;
+    }
+
+    .p-atracao-modal2 {
         width: 323px;
     }
 }
-
-

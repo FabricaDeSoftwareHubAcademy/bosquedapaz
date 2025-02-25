@@ -6,7 +6,9 @@
         <meta name="description" content="Página para gerenciar parceiros e suas informações.">
         <title>Cadastrar Parceiros</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/cadastrar-parceiros.css"> 
-            <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+        <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+        <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
     </head>
 
     <body>
@@ -22,7 +24,7 @@
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>
                     <div class="input-group">
-                        <label>Descrição do parceiro:</label>
+                        <label>Descrição do Parceiro:</label>
                         <input type="text" name="descricao" id="descricao"
                             placeholder="Escreva a descrição da utilidade pública">
                     </div>

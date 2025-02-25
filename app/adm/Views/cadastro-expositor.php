@@ -9,6 +9,8 @@
     <title>Cadastro de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -26,7 +28,7 @@
         <div class="box">
 
             <div class="title">
-                <h1 class="title-text">Cadastro de expositores</h1>
+                <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
             <div class="formularios">
@@ -37,23 +39,29 @@
                         <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="input2">
-                        <label>Qual seu produto:</label>
-                        <input type="text" name="" id="" placeholder="Informe seu produto" required>
+                        <label>E-mail:</label>
+                        <input type="text" name="" id="" placeholder="E-mail completo" required>
                     </div>
+                    
                     <div class="input3">
-                        <label>Qual cidade reside:</label>
-                        <input type="text" name="" id="" placeholder="Informe sua cidade" required>
-                    </div>
-                    <div class="input4">
-                        <label>Nome da marca ou loja:</label>
+                        <label>Nome da Marca/Loja:</label>
                         <input type="text" name="" id="" placeholder="Digite o nome da sua marca ou loja" required>
                     </div>
+                    <div class="input4">
+                        <label>Qual Cidade Reside:</label>
+                        <input type="text" name="" id="" placeholder="Digite sua cidade" required>
+                    </div>
+                   
                 </div>
 
                 <div class="caixa-contato">
+                    <div class="cpf">
+                        <label>CPF/CNPJ:</label>
+                        <input type="text" name="" id="" placeholder="CPF/CNPJ " required>
+                    </div>
 
                     <div class="whats-ctt">
-                        <label>Whatsapp para contato:</label>
+                        <label>Whatsapp para Contato:</label>
                         <input type="text" name="" id="" placeholder="(67)" required>
                     </div>
 
@@ -68,18 +76,17 @@
                         </datalist>
                     </div>
 
-                    <div class="input-img">
-                        <label>Upload de fotos:</label>
-                        <a href="#" class="upload"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
-                        <button class="carregar-src"><a href="#">Carregar fotos</a></button>
-                    </div>
+                    
 
                 </div>
 
                 <div class="form-opc">
-
-                    <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca de comida:<br>
-                        Qual é a medida EXATA dele?</label>
+                    <div class="input5">
+                        <label>Descrição:</label>
+                        <input type="text" name="" id="" placeholder="Digite uma descrição sobre seu trabalho" required>
+                    </div>
+                    <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca:<br>
+                        Qual a medida EXATA dele?</label>
                     <input list="options1" id="optionInput1" name="option1" placeholder="Selecione">
 
                     <datalist id="options1">
@@ -98,40 +105,47 @@
                         <option value="1000Kw">
                     </datalist>
 
+                    <div class="input-group">
+                        <label>Escolher Imagem:</label>
+                        <input type="file" name="file" id="file"
+                            required>
+                    </div>
                 </div>
 
             </div>
 
             <div class="form-finalizar">
 
-                <div class="edital-feira">
-                    <button><a href="#">Edital da feira</a></button>
+                <!-- <div class="edital-feira">
+                    <button><a href="#">Edital da Feira</a></button>
+                </div> -->
+
+                
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
 
                 <div class="botoes-salvar">
                     <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
                 </div>
 
-                <input type="checkbox" id="modal-checkbox" hidden>
-                <div class="modal-container">
+                <div id="modal" class="modal">
                     <div class="modal-content">
-                        <h1>Confirmar?</h1>
-                        <div class="botoes">
-                            <label for="modal-checkbox" class="salvar">Salvar</label>
-                            <label for="modal-checkbox" class="cancelar">Cancelar</label>
+                        <span class="close">&times;</span>
+                        <p>Deseja realmente salvar as alterações?</p>
+                        <div class="modal-botoes">
+                            <button class="btn-confirmar">Confirmar</button>
+                            <button class="btn-cancelar-modal">Cancelar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
 
             </div>
 
             <div class="form-termos">
 
-                <p class="termos">*Aceito os termos do Edital:</p>
+                <!-- <p class="termos">*Aceito os Termos do Edital:</p>
 
                 <div class="caixa-checkbox">
                     <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
@@ -139,10 +153,10 @@
 
                     <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
                     <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div>
+                </div> -->
 
                 <div class="expositor-kids">
-                    <button><a href="#">Expositor kids</a></button>
+                    <button><a href="#">Expositor Kids</a></button>
                 </div>
                 <div class="artistas">
                     <button><a href="#">Artistas</a></button>
@@ -155,10 +169,10 @@
             <!-- div de edital da feira junto com o chekbox -->
             <div class="edital-resp">
                 <div class="edital-feira">
-                    <button><a href="#">Edital da feira</a></button>
+                    <button><a href="#">Edital da Feira</a></button>
                 </div>
                 
-                <p class="termos">*Aceito os termos do Edital:</p>
+                <p class="termos">*Aceito os Termos do Edital:</p>
 
                 <div class="caixa-checkbox">
                     <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
@@ -172,7 +186,7 @@
             <!-- div para separar o expositor kids/artistas -->
             <div class="expo-resp">
                 <div class="expositor-kids">
-                    <button><a href="#">Expositor kids</a></button>
+                    <button><a href="#">Expositor Kids</a></button>
                 </div>
                 <div class="artistas">
                     <button><a href="#">Artistas</a></button>
@@ -180,8 +194,13 @@
             </div>
 
             <!-- div para salvar e cancelar -->
-            <div class="salvar-resp">
-                <div class="botoes-salvar">
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+                
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
                     <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
                 </div>
 
@@ -196,14 +215,13 @@
                     </div>
                 </div>
 
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
+               
             </div>
 
 
-            <div class="btns">
-              <a href="gerenciar-expositores.php" class="voltar">
+        </div>
+        <div class="btns">
+            <a href="gerenciar-expositores.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
@@ -218,7 +236,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../js/mais.js"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
 </body>
 
