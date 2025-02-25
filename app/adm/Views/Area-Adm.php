@@ -6,12 +6,8 @@
     <title>Área Administrativa</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/Area-Adm.css">
-<<<<<<< HEAD
     <link rel="icon" href="../../imgs/img-home/logo.png" type="image/x-icon">
-=======
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
->>>>>>> f6cb04b89fcf7b24909c968ce4bc2064f0cb84ba
 </head>
 <body>
 
