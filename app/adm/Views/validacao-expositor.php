@@ -20,7 +20,7 @@
                 <img src="../../../Public/imgs/img-validacao-expositor/logomarca.png" alt="logomarca" class="logomarca-imagem-vexp">
             </div>
             <div class="area-produtos-vexp">
-                <h1 class="texto-produtos-vexp">Foto dos Produtos</h1>
+                <h1 class="texto-produtos-vexp">Produtos</h1>
                 <div class="imagens-produtos-vexp">
                     <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-1.jpeg" alt="" class="produto1">
                     <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-2.jpeg" alt="" class="produto2">
@@ -43,8 +43,8 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="whatsapp-expositor">Tipo de Exposição</label>
-                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="Barraca" disabled>
+                        <label for="nome-marca">Marca</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Play Artesanato" disabled>
                     </div>
 
                     <div class="input-group-vexp">
@@ -53,23 +53,28 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="cnpj-expositor">Precisa de Energia</label>
-                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="Sim" disabled>
+                        <label for="whatsapp-expositor">Tipo</label>
+                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="Barraca" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="categoria-expositor">Whatsapp para Contato</label>
+                        <label for="categoria-expositor">Whatsapp</label>
                         <input type="text" name="categoria_expositor" id="categoria-expositor" placeholder="67 99956-6551" disabled>
                     </div>
 
                     <div class="input-group-vexp">
                         <label for="cnpj-expositor">Energia</label>
-                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="220kw" disabled>
+                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="Sim" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">CPF do Expositor</label>
+                        <label for="nome-marca">CPF</label>
                         <input type="text" name="nome_marca" id="nome-marca" placeholder="831.591.143-31" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="cnpj-expositor">Voltagem</label>
+                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="220v" disabled>
                     </div>
 
                     <div class="input-group-vexp">
@@ -83,18 +88,12 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">Nome da Marca</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Play Artesanato" disabled>
-                    </div>
-
-                    <div class="input-group-vexp">
-                        <label for="instagram-expositor">Instagram da Marca</label>
+                        <label for="instagram-expositor">Instagram</label>
                         <div style="position: relative;">
                             <input type="text" name="instagram_expositor" id="instagram-expositor" value="Clique aqui" disabled>
                             <a href="https://instagram.com/playartesanato" target="_blank" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-decoration: none; color: black;"></a>
                         </div>
                     </div>
-
 
                     <div class="input-group-vexp">
                         <label for="nome-marca">Categoria</label>
@@ -121,6 +120,8 @@
             </div>
         </div>
     </div>
+
+    
 
     <!-- recusado com sucesso -->
     <div class="mensagem-recusar-vexp" id="recusado-sucesso-vexp">

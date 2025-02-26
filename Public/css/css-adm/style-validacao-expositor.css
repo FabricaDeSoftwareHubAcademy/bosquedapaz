@@ -177,15 +177,13 @@
     font-weight: 400;
 }
 
-.formulario-informacoes-vexp .link-insta {
-    background-color: rgb(232, 232, 232);
+/* .formulario-informacoes-vexp .link-insta {
+    background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: blue;
     border: none;
     outline: none;
-    width: 100%;
     max-width: 100%;
     height: 55px;
     border-radius: 0.3em;
@@ -193,6 +191,10 @@
     font-size: 18px;
     border-right: 2px solid rgba(0, 0, 0, 0.274);
     border-bottom: 2px solid rgba(0, 0, 0, 0.301);
+} */
+
+#instagram-expositor {
+    color: blue;
 }
  
 .area-botoes-vexp {
@@ -346,7 +348,7 @@
     /* gap: 20px; */
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(214, 214, 214);
     border-radius: 10px;
     transition: all .3s ease;
 }
@@ -368,7 +370,7 @@
 
 .acao-numeroBarraca-vexp label {
     font-size: 18px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 1%;
 }
 
@@ -380,6 +382,7 @@
     outline: none;
     padding-top: 4px;
     text-align: center;
+    color: black;
 }
 
 .acao-corRua-vexp {
@@ -394,7 +397,7 @@
 
 .acao-corRua-vexp label {
     font-size: 18px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 1%;
 }
 
@@ -405,6 +408,7 @@
     outline: none;
     font-size: 18px;
     text-align: center;
+    color: black;
 }
 
 .acao-botoes-validar-vexp {
@@ -488,7 +492,7 @@
     /* gap: 20px; */
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(214, 214, 214);
     border-radius: 10px;
     transition: all .3s ease;
 }
@@ -509,7 +513,7 @@
 
 .trocar-categoria-acao-vexp label {
     font-size: 18px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 1%;
 }
 
@@ -1636,9 +1640,7 @@
         height: 90px;
         height: 100px;
     }
-
-    .input
-
+    
     .input-group-vexp .link-insta {
         margin-bottom: 5%;
         font-size: 1.8rem;
