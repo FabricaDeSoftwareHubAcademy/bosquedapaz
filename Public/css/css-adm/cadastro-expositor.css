@@ -78,6 +78,7 @@
 .formularios div {
     display: flex;
     flex-direction: column;
+    height: 80%;
 }
 
 .formularios input {
@@ -449,82 +450,6 @@ label#salvar-btn {
 
 }
 
-
-
-.tipo-expo{
-    position: relative;
-    top: 20px;
-}
-
-.energia{
-    position: relative;
-    top: 6px;
-}
-
-.equipamentos{
-    position: relative;
-    top: -7px;
-}
-
-.file{
-    position: relative;
-    top: -20px;
-}
-
-.input-group label{
-    position: relative;
-    top: -20px;
-}
-
-.energia-label{
-    position: relative;
-    top: 6px;
-}
-
-.tipo-expo-label{
-    position: relative;
-    top: 23px;
-}
-
-.input-prod{
-    position: relative;
-    top: 6px;
-}
-
-.prod-label{
-    position: relative;
-    top: 10px;
-}
-
-.marca-input{
-    position: relative;
-    top: 5px;
-}
-
-.marca-label{
-    position: relative;
-    top: 6px
-}
-
-.categoria-input{
-    position: relative;
-    top: 7px;
-}
-
-.categorias-label{
-    position: relative;
-    top: 50px;
-}
-
-
-.link-input{
-    position: relative;
-    top: -5px;
-}
-
-
-
-
 .edital-resp {
     display: none;
 }
@@ -535,13 +460,6 @@ label#salvar-btn {
 
 .salvar-resp {
     display: none;
-}
-
-
-
-.custom-dropdown {
-    position: relative;
-    margin-bottom: 15px;
 }
 
 .custom-dropdown input {
@@ -556,49 +474,18 @@ label#salvar-btn {
 }
 
 
-.dropdown-list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    max-height: 150px;
-    overflow-y: auto;
-    width: 100%;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    border-radius: 0 0 4px 4px;
+.select {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
 }
 
-.custom-dropdown input:focus + .dropdown-list {
-    display: block;
-}
 
-.dropdown-list li {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-}
-
-.dropdown-list li:hover {
-    background-color: #f0f0f0;
-}
-
-.dropdown-list li:active {
-    background-color: #e0e0e0;
-}
-
-/* Ajuste para quando a opção for selecionada */
-.custom-dropdown input[value]:not([value=""]) {
-    background-color: #f0f0f0;
-}
 
 
 
