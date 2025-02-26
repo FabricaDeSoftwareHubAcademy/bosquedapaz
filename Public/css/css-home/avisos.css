@@ -69,6 +69,14 @@
     width: 50%;
 }
 
+.img-prox-event-m {
+    display: none;
+}
+
+.img-ulti-publi-m {
+    display: none;
+}
+
 .conteiner-sobre {
     width: 35%;
     display: flex;
@@ -166,4 +174,36 @@
 
 .btn-vermais3:hover .text-verm-3 {
     color: white;
+}
+
+
+@media screen and (max-width: 500px) {
+    .secao-da-tarde{
+        padding: 10px;
+    }
+    .conteiner-img {
+        width: 100%;
+    }
+    
+    .conteiner-img-ulti-publi {
+        width: 100%;
+    }
+    .conteiner-img {
+        display: none;
+    }
+    .img-prox-event {
+        display: none;
+    }
+    .img-ulti-publi {
+        display: none;
+    }
+    
+    .img-prox-event-m {
+        display: block;
+        width: 80%;
+    }
+    
+    .img-ulti-publi-m {
+        display: block;
+    }
 }
