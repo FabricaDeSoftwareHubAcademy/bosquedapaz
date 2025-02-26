@@ -283,7 +283,9 @@ html,.body-recsenha{
 .img-recsenha .img-recsenha-svg-recsenha:hover{
     transform: scale(1.05);
 }
- 
+
+/* responsividade */
+
 @media (max-width:575.98px){
     /* .body-recsenha{
         background-color: grey;
