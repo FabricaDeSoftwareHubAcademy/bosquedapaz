@@ -22,14 +22,14 @@ html,.body-recsenha{
  
 .imgg-superior-direita-recsenha{
     position: absolute;
-    right: -2%;
+    right: 0%;
     top: 8%;
     display: flex;
 }
  
 .imgg-superior-esquerda-recsenha{
     position: absolute;
-    left: -3%;
+    left: 0%;
     top: 6%;
     display: flex;
 }
@@ -309,6 +309,14 @@ html,.body-recsenha{
         display: flex;
     }
 
+    .imgg-superior-direita-recsenha{
+        right: -2%;
+    }
+
+    .imgg-superior-esquerda-recsenha{
+        left: -3%;
+    }
+
     .img-recsenha-svg-recsenha{
         display: none;
     }
@@ -337,8 +345,8 @@ html,.body-recsenha{
 
     .text-h1-recsenha{
         /* background-color: rebeccapurple; */
-        width: 74%;
-        left: 12%;
+        width: 77%;
+        left: 11%;
         bottom: 77%;
         position: fixed;
     }
@@ -378,5 +386,50 @@ html,.body-recsenha{
 
     .botao-enviar-recsenha{
         width: 90%;
+    }
+}
+
+/* responsidivade do dispositivo Surface Duo */
+
+@media (width:540px) and (height:720px) {
+    .area-input-recsenha{
+        width: 75%;
+    }
+}
+
+@media (min-width:576px){
+    .body-recsenha{
+        background-color: blue;
+    }
+}
+
+@media (min-width:768px){
+    .body-recsenha{
+        background-color: red;
+    }
+
+    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
+        width: 150px;
+        height: 150px;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+@media (min-width:992px){
+    .body-recsenha{
+        background-color: yellow;
+    }
+}
+
+@media (min-width:1200px){
+    .body-recsenha{
+        background-color: green;
+    }
+}
+
+@media (min-width:1400px){
+    .body-recsenha{
+        background-color: purple;
     }
 }
