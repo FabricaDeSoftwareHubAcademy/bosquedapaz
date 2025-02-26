@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -20,14 +20,71 @@
 </head>
 
 <body>
-<?php include "../../../Public/assets/home/menu-home.html"; ?>
+    <header class="cabecalho">
+        <!-- inicio menu -->
+            <nav class="menu">
+    
+                <div class="logo"><!-- logo -->
+                    <a href="../../../index.php" class="link-logo"><img src="../../../Public/imgs/img-home/logo.png" class="img-logo" alt="Logo"></a>
+                </div>
+    
+                <div class="nav-bar"> <!-- navegação -->
+                    <ul class="lista-menu">
+                        <li class="li-menu"><a href="../../../index.php" class="link-menu">Início</a></li>
+                        <li class="li-menu"><a href="parceiros-bosque.php" class="link-menu">Parceiros</a></li>
+                        <li class="li-menu"><a href="fale-conosco.php" class="link-menu">Fale Conosco</a></li>
+                        <li class="li-menu"><a href="quem-somos.php" class="link-menu">Quem Somos?</a></li>
+                    </ul>
+                    
+                    <div class="pesquisar-login">
+                        <div class="pesquisar"> <!-- area de pesquisa -->
+                            <input class="input" type="text" placeholder="Pesquisar por...">
+                            <div class="bola"  onclick="inputShow2()">
+                            </div>
+                        </div>
+                        <div class="login"> <!-- area login -->
+                            <a href="../../../Public/tela-login.php" class="link-login"><img src="../../../Public/imgs/img-home/login.png" class="img-login" alt="Login"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="pequisa-mobile">
+                    <div class="pesquisa"> <!-- area de pesquisa -->
+                        <input class="input" type="text" placeholder="Pesquisar por...">
+                        <div class="bola"  onclick="inputShow()">
+                        </div>
+                    </div>
+                    <div class="menu-icon">
+                        <button class="btn-sandwich" onclick="menuShowHome()"><img class="img-sandwich" src="../../../Public/imgs/img-home/menu.png" alt="Menu"></button>
+                    </div>
+                </div>
+            </nav>
+            <!-- fim menu -->
+    
+            <!-- mobile menu -->
+            <div class="mobile-menu"> <!-- navegação -->
+                <ul class="nav-ul">
+                    <li class="nav-item"><a href="../../../index.php" class="link-menu">Início</a></li>
+                    <li class="nav-item"><a href="parceiros-bosque.php" class="link-menu">Parceiros</a></li>
+                    <li class="nav-item"><a href="fale-conosco.php" class="link-menu">Fale Conosco</a></li>
+                    <li class="nav-item"><a href="quem-somos.php" class="link-menu">Quem Somos?</a></li>
+                    <a href="../../../Public/tela-login.php" class="link-login">
+                        <div class="btn-login"> <!-- area login -->
+                            <button class="btnlogin">Login</button>
+                        </div>
+                    </a>
+                </ul>
+    
+            </div>
+            <!-- mobile menu -->
+    </header>
 
     <main class="principal">
 
         <div class="box">
 
             <div class="title">
-                <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
+                <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
             <div class="formularios">
