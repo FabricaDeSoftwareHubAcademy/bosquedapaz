@@ -1,145 +1,272 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Expositor</title>
-    <link rel="stylesheet" href="../../../Public/css/css-home/cadastro-expositor.css">
+    <title>Bosque da paz</title>
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
+
 </head>
+
 <body>
-    <?php include "../../../Public/assets/home/menu-home.html"; ?>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
-    <!-- inicio da parte principal da pagina -->
     <main class="principal">
-        
-        <!-- box principal -->
+
         <div class="box">
-            
-            <h1 class="titulo">Cadastro Expositor</h1>
 
-            <div class="all-content">
-                <form action="" class="form-expositor" method="post">
-                    <div class="div-dados-pessoa">
-                        <div class="div-foto-per">
-                            <input type="file" name="foto-per" id="foto-per" class="foto-per">
-                            <label for="" class="label-foper">arraste sua foto aqui</label>
-                        </div>
-                        <div class="div-input-pessoa">
-                            <div class="inputs-pessoa">
-                                <div class="area-input">
-                                    <label for="" class="label-input">Nome:</label>
-                                    <input type="text" name="nome" id="nome" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Endereço:</label>
-                                    <input type="text" name="endereco" id="endereco" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">E-mail:</label>
-                                    <input type="tel" name="email" id="email " class="input-dados">
-                                </div>
-                            </div>
-                            <div class="inputs-pessoa">
-                                <div class="area-input">
-                                    <label for="" class="label-input">Telefone:</label>
-                                    <input type="tel" name="telefone" id="telefone" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Link Instagram:</label>
-                                    <input type="text" name="link_instagram " id="link_instagram " class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Nome de usuário:</label>
-                                    <input type="text" name="usuario" id="usuario" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Senha:</label>
-                                    <input type="text" name="senha" id="senha" class="input-dados">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="dados-modular">
-                        <div class="up-img">
-                            <div class="arrasta-imgs">
-                                <input type="file" name="imagem" id="imagem" class="imagens">
-                                <label for="" class="up-imgs-expositor">Arraste aqui suas imagens</label>
-                            </div>
-                        </div>
-                        <div class="mudular-expositor">
-
-
-
-                        <div class="inputs-pessoa">
-                            <div class="area-input">
-                                <label for="" class="label-input">Nome da Marca:</label>
-                                <input type="text" name="nome_marca" id="nome_marca" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">dimenções:</label>
-                                <input type="text" name="dimensoes" id="dimensoes" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Numero da Barraca:</label>
-                                <input type="number" name="num_barraca" id="num_barraca" class="input-dados">
-                            </div>
-                            <div class="area-input">
-                                <label for="" class="label-input">Necessita de Energia:</label>
-                                <input type="checkbox" name="energia" id="energia " class="input-dados input-ener">
-                            </div>
-                        </div>
-                        <div class="inputs-pessoa">
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Outro Contato:</label>
-                                <input type="text" name="contato2" id="contato2" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Descrição:</label>
-                                <textarea id="descricao" name="descricao" rows="4" cols="50" class="input-dados descricao">
-                                </textarea>
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Metodos de Pagamento:</label>
-                                <input type="text" name="metodos_pgto" id="metodos_pgto" class="input-dados">
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="btns-salve-reset">
-                        <button type="reset" class="btn-form btn-cancel">
-                        <a href="escolher-cadastro.php" class="link-cas-expositor">Cancelar</a>
-                        </button>
-                        <button type="submit"class="btn-form btn-save">
-                        <a href="../../../index.php" class="link-cas-expositor">Cadastra-se</a>
-                        </button>
-                    </div>
-                </form>
+            <div class="title">
+                <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
+
+            <div class="formularios">
+
+                <div class="form-pessoa">
+                    <div class="input">
+                        <label>Nome completo:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="input">
+                        <label>Whatsapp:</label>
+                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                    </div>
+                    
+                    <div class="input">
+                        <label>E-mail:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input">
+                        <label>Qual Cidade Reside:</label>
+                        <input type="text" name="" id="" placeholder="Digite sua cidade" required>
+                    </div>
+                   
+                </div>
+
+                <div class="form-loja">
+                    <div class="input">
+                        <label class="prod-label" >Produto:</label>
+                        <input type="text" class="input-prod" name="" id="" placeholder="Digite seu produto" required>
+                    </div>
+
+                    <div class="input">
+                        <label class="marca-label" >Marca:</label>
+                        <input class="marca-input" type="text" name="" id="" placeholder="Digite a marca " required>
+                    </div>
+
+                    <div class="input">
+                        <label class-="categorias-label" for="categoria">Categorias</label>
+    
+                        <div class="custom-dropdown">
+                            <input type="text" id="categorias" name="categorias" class="categoria-input" placeholder="Selecione" autocomplete="off">
+                            <ul class="dropdown-list" id="categorias-list">
+                                <li onclick="selecionarOpcao(this, 'categorias')">Gastronomia</li>
+                                <li onclick="selecionarOpcao(this, 'categorias')">Antiguidade</li>
+                                <li onclick="selecionarOpcao(this, 'categorias')">Literatura</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="input">
+                        <label class="link-label">Link:</label>
+                        <input class="link-input" type="text" name="" id="" placeholder="link instagram" required>
+                    </div>
+
+                    
+
+                </div>
+
+                
+                <div class="form-expo">
+                    <label class="tipo-expo-label" for="tipo-expo">Tipo de exposição:</label>
+                    <div class="custom-dropdown">
+                        <input type="text" id="tipo-expo" name="tipo-expo" class="tipo-expo" placeholder="Selecione" autocomplete="off">
+                        <ul class="dropdown-list" id="tipo-expo-list">
+                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Trailer</li>
+                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Food Truck</li>
+                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Barraca</li>
+                        </ul>
+                    </div>
+
+                    <label class="energia-label" for="energia">Precisa de energia?</label>
+                    <div class="custom-dropdown">
+                        <input type="text" id="energia" name="energia" class="energia" placeholder="Selecione" autocomplete="off">
+                        <ul class="dropdown-list" id="energia-list">
+                            <li onclick="selecionarOpcao(this, 'energia')">Sim</li>
+                            <li onclick="selecionarOpcao(this, 'energia')">Não</li>
+                        </ul>
+                    </div>
+
+                    <label for="equipamentos">Voltagens dos equipamentos</label>
+                    <div class="custom-dropdown">
+                        <input type="text" id="equipamentos" class="equipamentos" name="equipamentos" placeholder="Selecione" autocomplete="off">
+                        <ul class="dropdown-list" id="equipamentos-list">
+                            <li onclick="selecionarOpcao(this, 'equipamentos')">110kw</li>
+                            <li onclick="selecionarOpcao(this, 'equipamentos')">220kw</li>
+                        </ul>
+                    </div>
+                    <div class="input-group">
+                        <label>Escolher Imagem:</label>
+                        <input type="file" class="file" name="file" id="file" required>
+                    </div>
+                </div>
+
+                <script>
+                    function selecionarOpcao(elemento, idInput) {
+                        var valorSelecionado = elemento.textContent;
+                        document.getElementById(idInput).value = valorSelecionado;
+                        elemento.parentElement.style.display = 'none';
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.querySelectorAll('.custom-dropdown input').forEach(function(input) {
+                            input.addEventListener('click', function() {
+                                var dropdownList = this.nextElementSibling;
+                                dropdownList.style.display = 'block';
+                            });
+                        });
+
+                        document.addEventListener('click', function(event) {
+                            if (!event.target.matches('.custom-dropdown input')) {
+                                document.querySelectorAll('.dropdown-list').forEach(function(list) {
+                                    list.style.display = 'none';
+                                });
+                            }
+                        });
+                    });
+                </script>
+
+
+
+               
+
+            </div>
+
+            <div class="form-finalizar">
+
+                <!-- <div class="edital-feira">
+                    <button><a href="#">Edital da Feira</a></button>
+                </div> -->
+
+                
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+
+                <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
+
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Deseja realmente salvar as alterações?</p>
+                        <div class="modal-botoes">
+                            <button class="btn-confirmar">Confirmar</button>
+                            <button class="btn-cancelar-modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-termos">
+
+                <!-- <p class="termos">*Aceito os Termos do Edital:</p>
+
+                <div class="caixa-checkbox">
+                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
+                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
+
+                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
+                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
+                </div> -->
+
+                <!-- <div class="expositor-kids">
+                    <button><a href="#">Expositor Kids</a></button>
+                </div>
+                <div class="artistas">
+                    <button><a href="#">Artistas</a></button>
+                </div> -->
+
+            </div>
+
+            <!-- fazendo div para responsividade -->
+
+            <!-- div de edital da feira junto com o chekbox -->
+            <!-- <div class="edital-resp">
+                <div class="edital-feira">
+                    <button><a href="#">Edital da Feira</a></button>
+                </div>
+                
+                <p class="termos">*Aceito os Termos do Edital:</p>
+
+                <div class="caixa-checkbox">
+                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
+                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
+
+                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
+                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
+                </div>
+            </div> -->
+
+            <!-- div para separar o expositor kids/artistas -->
+            <!-- <div class="expo-resp">
+                <div class="expositor-kids">
+                    <button><a href="#">Expositor Kids</a></button>
+                </div>
+                <div class="artistas">
+                    <button><a href="#">Artistas</a></button>
+                </div>
+            </div> -->
+
+            <!-- div para salvar e cancelar -->
+                <div class="botoes">
+                    <div class="botoes-cancelar">
+                        <button onclick="" class="btn-cancelar">Cancelar</button>
+                    </div>
+                    
+                    <div class="salvar-resp">
+                        <div class="botoes-salvar">
+                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                    </div>
+
+                    
+
+                
+                </div>
+
+
         </div>
+        <div class="btns">
+            <a href="gerenciar-expositores.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            </a>
+        </div>
+        
+    </div>
     </main>
 
-    <!-- bolas de fundo -->
     <div class="bolas-fundo">
+
         <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <!-- link do JavaScript -->
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
 </body>
+
 </html>
