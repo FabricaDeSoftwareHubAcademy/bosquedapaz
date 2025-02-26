@@ -274,8 +274,8 @@
     }
 
     .img img{
-        width: 69%;
-        top: 5%;
+        width: 75%;
+        top: 11%;
         position: relative;
     }
 
@@ -298,22 +298,23 @@
 
     .botao-saiba-mais{
         width: 68%;
-        height: -4%;
+        height: -2%;
         z-index: 1;
         top: 50%;
         font-size: 11px;
         align-items: center;
         justify-content: center;
         position: relative;
-        left: 18%;
+        left: 16%;
+        display: flex;
     }
 
     .dec-button{
-    width: 128%;
-    height: 91%;
+    width: 149%;
+    height: 122%;
     transform: rotate(-24deg);
     position: relative;
-    top: -1%;
+    top: -3%;
     left: 0%;
     background-color: #FF3877;
     }
