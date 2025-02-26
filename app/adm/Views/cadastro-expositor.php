@@ -66,13 +66,17 @@
 
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
-                        <input list="options3" id="optionInput3" name="option3" placeholder="Selecione">
+                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
     
-                        <datalist id="options3">
-                            <option value="gastronomia">
-                            <option value="artesanato">
-                            <option value="moda">
-                        </datalist>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="artesanato">artesanato</option>
+                            <option value="gastronia">gastronia</option>
+                            <option value="antiguidade">antiguidade</option>
+                           
+                        </select>
+                        
                     </div>
 
                     <div class="input">
@@ -88,30 +92,38 @@
                 <div class="form-expo">
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="tipo-expo-list">
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Trailer</li>
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Food Truck</li>
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Barraca</li>
-                        </ul>
+                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="trailer">trailer</option>
+                            <option value="food-truck">food truck</option>
+                            <option value="barrca">barrca</option>
+
+                        </select>
                     </div>
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="energia" name="energia" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="energia-list">
-                            <li onclick="selecionarOpcao(this, 'energia')">Sim</li>
-                            <li onclick="selecionarOpcao(this, 'energia')">Não</li>
-                        </ul>
+                        <select name="todas_categorias" id="todas_categorias" class="select">  
+
+                            <option value="">selecione</option>
+                            <option value="sim">sim</option>
+                            <option value="nao">não</option>
+                        
+
+                        </select>
                     </div>
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="equipamentos" name="equipamentos" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="equipamentos-list">
-                            <li onclick="selecionarOpcao(this, 'equipamentos')">110kw</li>
-                            <li onclick="selecionarOpcao(this, 'equipamentos')">220kw</li>
-                        </ul>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="110v">110v</option>
+                            <option value="220v">220v</option>
+                            
+                        </select>
                     </div>
                     <div class="input-group">
                         <label>Escolher Imagem:</label>
@@ -241,6 +253,7 @@
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
+    
 </body>
 
 </html>
