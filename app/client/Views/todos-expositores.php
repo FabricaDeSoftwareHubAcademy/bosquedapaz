@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas de Expositores</title>
-    <link rel="stylesheet" href="../../../Public/css/css-home/lista-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-lista-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 

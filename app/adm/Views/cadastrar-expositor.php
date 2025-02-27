@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosque da paz</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 
@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
+    <script src="../Public/js/js-adm/js-cadastrar-expositor.js"></script>
 
 </head>
 

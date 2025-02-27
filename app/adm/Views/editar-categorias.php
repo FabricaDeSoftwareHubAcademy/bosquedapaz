@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Categorias</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/styles-editar-categorias.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-categorias.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
