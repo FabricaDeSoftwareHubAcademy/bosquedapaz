@@ -65,7 +65,7 @@
 
 .cards-perfis {
     width: 100%;
-    height: 350px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,7 +73,45 @@
     background-color: antiquewhite;
 }
 
-/* .card-per-expo {
+.card-per-expo {
     background-color: aqua;
-    
-} */
+    width: 190px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.head-card {
+    background-color: #F8F8F8;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: 2s;
+}
+
+.body-card {
+    display: none;
+    background-color: #F8F8F8;
+    position: relative;
+    top: -90px;
+    width: 100%;
+    height: 0%;
+    z-index: 0;
+    transition: 1s;
+}
+
+.card-per-expo:hover {
+    display: block;
+}
+
+.card-per-expo:hover .body-card {
+    display: block;
+    height: 77%;
+    background-color: #F8F8F8;
+    transition: all 20s ease;
+}

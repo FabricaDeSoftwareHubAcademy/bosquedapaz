@@ -11,11 +11,24 @@
 
     <div class="listar-expositor">
         <div class="cards-perfis">
-            <!-- <div class="card-per-expo">
+            <div class="card-per-expo">
                 <div class="head-card"></div>
                 <div class="body-card"></div>
-            </div> -->
+            </div>
 
+            <div class="card-per-expo">
+                <div class="head-card"></div>
+                <div class="body-card"></div>
+            </div>
+
+            <div class="card-per-expo">
+                <div class="head-card"></div>
+                <div class="body-card"></div>
+            </div>
+            <div class="card-per-expo">
+                <div class="head-card"></div>
+                <div class="body-card"></div>
+            </div>
         </div>
     </div>
 </section>
