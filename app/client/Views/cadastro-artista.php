@@ -73,61 +73,33 @@
                         <input type="text" name="" id="" placeholder="Número de whatsapp" required>
                     </div>
                    
-                </div>
-
-                <div class="form-loja">
-                <div class="input">
-                    <label>Qual sua linguagem artística?</label>
-                    <select name="todas_categorias" id="todas_categorias" class="select">
-                        <option value="">Selecione</option>
-                        <option value="teatro">Teatro</option>
-                        <option value="danca">Dança</option>
-                        <option value="circo">Circo</option>
-                        <option value="musica">Música</option>
-                    </select>
-                </div>
-
-                <!-- Espaço para o segundo select (será adicionado dinamicamente) -->
-                <div id="estilo_musica_container">
-                    <label>Qual o estilo de música você segue?</label>
-                    <select name="estilo_musica" id="estilo_musica" class="select">
-                        <option value="">Selecione</option>
-                        <option value="rock">Rock</option>
-                        <option value="pop">Pop</option>
-                        <option value="sertanejo">Sertanejo</option>
-                        <option value="eletronica">Eletrônica</option>
-                    </select>
-                </div>
-
-                <!-- <script>
-               
-                    const todasCategorias = document.getElementById('todas_categorias');
-
-                    const estiloMusicaContainer = document.getElementById('estilo_musica_container');
-
-                    todasCategorias.addEventListener('change', function () {
-                  
-                        if (this.value === 'musica') {
-                            estiloMusicaContainer.style.display = 'block'; 
-                        } else {
-                            estiloMusicaContainer.style.display = 'none'; 
-                        }
-                    });
-                </script> -->
-
-                    <!-- <div class="input">
-                        <label>Caso seja musical, qual seu estilo?</label>
+                    <div class="input">
+                        <label>Qual sua linguagem artística?</label>
                         <select name="todas_categorias" id="todas_categorias" class="select">
-
-                            <option value="">selecione</option>
-                            <option value="artesanato">Sertanejo</option>
-                            <option value="gastronia">Pagode</option>
-                            <option value="antiguidade">MPB</option>
-                            <option value="antiguidade">Forró</option>
-                            <option value="antiguidade">Funk</option>
-
+                            <option value="">Selecione</option>
+                            <option value="teatro">Teatro</option>
+                            <option value="danca">Dança</option>
+                            <option value="circo">Circo</option>
+                            <option value="musica">Música</option>
                         </select>
-                    </div> -->
+                    </div>
+                </div>
+
+                
+                <div class="form-expo">
+
+                    <div id="estilo_musica_container">
+                        <label>Qual o estilo de música você segue?</label>
+                        <select name="estilo_musica" id="estilo_musica" class="select">
+                            <option value="">Selecione</option>
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="sertanejo">Sertanejo</option>
+                            <option value="eletronica">Eletrônica</option>
+                        </select>
+                    </div>
+
+                
 
                     <div class="input">
                         <label for="optionInput3">Qual seu publico alvo?</label>
@@ -148,12 +120,9 @@
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
-                    
 
-                </div>
 
-                
-                <div class="form-expo">
+
                     <label for="tipo-expo">Tempo médio da sua apresentação?</label>
                     <div class="custom-dropdown">
                         <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
@@ -180,7 +149,7 @@
                         </select>
                     </div>
 
-                    <label for="equipamentos">Voltagens dos equipamentos</label>
+                    <!-- <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
@@ -189,7 +158,7 @@
                             <option value="220v">220v</option>
                             
                         </select>
-                    </div>
+                    </div> -->
                     <!-- <div class="input-group">
                         <label>Escolher Imagem:</label>
                         <input type="file" name="file" id="file"
