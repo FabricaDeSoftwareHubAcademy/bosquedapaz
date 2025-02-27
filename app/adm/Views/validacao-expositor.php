@@ -43,8 +43,8 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">Marca</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Play Artesanato" disabled>
+                        <label for="marca_expositor">Marca</label>
+                        <input type="text" name="marca_expositor" id="marca-expositor" placeholder="Play Artesanato" disabled>
                     </div>
 
                     <div class="input-group-vexp">
@@ -53,42 +53,42 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="whatsapp-expositor">Tipo</label>
-                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="Barraca" disabled>
+                        <label for="tipo_venda">Tipo</label>
+                        <input type="text" name="tipo_venda" id="tipo-venda" placeholder="Barraca" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="categoria-expositor">Whatsapp</label>
-                        <input type="text" name="categoria_expositor" id="categoria-expositor" placeholder="67 99956-6551" disabled>
+                        <label for="whatsapp_expositor">Whatsapp</label>
+                        <input type="text" name="whatsapp_expositor" id="whatsapp_expositor" placeholder="67 99956-6551" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="cnpj-expositor">Energia</label>
-                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="Sim" disabled>
+                        <label for="energia_expositor">Energia</label>
+                        <input type="text" name="energia_expositor" id="energia-expositor" placeholder="Sim" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">CPF</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="831.591.143-31" disabled>
+                        <label for="cpf_expositor">CPF</label>
+                        <input type="text" name="cpf_expositor" id="cpf-expositor" placeholder="831.591.143-31" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="cnpj-expositor">Voltagem</label>
-                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="220v" disabled>
+                        <label for="voltagem_expositor">Voltagem</label>
+                        <input type="text" name="voltagem_expositor" id="voltagem-expositor" placeholder="220v" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">Cidade</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Campo Grande - MS" disabled>
+                        <label for="cidade_expositor">Cidade</label>
+                        <input type="text" name="cidade_expositor" id="cidade-expositor" placeholder="Campo Grande - MS" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="nome-marca">Endereço</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Afonso Pena N° 1332" disabled>
+                        <label for="endereco_expositor">Endereço</label>
+                        <input type="text" name="endereco_expositor" id="endereco-expositor" placeholder="Afonso Pena N° 1332" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="instagram-expositor">Instagram</label>
+                        <label for="instagram_expositor">Instagram</label>
                         <div style="position: relative;">
                             <input type="text" name="instagram_expositor" id="instagram-expositor" value="Clique aqui" disabled>
                             <a href="https://instagram.com/playartesanato" target="_blank" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-decoration: none; color: black;"></a>
