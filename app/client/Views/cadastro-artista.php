@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,67 +17,32 @@
 
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
+    <!-- <style>
+    
+        .select-opc {
+            width: 40vh;
+            height: 47px;
+            margin: 10px;
+            padding-left: 10px;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid #9d9fa1;
+            border-right: 2px solid #9d9fa1;
+        }
+
+        label {
+           
+            display: block; 
+
+        }
+
+        
+    </style> -->
+
 </head>
 
 <body>
-    <header class="cabecalho">
-        <!-- inicio menu -->
-            <nav class="menu">
-    
-                <div class="logo"><!-- logo -->
-                    <a href="../../../index.php" class="link-logo"><img src="../../../Public/imgs/img-home/logo.png" class="img-logo" alt="Logo"></a>
-                </div>
-    
-                <div class="nav-bar"> <!-- navegação -->
-                    <ul class="lista-menu">
-                        <li class="li-menu"><a href="../../../index.php" class="link-menu">Início</a></li>
-                        <li class="li-menu"><a href="parceiros-bosque.php" class="link-menu">Parceiros</a></li>
-                        <li class="li-menu"><a href="fale-conosco.php" class="link-menu">Fale Conosco</a></li>
-                        <li class="li-menu"><a href="quem-somos.php" class="link-menu">Quem Somos?</a></li>
-                    </ul>
-                    
-                    <div class="pesquisar-login">
-                        <div class="pesquisar"> <!-- area de pesquisa -->
-                            <input class="input" type="text" placeholder="Pesquisar por...">
-                            <div class="bola"  onclick="inputShow2()">
-                            </div>
-                        </div>
-                        <div class="login"> <!-- area login -->
-                            <a href="../../../Public/tela-login.php" class="link-login"><img src="../../../Public/imgs/img-home/login.png" class="img-login" alt="Login"></a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="pequisa-mobile">
-                    <div class="pesquisa"> <!-- area de pesquisa -->
-                        <input class="input" type="text" placeholder="Pesquisar por...">
-                        <div class="bola"  onclick="inputShow()">
-                        </div>
-                    </div>
-                    <div class="menu-icon">
-                        <button class="btn-sandwich" onclick="menuShowHome()"><img class="img-sandwich" src="../../../Public/imgs/img-home/menu.png" alt="Menu"></button>
-                    </div>
-                </div>
-            </nav>
-            <!-- fim menu -->
-    
-            <!-- mobile menu -->
-            <div class="mobile-menu"> <!-- navegação -->
-                <ul class="nav-ul">
-                    <li class="nav-item"><a href="../../../index.php" class="link-menu">Início</a></li>
-                    <li class="nav-item"><a href="parceiros-bosque.php" class="link-menu">Parceiros</a></li>
-                    <li class="nav-item"><a href="fale-conosco.php" class="link-menu">Fale Conosco</a></li>
-                    <li class="nav-item"><a href="quem-somos.php" class="link-menu">Quem Somos?</a></li>
-                    <a href="../../../Public/tela-login.php" class="link-login">
-                        <div class="btn-login"> <!-- area login -->
-                            <button class="btnlogin">Login</button>
-                        </div>
-                    </a>
-                </ul>
-    
-            </div>
-            <!-- mobile menu -->
-    </header>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
     <main class="principal">
 
@@ -95,8 +60,8 @@
                         <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="input">
-                        <label>Whatsapp:</label>
-                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                        <label>Nome artistico:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu nome artistico " required>
                     </div>
                     
                     <div class="input">
@@ -104,39 +69,83 @@
                         <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
                     </div>
                     <div class="input">
-                        <label>Qual Cidade Reside:</label>
-                        <input type="text" name="" id="" placeholder="Digite sua cidade" required>
+                        <label>Whatsapp:</label>
+                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
                     </div>
                    
                 </div>
 
                 <div class="form-loja">
-                    <div class="input">
-                        <label class="prod-label" >Produto:</label>
-                        <input type="text" class="input-prod" name="" id="" placeholder="Digite seu produto" required>
-                    </div>
+                <div class="input">
+                    <label>Qual sua linguagem artística?</label>
+                    <select name="todas_categorias" id="todas_categorias" class="select">
+                        <option value="">Selecione</option>
+                        <option value="teatro">Teatro</option>
+                        <option value="danca">Dança</option>
+                        <option value="circo">Circo</option>
+                        <option value="musica">Música</option>
+                    </select>
+                </div>
+
+                <!-- Espaço para o segundo select (será adicionado dinamicamente) -->
+                <div id="estilo_musica_container">
+                    <label>Qual o estilo de música você segue?</label>
+                    <select name="estilo_musica" id="estilo_musica" class="select">
+                        <option value="">Selecione</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="sertanejo">Sertanejo</option>
+                        <option value="eletronica">Eletrônica</option>
+                    </select>
+                </div>
+
+                <!-- <script>
+               
+                    const todasCategorias = document.getElementById('todas_categorias');
+
+                    const estiloMusicaContainer = document.getElementById('estilo_musica_container');
+
+                    todasCategorias.addEventListener('change', function () {
+                  
+                        if (this.value === 'musica') {
+                            estiloMusicaContainer.style.display = 'block'; 
+                        } else {
+                            estiloMusicaContainer.style.display = 'none'; 
+                        }
+                    });
+                </script> -->
+
+                    <!-- <div class="input">
+                        <label>Caso seja musical, qual seu estilo?</label>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="artesanato">Sertanejo</option>
+                            <option value="gastronia">Pagode</option>
+                            <option value="antiguidade">MPB</option>
+                            <option value="antiguidade">Forró</option>
+                            <option value="antiguidade">Funk</option>
+
+                        </select>
+                    </div> -->
 
                     <div class="input">
-                        <label class="marca-label" >Marca:</label>
-                        <input class="marca-input" type="text" name="" id="" placeholder="Digite a marca " required>
-                    </div>
-
-                    <div class="input">
-                        <label class-="categorias-label" for="categoria">Categorias</label>
+                        <label for="optionInput3">Qual seu publico alvo?</label>
     
-                        <div class="custom-dropdown">
-                            <input type="text" id="categorias" name="categorias" class="categoria-input" placeholder="Selecione" autocomplete="off">
-                            <ul class="dropdown-list" id="categorias-list">
-                                <li onclick="selecionarOpcao(this, 'categorias')">Gastronomia</li>
-                                <li onclick="selecionarOpcao(this, 'categorias')">Antiguidade</li>
-                                <li onclick="selecionarOpcao(this, 'categorias')">Literatura</li>
-                            </ul>
-                        </div>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="artesanato">Adulto</option>
+                            <option value="gastronia">Infantil</option>
+                            <option value="antiguidade">Misto</option>
+                           
+                        </select>
+                        
                     </div>
 
                     <div class="input">
-                        <label class="link-label">Link:</label>
-                        <input class="link-input" type="text" name="" id="" placeholder="link instagram" required>
+                        <label>Link:</label>
+                        <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
                     
@@ -145,63 +154,48 @@
 
                 
                 <div class="form-expo">
-                    <label class="tipo-expo-label" for="tipo-expo">Tipo de exposição:</label>
+                    <label for="tipo-expo">Tempo médio da sua apresentação?</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="tipo-expo" name="tipo-expo" class="tipo-expo" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="tipo-expo-list">
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Trailer</li>
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Food Truck</li>
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Barraca</li>
-                        </ul>
+                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="trailer">30min</option>
+                            <option value="food-truck">50min</option>
+                            <option value="barrca">60min</option>
+
+                        </select>
                     </div>
 
-                    <label class="energia-label" for="energia">Precisa de energia?</label>
+                    <label for="energia">Qual valor do cache?</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="energia" name="energia" class="energia" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="energia-list">
-                            <li onclick="selecionarOpcao(this, 'energia')">Sim</li>
-                            <li onclick="selecionarOpcao(this, 'energia')">Não</li>
-                        </ul>
+                        <select name="todas_categorias" id="todas_categorias" class="select">  
+
+                            <option value="">selecione</option>
+                            <option value="sim">Até R$200</option>
+                            <option value="nao">Até R$500</option>
+                            <option value="nao">Até R$1.000</option>
+                        
+
+                        </select>
                     </div>
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="equipamentos" class="equipamentos" name="equipamentos" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="equipamentos-list">
-                            <li onclick="selecionarOpcao(this, 'equipamentos')">110kw</li>
-                            <li onclick="selecionarOpcao(this, 'equipamentos')">220kw</li>
-                        </ul>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="110v">110v</option>
+                            <option value="220v">220v</option>
+                            
+                        </select>
                     </div>
-                    <div class="input-group">
+                    <!-- <div class="input-group">
                         <label>Escolher Imagem:</label>
-                        <input type="file" class="file" name="file" id="file" required>
-                    </div>
+                        <input type="file" name="file" id="file"
+                            required>
+                    </div> -->
                 </div>
-
-                <script>
-                    function selecionarOpcao(elemento, idInput) {
-                        var valorSelecionado = elemento.textContent;
-                        document.getElementById(idInput).value = valorSelecionado;
-                        elemento.parentElement.style.display = 'none';
-                    }
-
-                    document.addEventListener('DOMContentLoaded', function() {
-                        document.querySelectorAll('.custom-dropdown input').forEach(function(input) {
-                            input.addEventListener('click', function() {
-                                var dropdownList = this.nextElementSibling;
-                                dropdownList.style.display = 'block';
-                            });
-                        });
-
-                        document.addEventListener('click', function(event) {
-                            if (!event.target.matches('.custom-dropdown input')) {
-                                document.querySelectorAll('.dropdown-list').forEach(function(list) {
-                                    list.style.display = 'none';
-                                });
-                            }
-                        });
-                    });
-                </script>
 
 
 
@@ -324,6 +318,7 @@
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
+    
 </body>
 
 </html>
