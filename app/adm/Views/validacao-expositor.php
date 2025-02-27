@@ -116,12 +116,24 @@
             <h1 class="acao-texto-recusar-vexp">Deseja recusar o expositor?</h1>
             <div class="acao-botoes-recusar-vexp">
                 <a href=""><button class="botao-cancelar-vexp">Cancelar</button></a>
-                <a href="#recusado-sucesso-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
+                <a href="#motivo-recusar-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
             </div>
         </div>
     </div>
 
-    
+    <!-- motivo para recusar expositor -->
+    <div class="motivo-recusar-vexp" id="motivo-recusar-vexp">
+        <div class="motivo-recusar-content-vexp">
+            <h1 class="motivo-recusar-texto-vexp">Digite o Motivo</h1>
+            <div class="area-texto-recusar-vexp">
+                <textarea name="" id="" cols="30" rows="6" required></textarea>
+            </div>
+            <div class="motivo-recusar-botoes-vexp">
+                <a href=""><button class="botao-cancelar-vexp">Cancelar</button></a>
+                <a href="#recusado-sucesso-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
+            </div>
+        </div>
+    </div>
 
     <!-- recusado com sucesso -->
     <div class="mensagem-recusar-vexp" id="recusado-sucesso-vexp">

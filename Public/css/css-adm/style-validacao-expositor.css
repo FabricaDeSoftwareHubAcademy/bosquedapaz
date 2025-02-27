@@ -283,6 +283,64 @@
     /* background-color: red; */
 }
 
+#motivo-recusar-vexp {
+    display: none;
+}
+
+#motivo-recusar-vexp:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+.motivo-recusar-content-vexp {
+    width: 45%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.area-texto-recusar-vexp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    background-color: rgb(214, 214, 214);
+    border-radius: 10px;
+}
+
+.area-texto-recusar-vexp textarea {
+    width: 90%;
+    border: none;
+    resize: none;
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.motivo-recusar-botoes-vexp {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
+}
+
 #recusado-sucesso-vexp:target {
     display: flex;
     justify-content: center;
@@ -767,6 +825,49 @@
         gap: 30px;
         /* background-color: red; */
     }
+
+    .motivo-recusar-content-vexp {
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        gap: 20px;
+        z-index: 2;
+    }
+    
+    .area-texto-recusar-vexp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 40%;
+        background-color: rgb(214, 214, 214);
+        border-radius: 10px;
+    }
+    
+    .area-texto-recusar-vexp textarea {
+        width: 90%;
+        border: none;
+        resize: none;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .motivo-recusar-botoes-vexp {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        /* background-color: red; */
+    }
     
     .mensagem-content-recusar-vexp {
         width: 90%;
@@ -1080,6 +1181,49 @@
     .acao-botoes-recusar-vexp {
         width: 90%;
         height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        /* background-color: red; */
+    }
+
+    .motivo-recusar-content-vexp {
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        gap: 20px;
+        z-index: 2;
+    }
+    
+    .area-texto-recusar-vexp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 40%;
+        background-color: rgb(214, 214, 214);
+        border-radius: 10px;
+    }
+    
+    .area-texto-recusar-vexp textarea {
+        width: 90%;
+        border: none;
+        resize: none;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .motivo-recusar-botoes-vexp {
+        width: 55%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1404,6 +1548,49 @@
     .acao-botoes-recusar-vexp {
         width: 90%;
         height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        /* background-color: red; */
+    }
+
+    .motivo-recusar-content-vexp {
+        width: 90%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        gap: 20px;
+        z-index: 2;
+    }
+    
+    .area-texto-recusar-vexp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 40%;
+        background-color: rgb(214, 214, 214);
+        border-radius: 10px;
+    }
+    
+    .area-texto-recusar-vexp textarea {
+        width: 90%;
+        border: none;
+        resize: none;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .motivo-recusar-botoes-vexp {
+        width: 55%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1748,6 +1935,49 @@
         gap: 30px;
         /* background-color: red; */
     }
+
+    .motivo-recusar-content-vexp {
+        width: 90%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        gap: 20px;
+        z-index: 2;
+    }
+    
+    .area-texto-recusar-vexp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 40%;
+        background-color: rgb(214, 214, 214);
+        border-radius: 10px;
+    }
+    
+    .area-texto-recusar-vexp textarea {
+        width: 90%;
+        border: none;
+        resize: none;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .motivo-recusar-botoes-vexp {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        /* background-color: red; */
+    }
     
     .mensagem-content-recusar-vexp {
         width: 90%;
@@ -2073,6 +2303,49 @@
     .acao-botoes-recusar-vexp {
         width: 90%;
         height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        /* background-color: red; */
+    }
+
+    .motivo-recusar-content-vexp {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        gap: 20px;
+        z-index: 2;
+    }
+    
+    .area-texto-recusar-vexp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 40%;
+        background-color: rgb(214, 214, 214);
+        border-radius: 10px;
+    }
+    
+    .area-texto-recusar-vexp textarea {
+        width: 90%;
+        border: none;
+        resize: none;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .motivo-recusar-botoes-vexp {
+        width: 55%;
         display: flex;
         justify-content: center;
         align-items: center;
