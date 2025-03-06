@@ -16,7 +16,7 @@
     <!-- formas -->
     <main class="main-edpass">
         <section class="section-b-edpass">
-            <div class="box-edpass"></div>
+        <div class="box-edpass"></div>
             <div class="forma-1-edpass">
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma1.svg" alt="elemento1">
             </div>
@@ -202,16 +202,7 @@
                                     
                                     Se precisar de mais ajustes ou quiser adicionar algo, é só me falar! 🌸</p>
                         </div>
-                    </div>
-                </div>
-            </div> 
-
-
-        <!-- modal 4 -->
-        <div class="modal-edpass" id="modal4-edpass">
-            <span class="close-edpass" data-modal="modal4-edpass">&times;</span>
-            <div class="modal-content-edpass">
-                <div class="modal-img-edpass">
+                        Login 
                     <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 4" class="gg-img-edpass">
                     <div class="modal-img-p-edpass">
                         <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 4" class="p-img-edpass">
