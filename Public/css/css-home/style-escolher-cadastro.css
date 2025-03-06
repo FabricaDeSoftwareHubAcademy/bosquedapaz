@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url("menu.css");
+@import url("style-menu.css");
 
 * {
     margin: 0;
@@ -30,20 +30,6 @@
     padding: 10px 0px;
     gap: 10px;
     transition: all .5s ease-in-out;
-
-    #linha-vertical-ec{
-        height: 640px;
-        border-right: 3px solid rgba(0, 126, 112, 1);
-        position: fixed;
-        left: 50%;
-        top: 8%;
-    }
-}
-
-.seta-ec{
-    position: relative;
-    top: 90%;
-    left: 2%;
 }
 
 .principal .box:hover{
@@ -51,7 +37,13 @@
     backdrop-filter: blur(30px);
 }
 
-.area-infs-ec{
+.principal .box .seta-ec{
+    position: relative;
+    top: 90%;
+    left: 2%;
+}
+
+.principal .box .area-infs-ec{
     width: 50%;
     height: 100%;
     display: flex;
@@ -65,24 +57,23 @@
 .area-infs-ec h1{
     font-size: 30px;
     position: relative;
-    bottom: 8%;
+    bottom: 1%;
 }
 
-.area-total-button {
+.box .area-infs-ec .area-total-button {
     width: 60%;
     height: 10%;
     background-color: white;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    border-radius: 60px;
-    transition: all .2s ease-in-out ;
-    cursor: pointer;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    padding: 30px;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     transition: all .2s ease-in-out;
-    position: relative;
-    bottom: 5%;
+    margin-bottom: 0.5rem;
 }
 
 .area-total-button:hover{
@@ -110,46 +101,17 @@
     border: none; 
 }
 
-
-
-.icon-input-ec{
-    width: 10%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-input-ec i{
-    color: white;
-    font-size: 30px;
-}
-
-.text-input-ec{
-    width: 60%;
-    height: 100%;
-    background-color: rgba(255, 0, 242, 0);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: white;
-}
-
-.text-input-ec p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.area-img-ec{
+.principal .box .area-img-ec{
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(137, 43, 226, 0);
+}
+
+.area-img-ec img{
+    margin-right: 6rem;
 }
 
 .bolas-fundo {
@@ -186,50 +148,36 @@
 }
 
 @media screen and (max-width: 720px) {
-    .area-img-ec{
+    .principal .box .area-img-ec{
         display: none;
     }
 
-    #linha-vertical-ec{
-        display: none;
-    }
-
-    .area-total-button{
-        width: 100%;
-        font-size: 16px;
-        right: 8%;
-    }
-
-    .area-infs-ec{
-        width: 90%;
-        gap: 35px;
-    }
-
-    .text-input-ec p{
-        right: 15%;
-    }
-
-    .icon-input-ec{
-        width: 20%;
-    }
-
-    .text-input-ec{
-        width: 80%;
-    }
-    
-    .bolas-fundo img {
+    .bolas-fundo img{
         width: 15%;
         height: auto;
     }
 
-    .area-infs-ec h1{
-        font-size: 25px;
-        right: 8%;
+    .principal .box .seta-ec{
+        top: 0%;
     }
 
-    #p-ed-kids{
-        right: 6%;
+    .principal .box .area-infs-ec{
+        background-color: rgba(0, 255, 255, 0);
+        width: 100%;
+        position: relative;
+        right: 1.5rem;
+        gap: 35px;
     }
+
+    .box .area-infs-ec .area-total-button{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .area-infs-ec h1{
+        font-size: 29px;
+    }
+
 }
 
 @media (max-width: 768px) and (min-height: 1024px){
@@ -238,50 +186,21 @@
         height: 90vh;
     }
 
-    .area-img-ec{
-        background-color: #ff387700;
-        width: 40%;
+    .principal .box .area-img-ec{
+        display: none;
     }
 
-    .area-img-ec img{
-        width: 80%;
-        height: auto;
-    }
-
-    .area-infs-ec{
-        width: 60%;
-    }
-
-    .principal .box{
-        height: 95%;
+    .principal .box .area-infs-ec{
+        background-color: rgba(0, 255, 255, 0);
+        width: 100%;
         position: relative;
-        right: 2%;
-        #linha-vertical-ec{
-            left: 64%;
-            height: 400px;
-            top: 25%;
-        }
+        right: 1.5rem;
     }
 
-    .area-total-button{
-        width: 90%;
+    .box .area-infs-ec .area-total-button{
+        width: 70%;
     }
 
-    .text-input-ec p{
-        right: 10%;
-    }
-
-    .icon-input-ec{
-        width: 20%;
-    }
-
-    .text-input-ec{
-        width: 80%;
-    }  
-    
-    #p-ed-kids{
-        right: 2%;
-    }
 }
 
 @media (min-width: 820px) and (min-height: 1180px){
@@ -290,53 +209,24 @@
         height: 90vh;
     }
 
-    .area-img-ec{
-        background-color: #ff387700;
+    .principal .box .area-infs-ec{
+        background-color: rgba(0, 255, 255, 0);
+        width: 60%;
+        position: relative;
+        right: 1.5rem;
+    }
+
+    .box .area-infs-ec .area-total-button{
+        width: 70%;
+    }
+
+    .principal .box .area-img-ec{
         width: 40%;
     }
 
-    .area-img-ec img{
-        width: 80%;
+    .principal .box .area-img-ec img{
+        width: 90%;
         height: auto;
-    }
-
-    .area-infs-ec{
-        width: 60%;
-    }
-
-    .principal .box{
-        height: 80%;
-        position: relative;
-        #linha-vertical-ec{
-            height: 500px;
-            left: 63%;
-            top: 20%;
-        }
-    }
-
-    .area-total-button{
-        width: 95%;
-        font-size: 20px;
-    }
-
-    .text-input-ec p{
-        right: 5%;
-    }
-
-    .icon-input-ec{
-        width: 20%;
-    }
-
-    .text-input-ec{
-        width: 80%;
-    }    
-
-    .icon-input-ec i{
-        font-size: 35px;
-    }
-
-    #p-ed-kids{
-        right: 0%;
     }
 }
 
@@ -345,48 +235,34 @@
         background-color: #ff387700;
     }
 
-    .area-img-ec{
+    .principal .box .area-img-ec{
         display: none;
     }
-
-    .principal .box{
-        #linha-vertical-ec{
-            display: none;
-        }
-    }
-
-    .area-total-button{
-        width: 80%;
-    }
-
-    .area-infs-ec{
+    
+    .principal .box .area-infs-ec{
         background-color: rgba(0, 255, 255, 0);
-        width: 70%;
+        width: 100%;
+        position: relative;
+        right: 1.5rem;
     }
 
-    .area-infs-ec h1{
-        bottom: 5%;
+    .box .area-infs-ec .area-total-button{
+        width: 55%;
     }
 
-    .icon-input-ec{
+    .bolas-fundo .bola-rosa{
         width: 15%;
+        height: auto;
+    }
+    .bolas-fundo .bola-verde1{
+        width: 10%;
+        height: auto;
+    }
+    .bolas-fundo .bola-verde2{
+        width: 10%;
+        height: auto;
     }
 
-    .text-input-ec{
-        width: 85%;
-    }
-
-    .text-input-ec p{
-        right: 25%;
-    }
-
-    .bolas-fundo img{
-        width: 15%;
-    }
-
-    #p-ed-kids{
-        right: 20%;
-    }
 }
 
 @media (min-width: 1280px) and (max-height: 800px){
@@ -394,43 +270,33 @@
         background-color: #ff387700;
     }
 
-    .area-img-ec img{
-        width: 70%;
+    .principal .box .area-infs-ec{
+        background-color: rgba(0, 255, 255, 0);
+        width: 60%;
     }
 
-    .area-img-ec{
+    .principal .box .area-img-ec{
         width: 40%;
     }
 
-    .principal .box{
-        #linha-vertical-ec{
-            height: 550px;
-            left: 58%;
-        }
+    .principal .box .area-img-ec img{
+        width: 80%;
+        height: auto;
     }
 
-    .area-infs-ec{
-        width: 60%;
-        background-color: rgba(0, 255, 255, 0);
-    }
-
-    .text-input-ec p{
-        right: 24%;
-    }
-
-    .text-input-ec{
-        width: 85%;
-    }
-
-    .icon-input-ec{
+    .bolas-fundo .bola-rosa{
         width: 15%;
+        height: auto;
     }
 
-    .icon-input-ec i{
-        font-size: 30px;
+    .bolas-fundo .bola-verde1{
+        width: 10%;
+        height: auto;
     }
 
-    #p-ed-kids{
-        right: 20%;
+    .bolas-fundo .bola-verde2{
+        width: 10%;
+        height: auto;
     }
+
 }

@@ -797,7 +797,7 @@
     height: 55%;
     background-color: white;
     position: absolute;
-    top: 26%;
+    top: 50%;
     left: 22%;
     border: none;
     border-radius: 10px;
@@ -1187,7 +1187,7 @@
 /* Responsividade Ipad Mini: */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .area-principal-ProEv {
-        height: 950px;
+        height: 930px;
         background-color: rgba(0, 0, 255, 0);
     }
 
@@ -1198,12 +1198,12 @@
     .box-decorativa-ProEv {
         background-color: rgba(0, 255, 255, 0);
         height: 95%;
-        top: 6%;
+        top: 1.8%;
     }
 
     .div-decorativa-ProEv {
         right: 22%;
-        bottom: 62%;
+        bottom: 65%;
         transform: rotate(-20deg);
     }
 
@@ -1213,10 +1213,10 @@
     }
 
     .titulo-principal-ProEv {
-        font-size: 60px;
+        font-size: 30px;
         top: 35%;
         right: 25%;
-        transform: rotate(20.5deg);
+        transform: rotate(20deg);
     }
 
     .bolota-decorativa-Pro-Ev {
@@ -1226,16 +1226,22 @@
     .box-principal-ProEv {
         background-color: rgba(0, 0, 0, 0);
         border: 1px solid rgba(0, 126, 112, 1);
+        top: 1rem;
+        flex-direction: column;
     }
 
     .area-info-evento-ProEv {
-        background-color: rgba(137, 43, 226, 0);
+        background-color: rgba(43, 70, 226, 0);
+        width: 100%;
+        height: 50%;
+        position: relative;
+        bottom: 2.5rem;
     }
 
     .div-img-do-ev-ProEv {
         background-color: rgba(0, 255, 255, 0);
-        flex-direction: column;
-        top: 10%;
+        flex-direction: row;
+        top: 0%;
         left: 0;
         height: 60%;
     }
@@ -1243,6 +1249,8 @@
     .banner-evento-ProEv {
         background-color: rgba(0, 0, 255, 0);
         width: 100%;
+        position: relative;
+        bottom: 2rem;
     }
 
     .infs-evento-ProEv {
@@ -1252,20 +1260,22 @@
 
     .area-atracao-evento-ProEv {
         background-color: rgba(153, 0, 255, 0);
+        width: 100%;
+        height: 55%;
     }
 
     .div-cards-atracoes-ProEv {
         background-color: rgba(0, 255, 255, 0);
         height: 85%;
-        top: 6%;
+        top: 3%;
         gap: 30px;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .card-atracao-ProEv {
-        width: 70%;
-        height: 40%;
-        top: 0%;
+        width: 40%;
+        height: 90%;
+        top: ;
 
         #linha-decorativa-ProEv {
             bottom: 48%;

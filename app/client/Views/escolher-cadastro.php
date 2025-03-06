@@ -16,34 +16,25 @@
         <div class="box">
             <div class="seta-ec"><a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></a></div>
             
-            <div id="linha-vertical-ec"></div>
             <div class="area-infs-ec">
                 <h1>Escolher Cadastro</h1>
                 <a href="cadastro-expositor.php" class="area-total-button" id='button-ec-1'>
-                    <div class="icon-input-ec">
-                        <i id="icon-ec" class="bi bi-shop-window"></i>
-                    </div>
-                    <div class="text-input-ec">
-                        <p>Cadastro de Expositor</p>
-                    </div>
+                    <i id="icon-ec" class="bi bi-shop-window"></i>
+                    <p>Cadastro de Expositor</p>
                 </a>
+
                 <a href="cadastro-expositor-kids.php" class="area-total-button" id='button-ec-2'>
-                    <div class="icon-input-ec">
-                        <i id="icon-ec" class="bi bi-person-plus"></i>
-                    </div>
-                    <div class="text-input-ec">
-                        <p id="p-ed-kids">Cadastro de Expositor Kids</p>
-                    </div>
+                    <i id="icon-ec" class="bi bi-person-plus"></i>
+                    <p id="p-ed-kids">Cadastro de Expositor Kids</p>
                 </a>
+                
                 <a href="cadastro-artista.php" class="area-total-button" id='button-ec-3'>
-                    <div class="icon-input-ec">
-                        <i id="icon-ec" class="bi bi-music-note-list"></i>
-                    </div>
-                    <div class="text-input-ec">
-                        <p>Cadastro de Expositor</p>
-                    </div>
+                    <i id="icon-ec" class="bi bi-music-note-list"></i>
+                    <p>Cadastro de Artista</p>
                 </a>
             </div>
+
+
             <div class="area-img-ec">
                 <img src="../../../Public/imgs/img-escolher-cadastro/img-ec.svg" alt="">
             </div>
