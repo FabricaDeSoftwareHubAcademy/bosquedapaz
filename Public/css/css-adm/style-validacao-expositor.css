@@ -297,6 +297,7 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.589);
+    z-index: 1;
 }
 
 .motivo-recusar-content-vexp {
@@ -315,14 +316,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 50%;
+    width: 90%;
+    height: 40%;
     background-color: rgb(214, 214, 214);
     border-radius: 10px;
 }
 
 .area-texto-recusar-vexp textarea {
-    width: 90%;
+    width: 95%;
     border: none;
     resize: none;
     outline: none;
@@ -628,7 +629,7 @@
 }
 
 .botao-voltar-vexp {
-    top: 45.6vw;
+    top: 47.6vw;
     left: 6.5vw;
     width: 40px;
     height: auto;
@@ -2312,7 +2313,7 @@
 
     .motivo-recusar-content-vexp {
         width: 90%;
-        height: 80%;
+        height: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
