@@ -38,7 +38,7 @@
                 </a>
                 </div>
                 <div class="Botoes-relat">
-                    <a href="index-lista-de-espera.php" class="link-area-icon">
+                    <a href="lista-de-espera.php" class="link-area-icon">
                     <div class="area-icon-relat">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                         <p>Lista de Espera</p>
@@ -47,7 +47,7 @@
                     </a>
 
                 <div class="Botoes-relat">
-                    <a href="" class="link-area-icon">
+                    <a href="relatorio-expositor.php" class="link-area-icon">
                     <div class="area-icon-relat">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                         <p>Relatório Expositor </p>
@@ -56,14 +56,13 @@
                 </a>
 
                 <div class="Botoes-relat">
-                <a href="RelatorioExpositor.php" class="link-area-icon">
+                <a href="listar-adm.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                 <p>Relatório Usuários</p>
                 </div>
                 </a>
 </div>
-
 
             </div>
 

@@ -1,122 +1,235 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Expositor</title>
-    <link rel="stylesheet" href="../../../Public/css/css-home/cadastro-expositor.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-</head>
-<body>
-    <?php include "../../../Public/assets/home/menu-home.html"; ?>
+    <title>Bosque da paz</title>
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
 
-    <!-- inicio da parte principal da pagina -->
-    <main class="principal">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
+
+    <!-- <style>
+    
+        .select-opc {
+            width: 40vh;
+            height: 47px;
+            margin: 10px;
+            padding-left: 10px;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid #9d9fa1;
+            border-right: 2px solid #9d9fa1;
+        }
+
+        label {
+           
+            display: block; 
+
+        }
+
         
-        <!-- box principal -->
+    </style> -->
+
+</head>
+
+<body>
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
+
+    <main class="principal">
+
         <div class="box">
-            
-            <h1 class="titulo">Cadastro de Artistas</h1>
 
-            <div class="all-content">
-                <form action="" class="form-expositor" method="post">
-                    <div class="div-dados-pessoa">
-                        <div class="div-foto-per">
-                            <input type="file" name="foto-per" id="foto-per" class="foto-per">
-                            <label for="" class="label-foper">arraste sua foto aqui</label>
-                        </div>
-                        <div class="div-input-pessoa">
-                            <div class="inputs-pessoa">
-                                <div class="area-input">
-                                    <label for="" class="label-input">Nome:</label>
-                                    <input type="text" name="nome" id="nome" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Endereço:</label>
-                                    <input type="text" name="endereco" id="endereco" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">E-mail:</label>
-                                    <input type="tel" name="email" id="email " class="input-dados">
-                                </div>
-                            </div>
-                            <div class="inputs-pessoa">
-                                <div class="area-input">
-                                    <label for="" class="label-input">Telefone:</label>
-                                    <input type="tel" name="telefone" id="telefone" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Link Instagram:</label>
-                                    <input type="text" name="link_instagram " id="link_instagram " class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Nome de usuário:</label>
-                                    <input type="text" name="usuario" id="usuario" class="input-dados">
-                                </div>
-                                <div class="area-input">
-                                    <label for="" class="label-input">Senha:</label>
-                                    <input type="text" name="senha" id="senha" class="input-dados">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="dados-modular">
-                        <div class="up-img">
-                            <div class="arrasta-imgs">
-                                <input type="file" name="imagem" id="imagem" class="imagens">
-                                <label for="" class="up-imgs-expositor">Arraste aqui suas imagens</label>
-                            </div>
-                        </div>
-                        <div class="mudular-expositor">
-
-                        <div class="inputs-pessoa">
-                            <div class="area-input">
-                                <label for="" class="label-input">Tipo do Artista:</label>
-                                <input type="text" name="tipo_artista" id="tipo_artista" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Linguagem Artistica:</label>
-                                <input type="text" name="linguagem_artistica" id="linguagem_artistica" class="input-dados">
-                            </div>
-
-                            <div class="area-input">
-                                <label for="" class="label-input">Tempo de apresentação:</label>
-                                <input type="time" name="tempo_apresentacao" id="tempo_apresentacao" class="input-dados">
-                            </div>
-                            <div class="area-input">
-                                <label for="" class="label-input">Valor Cache:</label>
-                                <input type="text" name="valor_cache" id="valor_cache" class="input-dados">
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-
-                    <div class="btns-salve-reset">
-                        <button type="reset" class="btn-form btn-cancel">
-                        <a href="escolher-cadastro.php" class="link-cas-expositor">Cancelar</a>
-                        </button>
-                        <button type="submit"class="btn-form btn-save">
-                        <a href="../../../index.php" class="link-cas-expositor">Cadastra-se</a>
-                        </button>
-                    </div>
-                </form>
+            <div class="title">
+                <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
+
+            <div class="formularios">
+
+                <div class="form-pessoa">
+                    <div class="input">
+                        <label>Nome completo:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="input">
+                        <label>Nome artistico:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu nome artistico " required>
+                    </div>
+                    
+                    <div class="input">
+                        <label>E-mail:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input">
+                        <label>Whatsapp:</label>
+                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                    </div>
+
+                    <div class="input">
+                        <label>Link:</label>
+                        <input type="text" name="" id="" placeholder="link instagram" required>
+                    </div>
+                   
+                   
+                </div>
+
+                
+                <div class="form-expo">
+
+                    
+                    <div class="input">
+                        <label>Qual sua linguagem artística?</label>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+                            <option value="">Selecione</option>
+                            <option value="teatro">Teatro</option>
+                            <option value="danca">Dança</option>
+                            <option value="circo">Circo</option>
+                            <option value="musica">Música</option>
+                        </select>
+                    </div>
+
+
+                    <div id="estilo_musica_container">
+                        <label>Qual o estilo de música você segue?</label>
+                        <select name="estilo_musica" id="estilo_musica" class="select">
+                            <option value="">Selecione</option>
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="sertanejo">Sertanejo</option>
+                            <option value="eletronica">Eletrônica</option>
+                        </select>
+                    </div>
+
+                
+
+                    <div class="input">
+                        <label for="optionInput3">Qual seu publico alvo?</label>
+    
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="artesanato">Adulto</option>
+                            <option value="gastronia">Infantil</option>
+                            <option value="antiguidade">Misto</option>
+                           
+                        </select>
+
+                        
+                        
+                    </div>
+
+                 
+
+
+
+                    <label for="tipo-expo">Tempo médio da sua apresentação?</label>
+                    <div class="custom-dropdown">
+                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="trailer">30min</option>
+                            <option value="food-truck">50min</option>
+                            <option value="barrca">60min</option>
+
+                        </select>
+                    </div>
+
+                    <label for="energia">Qual valor do cache?</label>
+                    <div class="custom-dropdown">
+                        <select name="todas_categorias" id="todas_categorias" class="select">  
+
+                            <option value="">selecione</option>
+                            <option value="sim">Até R$200</option>
+                            <option value="nao">Até R$500</option>
+                            <option value="nao">Até R$1.000</option>
+                        
+
+                        </select>
+                    </div>
+
+                </div>
+
+
+
+               
+
+            </div>
+
+            <div class="form-finalizar">
+
+                <!-- <div class="edital-feira">
+                    <button><a href="#">Edital da Feira</a></button>
+                </div> -->
+
+                
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+
+                <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
+
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Deseja realmente salvar as alterações?</p>
+                        <div class="modal-botoes">
+                            <button class="btn-confirmar">Confirmar</button>
+                            <button class="btn-cancelar-modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+         
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+                    
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
+
+                    
+
+                
+            </div>
+
+
         </div>
+        <div class="btns">
+            <a href="gerenciar-expositores.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            </a>
+        </div>
+        
+    </div>
     </main>
 
-    <!-- bolas de fundo -->
     <div class="bolas-fundo">
+
         <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <!-- link do JavaScript -->
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
+    
 </body>
+
 </html>

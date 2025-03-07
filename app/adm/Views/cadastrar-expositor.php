@@ -6,9 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Expositor</title>
+    <title>Bosque da paz</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 
@@ -17,7 +17,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <script src="../js/main.js"></script>
+    <script src="../Public/js/js-adm/js-cadastrar-expositor.js"></script>
+
 </head>
 
 <body>
@@ -33,84 +34,109 @@
 
             <div class="formularios">
 
-                <div class="caixa-formulario">
-                    <div class="input1">
+                <div class="form-pessoa">
+                    <div class="input">
                         <label>Nome completo:</label>
                         <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
                     </div>
-                    <div class="input2">
-                        <label>E-mail:</label>
-                        <input type="text" name="" id="" placeholder="E-mail completo" required>
+                    <div class="input">
+                        <label>Whatsapp:</label>
+                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
                     </div>
                     
-                    <div class="input3">
-                        <label>Nome da Marca/Loja:</label>
-                        <input type="text" name="" id="" placeholder="Digite o nome da sua marca ou loja" required>
+                    <div class="input">
+                        <label>E-mail:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
                     </div>
-                    <div class="input4">
+                    <div class="input">
                         <label>Qual Cidade Reside:</label>
                         <input type="text" name="" id="" placeholder="Digite sua cidade" required>
                     </div>
                    
                 </div>
 
-                <div class="caixa-contato">
-                    <div class="cpf">
-                        <label>CPF/CNPJ:</label>
-                        <input type="text" name="" id="" placeholder="CPF/CNPJ " required>
+                <div class="form-loja">
+                    <div class="input">
+                        <label>Produto:</label>
+                        <input type="text" name="" id="" placeholder="Digite seu produto" required>
                     </div>
 
-                    <div class="whats-ctt">
-                        <label>Whatsapp para Contato:</label>
-                        <input type="text" name="" id="" placeholder="(67)" required>
+                    <div class="input">
+                        <label>Marca:</label>
+                        <input type="text" name="" id="" placeholder="Digite a marca " required>
                     </div>
 
-                    <div class="categoria-prod">
+                    <div class="input">
                         <label for="optionInput3">Categorias</label>
-                        <input list="options3" id="optionInput3" name="option3" placeholder="Selecione">
+                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
     
-                        <datalist id="options3">
-                            <option value="gastronomia">
-                            <option value="artesanato">
-                            <option value="moda">
-                        </datalist>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="artesanato">artesanato</option>
+                            <option value="gastronia">gastronia</option>
+                            <option value="antiguidade">antiguidade</option>
+                           
+                        </select>
+                        
+                    </div>
+
+                    <div class="input">
+                        <label>Link:</label>
+                        <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
                     
 
                 </div>
 
-                <div class="form-opc">
-                    <div class="input5">
-                        <label>Descrição:</label>
-                        <input type="text" name="" id="" placeholder="Digite uma descrição sobre seu trabalho" required>
+                
+                <div class="form-expo">
+                    <label for="tipo-expo">Tipo de exposição:</label>
+                    <div class="custom-dropdown">
+                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="trailer">trailer</option>
+                            <option value="food-truck">food truck</option>
+                            <option value="barrca">barrca</option>
+
+                        </select>
                     </div>
-                    <label for="optionInput1">Se você possui um trailer, foodtruck ou barraca:<br>
-                        Qual a medida EXATA dele?</label>
-                    <input list="options1" id="optionInput1" name="option1" placeholder="Selecione">
 
-                    <datalist id="options1">
-                        <option value="3m²">
-                        <option value="5m²">
-                        <option value="10m²">
-                    </datalist>
+                    <label for="energia">Precisa de energia?</label>
+                    <div class="custom-dropdown">
+                        <select name="todas_categorias" id="todas_categorias" class="select">  
 
-                    <label for="optionInput2">Precisa de energia para vender seus produtos?<br>
-                        Se sim, para quais voltagens e quais equipamentos:</label>
-                    <input list="options2" id="optionInput2" name="option2" placeholder="selecione">
+                            <option value="">selecione</option>
+                            <option value="sim">sim</option>
+                            <option value="nao">não</option>
+                        
 
-                    <datalist id="options2">
-                        <option value="300Kw">
-                        <option value="500Kw">
-                        <option value="1000Kw">
-                    </datalist>
+                        </select>
+                    </div>
 
+                    <label for="equipamentos">Voltagens dos equipamentos</label>
+                    <div class="custom-dropdown">
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="110v">110v</option>
+                            <option value="220v">220v</option>
+                            
+                        </select>
+                    </div>
                     <div class="input-group">
                         <label>Escolher Imagem:</label>
                         <input type="file" name="file" id="file"
                             required>
                     </div>
                 </div>
+
+
+
+               
 
             </div>
 
@@ -155,19 +181,19 @@
                     <label for="checkbox-nao" class="text-checkbox">- Não</label>
                 </div> -->
 
-                <div class="expositor-kids">
+                <!-- <div class="expositor-kids">
                     <button><a href="#">Expositor Kids</a></button>
                 </div>
                 <div class="artistas">
                     <button><a href="#">Artistas</a></button>
-                </div>
+                </div> -->
 
             </div>
 
             <!-- fazendo div para responsividade -->
 
             <!-- div de edital da feira junto com o chekbox -->
-            <div class="edital-resp">
+            <!-- <div class="edital-resp">
                 <div class="edital-feira">
                     <button><a href="#">Edital da Feira</a></button>
                 </div>
@@ -181,42 +207,33 @@
                     <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
                     <label for="checkbox-nao" class="text-checkbox">- Não</label>
                 </div>
-            </div>
+            </div> -->
 
             <!-- div para separar o expositor kids/artistas -->
-            <div class="expo-resp">
+            <!-- <div class="expo-resp">
                 <div class="expositor-kids">
                     <button><a href="#">Expositor Kids</a></button>
                 </div>
                 <div class="artistas">
                     <button><a href="#">Artistas</a></button>
                 </div>
-            </div>
+            </div> -->
 
             <!-- div para salvar e cancelar -->
-            <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-                
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                <input type="checkbox" id="modal-checkbox" hidden>
-                <div class="modal-container">
-                    <div class="modal-content">
-                        <h1>Confirmar?</h1>
-                        <div class="botoes">
-                            <label for="modal-checkbox" class="salvar"><label for="">Salvar</label></label>
-                            <label for="modal-checkbox" class="cancelar"><label for="">Cancelar</label></label>
-                        </div>
+                <div class="botoes">
+                    <div class="botoes-cancelar">
+                        <button onclick="" class="btn-cancelar">Cancelar</button>
                     </div>
-                </div>
+                    
+                    <div class="salvar-resp">
+                        <div class="botoes-salvar">
+                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                    </div>
 
-               
-            </div>
+                    
+
+                
+                </div>
 
 
         </div>
@@ -238,6 +255,7 @@
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
+    
 </body>
 
 </html>

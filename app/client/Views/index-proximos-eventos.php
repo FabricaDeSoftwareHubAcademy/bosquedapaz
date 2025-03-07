@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/css/css-home/proximos-eventos.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-proximos-eventos.css">
     <title>Próximo Evento</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
