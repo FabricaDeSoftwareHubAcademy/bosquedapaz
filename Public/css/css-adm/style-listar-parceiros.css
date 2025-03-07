@@ -115,11 +115,12 @@ h2 {
 
 .acao-content-editar {
     width: 30%;
-    height: 20%;
+    height: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
     background-color: white;
     border-radius: 10px;
 }
@@ -133,9 +134,17 @@ h2 {
 }
 
 .acao-input-edit {
-    width: 70%;
+    width: 80%;
+    min-height: 45px;
     padding: 5px;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box;
 }
+
 .acao-botoes-editar {
     width: 90%;
     height: 45%;
