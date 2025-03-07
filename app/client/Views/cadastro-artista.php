@@ -17,27 +17,7 @@
 
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
-    <!-- <style>
-    
-        .select-opc {
-            width: 40vh;
-            height: 47px;
-            margin: 10px;
-            padding-left: 10px;
-            border-radius: 5px;
-            border: none;
-            border-bottom: 2px solid #9d9fa1;
-            border-right: 2px solid #9d9fa1;
-        }
 
-        label {
-           
-            display: block; 
-
-        }
-
-        
-    </style> -->
 
 </head>
 
