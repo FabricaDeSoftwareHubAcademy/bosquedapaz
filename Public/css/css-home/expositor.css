@@ -204,6 +204,7 @@
 .span-color {
     font-weight: 500;
     padding: 2px 5px;
+    color: white;
     border-radius: .5rem;
 }
 
@@ -231,5 +232,12 @@
     border-radius: .5rem;
     color: #5C8001;
     font-weight: 500;
+    cursor: pointer;
     background-color: white;
+    transition: all .2s ease-in;
+}
+
+.btn-ver-info:hover {
+    background-color: #5C8001;
+    color: white;
 }
