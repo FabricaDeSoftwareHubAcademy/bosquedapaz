@@ -32,100 +32,171 @@ h2 {
     font-size: 30px;
 }
 
-
-/* Estilo do ícone de editar */
 .edit-icon i {
     color: #333;
-    /* Cor do ícone de editar */
     margin-right: 12px;
-    /* Espaçamento à direita do ícone */
     font-size: 18px;
-    /* Tamanho do ícone (ajuste conforme necessário) */
 }
 
-/* Estilo do ícone de excluir */
 .delete-icon i {
     color: #333;
-    /* Cor do ícone de excluir */
     font-size: 18px;
-    /* Tamanho do ícone (ajuste conforme necessário) */
 }
 
-/* Remover o sublinhado dos links */
-.edit-icon,
-.delete-icon {
-    text-decoration: none;
-    /* Remove o sublinhado */
-}
-
-/* Cor ao passar o mouse (hover) */
 .edit-icon:hover i,
 .delete-icon:hover i {
     color: #007bff;
-    /* Cor de hover para os ícones (ajuste conforme necessário) */
+    text-decoration: none;
 }
 
-/* Estilização para o Modal usando a classe .modal */
-.modal {
+#modal-validar, #modal-recusar,
+#recusado-sucesso, #validacao-sucesso {
     display: none;
-    /* Inicialmente escondido */
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#modal-recusar:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 2;
+}
+
+.acao-content-recusar {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.acao-texto-recusar {
+    width: 80%;
     text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1000;
-    /* Coloca o modal acima de outros conteúdos */
-    overflow: hidden;
+    font-weight: bold;
+    font-size: 26px;
+    /* background-color: red; */
 }
 
-/* Títulos dentro do modal */
-.modal h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
+.acao-botoes-recusar {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
 }
 
-/* Estilo do campo de entrada de texto */
-.modal input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+
+
+
+#modal-editar:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 2;
 }
 
-/* Estilo do parágrafo dentro do modal */
-.modal-edit {
-    margin: auto;
+.acao-content-editar {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.acao-texto-editar {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    /* background-color: red; */
+}
+
+.acao-input-edit {
+    width: 70%;
+    padding: 5px;
+}
+.acao-botoes-editar {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+.botao-recusar, .botao-validar,
+.botao-cancelar, .botao-confirmar {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
     border: none;
-    padding: 10px;
-    border-radius: 30px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
 }
 
-.modal-edit input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    /* Cor de fundo suave */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    /* Suaviza o foco */
+/* .botao-recusar:hover, .botao-validar:hover,
+.botao-cancelar:hover, .botao-confirmar:hover {
+    colocar efeito de box-shadow no hover do botão 
+} */
+
+.botao-recusar, .botao-cancelar {
+    background-color: #FF3877;
+    color: white;
 }
 
-/* Estilização dos botões dentro do modal */
+.botao-validar, .botao-confirmar {
+    background-color: #007E70;
+    color: white;
+}
+
+#recusado-sucesso:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 2;
+}
+
+.mensagem-content-recusar {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -134,33 +205,6 @@ button {
     border-radius: 5px;
     margin: 10px 5px;
 }
-
-/* Botão de Cancelar */
-.cancel-btn {
-    background-color: #f44336;
-    /* Vermelho */
-    color: white;
-}
-
-/* Botão de Confirmar */
-.confirm-btn {
-    background-color: #4CAF50;
-    /* Verde */
-    color: white;
-}
-
-/* Hover nos botões */
-button:hover {
-    opacity: 0.8;
-}
-
-/* Estilo do backdrop (fundo escuro atrás do modal) */
-.modal::backdrop {
-    background: rgba(0, 0, 0, 0.521);
-    /* Escurece o fundo atrás do modal */
-}
-
-
 
 .container {
     width: 90%;
@@ -239,7 +283,6 @@ button:hover {
     background-color: #f1f1f1;
 }
 
-
 .status {
     padding: 5px 10px;
     border: none;
@@ -250,18 +293,24 @@ button:hover {
 }
 
 .status.active {
-    background-color: #28a745;
+    background-color: #007E70;
     color: white;
     border-radius: 8px;
 }
 
 .status.inactive {
-    background-color: #dc3545;
+    background-color: #FF3877;
     color: white;
     border-radius: 8px;
 }
 
 .edit-icon {
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.delete-icon {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
