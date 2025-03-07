@@ -22,7 +22,7 @@ body {
     max-width: 1800px;
     min-height: 80vh;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 6.5%;
     height: auto;
     
 
@@ -204,7 +204,7 @@ body {
 }
 
 .botao-voltar-guilherme {
-    width: 50px;
+    width: 70px;
     height: auto;
     transition: all .3s ease;
     left: 83px;
@@ -234,7 +234,7 @@ body {
     width: 170px;
     height: auto;
     right: 0px;
-    top: 80%;
+    top: 75%;
     z-index: -1;
     /* background-color: red; */
 }
