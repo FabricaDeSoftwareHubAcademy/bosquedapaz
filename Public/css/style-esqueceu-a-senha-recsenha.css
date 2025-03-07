@@ -20,49 +20,34 @@ html,.body-recsenha{
     background-color: #e1e1e1;
 }
  
-.img-superior-direita-recsenha{
+.imgg-superior-direita-recsenha{
     position: absolute;
     right: 0%;
     top: 8%;
-    /* background-color: red; */
-}
-
-.img-superior-direita-recsenha .imgg-superior-direita-recsenha{
     display: flex;
 }
  
-.img-superior-esquerda-recsenha{
+.imgg-superior-esquerda-recsenha{
     position: absolute;
     left: 0%;
     top: 6%;
-    /* background-color: red; */
-}
-
-.img-superior-esquerda-recsenha .imgg-inferior-esquerda-recsenha{
     display: flex;
 }
+
  
-.img-inferior-direita-recsenha{
+.imgg-inferior-direita-recsenha{
+    display: flex;
     position: absolute;
     right: 0%;
     bottom: 0%;
     height: 32%;
-    /* background-color: red; */
-}
-
-.img-inferior-direita-recsenha .imgg-inferior-direita-recsenha{
-    display: flex;
 }
  
-.img-inferior-esquerda-recsenha{
+.imgg-inferior-esquerda-recsenha{
+    display: flex;
     position: absolute;
     left: 0%;
     bottom: 0%;
-    /* background-color: red; */
-}
-
-.img-inferior-esquerda-recsenha .imgg-inferior-esquerda-recsenha{
-    display: flex;
 }
  
 .section-recsenha{
@@ -73,11 +58,20 @@ html,.body-recsenha{
     align-items: center;
     justify-content: center;
 }
- 
-/* .botao-voltar{
-    margin-top: 46%;
-    margin-left: 1%;
-} */
+
+.img-circle{
+    display: flex;
+    /* background-color: red; */
+}
+
+.voltar{
+    display: flex;
+    background-color: rebeccapurple;
+    width: fit-content;
+    bottom: 11%;
+    left: 8.5%;
+    position: absolute;
+}
  
 .box-recsenha{
     background-color: rgba(248, 245, 246, 0.705);
@@ -101,21 +95,11 @@ html,.body-recsenha{
     }
 }
  
-/* .box-recsenha:hover{
-    background-color: #f0f0f013;
-    backdrop-filter: blur(30px);
- 
-    #linha-bet-recsenha{
-        border-right: 3px solid #162868;
-    }
-} */
- 
 .area-recsenha{
     display: flex;
     flex-direction: column;
     width: 42%;
     margin-left: 4%;
-    /* background-color: red; */
 }
  
 .div-redefinicao{
@@ -123,7 +107,6 @@ html,.body-recsenha{
     justify-content: center;
     font-size: 20px;
     font-weight: 600;
-    /* background-color: rgb(138, 21, 124); */
 }
  
 .div-text-recsenha{
@@ -135,13 +118,15 @@ html,.body-recsenha{
     margin: 10px auto;
     padding: 10px;
     font-size: 18px;
-    /* background-color: aqua; */
+}
+
+.div-text-recsenha .text-rec{
+    font-weight: 500;
 }
  
 .form-recsenha{
     display: flex;
     flex-direction: column;
-    /* background-color: purple; */
     justify-content: center;
     align-items: center;
 }
@@ -155,7 +140,6 @@ html,.body-recsenha{
  
 .area-input-recsenha{
     display: flex;
-    /* justify-content: center; */
     width: 55%;
     height: 38px;
     align-items: center;
@@ -274,8 +258,8 @@ html,.body-recsenha{
     justify-content: center;
     left: 8%;
 }
- 
-.area-img-recsenha .text-h1-recsenha{
+
+.text-h1-recsenha{
     display: flex;
     justify-content: center;
     font-size: 25px;
@@ -299,19 +283,40 @@ html,.body-recsenha{
 .img-recsenha .img-recsenha-svg-recsenha:hover{
     transform: scale(1.05);
 }
- 
+
+/* responsividade */
+
+/* reposividade de celulares */
+
 @media (max-width:575.98px){
-    .body-recsenha{
+    /* .body-recsenha{
         background-color: grey;
-    }
+    } */
 
     #linha-bet-recsenha{
+        display: none;
+    }
+
+    .img-recsenha{
+        display: none;
+    }
+
+    .img-recsenha-svg-recsenha{
         display: none;
     }
 
     .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
         width: 120px;
         height: 120px;
+        display: flex;
+    }
+
+    .imgg-superior-direita-recsenha{
+        right: -2%;
+    }
+
+    .imgg-superior-esquerda-recsenha{
+        left: -3%;
     }
 
     .img-recsenha-svg-recsenha{
@@ -328,8 +333,138 @@ html,.body-recsenha{
     }
 
     .area-recsenha{
-        background-color: green;
+        /* background-color: green; */
         width: 90%;
-        bottom: 90%;
+        bottom: 40%;
+        left: 0%;
+        position: absolute;
+    }
+
+    .area-input-recsenha{
+        /* background-color: red; */
+        width: 90%;
+    }
+
+    .text-h1-recsenha{
+        /* background-color: rebeccapurple; */
+        width: 77%;
+        left: 11%;
+        bottom: 77%;
+        position: fixed;
+    }
+
+    .div-text-recsenha{
+        /* background-color: red; */
+        right: 0%;
+        width: 90%;
+        position: relative;
+    }
+
+    .voltar{
+        /* background-color: red; */
+        bottom: 8%;
+        position: fixed;
+    }
+
+    .text-endereco-email{
+        /* background-color: aqua; */
+        left: -7%;
+        position: relative;
+    }
+
+    .area-img-recsenha{
+        /* background-color: red; */
+        height: 0%;
+    }
+
+    .div-botoes-recsenha{
+        gap: 25px;
+        left: 1%;
+    }
+
+    .botao-cancelar-recsenha{
+        width: 90%;
+    }
+
+    .botao-enviar-recsenha{
+        width: 90%;
     }
 }
+
+/* responsidivade do dispositivo Surface Duo */
+
+@media (width:540px) and (height:720px) {
+    .area-input-recsenha{
+        width: 75%;
+    }
+}
+/* 
+@media (min-width:576px){
+    .body-recsenha{
+        background-color: blue;
+    }
+} */
+
+/* responsividade tablets */
+
+/* @media (min-width:768px){
+
+    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
+        width: 150px;
+        height: 150px;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .div-text-recsenha{
+        position: relative;
+        width: 100%;
+    }
+
+    .area-img-recsenha{
+        width: 300px;
+        height: 300px;
+    }
+
+    .input-recsenha{
+        width: 100%;
+    }
+
+    .area-input-recsenha{
+        width: 100%;
+    }
+
+    .img-recsenha .img-recsenha-svg-recsenha{
+        width: 290px;
+        height: 290px;
+        right: 29%;
+        position: relative;
+    }
+
+    .text-h1-recsenha{
+        position: relative;
+        bottom: 35%;
+        right: 4%;
+    }
+
+}
+
+@media (min-width:992px){
+    .body-recsenha{
+        background-color: yellow;
+    }
+}
+
+@media (min-width:1200px){
+    .body-recsenha{
+        background-color: green;
+    }
+}
+
+@media (min-width:1400px){
+    .body-recsenha{
+        background-color: purple;
+    }
+
+
+} */
