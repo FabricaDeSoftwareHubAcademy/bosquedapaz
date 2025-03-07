@@ -42,17 +42,11 @@ h2 {
 }
 
 .search-bar {
-    position: sticky;
-    top: 0;
-    background: white;
-    z-index: 1000;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
-
 
 .search-bar label {
     font-weight: bold;
@@ -87,17 +81,13 @@ h2 {
     width: 100%;
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
 .collaborators-table thead {
-    position: sticky;
-    top: 60px;
     background-color: rgb(32, 54, 139);
     color: white;
-    z-index: 999;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .collaborators-table th,
 .collaborators-table td {
