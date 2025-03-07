@@ -15,7 +15,23 @@
                     <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                    <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-laranja">
+                                Laranja
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
@@ -24,7 +40,23 @@
                     <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                    <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-roxo">
+                                Roxa
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
@@ -33,7 +65,23 @@
                     <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-verde">
+                                Verde
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
             <div class="card-per-expo">
@@ -41,7 +89,23 @@
                     <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-amarela">
+                                Amarelo
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
         </div>
@@ -51,7 +115,23 @@
                     <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-roxo">
+                                Roxa
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
@@ -60,7 +140,23 @@
                     <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-verde">
+                                verde
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
@@ -69,7 +165,23 @@
                     <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                
+                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-amarela">
+                                Amarelo
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
             <div class="card-per-expo">

@@ -116,13 +116,23 @@
     transition: all .2s ease-in;
 }
 
-.card-per-expo:hover .body-card {
+.body-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     gap: 20px;
     height: 80%;
 }
+
+/* .card-per-expo:hover .body-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    height: 80%;
+} */
 
 .card-per-expo:hover .head-card {
     top: 0px;
@@ -156,4 +166,70 @@
     color: black;
     text-decoration: none;
     font-weight: 500;
+}
+
+.nome-expo {
+    margin-top: 110px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.detalhes-expo {
+    width: 95%;
+    border-top: 1px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.para-cate {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.span-cate {
+    font-weight: 400;
+}
+
+.para-color {
+    font-weight: 600;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.span-color {
+    font-weight: 500;
+    padding: 2px 5px;
+    border-radius: .5rem;
+}
+
+.color-amarela {
+    background-color: var(--color-rua1);
+}
+
+.color-verde {
+    background-color: var(--color-rua3);
+}
+
+.color-roxo {
+    background-color: var(--color-rua4);
+    color: white;
+}
+
+.color-laranja {
+    background-color: var(--color-rua2);
+    color: white;
+}
+
+.btn-ver-info {
+    padding: 5px 10px;
+    border: 2px solid #5C8001;
+    border-radius: .5rem;
+    color: #5C8001;
+    font-weight: 500;
+    background-color: white;
 }
