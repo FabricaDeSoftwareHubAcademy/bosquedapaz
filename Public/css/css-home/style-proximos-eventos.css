@@ -155,8 +155,8 @@
 
 .area-setaProEv {
     position: relative;
-    top: 93%;
-    left: 3%;
+    top: 95%;
+    left: 1%;
 }
 
 /* Area das Informações do Evento */
@@ -396,7 +396,6 @@
     z-index: 999;
     display: none;
 }
-
 .dlog-modal-card-ProEv {
     width: 75%;
     height: 80%;
@@ -716,6 +715,7 @@
     border: none;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 1000;
 }
 
 .div-infs-evento-modalres {
@@ -1058,7 +1058,7 @@
         width: 90%;
         height: 25%;
         left: 5%;
-        top: 35%;
+        top: 50%;
     }
 
     .div-decorativa-modalres {
@@ -1137,7 +1137,7 @@
         width: 90%;
         height: 25%;
         left: 5%;
-        top: 35%;
+        top: 50%;
     }
 
     .div-decorativa2-modalres2 {
@@ -1191,8 +1191,17 @@
         background-color: rgba(0, 0, 255, 0);
     }
 
+    .formas-decorativas-ProEv1{
+        right: 85vw;
+    }
+
+    .formas-decorativas-ProEv2{
+        left: 95vw;
+    }
+
     .formas-decorativas-ProEv3 {
         top: 88vh;
+        left: 88vw;
     }
 
     .box-decorativa-ProEv {
@@ -1213,9 +1222,9 @@
     }
 
     .titulo-principal-ProEv {
-        font-size: 30px;
-        top: 35%;
-        right: 25%;
+        font-size: 25px;
+        top: 34%;
+        right: 18%;
         transform: rotate(20deg);
     }
 
@@ -1235,7 +1244,7 @@
         width: 100%;
         height: 50%;
         position: relative;
-        bottom: 2.5rem;
+        bottom: 0rem;
     }
 
     .div-img-do-ev-ProEv {
@@ -1275,22 +1284,22 @@
     .card-atracao-ProEv {
         width: 40%;
         height: 90%;
-        top: ;
+        top: 0%;
 
         #linha-decorativa-ProEv {
-            bottom: 48%;
+            bottom: 41%;
             right: 52%;
         }
     }
 
     .div-decoratica-do-card-ProEv {
         position: relative;
-        bottom: 55%;
+        bottom: 42%;
     }
 
     .card-atracao-ProEv {
         #linha-decorativa2-ProEv {
-            top: 40%;
+            top: 54%;
             left: 26%;
         }
     }
@@ -1318,7 +1327,7 @@
 
     .atracao-ProEv {
         font-size: 25px;
-        top: 11%;
+        top: 2%;
     }
 
     .area-img-banner-ProEv img {
@@ -1435,23 +1444,23 @@
 /* Responsividade Ipad Air: */
 @media (min-width: 820px) and (min-height: 1180px) {
     .div-decoratica-do-card-ProEv {
-        bottom: 50%;
+        bottom: 39%;
 
         #linha-decorativa2-ProEv {
-            top: 47%;
+            top: 58%;
         }
     }
 
     .button-saibamais-ProEv {
         font-size: 15px;
-        width: 60%;
-        top: 8%;
-        left: 16%;
+        width: 67%;
+        top: 4%;
+        left: 14%;
     }
 
     .card-atracao-ProEv {
         #linha-decorativa-ProEv {
-            bottom: 45%;
+            bottom: 40%;
         }
     }
 
@@ -1462,11 +1471,11 @@
 
     .box-principal-ProEv {
         height: 100%;
-        top: 12%;
+        top: 5%;
     }
 
     .box-decorativa-ProEv {
-        top: 12%;
+        top: 5%;
     }
 }
 
@@ -1495,12 +1504,13 @@
     .box-principal-ProEv {
         height: 95%;
         top: 7%;
+        flex-direction: column;
     }
 
     .titulo-principal-ProEv {
-        font-size: 80px;
+        font-size: 35px;
         top: 35%;
-        right: 22%;
+        right: 19%;
         transform: rotate(20.5deg);
     }
 
@@ -1514,13 +1524,15 @@
     }
 
     .area-info-evento-ProEv {
-        background-color: rgba(137, 43, 226, 0);
+        background-color: rgba(0, 255, 255, 0);
+        width: 100%;
+        height: 50%;
     }
 
     .div-img-do-ev-ProEv {
         background-color: rgba(0, 255, 255, 0);
-        flex-direction: column;
-        top: 10%;
+        flex-direction: row;
+        top: 0%;
         left: 0;
         height: 60%;
     }
@@ -1535,50 +1547,67 @@
         width: 100%;
     }
 
+    .data-do-ev-ProEv{
+        font-size: 60px;
+    }
+
+    .horario-do-ev-ProEv{
+        font-size: 23px;
+        left: 0.5rem;
+    }
+
+    .local-do-ev-ProEv{
+        font-size: 18px;
+        text-align: justify;
+        right: 1rem;
+    }
+
     .area-atracao-evento-ProEv {
         background-color: rgba(153, 0, 255, 0);
+        width: 100%;
+        height: 50%;
     }
 
     .div-cards-atracoes-ProEv {
         background-color: rgba(0, 255, 255, 0);
-        height: 80%;
+        height: 85%;
         top: 0%;
         gap: 30px;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .card-atracao-ProEv {
-        width: 70%;
-        height: 40%;
-        top: 5%;
+        width: 40%;
+        height: 90%;
+        top: 0%;
         #linha-decorativa-ProEv {
             height: 180px;
-            bottom: 40%;
+            bottom: 35%;
             right: 55%;
         }
     }
 
     .div-decoratica-do-card-ProEv {
-        bottom: 35%;
+        bottom: 26%;
         left: 2%;
     }
 
     .card-atracao-ProEv {
         #linha-decorativa2-ProEv {
             height: 185px;
-            top: 70%;
+            top: 82%;
             left: 26%;
         }
     }
 
     .button-saibamais-ProEv {
-        top: 0%;
-        left: 18%;
+        top: 6%;
+        left: 13%;
     }
 
     .atracao-ProEv {
         font-size: 30px;
-        top: 9%;
+        top: 0%;
     }
 
     .div-banner-atracao-ProEv {
@@ -1711,6 +1740,8 @@
 
     .box-principal-ProEv {
         border: 2px solid rgba(0, 126, 112, 1);
+        height: 100%;
+        flex-direction: column;
     }
 
     .div-decorativa-ProEv {
@@ -1721,17 +1752,25 @@
     .titulo-principal-ProEv {
         transform: rotate(14deg);
         top: 40%;
-        font-size: 40px;
-        right: 35%;
+        font-size: 26px;
+        right: 25%;
     }
 
-    .bolota-decorativa-Pro-Ev {
-        display: none;
+    .data-do-ev-ProEv{
+        top: 0;
+    }
+
+    .horario-do-ev-ProEv{
+        top: 0;
+    }
+
+    .local-do-ev-ProEv{
+        top: 0;
     }
 
     .div-img-do-ev-ProEv {
         background-color: rgba(0, 0, 255, 0);
-        flex-direction: column;
+        flex-direction: row;
         height: 80%;
         top: 14%;
         left: 0;
@@ -1739,20 +1778,36 @@
 
     .banner-evento-ProEv {
         background-color: rgba(137, 43, 226, 0);
-        width: 100%;
-        height: 50%;
+        width: 35%;
+        height: 100%;
+        position: relative;
+        left: 3rem;
     }
 
-    .infs-evento-ProEv {
-        display: none;
+    .infs-evento-ProEv{
+        position: relative;
+        right: 6rem;
+    }
+
+    .banner-evento-ProEv img{
+        width: 100%;
     }
 
     .atracao-ProEv {
-        top: -4%;
+        top: -15%;
+        font-size: 18px;
     }
 
     .area-atracao-evento-ProEv {
         background-color: rgba(0, 255, 255, 0);
+        width: 100%;
+        height: 50%;
+    }
+
+    .area-info-evento-ProEv{
+        background-color: rgba(0, 0, 255, 0);
+        width: 100%;
+        height: 50%;
     }
 
     .div-cards-atracoes-ProEv {
@@ -1761,8 +1816,9 @@
     }
 
     .card-atracao-ProEv {
-        width: 40%;
-        height: 75%;
+        width: 30%;
+        height: 350px;
+        top: 0rem;
     }
 
     .Nome-atracao-proev{
@@ -1774,13 +1830,13 @@
         bottom: 40%;
 
         #linha-decorativa2-ProEv {
-            top: 10%;
+            top: 60%;
         }
     }
 
     .card-atracao-ProEv {
         #linha-decorativa-ProEv {
-            bottom: 32%;
+            bottom: 42%;
         }
     }
 
