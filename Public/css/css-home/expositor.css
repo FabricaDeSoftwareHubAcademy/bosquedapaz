@@ -80,6 +80,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: all .2s ease-in;
+}
+
+.card-per-expo:hover {
+    margin-top: -15px;
 }
 
 .head-card {
@@ -107,6 +112,12 @@
     height: 0%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.178);
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    height: 80%;
     position: absolute;
     top: 90px;
     /* bottom: 90px; */
@@ -116,23 +127,7 @@
     transition: all .2s ease-in;
 }
 
-.body-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    height: 80%;
-}
 
-/* .card-per-expo:hover .body-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    height: 80%;
-} */
 
 .card-per-expo:hover .head-card {
     top: 0px;
@@ -160,12 +155,21 @@
     border: 1px solid #f8621a;
     background-color: white;
     border-radius: .5rem;
+    transition: all .2s ease-in;
 }
 
 .link-edital {
     color: black;
     text-decoration: none;
     font-weight: 500;
+}
+
+.btn-seja-expo:hover {
+    background-color: #f8621a;
+}
+
+.btn-seja-expo:hover .link-edital {
+    color: white;
 }
 
 .nome-expo {
@@ -204,7 +208,7 @@
 .span-color {
     font-weight: 500;
     padding: 2px 5px;
-    color: white;
+    color: black;
     border-radius: .5rem;
 }
 
@@ -218,12 +222,10 @@
 
 .color-roxo {
     background-color: var(--color-rua4);
-    color: white;
 }
 
 .color-laranja {
     background-color: var(--color-rua2);
-    color: white;
 }
 
 .btn-ver-info {
