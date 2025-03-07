@@ -403,6 +403,8 @@ html,.body-recsenha{
     }
 }
 
+/* responsividade tablets */
+
 @media (min-width:768px){
     .body-recsenha{
         background-color: red;
