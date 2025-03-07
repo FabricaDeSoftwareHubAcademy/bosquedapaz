@@ -1,15 +1,17 @@
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Validação de Expositor</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-validacao-expositor.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
-<body>
+
+<body class="body-vexp">
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
     <div class="index-container-vexp">
 
         <section class="secao-expositor-vexp">
@@ -18,7 +20,7 @@
                 <img src="../../../Public/imgs/img-validacao-expositor/logomarca.png" alt="logomarca" class="logomarca-imagem-vexp">
             </div>
             <div class="area-produtos-vexp">
-                <h1 class="texto-produtos-vexp">Foto dos Produtos</h1>
+                <h1 class="texto-produtos-vexp">Produtos</h1>
                 <div class="imagens-produtos-vexp">
                     <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-1.jpeg" alt="" class="produto1">
                     <img src="../../../Public/imgs/img-validacao-expositor/foto-marca-2.jpeg" alt="" class="produto2">
@@ -29,7 +31,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section class="secao-informacoes-vexp">
             <h1 class="texto-informacoes-vexp">Informações do Expositor</h1>
             <form class="formulario-informacoes-vexp">
@@ -41,53 +43,66 @@
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="whatsapp-expositor">Whatsapp para Contato</label>
-                        <input type="text" name="whatsapp_expositor" id="whatsapp-expositor" placeholder="67 99956-6551" disabled>
+                        <label for="marca_expositor">Marca</label>
+                        <input type="text" name="marca_expositor" id="marca-expositor" placeholder="Play Artesanato" disabled>
                     </div>
-            
+
                     <div class="input-group-vexp">
                         <label for="email-expositor">Email</label>
                         <input type="email" name="email_expositor" id="email-expositor" placeholder="mariana@hotmail.com" disabled>
                     </div>
 
                     <div class="input-group-vexp">
-                        <label for="cnpj-expositor">CNPJ da Empresa</label>
-                        <input type="text" name="cnpj_expositor" id="cnpj-expositor" placeholder="56.133.133/0001-50" disabled>
+                        <label for="tipo_venda">Tipo</label>
+                        <input type="text" name="tipo_venda" id="tipo-venda" placeholder="Barraca" disabled>
                     </div>
-            
+
                     <div class="input-group-vexp">
-                        <label for="categoria-expositor">Categoria</label>
-                        <input type="text" name="categoria_expositor" id="categoria-expositor" placeholder="Artesanato" disabled>
+                        <label for="whatsapp_expositor">Whatsapp</label>
+                        <input type="text" name="whatsapp_expositor" id="whatsapp_expositor" placeholder="67 99956-6551" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="energia_expositor">Energia</label>
+                        <input type="text" name="energia_expositor" id="energia-expositor" placeholder="Sim" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="cpf_expositor">CPF</label>
+                        <input type="text" name="cpf_expositor" id="cpf-expositor" placeholder="831.591.143-31" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="voltagem_expositor">Voltagem</label>
+                        <input type="text" name="voltagem_expositor" id="voltagem-expositor" placeholder="220v" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="cidade_expositor">Cidade</label>
+                        <input type="text" name="cidade_expositor" id="cidade-expositor" placeholder="Campo Grande - MS" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="endereco_expositor">Endereço</label>
+                        <input type="text" name="endereco_expositor" id="endereco-expositor" placeholder="Afonso Pena N° 1332" disabled>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="instagram_expositor">Instagram</label>
+                        <div style="position: relative;">
+                            <input type="text" name="instagram_expositor" id="instagram-expositor" value="Clique aqui" disabled>
+                            <a href="https://instagram.com/playartesanato" target="_blank" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-decoration: none; color: black;"></a>
+                        </div>
+                    </div>
+
+                    <div class="input-group-vexp">
+                        <label for="nome-marca">Categoria</label>
+                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Artesanato" disabled>
                         <a href="#trocar-categoria-vexp">Alterar categoria</a>
-                    </div>
-
-                    <div class="input-group-vexp">
-                        <label for="nome-marca">CPF do Expositor</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="831.591.143-31" disabled>
-                    </div>
-
-                    <div class="input-group-vexp">
-                        <label for="nome-marca">Cidade</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Campo Grande - MS" disabled>
-                    </div>
-
-                    <div class="input-group-vexp">
-                        <label for="nome-marca">Endereço</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Afonso Pena N° 1332" disabled>
-                    </div>
-
-                    <div class="input-group-vexp">
-                        <label for="nome-marca">Formas de Pagamento</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="Cartão de crédito/débito e PIX" disabled>
-                    </div>
-
-                    <div class="input-group-vexp">
-                        <label for="nome-marca">Nome da Marca</label>
-                        <input type="text" name="nome_marca" id="nome-marca" placeholder="CakePet CG" disabled>
                     </div>
                 </div>
             </form>
-            
+
             <div class="area-botoes-vexp">
                 <a href="#modal-recusar-vexp"><button class="botao-recusar-vexp">Recusar</button></a>
                 <a href="#modal-validar-vexp"><button class="botao-validar-vexp">Validar</button></a>
@@ -101,6 +116,20 @@
             <h1 class="acao-texto-recusar-vexp">Deseja recusar o expositor?</h1>
             <div class="acao-botoes-recusar-vexp">
                 <a href=""><button class="botao-cancelar-vexp">Cancelar</button></a>
+                <a href="#motivo-recusar-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- motivo para recusar expositor -->
+    <div class="motivo-recusar-vexp" id="motivo-recusar-vexp">
+        <div class="motivo-recusar-content-vexp">
+            <h1 class="motivo-recusar-texto-vexp">Digite o Motivo</h1>
+            <div class="area-texto-recusar-vexp">
+                <textarea name="" id="" cols="30" rows="6" required></textarea>
+            </div>
+            <div class="motivo-recusar-botoes-vexp">
+                <a href=""><button class="botao-cancelar-vexp">Cancelar</button></a>
                 <a href="#recusado-sucesso-vexp"><button class="botao-confirmar-vexp">Confirmar</button></a>
             </div>
         </div>
@@ -113,7 +142,7 @@
             <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
         </div>
     </div>
- 
+
     <!-- modal para validar expositor -->
     <div class="acao-validar-vexp" id="modal-validar-vexp">
         <div class="acao-content-validar-vexp">
@@ -182,17 +211,18 @@
             <h1 class="trocar-sucesso-texto-vexp">Categoria alterada.</h1>
             <a href="#"><button class="botao-confirmar-vexp">Confirmar</button></a>
         </div>
-    </div>  
+    </div>
 
     <div class="decoracoes-vexp">
         <a href="gerenciar-relatorios.php">
-        <img src="../../../Public/imgs/img-validacao-expositor/voltar.svg" alt="setaVoltar" class="btnVoltar-guilherme">
+            <img src="../../../Public/imgs/img-validacao-expositor/voltar.svg" alt="setaVoltar" class="botao-voltar-vexp">
         </a>
-        <img src="../../../Public/imgs/img-validacao-expositor/detalhe1.svg" alt="" class="detalhe1">
-        <img src="../../../Public/imgs/img-validacao-expositor/detalhe2.svg" alt="" class="detalhe2">
-        <img src="../../../Public/imgs/img-validacao-expositor/detalhe3.svg" alt="" class="detalhe3">
+        <img src="../../../Public/imgs/img-validacao-expositor/detalhe1.svg" alt="" class="decoracao1-vexp">
+        <img src="../../../Public/imgs/img-validacao-expositor/detalhe2.svg" alt="" class="decoracao2-vexp">
+        <img src="../../../Public/imgs/img-validacao-expositor/detalhe3.svg" alt="" class="decoracao3-vexp">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
+
 </html>
