@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/lista-de-espera.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <title>Lista de Espera</title>
@@ -27,7 +27,7 @@
             <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
         </div>
         <div class="seta-LisEsp3">
-            <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
         </div>
 
         <div class="box-LisEsp-mat">
