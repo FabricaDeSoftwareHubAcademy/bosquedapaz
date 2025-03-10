@@ -113,7 +113,10 @@
                 <!-- Modal de Editar -->
                 <div class="acao-editar" id="modal-editar">
                     <div class="acao-content-editar">
-                        <h1 class="acao-texto-editar">Deseja editar o parceiro?</h1>
+                        <h1 class="acao-texto-editar">Editar parceiro</h1>
+                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
+                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
+                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
                         <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
                         <div class="acao-botoes-editar">
                             <a href=""><button class="botao-cancelar">Cancelar</button></a>

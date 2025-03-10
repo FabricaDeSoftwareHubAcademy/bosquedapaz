@@ -102,7 +102,9 @@ h2 {
 }
 
 
-
+#modal-editar {
+    display: none;
+}
 
 #modal-editar:target {
     display: flex;
@@ -118,8 +120,8 @@ h2 {
 }
 
 .acao-content-editar {
-    width: 30%;
-    height: 35%;
+    width: 50%;
+    height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
