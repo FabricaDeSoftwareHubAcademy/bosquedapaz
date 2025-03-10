@@ -404,7 +404,7 @@ body{
         width: 100%;
         position: relative;
         bottom: 6rem;
-        background-color: aqua;
+        background-color: rgba(0, 255, 255, 0);
         gap: 12px;
     }
 
@@ -413,7 +413,7 @@ body{
     }
 
     .box-principal .lado-direito .area-title-sobre{
-        background-color: #5cb74a;
+        background-color: #5cb74a00;
         height: 80%;
         gap: 5px;
     }
@@ -533,7 +533,7 @@ body{
 
     .img-decoracao2{
         position: relative;
-        top: 1.2vh;
+        top: 2.2vh;
         left: 0vw;
     }
     .img-decoracao3{
