@@ -244,6 +244,11 @@
     border-right: 15px solid #3F49EA;
 }
 
+#seta-voltar{
+    right: 47%;
+    position: relative;
+}
+
 @media (max-width:720px){
     .box-principal-utl{
         height: 170%;
@@ -319,26 +324,20 @@
     background-color: #FF3877;
     }
 
+    .bola-3{
+        position: absolute;
+        top: 157%;
+    }
  
- 
- 
- 
- 
+    #seta-voltar{
+        position: relative;
+        left: -43%;
+        top: -1%;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width:7680px) and (min-height:1024px){
+    .box-principal-utl{
+        
+    }
 }
