@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
         <title>Parceiros</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-parceiros.css">
-        <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+        <link rel="stylesheet" href="../../../Public/css/menu-adm.css">;
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
     </head>
 
@@ -62,7 +62,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="usuario-col">3</td>
+                                    <td class="usuario-col">3</td>;
                                     <td>SEBRAE-Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
                                     <td><button class="status inactive">Inativo</button></td>
                                     <td>
@@ -96,7 +96,7 @@
                                         </a>
                                         <a href="#modal-recusar" class="delete-icon">
                                             <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                        </a>
+                                        </a>    
                                     </td>
                                 </tr>  
                             </tbody>
@@ -117,7 +117,7 @@
                         <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
                         <div class="acao-botoes-editar">
                             <a href=""><button class="botao-cancelar">Cancelar</button></a>
-                            <a href=""><button class="botao-confirmar">Salvar</button></a>
+                            <a href="#recusado-sucesso"><button class="botao-confirmar">Salvar</button></a>
                         </div>
                     </div>
                 </div>
@@ -133,10 +133,10 @@
                     </div>
                 </div>
 
-                <!-- Modal confirmação Delete -->
+                <!-- Modal confirmação -->
                 <div class="mensagem-recusar" id="recusado-sucesso">
                     <div class="mensagem-content-recusar">
-                        <h1 class="mensagem-texto-recusar">Expositor excluído.</h1>
+                        <h1 class="mensagem-texto-recusar">Concluído com sucesso!</h1>
                         <a href="#"><button class="botao-confirmar">Confirmar</button></a>
                     </div>
                 </div>
