@@ -51,7 +51,7 @@ h2 {
 
 .edit-icon:hover i,
 .delete-icon:hover i {
-    color: #007bff  
+    color: #007bff ;
 }
 
 #modal-validar, #modal-recusar,
