@@ -4,10 +4,10 @@
     margin-top: 200px;
     text-align: center;
     width: 80%;
-    height: 800px;
+    height: 1000px;
 }
 
-.mapa-gabriel h1 {
+.title-loc {
     font-size: 2em;
     
 }
@@ -16,44 +16,22 @@
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.05);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
     width: 100%;
     height: 90%;
+  background-image: url("../../imgs/img-home/foto-bosque.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid black;
+  border-radius: .5rem;
 }
 
-.div-content-mapa {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 20px;
-}
-
-.div-all {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.link-mapa-bosque {
-    color: black;
-}
-
-.rua-bosque {
-    font-size: 1em;
-}
-
-.div-mapa-gabriel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aqua;
-}
-
-.img-mapa {
-    width: 100%;
+.loc-feira {
+  background-color: white;
+  width: 100%;
+  heigth: 10%;
+  text-align: left;
+  padding: 10px 0px 10px 30px;
 }
 
