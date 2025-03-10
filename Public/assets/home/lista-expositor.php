@@ -193,7 +193,13 @@
                     <button class="btn-seja-expo"><a href="" class="link-edital">Clique Aqui</a></button>
                 </div>
             </div>
-        </div>
+      </div>
+      <div class="conteiner-outros-expo">
+        <a href="../../../app/client/Views/todos-expositores.php">    
+        <button class="btn-outros-expo">
+          Ver Outros expositores
+        </button>
+      </div>
     </div>
 </section>
 <!-- fim seja expositor -->

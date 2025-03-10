@@ -243,3 +243,24 @@
     background-color: #5C8001;
     color: white;
 }
+
+.conteiner-outros-expo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.btn-outros-expo {
+  background-color: white;
+  border: 2px solid #f8621a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  padding: 5px 10px;
+  transition: all .2s ease-in;
+}
+
+.btn-outros-expo:hover {
+  background-color: #f8621a;
+}

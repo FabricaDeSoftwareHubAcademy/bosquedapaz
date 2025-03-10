@@ -17,12 +17,11 @@
     <!-- inicio main -->
     <main id="main">
         
-        
+        <!-- importando informações da feira -->
+      <?php include "../../../Public/assets/home/info-sobre-feira.html"; ?>
+
         <!-- importando categoria -->
         <?php include "../../../Public/assets/home/categoria.html"; ?>
-        
-        <!-- importando informações da feira -->
-        <?php include "../../../Public/assets/home/info-sobre-feira.html"; ?>
 
         <!-- incluindo expositores -->
         <?php include "../../../Public/assets/home/lista-expositor.php"; ?>
