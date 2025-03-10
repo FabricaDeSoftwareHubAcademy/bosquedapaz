@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Expositor</title>
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastro-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-client.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+<?php include "../../../Public/assets/home/menu-home.html"?>
 
     <main class="principal">
 
@@ -159,76 +159,26 @@
 
             </div>
 
-            <div class="form-termos">
-
-                <!-- <p class="termos">*Aceito os Termos do Edital:</p>
-
-                <div class="caixa-checkbox">
-                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
-                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
-
-                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
-                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div> -->
-
-                <!-- <div class="expositor-kids">
-                    <button><a href="#">Expositor Kids</a></button>
+           
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
-                <div class="artistas">
-                    <button><a href="#">Artistas</a></button>
-                </div> -->
+                    
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
 
+                    
+
+                
             </div>
-
-            <!-- fazendo div para responsividade -->
-
-            <!-- div de edital da feira junto com o chekbox -->
-            <!-- <div class="edital-resp">
-                <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div>
-                
-                <p class="termos">*Aceito os Termos do Edital:</p>
-
-                <div class="caixa-checkbox">
-                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
-                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
-
-                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
-                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div>
-            </div> -->
-
-            <!-- div para separar o expositor kids/artistas -->
-            <!-- <div class="expo-resp">
-                <div class="expositor-kids">
-                    <button><a href="#">Expositor Kids</a></button>
-                </div>
-                <div class="artistas">
-                    <button><a href="#">Artistas</a></button>
-                </div>
-            </div> -->
-
-            <!-- div para salvar e cancelar -->
-                <div class="botoes">
-                    <div class="botoes-cancelar">
-                        <button onclick="" class="btn-cancelar">Cancelar</button>
-                    </div>
-                    
-                    <div class="salvar-resp">
-                        <div class="botoes-salvar">
-                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                    </div>
-
-                    
-
-                
-                </div>
 
 
         </div>
         <div class="btns">
-            <a href="gerenciar-expositores.php" class="voltar">
+            <a href="escolher-cadastro.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>

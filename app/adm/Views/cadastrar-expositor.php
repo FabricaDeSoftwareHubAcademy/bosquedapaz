@@ -141,11 +141,6 @@
             </div>
 
             <div class="form-finalizar">
-
-                <!-- <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div> -->
-
                 
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
@@ -166,74 +161,20 @@
                     </div>
                 </div>
 
-
             </div>
 
-            <div class="form-termos">
-
-                <!-- <p class="termos">*Aceito os Termos do Edital:</p>
-
-                <div class="caixa-checkbox">
-                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
-                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
-
-                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
-                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div> -->
-
-                <!-- <div class="expositor-kids">
-                    <button><a href="#">Expositor Kids</a></button>
+           
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
-                <div class="artistas">
-                    <button><a href="#">Artistas</a></button>
-                </div> -->
-
+                    
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
+                
             </div>
-
-            <!-- fazendo div para responsividade -->
-
-            <!-- div de edital da feira junto com o chekbox -->
-            <!-- <div class="edital-resp">
-                <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div>
-                
-                <p class="termos">*Aceito os Termos do Edital:</p>
-
-                <div class="caixa-checkbox">
-                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
-                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
-
-                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
-                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div>
-            </div> -->
-
-            <!-- div para separar o expositor kids/artistas -->
-            <!-- <div class="expo-resp">
-                <div class="expositor-kids">
-                    <button><a href="#">Expositor Kids</a></button>
-                </div>
-                <div class="artistas">
-                    <button><a href="#">Artistas</a></button>
-                </div>
-            </div> -->
-
-            <!-- div para salvar e cancelar -->
-                <div class="botoes">
-                    <div class="botoes-cancelar">
-                        <button onclick="" class="btn-cancelar">Cancelar</button>
-                    </div>
-                    
-                    <div class="salvar-resp">
-                        <div class="botoes-salvar">
-                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                    </div>
-
-                    
-
-                
-                </div>
 
 
         </div>

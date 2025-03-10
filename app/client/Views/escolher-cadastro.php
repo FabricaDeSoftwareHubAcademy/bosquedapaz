@@ -19,7 +19,7 @@
             <div id="linha-vertical-ec"></div>
             <div class="area-infs-ec">
                 <h1>Escolher Cadastro</h1>
-                <a href="cadastro-expositor.php" class="area-total-button" id='button-ec-1'>
+                <a href="cadastro-expositor-client.php" class="area-total-button" id='button-ec-1'>
                     <div class="icon-input-ec">
                         <i id="icon-ec" class="bi bi-shop-window"></i>
                     </div>
