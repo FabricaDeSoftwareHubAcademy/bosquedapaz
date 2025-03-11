@@ -173,6 +173,14 @@
 
 @media (max-width: 1150px) {
 
+    .all-title {
+        font-size: 1.4rem;
+    }
+
+    .all-para {
+        font-size: 1.1rem;
+    }
+
     .text-carrossel {
         top: 300px;
         bottom: auto;
@@ -195,6 +203,18 @@
 
 /* responsividade para mobile (500px) */
 @media(max-width: 500px) {
+
+    .all-title {
+        font-size: 1.1rem;
+    }
+
+    .all-para {
+        font-size: .9rem;
+    }
+
+    .text-welcome-c {
+        width: 100%;
+    }
 
     /* informacaoe numeros */
 

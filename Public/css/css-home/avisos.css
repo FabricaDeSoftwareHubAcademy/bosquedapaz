@@ -176,34 +176,54 @@
     color: white;
 }
 
-
-@media screen and (max-width: 500px) {
-    .secao-da-tarde{
+@media screen and (max-width: 1150px) {
+    .secao-da-tarde {
         padding: 10px;
     }
+
     .conteiner-img {
-        width: 100%;
+        width: 50%;
     }
-    
-    .conteiner-img-ulti-publi {
-        width: 100%;
-    }
-    .conteiner-img {
-        display: none;
-    }
-    .img-prox-event {
-        display: none;
-    }
+
     .img-ulti-publi {
-        display: none;
-    }
-    
-    .img-prox-event-m {
-        display: block;
         width: 80%;
     }
-    
+
+    .img-ulti-publi2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .conteiner-img {
+        display: none;
+    }
+
+    .para-avisos-edit {
+        display: none;
+    }
+
+    .para-meio {
+        display: none;
+    }
+
+    .conteiner-sobre {
+        width: 100%;
+        margin: auto;
+    }
+    .img-prox-event-m {
+        display: block;
+        width: 70%;
+        border-radius: 10px;
+    }
+
+    .conteiner-img-ulti-publi {
+        display: none;
+    }
+
     .img-ulti-publi-m {
         display: block;
+        border-radius: 10px;
+        width: 50%;
     }
 }
