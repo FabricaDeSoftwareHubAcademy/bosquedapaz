@@ -5,7 +5,7 @@
 .fundo {
     width: 100vw;
     height: 100vh;
-    background-color: #0D592E;
+    background-color: #f8f8f8;
     padding-top: 70px;
     position: relative;
     overflow: hidden;
@@ -42,8 +42,8 @@
 }
 
 .swap {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid black;
@@ -54,7 +54,7 @@
 }
 
 .arrow-swap {
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
 .swap:hover {
@@ -100,7 +100,7 @@
     width: 50px;
     height: 5px;
     /* border-radius: 50%; */
-    border: none;
+    border: 1px solid black;
     outline: none;
     background-color: white;
 }
@@ -116,7 +116,7 @@
         background-color: white;
     }
     100% {
-        background-color: #FDF148;
+        background-color: #0D592E;
     }
 }
 

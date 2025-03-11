@@ -13,21 +13,16 @@
     <!-- incluindo o menu -->
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
     <?php include "../../../Public/assets/home/carrossel-home.html"; ?>
+        
+    <!-- importando informações da feira -->
+    <?php include "../../../Public/assets/home/info-sobre-feira.html"; ?>
     
-    <!-- inicio main -->
-    <main id="main">
-        
-        
-        <!-- importando categoria -->
-        <?php include "../../../Public/assets/home/categoria.html"; ?>
-        
-        <!-- importando informações da feira -->
-        <?php include "../../../Public/assets/home/info-sobre-feira.html"; ?>
+    <!-- incluindo expositores -->
+    <?php include "../../../Public/assets/home/lista-expositor.php"; ?>
+    
+    <!-- importando categoria -->
+    <?php include "../../../Public/assets/home/categoria.html"; ?>
 
-        <!-- incluindo expositores -->
-        <?php include "../../../Public/assets/home/lista-expositor.php"; ?>
-
-    </main>
 <!-- fim main -->
 
     <!-- importando avisos -->

@@ -43,6 +43,10 @@
     --color-rua3: #90C470;
     --color-rua4: #B313FF;
 
+    --color-prox-event: #4A8AF1;
+    --color-edit-pass: #FFFFFF;
+    --color-ulti-publi: #5CB748;
+
     --color-fundo-verde: #5EB64A;
     /* #5EB64A #90C470 */
 }
@@ -55,21 +59,45 @@
     font-family: "Poppins", sans-serif;
 }
 
+.all-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
 
-main {
+.all-para {
+    font-size: 1.3rem;
+}
+
+.after-banner {
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin: auto;
-    margin-top: 60px;
 }
 
 
+.content-carrossel {
+    max-width: 80%;
+    height: 250px;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-welcome, .text-welcome-c {
+    color: black;
+    width: 80%;
+    /* text-shadow: black 0.1em 0.1em 0.2em; */
+}
 
 /* informações sobre a feira */
 .informacoes {
+    height: 250px;
     margin: 10px auto 50px auto;
     display: flex;
     align-items: center;
@@ -145,6 +173,14 @@ main {
 
 @media (max-width: 1150px) {
 
+    .all-title {
+        font-size: 1.4rem;
+    }
+
+    .all-para {
+        font-size: 1.1rem;
+    }
+
     .text-carrossel {
         top: 300px;
         bottom: auto;
@@ -167,6 +203,18 @@ main {
 
 /* responsividade para mobile (500px) */
 @media(max-width: 500px) {
+
+    .all-title {
+        font-size: 1.1rem;
+    }
+
+    .all-para {
+        font-size: .9rem;
+    }
+
+    .text-welcome-c {
+        width: 100%;
+    }
 
     /* informacaoe numeros */
 
