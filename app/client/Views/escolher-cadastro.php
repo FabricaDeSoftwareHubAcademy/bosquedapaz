@@ -40,7 +40,7 @@
                         <i id="icon-ec" class="bi bi-music-note-list"></i>
                     </div>
                     <div class="text-input-ec">
-                        <p>Cadastro de Expositor</p>
+                        <p>Cadastro de Artistas</p>
                     </div>
                 </a>
             </div>

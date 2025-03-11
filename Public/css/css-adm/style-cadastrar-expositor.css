@@ -284,24 +284,7 @@ label#salvar-btn {
     cursor: pointer;
     font-size: 16px;
 }
-/* 
-.btn-cancelar-modal:hover {
-    background-color: #d81b60; 
-}
 
-.salvar {
-    background-color: #4CAF50; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.salvar:hover {
-    background-color: #45a049;
-} */
 
 /* Botão Cancelar */
 .btn-cancelar {
@@ -491,11 +474,6 @@ label#salvar-btn {
 }
 
 
-
-
-
-
-
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1 {
         width: 80px;
@@ -519,25 +497,33 @@ label#salvar-btn {
 }
 
 @media(max-width: 650px) {
-    .bolas-fundo .bola-verde1 {
-        display: none;
-    }
+        .bolas-fundo .bola-verde1 {
+            display: none;
+        }
 
-    .bolas-fundo .bola-verde2 {
-        display: none;
-    }
+        .bolas-fundo .bola-verde2 {
+            display: none;
+        }
 
-    .bolas-fundo .bola-rosa {
-        display: none;
+        .bolas-fundo .bola-rosa {
+            display: none;
+        }
+        /* .bolas-fundo .bola-rosa {
+            width: 100px;
+            position: relative;
+            top: 89%;
+            left: 76%;
+        } */
+
+    body{
+        overflow: hidden;
     }
 
     .title {
         font-size: 12px;
     }
 
-    .principal {
-        overflow-y: auto;
-    }
+   
 
     .box {
         height: auto;
@@ -545,6 +531,11 @@ label#salvar-btn {
         align-items: center;
         justify-content: center;
         padding: 0;
+        
+    }
+
+    .principal{
+        overflow-y: auto; 
     }
 
     .formularios {
@@ -553,126 +544,22 @@ label#salvar-btn {
         gap: 20px;
     }
 
-    .caixa-contato {
-        width: 100%;
-        margin-left: -5%;
-    }
-
-    .caixa-contato input {
-        width: 95%;
-    }
-
-    .upload {
-        display: none;
-    }
-
-    .carregar-src {
-        display: block;
+    .formularios label{
         position: relative;
-        left: 45%;
-        top: -13px;
+        left: 10px;
     }
 
-    .form-opc {
-        margin-top: 30px;
-    }
-
-    .form-termos {
-        display: none;
-    }
-
-    .form-finalizar {
-        display: none;
-    }
-
-    .edital-resp {
-        display: flex;
-        flex-direction: row;
-        /* justify-content: center;
-        align-items: center;
-        gap: 40px; */
-    }
-
-    .edital-resp button {
-        width: 285%;
-        font-size: 14px;
-    }
-
-    .termos {
-        width: 150%;
-        font-size: 14px;
+    .form-finalizar{
         position: relative;
-        left: 35%;
-        top: -10px;
+        top: -70px;
+        left: -65%;
     }
 
-    .caixa-checkbox {
-        width: 100%;
+ 
+    .voltar{
         position: relative;
-        top: 10px;
-        left: -60px;
+        top: 50px;
     }
-
-    .caixa-checkbox input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-    }
-
-    .caixa-checkbox label {
-        font-size: 14px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .expo-resp {
-        width: 100%;
-        display: flex;
-        position: relative;
-        top: 10px;
-        gap: 10px;
-    }
-
-    .expositor-kids {
-        position: relative;
-        left: 29px;
-    }
-
-    .artistas button {
-        width: 90%;
-        font-size: 12px;
-        position: relative;
-        left: 5px;
-    }
-
-    .expositor-kids button {
-        width: 90%;
-        font-size: 12px;
-    }
-
-    .salvar-resp {
-        display: flex;
-        position: relative;
-        top: 20px;
-    }
-
-    .salvar-resp {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        left: -48%;
-        gap: 5px;
-    }
-
-    .voltar {
-        position: relative;
-        top: 30px;
-    }
-
-    .botoes{
-        display: block;
-    }
-
     
 
 }
