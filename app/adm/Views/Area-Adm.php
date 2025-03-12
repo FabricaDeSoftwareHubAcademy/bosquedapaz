@@ -32,40 +32,75 @@
                 </a>
             </div>
 
-            <a href="gerenciar-parceiros.php">
             <div class="area-botao-gabriel">
-                <div class="Botoes-gabriel">
+                <!-- aqui -->
+                <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Parceiros</p>
                         <div class="icon-gabriel"></div>
                     </div>
                 </div>
-                </a>
-                <a href="gerenciar-expositores.php">
-                <div class="Botoes-gabriel">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p>Expositores</p>
-                    </div>
+
+            <!-- Modal Parcieros -->
+
+            <dialog class="abrir-mais" id="abrir-mais-parceiros">
+                <div class="modais">
+                    <p>dfbdfb</p>
+                    <p>dfbdfb</p>
                 </div>
-                </a>
-                <a href="gerenciar-relatorios.php">
-                <div class="Botoes-gabriel">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                        <p>Relatórios</p>
-                    </div>
+            </dialog>
+
+
+            <!-- aqui -->
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                    <p>Expositores</p>
                 </div>
-                </a>
-                <a href="gerenciar-categorias.php">
-                <div class="Botoes-gabriel">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                        <p>Categorias</p>
-                    </div>
+            </div>
+
+            <!-- Modal Expositores -->
+            <dialog class="abrir-mais" id="abrir-mais-expositor">
+                <div class="modais">
+                    <p>4</p>
+                    <p>dfbdfb</p>
                 </div>
-                </a>
+            </dialog>
+
+            <!-- aqui -->
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                    <p>Relatórios</p>
+                </div>
+            </div>
+
+            <!-- Modal Expositores -->
+            <dialog class="abrir-mais" id="abrir-mais-relatorios">
+                <div class="modais">
+                    <p>5</p>
+                    <p>dfbdfb</p>
+                </div>
+            </dialog>
+
+            <!-- aqui -->
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                    <p>Categorias</p>
+                </div>
+            </div>
+
+            <!-- Modal Expositores -->
+            <dialog class="abrir-mais" id="abrir-mais-categoria">
+                <div class="modais">
+                    <p>6</p>
+                    <p>dfbdfb</p>
+                </div>
+            </dialog>
+
+
                 <a href="editar-carrossel.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
@@ -90,14 +125,24 @@
                     </div>
                 </div>
                 </a>
-                <a href="../../../app/adm/Views/gerenciar-adm.php">
-                <div class="Botoes-gabriel">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                        <p>Gerenciar ADM</p>
-                    </div>
+
+
+            <!-- aqui -->
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                    <p>Gerenciar ADM</p>
                 </div>
-                </a>
+            </div>
+
+            <!-- Modal Expositores -->
+            <dialog class="abrir-mais" id="abrir-mais-gerancia">
+                <div class="modais">
+                    <p>8</p>
+                    <p>dfbdfb</p>
+                </div>
+            </dialog>
+
             </div>
 
         </div>
@@ -116,5 +161,6 @@
         <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
     </div>
 
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>

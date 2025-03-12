@@ -126,6 +126,22 @@
     font-size: 16px;
 }
 
+.abrir-mais {
+    margin: auto;
+}
+
+.modais {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
 @media screen and (max-width: 720px) {
     .area-icon-gabriel {
         width: 100%;
@@ -135,15 +151,7 @@
         height: 100%;
     }
 
-<<<<<<< Updated upstream
-    .nome-area-gabriel h1{
-        
-    }
-
-    .box-gabriel{
-=======
     .box-gabriel {
->>>>>>> Stashed changes
         top: 1%;
         flex-direction: column;
     }
