@@ -110,20 +110,59 @@
                     </a>
                 </div> 
 
-                <!-- Modal de Editar -->
+               <!-- Modal de Editar -->
                 <div class="acao-editar" id="modal-editar">
                     <div class="acao-content-editar">
-                        <h1 class="acao-texto-editar">Editar parceiro</h1>
-                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
-                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
-                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
-                        <input class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
+                        <h1 class="acao-texto-editar">Editar parceiro</h1>   
+                        <!-- Contêiner para os inputs com a classe 'acao-inputs' -->
+                        <div class="acao-inputs">
+                            <div class="input-group">
+                                <label for="input1" class="acao-label">Parceiro</label>
+                                <input id="input1" class="acao-input-edit" type="text" value="SENAC-Serviço Nacional de Aprendizagem Comercial">
+                            </div>
+                            <div class="input-group">
+                                <label for="input2" class="acao-label">Telefone</label>
+                                <input id="input2" class="acao-input-edit" type="text" value="(67) 3312-6260">
+                            </div>
+                            <div class="input-group">
+                                <label for="input3" class="acao-label">Email</label>
+                                <input id="input3" class="acao-input-edit" type="text" value="atendimento@ms.senac.br">
+                            </div>
+                            <div class="input-group">
+                                <label for="input4" class="acao-label">Contato</label>
+                                <input id="input4" class="acao-input-edit" type="text" value="João Pedro Costa Silva">
+                            </div>
+                            <div class="input-group">
+                                <label for="input5" class="acao-label">Tipo</label>
+                               
+                                <select name="todas_categorias" id="todas_categorias" class="acao-input-edit">
+
+                                    <option value="">selecione</option>
+                                    <option value="artesanato">Fisica</option>
+                                    <option value="gastronia">Jurídica</option>
+
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="input6" class="acao-label">CPF/CNPJ</label>
+                                <input id="input6" class="acao-input-edit" type="text" value="03.743.319/0001-52">
+                            </div>
+                            <div class="input-group">
+                                <label for="input7" class="acao-label">Logo</label>
+                                <input type="file" class="acao-input-edit" name="file" id="file" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="input8" class="acao-label">CEP</label>
+                                <input id="input8" class="acao-input-edit" type="text" value="79002-141">
+                            </div>
+                        </div>
                         <div class="acao-botoes-editar">
                             <a href=""><button class="botao-cancelar">Cancelar</button></a>
                             <a href="#recusado-sucesso"><button class="botao-confirmar">Salvar</button></a>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- Modal de Delete -->
                 <div class="acao-recusar" id="modal-recusar">

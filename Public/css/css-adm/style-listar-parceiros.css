@@ -102,8 +102,18 @@ h2 {
 }
 
 
+/* Estilos gerais para o modal */
 #modal-editar {
-    display: none;
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 2;
 }
 
 #modal-editar:target {
@@ -119,9 +129,10 @@ h2 {
     z-index: 2;
 }
 
+/* Content do Modal de Edição */
 .acao-content-editar {
-    width: 50%;
-    height: 45%;
+    width: 60%; /* Tamanho inicial para telas grandes */
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,39 +140,65 @@ h2 {
     gap: 20px;
     background-color: white;
     border-radius: 10px;
+    padding: 20px; /* Adicionando padding para não colar nos cantos */
 }
 
+/* Estilizando o título */
 .acao-texto-editar {
-    width: 80%;
+    width: 100%;
     text-align: center;
     font-weight: bold;
     font-size: 26px;
-    /* background-color: red; */
+    margin-top: 20px; /* Adiciona um espaço acima do título */
 }
 
+/* Estilizando os subtítulos */
+.acao-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Espaço entre subtítulo e input */
+    color: #333;
+}
+
+/* Estrutura dos campos de input */
+.input-group {
+    display: flex;
+    flex-direction: column; /* Coloca os inputs em uma coluna */
+    gap: 10px; /* Espaçamento entre os subtítulos e os inputs */
+}
+
+/* Contêiner dos inputs */
+.acao-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas maiores */
+    gap: 20px; /* Espaçamento entre os inputs */
+    width: 100%;
+}
+
+/* Input estilizado */
 .acao-input-edit {
-    width: 80%;
+    width: 100%;
     min-height: 45px;
-    padding: 5px;
-    border: none;
-    border-radius: 0.3rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
     box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
     box-sizing: border-box;
 }
 
+/* Botões de ação */
 .acao-botoes-editar {
     width: 90%;
-    height: 45%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    /* background-color: red; */
 }
 
-.botao-recusar, .botao-validar,
+/* Estilizando os botões */
 .botao-cancelar, .botao-confirmar {
     cursor: pointer;
     width: 200px;
@@ -172,16 +209,61 @@ h2 {
     font-size: 18px;
 }
 
-
-.botao-recusar, .botao-cancelar {
+.botao-cancelar {
     background-color: #FF3877;
     color: white;
 }
 
-.botao-validar, .botao-confirmar {
+.botao-confirmar {
     background-color: #007E70;
     color: white;
 }
+
+/* Responsividade */
+
+/* Para telas pequenas (dispositivos móveis, até 768px) */
+@media (max-width: 768px) {
+    .acao-content-editar {
+        width: 80%; /* Aumenta o modal para 80% da tela */
+        height: auto;
+    }
+
+    .acao-texto-editar {
+        font-size: 22px; /* Ajuste do tamanho do título */
+    }
+
+    .acao-inputs {
+        grid-template-columns: 1fr; /* Coloca os inputs em uma única coluna */
+        gap: 15px; /* Menor espaço entre os inputs */
+        width: 100%;
+    }
+
+    .botao-cancelar, .botao-confirmar {
+        width: 150px; /* Botões menores em telas pequenas */
+    }
+}
+
+/* Para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    .acao-content-editar {
+        width: 90%; /* Modal maior em telas pequenas */
+        padding: 10px;
+    }
+
+    .acao-texto-editar {
+        font-size: 20px; /* Ajuste do tamanho do título */
+    }
+
+    .acao-inputs {
+        gap: 10px; /* Menor espaço entre os inputs */
+    }
+
+    .botao-cancelar, .botao-confirmar {
+        width: 120px; /* Botões bem menores */
+        font-size: 14px; /* Texto dos botões menor */
+    }
+}
+
 
 #recusado-sucesso:target {
     display: flex;
