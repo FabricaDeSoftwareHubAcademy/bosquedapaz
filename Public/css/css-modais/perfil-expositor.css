@@ -1,5 +1,13 @@
 
 
+.m-per-expo {
+    width: 80%;
+    height: 85vh;
+    border-radius: 10px;
+    z-index: 4;
+    margin: auto;
+}
+
 /* Modal: */
 .box-principal{
     width: 80%;
@@ -11,13 +19,6 @@
     justify-content: center;
     border-radius: 10px;
     z-index: 4;
-}
-
-.uma-div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
 }
 
 .linha{

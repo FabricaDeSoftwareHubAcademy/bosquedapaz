@@ -195,7 +195,7 @@
             </div>
 
         </div>
-        <dialog>
+        <dialog class="m-per-expo" id="m-per-expo">
             <?php include '../../../Public/assets/home/perfil-expositor.html' ?>
         </dialog>
       <div class="conteiner-outros-expo">
