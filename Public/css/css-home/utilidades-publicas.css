@@ -251,8 +251,8 @@
 
 @media (max-width:720px){
     .box-principal-utl{
-        height: 170%;
-        top: 35%;
+        height: 200%;
+        top: 50%;
         position: relative;
     }
 
@@ -294,7 +294,7 @@
     }
 
     .dec-menor-button{
-        display: none;
+       display: none;
     }
 
     .dec-menor-dentro-button{
@@ -319,7 +319,7 @@
     height: 122%;
     transform: rotate(-24deg);
     position: relative;
-    top: -3%;
+    top: 8%;
     left: 0%;
     background-color: #FF3877;
     }
@@ -338,6 +338,73 @@
 
 @media (max-width:7680px) and (min-height:1024px){
     .box-principal-utl{
-        
+        position: relative;
+        width: 94%;
+        height: 200%;
+        right: 1%;
+        top: 51%;
+    }
+
+    .area-cards{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .cards{
+        width: 42%;
+        height: 21%;
+        position: relative;
+        top: 1%;
+    }
+
+    #seta-voltar{
+        position: relative;
+        bottom: 3%;
+    }
+
+    #titulo-ult{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        top: 3%;
+    }
+
+    .img img{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 68%;
+        top: -4;
+    }
+
+    .botao-saiba-mais{
+        position: relative;
+        width: 54%;
+        font-size: 17px;
+        height: 25%;
+        left: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 36%;
+    }
+
+    .dec-button{
+        position: relative;
+        top: 6%;
+    }
+
+    .dec-menor-dentro-button{
+        position: relative;
+        bottom: 196%;
+    }
+
+    .dec-menor-button{
+        position: relative;
+        bottom: 199%;
     }
 }
