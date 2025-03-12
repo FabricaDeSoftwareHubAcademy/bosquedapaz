@@ -181,7 +181,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
             <div class="card-per-expo">
@@ -193,6 +193,7 @@
                     <button class="btn-seja-expo"><a href="" class="link-edital">Clique Aqui</a></button>
                 </div>
             </div>
+            <?php include '../../../Public/assets/home/perfil-expositor.html' ?>
       </div>
       <div class="conteiner-outros-expo">
         <a href="../../../app/client/Views/todos-expositores.php">    
@@ -202,6 +203,8 @@
         </a>
       </div>
     </div>
+    
+
 </section>
 <!-- fim seja expositor -->
 

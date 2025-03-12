@@ -1,28 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.556);
-}
 
 /* Modal: */
 .box-principal{
-    width: 75%;
+    width: 80%;
     height: 85vh;
     background-color: white;
-    margin-top: 5rem;
+    margin: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     border-radius: 10px;
+    z-index: 4;
+}
+
+.uma-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     position: relative;
 }
 
@@ -35,7 +29,7 @@ body{
 }
 
 #icon-sair{
-    position: fixed;
+    position: absolute;
     top: 10%;
     left: 85%;
     font-size: 25px;
@@ -58,8 +52,8 @@ body{
 
 .img-decoracao2{
     position: absolute;
-    top: 77.6%;
-    left: 61.2%;
+    top: 71.3%;
+    left: 53.9%;
     z-index: 1;
     border-radius: 10px;
     /* display: none; */
