@@ -9,280 +9,328 @@
 
 body{
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.556);
 }
 
-
-/* Box do Modal */
+/* Modal: */
 .box-principal{
-    width: 65%;
-    height: 70vh;
+    width: 75%;
+    height: 85vh;
     background-color: white;
-    margin-top: 8rem;
+    margin-top: 5rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     border-radius: 10px;
+    position: relative;
 }
 
 .linha{
     width: 2px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.103);
+    background-color: rgba(0, 0, 0, 0.177);
     position: relative;
     left: 49%;
 }
 
-.img-decoracao{
+#icon-sair{
     position: fixed;
-    top: 64vh;
-    left: 51.5vw;
+    top: 10%;
+    left: 85%;
+    font-size: 25px;
+    transition: all .2s ease-in-out;
+}
+
+#icon-sair:hover{
+    transform: scale(1.1);
+    color: #FF3877;
+}
+
+/* Imagens decorativas do Modal */
+.img-decoracao1{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
     border-radius: 10px;
 }
 
 .img-decoracao2{
-    position: fixed;
-    top: 13.4vh;
-    left: 17.5vw;
+    position: absolute;
+    top: 77.6%;
+    left: 61.2%;
+    z-index: 1;
     border-radius: 10px;
-}
-.img-decoracao3{
-    display: none;
-}
-.img-decoracao4{
-    display: none;
+    /* display: none; */
 }
 
-.box-principal .lado-esquerdo{
+/* Lado Esquerdo: Logo e Imagens */
+.lado-esquerdo{
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
-
-/* Logo */
-.box-principal .lado-esquerdo .area-logo{
+/* Area da Logo: */
+.area-logo{
     width: 100%;
     height: 40%;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.box-principal .lado-esquerdo .area-logo .div-img-logo{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: rgba(47, 0, 255, 0);
+.div-logo{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.622);
     transition: all .2s ease-in-out;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.61);
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
-.div-img-logo:hover{
+.div-logo:hover{
     transform: scale(1.1);
 }
 
-.box-principal .lado-esquerdo .area-logo .div-img-logo img{
+.div-logo img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 50%;
 }
 
 
-/* Mini galeria de Imagens */
-.box-principal .lado-esquerdo .area-imgs{
+/* Mini Galeria de Imagens: */
+.galeria-imagens{
     width: 100%;
     height: 60%;
-    background-color: rgba(30, 255, 0, 0);
+    background-color: rgba(100, 148, 237, 0);
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
-    padding: 30px;  
+    padding: 50px;  
 }
 
-.title-produtos{
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
+.div-h1{
+    width: 100%;
+    height: 5%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-h1 h1{
+    font-weight: 400;
+    font-size: 38px;
     position: relative;
-    top: 1rem;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
+    top: 1.5rem;
 }
 
-.div-imgs{
+.div-img{
     width: calc(33.33% - 10px);
-    height: 140px;
-    background-color: rgba(0, 255, 255, 0);
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     transition: all .2s ease-in-out;
     border-radius: 10px;
+    transition: all .2s ease-in-out;
 }
 
-.div-imgs:hover{
+.div-img:hover{
     transform: scale(1.1);
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.61);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
 }
 
-.box-principal .lado-esquerdo .area-imgs img{
+.galeria-imagens img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
-/* Informações */
-.box-principal .lado-direito{
-    width: 45%;
+/* Lado Direito: Informações sobre a Empresa */
+.lado-direito{
+    width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
     display: flex;
-    align-items: self-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-/* Titulo e Sobre a Empresa */
-.box-principal .lado-direito .area-title-sobre{
-    width: 100%;
-    height: 42%;
-    background-color: rgba(0, 0, 255, 0);
-    display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
-.lado-direito .area-title-sobre .title-nomeEmpresa{
+.sobre-a-empresa{
+    width: 95%;
+    height: 31vh;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1rem;
+}
+
+.area-title{
     width: 100%;
-    height: 40%;
+    height: 25%;
+    background-color: rgba(136, 255, 9, 0);
+    position: relative;
+    top: 0rem;
+}
+
+.area-title h1{
+    font-weight: 500;
+    position: relative;
+    bottom: 1em;
+}
+
+.area-text{
+    width: 100%;
+    height: 75%;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.nome-empresa{
-    margin-top: 2rem;
-}
-
-#icon-sair{
-    margin-bottom: 3rem;
-    font-size: 20px;
-    transition: all .1s ease-in;
-}
-
-#icon-sair:hover{
-    transform: scale(1.1);
-    color: #0D592E;
-}
-
-.lado-direito .area-title-sobre .sobre-empresa{
-    width: 100%;
-    height: 60%;
-    background-color: rgba(255, 0, 0, 0);
-    text-align: justify;
     flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 10px;  /* Afastando o texto da barra de rolagem */
+    box-sizing: content-box;
 }
 
-.title-sobre{
-    margin-left: 1rem;
+.area-text::-webkit-scrollbar{
+    width: 6px;
+}
+
+.area-text::-webkit-scrollbar-track {
+    background-color: #555; /* cor de fundo do trilho */
+    border-radius: 10px;
+}
+
+.area-text::-webkit-scrollbar-thumb:hover {
+    background-color: #FF3877;
+    height: 1px;
 }
 
 .text-sobre{
+    text-align: justify;
+}
+
+.h2-sobre{
+    font-weight: 500;
+    position: relative;
+    bottom: 0.8rem;
+}
+
+
+.cat-num{
+    width: 95%;
+    height: 15vh;
+    background-color: rgba(25, 0, 255, 0);
     margin-left: 1rem;
-}
-
-.box-principal .lado-direito .area-infs{
-    width: 100%;
-    height: 58%;
-    background-color: rgba(49, 226, 43, 0);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-
-/* Lado esquerdo Contatos */
-.lado-direito .area-infs .infs-lado-esquerdo{
-    width: 45%;
-    height: 100%;
-    background-color: #0d592e00;
-}
-
-.area-infs .infs-lado-esquerdo .div-categoria{
-    width: 100%;
-    height: 20%;
-    background-color: rgba(0, 255, 255, 0);
-}
-
-.title-cat{
-    position: relative;
-    left: 1rem;
-}
-
-.cat{
-    position: relative;
-    left: 1rem;
-}
-
-.area-infs .infs-lado-esquerdo .div-infs-pessoais{
-    width: 100%;
-    height: 80%;
-    background-color: rgba(225, 0, 255, 0);
-    display: flex;
-    flex-direction: column;
-}
-
-.contacts{
-    position: relative;
-    left: 1rem;
-}
-
-.div-buttons-contacts{
-    width: 100%;
-    height: 25%;
-    background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    flex-direction: row;
+    position: relative;
+    top: 1rem;
+}
+
+.div-categoria{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(245, 222, 179, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-numero{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-categoria h2{
+    font-weight: 500;
+}
+
+.div-numero h2{
+    font-weight: 500;
+}
+
+
+.contacts-corR{
+    width: 95%;
+    height: 20vh;
+    background-color: rgba(255, 0, 60, 0);
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+    position: relative;
+    top: 1rem;
+}
+
+.contacts{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.contacts h2{
+    font-weight: 500;
+}
+
+.area-icons{
+    width: 100%;
+    height: 70%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
     flex-wrap: wrap;
 }
 
-.contato{
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    color: white;
-    border: none;
+.icons{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    position: relative;
-    right: 1rem;
-    bottom: 0.5rem;
+    border: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
     transition: all .3s ease-in-out;
-}
-.contato:hover{
-    transform: scale(1.2);
+    color: white;
+    position: relative;
+    right: 0.9rem;
+    cursor: pointer;
 }
 
+.icons:hover{
+    transform: scale(1.1);
+}
 
 #instagram{
     background-color: #FF3877;
@@ -320,232 +368,207 @@ body{
     border: 2px solid #F2C518;
 }
 
-
-
-
-
-/* Lado direito: Número e Cor da Rua */
-.lado-direito .area-infs .infs-lado-direito{
-    width: 55%;
+.cor-R{
+    width: 60%;
     height: 100%;
-    background-color: #00ff6e00;
-}
-
-.area-infs .infs-lado-direito .div-numB{
-    width: 100%;
-    height: 20%;
-    background-color: rgba(137, 43, 226, 0);
-}
-
-.area-infs .infs-lado-direito .div-corRua{
-    width: 100%;
-    height: 80%;
-    background-color: rgba(226, 43, 180, 0);
-    gap: 10px;
-}
-
-.div-corRua .div-cor{
-    width: 50%;
-    height: 20px;
-    background-color: #5CB74A;
-    color: white;
-    border-radius: 8px;
-    font-weight: 600;
+    background-color: rgba(128, 255, 0, 0);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.4rem;
 }
 
-@media (max-width: 720px) and (max-height: 667px){
+.cor-R h2{
+    font-weight: 500;
+}
+
+.cor{
+    width: 40%;
+    height: 25px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: #5CB74A;
+    font-weight: 600;
+    color: white;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+
+
+
+@media screen and (max-width: 720px) {
     .box-principal{
-        width: 95%;
-        height: 120vh;
-        margin-top: 0.5rem;
+        width: 90%;
+        height: 150vh;
+        /* overflow-y: scroll; */
         flex-direction: column;
-    }
-
-    .box-principal .lado-esquerdo{
-        background-color: #0d592e00;
-        width: 100%;
-        height: 150rem;
-        position: relative;
-        bottom: 6rem;
-    }
-
-    .title-produtos{
-        font-size: 1.5rem;
-    }
-
-    .title-sobre{
-        font-size: 18px;
-    }
-
-    .box-principal .lado-esquerdo .area-logo{
-        background-color: #3b9cdc00;
-    }
-
-    .box-principal .lado-esquerdo .area-logo .div-img-logo{
-        width: 120px;
-        height: 120px;
-    }
-
-    .box-principal .lado-esquerdo .area-imgs{
-        background-color: #ff387700;
-        height: 70%;
-    }
-
-    .div-imgs{
-        background-color: #f2c61800;
-        height: 85px;
-    }
-
-    .box-principal .lado-direito{
-        width: 100%;
-        position: relative;
-        bottom: 6rem;
-        background-color: rgba(0, 255, 255, 0);
-        gap: 12px;
-    }
-
-    .text-sobre{
-        font-size: 10.5px;
-    }
-
-    .box-principal .lado-direito .area-title-sobre{
-        background-color: #5cb74a00;
-        height: 80%;
-        gap: 5px;
-    }
-
-    .lado-direito .area-title-sobre .title-nomeEmpresa{
-        background-color: rgba(0, 255, 255, 0);
-        height: 15%;
-    }
-
-    .nome-empresa{
-        margin-top: 0;
-        font-size: 20px;
-        margin-left: 0.5rem;
-    }
-
-    .lado-direito .area-title-sobre .sobre-empresa{
-        background-color: #f2c61800;
-        height: 85%;
-        width: 98%;
-    }
-
-    .box-principal .lado-direito .area-infs{
-        background-color: #ff387700;
-        /* height: 30%; */
-
-    }
-
-    .lado-direito .area-infs .infs-lado-esquerdo{
-        background-color: rgba(127, 255, 212, 0);
-    }
-
-    .area-infs .infs-lado-esquerdo .div-categoria{
-        background-color: rgba(137, 43, 226, 0);
-        height: 40%;
-
-    }
-
-    .area-infs .infs-lado-esquerdo .div-infs-pessoais{
-        background-color: rgba(0, 0, 255, 0);
-        height: 60%;
-    }
-
-    .div-buttons-contacts{
-        background-color: rgba(128, 255, 0, 0);
-        height: 60%;
-    }
-
-    .contato{
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-        right: 0rem;
-        top: 2px;
-    }
-
-    .title-cat{
-        font-size: 18px;
-    }
-
-    .cat{
-        font-size: 10.5px;
-        bottom: 0.2rem;
-    }
-
-    .contacts{
-        font-size: 16px;
-    }
-
-    .lado-direito .area-infs .infs-lado-direito{
-        background-color: #22bc9d00;
-    }
-
-    .area-infs .infs-lado-direito .div-numB{
-        background-color: #3b9cdc00;
-        height: 40%;
-    }
-
-    .area-infs .infs-lado-direito .div-corRua{
-        background-color: #f2c61800;
-        height: 60%;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .num{
-        font-size: 16px;
-    }
-
-    .p-num{
-        font-size: 10.5px;
-        position: relative;
-        bottom: 3px;
-    }
-
-    .cor-r{
-        font-size: 16px;
-    }
-
-    .div-corRua .div-cor{
-        font-size: 10.5px;
-        position: relative;
-        bottom: 3px;
-        width: 30%;
-    }
-
-    #icon-sair{
-        display: none;
+        margin-top: 1rem;
     }
 
     .linha{
         display: none;
     }
 
-    .img-decoracao{
-        display: none;
+    #icon-sair{
+        position: relative;
+        z-index: 2;
+        top: 2%;
+        left: 88%;
+        font-size: 20px;
+    }
+
+    .img-decoracao1{
+        position: relative;
+        top: -3%;
+        right: 0;
+        z-index: 2;
     }
 
     .img-decoracao2{
-        position: relative;
-        top: 2.2vh;
-        left: 0vw;
+        top: 91%;
+        left: 11.4%;
+        z-index: 2;
+        width: 80vw;
     }
-    .img-decoracao3{
-        position: relative;
-        display: block;
-        top: 99.5vh;
-        width: 100px;
-        height: 100px;
-        left: 68.5vw;
-        border-radius: 10px;
+
+    .img-decoracao2 img{
+        width: 100%;
+        height: auto;
     }
+
+    .lado-esquerdo{
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 255, 255, 0);
+        z-index: 5;
+        position: relative;
+        bottom: 7rem;
+    }
+
+    .area-logo{
+        background-color: rgba(0, 255, 255, 0);
+    }
+
+    .div-logo{
+        width: 120px;
+        height: 120px;
+    }
+
+    .galeria-imagens{
+        background-color: rgba(100, 148, 237, 0);
+        height: 50%;
+        padding: 40px;
+    }
+
+    .div-h1{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .div-h1 h1{
+        font-size: 18px;
+        top: 0;
+    }
+
+    .div-img{
+        height: 75px;
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    .lado-direito{
+        width: 95%;
+        height: 65%;
+        position: relative;
+        bottom: 6.5rem;
+        left: 0.5rem;
+        z-index: 5;
+        background-color: rgba(0, 255, 255, 0);
+    }
+
+    .sobre-a-empresa{
+        background-color: rgba(0, 255, 255, 0);
+        margin-left: 0.5rem;
+    }
+    
+    .cat-num{
+        background-color: rgba(25, 0, 255, 0);
+        margin-left: 0.5rem;
+    }
+    
+    .contacts-corR{
+        background-color: rgba(255, 0, 60, 0);
+        margin-left: 0.5rem;
+    }
+
+    .area-title h1{
+        font-size: 25px;
+    }
+
+    .h2-sobre{
+        font-size: 18px;
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    .text-sobre{
+        font-size: 14px;
+    }
+
+    .div-categoria h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .div-categoria p{
+        font-size: 14px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .div-numero h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .div-numero p{
+        font-size: 14px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .cor-R{
+        background-color: #22bc9d00;
+        flex-direction: column;
+    }
+
+    .cor-R h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .cor{
+        width: 65%;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .contacts{
+        background-color: #3b9cdc00;
+    }
+
+    .contacts h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .icons{
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
 }
-
-
-
