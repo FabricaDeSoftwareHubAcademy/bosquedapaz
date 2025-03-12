@@ -193,8 +193,11 @@
                     <button class="btn-seja-expo"><a href="" class="link-edital">Clique Aqui</a></button>
                 </div>
             </div>
+
+        </div>
+        <dialog>
             <?php include '../../../Public/assets/home/perfil-expositor.html' ?>
-      </div>
+        </dialog>
       <div class="conteiner-outros-expo">
         <a href="../../../app/client/Views/todos-expositores.php">    
         <button class="btn-outros-expo">
