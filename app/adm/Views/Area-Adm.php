@@ -46,8 +46,21 @@
 
             <dialog class="abrir-mais" id="abrir-mais-parceiros">
                 <div class="modais">
-                    <p>dfbdfb</p>
-                    <p>dfbdfb</p>
+                    <a href="">
+                        <img class= "close-modal" src="../../../Public/imgs/icon-sair.png" alt="">
+                    </a>
+                <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
+                    <div class="area-icon-gabriel">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                        <p>Cadastrar Parceiros</p>
+                        <div class="icon-gabriel"></div>
+                    </div>
+                    <div class="area-icon-gabriel">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                        <p>Listar Parceiros</p>
+                        <div class="icon-gabriel"></div>
+                    </div>
+                </div>
                 </div>
             </dialog>
 
