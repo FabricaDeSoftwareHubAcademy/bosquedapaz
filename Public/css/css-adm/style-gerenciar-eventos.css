@@ -71,6 +71,7 @@ h2 {
     width: 700px;
     margin-right: 10px;
     font-size: 16px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
 
 .search-bar .search-button {
@@ -86,32 +87,87 @@ h2 {
     background-color: #041831;
 }
 
+.table-container {
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
 
 .collaborators-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+/* .collaborators-table thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(32, 54, 139);
+    color: white;
+    z-index: 10;
+} */
+
+/* .collaborators-table th, .collaborators-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 20%;
+} */
+
+
+.collaborators-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+.collaborators-table {
+    text-align: center;
     width: 100%;
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .collaborators-table tbody{
-    overflow-y: auto;
+    display: block;
+    max-height: 50vh;
+    width: 100%;
 }
 
 .collaborators-table thead {
     position: sticky;
-    top: 60px;
+    top: 0;
     background-color: rgb(32, 54, 139);
     color: white;
-    z-index: 999;
+    z-index: 2;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators-table thead tr,
+.collaborators-table tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.collaborators-table tbody tr td{
+    text-align: center;
+    height: 15%;
 }
 
 
 .collaborators-table th,
 .collaborators-table td {
     padding: 12px 15px;
-    text-align: left;
     border: 1px solid #ddd;
+    text-align: center;
+}
+
+.collaborators-table td{
+    padding: 12px 15px;
 }
 
 table tbody tr:nth-child(odd) {
@@ -132,6 +188,7 @@ table tbody tr:nth-child(even) {
 
 
 .status {
+    width: 80px;
     padding: 5px 10px;
     border: none;
     border-radius: 15px;
@@ -202,9 +259,71 @@ table tbody tr:nth-child(even) {
     right: 0px;
     bottom: 0px;
     z-index: -3;
-    top: 55%;
+    /* top: 55%; */
 }
 
+
+.voltar-link {
+    width: 50%;
+    height: 12%;
+    align-items: center;
+    position: relative;
+    bottom: -50px;
+    display: flex;
+    gap: 50px;
+    cursor: default;
+
+}
+
+.voltar {
+    background-color: transparent;
+    border: none;
+    justify-content: left;
+    justify-self: left;
+}
+
+.voltar-link .btn-voltar {
+    width: 60%;
+    height: 50%;
+}
+
+.btn-voltar {
+    cursor: pointer;
+}
+
+.novo-evento {
+    height: 34px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(255, 56, 119);
+    font-size: 19px;
+    padding: 1px 8px 4px 8px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    /* width: 150px; */
+}
+
+.botoes {
+    border-radius: 20px;
+    position: relative;
+    bottom: 13px;
+    justify-content: end;
+    display: flex;
+    gap: 50px;
+}
+
+.botoes a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.botoes a button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
 
 /* Modal */
 .modal {
