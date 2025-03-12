@@ -16,7 +16,7 @@
 
     <main class="principal">
         <div class="box">
-            <h2>CADASTRO DE EVENTOS</h2>
+            <h2>CADASTRO DE EVENTO</h2>
             <div class="form-box">
                 <form action="#" method = "POST">
                     <div id="form1">

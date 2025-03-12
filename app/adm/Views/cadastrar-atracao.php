@@ -30,8 +30,7 @@
                         
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricaodoevento" id="descricaodoevento"
-                                placeholder="Digite uma breve descrição do evento" required>
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>       
                         </div>
                                                
                         <div class="input-group">

@@ -163,9 +163,7 @@ h2 {
 
 .btn-cancelar-salvar {
     display: flex;
-    gap: 30px;
-    
-    
+    gap: 30px;  
 }
 
 .btn {
@@ -178,6 +176,7 @@ h2 {
     cursor: pointer;
     transition: 0.3s;
     
+    
 }
 
 .btn-cancelar-salvar .btn {
@@ -185,6 +184,8 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    
 }
 
 .btn-cancelar-salvar .btn-salvar {

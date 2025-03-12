@@ -115,6 +115,16 @@ h2 {
     
 }
 
+.input-group textarea{
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
 .form-container {
     display: flex; 
     align-items: center; 
@@ -123,6 +133,16 @@ h2 {
     width: 100%;
     /* max-width: 900px;  */
     margin: auto;
+}
+.data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+.data .input-group{
+    width: 40%;
 }
 
 .form-box {
@@ -192,6 +212,7 @@ h2 {
 }
 
 .btn-cancelar-salvar .btn {
+    border: none;
     width: 150px; 
     display: flex;
     align-items: center;

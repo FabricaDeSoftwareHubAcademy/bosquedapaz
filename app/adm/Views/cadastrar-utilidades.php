@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastroutilidades.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-utilidades.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 </head>
@@ -27,26 +27,23 @@
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricao" id="descricao"
-                            placeholder="Escreva a descrição da utilidade pública">
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>       
                         </div>
-                        <div class="input-group">
-                            <label>Data início</label>
-                            <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                        </div>
-                        <div class="input-group">
-                            <label>Data fim</label>
-                            <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                        <div class = "data">
+                            <div class="input-group">
+                                <label>Data início</label>
+                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                            </div>
+                            <div class="input-group">
+                                <label>Data fim</label>
+                                <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                            </div>
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
                             <input type="file" name="file" id="file" required>
                         </div>
                     </form>
-                </div>
-
-                <div class="box-img">
-                    <img src="../../../Public/imgs/img-cadastro-eventos/img-edicao-utilidade.png" alt="Imagem ao lado do formulário">
                 </div>
             </div>
             <div class="btns">
