@@ -153,10 +153,10 @@
                 <div id="modal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
+                        <p class="title-modal">Deseja salvar as alterações?</p>
                         <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
                             <button class="btn-cancelar-modal">Cancelar</button>
+                            <button class="btn-confirmar">Salvar</button>
                         </div>
                     </div>
                 </div>

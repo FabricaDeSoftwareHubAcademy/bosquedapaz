@@ -74,7 +74,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     border: none;
@@ -96,6 +96,8 @@ body{
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
 }
+
+
 
 .input-group input{
     width: 40vh;
@@ -211,29 +213,31 @@ label#salvar-btn {
 
 /* Estilo do modal */
 .modal {
-    display: none; /* Oculta o modal por padrão */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    background-color: rgba(0, 0, 0, 0.5); 
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
+.title-modal{
+    font-weight: bold;
+    width: 100%;
+}
 
-/* Conteúdo do modal */
 .modal-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Botão de fechar (x) */
 .close {
     position: absolute;
     top: 10px;
@@ -247,14 +251,13 @@ label#salvar-btn {
     color: #000;
 }
 
-/* Texto do modal */
 .modal-content p {
     font-size: 18px;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Botões do modal */
+
 .modal-botoes {
     display: flex;
     justify-content: center;
@@ -262,7 +265,7 @@ label#salvar-btn {
 }
 
 .btn-confirmar {
-    background-color: #4CAF50; /* Verde */
+    background-color: #007E70;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -271,24 +274,19 @@ label#salvar-btn {
     font-size: 16px;
 }
 
-.btn-confirmar:hover {
-    background-color: #45a049; /* Verde mais escuro */
-}
 
 .btn-cancelar-modal {
-    background-color: #e91e63; /* Rosa */
+    background-color: #e91e63; 
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
 
 
-/* Botão Cancelar */
 .btn-cancelar {
-
     color: white;
     border: none;
     padding: 10px 20px;
@@ -297,9 +295,7 @@ label#salvar-btn {
     font-size: 16px;
 }
 
-/* .btn-cancelar:hover {
-    background-color: #d81b60;
-} */
+/* fim modal */
 
 .botoes{
     display: none;
@@ -307,7 +303,7 @@ label#salvar-btn {
 
 .salvar {
     display: inline-block;
-    background-color: #FF3877;
+    background-color: #007E70;
     color: white;
     padding: 11px 40px;
     border: none;
@@ -332,7 +328,7 @@ label#salvar-btn {
     background-color: #5c4caf;
     color: white;
     /* padding: 13px 40px; */
-    background-color: #007E70;
+    background-color: #FF3877;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -477,23 +473,57 @@ label#salvar-btn {
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1 {
         width: 80px;
-        left: -20px;
+       left: -20px;
+       /* display: none; */
+
     }
 
     .bolas-fundo .bola-verde2 {
         width: 90px;
         right: -25px;
+        /* display: none; */
+
     }
 
     .bolas-fundo .bola-rosa {
         width: 200px;
         right: -50px;
         bottom: -50px;
+        /* display: none; */
     }
-
+    .principal{
+        overflow: hidden;
+    }
     .box {
         display: flex;
+        overflow-y: auto;
     }
+
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-finalizar{
+        position: relative;
+        left: -26%;
+    }
+
+}
+
+@media(max-width: 360px) {
+
+    .title{
+        width: 105%;
+    }
+
+    .form-finalizar button{ 
+        width: 140px;    
+        font-size: 18px;
+    }
+
+    
 }
 
 @media(max-width: 650px) {
@@ -508,12 +538,7 @@ label#salvar-btn {
         .bolas-fundo .bola-rosa {
             display: none;
         }
-        /* .bolas-fundo .bola-rosa {
-            width: 100px;
-            position: relative;
-            top: 89%;
-            left: 76%;
-        } */
+     
 
     body{
         overflow: hidden;
@@ -563,3 +588,4 @@ label#salvar-btn {
     
 
 }
+
