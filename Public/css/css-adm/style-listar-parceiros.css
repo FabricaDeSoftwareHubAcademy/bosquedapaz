@@ -8,6 +8,10 @@
     font-family: "poppins", sans-serif;
 }
 
+body{
+    overflow: hidden;
+}
+
 .principal {
     width: 100vw;
     height: 90vh;
@@ -180,13 +184,15 @@ h2 {
     width: 100%;
     min-height: 45px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff; /* Mantém a borda branca em cima, em baixo e à esquerda */
+    border-right: 1px solid #bebdbd; /* Borda à direita com cor mais escura */
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
     box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
     box-sizing: border-box;
 }
+
 
 /* Botões de ação */
 .acao-botoes-editar {
@@ -529,4 +535,80 @@ button {
         font-size: 12px;
         padding: 5px 10px;
     }
+
+    /* Modal de Deletar (Recusar) */
+@media (max-width: 768px) {
+    #modal-recusar .acao-content-recusar {
+        width: 80%;  /* Aumenta a largura para 80% da tela */
+        height: auto; /* Ajusta a altura para evitar que o modal fique muito grande */
+    }
+
+    .acao-texto-recusar {
+        font-size: 20px; /* Ajuste do tamanho da fonte */
+    }
+
+    .acao-botoes-recusar {
+        gap: 20px; /* Ajuste o espaçamento entre os botões */
+    }
+
+    .botao-cancelar, .botao-confirmar {
+        width: 160px; /* Ajuste do tamanho dos botões */
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+    }
+}
+
+/* Modal de Deletar (Recusar) para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    #modal-recusar .acao-content-recusar {
+        width: 90%; /* Aumenta o modal para 90% da tela */
+        padding: 10px; /* Reduz o padding para telas pequenas */
+    }
+
+    .acao-texto-recusar {
+        font-size: 16px; /* Reduz o tamanho da fonte do texto */
+    }
+
+    .acao-botoes-recusar {
+        gap: 15px; /* Diminui o espaçamento entre os botões */
+    }
+
+    .botao-cancelar, .botao-confirmar {
+        width: 120px; /* Botões menores */
+        font-size: 12px; /* Texto dos botões menor */
+    }
+}
+
+/* Modal de confirmação de sucesso (Recusado Sucesso) */
+@media (max-width: 768px) {
+    #recusado-sucesso .mensagem-content-recusar {
+        width: 80%; /* Ajusta a largura do modal */
+        height: auto; /* Ajusta a altura para telas pequenas */
+    }
+
+    .mensagem-texto-recusar {
+        font-size: 20px; /* Ajuste do tamanho da fonte */
+    }
+
+    .botao-confirmar {
+        width: 160px; /* Ajuste do tamanho dos botões */
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+    }
+}
+
+@media (max-width: 480px) {
+    #recusado-sucesso .mensagem-content-recusar {
+        width: 90%; /* Aumenta o modal para 90% da tela */
+        padding: 10px; /* Reduz o padding para telas pequenas */
+    }
+
+    .mensagem-texto-recusar {
+        font-size: 16px; /* Ajuste no tamanho da fonte */
+    }
+
+    .botao-confirmar {
+        width: 120px; /* Botão menor */
+        font-size: 12px; /* Tamanho menor do texto */
+    }
+}
+
 }
