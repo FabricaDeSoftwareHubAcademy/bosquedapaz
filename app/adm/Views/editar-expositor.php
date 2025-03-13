@@ -51,12 +51,13 @@
                 <div class="input-formulario3">
                     <label>Tipo de exposição:</label>
                     <input type="text" name="" id="" value="trailer">
-                    <label>Precisa de energia?</label>
+                    <label for="energia">Precisa de energia?</label>
                     <input type="text" name="" id="" value="Não">
-                    <label>Voltagens dos equipamentos</label>
+                    <label for="energia">Voltagens dos equipamentos</label>
                     <input type="text" name="" id="" value="110v">
                 </div>
 
+            </div>
             </div>
 
 

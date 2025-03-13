@@ -357,38 +357,53 @@ body{
         padding: 0;
         height: auto;
     }
-    .img-expo{
+
+    .img-expo {
         display: none;
     }
-    .caixa-formulario{
+
+    .caixa-formulario {
+        display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
-    .caixa-formulario input{
-        width: 150%;
-        position: relative;
-        left: -50px;
+    .input-formulario,
+    .input-formulario2 {
+        width: 90%;
     }
 
-    .caixa-formulario label{
+    .img-produtos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .img-produtos img {
+        width: 50px;
+        height: auto;
+    }
+
+    .form-status {
         position: relative;
-        left: -50px;
+        left: 5%;
+    }
+
+    .form-finalizar {
+        position: relative;
+        left: -30%;
+        top: 20px;
     }
 
     .input-formulario3 input{
-        width: 120%;
+        width: 125%;
         position: relative;
-        left: -10%;
+        left: -30px;
     }
-    
+
     .input-formulario3 label{
         position: relative;
-        left: -10%;
+        left: -30px;
     }
 
-    .imagens{
-        flex-direction: row;
-    }
-   
-
-}
+}    
