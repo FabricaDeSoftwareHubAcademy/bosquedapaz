@@ -6,6 +6,8 @@
     <title>Editar ADM</title>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
     
 </head>
 <body>

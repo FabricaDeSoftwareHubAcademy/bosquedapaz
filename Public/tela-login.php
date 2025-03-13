@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prévia Tela Login</title>
-    <link rel="stylesheet" href="../Public/css/tela-login.css">
+    <link rel="stylesheet" href="../Public/css/style-tela-login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body class="body-login">
@@ -14,16 +14,16 @@
  
             <!-- Imagens -->
             <div class="img-superior-direita">
-                <img src="../Imagens/imagem-superior-direito.svg" alt="">
+                <img class="imgg-superior-direita" src="../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
             </div>
             <div class="img-superior-esquerda">
-                <img src="../Imagens/imagem-superior-esquerdo.svg" alt="">
+                <img class="imgg-superior-esquerda" src="../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
             </div>
             <div class="img-inferior-direita">
-                <img src="../Imagens/imagem-inferior-direito.svg" alt="">
+                <img class="imgg-inferior-direita" src="../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
             </div>
             <div class="img-inferior-esquerda">
-                <img src="../Imagens/imagem-inferior-esquerdo.svg" alt="">
+                <img class="imgg-inferior-esquerda" src="../Public/imgs/imagens-bolas/imagem-inferior-esquerdo.svg" alt="">
             </div>
  
             <!-- Box Principal -->
@@ -31,8 +31,8 @@
                 <div id="linha-login"></div>
                
                 <div class="botao-voltar">
-                    <a href="tela-esqueceu-a-senha.html" class="volte">
-                        <img src="../Imagens/arrow-circle-left.svg" alt="">
+                    <a href="../index.php" class="volte">
+                        <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
                     </a>
                 </div>
  
@@ -54,7 +54,7 @@
                     </form>
  
                     <div class="div-esqueceu-senha-login">
-                        <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.html">Esqueceu a senha?</a>
+                        <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.php">Esqueceu a senha?</a>
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
@@ -68,7 +68,7 @@
                     <h1 class="area-img-login-h1-tiago">LOGIN</h1>
                    
                     <div class="a-img-login">
-                        <img src="../Imagens/dog-walking-79-12053-1.svg" alt="">
+                        <img class="img-dog" src="../Public/imgs/img-login/dog-walking-79-12053-1.svg" alt="">
                     </div>
                 </div>
             </div>

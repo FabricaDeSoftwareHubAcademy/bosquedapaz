@@ -1,0 +1,320 @@
+.expositores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.bar-title-expositor {
+    background-color: #0D592E;
+    width: 100%;
+    height: 400px;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content-title-expo {
+    display: flex;
+}
+
+.title-expositor {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+}
+
+.lines-before {
+    background-color: transparent;
+    padding: 0px 25px;
+    border-bottom: 4px solid #FF9665;
+    border-left: 4px solid #FF9665;
+    position: relative;
+    left: 40px;
+    top: 5px;
+    z-index: 2;
+}
+
+.lines-after {
+    background-color: transparent;
+    padding: 0px 25px;
+    border-top: 4px solid #FF9665;
+    border-right: 4px solid #FF9665;
+    position: relative;
+    right: 40px;
+    bottom: 5px;
+    z-index: 2;
+}
+
+.para-title {
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.listar-expositor {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #F8F8F8;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-perfis {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    background-color: #F8F8F8;
+}
+
+
+.card-per-expo {
+    /* background-color: aqua; */
+    width: 190px;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all .2s ease-in;
+}
+
+.card-per-expo:hover {
+    margin-top: -15px;
+}
+
+.head-card {
+    background-color: white;
+    min-width: 190px;
+    min-height: 190px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.178);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: all .2s ease-in;
+}
+
+.head-seja-expo {
+    background-color: #f8621a;
+    text-align: center;
+    box-shadow: 0px 0px 10px 2px #f8601ac5;
+}
+
+.body-card {
+    width: 100%;
+    height: 0%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.178);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    height: 80%;
+    position: absolute;
+    top: 90px;
+    /* bottom: 90px; */
+    z-index: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: all .2s ease-in;
+}
+
+
+
+.card-per-expo:hover .head-card {
+    top: 0px;
+    margin: 0px;
+}
+
+.img-perfil-expo {
+    width: 95%;
+}
+
+.seja-expo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.para-seja-expo {
+    margin-top: 110px;
+    font-size: .9rem;
+}
+
+.btn-seja-expo {
+    width: 70%;
+    padding: 5px 0px;
+    border: 1px solid #f8621a;
+    background-color: white;
+    border-radius: .5rem;
+    transition: all .2s ease-in;
+}
+
+.link-edital {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-seja-expo:hover {
+    background-color: #f8621a;
+}
+
+.btn-seja-expo:hover .link-edital {
+    color: white;
+}
+
+.nome-expo {
+    margin-top: 110px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.detalhes-expo {
+    width: 95%;
+    border-top: 1px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.para-cate {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.span-cate {
+    font-weight: 400;
+}
+
+.para-color {
+    font-weight: 600;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.span-color {
+    font-weight: 500;
+    padding: 2px 5px;
+    color: black;
+    border-radius: .5rem;
+}
+
+.color-amarela {
+    background-color: var(--color-rua1);
+}
+
+.color-verde {
+    background-color: var(--color-rua3);
+}
+
+.color-roxo {
+    background-color: var(--color-rua4);
+}
+
+.color-laranja {
+    background-color: var(--color-rua2);
+}
+
+.btn-ver-info {
+    padding: 5px 10px;
+    border: 2px solid #5C8001;
+    border-radius: .5rem;
+    color: #5C8001;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: white;
+    transition: all .2s ease-in;
+}
+
+.btn-ver-info:hover {
+    background-color: #5C8001;
+    color: white;
+}
+
+.conteiner-outros-expo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.btn-outros-expo {
+  background-color: white;
+  border: 2px solid #f8621a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  padding: 5px 10px;
+  transition: all .2s ease-in;
+}
+
+.btn-outros-expo:hover {
+  background-color: #f8621a;
+}
+
+@media (max-width: 1150px) {
+    .bar-title-expositor {
+        height: 300px;
+    }
+
+    .para-title {
+        width: 70%;
+    }
+
+    .cards-perfis {
+        /* height: auto; */
+        gap: 50px;
+        width: 70%;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .bar-title-expositor {
+        height: 250px;
+    }
+
+    .cards-perfis {
+        width: 100%;
+        gap: 15px;
+    }
+    .card-per-expo {
+        width: 160px;
+        height: 415px;
+    }
+
+    .head-card {
+        min-width: 160px;
+        min-height: 160px;
+    } 
+
+    .body-card {
+        top: 60px;
+        gap: 0px;
+    }
+
+    .para-cate {
+        flex-direction: column;
+    }
+}

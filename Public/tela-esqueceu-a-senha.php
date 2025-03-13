@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prévia Tela Esqueceu a Senha</title>
-    <link rel="stylesheet" href="../Public/css/esqueceu-a-senha-recsenha.css">
+    <link rel="stylesheet" href="../Public/css/style-esqueceu-a-senha-recsenha.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body class="body-recsenha">
     <main>
         <section class="section-recsenha">
             <div class="img-superior-direita-recsenha">
-                <img src="../Imagens/imagem-superior-direito.svg" alt="">
+                <img class="imgg-superior-direita-recsenha" src="../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
             </div>
             <div class="img-superior-esquerda-recsenha">
-                <img src="../Imagens/imagem-superior-esquerdo.svg" alt="">
+                <img class="imgg-superior-esquerda-recsenha" src="../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
             </div>
             <div class="img-inferior-direita-recsenha">
-                <img src="../Imagens/imagem-inferior-direito.svg" alt="">
+                <img class="imgg-inferior-direita-recsenha" src="../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
             </div>
             <div class="img-inferior-esquerda-recsenha">
-                <img src="../Imagens/imagem-inferior-esquerdo.svg" alt="">
+                <img class="imgg-inferior-esquerda-recsenha" src="../Public/imgs/imagens-bolas/imagem-inferior-esquerdo.svg" alt="">
             </div>
  
             <div class="box-recsenha">
- 
-                <div class="botao-voltar">
-                    <a href="tela-login.html" class="volte">
-                        <img src="../Imagens/arrow-circle-left.svg" alt="">
-                    </a>
-                </div>
                
                 <div id="linha-bet-recsenha"></div>
                 <div class="area-recsenha">
@@ -50,7 +44,7 @@
                     </div>
                     <div class="div-botoes-recsenha">
                         <div class="div-botao-cancelar-recsenha">
-                            <a class="botao-cancelar-recsenha" href="tela-login.html">Cancelar</a>
+                            <a class="botao-cancelar-recsenha" href="tela-login.php">Cancelar</a>
                             <!-- <button class="botao-cancelar-recsenha">Cancelar</button> -->
                         </div>
                         <div class="div-botao-enviar-recsenha">
@@ -60,12 +54,17 @@
                             <button class="close-modal" data-modal="modal-recsenha"></button>
                         </dialog> -->
                     </div>
+                    <div class="botao-voltar">
+                    <a href="tela-login.php" class="volte">
+                        <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
+                    </a>
+                </div>
                 </div>
                 <div class="area-img-recsenha">
                     <h1 class="text-h1-recsenha">REDEFINIÇÃO DE SENHA</h1>
  
                     <div class="img-recsenha">
-                        <img class="img-recsenha-svg-recsenha" src="../Imagens/message-sent.svg" alt="">
+                        <img class="img-recsenha-svg-recsenha" src="../Public/imgs/img-login/message-sent.svg" alt="">
                     </div>
                 </div>
             </div>

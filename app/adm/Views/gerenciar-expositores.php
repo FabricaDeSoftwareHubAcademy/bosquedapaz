@@ -6,6 +6,7 @@
     <title>Gerenciar Expositores</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-expositores.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -38,10 +39,10 @@
                 </div>
 
                 <div class="Botoes-expositores">
-                    <a href="cadastro-expositor.php" class="link-area-icon">
+                    <a href="cadastrar-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Cadastrar expositor</p>
+                        <p>Cadastrar Expositor</p>
                     </div>
                 </div>
                 </a>
@@ -49,7 +50,7 @@
                     <a href="listar-expositor.php" class="link-area-icon">
                     <div class="area-icon-expositores">
                         <img src="../../../Public/imgs/img-area-adm/Vector expositores.png" alt="">
-                        <p>Listar expositor</p>
+                        <p>Listar Expositor</p>
                     </div>
                 </div>
                 </a>

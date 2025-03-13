@@ -7,7 +7,9 @@
     <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link com style padrao da pagina adm -->
-    <link rel="stylesheet" href="../../../Public/css/css-adm/editar-carrossel.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-carrossel.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
 </head>
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html"?>
@@ -23,35 +25,44 @@
             <!-- local de uploads de imgs para o carrossel -->
             <section class="up-imgs">
 
-                <label class="uploads" id="label">
-                    <input type="file" name="img1" class="input" id="input1">
+                <div class="div-nome">
+                    <h1 class="num">Imagem 1</h1>
+                    <label class="uploads" id="label">
+                        <input type="file" name="img1" class="input" id="input1">
                     
-                    <img src="../../../Public/imgs/img-home/imagem-carrossel-1.jpg" alt="Imagem do carrossel 1" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-1.JPG" alt="Imagem do carrossel 1" class="up-img">
                     
-                    <button class="btn-editar open-modal">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </label>
+                        <button class="btn-editar open-modal">
+                            <i class="fa-solid fa-pen editar"></i>
+                        </button>
+                    </label>
+                </div>
                 
-                <label class="uploads" id="label">
-                    <input type="file" name="img2" class="input" id="input2">
+                <div class="div-nome">
+                    <h1 class="num">Imagem 2</h1>
+                    <label class="uploads" id="label">
+                        <input type="file" name="img2" class="input" id="input2">
                     
-                    <img src="../../../Public/imgs/img-home/imagem-carrossel-2.jpg" alt="Imagem do carrossel 2" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-2.JPG" alt="Imagem do carrossel 2" class="up-img">
                     
-                    <button class="btn-editar open-modal">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </label>
+                        <button class="btn-editar open-modal">
+                            <i class="fa-solid fa-pen editar"></i>
+                        </button>
+                    </label>
+                </div>
                 
-                <label class="uploads">
-                    <input type="file" name="img3" class="input" id="input3">
+                <div class="div-nome">
+                    <h1 class="num">Imagem 3</h1>
+                    <label class="uploads">
+                        <input type="file" name="img3" class="input" id="input3">
                     
-                    <img src="../../../Public/imgs/img-home/imagem-carrossel-3.jpg" alt="Imagem do carrossel 3" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-3.JPG" alt="Imagem do carrossel 3" class="up-img">
                     
-                    <button class="btn-editar open-modal">
-                        <i class="fa-solid fa-pen editar"></i>
-                    </button>
-                </label>
+                        <button class="btn-editar open-modal">
+                            <i class="fa-solid fa-pen editar"></i>
+                        </button>
+                    </label>
+                </div>
             </section>
 
             <!-- botoes parte de baixo -->

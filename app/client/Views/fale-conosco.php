@@ -1,15 +1,17 @@
-<?php include "../../../Public/assets/home/menu-home.html"?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Área de Suporte</title>
-    <link rel="stylesheet" href="../../../Public/css/faleconosco.css">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="../../../Public/css/style-fale-conosco.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 </head>
 <body>
+    <?php include "../../../Public/assets/home/menu-home.html"?>
     <div class="box-guilherme">
         <section class="secao-formulario-guilherme">
             <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>
@@ -53,9 +55,9 @@
 
     <div class="decoracoes-guilherme">
         <a href="../../../index.php"><img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="btnVoltar" class="botao-voltar-guilherme"></a>
-        <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo1.png" alt="deco1" class="decoracao1-guilherme">
+        <img src="../../../Public/imgs/imagens-bolas/decoracao1.png" alt="deco1" class="decoracao1-guilherme">
         <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="deco2" class="decoracao2-guilherme">
-        <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="deco3" class="decoracao3-guilherme">
+        <img src="../../../Public/imgs/imagens-bolas/decoracao3.png" alt="deco3" class="decoracao3-guilherme">
     </div>
 
     <script src="../../../Public/js/js-home/main.js"></script>

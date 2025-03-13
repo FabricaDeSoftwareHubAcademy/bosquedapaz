@@ -6,6 +6,7 @@
     <title>Gerenciar Relatórios</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-relatorio.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -28,7 +29,7 @@
         
         <div class="box-relat">
         <div class="nome-area-relat">
-                <h1>Relatórios</h1>
+                <h1>RELATÓRIOS</h1>
             </div>
 
                 <div class="seta-voltar-relat">
@@ -37,7 +38,7 @@
                 </a>
                 </div>
                 <div class="Botoes-relat">
-                    <a href="index-lista-de-espera.php" class="link-area-icon">
+                    <a href="lista-de-espera.php" class="link-area-icon">
                     <div class="area-icon-relat">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                         <p>Lista de Espera</p>
@@ -46,7 +47,7 @@
                     </a>
 
                 <div class="Botoes-relat">
-                    <a href="" class="link-area-icon">
+                    <a href="relatorio-expositor.php" class="link-area-icon">
                     <div class="area-icon-relat">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                         <p>Relatório Expositor </p>
@@ -55,14 +56,13 @@
                 </a>
 
                 <div class="Botoes-relat">
-                <a href="RelatorioExpositor.php" class="link-area-icon">
+                <a href="listar-adm.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                 <p>Relatório Usuários</p>
                 </div>
                 </a>
 </div>
-
 
             </div>
 

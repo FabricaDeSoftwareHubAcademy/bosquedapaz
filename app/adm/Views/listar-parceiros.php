@@ -6,10 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Página para gerenciar parceiros e suas informações.">
+        <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
         <title>Parceiros</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-parceiros.css">
         <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
     </head>
 
     <body>
@@ -36,7 +39,7 @@
                         <tbody> 
                         <tr>
                             <td class="usuario-col">1</td>
-                            <td>SENAC Serviço Nacional de Aprendizagem Comercial</td>                    
+                            <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>                    
                             <td><button class="status active">Ativo</button></td>
                             <td>
                                 <a class="edit-icon">
@@ -63,7 +66,7 @@
                             </tr>
                             <tr>
                                 <td class="usuario-col">3</td>
-                                <td>SEBRAE Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
+                                <td>SEBRAE-Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
                                 <td><button class="status inactive">Inativo</button></td>
                                 <td>
                                     <a class="edit-icon">
@@ -108,7 +111,7 @@
             </div> 
 
             <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar alteração</h2>
+                <h2>Confirmar Alteração</h2>
                 <input type="text" value="SENAC Serviço Nacional de Aprendizagem Comercial">
                 <p>Tem certeza que deseja fazer isso?</p>
                 <div>
