@@ -49,13 +49,13 @@
             </table>
         </div>
 
+        <button class="voltar">
             <a href="Area-Adm.php" class="voltar-link">
-                <div class="b-voltar">
-                    <button class="voltar">
-                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                    </button>
-                </div>
+                <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
             </a>
+        </button>
+        <div class="b-voltar">
+        </div>
             <div class="botoes">
                 <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
             </div>
