@@ -44,6 +44,10 @@
     height: 90vh;
 }
 
+body{
+    overflow-y: hidden;
+}
+
 .principal .box {
     width: 90%;
     height: auto;
@@ -56,7 +60,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .title {
@@ -353,43 +357,38 @@
         padding: 0;
         height: auto;
     }
-
-    .img-expo {
+    .img-expo{
         display: none;
     }
-
-    .caixa-formulario {
-        display: flex;
+    .caixa-formulario{
         flex-direction: column;
-        gap: 10px;
     }
 
-    .input-formulario,
-    .input-formulario2 {
-        width: 90%;
+    .caixa-formulario input{
+        width: 150%;
+        position: relative;
+        left: -50px;
     }
 
-    .img-produtos {
-        display: flex;
+    .caixa-formulario label{
+        position: relative;
+        left: -50px;
+    }
+
+    .input-formulario3 input{
+        width: 120%;
+        position: relative;
+        left: -10%;
+    }
+    
+    .input-formulario3 label{
+        position: relative;
+        left: -10%;
+    }
+
+    .imagens{
         flex-direction: row;
-        width: 100%;
     }
-
-    .img-produtos img {
-        width: 50px;
-        height: auto;
-    }
-
-    .form-status {
-        position: relative;
-        left: -30%;
-    }
-
-    .form-finalizar {
-        position: relative;
-        left: -30%;
-        top: 20px;
-    }
-
+   
 
 }
