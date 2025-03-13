@@ -27,8 +27,8 @@
                         <th class="usuario-col">Nome do Evento</th>
                         <th>Data</th>
                         <th>Status</th>
-                        <th>Foto</th>
                         <th class="fone-col">Editar</th>
+                        <th>Foto</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,11 +37,15 @@
                         <td class="usuario-col">Evento <?php echo $i; ?></td>
                         <td>Data <?php echo $i; ?></td>
                         <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Inativo' : 'Ativo'; ?></button></td>
-                        <td><i class="fa-solid fa-plus"></i></td>
                         <td class="fone-col">
-                            <a href="edicao-expositor.php">
+                            <a href="editar-expositor.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
+                        </td>
+                        <td class="mais">
+                            <button class="open-modal" data-modal="modal-fotos">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
                         </td>
                     </tr>
                     <?php endfor; ?>
@@ -59,6 +63,15 @@
             <div class="botoes">
                 <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
             </div>
+            <div class="modal" id="modal-fotos">
+        <div class="modal-content">
+            <span class="close-modal" data-modal="modal-fotos">&times;</span>
+            <h3>Adicionar Fotos ao Evento</h3>
+            <p>Limite de 5 Fotos por Evento</p>
+            <input type="file" multiple>
+            <button class="submit-fotos">Adicionar Fotos</button>
+        </div>
+    </div>
     </div>
 </main>
 
@@ -69,5 +82,6 @@
         </div>
 
     <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
+    <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
 </body>
 </html>

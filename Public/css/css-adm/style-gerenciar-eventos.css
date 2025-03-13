@@ -268,11 +268,10 @@ table tbody tr:nth-child(even) {
     height: 12%;
     align-items: center;
     position: relative;
-    bottom: -50px;
+    bottom: -60px;
     display: flex;
     gap: 50px;
     cursor: default;
-
 }
 
 .voltar {
@@ -325,6 +324,15 @@ table tbody tr:nth-child(even) {
     display: flex;
 }
 
+.fone-col i{
+    font-size: 25px;
+    color: black;
+}
+
+.mais i{
+    font-size: 25px;
+    color: black;
+}
 /* Modal */
 .modal {
     display: none;
@@ -349,10 +357,12 @@ table tbody tr:nth-child(even) {
 }
 
 .modal .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    justify-content: end;
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    /* right: 10px; */
+    font-size: 30px;
     cursor: pointer;
     color: #333;
 }
