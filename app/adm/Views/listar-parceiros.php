@@ -26,34 +26,20 @@
                         <input type="text" id="status" placeholder="Parceiros" />
                         <button class="search-button">BUSCAR</button>
                     </div>
-                
-                    <table class="collaborators-table">
-                        <thead>
+                    <div class="table-container">
+                        <table class="collaborators-table">
+                            <thead>
+                                <tr>
+                                <th class="usuario-col">ID</th>
+                                <th>Nome</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
                             <tr>
-                            <th class="usuario-col">ID</th>
-                            <th>Nome</th>
-                            <th>Status</th>
-                            <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody> 
-                        <tr>
-                            <td class="usuario-col">1</td>
-                            <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>                    
-                            <td><button class="status active">Ativo</button></td>
-                            <td>
-                                <a class="edit-icon">
-                                    <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                </a>
-                                <a class="delete-icon">
-                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                </a>
-                            </td>
-                        </tr>
-                            <tr>
-                            <tr>
-                                <td class="usuario-col">2</td>
-                                <td>Shopping Bosque dos Ipês</td>
+                                <td class="usuario-col">1</td>
+                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>                    
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
                                     <a class="edit-icon">
@@ -64,46 +50,114 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="usuario-col">3</td>
-                                <td>SEBRAE-Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
-                                <td><button class="status inactive">Inativo</button></td>
-                                <td>
-                                    <a class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>    
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="usuario-col">4</td>
-                                <td>Prefeitura Municipal De Campo Grande MS</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                                <td class="usuario-col">5</td>
-                                <td>SECTUR Campo Grande</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>  
-                        </tbody>
-                    </table>
+                                <tr>
+                                    <td class="usuario-col">2</td>
+                                    <td>Shopping Bosque dos Ipês</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="usuario-col">3</td>
+                                    <td>SEBRAE-Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td>
+                                    <td><button class="status inactive">Inativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>    
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="usuario-col">4</td>
+                                    <td>Prefeitura Municipal De Campo Grande MS</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="usuario-col">5</td>
+                                    <td>SECTUR Campo Grande</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="usuario-col">5</td>
+                                    <td>SECTUR Campo Grande</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td class="usuario-col">5</td>
+                                    <td>SECTUR Campo Grande</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td class="usuario-col">5</td>
+                                    <td>SECTUR Campo Grande</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td class="usuario-col">5</td>
+                                    <td>SECTUR Campo Grande</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a class="edit-icon">
+                                            <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                        <a class="delete-icon">
+                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+    
+                            </tbody>
+                        </table>
+                    </div>
             <div class="btns">
                 <a href="gerenciar-parceiros.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
