@@ -1,13 +1,15 @@
+/* Modal: */
 .m-per-expo {
     width: 80%;
     height: 85vh;
     border-radius: 10px;
     z-index: 4;
+    overflow: hidden;
     margin: auto;
 }
 
-/* Modal: */
-.box-principal{
+/* Area Principal do Modal: */
+.box-principal {
     width: 100%;
     height: 100%;
     background-color: white;
@@ -18,12 +20,12 @@
     z-index: 4;
 }
 
-.linha{
+.linha {
     width: 2px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.177);
     position: relative;
-    left: 50%;
+    left: 49%;
 }
 
 .btn {
@@ -35,18 +37,18 @@
     right: 0;
 }
 
-.icon-sair{
+.icon-sair {
     font-size: 25px;
     transition: all .2s ease-in-out;
 }
 
-#icon-sair:hover{
+#icon-sair:hover {
     transform: scale(1.1);
     color: #FF3877;
 }
 
 /* Imagens decorativas do Modal */
-.img-decoracao1{
+.img-decoracao1 {
     position: absolute;
     left: 0%;
     top: 0%;
@@ -54,16 +56,21 @@
     border-radius: 6px;
 }
 
-.img-decoracao2{
+.img-decoracao2 {
     position: absolute;
     top: 77%;
-    left: 58%;
+    left: 61%;
     z-index: 1;
     border-radius: 10px;
 }
 
+.img-decoracao2 img {
+    width: 100%;
+    height: auto;
+}
+
 /* Lado Esquerdo: Logo e Imagens */
-.lado-esquerdo{
+.lado-esquerdo {
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0);
@@ -73,7 +80,7 @@
 }
 
 /* Area da Logo: */
-.area-logo{
+.area-logo {
     width: 100%;
     height: 50%;
     background-color: rgba(0, 255, 255, 0);
@@ -83,7 +90,7 @@
     flex-direction: column;
 }
 
-.div-logo{
+.div-logo {
     width: 250px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0);
@@ -96,11 +103,11 @@
     margin-top: 1.5rem;
 }
 
-.div-logo:hover{
+.div-logo:hover {
     transform: scale(1.1);
 }
 
-.div-logo img{
+.div-logo img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -109,7 +116,7 @@
 
 
 /* Mini Galeria de Imagens: */
-.galeria-imagens{
+.galeria-imagens {
     width: 100%;
     height: 60%;
     background-color: rgba(100, 148, 237, 0);
@@ -118,11 +125,11 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 50px;  
+    padding: 50px;
     position: relative;
 }
 
-.div-h1{
+.div-h1 {
     width: 100%;
     height: 5%;
     background-color: rgba(255, 255, 255, 0);
@@ -131,14 +138,14 @@
     justify-content: center;
 }
 
-.div-h1 h1{
+.div-h1 h1 {
     font-weight: 400;
     font-size: 38px;
     position: relative;
     top: 1.5rem;
 }
 
-.div-img{
+.div-img {
     width: calc(33.33% - 10px);
     height: 160px;
     display: flex;
@@ -149,15 +156,14 @@
     border-radius: 10px;
     transition: all .2s ease-in-out;
     position: relative;
-    /* left: 0.5rem; */
 }
 
-.div-img:hover{
+.div-img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
 }
 
-.galeria-imagens img{
+.galeria-imagens img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -165,7 +171,7 @@
 
 
 /* Lado Direito: Informações sobre a Empresa */
-.lado-direito{
+.lado-direito {
     width: 50%;
     height: 100%;
     background-color: rgba(137, 43, 226, 0);
@@ -175,8 +181,8 @@
     flex-direction: column;
 }
 
-.sobre-a-empresa{
-    width: 90%;
+.sobre-a-empresa {
+    width: 95%;
     height: 31vh;
     background-color: rgba(0, 255, 255, 0);
     margin-left: 1rem;
@@ -186,7 +192,7 @@
     top: 1rem;
 }
 
-.area-title{
+.area-title {
     width: 100%;
     height: 25%;
     background-color: rgba(136, 255, 9, 0);
@@ -194,28 +200,30 @@
     top: 0rem;
 }
 
-.area-title h1{
+.area-title h1 {
     font-weight: 500;
     position: relative;
     bottom: 1em;
 }
 
-.area-text{
-    width: 90%;
+.area-text {
+    width: 95%;
     height: 75%;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     box-sizing: content-box;
+    padding-right: 10px;
 }
 
-.area-text::-webkit-scrollbar{
+/* Definições da barrinha de scroll */
+.area-text::-webkit-scrollbar {
     width: 6px;
 }
 
 .area-text::-webkit-scrollbar-track {
-    background-color: #555; /* cor de fundo do trilho */
+    background-color: #555;
     border-radius: 10px;
 }
 
@@ -224,19 +232,18 @@
     height: 1px;
 }
 
-.text-sobre{
+.text-sobre {
     text-align: justify;
 }
 
-.h2-sobre{
+.h2-sobre {
     font-weight: 500;
     position: relative;
     bottom: 0.8rem;
 }
 
-
-.cat-num{
-    width: 90%;
+.cat-num {
+    width: 95%;
     height: 15vh;
     background-color: rgba(25, 0, 255, 0);
     margin-left: 1rem;
@@ -248,7 +255,7 @@
     top: 1rem;
 }
 
-.div-categoria{
+.div-categoria {
     width: 40%;
     height: 100%;
     background-color: rgba(245, 222, 179, 0);
@@ -257,7 +264,7 @@
     flex-direction: column;
 }
 
-.div-numero{
+.div-numero {
     width: 60%;
     height: 100%;
     background-color: rgba(165, 42, 42, 0);
@@ -266,17 +273,17 @@
     flex-direction: column;
 }
 
-.div-categoria h2{
+.div-categoria h2 {
     font-weight: 500;
 }
 
-.div-numero h2{
+.div-numero h2 {
     font-weight: 500;
 }
 
 
-.contacts-corR{
-    width: 90%;
+.contacts-corR {
+    width: 95%;
     height: 20vh;
     background-color: rgba(255, 0, 60, 0);
     margin-left: 1rem;
@@ -287,18 +294,18 @@
     top: 1rem;
 }
 
-.contacts{
+.contacts {
     width: 40%;
     height: 100%;
     background-color: rgba(0, 255, 255, 0);
     position: relative;
 }
 
-.contacts h2{
+.contacts h2 {
     font-weight: 500;
 }
 
-.area-icons{
+.area-icons {
     width: 100%;
     height: 70%;
     background-color: rgba(0, 0, 255, 0);
@@ -309,7 +316,7 @@
     flex-wrap: wrap;
 }
 
-.area-icons a{
+.area-icons a {
     background-color: #55555500;
     width: 45px;
     height: 45px;
@@ -319,7 +326,7 @@
     border-radius: 50%;
 }
 
-.icons{
+.icons {
     width: 45px;
     height: 45px;
     border: none;
@@ -331,61 +338,70 @@
     right: 1rem;
 }
 
-.icons:hover{
+.icons:hover {
     transform: scale(1.1);
 }
 
-#insta{
+/* Definições dos Icons: */
+#insta {
     background-color: #FF3877;
     color: white;
 }
-#insta:hover{
+
+#insta:hover {
     background-color: #ff387700;
     color: #FF3877;
     border: 2px solid #FF3877;
 }
 
-#zap{
+#zap {
     background-color: #22BC9D;
     color: white;
 }
-#zap:hover{
+
+#zap:hover {
     background-color: #ff387700;
     color: #22BC9D;
     border: 2px solid #22BC9D;
 }
 
-#face{
+#face {
     background-color: #3B9BDC;
     color: white;
 }
-#face:hover{
+
+#face:hover {
     background-color: #ff387700;
     color: #3B9BDC;
     border: 2px solid #3B9BDC;
 }
 
-#email{
+#email {
     background-color: #F4DD53;
     color: white;
 }
-#email:hover{
+
+#email:hover {
     background-color: #ff387700;
     color: #F4DD53;
     border: 2px solid #F4DD53;
 }
 
-.cor-r{
+.cor-r {
     width: 60%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.cor-R h2{
+.cor-r h2 {
     font-weight: 500;
 }
 
-.cor{
+.cor-R h2 {
+    font-weight: 500;
+}
+
+.cor {
     width: 40%;
     height: 25px;
     display: flex;
@@ -398,50 +414,39 @@
     margin-top: 2%;
 }
 
-
-
-
+/* Responsividade: */
+/* Responsividades Celulares: */
 @media screen and (max-width: 720px) {
-    .box-principal{
+    .m-per-expo {
+        overflow: scroll;
+    }
+
+    .box-principal {
         width: 90%;
         height: 150vh;
-        /* overflow-y: scroll; */
         flex-direction: column;
         margin-top: 1rem;
     }
 
-    .linha{
+    .linha {
         display: none;
     }
 
-    #icon-sair{
+    .img-decoracao1 {
         position: relative;
-        z-index: 2;
-        top: 2%;
-        left: 88%;
-        font-size: 20px;
-    }
-
-    .img-decoracao1{
-        position: relative;
-        top: -3%;
-        right: 0;
+        top: -2%;
+        left: -6%;
         z-index: 2;
     }
 
-    .img-decoracao2{
-        top: 91%;
-        left: 11.4%;
+    .img-decoracao2 {
+        top: 59rem;
+        left: 2rem;
         z-index: 2;
-        width: 80vw;
+        width: 70vw;
     }
 
-    .img-decoracao2 img{
-        width: 100%;
-        height: auto;
-    }
-
-    .lado-esquerdo{
+    .lado-esquerdo {
         width: 100%;
         height: 50%;
         background-color: rgba(0, 255, 255, 0);
@@ -450,37 +455,39 @@
         bottom: 7rem;
     }
 
-    .area-logo{
+    .area-logo {
         background-color: rgba(0, 255, 255, 0);
+        height: 34%;
     }
 
-    .div-logo{
+    .div-logo {
         width: 120px;
         height: 120px;
     }
 
-    .galeria-imagens{
+    .galeria-imagens {
         background-color: rgba(100, 148, 237, 0);
-        height: 50%;
+        height: 59%;
         padding: 40px;
     }
 
-    .div-h1{
+    .div-h1 {
         background-color: rgb(255, 255, 255);
     }
 
-    .div-h1 h1{
+    .div-h1 h1 {
         font-size: 18px;
         top: 0;
     }
 
-    .div-img{
+    .div-img {
+        width: calc(50% - 10px);
         height: 75px;
         position: relative;
-        bottom: 0.5rem;
+        bottom: 1.5rem;
     }
 
-    .lado-direito{
+    .lado-direito {
         width: 95%;
         height: 65%;
         position: relative;
@@ -490,90 +497,242 @@
         background-color: rgba(0, 255, 255, 0);
     }
 
-    .sobre-a-empresa{
+    .sobre-a-empresa {
         background-color: rgba(0, 255, 255, 0);
         margin-left: 0.5rem;
     }
-    
-    .cat-num{
+
+    .cat-num {
         background-color: rgba(25, 0, 255, 0);
         margin-left: 0.5rem;
     }
-    
-    .contacts-corR{
+
+    .div-categoria {
+        background-color: #5cb74a00;
+        width: 55%;
+    }
+
+    .div-numero {
+        background-color: #f4dc5300;
+        width: 45%;
+    }
+
+    .contacts-corR {
         background-color: rgba(255, 0, 60, 0);
         margin-left: 0.5rem;
+        height: 20vh;
     }
 
-    .area-title h1{
+    .area-icons {
+        background-color: #3b9cdc00;
+        gap: 7px;
+    }
+
+    .area-title h1 {
         font-size: 25px;
+        position: relative;
+        bottom: 1rem;
     }
 
-    .h2-sobre{
+    .h2-sobre {
         font-size: 18px;
         position: relative;
         bottom: 0.5rem;
     }
 
-    .text-sobre{
+    .text-sobre {
         font-size: 14px;
     }
 
-    .div-categoria h2{
+    .div-categoria h2 {
         font-size: 18px;
         position: relative;
         top: 0.5rem;
     }
 
-    .div-categoria p{
+    .div-categoria p {
         font-size: 14px;
         position: relative;
         top: 0.5rem;
     }
 
-    .div-numero h2{
+    .div-numero h2 {
         font-size: 18px;
         position: relative;
         top: 0.5rem;
     }
 
-    .div-numero p{
+    .div-numero p {
         font-size: 14px;
         position: relative;
         top: 0.5rem;
     }
 
-    .cor-R{
+    .cor-r {
         background-color: #22bc9d00;
         flex-direction: column;
+        width: 45%;
     }
 
-    .cor-R h2{
+    .cor-r h2 {
         font-size: 18px;
         position: relative;
         top: 0.5rem;
     }
 
-    .cor{
-        width: 65%;
+    .cor {
+        width: 80%;
         position: relative;
         top: 0.5rem;
+        height: 20px;
+        font-size: 12px;
+        ;
     }
 
-    .contacts{
+    .contacts {
         background-color: #3b9cdc00;
+        width: 55%;
     }
 
-    .contacts h2{
+    .contacts h2 {
         font-size: 18px;
         position: relative;
         top: 0.5rem;
     }
 
-    .icons{
+    .icons {
         width: 25px;
         height: 25px;
         font-size: 12px;
     }
 
+    .area-icons a {
+        background-color: #f4dc5300;
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+@media (max-width: 414px) and (min-height: 896px) {
+    .box-principal {
+        height: 110vh;
+    }
+
+    .img-decoracao2 {
+        top: 64rem;
+        left: 2.2rem;
+    }
+}
+
+@media (max-width: 390px) and (min-height: 844px) {
+    .box-principal {
+        height: 120vh;
+    }
+
+    .img-decoracao2 {
+        top: 64rem;
+        left: 2rem;
+    }
+}
+
+@media (max-width: 430px) and (min-height: 932px) {
+    .box-principal {
+        height: 120vh;
+    }
+
+    .img-decoracao2 {
+        top: 66rem;
+        left: 2.2rem;
+    }
+}
+
+@media (max-width: 360px) and (min-height: 740px) {
+    .box-principal {
+        height: 130vh;
+    }
+
+    .img-decoracao2 {
+        top: 57rem;
+        left: 1.9rem;
+    }
+}
+
+@media (max-width: 412px) and (min-height: 915px) {
+    .img-decoracao2 {
+        top: 66rem;
+        left: 2.2rem;
+    }
+}
+
+/* Responsividade Ipad Mini: */
+@media (max-width: 1150px){
+    .box-principal{
+        flex-direction: column;
+        overflow: scroll;
+        position: relative;
+        height: 92vh;
+    }
+
+    .lado-esquerdo{
+        width: 100%;
+        z-index: 5;
+    }
+    
+    .lado-direito{
+        width: 100%;
+        z-index: 5;
+    }
+
+    .img-decoracao1{
+        position: absolute;
+        z-index: 0;
+    }
+
+    .img-decoracao2{
+        display: none;
+    }
+
+    .contacts-corR{
+        background-color: #22bc9d00;
+    }
+
+    .contacts{
+        background-color: #5cb74a00;
+        width: 55%;
+    }
+
+    .cor-r{
+        background-color: #ff387700;
+        width: 45%;
+    }
+
+    .div-categoria{
+        width: 55%;
+    }
+
+    .div-numero{
+        width: 45%;
+    }
+}
+
+@media (max-width: 1280px) and (min-height: 800px){
+    .div-logo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .div-h1 h1{
+        font-size: 30px;
+    }
+
+    .div-img{
+        height: 126px;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 600px){
+    .box-principal{
+        display: none;
+    }
 }
