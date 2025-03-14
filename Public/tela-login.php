@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prévia Tela Login</title>
     <link rel="stylesheet" href="../Public/css/style-tela-login.css">
+    <title>Bosque da Paz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body class="body-login">

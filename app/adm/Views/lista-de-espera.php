@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-    <title>Lista de Espera</title>
+    <title>Adm - Bosque da Paz</title>
 </head>
 
 <body class="corpo-lisEsp">

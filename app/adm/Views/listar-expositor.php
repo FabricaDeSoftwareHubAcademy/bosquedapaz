@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Expositores</title>
+    <title>Adm - Bosque da Paz</title>
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-expositor.css">
