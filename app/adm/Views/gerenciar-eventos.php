@@ -30,6 +30,7 @@
                                 <th>Data</th>
                                 <th>Status</th>
                                 <th class="fone-col">Editar</th>
+                                <th class="fone-col">Atração</th>
                                 <th>Foto</th>
                             </tr>
                         </thead>
@@ -42,6 +43,11 @@
                                     <td class="fone-col">
                                         <a href="editar-expositor.php">
                                             <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                    </td>
+                                    <td class="mais">
+                                        <a href="">
+                                            <i class="fa-solid fa-plus"></i>
                                         </a>
                                     </td>
                                     <td class="mais">
