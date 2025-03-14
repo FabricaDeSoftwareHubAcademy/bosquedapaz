@@ -18,28 +18,27 @@
         <div class="box">
             <h2>EDITAR EVENTO</h2>
             <div class="form-box">
-                <form action="#">
+            <form action="#" method = "POST">
                     <div id="form1">
                         <div class="input-group">
                             <label>Nome:</label>
                             <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                 required>
-                        </div>
-                        <div class="input-group">
-                            <label>Data:</label>
-                            <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                        </div>
+                        </div>                        
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricaodoevento" id="descricaodoevento"
-                                placeholder="Digite uma breve descrição do evento" required>
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>       
                         </div>
-                        
-                        
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="file" id="file"
-                                required>
+                        <div class = "data-imagem">
+                            <div class="input-group">
+                                <label>Data:</label>
+                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                            </div>
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="file" id="file"
+                                    required>
+                            </div>
                         </div>
                         <img class = "preview" src="" alt="" id="preview-image">
                     </div>
