@@ -11,9 +11,10 @@
 
 .nome-area-gabriel h1 {
     color: black;
-    position: absolute;
-    top: 150px;
-    right: 820px;
+    position: relative;
+    top: -34vh;
+    z-index: 1;
+    left: 62vh;
 }
 
 .Bola-1-gabriel {
@@ -77,6 +78,8 @@
     flex-wrap: wrap;
     gap: 40px;
     padding: 100px;
+    right: 11%;
+    position: relative;
 }
 
 .Botoes-gabriel {
@@ -127,83 +130,65 @@
 }
 
 @media screen and (max-width: 720px) {
-    .area-icon-gabriel {
+    .box-gabriel{
+        width: 95%;
+        background-color: #f8f5f64b;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .area-botao-gabriel{
+        background-color: #16286800;
+        right: 4rem;
         width: 100%;
-        padding: 20px;
-        gap: 20px;
-        display: flex;
-        height: 100%;
-    }
-    
-    .box-gabriel {
-        top: 1%;
-        flex-direction: column;
+        justify-content: center;
     }
 
-    .area-botao-gabriel {
-        gap: 0px;
-        padding: 0px;
-        width: 100%;
-        top: 10%;
-        position: relative;
+    .seta-voltar-gabriel{
+        top: 7.4rem;
+        left: 2rem;
+        bottom: 0%;
+        width: 141%;
     }
 
-    .Botoes-gabriel {
-        width: 100px;
-        height: 100px;
+    .nome-area-gabriel h1{
+        bottom: 0;
+        left: 9rem;
+        font-size: 15px;
     }
 
-    .Bola-1-gabriel {
-        display: block;
+    .Bola-1-gabriel{
         top: 20vh;
-        right: 88vw;
     }
 
-    .Bola-1-gabriel img {
-        width: 100%;
-        height: auto;
+    .Botoes-gabriel{
+        border-radius: 10px;
     }
 
-    .Bola-2-gabriel {
-        display: block;
-        top: 20vh;
-        right: 80vw;
+
+}
+
+@media (max-width:768px) and (min-height:1024px){
+    .box-gabriel{
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
-    .Bola-2-gabriel img {
-        width: 100%;
-        height: auto;
-    }
-
-    .Bola-3-gabriel {
-        display: block;
-        top: 91vh;
-    }
-
-    .Bola-3-gabriel img {
-        width: 100%;
-        height: auto;
-    }
-
-    .area-icon-gabriel img {
-        width: 75%;
-        left: 3%;
+    .seta-voltar-gabriel{
         position: relative;
+        left: -35%;
+        top: 201%;
     }
 
-    .area-icon-gabriel p {
-        top: 130px;
-        font-size: 10.5px;
-        z-index: 1;
-        top: 78%;
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 19vh;
+        font-size: 1.9rem;
+        width: 135%;
     }
 
-    .seta-voltar-gabriel {
-        width: 25px;
-        height: 25px;
-        top: 100vh;
-        left: 7vw;
+    .area-botao-gabriel{
+        position: relative;
+        left: -13vh;
     }
-
-   
 }

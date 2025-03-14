@@ -337,7 +337,7 @@
     }
 }
 
-@media (max-width:7680px) and (min-height:1024px){
+@media (max-width:768px) and (min-height:1024px){
     .box-principal-utl{
         position: relative;
         width: 94%;
