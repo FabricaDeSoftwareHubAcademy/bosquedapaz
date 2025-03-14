@@ -17,13 +17,14 @@
         <h1 class="title-all-expo">Expositores</h1>
         <div class="select-area">
             <select name="selecao-categoria" id="select-cat" class="select-cat">
-                <option value="0" class="opcoes-cat">Todas as Categorias</option>
-                <option value="1" class="opcoes-cat">Artesanato</option>
-                <option value="2" class="opcoes-cat">Antiguidade</option>
-                <option value="3" class="opcoes-cat">Colecionismo</option>
+                <option value="inicio" class="opcoes-cat">Todas as Categorias</option>
+                <option value="artesanato" class="opcoes-cat">Artesanato</option>
+                <option value="antiguidade" class="opcoes-cat">Antiguidade</option>
+                <option value="colecionismo" class="opcoes-cat">Colecionismo</option>
             </select>
+            <div class="vir-aqui" id="artesanato"></div>
         </div>
-        <div class="area-all-cards">
+        <div class="area-all-cards" id="inicio">
             <section class="secao-expo" id="artesanato">
                 <div class="content-title-sec">
                     <h2 class="title-sec">Artesanato</h2>
@@ -217,7 +218,8 @@
                     </div>
                 </div>
             </section>
-            <section class="secao-expo" id="artesanato">
+            <div class="vir-aqui" id="antiguidade"></div>
+            <section class="secao-expo">
                 <div class="content-title-sec">
                     <h2 class="title-sec">Antiguidade</h2>
                 </div>
@@ -410,7 +412,8 @@
                     </div>
                 </div>
             </section>
-            <section class="secao-expo" id="artesanato">
+            <div class="vir-aqui" id="colecionismo"></div>
+            <section class="secao-expo" id="colecionismo">
                 <div class="content-title-sec">
                     <h2 class="title-sec">Colecionismo</h2>
                 </div>
@@ -610,6 +613,17 @@
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
     <script src="../../../Public/js/js-home/escolher-categoria.js"></script>
     <script src="../../../Public/js/js-home/main.js"></script>
+    <script>
+        var selection = document.getElementById("select-cat");
+        var variavel = "";
+        // var url = window.location.href;
+        selection.onchange = function() {
+            section = this.value;
+            console.log(section);
+            let irPara = "http://localhost/aula-php-dev-33/bosquedapaz/app/client/Views/todos-expositores.php#" + section;
+            window.location.assign(irPara);
+        }
+    </script>
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 </body>
