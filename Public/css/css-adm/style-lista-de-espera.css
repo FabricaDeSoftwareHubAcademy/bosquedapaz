@@ -66,7 +66,7 @@ html,
 .seta-LisEsp3 {
     position: fixed;
     top: 92vh;
-    left: 3vw;
+    left: 8%;
     z-index: 2;
     cursor: pointer;
 }
@@ -78,6 +78,9 @@ html,
 
 
 .box-LisEsp-mat {
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
     width: 90%;
     height: 750px;
     background-color: #f8f5f6c3;
@@ -85,11 +88,12 @@ html,
     border-radius: 10px;
     overflow-y: hidden;
     bottom: 20px;
+    flex-direction: column;
     position: relative;
 }
 
 .box-LisEsp-mat h1 {
-    margin-left: 40%;
+    /* margin-left: 40%; */
     font-size: 30px;
     position: relative;
     top: 10px;
@@ -104,7 +108,7 @@ html,
     justify-content: center;
     border-radius: 10px;
     position: relative;
-    left: 20%;
+    /* left: 20%; */
 }
 
 .area-pesquisa-lisEsp input {
@@ -132,7 +136,7 @@ html,
 }
 
 .area-table-lisEsp {
-    width: 100%;
+    width: 90%;
     max-height: 50vh;
     overflow-y: auto;
     border: 1px solid #ddd;
@@ -181,9 +185,9 @@ html,
     height: 50px;
 }
 
-.table-lisEsp td{
+/* .table-lisEsp td{
     height: 80px;
-}
+} */
 
 .table-lisEsp thead tr,
 .table-lisEsp tbody tr{
@@ -199,7 +203,7 @@ html,
 
 .table-lisEsp th,
 .table-lisEsp td {
-    padding: 12px 15px;
+    padding: 8px 12px;
     border: 1px solid #ddd;
     text-align: center;
 }

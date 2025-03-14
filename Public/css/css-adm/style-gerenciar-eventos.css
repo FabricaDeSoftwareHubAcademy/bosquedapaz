@@ -50,7 +50,7 @@ h2 {
     top: 0;
     background: white;
     z-index: 1000;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,10 +225,10 @@ table tbody tr:nth-child(even) {
     position: relative;
     top: -90vh;
     z-index: -3;
-    animation: bolaAnim 5s infinite;
+    /* animation: bolaAnim 5s infinite; */
 }
 
-@keyframes bolaAnim {
+/* @keyframes bolaAnim {
     0% {
         transform: translateY(0);
     }
@@ -238,7 +238,7 @@ table tbody tr:nth-child(even) {
     100% {
         transform: translateY(0);
     }
-}
+} */
 
 .bolas-fundo .bola-verde1 {
     position: absolute;
@@ -264,7 +264,7 @@ table tbody tr:nth-child(even) {
 
 
 .voltar-link {
-    width: 50%;
+    width: 60%;
     height: 12%;
     align-items: center;
     position: relative;
@@ -272,6 +272,7 @@ table tbody tr:nth-child(even) {
     display: flex;
     gap: 50px;
     cursor: default;
+    left: -50%;
 }
 
 .voltar {
