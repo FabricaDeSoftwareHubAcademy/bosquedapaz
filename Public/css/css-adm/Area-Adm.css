@@ -130,7 +130,7 @@
     margin: auto;
 }
 
-.modais {
+.modais{
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -141,7 +141,16 @@
     justify-content: space-around;
     gap: 20px;
 }
-
+.abrir-mais{
+    border-radius: 12px;
+}
+.close-modal{
+    margin-bottom: 190px;
+    box-shadow: none;
+}
+#icon-sair{
+    cursor: pointer;
+}
 @media screen and (max-width: 720px) {
     .area-icon-gabriel {
         width: 100%;

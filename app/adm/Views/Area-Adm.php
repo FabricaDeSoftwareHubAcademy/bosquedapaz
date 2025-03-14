@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/Area-Adm.css">
     <link rel="icon" href="../../imgs/img-home/logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -42,25 +43,26 @@
                     </div>
                 </div>
 
-            <!-- Modal Parcieros -->
+            <!-- Modal Parceiros -->
 
             <dialog class="abrir-mais" id="abrir-mais-parceiros">
                 <div class="modais">
-                    <a href="">
-                        <img class= "close-modal" src="../../../Public/imgs/icon-sair.png" alt="">
-                    </a>
-                <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
+                    <div class="close-modal" data-modal="abrir-mais-parceiros">
+                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                    </div>
+                    <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Cadastrar Parceiros</p>
                         <div class="icon-gabriel"></div>
                     </div>
+                </div>
+                <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Listar Parceiros</p>
                         <div class="icon-gabriel"></div>
                     </div>
-                </div>
                 </div>
             </dialog>
 
@@ -76,8 +78,21 @@
             <!-- Modal Expositores -->
             <dialog class="abrir-mais" id="abrir-mais-expositor">
                 <div class="modais">
-                    <p>4</p>
-                    <p>dfbdfb</p>
+                <div class="close-modal" data-modal="abrir-mais-expositor">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
+                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
+                    <div class="area-icon-gabriel">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                        <p>Cadastrar Expositores</p>
+                    </div>
+                    </div>
+                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
+                    <div class="area-icon-gabriel">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                        <p>Listar Expositores</p>
+                    </div>
+                    </div>
                 </div>
             </dialog>
 
