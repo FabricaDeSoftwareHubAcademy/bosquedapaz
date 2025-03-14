@@ -37,13 +37,13 @@
 .img-superior-direita{
     position: absolute;
     right: 0%;
-    top: 8vw;
+    top: 10%;
 }
 
 .img-superior-esquerda{
     position: absolute;
     left: 0vw;
-    top: 6vw;
+    top: 12%;
 }
 
 .img-inferior-direita{
@@ -74,7 +74,7 @@
  
 .box-login{
     width: 85%;
-    height: 800px;
+    height: 83%;
     backdrop-filter: blur(0px);
     background-color: rgba(248, 245, 246, 0.705);
     border-radius: 15px;
@@ -101,7 +101,7 @@
     backdrop-filter: blur(30px);
  
     #linha-login{
-        border-right: 3px solid #162868;
+        border-right: 1.5px solid #162868;
     }
 }
  
@@ -257,9 +257,6 @@
 }
 
 @media (max-width:575.98px){
-    /* .body-login{
-        background-color: red;
-    } */
 
     #linha-login{
         display: none;
@@ -373,9 +370,6 @@
 }
 
 @media (width: 1024px) and (height: 600px){
-    /* .body-login{
-        background-color: blueviolet;
-    } */
 
     #linha-login{
         display: flex;
@@ -394,7 +388,6 @@
     }
 
     .area-img-login{
-        /* background-color: red; */
         height: 100%;
     }
 }
@@ -411,9 +404,7 @@
         width: 100%;
     }
 
-    .box-login{
-        height: 90%;
-    }
+
 }
 
 @media (min-width:1400px){
