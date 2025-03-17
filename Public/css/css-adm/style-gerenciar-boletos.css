@@ -65,7 +65,7 @@
 
 /* FILTRO DE EXPOSITOR */
 .filtro-expositor {
-    width: 40%;
+    width: 30%;
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@
 }
 
 .filtro-expositor label {
-    height: 60%;
+    height: 70%;
     /* background-color: red; */
 }
 /* FILTRO DE EXPOSITOR */
@@ -107,7 +107,7 @@
 
 .campo-data label {
     text-align: center;
-    height: 60%;
+    height: 45%;
     /* background-color: red; */
     /* margin-bottom: 2%; */
 }
@@ -144,145 +144,116 @@
     cursor: pointer;
 }
 
+.area-filtragem {
+    width: 10%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.area-filtragem label {
+    height: 40%;
+}
+
+.botao-filtrar {
+    width: 90%;
+    height: 80%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #007E70;
+    color: white;
+    cursor: pointer;
+}
+
+.espacamento {
+    width: 2px;
+    height: 80px;
+    background-color: #acacac;
+}
+
 .filtro-status label {
     height: 60%;
 }
 
-.tabela-boletos {
-    height: 80%;
-    width: 90%;
-    background-color: red;
+.area-table-lisEsp {
+    margin-top: 3%;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    overflow-x: auto;
+    position: relative;
 }
 
-.table-container {
-    margin-top: 2%;
-    width: 90%;
-    max-height: 50vh;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-}
- 
-.collaborators-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-}
- 
- 
-/* .collaborators-table thead {
-    position: sticky;
-    top: 0;
-    background-color: rgb(32, 54, 139);
-    color: white;
-    z-index: 10;
-} */
- 
-/* .collaborators-table th, .collaborators-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 20%;
-} */
- 
- 
-.collaborators-table tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
- 
- 
-.collaborators-table {
-    text-align: center;
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
- 
-.collaborators-table tbody{
+.table-lisEsp {
+    background-color: rgba(0, 255, 255, 0);
+    width: 88%;
     display: block;
-    max-height: 50vh;
-    width: 100%;
+    overflow-y: auto;
+    max-height: 500px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    position: relative;
+    bottom: 8%;
 }
- 
-.collaborators-table thead {
+
+.table-lisEsp tbody tr td i{
+    font-size: 25px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+
+.table-lisEsp td i:hover{
+    color: rgba(32, 54, 139, 1);
+}
+
+.table-lisEsp td a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.table-lisEsp thead {
     position: sticky;
     top: 0;
-    background-color: rgb(32, 54, 139);
-    color: white;
     z-index: 2;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
 }
- 
-.collaborators-table thead tr,
-.collaborators-table tbody tr{
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+
+.table-lisEsp th {
+    background-color: rgb(32, 54, 139, 1);
+    height: 50px;
 }
- 
-.collaborators-table tbody tr td{
+
+.table-lisEsp td{
+    height: 80px;
+}
+
+.table-lisEsp th,
+.table-lisEsp td {
+    width: 10%;
+    padding: 6px;
     text-align: center;
-    height: 15%;
-}
- 
- 
-.collaborators-table th,
-.collaborators-table td {
-    padding: 12px 15px;
+    box-sizing: border-box;
+    text-align: left;
     border: 1px solid #ddd;
-    text-align: center;
 }
- 
-/* .collaborators-table td{
-    padding: 12px 15px;
-} */
- 
-table tbody tr:nth-child(odd) {
-    font-size: 80%;
-    background-color: white;
-    /* Cor clara */
+
+.table-lisEsp tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
- 
-table tbody tr:nth-child(even) {
-    font-size: 80%;
-    background-color: #e6e6e6;
-    /* Cor mais escura */
+
+.table-lisEsp tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
- 
-.collaborators-table tbody tr:hover {
+
+.table-lisEsp tbody tr:hover{
     background-color: #f1f1f1;
-}
- 
- 
-.status {
-    width: 80px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-}
- 
-.status.pago {
-    background-color: #28a745;
-    color: white;
-    border-radius: 8px;
-}
- 
-.status.pendente {
-    background-color: #dc3545;
-    color: white;
-    border-radius: 8px;
-}
- 
-.edit-icon {
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-}
- 
-.edit-icon:hover {
-    color: #003d8c;
 }
