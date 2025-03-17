@@ -49,14 +49,15 @@
                 </div>
 
                 <div class="input-formulario3">
-                    <label>Se você possui um trailer, foodtruck ou <br> barraca de comida: <br>
-                        Qual a medida EXATA dele?</label>
-                    <input type="text" name="" id="" value="9m²">
-                    <label>Precisa de energia para vender seus produtos? <br>
-                        Se sim, para quais <br>voltagens e quais equipamentos:</label>
+                    <label>Tipo de exposição:</label>
+                    <input type="text" name="" id="" value="trailer">
+                    <label for="energia">Precisa de energia?</label>
                     <input type="text" name="" id="" value="Não">
+                    <label for="energia">Voltagens dos equipamentos</label>
+                    <input type="text" name="" id="" value="110v">
                 </div>
 
+            </div>
             </div>
 
 
