@@ -23,6 +23,12 @@
                 <option value="colecionismo" class="opcoes-cat">Colecionismo</option>
             </select>
             <div class="vir-aqui" id="artesanato"></div>
+            <div class="procurar">
+                <h3 class="title-pes">Pesquisar por expositor:</h3>
+                <div class="pesquisa-expo"> <!-- area de pesquisa -->
+                    <input class="input-pes" type="text" placeholder="Pesquisar por...">
+                </div>
+            </div>
         </div>
         <div class="area-all-cards" id="inicio">
             <section class="secao-expo" id="artesanato">

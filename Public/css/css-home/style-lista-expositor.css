@@ -11,6 +11,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 :root {
     --color-rua1: #FDF148;
     --color-rua2: #FC671D;
@@ -59,6 +60,36 @@
     text-transform: capitalize;
 }
 
+.procurar {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+    padding: 5px;
+}
+
+.title-pes  {
+    font-weight: 500;
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.pesquisa-expo {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.input-pes {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 2px solid #000;
+}
+
 .area-all-cards {
     width: 100%;
     background-color: #F8F8F8;
@@ -67,7 +98,7 @@
 }
 
 .vir-aqui {
-    width: 10%;
+    width: 4%;
     height: 40px;
 }
 
