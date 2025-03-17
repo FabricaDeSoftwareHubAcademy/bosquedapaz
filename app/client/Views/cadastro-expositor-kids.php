@@ -6,7 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
 
@@ -17,6 +16,8 @@
 
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
+    <title>Bosque da Paz</title>
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 
 <body>

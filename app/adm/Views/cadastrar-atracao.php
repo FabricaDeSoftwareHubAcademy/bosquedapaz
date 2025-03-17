@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Atração</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-atracao.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
@@ -30,8 +30,7 @@
                         
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricaodoevento" id="descricaodoevento"
-                                placeholder="Digite uma breve descrição do evento" required>
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>       
                         </div>
                                                
                         <div class="input-group">

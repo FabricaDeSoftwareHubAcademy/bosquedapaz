@@ -1,297 +1,229 @@
-/* avisos */
-.todos-avisos {
-    margin-top: 50px;
-}
-
 .avisos {
     width: 100%;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-    background-color: var(--color-fundo-verde);
-}
-
-.content-avisos {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.box-aviso {
-    width: 600px;
-    height: 400px;
-}
-
-.box-aviso img {
-    width: 100%;
-    height: 100%;
-}
-
-.box-text {
-    gap: 30px;
-    padding: 20px;
+    padding: 100px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
-.btn-saiba {
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.box-text img {
-    display: none;
-}
-
-.box-text h4 {
-    font-size: 3em;
-    font-weight: bold;
-    color: #fff;
-}
-
-.box-text p {
-    width: 70%;
-    font-size: 2em;
-    text-align: center;
-    color: #fff;
-}
-
-.link-saiba-mais {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.btn-saiba {
-    width: 50%;
-    height: 50px;
-    border: none;
-    outline: none;
-    background-color: #FFA929;
-    color: #fff;
-    font-size: 2em;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #0000002d;
-    transition: all .2s ease-in-out;
-}
-
-.btn-saiba:hover {
-    background-color: transparent;
-    color: black;
-    border: 2px solid #FFA929;
-}
-
-/* eventos passados */
-.passadas {
-    margin-top: -90px;
-    clip-path: none;
-    background-color: transparent;
-}
-
-.avisos .text-avisos h4, .avisos .text-avisos p,
-.avisos .text-ultimas h4, .avisos .text-ultimas p {
-    color: white;
-}
-
-
-.box-text h4, .box-text p {
-    color: black;
-}
-
-
-/* ultimas edições */
-.ultimas {
-    margin-top: -90px;
-    background-color: #3DB4F4;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
-}
-
-.edicoes {
-    gap: 20px;
-    width: auto;
-    height: 500px;
-    padding: 10px;
+.secao-da-tarde {
+    background-color: var(--color-prox-event);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    height: 500px;
+    padding: 50px 150px 100px 150px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
 
-.img {
-    width: 300px;
-    height: auto;
+.secao-tarde-2 {
+    background-color: var(--color-edit-pass);
+    padding: 50px 150px;
+    clip-path: none;
+}
+.secao-tarde-3 {
+    background-color: var(--color-ulti-publi);
+    padding: 100px 150px 50px 150px;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
+
+.conteiner-img {
+    width: 37%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.conteiner-img-ulti-publi {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+
+.img-prox-event {
+    width: 90%;
+    transition: all .1s ease-in;
+}
+
+.img-prox-event:hover {
+    width: 95%;
+}
+/* .img-prox-event:hover {
+    width: 95%;
+} */
+
+.img-ulti-publi {
+    width: 45%;
+    border-radius: 10px;
+    transition: all .1s ease-in;
+}
+
+.img-ulti-publi:hover {
+    width: 50%;
+}
+
+.img-prox-event-m {
+    display: none;
+}
+
+.img-ulti-publi-m {
+    display: none;
+}
+
+.conteiner-sobre {
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-}
-
-.img img {
-    width: 100%;
-    height: 70%;
-}
-
-.img p {
+    gap: 10px;
     text-align: center;
-    width: 50%;
-    font-size: 1.3em;
+    padding: 10px;
+}
+
+.title-evisos-edit {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.para-avisos-edit {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.title-meio {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.para-meio {
+    font-size: 1.1rem;
+    color: black;
+}
+
+.img-prox-event {
+    border-radius: 10px;
+}
+
+
+.btn-vermais {
+    background-color: white;
+    border: 2px solid #FEB850;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: all .2s ease-in-out;
+}
+
+.btn-vermais2 {
+    border: 2px solid #5CB74E;
+    background-color: #5CB74E;
+}
+.btn-vermais3 {
+    
+    border-color: #3DB4F4;
+}
+
+.text-verm {
+    color: #FEB850;
+    text-decoration: none;
+}
+
+.text-verm-2 {
     color: #fff;
+    text-decoration: none;
+}
+.text-verm-3 {
+    color: #3DB4F4;
+    text-decoration: none;
 }
 
-@media(max-width: 1500px) {
+.btn-vermais:hover {
+    background-color: #FEB850;
+    border: 2px solid #FEB850;
+}
 
-    .avisos {
-        height: 500px;
+.btn-vermais:hover .text-verm {
+    color: white;
+}
+
+.btn-vermais2:hover {
+    background-color: #fff;
+    border: 2px solid #5CB74E;
+}
+
+.btn-vermais2:hover .text-verm-2 {
+    color: #5CB74E;
+}
+
+
+.btn-vermais3:hover {
+    background-color: #3DB4F4;
+    border: 2px solid #3DB4F4;
+}
+
+.btn-vermais3:hover .text-verm-3 {
+    color: white;
+}
+
+@media screen and (max-width: 1150px) {
+    .secao-da-tarde {
+        padding: 10px;
     }
 
-    .box-aviso {
-        width: 290px;
-        height: 190px;
-        margin-bottom: 100px;
+    .conteiner-img {
+        width: 50%;
     }
 
-    .box-text {
-        width: 290px;
-    }
-
-    .text-avisos {
-        margin-bottom: 100px;
-    }
-    
-    .box-text h4 {
-        font-size: 1.5em;
-    }
-    
-    .box-text p {
+    .img-ulti-publi {
         width: 80%;
-        font-size: 1em;
     }
 
-    .btn-saiba {
-        width: auto;
-        height: auto;
-        padding: 5px 10px;
-        font-size: 1.2em;
-    }
-
-    .box-aviso {
-        margin-top: 100px;
-    }
-    
-    .edicoes {
-        margin-left: 20px;
-        width: 450px;
-        height: 300px;
-        margin-bottom: 30px;
-    }
-    
-    .img {
-        width: 200px;
-        height: 100%;
-        margin-right: 10px;
-        justify-content: space-between;
-    }
-    
-    .img p {
-        width: 200px;
-        font-size: 1.2em;
+    .img-ulti-publi2 {
+        display: none;
     }
 }
 
-@media(max-width: 950px) {
-    .avisos {
-        height: 500px;
-    }
-
-    .box-text {
-        width: 290px;
-    }
-
-    .box-text h4 {
-        font-size: 1em;
-    }
-    .box-text p {
-        width: 70%;
-        font-size: 0.9em;
-    }
-    .btn-saiba {
-        font-size: 0.9em;
-    }
-
-    .box-aviso {
-        margin-top: 50px;
-    }
-
-    .box-aviso {
-        width: 290px;
-        height: 200px;
-    }
-
-    .ultimas .edicoes {
-        width: auto;
-        height: 250px;
-    }
-    
-    .ultimas .edicoes #edicao-img-1 {
+@media screen and (max-width: 500px) {
+    .conteiner-img {
         display: none;
     }
 
-    .ultimas .edicoes .img {
-        height: 100%;
-    }
-
-    .ultimas .edicoes .img img {
-        height: 180px;
-        width: 150px;
-    }
-
-    .ultimas .edicoes .img p {
-        font-size: 1em;
-    }
-
-    .ultimas .text-ultimas {
-        margin: 10px;
-        width: 290px;
-    }
-}
-
-@media(max-width: 750px) {
-
-    .avisos {
-        margin-top: 0px;
-        height: 400px;
-    }
-
-    .box-aviso {
+    .para-avisos-edit {
         display: none;
     }
 
+    .para-meio {
+        display: none;
+    }
 
-    .box-text img {
+    .conteiner-sobre {
+        width: 100%;
+        margin: auto;
+    }
+    .img-prox-event-m {
         display: block;
-        width: 220px;
-        height: 150px;
+        width: 70%;
+        border-radius: 10px;
     }
 
-    .box-text p{
+    .conteiner-img-ulti-publi {
         display: none;
     }
 
-    .ultimas .text-ultimas {
-        margin-top: 20px;
+    .img-ulti-publi-m {
+        display: block;
+        border-radius: 10px;
+        width: 50%;
     }
-
-    .ultimas .text-ultimas img {
-        height: 200px;
-        width: 150px;
-    }
-
 }

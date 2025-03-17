@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
-    <title>Cadastro ADM</title>
+    <title>Adm - Bosque da Paz</title>
 </head>
 <body>
 <?php include "../../../Public/assets/adm/menu-adm.html"?>

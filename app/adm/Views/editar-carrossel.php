@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Carrossel</title>
+    <title>Adm - Bosque da Paz</title>
     <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link com style padrao da pagina adm -->
@@ -30,7 +30,7 @@
                     <label class="uploads" id="label">
                         <input type="file" name="img1" class="input" id="input1">
                     
-                        <img src="../../../Public/imgs/img-home/imagem-carrossel-1.jpg" alt="Imagem do carrossel 1" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-1.JPG" alt="Imagem do carrossel 1" class="up-img">
                     
                         <button class="btn-editar open-modal">
                             <i class="fa-solid fa-pen editar"></i>
@@ -43,7 +43,7 @@
                     <label class="uploads" id="label">
                         <input type="file" name="img2" class="input" id="input2">
                     
-                        <img src="../../../Public/imgs/img-home/imagem-carrossel-2.jpg" alt="Imagem do carrossel 2" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-2.JPG" alt="Imagem do carrossel 2" class="up-img">
                     
                         <button class="btn-editar open-modal">
                             <i class="fa-solid fa-pen editar"></i>
@@ -56,7 +56,7 @@
                     <label class="uploads">
                         <input type="file" name="img3" class="input" id="input3">
                     
-                        <img src="../../../Public/imgs/img-home/imagem-carrossel-3.jpg" alt="Imagem do carrossel 3" class="up-img">
+                        <img src="../../../Public/imgs/img-home/imagem-carrossel-3.JPG" alt="Imagem do carrossel 3" class="up-img">
                     
                         <button class="btn-editar open-modal">
                             <i class="fa-solid fa-pen editar"></i>

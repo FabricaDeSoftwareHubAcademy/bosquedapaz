@@ -4,21 +4,6 @@
     flex-direction: column;
 }
 
-.content-carrossel {
-    max-width: 80%;
-    height: auto;
-    max-height: 200px;
-    background-color: transparent;
-    margin: auto;
-    text-align: center;
-    margin: 50px 0px 100px 0px;
-}
-
-.title-welcome, .text-welcome-c {
-    color: black;
-    /* text-shadow: black 0.1em 0.1em 0.2em; */
-}
-
 .categoria #fundo-categoia {
     /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); */
     width: 100%;
@@ -80,7 +65,7 @@
     height: auto;
     margin: auto;
     border-radius: 20px;
-    margin: 50px auto 100px auto;
+    margin: 50px auto 15px auto;
     display: block;
 }
 

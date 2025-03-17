@@ -115,6 +115,29 @@ h2 {
     
 }
 
+.input-group textarea{
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.data-imagem{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 30px;
+}
+
+
+.data-imagem .input-group input{
+    width: 100%;
+    
+}
+
 .box .btns {
     display: flex;
     flex-direction: row;
@@ -140,9 +163,7 @@ h2 {
 
 .btn-cancelar-salvar {
     display: flex;
-    gap: 30px;
-    
-    
+    gap: 30px;  
 }
 
 .btn {
@@ -155,6 +176,7 @@ h2 {
     cursor: pointer;
     transition: 0.3s;
     
+    
 }
 
 .btn-cancelar-salvar .btn {
@@ -162,6 +184,8 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    
 }
 
 .btn-cancelar-salvar .btn-salvar {

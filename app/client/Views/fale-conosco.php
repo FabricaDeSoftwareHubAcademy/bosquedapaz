@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Fale Conosco</title>
     <link rel="stylesheet" href="../../../Public/css/style-fale-conosco.css">
+    <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 
 </head>

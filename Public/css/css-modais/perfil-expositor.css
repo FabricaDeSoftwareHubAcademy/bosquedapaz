@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.556);
+}
+
+/* Modal: */
+.box-principal{
+    width: 75%;
+    height: 85vh;
+    background-color: white;
+    margin-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.linha{
+    width: 2px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.177);
+    position: relative;
+    left: 49%;
+}
+
+#icon-sair{
+    position: fixed;
+    top: 10%;
+    left: 85%;
+    font-size: 25px;
+    transition: all .2s ease-in-out;
+}
+
+#icon-sair:hover{
+    transform: scale(1.1);
+    color: #FF3877;
+}
+
+/* Imagens decorativas do Modal */
+.img-decoracao1{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.img-decoracao2{
+    position: absolute;
+    top: 77.6%;
+    left: 61.2%;
+    z-index: 1;
+    border-radius: 10px;
+    /* display: none; */
+}
+
+/* Lado Esquerdo: Logo e Imagens */
+.lado-esquerdo{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Area da Logo: */
+.area-logo{
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-logo{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.622);
+    transition: all .2s ease-in-out;
+    margin-top: 1.5rem;
+}
+
+.div-logo:hover{
+    transform: scale(1.1);
+}
+
+.div-logo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Mini Galeria de Imagens: */
+.galeria-imagens{
+    width: 100%;
+    height: 60%;
+    background-color: rgba(100, 148, 237, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 50px;  
+}
+
+.div-h1{
+    width: 100%;
+    height: 5%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-h1 h1{
+    font-weight: 400;
+    font-size: 38px;
+    position: relative;
+    top: 1.5rem;
+}
+
+.div-img{
+    width: calc(33.33% - 10px);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.div-img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
+}
+
+.galeria-imagens img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Lado Direito: Informações sobre a Empresa */
+.lado-direito{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(137, 43, 226, 0);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre-a-empresa{
+    width: 95%;
+    height: 31vh;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1rem;
+}
+
+.area-title{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(136, 255, 9, 0);
+    position: relative;
+    top: 0rem;
+}
+
+.area-title h1{
+    font-weight: 500;
+    position: relative;
+    bottom: 1em;
+}
+
+.area-text{
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 10px;  /* Afastando o texto da barra de rolagem */
+    box-sizing: content-box;
+}
+
+.area-text::-webkit-scrollbar{
+    width: 6px;
+}
+
+.area-text::-webkit-scrollbar-track {
+    background-color: #555; /* cor de fundo do trilho */
+    border-radius: 10px;
+}
+
+.area-text::-webkit-scrollbar-thumb:hover {
+    background-color: #FF3877;
+    height: 1px;
+}
+
+.text-sobre{
+    text-align: justify;
+}
+
+.h2-sobre{
+    font-weight: 500;
+    position: relative;
+    bottom: 0.8rem;
+}
+
+
+.cat-num{
+    width: 95%;
+    height: 15vh;
+    background-color: rgba(25, 0, 255, 0);
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    top: 1rem;
+}
+
+.div-categoria{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(245, 222, 179, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-numero{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-categoria h2{
+    font-weight: 500;
+}
+
+.div-numero h2{
+    font-weight: 500;
+}
+
+
+.contacts-corR{
+    width: 95%;
+    height: 20vh;
+    background-color: rgba(255, 0, 60, 0);
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+    position: relative;
+    top: 1rem;
+}
+
+.contacts{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.contacts h2{
+    font-weight: 500;
+}
+
+.area-icons{
+    width: 100%;
+    height: 70%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.icons{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    transition: all .3s ease-in-out;
+    color: white;
+    position: relative;
+    right: 0.9rem;
+    cursor: pointer;
+}
+
+.icons:hover{
+    transform: scale(1.1);
+}
+
+#instagram{
+    background-color: #FF3877;
+}
+#instagram:hover{
+    background-color: #ff387700;
+    color: #FF3877;
+    border: 2px solid #FF3877;
+}
+
+#whatsapp{
+    background-color: #22BC9D;
+}
+#whatsapp:hover{
+    background-color: #22bc9d00;
+    color: #22BC9D;
+    border: 2px solid #22BC9D;
+}
+
+#facebook{
+    background-color: #3B9BDC;
+}
+#facebook:hover{
+    background-color: #3b9cdc00;
+    color: #3B9BDC;
+    border: 2px solid #3B9BDC;
+}
+
+#email{
+    background-color: #F2C518;
+}
+#email:hover{
+    background-color: #f2c61800;
+    color: #F2C518;
+    border: 2px solid #F2C518;
+}
+
+.cor-R{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(128, 255, 0, 0);
+    display: flex;
+}
+
+.cor-R h2{
+    font-weight: 500;
+}
+
+.cor{
+    width: 40%;
+    height: 25px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: #5CB74A;
+    font-weight: 600;
+    color: white;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+
+
+
+@media screen and (max-width: 720px) {
+    .box-principal{
+        width: 90%;
+        height: 150vh;
+        /* overflow-y: scroll; */
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .linha{
+        display: none;
+    }
+
+    #icon-sair{
+        position: relative;
+        z-index: 2;
+        top: 2%;
+        left: 88%;
+        font-size: 20px;
+    }
+
+    .img-decoracao1{
+        position: relative;
+        top: -3%;
+        right: 0;
+        z-index: 2;
+    }
+
+    .img-decoracao2{
+        top: 91%;
+        left: 11.4%;
+        z-index: 2;
+        width: 80vw;
+    }
+
+    .img-decoracao2 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .lado-esquerdo{
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 255, 255, 0);
+        z-index: 5;
+        position: relative;
+        bottom: 7rem;
+    }
+
+    .area-logo{
+        background-color: rgba(0, 255, 255, 0);
+    }
+
+    .div-logo{
+        width: 120px;
+        height: 120px;
+    }
+
+    .galeria-imagens{
+        background-color: rgba(100, 148, 237, 0);
+        height: 50%;
+        padding: 40px;
+    }
+
+    .div-h1{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .div-h1 h1{
+        font-size: 18px;
+        top: 0;
+    }
+
+    .div-img{
+        height: 75px;
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    .lado-direito{
+        width: 95%;
+        height: 65%;
+        position: relative;
+        bottom: 6.5rem;
+        left: 0.5rem;
+        z-index: 5;
+        background-color: rgba(0, 255, 255, 0);
+    }
+
+    .sobre-a-empresa{
+        background-color: rgba(0, 255, 255, 0);
+        margin-left: 0.5rem;
+    }
+    
+    .cat-num{
+        background-color: rgba(25, 0, 255, 0);
+        margin-left: 0.5rem;
+    }
+    
+    .contacts-corR{
+        background-color: rgba(255, 0, 60, 0);
+        margin-left: 0.5rem;
+    }
+
+    .area-title h1{
+        font-size: 25px;
+    }
+
+    .h2-sobre{
+        font-size: 18px;
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    .text-sobre{
+        font-size: 14px;
+    }
+
+    .div-categoria h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .div-categoria p{
+        font-size: 14px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .div-numero h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .div-numero p{
+        font-size: 14px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .cor-R{
+        background-color: #22bc9d00;
+        flex-direction: column;
+    }
+
+    .cor-R h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .cor{
+        width: 65%;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .contacts{
+        background-color: #3b9cdc00;
+    }
+
+    .contacts h2{
+        font-size: 18px;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .icons{
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+}
