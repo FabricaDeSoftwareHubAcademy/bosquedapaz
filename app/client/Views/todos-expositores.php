@@ -622,11 +622,11 @@
     <script>
         var selection = document.getElementById("select-cat");
         var variavel = "";
-        // var url = window.location.href;
+        var url = window.location.href;
         selection.onchange = function() {
             section = this.value;
             console.log(section);
-            let irPara = "http://localhost/aula-php-dev-33/bosquedapaz/app/client/Views/todos-expositores.php#" + section;
+            let irPara = url + "#" + section;
             window.location.assign(irPara);
         }
     </script>
