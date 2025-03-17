@@ -40,7 +40,9 @@
                     <label for="" class="label-edital">Aceito os termos a condições acima.</label>
                 </div>
                 <div class="btns">
-                    <button type="reset" class="btn-edital">Cancelar</button>
+                    <button type="reset" class="btn-edital">
+                    <a href="feira-bosque-da-paz.php#expositores" class="link-edital">Cancelar</a>
+                    </button>
                     <button type="submit" class="btn-edital btn-edital-conti"><a href="escolher-cadastro.php" class="link-edital">Continuar</a></button>
                 </div>
             </form>

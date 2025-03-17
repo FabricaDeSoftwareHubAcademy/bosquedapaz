@@ -79,6 +79,11 @@
     height: auto;
 }
 
+.link-cat-expo {
+    text-decoration: none;
+    color: black;
+}
+
 .item {
     width: 120px;
     height: 150px;
@@ -121,7 +126,7 @@
     background-color: var(--color-artesanato);
 }
 
-.artesanato:hover {
+.item:hover .artesanato {
     background-color: var(--color-artesanato-bg);
 }
 
@@ -129,7 +134,7 @@
     background-color: var(--color-antiguidade);
 }
 
-.antiguidade:hover {
+.item:hover .antiguidade {
     background-color: var(--color-antiguidade-bg);
 }
 
@@ -137,7 +142,7 @@
     background-color: var(--color-colecionismo);
 }
 
-.colecionismo:hover {
+.item:hover .colecionismo {
     background-color: var(--color-colecionismo-bg);
 }
 
@@ -145,7 +150,7 @@
     background-color: var(--color-cosmetica);
 }
 
-.cosmetica:hover {
+.item:hover .cosmetica {
     background-color: var(--color-cosmetica-bg);
 }
 
@@ -153,7 +158,7 @@
     background-color: var(--color-gastronomia);
 }
 
-.gastronomia:hover {
+.item:hover .gastronomia {
     background-color: var(--color-gastronomia-bg);
 }
 
@@ -161,7 +166,7 @@
     background-color: var(--color-literatura);
 }
 
-.literatura:hover {
+.item:hover .literatura {
     background-color: var(--color-literatura-bg);
 }
 
@@ -169,7 +174,7 @@
     background-color: var(--color-moda);
 }
 
-.moda:hover {
+.item:hover .moda {
     background-color: var(--color-moda-bg);
 }
 
@@ -177,7 +182,7 @@
     background-color: var(--color-planta);
 }
 
-.planta:hover {
+.item:hover .planta {
     background-color: var(--color-planta-bg);
 }
 
@@ -185,11 +190,11 @@
     background-color: var(--color-sustenta);
 }
 
-.sustenta:hover{
+.item:hover .sustenta{
     background-color: var(--color-sustenta-bg);
 }
 
-.img-fundo:hover {
+.item:hover .img-fundo {
     margin-top: -15px;
 }
 
