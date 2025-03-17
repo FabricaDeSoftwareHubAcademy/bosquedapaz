@@ -16,7 +16,7 @@
         <header class="cabecalho">
             <main class="principal">
                 <div class="box">
-                    <h2>NOSSOS PARCEIROS</h2>
+                    <h2>Parceiros</h2>
                     <div class="container">
                         <div class="search-bar">
                             <label for="status">Procurar</label>

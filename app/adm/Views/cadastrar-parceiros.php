@@ -172,7 +172,7 @@
                 <!-- div para salvar e cancelar -->
                     <div class="botoes">
                         <div class="botoes-cancelar">
-                            <button onclick="" class="btn-cancelar">Cancelar</button>
+                            <button onclick="" class="btn-cancelar">Cancelar<e/button>
                         </div>
                         
                         <div class="salvar-resp">
