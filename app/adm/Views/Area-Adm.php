@@ -50,13 +50,16 @@
                     <div class="close-modal" data-modal="abrir-mais-parceiros">
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
+                    <a href="../../../app/adm/Views/cadastrar-parceiros.php">
                     <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
-                        <p>Cadastrar Parceiros</p>
-                        <div class="icon-gabriel"></div>
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                            <p>Cadastrar Parceiros</p>
+                            <div class="icon-gabriel"></div>
+                        </div>
                     </div>
-                </div>
+                </a>
+                <a href="../../../app/adm/Views/listar-parceiros.php">
                 <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
@@ -64,6 +67,7 @@
                         <div class="icon-gabriel"></div>
                     </div>
                 </div>
+            </a>
             </dialog>
 
 
@@ -82,8 +86,8 @@
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                     <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                        <div class="area-icon-gabriel">
+                             <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
                         <p>Cadastrar Expositores</p>
                     </div>
                     </div>
@@ -104,11 +108,30 @@
                 </div>
             </div>
 
-            <!-- Modal Expositores -->
+            <!-- Modal Relatórios -->
             <dialog class="abrir-mais" id="abrir-mais-relatorios">
                 <div class="modais">
-                    <p>5</p>
-                    <p>dfbdfb</p>
+                <div class="close-modal" data-modal="abrir-mais-relatorios">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                    <p>Lista de Espera</p>
+                </div>
+            </div>
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                    <p>Relatório Expositor</p>
+                </div>
+            </div>
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                    <p>Relatório Usuários</p>
+                </div>
+            </div>
                 </div>
             </dialog>
 
@@ -120,11 +143,30 @@
                 </div>
             </div>
 
-            <!-- Modal Expositores -->
+            <!-- Modal Categorias -->
             <dialog class="abrir-mais" id="abrir-mais-categoria">
                 <div class="modais">
-                    <p>6</p>
-                    <p>dfbdfb</p>
+                <div class="close-modal" data-modal="abrir-mais-categoria">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                    <p>Cadastrar Categorias</p>
+                </div>
+            </div>
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                    <p>Listar Categorias</p>
+                </div>
+            </div>
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                    <p>Visualizar Categorias</p>
+                </div>
+            </div>
                 </div>
             </dialog>
 
@@ -163,11 +205,24 @@
                 </div>
             </div>
 
-            <!-- Modal Expositores -->
+            <!-- Modal ADM -->
             <dialog class="abrir-mais" id="abrir-mais-gerancia">
                 <div class="modais">
-                    <p>8</p>
-                    <p>dfbdfb</p>
+                <div class="close-modal" data-modal="abrir-mais-gerancia">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                    <p>Cadastrar ADM</p>
+                </div>
+            </div>
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                <div class="area-icon-gabriel">
+                    <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                    <p>Listar ADM</p>
+                </div>
+            </div>
                 </div>
             </dialog>
 
