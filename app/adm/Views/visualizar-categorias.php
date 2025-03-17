@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Categorias</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/style-visualizar-categoria.css" >
+        <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
         <link rel="stylesheet" href="../Public/assets/adm/menu-adm.html">
         <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     </head>
@@ -77,11 +78,43 @@
                 </div>
                 <p>Sustentabilidade</p>
             </div>
-                <a href="cadastrar-categoria.php" class="item">
-        <div class="bolota" id="b10">
-            <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">
+            <a href="#" class="item" id="openModal">
+    <div class="bolota" id="b10">
+        <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">
+    </div>
+    <p>Nova Categoria</p>
+</a>
+
+<!-- Modal -->
+<div id="modalCadastro" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="titulo">Cadastrar de Categorias</h1>
+        <div class="form-box">
+            <h3>Nome:</h3>
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
+            <h3>Cor:</h3>
+            <input class="botao-cor" name="cor_sala" type="color">
+            <h3>Ícone:</h3>
+            <label for="file" class="custum-file-upload">
+                <input id="file" type="file" onchange="loadFile(event)">
+            </label>
+
+            <div class="separacao">
+                <h2>Prévia da Categoria</h2>
+                <div class="previa">
+                    <img id="output"/>
+                    <h4 id="output-text"></h4>
+                </div>
+            </div>
+
+            <div class="botoes">
+                <button class="cancelar" onclick="fecharModal()">Cancelar</button>
+                <button class="salvar">Salvar</button>
+            </div>
         </div>
-        <p>Nova Categoria</p>
+    </div>
+</div>
     </a>
 
     <div class="btns">
@@ -91,6 +124,7 @@
         </div> 
     </main>
     <script src="../../js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
 </body>
 
 </html>
