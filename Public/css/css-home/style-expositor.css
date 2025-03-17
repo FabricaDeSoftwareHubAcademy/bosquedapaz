@@ -274,6 +274,15 @@
   background-color: #f8621a;
 }
 
+.link-edital {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 1150px) {
     .bar-title-expositor {
         height: 300px;

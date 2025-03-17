@@ -190,7 +190,7 @@
                 </div>
                 <div class="body-card">
                     <p class="para-seja-expo">Junte-se à nossa comunidade de expositores e ganhe visibilidade para a sua marca! Se torne um expositor clicando no botão abaixo.</p>
-                    <button class="btn-seja-expo"><a href="" class="link-edital">Clique Aqui</a></button>
+                    <button class="btn-seja-expo"><a href="edital-expositor.php" class="link-edital">Clique Aqui</a></button>
                 </div>
             </div>
       </div>
