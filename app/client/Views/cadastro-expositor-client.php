@@ -62,10 +62,17 @@
     
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
-                            <option value="">selecione</option>
-                            <option value="artesanato">artesanato</option>
-                            <option value="gastronia">gastronia</option>
-                            <option value="antiguidade">antiguidade</option>
+                            <option value="">Selecione</option>
+                            <option value="artesanato">Artesanato</option>
+                            <option value="gastronia">Gastronia</option>
+                            <option value="antiguidade">Antiguidade/Colecionismo</option>
+                            <option value="antiguidade">Plantas</option>
+                            <option value="antiguidade">Hortifruti</option>
+                            <option value="antiguidade">Moda autoral</option>
+                            <option value="antiguidade">Literatura</option>
+                            <option value="antiguidade">Cosmético</option>
+                            <option value="antiguidade">Sustentabilidade (brechó)</option>
+                            <option value="antiguidade">Empreendedorismo (industrializado)</option>
                            
                         </select>
                         
@@ -87,10 +94,10 @@
                         <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
-                            <option value="">selecione</option>
-                            <option value="trailer">trailer</option>
-                            <option value="food-truck">food truck</option>
-                            <option value="barrca">barrca</option>
+                            <option value="">Selecione</option>
+                            <option value="trailer">Trailer</option>
+                            <option value="food-truck">Food truck</option>
+                            <option value="barrca">Barrca</option>
 
                         </select>
                     </div>
@@ -99,9 +106,9 @@
                     <div class="custom-dropdown">
                         <select name="todas_categorias" id="todas_categorias" class="select">  
 
-                            <option value="">selecione</option>
-                            <option value="sim">sim</option>
-                            <option value="nao">não</option>
+                            <option value="">Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
                         
 
                         </select>

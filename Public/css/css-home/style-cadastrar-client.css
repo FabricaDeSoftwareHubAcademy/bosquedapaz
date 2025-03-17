@@ -472,6 +472,7 @@ label#salvar-btn {
     border: none;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
+    outline: none;
 }
 
 

@@ -6,23 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
+    <title>Cadastro de Expositor</title>
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-client.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <script src="../Public/js/js-adm/js-cadastrar-expositor.js"></script>
-
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+<?php include "../../../Public/assets/home/menu-home.html"?>
 
     <main class="principal">
 
@@ -72,10 +62,17 @@
     
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
-                            <option value="">selecione</option>
-                            <option value="artesanato">artesanato</option>
-                            <option value="gastronia">gastronia</option>
-                            <option value="antiguidade">antiguidade</option>
+                            <option value="">Selecione</option>
+                            <option value="artesanato">Artesanato</option>
+                            <option value="gastronia">Gastronia</option>
+                            <option value="antiguidade">Antiguidade/Colecionismo</option>
+                            <option value="antiguidade">Plantas</option>
+                            <option value="antiguidade">Hortifruti</option>
+                            <option value="antiguidade">Moda autoral</option>
+                            <option value="antiguidade">Literatura</option>
+                            <option value="antiguidade">Cosmético</option>
+                            <option value="antiguidade">Sustentabilidade (brechó)</option>
+                            <option value="antiguidade">Empreendedorismo (industrializado)</option>
                            
                         </select>
                         
@@ -97,10 +94,10 @@
                         <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
-                            <option value="">selecione</option>
-                            <option value="trailer">trailer</option>
-                            <option value="food-truck">food truck</option>
-                            <option value="barrca">barrca</option>
+                            <option value="">Selecione</option>
+                            <option value="trailer">Trailer</option>
+                            <option value="food-truck">Food truck</option>
+                            <option value="barrca">Barrca</option>
 
                         </select>
                     </div>
@@ -109,9 +106,9 @@
                     <div class="custom-dropdown">
                         <select name="todas_categorias" id="todas_categorias" class="select">  
 
-                            <option value="">selecione</option>
-                            <option value="sim">sim</option>
-                            <option value="nao">não</option>
+                            <option value="">Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
                         
 
                         </select>
@@ -141,6 +138,11 @@
             </div>
 
             <div class="form-finalizar">
+
+                <!-- <div class="edital-feira">
+                    <button><a href="#">Edital da Feira</a></button>
+                </div> -->
+
                 
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
@@ -153,24 +155,39 @@
                 <div id="modal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p class="title-modal">Deseja salvar as alterações?</p>
+                        <p>Deseja realmente salvar as alterações?</p>
                         <div class="modal-botoes">
+                            <button class="btn-confirmar">Confirmar</button>
                             <button class="btn-cancelar-modal">Cancelar</button>
-                            <button class="btn-confirmar">Salvar</button>
                         </div>
                     </div>
                 </div>
 
+
             </div>
 
-         
+           
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div>
+                    
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
 
+                    
 
-            <div class="btns">
-                <a href="gerenciar-expositores.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
+                
             </div>
+
+
+        </div>
+        <div class="btns">
+            <a href="escolher-cadastro.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            </a>
         </div>
         
     </div>
