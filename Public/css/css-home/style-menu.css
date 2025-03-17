@@ -87,7 +87,7 @@
 }
 
 .pesquisar-login {
-    width: 40%;
+    width: auto;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -95,7 +95,7 @@
     justify-content: space-between;
 }
 
-.pesquisar {
+/* .pesquisar {
     display: flex;
     align-items: center;
     width: auto;
@@ -123,7 +123,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
-}
+} */
 
 .login {
     border-radius: 50%;
