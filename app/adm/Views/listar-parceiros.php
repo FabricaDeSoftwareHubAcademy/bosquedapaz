@@ -13,7 +13,6 @@
 
     <body>
         <?php include "../../../Public/assets/adm/menu-adm.html"?>
-        <header class="cabecalho">
             <main class="principal">
                 <div class="box">
                     <h2>Parceiros</h2>
