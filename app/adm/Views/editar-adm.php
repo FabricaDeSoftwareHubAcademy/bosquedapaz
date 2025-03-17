@@ -18,16 +18,14 @@
 
     <main class="principal">
         <div class="box">
-            <div id="linha-login"></div>
-            <div class="img-box">
-                <img src="../../../Public/imgs/img-editar-adm/teste-removebg-preview.png" alt="">
+            <h2>EDITAR ADM</h2>
+            <div class="foto-container">
+                <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
+                <input type="file" id="uploadFoto" accept="image/*" onchange="previewImagem()">
             </div>
             <div class="form-box">
-                <h2>EDITAR ADM</h2>
-                <div class="form-image">
-                    <img src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Imagem colab">
-                </div>
-                <form action="#">
+            <form action="" method="post">
+                <div id="form1">
                     <div class="input-group">
                         <label>Nome:</label>
                         <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
@@ -44,6 +42,9 @@
                         <label>Profissão:</label>
                         <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
                     </div>
+                       
+                </div>
+            </form>   
                     
                     <div class="btns">
                         <a href="listar-adm.php" class="voltar">
@@ -51,15 +52,14 @@
                         </a>
                         <div class="btn-cancelar-salvar">
                             <button type="button" class="btn btn-cancelar">
-                                <a href="">Cancelar</a>
+                                <a href="./Area-Adm.php">Cancelar</a>
                             </button>
         
                             <button type="submit" class="btn btn-salvar">
                                 <a href="">Salvar</a>
                         </div>
-                    </div>
-                </form>   
-            </div>    
+                    </div>   
+            
         </div>
     </main>
     <div class="bolas-fundo">
