@@ -273,6 +273,50 @@ h3 {
     width: 60px;
 } */
 
+/* From Uiverse.io by csemszepp */ 
+.custum-file-upload {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    border-bottom: 3px solid rgb(0, 126, 112);
+    border-right: 3px solid rgb(0, 126, 112);
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 80px;
+    fill: rgb(0, 126, 112);
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: #333;
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
 @media screen and (max-width: 374) {
     .principal {
         width: 100%;

@@ -26,9 +26,6 @@
         <div class="b-LisEsp3">
             <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
         </div>
-        <div class="seta-LisEsp3">
-            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-        </div>
 
         <div class="box-LisEsp-mat">
             <div class="seta-LisEsp3-res">
@@ -153,6 +150,11 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="seta-LisEsp3">
+                    <a href="Area-Adm.php" class="voltar-link">
+                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                    </a>
             </div>
         </div>
     </section>

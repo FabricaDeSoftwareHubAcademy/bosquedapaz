@@ -67,6 +67,7 @@ h2 {
     width: 700px;
     margin-right: 10px;
     font-size: 16px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
 
 .search-bar .search-button {
@@ -82,32 +83,99 @@ h2 {
     background-color: #041831;
 }
 
+.table-container {
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
 
 .collaborators-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+/* .collaborators-table thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(32, 54, 139);
+    color: white;
+    z-index: 10;
+} */
+
+/* .collaborators-table th, .collaborators-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 20%;
+} */
+
+
+.collaborators-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+.collaborators-table {
+    text-align: center;
     width: 100%;
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.collaborators-table tbody{
+    display: block;
+    max-height: 50vh;
+    width: 100%;
+}
+
 .collaborators-table thead {
     position: sticky;
-    top: 60px;
+    top: 0;
     background-color: rgb(32, 54, 139);
     color: white;
-    z-index: 999;
+    z-index: 2;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators-table thead tr,
+.collaborators-table tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.collaborators-table tbody tr td{
+    text-align: center;
+    height: 15%;
 }
 
 
 .collaborators-table th,
 .collaborators-table td {
     padding: 12px 15px;
-    text-align: left;
     border: 1px solid #ddd;
+    text-align: center;
 }
 
-.collaborators-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+.collaborators-table td{
+    padding: 12px 15px;
+}
+
+table tbody tr:nth-child(odd) {
+    font-size: 80%;
+    background-color: white;
+    /* Cor clara */
+}
+
+table tbody tr:nth-child(even) {
+    font-size: 80%;
+    background-color: #e6e6e6;
+    /* Cor mais escura */
 }
 
 .collaborators-table tbody tr:hover {
@@ -116,6 +184,7 @@ h2 {
 
 
 .status {
+    width: 80px;
     padding: 5px 10px;
     border: none;
     border-radius: 15px;
@@ -144,6 +213,15 @@ h2 {
 
 .edit-icon:hover {
     color: #003d8c;
+}
+
+.edit i{
+    font-size: 20px;
+    color: black;
+}
+
+.email-col{
+    font-size: 11px;
 }
 
 .bolas-fundo {
