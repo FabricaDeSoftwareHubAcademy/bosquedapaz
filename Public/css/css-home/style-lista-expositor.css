@@ -43,6 +43,7 @@
 .title-all-expo {
     font-size: 2rem;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .select-cat {
@@ -228,7 +229,8 @@
 .nome-expo {
     margin-top: 110px;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .detalhes-expo {

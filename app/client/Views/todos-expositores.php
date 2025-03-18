@@ -14,7 +14,7 @@
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <main class="content-principal">
-        <h1 class="title-all-expo">Expositores</h1>
+        <h1 class="title-all-expo">expositores</h1>
         <div class="select-area">
             <select name="selecao-categoria" id="select-cat" class="select-cat">
                 <option value="inicio" class="opcoes-cat">Todas as Categorias</option>
@@ -41,7 +41,7 @@
                             <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -64,7 +64,7 @@
                             <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -87,7 +87,7 @@
                             <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -110,7 +110,7 @@
                             <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -135,7 +135,7 @@
                             <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -158,7 +158,7 @@
                             <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -181,7 +181,7 @@
                             <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -204,7 +204,7 @@
                             <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -235,7 +235,7 @@
                             <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -258,7 +258,7 @@
                             <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -281,7 +281,7 @@
                             <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -304,7 +304,7 @@
                             <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -329,7 +329,7 @@
                             <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -352,7 +352,7 @@
                             <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -375,7 +375,7 @@
                             <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -398,7 +398,7 @@
                             <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -429,7 +429,7 @@
                             <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -452,7 +452,7 @@
                             <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -475,7 +475,7 @@
                             <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -498,7 +498,7 @@
                             <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -523,7 +523,7 @@
                             <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -546,7 +546,7 @@
                             <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                            <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                            <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -569,7 +569,7 @@
                             <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
@@ -592,7 +592,7 @@
                             <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                         </div>
                         <div class="body-card">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                        <h3 class="nome-expo">retalhos e chicas</h3>
                             <div class="detalhes-expo">
                                 <p class="para-cate">
                                     Categoria:
