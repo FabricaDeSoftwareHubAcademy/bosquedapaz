@@ -208,21 +208,21 @@
             <!-- Modal ADM -->
             <dialog class="abrir-mais" id="abrir-mais-gerancia">
                 <div class="modais">
-                <div class="close-modal" data-modal="abrir-mais-gerancia">
-                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                </div>
-                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                    <p>Cadastrar ADM</p>
-                </div>
-            </div>
-            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                    <p>Listar ADM</p>
-                </div>
-            </div>
+                    <div class="close-modal" data-modal="abrir-mais-gerancia">
+                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                    </div>
+                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                            <p>Cadastrar ADM</p>
+                        </div>
+                    </div>
+                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                            <p>Listar ADM</p>
+                        </div>
+                    </div>
                 </div>
             </dialog>
 
