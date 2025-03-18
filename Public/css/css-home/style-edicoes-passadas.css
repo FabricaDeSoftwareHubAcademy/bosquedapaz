@@ -106,7 +106,7 @@ body {
     flex-direction: column;
     width: 70%;
     height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/edpassCardverde.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/edpassCardverde);
     background-size: cover;
     border-radius: 10px;
     border: 1px solid #007E70;
