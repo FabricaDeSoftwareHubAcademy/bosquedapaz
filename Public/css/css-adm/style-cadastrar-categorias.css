@@ -9,33 +9,38 @@
 }
 
 .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
 .modal-content {
-    background: white;
+    background-color: white;
     padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
+
 .close {
-    align-self: flex-end;
-    font-size: 24px;
+    justify-content: end;
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    /* right: 10px; */
+    font-size: 30px;
     cursor: pointer;
     color: #333;
 }
@@ -53,6 +58,44 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
+}
+
+.form-box .nome-cat{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 52%;
+    margin-right: 10px;
+    font-size: 16px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+}
+
+.form-box .botao-cor{
+    position: relative;
+    display: flex;
+    margin: 30px auto;
+    padding: 2px;
+    width: 45px;
+    height: 50px;
+    border-radius: 9px;
+    border: solid beige 3px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+}
+
+.separacao{
+    width: 30%;
+    height: 5%;
+}
+
+.previa{
+    width: 100%;
+    height: 100%;
+}
+
+.previa img{
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 .input-group {
