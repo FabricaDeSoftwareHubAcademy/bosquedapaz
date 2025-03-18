@@ -304,6 +304,43 @@ html,.body-recsenha{
 
 }
 
+@media (min-width:576px){
+
+    .box-recsenha{
+        padding: 10px;
+    }
+
+    .form-recsenha{
+        left: 0%;
+        width: 49%;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+    .title-recsenha{
+        margin-bottom: 25%;
+        text-align: center;
+    }
+
+    .area-img-recsenha{
+        top: 10%;
+    }
+
+    .botoes{
+        width: 100%;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+}
+
 @media (min-width:768px){
 
     .box-recsenha{
