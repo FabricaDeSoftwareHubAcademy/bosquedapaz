@@ -61,7 +61,8 @@
 
 .all-title {
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .all-para {

@@ -15,7 +15,7 @@
                     <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                    <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
@@ -40,7 +40,7 @@
                     <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                    <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                    <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
@@ -65,7 +65,7 @@
                     <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
@@ -89,7 +89,7 @@
                     <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
@@ -115,7 +115,7 @@
                     <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
@@ -140,7 +140,7 @@
                     <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
@@ -165,7 +165,7 @@
                     <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                 </div>
                 <div class="body-card">
-                <h3 class="nome-expo">RETALHOS E CHITA</h3>
+                <h3 class="nome-expo">retalhos e chicas</h3>
                     <div class="detalhes-expo">
 
                         <p class="para-cate">
