@@ -230,6 +230,14 @@ html,.body-recsenha{
     top: 4%;
 }
 
+.img-style .img-letter{
+    transition: all .5s ease;
+}
+
+.img-style .img-letter:hover{
+    transform: scale(1.05);
+}
+
 .title-recsenha{
     font-size: 30px;
     display: flex;
@@ -391,13 +399,27 @@ html,.body-recsenha{
     }
 }
 
+
+
 @media (min-width:1400px){
+    .box-recsenha{
+        height: 82%;
+    }
     
-    .imgg-inferior-direita-recsenha,
-    .imgg-inferior-esquerda-recsenha,
-    .imgg-superior-direita-recsenha,
+    .imgg-inferior-direita-recsenha{
+        width: 18%;
+    }
+
+    .imgg-inferior-esquerda-recsenha{
+        width: 11%;
+    }
+
+    .imgg-superior-direita-recsenha{
+        width: 12%;
+    }
+
     .imgg-superior-esquerda-recsenha{
-        width: 10%;
+        width: 11%;
     }
     
     .form-recsenha{
@@ -424,8 +446,8 @@ html,.body-recsenha{
         height: fit-content;
         width: 42.5%;
         position: relative;
-        right: 3%;
-        top: 4%;
+        margin-right: 5%;
+        top: 10%;
     }
     
     .title-recsenha{
