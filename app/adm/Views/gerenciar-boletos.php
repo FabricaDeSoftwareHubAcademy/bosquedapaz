@@ -1,822 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Gerenciamento de Boletos</title>
+    <title>Bosque da Paz - ADM</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
-
-<body class="body-boletos">
-<?php include "../../../Public/assets/adm/menu-adm.html"; ?>
-    <div class="box-boletos">
-        <div class="area-title-boletos">
-            <h1 class="title-boletos">Gerenciamento de Boletos</h1>
-        </div>
-
-        <div class="content-boletos">
-            <div class="area-filtros-boletos">
-                <!-- filtro de expositor -->
-                <div class="filtro-expositor">
-                    <label for="">Filtrar por Expositor</label>
-                    <input type="text" name="" id="campo_expositor" class="campo-expositor" placeholder="Pesquisar por Expositor">
+ 
+<body>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
+ 
+    <main class="principal">
+        <div class="box">
+            <h2>GERENCIAR EVENTOS</h2>
+            <div class="container">
+                <div class="search-bar">
+                    <label for="status">Procurar</label>
+                    <input type="text" id="status" placeholder="" />
+                    <button class="search-button">BUSCAR</button>
                 </div>
-
-                <div class="espacamento"></div>
-                
-                <!-- filtro de datas -->
-                <div class="filtro-datas">
-                    <div class="campo-data">
-                        <label>Data Inicial</label>
-                        <input type="date" name="" id="campo_data_inicial" class="campo-data-inicial">
+                <div class="table-container">
+                    <table class="collaborators-table">
+                        <thead>
+                            <tr>
+                                <th class="usuario-col">Nome do Evento</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th class="fone-col">Editar</th>
+                                <th>Foto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php for ($i = 1; $i <= 12; $i++): ?>
+                                <tr>
+                                    <td class="usuario-col">Evento <?php echo $i; ?></td>
+                                    <td>Data <?php echo $i; ?></td>
+                                    <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Inativo' : 'Ativo'; ?></button></td>
+                                    <td class="fone-col">
+                                        <a href="editar-expositor.php">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                    </td>
+                                    <td class="mais">
+                                        <button class="open-modal" data-modal="modal-fotos">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endfor; ?>
+                        </tbody>
+                    </table>
+                </div>
+ 
+                <button class="voltar">
+                    <a href="Area-Adm.php" class="voltar-link">
+                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                    </a>
+                </button>
+                <div class="b-voltar">
+                </div>
+                <div class="botoes">
+                    <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
+                </div>
+                <div class="modal" id="modal-fotos">
+                    <div class="modal-content">
+                        <span class="close-modal" data-modal="modal-fotos">&times;</span>
+                        <h3>Adicionar Fotos ao Evento</h3>
+                        <p>Limite de 5 Fotos por Evento</p>
+                        <input type="file" multiple>
+                        <button class="submit-fotos">Adicionar Fotos</button>
                     </div>
-    
-                    <div class="campo-data">
-                        <label>Data Inicial</label>
-                        <input type="date" name="" id="campo_data_inicial" class="campo-data-inicial">
-                    </div>
-                </div>
-                
-                <div class="espacamento"></div>
-    
-                <!-- filtro de status -->
-                <div class="filtro-status">
-                    <label for="">Filtrar por Status</label>
-                    <select name="" id="campo_status" class="campo-status">
-                        <option value="">Procurar por Status</option>
-                        <option value="pago">Pago</option>
-                        <option value="pendente">Pendente</option>
-                    </select>
-                </div>
-
-                <div class="espacamento"></div>
-
-                <!-- botao para filtrar -->
-                <div class="area-filtragem">
-                    <label for="">Realizar Pesquisa</label>
-                    <button class="botao-filtrar">Filtrar</button>
                 </div>
             </div>
-
-            <div class="area-table-lisEsp">
-                <table class="table-lisEsp">
-                    <thead>
-                        <tr>
-                            <th>Expositor</th>
-                            <th>Vencimento</th>
-                            <th>Referência</th>
-                            <th>Valor</th>
-                            <th>Status</th>
-                            <th>Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Arlindo Nobrega de Souza</td>
-                            <td>12/05/2024</td>
-                            <td>Abril</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pago">Pago</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>Roberto Carlos</td>
-                            <td>13/05/2024</td>
-                            <td>Janeiro</td>
-                            <td>R$ 2500,50</td>
-                            <td><button class="botao-status status-pendente">Pendente</button></td>
-                            <td><button><i class="fa-solid fa-pen"></i></button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-        </div>
+        </div>  
+    </main>
+ 
+    <div class="bolas-fundo">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
+ 
+    <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
+    <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
 </body>
+ 
 </html>
