@@ -94,6 +94,7 @@
             
             <div class="box-recsenha">
                 
+                <h1 class="title-recsenha">REDEFINIÇÃO DE SENHA</h1>
                 <!-- <a href="tela-login.php" class="volte"><img class="img-voltar" src="../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a> -->
                 
                 <!-- Form -->
@@ -119,7 +120,6 @@
 
                 <!-- area-img -->
                 <div class="area-img-recsenha">
-                    <h1 class="title-recsenha">REDEFINIÇÃO DE SENHA</h1>
                     <div class="img-style">
                         <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
                     </div>
