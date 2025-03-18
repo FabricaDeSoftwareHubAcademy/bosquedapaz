@@ -27,7 +27,7 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../img/ModalRosaEdpass.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -41,7 +41,7 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../img/ModalRosaEdpass.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -55,7 +55,7 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../img/ModalVerdeEdpass.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/edpassModalVerde.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -69,7 +69,7 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../img/ModalVerdeEdpass.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/edpassModalVerde.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -508,7 +508,7 @@
         transform: translate(-50%, -50%);
         width: 80%;
         height: 50%;
-        background-image: url(../img/edpassModalRosa.svg);
+        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
         background-color: white;
         border: 1px solid #FF3877;
         background-size: cover;
@@ -522,7 +522,7 @@
         transform: translate(-50%, -50%);
         width: 80%;
         height: 50%;
-        background-image: url(../img/edpassModalVerde.svg);
+        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
         background-color: white;
         border: 1px solid #007E70;
         background-size: cover;
@@ -612,7 +612,7 @@
         transform: translate(-50%, -50%);
         width: 75%;
         height: 60%;
-        background-image: url(../img/edpassModalRosa.svg);
+        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
         background-color: white;
         border: 1px solid #FF3877;
         background-size: cover;
@@ -626,7 +626,7 @@
         transform: translate(-50%, -50%);
         width: 75%;
         height: 60%;
-        background-image: url(../img/edpassModalVerde.svg);
+        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
         background-color: white;
         border: 1px solid #007E70;
         background-size: cover;

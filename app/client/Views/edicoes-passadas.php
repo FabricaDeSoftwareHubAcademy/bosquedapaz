@@ -16,13 +16,13 @@
         <section class="section-b">
             <div class="box-edpass"></div>
             <div class="forma-1-edpass">
-                <img src="../../../Public/imgs/ " alt="elemento1">
+                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma1.svg " alt="elemento1">
             </div>
             <div class="forma-3-edpass">
-                <img src="../../../Public/imgs/" alt="elemento3">
+                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma3.svg" alt="elemento3">
             </div>
             <div class="forma-4-edpass">
-                <img src="../../../Public/imgs/" alt="elemento4">
+                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma4.svg" alt="elemento4">
             </div>
             <button id="btn-voltar-edpass">
                 <img href="#voltar-edpass"  src="../edi-es/img/voltar.svg" alt="">
@@ -37,7 +37,7 @@
             <!-- card 1 -->
             <div class="cardRosa-edpass">
                 <div class="card-img-edpass">
-                    <img src="../edi-es/img/img-card1-edpass.png" alt="Imagem do Card 1">
+                    <img src="../../../Public/imgs/edicoes-passadas-img/img-card1-edpass.png" alt="Imagem do Card 1">
                 </div>
                 <div class="card-content-edpass">
                     <h2 class="title-card-edpass">Bloquinho de Carnaval</h2>
@@ -48,7 +48,7 @@
             <!-- card 2 -->
             <div class="cardVerde-edpass">
                 <div class="card-img-edpass">
-                    <img src="../edi-es/img/img-card2-edpass.png" alt="Imagem do Card 2">
+                    <img src="../../../Public/imgs/edicoes-passadas-img/img-card2-edpass.png" alt="Imagem do Card 2">
                 </div>
                 <div class="card-content-edpass">
                     <h2 class="title-card-edpass">Colônia de Férias</h2>
@@ -58,7 +58,7 @@
             <!-- card 3 -->
                 <div class="cardRosa-edpass">
                     <div class="card-img-edpass">
-                        <img src="../edi-es/img/img-card3-edpass.png" alt="Imagem do Card 3">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/img-card3-edpass.png" alt="Imagem do Card 3">
                     </div>
                     <div class="card-content-edpass">
                         <h2 class="title-card-edpass">Natal Encantado no Bosque</h2>
@@ -68,7 +68,7 @@
             <!-- card 4 -->
             <div class="cardVerde-edpass">
                 <div class="card-img-edpass">
-                    <img src="../edi-es/img/img-card4-edpass.png" alt="Imagem do Card 4">
+                    <img src="../../../Public/imgs/edicoes-passadas-img/img-card4-edpass.png" alt="Imagem do Card 4">
                 </div>
                 <div class="card-content-edpass">
                     <h2 class="title-card-edpass">Black Weekend</h2>
@@ -85,12 +85,12 @@
                 <span class="close" data-modal="modal1">&times;</span>
                 <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../edi-es/img/img-card1-edpass.png" alt="Imagem 1 do Modal 1" class="gg-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 1" class="gg-img">
                         <div class="area-img-p">
-                            <img src="../edi-es/img/imagempp.2.1.svg" alt="Imagem 2 do Modal 1" class="p-img">
-                            <img src="../edi-es/img/imagempp.3.1.svg" alt="Imagem 3 do Modal 1" class="p-img">
-                            <img src="../edi-es/img/imagempp.4.1.svg" alt="Imagem 4 do Modal 1" class="p-img">
-                            <img src="../edi-es/img/imagempp.5.1.svg" alt="Imagem 5 do Modal 1" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 1" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 1" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.4.1.svg" alt="Imagem 4 do Modal 1" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.5.1.svg" alt="Imagem 5 do Modal 1" class="p-img">
                         </div>
                     </div>
                     <div class="txt-content-modal">
@@ -120,12 +120,12 @@
                 <span class="close" data-modal="modal2">&times;</span>
                 <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../edi-es/img/img-card2-edpass.png" alt="Imagem 1 do Modal 2" class="gg-img">
-                        <div class="modal-img-p">
-                            <img src="../edi-es/img/imagempp.2.1.svg" alt="Imagem 2 do Modal 2" class="p-img">
-                            <img src="../edi-es/img/imagempp.3.1.svg" alt="Imagem 3 do Modal 2" class="p-img">
-                            <img src="../edi-es/img/imagempp.4.1.svg" alt="Imagem 4 do Modal 2" class="p-img">
-                            <img src="../edi-es/img/imagempp.5.1.svg" alt="Imagem 5 do Modal 2" class="p-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 2" class="gg-img">
+                        <div class="area-img-p">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 2" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 2" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.4.1.svg" alt="Imagem 4 do Modal 2" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.5.1.svg" alt="Imagem 5 do Modal 2" class="p-img">
                         </div>
                     </div>
                     <div class="txt-content-modal">
@@ -154,12 +154,12 @@
                 <span class="close" data-modal="modal3">&times;</span>
                 <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../edi-es/img/img-card3-edpass.png" alt="Imagem 1 do Modal 3" class="gg-img">
-                        <div class="modal-img-p">
-                            <img src="../edi-es/img/imagempp.2.1.svg" alt="Imagem 2 do Modal 3" class="p-img">
-                            <img src="../edi-es/img/imagempp.3.1.svg" alt="Imagem 3 do Modal 3" class="p-img">
-                            <img src="../edi-es/img/imagempp.4.1.svg" alt="Imagem 4 do Modal 3" class="p-img">
-                            <img src="../edi-es/img/imagempp.5.1.svg" alt="Imagem 5 do Modal 3" class="p-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 3" class="gg-img">
+                        <div class="area-img-p">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 3" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 3" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.4.1.svg" alt="Imagem 4 do Modal 3" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.5.1.svg" alt="Imagem 5 do Modal 3" class="p-img">
                         </div>
                     </div>
                     <div class="txt-content-modal">
@@ -188,15 +188,15 @@
         <div class="modal" id="modal4">
             <span class="close" data-modal="modal4">&times;</span>
             <div class="modal-content-edpass">
-                <div class="modal-img">
-                    <img src="../edi-es/img/img-card4-edpass.png" alt="Imagem 1 do Modal 4" class="gg-img">
-                    <div class="modal-img-p">
-                        <img src="../edi-es/img/imagempp.2.1.svg" alt="Imagem 2 do Modal 4" class="p-img">
-                        <img src="../edi-es/img/imagempp.3.1.svg" alt="Imagem 3 do Modal 4" class="p-img">
-                        <img src="../edi-es/img/imagempp.4.1.svg" alt="Imagem 4 do Modal 4" class="p-img">
-                        <img src="../edi-es/img/imagempp.5.1.svg" alt="Imagem 5 do Modal 4" class="p-img">
+                    <div class="modal-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 4" class="gg-img">
+                        <div class="area-img-p">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 4" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 4" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.4.1.svg" alt="Imagem 4 do Modal 4" class="p-img">
+                            <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.5.1.svg" alt="Imagem 5 do Modal 4" class="p-img">
+                        </div>
                     </div>
-                </div>
                 <div class="txt-content-modal">
                     <h2 class="title-modal2">Black Weekend</h2>
                     <div class="area-texto">
