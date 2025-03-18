@@ -101,7 +101,7 @@
     backdrop-filter: blur(30px);
  
     #linha-login{
-        border-right: 3px solid #162868;
+        border-right: 1.5px solid #162868;
     }
 }
  
