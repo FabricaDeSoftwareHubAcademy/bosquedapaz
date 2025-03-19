@@ -112,13 +112,13 @@
                             <input id="file" type="file" style="display: none;">
                         </label>
 
-                        <div class="separacao">
-                            <h2>Prévia da Categoria</h2>
+                        <!-- <div class="separacao">
+                            <h2>Prévia</h2>
                             <div class="previa">
                                 <img id="output" />
                                 <h4 id="output-text"></h4>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="botoes">
                             <button class="cancelar" onclick="fecharModal()">Cancelar</button>

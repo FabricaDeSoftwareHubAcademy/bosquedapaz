@@ -33,6 +33,10 @@
     position: relative;
 }
 
+.modal h2{
+    flex-direction: row;
+    font-size: 16px;
+}
 
 .close {
     justify-content: end;
@@ -65,7 +69,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 52%;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
@@ -163,6 +167,31 @@
     background-color: #007e70;
     color: white;
 }
+
+
+
+select {
+    color: gray;
+    transition: color 0s 2147483647s;
+  }
+  
+  /* select:hover,
+  select:focus,
+  select:active,
+  select:focus {
+    color: red;
+    transition:0s;
+  } */
+   
+  
+  select option {
+    color: #333;
+  }
+  
+  option[value=""][disabled] {
+    display: none;
+  }
+
 
 @media (max-width: 480px) {
     .modal-content {
