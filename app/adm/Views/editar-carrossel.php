@@ -20,7 +20,7 @@
         <!-- box principal -->
         <div class="box">
             
-            <h1 class="titulo">EDITAR CARROSSEL</h1>
+            <h1 class="titulo">editar carrosel</h1>
 
             <!-- local de uploads de imgs para o carrossel -->
             <section class="up-imgs">
@@ -85,11 +85,10 @@
     </main>
 
     <!-- bolas de fundo -->
-    <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
-    </div>
+    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+
 
     <!-- link do JavaScript -->
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
