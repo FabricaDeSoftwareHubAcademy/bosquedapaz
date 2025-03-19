@@ -71,7 +71,6 @@
 .area-botao-gabriel {
     width: 70%;
     height: 100%;
-    background-color: #f8f5f64b;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -96,7 +95,6 @@
     cursor: pointer;
 }
 
-
 .Botoes-gabriel:hover {
     transform: scale(1.1);
 }
@@ -112,6 +110,9 @@
     background-color: white;
     position: absolute;
     transition: all .3s ease;
+}
+.link-modais:focus-visible{
+    outline: none;
 }
 
 .area-icon-gabriel img {
@@ -136,10 +137,10 @@
     padding: 20px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
-    justify-content: space-evenly;
-    gap: 25px;
+    justify-content: space-around;
+    gap: 15px;
 }
 
 /* .div1 {
@@ -154,8 +155,10 @@
 }
 .close-modal{
     margin-bottom: 220px;
+    /* background-color: aqua; */
 }
 #icon-sair{
+    font-size: 25px;
     color: #162868;
     cursor: pointer;
 }

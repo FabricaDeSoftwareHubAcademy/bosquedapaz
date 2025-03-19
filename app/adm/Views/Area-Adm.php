@@ -47,10 +47,7 @@
 
             <dialog class="abrir-mais" id="abrir-mais-parceiros">
                 <div class="modais">
-                    <div class="close-modal" data-modal="abrir-mais-parceiros">
-                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                    </div>
-                    <a href="../../../app/adm/Views/cadastrar-parceiros.php">
+                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-parceiros.php">
                     <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
                         <div class="area-icon-gabriel">
                             <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
@@ -59,15 +56,18 @@
                         </div>
                     </div>
                 </a>
-                <a href="../../../app/adm/Views/listar-parceiros.php">
-                <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
-                        <p>Listar Parceiros</p>
-                        <div class="icon-gabriel"></div>
+                <a class="link-modais" href="../../../app/adm/Views/listar-parceiros.php">
+                    <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                            <p>Listar Parceiros</p>
+                            <div class="icon-gabriel"></div>
+                        </div>
                     </div>
+                </a>
+                <div class="close-modal" data-modal="abrir-mais-parceiros">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
-            </a>
             </dialog>
 
 
@@ -82,21 +82,25 @@
             <!-- Modal Expositores -->
             <dialog class="abrir-mais" id="abrir-mais-expositor">
                 <div class="modais">
+                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-expositor.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                                <p>Cadastrar Expositores</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="link-modais" href="../../../app/adm/Views/listar-expositor.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                        <p>Listar Expositores</p>
+                    </div>
+                </div>
+                </a>
                 <div class="close-modal" data-modal="abrir-mais-expositor">
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
-                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
-                        <div class="area-icon-gabriel">
-                             <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p>Cadastrar Expositores</p>
-                    </div>
-                    </div>
-                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
-                    <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p>Listar Expositores</p>
-                    </div>
-                    </div>
                 </div>
             </dialog>
 
@@ -111,27 +115,33 @@
             <!-- Modal Relatórios -->
             <dialog class="abrir-mais" id="abrir-mais-relatorios">
                 <div class="modais">
-                <div class="close-modal" data-modal="abrir-mais-relatorios">
-                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                </div>
-                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                    <p>Lista de Espera</p>
-                </div>
-            </div>
-                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                    <a class="link-modais" href="../../../app/adm/Views/lista-de-espera.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                                <p>Lista de Espera</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="link-modais" href="../../../app/adm/Views/relatorio-expositor.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                     <p>Relatório Expositor</p>
                 </div>
             </div>
-                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
+        </a>
+        <a class="link-modais" href="../../../app/adm/Views/listar-adm.php">
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
                 <div class="area-icon-gabriel">
                     <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                     <p>Relatório Usuários</p>
                 </div>
             </div>
+        </a>
+        <div class="close-modal" data-modal="abrir-mais-relatorios">
+            <i id="icon-sair" class="bi bi-x-square-fill"></i>
+        </div>
                 </div>
             </dialog>
 
@@ -146,27 +156,33 @@
             <!-- Modal Categorias -->
             <dialog class="abrir-mais" id="abrir-mais-categoria">
                 <div class="modais">
-                <div class="close-modal" data-modal="abrir-mais-categoria">
-                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                </div>
-                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                    <p>Cadastrar Categorias</p>
-                </div>
-            </div>
-            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                    <p>Listar Categorias</p>
-                </div>
-            </div>
-            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
-                <div class="area-icon-gabriel">
-                    <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                    <p>Visualizar Categorias</p>
-                </div>
-            </div>
+                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-categoria.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                                <p>Cadastrar Categorias</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                                <p>Listar Categorias</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="link-modais" href="../../../app/adm/Views/visualizar-categorias.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                                <p>Visualizar Categorias</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="close-modal" data-modal="abrir-mais-categoria">
+                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                    </div>
                 </div>
             </dialog>
 
@@ -208,22 +224,26 @@
             <!-- Modal ADM -->
             <dialog class="abrir-mais" id="abrir-mais-gerancia">
                 <div class="modais">
-                    <div class="close-modal" data-modal="abrir-mais-gerancia">
-                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                    </div>
-                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
-                        <div class="area-icon-gabriel">
-                            <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                            <p>Cadastrar ADM</p>
+                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-adm.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                                <p>Cadastrar ADM</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="link-modais" href="../../../app/adm/Views/listar-adm.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                                <p>Listar ADM</p>
                         </div>
                     </div>
-                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
-                        <div class="area-icon-gabriel">
-                            <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
-                            <p>Listar ADM</p>
-                        </div>
-                    </div>
+                </a>
+                <div class="close-modal" data-modal="abrir-mais-gerancia">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
+            </div>
             </dialog>
 
             </div>
