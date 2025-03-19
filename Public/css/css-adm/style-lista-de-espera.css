@@ -65,14 +65,14 @@ html,
 
 .seta-LisEsp3 {
     position: fixed;
-    top: 92vh;
-    left: 6%;
+    top: 94vh;
+    left: 5%;
     z-index: 2;
     cursor: pointer;
 }
 
 .seta-LisEsp3 img {
-    width: 70%;
+    width: 65%;
     height: auto;
 }
 
