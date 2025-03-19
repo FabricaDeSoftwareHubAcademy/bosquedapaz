@@ -25,35 +25,43 @@
     <main class="principal">
         <div class="box">
             <h2>Editar ADM</h2>
+
             <div class="foto-container">
                 <input type="file" id="uploadFoto" accept="image/*" onchange="previewImagem()">
                 <label for="uploadFoto">
-                <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
-                <div class="icone-editar">
-                    <i class="fa-solid fa-pen-to-square"></i>
+                    <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
+                    <div class="icone-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </div>
                 </label>
             </div>
+
             <div class="form-box">
-            <form action="" method="post">
-                <div id="form1">
-                    <div class="input-group">
-                        <label>Nome:</label>
-                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
-                    </div>                   
-                     <div class="input-group">
-                        <label>Telefone:</label>
-                        <input type="number" name="telefone" id="telefone" placeholder="Digite o seu número de telefone" required>
-                    </div>
-                    <div class="input-group">
-                        <label>E-mail:</label>
-                        <input type="email" name="email" id="email"  placeholder="Digite o seu e-mail" required>
-                    </div> 
-                    <div class="input-group">
-                        <label>Profissão:</label>
-                        <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
-                    </div>       
-                </div>
+                <form action="" method="post">
+                    <div id="form1">
+                        <div class="input-container">
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label>Nome:</label>
+                                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+                                </div>                   
+                                <div class="input-group">
+                                    <label>Telefone:</label>
+                                    <input type="number" name="telefone" id="telefone" placeholder="Digite o seu número de telefone" required>
+                                </div>
+                            </div>
+                        <div class="input-row">
+                                <div class="input-group">
+                                    <label>E-mail:</label>
+                                    <input type="email" name="email" id="email"  placeholder="Digite o seu e-mail" required>
+                                </div> 
+                            <div class="input-group">
+                                <label>Profissão:</label>
+                                <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
+                            </div>       
+                        </div>
+                 </div>
+            </div>    
             </form> 
         </div>    
             <div class="btns">
