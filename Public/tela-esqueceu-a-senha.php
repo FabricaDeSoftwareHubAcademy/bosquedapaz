@@ -98,7 +98,7 @@
                 
                 <!-- Form -->
                 <div class="form-recsenha">
-                    <h1 class="title-recsenha">REDEFINIÇÃO DE SENHA</h1>
+                    <h1 class="title-recsenha">Redefinição De Senha</h1>
                     
                     <form action="#" class="forms-recsenha">
                         <p class="text">Digite seu email abaixo para redefinir sua senha</p>
@@ -119,11 +119,11 @@
                 <div id="linha-bet-recsenha"></div>
 
                 <!-- area-img -->
-                <div class="area-img-recsenha">
-                    <div class="img-style">
+                <!-- <div class="area-img-recsenha">
+                    <div class="img-style"> -->
                         <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
-                    </div>
-                </div>
+                    <!-- </div>
+                </div> -->
 
             </div>
         </section>

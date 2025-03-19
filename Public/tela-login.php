@@ -39,7 +39,7 @@
                 <!-- Area Form -->
                 <div class="area-form-login">
 
-                    <h1 class="area-img-login-h1-tiago">LOGIN</h1>
+                    <h1 class="area-img-login-h1-tiago">Login</h1>
                     
                     <form action="#" class="forms-login">
  
@@ -61,18 +61,13 @@
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
-                    <a href="../app/adm/Views/Area-Adm.php"><button class="botao-login">Login</button></a>
+                    <a class="botao-login" href="../app/adm/Views/Area-Adm.php">Login</a>
                    
                 </div>
                
  
                 <!-- Area da Imagem -->
-                <div class="area-img-login">
-                   
-                    <div class="a-img-login">
-                        <img class="img-dog" src="../Public/imgs/img-login/dog-walking-79-12053-1.svg" alt="">
-                    </div>
-                </div>
+                <img class="img-dog" src="../Public/imgs/img-login/dog-walking-79-12053-1.svg" alt="">
             </div>
         </section>
     </main>
