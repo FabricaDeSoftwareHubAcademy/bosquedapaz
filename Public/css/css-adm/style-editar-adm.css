@@ -30,14 +30,18 @@
     padding: 20px;
 }
 h2{
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
 }
 .foto-container {
-    width: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    /* width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 10px; */
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,18 +49,100 @@ h2{
 }
 
 .foto-container img {
-    max-width: 200px;
+    max-width: 180px;
     height: auto;
     border-radius: 5%;
     object-fit: cover;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+.foto-container:hover img{
+    opacity: 0.6;
+}
+.icone-editar{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.foto-container input {
-    margin-top: 0;
+
+.foto-container:hover .icone-editar {
+    opacity: 1;
+    /* margin-top: 0; */
     /* padding: 5px;
     font-size: 1rem; */
 }
+.icone-editar i {
+    color: white;
+    font-size: 16px;
+}
+input[type="file"]{
+    display: none;
+}
+
+.custom-file-label {
+    width: 10%;
+    height: 50px;
+    border-radius: 5px;
+    /* border: 1px solid #007E70; */
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    color: #828080;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);    
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.custom-file-label :hover {
+    background: #F0F0F0;
+}
+.imagem-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icone-editar {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.icone-editar img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.imagem-label:hover .icone-editar {
+    opacity: 1;
+}
+
 
 .box .form-box{
     width: 50%;
@@ -129,10 +215,9 @@ h2{
 .btns {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
-    border-radius: 20px;
 }
 
 .voltar {
@@ -145,7 +230,6 @@ h2{
     display: flex;
     justify-content: flex-end;
     gap: 15px;
-    margin-left: auto;
 }
 
 .btn {
@@ -159,7 +243,9 @@ h2{
     transition: 0.3s;
 }
 .btn-cancelar-salvar .btn {
-    width: 150px;
+    width: 120px;
+    padding: 8px;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;

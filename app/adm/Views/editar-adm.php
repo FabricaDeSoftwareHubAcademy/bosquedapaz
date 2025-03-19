@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-editar-adm.js"></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
-    
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />   
 </head>
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html"?>
@@ -18,10 +24,15 @@
 
     <main class="principal">
         <div class="box">
-            <h2>EDITAR ADM</h2>
+            <h2>Editar ADM</h2>
             <div class="foto-container">
-                <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
                 <input type="file" id="uploadFoto" accept="image/*" onchange="previewImagem()">
+                <label for="uploadFoto">
+                <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
+                <div class="icone-editar">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                </label>
             </div>
             <div class="form-box">
             <form action="" method="post">
@@ -41,12 +52,11 @@
                     <div class="input-group">
                         <label>Profissão:</label>
                         <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
-                    </div>
-                       
+                    </div>       
                 </div>
-            </form>   
-                    
-                    <div class="btns">
+            </form> 
+        </div>    
+            <div class="btns">
                         <a href="listar-adm.php" class="voltar">
                             <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                         </a>
@@ -58,7 +68,8 @@
                             <button type="submit" class="btn btn-salvar">
                                 <a href="">Salvar</a>
                         </div>
-                    </div>   
+                    </div>        
+                      
             
         </div>
     </main>
