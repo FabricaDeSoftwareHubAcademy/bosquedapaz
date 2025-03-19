@@ -230,11 +230,12 @@ input[type="file"]{
     align-items: center;
     justify-content: center;
     border: none;
+    /* padding: 5px; */
 }
 
 .btn-cancelar-salvar .btn-salvar {
     background-color: rgb(9, 9, 158);
-    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
 }
 
 .btn-cancelar-salvar .btn-cancelar {
