@@ -29,6 +29,7 @@
     right: -50px;
     top: 6vh;
     z-index: -3;
+    left: 93%;
 }
 
 .bolas-fundo .bola-azul3 {
@@ -36,6 +37,7 @@
     right: -100px;
     bottom: -50px;
     z-index: -3;
+    top: 80%;
 }
 
 .principal {

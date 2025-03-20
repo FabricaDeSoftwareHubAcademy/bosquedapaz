@@ -152,7 +152,7 @@
                 </table>
             </div>
             <div class="seta-LisEsp3">
-                    <a href="Area-Adm.php" class="voltar-link">
+                    <a href="gerenciar-relatorios.php" class="voltar-link">
                         <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                     </a>
             </div>
