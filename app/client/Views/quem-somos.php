@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-quem-somos.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <title>Bosque da Paz</title>
 </head>
 <body>
-    <?php include "../../../Public/assets/home/menu-home.php "; ?>
+    <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <main class="section-bosque-quem-somos">
         <div class="div-text-sobre">
