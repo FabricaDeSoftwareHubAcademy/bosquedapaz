@@ -17,17 +17,17 @@ class Carrossel {
             "img3" => $this->img3
         ];
 
-        $res = $db->update('id_carrosel = 2', $values);
+        $res = $db->update('id_carrosel = 2'. $values);
 
         return $res ? true : false;
     }
+
+    public function buscar_id($id){
+        $db = new Database('carrosel');
+
+        $res = $db->select("id_carrosel = ". $id)->fetchObject(self::class);
+        return $res;
+    }
 }
-
-$car = new Carrossel();
-$car->img1 = '../../../Public/imgs/uploads-carrosel/imagem-carrossel-1.JPG';
-$car->img2 = '../../../Public/imgs/uploads-carrosel/imagem-carrossel-2.JPG';
-$car->img3 = '../../../Public/imgs/uploads-carrosel/imagem-carrossel-3.JPG';
-
-$car->atualizar();
 
 ?>
