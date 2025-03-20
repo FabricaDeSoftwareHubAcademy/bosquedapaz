@@ -24,9 +24,11 @@
             <div class="forma-4-edpass">
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma4.svg" alt="elemento4">
             </div>
-            <button id="btn-voltar-edpass">
-                <img href="../../../Public/assets/home/avisos.html#voltar-edpass"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
-            </button>
+            </div>
+            <a id="btn-voltar-edpass" href="../../../index.php#voltar-edpass">
+                <img src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
+            </a>
+        </div>
         </section>
 
         <div>
