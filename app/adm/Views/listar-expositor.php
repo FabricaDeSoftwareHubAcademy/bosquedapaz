@@ -105,7 +105,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">05</td>
                               <td>Nara Helena</td>
@@ -122,7 +122,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">06</td>
                               <td>Fernanda Santos</td>
@@ -139,7 +139,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                 </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">07</td>
                               <td>Emanuelle Valadares</td>
@@ -156,7 +156,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">08</td>
                               <td>Kauan Ribeiro</td>
@@ -173,7 +173,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">09</td>
                               <td>Vini Count</td>
@@ -190,7 +190,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">10</td>
                               <td>Isabela Oliveira</td>
@@ -207,7 +207,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">11</td>
                               <td>Kelvin Bach</td>
@@ -224,7 +224,7 @@
                                         <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>
+                          </tr>
                           <tr>
                               <td class="usuario-col">12</td>
                               <td>Paulo Henrique</td>
@@ -241,7 +241,7 @@
                                           <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                       </a>
                               </td>
-                            </tr>  
+                          </tr>  
                         </tbody>
                       </table>
                     </div>  
