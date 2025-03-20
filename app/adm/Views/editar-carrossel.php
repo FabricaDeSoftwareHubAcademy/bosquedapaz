@@ -4,22 +4,16 @@ require_once('../Models/carrossel.php');
 
 $car = new Carrossel();
 
-$car->buscar_id(2);
+$res = $car->buscar_id(2);
 
-// $img1 = $car->img1;
-// $img2 = $car->img2;
-$img3 = "../../../Public/imgs/uploads-carrosel/imagem-carrossel-3.JPG";
-
-echo"<pre>";
-print_r($car);
-// echo $car->img1;
-echo"</pre>";
-
-// if (isset($_POST['editar'])){
-    
+$img1 = $res->img1;
+$img2 = $res->img2;
+$img3 = $res->img3;
 
 
-// }
+if (isset($_POST['editar'])){
+    if ()
+}
 
 ?>
 
@@ -49,14 +43,14 @@ echo"</pre>";
             <h1 class="titulo">editar carrosel</h1>
 
             <!-- local de uploads de imgs para o carrossel -->
-            <form action="" method="get" class="formulario-ca">
+            <form action="" method="post" class="formulario-ca">
                 <section class="up-imgs">
                     <div class="div-nome">
                         <h1 class="num">Imagem 1</h1>
                         <label class="uploads" id="label">
                             <input type="file" name="img1" class="input" id="input1">
                 
-                            <img src="../../../Public/imgs/img-home/imagem-carrossel-1.JPG" alt="Imagem do carrossel 1" class="up-img">
+                            <img <?php echo "src='".$img1."'"; ?> alt="Imagem do carrossel 3" class="up-img">
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
@@ -69,7 +63,7 @@ echo"</pre>";
                         <label class="uploads" id="label">
                             <input type="file" name="img2" class="input" id="input2">
                 
-                            <img src="../../../Public/imgs/img-home/imagem-carrossel-2.JPG" alt="Imagem do carrossel 2" class="up-img">
+                            <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" class="up-img">
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
@@ -80,7 +74,7 @@ echo"</pre>";
                     <div class="div-nome">
                         <h1 class="num">Imagem 3</h1>
                         <label class="uploads">
-                            <input type="file" name="img3" <?php echo "value='".$img3."'"; ?> class="input" id="input3">
+                            <input type="file" name="img3" class="input" id="input3">
                 
                             <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" class="up-img">
                 
