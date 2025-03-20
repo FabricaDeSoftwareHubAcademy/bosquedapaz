@@ -8,7 +8,7 @@
     <title>Bosque da Paz</title>
 </head>
 <body>
-    <?php include "../../../Public/assets/home/menu-home.html"; ?>
+    <?php include "../../../Public/assets/home/menu-home.php "; ?>
 
     <main class="section-bosque-quem-somos">
         <div class="div-text-sobre">
