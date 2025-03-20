@@ -35,19 +35,19 @@
             
             <div class="image-text-carina">
                 
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora1.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-carina.png" alt="">
                 <p class="carina">Carina Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
 
             <div class="image-text-denise">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora2.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-denize.png" alt="">
                 <p class="denise">Denise Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
    
             <div class="image-text-fernanda">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora3.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-fernanda.png" alt="">
                 <p class="fernanda">Fernanda Gutierrez</p>
                 <span class="profission">Advogada</span>
             </div>
@@ -75,12 +75,26 @@
         </div>
     </section>
 
-    <section class="vazio">
-        <div class="logo2">
-            <img src="../../../Public/imgs/quem-somos/BOSQUE-removebg-preview (1) 3.png" alt="">
-        </div>
-    </section>
 
+    <section class="parceiros-quem-somos">
+    <div class="titulo-parceiros-quem-somos">
+        <h4>PARCEIROS</h4>
+
+    </div>
+    <div class="fotos-parceiros-quem-somos">
+       <img src="../../../Public/imgs/quem-somos/bosque-ipe.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/governo.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/senac.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/sebrae.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/setur.png" alt="">
+        
+
+    </div>
+
+
+</section>
+
+   
 
 
     <!--------------------------------->
