@@ -1,3 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e1e1e1;
+    position: relative;
+}
+
 .principal-gabriel {
     margin: 10px;
     padding: 0;
@@ -19,26 +37,26 @@
 
 .Bola-1-gabriel {
     position: fixed;
-    top: 15vh;
-    right: 80vw;
+    top: 15%;
+    left: 0%;
     z-index: 1;
-    width: 20vw;
 }
 
 .Bola-2-gabriel {
+    display: flex;
     position: fixed;
     top: 20vh;
-    left: 90vw;
+    right: 0%;
     z-index: 1;
-    width: 20vw;
 }
 
 .Bola-3-gabriel {
+    display: flex;
+    height: fit-content;
     position: fixed;
-    top: 65vh;
-    left: 80vw;
+    right: 0%;
+    bottom: 0%;
     z-index: 1;
-    width: 20vw;
 }
 
 
@@ -132,16 +150,64 @@
 /* todos os celulares */
 @media (max-width:575.98px){
     body{
-        /* background-color: red; */
+        background-color: green;
     }
 
+    .principal-gabriel{
+        height: 85vh;
+    }
+
+    .box-gabriel{
+        width: 93%;
+        background-color: #f8f5f64b;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        height: 92%;
+        top: 0%;
+    }
+
+    .area-botao-gabriel{
+        background-color: #16286800;
+        right: 7.6rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .seta-voltar-gabriel{
+        left: 0rem;
+        top: 122rem;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 6.7rem;
+        font-size: 1.8rem;
+        width: 135%;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+
+    .Botoes-gabriel{
+        border-radius: 10px;
+    }
 
 }
 
 /* iPad Air */
 @media (min-width:576px){
     body{
-        background-color: blue;
+        background-color: darkred;
     }
 }
 
@@ -150,6 +216,56 @@
     body{
         background-color: pink;
     }
+    
+    .principal-gabriel{
+        height: 85vh;
+    }
+
+    .box-gabriel{
+        width: 93%;
+        background-color: #f8f5f64b;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        height: 92%;
+        top: 0%;
+    }
+
+    .area-botao-gabriel{
+        background-color: #16286800;
+        right: 7.6rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .seta-voltar-gabriel{
+        left: 0rem;
+        top: 122rem;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 6.7rem;
+        font-size: 1.8rem;
+        width: 135%;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+
+    .Botoes-gabriel{
+        border-radius: 10px;
+    }
+
 }
 
 
@@ -168,7 +284,7 @@
 
 @media (min-width:1400px){
     body{
-        background-color: orange;
+        background-color: white;
     }
 
 }

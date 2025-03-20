@@ -104,17 +104,11 @@
 
     </main>
 
-    <div class="Bola-1-gabriel">
-        <img src="../../../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
-    </div>
+    <img class="Bola-1-gabriel" src="../../../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
 
-    <div class="Bola-2-gabriel">
-        <img src="../../../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
-    </div>
+    <img class="Bola-2-gabriel" src="../../../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
 
-    <div class="Bola-3-gabriel">
-        <img src="../../../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
-    </div>
+    <img class="Bola-3-gabriel" src="../../../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
