@@ -55,7 +55,7 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/edpassModalVerde.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -69,7 +69,7 @@
     transform: translate(-50%, -50%);
     width: 55%;
     height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/edpassModalVerde.svg);
+    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
     background-size: cover;
     border-radius: 20px;
     display: none;
