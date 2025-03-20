@@ -26,29 +26,23 @@
                     <table class="collaborators-table">
                         <thead>
                             <tr>
-                                <th class="usuario-col">Nome do Evento</th>
-                                <th>Data</th>
+                                <th>Expositor</th>
+                                <th>Vencimento</th>
+                                <th>Referência</th>
+                                <th>Valor</th>
                                 <th>Status</th>
-                                <th class="fone-col">Editar</th>
-                                <th>Foto</th>
+                                <th>Editar</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 1; $i <= 12; $i++): ?>
+                            <?php for ($i = 1; $i <= 20; $i++): ?>
                                 <tr>
-                                    <td class="usuario-col">Evento <?php echo $i; ?></td>
-                                    <td>Data <?php echo $i; ?></td>
+                                    <td>Expositor <?php echo $i;?></td>
+                                    <td>13/05/2024</td>
+                                    <td>Abril</td>
+                                    <td>2.500,00</td>
                                     <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Inativo' : 'Ativo'; ?></button></td>
-                                    <td class="fone-col">
-                                        <a href="editar-expositor.php">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <button class="open-modal" data-modal="modal-fotos">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </td>
+                                    <td class="fone-col"> <a href="editar-expositor.php"> <i class="fa-solid fa-pen-to-square"> </i> </a></td>
                                 </tr>
                             <?php endfor; ?>
                         </tbody>
@@ -61,9 +55,6 @@
                     </a>
                 </button>
                 <div class="b-voltar">
-                </div>
-                <div class="botoes">
-                    <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
                 </div>
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">
