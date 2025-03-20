@@ -215,9 +215,9 @@
         </main>
 
             <div class="bolas-fundo">
-                <img class="bola-azul1"   src="../img/Elemento1.FolhaAzul.png" alt="">
-                <img class="bola-azul2"   src="../img/Elemento2.FolhaAzul.png" alt="">
-                <img class="bola-azul3"   src="../img/Elemento3.ElipseAzul.png" alt="">
+                <img class="bola-azul1"   src="../../../Public/imgs/imagens-bolas/azul-sem-fundo1.png" alt="">
+                <img class="bola-azul2"   src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="">
+                <img class="bola-azul3"   src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="">
             </div>
 
     <script src="../../../Public/js//js-adm/status-colaborador.js"></script>

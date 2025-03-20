@@ -6,6 +6,40 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
+    overflow-y: hidden;
+}
+
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+    
+}
+
+.bolas-fundo .folhaAzul1-yan{
+    position: absolute;
+    left: -40px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .folhaAzul2-yan{
+    position: absolute;
+    right: -50px;
+    left: 94%;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .folhaRosa-yan {
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    right: -100px;
+    bottom: -50px;
+    z-index: -3;
 }
 
 .principal {
