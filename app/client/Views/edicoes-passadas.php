@@ -25,7 +25,7 @@
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma4.svg" alt="elemento4">
             </div>
             <button id="btn-voltar-edpass">
-                <img href="avisos.html#voltar-edpass"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
+                <img href="../../../Public/assets/home/avisos.html#voltar-edpass"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
             </button>
         </section>
 
