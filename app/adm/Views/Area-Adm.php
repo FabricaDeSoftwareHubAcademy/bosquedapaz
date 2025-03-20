@@ -105,15 +105,15 @@
     </main>
 
     <div class="Bola-1-gabriel">
-        <img src="../../../Public/imgs/img-area-adm/bola-1.png" alt="">
+        <img src="../../../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
     </div>
 
     <div class="Bola-2-gabriel">
-        <img src="../../../Public/imgs/img-area-adm/bola-2.png" alt="">
+        <img src="../../../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
     </div>
 
     <div class="Bola-3-gabriel">
-        <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
+        <img src="../../../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>

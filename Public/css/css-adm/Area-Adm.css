@@ -129,6 +129,51 @@
     font-size: 16px;
 }
 
+/* todos os celulares */
+@media (max-width:575.98px){
+    body{
+        /* background-color: red; */
+    }
+
+
+}
+
+/* iPad Air */
+@media (min-width:576px){
+    body{
+        background-color: blue;
+    }
+}
+
+/* Resto dos iPad's e tablets */
+@media (min-width:768px){
+    body{
+        background-color: pink;
+    }
+}
+
+
+@media (min-width:992px){
+    body{
+        background-color: aqua;
+    }
+}
+
+
+@media (min-width:1200px){
+    body{
+        background-color: blueviolet;
+    }
+}
+
+@media (min-width:1400px){
+    body{
+        background-color: orange;
+    }
+
+}
+
+/* 
 @media screen and (max-width: 720px) {
     .box-gabriel{
         width: 95%;
@@ -298,4 +343,4 @@
     .Bola-3-gabriel{
         display: none;
     }
-}
+} */
