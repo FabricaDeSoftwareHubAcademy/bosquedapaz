@@ -161,14 +161,14 @@ h2 {
 
 .collaborators-table th,
 .collaborators-table td {
-    padding: 12px 15px;
+    /* padding: 12px 15px; */
     border: 1px solid #ddd;
     text-align: center;
 }
 
-/* .collaborators-table td{
+.collaborators-table th{
     padding: 12px 15px;
-} */
+}
 
 table tbody tr:nth-child(odd) {
     font-size: 80%;
