@@ -321,7 +321,7 @@
                             <td>Expositor</td>
                             <td>13/05/2024</td>
                             <td>Abril</td>
-                            <td>2.500,00</td>
+                            <td>2.900,00</td>
                             <td><button class="boleto-botao-pendente">Pendente</button></td>
                             <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
                         </tr>
@@ -331,4 +331,19 @@
         </section>
     </div>
 
+    <div class="boleto-bola1">
+            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
+        </div>
+
+        <div class="boleto-bola2">
+            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
+        </div>
+
+        <div class="boleto-bola3">
+            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
+        </div>
+        <div class="boleto-seta-voltar">
+            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+        </div>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>

@@ -59,7 +59,7 @@
 }
 
 .boleto-filtro-expositor label {
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -70,7 +70,7 @@
     border: 2px solid #007E70;
     border-radius: 10px;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .boleto-filtro-datas {
@@ -94,7 +94,7 @@
 }
 
 .boleto-filtro-datas .boleto-filtro-data-area label {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .boleto-filtro-datas .boleto-filtro-data-area input {
@@ -106,7 +106,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -120,6 +120,10 @@
     /* background-color: green; */
 }
 
+.boleto-filtro-data-pesquisar label {
+    font-size: 16px;
+}
+
 .boleto-filtro-data-pesquisar .botao-data-pesquisar {
     width: 100%;
     height: 40%;
@@ -127,7 +131,7 @@
     border-radius: 10px;
     background-color: #007E70;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -142,7 +146,7 @@
 }
 
 .boleto-filtro-status label {
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -153,7 +157,7 @@
     border: 2px solid #007E70;
     border-radius: 10px;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -166,7 +170,7 @@
 .boleto-secao-tabela {
     width: 90%;
     height: 100%;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .boleto-tabela-container {
@@ -214,14 +218,14 @@
 }
 
 .boleto-botao-pago, .boleto-botao-pendente {
-    width: 120px;
-    height: 45px;
+    width: 100px;
+    height: 35px;
     border: none;
     border-radius: 10px;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .boleto-botao-pago {
@@ -236,11 +240,276 @@
 
 .boleto-botao-editar i {
     cursor: pointer;
-    font-size: 32px;
+    font-size: 26px;
     text-align: center;
     color: black;
 }
 
 .boleto-botao-editar i:hover {
     color: #003d8c;
+}
+
+.boleto-bola1 {
+    position: fixed;
+    top: 20vh;
+    right: 91vw;
+    z-index: -1;
+}
+
+.boleto-bola1 img {
+    width: 100%;
+    height: auto;
+}
+
+.boleto-bola2 {
+    position: fixed;
+    top: 20vh;
+    left: 90vw;
+    z-index: -1;
+}
+
+.boleto-bola2 img {
+    width: 100%;
+    height: auto;
+}
+
+.boleto-bola3 {
+    position: fixed;
+    top: 70vh;
+    left: 83vw;
+    z-index: -1;
+}
+
+.boleto-bola3 img {
+    width: 100%;
+    height: auto;
+}
+
+.boleto-seta-voltar {
+    position: fixed;
+    top: 90vh;
+    left: 3.5vw;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.boleto-seta-voltar img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 320px) and (max-width: 538px) {
+
+    .boletao-secao-titulo {
+        width: 100%;
+        height: 10%;
+        align-content: center;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        /* background-color: red; */
+    }
+    
+    .boleto-secao-filtros {
+        width: 90%;
+        height: 100%;
+        margin-bottom: 5%;
+        /* background-color: rgb(191, 255, 0); */
+    }
+    
+    .boleto-filtros-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        /* background-color: rgb(72, 79, 150); */
+        background-color: rgb(231, 231, 231);
+    }
+    
+    .boleto-filtro-expositor {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: cyan; */
+    }
+    
+    .boleto-filtro-expositor label {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 1.5%;
+    }
+    
+    .boleto-filtro-expositor input {
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border: 2px solid #007E70;
+        border-radius: 10px;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    
+    .boleto-filtro-datas {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: purple; */
+    }
+    
+    .boleto-filtro-datas .boleto-filtro-data-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+    }
+    
+    .boleto-filtro-datas .boleto-filtro-data-area label {
+        font-size: 18px;
+        margin-bottom: 1.5%;
+    }
+    
+    .boleto-filtro-datas .boleto-filtro-data-area input {
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border: 2px solid #007E70;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .boleto-filtro-data-pesquisar {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: green; */
+    }
+    
+    .boleto-filtro-data-pesquisar label {
+        font-size: 18px;
+        margin-bottom: 1.5%;
+    }
+    
+    .boleto-filtro-data-pesquisar .botao-data-pesquisar {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: #007E70;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    .boleto-filtro-status {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: yellow; */
+    }
+    
+    .boleto-filtro-status label {
+        font-size: 18px;
+        margin-bottom: 1.5%;
+        text-align: center;
+    }
+    
+    .boleto-filtro-status select {
+        margin-bottom: 10%;
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border: 2px solid #007E70;
+        border-radius: 10px;
+        padding-left: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .linha-espaco {
+        display: none;
+    }
+
+    .boleto-tabela-container {
+        margin-bottom: 10%;
+        width: 100%;
+        max-height: 50vh;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        position: relative;
+    }
+
+    .boleto-bola1 {
+        position: fixed;
+        top: 20vh;
+        right: 91vw;
+        z-index: -1;
+    }
+    
+    .boleto-bola1 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .boleto-bola2 {
+        display: none;
+        position: fixed;
+        top: 20vh;
+        left: 90vw;
+        z-index: -1;
+    }
+    
+    .boleto-bola2 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .boleto-bola3 {
+        display: none;
+        position: fixed;
+        top: 70vh;
+        left: 83vw;
+        z-index: -1;
+    }
+    
+    .boleto-bola3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .boleto-seta-voltar {
+        position: absolute;
+        top: 37vw;
+        left: 9vw;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .boleto-seta-voltar img {
+        width: 35px;
+        height: auto;
+    }
 }

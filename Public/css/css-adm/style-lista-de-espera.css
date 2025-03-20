@@ -66,18 +66,21 @@ html,
 .seta-LisEsp3 {
     position: fixed;
     top: 92vh;
-    left: 3vw;
+    left: 6%;
     z-index: 2;
     cursor: pointer;
 }
 
 .seta-LisEsp3 img {
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 
 
 .box-LisEsp-mat {
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
     width: 90%;
     height: 750px;
     background-color: #f8f5f6c3;
@@ -85,11 +88,12 @@ html,
     border-radius: 10px;
     overflow-y: hidden;
     bottom: 20px;
+    flex-direction: column;
     position: relative;
 }
 
 .box-LisEsp-mat h1 {
-    margin-left: 40%;
+    /* margin-left: 40%; */
     font-size: 30px;
     position: relative;
     top: 10px;
@@ -104,7 +108,7 @@ html,
     justify-content: center;
     border-radius: 10px;
     position: relative;
-    left: 20%;
+    /* left: 20%; */
 }
 
 .area-pesquisa-lisEsp input {
@@ -132,32 +136,28 @@ html,
 }
 
 .area-table-lisEsp {
-    width: 100%;
-    height: 600px;
-    background-color: rgba(0, 0, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 10px;
-    overflow-x: auto;
-    position: relative;
+    width: 90%;
+    max-height: 50vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
 }
 
 .table-lisEsp {
-    background-color: rgba(0, 255, 255, 0);
-    width: 88%;
-    display: block;
-    overflow-y: auto;
-    max-height: 500px;
-    table-layout: fixed;
+    width: 100%;
     border-collapse: collapse;
-    position: relative;
-    bottom: 8%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-lisEsp tbody{
+    display: table-row-group;
+    max-height: 50vh;
+    width: 100%;
 }
 
 .table-lisEsp tbody tr td i{
     font-size: 25px;
-    margin-left: 45%;
+    /* margin-left: 45%; */
     cursor: pointer;
 }
 
@@ -174,8 +174,10 @@ html,
 .table-lisEsp thead {
     position: sticky;
     top: 0;
-    z-index: 2;
+    background-color: rgb(32, 54, 139);
     color: white;
+    z-index: 2;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .table-lisEsp th {
@@ -183,26 +185,41 @@ html,
     height: 50px;
 }
 
-.table-lisEsp td{
+/* .table-lisEsp td{
     height: 80px;
+} */
+
+.table-lisEsp thead tr,
+.table-lisEsp tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-lisEsp tr td{
+    text-align: center;
+    height: 15%;
 }
 
 .table-lisEsp th,
 .table-lisEsp td {
-    width: 10%;
-    padding: 6px;
-    text-align: center;
-    box-sizing: border-box;
-    text-align: left;
+    padding: 8px 12px;
     border: 1px solid #ddd;
+    text-align: center;
+}
+
+#td-icon{
+    text-align: center;
 }
 
 .table-lisEsp tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
+    font-size: 80%;
+    background-color: white;
 }
 
 .table-lisEsp tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    font-size: 80%;
+    background-color: #e6e6e6;  
 }
 
 .table-lisEsp tbody tr:hover{
