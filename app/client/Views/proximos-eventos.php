@@ -28,7 +28,7 @@
             <div class="div-decorativa-ProEv">
                 <h1 class="titulo-principal-ProEv">Proxímo Evento</h1>
             </div>
-        
+
             <!-- Card da Responsividade -->
             <div class="card-respon-ProEv">
                 <div class="div-banner-atracao-ProEv">
@@ -114,7 +114,7 @@
         <!-- Box Peincipal -->
         <div class="box-principal-ProEv">
             <div class="area-setaProEv">
-                <a href="../../../index.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+                <a href="../../../index.php#prox_evento"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
             </div>
            
             <!-- Area das Informações do Evento -->
