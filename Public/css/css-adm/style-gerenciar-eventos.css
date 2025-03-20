@@ -161,7 +161,7 @@ h2 {
 
 .collaborators-table th,
 .collaborators-table td {
-    /* padding: 12px 15px; */
+    padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: center;
 }
@@ -400,6 +400,43 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
+@media (max-width:575.98px){
+    body{
+        background-color: red;
+    }
+}
+
+@media (min-width:576px){
+    body{
+        background-color: green;
+    }
+}
+
+@media (min-width:768px){
+    body{
+        background-color: blue;
+    }
+}
+
+@media (min-width:992px){
+    body{
+        background-color: aqua;
+    }
+}
+
+@media (min-width:1200px){
+    body{
+        background-color: yellow;
+    }
+}
+
+@media (min-width:1400px){
+    body{
+        background-color: orange;
+    }
+}
+
+/* 
 @media only screen and (max-width: 768px) {
     .principal {
         width: 100%;
@@ -408,7 +445,6 @@ table tbody tr:nth-child(even) {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* margin-top: 10%; */
     }
 
     .principal .box {
@@ -433,13 +469,10 @@ table tbody tr:nth-child(even) {
         left: -1px;
         display: flex;
         position: relative;
-        /* flex-direction: column; */
         gap: 10px;
         align-items: center;
-        /* width: 100%; */
         margin-top: 20px;
         justify-content: center;
-        /* padding-left: 50px; */
     }
 
     .botoes a button {
@@ -457,14 +490,11 @@ table tbody tr:nth-child(even) {
         align-items: center;
         bottom: -10.5%;
         right: 15px;
-        /* left: 30%; */
     }
 
     .b-voltar {
         position: absolute;
         width: 40%;
-        /* height: 50%; */
-        /* bottom: -18.5%; */
         left: 5%;
     }
 
@@ -545,4 +575,4 @@ table tbody tr:nth-child(even) {
         width: 80%;
         font-size: 60%;
     }
-}
+} */
