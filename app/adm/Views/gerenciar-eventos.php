@@ -35,7 +35,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 1; $i <= 12; $i++): ?>
+                            <?php for ($i = 1; $i <= 25; $i++): ?>
                                 <tr>
                                     <td class="usuario-col">Evento <?php echo $i; ?></td>
                                     <td>Data <?php echo $i; ?></td>
