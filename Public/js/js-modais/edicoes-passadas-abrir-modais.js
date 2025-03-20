@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btns = document.querySelectorAll('.btn-ver-mais-edpass');
-    const modals = document.querySelectorAll('.modal-edpass');
-    const closes = document.querySelectorAll('.close-edpass');
+    const btns = document.querySelectorAll('.btn-ver-mais');
+    const modals = document.querySelectorAll('.modal');
+    const closes = document.querySelectorAll('.close');
     const overlay = document.getElementById('overlay');
 
     btns.forEach(btn => {
@@ -26,4 +26,3 @@ document.addEventListener('DOMContentLoaded', () => {
         event.stopPropagation(); 
     });
 });
-
