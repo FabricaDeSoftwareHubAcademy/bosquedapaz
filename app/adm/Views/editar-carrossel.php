@@ -12,7 +12,12 @@ $img3 = $res->img3;
 
 
 if (isset($_POST['editar'])){
-    if ()
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
+    $img1 = $_POST['img1'];
+    $img2 = $_POST['img2'];
+    $img3 = $_POST['img3'];
 }
 
 ?>
