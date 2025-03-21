@@ -10,6 +10,8 @@ $img1 = $res->img1;
 $img2 = $res->img2;
 $img3 = $res->img3;
 
+$caminho = '../../../Public/imgs/uploads-carrosel';
+
 
 if (isset($_POST['editar'])){
     echo '<pre>';
@@ -18,13 +20,14 @@ if (isset($_POST['editar'])){
 
     if (!empty($_POST['img1'])){
         echo "tem";
+        $img1 = caminho + $_POST['img1'];
     }
     else {
-        
+        echo "nao tem";
     }
-    $img1 = $_POST['img1'];
-    $img2 = $_POST['img2'];
-    $img3 = $_POST['img3'];
+    // $img1 = $_POST['img1'];
+    // $img2 = $_POST['img2'];
+    // $img3 = $_POST['img3'];
 }
 
 ?>
