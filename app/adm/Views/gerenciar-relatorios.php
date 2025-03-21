@@ -59,7 +59,7 @@
                 <a href="listar-adm.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                <p>Relatório Usuários</p>
+                <p>Relatório Administradores</p>
                 </div>
                 </a>
 </div>

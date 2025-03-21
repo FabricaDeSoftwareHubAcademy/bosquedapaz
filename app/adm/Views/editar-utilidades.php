@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-utilidades.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
-<main class="principal">
-    <div class="box">
-        <h2>EDITAR UTILIDADE PÚBLICA</h2>
+    <main class="principal">
+        <div class="box">
+            <h2>EDITAR UTILIDADE PÚBLICA</h2>
             <div class="form-container">
                 <div class="form-box">
-                <form action="#">
+                    <form action="#">
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
-                            placeholder="Escreva o título da utilidade pública">
+                                placeholder="Escreva o título da utilidade pública">
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>       
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
-                        <div class = "data">
+                        <div class="data">
                             <div class="input-group">
                                 <label>Data início</label>
                                 <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
@@ -60,8 +60,8 @@
                         <a href="">Salvar</a>
                 </div>
             </div>
-    </div>
-</main>
+        </div>
+    </main>
 
     <div class="bolas-fundo">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
