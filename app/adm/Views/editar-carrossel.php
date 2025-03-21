@@ -15,6 +15,13 @@ if (isset($_POST['editar'])){
     echo '<pre>';
     print_r($_POST);
     echo '</pre>';
+
+    if (!empty($_POST['img1'])){
+        echo "tem";
+    }
+    else {
+        
+    }
     $img1 = $_POST['img1'];
     $img2 = $_POST['img2'];
     $img3 = $_POST['img3'];
