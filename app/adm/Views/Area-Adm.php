@@ -46,6 +46,9 @@
             <!-- Modal Parceiros -->
 
             <dialog class="abrir-mais" id="abrir-mais-parceiros">
+                <div class="close-modal" data-modal="abrir-mais-parceiros">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
                 <div class="modais">
                     <a class="link-modais" href="../../../app/adm/Views/cadastrar-parceiros.php">
                     <div class="Botoes-gabriel open-modal"  data-modal="abrir-mais-parceiros">
@@ -65,9 +68,6 @@
                         </div>
                     </div>
                 </a>
-                <div class="close-modal" data-modal="abrir-mais-parceiros">
-                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                </div>
             </dialog>
 
 
@@ -81,6 +81,9 @@
 
             <!-- Modal Expositores -->
             <dialog class="abrir-mais" id="abrir-mais-expositor">
+                <div class="close-modal" data-modal="abrir-mais-expositor">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
                 <div class="modais">
                     <a class="link-modais" href="../../../app/adm/Views/cadastrar-expositor.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-expositor">
@@ -98,9 +101,6 @@
                     </div>
                 </div>
                 </a>
-                <div class="close-modal" data-modal="abrir-mais-expositor">
-                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                </div>
                 </div>
             </dialog>
 
@@ -114,6 +114,9 @@
 
             <!-- Modal Relatórios -->
             <dialog class="abrir-mais" id="abrir-mais-relatorios">
+                <div class="close-modal" data-modal="abrir-mais-relatorios">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
                 <div class="modais">
                     <a class="link-modais" href="../../../app/adm/Views/lista-de-espera.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
@@ -139,9 +142,6 @@
                 </div>
             </div>
         </a>
-        <div class="close-modal" data-modal="abrir-mais-relatorios">
-            <i id="icon-sair" class="bi bi-x-square-fill"></i>
-        </div>
                 </div>
             </dialog>
 
@@ -155,6 +155,9 @@
 
             <!-- Modal Categorias -->
             <dialog class="abrir-mais" id="abrir-mais-categoria">
+                <div class="close-modal" data-modal="abrir-mais-categoria">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
                 <div class="modais">
                     <a class="link-modais" href="../../../app/adm/Views/cadastrar-categoria.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
@@ -180,9 +183,6 @@
                             </div>
                         </div>
                     </a>
-                    <div class="close-modal" data-modal="abrir-mais-categoria">
-                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                    </div>
                 </div>
             </dialog>
 
@@ -223,6 +223,9 @@
 
             <!-- Modal ADM -->
             <dialog class="abrir-mais" id="abrir-mais-gerancia">
+            <div class="close-modal" data-modal="abrir-mais-gerancia">
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
                 <div class="modais">
                     <a class="link-modais" href="../../../app/adm/Views/cadastrar-adm.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
@@ -240,9 +243,6 @@
                         </div>
                     </div>
                 </a>
-                <div class="close-modal" data-modal="abrir-mais-gerancia">
-                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                </div>
             </div>
             </dialog>
 
