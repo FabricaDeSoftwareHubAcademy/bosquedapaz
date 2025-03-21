@@ -3,6 +3,10 @@
 @import url('style-padrao.css');
 @import url('../css-modais/css-m-form-e-perfil-expo.css');
 
+body{
+    overflow-y: hidden;
+}
+
 .up-imgs {
     width: 100%;
     height: auto;

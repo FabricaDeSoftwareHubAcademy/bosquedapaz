@@ -165,6 +165,7 @@ button:hover {
     width: 700px;
     margin-right: 10px;
     font-size: 16px;
+    outline: none;
 }
 
 .search-bar .search-button {

@@ -102,6 +102,7 @@ h2 {
     margin-right: 10px;
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+    outline: none;
 }
 
 .search-bar .search-button {

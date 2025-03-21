@@ -7,7 +7,7 @@
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-expo-adm.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <main class="principal">
 
@@ -58,65 +58,65 @@
                 </div>
 
             </div>
+        </div>
+
+
+        <div class="form-status">
+            <div class="imagens">
+                <p class="text-img">Imagens:</p>
+
+                <div class="img-produtos">
+                    <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos1.png" alt=""
+                        class="img-produto1">
+                    <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos2.png" alt=""
+                        class="img-produto2">
+                    <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos3.png" alt=""
+                        class="img-produto3">
+                    <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos4.png" alt=""
+                        class="img-produto4">
+                    <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos5.png" alt=""
+                        class="img-produto5">
+                </div>
+
             </div>
+            <div class="status">
 
-
-            <div class="form-status">
-                <div class="imagens">
-                    <p class="text-img">Imagens:</p>
-
-                    <div class="img-produtos">
-                        <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos1.png" alt=""
-                            class="img-produto1">
-                        <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos2.png" alt=""
-                            class="img-produto2">
-                        <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos3.png" alt=""
-                            class="img-produto3">
-                        <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos4.png" alt=""
-                            class="img-produto4">
-                        <img src="../../../Public/imgs/img-editar-exositor-adm/img-produtos5.png" alt=""
-                            class="img-produto5">
+                <p class="status">Inativar/Ativar</p>
+                <label class="toggle-btn">
+                    <input type="checkbox">
+                    <div class="btn-status">
+                        <div class="ativar"></div>
                     </div>
+                </label>
+            </div>
+        </div>
 
-                </div>
-                <div class="status">
 
-                    <p class="status">Inativar/Ativar</p>
-                    <label class="toggle-btn">
-                        <input type="checkbox">
-                        <div class="btn-status">
-                            <div class="ativar"></div>
-                        </div>
-                    </label>
-                </div>
+
+
+        <div class="form-finalizar">
+
+            <div class="botao-cancelar">
+                <button>
+                    <a href="#">Cancelar</a>
+                </button>
+            </div>
+            <div class="botao-salvar">
+                <button>
+                    <a href="#">Salvar</a>
+                </button>
             </div>
 
-            
 
 
-            <div class="form-finalizar">
+        </div>
 
-                <div class="botao-cancelar">
-                    <button>
-                        <a href="#">Cancelar</a>
-                    </button>
-                </div>
-                <div class="botao-salvar">
-                    <button>
-                        <a href="#">Salvar</a>
-                    </button>
-                </div>
 
-                
-    
-            </div>
-
-            
-            <div class="btns">
-                <a href="listar-expositor.php" class="voltar">
+        <div class="btns">
+            <a href="listar-expositor.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
-            </div>
+            </a>
+        </div>
         </div>
 
     </main>

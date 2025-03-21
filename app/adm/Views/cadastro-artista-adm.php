@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
     <main class="principal">
@@ -40,7 +40,7 @@
                         <label>Nome artistico:</label>
                         <input type="text" name="" id="" placeholder="Digite seu nome artistico " required>
                     </div>
-                    
+
                     <div class="input">
                         <label>E-mail:</label>
                         <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
@@ -54,14 +54,14 @@
                         <label>Link:</label>
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
-                   
-                   
+
+
                 </div>
 
-                
+
                 <div class="form-expo">
 
-                    
+
                     <div class="input">
                         <label>Qual sua linguagem artística?</label>
                         <select name="todas_categorias" id="todas_categorias" class="select">
@@ -85,25 +85,25 @@
                         </select>
                     </div>
 
-                
+
 
                     <div class="input">
                         <label for="optionInput3">Qual seu publico alvo?</label>
-    
+
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
                             <option value="">selecione</option>
                             <option value="artesanato">Adulto</option>
                             <option value="gastronia">Infantil</option>
                             <option value="antiguidade">Misto</option>
-                           
+
                         </select>
 
-                        
-                        
+
+
                     </div>
 
-                 
+
 
 
 
@@ -122,13 +122,13 @@
 
                     <label for="energia">Qual valor do cache?</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">  
+                        <select name="todas_categorias" id="todas_categorias" class="select">
 
                             <option value="">selecione</option>
                             <option value="sim">Até R$200</option>
                             <option value="nao">Até R$500</option>
                             <option value="nao">Até R$1.000</option>
-                        
+
 
                         </select>
                     </div>
@@ -137,7 +137,7 @@
 
 
 
-               
+
 
             </div>
 
@@ -147,7 +147,7 @@
                     <button><a href="#">Edital da Feira</a></button>
                 </div> -->
 
-                
+
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
@@ -170,31 +170,31 @@
 
             </div>
 
-         
+
             <div class="botoes">
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
-                    
+
                 <div class="salvar-resp">
                     <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                    </div>
+
+
+
+
                 </div>
 
-                    
 
-                
+            </div>
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
             </div>
 
-
         </div>
-        <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div>
-        
-    </div>
     </main>
 
     <div class="bolas-fundo">
@@ -206,7 +206,7 @@
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
-    
+
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <title>Adm - Bosque da Paz</title>
 </head>
 
@@ -152,9 +152,9 @@
                 </table>
             </div>
             <div class="seta-LisEsp3">
-                    <a href="gerenciar-relatorios.php" class="voltar-link">
-                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                    </a>
+                <a href="gerenciar-relatorios.php" class="voltar-link">
+                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                </a>
             </div>
         </div>
     </section>

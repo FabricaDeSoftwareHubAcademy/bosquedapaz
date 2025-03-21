@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,11 +16,11 @@
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
     <title>Bosque da Paz</title>
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <main class="principal">
 
@@ -42,7 +41,7 @@
                         <label>Idade:</label>
                         <input type="text" name="" id="" placeholder="Idade:" required>
                     </div>
-                    
+
                     <div class="input">
                         <label>Nome do responsavel:</label>
                         <input type="text" name="" id="" placeholder="Nome do responsavel:" required>
@@ -51,7 +50,7 @@
                         <label>Cidade:</label>
                         <input type="text" name="" id="" placeholder="Digite sua cidade" required>
                     </div>
-                   
+
                 </div>
 
                 <div class="form-loja">
@@ -68,16 +67,16 @@
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
                         <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
-    
+
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
                             <option value="">selecione</option>
                             <option value="artesanato">artesanato</option>
                             <option value="gastronia">gastronia</option>
                             <option value="antiguidade">antiguidade</option>
-                           
+
                         </select>
-                        
+
                     </div>
 
                     <div class="input">
@@ -85,16 +84,16 @@
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
-                    
+
 
                 </div>
 
-                
-                
 
 
 
-               
+
+
+
 
             </div>
 
@@ -104,7 +103,7 @@
                     <button><a href="#">Edital da Feira</a></button>
                 </div> -->
 
-                
+
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
@@ -131,26 +130,26 @@
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
-                    
+
                 <div class="salvar-resp">
                     <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                    </div>
+
+
+
+
                 </div>
 
-                    
 
-                
+            </div>
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
             </div>
 
-
         </div>
-        <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div>
-        
-    </div>
     </main>
 
     <div class="bolas-fundo">
@@ -162,7 +161,7 @@
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
-    
+
 </body>
 
 </html>
