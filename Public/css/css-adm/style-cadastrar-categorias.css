@@ -108,6 +108,11 @@
     width: 50%;
 }
 
+.custum-file-upload .icon svg {
+    height: 80px;
+    fill: rgba(75, 85, 99, 1);
+  }
+
 .separacao{
     width: 30%;
     height: 5%;
