@@ -72,7 +72,6 @@
 .area-botao-gabriel {
     width: 70%;
     height: 100%;
-    background-color: #f8f5f64b;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -93,12 +92,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-width: 500px;
-    margin: auto;
     position: relative;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-
 
 .Botoes-gabriel:hover {
     transform: scale(1.1);
@@ -116,6 +113,9 @@
     position: absolute;
     transition: all .3s ease;
 }
+.link-modais:focus-visible{
+    outline: none;
+}
 
 .area-icon-gabriel img {
     width: 40%;
@@ -129,6 +129,46 @@
     font-size: 16px;
 }
 
+.abrir-mais {
+    margin: auto;
+}
+
+.modais{
+    width: 100%;
+    height: 100%;
+    padding: 5px 35px 35px 35px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+/* .div1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25px;
+} */
+.abrir-mais{
+    border-radius: 12px;
+}
+.close-modal{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding: 5px 15px 0px;
+    /* margin-bottom: 220px; */
+    /* background-color: aqua; */
+}
+#icon-sair{
+    font-size: 25px;
+    color: #162868;
+    cursor: pointer;
+}
 @media screen and (max-width: 720px) {
     .box-gabriel{
         width: 95%;
