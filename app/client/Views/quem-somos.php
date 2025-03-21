@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../../Public/css/menu-home.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
     <title>Bosque da Paz</title>
 </head>
 <body>
@@ -68,16 +69,18 @@
         </div>
         
         <div class="expositor-p">
-            <p class="acesse">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botão abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
+            <p class="acesse">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botao abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
             
         </div>
-        
-        <div class="botão-expositor">
-            <a class="botão" href="../../../app/client/views/edital-expositor.php">CLIQUE AQUI!</a>
+        <a class="botao-expositor" href="../../../app/client/views/edital-expositor.php">
+        <div class="botao">
+            CLIQUE AQUI!
+       
         </div>
+        </a>
     </section>
 
-
+<!-- 
     <section class="parceiros-quem-somos">
     <div class="titulo-parceiros-quem-somos">
         <h4>PARCEIROS</h4>
@@ -94,12 +97,13 @@
     </div>
 
 
-</section>
+</section> -->
 
    
 
 
     <!--------------------------------->
+    <?php include "../../../Public/assets/home/parceiros.html" ?>
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 

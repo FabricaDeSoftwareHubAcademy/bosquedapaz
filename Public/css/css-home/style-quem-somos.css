@@ -133,7 +133,7 @@
      
      
     .section-colaboradoras-quem-somos .carina, .profission, .denise,  .fernanda,  .nájila{
-        color: #8b3ac4;
+        color: #565358;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -187,7 +187,7 @@
        
         text-align: center; 
    }
-   .section-expositor-quem-somos .botão-expositor{
+   .section-expositor-quem-somos .botao-expositor{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,7 +205,7 @@
    }
    
  
-.botão-expositor .botão{
+.botao-expositor .botao{
     color: #8b3ac4;
     background-clip: none;
     -webkit-background-clip: text;
@@ -223,7 +223,7 @@ text-decoration: none;}
    
 }
    /*
-   .section-expositor-quem-somos .botão-expositor .botão{
+   .section-expositor-quem-somos .botao-expositor .botao{
     color: #8b3ac4;
     text-transform: uppercase;
     background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134), rgb(0, 145, 255));
@@ -240,7 +240,7 @@ text-decoration: none;}
    }
    */
     
-.botão-expositor:hover{
+.botao-expositor:hover{
     transition: .2s ;
     cursor: pointer;
     transform: scale(1.05);
@@ -364,7 +364,7 @@ text-decoration: none;}
     left: 0%;
     top: 3%;
 }
-.section-expositor-quem-somos .botão-expositor{
+.section-expositor-quem-somos .botao-expositor{
     left: 0%;
     top: 5%;
 }
@@ -465,7 +465,7 @@ text-decoration: none;}
     left: 0%;
     top: 13%;
 }
-.section-expositor-quem-somos .botão-expositor{
+.section-expositor-quem-somos .botao-expositor{
     left: 0%;
     top: 12%;
 }
@@ -512,7 +512,7 @@ text-decoration: none;}
         position: relative;
         bottom: 25%;
     }
-    .section-expositor-quem-somos .botão-expositor{
+    .section-expositor-quem-somos .botao-expositor{
     width: 20%;  
   }
 }
@@ -539,7 +539,7 @@ text-decoration: none;}
         position: relative;
         bottom: 25%;
     }
-    .section-expositor-quem-somos .botão-expositor{
+    .section-expositor-quem-somos .botao-expositor{
         position: relative;
         margin-top: -0.5%;
     }
@@ -563,7 +563,7 @@ text-decoration: none;}
     .section-expositor-quem-somos .expositor-p{
         text-align: justify;
     }
-    .section-expositor-quem-somos .botão-expositor .botão{
+    .section-expositor-quem-somos .botao-expositor .botao{
         display: flex;
         
         font-size: 0.9rem;
@@ -578,7 +578,7 @@ text-decoration: none;}
     .section-bosque-quem-somos .titulo{
         font-size: 1.7rem;
     }
-    .section-expositor-quem-somos .botão-expositor{
+    .section-expositor-quem-somos .botao-expositor{
         width: 30%;
         margin-left: 35%;
         display: flex;
@@ -611,7 +611,7 @@ text-decoration: none;}
     .section-expositor-quem-somos .expositor-p p{
         font-size: 0.9rem;
     }
-    .section-expositor-quem-somos .botão-expositor{
+    .section-expositor-quem-somos .botao-expositor{
         position: relative;
         margin-top: -8%;
         
