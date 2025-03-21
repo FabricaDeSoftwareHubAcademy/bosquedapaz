@@ -297,7 +297,15 @@ label#salvar-btn {
 }
 
 /* fim modal */
-
+.box .form-finalizar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    padding-right: 50px;
+}
 .voltar .btn-voltar {
     width: 40px;
 }
