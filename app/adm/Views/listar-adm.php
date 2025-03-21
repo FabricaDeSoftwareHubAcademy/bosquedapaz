@@ -21,7 +21,7 @@
     
     <main class="principal">
         <div class="box">
-            <h2>LISTAR ADM</h2>
+            <h2>Listar ADM</h2>
             <div class="container">
                 <div class="search-bar">
                   <label for="status">Procurar</label>

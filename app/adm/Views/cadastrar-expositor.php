@@ -144,13 +144,16 @@
                 </div> -->
 
                 
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-
-                <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
+                <div class="bytns">
+                        <div class="bytn-cancelar-salvar">
+                            <button type="button" class="bytn bytn-cancelar">
+                                <a href="./Area-Adm.php">Cancelar</a>
+                            </button>
+        
+                            <button type="submit" class="bytn bytn-salvar">
+                                <a href="">Salvar</a>
+                        </div>
+                    </div>        
 
                 <div id="modal" class="modal">
                     <div class="modal-content">
