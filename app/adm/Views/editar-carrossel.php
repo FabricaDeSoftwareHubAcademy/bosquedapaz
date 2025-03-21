@@ -10,24 +10,36 @@ $img1 = $res->img1;
 $img2 = $res->img2;
 $img3 = $res->img3;
 
-$caminho = '../../../Public/imgs/uploads-carrosel';
-
-
 if (isset($_POST['editar'])){
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
-
+    
     if (!empty($_POST['img1'])){
-        echo "tem";
-        $img1 = caminho + $_POST['img1'];
+        $imagem1 = $_POST['img1'];
+        $link_img1 = '../../../Public/imgs/img-home/'. $imagem1;
+        $img1 = $link_img1;
+        $car->img1 = $link_img1;
+    }else {
+        $car->img1 = $res->img1;
     }
-    else {
-        echo "nao tem";
+    
+    if (!empty($_POST['img2'])){
+        $imagem2 = $_POST['img2'];
+        $link_img2 = '../../../Public/imgs/img-home/'. $imagem2;
+        $img2 = $link_img2;
+        $car->img2 = $link_img2;
+    }else {
+        $car->img2 = $res->img2;
     }
-    // $img1 = $_POST['img1'];
-    // $img2 = $_POST['img2'];
-    // $img3 = $_POST['img3'];
+    
+    if (!empty($_POST['img3'])){
+        $imagem3 = $_POST['img3'];
+        $link_img3 = '../../../Public/imgs/img-home/'. $imagem3;
+        $img3 = $link_img3;
+        $car->img3 = $link_img3;
+    }else {
+        $car->img3 = $res->img3;
+    }
+    
+    $car->atualizar();
 }
 
 ?>

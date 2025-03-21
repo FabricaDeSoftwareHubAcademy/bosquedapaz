@@ -17,7 +17,7 @@ class Carrossel {
             "img3" => $this->img3
         ];
 
-        $res = $db->update('id_carrosel = 2'. $values);
+        $res = $db->update('id_carrosel = 2', $values);
 
         return $res ? true : false;
     }
