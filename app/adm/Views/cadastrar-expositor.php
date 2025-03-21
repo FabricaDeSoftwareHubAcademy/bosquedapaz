@@ -186,7 +186,7 @@
 
         </div>
         <div class="btns">
-            <a href="gerenciar-expositor.php" class="voltar">
+            <a href="gerenciar-expositores.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
