@@ -16,14 +16,17 @@
 
 }
 .section-bosque-quem-somos .div-img-animation .imagem1{
+    margin-top: -100px;
  
     height: 550px;
 }
 .section-bosque-quem-somos .div-img-animation .imagem2{
+    margin-top: 0%;
  
     height: 550px;
 }
 .section-bosque-quem-somos .div-img-animation .imagem3{
+    margin-top: -5%;
    
     height: 550px;
  
