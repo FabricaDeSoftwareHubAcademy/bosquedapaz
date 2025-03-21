@@ -1,3 +1,50 @@
+<?php
+
+require_once('../Models/carrossel.php');
+
+$car = new Carrossel();
+
+$res = $car->buscar_id(2);
+
+$img1 = $res->img1;
+$img2 = $res->img2;
+$img3 = $res->img3;
+
+if (isset($_POST['editar'])){
+    
+    if (!empty($_POST['img1'])){
+        $imagem1 = $_POST['img1'];
+        $link_img1 = '../../../Public/imgs/img-home/'. $imagem1;
+        $img1 = $link_img1;
+        $car->img1 = $link_img1;
+    }else {
+        $car->img1 = $res->img1;
+    }
+    
+    if (!empty($_POST['img2'])){
+        $imagem2 = $_POST['img2'];
+        $link_img2 = '../../../Public/imgs/img-home/'. $imagem2;
+        $img2 = $link_img2;
+        $car->img2 = $link_img2;
+    }else {
+        $car->img2 = $res->img2;
+    }
+    
+    if (!empty($_POST['img3'])){
+        $imagem3 = $_POST['img3'];
+        $link_img3 = '../../../Public/imgs/img-home/'. $imagem3;
+        $img3 = $link_img3;
+        $car->img3 = $link_img3;
+    }else {
+        $car->img3 = $res->img3;
+    }
+    
+    $car->atualizar();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,77 +68,78 @@
 
         <!-- box principal -->
         <div class="box">
-
-            <h1 class="titulo">EDITAR CARROSSEL</h1>
+            
+            <h1 class="titulo">editar carrosel</h1>
 
             <!-- local de uploads de imgs para o carrossel -->
-            <section class="up-imgs">
+            <form action="" method="post" class="formulario-ca">
+                <section class="up-imgs">
+                    <div class="div-nome">
+                        <h1 class="num">Imagem 1</h1>
+                        <label class="uploads" id="label">
+                            <input type="file" name="img1" class="input" id="input1">
+                
+                            <img <?php echo "src='".$img1."'"; ?> alt="Imagem do carrossel 3" class="up-img">
+                
+                            <button class="btn-editar open-modal">
+                                <i class="fa-solid fa-pen editar"></i>
+                            </button>
+                        </label>
+                    </div>
+                
+                    <div class="div-nome">
+                        <h1 class="num">Imagem 2</h1>
+                        <label class="uploads" id="label">
+                            <input type="file" name="img2" class="input" id="input2">
+                
+                            <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" class="up-img">
+                
+                            <button class="btn-editar open-modal">
+                                <i class="fa-solid fa-pen editar"></i>
+                            </button>
+                        </label>
+                    </div>
+                
+                    <div class="div-nome">
+                        <h1 class="num">Imagem 3</h1>
+                        <label class="uploads">
+                            <input type="file" name="img3" class="input" id="input3">
+                
+                            <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" class="up-img">
+                
+                            <button class="btn-editar open-modal">
+                                <i class="fa-solid fa-pen editar"></i>
+                            </button>
 
-                <div class="div-nome">
-                    <h1 class="num">Imagem 1</h1>
-                    <label class="uploads" id="label">
-                        <input type="file" name="img1" class="input" id="input1">
-
-                        <img src="../../../Public/imgs/img-home/imagem-carrossel-1.JPG" alt="Imagem do carrossel 1" class="up-img">
-
-                        <button class="btn-editar open-modal">
-                            <i class="fa-solid fa-pen editar"></i>
-                        </button>
-                    </label>
+                        </label>
+                    </div>
+                </section>
+                <!-- botoes parte de baixo -->
+                <div class="btns">
+                    <a href="Area-Adm.php" class="voltar">
+                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    </a>
+                    <div class="btn-cancelar-salvar">
+                            <button class="btn btn-cancelar">
+                                <a href="">Cancelar</a>
+                            </button>
+                            
+                            <button type="submit" name="editar" class="btn btn-salvar">
+                                Salvar
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="div-nome">
-                    <h1 class="num">Imagem 2</h1>
-                    <label class="uploads" id="label">
-                        <input type="file" name="img2" class="input" id="input2">
-
-                        <img src="../../../Public/imgs/img-home/imagem-carrossel-2.JPG" alt="Imagem do carrossel 2" class="up-img">
-
-                        <button class="btn-editar open-modal">
-                            <i class="fa-solid fa-pen editar"></i>
-                        </button>
-                    </label>
-                </div>
-
-                <div class="div-nome">
-                    <h1 class="num">Imagem 3</h1>
-                    <label class="uploads">
-                        <input type="file" name="img3" class="input" id="input3">
-
-                        <img src="../../../Public/imgs/img-home/imagem-carrossel-3.JPG" alt="Imagem do carrossel 3" class="up-img">
-
-                        <button class="btn-editar open-modal">
-                            <i class="fa-solid fa-pen editar"></i>
-                        </button>
-                    </label>
-                </div>
-            </section>
-
-            <!-- botoes parte de baixo -->
-            <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
-
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="">Cancelar</a>
-                    </button>
-
-                    <button class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
-            </div>
+            </form>
         </div>
         </div>
     </main>
 
     <!-- bolas de fundo -->
-    <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
-    </div>
+    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+
 
     <!-- link do JavaScript -->
     <script src="../../../Public/js/js-menu/js-menu.js"></script>

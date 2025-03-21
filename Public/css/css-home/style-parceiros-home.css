@@ -6,12 +6,18 @@
     align-items: center;
     justify-content: center;
 }
+
+.title {
+    padding-bottom: 2rem;
+}
+
 .all-parce {
     width: 80%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-top: .8px solid #c1c1c1;
 }
 
 .div-logo-parceiro {

@@ -44,24 +44,24 @@
     z-index: -3;
 }
 
-.bolas-fundo .bola-verde1 {
+.bola-verde1 {
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .bola-verde2 {
+.bola-verde2 {
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .bola-rosa {
+.bola-rosa {
     position: absolute;
-    right: -100px;
-    bottom: -100px;
+    right: 0px;
+    bottom: 0px;
     z-index: -3;
 }
 

@@ -1,6 +1,6 @@
 /* rodape */
 .rodape {
-    background-color: #CD1650;
+    background-color: #DD2D4A;
     margin-top: 100px;
     width: 100%;
     height: auto;
@@ -24,19 +24,22 @@
 }
 
 .title-list-rodape {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0px auto;
     margin-top: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .list-ul {
     margin: 0 auto;
-    font-size: 1.2em;
+    font-size: 1.1em;
     list-style: none;
 }
 
 .link-rodape {
     color: #fff;
+    text-decoration: none;
 }
 
 .link-contato-rodape {
