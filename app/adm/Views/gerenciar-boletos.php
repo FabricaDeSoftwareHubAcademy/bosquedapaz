@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Boletos </title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/g_boleto.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
@@ -332,18 +332,18 @@
     </div>
 
     <div class="boleto-bola1">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
-        </div>
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
+    </div>
 
-        <div class="boleto-bola2">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
-        </div>
+    <div class="boleto-bola2">
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
+    </div>
 
-        <div class="boleto-bola3">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
-        </div>
-        <div class="boleto-seta-voltar">
-            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-        </div>
+    <div class="boleto-bola3">
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
+    </div>
+    <div class="boleto-seta-voltar">
+        <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+    </div>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
