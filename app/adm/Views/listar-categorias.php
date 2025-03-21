@@ -194,7 +194,7 @@
                             <option value="" style="background-color: rgba(25, 169, 78, 0.3);">Cor 8</option>
                             <option value="" style="background-color: rgba(108, 88, 76, 0.30);">Cor 9</option>
                         </select>
-                        <input class="botao-cor" name="cor_sala" type="color">
+                        <!-- <input class="botao-cor" name="cor_sala" type="color"> -->
                         <h3>Ícone:</h3>
                         <label for="file" class="custum-file-upload" onchange="loadFile(event)">
                             <div class="icon">
@@ -207,7 +207,7 @@
                                 </svg>
                             </div>
                             <div class="text">
-                                <span>Selecione a Imagem</span>
+                                <span style="color:grey">Selecione a Imagem</span>
                             </div>
                             <input id="file" type="file" style="display: none;">
                         </label>
