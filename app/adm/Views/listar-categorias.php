@@ -160,16 +160,16 @@
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div> 
-
-            <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar Exclusão</h2>
-                <!-- <input type="text" value=""> -->
-                <p>Tem certeza que deseja fazer isso?</p>
-                <div>
-                    <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
-                    <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
+            <!-- modal delete -->
+            <div class="acao-recusar" id="modal-recusar">
+                <div class="acao-content-recusar">
+                    <h1 class="acao-texto-recusar">Deseja excluir o expositor?</h1>
+                    <div class="acao-botoes-recusar">
+                        <a href=""><button class="botao-cancelar">Cancelar</button></a>
+                        <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
+                    </div>
                 </div>
-            </dialog>
+            </div>
             
         </main>
 

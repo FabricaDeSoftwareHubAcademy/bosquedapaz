@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+body{
+    overflow: hidden;
+}
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -97,7 +100,7 @@ h2 {
 }
 
 .input-group label {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #3d3d3d;
 }
 
@@ -106,23 +109,30 @@ h2 {
     min-height: 45px;
     padding: 5px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
-    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
     
 }
 
 .input-group textarea{
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
-    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
 }
 
 .data-imagem{

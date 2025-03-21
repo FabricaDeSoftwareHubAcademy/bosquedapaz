@@ -7,6 +7,9 @@
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
 }
+body{
+    overflow: hidden;
+}
 
 .principal {
     width: 100vw;
@@ -288,6 +291,54 @@ button:hover {
     text-align: center;
     font-size: 14px;
     cursor: pointer;
+}
+
+#modal-validar, #modal-recusar,
+#recusado-sucesso, #validacao-sucesso {
+    display: none;
+}
+
+
+#modal-recusar:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 2;
+}
+
+.acao-content-recusar {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.acao-texto-recusar {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    /* background-color: red; */
+}
+
+.acao-botoes-recusar {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
 }
 
 @media (max-width: 1042px) {
