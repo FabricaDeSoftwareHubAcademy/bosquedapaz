@@ -10,6 +10,7 @@
     --franch-rose:#FF3877;
     --royal-blue: #162868;
 }
+
 html,.body-recsenha{
     overflow: hidden;
     overflow-x: hidden;
@@ -18,318 +19,482 @@ html,.body-recsenha{
     margin: 0;
     padding: 0;
     background-color: #e1e1e1;
-}
- 
-.img-superior-direita-recsenha{
-    position: absolute;
-    right: 0%;
-    top: 8%;
-    /* background-color: red; */
+    position: relative;
 }
 
-.img-superior-direita-recsenha .imgg-superior-direita-recsenha{
-    display: flex;
-}
- 
-.img-superior-esquerda-recsenha{
-    position: absolute;
-    left: 0%;
-    top: 6%;
-    /* background-color: red; */
-}
-
-.img-superior-esquerda-recsenha .imgg-inferior-esquerda-recsenha{
-    display: flex;
-}
- 
-.img-inferior-direita-recsenha{
-    position: absolute;
-    right: 0%;
-    bottom: 0%;
-    height: 32%;
-    /* background-color: red; */
-}
-
-.img-inferior-direita-recsenha .imgg-inferior-direita-recsenha{
-    display: flex;
-}
- 
-.img-inferior-esquerda-recsenha{
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
-    /* background-color: red; */
-}
-
-.img-inferior-esquerda-recsenha .imgg-inferior-esquerda-recsenha{
-    display: flex;
-}
- 
 .section-recsenha{
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* background-color: green; */
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
 }
- 
-/* .botao-voltar{
-    margin-top: 46%;
-    margin-left: 1%;
-} */
- 
+
+.imgg-inferior-direita-recsenha{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
+
+.imgg-inferior-esquerda-recsenha{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+}
+
+.imgg-superior-direita-recsenha{
+    position: fixed;
+    top: 10%;
+    right: 0%;
+}
+
+.imgg-superior-esquerda-recsenha{
+    position: fixed;
+    top: 12%;
+    left: 0%;
+}
+
 .box-recsenha{
-    background-color: rgba(248, 245, 246, 0.705);
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
     width: 85%;
-    flex-wrap: wrap;
-    height: 800px;
-    box-sizing: border-box;
+    height: 83%;
+    display: flex;
+    backdrop-filter: blur(0px);
+    background-color: rgba(248, 245, 246, 0.705);
     border-radius: 15px;
+    align-items: self-start;
+    justify-content: space-between;
     transition: all .5s ease;
+    will-change: transform;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
     z-index: 1;
     #linha-bet-recsenha{
-        height: 640px;
-        position: fixed;
+        height: 82%;
+        position: absolute;
         border-right: 1.5px solid #ec6a93;
         left: 50%;
         border-radius: 20px;
-        /* margin-top: 60px; */
+        top: 10%;
+        bottom: 10%;
     }
 }
- 
-/* .box-recsenha:hover{
-    background-color: #f0f0f013;
+
+.box-recsenha:hover{
+    background-color: rgba(240, 240, 240, 0.075);
     backdrop-filter: blur(30px);
- 
+
     #linha-bet-recsenha{
-        border-right: 3px solid #162868;
+        border-right: 1.5px solid #162868;
     }
+}
+
+/* .img-voltar{
+    background-color: darkviolet;
 } */
- 
-.area-recsenha{
-    display: flex;
-    flex-direction: column;
-    width: 42%;
-    margin-left: 4%;
-    /* background-color: red; */
-}
- 
-.div-redefinicao{
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 600;
-    /* background-color: rgb(138, 21, 124); */
-}
- 
-.div-text-recsenha{
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 18px;
-    /* background-color: aqua; */
-}
- 
+
 .form-recsenha{
     display: flex;
     flex-direction: column;
-    /* background-color: purple; */
-    justify-content: center;
-    align-items: center;
-}
- 
-.form-recsenha .text-endereco-email{
-    display: flex;
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 29%;
-}
- 
-.area-input-recsenha{
-    display: flex;
-    /* justify-content: center; */
-    width: 55%;
-    height: 38px;
-    align-items: center;
+    /* background-color: green; */
     position: relative;
+    top: 32%;
+    left: 9.5%;
+    width: 30%;
+    /* height: 120px; */
 }
- 
-.area-input-recsenha i{
-    z-index: 5;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    left: 7px;
-    font-size: 18px;
-}
- 
-.area-input-recsenha .input-recsenha{
-    display: flex;
-    justify-content: center;
-    border-radius: 8px;
-    border: none;
-    text-decoration: none;
-    outline: none;
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    padding-left: 35px;
-    border-width: 0 0.5px 0.5px 0;
-    border-style: solid;
-    border-color: #162868;
-    padding-top: 2px;
-    box-shadow: 1px 2px 3px 2px #162868;
-    font-weight: 500;
-    font-size: 14px;
-}
- 
-.input-recsenha::placeholder{
-    color: rgb(30, 30, 30);
-    font-size: 15.2px;
-}
- 
-.div-botoes-recsenha{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+
+.forms-recsenha{
     /* background-color: red; */
-    justify-content: center;
-    align-items: center;
-    margin-top: 27px;
-}
- 
-.div-botao-cancelar-recsenha{
-    /* background-color: rebeccapurple; */
-    width: 140px;
-    height: 42px;
-}
- 
-.div-botao-enviar-recsenha{
-    /* background-color: firebrick; */
-    width: 140px;
-    height: 42px;
-}
- 
-.botao-cancelar-recsenha{
-    background-color: #FF3877;
+    height: 150px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    outline: none;
-    border:none;
-    border-radius: 10px;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 500;
-    transition: all .5s ease;
-    box-shadow: 1px 3px 5px 2px #7d7d7d;
-}
- 
-.botao-cancelar-recsenha:hover{
-    box-shadow: 1px 3px 5px 3.5px #162868;
-}
- 
-.botao-enviar-recsenha{
-    background-color: #162868;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 500;
-    transition: all .5s ease;
-    box-shadow: 1px 3px 5px 2px rgb(125, 125, 125);
-}
- 
-.botao-enviar-recsenha:hover{
-    box-shadow: 1px 3px 5px 3.5px #FF3877;
-}
- 
-.area-img-recsenha{
-    /* background-color: crimson; */
     display: flex;
     flex-direction: column;
     position: relative;
-    justify-content: center;
-    left: 8%;
 }
- 
-.area-img-recsenha .text-h1-recsenha{
+
+.text{
     display: flex;
     justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
+    margin-bottom: 5%;
+    width: 100%;
+    /* background-color: chartreuse; */
 }
- 
-.area-img-recsenha .img-recsenha{
+
+/* 
+.label-email{
+    background-color: blueviolet;
+    left: 4%;
+    position: relative;
+} */
+
+.area-input-recsenha{
     display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+    width: 95%;
+    height: 42px;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.area-input-recsenha i{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.input-recsenha{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 35px;
+    border-color: #162868;
+    border-width: 0 0.5px 0.5px 0;
+    border-style: solid;
+    box-shadow: 2px 2px 4px 1px #162868;
+}
+
+
+.botoes{
+    display: flex;
+    position: relative;
+    /* background-color: pink; */
+    justify-content: space-evenly;
+    width: 100%;
+    height: 48px;
+}
+
+.botao-cancelar{
     justify-content: center;
     align-items: center;
-    width: 650px;
-    height: auto;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+    transition: all .5s ease;
+    box-shadow: 1px 3px 5px 2px #7d7d7d;
+    display: flex;
+    background-color: #162868;
 }
- 
-.img-recsenha .img-recsenha-svg-recsenha{
-    width: 100%;
-    height: auto;
-    transition: all 0.5s ease;
+
+.botao-cancelar:hover{
+    box-shadow: 1px 3px 5px 2px #FF3877;
 }
- 
-.img-recsenha .img-recsenha-svg-recsenha:hover{
+
+.botao-redefinir{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+    transition: all .5s ease;
+    box-shadow: 1px 3px 5px 2px #7d7d7d;
+    display: flex;
+    background-color: #FF3877;
+}
+
+.botao-redefinir:hover{
+    box-shadow: 1px 3px 5px 2px #162868;
+
+}
+
+.img-letter{
+    position: relative;
+    width: 50%;
+}
+
+.img-style .img-letter{
+    transition: all .5s ease;
+}
+
+.img-style .img-letter:hover{
     transform: scale(1.05);
 }
- 
+
+.title-recsenha{
+    font-weight: 600;
+    left: 10%;
+    top: 12%;
+    position: absolute;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width:575.98px){
-    .body-recsenha{
-        background-color: grey;
+    .box-recsenha{
+        width: 90%;
+        height: 90%;
+    }
+
+    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
+        display: flex;
+        width: 30%;
     }
 
     #linha-bet-recsenha{
         display: none;
     }
 
-    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
-        width: 120px;
-        height: 120px;
-    }
-
-    .img-recsenha-svg-recsenha{
+    .img-letter{
         display: none;
     }
 
-    .box-recsenha{
-        justify-content: center;
+    .title-recsenha{
+        margin-bottom: 20%;
+        left: 0%;
+        position: relative;
         display: flex;
-        height: 90%;
-        top: 5%;
-        position: fixed;
-        width: 90%;
+        font-size: 23px;
     }
 
-    .area-recsenha{
-        background-color: green;
-        width: 90%;
-        bottom: 90%;
+    .form-recsenha{
+        top: 20%;
+        position: absolute;
+        width: 87%;
+        left: 6%;
     }
+
+    .text{
+        text-align: center;
+        margin-bottom: 4%;
+        display: flex;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .botoes{
+        justify-content: space-around;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+
+}
+
+@media (min-width:576px){
+
+    .box-recsenha{
+        padding: 10px;
+    }
+
+    .form-recsenha{
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        left: 0.5%;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+    .title-recsenha{
+        text-align: center;
+        left: 0%;
+        position: relative;
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+
+    .img-letter{
+        top: 27%;
+    }
+
+    .botoes{
+        width: 100%;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+}
+
+@media (min-width:768px){
+
+    .box-recsenha{
+        height: 88%;
+        padding: 10px;
+    }
+
+    .form-recsenha{
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        left: 0.5%;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+    .img-letter{
+        top: 28%;
+    }
+
+    .title-recsenha{
+        left: 0%;
+        position: relative;
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+}
+
+@media (min-width:992px){
+
+    .imgg-inferior-direita-recsenha, 
+    .imgg-inferior-esquerda-recsenha, 
+    .imgg-superior-direita-recsenha, 
+    .imgg-superior-esquerda-recsenha{
+        width: 28%;
+    }   
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+
+    .imgg-inferior-direita-recsenha, 
+    .imgg-inferior-esquerda-recsenha, 
+    .imgg-superior-direita-recsenha, 
+    .imgg-superior-esquerda-recsenha{
+        width: 18%;
+    }
+
+    .form-recsenha{
+        top: 22%;
+    }
+
+    .title-recsenha{
+        margin-bottom: 8%;
+    }
+
+    .img-letter{
+        top: 7%;
+    }
+}
+
+@media (min-width:1200px){
+    
+    .imgg-inferior-direita-recsenha, 
+    .imgg-inferior-esquerda-recsenha, 
+    .imgg-superior-direita-recsenha, 
+    .imgg-superior-esquerda-recsenha{
+        width: 18%;
+    }
+
+    .title-recsenha{
+        margin-bottom: 0%;
+    }
+
+    .img-letter{
+        top: 5%;
+    }
+
+    .botao-cancelar{
+        width: 30%;
+    }
+
+    .botao-redefinir{
+        width: 30%;
+    }
+}
+
+@media (min-width:1400px){
+    .box-recsenha{
+        height: 82%;
+    }
+    
+    .imgg-inferior-direita-recsenha{
+        width: 18%;
+    }
+
+    .imgg-inferior-esquerda-recsenha{
+        width: 11%;
+    }
+
+    .imgg-superior-direita-recsenha{
+        width: 12%;
+    }
+
+    .imgg-superior-esquerda-recsenha{
+        width: 11%;
+    }
+    
+    .form-recsenha{
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 20%;
+        left: 9.5%;
+        width: 30%;
+        height: 60%;
+    }
+    
+    .forms-recsenha{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .img-letter{
+        top: 0%;
+    }
+    
+    .title-recsenha{
+        /* background-color: red; */
+        margin-bottom: 30%;
+        top: 0%;
+        left: 0%;
+        position: relative;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }    
 }
