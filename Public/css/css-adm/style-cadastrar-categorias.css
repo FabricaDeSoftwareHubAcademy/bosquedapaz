@@ -23,6 +23,7 @@
 }
 
 .modal-content {
+    height: 70%;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -151,7 +152,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 40px;
     gap: 20px;
 }
 
@@ -175,7 +176,6 @@
 }
 
 .custom-select {
-    position: relative;
     width: 200px;
 }
 
@@ -198,11 +198,11 @@
 
 .select-items {
     position: absolute;
-    width: 100%;
+    width: 40%;
     background-color: white;
     border: 1px solid #ccc;
     display: none;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .select-items div {

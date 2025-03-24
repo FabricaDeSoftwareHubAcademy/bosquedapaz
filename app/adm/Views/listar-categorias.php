@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página para gerenciar parceiros e suas informações.">
+    <meta name="description" content="Página para gerenciar categorias e suas informações.">
     <title>Listar Categorias</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-categoria.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
+    <!-- <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css"> -->
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-categorias.css">
     <!-- <link rel="stylesheet" href="../../../Public/css/menu-adm.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
@@ -15,7 +16,6 @@
 
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
-    <header class="cabecalho">
         <main class="principal">
             <div class="box">
                 <h2>CATEGORIAS</h2>
@@ -201,13 +201,13 @@
                                                 <div class="color-preview" style="background-color: rgba(217, 3, 103, 0.30);"></div> Cor 4
                                             </div>
                                             <div data-value="rgba(23, 128, 118, 0.30)">
-                                                <div class="color-preview" style="background-color: rgba(23, 128, 118, 0.30);"></div> Cor 4
+                                                <div class="color-preview" style="background-color: rgba(23, 128, 118, 0.30);"></div> Cor 5
                                             </div>
                                             <div data-value="rgba(251, 84, 7, 0.30)">
-                                                <div class="color-preview" style="background-color: rgba(251, 84, 7, 0.30);"></div> Cor 4
+                                                <div class="color-preview" style="background-color: rgba(251, 84, 7, 0.30);"></div> Cor 6
                                             </div>
                                             <div data-value="rgba(25, 169, 78, 0.3)">
-                                                <div class="color-preview" style="background-color: rgba(25, 169, 78, 0.3);"></div> Cor 4
+                                                <div class="color-preview" style="background-color: rgba(25, 169, 78, 0.3);"></div> Cor 7
                                             </div>
                                         </div>
                                     </div>
