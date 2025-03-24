@@ -294,7 +294,6 @@ text-decoration: none;}
 .fotos-parceiros-quem-somos .foto-zuada{
     margin-left: -2.5%;
 }
-
 @media(max-width:1669px){
 
     .div-img-animation{
@@ -466,7 +465,7 @@ text-decoration: none;}
     top: 13%;
 }
 .section-expositor-quem-somos .botao-expositor{
-    left: 0%;
+    left: 1%;
     top: 12%;
 }
 .section-expositor-quem-somos .expositor{
@@ -514,6 +513,8 @@ text-decoration: none;}
     }
     .section-expositor-quem-somos .botao-expositor{
     width: 20%;
+    left: 1%;
+    right: 0%;
   }
 }
 
@@ -541,6 +542,7 @@ text-decoration: none;}
     }
     .section-expositor-quem-somos .botao-expositor{
         position: relative;
+        left: 1%;
         margin-top: -0.5%;
     }
     .section-colaboradoras-quem-somos .fotos{
@@ -565,7 +567,6 @@ text-decoration: none;}
     }
     .section-expositor-quem-somos .botao-expositor .botao{
         display: flex;
-        
         font-size: 0.9rem;
     }
     .section-colaboradoras-quem-somos .fotos{
@@ -617,5 +618,3 @@ text-decoration: none;}
         
     }
 }
-
-
