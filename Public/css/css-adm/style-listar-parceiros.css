@@ -36,7 +36,6 @@ h2 {
     font-size: 30px;
 }
 
-
 /* Estilo do ícone de editar */
 .edit-icon i {
     color: #333;
@@ -289,7 +288,6 @@ h2 {
     box-sizing: border-box;
 }
 
-
 /* Botões de ação */
 .acao-botoes-editar {
     width: 90%;
@@ -404,8 +402,6 @@ h2 {
     background-color: white;
 }
 
-
-
 /* Estilo do parágrafo dentro do modal */
 .modal-edit {
     margin: auto;
@@ -462,8 +458,6 @@ button:hover {
     background: rgba(0, 0, 0, 0.521);
     /* Escurece o fundo atrás do modal */
 }
-
-
 
 .container {
     width: 90%;
@@ -533,23 +527,6 @@ button:hover {
     text-align: center;
 }
 
-
-/* .collaborators-table thead {
-    position: sticky;
-    top: 0;
-    background-color: rgb(32, 54, 139);
-    color: white;
-    z-index: 10;
-} */
-
-/* .collaborators-table th, .collaborators-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 20%;
-} */
-
-
 .collaborators-table tr {
     display: table;
     width: 100%;
@@ -591,7 +568,6 @@ button:hover {
     height: 15%;
 }
 
-
 .collaborators-table th,
 .collaborators-table td {
     /* padding: 12px 15px; */
@@ -622,7 +598,6 @@ table tbody tr:nth-child(even) {
 .collaborators-table tbody tr:hover {
     background-color: #f1f1f1;
 }
-
 
 .status {
     width: 80px;

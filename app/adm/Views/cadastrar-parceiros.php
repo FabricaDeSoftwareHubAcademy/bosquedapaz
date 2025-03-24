@@ -37,7 +37,6 @@
 
                     <div class="input">
                         <label for="optionInput3">Tipo:</label>
-                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
 
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
@@ -84,11 +83,6 @@
 
             <div class="form-finalizar">
 
-                <!-- <div class="edital-feira">
-                        <button><a href="#">Edital da Feira</a></button>
-                    </div> -->
-
-
                 <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
@@ -100,10 +94,11 @@
                 <div id="modal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
+                        <h1 class="acao-texto-recusar">Deseja salvar as alterações?</h1>
                         <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
                             <button class="btn-cancelar-modal">Cancelar</button>
+                            <button class="btn-confirmar">Confirmar</button>
+                          
                         </div>
                     </div>
                 </div>
@@ -113,7 +108,7 @@
 
             <div class="botoes">
                 <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar<e /button>
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
 
                 <div class="salvar-resp">

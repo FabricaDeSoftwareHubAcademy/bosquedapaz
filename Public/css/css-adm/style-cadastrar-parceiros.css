@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
- 
 }
  
 body{
@@ -39,7 +38,6 @@ body{
     outline: none;
 }
  
- 
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -69,7 +67,6 @@ body{
     z-index: -3;
 }
  
- 
 .formularios {
     width: 100%;
     display: flex;
@@ -97,8 +94,6 @@ body{
     border-right: 2px solid #9d9fa1;
     outline: none;
 }
- 
- 
  
 .input-group input{
     width: 40vh;
@@ -197,7 +192,6 @@ body{
     font-size: 18px;
 }
  
- 
 label#salvar-btn {
     display: inline-block;
     background-color: #FF3877;
@@ -210,7 +204,6 @@ label#salvar-btn {
     font-size: 23px;
     text-transform: uppercase;
 }
- 
  
 /* Estilo do modal */
 .modal {
@@ -225,16 +218,20 @@ label#salvar-btn {
     align-items: center;
     z-index: 1000;
 }
-.title-modal{
-    font-weight: bold;
+
+.acao-texto-recusar {
     width: 100%;
+    height: 48px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
 }
  
 .modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 41px;
     border-radius: 10px;
-    width: 400px;
+    width: 580px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -247,6 +244,8 @@ label#salvar-btn {
     cursor: pointer;
     color: #555;
 }
+
+/* background-color: red; */
  
 .close:hover {
     color: #000;
@@ -257,43 +256,38 @@ label#salvar-btn {
     margin-bottom: 20px;
     color: #333;
 }
- 
- 
+
+/* background-color: red; */
+
 .modal-botoes {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 37px;
 }
  
 .btn-confirmar {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
     background-color: #007E70;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
 }
- 
  
 .btn-cancelar-modal {
-    background-color: #e91e63;
-    color: white;
-    border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-}
- 
- 
-.btn-cancelar {
-    color: white;
+    width: 200px;
+    height: 60px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    background-color: #FF3877;
+    color: white;
 }
  
 /* fim modal */
@@ -312,7 +306,6 @@ label#salvar-btn {
     cursor: pointer;
     color: white;
     font-size: 23px;
-    text-transform: uppercase;
 }
  
 .botoes-salvar,
@@ -323,20 +316,16 @@ label#salvar-btn {
    
 }
  
- 
 .btn-cancelar {
-    display: inline-block;
-    background-color: #5c4caf;
-    color: white;
-    /* padding: 13px 40px; */
     background-color: #FF3877;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     font-size: 23px;
-    text-transform: uppercase;
- 
 }
  
  
@@ -587,5 +576,32 @@ label#salvar-btn {
         top: 50px;
     }
    
- 
+    @media (max-width: 600px) {
+        .modal-content {
+            padding: 20px; /* Reduzido o padding para telas menores */
+        }
+    
+        .modal-botoes {
+            gap: 15px; /* Reduzido o gap entre os botões */
+        }
+    
+        .btn-confirmar,
+        .btn-cancelar-modal {
+            width: 150px; /* Reduzido a largura dos botões */
+            height: 50px; /* Reduzido a altura dos botões */
+            font-size: 16px; /* Reduzido o tamanho da fonte */
+        }
+    
+        .acao-texto-recusar {
+            font-size: 20px; /* Reduzido o tamanho da fonte do título */
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .btn-confirmar,
+        .btn-cancelar-modal {
+            width: 120px;
+            font-size: 14px;
+        }
+    }
 }

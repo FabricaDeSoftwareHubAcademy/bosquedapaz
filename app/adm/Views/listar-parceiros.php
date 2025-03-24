@@ -52,7 +52,7 @@
                             </tr>
 
                             <tr>
-                                <td class="usuario-col">1</td>
+                                <td class="usuario-col">2</td>
                                 <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
@@ -66,7 +66,7 @@
                             </tr>
 
                             <tr>
-                                <td class="usuario-col">1</td>
+                                <td class="usuario-col">3</td>
                                 <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
@@ -80,7 +80,7 @@
                             </tr>
 
                             <tr>
-                                <td class="usuario-col">1</td>
+                                <td class="usuario-col">4</td>
                                 <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
@@ -92,9 +92,9 @@
                                     </a>
                                 </td>
                             </tr>
-
+                            
                             <tr>
-                                <td class="usuario-col">1</td>
+                                <td class="usuario-col">5</td>
                                 <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
@@ -106,76 +106,8 @@
                                     </a>
                                 </td>
                             </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                            
+                           
 
                         </tbody>
                     </table>
