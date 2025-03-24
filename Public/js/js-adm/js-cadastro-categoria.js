@@ -59,3 +59,26 @@
             });
         });
     });
+
+    const selected = document.querySelector(".select-selected");
+    const selectedText = document.getElementById("selectedText");
+    const selectedColor = document.getElementById("selectedColor");
+    const items = document.querySelector(".select-items");
+
+    selected.addEventListener("click", () => {
+        items.style.display = items.style.display === "block" ? "none" : "block";
+    });
+
+    document.querySelectorAll(".select-items div").forEach(item => {
+        item.addEventListener("click", function () {
+            selectedText.textContent = this.textContent.trim();
+            selectedColor.style.backgroundColor = this.dataset.value;
+            items.style.display = "none";
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".custom-select")) {
+            items.style.display = "none";
+        }
+    });

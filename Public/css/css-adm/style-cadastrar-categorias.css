@@ -152,6 +152,7 @@
     justify-content: center;
     width: 100%;
     margin-top: 15px;
+    gap: 20px;
 }
 
 .botoes button {
@@ -173,7 +174,47 @@
     color: white;
 }
 
+.custom-select {
+    position: relative;
+    width: 200px;
+}
 
+.select-selected {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.color-preview {
+    width: 30px;
+    height: 20px;
+    /* border-radius: 50%; */
+    margin-right: 10px;
+    border: 1px solid #000;
+}
+
+.select-items {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 10;
+}
+
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.select-items div:hover {
+    background-color: #f1f1f1;
+}
 
 select {
     color: gray;
