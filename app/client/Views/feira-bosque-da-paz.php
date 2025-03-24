@@ -12,7 +12,7 @@
 <body class="home">
     <!-- incluindo o menu -->
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
-    <?php include "../../../Public/assets/home/carrossel-home.html"; ?>
+    <?php include "../../../Public/assets/home/carrossel-home.php"; ?>
         
     <!-- importando informações da feira -->
     <?php include "../../../Public/assets/home/info-sobre-feira.html"; ?>
