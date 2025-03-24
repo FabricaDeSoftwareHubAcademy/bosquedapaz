@@ -17,7 +17,7 @@ body {
 
 #btn-voltar-cb {
     font-size: 30px;
-    margin-top: 35%;
+    margin-top: 30%;
     margin-right: 5%;
     z-index: 10;
     border: none;
@@ -86,14 +86,15 @@ body {
 }
 
 .main-cb{
-    width: 60%;
-    height: 90%;
+    width: 150vh;
+    height: 75vh;
     display: flex;
     position: relative;
     z-index: 2;
+    margin-left: -5%;
+    margin-top: -5%;
     justify-content: center;
     align-items: center;
-    background-color: red;
 }
 
 .area-form-cb{
@@ -214,11 +215,6 @@ body {
     background-size: 50%;
     margin-top: 30px;
     margin-left: 3%;
-}
-
-#option-cb{
-    border: 1px solid #626262b9;
-    border-radius: 5px;
 }
 
 input[type="file"] {
