@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar Relatórios</title>
+    <title>Adm - Bosque da Paz</title>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script> 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-relatorio.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
@@ -59,7 +59,7 @@
                 <a href="listar-adm.php" class="link-area-icon">
                 <div class="area-icon-relat">
                 <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                <p>Relatório Usuários</p>
+                <p>Relatório Administradores</p>
                 </div>
                 </a>
 </div>

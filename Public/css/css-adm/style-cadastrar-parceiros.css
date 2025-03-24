@@ -7,16 +7,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+ 
 }
-
+ 
+body{
+    overflow: hidden;
+}
+ 
 .principal {
-
     width: 100vw;
     height: 90vh;
-    z-index: 1;
 }
-
-.principal .box {
+ 
+.box {
     width: 90%;
     height: 90%;
     background-color: rgba(248, 245, 246, 0.65);
@@ -26,14 +29,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
 }
-
-h2 {
-    font-size: 30px;
+ 
+.btn-editar {
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
-
+ 
+ 
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -41,208 +47,545 @@ h2 {
     top: -90vh;
     z-index: -3;
 }
-
+ 
 .bolas-fundo .bola-verde1 {
     position: absolute;
     left: -40px;
     top: 6vh;
     z-index: -3;
 }
-
+ 
 .bolas-fundo .bola-verde2 {
     position: absolute;
     right: -50px;
     top: 6vh;
     z-index: -3;
 }
-
+ 
 .bolas-fundo .bola-rosa {
     position: absolute;
     right: -100px;
     bottom: -100px;
     z-index: -3;
 }
-
-.box .btns {
+ 
+ 
+.formularios {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 8%;
-    padding-right: 50px;
-}
-
-.btns .voltar {
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
+    gap: 20px;
     justify-content: center;
-}
-
-.voltar .btn-voltar {
-    width: 40px;
-}
-
-.btns .btn-cancelar-salvar {
-    width: auto;
-    height: 100%;
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 30px;
-    padding: 10px;
-}
-
-.btn-cancelar-salvar .btn {
     border: none;
-    padding: 5px 10px;
-    border-radius: 8px;
-    background-color: #FF3877;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 }
-
-.btn-cancelar-salvar .btn-salvar {
-    background-color: #007E70;
-    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
-}
-
-.btn-cancelar-salvar .btn a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.form-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: #FF3877; */
-    width: 100%;
-    height: 100%;
-}
-
-.form-box form {
+ 
+.formularios div {
     display: flex;
     flex-direction: column;
-    /* background-color: #007E70; */
     height: 80%;
-    width: 40%;
+}
+ 
+.formularios input {
+    width: 40vh;
+    height: 5vh;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    outline: none;
+}
+ 
+ 
+ 
+.input-group input{
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+.caixa-formulario label {
+    font-size: 14px;
+    margin-bottom: -10px;
+    margin-left: 10px;    
+}
+ 
+.caixa-contato{
+    position: relative;
+    top: -25px;
+}
+ 
+.caixa-contato input {
+    width: 170px;
+    margin: 20px;
+}
+ 
+.caixa-contato label {
+    font-size: 14px;
+    margin-bottom: -20px;
+    margin-left: 20px;
+}
+ 
+.carregar-src {
+    background-color: rgb(126, 126, 126);
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+ 
+.carregar-src a {
+    color: white;
+    text-decoration: none;
+}
+ 
+.carregar-src {
+    display: none;
+}
+ 
+.form-opc {
+    position: relative;
+    top: 5px;
+}
+ 
+.form-opc label {
+    font-size: 14px;
+    margin-bottom: -8px;
+    margin-left: 10px;
+}
+ 
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: black;
+    margin-top: 15px;
+}
+ 
+.form-finalizar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
     gap: 20px;
 }
-
-.img-parceiro {
-    width: 250px;
+ 
+.edital-feira {
+    position: relative;
+    left: 10%;
 }
-
-.parceiro-img {
-    width: 100%;
+ 
+ 
+.edital-feira a {
+    text-decoration: none;
+    color: white;
 }
-
-.input-group {
-    display: flex;
-    flex-direction: column;
-    height: 70px;
-    padding: 2px;
-    /* background-color: #007E70; */
-}
-
-.form-box .input-group label {
-    color: #3d3d3d;
-    font-weight: bold;
-    display: flex;
-}
-
-.form-box .input-group input {
-    width: 100%;
-    height: 30px;
-    background-color: white;
+ 
+.edital-feira button {
+    height: 35px;
+    width: 190px;
     border-radius: 10px;
-    outline: none;
-    border: 2px solid transparent;
-    padding: 15px;
-    font-size: 15px;
-    color: #616161;
-    transition: all 0.4s ease;
-    box-shadow: 1px 2px 0px 0px;
-}
-
-.input-group #file {
-
-    padding-top: 0px;
-
-}
-
-.form-box .uploadimg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: transparent;
     border: none;
-
+    background-color: #007E70;
+    font-size: 18px;
 }
-
-.uploadimg .upload {
-    border: transparent;
-    background-color: transparent;
+ 
+ 
+label#salvar-btn {
+    display: inline-block;
+    background-color: #FF3877;
+    color: white;
+    padding: 9px 50px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
 }
-
-.form-box .box-img {
+ 
+ 
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.title-modal{
+    font-weight: bold;
+    width: 100%;
+}
+ 
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+ 
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+ 
+.close:hover {
+    color: #000;
+}
+ 
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+ 
+ 
+.modal-botoes {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    height: 70%;
+    justify-content: center;
+    gap: 10px;
 }
-
-@media only screen and (max-width: 950px) {
-    h2 {
-        font-size: 1rem;
+ 
+.btn-confirmar {
+    background-color: #007E70;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ 
+ 
+.btn-cancelar-modal {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ 
+ 
+.btn-cancelar {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ 
+/* fim modal */
+ 
+.botoes{
+    display: none;
+}
+ 
+.salvar {
+    display: inline-block;
+    background-color: #007E70;
+    color: white;
+    padding: 11px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+ 
+.botoes-salvar,
+.botoes-cancelar {
+    position: relative;
+    left: 70%;
+    top: 100px;
+   
+}
+ 
+ 
+.btn-cancelar {
+    display: inline-block;
+    background-color: #5c4caf;
+    color: white;
+    /* padding: 13px 40px; */
+    background-color: #FF3877;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+ 
+}
+ 
+ 
+.form-termos {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+ 
+.form-termos a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+ 
+.form-termos button {
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+}
+ 
+.expo-resp a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+ 
+.expo-resp button {
+    height: 35px;
+    width: 185px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #007E70;
+}
+ 
+.termos {
+    height: 20px;
+    width: 250px;
+    color: red;
+    position: relative;
+    left: 10%;
+}
+ 
+.expositor-kids {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    left: 30%;
+    top: -90px;
+}
+ 
+.artistas {
+    height: 45px;
+    width: 200px;
+    position: relative;
+    left: 6%;
+    top: -90px;
+}
+ 
+.caixa-checkbox {
+    position: relative;
+    left: 10%;
+}
+ 
+.caixa-checkbox input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+ 
+.caixa-checkbox label {
+    font-size: 18px;
+    position: relative;
+    top: -10%;
+ 
+}
+ 
+.btns{
+    display: flex;
+    justify-content: start;
+    align-self: start;
+}
+ 
+ 
+.voltar {
+    color: black;
+    font-size: 20px;
+   
+ 
+}
+ 
+.edital-resp {
+    display: none;
+}
+ 
+.expo-resp {
+    display: none;
+}
+ 
+.salvar-resp {
+    display: none;
+}
+ 
+.custom-dropdown input {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+ 
+ 
+.select {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+ 
+ 
+@media(max-width: 1050px) {
+    .bolas-fundo .bola-verde1 {
+        width: 80px;
+       left: -20px;
+       /* display: none; */
+ 
     }
-
-    .bottoms-group #banner {
-        height: 150px;
+ 
+    .bolas-fundo .bola-verde2 {
+        width: 90px;
+        right: -25px;
+        /* display: none; */
+ 
     }
-
-    .form-box .vetor {
-        display: none;
+ 
+    .bolas-fundo .bola-rosa {
+        width: 200px;
+        right: -50px;
+        bottom: -50px;
+        /* display: none; */
     }
-
-    .box-img img {
-        display: none;
+    .principal{
+        overflow: hidden;
     }
-
-    .form-box form {
-        width: 100%;
-        height: 85%;
-        gap: 0px;
-        justify-content: space-around;
+    .box {
+        display: flex;
+        overflow-y: auto;
     }
-
-    .form-box .uploadimg {
-        height: 100%;
-        scale: 0.8;
-
-
+ 
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
-
-    .uploadimg .upload {
-
-        height: 100%;
-
+ 
+    .form-finalizar{
+        position: relative;
+        left: -26%;
     }
-
-    .input-group label {
-        font-size: 0.8rem;
+ 
+}
+ 
+@media(max-width: 360px) {
+ 
+    .title{
+        width: 105%;
     }
-
-    .box .btns {
-        padding-right: 0px;
+ 
+    .form-finalizar button{
+        width: 140px;    
+        font-size: 18px;
     }
-
+ 
+   
+}
+ 
+@media(max-width: 650px) {
+        .bolas-fundo .bola-verde1 {
+            display: none;
+        }
+ 
+        .bolas-fundo .bola-verde2 {
+            display: none;
+        }
+ 
+        .bolas-fundo .bola-rosa {
+            display: none;
+        }
+     
+ 
+    body{
+        overflow: hidden;
+    }
+ 
+    .title {
+        font-size: 12px;
+    }
+ 
+   
+ 
+    .box {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+    }
+ 
+    .principal{
+        overflow-y: auto;
+    }
+ 
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+    .formularios label{
+        position: relative;
+        left: 10px;
+    }
+ 
+    .form-finalizar{
+        position: relative;
+        top: -70px;
+        left: -65%;
+    }
+ 
+ 
+    .voltar{
+        position: relative;
+        top: 50px;
+    }
+   
+ 
 }

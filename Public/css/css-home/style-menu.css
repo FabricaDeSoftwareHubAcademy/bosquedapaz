@@ -12,7 +12,7 @@
 /* cabeçalho */
 .cabecalho {
     width: 100%;
-    height: 70px;
+    height: 80px;
     display: flex;
     align-items: center;
     border-bottom: 2px solid rgba(0, 0, 0, 0.24);
@@ -22,9 +22,18 @@
     background-color: white;
 }
 
+.link-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo {
     width: 150px;
-    margin: 5px 0px 0px 20px;
+    margin: 0px 0px 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-logo {
@@ -73,11 +82,26 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .li-menu {
     font-size: 1em;
-    padding-right: 20px;
+}
+
+.li-menu:after{
+    content: "";
+    background-color: #FF3877;
+    height: 3px;
+    width: 0%;
+    display: block;
+    width: 20%;
+    transition: 0.3s;
+
+}
+
+.li-menu:hover::after{
+    width: 100%;
 }
 
 .link-menu {
@@ -87,42 +111,12 @@
 }
 
 .pesquisar-login {
-    width: 40%;
+    width: auto;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-.pesquisar {
-    display: flex;
-    align-items: center;
-    width: auto;
-    margin-right: 50px;
-}
-
-.input {
-    width: 70%;
-    height: 40px;
-    border-radius: 5px;
-    margin-right: -25px;
-    padding-left: 5px;
-    border: 2px solid #000;
-}
-
-.bola {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: #0D592E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../../imgs/img-home/Lupa.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
 }
 
 .login {
@@ -133,10 +127,6 @@
 
 .img-login {
     width: 100%;
-}
-
-.pesquisa {
-    display: none;
 }
 
 .mobile-menu {
@@ -160,20 +150,6 @@
         font-size: 0.9em;
     }
 
-    .pesquisar {
-        width: 50px;
-        height: 40px;
-    }
-
-    .input {
-        display: none;
-    }
-
-    .bola {
-        height: 50px;
-        width: 50px;
-    }
-
     .login {
         width: 50px;
         height: 50px;
@@ -182,38 +158,6 @@
     .img-login{
         width: 50px;
         height: 50px;
-    }
-
-    .pesquisar {
-        display: flex;
-        align-items: center;
-        width: auto;
-        margin-right: 30px;
-        width: auto;
-        height: 100%;
-    }
-
-    .bola {
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-        background-color: #0D592E;
-        display: flex;
-    }
-
-    .input {
-        width: 110px;
-        height: 35px;
-        font-size: 0.6em;
-        font-weight: 600;
-        color: #000;
-        border-radius: 5px;
-        margin-right: -15px;
-        padding-left: 10px;
-    }
-
-    .inputOpen {
-        display: block;
     }
 
 }
@@ -242,7 +186,7 @@
 
     .mobile-menu {
         width: 100%;
-        height: 300px;
+        height: 200px;
         background-color: #fff;
         position: fixed;
         top: -20px;
@@ -257,23 +201,36 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
     }
 
     .nav-item  {
         text-align: center;
         margin-left: 0;
         display: block;
-        padding-top: 1.1rem;
         text-decoration: none;
-        padding-bottom: 1rem;
         color: #000;
+    }
+
+    .nav-item:after{
+        content: "";
+        background-color: #FF3877;
+        height: 3px;
+        width: 0%;
+        display: block;
+        width: 20%;
+        transition: 0.3s;
+    
+    }
+    
+    .nav-item:hover::after{
+        width: 100%;
     }
 
     .btn-login {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 30px;
     }
 
     .btnlogin {
@@ -284,6 +241,11 @@
         color: #fff;
         font-weight: 600;
         background-color: #0D592E;
+    }
+
+    .link-login {
+        text-decoration: none;
+        color: #fff;
     }
 
     .open {
@@ -297,45 +259,11 @@
         align-items: center;
         justify-content: right;
     }
-    
-    .pesquisa {
-        display: flex;
-        align-items: center;
-        width: auto;
-        margin-right: 30px;
-        width: auto;
-        height: 100%;
-    }
 
-    .input {
+    .pesquisar-login {
         display: none;
-        width: 110px;
-        height: 35px;
-        font-size: 0.6em;
-        font-weight: 600;
-        color: #000;
-        border-radius: 5px;
-        margin-right: -15px;
-        padding-left: 10px;
     }
-
-    .bola {
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-        background-color: #0D592E;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url("../../imgs/img-home/Lupa.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-    }
-
-    .inputOpen {
-        display: block;
-    }
+    
 }
 
 @media screen and (max-width: 510px) {
@@ -357,11 +285,6 @@
     
     .img-sandwich {
         width: 100%;
-    }
-    
-    .bola {
-        width: 35px;
-        height: 35px;
     }
 
 }

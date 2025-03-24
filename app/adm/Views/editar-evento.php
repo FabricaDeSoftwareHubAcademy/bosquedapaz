@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Eventos</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-evento.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
     <main class="principal">
         <div class="box">
             <h2>EDITAR EVENTO</h2>
             <div class="form-box">
-                <form action="#">
+                <form action="#" method="POST">
                     <div id="form1">
                         <div class="input-group">
                             <label>Nome:</label>
@@ -26,26 +26,25 @@
                                 required>
                         </div>
                         <div class="input-group">
-                            <label>Data:</label>
-                            <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                        </div>
-                        <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricaodoevento" id="descricaodoevento"
-                                placeholder="Digite uma breve descrição do evento" required>
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
-                        
-                        
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="file" id="file"
-                                required>
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Data:</label>
+                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                            </div>
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="file" id="file"
+                                    required>
+                            </div>
                         </div>
-                        <img class = "preview" src="" alt="" id="preview-image">
+                        <img class="preview" src="" alt="" id="preview-image">
                     </div>
-                    
+
                 </form>
-                
+
             </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">

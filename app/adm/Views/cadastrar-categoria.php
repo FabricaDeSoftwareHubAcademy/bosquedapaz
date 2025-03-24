@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Categorias</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">

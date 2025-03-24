@@ -3,6 +3,25 @@
 @import url('style-padrao.css');
 @import url('../css-modais/css-m-form-e-perfil-expo.css');
 
+.principal {
+    height: 84vh;
+}
+
+.titulo {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.formulario-ca {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 75px;
+}
+
 .up-imgs {
     width: 100%;
     height: auto;
@@ -67,6 +86,11 @@
 .btn-editar:hover .editar {
     color: #007E70;
     ;
+}
+
+.btn-salvar {
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 1190px) {

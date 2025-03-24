@@ -6,23 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <script src="../Public/js/js-adm/js-cadastrar-expositor.js"></script>
-
 </head>
 
 <body>
 <?php include "../../../Public/assets/adm/menu-adm.html"?>
+
 
     <main class="principal">
 
@@ -68,13 +59,24 @@
 
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
-                        <input list="options3" id="optionInput3" name="option3" placeholder="Selecione">
+                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
     
-                        <datalist id="options3">
-                            <option value="gastronomia">
-                            <option value="artesanato">
-                            <option value="moda">
-                        </datalist>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">Selecione</option>
+                            <option value="artesanato">Artesanato</option>
+                            <option value="gastronia">Gastronia</option>
+                            <option value="antiguidade">Antiguidade/Colecionismo</option>
+                            <option value="antiguidade">Plantas</option>
+                            <option value="antiguidade">Hortifruti</option>
+                            <option value="antiguidade">Moda autoral</option>
+                            <option value="antiguidade">Literatura</option>
+                            <option value="antiguidade">Cosmético</option>
+                            <option value="antiguidade">Sustentabilidade (brechó)</option>
+                            <option value="antiguidade">Empreendedorismo (industrializado)</option>
+                           
+                        </select>
+                        
                     </div>
 
                     <div class="input">
@@ -90,30 +92,38 @@
                 <div class="form-expo">
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="tipo-expo-list">
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Trailer</li>
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Food Truck</li>
-                            <li onclick="selecionarOpcao(this, 'tipo-expo')">Barraca</li>
-                        </ul>
+                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">Selecione</option>
+                            <option value="trailer">Trailer</option>
+                            <option value="food-truck">Food truck</option>
+                            <option value="barrca">Barrca</option>
+
+                        </select>
                     </div>
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="energia" name="energia" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="energia-list">
-                            <li onclick="selecionarOpcao(this, 'energia')">Sim</li>
-                            <li onclick="selecionarOpcao(this, 'energia')">Não</li>
-                        </ul>
+                        <select name="todas_categorias" id="todas_categorias" class="select">  
+
+                            <option value="">Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        
+
+                        </select>
                     </div>
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <input type="text" id="equipamentos" name="equipamentos" placeholder="Selecione" autocomplete="off">
-                        <ul class="dropdown-list" id="equipamentos-list">
-                            <li onclick="selecionarOpcao(this, 'equipamentos')">110kw</li>
-                            <li onclick="selecionarOpcao(this, 'equipamentos')">220kw</li>
-                        </ul>
+                        <select name="todas_categorias" id="todas_categorias" class="select">
+
+                            <option value="">selecione</option>
+                            <option value="110v">110v</option>
+                            <option value="220v">220v</option>
+                            
+                        </select>
                     </div>
                     <div class="input-group">
                         <label>Escolher Imagem:</label>
@@ -157,71 +167,21 @@
 
             </div>
 
-            <div class="form-termos">
-
-                <!-- <p class="termos">*Aceito os Termos do Edital:</p>
-
-                <div class="caixa-checkbox">
-                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
-                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
-
-                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
-                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div> -->
-
-                <!-- <div class="expositor-kids">
-                    <button><a href="#">Expositor Kids</a></button>
+           
+            <div class="botoes">
+                <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
-                <div class="artistas">
-                    <button><a href="#">Artistas</a></button>
-                </div> -->
+                    
+                <div class="salvar-resp">
+                    <div class="botoes-salvar">
+                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </div>
 
+                    
+
+                
             </div>
-
-            <!-- fazendo div para responsividade -->
-
-            <!-- div de edital da feira junto com o chekbox -->
-            <!-- <div class="edital-resp">
-                <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div>
-                
-                <p class="termos">*Aceito os Termos do Edital:</p>
-
-                <div class="caixa-checkbox">
-                    <input type="checkbox" id="checkbox-sim" class="caixa-checkbox-sim">
-                    <label for="checkbox-sim" class="text-checkbox">- Sim</label>
-
-                    <input type="checkbox" id="checkbox-nao" class="caixa-checkbox-nao">
-                    <label for="checkbox-nao" class="text-checkbox">- Não</label>
-                </div>
-            </div> -->
-
-            <!-- div para separar o expositor kids/artistas -->
-            <!-- <div class="expo-resp">
-                <div class="expositor-kids">
-                    <button><a href="#">Expositor Kids</a></button>
-                </div>
-                <div class="artistas">
-                    <button><a href="#">Artistas</a></button>
-                </div>
-            </div> -->
-
-            <!-- div para salvar e cancelar -->
-                <div class="botoes">
-                    <div class="botoes-cancelar">
-                        <button onclick="" class="btn-cancelar">Cancelar</button>
-                    </div>
-                    
-                    <div class="salvar-resp">
-                        <div class="botoes-salvar">
-                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                    </div>
-
-                    
-
-                
-                </div>
 
 
         </div>
@@ -243,6 +203,7 @@
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
 
+    
 </body>
 
 </html>

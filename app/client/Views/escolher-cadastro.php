@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-escolher-cadastro.css">
+    <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
@@ -19,7 +19,7 @@
             <div id="linha-vertical-ec"></div>
             <div class="area-infs-ec">
                 <h1>Escolher Cadastro</h1>
-                <a href="cadastro-expositor.php" class="area-total-button" id='button-ec-1'>
+                <a href="cadastro-expositor-client.php" class="area-total-button" id='button-ec-1'>
                     <div class="icon-input-ec">
                         <i id="icon-ec" class="bi bi-shop-window"></i>
                     </div>
@@ -40,7 +40,7 @@
                         <i id="icon-ec" class="bi bi-music-note-list"></i>
                     </div>
                     <div class="text-input-ec">
-                        <p>Cadastro de Expositor</p>
+                        <p>Cadastro de Artistas</p>
                     </div>
                 </a>
             </div>

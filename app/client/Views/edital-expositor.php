@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Edital</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edital-expositor.css">
+    <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
 <body>
@@ -40,7 +40,9 @@
                     <label for="" class="label-edital">Aceito os termos a condições acima.</label>
                 </div>
                 <div class="btns">
-                    <button type="reset" class="btn-edital">Cancelar</button>
+                    <button type="reset" class="btn-edital">
+                    <a href="feira-bosque-da-paz.php#expositores" class="link-edital">Cancelar</a>
+                    </button>
                     <button type="submit" class="btn-edital btn-edital-conti"><a href="escolher-cadastro.php" class="link-edital">Continuar</a></button>
                 </div>
             </form>

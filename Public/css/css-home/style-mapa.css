@@ -1,59 +1,40 @@
 /* mapa do gabriel */
 .mapa-gabriel {
-    margin: 0 auto;
-    margin-top: 200px;
-    text-align: center;
-    width: 80%;
-    height: 800px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+  width: 80%;
+  height: 650px;
 }
 
-.mapa-gabriel h1 {
-    font-size: 2em;
-    
+.title-loc {
+  font-size: 2em;
+  padding-bottom: 2rem;
 }
 
 .mapaDoGabriel {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 90%;
+  border-radius: .5rem;
 }
 
-.div-content-mapa {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 20px;
+.mapa-ampliado {
+  border: 2px solid #f8621a;
+  padding: 5px 10px;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  transition: all .2s ease-in;
 }
 
-.div-all {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+.mapa-ampliado:hover {
+  background-color: #f8621a;
 }
-
-.link-mapa-bosque {
-    color: black;
-}
-
-.rua-bosque {
-    font-size: 1em;
-}
-
-.div-mapa-gabriel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aqua;
-}
-
-.img-mapa {
-    width: 100%;
-}
-

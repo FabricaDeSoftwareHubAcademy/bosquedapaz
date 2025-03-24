@@ -5,13 +5,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
+
+.title {
+    padding-bottom: 2rem;
+}
+
 .all-parce {
     width: 80%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
+    border-top: .8px solid #c1c1c1;
 }
 
 .div-logo-parceiro {
@@ -20,4 +26,17 @@
 
 .img-logo-parceiros {
     width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .all-parce {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .div-logo-parceiro {
+        width: 120px;
+    }
+    .img-logo-parceiros {
+        width: 120px;
+    }
 }

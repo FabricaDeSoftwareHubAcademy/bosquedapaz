@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-perfil-expositor.css">
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
+
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
-        
+
         <!-- box principal -->
         <div class="box">
             <div class="all-content">
                 <div class="parte-superior">
                     <img src="../../../Public/imgs/img-editar-expositor/img-banner.png" alt="imagem do banner" class="img-banner">
                 </div>
-                
+
                 <div class="informacoes">
                     <div class="lado lado-esquerdo">
                         <div class="content-fp">
@@ -90,4 +92,5 @@
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
     <script src="../../../Public/js/js-modais/js-editar-expositor.js"></script>
 </body>
+
 </html>

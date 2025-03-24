@@ -6,66 +6,48 @@
     <title>Avisos</title>
 </head>
 <body>
-    <div class="todos-avisos">
-        <!-- proximo evento -->
-            <section class="avisos">
-                <div class="content-avisos">
-                    <div class="box-aviso"><!-- imagem -->
-                        <img src="../../../Public/imgs/img-home/Rectangle 648.png" alt="imagem evento magia">
-                    </div>
-                    <div class="box-text text-avisos"><!-- texto -->
-                        <h4>PRÓXIMO EVENTO</h4>
-                        <img src="../../../Public/imgs/img-home/Rectangle 648.png" alt="imagem evento magia">
-                        <p>Descubra como será o nosso próximo evento!</p>
-                        <a href="../../../app/client/Views/index-proximos-eventos.php" class="link-saiba-mais"><button class="btn-saiba">SAIBA MAIS!</button></a>
-                    </div>
-                </div>
-            </section>
-        <!-- fim proximo evento -->
-        
-        <!-- proximos eventos -->
-            <section class="avisos passadas" id="voltar-edpass">
-                <div class="content-avisos">
-                    <div class="box-text"><!-- texto -->
-                        <h4>EDIÇÕES PASSADAS</h4>
-                        <img src="../../../Public/imgs/img-home/image 83.png" alt="tempos brilhantes">
-                        <p>Descubra como será o nosso próximo evento!</p>
-                        <a href="../../../app/client/Views/edicoes-passadas.php" class="link-saiba-mais"><button class="btn-saiba">SAIBA MAIS!</button></a>
-                    </div>
-                    <div class="box-aviso"><!-- imagem -->
-                        <img src="../../../Public/imgs/img-home/image 83.png" alt="tempos brilhantes">
-                    </div>
-                </div>
-            </section>
-        <!-- fim proximos eventos -->
-        
-        <!-- ultimas edições -->
-            <section class="avisos ultimas">
-                <!-- imgens -->
-                <div class="content-avisos">
-                    <div class="box-aviso edicoes">
-                        <!-- img 1 -->
-                        <div class="img" id="edicao-img-1">
-                            <img src="../../../Public/imgs/img-home/Rectangle 652.png" alt="imagem adote um cachorro">
-                            <p>Feirinha de Adoção de Animais</p>
-                        </div>
-                        <!-- fim img 1 -->
-        
-                        <!-- img 2 -->
-                        <div class="img">
-                            <img src="../../../Public/imgs/img-home/Rectangle 653.png" alt="imagem doe sangue">
-                            <p>Campanha de Vacinação Contra o HIV</p>
-                        </div>
-                        <!-- img 2 -->
-                    </div>
-                    <!-- fim imagens -->
-                    <div class="box-text text-ultimas"><!-- texto -->
-                        <h4>Ultilidades Públicas</h4>
-                        <img src="../../../Public/imgs/img-home/Rectangle 653.png" alt="imagem doe sangue" ">
-                        <p>Descubra como será o nosso próximo evento!</p>
-                        <a href="utilidades-publicas.php" class="link-saiba-mais"><button class="btn-saiba">SAIBA MAIS!</button></a>
-                    </div>
-                </div>
-            </section>
-        <!-- ultimas edições -->
+    
+    <div class="avisos">
+        <section class="secao-da-tarde" id="prox_evento">
+            <div class="conteiner-img">
+                <img src="../../../Public/imgs/img-home/img-prox-event.png" alt="proximo evento" class="img-prox-event">
+            </div>
+            <div class="conteiner-sobre">
+                <h2 class="title-evisos-edit">próximo evento</h2>
+                <img src="../../../Public/imgs/img-home/img-prox-event.png" alt="proximo evento" class="img-prox-event-m">
+                <p class="para-avisos-edit">Descubra como será o nosso próximo evento!</p>
+                <button class="btn-vermais">
+                    <a href="proximos-eventos.php" target="_parent" class="text-verm">SAIBA MAIS!</a>
+                </button>
+            </div>
+        </section>
+
+
+        <section class="secao-da-tarde secao-tarde-2" id="edit_pass">
+            <div class="conteiner-sobre">
+                <h2 class="title-meio">edições passadas</h2>
+                <img src="../../../Public/imgs/img-home/img-edit-pass.png" alt="edicao passadas" class="img-prox-event-m">
+                <p class="para-meio">Confira como foram nossas edições anteriores!</p>
+                <button class="btn-vermais btn-vermais2">
+                    <a href="edicoes-passadas.php" target="_parent" class="text-verm-2">SAIBA MAIS!</a>
+                </button>
+            </div>
+            <div class="conteiner-img">
+                <img src="../../../Public/imgs/img-home/img-edit-pass.png" alt="edicao passadas" class="img-prox-event">
+            </div>
+        </section>
+        <section class="secao-da-tarde secao-tarde-3" id="ulti_publi">
+            <div class="conteiner-img-ulti-publi ">
+                <img src="../../../Public/imgs/img-home/img-ult-publi-1.png" alt="ultilidade publica 1" class="img-ulti-publi">
+                <img src="../../../Public/imgs/img-home/img-ult-publi-2.png" alt="ultilidade publica 2" class="img-ulti-publi img-ulti-publi2">
+            </div>
+            <div class="conteiner-sobre">
+                <h2 class="title-evisos-edit">utilidades públicas</h2>
+                <img src="../../../Public/imgs/img-home/img-ult-publi-2.png" alt="ultilidade publica 2" class="img-ulti-publi-m">
+                <p class="para-avisos-edit">Nossas Utilidades Públicas são organizações para fins de interresse geral, onde prestamos serviços, sem fins lucrativos! </p>
+                <button class="btn-vermais btn-vermais3">
+                    <a href="utilidades-publicas.php" target="_parent" class="text-verm-3">SAIBA MAIS!</a>
+                </button>
+            </div>
+        </section>
     </div>

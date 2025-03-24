@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Expositores</title>
-    <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-expositor.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adm - Bosque da Paz</title>
+  <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
+  <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+  <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-expositor.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
+
 <body>
 
-    <?php include "../../../Public/assets/adm/menu-adm.html"?>
+  <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
   <script src="../js/main.js"></script>
 
@@ -261,12 +263,7 @@
             </dialog>
         </main>
 
-            <div class="bolas-fundo">
-                <img class="bola-azul1"   src="../img/Elemento1.FolhaAzul.png" alt="">
-                <img class="bola-azul2"   src="../img/Elemento2.FolhaAzul.png" alt="">
-                <img class="bola-azul3"   src="../img/Elemento3.ElipseAzul.png" alt="">
-            </div>
 
-  
 </body>
+
 </html>

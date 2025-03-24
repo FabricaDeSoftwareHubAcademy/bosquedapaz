@@ -4,49 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Utilidade Públicas</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-utilidades.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <title>Adm - Bosque da Paz</title>
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-utilidades.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
-<main class="principal">
-    <div class="box">
-        <h2>CADASTRO DE UTILIDADES PÚBLICAS</h2>
+    <main class="principal">
+        <div class="box">
+            <h2>EDITAR UTILIDADE PÚBLICA</h2>
             <div class="form-container">
                 <div class="form-box">
                     <form action="#">
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
-                            placeholder="Escreva o título da utilidade pública">
+                                placeholder="Escreva o título da utilidade pública">
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricao" id="descricao"
-                            placeholder="Escreva a descrição da utilidade pública">
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
-                        <div class="input-group">
-                            <label>Data início</label>
-                            <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                        </div>
-                        <div class="input-group">
-                            <label>Data fim</label>
-                            <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                        <div class="data">
+                            <div class="input-group">
+                                <label>Data início</label>
+                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                            </div>
+                            <div class="input-group">
+                                <label>Data fim</label>
+                                <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                            </div>
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
                             <input type="file" name="file" id="file" required>
                         </div>
                     </form>
-                </div>
-
-                <div class="box-img">
-                    <img src="../../../Public/imgs/img-cadastro-eventos/img-edicao-utilidade.png" alt="Imagem ao lado do formulário">
                 </div>
             </div>
             <div class="btns">
@@ -63,8 +60,8 @@
                         <a href="">Salvar</a>
                 </div>
             </div>
-    </div>
-</main>
+        </div>
+    </main>
 
     <div class="bolas-fundo">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">

@@ -1,446 +1,235 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Expositor</title>
-</head>
-<body>
-    <section class="expositores" id="expositores">
-        <h2 class="title-expositor">NOSSOS EXPOSITORES</h2>
-        <p class="text-ver-expositores">Veja como são nossos expositores e venha explorar, apoiar e compartilhar uma experiência inesquecível conosco!</p>
-        <div class="expositor-lista">
 
-            <div class="expositor expositor1">
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica" class="img-perfil-card">
+<section class="expositores" id="expositores">
+    <div class="bar-title-expositor">
+        <div class="content-title-expo">
+            <div class="lines-before"></div>
+            <h2 class="title-expositor all-title">nossos expositores</h2>
+            <div class="lines-after"></div>
+        </div>
+        <p class="para-title all-para">Veja como são nossos expositores e venha explorar, apoiar e compartilhar uma experiência inesquecível conosco!</p>
+        <div class="content-seja-expositor">
+            <a href="../../../app/client/Views/edital-expositor.php">    
+                <button class="btn-outros-expo btn-seja-expo">
+                    seja um expositor!
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="listar-expositor">
+        <div class="cards-perfis">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/akj-prime.png" alt="" class="img-perfil-expo">
                 </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
+                <div class="body-card">
+                    <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-laranja">
+                                Laranja
+                            </span>
+                        </p>
                     </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
-            <div class="expositor expositor2">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime" class="img-perfil-card">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
                 </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">AKJ PRIME</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
+                <div class="body-card">
+                    <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-roxo">
+                                Roxa
+                            </span>
+                        </p>
                     </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
-            <div class="expositor expositor3">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG" class="img-perfil-card">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                 </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">CAKE PET CG</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
+                <div class="body-card">
+                <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-verde">
+                                Verde
+                            </span>
+                        </p>
                     </div>
+                    <button class="btn-ver-info">Ver Mais</button>
+                </div>
+            </div>
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
+                </div>
+                <div class="body-card">
+                <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-amarela">
+                                Amarelo
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards-perfis">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
+                </div>
+                <div class="body-card">
+                <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-roxo">
+                                Roxa
+                            </span>
+                        </p>
+                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
-            <div class="expositor expositor4">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato" class="img-perfil-card">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/cake-pet.png" alt="" class="img-perfil-expo">
                 </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">DECORART ARTESANATO</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rr-s">Roxa</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
+                <div class="body-card">
+                <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-verde">
+                                verde
+                            </span>
+                        </p>
                     </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
-            <div class="expositor expositor1">
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica" class="img-perfil-card">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                 </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
+                <div class="body-card">
+                <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-amarela">
+                                Amarelo
+                            </span>
+                        </p>
                     </div>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
-
-            <div class="expositor expositor2">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime" class="img-perfil-card">
+            <div class="card-per-expo">
+                <div class="head-card">
+                    <img src="../../../Public/imgs/img-home/retalhos-e-chica.png" alt="" class="img-perfil-expo">
                 </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">AKJ PRIME</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
+                <div class="body-card">
+                <h3 class="nome-expo">retalhos e chicas</h3>
+                    <div class="detalhes-expo">
+
+                        <p class="para-cate">
+                            Categoria:
+                            <span class="span-cate">
+                                Artesanato
+                            </span>
+                        </p>
+                        <p class="para-color">
+                            Rua:
+                            <span class="span-color color-amarela">
+                                Amarelo
+                            </span>
+                        </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor3">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">CAKE PET CG</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor4">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">DECORART ARTESANATO</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rr-s">Roxa</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor1">
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor2">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">AKJ PRIME</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor3">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">CAKE PET CG</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor4">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/decorart.png" alt="Perfil Decorart Artezanato" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">DECORART ARTESANATO</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rr-s">Roxa</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor1">
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor2">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">AKJ PRIME</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expositor expositor3">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">CAKE PET CG</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
+                    <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
 
         </div>
-
-        
-        
-        <div class="ver-mais-expositor"><!-- botão mais expositores -->
-            <a href="todos-expositores.php" class="link-mais-expo">VER MAIS EXPOSITORES</a>
-        </div>
-    </section>
-
-    <section class="expositores expositores-mobal" id="expositores">
-        <div class="expositor-lista">
-
-            <div class="expositor expositor1">
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="expositor expositor2">
-                
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">AKJ PRIME</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="expositor expositor3">
-
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">CAKE PET CG</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="expositor expositor1">
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/retalhos e chica.png" alt="Perfil Retalhos e chica" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">RETALHOS E CHITA</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Artesanato</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr ra-s">Amarela</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="expositor expositor2">
-                
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/akj prime.png" alt="Perfil AKJ Prime" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">AKJ PRIME</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rl-s">Laranja</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="expositor expositor3">
-                
-                <div class="imagem-expositor">
-                    <img src="../../../Public/imgs/img-home/cake pet.png" alt="Perfil Cake Pet CG" class="img-perfil-card">
-                </div>
-                <div class="informacoes-expositor">
-                    <div class="info-expo">
-                        <h3 class="nome-expo">CAKE PET CG</h3>
-                        <div id="informacao">
-                            <p class="text-info">CATEGORIA: <span class="span-cat">Gastronomia</span></p>
-                            <div class="rua rua1"><span class="rua-s">Rua:</span><span class="corr rv-s">Verde</span></div>
-                        </div>
-                        <div class="botao">
-                            <button class="open-modal btn-ver-perfil" data-modal="modal-ver-per-expo">VER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="ver-mais-expositor"><!-- botão mais expositores -->
-            <!-- <a href="todos-expositores.php" class="link-mais-expo">VER MAIS EXPOSITORES</a> -->
-        </div>
-    </section>
+        <dialog class="m-per-expo" id="m-per-expo">
+            <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
+        </dialog>
+      <div class="conteiner-outros-expo">
+        <a href="../../../app/client/Views/todos-expositores.php">    
+            <button class="btn-outros-expo">
+                ver outros expositores
+            </button>
+        </a>
+    </div>
+    </div>
     
-    <dialog class="modal-ver-per-expo" id="modal-ver-per-expo">
-        <?php include "../../../Public/assets/modais/m-perfil-expo.html"; ?>
-    </dialog>
 
-    <section class="seja-expositor">
-        
-        <!-- seja expositor -->
-        <div class="box-content-seja-expositor">
-            <div class="box-seja-expositor">
-                <div class="box-content-expositor">
-                    <h3 class="title-seja-expositor">SEJA UM EXPOSITOR</h3>
-                    <p class="text-seja-expositor">Mostre seu talento na nossa feira! Acesse o Botão Abaixo e Cadastre-se agora e aproveite a chance de destacar seu trabalho para um público animado. Não perca essa oportunidade!</p>
-                    <a href="edital-expositor.php" class="link-saiba-mais"><button class="btn-casdastro-expositor">ACESSAR</button></a>
-                </div>
-                </div>
-                <div class="sombra"></div><!-- sombra do seja expositor -->
-            </div>
-            
-    </section>
-    <!-- fim seja expositor -->
+</section>
+<!-- fim seja expositor -->
 
-    <script src="../js/js-modais/js-abrir-modal.js"></script>

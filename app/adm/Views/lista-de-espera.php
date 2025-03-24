@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-    <title>Lista de Espera</title>
+    <title>Adm - Bosque da Paz</title>
 </head>
 
 <body class="corpo-lisEsp">
@@ -153,7 +153,7 @@
                 </table>
             </div>
             <div class="seta-LisEsp3">
-                <a href="Area-Adm.php" class="voltar-link">
+                <a href="gerenciar-relatorios.php" class="voltar-link">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                 </a>
             </div>

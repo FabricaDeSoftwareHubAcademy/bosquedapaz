@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url(../../Public/css/css-home/menu.css);
+@import url(../../Public/css/css-home/style-menu.css);
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +22,7 @@ body {
     max-width: 1800px;
     min-height: 80vh;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 6.5%;
     height: auto;
     
 
@@ -204,7 +204,7 @@ body {
 }
 
 .botao-voltar-guilherme {
-    width: 50px;
+    width: 70px;
     height: auto;
     transition: all .3s ease;
     left: 83px;
@@ -234,7 +234,7 @@ body {
     width: 170px;
     height: auto;
     right: 0px;
-    top: 80%;
+    top: 75%;
     z-index: -1;
     /* background-color: red; */
 }
