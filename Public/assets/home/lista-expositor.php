@@ -188,7 +188,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
             <div class="card-per-expo">
@@ -215,8 +215,12 @@
                     <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
-    </div>
-    <div class="conteiner-outros-expo">
+
+        </div>
+        <dialog class="m-per-expo" id="m-per-expo">
+            <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
+        </dialog>
+      <div class="conteiner-outros-expo">
         <a href="../../../app/client/Views/todos-expositores.php">    
             <button class="btn-outros-expo">
                 ver outros expositores
@@ -224,6 +228,8 @@
         </a>
     </div>
     </div>
+    
+
 </section>
 <!-- fim seja expositor -->
 
