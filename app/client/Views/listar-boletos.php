@@ -37,7 +37,7 @@
                         <th class="email-col">Referência</th>
                         <th class="fone-col">Valor</th>
                         <th class="status-col">Status</th>
-                        <imi class="imprimir-col">Imprimir</th>
+                        <th class="imprimir-col">Imprimir</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -241,9 +241,9 @@
 
     </main>
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
+        <img src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="FolhaAzul" class="img-superior-esquerda">
+        <img src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="FolhaAzul2" class="img-superior-direita">
+        <img src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="FolhaRosa" class="img-inferior-boleto">
     </div>
 </body>
 </html>
