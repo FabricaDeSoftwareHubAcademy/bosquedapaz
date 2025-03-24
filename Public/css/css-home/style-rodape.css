@@ -14,26 +14,34 @@
 }
 
 .list-rodape {
-    border-top: 2px solid #fff;
     height:  auto;
-    width: 300px;
+    width: auto;
     display: flex;
     flex-direction: column;
+    align-items: start;
     margin-top: 40px;
     padding-bottom: 15px;
 }
 
+.list-contato {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title-list-rodape {
     font-size: 1.5em;
-    margin: 0px auto;
     margin-top: 30px;
     text-transform: capitalize;
     font-weight: 600;
 }
 
 .list-ul {
-    margin: 0 auto;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
     font-size: 1.1em;
+    margin-top: 5px;
+    padding-top: 20px;
     list-style: none;
 }
 
@@ -47,19 +55,22 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     margin-top: 5px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .copyright {
-    width: 90%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding-bottom: 5px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
     color: #fff;
-    border-top: 2px solid #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .icon-r {
