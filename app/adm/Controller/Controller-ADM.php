@@ -26,8 +26,8 @@ class Database {
 
         }
 
-        catch(PDOExption $err){
-            die("Conection Failed".$err.getMessage());
+        catch(PDOException $err){
+            die("Conection Failed".$err->getMessage());
         }
     }
 
