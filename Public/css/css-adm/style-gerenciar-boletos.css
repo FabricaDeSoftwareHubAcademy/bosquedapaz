@@ -37,7 +37,7 @@
     /* background-color: blue; */
 }
 
-.boleto-filtros-container {
+.form-boleto-filtros-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -47,6 +47,7 @@
     border-radius: 10px;
     background-color: rgb(231, 231, 231);
 }
+
 
 .boleto-filtro-expositor {
     width: 25%;

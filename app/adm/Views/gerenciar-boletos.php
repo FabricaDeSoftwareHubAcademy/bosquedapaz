@@ -19,7 +19,7 @@
         </section>
 
         <section class="boleto-secao-filtros">
-            <div class="boleto-filtros-container">
+            <form action="" class="form-boleto-filtros-container">
                 <div class="boleto-filtro-expositor">
                     <label for="">Expositor</label>
                     <input type="text" name="" id="filtro_expositor" class="filtro-expositor" placeholder="Procure por um expositor">
@@ -52,7 +52,7 @@
                         <option value="pendente">Pendente</option>
                     </select>
                 </div>
-            </div>
+            </form>
         </section>
 
         <section class="boleto-secao-tabela">
