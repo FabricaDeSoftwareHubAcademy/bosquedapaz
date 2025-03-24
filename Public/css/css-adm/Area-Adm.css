@@ -148,10 +148,10 @@ body{
 }
 
 /* todos os celulares */
-/* @media (max-width:575.98px){
-    body{
+ @media (max-width:575.98px){
+    /* body{
         background-color: green;
-    }
+    } */
 
     .principal-gabriel{
         height: 85vh;
@@ -202,7 +202,7 @@ body{
         border-radius: 10px;
     }
 
-} */
+} 
 
 /* iPad Air */
 @media (min-width:576px){
@@ -212,7 +212,7 @@ body{
 }
 
 /* Resto dos iPad's e tablets */
-/* @media (min-width:768px){
+@media (min-width:768px){
     body{
         background-color: pink;
     }
@@ -243,12 +243,19 @@ body{
         top: 122rem;
     }
 
+    /* .nome-area-gabriel{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
     .nome-area-gabriel h1{
         position: relative;
-        left: 6.7rem;
+        left: 10rem;
         font-size: 1.8rem;
         width: 135%;
-    }
+    } 
 
     .Bola-1-gabriel{
         display: none;
@@ -266,7 +273,7 @@ body{
         border-radius: 10px;
     }
 
-} */
+}
 
 
 @media (min-width:992px){

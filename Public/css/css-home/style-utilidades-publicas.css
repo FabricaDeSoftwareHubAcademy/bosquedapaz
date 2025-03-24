@@ -268,7 +268,7 @@
 .div-decorativa-modal {
     width: 30%;
     height: 30%;
-    background-color: rgba(0, 126, 112, 1);
+    background-color: #3F49EA;
     transform: rotate(-25deg);
     position: absolute;
     bottom: 88%;
@@ -289,7 +289,7 @@
 .div-decorativa2-modal {
     width: 60%;
     height: 50%;
-    background-color: rgba(0, 126, 112, 1);
+    background-color: #3F49EA;
     transform: rotate(-25deg);
     position: absolute;
     top: 80%;
@@ -363,6 +363,8 @@
 .area-img-modal-ProEv img {
     width: 100%;
     height: auto;
+    top: 4%;
+    position: relative;
 }
 
 .area-text-modal-ProEv {

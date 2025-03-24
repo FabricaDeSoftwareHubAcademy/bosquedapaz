@@ -97,7 +97,7 @@
                     </div>
                     <div class="area-button">
                         <h1 id="h1-rosa-utl">Primavera</h1>
-                        <button class="botao-saiba-mais open-modal" data-modal="dlog-modal-card-ProEv">Saiba Mais</button>
+                        <button class="botao-saiba-mais open-modal" data-modal="abrir-siba-mas">Saiba Mais</button>
                         <div class="dec-button"></div>
                         <div class="dec-menor-button"></div>
                         <div class="dec-menor-dentro-button"></div>
@@ -117,7 +117,7 @@
                             <div class="div-infs-evento-modal">
                                 <div class="areatl-img-modal-ProEv">
                                     <div class="area-img-modal-ProEv">
-                                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
+                                        <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
                                     </div>
                                 </div>
                                 <div class="area-text-modal-ProEv">
