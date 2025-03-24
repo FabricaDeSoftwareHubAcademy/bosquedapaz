@@ -112,107 +112,110 @@ body {
 
 
 /* Elementos da box - Form */
-.area-total-Form-Cad-mt {
+.lado-esquerdo{
     width: 50%;
-    height: 750px;
-    background-color: rgba(0, 0, 255, 0);
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    flex-direction: column;
+}
+
+.area-form{
+    width: 100%;
+    height: 85%;
+    background-color: rgba(222, 184, 135, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-form form{
+    width: 80%;
+    height: 100%;
+    background-color: rgba(127, 255, 212, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 25px;
+    border: none;
 }
 
-.areaForm-cad-mt {
-    width: 700px;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0);
+.area-total-input{
+    width: 65%;
+    height: 60px;
+    background-color: rgba(127, 255, 212, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.area-input{
+    width: 100%;
+    height: 45px;
+    background-color: #a5abc200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.area-input i{
+    position: absolute;
+    margin-left: 0.8rem;
+    font-size: 18px;
+}
+
+#iconOlho{
+    margin-left: 22rem;
+}
+
+.input{
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    border-radius: 6px;
+    padding-left: 40px;
+    box-shadow: 3px 3px 4px #162868;
+    border: none;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input:focus {
+    border: 2px solid #162868; /* Linha visível quando o campo é clicado */
+}
+
+.area-buttons{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(95, 158, 160, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    z-index: 3;
-    margin-bottom: 100px;
+    gap: 15px;
 }
 
-.label-cad-mt {
-    display: block;
-    margin-left: 10px;
-}
-
-form {
-    background-color: #ff387700;
-    width: 350px;
-    height: 530px;
-    position: relative;
-    left: 160px;
-    bottom: 0px;
-}
-
-
-.area-input-mat {
-    width: 100%;
-    height: 50px;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 10px;
-}
-
-.area-input-mat i {
-    position: absolute;
-    left: 20px;
-    top: 45%;
-    transform: translateY(-50%);
-}
-
-.area-input-mat #iconOlho {
-    margin-left: 80%;
-    color: rgba(0, 0, 0, 0.714);
-}
-
-.input-cad-mt {
-    width: 95%;
-    height: 35px;
+.buttons{
+    width: 25%;
+    height: 45px;
+    background-color: #FF3877;
+    box-shadow: 0 5px 3px #162868;
     border: none;
-    border-radius: 6px;
-    padding-left: 35px;
-    padding-right: 50px;
-    box-shadow: 2px 2px 4px #162868;
-    margin-top: 5px;
-    font-size: 14px;
-    margin-left: 8px;
-}
-
-.input-cad-mt:focus {
-    outline: 2px solid #162868;
-}
-
-.button-cad-mt {
-    margin-top: 580px;
-    position: relative;
-    right: 180px;
-    width: 180px;
-    height: 35px;
-    border: none;
-    margin-right: 25px;
     border-radius: 8px;
     color: white;
     font-size: 16px;
     font-weight: 600;
-    background-color: #FF3877;
-    box-shadow: 0 6px 4px #162868;
-    cursor: pointer;
-    transition: all .2s ease-in;
+    transition: all .2s ease-in-out;
 }
 
-.button-cad-mt:hover {
+.buttons:hover{
     transform: scale(1.1);
 }
 
-
-#b-2-mt {
+#button-azul{
     background-color: #162868;
-    box-shadow: 0 6px 4px #FF3877;
+    box-shadow: 0 5px 3px #FF3877;
 }
+
+
 
 
 /* Elementos da box - img */
@@ -340,50 +343,11 @@ form {
         /* background-color: #306816; */
     }
 
-    form {
-        background-color: #16286800;
-        top: 50px;
-        left: 150px;
-        height: 466px;
-    }
-
-    .button-cad-mt {
-        margin-top: 78%;
-        right: 180px;
-        width: 120px;
-    }
-
-    .input-cad-mt {
-        width: 85%;
-        height: 28px;
-    }
-
     .titulo-areato-mt {
         display: block;
         margin-bottom: 550px;
         right: 15px;
         position: relative;
-    }
-
-    .area-input-mat {
-        margin-bottom: 5px;
-    }
-
-    .label-cad-mt {
-        font-size: 15px;
-    }
-
-    .input-cad-mt {
-        margin-top: 8px;
-    }
-
-    .area-input-mat i {
-        left: 18px;
-    }
-
-    .area-input-mat #iconOlho {
-        margin-left: 74%;
-        color: rgba(0, 0, 0, 0.714);
     }
 }
 
@@ -472,43 +436,9 @@ form {
         font-size: 30px;
     }
 
-    .input-cad-mt {
-        width: 95%;
-        height: 35px;
-    }
-
-    .button-cad-mt {
-        width: 250px;
-        right: 170px;
-        margin-top: 500px;
-    }
-
-    form {
-        background-color: #16286800;
-        left: 170px;
-        bottom: 50px;
-        width: 600px;
-        height: 600px;
-    }
 
     .titulo-areato-mt {
         font-size: 40px;
-    }
-
-    .areaForm-cad-mt {
-        height: 800px;
-        top: 50px;
-        background-color: transparent;
-    }
-
-    .area-input-mat {
-        background-color: #ff387700;
-        top: 40px;
-    }
-
-    .label-cad-mt {
-        position: relative;
-        top: 40px;
     }
 }
 
@@ -526,15 +456,6 @@ form {
         align-items: center;
         justify-content: center;
         height: 95%;
-    }
-
-    form {
-        height: 500px;
-        top: 30px;
-    }
-
-    .area-input-mat {
-        margin-bottom: 5px;
     }
 }
 
@@ -620,16 +541,6 @@ form {
         display: block;
         margin-bottom: 600px;
         font-size: 40px;
-    }
-
-    form {
-        left: 185px;
-        background-color: #16286800;
-    }
-
-    .button-cad-mt {
-        right: 155px;
-        margin-top: 600px;
     }
 
     .box-cadastro-mt {

@@ -43,60 +43,82 @@
 
                 <div id="linha-vertical"></div>
 
-                <!-- /* Elementos da box - Form */ -->
-                <div class="area-total-Form-Cad-mt">
-                    <h1 class="titulo-areato-mt">Cadastro</h1>
-                    <div class="areaForm-cad-mt">
-                        <form action="#" method="POST">
-                            <label class="label-cad-mt" for="nome">Nome</label>
-                            <div class="area-input-mat">
-                                <i class="bi bi-person"></i>
-                                <input class="input-cad-mt" type="text" name="nome" id="nome" placeholder="Digite seu nome" required><br><br>
-                            </div>
-
-                            <label class="label-cad-mt" for="tel">Telefone</label>
-                            <div class="area-input-mat">
-                                <i class="bi bi-telephone"></i>
-                                <input class="input-cad-mt" type="tel" name="tel" id="tel" placeholder="Digite seu Telefone" required><br><br>
-                            </div>
-
-                            <label class="label-cad-mt" for="email">Email</label>
-                            <div class="area-input-mat">
-                                <i class="bi bi-envelope"></i>
-                                <input class="input-cad-mt" type="email" name="email" id="email" placeholder="Digite seu email" required><br><br>
-                            </div>
-
-                            <label class="label-cad-mt" for="profissao">Profissão</label>
-                            <div class="area-input-mat">
-                                <i class="bi bi-telephone"></i>
-                                <input class="input-cad-mt" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão" required><br><br>
-                            </div>
-
-                            <label class="label-cad-mt" for="senha">Senha</label>
-                            <div class="area-input-mat">
-                                <i class="bi bi-shield-lock"></i>
-                                <input class="input-cad-mt" type="password" name="senha" id="senha" placeholder="Digite sua senha" required><br><br>
-                                <i id="iconOlho" class="bi bi-eye-slash"></i>
-                            </div>
-
-                            <label class="label-cad-mt" for="confSenha">Confirmar Senha</label>
-                            <div class="area-input-mat">
-                                <i class="bi bi-shield-lock"></i>
-                                <input class="input-cad-mt" class="label-cad-mt" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required><br>
-                                <i id="iconOlho" class="bi bi-eye-slash"></i>
-                            </div>
-                        </form>
-                        <button class="button-cad-mt">Cancelar</button>
-                        <button class="button-cad-mt" id="b-2-mt">Cadastre-se</button>
-                    </div>
-                </div>
-
                 <!-- /* Elementos da box - img */ -->
                 <div class="areaImg-cad-mt">
                     <h1 class="h1-mt">CADASTRO</h1>
                     <div class="divIMg-mt">
                         <h1 class="h12-mt">CADASTRO</h1>
                         <img src="../../../Public/imgs/img-cadastro-adm/a.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- /* Elementos da box - Form */ -->  
+                <div class="lado-esquerdo">
+                    <div class="area-form">
+                        <form action="#" method="POST">
+
+                            <div class="area-total-input">
+                                <label class="label-cad" for="nome">Nome</label>
+                                <div class="area-input">
+                                    <i class="bi bi-person"></i>
+                                    <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome" required><br><br>
+                                </div>
+                            </div>
+                                
+                            <div class="area-total-input">
+                                <label class="label-cad" for="tel">Telefone</label>
+                                <div class="area-input">
+                                    <i class="bi bi-telephone"></i>
+                                    <input class="input" type="tel" name="tel" id="tel" placeholder="Digite seu Telefone" required><br><br>
+                                </div>
+
+                            </div>
+                            <div class="area-total-input">
+                                <label class="label-cad" for="email">Email</label>
+                                <div class="area-input">
+                                    <i class="bi bi-envelope"></i>
+                                    <input class="input" type="email" name="email" id="email" placeholder="Digite seu email" required><br><br>
+                                </div>
+                            </div>
+                            <div class="area-total-input">
+                                <label class="label-cad" for="profissao">Profissão</label>
+                                <div class="area-input">
+                                    <i class="bi bi-briefcase"></i>
+                                    <input class="input" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão" required><br><br>
+                                </div>
+                            </div>
+                            <div class="area-total-input">
+                                <label class="label-cad" for="senha">Senha</label>
+                                <div class="area-input">
+                                    <i class="bi bi-shield-lock"></i>
+                                    <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required><br><br>
+                                    <i id="iconOlho" class="bi bi-eye-slash"></i>
+                                </div>
+                            </div>
+                            <div class="area-total-input">
+                                <label class="label-cad" for="confSenha">Confirmar Senha</label>
+                                <div class="area-input">
+                                    <i class="bi bi-shield-lock"></i>
+                                    <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required><br>
+                                    <i id="iconOlho" class="bi bi-eye-slash"></i>
+                                </div>
+                            </div>
+                            <div class="area-total-input">
+                                <label class="label-cad" for="imagem">Foto de Perfil</label>
+                                <div class="area-input">
+                                    <i class="bi bi-camera"></i>
+                                    <input class="input" type="file" name="imagem" id="imagem" accept="image/*" required><br><br>
+                                </div>
+                            </div>   
+                        </form>
+                    </div>
+
+
+
+
+                    <div class="area-buttons">
+                        <button class="buttons">Cancelar</button>
+                        <button class="buttons" id="button-azul">Cadastrar</button>
                     </div>
                 </div>
             </div>
