@@ -7,6 +7,13 @@
             <div class="lines-after"></div>
         </div>
         <p class="para-title all-para">Veja como são nossos expositores e venha explorar, apoiar e compartilhar uma experiência inesquecível conosco!</p>
+        <div class="content-seja-expositor">
+            <a href="../../../app/client/Views/edital-expositor.php">    
+                <button class="btn-outros-expo btn-seja-expo">
+                    seja um expositor!
+                </button>
+            </a>
+        </div>
     </div>
     <div class="listar-expositor">
         <div class="cards-perfis">
@@ -208,19 +215,14 @@
                     <button class="btn-ver-info">Ver Mais</button>
                 </div>
             </div>
-      </div>
-      <div class="conteiner-outros-expo">
+    </div>
+    <div class="conteiner-outros-expo">
         <a href="../../../app/client/Views/todos-expositores.php">    
             <button class="btn-outros-expo">
-                Ver Outros expositores
+                ver outros expositores
             </button>
         </a>
-        <a href="../../../app/client/Views/todos-expositores.php">    
-            <button class="btn-outros-expo">
-                seja um expositor!
-            </button>
-        </a>
-      </div>
+    </div>
     </div>
 </section>
 <!-- fim seja expositor -->
