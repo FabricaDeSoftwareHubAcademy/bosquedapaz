@@ -101,16 +101,16 @@
     backdrop-filter: blur(30px);
  
     #linha-login{
-        border-right: 3px solid #162868;
+        border-right: 1.5px solid #162868;
     }
 }
  
 .area-form-login{
     position: absolute;
     left: 12%;
-    top: 28%;
+    top: 20%;
     width: 27%;
-    height: 45%;
+    height: 65%;
     /* background-color: red; */
     display: flex;
     align-items: center;
@@ -137,7 +137,9 @@
     flex-direction: column;
 }
  
-.a-img-login{
+/* ALTERAR HOVER IMG */
+
+/* .a-img-login{
     width: 90%;
     height: 600px;
     background-color: #16286800;
@@ -155,10 +157,13 @@
 .a-img-login img:hover{
     transform: scale(1.05);
    
-}
+} */
  
-.area-img-login .area-img-login-h1-tiago{
-   font-size: 40px;
+.area-img-login-h1-tiago{
+    font-weight: 600;
+   font-size: 45px;
+   margin-bottom: 28%;
+   position: relative;
 }
  
 .area-input-login{
@@ -195,6 +200,7 @@
 }
  
 .botao-login{
+    text-decoration: none;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -213,12 +219,6 @@
     box-shadow: 1px 3px 5px 2px #7d7d7d;
 }
 
-.botao-login .botao-login-a{
-    display: flex;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
  
 .botao-login:hover{
     box-shadow: 1px 3px 5px 3.5px #FF3877;
@@ -265,7 +265,7 @@
         display: none;
     }
 
-    .a-img-login {
+    .area-img-login {
         display: none;
     }
 
@@ -288,11 +288,12 @@
     }
 
     .area-form-login{
+        left: 10%;
         display: flex;
         flex-direction: column;
         width: 80%;
-        height: 70%;
-        top: 15%;
+        height: 80%;
+        top: 3%;
     }
 
     .botao-login{
@@ -304,12 +305,8 @@
         width: 100%;
     }
 
-    .area-img-login{
-        position: fixed;
-        left: 25%;
-        display: flex;
-        height: 10%;
-        top: 15%;
+    .img-dog{
+        display: none;
     }
 
     .div-esqueceu-senha-login{
@@ -330,7 +327,7 @@
     .area-form-login{
         width: 43%;
         position: absolute;
-        top: 29%;
+        top: 11%;
         left: 4%;
         box-sizing: border-box;
     }
@@ -339,7 +336,14 @@
     }
 
     .div-esqueceu-senha-login{
-        left: 20%;
+        left: 14%;
+    }
+
+    .img-dog{
+        top: 27%;
+        position: relative;
+        width: 50%;
+        left: 2%;
     }
 }
 
@@ -353,7 +357,7 @@
     }
 
     .area-form-login{
-        top: 30%;
+        top: 10%;
         left: 4%;
         position: fixed;
         box-sizing: border-box;
@@ -362,12 +366,28 @@
     .forms-login{
         width: 100%;
     }
+
+    .box-login{
+        height: 80%;
+    }
+
+    .img-dog{
+        left: 1%;
+        top: 26%;
+        position: relative;
+        width: 50%;
+    }
+
 }
 
 @media (min-width:992px){
 
     .area-form-login{
         width: 43%;
+    }
+
+    .img-dog{
+        top: 27%;
     }
 
 }
@@ -393,9 +413,12 @@
         height: 90%;
     }
 
-    .area-img-login{
-        /* background-color: red; */
-        height: 100%;
+    .img-dog{
+        top: 10%;
+    }
+
+    .area-img-login-h1-tiago{
+        margin-bottom: 14%;
     }
 }
 
@@ -414,12 +437,17 @@
     .box-login{
         height: 90%;
     }
+
+    .img-dog{
+        top: 6%;
+    }
 }
 
 @media (min-width:1400px){
 
     .area-form-login{
+        top: 10%;
         width: 30%;
-        left: 12%;
+        left: 10%;
     }
 }
