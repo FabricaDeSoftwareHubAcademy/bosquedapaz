@@ -212,7 +212,7 @@ body{
 }
 
 /* Resto dos iPad's e tablets */
-@media (min-width:768px){
+/* @media (min-width:768px){
     body{
         background-color: pink;
     }
@@ -243,13 +243,6 @@ body{
         top: 122rem;
     }
 
-    /* .nome-area-gabriel{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
-
     .nome-area-gabriel h1{
         position: relative;
         left: 10rem;
@@ -273,7 +266,7 @@ body{
         border-radius: 10px;
     }
 
-}
+} */
 
 
 @media (min-width:992px){
