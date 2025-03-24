@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../cad-boletos/cb-css.css">
-    <script src="../js/js-cb.js" defer></script>
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-boleto.css">
+    <script src="../../../Public/js/js-adm/input-cadastro-boleto.js" defer></script>
     <title>Cadastro de Boletos</title>
 </head>
 <body>
@@ -14,16 +14,16 @@
         <section class="section-cb">
             <div class="box-cb"></div>
             <div class="forma-1-cb">
-                <img src="../img/edpassForma1.svg" alt="elemento1">
+                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma1.svg" alt="elemento1">
             </div>
             <div class="forma-3-cb">
-                <img src="../img/edpassForma3.svg" alt="elemento3">
+                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma3.svg" alt="elemento3">
             </div>
             <div class="forma-4-cb">
-                <img src="../img/edpassForma4.svg" alt="elemento4">
+                <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma4.svg" alt="elemento4">
             </div>
             <button id="btn-voltar-cb">
-                <img href="#"  src="../img/voltar.svg" alt="">
+                <img href="#"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
             </button>
         <section/>
 
@@ -46,7 +46,7 @@
                             <label>Arquivo em PDF:</label>
                             <label for="arq-cb" class="custom-file-label">
                                 <span id="file-text">Selecionar Arquivo em PDF</span>
-                                <img src="../img/Upload.svg" alt="">
+                                <img src="../../../Public/imgs/edicoes-passadas-img/Upload.svg" alt="">
                             </label>
                             <input type="file" name="arq-cb" id="arq-cb" accept=".pdf">
                         </div>
