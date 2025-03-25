@@ -23,7 +23,7 @@
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <form class="formularios">
+            <form action="" method="post" class="formularios">
 
                 <div class="form-pessoa">
                     <div class="input">
