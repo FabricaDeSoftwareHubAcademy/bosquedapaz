@@ -172,7 +172,7 @@
         position: relative;
         width: 100%;
         font-size: 3rem;
-        top: 150px;
+        top: 100px;
         align-items: center;
         justify-content: center;
         
@@ -181,7 +181,7 @@
         display: flex;
         color: #ffffff;
         flex-direction: column;
-        margin-top: 10%;
+        margin-top: 140px;
         margin-left: 10%;
         margin-right: 10%;
        
@@ -198,7 +198,7 @@
     text-decoration: none;
     position: relative;
     margin-left: 39.7%;
-    margin-top: 50px;
+    margin-top: 60px;
     border-radius: 10px;
     
     
