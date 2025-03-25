@@ -16,6 +16,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-right: 20px;
     /* padding: 0px 20px; */
     /* border-bottom: 3px solid rgba(0, 0, 0, 0.301); */
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.301);
@@ -51,11 +52,11 @@
     align-items: center;
     justify-content: center;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     height: 45px;
     text-transform: capitalize;
@@ -146,7 +147,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin-right: 20px;
     cursor: pointer;
     overflow: hidden;
 }
@@ -161,14 +161,37 @@
         display: none;
     }
 
+    .login-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .link-login {
+        width: 70px;
+        height: 70px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .login {
+        width: 50px;
+        height: 50px;
+    }
+
     .sandwich-menu {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 40px;
         height: 80px;
-        position: absolute;
-        right: 120px;
     }
 
     .menu {
@@ -236,10 +259,6 @@
 
     .logo {
         width: 150px;
-    }
-
-    .login {
-        display: none;
     }
 
     .sandwich-menu {
