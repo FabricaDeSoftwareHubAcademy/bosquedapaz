@@ -8,10 +8,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .menu-adm {
     width: 100%;
     height: 110px;
@@ -62,6 +58,7 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     height: 45px;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
@@ -148,8 +145,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     margin-right: 20px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .img-login {
