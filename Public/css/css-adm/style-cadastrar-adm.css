@@ -121,7 +121,7 @@ body {
 
 .area-form{
     width: 100%;
-    height: 85%;
+    height: 87%;
     background-color: rgba(222, 184, 135, 0);
     display: flex;
     align-items: center;
@@ -142,10 +142,15 @@ body {
 
 .area-total-input{
     width: 65%;
-    height: 60px;
-    background-color: rgba(127, 255, 212, 0);
+    height: 80px;
+    background-color: rgba(0, 0, 255, 0);
     display: flex;
     flex-direction: column;
+}
+
+.label-cad{
+    position: relative;
+    bottom: 0.3rem;
 }
 
 .area-input{
@@ -185,7 +190,7 @@ body {
 
 .area-buttons{
     width: 100%;
-    height: 15%;
+    height: 13%;
     background-color: rgba(95, 158, 160, 0);
     display: flex;
     align-items: center;
