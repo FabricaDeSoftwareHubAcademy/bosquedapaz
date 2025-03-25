@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Boletos </title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/g_boleto.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
@@ -19,7 +19,7 @@
         </section>
 
         <section class="boleto-secao-filtros">
-            <div class="boleto-filtros-container">
+            <form action="" class="form-boleto-filtros-container">
                 <div class="boleto-filtro-expositor">
                     <label for="">Expositor</label>
                     <input type="text" name="" id="filtro_expositor" class="filtro-expositor" placeholder="Procure por um expositor">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="boleto-filtro-data-pesquisar">
                         <label for="">Aplicar</label>
-                        <button class="botao-data-pesquisar">Buscar</button>
+                        <button type="submit" class="botao-data-pesquisar">Buscar</button>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                         <option value="pendente">Pendente</option>
                     </select>
                 </div>
-            </div>
+            </form>
         </section>
 
         <section class="boleto-secao-tabela">
@@ -332,18 +332,18 @@
     </div>
 
     <div class="boleto-bola1">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
-        </div>
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
+    </div>
 
-        <div class="boleto-bola2">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
-        </div>
+    <div class="boleto-bola2">
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
+    </div>
 
-        <div class="boleto-bola3">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
-        </div>
-        <div class="boleto-seta-voltar">
-            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-        </div>
+    <div class="boleto-bola3">
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
+    </div>
+    <div class="boleto-seta-voltar">
+        <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+    </div>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>

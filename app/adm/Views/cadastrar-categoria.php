@@ -23,15 +23,11 @@
                     <div class="input-group">
                     </div>
                     <h3>Nome:</h3>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
-                    <h3>Cor da Categoria:</h3>
-                    <img src="../../../Public/imgs/cadastro-categorias/roleta.svg" alt="Tabela Cores" class="roleta">
-                    <h3>RGB:</h3>
-                    <input class="botao-cor" name="cor_sala" type="color">
-                </div>
-                <div class="separacao">
+                    <input class="input-nome" type="text" name="nome" id="nome" placeholder="Digite o nome da categoria" onchange="loadName(event)">
+                    <h3>Cor:</h3>
+                    <input class="botao-cor" name="cor_cat" type="color">
                     <h3>Icone:</h3>
-                    <label for="file" class="custum-file-upload">
+                    <label for="file" class="custum-file-upload" onchange="loadFile(event)">
                         <div class="icon">
                             <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -46,6 +42,15 @@
                         </div>
                         <input id="file" type="file">
                     </label>
+                </div>
+                <div class="separacao">
+                    <h2>Prévia da Categoria</h2>
+                    <div class="previa">
+                        <img id="output"/>
+                        <h4 id="output-text"></h4>
+                    </div>
+
+                    
                 </div>
                 <a href="gerenciar-categorias.php" class="voltar-link">
                     <div class="b-voltar">
@@ -71,6 +76,7 @@
 
 
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
 </body>
 
 </html>

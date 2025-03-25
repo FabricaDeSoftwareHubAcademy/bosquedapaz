@@ -9,6 +9,7 @@
 @import url('style-mapa.css');
 @import url('style-rodape.css');
 @import url('style-parceiros-home.css');
+@import url('../css-modais/perfil-expositor.css');
 
 :root {
     --color-artesanato: rgba(13, 71, 161, 0.30);

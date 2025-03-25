@@ -564,8 +564,8 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.collaborators-table tbody {
-    display: block;
+.collaborators-table tbody{
+    display: table-row-group;
     max-height: 50vh;
     width: 100%;
 }

@@ -5,13 +5,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .principal {
     width: 100vw;
     height: 90vh;
     z-index: 1;
+}
+
+body{
+    overflow-y: hidden;
 }
 
 .principal .box {
@@ -30,105 +34,6 @@
 
 h2 {
     font-size: 30px;
-}
-
-.edit-icon i {
-    color: #333;
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-.delete-icon i {
-    color: #333;
-    font-size: 18px;
-}
-
-.edit-icon,
-.delete-icon {
-    text-decoration: none;
-
-}
-
-.edit-icon:hover i,
-.delete-icon:hover i {
-    color: #007bff;
-}
-
-/* .modal {
-    display: none;
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1000;
-    overflow: hidden;
-}
-
-.modal h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-} */
-/* .modal input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-} */
-
-.modal-edit {
-    margin: auto;
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-}
-
-.modal-edit input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px 5px;
-}
-
-.cancel-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.confirm-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-button:hover {
-    opacity: 0.8;
-}
-
-.modal::backdrop {
-    background: rgba(0, 0, 0, 0.521);
 }
 
 .container {
@@ -151,11 +56,6 @@ button:hover {
     font-weight: bold;
     font-size: 20px;
     margin-right: 10px;
-}
-
-.edicao-expositor {
-    height: 500px;
-    width: 399px;
 }
 
 .search-bar input {
@@ -281,8 +181,6 @@ table tbody tr:nth-child(even) {
     background-color: #f1f1f1;
 }
 
-
-
 .status {
     width: 80px;
     padding: 5px 10px;
@@ -309,38 +207,131 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    margin-right: 8px;
+    color: black;
 }
 
 .edit-icon:hover {
     color: #003d8c;
 }
+.delete-icon i {
+    color: #333;
+    font-size: 18px;
+ 
+}
 
-.bolas-fundo {
+.delete-icon {
+    text-decoration: none;
+}
+
+
+.delete-icon:hover i {
+    color: #007bff;
+}
+.modal {
+    display: none;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.modal h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.modal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.modal-edit {
+    margin: auto;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.modal-edit input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.521);
+}
+
+/* .bolas-fundo {
     width: 100vw;
     height: 90vh;
     position: relative;
     top: -90vh;
     z-index: -3;
-}
+} */
 
-.bolas-fundo .folhaAzul1-yan {
-    position: absolute;
-    left: -40px;
-    top: 6vh;
+.img-superior-esquerda {
+    position: fixed;
+    left: 0%;
+    top: 15%;
     z-index: -3;
 }
 
-.bolas-fundo .folhaAzul2-yan {
-    position: absolute;
-    right: -50px;
-    top: 6vh;
+.img-superior-direita {
+    position: fixed;
+    right: 0%;
+    top: 17%;
     z-index: -3;
 }
 
-.bolas-fundo .folhaRosa-yan {
-    position: absolute;
-    right: -100px;
-    bottom: -100px;
+.img-inferior-boleto {
+    width: 12%;
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
     z-index: -3;
 }
 
@@ -365,70 +356,39 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
-@media (max-width: 1042px) {
-    .principal .box {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .search-bar input {
-        width: 100%;
+/* 
+@media (max-width:575.98px){
+    body{
+        background-color: red;
     }
 }
 
-@media(max-width: 720px) {
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-bar label {
-        font-size: 14px;
-    }
-
-    .collaborators-table {
-        font-size: 12px;
-    }
-
-    .collaborators-table th,
-    .collaborators-table td {
-        padding: 6px;
-    }
-
-    .collaborators-table th {
-        font-size: 12px;
-    }
-
-    .btn-voltar {
-        display: none;
-    }
-
-    .email-col,
-    .fone-col,
-    .usuario-col,
-    label {
-        display: none;
-    }
-
-    .bolas-fundo {
-        display: none;
+@media (min-width:576px){
+    body{
+        background-color: blue;
     }
 }
 
-@media (max-width: 480px) {
-    h2 {
-        font-size: 18px;
-    }
-
-    .search-bar input {
-        font-size: 12px;
-    }
-
-    .search-bar .search-button {
-        font-size: 12px;
-        padding: 5px 10px;
+@media (min-width:768px){
+    body{
+        background-color: green;
     }
 }
+
+@media (min-width:992px){
+    body{
+        background-color: yellow;
+    }
+}
+
+@media (min-width:1200px){
+    body{
+        background-color: violet;
+    }
+}
+
+@media (min-width:1400px){
+    body{
+        background-color: pink;
+    }
+} */

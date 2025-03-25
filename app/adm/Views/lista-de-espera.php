@@ -33,9 +33,10 @@
             </div>
 
             <h1>LISTA DE ESPERA</h1>
-            <div class="area-pesquisa-lisEsp">
-                <input type="text" id="search" name="q" placeholder="Pesquisar..." />
-                <button>BUSCAR</button>
+            <div class="search-bar">
+                <label for="status">Procurar</label>
+                <input type="text" id="status" placeholder="Expositor" />
+                <button class="search-button">BUSCAR</button>
             </div>
 
             <div class="area-table-lisEsp">

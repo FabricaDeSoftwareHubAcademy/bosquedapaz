@@ -25,19 +25,22 @@
             <div class="img-inferior-esquerda">
                 <img class="imgg-inferior-esquerda" src="../Public/imgs/imagens-bolas/imagem-inferior-esquerdo.svg" alt="">
             </div>
- 
+            
             <!-- Box Principal -->
             <div class="box-login">
                 <div id="linha-login"></div>
-               
+                
                 <div class="botao-voltar">
                     <a href="../index.php" class="volte">
                         <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
                     </a>
                 </div>
- 
+                
                 <!-- Area Form -->
                 <div class="area-form-login">
+
+                    <h1 class="area-img-login-h1-tiago">Login</h1>
+                    
                     <form action="#" class="forms-login">
  
                         <label>E-mail</label>
@@ -58,19 +61,13 @@
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
-                    <a href="../app/adm/Views/Area-Adm.php"><button class="botao-login">Login</button></a>
+                    <a class="botao-login" href="../app/adm/Views/Area-Adm.php">Login</a>
                    
                 </div>
                
  
                 <!-- Area da Imagem -->
-                <div class="area-img-login">
-                    <h1 class="area-img-login-h1-tiago">LOGIN</h1>
-                   
-                    <div class="a-img-login">
-                        <img class="img-dog" src="../Public/imgs/img-login/dog-walking-79-12053-1.svg" alt="">
-                    </div>
-                </div>
+                <img class="img-dog" src="../Public/imgs/img-login/dog-walking-79-12053-1.svg" alt="">
             </div>
         </section>
     </main>

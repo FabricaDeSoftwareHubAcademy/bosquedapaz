@@ -18,6 +18,42 @@ html,
     overflow-y: hidden;
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.search-bar label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 700px;
+    margin-right: 10px;
+    font-size: 16px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+}
+
+.search-bar .search-button {
+    background-color: rgb(32, 54, 139);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar .search-button:hover {
+    background-color: #041831;
+}
 
 .area-LisEsp-principal {
     display: flex;
@@ -66,14 +102,14 @@ html,
 
 .seta-LisEsp3 {
     position: fixed;
-    top: 92vh;
-    left: 6%;
+    top: 94vh;
+    left: 5%;
     z-index: 2;
     cursor: pointer;
 }
 
 .seta-LisEsp3 img {
-    width: 70%;
+    width: 65%;
     height: auto;
 }
 
@@ -91,6 +127,7 @@ html,
     bottom: 20px;
     flex-direction: column;
     position: relative;
+    margin: 20px auto;
 }
 
 .box-LisEsp-mat h1 {

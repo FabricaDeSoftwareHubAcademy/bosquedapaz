@@ -163,7 +163,7 @@ h2 {
 }
 
 .collaborators-table tbody{
-    display: block;
+    display: table-row-group;
     max-height: 50vh;
     width: 100%;
 }
