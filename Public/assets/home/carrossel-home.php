@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Models/Carrossel.php');
+require_once('../Controller/Carrossel.php');
 
 $car = new Carrossel();
 
