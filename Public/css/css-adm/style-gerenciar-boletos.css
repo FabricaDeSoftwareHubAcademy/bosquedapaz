@@ -341,7 +341,7 @@
         /* background-color: rgb(191, 255, 0); */
     }
     
-    .boleto-filtros-container {
+    .form-boleto-filtros-container {
         width: 100%;
         height: 90vh;
         display: flex;
@@ -373,7 +373,6 @@
         width: 90%;
         height: 50px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         padding-left: 10px;
         font-size: 16px;
@@ -406,9 +405,8 @@
     
     .boleto-filtro-datas .boleto-filtro-data-area input {
         width: 90%;
-        height: 50px;
+        height: 50px;   
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -437,7 +435,7 @@
         height: 50px;
         border: none;
         border-radius: 10px;
-        background-color: #007E70;
+        background-color: rgba(32, 54, 139, 1);
         color: white;
         font-size: 18px;
         cursor: pointer;
@@ -463,7 +461,6 @@
         width: 90%;
         height: 50px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         padding-left: 10px;
         font-size: 16px;
@@ -577,7 +574,7 @@
         /* background-color: rgb(191, 255, 0); */
     }
     
-    .boleto-filtros-container {
+    .form-boleto-filtros-container {
         width: 100%;
         height: 90vh;
         display: flex;
@@ -609,7 +606,6 @@
         width: 90%;
         height: 60px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         padding-left: 10px;
         font-size: 16px;
@@ -644,7 +640,7 @@
         width: 90%;
         height: 60px;
         outline: none;
-        border: 2px solid #007E70;
+
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -673,7 +669,7 @@
         height: 60px;
         border: none;
         border-radius: 10px;
-        background-color: #007E70;
+        background-color: rgba(32, 54, 139, 1);
         color: white;
         font-size: 18px;
         cursor: pointer;
@@ -699,7 +695,6 @@
         width: 90%;
         height: 60px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         padding-left: 10px;
         font-size: 16px;
@@ -822,7 +817,7 @@
         /* background-color: rgb(191, 255, 0); */
     }
     
-    .boleto-filtros-container {
+    .form-boleto-filtros-container {
         width: 100%;
         height: 90vh;
         display: flex;
@@ -854,10 +849,9 @@
         width: 90%;
         height: 80px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
-        padding-left: 10px;
-        font-size: 16px;
+        padding-left: 15px;
+        font-size: 22px;
     }
     
     .boleto-filtro-datas {
@@ -889,12 +883,11 @@
         width: 90%;
         height: 80px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 16px;
+        font-size: 22px;
         cursor: pointer;
     }
     
@@ -918,7 +911,7 @@
         height: 80px;
         border: none;
         border-radius: 10px;
-        background-color: #007E70;
+        background-color: rgba(32, 54, 139, 1);
         color: white;
         font-size: 22px;
         cursor: pointer;
@@ -944,10 +937,9 @@
         width: 90%;
         height: 80px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
-        padding-left: 10px;
-        font-size: 16px;
+        padding-left: 15px;
+        font-size: 22px;
         cursor: pointer;
     }
     
@@ -1071,7 +1063,7 @@
         /* background-color: rgb(191, 255, 0); */
     }
     
-    .boleto-filtros-container {
+    .form-boleto-filtros-container {
         width: 100%;
         height: 90vh;
         display: flex;
@@ -1103,10 +1095,9 @@
         width: 90%;
         height: 80px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
-        padding-left: 10px;
-        font-size: 22px;
+        padding-left: 15px;
+        font-size: 24px;
     }
     
     .boleto-filtro-datas {
@@ -1138,12 +1129,11 @@
         width: 90%;
         height: 80px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 22px;
+        font-size: 24px;
         cursor: pointer;
     }
     
@@ -1167,9 +1157,9 @@
         height: 80px;
         border: none;
         border-radius: 10px;
-        background-color: #007E70;
+        background-color: rgba(32, 54, 139, 1);
         color: white;
-        font-size: 22px;
+        font-size: 24px;
         cursor: pointer;
     }
     
@@ -1193,10 +1183,9 @@
         width: 90%;
         height: 80px;
         outline: none;
-        border: 2px solid #007E70;
         border-radius: 10px;
-        padding-left: 10px;
-        font-size: 22px;
+        padding-left: 15px;
+        font-size: 24px;
         cursor: pointer;
     }
     
@@ -1303,24 +1292,24 @@
     }
 
     .boletao-secao-titulo {
-        width: 50%;
+        width: 100%;
         height: 10%;
         align-content: center;
         text-align: center;
-        font-size: 26px;
+        font-size: 32px;
         margin-top: 2%;
-        margin-bottom: 20%;
+        margin-bottom: 10%;
         /* background-color: red; */
     }
     
     .boleto-secao-filtros {
         width: 90%;
         height: 100vh;
-        margin-bottom: 5%;
+        margin-bottom: 15%;
         /* background-color: rgb(191, 255, 0); */
     }
     
-    .boleto-filtros-container {
+    .form-boleto-filtros-container {
         width: 100%;
         height: 190vh;
         display: flex;
@@ -1411,16 +1400,16 @@
         margin-bottom: 1.5%;
     }
     
-    .boleto-filtro-data-pesquisar .botao-data-pesquisar {
-        width: 100%;
-        height: 80px;
-        border: none;
-        border-radius: 10px;
-        background-color: #007E70;
-        color: white;
-        font-size: 22px;
-        cursor: pointer;
-    }
+.boleto-filtro-data-pesquisar .botao-data-pesquisar {
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(32, 54, 139, 1);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
     
     .boleto-filtro-status {
         width: 100%;

@@ -38,7 +38,7 @@
                     </div>
                     <div class="boleto-filtro-data-pesquisar">
                         <label for="">Aplicar</label>
-                        <button class="botao-data-pesquisar">Buscar</button>
+                        <button type="submit" class="botao-data-pesquisar">Buscar</button>
                     </div>
                 </div>
 
