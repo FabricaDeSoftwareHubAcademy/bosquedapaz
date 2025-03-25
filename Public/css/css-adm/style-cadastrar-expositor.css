@@ -21,16 +21,18 @@ body{
 
 .box {
     width: 90%;
-    height: 90%;
-    background-color: rgba(248, 245, 246, 0.65);
+    height: auto;
+    height: 80%;
+    background-color: rgba(246, 246, 246, 0.616);
     margin: auto;
     margin-top: 40px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 20px;
+    gap: 20px;
 }
 
 .btn-editar {
@@ -72,12 +74,15 @@ body{
 
 .formularios {
     width: 100%;
+    height: 68%;
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
     align-items: center;
     border: none;
+    position: relative;
+    top: 40px;
 }
 
 .formularios div {
@@ -169,13 +174,6 @@ body{
     margin-top: 15px;
 }
 
-.form-finalizar {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 20px;
-}
 
 .edital-feira {
     position: relative;
@@ -213,7 +211,7 @@ label#salvar-btn {
 
 
 /* Estilo do modal */
-.modal {
+/* .modal {
     display: none; 
     position: fixed;
     top: 0;
@@ -294,49 +292,50 @@ label#salvar-btn {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
+} */
 
 /* fim modal */
 
-.botoes{
-    display: none;
-}
-
-.salvar {
-    display: inline-block;
-    background-color: #007E70;
-    color: white;
-    padding: 11px 40px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-}
-
-.botoes-salvar,
-.botoes-cancelar {
+.btn-finalizar{
+    display: flex;
     position: relative;
-    left: 70%;
-    top: 100px;
-   
+    left: 150%;
+    top: 50px;
+    gap: 20px;
+    
 }
 
-
-.btn-cancelar {
-    display: inline-block;
-    background-color: #5c4caf;
-    color: white;
-    /* padding: 13px 40px; */
-    background-color: #FF3877;
+.btn-finalizar 
+.btn{
+    width: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
+}
 
+.btn-finalizar 
+.btn-salvar {
+    background-color: #007E70;
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
+    border-radius: 10px;
+    padding: 10px 20px;
+    
+}
+
+.btn-finalizar 
+.btn-cancelar {
+    background-color: #FF3877;
+    border-radius: 10px;    
+}
+
+.btn-finalizar 
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 
@@ -421,30 +420,14 @@ label#salvar-btn {
 
 }
 
-.btns{
-    display: flex;
-    justify-content: start;
-    align-self: start;
-}
-
 
 .voltar {
     color: black;
-    font-size: 20px;
-    
-
-}
-
-.edital-resp {
-    display: none;
-}
-
-.expo-resp {
-    display: none;
-}
-
-.salvar-resp {
-    display: none;
+    font-size: 50px;
+    position: absolute;
+    top: 800px;
+    left: 150px;
+    transition: transform 0.3s ease;
 }
 
 .custom-dropdown input {
@@ -457,6 +440,8 @@ label#salvar-btn {
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
 }
+
+
 
 
 .select {
