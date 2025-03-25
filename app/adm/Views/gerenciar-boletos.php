@@ -19,7 +19,7 @@
         </section>
 
         <section class="boleto-secao-filtros">
-            <div class="boleto-filtros-container">
+            <form action="" class="form-boleto-filtros-container">
                 <div class="boleto-filtro-expositor">
                     <label for="">Expositor</label>
                     <input type="text" name="" id="filtro_expositor" class="filtro-expositor" placeholder="Procure por um expositor">
@@ -52,7 +52,7 @@
                         <option value="pendente">Pendente</option>
                     </select>
                 </div>
-            </div>
+            </form>
         </section>
 
         <section class="boleto-secao-tabela">
@@ -332,18 +332,18 @@
     </div>
 
     <div class="boleto-bola1">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
-        </div>
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
+    </div>
 
-        <div class="boleto-bola2">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
-        </div>
+    <div class="boleto-bola2">
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
+    </div>
 
-        <div class="boleto-bola3">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
-        </div>
-        <div class="boleto-seta-voltar">
-            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-        </div>
+    <div class="boleto-bola3">
+        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
+    </div>
+    <div class="boleto-seta-voltar">
+        <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+    </div>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
