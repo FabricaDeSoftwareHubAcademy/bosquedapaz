@@ -507,7 +507,22 @@
 }
 
 @media (min-width:1200px){
-   
+
+    .area-cards{
+        
+    }
+
+   .bola-1{
+    display: none;
+   }
+
+   .bola-2{
+    display: none;
+   }
+
+   .bola-3{
+    display: none;
+   }
 }
 
 @media (min-width:1400px){

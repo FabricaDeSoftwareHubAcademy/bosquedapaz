@@ -38,7 +38,7 @@
 
         <div class="box-principal-utl">
             <h1 id="titulo-ult">Utilidades Públicas</h1>
-            <div class="l">
+            <div class="area-cards">
 
                 <div class="cards" id="border-card-azul">
                     <div class="area-img">
