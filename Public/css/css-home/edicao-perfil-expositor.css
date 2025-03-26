@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.principal{
+    width: 100%;
+    height: 87.8vh;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img1{
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img2{
+    position: fixed;
+    top: 25vh;
+    left: 92vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3{
+    position: fixed;
+    top: 72vh;
+    left: 88vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3 img{
+    width: 70%;
+    height: auto;
+}
+
+.box-principal{
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+    border-radius: 12px;
+    background-color: rgba(248, 245, 246, 0.65);
+    display: flex;
+    flex-direction: column;
+}
+
+.area-h1{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-h1 h1{
+    font-size: 30px;
+}
+
+.area-infs{
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+}
+
+.lado-esquerdo{
+    width: 50%;
+    height: 100%;
+    background-color: cadetblue;
+}
+
+.lado-direito{
+    width: 50%;
+    height: 100%;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+}
+
+.area-text{
+    width: 100%;
+    height: 40%;
+    background-color: cornflowerblue;
+}
+.area-cat-num{
+    width: 100%;
+    height: 20%;
+    background-color: coral;
+}
+.area-inf-corR{
+    width: 100%;
+    height: 40%;
+    background-color: crimson;
+}
+
