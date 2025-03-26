@@ -159,14 +159,6 @@
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
-                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-categoria.php">
-                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
-                            <div class="area-icon-gabriel">
-                                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                                <p>Cadastrar Categorias</p>
-                            </div>
-                        </div>
-                    </a>
                     <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
                             <div class="area-icon-gabriel">
@@ -195,22 +187,45 @@
                     </div>
                 </div>
                 </a>
-                <a href="gerenciar-eventos.php">
-                <div class="Botoes-gabriel">
-                        <div class="area-icon-gabriel">
-                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
-                            <p>Eventos</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="index-ctrl.php">
-                <div class="Botoes-gabriel">
+                
+                
+                <!-- Aqui -->
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
                     <div class="area-icon-gabriel">
-                        <img src="../../../Public/imgs/img-area-adm/Central de Controle.png" alt="">
-                        <p>Central Controle </p>
+                        <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                    <p>Eventos</p>
                     </div>
                 </div>
-                </a>
+
+                <!-- Modal Eventos -->
+                <dialog class="abrir-mais" id="abrir-mais-evento">
+                    <div class="close-modal" data-modal="abrir-mais-evento">
+                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                    </div>
+                    <div class="modais">
+                        <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
+                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                        <p>Cadastrar Eventos</p>
+                    </div>
+                </div>
+                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                        <p>Cadastrar Eventos</p>
+                    </div>
+                </div>
+                </dialog>
+
+                    <a href="index-ctrl.php">
+                    <div class="Botoes-gabriel">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Central de Controle.png" alt="">
+                            <p>Central Controle </p>
+                        </div>
+                    </div>
+                    </a>
 
 
             <!-- aqui -->
