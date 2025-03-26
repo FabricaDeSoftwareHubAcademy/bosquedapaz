@@ -23,7 +23,9 @@
                 <div class="lado-esquerdo"></div>
                 <div class="lado-direito">
                     <div class="area-text">
-                        <h1>Cake Page</h1>
+                        <h1>Play Artesanato</h1>
+                        <h3>Sobre a Empresa</h3>
+                        <textarea class="input-texto" placeholder="Edite o texto aqui..."></textarea>
                     </div>
 
 
