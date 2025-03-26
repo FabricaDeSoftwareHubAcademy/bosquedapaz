@@ -298,47 +298,82 @@ label#salvar-btn {
 
 /* fim modal */
 
-.botoes{
-    display: none;
+.box .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    padding-right: 50px;
+}
+.voltar .btn-voltar {
+    width: 40px;
 }
 
-.salvar {
-    display: inline-block;
+.btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.voltar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-cancelar-salvar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+.btn-cancelar-salvar .btn {
+    width: 120px;
+    padding: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    /* padding: 5px; */
+}
+
+.btn-cancelar-salvar .btn-salvar {
     background-color: #007E70;
-    color: white;
-    padding: 11px 40px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
 }
 
-.botoes-salvar,
-.botoes-cancelar {
-    position: relative;
-    left: 70%;
-    top: 100px;
-   
-}
-
-
-.btn-cancelar {
-    display: inline-block;
-    background-color: #5c4caf;
-    color: white;
-    /* padding: 13px 40px; */
+.btn-cancelar-salvar .btn-cancelar {
     background-color: #FF3877;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-
 }
 
+.btn-cancelar-salvar .btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.btn-cancelar-salvar .btn-salvar:hover, .btn-cancelar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   /* box-shadow: 1px 3px 5px 3.5px #FF3877; */
+    /* transform: scale(1.05); */
+}
 
 .form-termos {
     width: 100%;

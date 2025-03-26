@@ -85,17 +85,17 @@
             <div class="form-finalizar">
 
                 <!-- <div class="edital-feira">
-                        <button><a href="#">Edital da Feira</a></button>
-                    </div> -->
+                    <button><a href="#">Edital da Feira</a></button>
+                </div> -->
 
 
-                <div class="botoes-cancelar">
+                <!-- <div class="botoes-cancelar">
                     <button onclick="" class="btn-cancelar">Cancelar</button>
                 </div>
 
                 <div class="botoes-salvar">
                     <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
+                </div> -->
 
                 <div id="modal" class="modal">
                     <div class="modal-content">
@@ -111,23 +111,37 @@
 
             </div>
 
+
             <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar<e /button>
-                </div>
+                <!-- <div class="botoes-cancelar">
+                    <button onclick="" class="btn-cancelar">Cancelar</button>
+                </div> -->
 
                 <div class="salvar-resp">
                     <div class="botoes-salvar">
                         <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
                     </div>
+
+
+
+
                 </div>
 
 
             </div>
             <div class="btns">
-                <a href="gerenciar-parceiros.php" class="voltar">
+                <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
+                <div class="btn-cancelar-salvar">
+                    <button type="button" class="btn btn-cancelar">
+                        <a href="./Area-Adm.php">Cancelar</a>
+                    </button>
+
+                    <button type="submit" class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div>
+            </div>
             </div>
 
         </div>
