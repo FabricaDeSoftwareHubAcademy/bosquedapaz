@@ -51,9 +51,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                         </td>
                       </tr>
                       <tr>
@@ -66,9 +66,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                         </td>
                       </tr>
                       <tr>
@@ -81,9 +81,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                         </td>
                       </tr>
                       <tr>
@@ -96,9 +96,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -111,9 +111,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -126,9 +126,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -141,9 +141,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -156,9 +156,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -171,9 +171,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -186,9 +186,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -201,9 +201,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>
                       <tr>
@@ -216,9 +216,9 @@
                             <a class="edit-icon" href="editar-adm.php">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                            <a href="#modal-recusar" class="delete-icon">
+                                <i class="fa-solid fa-trash open-modal"       data-modal="delete-modal"></i>
+                            </a>
                           </td>
                         </tr>  
                     </tbody>
@@ -230,14 +230,24 @@
             </a>
         </div>  
         </div>
-        <dialog id="edit-modal" class="modal-edit">
-                <h2>Confirmar Exclusão</h2>
-                <p>Tem certeza que deseja fazer isso?</p>
-                <div>
-                    <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
-                    <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
+
+        <!-- modal excluir -->
+        <div class="acao-recusar" id="modal-recusar">
+                    <div class="acao-content-recusar">
+                        <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+                        <div class="acao-botoes-recusar">
+                            <a href=""><button class="botao-cancelar">Cancelar</button></a>
+                            <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
+                        </div>
+                    </div>
+          </div>
+        <!-- Modal confirmação -->
+        <div class="mensagem-recusar" id="recusado-sucesso">
+                    <div class="mensagem-content-recusar">
+                        <h1 class="mensagem-texto-recusar">Concluído com sucesso!</h1>
+                        <a href="#"><button class="botao-confirmar">Confirmar</button></a>
+                    </div>
                 </div>
-            </dialog>
 
     </main>
     <div class="bolas-fundo">
@@ -245,5 +255,7 @@
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
     </div>
+
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
 </html>
