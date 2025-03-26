@@ -6,7 +6,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+body {
     overflow: hidden;
+
 }
 
 .principal {
@@ -248,6 +252,12 @@ input[type="file"]{
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
+}
+.btn-cancelar-salvar .btn-salvar:hover, .btn-cancelar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   /* box-shadow: 1px 3px 5px 3.5px #FF3877; */
+    /* transform: scale(1.05); */
 }
 
 .bolas-fundo {
