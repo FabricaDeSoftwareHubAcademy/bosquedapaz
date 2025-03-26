@@ -16,20 +16,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px;
-    /* padding: 0px 20px; */
+    padding: 0px 20px;
     /* border-bottom: 3px solid rgba(0, 0, 0, 0.301); */
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.301);
 }
 
 .logo {
-    width: 200px;
+    width: 10%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 20px;
 }
 
 .img-logo {
@@ -38,7 +36,7 @@
 }
 
 .nav-bar {
-    width: 70%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -140,9 +138,20 @@
     display: none;
 }
 
+.login-menu {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 0px;
+    gap: 10px;
+}
+
 .login {
     width: 75px;
-    height: 100%;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,6 +162,7 @@
 
 .img-login {
     width: 100%;
+    object-fit: cover;
 }
 
 @media(max-width: 1350px){
@@ -161,29 +171,17 @@
         display: none;
     }
 
-    .login-menu {
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        gap: 10px;
+    .logo {
+        width: 30%;
     }
 
-    .link-login {
-        width: 70px;
-        height: 70px;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
+    .login-menu {
+        width: 40%;
     }
 
     .login {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .sandwich-menu {
