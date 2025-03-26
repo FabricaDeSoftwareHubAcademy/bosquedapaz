@@ -42,12 +42,12 @@
                                     <td>Data <?php echo $i; ?></td>
                                     <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Inativo' : 'Ativo'; ?></button></td>
                                     <td class="fone-col">
-                                        <a href="editar-expositor.php">
+                                        <a href="editar-evento.php">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </a>
                                     </td>
                                     <td class="mais">
-                                        <a href="">
+                                        <a href="./cadastrar-atracao.php">
                                             <i class="fa-solid fa-plus"></i>
                                         </a>
                                     </td>
