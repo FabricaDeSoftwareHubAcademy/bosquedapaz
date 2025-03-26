@@ -205,7 +205,7 @@
                     </div>
                 </div>
             </a>
-            <a href="index-ctrl.php">
+            <a href="grafico-central.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Central de Controle.png" alt="">

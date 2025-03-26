@@ -6,10 +6,23 @@ $car = new Carrossel();
 
 $carrossel = $car->buscar_id(2);
 
-$img1 = $carrossel->img1;
-$img2 = $carrossel->img2;
-$img3 = $carrossel->img3;
+if(isset($carrossel)){
 
+    $img1 = $carrossel->img1;
+    $img2 = $carrossel->img2;
+    $img3 = $carrossel->img3;
+}
+else {
+    $imagens = [
+        'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
+        'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+        'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+    ];
+
+    $img1 = $imagens->img1;
+    $img2 = $imagens->img2;
+    $img3 = $imagens->img3;
+}
 
 ?>
 

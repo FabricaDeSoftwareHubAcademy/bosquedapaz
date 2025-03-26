@@ -6,79 +6,93 @@ $car = new Carrossel();
 
 $res = $car->buscar_id(2);
 
-$img1 = $res->img1;
-$img2 = $res->img2;
-$img3 = $res->img3;
+if(isset($res)){
 
-if (isset($_POST['editar'])){
-    //caminho padrao das imagens
-    $pasta = '../../../Public/imgs/uploads-carrosel/';
+    $img1 = $res->img1;
+    $img2 = $res->img2;
+    $img3 = $res->img3;
 
-    // verifica se o file esta vazio
-    if (!empty($_FILES['img1']['name'])){
-        // pegando o arquivo e gerando um novo nome e caminho
-        $imagem1 = $_FILES['img1'];
-        
-        $nome_imagem1 = $imagem1['name'];
-        $nova_imagem1 = 'img-carrossel-1';
-        $extencao_imagem1 = strtolower(pathinfo($nome_imagem1, PATHINFO_EXTENSION));
-        
-        // verificando a extencao
-        if($extencao_imagem1 != 'png' && $extencao_imagem1 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-        $caminho_img1 = $pasta . $nova_imagem1. '.'. $extencao_imagem1;
-        $upload_img1 = move_uploaded_file($imagem1['tmp_name'], $caminho_img1);
-        
-        // cadastrando img no db
-        $img1 = $caminho_img1;
-        $car->img1 = $img1;
-    }
-    // no de caso de nao ter nenhuma img, ele cadrasta o mesmo caminho
-    else {
-        $car->img1 = $res->img1;
-    }
-    
-    if (!empty($_FILES['img2']['name'])){
-        // pegando o arquivo e gerando um novo nome e caminho
-        $imagem2 = $_FILES['img2'];
-        
-        $nome_imagem2 = $imagem2['name'];
-        $nova_imagem2 = 'img-carrossel-2';
-        $extencao_imagem2 = strtolower(pathinfo($nome_imagem2, PATHINFO_EXTENSION));
-        
-        // verificando a extencao
-        if($extencao_imagem2 != 'png' && $extencao_imagem2 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-        $caminho_img2 = $pasta . $nova_imagem2. '.'. $extencao_imagem2;
-        $upload_img2 = move_uploaded_file($imagem2['tmp_name'], $caminho_img2);
-        
-        // cadastrando img no db
-        $img2 = $caminho_img2;
-        $car->img2 = $img2;
-    }else {
-        $car->img2 = $res->img2;
-    }
-    
-    if (!empty($_FILES['img3']['name'])){
-        // pegando o arquivo e gerando um novo nome e caminho
-        $imagem3 = $_FILES['img3'];
-    
+    if (isset($_POST['editar'])){
+        //caminho padrao das imagens
         $pasta = '../../../Public/imgs/uploads-carrosel/';
-        $nome_imagem3 = $imagem3['name'];
-        $nova_imagem3 = 'img-carrossel-3';
-        $extencao_imagem3 = strtolower(pathinfo($nome_imagem3, PATHINFO_EXTENSION));
 
-        // verificando a extencao
-        if($extencao_imagem3 != 'png' && $extencao_imagem3 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-        $caminho_img3 = $pasta . $nova_imagem3. '.'. $extencao_imagem3;
-        $upload_img3 = move_uploaded_file($imagem3['tmp_name'], $caminho_img3);
+        // verifica se o file esta vazio
+        if (!empty($_FILES['img1']['name'])){
+            // pegando o arquivo e gerando um novo nome e caminho
+            $imagem1 = $_FILES['img1'];
+            
+            $nome_imagem1 = $imagem1['name'];
+            $nova_imagem1 = 'img-carrossel-1';
+            $extencao_imagem1 = strtolower(pathinfo($nome_imagem1, PATHINFO_EXTENSION));
+            
+            // verificando a extencao
+            if($extencao_imagem1 != 'png' && $extencao_imagem1 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
+            $caminho_img1 = $pasta . $nova_imagem1. '.'. $extencao_imagem1;
+            $upload_img1 = move_uploaded_file($imagem1['tmp_name'], $caminho_img1);
+            
+            // cadastrando img no db
+            $img1 = $caminho_img1;
+            $car->img1 = $img1;
+        }
+        // no de caso de nao ter nenhuma img, ele cadrasta o mesmo caminho
+        else {
+            $car->img1 = $res->img1;
+        }
+        
+        if (!empty($_FILES['img2']['name'])){
+            // pegando o arquivo e gerando um novo nome e caminho
+            $imagem2 = $_FILES['img2'];
+            
+            $nome_imagem2 = $imagem2['name'];
+            $nova_imagem2 = 'img-carrossel-2';
+            $extencao_imagem2 = strtolower(pathinfo($nome_imagem2, PATHINFO_EXTENSION));
+            
+            // verificando a extencao
+            if($extencao_imagem2 != 'png' && $extencao_imagem2 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
+            $caminho_img2 = $pasta . $nova_imagem2. '.'. $extencao_imagem2;
+            $upload_img2 = move_uploaded_file($imagem2['tmp_name'], $caminho_img2);
+            
+            // cadastrando img no db
+            $img2 = $caminho_img2;
+            $car->img2 = $img2;
+        }else {
+            $car->img2 = $res->img2;
+        }
+        
+        if (!empty($_FILES['img3']['name'])){
+            // pegando o arquivo e gerando um novo nome e caminho
+            $imagem3 = $_FILES['img3'];
+        
+            $pasta = '../../../Public/imgs/uploads-carrosel/';
+            $nome_imagem3 = $imagem3['name'];
+            $nova_imagem3 = 'img-carrossel-3';
+            $extencao_imagem3 = strtolower(pathinfo($nome_imagem3, PATHINFO_EXTENSION));
 
-        // cadastrando img no db
-        $img3 = $caminho_img3;
-        $car->img3 = $img3;
-    }else {
-        $car->img3 = $res->img3;
+            // verificando a extencao
+            if($extencao_imagem3 != 'png' && $extencao_imagem3 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
+            $caminho_img3 = $pasta . $nova_imagem3. '.'. $extencao_imagem3;
+            $upload_img3 = move_uploaded_file($imagem3['tmp_name'], $caminho_img3);
+
+            // cadastrando img no db
+            $img3 = $caminho_img3;
+            $car->img3 = $img3;
+        }else {
+            $car->img3 = $res->img3;
+        }
+        
+        $car->atualizar();
     }
-    
-    $car->atualizar();
+}
+else {
+    $imagens = [
+        'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
+        'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+        'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+    ];
+
+    $img1 = $imagens->img1;
+    $img2 = $imagens->img2;
+    $img3 = $imagens->img3;
 }
 
 ?>
