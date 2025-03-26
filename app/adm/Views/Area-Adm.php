@@ -86,7 +86,7 @@
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Central de Controle.png" alt="">
-                        <p>Central Controle </p>
+                        <p>Finanças</p>
                     </div>
                 </div>
                 </a>

@@ -416,16 +416,14 @@
 
 @media (max-width:575.98px){
     .box-principal-utl{
-        height: 200%;
-        top: 50%;
-        position: relative;
+        height: auto;
+        overflow-y: hidden;
     }
 
     .cards{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        overflow: hidden;
         width: 57%;
     }
 
@@ -454,6 +452,7 @@
         justify-content: center;
         flex-direction: column;
         position: relative;
+        overflow-y: scroll;
         top: -2%;
         height: 93%;
     }
@@ -485,8 +484,7 @@
     }
 
     .bola-3{
-        position: absolute;
-        top: 157%;
+       display: none;
     }
  
     #seta-voltar{
@@ -509,7 +507,7 @@
 }
 
 @media (min-width:1200px){
-
+   
 }
 
 @media (min-width:1400px){
