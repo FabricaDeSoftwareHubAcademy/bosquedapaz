@@ -79,6 +79,9 @@
         </div>
         </a>
     </section>
+    <section class="parceiros-quem-somos">
+    <?php include "../../../Public/assets/home/parceiros.html" ?>
+    </section>
 
 <!-- 
     <section class="parceiros-quem-somos">
@@ -103,7 +106,7 @@
 
 
     <!--------------------------------->
-    <?php include "../../../Public/assets/home/parceiros.html" ?>
+  
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 
