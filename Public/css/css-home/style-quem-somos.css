@@ -369,6 +369,7 @@ text-decoration: none;}
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 10%;
     
    
     
@@ -463,8 +464,9 @@ text-decoration: none;}
     top: 13%;
 }
 .section-expositor-quem-somos .botao-expositor{
-    left: 1%;
+    left: 0%;
     top: 12%;
+    height: 15%;
 }
 .section-expositor-quem-somos .expositor{
     display: flex;
@@ -536,11 +538,12 @@ text-decoration: none;}
     }
     .section-expositor-quem-somos .expositor-p .acesse{
         position: relative;
-        bottom: 25%;
+        display: flex;
+        bottom: 30px;
     }
     .section-expositor-quem-somos .botao-expositor{
         position: relative;
-        left: 1%;
+        left: 0%;
         margin-top: -0.5%;
     }
     .section-colaboradoras-quem-somos .fotos{
@@ -555,17 +558,23 @@ text-decoration: none;}
 
 @media(max-width:560px){
     .section-expositor-quem-somos .expositor{
-        bottom: 25%;
+        top: -20%;
     }
     .section-expositor-quem-somos .expositor h3{
         font-size: 1.7rem;
     }
     .section-expositor-quem-somos .expositor-p{
         text-align: justify;
+        top: -15%;
+    }
+    .section-expositor-quem-somos .botao-expositor{
+        top: -15%;
+        height: 10%;
     }
     .section-expositor-quem-somos .botao-expositor .botao{
         display: flex;
         font-size: 0.9rem;
+      
     }
     .section-colaboradoras-quem-somos .fotos{
         width: 100%;
@@ -612,7 +621,7 @@ text-decoration: none;}
     }
     .section-expositor-quem-somos .botao-expositor{
         position: relative;
-        margin-top: -8%;
+        margin-top: 0%;
         
     }
 }
