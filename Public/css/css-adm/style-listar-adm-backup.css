@@ -7,9 +7,6 @@
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
 }
-body{
-    overflow: hidden;
-}
 
 .principal {
     width: 100vw;
@@ -35,105 +32,6 @@ h2 {
     font-size: 30px;
 }
 
-.edit-icon i {
-    color: #333;
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-.delete-icon i {
-    color: #333;
-    font-size: 18px;
-}
-
-.edit-icon,
-.delete-icon {
-    text-decoration: none;
-
-}
-
-.edit-icon:hover i,
-.delete-icon:hover i {
-    color: #007bff;
-}
-
-/* .modal {
-    display: none;
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1000;
-    overflow: hidden;
-}
-
-.modal h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-} */
-/* .modal input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-} */
-
-.modal-edit {
-    margin: auto;
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-}
-
-.modal-edit input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px 5px;
-}
-
-.cancel-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.confirm-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-button:hover {
-    opacity: 0.8;
-}
-
-.modal::backdrop {
-    background: rgba(0, 0, 0, 0.521);
-}
-
 .container {
     width: 90%;
     margin: 20px auto;
@@ -154,11 +52,6 @@ button:hover {
     font-weight: bold;
     font-size: 20px;
     margin-right: 10px;
-}
-
-.edicao-expositor {
-    height: 500px;
-    width: 399px;
 }
 
 .search-bar input {
@@ -284,8 +177,6 @@ table tbody tr:nth-child(even) {
     background-color: #f1f1f1;
 }
 
-
-
 .status {
     width: 80px;
     padding: 5px 10px;
@@ -312,10 +203,103 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    margin-right: 8px;
+    color: black;
 }
 
 .edit-icon:hover {
     color: #003d8c;
+}
+.delete-icon i {
+    color: #333;
+    font-size: 18px;
+ 
+}
+
+.delete-icon {
+    text-decoration: none;
+    
+}
+
+
+.delete-icon:hover i {
+    color: #007bff;
+}
+.modal {
+    display: none;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.modal h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.modal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.modal-edit {
+    margin: auto;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.modal-edit input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.521);
 }
 
 .bolas-fundo {
@@ -353,7 +337,6 @@ table tbody tr:nth-child(even) {
     justify-content: center;
     margin-top: 20px;
 }
-
 .btns .voltar {
     position: absolute;
     bottom: 20px;
@@ -366,54 +349,6 @@ table tbody tr:nth-child(even) {
     text-align: center;
     font-size: 14px;
     cursor: pointer;
-}
-
-#modal-validar, #modal-recusar,
-#recusado-sucesso, #validacao-sucesso {
-    display: none;
-}
-
-
-#modal-recusar:target {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
-    z-index: 2;
-}
-
-.acao-content-recusar {
-    width: 30%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.acao-texto-recusar {
-    width: 80%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 26px;
-    /* background-color: red; */
-}
-
-.acao-botoes-recusar {
-    width: 90%;
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    /* background-color: red; */
 }
 
 @media (max-width: 1042px) {
