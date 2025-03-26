@@ -9,7 +9,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow: hidden;
+}
+
+body{
+    overflow-y: hidden;
 }
 
 .titulo {
@@ -57,7 +60,7 @@ h2 {
     position: sticky;
     top: 0;
     background: white;
-    z-index: 1000;
+    /* z-index: 1000; */
     padding: 20px;
     display: flex;
     align-items: center;
@@ -408,9 +411,125 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
-/* @media (max-width:575.98px){
-    body{
+@media (max-width: 575.98px) {
+    body {
         background-color: red;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    body{
+        max-height: 20vh;
+        overflow-y: auto;
+    }
+
+    .principal {
+        height: auto;
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .search-bar .search-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Mantém a tabela completa com rolagem */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 60vh;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 600px; /* Garante que a tabela não quebre em telas menores */
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th,
+    .collaborators-table td {
+        padding: 8px;
+        font-size: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 14px;
+    }
+
+    .status {
+        width: 60px;
+        font-size: 12px;
+    }
+
+    .botoes {
+        left: 30%;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .novo-evento {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal h3 {
+        font-size: 16px;
+    }
+
+    .modal input[type="file"] {
+        font-size: 14px;
+    }
+
+    .modal .submit-fotos {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .voltar-link {
+        flex-direction: column;
+        gap: 10px;
+        left: 0;
+        align-items: center;
+        text-align: center;
+        bottom: -40px;
+    }
+
+    .bolas-fundo img {
+        width: 80px;
+        opacity: 0.6;
     }
 }
 
@@ -442,7 +561,7 @@ table tbody tr:nth-child(even) {
     body{
         background-color: orange;
     }
-} */
+}
 
 /* 
 @media only screen and (max-width: 768px) {
