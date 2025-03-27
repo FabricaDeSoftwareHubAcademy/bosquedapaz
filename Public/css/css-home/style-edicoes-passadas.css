@@ -601,7 +601,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 80%;
-        height: 20rem;
+        height: 24rem;
         background-image: none;
         border: 0.5px solid #FF3877;
         background-color: white;
@@ -617,7 +617,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 80%;
-        height: 20rem;
+        height: 24rem;
         background-image: none;
         border: 0.5px solid #007E70;
         background-color: white;
