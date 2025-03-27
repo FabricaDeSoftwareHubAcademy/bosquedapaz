@@ -1,4 +1,3 @@
-
 <section class="expositores" id="expositores">
     <div class="bar-title-expositor">
         <div class="content-title-expo">
@@ -38,7 +37,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
 
@@ -63,7 +62,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
 
@@ -88,7 +87,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
             <div class="card-per-expo">
@@ -112,7 +111,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
         </div>
@@ -138,7 +137,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
 
@@ -163,7 +162,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
 
@@ -212,7 +211,7 @@
                             </span>
                         </p>
                     </div>
-                    <button class="btn-ver-info">Ver Mais</button>
+                    <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                 </div>
             </div>
 
