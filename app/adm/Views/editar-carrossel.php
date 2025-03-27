@@ -36,7 +36,6 @@ if(!empty($res)){
 }
  //no caso de estar vazio, vem para cá e carrega imgs padrao
  else{
-    echo "b";
     $img1 = $imagens['img1'];
     $img2 = $imagens['img2'];
     $img3 = $imagens['img3'];
