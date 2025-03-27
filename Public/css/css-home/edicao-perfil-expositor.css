@@ -80,29 +80,181 @@
     width: 50%;
     height: 100%;
     background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
 }
+
+.area-logo{
+    width: 100%;
+    height: 40%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-produtos{
+    width: 100%;
+    height: 10%;
+    background-color: blue;
+}
+
+.area-imgs{
+    width: 100%;
+    height: 50%;
+    background-color: blueviolet;
+}
+
+
+
+
 
 .lado-direito{
     width: 50%;
     height: 100%;
-    background-color: burlywood;
+    background-color: rgba(222, 184, 135, 0);
     display: flex;
     flex-direction: column;
 }
 
 .area-text{
     width: 100%;
-    height: 40%;
-    background-color: cornflowerblue;
+    height: 35%;
+    background-color: rgba(100, 148, 237, 0);
+    display: flex;
+    flex-direction: column;
 }
+
+.title{
+    margin-left: 1rem;
+}
+
+.sobre{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.input-texto {
+    width: 60%; 
+    height: 100px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: none; 
+    resize: vertical;
+    margin-left: 1rem;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0, 0.219)
+}
+
 .area-cat-num{
     width: 100%;
-    height: 20%;
-    background-color: coral;
+    height: 15%;
+    background-color: rgba(255, 127, 80, 0);
+    display: flex;
 }
+
+.cat{
+    width: 45%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.cat h3{
+    margin-left: 1rem;
+}
+
+.cat p{
+    margin-left: 1rem;
+}
+
+
+.num{
+    width: 55%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+
+
 .area-inf-corR{
     width: 100%;
-    height: 40%;
-    background-color: crimson;
+    height: 50%;
+    background-color: rgba(220, 20, 60, 0);
+    display: flex;
+}
+
+.area-form{
+    width: 45%;
+    height: 100%;
+    background-color: rgba(137, 43, 226, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.area-form h3{
+    margin-left: 1rem;
+}
+
+.area-form form{
+    width: 90%;
+    height: 90%;
+    background-color: #5cb74a00;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 1rem;
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.area-inputs{
+    width: 100%;
+    height: 20%;
+    background-color: rgba(210, 105, 30, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.area-inputs label{
+    font-size: 14px;
+}
+
+.input {
+    width: 70%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0, 0.219);
+}
+
+input::placeholder {
+    font-size: 12px; 
+}
+
+
+.area-corR{
+    width: 55%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0);
+}
+
+.cor-rua{
+    width: 30%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #5CB74A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cor-rua p{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
 }
 

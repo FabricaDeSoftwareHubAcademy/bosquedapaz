@@ -20,7 +20,15 @@
             
 
             <div class="area-infs">
-                <div class="lado-esquerdo"></div>
+                <div class="lado-esquerdo">
+                    <div class="area-logo">
+                        
+                    </div>
+                    <div class="text-produtos"></div>
+                    <div class="area-imgs"></div>
+                </div>
+
+
                 <div class="lado-direito">
                     <div class="area-text">
                         <h1 class="title">Play Artesanato</h1>
@@ -28,11 +36,48 @@
                         <textarea class="input-texto" placeholder="Edite o texto aqui..."></textarea>
                     </div>
 
+                    <div class="area-cat-num">
+                        <div class="cat">
+                            <h3>Categoria</h3>
+                            <p>Artesanato</p>
+                        </div>
+                        <div class="num">
+                            <h3>Numero</h3>
+                            <p>89</p>
+                        </div>
+                    </div>
 
-                    <div class="area-cat-num"></div>
+                    <div class="area-inf-corR">
+                        <div class="area-form">
+                            <h3>Informações Pessoais</h3>
+                            <form action="" method="POST">
+                                <div class="area-inputs">
+                                    <label>Link Instagram:</label>
+                                    <input class="input" type="text" name="insta" id="insta" placeholder="Digite o Link do Instagram" required><br><br>
+                                </div>
 
+                                <div class="area-inputs">
+                                    <label>Link Whatsapp:</label>
+                                    <input class="input" type="text" name="insta" id="insta" placeholder="Digite o Link do whatsapp" required><br><br>
+                                </div>
 
-                    <div class="area-inf-corR"></div>
+                                <div class="area-inputs">
+                                    <label>Link Facebook:</label>
+                                    <input class="input" type="text" name="insta" id="insta" placeholder="Digite o Link do facebook" required><br><br>
+                                </div>
+
+                                <div class="area-inputs">
+                                    <label>Link E-mail:</label>
+                                    <input class="input" type="text" name="insta" id="insta" placeholder="Digite o Link do E-mail" required><br><br>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="area-corR">
+                            <h3>Cor da Rua</h3>
+                            <div class="cor-rua"><p>Verde</p></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
