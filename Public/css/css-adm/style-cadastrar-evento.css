@@ -7,9 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-body{
-    overflow: hidden;
+    overflow-y: hidden;
+
 }
 .bolas-fundo {
     width: 100vw;
@@ -109,23 +108,30 @@ h2 {
     min-height: 45px;
     padding: 5px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
-    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
     
 }
 
 .input-group textarea{
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
-    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
 }
 
 .data-imagem{
@@ -166,8 +172,7 @@ h2 {
 
 .btn-cancelar-salvar {
     display: flex;
-    gap: 30px;
-    background-color: aquamarine;  
+    gap: 30px;  
 }
 
 .btn {
@@ -184,7 +189,7 @@ h2 {
 }
 
 .btn-cancelar-salvar .btn {
-    width: 10rem; 
+    width: 150px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,27 +228,18 @@ h2 {
     .btn {
         width: 100%;
     }
-    .box {
-        display: flex;
-        overflow-y: hidden;
-    }
-    .btn-cancelar-salvar {
-        
-        flex-direction: row;
-        background-color: aquamarine;
-         
-    }
 }
 
 @media (max-width: 650px) {
     .principal .box {
         padding: 10px;
     }
-
+    .box{
+        overflow: scroll;
+    }
     
-    
-    .btn-cancelar-salvar {       
-        flex-direction: row;
+    .btn {
+        width: 100%;
     }
 }
 
