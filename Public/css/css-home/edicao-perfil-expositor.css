@@ -97,7 +97,27 @@
     width: 200px;
     height: 200px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.uploads img{
+    border-radius: 50%;
+}
+
+.img-input{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    cursor: pointer;
 }
 
 
