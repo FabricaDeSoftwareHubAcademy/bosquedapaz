@@ -362,7 +362,7 @@ label#salvar-btn {
 
 
 /* celular pequeno */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
     .bolas-fundo{
         display: none;
     }
@@ -403,23 +403,125 @@ label#salvar-btn {
         position: relative;
         left: -15vh;
     }
-
-   
-
-    
 }
     
 
 
 /* celular padrao */
-@media screen and (max-width: 767px) {
-    
+@media screen and (min-width: 651px) and (max-width:1023px) {
+    .bola-verde2{
+        width: 20%;
+        left: 80%;
+    }
+    .bola-rosa{
+        width: 30%;
+        top: 80%;
+        left: 70%;
+    }
+
+    .principal{
+        /* height: 100vh; */
+        overflow-y: auto;
+    }
+
+    .box{
+        height: auto;
+    }
+
+    .formularios{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formularios label{
+        position: relative;
+        left: 10px;
+    }
+
+    .btn-finalizar{
+        position: relative;
+        left: 0%;
+    }
+
+    .voltar{
+        position: relative;
+        left: 30px;
+    }
+
+    .voltar img{
+        /* background-color: red; */
+        position: relative;
+        top: -7vh;
+        left: -28vh;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width:1250px) {
+    .formularios{
+        width: 100%;
+    }
+
+    .formularios label{
+        position: relative;
+        left: 5%;
+    }
+
+    .form-pessoa{
+        position: relative;
+        left: 5%;
+        top: 5px;
+    }
+
+    .form-pessoa input{
+        width: 110%;
+    }
+
+    .form-loja{
+        position: relative;
+        left: 10%;
+        top: 5px;
+    }
+
+    .form-expo{
+        /* background-color: red; */
+        position: relative;
+        left: 5%;
+    }
+    .form-loja input{
+        width: 76%;
+    }
+
+    .form-expo input{
+        width: 70%;
+    }
+
+    .select{
+        width: 70%;
+    }
+
+    #categorias{
+        /* background-color: red; */
+        width: 76%;
+    }
+
+    .btn-finalizar{
+        position: relative;
+        left: 70%;
+    }
+}
+
+@media screen and (min-width: 1251px){
+    .btn-finalizar{
+        position: relative;
+        left: 45vh;
+        top: 10vh;
+    }
 }
 
 /* tablet */
-@media screen and (max-width: 1024px) {
-    
-}
+
 
 
 /* @media(max-width: 1050px) {

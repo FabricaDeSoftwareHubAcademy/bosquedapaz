@@ -61,7 +61,7 @@
                         <label for="optionInput3">Categorias</label>
                         <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
     
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="todas_categorias" id="categorias" class="select">
 
                             <option value="">Selecione</option>
                             <option value="artesanato">Artesanato</option>
@@ -81,6 +81,7 @@
 
                     <div class="input">
                         <label>Link:</label>
+                        <script>link</script>
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
@@ -93,7 +94,7 @@
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
                         <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="" id="" class="select">
 
                             <option value="">Selecione</option>
                             <option value="trailer">Trailer</option>
@@ -105,7 +106,7 @@
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">  
+                        <select name="" id="" class="select">  
 
                             <option value="">Selecione</option>
                             <option value="sim">Sim</option>
@@ -117,7 +118,7 @@
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="" id="" class="select">
 
                             <option value="">selecione</option>
                             <option value="110v">110v</option>
@@ -145,12 +146,12 @@
                 </div>
             </form>
 
-
             <div class="btns">
                 <a href="gerenciar-expositores.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
+
         </div>
         
     </div>
