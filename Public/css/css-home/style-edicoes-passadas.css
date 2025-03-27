@@ -569,7 +569,13 @@ body {
     }
     
     #btn-voltar-edpass {
-        display: none;
+        font-size: 30px;
+        margin-right: 78%;
+        margin-top: 32%;
+        z-index: 10;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     body {
@@ -710,7 +716,13 @@ body {
     }
     
     #btn-voltar-edpass {
-        display: none;
+        font-size: 30px;
+        margin-right: 78%;
+        margin-top: 32%;
+        z-index: 10;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     body {
@@ -849,7 +861,13 @@ body {
     }
     
     #btn-voltar-edpass {
-        display: none;
+        font-size: 30px;
+        margin-right: 78%;
+        margin-top: 32%;
+        z-index: 10;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     body {
