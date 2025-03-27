@@ -105,7 +105,7 @@
                 </div>
                 
 
-                <dialog class="dlog-modal-card-ProEv" id="abrir-siba-mas">
+                <dialog class="dlog-modal-card-ProEv abrir-siba-mas" id="abrir-siba-mas">
                 <div class="div-decorativa-modal">
                                 <div id="linha-dec1-modal"></div>
                             </div>
@@ -131,7 +131,7 @@
                                         dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
-                                <button id="b-sari-modal" class="close-modal" data-modal="dlog-modal-card-ProEv">
+                                <button id="b-sari-modal" class="close-modal" data-modal="abrir-siba-mas">
                                     <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
                                 </button>
                             </div>
