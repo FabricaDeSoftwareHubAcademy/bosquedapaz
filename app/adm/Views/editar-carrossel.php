@@ -1,16 +1,35 @@
 <?php
 
-require_once('../Models/Carrossel.php');
+require_once('../Models/carrossel.php');
 
 $car = new Carrossel();
 
 $res = $car->buscar_id(2);
 
-if(isset($res)){
-
+echo "<pre>";
+print_r($res);
+echo "</pre>";
+if(!empty($res)){
+    echo 'aqui';
     $img1 = $res->img1;
     $img2 = $res->img2;
     $img3 = $res->img3;
+}
+else{
+    echo 'akita';
+$imagens = [
+    'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
+    'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+    'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg',
+];
+
+$img1 = $imagens->img1;
+$img2 = $imagens->img2;
+$img3 = $imagens->img3;
+
+print_r($imagens);
+echo $img1;
+}
 
     if (isset($_POST['editar'])){
         //caminho padrao das imagens
@@ -82,18 +101,8 @@ if(isset($res)){
         
         $car->atualizar();
     }
-}
-else {
-    $imagens = [
-        'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
-        'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
-        'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
-    ];
 
-    $img1 = $imagens->img1;
-    $img2 = $imagens->img2;
-    $img3 = $imagens->img3;
-}
+
 
 ?>
 
