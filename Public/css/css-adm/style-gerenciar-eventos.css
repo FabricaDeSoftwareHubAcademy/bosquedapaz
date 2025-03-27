@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../../../Public/css/menu-adm.css');
 
-/* ajuste commit yuri e professor guilherme */
-
 
 * {
     margin: 0;
@@ -46,6 +44,7 @@ body{
 
 h2 {
     font-size: 30px;
+    text-align: center;
 }
 
 .container {
@@ -413,69 +412,126 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
-@media (max-width: 575.98px) {
+/* Estilos padrão (para telas grandes - Desktop) */
+body {
+    background-color: yellow;
+}
+
+/* 📱 Ajustes para telas menores que 1200px */
+@media (max-width: 1199.98px) {
     body {
-        background-color: red;
+        background-color: aqua;
     }
 
-    h2{
-        font-size: 16px;
-    }
-
-    body{
-        max-height: 20vh;
-        overflow-y: auto;
-    }
-
-    .principal {
-        height: auto;
-        padding: 10px;
+    .container {
+        padding: 20px;
     }
 
     .titulo {
-        font-size: 24px;
+        font-size: 32px;
         text-align: center;
-        margin-bottom: 10px;
     }
 
     .search-bar {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .search-bar input {
-        width: 100%;
-        font-size: 14px;
-        padding: 6px;
+        width: 80%;
+        font-size: 18px;
+        padding: 12px;
     }
 
     .search-bar .search-button {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
+        font-size: 18px;
+        padding: 12px;
     }
 
-    /* Mantém a tabela completa com rolagem */
+    /* Ajustando a tabela para telas menores */
     .table-container {
         width: 100%;
-        overflow-x: auto;
-        overflow-y: auto;
-        max-height: 60vh;
+        overflow-x: auto;  /* Permite rolagem horizontal */
+        overflow-y: auto;  /* Permite rolagem vertical */
+        max-height: 70vh;  /* Ajuste a altura conforme necessário */
+        padding: 10px;
         border: 1px solid #ccc;
     }
 
     .collaborators-table {
         width: 100%;
-        min-width: 600px; /* Garante que a tabela não quebre em telas menores */
+        min-width: 1000px;  /* Ajuste para telas menores que 1200px */
         border-collapse: collapse;
     }
 
-    .collaborators-table th,
-    .collaborators-table td {
-        padding: 8px;
+    .collaborators-table th, .collaborators-table td {
+        padding: 12px;
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 16px;
+    }
+
+    .status {
+        font-size: 14px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .novo-evento {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 992px */
+@media (max-width: 991.98px) {
+    body {
+        background-color: blue;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .search-bar .search-button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;  /* Permite rolagem horizontal */
+        overflow-y: auto;  /* Permite rolagem vertical */
+        max-height: 60vh;  /* Ajuste a altura conforme necessário */
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 800px;  /* Ajuste para telas menores que 992px */
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 10px;
         font-size: 12px;
-        text-align: left;
+        text-align: center;
         border: 1px solid #ddd;
     }
 
@@ -484,86 +540,166 @@ table tbody tr:nth-child(even) {
     }
 
     .status {
-        width: 60px;
         font-size: 12px;
     }
 
     .botoes {
-        left: 30%;
-        width: 50%;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
 
     .novo-evento {
-        width: 100%;
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    .modal-content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .modal h3 {
-        font-size: 16px;
-    }
-
-    .modal input[type="file"] {
         font-size: 14px;
-    }
-
-    .modal .submit-fotos {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .voltar-link {
-        flex-direction: column;
-        gap: 10px;
-        left: 0;
-        align-items: center;
-        text-align: center;
-        bottom: -40px;
-    }
-
-    .bolas-fundo img {
-        width: 80px;
-        opacity: 0.6;
+        padding: 8px 18px;
     }
 }
 
-@media (min-width:576px){
-    body{
+/* 📱 Ajustes para telas menores que 768px */
+@media (max-width: 767.98px) {
+    body {
         background-color: green;
     }
-}
 
-@media (min-width:768px){
-    body{
-        background-color: blue;
+    .titulo {
+        font-size: 24px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar .search-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;  /* Permite rolagem horizontal */
+        overflow-y: auto;  /* Permite rolagem vertical */
+        max-height: 50vh;  /* Ajuste a altura conforme necessário */
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 600px;  /* Ajuste para telas menores que 768px */
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 8px;
+        font-size: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .novo-evento {
+        font-size: 12px;
+        padding: 6px 16px;
     }
 }
 
-@media (min-width:992px){
-    body{
-        background-color: aqua;
+/* 📱 Ajustes para telas menores que 576px */
+@media (max-width: 575.98px) {
+    body {
+        background-color: red;
+    }
+
+    .principal .box{
+        padding: 0;
+        width: 88%;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .search-bar .search-button {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 40vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 400px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 6px;
+        font-size: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 10px;
+    }
+
+    .status {
+        width: auto;
+        font-size: 8px;
+    }
+
+    .botoes {
+        bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .novo-evento {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .voltar-link{
+        bottom: -3rem;
+        left: -2rem;
     }
 }
 
-@media (min-width:1200px){
-    body{
-        background-color: yellow;
-    }
-}
-
-@media (min-width:1400px){
-    body{
-        background-color: orange;
-    }
-}
 
 /* 
 @media only screen and (max-width: 768px) {
