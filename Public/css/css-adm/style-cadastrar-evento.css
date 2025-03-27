@@ -7,8 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow-y: hidden;
-
 }
 body{
     overflow: hidden;
@@ -102,7 +100,7 @@ h2 {
 }
 
 .input-group label {
-    /* font-weight: bold; */
+    font-weight: bold;
     color: #3d3d3d;
 }
 
@@ -111,30 +109,23 @@ h2 {
     min-height: 45px;
     padding: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     background-color: rgb(255, 255, 255);
     outline: none;
-    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
     box-sizing: border-box;
     margin-bottom: 20px;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
     
 }
 
 .input-group textarea{
-    width: 100%;
-    min-height: 45px;
-    padding: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     background-color: rgb(255, 255, 255);
     outline: none;
-    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
     box-sizing: border-box;
     margin-bottom: 20px;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
 }
 
 .data-imagem{
@@ -175,7 +166,8 @@ h2 {
 
 .btn-cancelar-salvar {
     display: flex;
-    gap: 30px;  
+    gap: 30px;
+    background-color: aquamarine;  
 }
 
 .btn {
@@ -192,7 +184,7 @@ h2 {
 }
 
 .btn-cancelar-salvar .btn {
-    width: 150px; 
+    width: 10rem; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,6 +223,16 @@ h2 {
     .btn {
         width: 100%;
     }
+    .box {
+        display: flex;
+        overflow-y: hidden;
+    }
+    .btn-cancelar-salvar {
+        
+        flex-direction: row;
+        background-color: aquamarine;
+         
+    }
 }
 
 @media (max-width: 650px) {
@@ -238,12 +240,10 @@ h2 {
         padding: 10px;
     }
 
-    .btn-cancelar-salvar {
-        flex-direction: column;
-        align-items: center;
-    }
-    .btn {
-        width: 100%;
+    
+    
+    .btn-cancelar-salvar {       
+        flex-direction: row;
     }
 }
 
