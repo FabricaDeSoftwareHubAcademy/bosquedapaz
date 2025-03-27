@@ -234,9 +234,7 @@ h2 {
     .principal .box {
         padding: 10px;
     }
-    .box{
-        overflow: scroll;
-    }
+    
     
     .btn {
         width: 100%;
