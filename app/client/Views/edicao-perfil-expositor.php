@@ -22,7 +22,10 @@
             <div class="area-infs">
                 <div class="lado-esquerdo">
                     <div class="area-logo">
-                        
+                        <label for="file" class="uploads" id="input">
+                            <input type="file" name="imagem" id="imagem" class="img-input" multiple>
+                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/logo-marca.png" alt="">
+                        </label>
                     </div>
                     <div class="text-produtos"></div>
                     <div class="area-imgs"></div>

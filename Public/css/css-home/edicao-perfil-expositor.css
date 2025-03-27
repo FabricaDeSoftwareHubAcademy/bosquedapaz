@@ -93,6 +93,13 @@
     justify-content: center;
 }
 
+.uploads{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+}
+
 
 .text-produtos{
     width: 100%;
