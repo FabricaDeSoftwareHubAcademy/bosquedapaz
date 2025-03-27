@@ -151,6 +151,8 @@ if (isset($_POST['editar'])){
             
             <h1 class="titulo">editar carrosel</h1>
 
+
+            
             <!-- local de uploads de imgs para o carrossel -->
             <form action="" method="post" class="formulario-ca" enctype='multipart/form-data'>
                 <section class="up-imgs">

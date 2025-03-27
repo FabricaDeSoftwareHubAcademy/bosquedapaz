@@ -1,4 +1,3 @@
-
 <section class="expositores" id="expositores">
     <div class="bar-title-expositor">
         <div class="content-title-expo">

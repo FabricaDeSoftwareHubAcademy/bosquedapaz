@@ -93,6 +93,18 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 1400px) {
+    .principal {
+        height: auto;
+    }
+    .uploads {
+        width: 300px
+    }
+    .bola-rosa {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1190px) {
     .up-imgs {
         width: 100%;
