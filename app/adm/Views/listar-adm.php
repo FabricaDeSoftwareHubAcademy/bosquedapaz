@@ -24,11 +24,14 @@
     <div class="box">
       <h2>LISTAR ADM</h2>
       <div class="container">
+
+      <form action="" method="GET">
         <div class="search-bar">
           <label for="status">Procurar</label>
-          <input type="text" id="status" placeholder="Colaborador" />
-          <button class="search-button">BUSCAR</button>
+          <input type="text" id="status" name="busca" placeholder="Colaborador" />
+          <button type="submit" class="search-button">BUSCAR</button>
         </div>
+
         <div class="table-container">
           <table class="collaborators-table">
             <thead>
@@ -47,7 +50,7 @@
                 <td>Carla Costa</td>
                 <td class="email-col">carla.costa123@gmail.com</td>
                 <td class="fone-col">(67) 98123-4567</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -62,7 +65,7 @@
                 <td>Juan Quintela</td>
                 <td class="email-col">juan.quintela987@gmail.com</td>
                 <td class="fone-col">(67) 98234-5678</td>
-                <td><button class="status inactive">Inativo</button></td>
+                <td><button type="button" class="status inactive">Inativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -77,7 +80,7 @@
                 <td>Julia Souza</td>
                 <td class="email-col">julia.souza456@gmail.com</td>
                 <td class="fone-col">(67) 98945-6789</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -92,7 +95,7 @@
                 <td>Pedro Alves</td>
                 <td class="email-col">pedro.alves789@gmail.com</td>
                 <td class="fone-col">(67) 98845-6789</td>
-                <td><button class="status inactive">Inativo</button></td>
+                <td><button type="button" class="status inactive">Inativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -107,7 +110,7 @@
                 <td>Nara Helena</td>
                 <td class="email-col">nara.helena126@gmail.com</td>
                 <td class="fone-col">(67) 98345-6789</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -122,7 +125,7 @@
                 <td>Fernanda Santos</td>
                 <td class="email-col">fernanda.santos126@gmail.com</td>
                 <td class="fone-col">(67) 97345-6623</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -137,7 +140,7 @@
                 <td>Emanuelle Valadares</td>
                 <td class="email-col">manu.vala777@gmail.com</td>
                 <td class="fone-col">(67) 98885-6888</td>
-                <td><button class="status inactive">Inativo</button></td>
+                <td><button type="button" class="status inactive">Inativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -152,7 +155,7 @@
                 <td>Kauan Ribeiro</td>
                 <td class="email-col">kauan.ribeiro753@gmail.com</td>
                 <td class="fone-col">(67) 99942-1110</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -167,7 +170,7 @@
                 <td>Vini Count</td>
                 <td class="email-col">count.vini99@gmail.com</td>
                 <td class="fone-col">(67) 99210-2566</td>
-                <td><button class="status inactive">Inativo</button></td>
+                <td><button type="button" class="status inactive">Inativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -182,7 +185,7 @@
                 <td>Isabela Oliveira</td>
                 <td class="email-col">isa.bela555@gmail.com</td>
                 <td class="fone-col">(67) 96841-5517</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -197,7 +200,7 @@
                 <td>Kelvin Bach</td>
                 <td class="email-col">kelvin.bach0208@gmail.com</td>
                 <td class="fone-col">(67) 90208-5623</td>
-                <td><button class="status inactive">Inativo</button></td>
+                <td><button type="button" class="status inactive">Inativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -212,7 +215,7 @@
                 <td>Paulo Henrique</td>
                 <td class="email-col">paulo.henrique33@gmail.com</td>
                 <td class="fone-col">(67) 98345-6789</td>
-                <td><button class="status active">Ativo</button></td>
+                <td><button type="button" class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -225,12 +228,15 @@
             </tbody>
           </table>
         </div>
+      </form>
+
         <div class="btns">
           <a href="gerenciar-relatorios.php" class="voltar">
             <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
           </a>
         </div>
       </div>
+
       <dialog id="edit-modal" class="modal-edit">
         <h2>Confirmar Exclusão</h2>
         <p>Tem certeza que deseja fazer isso?</p>
@@ -241,11 +247,13 @@
       </dialog>
 
   </main>
+
   <div class="bolas-fundo">
     <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
     <img src="../../../Public/imgs/img-listar-colaboradores/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
     <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
   </div>
+
 </body>
 
 </html>
