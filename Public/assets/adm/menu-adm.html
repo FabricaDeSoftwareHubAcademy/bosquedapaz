@@ -1,85 +1,170 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-</head>
-<body>
-    
-    <!-- começo cebecalho -->
-    <header class="menu-adm" id="menu-adm">
-            
-            <!-- logo da feira -->
-            <div class="logo">
-               <a href="../../../index.php"> <img src="../../../Public/imgs/img-menu/logo.png" alt="Logo da Feira" class="img-logo" href=""></a>
-            </div>
-    
-            <!-- itens de navegação -->
-            <nav class="nav-bar">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="../../../app/adm/Views/Area-Adm.php">Área Administrativa</a></li>
-                    <li class="nav-item">Eventos
-                            <ul class="submenu">
-                                <li><a href="../../../app/adm/Views/cadastrar-evento.php" class="item-submenu">Cadastrar Evento</a></li>
-                                <li><a href="../../../app/adm/Views/gerenciar-eventos.php" class="item-submenu">Gerenciar Evento</a></li>
-                            </ul>
-                    </li>
-                    <li class="nav-item">Expositores
-                        <ul class="submenu">
-                            <li><a href="../../../app/adm/Views/cadastrar-expositor.php" class="item-submenu">Cadastrar  artista</a></li>
-                            <li><a href="../../../app/adm/Views/cadastrar-expositor.php" class="item-submenu">Cadastrar Expositor</a></li>
-                            <li><a href="../../../app/adm/Views/cadastrar-expositor.php" class="item-submenu">Cadastrar expositor kids</a></li> 
-                            <li><a href="../../../app/adm/Views/listar-expositor.php" class="item-submenu">Listar expositores</a></li> 
-                        </ul>
-                    </li>
-                    <li class="nav-item">Carrossel
-                        <ul class="submenu">
-                            <!-- <li><a href="../../../app/adm/Views/cadastro-carrossel.php" class="item-submenu">cadastrar Carrosel</a></li> -->
-                            <li><a href="../../../app/adm/Views/editar-carrossel.php" class="item-submenu">Editar Carrosel</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">Categorias
-                        <ul class="submenu">
-                            <li><a href="../../../app/adm/Views/cadastrar-categoria.php" class="item-submenu">cadastrar Categorias</a></li>
-                            <li><a href="../../../app/adm/Views/listar-categorias.php" class="item-submenu">Listar Categorias</a></li> 
-                        </ul>
-                    </li>
-                    <li class="nav-item">Relatórios
-                        <ul class="submenu">
-                            <li><a href="lista-de-espera.php" class="item-submenu">lista de espera</a></li>
-                            <!-- <li><a href="../../../app/adm/Views/gerenciar-eventos.php" class="item-submenu">Relatório de eventos</a></li> -->
-                            <li><a href="../../../app/adm/Views/relatorio-expositor.php" class="item-submenu">Relatório de expositores</a></li>
-                            <li><a href="../../../app/adm/Views/listar-adm.php" class="item-submenu">Relatório de usuarios</a></li>
-                            <li><a href="../../../app/adm/Views/validar-expositor.php" class="item-submenu">Validação de expositores</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">Parceiros
-                        <ul class="submenu">
-                            <li><a href="../../../app/adm/Views/cadastrar-parceiros.php" class="item-submenu">Cadastrar parceiros</a></li>
-                            <li><a href="../../../app/adm/Views/listar-parceiros.php" class="item-submenu">Listar parceiros</a></li>
-                            
-                            
-                        </ul>
-                    </li>
-                </ul>
-    
-                <!-- btn login para o menu mobile -->
-                <button class="btn-login"><a href="../../../Public/tela-login.php">Login</a></button>
+<!-- começo cebecalho -->
+<header class="menu-adm" id="menu-adm">
+        
+        <!-- logo da feira -->
+        <div class="logo">
+            <a href="../../../index.php"> <img src="../../../Public/imgs/img-menu/logo.png" alt="Logo da Feira" class="img-logo" href=""></a>
+        </div>
+
+        <!-- itens de navegação -->
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="../../../app/adm/Views/Area-Adm.php">
+                        área administrativa
+                    </a>
+                </li>
+
+                <li class="nav-item">parceiros
+                    <ul class="submenu">
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastrar-parceiros.php" class="item-submenu">
+                                cadastrar parceiros
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/listar-parceiros.php" class="item-submenu">
+                                listar parceiros
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">expositores
+                    <ul class="submenu">
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastrar-artista-adm.php" class="item-submenu">
+                                cadastrar  artista
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastrar-expositor.php" class="item-submenu">
+                                cadastrar expositor
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastrar-expositor-kids-adm.php" class="item-submenu">
+                                cadastrar expositor kids
+                            </a>
+                        </li> 
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/listar-expositor.php" class="item-submenu">
+                                listar expositores
+                            </a>
+                        </li> 
+                    </ul>
+                </li>
+
+                <li class="nav-item">relatórios
+                    <ul class="submenu">
+                        <li class="sub-nav-item">
+                            <a href="lista-de-espera.php" class="item-submenu">
+                                lista de espera
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/relatorio-expositor.php" class="item-submenu">
+                                relatório de expositores
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/listar-adm.php" class="item-submenu">
+                                relatório de usuários
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/validar-expositor.php" class="item-submenu">
+                                validação de expositores
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">categorias
+                    <ul class="submenu">
+
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/listar-categorias.php" class="item-submenu">
+                                listar Categorias
+                            </a>
+                        </li> 
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/visualizar-categorias.php" class="item-submenu">
+                                visualizar categorias
+                            </a>
+                        </li> 
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="../../../app/adm/Views/editar-carrossel.php">
+                        carrossel
+                    </a>
+                </li>
+
+                <li class="nav-item">eventos
+                    <ul class="submenu">
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastrar-evento.php" class="item-submenu">cadastrar evento
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/gerenciar-eventos.php" class="item-submenu">
+                                gerenciar evento
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">Financeiro
+                    <ul class="submenu">
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/grafico-central.php" class="item-submenu">
+                                central de controle
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastro-boleto.php" class="item-submenu">
+                                cadastrar boleto
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/gerenciar-boleto.php" class="item-submenu">
+                                gerenciar boleto
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">gerenciar ADM
+                    <ul class="submenu">
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/cadastrar-adm.php" class="item-submenu">
+                                cadastrar ADM
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/adm/Views/listar-adm.php" class="item-submenu">
+                                gerenciar ADM
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 
-            </nav>
-    
-            <!-- exibir menu mobile -->
+            </ul>
+            
+        </nav>
+
+        <!-- exibir menu mobile -->
+        <div class="login-menu">
             <div class="sandwich-menu" onclick="menuShowAdm()">
                 <img src="../../../Public/imgs/img-menu/menu.png" alt="menu" class="menu">
             </div>
-    
             <!-- login normal -->
-            <a href="../../../Public/tela-login.php" class="link-login">
+            <a href="../../../app/adm/Views/editar-adm.php" class="link-login">
                 <div class="login">
-                    <img src="../../../Public/imgs/img-menu/login.png" alt="Botão de login" class="img-login">
+                    <img src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Botão de login" class="img-login">
                 </div>
             </a>
-    </header>
-</body>
-</html>
+        </div>
+</header>
+

@@ -11,9 +11,10 @@
 
 .nome-area-gabriel h1 {
     color: black;
-    position: absolute;
-    top: 150px;
-    right: 820px;
+    position: relative;
+    top: -34vh;
+    z-index: 1;
+    left: 62vh;
 }
 
 .Bola-1-gabriel {
@@ -71,12 +72,13 @@
 .area-botao-gabriel {
     width: 70%;
     height: 100%;
-    background-color: #f8f5f64b;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 40px;
     padding: 100px;
+    right: 11%;
+    position: relative;
 }
 
 .Botoes-gabriel {
@@ -90,12 +92,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-width: 500px;
-    margin: auto;
     position: relative;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-
 
 .Botoes-gabriel:hover {
     transform: scale(1.1);
@@ -113,6 +113,9 @@
     position: absolute;
     transition: all .3s ease;
 }
+.link-modais:focus-visible{
+    outline: none;
+}
 
 .area-icon-gabriel img {
     width: 40%;
@@ -126,90 +129,213 @@
     font-size: 16px;
 }
 
+.abrir-mais {
+    margin: auto;
+}
+
+.modais{
+    width: 100%;
+    height: 100%;
+    padding: 5px 35px 35px 35px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+/* .div1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25px;
+} */
+.abrir-mais{
+    border-radius: 12px;
+}
+.close-modal{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding: 5px 15px 0px;
+    /* margin-bottom: 220px; */
+    /* background-color: aqua; */
+}
+#icon-sair{
+    font-size: 25px;
+    color: #162868;
+    cursor: pointer;
+}
 @media screen and (max-width: 720px) {
-    .area-icon-gabriel {
-        width: 100%;
-        padding: 20px;
-        gap: 20px;
-        display: flex;
-        height: 100%;
-    }
-
-<<<<<<< Updated upstream
-    .nome-area-gabriel h1{
-        
-    }
-
     .box-gabriel{
-=======
-    .box-gabriel {
->>>>>>> Stashed changes
-        top: 1%;
-        flex-direction: column;
-    }
-
-    .area-botao-gabriel {
-        gap: 0px;
-        padding: 0px;
-        width: 100%;
-        top: 10%;
+        width: 95%;
+        background-color: #f8f5f64b;
+        overflow-y: auto;
+        overflow-x: hidden;
+        top: 3%;
         position: relative;
     }
 
-    .Botoes-gabriel {
-        width: 100px;
-        height: 100px;
-    }
-
-    .Bola-1-gabriel {
-        display: block;
-        top: 20vh;
-        right: 88vw;
-    }
-
-    .Bola-1-gabriel img {
+    .area-botao-gabriel{
+        background-color: #16286800;
+        right: 5.2rem;
         width: 100%;
-        height: auto;
+        justify-content: center;
     }
 
-    .Bola-2-gabriel {
-        display: block;
-        top: 20vh;
-        right: 80vw;
+    .seta-voltar-gabriel{
+        top: 122.4rem;
+        left: 1rem;
+        bottom: 0%;
     }
 
-    .Bola-2-gabriel img {
-        width: 100%;
-        height: auto;
-    }
-
-    .Bola-3-gabriel {
-        display: block;
-        top: 91vh;
-    }
-
-    .Bola-3-gabriel img {
-        width: 100%;
-        height: auto;
-    }
-
-    .area-icon-gabriel img {
-        width: 75%;
-        left: 3%;
+    .nome-area-gabriel h1{
+        bottom: 0;
+        left: 7.2rem;
+        font-size: 21px;
+        width: 135%;
         position: relative;
     }
 
-    .area-icon-gabriel p {
-        top: 130px;
-        font-size: 10.5px;
-        z-index: 1;
-        top: 78%;
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+
+    .Botoes-gabriel{
+        border-radius: 10px;
+    }
+
+
+}
+
+@media (max-width:768px) and (min-height:1024px){
+    .box-gabriel{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .seta-voltar-gabriel{
+        position: relative;
+        left: -35%;
+        top: 201%;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 19vh;
+        font-size: 1.9rem;
+        width: 135%;
+    }
+
+    .area-botao-gabriel{
+        position: relative;
+        left: -13vh;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+}
+
+@media (max-width:820px) and (min-height:1180px){
+    .box-gabriel{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 110%;
+        position: relative;
+        top: 5%;
+    }
+
+    .area-botao-gabriel{
+        position: relative;
+        left: -8rem;
     }
 
     .seta-voltar-gabriel {
-        width: 25px;
-        height: 25px;
-        top: 91vh;
-        left: 7vw;
+        position: relative;
+        top: 10rem;
+        top: 91rem;
+        z-index: 1;
+        left: -15rem;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 12rem;
+        width: 135%;
+        top: -29rem;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+}
+
+@media (max-width:1024px) and (min-height:1366px){
+    .box-gabriel{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 110%;
+        position: relative;
+        top: 5%;
+    }
+
+    .area-botao-gabriel{
+        position: relative;
+        left: -10rem;
+    }
+
+    .seta-voltar-gabriel {
+        position: relative;
+        top: 91rem;
+        z-index: 1;
+        left: -18rem;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 16rem;
+        width: 135%;
+        top: -33rem;
+        font-size: 36px;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
     }
 }

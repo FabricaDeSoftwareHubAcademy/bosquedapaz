@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/cadastro-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-client.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -17,32 +17,11 @@
 
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
-    <!-- <style>
-    
-        .select-opc {
-            width: 40vh;
-            height: 47px;
-            margin: 10px;
-            padding-left: 10px;
-            border-radius: 5px;
-            border: none;
-            border-bottom: 2px solid #9d9fa1;
-            border-right: 2px solid #9d9fa1;
-        }
-
-        label {
-           
-            display: block; 
-
-        }
-
-        
-    </style> -->
-
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+<?php include "../../../Public/assets/home/menu-home.html"?>
+
 
     <main class="principal">
 
@@ -212,7 +191,7 @@
 
         </div>
         <div class="btns">
-            <a href="gerenciar-expositores.php" class="voltar">
+            <a href="escolher-cadastro.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>

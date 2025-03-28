@@ -9,6 +9,7 @@
 @import url('style-mapa.css');
 @import url('style-rodape.css');
 @import url('style-parceiros-home.css');
+@import url('../css-modais/perfil-expositor.css');
 
 :root {
     --color-artesanato: rgba(13, 71, 161, 0.30);
@@ -38,10 +39,17 @@
     --color-sustenta: rgba(108, 88, 76, 0.30);
     --color-sustenta-bg: rgba(108, 88, 76, 0.60);
 
-    --color-rua1: #FDF148;
-    --color-rua2: #FC671D;
-    --color-rua3: #90C470;
-    --color-rua4: #B313FF;
+    --color-rua1: #ffde5a;
+    --color-rua2: #EC6627;
+    --color-rua3: #5EBB50;
+    --color-rua4: #8D55F2;
+    --color-rua5: #38B6FC;
+    --color-rua6: #959499;
+    --color-rua7: #A5569F;
+    --color-rua8: #E5AD95;
+    --color-rua9: #EE71CA;
+    --color-rua10: #010101;
+    --color-rua11: #EB2123;
 
     --color-prox-event: #4A8AF1;
     --color-edit-pass: #FFFFFF;
@@ -61,7 +69,8 @@
 
 .all-title {
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .all-para {

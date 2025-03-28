@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #f8f8f8;
-    padding-top: 70px;
+    padding-top: 80px;
     position: relative;
     overflow: hidden;
 }
@@ -64,7 +64,6 @@
 .slider-all .slider-item {
     width: 100%;
     height: 100%;
-    background-image: url("../../imgs/img-home/imagem-carrossel-1.JPG");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -74,15 +73,12 @@
 }
 
 .slider-all .slider-item:nth-child(2) {
-    background-image: url("../../imgs/img-home/imagem-carrossel-1.JPG");
     z-index: 1;
 }
 .slider-all .slider-item:nth-child(3) {
-    background-image: url("../../imgs/img-home/imagem-carrossel-2.JPG");
     z-index: 0;
 }
 .slider-all .slider-item:nth-child(4) {
-    background-image: url("../../imgs/img-home/imagem-carrossel-3.JPG");
     z-index: -1;
 }
 

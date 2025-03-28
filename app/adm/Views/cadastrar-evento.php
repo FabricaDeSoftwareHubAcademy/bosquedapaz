@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-evento.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
     <main class="principal">
         <div class="box">
             <h2>CADASTRO DE EVENTO</h2>
             <div class="form-box">
-                <form action="#" method = "POST">
+                <form action="#" method="POST">
                     <div id="form1">
                         <div class="input-group">
                             <label>Nome:</label>
                             <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                 required>
-                        </div>                        
+                        </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>       
+                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
-                        <div class = "data-imagem">
+                        <div class="data-imagem">
                             <div class="input-group">
                                 <label>Data:</label>
                                 <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
@@ -40,15 +40,15 @@
                                     required>
                             </div>
                         </div>
-                        <img class = "preview" src="" alt="" id="preview-image">
+                        <img class="preview" src="" alt="" id="preview-image">
                     </div>
-                    
+
                 </form>
-                
+
             </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">

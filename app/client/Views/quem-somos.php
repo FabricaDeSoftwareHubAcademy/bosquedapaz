@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-quem-somos.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
     <title>Bosque da Paz</title>
 </head>
 <body>
@@ -35,19 +38,19 @@
             
             <div class="image-text-carina">
                 
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora1.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-carina.png" alt="">
                 <p class="carina">Carina Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
 
             <div class="image-text-denise">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora2.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-denize.png" alt="">
                 <p class="denise">Denise Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
    
             <div class="image-text-fernanda">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora3.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-fernanda.png" alt="">
                 <p class="fernanda">Fernanda Gutierrez</p>
                 <span class="profission">Advogada</span>
             </div>
@@ -66,24 +69,41 @@
         </div>
         
         <div class="expositor-p">
-            <p class="acesse">Mostre seu talento na nossa feira. Acesse o Botão Abaixo e Cadastre-se agora e aproveite a chance de destacar seu trabalho para um público animado. Não perca essa oportunidade!</p>
+            <p class="acesse">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botao abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
             
         </div>
+        <a class="botao-expositor" href="../../../app/client/views/edital-expositor.php">
+        <div class="botao">
+            CLIQUE AQUI!
+       
+        </div>
+        </a>
+    </section>
+
+<!-- 
+    <section class="parceiros-quem-somos">
+    <div class="titulo-parceiros-quem-somos">
+        <h4>PARCEIROS</h4>
+
+    </div>
+    <div class="fotos-parceiros-quem-somos">
+       <img src="../../../Public/imgs/quem-somos/bosque-ipe.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/governo.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/senac.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/sebrae.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/setur.png" alt="">
         
-        <div class="botão-expositor">
-            <a class="botão" href="../../../app/client/views/edital-expositor.php">CLIQUE AQUI!</a>
-        </div>
-    </section>
 
-    <section class="vazio">
-        <div class="logo2">
-            <img src="../../../Public/imgs/quem-somos/BOSQUE-removebg-preview (1) 3.png" alt="">
-        </div>
-    </section>
+    </div>
 
+
+</section> -->
+
+   
 
 
     <!--------------------------------->
+    <?php include "../../../Public/assets/home/parceiros.html" ?>
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 

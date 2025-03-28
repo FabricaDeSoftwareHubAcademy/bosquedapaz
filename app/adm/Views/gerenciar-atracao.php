@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
- 
+
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
- 
+
     <main class="principal">
         <div class="box">
             <h2>GERENCIAR ATRAÇÃO</h2>
@@ -54,7 +54,7 @@
                         </tbody>
                     </table>
                 </div>
- 
+
                 <button class="voltar">
                     <a href="Area-Adm.php" class="voltar-link">
                         <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
@@ -75,17 +75,17 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </main>
- 
+
     <div class="bolas-fundo">
         <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
- 
+
     <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
 </body>
- 
+
 </html>

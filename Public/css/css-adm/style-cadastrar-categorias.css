@@ -1,589 +1,260 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('../../../Public/css/menu-adm.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    height: 70%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal h2{
+    flex-direction: row;
+    font-size: 16px;
+}
+
+.close {
+    justify-content: end;
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    /* right: 10px; */
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
 }
 
 .titulo {
     text-transform: uppercase;
-    font-size: 30px;
-    padding: 1%;
-}
-
-.principal {
-    width: 100vw;
-    height: 90vh;
-    z-index: 1;
-    margin-top: 2%;
-}
-
-.principal .box {
-    width: 90%;
-    height: 90%;
-    background-color: rgba(248, 245, 246, 0.65);
-    margin: auto;
-    /* margin-top: 3%; */
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 20px;
-}
-
-.bolas-fundo {
-    width: 100vw;
-    height: 90vh;
-    position: relative;
-    top: -90vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-verde1 {
-    position: absolute;
-    left: 0px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-verde2 {
-    position: absolute;
-    right: 0px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-rosa {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    z-index: -3;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .form-box {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 100vh;
-    justify-content: center;
-    gap: 50px;
+    flex-direction: column;
+    gap: 15px;
     align-items: center;
+}
+
+.form-box .nome-cat{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 52%;
+    /* margin-right: 10px; */
+    font-size: 16px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+}
+
+.form-box .botao-cor{
     position: relative;
-}
-
-h3 {
-    font-size: 18px;
-    text-align: left;
-}
-
-.tabela {
     display: flex;
+    margin: 30px auto;
+    padding: 2px;
+    width: 45px;
+    height: 50px;
+    border-radius: 9px;
+    border: solid beige 3px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+}
+
+.custum-file-upload{
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 470.38px;
-    height: 400px;
-    /* background-color: whitesmoke; */
-}
-
-.tabela .roleta {
-    width: 60%;
-    height: 40%;
-    /* justify-content: space-around; */
-    align-items: center;
-    z-index: 2;
-}
-
-.fotos {
-    /* width: 353.15px;
-    height: 339.96; */
-    border-bottom: 3px solid rgb(0, 126, 112);
-    border-right: 3px solid rgb(0, 126, 112);
-    align-items: center;
     display: flex;
-    background-color: white;
-    flex-direction: column;
-    border-radius: 10px;
-}
-
-.upload {
-    width: 80%;
-    height: 70%;
     justify-content: center;
     align-items: center;
+    width: 30%;
 }
 
-.texto1 {
-    margin: 70px;
+.icon{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon svg{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.custum-file-upload .icon svg {
+    height: 80px;
+    fill: rgba(75, 85, 99, 1);
+  }
+
+.separacao{
+    width: 30%;
+    height: 5%;
+}
+
+.previa{
+    width: 100%;
+    height: 100%;
+}
+
+.previa img{
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 .input-group {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* .botoes{
-    display: flex;
-    justify-content: flex-end;
-    
-}
-
-.botoes button{
-    font-size: 24px;    
-    text-align: center;
-    width: 150px;
-    height: 50px;
-    border: none;
-    outline: none;
-} */
-
-.separacao {
-    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    width: 300px;
-    height: 500px;
 }
 
-/* .botoes{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
-.separacao .botoes{
-    position: absolute;
-    gap: 50px;
-    bottom: 20px;
-    right: 20px;
-} */
-
-/* .salvar{
-    background-color: rgb(0,126,112);
-    color: white;
-    border-radius: 10px;
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
-.cancelar{
-    color: white;
-    border-radius: 10px;
-    background-color: rgb(255, 56, 119);
-} */
 
 .botoes {
-    /* width: 100%; */
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    gap: 20px;
 }
 
-.cancelar,
-.salvar {
-    font-size: 25px;
+.botoes button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 150px;
+    font-size: 16px;
+    width: 30%;
 }
 
 .cancelar {
-    background-color: rgb(255, 56, 119);
+    background-color: #ff3867;
     color: white;
 }
 
 .salvar {
-    background-color: rgb(0, 126, 112);
+    background-color: #007e70;
     color: white;
 }
 
-.voltar-link {
-    width: 50%;
-    height: 8%;
-    align-items: center;
-    position: absolute;
-    bottom: 16px;
-    left: -19px;
-    display: flex;
-    gap: 50px;
-    cursor: default;
-
+.custom-select {
+    width: 200px;
 }
 
-.voltar {
-    background-color: transparent;
-    border: none;
-    justify-content: left;
-    justify-self: left;
-}
-
-.voltar-link .btn-voltar {
-    width: 70%;
-    height: 50%;
-}
-
-.btn-voltar {
+.select-selected {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.tabela input {
-    width: 70%;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 2px solid darkgray;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #333;
-    background-color: #f9f9f9;
-    outline: none;
-    transition: border-color 0.3s ease;
-    border-top: none;
-    border-left: none;
-    border-bottom: 2.93px solid rgb(185, 185, 185);
-    border-right: 2.93px solid rgb(185, 185, 185);
+.color-preview {
+    width: 30px;
+    height: 20px;
+    /* border-radius: 50%; */
+    margin-right: 10px;
+    border: 1px solid #000;
 }
 
-/* .btns {
+.select-items {
     position: absolute;
-    bottom: 5px;
+    width: 40%;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 1000;
+}
+
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
     display: flex;
-    gap: 50px;
     align-items: center;
 }
-.btns .voltar {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-.voltar .btn-voltar {
-    width: 60px;
-} */
 
-@media screen and (max-width: 374) {
-    .principal {
-        width: 100%;
-        height: auto;
-        /* padding: 10px; */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        /* margin-top: 10%; */
-    }
-
-    .principal .box {
-        width: 100%;
-        height: auto;
-        gap: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        gap: 20px;
-    }
-
-    .tabela {
-        width: 75%;
-        /* padding: 10px; */
-        align-items: center;
-        height: auto;
-    }
-
-    .tabela .input-group h3,
-    .tabela input {
-        font-size: 80%;
-        width: 50%;
-        text-align: center;
-    }
-
-    h3 {
-        font-size: 80%;
-    }
-
-    .roleta {
-        width: 80%;
-        height: auto;
-        margin: 10px 0;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-    }
-
-    .separacao {
-        width: 40%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .separacao .fotos {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .botoes {
-        display: flex;
-        position: relative;
-        /* flex-direction: column; */
-        /* gap: 10px; */
-        align-items: center;
-        width: 80%;
-        /* margin-top: 20px; */
-        justify-content: center;
-        padding-left: 50px;
-    }
-
-    .botoes button {
-        width: 50%;
-        /* height: 50px; */
-        font-size: 70%;
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    /* .voltar-link{
-        width: 20%;
-        height: 50%;
-        bottom: -18.5%;
-        left: 5%;
-    } */
-    .b-voltar {
-        width: 40%;
-        /* height: 50%; */
-        bottom: -18.5%;
-        left: 5%;
-    }
-
-    .voltar-link .voltar {
-        width: 100%;
-        height: 100%;
-    }
-
-    .titulo {
-        font-size: 90%;
-        text-align: center;
-    }
-
-    .bolas-fundo img {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 0.5;
-    }
-
-    .bolas-fundo .bola-verde1 {
-        width: 150px;
-        left: -30px;
-    }
-
-    .bolas-fundo .bola-verde2 {
-        width: 100px;
-        left: 300px;
-    }
-
-    .bolas-fundo .bola-rosa {
-        width: 250px;
-        left: 250px;
-    }
-
-    header .nav-bar ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    header .nav-bar .nav-item {
-        text-align: center;
-    }
-
-    header .btn-login a {
-        padding: 10px;
-    }
+.select-items div:hover {
+    background-color: #f1f1f1;
 }
 
-@media only screen and (max-width: 768px) {
-    .principal {
-        width: 100%;
-        height: 90vh;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        /* margin-top: 10%; */
-    }
+select {
+    color: gray;
+    transition: color 0s 2147483647s;
+  }
+  
+  /* select:hover,
+  select:focus,
+  select:active,
+  select:focus {
+    color: red;
+    transition:0s;
+  } */
+   
+  
+  select option {
+    color: #333;
+  }
+  
+  option[value=""][disabled] {
+    display: none;
+  }
 
-    .principal .box {
-        width: 100%;
-        height: auto;
-        gap: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-    }
 
-    .form-box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        gap: 20px;
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
     }
-
-    .tabela {
-        width: 75%;
-        padding: 10px;
-        align-items: center;
-        height: auto;
-    }
-
-    .tabela .input-group h3,
-    .tabela input {
-        font-size: 80%;
-        width: 50%;
-        text-align: center;
-    }
-
-    h3 {
-        font-size: 80%;
-    }
-
-    .roleta {
-        width: 80%;
-        height: auto;
-        margin: 10px 0;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-    }
-
-    .separacao {
-        width: 40%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .separacao .fotos {
-        width: 100%;
-        /* height: auto; */
-        height: 20vh;
-        margin: 10px 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .upload {
-        width: 100%;
-        height: 100%;
-    }
-
-    .botoes {
-        right: 0;
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        width: 50%;
-        margin-top: 20px;
-        justify-content: center;
-        /* padding-left: 50px; */
-    }
-
-    .botoes button {
-        width: 100%;
-        height: 50px;
-        font-size: 70%;
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    /* .voltar-link{
-        width: 20%;
-        height: 50%;
-        bottom: -18.5%;
-        left: 5%;
-    } */
-    .b-voltar {
-        width: 40%;
-        /* height: 50%; */
-        bottom: -18.5%;
-        left: 5%;
-    }
-
-    .voltar-link .voltar {
-        width: 100%;
-        height: 100%;
-    }
-
+    
     .titulo {
-        font-size: 90%;
-        text-align: center;
+        font-size: 20px;
     }
-
-    .bolas-fundo img {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 0.5;
+    
+    .input-group input {
+        padding: 8px;
     }
-
-    .bolas-fundo .bola-verde1 {
-        width: 150px;
-        left: -30px;
-    }
-
-    .bolas-fundo .bola-verde2 {
-        width: 100px;
-        left: 300px;
-    }
-
-    .bolas-fundo .bola-rosa {
-        width: 250px;
-        left: 250px;
-    }
-
-    header .nav-bar ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    header .nav-bar .nav-item {
-        text-align: center;
-    }
-
-    header .btn-login a {
-        padding: 10px;
+    
+    .botoes button {
+        font-size: 14px;
+        padding: 8px 15px;
     }
 }

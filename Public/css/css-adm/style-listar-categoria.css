@@ -7,6 +7,9 @@
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
 }
+body{
+    overflow: hidden;
+}
 
 .principal {
     width: 100vw;
@@ -54,7 +57,7 @@ h2 {
     color: #007bff;
 }
 
-.modal {
+/* .modal {
     display: none;
     width: 400px;
     padding: 20px;
@@ -75,8 +78,8 @@ h2 {
     font-size: 20px;
     color: #333;
     margin-bottom: 20px;
-}
-.modal input[type="text"] {
+} */
+/* .modal input[type="text"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -84,7 +87,7 @@ h2 {
     border-radius: 4px;
     margin-bottom: 20px;
     box-sizing: border-box;
-}
+} */
 
 .modal-edit {
     margin: auto;
@@ -165,6 +168,7 @@ button:hover {
     width: 700px;
     margin-right: 10px;
     font-size: 16px;
+    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
 
 .search-bar .search-button {
@@ -181,27 +185,99 @@ button:hover {
 }
 
 
-.collaborators-table {
+.table-container {
     width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 50vh;
     overflow-y: auto;
-}
-
-.collaborators-table thead {
-    background-color: rgb(32, 54, 139);
-    color: white;
-}
-
-.collaborators-table th,
-.collaborators-table td {
-    padding: 12px 15px;
-    text-align: left;
     border: 1px solid #ddd;
 }
 
-.collaborators-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+.collaborators-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+/* .collaborators-table thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(32, 54, 139);
+    color: white;
+    z-index: 10;
+} */
+
+/* .collaborators-table th, .collaborators-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 20%;
+} */
+
+
+.collaborators-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+.collaborators-table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators-table tbody{
+    display: table-row-group;
+    max-height: 50vh;
+    width: 100%;
+}
+
+.collaborators-table thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(32, 54, 139);
+    color: white;
+    z-index: 2;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators-table thead tr,
+.collaborators-table tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.collaborators-table tbody tr td{
+    text-align: center;
+    height: 15%;
+}
+
+
+.collaborators-table th,
+.collaborators-table td {
+    /* padding: 12px 15px; */
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.collaborators-table th{
+    padding: 12px 15px;
+}
+
+table tbody tr:nth-child(odd) {
+    font-size: 80%;
+    background-color: white;
+    /* Cor clara */
+}
+
+table tbody tr:nth-child(even) {
+    font-size: 80%;
+    background-color: #e6e6e6;
+    /* Cor mais escura */
 }
 
 .collaborators-table tbody tr:hover {
@@ -209,7 +285,9 @@ button:hover {
 }
 
 
+
 .status {
+    width: 80px;
     padding: 5px 10px;
     border: none;
     border-radius: 15px;
@@ -288,6 +366,54 @@ button:hover {
     text-align: center;
     font-size: 14px;
     cursor: pointer;
+}
+
+#modal-validar, #modal-recusar,
+#recusado-sucesso, #validacao-sucesso {
+    display: none;
+}
+
+
+#modal-recusar:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 2;
+}
+
+.acao-content-recusar {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.acao-texto-recusar {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    /* background-color: red; */
+}
+
+.acao-botoes-recusar {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
 }
 
 @media (max-width: 1042px) {

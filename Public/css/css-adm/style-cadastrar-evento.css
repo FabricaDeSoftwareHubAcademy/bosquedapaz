@@ -7,6 +7,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    overflow-y: hidden;
+
+}
+body{
+    overflow: hidden;
 }
 .bolas-fundo {
     width: 100vw;
@@ -97,7 +102,7 @@ h2 {
 }
 
 .input-group label {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #3d3d3d;
 }
 
@@ -106,23 +111,30 @@ h2 {
     min-height: 45px;
     padding: 5px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
-    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
     
 }
 
 .input-group textarea{
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
-    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
 }
 
 .data-imagem{
@@ -158,12 +170,17 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 0 20px;   
+}
+
+.voltar {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .btn-cancelar-salvar {
     display: flex;
-    gap: 30px;  
+    gap: 15px;  
 }
 
 .btn {
@@ -180,7 +197,9 @@ h2 {
 }
 
 .btn-cancelar-salvar .btn {
-    width: 150px; 
+    width: 120px;
+    padding: 8px; 
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +209,7 @@ h2 {
 
 .btn-cancelar-salvar .btn-salvar {
     background-color: #007E70;
-    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
 }
 
 .btn-cancelar-salvar .btn-cancelar {

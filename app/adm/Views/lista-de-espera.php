@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <title>Adm - Bosque da Paz</title>
 </head>
 
@@ -26,9 +26,6 @@
         <div class="b-LisEsp3">
             <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
         </div>
-        <div class="seta-LisEsp3">
-            <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-        </div>
 
         <div class="box-LisEsp-mat">
             <div class="seta-LisEsp3-res">
@@ -36,9 +33,10 @@
             </div>
 
             <h1>LISTA DE ESPERA</h1>
-            <div class="area-pesquisa-lisEsp">
-                <input type="text" id="search" name="q" placeholder="Pesquisar..." />
-                <button>BUSCAR</button>
+            <div class="search-bar">
+                <label for="status">Procurar</label>
+                <input type="text" id="status" placeholder="Expositor" />
+                <button class="search-button">BUSCAR</button>
             </div>
 
             <div class="area-table-lisEsp">
@@ -153,6 +151,11 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="seta-LisEsp3">
+                <a href="gerenciar-relatorios.php" class="voltar-link">
+                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                </a>
             </div>
         </div>
     </section>
