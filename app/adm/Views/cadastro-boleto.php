@@ -43,28 +43,28 @@
                         </div>
     
                         <div class="form-group-cb">
-                            <label>Arquivo em PDF:</label>
+                            <label class="label-cb">Arquivo em PDF:</label>
                             <label for="arq-cb" class="custom-file-label">
                                 <span id="file-text">Selecionar Arquivo em PDF</span>
-                                <img src="../../../Public/imgs/edicoes-passadas-img/Upload.svg" alt="">
+                                <img class="img-cb" src="../../../Public/imgs/edicoes-passadas-img/Upload.svg" alt="">
                             </label>
                             <input type="file" name="arq-cb" id="arq-cb" accept=".pdf">
                         </div>
     
                         <div class="form-group-cb">
-                            <label>Valor:</label>
+                            <label class="label-cb">Valor:</label>
                             <input type="text" name="valor-cb" id="valor-cb" class="form-cb-input"  placeholder="R$ 00,00">
                         </div>
                     </div>
 
                     <div class="area-div-2-cb">
                         <div class="form-group-cb">
-                            <label>CPF/CNPJ:</label>
+                            <label class="label-cb">CPF/CNPJ:</label>
                             <input type="text" name="cpf-cb" id="cpf-cb" class="form-cb-input"  placeholder="000.000.000-00  |  00.000.000/0000-00">
                         </div>
 
                         <div class="form-group-cb">
-                            <label>Referência:</label>
+                            <label class="label-cb">Referência:</label>
                             <select name="input_select" id="referencia_select" class="form-cb-input">
                                 <option id="option-cb" value="">Janeiro</option>
                                 <option id="option-cb" value="">Fevereiro</option>
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="form-group-cb">
-                            <label>Vencimento:</label>
+                            <label class="label-cb">Vencimento:</label>
                             <input type="date" name="val-cb" id="val-cb" class="form-cb-input"  placeholder="00/00/0000" required>
                         </div>
                     </div>
