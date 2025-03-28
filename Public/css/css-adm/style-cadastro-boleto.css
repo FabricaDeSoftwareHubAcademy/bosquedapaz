@@ -136,14 +136,16 @@ body {
 
 
 .btn-salvar-cb{
-    background-color: #007E70;
-    color: white;
-    width: 25%;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 20px;
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
     border: none;
-    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: rgb(190, 3, 3);
+    outline: none;
+    box-shadow: 0px 0.125rem 0px rgb(182, 182, 182);
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .btn-cancelar-cb{
