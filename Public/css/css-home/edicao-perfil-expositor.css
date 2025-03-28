@@ -17,6 +17,7 @@
     justify-content: center;
 }
 
+/* Imagens */
 .img1{
     position: fixed;
     top: 25vh;
@@ -46,6 +47,7 @@
     height: auto;
 }
 
+/* Box */
 .box-principal{
     width: 90%;
     height: 90%;
@@ -54,6 +56,15 @@
     background-color: rgba(248, 245, 246, 0.65);
     display: flex;
     flex-direction: column;
+}
+
+/* Elementos da Box */
+.linha{
+    width: 2px;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    background-color: rgba(43, 43, 43, 0.295);
 }
 
 .area-h1{
@@ -76,133 +87,103 @@
     display: flex;
 }
 
+.area-infs form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(137, 43, 226, 0);
+}
+
+/* Lado Esquerdo */
 .lado-esquerdo{
     width: 50%;
     height: 100%;
     background-color: cadetblue;
-    display: flex;
-    flex-direction: column;
 }
 
 .area-logo{
     width: 100%;
     height: 40%;
+    background-color: #5CB74A;
+}
+
+.text-produtos{
+    width: 100%;
+    height: 10%;
     background-color: aqua;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.uploads{
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    transition: all .2s ease-in-out;
-}
-
-.uploads img{
-    border-radius: 50%;
-}
-
-.img-input{
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-color: aqua;
-    position: absolute;
-    cursor: pointer;
-}
-
-
-.text-produtos{
-    width: 100%;
-    height: 10%;
-    background-color: blue;
+.text-produtos h1{
+    font-weight: 500;
 }
 
 .area-imgs{
     width: 100%;
     height: 50%;
-    background-color: blueviolet;
+    background-color:  blue;
 }
 
 
 
-
-
+/* Lado Direito */
 .lado-direito{
     width: 50%;
     height: 100%;
-    background-color: rgba(222, 184, 135, 0);
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(255, 228, 196, 0);
 }
 
+/* Elementos do Lado Direito */
 .area-text{
     width: 100%;
     height: 35%;
-    background-color: rgba(100, 148, 237, 0);
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(255, 248, 220, 0);
 }
 
-.title{
+.area-text h1, h3, .input-texto{
     margin-left: 1rem;
+    font-weight: 500;
 }
 
-.sobre{
-    margin-top: 1rem;
-    margin-left: 1rem;
+.area-text p{
+    margin-top: 0.5rem;
 }
 
-.input-texto {
-    width: 60%; 
-    height: 100px; 
-    padding: 10px; 
-    font-size: 16px; 
-    border-radius: 5px; 
-    border: none; 
-    resize: vertical;
-    margin-left: 1rem;
-    box-shadow: 2px 2px 0px rgb(0, 0, 0, 0.219)
+.input-texto{
+    width: 80%;
+    height: 50%;
+    border: none;
+    outline: none;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    box-shadow: 2px 2px 0px rgb(182, 182, 182);
 }
 
 .area-cat-num{
     width: 100%;
     height: 15%;
-    background-color: rgba(255, 127, 80, 0);
     display: flex;
+    background-color: rgba(100, 148, 237, 0);
 }
 
 .cat{
     width: 45%;
     height: 100%;
-    background-color: rgba(0, 255, 255, 0);
+    background-color: rgba(137, 43, 226, 0);
 }
 
-.cat h3{
+.cat h3, .p-cat{
     margin-left: 1rem;
 }
-
-.cat p{
-    margin-left: 1rem;
-}
-
-
+ 
 .num{
     width: 55%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(165, 42, 42, 0);
 }
-
-
 
 .area-inf-corR{
     width: 100%;
@@ -211,77 +192,53 @@
     display: flex;
 }
 
-.area-form{
+.area-total-form{
     width: 45%;
     height: 100%;
-    background-color: rgba(137, 43, 226, 0);
+    background-color: rgba(0, 255, 255, 0);
     display: flex;
+    gap: 8px;
     flex-direction: column;
-}
-
-.area-form h3{
-    margin-left: 1rem;
-}
-
-.area-form form{
-    width: 90%;
-    height: 90%;
-    background-color: #5cb74a00;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-left: 1rem;
-    position: relative;
-    margin-top: 0.5rem;
 }
 
 .area-inputs{
-    width: 100%;
+    width: 80%;
     height: 20%;
-    background-color: rgba(210, 105, 30, 0);
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    background-color: #5cb74a00;
+    margin-left: 1rem;
 }
 
 .area-inputs label{
     font-size: 14px;
 }
 
-.input {
-    width: 70%;
+.input{
     padding: 5px;
     border: none;
     outline: none;
-    padding-left: 15px;
+    padding-left: 10px;
     border-radius: 5px;
-    box-shadow: 2px 2px 0px rgb(0, 0, 0, 0.219);
+    box-shadow: 2px 2px 0px rgb(182, 182, 182);
 }
-
-input::placeholder {
-    font-size: 12px; 
-}
-
-
+ 
 .area-corR{
     width: 55%;
     height: 100%;
-    background-color: rgba(165, 42, 42, 0);
+    background-color: rgba(0, 0, 255, 0);
 }
 
 .cor-rua{
     width: 30%;
     height: 25px;
-    border-radius: 5px;
-    background-color: #5CB74A;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.cor-rua p{
+    background-color: #5CB74A;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
+    border-radius: 8px;
 }
-
+ 
