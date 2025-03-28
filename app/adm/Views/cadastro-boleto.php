@@ -60,7 +60,7 @@
                     <div class="area-div-2-cb">
                         <div class="form-group-cb">
                             <label>CPF/CNPJ:</label>
-                            <input type="text" name="cpf-cb" id="cpf-cb" class="form-cb-input"  placeholder="000.000.000-00 / 00.000.000/0000-00">
+                            <input type="text" name="cpf-cb" id="cpf-cb" class="form-cb-input"  placeholder="000.000.000-00  |  00.000.000/0000-00">
                         </div>
 
                         <div class="form-group-cb">
