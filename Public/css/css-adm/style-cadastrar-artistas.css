@@ -458,7 +458,7 @@ label#salvar-btn {
 
 }
 
-@media screen and (min-width: 1024px) and (max-width:1250px) {
+@media screen and (min-width: 1024px) and (max-width:1500px) {
     .formularios{
         width: 100%;
     }
@@ -467,38 +467,10 @@ label#salvar-btn {
         position: relative;
         left: 5%;
     }
-
-    .form-pessoa{
-        position: relative;
-        left: 5%;
-        top: 5px;
-    }
-
-    .form-pessoa input{
-        width: 110%;
-    }
-
-    .form-loja{
-        position: relative;
-        left: 10%;
-        top: 5px;
-    }
-
     .form-expo{
-        /* background-color: red; */
         position: relative;
         left: 5%;
-    }
-    .form-loja input{
-        width: 76%;
-    }
-
-    .form-expo input{
-        width: 70%;
-    }
-
-    .select{
-        width: 70%;
+        top: -10px;
     }
 
     #categorias{
@@ -508,7 +480,8 @@ label#salvar-btn {
 
     .btn-finalizar{
         position: relative;
-        left: 70%;
+        left: 28vh;
+        top: 15vh;
     }
 }
 
