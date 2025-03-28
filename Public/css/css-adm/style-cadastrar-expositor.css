@@ -89,6 +89,12 @@ body {
     height: 80%;
 }
 
+.formularios label{
+    position: relative;
+    left: 5%;
+}
+
+
 .formularios input {
     width: 40vh;
     height: 5vh;
