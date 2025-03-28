@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-eventos.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
@@ -16,7 +17,7 @@
 
     <main class="principal">
         <div class="box">
-            <h2>GERENCIAR EVENTOS</h2>
+            <h2>Gerenciar Eventos</h2>
             <div class="container">
                 <div class="search-bar">
                     <label for="status">Procurar</label>
@@ -216,6 +217,207 @@
                                     </button>
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Festival da Primavera</td>
+                                <td>10/04/2025</td>
+                                <td><button class="status inactive">Inativo</button></td>
+                                <td class="fone-col">
+                                    <a href="editar-expositor.php">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <a href="">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </td>
+                                <td class="mais">
+                                    <button class="open-modal" data-modal="modal-fotos">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            
                             
                         </tbody>
                     </table>

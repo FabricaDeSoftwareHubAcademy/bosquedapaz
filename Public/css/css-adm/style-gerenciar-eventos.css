@@ -58,7 +58,7 @@ h2 {
 
 
 .search-bar {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     background: white;
     /* z-index: 1000; */
@@ -67,6 +67,7 @@ h2 {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
 
@@ -280,7 +281,7 @@ table tbody tr:nth-child(even) {
     height: 12%;
     align-items: center;
     position: relative;
-    bottom: -70px;
+    bottom: -40px;
     display: flex;
     gap: 50px;
     cursor: default;
@@ -412,19 +413,18 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
-/* Estilos padrão (para telas grandes - Desktop) */
-body {
-    background-color: yellow;
-}
 
 /* 📱 Ajustes para telas menores que 1200px */
 @media (max-width: 1199.98px) {
     body {
+        max-height: 40vh;
+        overflow-y: auto;
         background-color: aqua;
     }
 
     .container {
         padding: 20px;
+        height: auto;
     }
 
     .titulo {
@@ -441,6 +441,7 @@ body {
         width: 80%;
         font-size: 18px;
         padding: 12px;
+        outline: none;
     }
 
     .search-bar .search-button {
@@ -454,7 +455,7 @@ body {
         overflow-x: auto;  /* Permite rolagem horizontal */
         overflow-y: auto;  /* Permite rolagem vertical */
         max-height: 70vh;  /* Ajuste a altura conforme necessário */
-        padding: 10px;
+        padding: initial;
         border: 1px solid #ccc;
     }
 
@@ -489,6 +490,14 @@ body {
         font-size: 16px;
         padding: 10px 20px;
     }
+
+    .principal .box{
+        height: 125vh;
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: -50%;
+    }
 }
 
 /* 📱 Ajustes para telas menores que 992px */
@@ -505,10 +514,11 @@ body {
         width: 100%;
         font-size: 16px;
         padding: 10px;
+        outline: none;
     }
 
     .search-bar .search-button {
-        width: 100%;
+        width: auto;
         font-size: 16px;
         padding: 10px;
     }
@@ -518,7 +528,7 @@ body {
         overflow-x: auto;  /* Permite rolagem horizontal */
         overflow-y: auto;  /* Permite rolagem vertical */
         max-height: 60vh;  /* Ajuste a altura conforme necessário */
-        padding: 10px;
+        padding: initial;
         border: 1px solid #ccc;
     }
 
@@ -553,6 +563,14 @@ body {
         font-size: 14px;
         padding: 8px 18px;
     }
+
+    .principal .box{
+        height: 95%;
+    }
+
+    .voltar-link{
+        bottom: -70px
+    }
 }
 
 /* 📱 Ajustes para telas menores que 768px */
@@ -574,6 +592,7 @@ body {
         width: 100%;
         font-size: 14px;
         padding: 8px;
+        outline: none;
     }
 
     .search-bar .search-button {
@@ -627,10 +646,13 @@ body {
 /* 📱 Ajustes para telas menores que 576px */
 @media (max-width: 575.98px) {
     body {
+        overflow-y: auto;
+        max-height: 60vh;
         background-color: red;
     }
 
     .principal .box{
+        height: 85vh;
         padding: 0;
         width: 88%;
     }
@@ -643,9 +665,12 @@ body {
         width: 100%;
         font-size: 12px;
         padding: 6px;
+        outline: none;
     }
 
     .search-bar .search-button {
+        position: relative;
+        right: 3px;
         width: 100%;
         font-size: 12px;
         padding: 8px;
@@ -674,19 +699,22 @@ body {
     }
 
     .collaborators-table thead {
+        top: -3.5px;
         font-size: 10px;
     }
 
     .status {
-        width: auto;
+        width: 50px;
         font-size: 8px;
     }
 
     .botoes {
-        bottom: 1rem;
+        width: 50%;
+        bottom: 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: right;
         margin-top: 20px;
+        left: 3rem;
     }
 
     .novo-evento {
@@ -695,8 +723,28 @@ body {
     }
 
     .voltar-link{
-        bottom: -3rem;
-        left: -2rem;
+        bottom: -2rem;
+        left: -1rem;
+    }
+
+    .fone-col i{
+        font-size: 15px;
+    }
+
+    .mais i{
+        font-size: 15px;
+    }
+
+    .container{
+        padding: inherit;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: 0   ;
     }
 }
 
