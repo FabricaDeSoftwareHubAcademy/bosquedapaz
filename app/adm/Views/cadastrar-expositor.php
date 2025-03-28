@@ -210,7 +210,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
 
     
 </body>
