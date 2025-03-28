@@ -7,9 +7,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow-y: hidden;
-
 }
+body{
+    overflow: hidden;
+}
+
+/* html, body {
+    height: 100%;
+    overflow-y: auto;
+} */
+
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -39,19 +46,16 @@
     z-index: -3;
 }
 
-
 .principal {
     width: 100vw;
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    
-    
+    padding: 20px;
 }
 
-.principal .box {
+.box {
     width: 100%;
     max-width: 90%;
     height: 90%;
@@ -60,36 +64,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
-    
+    overflow-y: auto;
 }
 
 h2 {
     font-size: 2rem;
-    z-index: 10;
 }
-
-.box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
 
 .box .form-box {
     width: 50%;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
     flex-wrap: wrap;
-    
-    
+    gap: 20px;
 }
 
 .form-box form {
@@ -97,11 +85,9 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    /* background-color: aqua; */
-    
 }
 
-#form1{
+#form1 {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -119,59 +105,31 @@ h2 {
     color: #3d3d3d;
 }
 
-.input-group input{
+.input-group input,
+.input-group textarea {
     width: 100%;
     min-height: 45px;
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     outline: none;
-    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-    
-}
-
-.input-group textarea{
-    width: 100%;
-    min-height: 45px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    outline: none;
-    /* box-shadow: 0px 0.125rem 0px rgb(182, 182, 182); */
-    box-sizing: border-box;
     margin-bottom: 20px;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
 }
 
-.data-imagem{
+.data-imagem {
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
     gap: 30px;
-}
-
-
-.data-imagem .input-group input{
-    width: 100%;
-    
 }
 
 .box .btns {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 8%;
     padding-right: 50px;
-    /* background-color: #007E70; */
 }
 
 .voltar .btn-voltar {
@@ -182,13 +140,11 @@ h2 {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
 }
 
 .btn-cancelar-salvar {
     display: flex;
-    gap: 30px;  
+    gap: 30px;
 }
 
 .btn {
@@ -200,17 +156,21 @@ h2 {
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
-    
-    
 }
 
 .btn-cancelar-salvar .btn {
-    width: 150px; 
+    width: clamp(100px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
+    /* padding: 10px 20px; */
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-cancelar-salvar .btn-salvar {
@@ -227,18 +187,13 @@ h2 {
     color: white;
     font-weight: 600;
     font-size: 1rem;
-    text-transform: uppercase;
 }
 
-/* Responsividade */
 @media (max-width: 950px) {
-    /* .form-box {
-        flex-direction: column;
-    } */
-    .box .form-box{
+    .box .form-box {
         width: 100%;
     }
-    #form1, #form2 {
+    #form1 {
         width: 100%;
     }
     .btn {
@@ -249,13 +204,12 @@ h2 {
 @media (max-width: 650px) {
     .principal .box {
         padding: 10px;
-        max-height: 90vh;
-        overflow-y: auto;
     }
-    
-    
     .btn {
         width: 100%;
+    }
+    .btn-cancelar-salvar .btn {
+        width: clamp(80px, 25%, 120px); /* Ajuste proporcional em telas menores */
     }
 }
 
@@ -263,8 +217,10 @@ h2 {
     h2 {
         font-size: 1.5rem;
     }
-
     .btn {
         width: 100%;
+    }
+    .btn-cancelar-salvar .btn {
+        width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
     }
 }
