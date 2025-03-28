@@ -54,9 +54,11 @@
 }
 
 .select-cat {
-    padding: 5px 10px;
-    border: 2px solid black;
-    border-radius: .4rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
     font-weight: 500;
     font-size: .8rem;
     text-transform: capitalize;
@@ -93,9 +95,11 @@
 .input-pes {
     width: 500px;
     height: 40px;
+    padding-left: 10px;
     border-radius: 5px;
-    padding-left: 5px;
-    border: 2px solid #000;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
 }
 
 .area-all-cards {

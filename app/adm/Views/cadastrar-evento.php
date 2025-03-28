@@ -48,7 +48,7 @@
             </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
                 <div class="btn-cancelar-salvar">

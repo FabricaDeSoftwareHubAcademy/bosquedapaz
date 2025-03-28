@@ -145,15 +145,15 @@
 .nome-expo {
     margin-top: 70px;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
 .detalhes-expo {
     width: 95%;
     padding: 5px;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(0, 0, 0, 0.237);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.237);
 }
 
 .para-cate {
@@ -162,10 +162,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    color: #575757;
 }
 
 .span-cate {
     font-weight: 400;
+    color: #575757;
 }
 
 .para-color {
@@ -175,6 +177,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    color: #575757;
 }
 
 .span-color {
@@ -185,21 +188,22 @@
 }
 
 .color-amarela {
+    color: #494949;
     background-color: var(--color-rua1);
 }
 
 .color-verde {
-    color: #fff;
+    color: #494949;
     background-color: var(--color-rua3);
 }
 
 .color-roxo {
-    color: #fff;
+    color: #494949;
     background-color: var(--color-rua4);
 }
 
 .color-laranja {
-    color: #fff;
+    color: #494949;
     background-color: var(--color-rua2);
 }
 

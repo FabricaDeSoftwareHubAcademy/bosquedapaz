@@ -23,7 +23,7 @@
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <div class="formularios">
+            <form class="formularios">
 
                 <div class="form-pessoa">
                     <div class="input">
@@ -61,7 +61,7 @@
                         <label for="optionInput3">Categorias</label>
                         <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
     
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="todas_categorias" id="categorias" class="select">
 
                             <option value="">Selecione</option>
                             <option value="artesanato">Artesanato</option>
@@ -81,6 +81,7 @@
 
                     <div class="input">
                         <label>Link:</label>
+                        <script>link</script>
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
@@ -93,7 +94,7 @@
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
                         <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="" id="" class="select">
 
                             <option value="">Selecione</option>
                             <option value="trailer">Trailer</option>
@@ -105,7 +106,7 @@
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">  
+                        <select name="" id="" class="select">  
 
                             <option value="">Selecione</option>
                             <option value="sim">Sim</option>
@@ -117,7 +118,7 @@
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="" id="" class="select">
 
                             <option value="">selecione</option>
                             <option value="110v">110v</option>
@@ -136,59 +137,21 @@
 
                
 
+            </form>
+
+            <form action="" method="post" class="finalizar">
+                <div class="btn-finalizar">
+                    <button class="btn btn-cancelar"><a href="">cancelar</a></button>
+                    <button class="btn btn-salvar"><a href="">salvar</a></button>
+                </div>
+            </form>
+
+            <div class="btns">
+                <a href="gerenciar-expositores.php" class="voltar">
+                    <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
             </div>
 
-            <div class="form-finalizar">
-
-                <!-- <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div> -->
-
-                
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-
-                <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
-                        <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
-                            <button class="btn-cancelar-modal">Cancelar</button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-           
-            <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-                    
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                    
-
-                
-            </div>
-
-
-        </div>
-        <div class="btns">
-            <a href="gerenciar-expositores.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
         </div>
         
     </div>
@@ -201,7 +164,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
 
     
 </body>

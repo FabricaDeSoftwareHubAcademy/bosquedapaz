@@ -304,12 +304,14 @@ h2 {
 .botao-cancelar,
 .botao-confirmar {
     cursor: pointer;
-    width: 200px;
-    height: 60px;
+    width: 120px;
+    padding: 8px;
+    /* height: 60px; */
     border: none;
     border-radius: 10px;
     outline: none;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .botao-cancelar {

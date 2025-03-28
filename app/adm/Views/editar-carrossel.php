@@ -4,12 +4,45 @@ require_once('../Controller/Carrossel.php');
 
 $car = new Carrossel();
 
-$res = $car->buscar_id(2);
 
-$img1 = $res->img1;
-$img2 = $res->img2;
-$img3 = $res->img3;
+// busca no banco
+$res = $car->buscar_id(3);
 
+
+// caminho das imgs padrao
+$imagens = [
+    'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
+    'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+    'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg',
+];
+
+// verifica se aconsulta no db esta vazia
+if(!empty($res)){
+    //no caso de nao esta vem para aqui
+    $img1 = $res->img1;
+    $img2 = $res->img2;
+    $img3 = $res->img3;
+    
+    // ifs para saber se esta faltando uma img 
+    if(empty($res->img1)){
+        $img1 = $imagens['img1'];
+    }
+    if(empty($res->img2)){
+        $img2 = $imagens['img2'];
+    }
+    if(empty($res->img3)){
+        $img3 = $imagens['img3'];
+    }
+}
+ //no caso de estar vazio, vem para cá e carrega imgs padrao
+ else{
+    $img1 = $imagens['img1'];
+    $img2 = $imagens['img2'];
+    $img3 = $imagens['img3'];
+ }
+
+
+//verifica post para atualizar os dados do carrossel
 if (isset($_POST['editar'])){
     //caminho padrao das imagens
     $pasta = '../../../Public/imgs/uploads-carrosel/';
@@ -77,9 +110,15 @@ if (isset($_POST['editar'])){
     }else {
         $car->img3 = $res->img3;
     }
+
+    print_r($car);
     
-    $car->atualizar();
+    if($car->atualizar()){
+        echo "1";
+    }
 }
+
+
 
 ?>
 
@@ -112,6 +151,8 @@ if (isset($_POST['editar'])){
             
             <h1 class="titulo">editar carrosel</h1>
 
+
+            
             <!-- local de uploads de imgs para o carrossel -->
             <form action="" method="post" class="formulario-ca" enctype='multipart/form-data'>
                 <section class="up-imgs">

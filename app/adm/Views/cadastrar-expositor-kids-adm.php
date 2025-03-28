@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">v
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor-kids.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -30,7 +30,7 @@
                 <h1 class="title-text">CADASTRO DE EXPOSITOR KIDS</h1>
             </div>
 
-            <div class="formularios">
+            <form class="formularios">
 
                 <div class="form-pessoa">
                     <div class="input">
@@ -95,58 +95,28 @@
 
 
 
-            </div>
+            </form>
 
-            <div class="form-finalizar">
-
-                <!-- <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div> -->
-
-
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
+            <form action="" method="post" class="finalizar">
+                <div class="btn-finalizar">
+                    <button class="btn btn-cancelar"><a href="">cancelar</a></button>
+                    <button class="btn btn-salvar"><a href="">salvar</a></button>
                 </div>
+            </form>
 
-                <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
-                        <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
-                            <button class="btn-cancelar-modal">Cancelar</button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                    </div>
-
-
-
-
-                </div>
-
-
-            </div>
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
+                <div class="btn-cancelar-salvar">
+                    <button type="button" class="btn btn-cancelar">
+                        <a href="./Area-Adm.php">Cancelar</a>
+                    </button>
+
+                    <button type="submit" class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div>
+            </div>
             </div>
 
         </div>

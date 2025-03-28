@@ -47,7 +47,7 @@
                 <td class="barraca-col">6</td>
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -60,7 +60,7 @@
                 <td class="barraca-col">12</td>
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -74,7 +74,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -88,7 +88,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -102,7 +102,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -116,7 +116,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -130,7 +130,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -144,7 +144,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -158,7 +158,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -172,7 +172,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -186,7 +186,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -200,7 +200,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
