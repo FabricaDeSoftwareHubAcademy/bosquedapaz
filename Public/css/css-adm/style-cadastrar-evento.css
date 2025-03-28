@@ -161,6 +161,7 @@ h2 {
 .btn-cancelar-salvar .btn {
     width: clamp(100px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
     /* padding: 10px 20px; */
+    height: clamp(40px, 15%, 30px);
     display: flex;
     align-items: center;
     justify-content: center;
