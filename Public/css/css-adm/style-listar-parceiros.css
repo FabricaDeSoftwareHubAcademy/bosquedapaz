@@ -171,14 +171,6 @@ h2 {
     border-radius: 10px;
 }
 
-.acao-texto-recusar {
-    width: 80%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 26px;
-    /* background-color: red; */
-}
-
 .acao-botoes-recusar {
     width: 90%;
     height: 45%;
@@ -303,7 +295,7 @@ h2 {
 .botao-confirmar {
     cursor: pointer;
     width: 200px;
-    height: 60px;
+    height: 50px;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -779,19 +771,19 @@ table tbody tr:nth-child(even) {
     /* Modal de Deletar (Recusar) para telas muito pequenas (até 480px) */
     @media (max-width: 480px) {
         #modal-recusar .acao-content-recusar {
-            width: 90%;
+            width: 140%;
             /* Aumenta o modal para 90% da tela */
-            padding: 10px;
+            padding: 15px;
             /* Reduz o padding para telas pequenas */
         }
 
         .acao-texto-recusar {
-            font-size: 16px;
+            font-size: 20px;
             /* Reduz o tamanho da fonte do texto */
         }
 
         .acao-botoes-recusar {
-            gap: 15px;
+            gap: 7px;
             /* Diminui o espaçamento entre os botões */
         }
 
@@ -842,7 +834,14 @@ table tbody tr:nth-child(even) {
         .botao-confirmar {
             width: 120px;
             /* Botão menor */
-            font-size: 12px;
+            font-size: 14px;
+            /* Tamanho menor do texto */
+        }
+
+        .botao-cancelar {
+            width: 120px;
+            /* Botão menor */
+            font-size: 14px;
             /* Tamanho menor do texto */
         }
     }
