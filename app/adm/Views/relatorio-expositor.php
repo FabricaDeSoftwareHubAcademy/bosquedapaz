@@ -38,7 +38,6 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Rascunho  -->
               <tr>
                 <td class="usuario-col">01</td>
                 <td>Carla Costa</td>
@@ -209,7 +208,7 @@
           </table>
         </div>
         <div class="btns">
-          <a href="gerenciar-relatorios.php" class="voltar">
+          <a href="Area-Adm.php" class="voltar">
             <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
           </a>
         </div>
