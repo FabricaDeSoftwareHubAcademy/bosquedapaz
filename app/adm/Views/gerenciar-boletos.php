@@ -1,3 +1,21 @@
+<?php
+$host = 'localhost'; // seu servidor MySQL, pode ser localhost
+$usuario = 'root';   // seu usuário do banco de dados
+$senha = '';         // sua senha (se houver)
+$banco = 'expositor_teste'; // nome do banco de dados
+
+// Criar a conexão
+$conn = new mysqli($host, $usuario, $senha, $banco);
+
+// Verificar a conexão
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM expositor_lista";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -69,87 +87,35 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                        </tr>
+                        <?php if ($result->num_rows > 0): ?>
+                            <?php while ($row = $result->fetch_assoc()): ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($row['nome']); ?></td>
+                                    <td><?php echo date("d/m/Y", strtotime($row['vencimento'])); ?></td>
+                                    <td><?php echo htmlspecialchars($row['referencia']); ?></td>
+                                    <td><?php echo number_format($row['valor'], 2, ',', '.'); ?></td>
+<td>
+    <button class="status <?php echo ($row['status'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>" 
+            onclick="toggleStatus(this, <?php echo $row['id_expositor']; ?>)">
+        <?php echo ($row['status'] == 'pago') ? 'Pago' : 'Pendente'; ?>
+    </button>
+</td>
+
+
+                                    <td>
+                                        <a href="editar.php?id=<?php echo $row['id_expositor']; ?>" class="boleto-botao-editar">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="6">Nenhum boleto encontrado.</td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
+
                 </table>
             </div>
         </section>
@@ -169,5 +135,7 @@
     <div class="boleto-seta-voltar">
         <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
     </div>
+
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/troca-status-boleto.js"></script>
 </body>
