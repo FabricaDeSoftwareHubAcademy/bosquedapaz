@@ -56,12 +56,26 @@
                         <a href="./Area-Adm.php">Cancelar</a>
                     </button>
 
-                    <button class="btn btn-salvar">
-                        <a href="">Salvar</a>
+                    <button class="open-modal" data-modal="modal-deleta">
+                        Salvar
+                    </button>
+                        
                 </div>
             </div>
         </div>
         </div>
+
+        <dialog id="modal-deleta" class="modal-deleta">
+          <div class="acao-recusar">
+            <div class="acao-content-recusar">
+                <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
+                <div class="acao-botoes-recusar">
+                  <!-- <button class="close-modal" data-modal="modal-deleta">cancelar</button> -->
+                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+                </div>
+            </div>
+          </div>
+        </dialog>
     </main>
 
     <div class="bolas-fundo">
@@ -72,6 +86,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
 
 </html>

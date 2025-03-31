@@ -75,10 +75,13 @@
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">
                         <span class="close-modal" data-modal="modal-fotos">&times;</span>
+
                         <h3>Adicionar Fotos ao Evento</h3>
                         <p>Limite de 5 Fotos por Evento</p>
-                        <input type="file" multiple>
-                        <button class="submit-fotos">Adicionar Fotos</button>
+                        <form action="">
+                            <input type="file" multiple>
+                            <button class="submit-fotos">Adicionar Fotos</button>
+                        </form>
                     </div>
                 </div>
             </div>
