@@ -750,7 +750,7 @@ table tbody tr:nth-child(even) {
         overflow-x: auto;
         overflow-y: auto;
         max-height: 50vh;
-        padding: 10px;
+        padding: initial;
         border: 1px solid #ccc;
     }
 
