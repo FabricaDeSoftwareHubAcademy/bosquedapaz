@@ -462,8 +462,16 @@ body{
     }
 
     .btns .voltar{
-        bottom: -5px;
-        left: 3%;
+        bottom: revert-layer;
+        left: -2%;
+    }
+
+    .voltar{
+        width: 20%;
+    }
+
+    .voltar img{
+        width: 30%;
     }
 }
 
@@ -541,6 +549,11 @@ body{
 
     .bolas-fundo .bola-rosa{
         bottom: -5%;
+    }
+
+    .btns .voltar{
+        bottom: -35px;
+        left: -2%;
     }
 }
 
@@ -697,9 +710,9 @@ body{
     }
 
     .btns .voltar{
-        width: 50%;
-        bottom: -3rem;
-        left: -3rem;
+        width: 40%;
+        bottom: -2.9rem;
+        left: -7%;
     }
 
     .fone-col i{
