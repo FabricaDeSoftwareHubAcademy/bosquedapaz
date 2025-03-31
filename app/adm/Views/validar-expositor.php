@@ -214,7 +214,7 @@
     </div>
 
     <div class="decoracoes-vexp">
-        <a href="gerenciar-relatorios.php">
+        <a href="lista-de-espera.php">
             <img src="../../../Public/imgs/img-validacao-expositor/voltar.svg" alt="setaVoltar" class="botao-voltar-vexp">
         </a>
         <img src="../../../Public/imgs/img-validacao-expositor/detalhe1.svg" alt="" class="decoracao1-vexp">
