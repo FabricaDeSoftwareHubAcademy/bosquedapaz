@@ -220,6 +220,9 @@ h2 {
 .modal::backdrop {
     background: rgba(0, 0, 0, 0.521);
 }
+
+
+
 @media (max-width: 950px) {
     .box .form-box {
         width: 100%;
