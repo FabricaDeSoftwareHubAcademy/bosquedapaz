@@ -78,7 +78,7 @@
 
                         <h3>Adicionar Fotos ao Evento</h3>
                         <p>Limite de 5 Fotos por Evento</p>
-                        <form action="">
+                        <form method="POST" class="form-img">
                             <input type="file" multiple>
                             <button class="submit-fotos">Adicionar Fotos</button>
                         </form>
