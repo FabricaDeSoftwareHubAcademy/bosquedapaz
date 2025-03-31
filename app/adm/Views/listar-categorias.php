@@ -46,7 +46,7 @@
                                         <i class="fa-solid fa-pen-to-square "></i>
                                     </a>
                                     <a class="delete-icon">
-                                    <i class="fa-solid fa-trash open-custom-modal"></i>
+                                        <i class="fa-solid fa-trash open-custom-modal"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -252,9 +252,9 @@
     </main>
 
     <div class="bolas-fundo">
-        <img class="bola-azul1" src="../img/Elemento1.FolhaAzul.png" alt="">
-        <img class="bola-azul2" src="../img/Elemento2.FolhaAzul.png" alt="">
-        <img class="bola-azul3" src="../img/Elemento3.ElipseAzul.png" alt="">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js//js-adm/status-colaborador.js"></script>

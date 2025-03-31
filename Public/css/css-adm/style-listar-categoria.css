@@ -149,10 +149,16 @@ button:hover {
 }
 
 .search-bar {
+    /* position: sticky; */
+    top: 0;
+    background: white;
+    /* z-index: 1000; */
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
 .search-bar label {
@@ -329,27 +335,41 @@ table tbody tr:nth-child(even) {
     position: relative;
     top: -90vh;
     z-index: -3;
+    /* animation: bolaAnim 5s infinite; */
 }
 
-.bolas-fundo .folhaAzul1-yan {
+/* @keyframes bolaAnim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */
+
+.bolas-fundo .bola-verde1 {
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .folhaAzul2-yan {
+.bolas-fundo .bola-verde2 {
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .folhaRosa-yan {
+.bolas-fundo .bola-rosa {
     position: absolute;
-    right: -100px;
-    bottom: -100px;
+    right: 0px;
+    bottom: 0px;
     z-index: -3;
+    /* top: 55%; */
 }
 
 .btns {
@@ -428,70 +448,392 @@ table tbody tr:nth-child(even) {
     background: darkred;
 } */
 
-@media (max-width: 1042px) {
-    .principal .box {
+/* 📱 Ajustes para telas menores que 1200px */
+@media (max-width: 1199.98px) {
+    body {
+        max-height: 50vh;
+        overflow-y: auto;
+        background-color: aqua;
+    }
+
+    .container {
+        padding: 20px;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-bar input {
+        width: 80%;
+        font-size: 18px;
+        padding: 12px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 55vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 1000px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th{
         padding: 15px;
     }
 
-    h2 {
-        font-size: 22px;
+    .collaborators-table td{
+        padding: 12px;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        /* padding: 12px; */
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 16px;
+    }
+
+    .status {
+        font-size: 14px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .novo-evento {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .principal .box{
+        margin-top: 40px;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: -15%;
+    }
+
+    .voltar-link{
+        width: 70%;
+        bottom: -40px;
+    }
+
+    .email-col{
+        overflow-x: auto;
+    }
+
+    .btns .voltar{
+        bottom: revert-layer;
+        left: -2%;
+    }
+
+    .voltar{
+        width: 20%;
+    }
+
+    .voltar img{
+        width: 30%;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 992px */
+@media (max-width: 991.98px) {
+    body {
+        background-color: blue;
+    }
+
+    .titulo {
+        font-size: 28px;
     }
 
     .search-bar input {
         width: 100%;
-    }
-}
-
-@media(max-width: 720px) {
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-bar label {
-        font-size: 14px;
-    }
-
-    .collaborators-table {
-        font-size: 12px;
-    }
-
-    .collaborators-table th,
-    .collaborators-table td {
-        padding: 6px;
-    }
-
-    .collaborators-table th {
-        font-size: 12px;
-    }
-
-    .btn-voltar {
-        display: none;
-    }
-
-    .email-col,
-    .fone-col,
-    .usuario-col,
-    label {
-        display: none;
-    }
-
-    .bolas-fundo {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 18px;
-    }
-
-    .search-bar input {
-        font-size: 12px;
+        font-size: 16px;
+        padding: 10px;
+        outline: none;
     }
 
     .search-bar .search-button {
+        width: auto;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 60vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 800px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 10px;
         font-size: 12px;
-        padding: 5px 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 14px;
+    }
+
+    .status {
+        font-size: 12px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .novo-evento {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+
+    .principal .box{
+        height: 100%;
+    }
+
+    .voltar-link{
+        bottom: -60px
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: -5%;
+    }
+
+    .btns .voltar{
+        bottom: -30px;
+        left: -1.8%;
+    }
+
+    .voltar{
+        width: 20%;
+    }
+
+    .voltar img{
+        width: 40%;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 768px */
+@media (max-width: 767.98px) {
+    body {
+        background-color: green;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 50vh;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 8px;
+        font-size: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .novo-evento {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 576px */
+@media (max-width: 575.98px) {
+    body {
+        overflow-y: auto;
+        max-height: 60vh;
+        background-color: red;
+    }
+
+    .principal .box{
+        margin-top: 40px;
+        height: 90vh;
+        padding: 0;
+        width: 88%;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        position: relative;
+        right: 3px;
+        width: 100%;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 40vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 400px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 12px;
+        font-size: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        top: -3.5px;
+        font-size: 10px;
+    }
+
+    .status {
+        position: relative;
+        right: 4px;
+        width: 50px;
+        font-size: 8px;
+    }
+
+    .botoes {
+        width: 50%;
+        bottom: 2rem;
+        display: flex;
+        justify-content: right;
+        margin-top: 20px;
+        left: 3rem;
+    }
+
+    .novo-evento {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .btns .voltar{
+        width: 40%;
+        bottom: -2.8rem;
+        left: -7%;
+    }
+
+    .fone-col i{
+        font-size: 15px;
+    }
+
+    .mais i{
+        font-size: 15px;
+    }
+
+    .container{
+        padding: inherit;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: -5%;
+    }
+
+    .voltar img{
+        width: 30%;
     }
 }
