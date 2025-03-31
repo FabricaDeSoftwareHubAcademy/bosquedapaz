@@ -22,9 +22,12 @@
             <div class="forma-4-cb">
                 <img src="../../../Public/imgs/edicoes-passadas-img/edpassForma4.svg" alt="elemento4">
             </div>
+
+            
             <button id="btn-voltar-cb">
                 <img href="#"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
             </button>
+
         <section/>
 
         <main class="main-cb">
@@ -93,6 +96,7 @@
                     </div>
                 </form>
             </nav>
+
         </main>
 </body>
 </html> 
