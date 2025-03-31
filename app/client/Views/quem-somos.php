@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <?php include "../../../Public/assets/home/menu-home.html"; ?>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-quem-somos.css">
-   
+    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
     <title>Bosque da Paz</title>
 </head>
 <body>
-    <?php include "../../../Public/assets/home/menu-home.html"; ?>
+  
 
     <main class="section-bosque-quem-somos">
         <div class="div-text-sobre">
@@ -107,8 +110,9 @@
 
     <!--------------------------------->
   
-
+    <div class="rodape-quem-somos">
     <?php include "../../../Public/assets/home/rodape.html"; ?>
+    </div>
 
 </body>
 </html>
