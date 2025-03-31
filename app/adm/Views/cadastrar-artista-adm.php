@@ -107,7 +107,7 @@
 
 
 
-                    <label for="tipo-expo">Tempo médio da sua apresentação?</label>
+                    <label for="tipo-expo" class="tipo-expo">Tempo médio da sua apresentação?</label>
                     <div class="custom-dropdown">
                         <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
                         <select name="todas_categorias" id="todas_categorias" class="select">
@@ -120,7 +120,7 @@
                         </select>
                     </div>
 
-                    <label for="energia">Qual valor do cache?</label>
+                    <label for="energia" class="energia">Qual valor do cache?</label>
                     <div class="custom-dropdown">
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
@@ -135,27 +135,17 @@
 
                 </div>
 
-            </form>
-
-            <form action="" method="post" class="finalizar">
                 <div class="btn-finalizar">
                     <button class="btn btn-cancelar"><a href="">cancelar</a></button>
                     <button class="btn btn-salvar"><a href="">salvar</a></button>
                 </div>
             </form>
 
+
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
-                <div class="btn-cancelar-salvar">
-                    <button type="button" class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button type="submit" class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
             </div>
             </div>
             

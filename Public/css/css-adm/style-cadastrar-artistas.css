@@ -87,6 +87,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 80%;
+    position: relative;
+    left: 8%;
 }
 
 .formularios input {
@@ -101,8 +103,6 @@ body {
     outline: none;
 }
 
-
-
 .input-group input {
     width: 40vh;
     height: 47px;
@@ -114,11 +114,6 @@ body {
     border-right: 2px solid #9d9fa1;
 }
 
-.caixa-formulario label {
-    font-size: 14px;
-    margin-bottom: -10px;
-    margin-left: 10px;
-}
 
 .caixa-contato {
     position: relative;
@@ -128,12 +123,6 @@ body {
 .caixa-contato input {
     width: 170px;
     margin: 20px;
-}
-
-.caixa-contato label {
-    font-size: 14px;
-    margin-bottom: -20px;
-    margin-left: 20px;
 }
 
 .carregar-src {
@@ -158,12 +147,18 @@ body {
     top: 5px;
 }
 
-.form-opc label {
-    font-size: 14px;
-    margin-bottom: -8px;
-    margin-left: 10px;
+#tipo-expo{
+    background-color: red;
 }
 
+.energia{
+    position: relative;
+    left: 10%;
+}
+.form-expo label{
+    position: relative;
+    left: 5%;
+}
 
 
 label#salvar-btn {
@@ -267,6 +262,9 @@ label#salvar-btn {
 /******* fim modal ******/
 
 
+
+
+
 .custom-dropdown input {
     width: 40vh;
     height: 47px;
@@ -309,12 +307,14 @@ label#salvar-btn {
 
 /********** novo botao de salvar/cancelar ******/
 
-.btn-finalizar{
-    display: flex;
-    position: relative;
-    left: 150%;
-    top: 50px;
+div.btn-finalizar{
+    height: 45px;
     gap: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 35vh;
+    left: 10px;
 }
 
 .btn-finalizar 
