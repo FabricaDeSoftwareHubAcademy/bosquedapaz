@@ -23,7 +23,7 @@
 }
 
 .modal-content {
-    height: 70%;
+    height: auto;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -241,23 +241,3 @@ select {
     display: none;
   }
 
-
-@media (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        padding: 15px;
-    }
-    
-    .titulo {
-        font-size: 20px;
-    }
-    
-    .input-group input {
-        padding: 8px;
-    }
-    
-    .botoes button {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-}
