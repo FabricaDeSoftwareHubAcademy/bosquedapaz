@@ -5,6 +5,14 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
  }
+
+ .section-parce2{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
  
 .div-img-animation{
     display: flex;
@@ -69,7 +77,7 @@
     width: 50%;
     margin-left: 2%;
     margin-bottom: 2%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ff5029;
 
 }
@@ -95,13 +103,21 @@
     animation: degrade-animado 5s infinite alternate;*/
 }
 .div-nt h2{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 200px;
     color: #ffffff;
     position: relative;
-    
-
 }
+
+.section-parce2 h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #000000;
+    position: relative;
+}
+
+
+
 @keyframes degrade-animado{
     0%{
         background-position-x: 0%;
@@ -157,11 +173,6 @@
         display: flex;
         flex-direction: column;
         background-color: #8b3ac4;
-        /*
-        background-image: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134), rgb(0, 145, 255));
-        background-size: 500% 100%;
-        animation: degrade-animado 10s infinite alternate;*/
-
 
     }
 
@@ -171,8 +182,8 @@
         color: #ffffff;
         position: relative;
         width: 100%;
-        font-size: 3rem;
-        top: 100px;
+        font-size: 2rem;
+        top: 50px;
         align-items: center;
         justify-content: center;
         
@@ -207,91 +218,17 @@
     color: #8b3ac4;
     background-clip: none;
     -webkit-background-clip: text;
-text-decoration: none;}
-    /*
-    text-transform: uppercase;
-    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134), rgb(0, 145, 255));
-    background-size: 500% 100%;
-    animation: degrade-animado 10s infinite alternate;
-    background-clip: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-radius: 8px;
-    /*
-   
+text-decoration: none;
+
 }
-   /*
-   .section-expositor-quem-somos .botao-expositor .botao{
-    color: #8b3ac4;
-    text-transform: uppercase;
-    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134), rgb(0, 145, 255));
-    background-size: 500% 100%;
-    animation: degrade-animado 10s infinite alternate;
-    background-clip: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    position: relative;
-    left: 22%;
     
-   
-   }
-   */
     
 .botao-expositor:hover{
     transition: .2s ;
     cursor: pointer;
     transform: scale(1.05);
-}
-/*
-.titulo-nossa-história{
-    background-color: #8b3ac4;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.5rem;
-    width: 25%;
-    height: 70vh;
-    margin-top: 10%;
-    align-items: center;
-    background-image: linear-gradient(to left, rgb(25, 59, 171), rgb(0, 123, 255), rgb(8, 172, 112), rgb(22, 144, 8));
-    background-size: 500% 100%;
-    animation: degrade-animado 10s infinite alternate;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+} 
 
-
-}
-.titulo-nossa-história h4{
-    display: flex;
-    margin-top: 60%;
-    color: #ffffff;
-}*/
-.parceiros-quem-somos{
-    height: 50;
-}
-.parceiros-quem-somos .titulo-parceiros-quem-somos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2.5rem;
-    position: relative;
-    width: 100%;
-    margin-top: 250px;
-    color: rgb(0, 123, 255);
-    font-weight: bold;
-}
-.fotos-parceiros-quem-somos{
-    display: flex;
-    margin-top: 5%;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    height: 300px;
-    flex-wrap: wrap;
-}
-.fotos-parceiros-quem-somos .foto-zuada{
-    margin-left: -2.5%;
-}
 @media(max-width:1669px){
 
     .div-img-animation{
@@ -461,11 +398,11 @@ text-decoration: none;}
     justify-content: center;
     position: relative;
     left: 0%;
-    top: 13%;
+    top: 6%;
 }
 .section-expositor-quem-somos .botao-expositor{
     left: 0%;
-    top: 12%;
+    top: 5%;
     height: 15%;
 }
 .section-expositor-quem-somos .expositor{

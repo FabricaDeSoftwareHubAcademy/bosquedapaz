@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-quem-somos.css">
-    <link rel="stylesheet" href="../../../Public/css/menu-home.css">
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
+
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
+
+
     <title>Bosque da Paz</title>
 </head>
 <body>
+
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
+    <li> kkkkkk</li>
 
     <main class="section-bosque-quem-somos">
         <div class="div-text-sobre">
@@ -103,7 +109,10 @@
 
 
     <!--------------------------------->
-    <?php include "../../../Public/assets/home/parceiros.html" ?>
+    <section class="section-parce2">
+        <?php include "../../../Public/assets/home/parceiros.html" ?>
+    </section>
+    
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 
