@@ -506,7 +506,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin-top: -100%;
         position: relative;
         text-align: center;
-        font-size: 20px;
+        font-size: 22px;
         z-index: 2;
         margin-left: -40%;
         font-weight: 500;
@@ -518,9 +518,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     
     .box-cb{
         width: 85%;
-        height: 40%;
+        height: 39%;
         max-width: 2000px;
-        margin-top: -160%;
+        margin-top: -125%;
         z-index: 2;
         display: flex;
         align-items: center;
@@ -557,7 +557,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     
     .form-cb{
-        width: 80%;
+        width: 90%;
         height: 80%;
         margin-top: 5%;
         margin-left: 5%;
@@ -622,7 +622,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     
     .area-div-1-cb{
-        width: 45%;
+        width: 60%;
         height: 90%;
         display: flex;
         flex-direction: column;
@@ -632,7 +632,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     
     .area-div-2-cb{
-        width: 45%;
+        width: 60%;
         height: 80%;
         margin-top: -28%;
         display: flex;
@@ -645,7 +645,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30%;
+        width: 40%;
         height: 10%;
         gap: 30px;
         margin-left: 25%;
@@ -660,7 +660,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     
     .pesquisa-cb input {
-        width: 40%;
+        width: 60%;
         height: 30px;
         border-radius: 5px;
         padding-left: 10px;
@@ -712,11 +712,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .label-cb{
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #file-text {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .img-cb{
