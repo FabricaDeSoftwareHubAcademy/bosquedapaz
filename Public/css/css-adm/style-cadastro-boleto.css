@@ -638,7 +638,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin-left: 10%;
+        margin-left: 50%;
     }
 
     .area-btn-cb{
