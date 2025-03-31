@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.principal{
+    width: 100%;
+    height: 87.8vh;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagens */
+.img1{
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img2{
+    position: fixed;
+    top: 25vh;
+    left: 92vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3{
+    position: fixed;
+    top: 72vh;
+    left: 88vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3 img{
+    width: 70%;
+    height: auto;
+}
+
+/* Box */
+.box-principal{
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+    border-radius: 12px;
+    background-color: rgba(248, 245, 246, 0.65);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Elementos da Box */
+.linha{
+    width: 2px;
+    height: 100%;
+    position: relative;
+    left: 39%;
+    background-color: rgba(43, 43, 43, 0.295);
+}
+
+.area-infs{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+}
+
+.area-infs form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(137, 43, 226, 0);
+}
+
+/* Lado Esquerdo */
+.lado-esquerdo{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(95, 158, 160, 0);
+}
+
+.area-logo{
+    width: 100%;
+    height: 40%;
+    background-color: #5cb74a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.area-logo p{
+    position: relative;
+    top: 2.5rem;
+}
+
+.uploads{
+    width: 200px;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    right: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.uploads:hover{
+    transform: scale(1.1);
+}
+
+.img-input{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 255, 0);
+    position: absolute;
+    cursor: pointer;
+}
+
+.uploads img{
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.562);
+}
+
+.text-produtos{
+    width: 100%;
+    height: 13%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-produtos h1{
+    font-size: 26   px;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.area-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.imgs-produtos {
+    width: calc(33.3% - 10px); 
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    overflow: hidden; 
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562);
+}
+
+.imgs-produtos:hover{
+    transform: scale(1.1);
+}
+
+.img-produto-input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.imgs-produtos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+/* Lado Direito */
+.lado-direito{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 228, 196, 0);
+}
+
+/* Elementos do Lado Direito */
+.area-h1{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-h1 h1{
+    font-size: 30px;
+    position: relative;
+    top: 2rem;
+}
+
+.area-text{
+    width: 100%;
+    height: 32%;
+    background-color: rgba(255, 248, 220, 0);
+    margin-top: 1.8rem;
+}
+
+.area-text h1, .sobre, .input-texto{
+    margin-left: 1rem;
+}
+
+.area-text p{
+    margin-top: 0.5rem;
+}
+
+.input-texto{
+    width: 78%;
+    height: 50%;
+    border: none;
+    outline: none;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    resize: none;
+    box-shadow: 2px 2px 0px rgb(182, 182, 182);
+}
+
+.area-cat-num{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    background-color: rgba(100, 148, 237, 0);
+}
+
+.cat{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(137, 43, 226, 0);
+}
+
+.cat h3, .p-cat{
+    margin-left: 1rem;
+}
+ 
+.num{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0);
+}
+
+.area-corR{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+.cor-rua{
+    width: 30%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5CB74A;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+ 
+
+.area-inf-corR{
+    width: 100%;
+    display: flex;
+    background-color: #5cb74a00;
+}
+
+.area-total-form{
+    width: 80%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 1rem;
+}
+
+.h3-infs-pessoais{
+    width: 100%;
+
+}
+
+.area-inputs{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.area-inputs label{
+    font-size: 14px;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px rgb(182, 182, 182);
+}
+ 
+.area-buttons{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttons{
+    color: white;
+    width: 15%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    transition: all .2s ease-in-out;
+    margin-bottom: 2rem;
+    position: relative;
+    right: 10rem;
+}
+
+.buttons:hover{
+    transform: scale(1.1);
+}
+
+#button-cancelar{
+    background-color: #FF3877;
+}
+#button-salvar{
+    background-color: #007E70;
+}
