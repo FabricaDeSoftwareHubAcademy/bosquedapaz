@@ -508,14 +508,14 @@
 
     
 
-    .dlog-modalres-card-ProEv {
+    .dlog-modal-card-ProEv {
         width: 90%;
         height: 25%;
         left: 5%;
         top: 35%;
     }
 
-    .div-decorativa-modalres {
+    .div-decorativa-modal {
         bottom: 90%;
         height: 10%;
 
@@ -524,61 +524,62 @@
         }
     }
 
-    .div-decorativa2-modalres {
+    .div-decorativa2-modal {
         top: 90%;
         left: 52%;
 
-        #linha-dec2-modalres {
+        #linha-dec2-modal {
             display: none;
         }
 
-        #linha-dec3-modalres {
+        #linha-dec3-modal {
             display: none;
         }
 
-        #linha-dec4-modalres {
+        #linha-dec4-modal {
             display: none;
         }
     }
 
-    .title-atracao-modalres {
+    .title-atracao-modal {
         font-size: 16px;
     }
 
-    .p-atracao-modalres {
-        font-size: 7px;
+    .p-atracao-modal {
+        font-size: 6px;
         width: 150px;
         /* left: 55%;     */
+        top: 25%;
     }
 
-    .area-img-modalres-ProEv {
+    .area-img-modal-ProEv {
         left: 2%;
     }
 
-    #b-sari-modalres {
+    #b-sari-modal {
         left: 90%;
         top: 5%;
     }
 
-    #b-sari-modalres img {
+    #b-sari-modal img {
         width: 70%;
         height: auto;
     }
 
-    .div-decorativa2-modalres {
+    .div-decorativa2-modal {
         width: 50%;
         height: 30%;
-        background-color: rgba(0, 126, 112, 1);
+        background-color: #3F49EA;
         position: relative;
         top: 55%;
         left: 65%;
         transform: rotate(-25deg);
     }
 
-    .div-decorativa-modalres {
+    .div-decorativa-modal {
         width: 30%;
         height: 30%;
-        background-color: rgba(0, 126, 112, 1);
+        background-color: #3F49EA;
         position: relative;
         bottom: 20%;
         right: 5%;
