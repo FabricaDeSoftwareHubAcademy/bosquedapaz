@@ -103,12 +103,10 @@
                                     <i id="iconOlho" class="bi bi-eye-slash"></i>
                                 </div>
                             </div>
-                            <div class="area-total-input">
-                                <label class="label-cad" for="imagem">Foto de Perfil</label>
-                                <div class="area-input">
-                                    <i class="bi bi-camera"></i>
-                                    <input class="input" type="file" name="imagem" id="imagem" accept="image/*" required><br><br>
-                                </div>
+                            <div class="area-total-input-2">
+                                <label for="imagem" class="uploads">
+                                    <input type="file" name="imagem" id="imagem" class="img-input" multiple>
+                                </label>
                             </div>   
                         </form>
                     </div>
