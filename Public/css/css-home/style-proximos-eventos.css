@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('../menu-home.css');
+@import url('style-menu.css');
 
 * {
     padding: 0;
@@ -8,10 +8,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 /* Area Principal */
 .area-principal-ProEv {
     width: 100%;
-    height: 843px;
+    height: 100vh;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     align-items: center;
@@ -23,7 +24,7 @@
 .formas-decorativas-ProEv1 {
     position: fixed;
     top: 30vh;
-    right: 83vw;
+    right: 85vw;
     width: 20vw;
     z-index: -1;
 }
@@ -62,11 +63,11 @@
 /* Box/Emementos da Box Decorativas */
 .box-decorativa-ProEv {
     width: 90%;
-    height: 92%;
+    height: 83%;
     background-color: rgba(0, 255, 255, 0);
     z-index: 1;
     position: absolute;
-    top: 6%;
+    top: 12%;
     left: 5%;
     overflow: hidden;
 }
@@ -141,11 +142,11 @@
 /* Box Peincipal */
 .box-principal-ProEv {
     width: 90%;
-    height: 92%;
-    background-color: rgba(255, 255, 255, 0);
+    height: 86%;
+    background-color: rgba(255, 0, 0, 0);
     z-index: 2;
     position: absolute;
-    top: 6%;
+    top: 12%;
     left: 5%;
     display: flex;
     align-items: flex-start;
@@ -940,7 +941,7 @@
 }
 
 /* Responsividades: */
-/* Responsividade Celular: */
+/* Responsividade Celular: Principalmente Iphone SE */
 @media screen and (max-width: 720px) {
     .area-setaProEv {
         position: relative;
@@ -958,8 +959,8 @@
     .box-decorativa-ProEv {
         background-color: #f8f5f6c3;
         border-radius: 0px 0px 10px 10px;
-        height: 48%;
-        top: 50%;
+        height: 61%;
+        top: 66%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -967,10 +968,10 @@
     }
 
     .box-principal-ProEv {
-        height: 50%;
+        height: 60%;
         background-color: #f8f5f6c3;
         border-radius: 10px 10px 0px 0px;
-        top: 2%;
+        top: 12%;
     }
 
     .area-atracao-evento-ProEv {
@@ -1184,6 +1185,20 @@
     }
 }
 
+/* Definição para os outros celulares */
+@media (min-width: 390px) and (max-width: 430px){
+    .box-principal-ProEv {
+        height: 46%;
+    }
+
+    .box-decorativa-ProEv {
+        height: 47%;
+        top: 57%;
+    }
+    
+}
+
+
 /* Responsividade Ipad Mini: */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .area-principal-ProEv {
@@ -1213,12 +1228,11 @@
     }
 
     .titulo-principal-ProEv {
-        font-size: 60px;
+        font-size: 28px;
         top: 35%;
         right: 25%;
-        transform: rotate(20.5deg);
+        transform: rotate(20deg);
     }
-
     .bolota-decorativa-Pro-Ev {
         display: none;
     }
@@ -1408,7 +1422,6 @@
     .p-atracao-modal2 {
         font-size: 14px;
         width: 320px;
-        /* left: 55%;     */
     }
 
     .area-img-modal2-ProEv {
@@ -1488,9 +1501,9 @@
     }
 
     .titulo-principal-ProEv {
-        font-size: 80px;
-        top: 35%;
-        right: 22%;
+        font-size: 45px;
+        top: 37%;
+        right: 24%;
         transform: rotate(20.5deg);
     }
 
@@ -1697,6 +1710,20 @@
     }
 }
 
+/* Responsividade Surface Duo */
+@media (max-width: 720px) and (min-width: 540px) {
+    .box-principal-ProEv {
+        height: 74%;
+        top: 12%;
+    }
+
+    .box-decorativa-ProEv {
+        height: 61%;
+        top: 80%;
+    }
+}
+
+/* Responsividade Nex Hub */
 @media (min-width: 1024px) and (max-height: 600px) {
 
     .box-principal-ProEv {
@@ -1709,10 +1736,10 @@
     }
 
     .titulo-principal-ProEv {
-        transform: rotate(14deg);
-        top: 40%;
-        font-size: 40px;
-        right: 35%;
+        transform: rotate(13deg);
+        top: 30%;
+        font-size: 30px;
+        right: 31%;
     }
 
     .bolota-decorativa-Pro-Ev {
@@ -1725,12 +1752,17 @@
         height: 80%;
         top: 14%;
         left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .banner-evento-ProEv {
         background-color: rgba(137, 43, 226, 0);
-        width: 100%;
+        width: 75%;
         height: 50%;
+        position: relative;
+        bottom: 4rem;
     }
 
     .infs-evento-ProEv {
@@ -1738,7 +1770,7 @@
     }
 
     .atracao-ProEv {
-        top: -4%;
+        top: 10%;
     }
 
     .area-atracao-evento-ProEv {
@@ -1747,9 +1779,10 @@
 
     .div-cards-atracoes-ProEv {
         background-color: rgba(0, 0, 255, 0);
-        top: 0%;
-    }
+        top: 13%;
+        height: 81%;
 
+    }
     .card-atracao-ProEv {
         width: 40%;
         height: 75%;
@@ -1853,6 +1886,7 @@
     }
 }
 
+/* Responsividade Nex Hub Max */
 @media (min-width: 1280px) and (max-height: 800px) {
 
     .box-principal-ProEv {
@@ -1866,7 +1900,7 @@
 
     .titulo-principal-ProEv {
         transform: rotate(13.5deg);
-        top: 45%;
+        top: 32%;
     }
 
     .bolota-decorativa-Pro-Ev {
@@ -1890,8 +1924,9 @@
         height: 50%;
     }
 
-    .banner-evento-ProEv img{
-        width: 85%;
+    .banner-evento-ProEv img {
+        width: 80%;
+        margin-left: 2rem;
     }
 
     .infs-evento-ProEv {
@@ -1914,8 +1949,9 @@
     }
 
     .div-cards-atracoes-ProEv {
-        background-color: rgba(0, 0, 255, 0);
-        top: 10%;
+        width: 100%;
+        height: 65%;
+        top: 17%;
     }
 
     .card-atracao-ProEv {

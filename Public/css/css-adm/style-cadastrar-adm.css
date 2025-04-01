@@ -9,87 +9,72 @@
     overflow: hidden;
 }
 
-body {
-    overflow: auto;
-}
-
-
-/* Section da tela */
-.section-cadastro-mt {
+.principal{
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 255, 255, 0);
+    height: 89vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
-
-/* Formas da tela */
-.formaCadastro-1 {
+/* Imagens */
+.img1{
     position: fixed;
     top: 15vh;
-    right: 80vw;
+    left: 0;
     z-index: 1;
     width: 20vw;
 }
 
-
-.formaCadastro-2 {
-    position: absolute;
-    top: 80vh;
-    right: 80vw;
-    z-index: 1;
-    width: 20vw;
-}
-
-.formaCadastro-3 {
-    position: absolute;
-    top: 10vh;
-    left: 90vw;
-    z-index: 1;
-    width: 20vw;
-    height: 100vh;
-}
-
-.formaCadastro-4 {
+.img2{
     position: fixed;
-    top: 75vh;
-    left: 85vw;
+    top: 25vh;
+    left: 92vw;
     z-index: 1;
     width: 20vw;
 }
 
+.img2 img{
+    width: 50%;
+    height: auto;
+}
 
-/* Box */
-.box-cadastro-mt {
-    width: 85%;
-    height: 750px;
-    max-width: 2000px;
+.img3{
+    position: fixed;
+    top: 70vh;
+    left: 84vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3 img{
+    width: 80%;
+    height: auto;
+}
+
+/* Box Principal */
+.box{
+    width: 90%;
+    height: 90%;
     z-index: 2;
     backdrop-filter: blur(0px);
     background-color: rgba(248, 245, 246, 0.705);
     display: flex;
-    align-items: self-start;
-    justify-content: space-between;
     border-radius: 12px;
     padding: 20px;
-    box-sizing: border-box;
     transition: all .5s ease;
     position: relative;
-    bottom: 6%;
 
     #linha-vertical {
-        height: 640px;
+        height: 94%;
         border-right: 3px solid #FF3877;
         position: fixed;
-        left: 50%;
-        top: 8%;
+        left: 46%;
+        bottom: 3%;
     }
 }
 
-.box-cadastro-mt:hover {
+.box:hover {
     background-color: #f0f0f013;
     backdrop-filter: blur(30px);
 
@@ -98,6 +83,7 @@ body {
     }
 }
 
+/* Elementos da Box */
 .setaV-cadastro {
     position: relative;
     top: 70vh;
@@ -110,338 +96,325 @@ body {
     transform: scale(1.1);
 }
 
-
-/* Elementos da box - Form */
-.area-total-Form-Cad-mt {
-    width: 50%;
-    height: 750px;
-    background-color: rgba(0, 0, 255, 0);
+/* Lado Esquerdo da Box: IMAGEM */
+.lado-esquerdo{
+    width: 45%;
+    height: 100%;
+    background-color: rgba(95, 158, 160, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.areaForm-cad-mt {
-    width: 700px;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0);
+.area-img{
+    width: 80%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    z-index: 3;
-    margin-bottom: 100px;
-}
-
-.label-cad-mt {
-    display: block;
-    margin-left: 10px;
-}
-
-form {
     background-color: #ff387700;
-    width: 350px;
-    height: 530px;
     position: relative;
-    left: 160px;
-    bottom: 0px;
+    right: 3rem;
 }
 
-
-.area-input-mat {
-    width: 100%;
-    height: 50px;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 10px;
-}
-
-.area-input-mat i {
-    position: absolute;
-    left: 20px;
-    top: 45%;
-    transform: translateY(-50%);
-}
-
-.area-input-mat #iconOlho {
-    margin-left: 80%;
-    color: rgba(0, 0, 0, 0.714);
-}
-
-.input-cad-mt {
+.area-img img{
     width: 95%;
-    height: 35px;
-    border: none;
-    border-radius: 6px;
-    padding-left: 35px;
-    padding-right: 50px;
-    box-shadow: 2px 2px 4px #162868;
-    margin-top: 5px;
+    height: auto;
+}
+
+
+/* Lado Direito da Box: Form */
+.lado-direito{
+    width: 55%;
+    height: 100%;
+    background-color: rgba(222, 184, 135, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lado-direito form{
+    width: 95%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.area-h1{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 248, 220, 0);
+}
+
+.area-h1 h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.area-form{
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(100, 148, 237, 0);
+}
+
+/* Inputs normais: */
+.area-total-input{
+    width: 65%;
+    height: 80px;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.label-cad{
     font-size: 14px;
-    margin-left: 8px;
-}
-
-.input-cad-mt:focus {
-    outline: 2px solid #162868;
-}
-
-.button-cad-mt {
-    margin-top: 580px;
     position: relative;
-    right: 180px;
-    width: 180px;
-    height: 35px;
+    bottom: 0.3rem;
+}
+.area-input{
+    width: 100%;
+    height: 45px;
+    background-color: #a5abc200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.area-input i{
+    position: absolute;
+    margin-left: 0.8rem;
+    font-size: 18px;
+}
+
+#iconOlho{
+    margin-left: 31rem;
+}
+
+.input{
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    border-radius: 6px;
+    padding-left: 40px;
+    box-shadow: 3px 3px 4px #162868;
     border: none;
-    margin-right: 25px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input:focus {
+    border: 2px solid #162868; /* Linha visível quando o campo é clicado */
+}
+
+/* Input de Cadastrar Img */
+.area-total-input-2 {
+    width: 50%;
+    height: 50px;
+    background-color: rgba(0, 0, 255, 0);
+    border: 2px dashed #FF3877;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    right: 1rem;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.uploads {
+    width: 100%;
+    height: 100%;
+    background-color: #FF3877;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.uploads:hover {
+    background-color: #162868; 
+}
+
+.uploads input[type="file"] {
+    display: none;
+}
+
+.uploads::before {
+    content: "Clique para selecionar uma imagem";
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.uploads input[type="file"]:focus + .uploads::before {
+    content: "Imagem selecionada!";
+    color: #0F0;
+}
+
+.uploads input[type="file"]:hover {
+    cursor: pointer;
+}
+
+/* Area dos Botões */
+.area-button{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(220, 20, 60, 0);
+}
+
+/* Botões */
+.buttons{
+    width: 20%;
+    height: 40px;
+    background-color: #FF3877;
+    box-shadow: 0 5px 3px #162868;
+    border: none;
     border-radius: 8px;
     color: white;
     font-size: 16px;
     font-weight: 600;
-    background-color: #FF3877;
-    box-shadow: 0 6px 4px #162868;
+    transition: all .2s ease-in-out;
     cursor: pointer;
-    transition: all .2s ease-in;
+    margin-top: 1rem;
 }
 
-.button-cad-mt:hover {
+.buttons:hover{
     transform: scale(1.1);
 }
 
-
-#b-2-mt {
+#button-azul{
     background-color: #162868;
-    box-shadow: 0 6px 4px #FF3877;
+    box-shadow: 0 5px 3px #FF3877;
 }
 
-
-/* Elementos da box - img */
-.areaImg-cad-mt {
-    width: 50%;
-    height: 750px;
-    background-color: rgba(137, 43, 226, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.divIMg-mt:hover {
-    transform: scale(1.04);
-}
-
-#linha-vertical:hover {
-    background-color: rgba(0, 0, 255, 0);
-}
-
-.divIMg-mt {
-    width: 600px;
-    height: 600px;
-    background-color: rgba(165, 42, 42, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-    position: relative;
-    right: 120px;
-    transition: all .2s ease;
-}
-
-.h1-mt {
-    margin-bottom: 600px;
-    position: relative;
-    left: 300px;
-    font-size: 30px;
-}
-
-.h12-mt {
-    display: none;
-}
-
-
-/* Elementos da box - outros elementos */
-.formares-mt {
-    display: none;
-}
-
-.titulo-areato-mt {
-    display: none;
-}
 
 /* Responsividade */
-<<<<<<< Updated upstream:Public/css/css-adm/style-cadastrar-adm.css
 /* Responsividade Celular*/
 @media screen and (max-width: 720px) {
+
     .setaV-cadastro {
-=======
-@media screen and (max-width: 720px){
-    .setaV-cadastro{
->>>>>>> Stashed changes:Public/css/css-adm/style-cadastro-adm.css
+
         display: block;
         top: 41vh;
         right: 15vw;
     }
+    .img1{
+        top: 20vh;
 
-    .setaV-cadastro img {
-        width: 80%;
+    }
+    .img1 img{
+        width: 50%;
         height: auto;
     }
-
-    .formaCadastro-2 {
-        display: block;
-        top: 89vh;
-        right: 85vw;
+    .img3 {
+        top: 94vh;
     }
 
-    .formaCadastro-2 img {
-        width: 100%;
-        height: auto;
+    .box{
+        height: 98%;
     }
 
-    .formaCadastro-3 {
-        display: block;
-        top: 10vh;
-    }
-
-    .formaCadastro-3 img {
-        width: 100%;
-        height: auto;
-    }
-
-    .formaCadastro-4 {
-        display: block;
-        top: 93vh;
-        left: 81vw;
-    }
-
-    .formaCadastro-4 img {
-        width: 100%;
-        height: auto;
-    }
-
-    .formaCadastro-1 {
-        display: block;
-        right: 85vw;
-    }
-
-    .formaCadastro-1 img {
-        width: 100%;
-        height: auto;
-    }
-
-    #linha-vertical {
+    #linha-vertical{
         display: none;
     }
 
-    .areaImg-cad-mt {
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .lado-esquerdo{
         display: none;
     }
 
-    .box-cadastro-mt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 85%;
-        width: 90%;
-        /* background-color: #306816; */
-    }
-
-    form {
-        background-color: #16286800;
-        top: 50px;
-        left: 150px;
-        height: 466px;
-    }
-
-    .button-cad-mt {
-        margin-top: 78%;
-        right: 180px;
-        width: 120px;
-    }
-
-    .input-cad-mt {
-        width: 85%;
-        height: 28px;
-    }
-
-    .titulo-areato-mt {
-        display: block;
-        margin-bottom: 550px;
-        right: 15px;
+    .lado-direito{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
         position: relative;
+        right: 0.5rem;
+        background-color: rgba(0, 255, 255, 0);
     }
 
-    .area-input-mat {
-        margin-bottom: 5px;
+    .area-h1 h1{
+        font-size: 20px;
     }
 
-    .label-cad-mt {
-        font-size: 15px;
-    }
-
-    .input-cad-mt {
-        margin-top: 8px;
-    }
-
-    .area-input-mat i {
-        left: 18px;
-    }
-
-    .area-input-mat #iconOlho {
-        margin-left: 74%;
-        color: rgba(0, 0, 0, 0.714);
-    }
-}
-
-@media (min-width: 390px) and (max-width: 431px) {
-    .button-cad-mt {
-        margin-top: 95%;
-    }
-
-    .setaV-cadastro {
-        display: block;
-        top: 40vh;
-        right: 15vw;
-        /* background-color: #162868; */
-    }
-
-    .setaV-cadastro img {
+    .lado-direito form{
         width: 100%;
-        height: auto;
+        height: 100%;
+        background-color: #16286800;
     }
+
+    .label-cad {
+        font-size: 12px;
+    }
+
+    #iconOlho{
+        margin-left: 13rem;
+    }
+
+    .area-total-input{
+        width: 90%;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .buttons {
+        width: 35%;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0.3rem;
+    }
+
+    .uploads::before{
+        font-size: 10px;
+    }
+
 }
 
 /* Responsividade Ipad Mini*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .areaImg-cad-mt {
-        display: none;
+    .img1{
+        top: 20vh;
     }
-
-    #linha-vertical {
-        display: none;
-    }
-
-    .setaV-cadastro {
-        display: block;
-        top: 38vh;
-        right: 15vw;
-    }
-
-    .box-cadastro-mt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-        height: 850px;
-    }
-
-    .formaCadastro-1 img {
-        width: 100%;
+    .img1 img{
+        width: 70%;
         height: auto;
     }
-
-    .formaCadastro-2 {
-        top: 82vh;
+    .img3 {
+        top: 90vh;
     }
+
 
     .formaCadastro-2 img {
         width: 100%;
@@ -505,7 +478,6 @@ form {
         top: 50px;
         background-color: transparent;
     }
-<<<<<<< Updated upstream:Public/css/css-adm/style-cadastrar-adm.css
 
     .area-input-mat {
         background-color: #ff387700;
@@ -516,69 +488,143 @@ form {
         position: relative;
         top: 40px;
     }
-=======
->>>>>>> Stashed changes:Public/css/css-adm/style-cadastro-adm.css
 }
 
 @media screen and (max-height: 800px) {
     .areaImg-cad-mt {
         display: none;
     }
-
-    #linha-vertical {
-        display: none;
+    .lado-esquerdo{
+        position: relative;
+        right: 1.5rem;
+        background-color: rgba(0, 255, 0, 0);
     }
 
-    .box-cadastro-mt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 95%;
+    .area-img {
+        width: 100%;
+        height: 100%;
+        right: 1rem;
+        background-color: #ff387700;
     }
 
-    form {
-        height: 500px;
-        top: 30px;
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
     }
 
-    .area-input-mat {
-        margin-bottom: 5px;
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .area-h1 h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .area-total-input {
+        width: 90%;
+    }
+
+    #iconOlho{
+        margin-left: 15rem;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0rem;
+    }
+
+    .area-form{
+        position: relative;
+        left: 1rem;
+    }
+
+    .buttons {
+        width: 37%;
+        position: relative;
+        left: 1rem;
+        margin-top: 0;
     }
 }
 
 /* Responsividade Ipad Pro*/
 @media screen and (min-height: 1366px) {
-    .areaImg-cad-mt {
-        background-color: #16286800;
+    .img1{
+        top: 20vh;
+    }
+    .img1 img{
+        width: 70%;
+        height: auto;
+    }
+    .img3 {
+        top: 90vh;
     }
 
-    .divIMg-mt {
+    .lado-esquerdo{
+        position: relative;
+        right: 1.5rem;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .area-img {
+        width: 100%;
+        height: 100%;
+        right: 1rem;
         background-color: #ff387700;
-        right: 0px;
-        width: 400px;
-        flex-direction: column;
     }
 
-    .divIMg-mt img {
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .setaV-cadastro img{
         width: 100%;
         height: auto;
     }
-<<<<<<< Updated upstream:Public/css/css-adm/style-cadastrar-adm.css
 
-    .formaCadastro-2 {
-=======
     .formaCadastro-2{
->>>>>>> Stashed changes:Public/css/css-adm/style-cadastro-adm.css
         top: 85vh;
     }
-
-    .h1-mt {
-        display: none;
+    .area-h1{
+        margin-top: 7rem;
     }
 
-    .h12-mt {
-        display: inline;
-        font-size: 35px;
+    .area-h1 h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .area-total-input {
+        width: 90%;
+    }
+
+    #iconOlho{
+        margin-left: 21rem;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0rem;
+    }
+
+    .area-form {
+        width: 100%;
+        height: 60%;
+        margin-left: 1rem;
+    }
+
+    .buttons {
+        width: 37%;
         position: relative;
         bottom: 80px;
         left: 15px;
@@ -639,11 +685,7 @@ form {
         background-color: #16286800;
     }
 
-<<<<<<< Updated upstream:Public/css/css-adm/style-cadastrar-adm.css
     .button-cad-mt {
-=======
-    .button-cad-mt{
->>>>>>> Stashed changes:Public/css/css-adm/style-cadastro-adm.css
         right: 155px;
         margin-top: 600px;
     }
@@ -659,30 +701,141 @@ form {
 
 }
 
-<<<<<<< Updated upstream:Public/css/css-adm/style-cadastrar-adm.css
 /* Responsividade Sansung Galaxy A51/71 */
 @media (min-width: 412px) and (max-height: 915px) {
     .setaV-cadastro {
-=======
-@media (min-width: 412px) and (max-height: 915px){
-    .setaV-cadastro{
->>>>>>> Stashed changes:Public/css/css-adm/style-cadastro-adm.css
         display: block;
         top: 45vh;
         right: 18vw;
+        left: 1rem;
+        margin-top: 0;
     }
 }
 
-<<<<<<< Updated upstream:Public/css/css-adm/style-cadastrar-adm.css
 /* Responsividade Surface Pro 7 */
 @media (min-width: 912px) and (min-height: 1368px) {
-    .setaV-cadastro {
-=======
-@media (min-width: 912px) and (min-height: 1368px){
     .setaV-cadastro{
->>>>>>> Stashed changes:Public/css/css-adm/style-cadastro-adm.css
         display: block;
         top: 30vh;
         right: 18vw;
+    }
+    .area-form{
+        left: 0;
+    }
+}
+
+/* Responsividade Next Hub*/
+@media (min-width: 1024px) and (max-height: 600px) {
+    .img1{
+        top: 20vh;
+    }
+    .img1 img{
+        width: 70%;
+        height: auto;
+    }
+    .img3 {
+        top: 90vh;
+    }
+
+    .box{
+        height: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .lado-esquerdo{
+        position: relative;
+        right: 1.5rem;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .area-img {
+        width: 100%;
+        height: 100%;
+        right: 1rem;
+        background-color: #ff387700;
+    }
+
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 1rem;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .area-h1 h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .label-cad{
+        font-size: 12px;
+    }
+
+    .area-total-input {
+        width: 90%;
+    }
+
+    #iconOlho{
+        margin-left: 21rem;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0rem;
+    }
+
+    .area-form {
+        width: 100%;
+        height: 82%;
+        margin-left: 1rem;
+    }
+
+    .buttons {
+        width: 30%;
+        height: 25px;
+        position: relative;
+        left: 1rem;
+        margin-top: 0;
+    }
+
+}
+
+/* Responsividade Next Pro*/
+@media (min-width: 1280px) and (max-height: 800px) {
+    .img3 {
+        top: 80vh;
+        left: 88vw;
+    }
+
+    .img3 img{
+        width: 70%;
+        height: auto;
+    }
+
+    .area-h1 h1 {
+        font-size: 25px;
+    }
+
+    #iconOlho{
+        margin-left: 19rem;
+    }
+
+    .area-total-input-2 {
+        width: 58%;
+        height: 50px;
+        right: 0.5rem;
+    }
+
+    .buttons {
+        width: 22%;
+        height: 35px;
+        margin-top: 0rem;
     }
 }
