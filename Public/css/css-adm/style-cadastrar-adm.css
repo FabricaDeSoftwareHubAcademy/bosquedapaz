@@ -305,7 +305,362 @@
 }
 
 
+/* Responsividade */
+/* Responsividade Celular*/
+@media screen and (max-width: 720px) {
+    .img1{
+        top: 20vh;
+    }
+    .img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img3 {
+        top: 94vh;
+    }
 
+    .box{
+        height: 98%;
+    }
 
+    #linha-vertical{
+        display: none;
+    }
 
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
 
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .lado-esquerdo{
+        display: none;
+    }
+
+    .lado-direito{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: relative;
+        right: 0.5rem;
+        background-color: rgba(0, 255, 255, 0);
+    }
+
+    .area-h1 h1{
+        font-size: 20px;
+    }
+
+    .lado-direito form{
+        width: 100%;
+        height: 100%;
+        background-color: #16286800;
+    }
+
+    .label-cad {
+        font-size: 12px;
+    }
+
+    #iconOlho{
+        margin-left: 13rem;
+    }
+
+    .area-total-input{
+        width: 90%;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .buttons {
+        width: 35%;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0.3rem;
+    }
+
+    .uploads::before{
+        font-size: 10px;
+    }
+
+}
+
+/* Responsividade Ipad Mini*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .img1{
+        top: 20vh;
+    }
+    .img1 img{
+        width: 70%;
+        height: auto;
+    }
+    .img3 {
+        top: 90vh;
+    }
+
+    .lado-esquerdo{
+        position: relative;
+        right: 1.5rem;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .area-img {
+        width: 100%;
+        height: 100%;
+        right: 1rem;
+        background-color: #ff387700;
+    }
+
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .area-h1 h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .area-total-input {
+        width: 90%;
+    }
+
+    #iconOlho{
+        margin-left: 15rem;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0rem;
+    }
+
+    .area-form{
+        position: relative;
+        left: 1rem;
+    }
+
+    .buttons {
+        width: 37%;
+        position: relative;
+        left: 1rem;
+        margin-top: 0;
+    }
+}
+
+/* Responsividade Ipad Pro*/
+@media screen and (min-height: 1366px) {
+    .img1{
+        top: 20vh;
+    }
+    .img1 img{
+        width: 70%;
+        height: auto;
+    }
+    .img3 {
+        top: 90vh;
+    }
+
+    .lado-esquerdo{
+        position: relative;
+        right: 1.5rem;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .area-img {
+        width: 100%;
+        height: 100%;
+        right: 1rem;
+        background-color: #ff387700;
+    }
+
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .area-h1{
+        margin-top: 7rem;
+    }
+
+    .area-h1 h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .area-total-input {
+        width: 90%;
+    }
+
+    #iconOlho{
+        margin-left: 21rem;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0rem;
+    }
+
+    .area-form {
+        width: 100%;
+        height: 60%;
+        margin-left: 1rem;
+    }
+
+    .buttons {
+        width: 37%;
+        position: relative;
+        left: 1rem;
+        margin-top: 0;
+    }
+}
+
+/* Responsividade Surface Pro 7 */
+@media (min-width: 912px) and (min-height: 1368px) {
+    .area-form{
+        left: 0;
+    }
+}
+
+/* Responsividade Next Hub*/
+@media (min-width: 1024px) and (max-height: 600px) {
+    .img1{
+        top: 20vh;
+    }
+    .img1 img{
+        width: 70%;
+        height: auto;
+    }
+    .img3 {
+        top: 90vh;
+    }
+
+    .box{
+        height: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .lado-esquerdo{
+        position: relative;
+        right: 1.5rem;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .area-img {
+        width: 100%;
+        height: 100%;
+        right: 1rem;
+        background-color: #ff387700;
+    }
+
+    .setaV-cadastro{
+        width: 30px;
+        height: 30px;
+        top: 1rem;
+        right: 0.5rem;
+        z-index: 1;
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    .setaV-cadastro img{
+        width: 100%;
+        height: auto;
+    }
+
+    .area-h1 h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .label-cad{
+        font-size: 12px;
+    }
+
+    .area-total-input {
+        width: 90%;
+    }
+
+    #iconOlho{
+        margin-left: 21rem;
+    }
+
+    .area-total-input-2 {
+        width: 90%;
+        right: 0rem;
+    }
+
+    .area-form {
+        width: 100%;
+        height: 82%;
+        margin-left: 1rem;
+    }
+
+    .buttons {
+        width: 30%;
+        height: 25px;
+        position: relative;
+        left: 1rem;
+        margin-top: 0;
+    }
+
+}
+
+/* Responsividade Next Pro*/
+@media (min-width: 1280px) and (max-height: 800px) {
+    .img3 {
+        top: 80vh;
+        left: 88vw;
+    }
+
+    .img3 img{
+        width: 70%;
+        height: auto;
+    }
+
+    .area-h1 h1 {
+        font-size: 25px;
+    }
+
+    #iconOlho{
+        margin-left: 19rem;
+    }
+
+    .area-total-input-2 {
+        width: 58%;
+        height: 50px;
+        right: 0.5rem;
+    }
+
+    .buttons {
+        width: 22%;
+        height: 35px;
+        margin-top: 0rem;
+    }
+
+}
