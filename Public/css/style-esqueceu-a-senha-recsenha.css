@@ -209,11 +209,13 @@ html,.body-recsenha{
 .modal-title{
     /* background-color: orange; */
     text-align: center;
+    /* margin-bottom: 1%; */
 }
 
 .modal-text{
     /* background-color: yellow; */
     text-align: center;
+    margin-bottom: 5%;
 }
 
 .close-modal{
@@ -284,7 +286,6 @@ html,.body-recsenha{
 
 .botao-redefinir:hover{
     box-shadow: 1px 3px 5px 2px #162868;
-
 }
 
 .img-letter{
@@ -307,6 +308,27 @@ html,.body-recsenha{
     .box-recsenha{
         width: 90%;
         height: 90%;
+    }
+
+    .recsenha-modal{
+        width: 80vw;
+        height: 170px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .close-modal{
+        width: 90px;
+        height: 40px;
+        font-size: 11.5px;
+    }
+
+    .modal-text{
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
@@ -363,6 +385,16 @@ html,.body-recsenha{
 
     .box-recsenha{
         padding: 10px;
+    }
+
+    .recsenha-modal{
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .form-recsenha{
@@ -439,6 +471,19 @@ html,.body-recsenha{
         margin-bottom: 30%;
         font-size: 26px;
     }
+
+    .recsenha-modal{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        font-size: 17px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
 }
 
 @media (min-width:992px){
@@ -462,6 +507,11 @@ html,.body-recsenha{
 
     .form-recsenha{
         top: 22%;
+    }
+
+    .recsenha-modal{
+        width: 60vw;
+        height: 40vh;
     }
 
     .title-recsenha{
@@ -488,6 +538,11 @@ html,.body-recsenha{
 
     .img-letter{
         top: 5%;
+    }
+
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
     }
 
     .botao-cancelar{
@@ -537,6 +592,11 @@ html,.body-recsenha{
         display: flex;
         flex-direction: column;
         position: relative;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
     }
     
     .img-letter{
