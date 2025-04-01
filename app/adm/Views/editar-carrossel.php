@@ -70,7 +70,7 @@ if (isset($_POST['editar'])){
         // no de caso de nao ter nenhuma img, ele cadrasta o mesmo caminho
         else {
             if(empty($res->img1)){
-                $img1 = $imagens['img1'];
+                $car->img1 = $imagens['img1'];
             }
             else{
                 $car->img1 = $img1;
@@ -95,7 +95,7 @@ if (isset($_POST['editar'])){
             $car->img2 = $img2;
         }else {
             if(empty($res->img2)){
-                $img2 = $imagens['img2'];
+                $car->img2 = $imagens['img2'];
             }
             else{
                 $car->img2 = $img2;
@@ -120,7 +120,7 @@ if (isset($_POST['editar'])){
             $car->img3 = $img3;
         }else {
             if(empty($res->img3)){
-                $img3 = $imagens['img3'];
+                $car->img3 = $imagens['img3'];
             }
             else{
                 $car->img3 = $img3;
@@ -134,7 +134,8 @@ if (isset($_POST['editar'])){
         }
     }
     catch (\Throwable $th) {
-        echo "<script>alert('Não foi possivel atualizar.')</script>";
+        // echo "<script>alert('Não foi possivel atualizar.')</script>";
+        echo $th;
     }
 }
 
