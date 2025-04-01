@@ -8,41 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-
     <title>Adm - Bosque da Paz</title>
 </head>
-
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
-
     <section class="principal">
+        <!-- Imagens de Decoração -->
         <div class="img1">
             <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt="">
         </div>
         <div class="img2">
-            <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-02.png" alt="">
+            <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt="">
         </div>
         <div class="img3">
             <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt="">
         </div>
 
+        <!-- Box Principal -->
         <div class="box">
             <div id="linha-vertical"></div>
             <div class="setaV-cadastro">
                     <a href="../../../app/adm/Views/gerenciar-adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
             </div>
-
+            
+            <!-- lado Esquerdo: area da imagem -->
             <div class="lado-esquerdo">
                 <div class="area-img"><img src="../../../Public/imgs/img-cadastro-adm/a.svg" alt=""></div>
             </div>
 
-
+            <!-- lado Esquerdo: area da Form -->
             <div class="lado-direito">
                 <form action="" method="POST">
                     <div class="area-h1"><h1>Cadastro ADM</h1></div>
 
                     <div class="area-form">
-
                         <div class="area-total-input">
                             <label class="label-cad" for="nome">Nome</label>
                             <div class="area-input">
@@ -98,16 +97,12 @@
                     </div>
 
                     <div class="area-button">
-                        <button class="buttons"></button>
-                        <button class="buttons"></button>
+                        <button class="buttons">Cancelar</button>
+                        <button class="buttons" id="button-azul">Cadastrar</button>
                     </div>
                 </form>
-
             </div>
-
-
         </div>
     </section>
-    
 </body>
 </html>
