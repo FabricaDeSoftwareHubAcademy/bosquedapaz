@@ -47,8 +47,49 @@
     height: auto;
 }
 
-.box{
-    width: 90%;
-    height: 90%;
-    background-color: ;
+.box-cadastro-mt {
+    width: 85%;
+    height: 750px;
+    max-width: 2000px;
+    z-index: 2;
+    backdrop-filter: blur(0px);
+    background-color: rgba(248, 245, 246, 0.705);
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all .5s ease;
+    position: relative;
+    bottom: 6%;
+
+    #linha-vertical {
+        height: 640px;
+        border-right: 3px solid #FF3877;
+        position: fixed;
+        left: 50%;
+        top: 8%;
+    }
+}
+
+.box-cadastro-mt:hover {
+    background-color: #f0f0f013;
+    backdrop-filter: blur(30px);
+
+    #linha-vertical {
+        border-right: 3px solid #162868;
+    }
+}
+
+.setaV-cadastro {
+    position: relative;
+    top: 70vh;
+    display: block;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.setaV-cadastro:hover {
+    transform: scale(1.1);
 }
