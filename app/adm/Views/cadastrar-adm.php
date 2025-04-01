@@ -27,7 +27,22 @@
             <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt="">
         </div>
 
-        <div class="box"></div>
+        <div class="box">
+            <div id="linha-vertical"></div>
+
+            <div class="setaV-cadastro">
+                    <a href="../../../app/adm/Views/gerenciar-adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+            </div>
+
+            <div class="lado-esquerdo">
+                <div class="area-img"><img src="" alt=""></div>
+            </div>
+
+
+            <div class="lado-direito"></div>
+
+
+        </div>
     </section>
     
 </body>
