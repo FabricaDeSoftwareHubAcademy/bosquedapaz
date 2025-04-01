@@ -35,11 +35,14 @@
             </div>
 
             <div class="lado-esquerdo">
-                <div class="area-img"><img src="" alt=""></div>
+                <div class="area-img"><img src="../../../Public/imgs/img-cadastro-adm/a.svg" alt=""></div>
             </div>
 
 
-            <div class="lado-direito"></div>
+            <div class="lado-direito">
+                
+
+            </div>
 
 
         </div>

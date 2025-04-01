@@ -17,6 +17,7 @@
     justify-content: center;
 }
 
+/* Imagens */
 .img1{
     position: fixed;
     top: 25vh;
@@ -46,6 +47,7 @@
     height: auto;
 }
 
+/* Box Principal */
 .box{
     width: 90%;
     height: 90%;
@@ -76,6 +78,7 @@
     }
 }
 
+/* Elementos da Box */
 .setaV-cadastro {
     position: relative;
     top: 70vh;
@@ -88,10 +91,11 @@
     transform: scale(1.1);
 }
 
+/* Lado Esquerdo da Box: IMAGEM */
 .lado-esquerdo{
     width: 45%;
     height: 100%;
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,11 +104,25 @@
 .area-img{
     width: 80%;
     height: 80%;
-    background-color: #FF3877;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff387700;
 }
 
+.area-img img{
+    width: 95%;
+    height: auto;
+}
+
+
+/* Lado Direito da Box: Form */
 .lado-direito{
     width: 55%;
     height: 100%;
     background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
