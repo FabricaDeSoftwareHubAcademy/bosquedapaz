@@ -39,8 +39,13 @@
             <div class="box-cadastro-mt">
                 <div class="setaV-cadastro">
                     <a href="../../../app/adm/Views/gerenciar-adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+<<<<<<< Updated upstream:app/adm/Views/cadastrar-adm.php
                 </div>
 
+=======
+                </div> 
+               
+>>>>>>> Stashed changes:app/adm/Views/cadastro-adm.php
                 <div id="linha-vertical"></div>
 
                 <!-- /* Elementos da box - Form */ -->
@@ -59,12 +64,17 @@
                                 <i class="bi bi-telephone"></i>
                                 <input class="input-cad-mt" type="tel" name="tel" id="tel" placeholder="Digite seu Telefone" required><br><br>
                             </div>
+<<<<<<< Updated upstream:app/adm/Views/cadastrar-adm.php
 
+=======
+                            
+>>>>>>> Stashed changes:app/adm/Views/cadastro-adm.php
                             <label class="label-cad-mt" for="email">Email</label>
                             <div class="area-input-mat">
                                 <i class="bi bi-envelope"></i>
                                 <input class="input-cad-mt" type="email" name="email" id="email" placeholder="Digite seu email" required><br><br>
                             </div>
+<<<<<<< Updated upstream:app/adm/Views/cadastrar-adm.php
 
                             <label class="label-cad-mt" for="profissao">Profissão</label>
                             <div class="area-input-mat">
@@ -72,6 +82,15 @@
                                 <input class="input-cad-mt" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão" required><br><br>
                             </div>
 
+=======
+                            
+                            <label class="label-cad-mt" for="profissao">Profissão</label>
+                            <div class="area-input-mat">
+                                <i class="bi bi-briefcase"></i>
+                                <input class="input-cad-mt" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão" required><br><br>
+                            </div>
+                            
+>>>>>>> Stashed changes:app/adm/Views/cadastro-adm.php
                             <label class="label-cad-mt" for="senha">Senha</label>
                             <div class="area-input-mat">
                                 <i class="bi bi-shield-lock"></i>
