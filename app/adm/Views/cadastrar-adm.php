@@ -16,7 +16,6 @@
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <section class="principal">
-
         <div class="img1">
             <img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt="">
         </div>
@@ -29,7 +28,6 @@
 
         <div class="box">
             <div id="linha-vertical"></div>
-
             <div class="setaV-cadastro">
                     <a href="../../../app/adm/Views/gerenciar-adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
             </div>
@@ -40,7 +38,22 @@
 
 
             <div class="lado-direito">
-                <form action="" method></form>
+                <form action="" method="POST">
+                    <div class="area-h1"><h1>Cadastro ADM</h1></div>
+
+                    <div class="area-form">
+
+                        
+
+                        <div class="area-total-input-2">
+                            <label for="imagem" class="uploads">
+                                <input type="file" name="imagem" id="imagem" class="img-input" multiple>
+                            </label>
+                        </div> 
+                    </div>
+
+                    <div class="area-button"></div>
+                </form>
 
             </div>
 
