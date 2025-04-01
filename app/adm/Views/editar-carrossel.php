@@ -67,7 +67,7 @@ if (isset($_POST['editar'])){
     }
     // no de caso de nao ter nenhuma img, ele cadrasta o mesmo caminho
     else {
-        $car->img1 = $res->img1;
+        $car->img1 = $imagens->img1;
     }
     
     if (!empty($_FILES['img2']['name'])){
@@ -87,7 +87,7 @@ if (isset($_POST['editar'])){
         $img2 = $caminho_img2;
         $car->img2 = $img2;
     }else {
-        $car->img2 = $res->img2;
+        $car->img2 = $imagens->img2;
     }
     
     if (!empty($_FILES['img3']['name'])){
@@ -108,7 +108,7 @@ if (isset($_POST['editar'])){
         $img3 = $caminho_img3;
         $car->img3 = $img3;
     }else {
-        $car->img3 = $res->img3;
+        $car->img3 = $imagens->img3;
     }
 
     
