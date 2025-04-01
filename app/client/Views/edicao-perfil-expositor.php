@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>Document</title>
 </head>
-
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
@@ -21,7 +19,7 @@
             <div class="area-infs">
                 <div class="linha"></div>
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <!-- Lado esquerdo - Upload de imagem -->
+                    <!-- Lado esquerdo - Upload de imagem (LOGO) -->
                     <div class="lado-esquerdo">
                         <div class="area-logo">
                             <label for="imagem" class="uploads">
@@ -35,6 +33,7 @@
                             <h1>Produtos</h1>
                         </div>
 
+                        <!-- Lado esquerdo - Upload de imagens -->
                         <div class="area-imgs">
                             <label for="imagem" class="imgs-produtos">
                                 <input type="file" name="imagem" id="imagem" class="img-produto-input" multiple>
@@ -94,7 +93,7 @@
                             </div>
                             <div class="num">
                                 <h3>Numero</h3>
-                                <p>89</p>
+                                <p class="pp">89</p>
                             </div>
 
                             <div class="area-corR">
@@ -155,9 +154,5 @@
             </div>
         </div>
     </section>
-
-
-
 </body>
-
 </html>
