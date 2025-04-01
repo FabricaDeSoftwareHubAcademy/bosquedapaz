@@ -541,6 +541,14 @@
         margin-bottom: 2rem;
         right: 1rem;
     }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .title{
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 390px) and (max-height: 932px){
@@ -559,26 +567,290 @@
 
 
 /* Responsividade Ipads: */
-/* Ipad Mini, Air, Surface Pro 7, Zenbook: */
+/* Ipad Mini: */
 @media screen and (min-width: 768px) and (max-width: 1023px){
+    .box-principal{
+        width: 95%;
+        height: 95%;
+    }
 
+    .img3 {
+        top: 91vh;
+    }
+
+    .area-text{
+        height: 25%;
+    }
+
+    .text-produtos {
+        height: 10%;
+    }
+
+    .text-produtos h1 {
+        font-size: 26px;
+        font-weight: 500;
+        margin-top: 0rem;
+    }
+
+    .imgs-produtos {
+        width: calc(50% - 30px);
+        height: 100px;
+    }
+
+    .area-text h1{
+        font-size: 20px;
+    }
+
+    .area-total-form{
+        gap: 20px;
+    }
+
+    .area-infs form h3{
+        font-size: 20px;
+    }
+
+    .area-inputs {
+        width: 70%;
+    }
+
+    .num h3, .pp{
+        margin-left: 2rem;
+    }
+
+    .cor-rua{
+        width: 76%;
+    }
+
+    .area-buttons{
+        height: 7%;
+    }
+
+    .buttons {
+        width: 28%;
+        height: 35px;
+        font-size: 18px;
+        margin-bottom: 0;
+        right: 1rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .title{
+        font-weight: 500;
+    }
 }
 
 
 /* Responsividade Ipad Pro: */
 @media screen and (min-height: 1366px){
+    .box-principal{
+        width: 95%;
+        height: 90%;
+    }
 
+    .img3 {
+        top: 91vh;
+    }    
+
+    .area-logo{
+        height: 28%;
+        margin-top: 7rem;
+    }
+
+    .imgs-produtos {
+        width: calc(50% - 50px);
+        height: 200px;
+    }
+
+    .text-produtos{
+        height: 5%;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+
+    .text-produtos h1 {
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+
+    .area-imgs{
+        margin-top: 2rem;
+    }
+
+    .area-infs form h3{
+        font-size: 20px;
+    }
+
+    .area-text {
+        height: 25%;
+    }
+
+    .num h3, .pp{
+        margin-left: 2.5rem;
+    }
+
+    .area-cat-num {
+        height: 10%;
+    }
+
+    .area-buttons{
+        height: 10%;
+    }
+
+    .buttons{
+        width: 25%;
+        right: 2rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .cor-rua {
+        width: 48%;
+        font-size: 16px;
+    }
 }   
 
 /* Responsividade Next Hub: */
 @media (min-width: 1024px) and (max-height: 600px){
+    .box-principal{
+        width: 95%;
+        position: relative;
+        top: 19rem;
+    }
 
+    .img3{
+        top: 85vh;
+    }
+
+    .area-logo {
+        height: 35%;
+    }
+
+    .text-produtos {
+        height: 5%;
+    }
+
+    .text-produtos h1{
+        margin-top: 0rem;
+    }
+
+    .imgs-produtos{
+        width: calc(50% - 40px);
+        height: 120px;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .area-text {
+        height: 24%;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+
+    .area-cat-num {
+        height: 10%;
+    }
+
+    .num h3, .pp{
+        margin-left: 2rem;
+    }
+
+    .area-inputs {
+        width: 60%;
+    }
+
+    .area-buttons{
+        height: 10%;
+    }
+
+    .buttons{
+        width: 20%;
+        height: 38px;
+        font-size: 18px;
+        right: 2rem;
+    }
+
+    .cor-rua {
+        width: 48%;
+        font-size: 16px;
+    }
+    
 }
 
 
 /* Responsividade Next Hub Max: */
 @media (min-width: 1280px) and (max-height: 800px){
+    .box-principal{
+        width: 95%;
+        height: 150vh;
+        position: relative;
+        top: 18rem;
+    }
 
+    .img3 {
+        top: 91vh;
+    }  
+
+    .text-produtos{
+        height: 9%;
+    }
+
+    .imgs-produtos {
+        width: calc(50% - 40px);
+        height: 140px;
+    }
+
+    .area-logo{
+        height: 25%;
+    }
+
+    .area-infs form h3{
+        font-size: 20px;
+    }
+
+    .area-text {
+        height: 25%;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+
+    .num h3, .pp{
+        margin-left: 2rem;
+    }
+
+    .area-cat-num {
+        height: 10%;
+    }
+
+    .area-buttons{
+        height: 12%;
+    }
+
+    .buttons{
+        width: 25%;
+        right: 2rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .cor-rua {
+        width: 48%;
+        font-size: 16px;
+    }    
 }
 
 

@@ -94,7 +94,7 @@
                             </div>
                             <div class="num">
                                 <h3>Numero</h3>
-                                <p>89</p>
+                                <p class="pp">89</p>
                             </div>
 
                             <div class="area-corR">
