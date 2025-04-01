@@ -43,8 +43,53 @@
 
                     <div class="area-form">
 
-                        
+                        <div class="area-total-input">
+                            <label class="label-cad" for="nome">Nome</label>
+                            <div class="area-input">
+                                <i class="bi bi-person"></i>
+                                <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome" required><br><br>
+                            </div>
+                        </div>
+                            
+                        <div class="area-total-input">
+                            <label class="label-cad" for="tel">Telefone</label>
+                            <div class="area-input">
+                                <i class="bi bi-telephone"></i>
+                                <input class="input" type="tel" name="tel" id="tel" placeholder="Digite seu Telefone" required><br><br>
+                            </div>
 
+                        </div>
+                        <div class="area-total-input">
+                            <label class="label-cad" for="email">Email</label>
+                            <div class="area-input">
+                                <i class="bi bi-envelope"></i>
+                                <input class="input" type="email" name="email" id="email" placeholder="Digite seu email" required><br><br>
+                            </div>
+                        </div>
+                        <div class="area-total-input">
+                            <label class="label-cad" for="profissao">Profissão</label>
+                            <div class="area-input">
+                                <i class="bi bi-briefcase"></i>
+                                <input class="input" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão" required><br><br>
+                            </div>
+                        </div>
+                        <div class="area-total-input">
+                            <label class="label-cad" for="senha">Senha</label>
+                            <div class="area-input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required><br><br>
+                                <i id="iconOlho" class="bi bi-eye-slash"></i>
+                            </div>
+                        </div>
+                        <div class="area-total-input">
+                            <label class="label-cad" for="confSenha">Confirmar Senha</label>
+                            <div class="area-input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required><br>
+                                <i id="iconOlho" class="bi bi-eye-slash"></i>
+                            </div>
+                        </div>
+                        
                         <div class="area-total-input-2">
                             <label for="imagem" class="uploads">
                                 <input type="file" name="imagem" id="imagem" class="img-input" multiple>
@@ -52,7 +97,10 @@
                         </div> 
                     </div>
 
-                    <div class="area-button"></div>
+                    <div class="area-button">
+                        <button class="buttons"></button>
+                        <button class="buttons"></button>
+                    </div>
                 </form>
 
             </div>
