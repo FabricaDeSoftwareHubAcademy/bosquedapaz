@@ -69,7 +69,7 @@ body{
     overflow-y: auto;
 }
 
-h2 {
+h1 {
     font-size: 2rem;
 }
 
@@ -220,6 +220,52 @@ h2 {
 .modal::backdrop {
     background: rgba(0, 0, 0, 0.521);
 }
+.modal-deleta{
+    border: none;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+}
+.acao-recusar{
+    background-color: brown;
+    height: 100%;
+}
+.acao-content-recusar{
+    background-color: coral;
+    height: 100%;
+}
+.acao-texto-recusar{
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    padding-top: 7%;
+}
+.acao-botoes-recusar{
+    background-color: darkmagenta;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50%;
+}
+.close-modal{
+    width: clamp(150px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
+    /* padding: 10px 20px; */
+    height: clamp(40px, 15%, 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
 
 
 
