@@ -227,26 +227,26 @@ h1 {
     border-radius: 5px;
 }
 .acao-recusar{
-    background-color: brown;
+    /* background-color: brown; */
     height: 100%;
 }
 .acao-content-recusar{
-    background-color: coral;
+    /* background-color: coral; */
     height: 100%;
 }
 .acao-texto-recusar{
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     display: flex;
     justify-content: center;
     height: 50%;
     padding-top: 7%;
 }
 .acao-botoes-recusar{
-    background-color: darkmagenta;
+    /* background-color: darkmagenta; */
     height: 30%;
     display: flex;
     justify-content: center;
-    padding-top: 50%;
+    padding-top: 3%;
 }
 .close-modal{
     width: clamp(150px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
