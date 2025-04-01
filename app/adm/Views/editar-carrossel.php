@@ -111,10 +111,9 @@ if (isset($_POST['editar'])){
         $car->img3 = $res->img3;
     }
 
-    print_r($car);
     
     if($car->atualizar()){
-        echo "1";
+        echo "<script>alert('Atualizado com sucesso')</script>";
     }
 }
 
