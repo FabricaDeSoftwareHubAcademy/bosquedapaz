@@ -309,7 +309,7 @@ label#salvar-btn {
 
 /********** novo botao de salvar/cancelar ******/
 
-.btn-finalizar{
+/* .btn-finalizar{
     display: flex;
     position: relative;
     left: 150%;
@@ -329,7 +329,6 @@ label#salvar-btn {
 .btn-finalizar 
 .btn-salvar {
     background-color: #007E70;
-    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
     border-radius: 10px;
     padding: 10px 20px;
     
@@ -348,7 +347,7 @@ label#salvar-btn {
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
-}
+} */
 
 /* fim botao finalizar */
 

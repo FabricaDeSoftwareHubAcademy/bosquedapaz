@@ -65,6 +65,26 @@ class Database {
         }
     }
 
+    public function insert_lastid($values)
+    {
+        // quebrar o array associativo que veio como parametro
+        $fields = array_keys($values);
+
+        $binds = array_pad([], count($fields), '?');
+
+        $query = 'INSERT INTO ' . $this->table . '(' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
+
+        $res = $this->execute($query, array_values($values));
+
+        $lastId = $this->conn->lastInsertId();
+
+        if ($res) {
+            return $lastId;
+        } else {
+            return false;
+        }
+    }
+
     // método de select
     public function select($where = null, $order = null, $limit = null, $fields = "*") {
         $where = strlen($where) ? ' WHERE '.$where : '';

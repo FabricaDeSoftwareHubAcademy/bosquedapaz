@@ -1,3 +1,44 @@
+<?php
+require_once '../Controller/Pessoa.php';
+require_once '../Controller/Expositor.php';
+
+// Verifica se é POST
+if (isset($_POST['REQUEST_METHOD'])) {
+
+    $expositor = new Expositor();
+
+    $expositor->setNome($_POST['nome']);
+    $expositor->setWhats($_POST['whatsapp']);
+    $expositor->setEmail($_POST['email']);
+    $expositor->setTelefone($_POST['whatsapp']);
+    $expositor->setNome_marca($_POST['marca']);
+    $expositor->setVoltagem('110');
+    $expositor->setEnergia('SIM');
+    $expositor->setContato2($_POST['whatsapp']);
+    $expositor->setDescricao('teste');
+    $expositor->setMetodos_pgto('DINHEIRO SEMPRE');
+    $expositor->setProduto($_POST['produto']);
+    $expositor->setCor_rua('vermelha');
+    $expositor->setId_categoria(1);
+    $expositor->setId_imagem(1);
+
+
+
+    $res = $expositor->cadastrar();
+
+    if ($res) {
+        // header("Location: sucesso.php");
+        echo '<script> alert("cadastrou") </script>';
+    } else {
+        echo '<script> alert(" não cadastrou") </script>';
+    }
+    exit;
+}
+
+?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -23,25 +64,25 @@
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <form class="formularios">
+            <form class="formularios" method="POST">
 
                 <div class="form-pessoa">
                     <div class="input">
                         <label>Nome completo:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                        <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="input">
                         <label>Whatsapp:</label>
-                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                        <input type="text" name="whatsapp" id="" placeholder="Número de whatsapp" required>
                     </div>
                     
                     <div class="input">
                         <label>E-mail:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
+                        <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
                     </div>
                     <div class="input">
                         <label>Qual Cidade Reside:</label>
-                        <input type="text" name="" id="" placeholder="Digite sua cidade" required>
+                        <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
                     </div>
                    
                 </div>
@@ -49,31 +90,31 @@
                 <div class="form-loja">
                     <div class="input">
                         <label>Produto:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu produto" required>
+                        <input type="text" name="produto" id="" placeholder="Digite seu produto" required>
                     </div>
 
                     <div class="input">
                         <label>Marca:</label>
-                        <input type="text" name="" id="" placeholder="Digite a marca " required>
+                        <input type="text" name="marca" id="" placeholder="Digite a marca " required>
                     </div>
 
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
                         <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
     
-                        <select name="todas_categorias" id="categorias" class="select">
+                        <select name="id_categoria" id="categorias" class="select" require>
 
                             <option value="">Selecione</option>
-                            <option value="artesanato">Artesanato</option>
-                            <option value="gastronia">Gastronia</option>
+                            <option value="<?=$categorias['$id_categoria']?>"></option>
+                            <!-- <option value="gastronia">Gastronia</option>
                             <option value="antiguidade">Antiguidade/Colecionismo</option>
                             <option value="antiguidade">Plantas</option>
-                            <option value="antiguidade">Hortifruti</option>
+                            <option value="antiguidade">Hortifruti</option> 
                             <option value="antiguidade">Moda autoral</option>
                             <option value="antiguidade">Literatura</option>
                             <option value="antiguidade">Cosmético</option>
                             <option value="antiguidade">Sustentabilidade (brechó)</option>
-                            <option value="antiguidade">Empreendedorismo (industrializado)</option>
+                            <option value="antiguidade">Empreendedorismo (industrializado)</option> -->
                            
                         </select>
                         
@@ -128,9 +169,15 @@
                     </div>
                     <div class="input-group">
                         <label>Escolher Imagem:</label>
-                        <input type="file" name="file" id="file"
-                            required>
+                        <input type="file" name="file" id="file" required>
                     </div>
+                </div>
+
+                <div class="btn-finalizar">
+                    <button name="REQUEST_METHOD" class="btn btn-cancelar" >salvar</button> 
+              
+                    <button class="btn btn-salvar"><a href="cadastrar-expositor.php">cancelar</a></button>
+                    
                 </div>
 
 
@@ -139,12 +186,9 @@
 
             </form>
 
-            <form action="" method="post" class="finalizar">
-                <div class="btn-finalizar">
-                    <button class="btn btn-cancelar"><a href="">cancelar</a></button>
-                    <button class="btn btn-salvar"><a href="">salvar</a></button>
-                </div>
-            </form>
+            <!-- <form action="" method="post" class="finalizar">
+                
+            </form> -->
 
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
@@ -154,7 +198,7 @@
 
         </div>
         
-    </div>
+    </div>  
     </main>
 
     <div class="bolas-fundo">
