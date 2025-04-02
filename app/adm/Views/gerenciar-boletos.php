@@ -14,6 +14,33 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM expositor_lista";
 $result = $conn->query($sql);
+
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
+
+// Inicia a query base
+$query = "SELECT * FROM expositor_lista WHERE 1=1";
+
+// Aplicar filtros apenas se os campos não estiverem vazios
+if (!empty($_GET['nome_expositor'])) {
+    $nome = $conn->real_escape_string($_GET['nome_expositor']);
+    $query .= " AND nome LIKE '%$nome%'";
+}
+
+if (!empty($_GET['data_inicio']) && !empty($_GET['data_fim'])) {
+    $data_inicio = $conn->real_escape_string($_GET['data_inicio']);
+    $data_fim = $conn->real_escape_string($_GET['data_fim']);
+    $query .= " AND vencimento BETWEEN '$data_inicio' AND '$data_fim'";
+}
+
+if (!empty($_GET['status'])) {
+    $status = $conn->real_escape_string($_GET['status']);
+    $query .= " AND pagamento = '$status'";
+}
+
+// Executa a query
+$result = $conn->query($query);
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +67,7 @@ $result = $conn->query($sql);
             <form action="" class="form-boleto-filtros-container">
                 <div class="boleto-filtro-expositor">
                     <label for="">Expositor</label>
-                    <input type="text" name="" id="filtro_expositor" class="filtro-expositor" placeholder="Procure por um expositor">
+                    <input type="text" name="nome_expositor" id="filtro_expositor" class="filtro-expositor" placeholder="Procure por um expositor">
                 </div>
 
                 <div class="linha-espaco"></div>
@@ -48,11 +75,11 @@ $result = $conn->query($sql);
                 <div class="boleto-filtro-datas">
                     <div class="boleto-filtro-data-area">
                         <label for="">Data Inicial</label>
-                        <input type="date" name="" id="filtro_data_inicial" class="filtro-data-inicial">
+                        <input type="date" name="data_inicio" id="filtro_data_inicial" class="filtro-data-inicial">
                     </div>
                     <div class="boleto-filtro-data-area">
                         <label for="">Data Final</label>
-                        <input type="date" name="" id="filtro_data_final" class="filtro-data-final">
+                        <input type="date" name="data_fim" id="filtro_data_final" class="filtro-data-final">
                     </div>
                     <div class="boleto-filtro-data-pesquisar">
                         <label for="">Aplicar</label>
@@ -64,7 +91,7 @@ $result = $conn->query($sql);
 
                 <div class="boleto-filtro-status">
                     <label for="">Status</label>
-                    <select name="" id="filtro_status" class="filtro-status">
+                    <select name="status" id="filtro_status" class="filtro-status">
                         <option value="">Procurar por Status</option>
                         <option value="pago">Pago</option>
                         <option value="pendente">Pendente</option>
@@ -94,12 +121,12 @@ $result = $conn->query($sql);
                                     <td><?php echo date("d/m/Y", strtotime($row['vencimento'])); ?></td>
                                     <td><?php echo htmlspecialchars($row['referencia']); ?></td>
                                     <td><?php echo number_format($row['valor'], 2, ',', '.'); ?></td>
-<td>
-    <button class="status <?php echo ($row['status'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>" 
-            onclick="toggleStatus(this, <?php echo $row['id_expositor']; ?>)">
-        <?php echo ($row['status'] == 'pago') ? 'Pago' : 'Pendente'; ?>
-    </button>
-</td>
+                                <td>
+                                    <button class="status <?php echo ($row['pagamento'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>" 
+                                            onclick="toggleStatus(this, <?php echo $row['id_expositor']; ?>)">
+                                        <?php echo ($row['pagamento'] == 'pago') ? 'Pago' : 'Pendente'; ?>
+                                    </button>
+                                </td>
 
 
                                     <td>
