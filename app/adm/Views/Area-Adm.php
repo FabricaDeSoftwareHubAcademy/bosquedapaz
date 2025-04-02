@@ -49,6 +49,7 @@
 
             <dialog class="abrir-mais" id="abrir-mais-parceiros">
                 <div class="close-modal" data-modal="abrir-mais-parceiros">
+                    <h2>Parceiros</h2>
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
@@ -84,6 +85,7 @@
             <!-- Modal Expositores -->
             <dialog class="abrir-mais" id="abrir-mais-expositor">
                 <div class="close-modal" data-modal="abrir-mais-expositor">
+                    <h2>Expositores</h2>
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
@@ -117,6 +119,7 @@
             <!-- Modal Relatórios -->
             <dialog class="abrir-mais" id="abrir-mais-relatorios">
                 <div class="close-modal" data-modal="abrir-mais-relatorios">
+                    <h2>Relatórios</h2>
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
@@ -158,17 +161,10 @@
             <!-- Modal Categorias -->
             <dialog class="abrir-mais" id="abrir-mais-categoria">
                 <div class="close-modal" data-modal="abrir-mais-categoria">
+                    <h2>Categorias</h2>
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
-                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-categoria.php">
-                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
-                            <div class="area-icon-gabriel">
-                                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                                <p>Cadastrar Categorias</p>
-                            </div>
-                        </div>
-                    </a>
                     <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
                             <div class="area-icon-gabriel">
@@ -226,6 +222,7 @@
             <!-- Modal ADM -->
             <dialog class="abrir-mais" id="abrir-mais-gerancia">
             <div class="close-modal" data-modal="abrir-mais-gerancia">
+                    <h2>Gerenciar ADM</h2>
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
