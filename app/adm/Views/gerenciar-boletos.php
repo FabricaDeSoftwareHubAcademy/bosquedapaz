@@ -1,13 +1,11 @@
 <?php
-$host = 'localhost'; // seu servidor MySQL, pode ser localhost
-$usuario = 'root';   // seu usuário do banco de dados
-$senha = '';         // sua senha (se houver)
-$banco = 'expositor_teste'; // nome do banco de dados
+$host = 'localhost';
+$usuario = 'root';
+$senha = '';
+$banco = 'expositor_teste';
 
-// Criar a conexão
 $conn = new mysqli($host, $usuario, $senha, $banco);
 
-// Verificar a conexão
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
@@ -19,10 +17,8 @@ if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
 
-// Inicia a query base
 $query = "SELECT * FROM expositor_lista WHERE 1=1";
 
-// Aplicar filtros apenas se os campos não estiverem vazios
 if (!empty($_GET['nome_expositor'])) {
     $nome = $conn->real_escape_string($_GET['nome_expositor']);
     $query .= " AND nome LIKE '%$nome%'";
@@ -39,7 +35,6 @@ if (!empty($_GET['status'])) {
     $query .= " AND pagamento = '$status'";
 }
 
-// Executa a query
 $result = $conn->query($query);
 ?>
 
