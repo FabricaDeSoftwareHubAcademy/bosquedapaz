@@ -11,12 +11,6 @@
 body{
     overflow: hidden;
 }
-
-/* html, body {
-    height: 100%;
-    overflow-y: auto;
-} */
-
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
