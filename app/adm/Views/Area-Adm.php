@@ -199,23 +199,25 @@
 
                 <!-- Modal Eventos -->
                 <dialog class="abrir-mais" id="abrir-mais-evento">
-                    <div class="close-modal" data-modal="abrir-mais-evento">
-                        <i id="icon-sair" class="bi bi-x-square-fill"></i>
-                    </div>
+                        <div class="close-modal" data-modal="abrir-mais-evento">
+                            <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                        </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
-                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
-                        <div class="area-icon-gabriel">
-                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
-                        <p>Cadastrar Eventos</p>
+                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-evento.php">
+                            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
+                                <div class="area-icon-gabriel">
+                                    <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                                    <p>Cadastrar Eventos</p>
+                                </div>
+                            </div>
+                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-evento.php">
+                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
+                            <div class="area-icon-gabriel">
+                                <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                                <p>Gerenciar Eventos</p>
+                            </div>
                     </div>
-                </div>
-                    <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
-                        <div class="area-icon-gabriel">
-                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
-                        <p>Cadastrar Eventos</p>
-                    </div>
-                </div>
+                    </a>
                 </dialog>
 
                     <a href="index-ctrl.php">
