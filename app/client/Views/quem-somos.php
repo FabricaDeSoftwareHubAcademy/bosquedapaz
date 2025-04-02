@@ -35,7 +35,7 @@
     
         <section class="section-nosso-time-quem-somos">
             <div class="div-nt" >
-            <h2>NOSSO TIME</h2 >
+            <h1 class="titulo-nosso-time-quem-somos">NOSSO TIME</h1 >
             
             </div>
         </section> <!--section que termina o NOSSO TIME-->
@@ -71,13 +71,14 @@
     <section class="section-expositor-quem-somos">
 
         <div class="expositor">
-            <h3>SEJA UM EXPOSITOR</h3>
+            <h1 class="titulo-seja-expositor-quem-somos">SEJA UM EXPOSITOR</h1>
         </div>
         
         <div class="expositor-p">
             <p class="acesse">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botao abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
             
         </div>
+        
         <a class="botao-expositor" href="../../../app/client/views/edital-expositor.php">
         <div class="botao">
             CLIQUE AQUI!
