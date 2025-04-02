@@ -147,7 +147,7 @@
             </form>
 
             <div class="btns">
-                <a href="gerenciar-expositores.php" class="voltar">
+                <a href="Area-Adm.php" class="voltar">
                     <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>

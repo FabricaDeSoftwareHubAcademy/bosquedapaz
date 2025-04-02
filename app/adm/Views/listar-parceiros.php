@@ -245,7 +245,7 @@
         <!-- Modal de Delete -->
         <div class="acao-recusar" id="modal-recusar">
             <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Deseja excluir o expositor?</h1>
+                <h1 class="acao-texto-recusar">Deseja excluir o parceiro?</h1>
                 <div class="acao-botoes-recusar">
                     <a href=""><button class="botao-cancelar">Cancelar</button></a>
                     <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
