@@ -165,14 +165,6 @@
                     <i id="icon-sair" class="bi bi-x-square-fill"></i>
                 </div>
                 <div class="modais">
-                    <!-- <a class="link-modais" href="../../../app/adm/Views/cadastrar-categoria.php">
-                        <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
-                            <div class="area-icon-gabriel">
-                                <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
-                                <p>Cadastrar Categorias</p>
-                            </div>
-                        </div>
-                    </a> -->
                     <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-categoria">
                             <div class="area-icon-gabriel">

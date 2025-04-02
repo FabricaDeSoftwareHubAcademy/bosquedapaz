@@ -135,11 +135,9 @@
 .modais{
     width: 100%;
     height: 100%;
-    padding: 5px 35px 35px 35px;
-    padding-top: 15px;
+    padding: 35px;
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-around;
     gap: 25px;
@@ -159,9 +157,7 @@ dialog::backdrop{
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px 0px;
-    border-bottom: 2px solid #1c1b80;
-    /* margin-bottom: 220px; */
-    /* background-color: aqua; */
+    border-bottom: 1.5px solid #c1c1c1;
 }
 .close-modal h2{
     text-align: left;
