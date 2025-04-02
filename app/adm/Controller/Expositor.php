@@ -10,7 +10,6 @@ class Expositor extends Pessoa
     protected $id_categoria;
     protected $id_imagem;
     protected $nome_marca;
-    protected $dimensoes;
     protected $num_barraca;
     protected $voltagem;
     protected $energia;
@@ -43,10 +42,7 @@ class Expositor extends Pessoa
     {
         $this->nome_marca = $nome_marca;
     }
-    public function setDimensoes($dimensoes)
-    {
-        $this->dimensoes = $dimensoes;
-    }
+ 
     public function setEnergia($energia)
     {
         $this->energia = $energia;
@@ -105,10 +101,7 @@ class Expositor extends Pessoa
     {
         return $this->nome_marca;
     }
-    public function getDimensoes()
-    {
-        return $this->dimensoes;
-    }
+
     public function getEnergia()
     {
         return $this->energia;
@@ -166,7 +159,6 @@ class Expositor extends Pessoa
                 'id_categoria' => 1, // $this->id_categoria,
                 'id_imagem' => 1, // $img_id,
                 'nome_marca' => $this->nome_marca,
-                'dimensoes' => 'retirar',// $this->dimensoes,
                 'num_barraca' => $this->num_barraca,
                 'voltagem' => $this->voltagem,
                 'energia' => $this->energia,

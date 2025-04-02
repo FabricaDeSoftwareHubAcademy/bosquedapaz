@@ -198,7 +198,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
         </div>
         
-    </div>
+    </div>  
     </main>
 
     <div class="bolas-fundo">
