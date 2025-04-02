@@ -30,6 +30,7 @@
           <input type="text" id="status" name="busca" placeholder="Colaborador" />
           <button type="submit" class="search-button">BUSCAR</button>
         </div>
+      </form>
 
         <div class="table-container">
           <table class="collaborators-table">
@@ -54,9 +55,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -69,9 +70,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -84,9 +85,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -99,9 +100,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -114,9 +115,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -129,9 +130,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -144,9 +145,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -159,9 +160,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -174,9 +175,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -189,9 +190,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -204,9 +205,9 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class=" open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -219,15 +220,14 @@
                   <a class="edit-icon" href="editar-adm.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="delete-icon">
-                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                  </a>
+                  <button class="open-modal" data-modal="modal-deleta">
+                    <i class="fa-solid fa-trash" ></i>
+                  </button>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-      </form>
 
         <div class="btns">
             <a href="gerenciar-adm.php" class="voltar">
@@ -236,23 +236,26 @@
         </div>  
         </div>
 
+
         <!-- modal excluir -->
-        <div class="acao-recusar" id="modal-recusar">
-                    <div class="acao-content-recusar">
-                        <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-                        <div class="acao-botoes-recusar">
-                            <a href=""><button class="botao-cancelar">Cancelar</button></a>
-                            <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
-                        </div>
-                    </div>
+        <dialog id="modal-deleta" class="modal-deleta">
+          <div class="acao-recusar">
+            <div class="acao-content-recusar">
+                <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+                <div class="acao-botoes-recusar">
+                  <button class="close-modal" data-modal="modal-deleta">cancelar</button>
+                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+                </div>
+            </div>
           </div>
+        </dialog>
         <!-- Modal confirmação -->
-        <div class="mensagem-recusar" id="recusado-sucesso">
+        <!-- <div class="mensagem-recusar" id="recusado-sucesso">
                     <div class="mensagem-content-recusar">
                         <h1 class="mensagem-texto-recusar">Concluído com sucesso!</h1>
                         <a href="#"><button class="botao-confirmar">Confirmar</button></a>
                     </div>
-                </div>
+                </div> -->
 
     </main>
     <div class="bolas-fundo">
