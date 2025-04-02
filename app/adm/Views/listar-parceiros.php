@@ -19,7 +19,7 @@
 <body>
     <main class="principal">
         <div class="box">
-            <h2>Parceiros</h2>
+            <h2>PARCEIROS</h2>
             <div class="container">
                 <div class="search-bar">
                     <label for="status">Procurar</label>
@@ -183,7 +183,7 @@
             </div>
         </div>
         <div class="btns">
-            <a href="gerenciar-parceiros.php" class="voltar">
+            <a href="Area-Adm.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
