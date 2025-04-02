@@ -81,12 +81,12 @@ body {
     border: none;
     position: relative;
     top: 20px;
+    position: relative;
 }
 
 .formularios div {
     display: flex;
     flex-direction: column;
-    height: 80%;
 }
 
 .formularios input {
@@ -303,46 +303,35 @@ label#salvar-btn {
 
 
 .voltar:hover {
-    transform: scale(1.1); /* Efeito ao passar o mouse */
+    transform: scale(1.1); 
 }
 
 
 /********** novo botao de salvar/cancelar ******/
 
-.btn-finalizar{
-    display: flex;
-    position: relative;
-    left: 150%;
-    top: 50px;
-    gap: 20px;
-}
 
-.btn-finalizar 
-.btn{
-    width: 150px; 
+.btn-finalizar{
+    /* background-color: red; */
+    position: relative;
+    top: 30vh;
+    left: -10%;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+}
+.btn-salvar{
+    width: 35%;
+    border: none;
+}
+.btn-cancelar{
+    width: 35%;
+    position: relative;
+    left: 40%;
+    top: 48px;
+    padding: 11px 25px; 
     border: none;
 }
 
-.btn-finalizar 
-.btn-salvar {
-    background-color: #007E70;
-    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
-    border-radius: 10px;
-    padding: 10px 20px;
-    
-}
-
-.btn-finalizar 
-.btn-cancelar {
-    background-color: #FF3877;
-    border-radius: 10px;    
-}
-
-.btn-finalizar 
-.btn a {
+.btn-finalizar a{
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -350,7 +339,32 @@ label#salvar-btn {
     text-transform: uppercase;
 }
 
+
+.btn-finalizar 
+.btn-salvar {
+    background-color: #FF3877;
+    border-radius: 10px;
+    padding: 11px 20px;
+    
+}
+
+.btn-finalizar 
+.btn-cancelar {
+    background-color: #007E70;
+    border-radius: 10px;    
+}
+
+
+
 /* fim botao finalizar */
+
+
+.form-pessoa,
+.form-loja,
+.form-expo{
+    position: relative;
+    left: 13%;
+}
 
 
 /*  celular pequeno: 480px
@@ -358,8 +372,6 @@ label#salvar-btn {
     tablet: 768 a 1024px
     desktop: acima de 1024px 
 */
-
-
 
 /* celular pequeno */
 @media screen and (max-width: 650px) {
@@ -512,132 +524,10 @@ label#salvar-btn {
     }
 }
 
-@media screen and (min-width: 1251px){
+/* @media screen and (min-width: 1251px){
     .btn-finalizar{
         position: relative;
         left: 45vh;
         top: 10vh;
     }
-}
-
-/* tablet */
-
-
-
-/* @media(max-width: 1050px) {
-    .bolas-fundo .bola-verde1 {
-        width: 80px;
-        left: -20px;
-
-    }
-
-    .bolas-fundo .bola-verde2 {
-        width: 90px;
-        right: -25px;
-
-    }
-
-    .bolas-fundo .bola-rosa {
-        width: 200px;
-        right: -50px;
-        bottom: -50px;
-    }
-
-    .principal {
-        overflow: hidden;
-    }
-
-    .box {
-        display: flex;
-        overflow-y: auto;
-    }
-
-    .formularios {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .form-finalizar {
-        position: relative;
-        left: -26%;
-    }
-
-}
-
-@media(max-width: 360px) {
-
-    .title {
-        width: 105%;
-    }
-
-    .form-finalizar button {
-        width: 140px;
-        font-size: 18px;
-    }
-
-
-}
-
-@media(max-width: 650px) {
-    .bolas-fundo .bola-verde1 {
-        display: none;
-    }
-
-    .bolas-fundo .bola-verde2 {
-        display: none;
-    }
-
-    .bolas-fundo .bola-rosa {
-        display: none;
-    }
-
-
-    body {
-        overflow: hidden;
-    }
-
-    .title {
-        font-size: 12px;
-    }
-
-
-
-    .box {
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        overflow-y: hidden;
-    }
-
-    .principal {
-        overflow-y: auto;
-    }
-
-    .formularios {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .formularios label {
-        position: relative;
-        left: 10px;
-    }
-
-    .form-finalizar {
-        position: relative;
-        top: -70px;
-        left: -65%;
-    }
-
-
-    .voltar {
-        position: relative;
-        top: 50px;
-    }
-
-
 } */
