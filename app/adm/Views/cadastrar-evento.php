@@ -1,3 +1,28 @@
+<?php
+require_once '../Controller/Evento.php';
+
+if (isset($_POST['REQUEST_METHOD'])) {
+
+    $evento = new Evento();
+
+    $evento->setNome($_POST['nome']);
+    $evento->setDescricao($_POST['descricao']);
+    $evento->setData($_POST['data']);
+    $evento->setBanner($_POST['banner']);
+
+
+    $res = $evento->cadastrar();
+
+    if ($res) {
+        echo '<script> alert("cadastrou") </script>';
+    } else {
+        echo '<script> alert(" não cadastrou") </script>';
+    }
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
