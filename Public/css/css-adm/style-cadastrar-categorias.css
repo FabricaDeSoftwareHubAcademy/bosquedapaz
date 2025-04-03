@@ -9,6 +9,7 @@
 }
 
 .cadastro-categoria {
+    width: 500px;
     margin: auto;
     border: none;
     border-radius: 8px;
@@ -60,7 +61,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 90%;
+    width: 65%;
     /* margin-right: 10px; */
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);

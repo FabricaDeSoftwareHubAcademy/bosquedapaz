@@ -172,8 +172,8 @@
             </div>
     </main>
     <script src="../../js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
 </body>
 
 </html>
