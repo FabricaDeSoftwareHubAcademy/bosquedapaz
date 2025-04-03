@@ -3,7 +3,7 @@
 Class Database{
     private $conn;
     private string $server = "localhost";
-    private string $db = "adm";
+    private string $db = "BosqueDaPaz";
     private string $user = "root";
     private string $pass = "";
     private $table;
@@ -51,6 +51,10 @@ Class Database{
             echo "<pre>Erro no insert: " . $th->getMessage() . "</pre>";
             return false;
         }
+    }
+
+    public function getConnection(){
+        return $this->conn;
     }
 
     public function select($fields = '*'){

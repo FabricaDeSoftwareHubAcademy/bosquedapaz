@@ -1,6 +1,6 @@
 <?php 
 
-require '../../../app/adm/Controller/Adiministrador.php';
+require '../../../app/adm/Controller/Administrador.php';
 
 if(isset($_POST['cadastrar'])){
     $nome = $_POST['nome'];
@@ -46,6 +46,7 @@ if(isset($_POST['cadastrar'])){
     } else {
         echo '<script> alert("Erro ao cadastrar!"); </script>';
     }
+
 }
 
 ?>
@@ -145,7 +146,7 @@ if(isset($_POST['cadastrar'])){
                             <label class="label-cad" for="confSenha">Imagem de Perfil</label>
                             <div class="area-input2">
                                 <label for="imagem" class="uploads">
-                                    <input type="file" name="imagem" id="imagem" class="input2" multiple>
+                                    <input type="file" name="imagem" id="imagem" class="input2">
                                 </label>
                             </div> 
                         </div>
