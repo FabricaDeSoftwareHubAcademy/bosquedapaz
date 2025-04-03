@@ -151,8 +151,8 @@
                                 </div> -->
 
                                     <div class="botoes">
-                                        <button class="cancelar" onclick="fecharModal()">Cancelar</button>
-                                        <button class="salvar" onclick="fecharModal()">Salvar</button>
+                                        <button class="cancelar" onclick="fecharModal()">CANCELAR</button>
+                                        <button class="salvar" onclick="fecharModal()">SALVAR</button>
                                     </div>
                                 </div>
                             </form>

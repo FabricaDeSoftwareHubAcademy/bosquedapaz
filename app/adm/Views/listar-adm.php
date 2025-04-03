@@ -243,8 +243,8 @@
             <div class="acao-content-recusar">
                 <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
                 <div class="acao-botoes-recusar">
-                  <button class="close-modal" data-modal="modal-deleta">cancelar</button>
-                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+                  <button class="close-modal-cancel" data-modal="modal-deleta">cancelar</button>
+                  <button class="close-modal-save" data-modal="modal-deleta">confirmar</button>
                 </div>
             </div>
           </div>
