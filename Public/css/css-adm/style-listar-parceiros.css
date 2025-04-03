@@ -9,7 +9,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .principal {
@@ -765,10 +765,6 @@ table tbody tr:nth-child(even) {
         font-size: 12px;
     }
 
-    .btn-voltar {
-        display: none;
-    }
-
     .email-col,
     .fone-col,
     .usuario-col,
@@ -1002,7 +998,7 @@ table tbody tr:nth-child(even) {
     }
 
     .btns .voltar {
-        bottom: revert-layer;
+        bottom: -150px;
         left: -2%;
     }
 
@@ -1087,11 +1083,17 @@ table tbody tr:nth-child(even) {
         min-width: 800px;
         border-collapse: collapse;
     }
+    .collaborators-table th{
+        padding: 15px;
+    }
 
-    .collaborators-table th,
-    .collaborators-table td {
+    .collaborators-table td{
         padding: 10px;
-        font-size: 12px;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        /* padding: 12px; */
+        font-size: 14px;
         text-align: center;
         border: 1px solid #ddd;
     }
