@@ -193,7 +193,7 @@ if (isset($_POST['editar'])){
                     <div class="div-nome">
                         <h1 class="num">Imagem 2</h1>
                         <label class="uploads" id="label">
-                            <input type="file" name="img2" id="imagens-input" class="input" id="input2">
+                            <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
                 
                             <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" id="img2" class="up-img">
                 
@@ -205,8 +205,8 @@ if (isset($_POST['editar'])){
                 
                     <div class="div-nome">
                         <h1 class="num">Imagem 3</h1>
-                        <label class="uploads">
-                            <input type="file" name="img3" id="imagens-input" class="input" id="input3">
+                        <label class="uploads" id="label">
+                            <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
                 
                             <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" id="img3" class="up-img">
                 
