@@ -49,11 +49,11 @@ if (isset($_POST['REQUEST_METHOD'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
     <main class="principal">
@@ -75,7 +75,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         <label>Whatsapp:</label>
                         <input type="text" name="whatsapp" id="" placeholder="Número de whatsapp" required>
                     </div>
-                    
+
                     <div class="input">
                         <label>E-mail:</label>
                         <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
@@ -84,7 +84,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         <label>Qual Cidade Reside:</label>
                         <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
                     </div>
-                   
+
                 </div>
 
                 <div class="form-loja">
@@ -101,11 +101,11 @@ if (isset($_POST['REQUEST_METHOD'])) {
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
                         <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
-    
+
                         <select name="id_categoria" id="categorias" class="select" require>
 
                             <option value="">Selecione</option>
-                            <option value="<?=$categorias['$id_categoria']?>"></option>
+                            <option value="<?= $categorias['$id_categoria'] ?>"></option>
                             <!-- <option value="gastronia">Gastronia</option>
                             <option value="antiguidade">Antiguidade/Colecionismo</option>
                             <option value="antiguidade">Plantas</option>
@@ -115,22 +115,24 @@ if (isset($_POST['REQUEST_METHOD'])) {
                             <option value="antiguidade">Cosmético</option>
                             <option value="antiguidade">Sustentabilidade (brechó)</option>
                             <option value="antiguidade">Empreendedorismo (industrializado)</option> -->
-                           
+
                         </select>
-                        
+
                     </div>
 
                     <div class="input">
                         <label>Link:</label>
-                        <script>link</script>
+                        <script>
+                            link
+                        </script>
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
 
-                    
+
 
                 </div>
 
-                
+
                 <div class="form-expo">
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
@@ -147,12 +149,12 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <select name="" id="" class="select">  
+                        <select name="" id="" class="select">
 
                             <option value="">Selecione</option>
                             <option value="sim">Sim</option>
                             <option value="nao">Não</option>
-                        
+
 
                         </select>
                     </div>
@@ -164,25 +166,24 @@ if (isset($_POST['REQUEST_METHOD'])) {
                             <option value="">selecione</option>
                             <option value="110v">110v</option>
                             <option value="220v">220v</option>
-                            
+
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>Escolher Imagem:</label>
-                        <input type="file" name="file" id="file" required>
+                        <label>Escolher Imagens:</label>
+                        <input type="file" name="file[]" id="file" multiple="multiple">
                     </div>
+
                 </div>
 
                 <div class="btn-finalizar">
-                    <button name="REQUEST_METHOD" class="btn btn-cancelar" >salvar</button> 
-              
-                    <button class="btn btn-salvar"><a href="cadastrar-expositor.php">cancelar</a></button>
-                    
+                    <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
+                    <button class="btn btn-cancelar"><a href="cadastrar-expositor.php">cancelar</a></button>
                 </div>
 
 
 
-               
+
 
             </form>
 
@@ -197,8 +198,8 @@ if (isset($_POST['REQUEST_METHOD'])) {
             </div>
 
         </div>
-        
-    </div>  
+
+        </div>
     </main>
 
     <div class="bolas-fundo">
@@ -210,7 +211,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
 
-    
+
 </body>
 
 </html>
