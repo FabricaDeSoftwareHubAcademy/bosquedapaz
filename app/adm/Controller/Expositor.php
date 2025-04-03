@@ -208,7 +208,7 @@ class Expositor extends Pessoa
                 'id_expositor' => $this->id_expositor,
                 'id_pessoa' => $pes_id,
                 'id_categoria' => $this->id_categoria,
-                'id_imagem' => 1, // $img_id,
+                'id_imagem' => $img_id,
                 'nome_marca' => $this->nome_marca,
                 'num_barraca' => $this->num_barraca,
                 'voltagem' => $this->voltagem,
