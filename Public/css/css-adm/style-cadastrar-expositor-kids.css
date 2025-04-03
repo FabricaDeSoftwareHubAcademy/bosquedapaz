@@ -86,7 +86,7 @@ body {
 .formularios div {
     display: flex;
     flex-direction: column;
-    height: 80%;
+    /* height: 80%; */
 }
 
 .formularios input {
@@ -309,45 +309,58 @@ label#salvar-btn {
 
 /********** novo botao de salvar/cancelar ******/
 
-/* .btn-finalizar{
-    display: flex;
-    position: relative;
-    left: 150%;
-    top: 50px;
-    gap: 20px;
-}
 
-.btn-finalizar 
-.btn{
-    width: 150px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn-finalizar{
+    /* background-color: red; */
+    position: absolute;
+    width: 40%;
+    /* gap: 20px; */
+    left: 70%;
+    top: 50vh;
+    
+}
+.btn-finalizar button{
     border: none;
 }
 
-.btn-finalizar 
-.btn-salvar {
-    background-color: #007E70;
-    border-radius: 10px;
-    padding: 10px 20px;
-    
+.btn-salvar{
+    width: 20%;
+    height: 46px;
+    position: relative;
+    left: 23%;
+    top: 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
 }
-
-.btn-finalizar 
-.btn-cancelar {
-    background-color: #FF3877;
-    border-radius: 10px;    
+.btn-cancelar{
+    width: 20%;
+    height: 46px;
 }
-
-.btn-finalizar 
-.btn a {
+.btn-finalizar a{
     text-decoration: none;
     color: white;
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
-} */
+}
+
+
+
+.btn-finalizar 
+.btn-cancelar {
+    background-color: #FF3877;
+    border-radius: 10px;
+    /* padding: 11px 20px; */
+    
+}
+
+.btn-finalizar 
+.btn-salvar {
+    background-color: #007E70;
+    border-radius: 10px;    
+}
 
 /* fim botao finalizar */
 
@@ -467,11 +480,6 @@ label#salvar-btn {
         left: 5%;
     }
 
-    .form-pessoa{
-        /* position: relative;
-        left: 5%;
-        top: 5px; */
-    }
 
     .form-expo{
         position: relative;
@@ -491,132 +499,6 @@ label#salvar-btn {
     }
 }
 
-@media screen and (min-width: 1251px){
-    .btn-finalizar{
-        position: relative;
-        left: 45vh;
-        top: 10vh;
-    }
-}
-
-/* tablet */
-
-
-
-/* @media(max-width: 1050px) {
-    .bolas-fundo .bola-verde1 {
-        width: 80px;
-        left: -20px;
-
-    }
-
-    .bolas-fundo .bola-verde2 {
-        width: 90px;
-        right: -25px;
-
-    }
-
-    .bolas-fundo .bola-rosa {
-        width: 200px;
-        right: -50px;
-        bottom: -50px;
-    }
-
-    .principal {
-        overflow: hidden;
-    }
-
-    .box {
-        display: flex;
-        overflow-y: auto;
-    }
-
-    .formularios {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .form-finalizar {
-        position: relative;
-        left: -26%;
-    }
-
-}
-
-@media(max-width: 360px) {
-
-    .title {
-        width: 105%;
-    }
-
-    .form-finalizar button {
-        width: 140px;
-        font-size: 18px;
-    }
-
-
-}
-
-@media(max-width: 650px) {
-    .bolas-fundo .bola-verde1 {
-        display: none;
-    }
-
-    .bolas-fundo .bola-verde2 {
-        display: none;
-    }
-
-    .bolas-fundo .bola-rosa {
-        display: none;
-    }
-
-
-    body {
-        overflow: hidden;
-    }
-
-    .title {
-        font-size: 12px;
-    }
-
-
-
-    .box {
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        overflow-y: hidden;
-    }
-
-    .principal {
-        overflow-y: auto;
-    }
-
-    .formularios {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .formularios label {
-        position: relative;
-        left: 10px;
-    }
-
-    .form-finalizar {
-        position: relative;
-        top: -70px;
-        left: -65%;
-    }
-
-
-    .voltar {
-        position: relative;
-        top: 50px;
-    }
-
-
+/* @media screen and (min-width: 1251px){
 } */
+
