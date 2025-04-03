@@ -10,6 +10,8 @@
 
 :root{
     --cinza-claro:#e1e1e1;
+    --verde: #28A745;
+    --vermelho: #DC3545;
 }
 
 .body-listb{
@@ -26,7 +28,7 @@
 
 .listb-superior-esquerda{
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 0%;
     z-index: -1;
 }
@@ -34,7 +36,7 @@
 .listb-superior-direita{
     position: fixed;
     right: 0%;
-    top: 30%;
+    top: 20%;
     z-index: -1;
 }
 
@@ -43,12 +45,113 @@
     bottom: 0%;
     right: 0%;
     z-index: -1;
+    width: 12%;
 }
 
 .listb-box{
-    background-color: rgba(248, green, blue, alpha);
+    left: 50%;
+    transform: translate(-50%);
+    /* background-color: rgba(176, 48, 91, 0.705); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 90%;
+    top: 5%;
+}
+
+.listb-title{
+    /* background-color: rgba(41, 115, 28, 0.705); */
+    position: relative;
+    font-size: 40px;
+    width: 50%;
+    text-align: center;
+}
+
+.section-listb-tabela{
+    background-color: rgba(176, 160, 11, 0.705);
+    position: relative;
+    margin-top: 3%;
+    width: 88%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listb-tabela-container{
+    background-color: #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.listb-table{
+    /* background-color: rgba(7, 207, 14, 0.705); */
+    width: 100%;
+}
+
+.listb-head{
+    /* background-color: rgba(32, 14, 200, 0.705); */
+    width: 100%;
+}
+
+.listb-row-name{
+    /* background-color: rgba(217, 11, 11, 0.705); */
+    width: 50%;
+}
+
+.listb-header-name{
+    background-color: #20368B;
+    color: white;
+    padding: 20px;
+}
+
+.listb-body{
+    /* background-color: rgba(192, 19, 240, 0.705); */
+    padding: 20px;
+}
+
+.listb-tr:nth-child(even){
+    background-color: #F1F1F1;
+
+}
+
+.listb-tr:nth-child(odd){
+    background-color: #e6e6e6;
+}
+
+.listb-boleto-td{
+    /* background-color: rgba(219, 84, 1, 0.705); */
+    padding: 20px;
+}
+
+@media (max-width: 575.98px){
+
+}
+
+@media (min-width: 576px){
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 992px){
+
+}
+
+@media (max-width: 1024px) and (min-height:600px){
+
+}
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 1400px){
+
 }
