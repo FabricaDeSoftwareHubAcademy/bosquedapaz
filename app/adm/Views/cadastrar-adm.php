@@ -141,17 +141,21 @@ if(isset($_POST['cadastrar'])){
                             </div>
                         </div>
                         
-                        <div class="area-total-input-2">
-                            <label for="imagem" class="uploads">
-                                <input type="file" name="imagem" id="imagem" class="img-input" multiple>
-                            </label>
-                        </div> 
+                        <div class="area-total-input">
+                            <label class="label-cad" for="confSenha">Imagem de Perfil</label>
+                            <div class="area-input2">
+                                <label for="imagem" class="uploads">
+                                    <input type="file" name="imagem" id="imagem" class="input2" multiple>
+                                </label>
+                            </div> 
+                        </div>
                     </div>
-
+                    
                     <div class="area-button">
                         <button class="buttons">Cancelar</button>
                         <button class="buttons" id="button-azul" name="cadastrar" value="Cadastrar">Cadastrar</button>
                     </div>
+                        
                 </form>
             </div>
         </div>

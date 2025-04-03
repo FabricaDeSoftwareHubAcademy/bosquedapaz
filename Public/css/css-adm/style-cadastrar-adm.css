@@ -190,6 +190,14 @@
     justify-content: space-between;
 }
 
+.area-input2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ff387700;
+}
+
 .area-input i{
     position: absolute;
     margin-left: 0.8rem;
@@ -206,67 +214,35 @@
     background-color: white;
     border-radius: 6px;
     padding-left: 40px;
-    box-shadow: 3px 3px 4px #162868;
+    box-shadow: 3px 3px 0px #9d9fa1;
     border: none;
     outline: none;
     transition: border 0.3s ease;
+}
+.input2{
+    width: 95%;
+    height: 40px;
+    background-color: white;
+    border-radius: 6px;
+    padding-left: 40px;
+    box-shadow: 3px 3px 0px #9d9fa1;
+    border: none;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.uploads{
+    width: 100%;
+    height: 100%;
 }
 
 .input:focus {
     border: 2px solid #162868; /* Linha visível quando o campo é clicado */
 }
 
+
 /* Input de Cadastrar Img */
-.area-total-input-2 {
-    width: 50%;
-    height: 50px;
-    background-color: rgba(0, 0, 255, 0);
-    border: 2px dashed #FF3877;
-    border-radius: 10px;
-    padding: 6px;
-    cursor: pointer;
-    right: 1rem;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
 
-.uploads {
-    width: 100%;
-    height: 100%;
-    background-color: #FF3877;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-
-.uploads:hover {
-    background-color: #162868; 
-}
-
-.uploads input[type="file"] {
-    display: none;
-}
-
-.uploads::before {
-    content: "Clique para selecionar uma imagem";
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.uploads input[type="file"]:focus + .uploads::before {
-    content: "Imagem selecionada!";
-    color: #0F0;
-}
-
-.uploads input[type="file"]:hover {
-    cursor: pointer;
-}
 
 /* Area dos Botões */
 .area-button{
