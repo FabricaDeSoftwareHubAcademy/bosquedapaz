@@ -8,26 +8,17 @@
     font-family: "Poppins", sans-serif;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.753);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+.cadastro-categoria {
+    margin: auto;
+    border: none;
+    border-radius: 8px;
 }
 
 .modal-content {
+    width: 100%;
     height: 70%;
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    width: 80%;
     max-width: 500px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -69,7 +60,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 52%;
+    width: 90%;
     /* margin-right: 10px; */
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
