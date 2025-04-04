@@ -108,6 +108,11 @@
         </script>
       </div>
     </div>
+    <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div>
   </main>
   <img class="imagem-fundo1" src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="">
   <img class="imagem-fundo2" src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="">
