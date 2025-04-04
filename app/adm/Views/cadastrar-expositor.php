@@ -1,6 +1,11 @@
 <?php
 require_once '../Controller/Pessoa.php';
 require_once '../Controller/Expositor.php';
+require_once '../Controller/Categoria.php';
+
+$categoriaModel = new Categoria();
+
+$lista = $categoriaModel->listar();
 
 // Verifica se é POST
 if (isset($_POST['REQUEST_METHOD'])) {
@@ -12,17 +17,22 @@ if (isset($_POST['REQUEST_METHOD'])) {
     $expositor->setEmail($_POST['email']);
     $expositor->setTelefone($_POST['whatsapp']);
     $expositor->setNome_marca($_POST['marca']);
-    $expositor->setVoltagem('110');
-    $expositor->setEnergia('SIM');
+    // verificar o input de voltagem
+    $expositor->setVoltagem($_POST['voltagem']);
+    // verificar o input de energia
+    $expositor->setEnergia($_POST['energia']);
     $expositor->setContato2($_POST['whatsapp']);
-    $expositor->setDescricao('teste');
-    $expositor->setMetodos_pgto('DINHEIRO SEMPRE');
+    // verificar o input de descricao
+    // $expositor->setDescricao('teste');
+    // verificar o input de metodo pagamento
+    // $expositor->setMetodos_pgto('DINHEIRO SEMPRE');
     $expositor->setProduto($_POST['produto']);
-    $expositor->setCor_rua('vermelha');
-    $expositor->setId_categoria(1);
-    $expositor->setId_imagem(1);
-
-
+    // verificar o input cor rua
+    // $expositor->setCor_rua('vermelha');
+    // verificar o input id_categoria
+    $expositor->setId_categoria($_POST['id_categoria']);
+    // verificar o input id_imagem
+    $expositor->setImagens($_POST['files']);
 
     $res = $expositor->cadastrar();
 
@@ -36,9 +46,6 @@ if (isset($_POST['REQUEST_METHOD'])) {
 }
 
 ?>
-
-
-
 
 
 <!DOCTYPE html>
@@ -84,7 +91,6 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         <label>Qual Cidade Reside:</label>
                         <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
                     </div>
-
                 </div>
 
                 <div class="form-loja">
@@ -100,24 +106,12 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
-                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
-
                         <select name="id_categoria" id="categorias" class="select" require>
-
                             <option value="">Selecione</option>
-                            <option value="<?= $categorias['$id_categoria'] ?>"></option>
-                            <!-- <option value="gastronia">Gastronia</option>
-                            <option value="antiguidade">Antiguidade/Colecionismo</option>
-                            <option value="antiguidade">Plantas</option>
-                            <option value="antiguidade">Hortifruti</option> 
-                            <option value="antiguidade">Moda autoral</option>
-                            <option value="antiguidade">Literatura</option>
-                            <option value="antiguidade">Cosmético</option>
-                            <option value="antiguidade">Sustentabilidade (brechó)</option>
-                            <option value="antiguidade">Empreendedorismo (industrializado)</option> -->
-
+                            <?php foreach($lista as $categoria) : ?>
+                                <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['descricao'] ?></option>
+                            <?php endforeach; ?>
                         </select>
-
                     </div>
 
                     <div class="input">
@@ -127,29 +121,23 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         </script>
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
-
-
-
                 </div>
 
 
                 <div class="form-expo">
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
-                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
                         <select name="" id="" class="select">
-
                             <option value="">Selecione</option>
                             <option value="trailer">Trailer</option>
                             <option value="food-truck">Food truck</option>
-                            <option value="barrca">Barrca</option>
-
+                            <option value="barraca">Barraca</option>
                         </select>
                     </div>
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <select name="" id="" class="select">
+                        <select name="energia" id="energia" class="select">
 
                             <option value="">Selecione</option>
                             <option value="sim">Sim</option>
@@ -161,7 +149,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <select name="" id="" class="select">
+                        <select name="voltagem" id="voltagem" class="select">
 
                             <option value="">selecione</option>
                             <option value="110v">110v</option>
@@ -171,7 +159,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
                     </div>
                     <div class="input-group">
                         <label>Escolher Imagens:</label>
-                        <input type="file" name="file[]" id="file" multiple="multiple">
+                        <input type="file" name="files[]" id="files" multiple="multiple">
                     </div>
 
                 </div>
@@ -180,16 +168,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
                     <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
                     <button class="btn btn-cancelar"><a href="cadastrar-expositor.php">cancelar</a></button>
                 </div>
-
-
-
-
-
             </form>
-
-            <!-- <form action="" method="post" class="finalizar">
-                
-            </form> -->
 
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
