@@ -1,3 +1,56 @@
+<?php 
+
+require '../../../app/adm/Controller/Administrador.php';
+
+if(isset($_POST['cadastrar'])){
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['tel'];
+    $cargo = $_POST['cargo'];
+    $senha = $_POST['senha'];
+    $confSenha = $_POST['confSenha'];
+
+    $arquivo = $_FILES['imagem'];
+    if ($arquivo['error']) die ("Falha ao enviar a foto");
+    $pasta = '../../../Public/imgs/imgs-fotos-cadastro-adm/';
+    $nome_foto = $arquivo['name'];
+    $novo_nome = uniqid();
+    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
+
+    if ($extensao != 'png' && $extensao != 'jpg') die ("Extensão do arquivo inválida");
+    $caminho = $pasta . $novo_nome . '.' . $extensao;
+    $foto = move_uploaded_file($arquivo['tmp_name'], $caminho);
+
+    if (!$foto) {
+        die("Falha ao mover o arquivo para o diretório.");
+    }
+
+    if ($senha !== $confSenha){
+        echo '<script> alert("As senhas não coincidem!"); window.history.back(); </script>';
+        exit;
+    }
+
+    $senhaHash = password_hash($senha,  PASSWORD_DEFAULT);
+
+    $objColab = new Adm();
+    $objColab->nome = $nome;
+    $objColab->email = $email;
+    $objColab->telefone = $telefone;
+    $objColab->cargo = $cargo;
+    $objColab->senha = $senhaHash;
+    $objColab->imagem = $caminho;
+
+    $res = $objColab->cadastrar();
+    if($res){
+        echo '<script> alert("Cadastrado com sucesso!"); window.location.href = "../../../app/adm/Views/cadastrar-adm.php"; </script>';
+    } else {
+        echo '<script> alert("Erro ao cadastrar!"); </script>';
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -38,7 +91,7 @@
 
             <!-- lado Esquerdo: area da Form -->
             <div class="lado-direito">
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="area-h1"><h1>Cadastro ADM</h1></div>
 
                     <div class="area-form">
@@ -66,10 +119,10 @@
                             </div>
                         </div>
                         <div class="area-total-input">
-                            <label class="label-cad" for="profissao">Profissão</label>
+                            <label class="label-cad" for="cargo">Cargo</label>
                             <div class="area-input">
                                 <i class="bi bi-briefcase"></i>
-                                <input class="input" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão" required><br><br>
+                                <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu Cargo" required><br><br>
                             </div>
                         </div>
                         <div class="area-total-input">
@@ -89,17 +142,21 @@
                             </div>
                         </div>
                         
-                        <div class="area-total-input-2">
-                            <label for="imagem" class="uploads">
-                                <input type="file" name="imagem" id="imagem" class="img-input" multiple>
-                            </label>
-                        </div> 
+                        <div class="area-total-input">
+                            <label class="label-cad" for="confSenha">Imagem de Perfil</label>
+                            <div class="area-input2">
+                                <label for="imagem" class="uploads">
+                                    <input type="file" name="imagem" id="imagem" class="input2">
+                                </label>
+                            </div> 
+                        </div>
                     </div>
-
+                    
                     <div class="area-button">
                         <button class="buttons">Cancelar</button>
-                        <button class="buttons" id="button-azul">Cadastrar</button>
+                        <button class="buttons" id="button-azul" name="cadastrar" value="Cadastrar">Cadastrar</button>
                     </div>
+                        
                 </form>
             </div>
         </div>
