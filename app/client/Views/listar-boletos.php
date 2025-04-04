@@ -34,7 +34,7 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -42,7 +42,7 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -50,7 +50,7 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -58,7 +58,7 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -66,7 +66,7 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -74,7 +74,16 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
+                        </tr>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -82,7 +91,16 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
+                        </tr>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -90,7 +108,16 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
+                        </tr>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -98,7 +125,16 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
+                        </tr>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                         <tr class="listb-tr" >
@@ -106,193 +142,18 @@
                             <td class="listb-boleto-td">35/50/69</td>
                             <td class="listb-boleto-td">Dezembro</td>
                             <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr class="listb-tr" >
-                            <td class="listb-boleto-td">110054</td>
-                            <td class="listb-boleto-td">35/50/69</td>
-                            <td class="listb-boleto-td">Dezembro</td>
-                            <td class="listb-boleto-td">R$2513,25</td>
-                            <td class="listb-boleto-td"><button class="listb-btn">Pago</button></td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
                             <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+        
+        <a href="#" class="listb-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a>
     </div>
     <img class="listb-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
     <img class="listb-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
     <img class="listb-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
-    <a href="#" class="listb-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a>
 </body>
 </html>
