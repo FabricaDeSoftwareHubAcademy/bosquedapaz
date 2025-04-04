@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Models/Controller-ADM.php');
+require_once('../../Models/Database.php');
 
 class Carrossel {
     public int $id;
@@ -17,7 +17,7 @@ class Carrossel {
             "img3" => $this->img3
         ];
 
-        $res = $db->update('id_carrosel = 3', $values);
+        $res = $db->update('id_carrosel = 1', $values);
 
         return $res ? true : false;
     }

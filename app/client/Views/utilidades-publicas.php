@@ -1,6 +1,3 @@
-<?php include "../../../Public/assets/home/menu-home.html"; ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -40,7 +37,7 @@
         </div>
 
         <div class="box-principal-utl">
-            <h1 id="titulo-ult">Utilidades Publicas</h1>
+            <h1 id="titulo-ult">Utilidades Públicas</h1>
             <div class="area-cards">
 
                 <div class="cards" id="border-card-azul">
@@ -68,7 +65,7 @@
                     </div>
                     <div class="area-button">
                         <h1 id="h1-rosa-utl">Primavera</h1>
-                        <button class="botao-saiba-mais open-modal" data-modal="abrir-siba-mas">Saiba Mais</button>
+                        <button class="botao-saiba-mais open-modal" data-modal="abrir-siba-mas2">Saiba Mais</button>
                         <div class="dec-button"></div>
                         <div class="dec-menor-button"></div>
                         <div class="dec-menor-dentro-button"></div>
@@ -100,16 +97,79 @@
                     </div>
                     <div class="area-button">
                         <h1 id="h1-rosa-utl">Primavera</h1>
-                        <button class="botao-saiba-mais open-modal" data-modal="abrir-siba-mas">Saiba Mais</button>
+                        <button class="botao-saiba-mais open-modal" data-modal="abrir-siba-mas2">Saiba Mais</button>
                         <div class="dec-button"></div>
                         <div class="dec-menor-button"></div>
                         <div class="dec-menor-dentro-button"></div>
                     </div>
                 </div>
                 
+                    <!-- MODAL 1 -->
 
-                <dialog class="modal-siba-mas" id="abrir-siba-mas">
-                    
+                <dialog class="dlog-modal-card-ProEv abrir-siba-mas" id="abrir-siba-mas">
+                <div class="div-decorativa-modal">
+                                <div id="linha-dec1-modal"></div>
+                            </div>
+                            <div class="div-decorativa2-modal">
+                                <div id="linha-dec2-modal"></div>
+                                <div id="linha-dec3-modal"></div>
+                                <div id="linha-dec4-modal"></div>
+                            </div>
+                            <div class="div-infs-evento-modal">
+                                <div class="areatl-img-modal-ProEv">
+                                    <div class="area-img-modal-ProEv">
+                                        <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="area-text-modal-ProEv">
+                                    <h1 class="title-atracao-modal">Primavera</h1>
+                                    <p class="p-atracao-modal">Lorem ipsum dolor sit amet consectetur. 
+                                        Fames metus ac egestas turpis ipsum Lorem 
+                                        ipsum dolor sit amet consectetur. Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.
+                                        Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <button id="b-sari-modal" class="close-modal" data-modal="abrir-siba-mas">
+                                    <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
+                                </button>
+                            </div>
+                </dialog>
+
+                    <!-- MODAL 2 -->
+
+                <dialog class="dlog-modal-card-ProEv abrir-siba-mas" id="abrir-siba-mas2">
+                <div class="div-decorativa-modal2">
+                                <div id="linha-dec1-modal2"></div>
+                            </div>
+                            <div class="div-decorativa2-modal2">
+                                <div id="linha-dec2-modal2"></div>
+                                <div id="linha-dec3-modal2"></div>
+                                <div id="linha-dec4-modal2"></div>
+                            </div>
+                            <div class="div-infs-evento-modal2">
+                                <div class="areatl-img-modal-ProEv2">
+                                    <div class="area-img-modal-ProEv2">
+                                        <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="area-text-modal-ProEv2">
+                                    <h1 class="title-atracao-modal2">Primavera</h1>
+                                    <p class="p-atracao-modal2">Lorem ipsum dolor sit amet consectetur. 
+                                        Fames metus ac egestas turpis ipsum Lorem 
+                                        ipsum dolor sit amet consectetur. Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.
+                                        Lorem ipsum 
+                                        dolor sit amet consectetur. Fames metus ac egestas 
+                                        turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <button id="b-sari-modal" class="close-modal" data-modal="abrir-siba-mas2">
+                                    <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
+                                </button>
+                            </div>
                 </dialog>
 
             </div>

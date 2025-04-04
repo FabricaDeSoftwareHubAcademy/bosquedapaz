@@ -1279,6 +1279,10 @@
 
 @media (min-width: 1020px) and (max-width: 1440px) {
 
+    body {
+        overflow-y: none;
+    }
+
     .boleto-box {
         width: 90%;
         height: 1950px;
@@ -1304,14 +1308,14 @@
     
     .boleto-secao-filtros {
         width: 90%;
-        height: 100vh;
+        height: 40vh;
         margin-bottom: 15%;
         /* background-color: rgb(191, 255, 0); */
     }
     
     .form-boleto-filtros-container {
         width: 100%;
-        height: 190vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1400,17 +1404,17 @@
         margin-bottom: 1.5%;
     }
     
-.boleto-filtro-data-pesquisar .botao-data-pesquisar {
-    width: 100%;
-    height: 80px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(32, 54, 139, 1);
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-    
+    .boleto-filtro-data-pesquisar .botao-data-pesquisar {
+        width: 100%;
+        height: 80px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(32, 54, 139, 1);
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+        
     .boleto-filtro-status {
         width: 100%;
         height: 100%;
@@ -1500,8 +1504,8 @@
     
     .boleto-bola3 {
         position: absolute;
-        top: 320vh;
-        left: 90vw;
+        top: 180vh;
+        left: 50vw;
         z-index: -1;
         /* background-color: red; */
     }

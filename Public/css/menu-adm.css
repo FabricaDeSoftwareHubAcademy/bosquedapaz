@@ -56,7 +56,7 @@
 .nav-item {
     font-size: 1.1rem;
     font-weight: 600;
-    height: 45px;
+    height: 35px;
     text-transform: capitalize;
     cursor: pointer;
 }
@@ -85,15 +85,15 @@
 }
 
 .submenu {
-    margin-top: 10px;
+    margin-top: 5px;
     position: absolute;
     background-color: white;
-    padding: 15px 10px;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding: 0px 10px 10px 10px;
     text-transform: capitalize;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    border-radius: .5rem;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     list-style: none;
     transition: 5s;
 }
@@ -102,15 +102,15 @@
     display: none;
 }
 
-.submenu li {
+.sub-nav-item {
     margin-top: 10px;
 }
 
-.submenu a::after{
+.item-submenu::after{
     display: none;
 }
 
-.submenu a:hover {
+.item-submenu:hover {
     color: #FC1269;
 }
 
