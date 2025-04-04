@@ -94,18 +94,25 @@ $colaboradores = $adm->listar($busca);
         </div>  
         </div>
 
-        <!-- Modal excluir -->
-        <dialog id="modal-deleta" class="modal-deleta">
-          <div class="acao-recusar">
-            <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-                <div class="acao-botoes-recusar">
-                  <button class="close-modal" data-modal="modal-deleta">cancelar</button>
-                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
-                </div>
+        <!-- modal excluir -->
+        <div class="acao-recusar" id="modal-recusar">
+          <div class="acao-content-recusar">
+            <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+            <div class="acao-botoes-recusar">
+              <a href=""><button class="botao-cancelar">Cancelar</button></a>
+              <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
             </div>
           </div>
-        </dialog>
+        </div>
+
+      <!-- Modal confirmação -->
+      <div class="mensagem-recusar" id="recusado-sucesso">
+        <div class="mensagem-content-recusar">
+          <h1 class="mensagem-texto-recusar">Concluído com sucesso!</h1>
+          <a href="#"><button class="botao-confirmar">Confirmar</button></a>
+        </div>
+      </div>
+
     </main>
     <div class="bolas-fundo">
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
