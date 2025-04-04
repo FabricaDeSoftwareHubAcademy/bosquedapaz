@@ -12,7 +12,8 @@
 </head>
 
 <body>
-<?php include "../../../Public/assets/home/menu-home.html"?>
+<?php include "../../../Public/assets/home/menu-home.html"; ?>
+
 
     <main class="principal">
 
