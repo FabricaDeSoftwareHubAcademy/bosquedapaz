@@ -148,14 +148,6 @@
                 <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
-                <div class="btn-cancelar-salvar">
-                    <button type="button" class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button type="submit" class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
             </div>
             </div>
             
