@@ -1,5 +1,5 @@
 <?php 
-require_once '../../../app/adm/Controller/Administrador.php';
+require_once '../../../app/adm/Controller/Colaborador.php';
 
 $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
 
