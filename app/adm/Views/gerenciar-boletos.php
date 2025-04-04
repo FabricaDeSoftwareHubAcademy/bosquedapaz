@@ -16,26 +16,6 @@ $result = $conn->query($sql);
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
-
-$query = "SELECT * FROM expositor_lista WHERE 1=1";
-
-if (!empty($_GET['nome_expositor'])) {
-    $nome = $conn->real_escape_string($_GET['nome_expositor']);
-    $query .= " AND nome LIKE '%$nome%'";
-}
-
-if (!empty($_GET['data_inicio']) && !empty($_GET['data_fim'])) {
-    $data_inicio = $conn->real_escape_string($_GET['data_inicio']);
-    $data_fim = $conn->real_escape_string($_GET['data_fim']);
-    $query .= " AND vencimento BETWEEN '$data_inicio' AND '$data_fim'";
-}
-
-if (!empty($_GET['status'])) {
-    $status = $conn->real_escape_string($_GET['status']);
-    $query .= " AND pagamento = '$status'";
-}
-
-$result = $conn->query($query);
 ?>
 
 <!DOCTYPE html>
