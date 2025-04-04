@@ -96,7 +96,7 @@
                             <input class="nome-cat" type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
                             <h3>Cor:</h3>
                             <div class="custom-select">
-                                <div class="select-selected">
+                                <div class="select-selected" id="openModal">
                                     <div class="color-preview" id="selectedColor"></div>
                                     <span id="selectedText">Selecione uma cor</span>
                                 </div>
