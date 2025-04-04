@@ -1,8 +1,8 @@
 <?php 
 
-require '../../../app/adm/Models/Administrador.php';
+require '../../Models/Database.php';
 
-class Adm{
+class Colaborador{
    public int $id_colaborador;
    public string $nome;
    public string $email; 

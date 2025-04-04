@@ -3,7 +3,7 @@ require_once '../../../app/adm/Controller/Colaborador.php';
 
 $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
 
-$adm = new Adm();
+$adm = new Colaborador();
 $colaboradores = $adm->listar($busca);
 ?>
 

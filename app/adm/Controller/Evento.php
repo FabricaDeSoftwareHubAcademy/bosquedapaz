@@ -1,5 +1,5 @@
 <?php
-require '../Models/Controller-ADM.php';
+require '../../Models/Database.php';
 
 class Evento
 {

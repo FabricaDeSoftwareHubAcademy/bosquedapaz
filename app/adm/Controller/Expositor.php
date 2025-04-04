@@ -1,6 +1,6 @@
 <?php
-require '../Models/Controller-ADM.php';
-require '../Controller/Imagem.php';
+require '../../Models/Database.php';
+require 'Imagem.php';
 
 
 class Expositor extends Pessoa
