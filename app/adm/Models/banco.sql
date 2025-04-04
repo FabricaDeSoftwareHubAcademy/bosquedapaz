@@ -109,6 +109,8 @@ CREATE TABLE colaborador(
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
     profissao VARCHAR(100) NOT NULL,
+    imagem VARCHAR(255) NULL,
+    senha VARCHAR(150) NOT NULL,
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -130,7 +132,9 @@ CREATE TABLE atracao(
     tipo VARCHAR(50) NOT NULL,
     horario DATETIME NOT NULL,
     foto_atracao VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id_atracao)
+    id_evento INT NOT NULL,
+    PRIMARY KEY(id_atracao),
+    FOREIGN KEY(id_evento) REFERENCES evento
 );
 
 CREATE TABLE evento(
@@ -140,9 +144,8 @@ CREATE TABLE evento(
     data_evento DATE NOT NULL,
     banner VARCHAR(255) NOT NULL,
     status BOOLEAN DEFAULT(0),
-    id_atracao INT NULL,
     PRIMARY KEY(id_evento),
-    FOREIGN KEY(id_atracao) REFERENCES atracao(id_atracao)
+    
 );
 
 CREATE TABLE desenvolvedor(
