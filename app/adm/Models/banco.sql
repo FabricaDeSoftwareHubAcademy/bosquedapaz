@@ -125,13 +125,10 @@ CREATE TABLE evento(
     nome_evento VARCHAR(150) NOT NULL,
     descricao VARCHAR(200) NOT NULL,
     data_evento DATE NOT NULL,
-    local VARCHAR(150) NOT NULL,
     banner VARCHAR(255) NOT NULL,
-    status BOOLEAN NOT NULL,
-    id_colaborador INT NOT NULL,
-    id_atracao INT NOT NULL,
+    status BOOLEAN DEFAULT(0),
+    id_atracao INT NULL,
     PRIMARY KEY(id_evento),
-    FOREIGN KEY(id_colaborador) REFERENCES colaborador(id_colaborador),
     FOREIGN KEY(id_atracao) REFERENCES atracao(id_atracao)
 );
 
