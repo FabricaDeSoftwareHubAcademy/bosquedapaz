@@ -24,9 +24,9 @@
             </div>
 
             
-            <button id="btn-voltar-cb">
-                <img href="#"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
-            </button>
+            <a href="Area-Adm.php" class="btn-voltar-cb">
+                <img src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
+            </a>
 
         <section/>
 

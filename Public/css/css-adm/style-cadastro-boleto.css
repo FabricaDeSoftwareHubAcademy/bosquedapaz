@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-#btn-voltar-cb {
+.btn-voltar-cb {
     font-size: 30px;
     margin-top: 30%;
     margin-right: 5%;
@@ -197,6 +197,7 @@ body {
     flex-direction: column;
     gap: 50px;
 }
+
 .area-btn-cb{
     display: flex;
     align-items: center;
@@ -273,7 +274,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 576px) {
-    #btn-voltar-cb {
+    .btn-voltar-cb {
         font-size: 90px;
         margin-left: 160%;
         margin-top: -60%;
@@ -513,7 +514,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-    #btn-voltar-cb {
+    .btn-voltar-cb {
         font-size: 90px;
         margin-left: 100%;
         margin-top: -50%;
@@ -754,7 +755,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    #btn-voltar-cb {
+    .btn-voltar-cb {
         font-size: 90px;
         margin-left: 65%;
         margin-top: -50%;
@@ -1038,7 +1039,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         z-index: 1;
     }
     
-    #btn-voltar-cb {
+    .btn-voltar-cb {
         font-size: 90px;
         margin-left: 36%;
         margin-top: -45%;
@@ -1298,7 +1299,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         z-index: 1;
     }
     
-    #btn-voltar-cb {
+    .btn-voltar-cb {
         font-size: 90px;
         margin-left: 30%;
         margin-top: -37%;

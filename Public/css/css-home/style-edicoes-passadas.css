@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('style-menu.css');
+@import url("style-menu.css");
 
 * {
     margin: 0;
@@ -155,7 +155,7 @@ body {
 #btn-voltar-edpass {
     font-size: 30px;
     margin-right: 78%;
-    margin-top: 32%;
+    margin-top: 34%;
     z-index: 10;
     border: none;
     background-color: transparent;
@@ -217,7 +217,7 @@ body {
     .cardRosa-edpass {
         display: flex;
         flex-direction: column;
-        width: 65%;
+        width: 70%;
         height: 16rem;
         background-image: none;
         border: 0.5px solid #FF3877;
@@ -233,7 +233,7 @@ body {
     .cardVerde-edpass {
         display: flex;
         flex-direction: column;
-        width: 65%;
+        width: 70%;
         height: 16rem;
         background-image: none;
         border: 0.5px solid #007E70;
@@ -261,7 +261,7 @@ body {
     
     .title-card-edpass {
         width: 100%;
-        font-size: 1rem;
+        font-size: 12px;
         margin-top: -5%;
         font-weight: 400;
     }
@@ -270,7 +270,7 @@ body {
         display: inline-block;
         width: 60%;
         padding: 3px;
-        font-size: 1rem;
+        font-size: 15px;
         margin: 15% 20%;
         text-align: center;
     }
@@ -279,7 +279,7 @@ body {
         display: inline-block;
         width: 60%;
         padding: 3px;
-        font-size: 1rem;
+        font-size: 15px;
         margin: 15% 20%;
         text-align: center;
     }
@@ -298,7 +298,7 @@ body {
     }
 
     .ed-edpass {
-        margin-top: -49rem;
+        margin-top: -48rem;
         position: relative;
         text-align: center;
         font-size: 25px;
@@ -318,7 +318,7 @@ body {
 
     .box-edpass{
         width: 85%;
-        height: 130%;
+        height: 150%;
         max-width: 2000px;
         z-index: 2;
         backdrop-filter: blur(0px);
@@ -330,7 +330,7 @@ body {
         box-sizing: border-box;
         transition: all .5s ease;
         position: absolute;
-        margin-top: 90%;
+        margin-top: 110%;
     }
 }
 
