@@ -9,21 +9,28 @@
     font-family: "Poppins", sans-serif;
 }
 
+.corpo-lisEsp{
+    overflow-y: hidden;
+}
 
 html,
 .corpo-lisEsp {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
 }
 
 .search-bar {
+    /* position: sticky; */
+    top: 0;
+    background: white;
+    /* z-index: 1000; */
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
-    padding-top: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
 .search-bar label {
@@ -64,41 +71,49 @@ html,
     height: 900px;
 }
 
-.b-LisEsp1 {
-    position: fixed;
-    top: 20vh;
-    right: 91vw;
-    z-index: 1;
+.bolas-fundo {
+    width: 100vw;
+    height: 750px;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+    /* animation: bolaAnim 5s infinite; */
 }
 
-.b-LisEsp1 img {
-    width: 100%;
-    height: auto;
+/* @keyframes bolaAnim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */
+
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: 0px;
+    top: 6vh;
+    z-index: -3;
 }
 
-.b-LisEsp2 {
-    position: fixed;
-    top: 20vh;
-    left: 90vw;
-    z-index: 1;
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: 0px;
+    top: 6vh;
+    z-index: -3;
 }
 
-.b-LisEsp2 img {
-    width: 100%;
-    height: auto;
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -3;
+    /* top: 55%; */
 }
 
-.b-LisEsp3 {
-    position: fixed;
-    top: 70vh;
-    left: 83vw;
-    z-index: 1;
-}
-
-.b-LisEsp3 img {
-    width: 100%;
-    height: auto;
-}
 
 .seta-LisEsp3 {
     position: fixed;
@@ -119,7 +134,7 @@ html,
     /* justify-content: center; */
     display: flex;
     width: 90%;
-    height: 750px;
+    height: 90vh;
     background-color: #f8f5f6c3;
     z-index: 2;
     border-radius: 10px;
@@ -187,19 +202,19 @@ html,
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.table-lisEsp tbody{
+.table-lisEsp tbody {
     display: table-row-group;
     max-height: 50vh;
     width: 100%;
 }
 
-.table-lisEsp tbody tr td i{
+.table-lisEsp tbody tr td i {
     font-size: 25px;
     /* margin-left: 45%; */
     cursor: pointer;
 }
 
-.table-lisEsp td i:hover{
+.table-lisEsp td i:hover {
     color: rgba(32, 54, 139, 1);
 }
 
@@ -228,13 +243,13 @@ html,
 } */
 
 .table-lisEsp thead tr,
-.table-lisEsp tbody tr{
+.table-lisEsp tbody tr {
     display: table;
     width: 100%;
     table-layout: fixed;
 }
 
-.table-lisEsp tr td{
+.table-lisEsp tr td {
     text-align: center;
     height: 15%;
 }
@@ -246,7 +261,7 @@ html,
     text-align: center;
 }
 
-#td-icon{
+#td-icon {
     text-align: center;
 }
 
@@ -257,14 +272,14 @@ html,
 
 .table-lisEsp tbody tr:nth-child(even) {
     font-size: 80%;
-    background-color: #e6e6e6;  
+    background-color: #e6e6e6;
 }
 
-.table-lisEsp tbody tr:hover{
+.table-lisEsp tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-@media screen and (max-width: 720px) {
+/* @media screen and (max-width: 720px) {
     .area-LisEsp-principal {
         height: 650px;
     }
@@ -358,10 +373,10 @@ html,
         width: 0px;
     }
 
-}
+} */
 
 /* Responsividade Ipad Mini */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
     .area-LisEsp-principal {
         height: 100%;
     }
@@ -411,10 +426,10 @@ html,
     .table-lisEsp tbody tr td i{
         margin-left: 30%;
     }
-}
+} */
 
 /* Responsividade Ipad Pro */
-@media screen and (min-height: 1366px) {
+/* @media screen and (min-height: 1366px) {
     .area-LisEsp-principal {
         height: 100%;
     }
@@ -460,10 +475,10 @@ html,
             margin-left: 40%;
     }
 
-}
+} */
 
 /* Responsividade Next Hub */
-@media (min-width: 1024px) and (max-height: 600px) {
+/* @media (min-width: 1024px) and (max-height: 600px) {
     .b-LisEsp3 {
         top: 75vh;
     }
@@ -481,10 +496,10 @@ html,
     .table-lisEsp tbody tr td i{
         margin-left: 35%;
     }
-}
+} */
 
 /* Responsividade Nest Hub Max */
-@media (min-width: 1280px) and (max-height: 800px) {
+/* @media (min-width: 1280px) and (max-height: 800px) {
     .b-LisEsp3 {
         top: 75vh;
     }
@@ -502,17 +517,147 @@ html,
     .table-lisEsp tbody tr td i{
         margin-left: 40%;
     }
-}
+} */
 
-@media (min-width: 912px) and (max-height: 1368px) {
+/* @media (min-width: 912px) and (max-height: 1368px) {
     .seta-LisEsp3-res {
         display: none;
     }
-}
+} */
 
-@media (min-width: 540px) and (max-height: 720px) {
+/* @media (min-width: 540px) and (max-height: 720px) {
     .seta-LisEsp3-res img {
         width: 5%;
         height: auto;
     }
+} */
+
+
+
+/* 📱 Ajustes para telas menores que 576px */
+@media (max-width: 575.98px) {
+    .area-LisEsp-principal {
+        overflow-y: auto;
+        max-height: 100vh;
+        background-color: red;
+    }
+
+    .box-LisEsp-mat {
+        margin-top: 40px;
+        height: 90vh;
+        padding: 0;
+        width: 88%;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .search-bar{
+        flex-direction: column;
+        gap: 10px;
+        background-color: #ffffff;
+        justify-content: space-between;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        position: relative;
+        right: 3px;
+        width: 100%;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .area-table-lisEsp {
+        width: 90%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 40vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .table-lisEsp {
+        width: 165%;
+        min-width: 400px;
+        border-collapse: collapse;
+    }
+
+    .table-lisEsp th,
+    .table-lisEsp td {
+        padding: 12px;
+        font-size: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .table-lisEsp thead {
+        top: -3.5px;
+        font-size: 10px;
+    }
+
+    .table-lisEsp tbody tr td i {
+        width: 50%;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .email-col {
+        overflow-x: auto;
+    }
+
+    .novo-evento {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .btns .voltar {
+        width: 40%;
+        bottom: -2.8rem;
+        left: -7%;
+    }
+
+    .fone-col i {
+        font-size: 15px;
+    }
+
+    .mais i {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: inherit;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .bolas-fundo .bola-rosa {
+        bottom: -5%;
+    }
+
+    .voltar img {
+        width: 30%;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    /* html,
+    .corpo-lisEsp {
+        height: 100vh;
+        overflow-y: auto;
+    } */
 }

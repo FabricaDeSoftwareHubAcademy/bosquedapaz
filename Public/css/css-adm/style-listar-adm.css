@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
-    overflow-y: hidden;
 }
 
 body{
@@ -805,7 +804,7 @@ button:hover {
 
     .collaborators-table th,
     .collaborators-table td {
-        padding: 12px;
+        padding: 10px;
         font-size: 8px;
         text-align: center;
         border: 1px solid #ddd;
@@ -899,3 +898,5 @@ button:hover {
         width: 100%;
     }
 }   
+
+.edit-icon{text-decoration: none;}
