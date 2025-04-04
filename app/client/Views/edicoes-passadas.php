@@ -87,7 +87,7 @@
                 <span class="close" data-modal="modal1">&times;</span>
                 <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 1" class="gg-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/img-card1-edpass.png" alt="Imagem 1 do Modal 1" class="gg-img">
                         <div class="area-img-p">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 1" class="p-img">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 1" class="p-img">
@@ -122,7 +122,7 @@
                 <span class="close" data-modal="modal2">&times;</span>
                 <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 2" class="gg-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/img-card2-edpass.png" alt="Imagem 1 do Modal 2" class="gg-img">
                         <div class="area-img-p">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 2" class="p-img">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 2" class="p-img">
@@ -156,7 +156,7 @@
                 <span class="close" data-modal="modal3">&times;</span>
                 <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 3" class="gg-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/img-card3-edpass.png" alt="Imagem 1 do Modal 3" class="gg-img">
                         <div class="area-img-p">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 3" class="p-img">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 3" class="p-img">
@@ -191,7 +191,7 @@
             <span class="close" data-modal="modal4">&times;</span>
             <div class="modal-content-edpass">
                     <div class="modal-img">
-                        <img src="../../../Public/imgs/edicoes-passadas-img/imagemGG.1.1.svg" alt="Imagem 1 do Modal 4" class="gg-img">
+                        <img src="../../../Public/imgs/edicoes-passadas-img/img-card4-edpass.png" alt="Imagem 1 do Modal 4" class="gg-img">
                         <div class="area-img-p">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.2.1.svg" alt="Imagem 2 do Modal 4" class="p-img">
                             <img src="../../../Public/imgs/edicoes-passadas-img/imagempp.3.1.svg" alt="Imagem 3 do Modal 4" class="p-img">

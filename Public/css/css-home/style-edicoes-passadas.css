@@ -217,7 +217,7 @@ body {
     .cardRosa-edpass {
         display: flex;
         flex-direction: column;
-        width: 65%;
+        width: 70%;
         height: 16rem;
         background-image: none;
         border: 0.5px solid #FF3877;
@@ -233,7 +233,7 @@ body {
     .cardVerde-edpass {
         display: flex;
         flex-direction: column;
-        width: 65%;
+        width: 70%;
         height: 16rem;
         background-image: none;
         border: 0.5px solid #007E70;
@@ -261,7 +261,7 @@ body {
     
     .title-card-edpass {
         width: 100%;
-        font-size: 1rem;
+        font-size: 12px;
         margin-top: -5%;
         font-weight: 400;
     }
@@ -270,7 +270,7 @@ body {
         display: inline-block;
         width: 60%;
         padding: 3px;
-        font-size: 1rem;
+        font-size: 15px;
         margin: 15% 20%;
         text-align: center;
     }
@@ -279,7 +279,7 @@ body {
         display: inline-block;
         width: 60%;
         padding: 3px;
-        font-size: 1rem;
+        font-size: 15px;
         margin: 15% 20%;
         text-align: center;
     }
@@ -298,7 +298,7 @@ body {
     }
 
     .ed-edpass {
-        margin-top: -49rem;
+        margin-top: -48rem;
         position: relative;
         text-align: center;
         font-size: 25px;
@@ -318,7 +318,7 @@ body {
 
     .box-edpass{
         width: 85%;
-        height: 130%;
+        height: 150%;
         max-width: 2000px;
         z-index: 2;
         backdrop-filter: blur(0px);
@@ -330,7 +330,7 @@ body {
         box-sizing: border-box;
         transition: all .5s ease;
         position: absolute;
-        margin-top: 90%;
+        margin-top: 110%;
     }
 }
 
