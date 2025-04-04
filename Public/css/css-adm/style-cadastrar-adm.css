@@ -67,7 +67,7 @@
 
     #linha-vertical {
         height: 85%;
-        border-right: 3px solid #FF3877;
+        border-right: 1.5px solid #FF3877;
         position: fixed;
         left: 46%;
         bottom: 8%;
@@ -79,7 +79,7 @@
     backdrop-filter: blur(30px);
 
     #linha-vertical {
-        border-right: 3px solid #162868;
+        border-right: 1.5px solid #162868;
     }
 }
 
