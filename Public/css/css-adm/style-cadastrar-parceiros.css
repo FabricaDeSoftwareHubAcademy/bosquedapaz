@@ -354,7 +354,6 @@ label#salvar-btn {
 
 .btn-cancelar-salvar .btn-salvar {
     background-color: #007E70;
-    /* box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50); */
 }
 
 .btn-cancelar-salvar .btn-cancelar {
@@ -371,8 +370,6 @@ label#salvar-btn {
 .btn-cancelar-salvar .btn-salvar:hover, .btn-cancelar:hover {
     transform: translateY(-4px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-   /* box-shadow: 1px 3px 5px 3.5px #FF3877; */
-    /* transform: scale(1.05); */
 }
  
  
@@ -510,23 +507,18 @@ label#salvar-btn {
 @media(max-width: 1050px) {
     .bolas-fundo .bola-verde1 {
         width: 80px;
-       left: -20px;
-       /* display: none; */
- 
+       left: -20px; 
     }
  
     .bolas-fundo .bola-verde2 {
         width: 90px;
         right: -25px;
-        /* display: none; */
- 
     }
  
     .bolas-fundo .bola-rosa {
         width: 200px;
         right: -50px;
         bottom: -50px;
-        /* display: none; */
     }
     .principal{
         overflow: hidden;

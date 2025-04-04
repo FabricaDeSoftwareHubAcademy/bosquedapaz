@@ -36,7 +36,6 @@
     display: flex;
     position: relative;
     bottom: 10px;
-    /* right: 10px; */
     font-size: 30px;
     cursor: pointer;
     color: #333;
@@ -151,19 +150,20 @@
 .botoes button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
     font-size: 16px;
     width: 30%;
 }
 
 .cancelar {
-    background-color: #ff3867;
+    background-color: #FF3877;
     color: white;
 }
 
 .salvar {
-    background-color: #007e70;
+    background-color: #007E70;
     color: white;
 }
 

@@ -122,6 +122,20 @@
                                         <div data-value="rgba(25, 169, 78, 0.3)">
                                             <div class="color-preview" style="background-color: rgba(25, 169, 78, 0.3);"></div> Cor 7
                                         </div>
+                                        <input id="file" type="file" style="display: none;">
+                                    </label>
+
+                                <!-- <div class="separacao">
+                                    <h2>Prévia da Categoria</h2>
+                                    <div class="previa">
+                                        <img id="output" />
+                                        <h4 id="output-text"></h4>
+                                    </div>
+                                </div> -->
+
+                                    <div class="botoes">
+                                        <button class="cancelar" onclick="fecharModal()">CANCELAR</button>
+                                        <button class="salvar" onclick="fecharModal()">SALVAR</button>
                                     </div>
                                 </div>
             
