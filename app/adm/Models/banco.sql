@@ -1,18 +1,5 @@
-CREATE DATABASE BosqueDaPaz;
-use BosqueDaPaz;
-
-show tables;
-
-drop database BosqueDaPaz;
-
-select * from pessoa;
-select * from expositor;
-
-select * from imagem;
-
-insert into imagem values (default,"a","a","A","","");
-
-insert into categoria values (default,"BURGERS","ROXO","blalba");
+CREATE DATABASE bosquedapaz;
+use bosquedapaz;
 
 CREATE TABLE categoria(
 	id_categoria INT NOT NULL AUTO_INCREMENT,
@@ -187,3 +174,15 @@ CREATE TABLE dadosFeira(
     qtd_paises BIGINT NOT NULL,
     PRIMARY KEY(id_dadosFeira)
 );
+
+
+show tables;
+
+select * from pessoa;
+select * from expositor;
+
+select * from imagem;
+
+insert into imagem values (default,"A","A","A","A","A");
+
+insert into categoria values (default,"BURGERS","ROXO","blablabla");
