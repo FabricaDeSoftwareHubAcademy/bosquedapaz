@@ -41,78 +41,69 @@ $colaboradores = $adm->listar($busca);
           <button type="submit" class="search-button">BUSCAR</button>
         </div>
       </form>
-
-        <!-- Tabela de Colaboradores -->
-        <div class="table-container">
-          <table class="collaborators-table">
-            <thead>
-              <tr>
-                <th class="usuario-col">Usuário</th>
-                <th>Nome</th>
-                <th class="email-col">E-mail</th>
-                <th class="fone-col">Telefone</th>
-                <th class="cargo-col">Cargo</th>
-                <th>Status</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php if (!empty($colaboradores)) : ?>
-                <?php foreach ($colaboradores as $colaborador) : ?>
-                  <tr>
-                    <td class="usuario-col"><?php echo htmlspecialchars($colaborador['id_colaborador']); ?></td>
-                    <td><?php echo htmlspecialchars($colaborador['nome']); ?></td>
-                    <td class="email-col"><?php echo htmlspecialchars($colaborador['email']); ?></td>
-                    <td class="fone-col"><?php echo htmlspecialchars($colaborador['telefone']); ?></td>
-                    <td class="cargo-col"><?php echo htmlspecialchars($colaborador['cargo']); ?></td>
-                    <td>
-                      <button type="button" class="status active">Ativo</button>
-                    </td>
-                    <td>
-                      <a class="edit-icon" href="editar-adm.php?id=<?php echo $colaborador['id_colaborador']; ?>">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                      </a>
-                      <button class="open-modal" data-modal="modal-deleta" data-id="<?php echo $colaborador['id_colaborador']; ?>">
-                        <i class="fa-solid fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                <?php endforeach; ?>
-              <?php else : ?>
+      <!-- Tabela de Colaboradores -->
+      <div class="table-container">
+        <table class="collaborators-table">
+          <thead>
+            <tr>
+              <th class="usuario-col">Usuário</th>
+              <th>Nome</th>
+              <th class="email-col">E-mail</th>
+              <th class="fone-col">Telefone</th>
+              <th class="cargo-col">Cargo</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php if (!empty($colaboradores)) : ?>
+              <?php foreach ($colaboradores as $colaborador) : ?>
                 <tr>
-                  <td colspan="6">Nenhum colaborador encontrado.</td>
+                  <td class="usuario-col"><?php echo htmlspecialchars($colaborador['id_colaborador']); ?></td>
+                  <td><?php echo htmlspecialchars($colaborador['nome']); ?></td>
+                  <td class="email-col"><?php echo htmlspecialchars($colaborador['email']); ?></td>
+                  <td class="fone-col"><?php echo htmlspecialchars($colaborador['telefone']); ?></td>
+                  <td class="cargo-col"><?php echo htmlspecialchars($colaborador['cargo']); ?></td>
+                  <td>
+                    <button type="button" class="status active">Ativo</button>
+                  </td>
+                  <td>
+                    <a class="edit-icon" href="editar-adm.php?id=<?php echo $colaborador['id_colaborador']; ?>">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <button class="open-modal" data-modal="modal-deleta" data-id="<?php echo $colaborador['id_colaborador']; ?>">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
                 </tr>
-              <?php endif; ?>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
-            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div>  
-        </div>
-
-        <!-- modal excluir -->
-        <div class="acao-recusar" id="modal-recusar">
-          <div class="acao-content-recusar">
-            <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-            <div class="acao-botoes-recusar">
-              <a href=""><button class="botao-cancelar">Cancelar</button></a>
-              <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
-            </div>
-          </div>
-        </div>
-
-      <!-- Modal confirmação -->
-      <div class="mensagem-recusar" id="recusado-sucesso">
-        <div class="mensagem-content-recusar">
-          <h1 class="mensagem-texto-recusar">Concluído com sucesso!</h1>
-          <a href="#"><button class="botao-confirmar">Confirmar</button></a>
-        </div>
+              <?php endforeach; ?>
+            <?php else : ?>
+              <tr>
+                <td colspan="6">Nenhum colaborador encontrado.</td>
+              </tr>
+            <?php endif; ?>
+          </tbody>
+        </table>
       </div>
 
+      <dialog id="modal-deleta" class="modal-deleta">
+        <div class="acao-recusar">
+          <div class="acao-content-recusar">
+              <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+              <div class="acao-botoes-recusar">
+                <button class="close-modal" data-modal="modal-deleta">cancelar</button>
+                <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+              </div>
+          </div>
+        </div>
+      </dialog>
+
+      <div class="btns">
+          <a href="Area-Adm.php" class="voltar">
+          <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+          </a>
+      </div>  
+      </div>
     </main>
     <div class="bolas-fundo">
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
