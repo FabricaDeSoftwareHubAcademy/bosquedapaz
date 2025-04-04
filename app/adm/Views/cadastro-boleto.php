@@ -24,8 +24,8 @@
             </div>
 
             
-            <a class="btn-voltar-cb">
-                <img href="Area-Adm.php"  src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
+            <a href="Area-Adm.php" class="btn-voltar-cb">
+                <img src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="">
             </a>
 
         <section/>

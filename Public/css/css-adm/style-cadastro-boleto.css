@@ -21,7 +21,7 @@ body {
     margin-right: 5%;
     z-index: 10;
     border: none;
-    background-color: red;
+    background-color: transparent;
     cursor: pointer;
 }
 
