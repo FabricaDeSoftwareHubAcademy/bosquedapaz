@@ -380,12 +380,12 @@
     gap: 20px;
 }
 
-.title-atracao-modal {
+.title-atracao-modal{
     font-size: 40px;
-    color: rgba(0, 126, 112, 1);
+    color: #3F49EA;
     position: absolute;
-    bottom: 67%;
-    left: 67%;
+    bottom: 28%;
+    left: -3%;
 }
 
 .p-atracao-modal {
@@ -544,12 +544,12 @@
             gap: 20px;
         }
         
-        .title-atracao-modal2 {
+        .title-atracao-modal2{
             font-size: 40px;
-            color: rgba(0, 126, 112, 1);
+            color: #FF3877;
             position: absolute;
-            bottom: 67%;
-            left: 67%;
+            bottom: 28%;
+            left: -3%;
         }
         
         .p-atracao-modal2 {
@@ -709,6 +709,9 @@
 
     .title-atracao-modal {
         font-size: 5px;
+        display: none;
+        position: relative;
+        left: 106%;
     }
 
     .p-atracao-modal {
@@ -754,7 +757,7 @@
 
         /* MODAL 2 */
 
-    .dlog-modal-card-ProEv2 {
+     .dlog-modal-card-ProEv2 {
         width: 90%;
         height: 25%;
         left: 5%;
@@ -789,12 +792,14 @@
 
     .title-atracao-modal2 {
         font-size: 5px;
+        display: none;
+        position: relative;
+        left: 106%;
     }
 
     .p-atracao-modal2 {
         font-size: 6px;
         width: 150px;
-        /* left: 55%;     */
         top: 25%;
     }
 
@@ -815,7 +820,7 @@
     .div-decorativa2-modal2 {
         width: 50%;
         height: 30%;
-        background-color: #3F49EA;
+        background-color: #FF3877;
         position: relative;
         top: 55%;
         left: 65%;
@@ -825,12 +830,12 @@
     .div-decorativa-modal2 {
         width: 30%;
         height: 30%;
-        background-color: #3F49EA;
+        background-color: #FF3877;
         position: relative;
         bottom: 20%;
         right: 5%;
         transform: rotate(-25deg);
-    }
+    } 
 
 }
 

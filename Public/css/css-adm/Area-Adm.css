@@ -323,4 +323,46 @@ body{
     .Bola-3-gabriel{
         display: none;
     }
-} 
+}
+
+@media (max-width:1280px){
+    .box-gabriel{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 110%;
+        position: relative;
+        top: 5%;
+    }
+
+    .area-botao-gabriel{
+        position: relative;
+        left: -8rem;
+    }
+
+    .seta-voltar-gabriel {
+        position: relative;
+        top: 10rem;
+        top: 91rem;
+        z-index: 1;
+        left: -15rem;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 12rem;
+        width: 135%;
+        top: -29rem;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+}

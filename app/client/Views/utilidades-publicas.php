@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
                                 <div class="area-text-modal-ProEv">
-                                    <h1 class="title-atracao-modal">Tapioca Forró</h1>
+                                    <h1 class="title-atracao-modal">Primavera</h1>
                                     <p class="p-atracao-modal">Lorem ipsum dolor sit amet consectetur. 
                                         Fames metus ac egestas turpis ipsum Lorem 
                                         ipsum dolor sit amet consectetur. Lorem ipsum 
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="area-text-modal-ProEv2">
-                                    <h1 class="title-atracao-modal2">Tapioca Forró</h1>
+                                    <h1 class="title-atracao-modal2">Primavera</h1>
                                     <p class="p-atracao-modal2">Lorem ipsum dolor sit amet consectetur. 
                                         Fames metus ac egestas turpis ipsum Lorem 
                                         ipsum dolor sit amet consectetur. Lorem ipsum 
@@ -166,7 +166,7 @@
                                         dolor sit amet consectetur. Fames metus ac egestas 
                                         turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
-                                <button id="b-sari-modal" class="close-modal" data-modal="abrir-siba-mas">
+                                <button id="b-sari-modal" class="close-modal" data-modal="abrir-siba-mas2">
                                     <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
                                 </button>
                             </div>
