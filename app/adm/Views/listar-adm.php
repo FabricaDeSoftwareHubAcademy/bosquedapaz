@@ -66,7 +66,7 @@ $colaboradores = $adm->listar($busca);
                     <td class="fone-col"><?php echo htmlspecialchars($colaborador['telefone']); ?></td>
                     <td class="cargo-col"><?php echo htmlspecialchars($colaborador['cargo']); ?></td>
                     <td>
-                      <button type="button" class="status"></button>
+                      <button type="button" class="status active">Ativo</button>
                     </td>
                     <td>
                       <a class="edit-icon" href="editar-adm.php?id=<?php echo $colaborador['id_colaborador']; ?>">

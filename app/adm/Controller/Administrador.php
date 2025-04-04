@@ -58,8 +58,6 @@ class Adm{
     
         if ($stmt) {
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            // Adicione esta linha para verificar o que está sendo retornado
-            var_dump($result); 
             return $result;
         }
         
