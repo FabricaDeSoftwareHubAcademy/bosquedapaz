@@ -35,6 +35,39 @@ class Adm{
         }
         return false;
     }
+
+    public function listar($busca = null){
+        $db = new Database('colaborador');
+        
+        if ($busca) {
+            $query = "
+                SELECT c.id_colaborador, p.nome, p.email, p.telefone, c.cargo, c.imagem
+                FROM colaborador c
+                JOIN pessoa p ON p.id_pessoa = c.id_pessoa
+                WHERE p.nome LIKE ?
+            ";
+            $stmt = $db->execute($query, ["%$busca%"]);
+        } else {
+            $query = "
+                SELECT c.id_colaborador, p.nome, p.email, p.telefone, c.cargo, c.imagem
+                FROM colaborador c
+                JOIN pessoa p ON p.id_pessoa = c.id_pessoa
+            ";
+            $stmt = $db->execute($query);
+        }
+    
+        if ($stmt) {
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // Adicione esta linha para verificar o que está sendo retornado
+            var_dump($result); 
+            return $result;
+        }
+        
+        return [];
+    }
+    
+    
+    
 }
 
 
