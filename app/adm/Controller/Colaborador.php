@@ -1,6 +1,6 @@
 <?php 
 
-require '../../../app/adm/Models/Database-cadastroADM.php';
+require '../../../app/adm/Models/Administrador.php';
 
 class Adm{
    public int $id_colaborador;
@@ -63,9 +63,6 @@ class Adm{
         
         return [];
     }
-    
-    
-    
 }
 
 

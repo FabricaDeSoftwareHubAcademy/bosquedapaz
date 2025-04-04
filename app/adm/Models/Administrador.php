@@ -65,6 +65,10 @@ class Database {
         }
     }
 
+    public function getConnection(){
+        return $this->conn;
+    }
+
     public function insert_lastid($values)
     {
         // quebrar o array associativo que veio como parametro

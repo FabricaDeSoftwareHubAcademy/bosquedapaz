@@ -1,6 +1,6 @@
 <?php 
 
-require '../../../app/adm/Controller/Administrador.php';
+require '../../../app/adm/Controller/Colaborador.php';
 
 if(isset($_POST['cadastrar'])){
     $nome = $_POST['nome'];
@@ -81,7 +81,7 @@ if(isset($_POST['cadastrar'])){
         <div class="box">
             <div id="linha-vertical"></div>
             <div class="setaV-cadastro">
-                <a href="../../../app/adm/Views/gerenciar-adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+                <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
             </div>
             
             <!-- lado Esquerdo: area da imagem -->

@@ -89,11 +89,6 @@
     top: 70vh;
     display: block;
     cursor: pointer;
-    transition: all .2s ease-in;
-}
-
-.setaV-cadastro:hover {
-    transform: scale(1.1);
 }
 
 /* Lado Esquerdo da Box: IMAGEM */
