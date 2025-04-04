@@ -27,8 +27,8 @@ if (isset($_POST['REQUEST_METHOD'])) {
     $res = $expositor->cadastrar();
 
     if ($res) {
-        // header("Location: sucesso.php");
-        echo '<script> alert("cadastrou") </script>';
+        echo '<script> alert("Cadastrado com sucesso") </script>';
+        header("location:cadastrar-expositor.php");
     } else {
         echo '<script> alert(" não cadastrou") </script>';
     }
