@@ -196,7 +196,7 @@ table tbody tr:nth-child(even) {
 
 
 .status {
-    width: 80px;
+    width: 90px;
     padding: 5px 10px;
     border: none;
     border-radius: 15px;
@@ -212,7 +212,7 @@ table tbody tr:nth-child(even) {
 }
 
 .status.inactive {
-    background-color: #dc3545;
+    background-color: #dee113;
     color: white;
     border-radius: 8px;
 }

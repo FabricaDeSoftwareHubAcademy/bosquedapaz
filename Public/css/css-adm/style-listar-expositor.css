@@ -216,6 +216,8 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    width: 10px;
+    padding-left: 5%;
 }
 
 .edit-icon:hover {

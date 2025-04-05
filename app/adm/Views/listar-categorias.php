@@ -31,7 +31,7 @@
                                     <th class="usuario-col">ID</th>
                                     <th>Nome</th>
                                     <th>Status</th>
-                                    <th>Ações</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,9 +42,6 @@
                                     <td>
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
                                         </a>
                                     </td>
                                 </tr>
@@ -57,9 +54,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -70,9 +65,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -83,9 +76,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <td class="usuario-col">5</td>
@@ -95,9 +86,7 @@
                                     <a href="#" class="edit-icon" id="openModal">
                                         <i class="fa-solid fa-pen-to-square "></i>
                                     </a>
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                    </a>
+                                    
                                 </td>
                                 </tr>
                                 <tr>
@@ -108,9 +97,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -121,9 +108,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -134,9 +119,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -147,9 +130,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                             </tbody>

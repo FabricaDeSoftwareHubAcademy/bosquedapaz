@@ -49,6 +49,8 @@ h2 {
 .edit-icon,
 .delete-icon {
     text-decoration: none;
+    width: 10px;
+    padding-left: 5%;
 
 }
 

@@ -30,16 +30,75 @@
                     <table class="collaborators-table">
                         <thead>
                             <tr>
-                                <th class="usuario-col">ID</th>
-                                <th>Nome</th>
+                                <th class="usuario-col">Nome</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
                                 <th>Status</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
+                                <td class="usuario-col">Shopping Bosque dos Ipês</td>
+                                <td>(67)99999-9999</td>
+                                <td>bosquedosipes@bosque.com</td>
+                                <td><button class="status active">Ativo</button></td>
+                                <td>
+                                    <a href="#modal-editar" class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a href="#modal-recusar" class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="usuario-col">Prefeitura de Campo Grande</td>
+                                <td>(67)99999-9999</td>
+                                <td>prefeituracgr@prefeitura.com</td>
+                                <td><button class="status active">Ativo</button></td>
+                                <td>
+                                    <a href="#modal-editar" class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a href="#modal-recusar" class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Sebrae</td>
+                                <td>(67)99999-9999</td>
+                                <td>sebrae@sebrae.com</td>
+                                <td><button class="status active">Ativo</button></td>
+                                <td>
+                                    <a href="#modal-editar" class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a href="#modal-recusar" class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Senac</td>
+                                <td>(67)99999-9999</td>
+                                <td>senac@senac.com</td>
+                                <td><button class="status active">Ativo</button></td>
+                                <td>
+                                    <a href="#modal-editar" class="edit-icon">
+                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
+                                    </a>
+                                    <a href="#modal-recusar" class="delete-icon">
+                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="usuario-col">Sectur</td>
+                                <td>(67)99999-9999</td>
+                                <td>secur@sectur.com</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
                                     <a href="#modal-editar" class="edit-icon">
@@ -51,131 +110,6 @@
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>SENAC-Serviço Nacional de Aprendizagem Comercial</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
 
                         </tbody>
                     </table>

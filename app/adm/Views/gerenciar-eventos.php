@@ -35,11 +35,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 1; $i <= 25; $i++): ?>
+                            <?php for ($i = 1; $i <= 12; $i++): ?>
                                 <tr>
                                     <td class="usuario-col">Evento <?php echo $i; ?></td>
-                                    <td>Data <?php echo $i; ?></td>
-                                    <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Inativo' : 'Ativo'; ?></button></td>
+                                    <td><?php echo ("10/$i/25"); ?></td>
+                                    <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Em curso' : 'Finalizado'; ?></button></td>
                                     <td class="fone-col">
                                         <a href="editar-evento.php">
                                             <i class="fa-solid fa-pen-to-square"></i>
@@ -93,7 +93,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
+    <script src="../../../Public/js/js-adm/status-evento.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
 </body>
 
