@@ -57,7 +57,7 @@
     align-items: center;
     position: fixed;
     width: 95%;
-    margin-top: 8%;
+    top: 18%;
     border-radius: 10px;
     height: 80%;
 }
@@ -66,7 +66,7 @@
     /* background-color: rgba(41, 115, 28, 0.705); */
     position: relative;
     font-size: 40px;
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-top: 1%;
 }
@@ -149,29 +149,117 @@
 }
 
 @media (max-width: 575.98px){
+    .listb-box{
+        top: 14%;
+        height: 82%;
+    }
 
+    .listb-title{
+        font-size: 36px;
+    }
+
+    .listb-voltar{
+        right: 42%;
+        top: 6%;
+    }
+
+    .listb-superior-direita{
+        width: 20%;
+    }
+
+    .listb-superior-esquerda{
+        width: 20%;
+    }
+
+    .listb-inferior{
+        width: 25%;
+    }
+
+    .listb-tabela-container{
+        width: 85%;
+        max-height: 61vh;
+    }
 }
 
 @media (min-width: 576px){
+    .body-listb{
+        background-color: blue;
+    }
 
+    .listb-title{
+        width: 100%;
+        font-size: 33px;
+    }
+
+    .listb-tabela-container{
+        width: 90%;
+        max-height: 60vh;
+    }
+
+    .listb-voltar{
+        right: 45%;
+    }
+
+    .listb-box{
+        top: 16%;
+        height: 83%;
+    }
 }
 
 @media (min-width: 768px){
+    .listb-box{
+        top: 12%;
+        height: 82%;
+    }
 
+    .listb-tabela-container{
+        max-height: 67vh;
+    }
+
+    .listb-voltar{
+        right: 46%;
+    }
+
+    .listb-superior-esquerda{
+        width: 20%;
+    }
+
+    .listb-superior-direita{
+        width: 20%;
+    }
+
+    .listb-inferior{
+        width: 18%;
+    }
 }
 
 @media (min-width: 992px){
+    .body-listb{
+        background-color: aqua;
+    }
 
+    .listb-box{
+        height: 80%;
+        top: 5%;
+    }
+
+    .listb-tabela-container{
+        max-height: 60vh;
+    }
 }
 
-@media (max-width: 1024px) and (min-height:600px){
+/* @media (max-width: 1024px) and (min-height:600px){
 
-}
+} */
 
 @media (min-width: 1200px){
-
+    .body-listb{
+        background-color: purple;
+    }
 }
 
 @media (min-width: 1400px){
-
+    .body-listb{
+        background-color: yellow;
+    }
 }
