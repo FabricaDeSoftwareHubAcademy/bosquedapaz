@@ -63,20 +63,6 @@ class Colaborador{
         
         return [];
     }
-
-    public function deletar($id_colaborador){
-        $db = new Database('colaborador');
-
-        $resColaborador = $db->delete("id_colaborador = $id_colaborador");
-
-        if($resColaborador){
-            $dbPessoa = new Database('pessoa');
-            return $dbPessoa->delete("id_pessoa = (SELECT id_pessoa FROM colaborador WHERE id_colaborador = $id_colaborador)");
-        }
-
-        return false;
-    }
-
 }
 
 

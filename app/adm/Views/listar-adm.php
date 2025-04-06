@@ -1,20 +1,6 @@
 <?php 
 require_once '../../../app/adm/Controller/Colaborador.php';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id_colaborador'])){
-  $id_colaborador = $_POST['id_colaborador'];
-
-  $colaborador = new Colaborador();
-  $excluido = $colaborador->deletar($id_colaborador);
-
-  if($excluido){
-    header('Location: ' . $_SERVER['PHP_SELF']);
-    exit;
-  }else{
-    echo "Erro ao excluir o colaborador.";
-  }
-}
-
 $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
 $adm = new Colaborador();
 $colaboradores = $adm->listar($busca);
@@ -107,11 +93,8 @@ $colaboradores = $adm->listar($busca);
             <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
             <div class="acao-botoes-recusar">
               <button class="close-modal-cancel" data-modal="modal-deleta">Cancelar</button>
-              <!-- Formulário de exclusão com o ID do colaborador -->
-              <form id="form-excluir" method="POST">
                 <input type="hidden" name="id_colaborador" id="id_colaborador">
                 <button type="submit" class="close-modal-save">Confirmar</button>
-              </form>
             </div>
           </div>
         </div>
@@ -130,18 +113,6 @@ $colaboradores = $adm->listar($busca);
         <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
     </div>
 
-    <script>
-      // Abre o modal de exclusão e define o ID do colaborador a ser excluído
-      document.querySelectorAll('.open-modal').forEach(button => {
-        button.addEventListener('click', function () {
-            const colaboradorId = this.getAttribute('data-id'); // Pega o ID do colaborador
-            document.getElementById('id_colaborador').value = colaboradorId; // Coloca o ID no campo oculto
-            document.getElementById('modal-deleta').showModal(); // Abre o modal
-        });
-      });
-    </script>
-
-    <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
-    <script src="../../../Public/js/js-modais/js-excluir-listar-adm.js.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
 </html>
