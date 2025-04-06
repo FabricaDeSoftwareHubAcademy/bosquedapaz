@@ -70,7 +70,7 @@ $colaboradores = $adm->listar($busca);
                     <a class="edit-icon" href="editar-adm.php?id=<?php echo $colaborador['id_colaborador']; ?>">
                       <i class="fa-solid fa-pen-to-square"></i>
                     </a>
-                    <button class="open-modal" data-id="<?php echo $colaborador['id_colaborador']; ?>">
+                    <button class="open-modal" data-modal="modal-deleta" data-id="<?php echo $colaborador['id_colaborador']; ?>">
                       <i class="fa-solid fa-trash"></i>
                     </button>
                   </td>
