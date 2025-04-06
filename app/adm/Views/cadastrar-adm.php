@@ -32,7 +32,7 @@ if(isset($_POST['cadastrar'])){
 
     $senhaHash = password_hash($senha,  PASSWORD_DEFAULT);
 
-    $objColab = new Adm();
+    $objColab = new Colaborador();
     $objColab->nome = $nome;
     $objColab->email = $email;
     $objColab->telefone = $telefone;

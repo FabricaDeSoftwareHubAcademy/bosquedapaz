@@ -33,7 +33,7 @@
 
     #linha-vertical-ec{
         height: 640px;
-        border-right: 3px solid rgba(0, 126, 112, 1);
+        border-right: 1px solid rgba(0, 126, 112, 1);
         position: fixed;
         left: 50%;
         top: 8%;

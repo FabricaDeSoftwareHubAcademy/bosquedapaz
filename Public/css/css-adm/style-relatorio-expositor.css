@@ -255,10 +255,6 @@ table tbody tr:nth-child(even) {
     color: black;
 }
 
-.email-col{
-    font-size: 11px;
-}
-
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -310,7 +306,7 @@ table tbody tr:nth-child(even) {
 }
 
 @media (max-width: 1042px) {
-    .principal .box {
+    .box {
         padding: 15px;
     }
 
@@ -320,6 +316,10 @@ table tbody tr:nth-child(even) {
 
     .search-bar input {
         width: 100%;
+    }
+
+    .bolas-fundo {
+        display: none;
     }
 }
 
