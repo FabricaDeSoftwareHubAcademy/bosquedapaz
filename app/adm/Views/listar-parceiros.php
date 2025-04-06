@@ -30,7 +30,8 @@
                     <table class="collaborators-table">
                         <thead>
                             <tr>
-                                <th class="usuario-col">Nome</th>
+                                <th class="usuario-col">Parceiro</th>
+                                <th>Contato</th>
                                 <th>Telefone</th>
                                 <th>Email</th>
                                 <th>Status</th>
@@ -40,6 +41,7 @@
                         <tbody>
                             <tr>
                                 <td class="usuario-col">Shopping Bosque dos Ipês</td>
+                                <td>João</td>
                                 <td>(67)99999-9999</td>
                                 <td>bosquedosipes@bosque.com</td>
                                 <td><button class="status active">Ativo</button></td>
@@ -55,6 +57,7 @@
                             
                             <tr>
                                 <td class="usuario-col">Prefeitura de Campo Grande</td>
+                                <td>Rosângela</td>
                                 <td>(67)99999-9999</td>
                                 <td>prefeituracgr@prefeitura.com</td>
                                 <td><button class="status active">Ativo</button></td>
@@ -69,6 +72,7 @@
                             </tr>
                             <tr>
                                 <td class="usuario-col">Sebrae</td>
+                                <td>Greyce</td>
                                 <td>(67)99999-9999</td>
                                 <td>sebrae@sebrae.com</td>
                                 <td><button class="status active">Ativo</button></td>
@@ -83,6 +87,7 @@
                             </tr>
                             <tr>
                                 <td class="usuario-col">Senac</td>
+                                <td>Amaury</td>
                                 <td>(67)99999-9999</td>
                                 <td>senac@senac.com</td>
                                 <td><button class="status active">Ativo</button></td>
@@ -97,6 +102,7 @@
                             </tr>
                             <tr>
                                 <td class="usuario-col">Sectur</td>
+                                <td>Elizeu</td>
                                 <td>(67)99999-9999</td>
                                 <td>secur@sectur.com</td>
                                 <td><button class="status active">Ativo</button></td>
