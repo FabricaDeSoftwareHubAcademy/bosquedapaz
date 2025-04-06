@@ -90,12 +90,11 @@ $colaboradores = $adm->listar($busca);
       <dialog id="modal-deleta" class="modal-deleta">
         <div class="acao-recusar">
           <div class="acao-content-recusar">
-            <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-            <div class="acao-botoes-recusar">
-              <button class="close-modal-cancel" data-modal="modal-deleta">Cancelar</button>
-                <input type="hidden" name="id_colaborador" id="id_colaborador">
-                <button type="submit" class="close-modal-save">Confirmar</button>
-            </div>
+              <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+              <div class="acao-botoes-recusar">
+                <button class="close-modal" data-modal="modal-deleta">cancelar</button>
+                <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+              </div>
           </div>
         </div>
       </dialog>
