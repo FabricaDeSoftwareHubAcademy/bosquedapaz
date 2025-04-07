@@ -1,20 +1,15 @@
 <?php
-$host = 'localhost';
-$usuario = 'root';
-$senha = '';
-$banco = 'expositor_teste';
+require_once '../../../app/adm/Controller/Boleto.php';
 
-$conn = new mysqli($host, $usuario, $senha, $banco);
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=banco_expositor", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
+    $boleto = new Boleto($pdo);
+    $boletos = $boleto->listarBoletos();
 
-$sql = "SELECT * FROM expositor_lista";
-$result = $conn->query($sql);
-
-if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error);
+} catch (PDOException $e) {
+    die("Erro ao conectar: " . $e->getMessage());
 }
 ?>
 
@@ -25,13 +20,12 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Boletos </title>
+    <script src="../../../Public/js/js-adm/atualizar-status.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body class="boleto-body">
-    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <div class="boleto-box">
         <section class="boletao-secao-titulo">
@@ -85,59 +79,40 @@ if ($conn->connect_error) {
                             <th>Referência</th>
                             <th>Valor</th>
                             <th>Status</th>
-                            <th>Editar</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <?php if ($result->num_rows > 0): ?>
-                            <?php while ($row = $result->fetch_assoc()): ?>
-                                <tr>
-                                    <td><?php echo htmlspecialchars($row['nome']); ?></td>
-                                    <td><?php echo date("d/m/Y", strtotime($row['vencimento'])); ?></td>
-                                    <td><?php echo htmlspecialchars($row['referencia']); ?></td>
-                                    <td><?php echo number_format($row['valor'], 2, ',', '.'); ?></td>
-                                <td>
-                                    <button class="status <?php echo ($row['pagamento'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>" 
-                                            onclick="toggleStatus(this, <?php echo $row['id_expositor']; ?>)">
-                                        <?php echo ($row['pagamento'] == 'pago') ? 'Pago' : 'Pendente'; ?>
-                                    </button>
-                                </td>
-
-
-                                    <td>
-                                        <a href="editar.php?id=<?php echo $row['id_expositor']; ?>" class="boleto-botao-editar">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endwhile; ?>
-                        <?php else: ?>
+                    <tbody class="boleto-tabela-lista">
+                        <?php foreach ($boletos as $row): ?>
                             <tr>
-                                <td colspan="6">Nenhum boleto encontrado.</td>
-                            </tr>
-                        <?php endif; ?>
-                    </tbody>
+                                <td><?= htmlspecialchars($row['nome_expositor']) ?></td>
+                                <td><?= htmlspecialchars($row['vencimento']) ?></td>
+                                <td><?= htmlspecialchars($row['referencia']) ?></td>
+                                <td><?= htmlspecialchars($row['valor']) ?></td>
+                                <td>
+                                    <button class="status <?php echo ($row['situacao'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>"
+                                        onclick="toggleSituacao(this, <?php echo $row['id_expositor']; ?>)">
+                                        <?php echo ucfirst($row['situacao']); ?>
+                                    </button>
 
+
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
                 </table>
             </div>
         </section>
     </div>
 
-    <div class="boleto-bola1">
-        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
+    <!-- Modal de Confirmação -->
+    <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
+     background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+        <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center;">
+            <p>Deseja realmente alterar o status?</p>
+            <button id="btn-sim">Sim</button>
+            <button id="btn-nao">Não</button>
+        </div>
     </div>
 
-    <div class="boleto-bola2">
-        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
-    </div>
 
-    <div class="boleto-bola3">
-        <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
-    </div>
-    <div class="boleto-seta-voltar">
-        <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-    </div>
-
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/troca-status-boleto.js"></script>
 </body>
