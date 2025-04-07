@@ -15,22 +15,8 @@
     <?php include "../../../Public/assets/adm/menu-adm.html"; ?>
 
     <section class="area-LisEsp-principal">
-        <div class="b-LisEsp1">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp1.svg" alt="">
-        </div>
-
-        <div class="b-LisEsp2">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp2.svg" alt="">
-        </div>
-
-        <div class="b-LisEsp3">
-            <img src="../../../Public/imgs/imgs-lista-de-espera/b-LisEsp4.svg" alt="">
-        </div>
 
         <div class="box-LisEsp-mat">
-            <div class="seta-LisEsp3-res">
-                <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-            </div>
 
             <h1 class="titulo">LISTA DE ESPERA</h1>
             <div class="search-bar">
