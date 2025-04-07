@@ -80,7 +80,6 @@
                 <td class="email-col">julia.souza456@gmail.com</td>
                 <td class="fone-col">(67) 98945-6789</td>
                 <td class="barraca-col">10</td>
-
                 <td><button class="status active">Ativo</button></td>
                 <td>
                   <a class="edit-icon" href="editar-expositor.php">

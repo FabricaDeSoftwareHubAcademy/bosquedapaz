@@ -160,6 +160,13 @@
     margin-left: 15px;
     display: flex;
 }
+.btns{
+    position: absolute;
+    display: flex;
+    margin-top: 110px;
+    cursor: pointer;
+    margin-right: 1750px;
+}
 @media screen and (max-width: 1629px){
     .cards-feirantes{
         display: flex;

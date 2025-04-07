@@ -8,26 +8,18 @@
     font-family: "Poppins", sans-serif;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+.cadastro-categoria {
+    width: 500px;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
 }
 
 .modal-content {
+    width: 100%;
     height: 70%;
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    width: 80%;
     max-width: 500px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -44,7 +36,6 @@
     display: flex;
     position: relative;
     bottom: 10px;
-    /* right: 10px; */
     font-size: 30px;
     cursor: pointer;
     color: #333;
@@ -69,7 +60,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 52%;
+    width: 65%;
     /* margin-right: 10px; */
     font-size: 16px;
     border-bottom: 2px solid #9d9fa1;
@@ -161,19 +152,20 @@
 .botoes button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
     font-size: 16px;
     width: 30%;
 }
 
 .cancelar {
-    background-color: #ff3867;
+    background-color: #FF3877;
     color: white;
 }
 
 .salvar {
-    background-color: #007e70;
+    background-color: #007E70;
     color: white;
 }
 

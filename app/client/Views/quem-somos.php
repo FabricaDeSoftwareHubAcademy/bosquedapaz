@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-quem-somos.css">
+
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
+
+
     <title>Bosque da Paz</title>
 </head>
 <body>
+
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
+    <li> kkkkkk</li>
 
     <main class="section-bosque-quem-somos">
         <div class="div-text-sobre">
@@ -26,7 +35,7 @@
     
         <section class="section-nosso-time-quem-somos">
             <div class="div-nt" >
-            <h2>NOSSO TIME</h2 >
+            <h1 class="titulo-nosso-time-quem-somos">NOSSO TIME</h1 >
             
             </div>
         </section> <!--section que termina o NOSSO TIME-->
@@ -35,19 +44,19 @@
             
             <div class="image-text-carina">
                 
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora1.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-carina.png" alt="">
                 <p class="carina">Carina Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
 
             <div class="image-text-denise">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora2.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-denize.png" alt="">
                 <p class="denise">Denise Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
    
             <div class="image-text-fernanda">
-                <img class="fotos" src="../../../Public/imgs/quem-somos/colaboradora3.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos/foto-fernanda.png" alt="">
                 <p class="fernanda">Fernanda Gutierrez</p>
                 <span class="profission">Advogada</span>
             </div>
@@ -62,28 +71,49 @@
     <section class="section-expositor-quem-somos">
 
         <div class="expositor">
-            <h3>SEJA UM EXPOSITOR</h3>
+            <h1 class="titulo-seja-expositor-quem-somos">SEJA UM EXPOSITOR</h1>
         </div>
         
         <div class="expositor-p">
-            <p class="acesse">Mostre seu talento na nossa feira. Acesse o Botão Abaixo e Cadastre-se agora e aproveite a chance de destacar seu trabalho para um público animado. Não perca essa oportunidade!</p>
+            <p class="acesse">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botao abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
             
         </div>
         
-        <div class="botão-expositor">
-            <a class="botão" href="../../../app/client/views/edital-expositor.php">CLIQUE AQUI!</a>
+        <a class="botao-expositor" href="../../../app/client/views/edital-expositor.php">
+        <div class="botao">
+            CLIQUE AQUI!
+       
         </div>
+        </a>
     </section>
 
-    <section class="vazio">
-        <div class="logo2">
-            <img src="../../../Public/imgs/quem-somos/BOSQUE-removebg-preview (1) 3.png" alt="">
-        </div>
-    </section>
+<!-- 
+    <section class="parceiros-quem-somos">
+    <div class="titulo-parceiros-quem-somos">
+        <h4>PARCEIROS</h4>
 
+    </div>
+    <div class="fotos-parceiros-quem-somos">
+       <img src="../../../Public/imgs/quem-somos/bosque-ipe.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/governo.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/senac.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/sebrae.png" alt="">
+        <img src="../../../Public/imgs/quem-somos/setur.png" alt="">
+        
+
+    </div>
+
+
+</section> -->
+
+   
 
 
     <!--------------------------------->
+    <section class="section-parce2">
+        <?php include "../../../Public/assets/home/parceiros.html" ?>
+    </section>
+    
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 

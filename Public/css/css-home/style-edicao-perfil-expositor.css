@@ -1,0 +1,856 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.principal{
+    width: 100%;
+    height: 87.8vh;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagens */
+.img1{
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img2{
+    position: fixed;
+    top: 25vh;
+    left: 92vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3{
+    position: fixed;
+    top: 72vh;
+    left: 88vw;
+    z-index: 1;
+    width: 20vw;
+}
+
+.img3 img{
+    width: 70%;
+    height: auto;
+}
+
+
+
+/* Box */
+.box-principal{
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+    border-radius: 12px;
+    background-color: rgba(248, 245, 246, 0.65);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Elementos da Box */
+.linha{
+    width: 2px;
+    height: 100%;
+    position: relative;
+    left: 39%;
+    background-color: rgba(43, 43, 43, 0.295);
+}
+
+.area-infs{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+}
+
+.area-infs form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(137, 43, 226, 0);
+}
+
+
+
+/* Lado Esquerdo */
+.lado-esquerdo{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(95, 158, 160, 0);
+}
+
+.area-logo{
+    width: 100%;
+    height: 40%;
+    background-color: #5cb74a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.area-logo p{
+    position: relative;
+    top: 2.5rem;
+}
+
+.uploads{
+    width: 200px;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    right: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.uploads:hover{
+    transform: scale(1.1);
+}
+
+.img-input{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 255, 0);
+    position: absolute;
+    cursor: pointer;
+}
+
+.uploads img{
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.562);
+}
+
+.text-produtos{
+    width: 100%;
+    height: 13%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-produtos h1{
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.area-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #ff387700;
+}
+
+.imgs-produtos {
+    width: calc(33.3% - 10px); 
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    overflow: hidden; 
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562);
+}
+
+.imgs-produtos:hover{
+    transform: scale(1.1);
+}
+
+.img-produto-input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.imgs-produtos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+
+
+/* Lado Direito */
+.lado-direito{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 228, 196, 0);
+}
+
+/* Elementos do Lado Direito */
+.area-h1{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-h1 h1{
+    font-size: 30px;
+    position: relative;
+    top: 2rem;
+    font-weight: 600;
+}
+
+.area-text{
+    width: 100%;
+    height: 32%;
+    background-color: rgba(255, 248, 220, 0);
+    margin-top: 1.8rem;
+}
+
+.area-text h1, .sobre, .input-texto{
+    margin-left: 1rem;
+}
+
+.area-text p{
+    margin-top: 0.5rem;
+}
+
+.input-texto{
+    width: 78%;
+    height: 50%;
+    border: none;
+    outline: none;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    resize: none;
+    box-shadow: 2px 2px 0px rgb(182, 182, 182);
+}
+
+.area-cat-num{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    background-color: rgba(100, 148, 237, 0);
+}
+
+.cat{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(137, 43, 226, 0);
+}
+
+.cat h3, .p-cat{
+    margin-left: 1rem;
+}
+ 
+.num{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0);
+}
+
+.area-corR{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+.cor-rua{
+    width: 30%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5CB74A;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+ 
+
+.area-inf-corR{
+    width: 100%;
+    display: flex;
+    background-color: #5cb74a00;
+}
+
+.area-total-form{
+    width: 80%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 1rem;
+}
+
+.h3-infs-pessoais{
+    width: 100%;
+
+}
+
+.area-inputs{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.area-inputs label{
+    font-size: 14px;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px rgb(182, 182, 182);
+}
+ 
+.area-buttons{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttons{
+    color: white;
+    width: 15%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    margin-bottom: 2rem;
+    position: relative;
+    right: 10rem;
+}
+
+#button-cancelar{
+    background-color: #FF3877;
+}
+#button-salvar{
+    background-color: #007E70;
+}
+
+/* Responsividades: */
+/* Responsividade Celular: */
+@media screen and (max-width: 720px){
+    /* Box: */
+    .box-principal{
+        width: 95%;
+        height: 240vh;
+        position: relative;
+        top: 33rem;
+    }
+
+    .img1{
+        top: 21vh;
+    }
+
+    .img1 img{
+        width: 80%;
+        height: auto;
+    }
+
+    .img2{
+        left: 86vw;
+        top: 35vh;
+    }
+
+    .img2 img{
+        width: 80%;
+        height: auto;
+    }
+
+    .img3 {
+        top: 95vh;
+    }
+
+    .area-infs form{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .linha{
+        display: none;
+    }
+
+
+    /* Lado Esquerdo: */
+    .lado-esquerdo{
+        width: 100%;
+        height: 46%;
+        background-color: #007e6f00;
+    }
+    .area-imgs {
+        gap: 12px;
+        overflow-y: auto;
+    }
+    .imgs-produtos{
+        width: calc(50% - 63px);
+        height: 95px;
+    }
+    .area-logo p {
+        font-size: 14px;
+    }
+    .area-imgs p{
+        font-size: 14px;
+    }
+    .text-produtos{
+        height: 10%;
+    }
+
+
+    /* Lado Direito: */
+    .lado-direito{
+        width: 100%;
+        height: 50%;
+        background-color: #5cb74a00;
+    }
+
+    .area-h1{
+        height: 5%;
+        display: none;
+    }
+
+    .area-h1 h1 {
+        font-size: 25px;
+        top: 0rem;
+    }
+
+    .area-text {
+        height: 27%;
+        margin-top: 0.5rem;
+    }
+
+    .area-text h1{
+        font-size: 16px;
+    }
+
+    .sobre{
+        font-size: 14px;
+    }
+
+    .cat h3{
+        font-size: 16px;
+    }
+
+    .p-cat{
+        font-size: 14px;
+    }
+
+    .num h3, .num p{
+        margin-left: 1.5rem;
+    }
+
+    .num h3{
+        font-size: 16px;
+    }
+
+    .num p{
+        font-size: 14px;
+    }
+
+    .area-corR h3{
+        font-size: 16px;
+    }
+
+    .cor-rua {
+        width: 80%;
+        height: 20px;
+    }
+
+    .cor-rua p{
+        font-size: 14px;
+    }
+
+    .area-inputs {
+        width: 86%;
+    }
+
+    .h3-infs-pessoais {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .area-total-form {
+        gap: 20px;
+    }
+
+    .area-buttons{
+        height: 11%;
+        background-color: #ff387700;
+        margin-top: 1rem;
+    }
+
+    .buttons {
+        width: 31%;
+        height: 32px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-bottom: 2rem;
+        right: 1rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 390px) and (max-height: 932px){
+    .box-principal {
+        height: 178vh;
+        top: 27rem;
+    }
+}
+
+@media (max-width: 360px) and (min-height: 740px){
+    .box-principal {
+        height: 215vh;
+        top: 31rem;
+    }
+}
+
+
+/* Responsividade Ipads: */
+/* Ipad Mini: */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .box-principal{
+        width: 95%;
+        height: 95%;
+    }
+
+    .img3 {
+        top: 91vh;
+    }
+
+    .area-text{
+        height: 25%;
+    }
+
+    .text-produtos {
+        height: 10%;
+    }
+
+    .text-produtos h1 {
+        font-size: 26px;
+        font-weight: 500;
+        margin-top: 0rem;
+    }
+
+    .imgs-produtos {
+        width: calc(50% - 30px);
+        height: 100px;
+    }
+
+    .area-text h1{
+        font-size: 20px;
+    }
+
+    .area-total-form{
+        gap: 20px;
+    }
+
+    .area-infs form h3{
+        font-size: 20px;
+    }
+
+    .area-inputs {
+        width: 70%;
+    }
+
+    .num h3, .pp{
+        margin-left: 2rem;
+    }
+
+    .cor-rua{
+        width: 76%;
+    }
+
+    .area-buttons{
+        height: 7%;
+    }
+
+    .buttons {
+        width: 28%;
+        height: 35px;
+        font-size: 18px;
+        margin-bottom: 0;
+        right: 1rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+}
+
+
+/* Responsividade Ipad Pro: */
+@media screen and (min-height: 1366px){
+    .box-principal{
+        width: 95%;
+        height: 90%;
+    }
+
+    .img3 {
+        top: 91vh;
+    }    
+
+    .area-logo{
+        height: 28%;
+        margin-top: 7rem;
+    }
+
+    .imgs-produtos {
+        width: calc(50% - 50px);
+        height: 160px;
+    }
+
+    .text-produtos{
+        height: 5%;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+
+    .text-produtos h1 {
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+
+    .area-imgs{
+        margin-top: 2rem;
+    }
+
+    .area-infs form h3{
+        font-size: 20px;
+    }
+
+    .area-text {
+        height: 25%;
+    }
+
+    .num h3, .pp{
+        margin-left: 2.5rem;
+    }
+
+    .area-cat-num {
+        height: 10%;
+    }
+
+    .area-buttons{
+        height: 10%;
+    }
+
+    .buttons{
+        width: 25%;
+        right: 2rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .cor-rua {
+        width: 48%;
+        font-size: 16px;
+    }
+}   
+
+/* Responsividade Next Hub: */
+@media (min-width: 1024px) and (max-height: 600px){
+    .box-principal{
+        width: 95%;
+        position: relative;
+        top: 19rem;
+    }
+
+    .img3{
+        top: 85vh;
+    }
+
+    .area-logo {
+        height: 35%;
+    }
+
+    .text-produtos {
+        height: 5%;
+    }
+
+    .text-produtos h1{
+        margin-top: 0rem;
+    }
+
+    .imgs-produtos{
+        width: calc(50% - 40px);
+        height: 120px;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .area-text {
+        height: 24%;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+
+    .area-cat-num {
+        height: 10%;
+    }
+
+    .num h3, .pp{
+        margin-left: 2rem;
+    }
+
+    .area-inputs {
+        width: 60%;
+    }
+
+    .area-buttons{
+        height: 10%;
+    }
+
+    .buttons{
+        width: 20%;
+        height: 38px;
+        font-size: 18px;
+        right: 2rem;
+    }
+
+    .cor-rua {
+        width: 48%;
+        font-size: 16px;
+    }
+    
+}
+
+
+/* Responsividade Next Hub Max: */
+@media (min-width: 1280px) and (max-height: 800px){
+    .box-principal{
+        width: 95%;
+        height: 150vh;
+        position: relative;
+        top: 18rem;
+    }
+
+    .img3 {
+        top: 91vh;
+    }  
+
+    .text-produtos{
+        height: 9%;
+    }
+
+    .imgs-produtos {
+        width: calc(50% - 40px);
+        height: 140px;
+    }
+
+    .area-logo{
+        height: 25%;
+    }
+
+    .area-infs form h3{
+        font-size: 20px;
+    }
+
+    .area-text {
+        height: 25%;
+    }
+
+    .title{
+        font-weight: 500;
+    }
+
+    .num h3, .pp{
+        margin-left: 2rem;
+    }
+
+    .area-cat-num {
+        height: 10%;
+    }
+
+    .area-buttons{
+        height: 12%;
+    }
+
+    .buttons{
+        width: 25%;
+        right: 2rem;
+    }
+
+    .lado-direito h3{
+        font-weight: 500;
+    }
+
+    .cor-rua {
+        width: 48%;
+        font-size: 16px;
+    }    
+}
+
+

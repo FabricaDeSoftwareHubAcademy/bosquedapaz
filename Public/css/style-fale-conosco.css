@@ -94,6 +94,7 @@ body {
     width: 70%;
     height: 140px;
     padding-top: 10px;
+    resize: none;
 }
 
 .botao-enviar-guilherme {

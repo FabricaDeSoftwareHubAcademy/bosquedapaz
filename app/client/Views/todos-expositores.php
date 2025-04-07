@@ -3,10 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Bosque da Paz</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-lista-expositor.css">
-    <title>Bosque da Paz</title>
+    <link rel="stylesheet" href="../../../Public/css/css-modais/perfil-expositor.css">
+
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -56,7 +60,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -79,7 +83,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -102,7 +106,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -125,7 +129,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                 </div>
@@ -150,7 +154,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -173,7 +177,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -196,7 +200,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -219,7 +223,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                 </div>
@@ -250,7 +254,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -273,7 +277,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -296,7 +300,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -319,7 +323,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                 </div>
@@ -344,7 +348,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -367,7 +371,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -390,7 +394,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -413,7 +417,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                 </div>
@@ -444,7 +448,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -467,7 +471,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -490,7 +494,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -513,7 +517,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                 </div>
@@ -538,7 +542,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -561,7 +565,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -584,7 +588,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                     <div class="card-per-expo">
@@ -607,10 +611,13 @@
                                     </span>
                                 </p>
                             </div>
-                            <button class="btn-ver-info">Ver Mais</button>
+                            <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
                         </div>
                     </div>
                 </div>
+                <dialog class="m-per-expo" id="m-per-expo">
+                    <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
+                </dialog>
             </section>
         </div>
     </main>

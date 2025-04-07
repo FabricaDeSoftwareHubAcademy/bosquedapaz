@@ -86,7 +86,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.753);
     z-index: 2;
 }
 
@@ -107,7 +107,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.753);
     z-index: 2;
 }
 
@@ -157,7 +157,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.753);
     z-index: 2;
 }
 
@@ -202,7 +202,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.753);
     z-index: 2;
 }
 
@@ -215,7 +215,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.753);
     z-index: 2;
 }
 
@@ -279,9 +279,7 @@ h2 {
     min-height: 45px;
     padding: 10px;
     border: 1px solid #ffffff;
-    /* Mantém a borda branca em cima, em baixo e à esquerda */
     border-right: 1px solid #bebdbd;
-    /* Borda à direita com cor mais escura */
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     outline: none;
@@ -304,12 +302,13 @@ h2 {
 .botao-cancelar,
 .botao-confirmar {
     cursor: pointer;
-    width: 200px;
-    height: 60px;
+    width: 120px;
+    padding: 8px;
     border: none;
     border-radius: 10px;
     outline: none;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .botao-cancelar {
@@ -322,60 +321,47 @@ h2 {
     color: white;
 }
 
-/* Responsividade */
 
-/* Para telas pequenas (dispositivos móveis, até 768px) */
 @media (max-width: 768px) {
     .acao-content-editar {
         width: 80%;
-        /* Aumenta o modal para 80% da tela */
         height: auto;
     }
 
     .acao-texto-editar {
         font-size: 22px;
-        /* Ajuste do tamanho do título */
     }
 
     .acao-inputs {
         grid-template-columns: 1fr;
-        /* Coloca os inputs em uma única coluna */
         gap: 15px;
-        /* Menor espaço entre os inputs */
         width: 100%;
     }
 
     .botao-cancelar,
     .botao-confirmar {
         width: 150px;
-        /* Botões menores em telas pequenas */
     }
 }
 
-/* Para telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
     .acao-content-editar {
         width: 90%;
-        /* Modal maior em telas pequenas */
         padding: 10px;
     }
 
     .acao-texto-editar {
         font-size: 20px;
-        /* Ajuste do tamanho do título */
     }
 
     .acao-inputs {
         gap: 10px;
-        /* Menor espaço entre os inputs */
     }
 
     .botao-cancelar,
     .botao-confirmar {
         width: 120px;
-        /* Botões bem menores */
         font-size: 14px;
-        /* Texto dos botões menor */
     }
 }
 
@@ -388,7 +374,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.753);
     z-index: 2;
 }
 
@@ -405,8 +391,6 @@ h2 {
 }
 
 
-
-/* Estilo do parágrafo dentro do modal */
 .modal-edit {
     margin: auto;
     border: none;
@@ -423,12 +407,9 @@ h2 {
     margin-bottom: 20px;
     box-sizing: border-box;
     background-color: #f9f9f9;
-    /* Cor de fundo suave */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    /* Suaviza o foco */
 }
 
-/* Estilização dos botões dentro do modal */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -438,31 +419,23 @@ button {
     margin: 10px 5px;
 }
 
-/* Botão de Cancelar */
 .cancel-btn {
     background-color: #f44336;
-    /* Vermelho */
     color: white;
 }
 
-/* Botão de Confirmar */
 .confirm-btn {
     background-color: #4CAF50;
-    /* Verde */
     color: white;
 }
 
-/* Hover nos botões */
 button:hover {
     opacity: 0.8;
 }
 
-/* Estilo do backdrop (fundo escuro atrás do modal) */
 .modal::backdrop {
-    background: rgba(0, 0, 0, 0.521);
-    /* Escurece o fundo atrás do modal */
+    background: rgba(0, 0, 0, 0.753);
 }
-
 
 
 .container {
@@ -541,23 +514,6 @@ button:hover {
     text-align: center;
 }
 
-
-/* .collaborators-table thead {
-    position: sticky;
-    top: 0;
-    background-color: rgb(32, 54, 139);
-    color: white;
-    z-index: 10;
-} */
-
-/* .collaborators-table th, .collaborators-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 20%;
-} */
-
-
 .collaborators-table tr {
     display: table;
     width: 100%;
@@ -602,7 +558,6 @@ button:hover {
 
 .collaborators-table th,
 .collaborators-table td {
-    /* padding: 12px 15px; */
     border: 1px solid #ddd;
     text-align: center;
 }
@@ -611,20 +566,14 @@ button:hover {
     padding: 12px 15px;
 }
 
-/* .collaborators-table td{
-    padding: 12px 15px;
-} */
-
 table tbody tr:nth-child(odd) {
     font-size: 80%;
     background-color: white;
-    /* Cor clara */
 }
 
 table tbody tr:nth-child(even) {
     font-size: 80%;
     background-color: #e6e6e6;
-    /* Cor mais escura */
 }
 
 .collaborators-table tbody tr:hover {
@@ -791,102 +740,77 @@ table tbody tr:nth-child(even) {
         padding: 5px 10px;
     }
 
-    /* Modal de Deletar (Recusar) */
     @media (max-width: 768px) {
         #modal-recusar .acao-content-recusar {
             width: 80%;
-            /* Aumenta a largura para 80% da tela */
             height: auto;
-            /* Ajusta a altura para evitar que o modal fique muito grande */
         }
 
         .acao-texto-recusar {
             font-size: 20px;
-            /* Ajuste do tamanho da fonte */
         }
 
         .acao-botoes-recusar {
             gap: 20px;
-            /* Ajuste o espaçamento entre os botões */
         }
 
         .botao-cancelar,
         .botao-confirmar {
             width: 160px;
-            /* Ajuste do tamanho dos botões */
             font-size: 14px;
-            /* Reduz o tamanho da fonte dos botões */
         }
     }
 
-    /* Modal de Deletar (Recusar) para telas muito pequenas (até 480px) */
     @media (max-width: 480px) {
         #modal-recusar .acao-content-recusar {
             width: 90%;
-            /* Aumenta o modal para 90% da tela */
             padding: 10px;
-            /* Reduz o padding para telas pequenas */
         }
 
         .acao-texto-recusar {
             font-size: 16px;
-            /* Reduz o tamanho da fonte do texto */
         }
 
         .acao-botoes-recusar {
             gap: 15px;
-            /* Diminui o espaçamento entre os botões */
         }
 
         .botao-cancelar,
         .botao-confirmar {
             width: 120px;
-            /* Botões menores */
             font-size: 12px;
-            /* Texto dos botões menor */
         }
     }
 
-    /* Modal de confirmação de sucesso (Recusado Sucesso) */
     @media (max-width: 768px) {
         #recusado-sucesso .mensagem-content-recusar {
             width: 80%;
-            /* Ajusta a largura do modal */
             height: auto;
-            /* Ajusta a altura para telas pequenas */
         }
 
         .mensagem-texto-recusar {
             font-size: 20px;
-            /* Ajuste do tamanho da fonte */
         }
 
         .botao-confirmar {
             width: 160px;
-            /* Ajuste do tamanho dos botões */
             font-size: 14px;
-            /* Reduz o tamanho da fonte dos botões */
         }
     }
 
     @media (max-width: 480px) {
         #recusado-sucesso .mensagem-content-recusar {
             width: 90%;
-            /* Aumenta o modal para 90% da tela */
             padding: 10px;
-            /* Reduz o padding para telas pequenas */
         }
 
         .mensagem-texto-recusar {
             font-size: 16px;
-            /* Ajuste no tamanho da fonte */
         }
 
         .botao-confirmar {
             width: 120px;
-            /* Botão menor */
             font-size: 12px;
-            /* Tamanho menor do texto */
         }
     }
 

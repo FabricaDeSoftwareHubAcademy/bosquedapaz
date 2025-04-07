@@ -17,7 +17,6 @@
     <section class="area-LisEsp-principal">
 
         <div class="box-LisEsp-mat">
-
             <h1 class="titulo">LISTA DE ESPERA</h1>
             <div class="search-bar">
                 <label for="status">Procurar</label>
@@ -91,7 +90,7 @@
                             <td><a href="#">888.999.000-11</a></td>
                             <td><a href="#">Expositor</a></td>
                             <td><a href="#">aline.rocha@email.com</a></td>
-                            <td><a href="#"><i class="bi bi-person-badge"></i></a></td>
+                            <td><a href="validar-expositor.php"><i class="bi bi-person-badge"></i></a></td>
                         </tr>
                         <tr>
                             <td><a href="#">Bruna Silva</a></td>
@@ -139,7 +138,7 @@
                 </table>
             </div>
             <div class="seta-LisEsp3">
-                <a href="gerenciar-relatorios.php" class="voltar-link">
+                <a href="Area-Adm.php" class="voltar-link">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                 </a>
             </div>

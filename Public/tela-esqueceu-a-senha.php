@@ -108,25 +108,33 @@
                             <input class="input-recsenha" type="email" name="email" id="email" placeholder="Digite seu email" required>
                         </div>
                     </form>
+
+                    
                     
                     <div class="botoes">
                         <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
-                        <a href="#" class="botao-redefinir">Redefinir</a>
+                        <button id="abrir-modal recsenha-modal"  class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
                     </div>
+
+                    <dialog id="recsenha-modal" class="recsenha-modal">
+                        <div class="modal-recsenha">
+                            <div class="modal-recpass">
+                                <h1 class="modal-title">Enviado!</h1>
+                                <p class="modal-text">Verifique sua caixa de entrada para redefinir sua senha</p>
+                                <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button>
+                            </div>
+                        </div>
+                    </dialog>
                     
                 </div>
 
                 <div id="linha-bet-recsenha"></div>
 
-                <!-- area-img -->
-                <!-- <div class="area-img-recsenha">
-                    <div class="img-style"> -->
-                        <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
-                    <!-- </div>
-                </div> -->
-
+                <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
             </div>
         </section>
     </main>
+
+    <script src="./js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>

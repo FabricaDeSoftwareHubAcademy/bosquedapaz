@@ -20,7 +20,7 @@
         <div class="box">
 
             <div class="title">
-                <h1 class="title-text">Cadastro de Parceiros</h1>
+                <h1 class="title-text">CADASTRO DE PARCEIRO</h1>
             </div>
 
             <div class="formularios">
@@ -37,7 +37,6 @@
 
                     <div class="input">
                         <label for="optionInput3">Tipo:</label>
-                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
 
                         <select name="todas_categorias" id="todas_categorias" class="select">
 
@@ -84,19 +83,6 @@
 
             <div class="form-finalizar">
 
-                <!-- <div class="edital-feira">
-                        <button><a href="#">Edital da Feira</a></button>
-                    </div> -->
-
-
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-
-                <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
                 <div id="modal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
@@ -111,10 +97,8 @@
 
             </div>
 
+
             <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar<e /button>
-                </div>
 
                 <div class="salvar-resp">
                     <div class="botoes-salvar">
@@ -122,12 +106,20 @@
                     </div>
                 </div>
 
-
             </div>
+
             <div class="btns">
-                <a href="gerenciar-parceiros.php" class="voltar">
+                <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
+                <div class="btn-cancelar-salvar">
+                    <button type="button" class="btn btn-cancelar">
+                        <a href="./Area-Adm.php">Cancelar</a>
+                    </button>
+
+                    <button type="submit" class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div>
             </div>
 
         </div>

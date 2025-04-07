@@ -13,10 +13,17 @@
 
 
 :root {
-    --color-rua1: #FDF148;
-    --color-rua2: #FC671D;
-    --color-rua3: #90C470;
-    --color-rua4: #B313FF;
+    --color-rua1: #ffde5a;
+    --color-rua2: #EC6627;
+    --color-rua3: #5EBB50;
+    --color-rua4: #8D55F2;
+    --color-rua5: #38B6FC;
+    --color-rua6: #959499;
+    --color-rua7: #A5569F;
+    --color-rua8: #E5AD95;
+    --color-rua9: #EE71CA;
+    --color-rua10: #010101;
+    --color-rua11: #EB2123;
     --color-branca: white;
 }
 
@@ -42,21 +49,23 @@
 
 .title-all-expo {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
 .select-cat {
-    padding: 5px 10px;
-    border: 2px solid black;
-    border-radius: .4rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
     font-weight: 500;
     font-size: .8rem;
     text-transform: capitalize;
 }
 
 .opcoes-cat {
-    font-weight: 500;
+    font-weight: 400;
     font-size: .8rem;
     text-transform: capitalize;
 }
@@ -86,9 +95,11 @@
 .input-pes {
     width: 500px;
     height: 40px;
+    padding-left: 10px;
     border-radius: 5px;
-    padding-left: 5px;
-    border: 2px solid #000;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
 }
 
 .area-all-cards {
@@ -191,15 +202,15 @@
 .nome-expo {
     margin-top: 70px;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
 .detalhes-expo {
     width: 95%;
     padding: 5px;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(0, 0, 0, 0.237);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.237);
 }
 
 .para-cate {
@@ -208,6 +219,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    color: #575757;
 }
 
 .span-cate {
@@ -221,12 +233,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    color: #575757;
 }
 
 .span-color {
-    font-weight: 500;
+    font-weight: 400;
     padding: 2px 5px;
-    color: black;
+    color: #494949;
     border-radius: .5rem;
 }
 

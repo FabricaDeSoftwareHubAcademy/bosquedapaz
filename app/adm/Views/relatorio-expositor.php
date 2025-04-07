@@ -38,7 +38,6 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Rascunho  -->
               <tr>
                 <td class="usuario-col">01</td>
                 <td>Carla Costa</td>
@@ -47,7 +46,7 @@
                 <td class="barraca-col">6</td>
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -60,7 +59,7 @@
                 <td class="barraca-col">12</td>
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -74,7 +73,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -88,7 +87,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -102,7 +101,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -116,7 +115,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -130,7 +129,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -144,7 +143,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -158,7 +157,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -172,7 +171,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -186,7 +185,7 @@
 
                 <td><button class="status inactive">Inativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -200,7 +199,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td class="edit">
-                  <a href="edicao-expositor.php">
+                  <a href="editar-expositor.php">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
@@ -209,7 +208,7 @@
           </table>
         </div>
         <div class="btns">
-          <a href="gerenciar-relatorios.php" class="voltar">
+          <a href="Area-Adm.php" class="voltar">
             <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
           </a>
         </div>

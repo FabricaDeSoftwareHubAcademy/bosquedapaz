@@ -28,6 +28,7 @@
     width: 55%;
     height: 65%;
     background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
+    background-color: white;
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -42,6 +43,7 @@
     width: 55%;
     height: 65%;
     background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
+    background-color: white;
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -56,6 +58,7 @@
     width: 55%;
     height: 65%;
     background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
+    background-color: white;
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -70,6 +73,7 @@
     width: 55%;
     height: 65%;
     background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
+    background-color: white;
     background-size: cover;
     border-radius: 20px;
     display: none;
@@ -708,3 +712,4 @@
         padding: 10px; 
     }
 }
+

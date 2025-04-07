@@ -323,9 +323,12 @@ button:hover {
 }
 
 .modal::backdrop {
-    background: rgba(0, 0, 0, 0.521);
+    background: rgba(0, 0, 0, 0.753);
 }
 
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.753);
+}
 .bolas-fundo {
     width: 100vw;
     height: 90vh;

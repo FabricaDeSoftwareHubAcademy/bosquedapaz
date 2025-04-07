@@ -8,10 +8,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .menu-adm {
     width: 100%;
     height: 110px;
@@ -20,19 +16,18 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0px 20px; */
+    padding: 0px 20px;
     /* border-bottom: 3px solid rgba(0, 0, 0, 0.301); */
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.301);
 }
 
 .logo {
-    width: 200px;
+    width: 10%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 20px;
 }
 
 .img-logo {
@@ -41,7 +36,7 @@ body {
 }
 
 .nav-bar {
-    width: 70%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -55,13 +50,14 @@ body {
     align-items: center;
     justify-content: center;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    height: 45px;
+    height: 35px;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
@@ -89,15 +85,15 @@ body {
 }
 
 .submenu {
-    margin-top: 10px;
+    margin-top: 5px;
     position: absolute;
     background-color: white;
-    padding: 15px 10px;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding: 0px 10px 10px 10px;
     text-transform: capitalize;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    border-radius: .5rem;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     list-style: none;
     transition: 5s;
 }
@@ -106,15 +102,15 @@ body {
     display: none;
 }
 
-.submenu li {
+.sub-nav-item {
     margin-top: 10px;
 }
 
-.submenu a::after{
+.item-submenu::after{
     display: none;
 }
 
-.submenu a:hover {
+.item-submenu:hover {
     color: #FC1269;
 }
 
@@ -142,24 +138,49 @@ body {
     display: none;
 }
 
+.login-menu {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 0px;
+    gap: 10px;
+}
+
 .login {
     width: 75px;
-    height: 100%;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    border-radius: 50%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .img-login {
     width: 100%;
+    object-fit: cover;
 }
 
-@media(max-width: 1350px){
-
+@media screen and (max-width: 1400px) {
     .nav-bar {
         display: none;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    .login-menu {
+        width: 40%;
+    }
+
+    .login {
+        width: 60px;
+        height: 60px;
     }
 
     .sandwich-menu {
@@ -168,8 +189,6 @@ body {
         justify-content: center;
         width: 40px;
         height: 80px;
-        position: absolute;
-        right: 120px;
     }
 
     .menu {
@@ -226,6 +245,15 @@ body {
     }
 }
 
+@media(max-width: 1350px){
+
+    .logo {
+        width: 25%;
+    }
+
+
+}
+
 @media(max-width: 650px) {
     .menu-adm {
         height: 80px;
@@ -237,10 +265,6 @@ body {
 
     .logo {
         width: 150px;
-    }
-
-    .login {
-        display: none;
     }
 
     .sandwich-menu {

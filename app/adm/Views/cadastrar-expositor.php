@@ -1,3 +1,51 @@
+<?php
+require_once '../Controller/Pessoa.php';
+require_once '../Controller/Expositor.php';
+require_once '../Controller/Categoria.php';
+
+$categoriaModel = new Categoria();
+
+$lista = $categoriaModel->listar();
+
+// Verifica se é POST
+if (isset($_POST['REQUEST_METHOD'])) {
+
+    $expositor = new Expositor();
+
+    $expositor->setNome($_POST['nome']);
+    $expositor->setWhats($_POST['whatsapp']);
+    $expositor->setEmail($_POST['email']);
+    $expositor->setTelefone($_POST['whatsapp']);
+    $expositor->setNome_marca($_POST['marca']);
+    // verificar o input de voltagem
+    $expositor->setVoltagem($_POST['voltagem']);
+    // verificar o input de energia
+    $expositor->setEnergia($_POST['energia']);
+    $expositor->setContato2($_POST['whatsapp']);
+    // verificar o input de descricao
+    // $expositor->setDescricao('teste');
+    // verificar o input de metodo pagamento
+    // $expositor->setMetodos_pgto('DINHEIRO SEMPRE');
+    $expositor->setProduto($_POST['produto']);
+    // verificar o input cor rua
+    // $expositor->setCor_rua('vermelha');
+    // verificar o input id_categoria
+    $expositor->setId_categoria($_POST['id_categoria']);
+    // verificar o input id_imagem
+    $expositor->setImagens($_POST['files']);
+
+    $res = $expositor->cadastrar();
+
+    if ($res) {
+        // header("Location: sucesso.php");
+        echo '<script> alert("cadastrou") </script>';
+    } else {
+        echo '<script> alert(" não cadastrou") </script>';
+    }
+    exit;
+}
+
+?>
 
 
 <!DOCTYPE html>
@@ -8,11 +56,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body>
-<?php include "../../../Public/assets/adm/menu-adm.html"?>
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
 
     <main class="principal">
@@ -23,175 +71,114 @@
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <div class="formularios">
+            <form class="formularios" method="POST">
 
                 <div class="form-pessoa">
                     <div class="input">
                         <label>Nome completo:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                        <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="input">
                         <label>Whatsapp:</label>
-                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                        <input type="text" name="whatsapp" id="" placeholder="Número de whatsapp" required>
                     </div>
-                    
+
                     <div class="input">
                         <label>E-mail:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
+                        <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
                     </div>
                     <div class="input">
                         <label>Qual Cidade Reside:</label>
-                        <input type="text" name="" id="" placeholder="Digite sua cidade" required>
+                        <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
                     </div>
-                   
                 </div>
 
                 <div class="form-loja">
                     <div class="input">
                         <label>Produto:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu produto" required>
+                        <input type="text" name="produto" id="" placeholder="Digite seu produto" required>
                     </div>
 
                     <div class="input">
                         <label>Marca:</label>
-                        <input type="text" name="" id="" placeholder="Digite a marca " required>
+                        <input type="text" name="marca" id="" placeholder="Digite a marca " required>
                     </div>
 
                     <div class="input">
                         <label for="optionInput3">Categorias</label>
-                        <!-- <input list="options3" id="optionInput3" name="option3" placeholder="Selecione"> -->
-    
-                        <select name="todas_categorias" id="todas_categorias" class="select">
-
+                        <select name="id_categoria" id="categorias" class="select" require>
                             <option value="">Selecione</option>
-                            <option value="artesanato">Artesanato</option>
-                            <option value="gastronia">Gastronia</option>
-                            <option value="antiguidade">Antiguidade/Colecionismo</option>
-                            <option value="antiguidade">Plantas</option>
-                            <option value="antiguidade">Hortifruti</option>
-                            <option value="antiguidade">Moda autoral</option>
-                            <option value="antiguidade">Literatura</option>
-                            <option value="antiguidade">Cosmético</option>
-                            <option value="antiguidade">Sustentabilidade (brechó)</option>
-                            <option value="antiguidade">Empreendedorismo (industrializado)</option>
-                           
+                            <?php foreach($lista as $categoria) : ?>
+                                <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['descricao'] ?></option>
+                            <?php endforeach; ?>
                         </select>
-                        
                     </div>
 
                     <div class="input">
                         <label>Link:</label>
+                        <script>
+                            link
+                        </script>
                         <input type="text" name="" id="" placeholder="link instagram" required>
                     </div>
-
-                    
-
                 </div>
 
-                
+
                 <div class="form-expo">
                     <label for="tipo-expo">Tipo de exposição:</label>
                     <div class="custom-dropdown">
-                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
-                        <select name="todas_categorias" id="todas_categorias" class="select">
-
+                        <select name="" id="" class="select">
                             <option value="">Selecione</option>
                             <option value="trailer">Trailer</option>
                             <option value="food-truck">Food truck</option>
-                            <option value="barrca">Barrca</option>
-
+                            <option value="barraca">Barraca</option>
                         </select>
                     </div>
 
                     <label for="energia">Precisa de energia?</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">  
+                        <select name="energia" id="energia" class="select">
 
                             <option value="">Selecione</option>
                             <option value="sim">Sim</option>
                             <option value="nao">Não</option>
-                        
+
 
                         </select>
                     </div>
 
                     <label for="equipamentos">Voltagens dos equipamentos</label>
                     <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <select name="voltagem" id="voltagem" class="select">
 
                             <option value="">selecione</option>
                             <option value="110v">110v</option>
                             <option value="220v">220v</option>
-                            
+
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>Escolher Imagem:</label>
-                        <input type="file" name="file" id="file"
-                            required>
+                        <label>Escolher Imagens:</label>
+                        <input type="file" name="files[]" id="files" multiple="multiple">
                     </div>
+
                 </div>
 
+                <div class="btn-finalizar">
+                    <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
+                    <button class="btn btn-cancelar"><a href="cadastrar-expositor.php">cancelar</a></button>
+                </div>
+            </form>
 
-
-               
-
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
             </div>
-
-            <div class="form-finalizar">
-
-                <!-- <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div> -->
-
-                
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-
-                <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
-                        <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
-                            <button class="btn-cancelar-modal">Cancelar</button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-           
-            <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-                    
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                    
-
-                
-            </div>
-
 
         </div>
-        <div class="btns">
-            <a href="gerenciar-expositores.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
+
         </div>
-        
-    </div>
     </main>
 
     <div class="bolas-fundo">
@@ -201,9 +188,9 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+    <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
 
-    
+
 </body>
 
 </html>

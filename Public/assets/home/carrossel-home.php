@@ -1,26 +1,48 @@
 <?php
 
-require_once('../Models/Carrossel.php');
+require_once('../Controller/Carrossel.php');
 
 $car = new Carrossel();
 
-$carrossel = $car->buscar_id(2);
+$carrossel = $car->buscar_id(3);
 
-$img1 = $carrossel->img1;
-$img2 = $carrossel->img2;
-$img3 = $carrossel->img3;
+
+// caminho das imgs padrao
+$imagens = [
+    'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
+    'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+    'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg',
+];
+
+// verifica se aconsulta no db esta vazia
+if(!empty($carrossel)){
+    //no caso de nao esta vem para aqui
+    $img1 = $carrossel->img1;
+    $img2 = $carrossel->img2;
+    $img3 = $carrossel->img3;
+
+    // ifs para saber se esta faltando uma img 
+    if(empty($carrossel->img1)){
+        $img1 = $imagens['img1'];
+    }
+    if(empty($carrossel->img2)){
+        $img2 = $imagens['img2'];
+    }
+    if(empty($carrossel->img3)){
+        $img3 = $imagens['img3'];
+    }
+}
+//no caso de estar vazio, vem para cá e carrega imgs padrao
+else{
+    $img1 = $imagens['img1'];
+    $img2 = $imagens['img2'];
+    $img3 = $imagens['img3'];
+}
 
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+<style>
         .slider-item1 {
             background-image: url(<?php echo "'". $img1. "'"; ?>);
         }
@@ -31,8 +53,6 @@ $img3 = $carrossel->img3;
             background-image: url(<?php echo "'". $img3. "'"; ?>);
         }
     </style>
-</head>
-<body>
     <!-- inicio carrosel -->
     <section class="carossel">
         <div class="fundo"> <!-- fundo da imagem -->
