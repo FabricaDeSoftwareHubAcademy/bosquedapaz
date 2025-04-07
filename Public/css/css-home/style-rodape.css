@@ -77,6 +77,15 @@
     font-size: 2rem;
     margin-right: 5px;
     color: #fff;
+    padding: 10px;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+}
+
+.icon-r:hover {
+    font-size: 2.1rem;
+    color: #DD2D4A;
+    background-color: #fff;
 }
 
 @media (max-width: 1050px) {

@@ -4,7 +4,13 @@
 @import url('../css-modais/css-m-form-e-perfil-expo.css');
 
 .principal {
-    height: 84vh;
+    height: 83vh;
+    overflow-y: auto;
+}
+
+.principal .box {
+    height: auto;
+    min-height: 94%;
 }
 
 .titulo {
@@ -25,7 +31,6 @@
 .up-imgs {
     width: 100%;
     height: auto;
-    max-height: 380px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -109,7 +114,6 @@
     .up-imgs {
         width: 100%;
         height: auto;
-        max-height: 380px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -150,7 +154,6 @@
     .up-imgs {
         width: 100%;
         height: auto;
-        max-height: 450px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
