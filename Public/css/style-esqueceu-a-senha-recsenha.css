@@ -93,23 +93,16 @@ html,.body-recsenha{
     }
 }
 
-/* .img-voltar{
-    background-color: darkviolet;
-} */
-
 .form-recsenha{
     display: flex;
     flex-direction: column;
-    /* background-color: green; */
     position: relative;
     top: 32%;
     left: 9.5%;
     width: 30%;
-    /* height: 120px; */
 }
 
 .forms-recsenha{
-    /* background-color: red; */
     height: 150px;
     width: 100%;
     display: flex;
@@ -122,19 +115,10 @@ html,.body-recsenha{
     justify-content: center;
     margin-bottom: 5%;
     width: 100%;
-    /* background-color: chartreuse; */
 }
-
-/* 
-.label-email{
-    background-color: blueviolet;
-    left: 4%;
-    position: relative;
-} */
 
 .area-input-recsenha{
     display: flex;
-    /* background-color: aqua; */
     align-items: center;
     width: 95%;
     height: 42px;
@@ -171,7 +155,6 @@ html,.body-recsenha{
 .botoes{
     display: flex;
     position: relative;
-    /* background-color: pink; */
     justify-content: space-evenly;
     width: 100%;
     height: 48px;
@@ -225,16 +208,13 @@ html,.body-recsenha{
 }
 
 .img-letter{
-    position: relative;
-    width: 50%;
+    transition: ease .5s;
+    width: 49%;
 }
 
-.img-style .img-letter{
-    transition: all .5s ease;
-}
-
-.img-style .img-letter:hover{
-    transform: scale(1.05);
+.img-letter:hover{
+    transition: ease .5s;
+    transform: scale(1.03);
 }
 
 .title-recsenha{
@@ -465,7 +445,6 @@ html,.body-recsenha{
     }
     
     .form-recsenha{
-        /* background-color: green; */
         display: flex;
         flex-direction: column;
         position: relative;
@@ -488,7 +467,6 @@ html,.body-recsenha{
     }
     
     .title-recsenha{
-        /* background-color: red; */
         margin-bottom: 30%;
         top: 0%;
         left: 0%;

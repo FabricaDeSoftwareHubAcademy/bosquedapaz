@@ -111,7 +111,6 @@
     top: 20%;
     width: 27%;
     height: 65%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,28 +135,16 @@
     justify-content: center;
     flex-direction: column;
 }
- 
-/* ALTERAR HOVER IMG */
 
-/* .a-img-login{
-    width: 90%;
-    height: 600px;
-    background-color: #16286800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.img-dog{
+    transition: ease .5s;
+    width: 49%;
 }
- 
-.a-img-login img{
-    width: 100%;
-    height: auto;
-    transition: all 0.5s ease;
+
+.img-dog:hover{
+    transition: ease .5s;
+    transform: scale(1.03);
 }
- 
-.a-img-login img:hover{
-    transform: scale(1.05);
-   
-} */
  
 .area-img-login-h1-tiago{
     font-weight: 600;
@@ -239,7 +226,6 @@
 .div-esqueceu-senha-login{
     margin-left: 20%;
     position: relative;
-    /* background-color: red; */
 }
  
 .div-esqueceu-senha-login .esqueceu-a-senha-p{
@@ -257,9 +243,6 @@
 }
 
 @media (max-width:575.98px){
-    /* .body-login{
-        background-color: red;
-    } */
 
     #linha-login{
         display: none;
@@ -393,9 +376,6 @@
 }
 
 @media (width: 1024px) and (height: 600px){
-    /* .body-login{
-        background-color: blueviolet;
-    } */
 
     #linha-login{
         display: flex;
@@ -444,6 +424,9 @@
 }
 
 @media (min-width:1400px){
+    .box-login{
+        height: 83%;
+    }
 
     .area-form-login{
         top: 10%;

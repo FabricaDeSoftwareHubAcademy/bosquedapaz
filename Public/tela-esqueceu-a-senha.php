@@ -119,13 +119,7 @@
 
                 <div id="linha-bet-recsenha"></div>
 
-                <!-- area-img -->
-                <!-- <div class="area-img-recsenha">
-                    <div class="img-style"> -->
-                        <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
-                    <!-- </div>
-                </div> -->
-
+                <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
             </div>
         </section>
     </main>
