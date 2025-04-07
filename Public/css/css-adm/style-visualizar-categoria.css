@@ -272,6 +272,38 @@
     .imagem-enzo-fundo3 {
         display: none;
     }
+
+    .modal-content {
+        overflow-y: auto;
+        width: 90%;
+        max-width: 90%;
+        height: 70%;
+        padding: 15px;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .form-box .nome-cat {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .botoes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .botoes .cancelar{
+        width: 50%;
+    }
+
+    .botoes .salvar{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1045px) {
@@ -290,6 +322,33 @@
         width: 80%;
         height: 80%;
         /* padding: 20px; */
+    }
+
+    .modal-content {
+        width: 85%;
+        max-width: 85%;
+        height: 700px;
+        padding: 20px;  
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .form-box .nome-cat {
+        width: 50%;
+        font-size: 15px;
+    }
+
+    .botoes {
+        width: 50%;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .botoes button {
+        width: 70%;
     }
 }
 
@@ -321,4 +380,33 @@
         overflow: scroll;
         justify-content: space-evenly;
     }
+
+    .modal-content {
+        width: 80%;
+        max-width: 600px;
+        height: 500px;
+        padding: 25px;
+        overflow-y: auto;
+    }
+
+    .titulo {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .form-box .nome-cat {
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .botoes button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }  
 }

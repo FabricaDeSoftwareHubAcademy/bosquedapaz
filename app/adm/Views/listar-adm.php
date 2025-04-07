@@ -101,18 +101,13 @@ $colaboradores = $adm->listar($busca);
         </div>
       </dialog>
 
-      <div class="btns">
-          <a href="Area-Adm.php" class="voltar">
-          <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-          </a>
-      </div>  
-      </div>
-    </main>
-    <div class="bolas-fundo">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
-    </div>
+  </main>
+  <div class="bolas-fundo">
+    <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+    <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+    <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+  </div>
+</body>
 
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
