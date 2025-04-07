@@ -30,16 +30,14 @@
                     <table class="collaborators-table">
                         <thead>
                             <tr>
-                                <th class="usuario-col">ID</th>
-                                <th>Nome</th>
+                                <th class="usuario-col">Nome</th>
                                 <th>Status</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="usuario-col">1</td>
-                                <td>Doação de Sangue</td>
+                                <td class="usuario-col">Doação de Sangue</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
                                     <a href="./editar-utilidades.php" class="edit-icon">
@@ -52,8 +50,7 @@
                             </tr>
 
                             <tr>
-                                <td class="usuario-col">2</td>
-                                <td>Adoção de Pets</td>
+                                <td class="usuario-col">Adoção de Pets</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
                                     <a href="./editar-utilidades.php" class="edit-icon">
@@ -66,8 +63,7 @@
                             </tr>
 
                             <tr>
-                                <td class="usuario-col">3</td>
-                                <td>Campanha do Agasalho</td>
+                                <td class="usuario-col">Campanha do Agasalho</td>
                                 <td><button class="status active">Ativo</button></td>
                                 <td>
                                     <a href="./editar-utilidades.php" class="edit-icon">

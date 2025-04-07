@@ -25,56 +25,69 @@
                         <input type="text" id="status" placeholder="Categorias" />
                         <button class="search-button">BUSCAR</button>
                     </div>
-                </form>
-                <div class="table-container">
-                    <table class="collaborators-table">
-                        <thead>
-                            <tr>
-                                <th class="usuario-col">ID</th>
-                                <th>Nome</th>
-                                <th>Status</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="usuario-col">1</td>
-                                <td>Artesanato</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#" class="edit-icon" id="openModal">
-                                        <i class="fa-solid fa-pen-to-square "></i>
-                                    </a>
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-custom-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                            <tr>
-                                <td class="usuario-col">2</td>
-                                <td>Antiguidade</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#" class="edit-icon" id="openModal">
-                                        <i class="fa-solid fa-pen-to-square "></i>
-                                    </a>
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-custom-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="usuario-col">3</td>
-                                <td>Colecionismo</td>
+                    <div class="table-container">
+                        <table class="collaborators-table">
+                            <thead>
+                                <tr>
+                                    <th class="usuario-col">ID</th>
+                                    <th>Nome</th>
+                                    <th>Status</th>
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="usuario-col">1</td>
+                                    <td>Artesanato</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a href="#" class="edit-icon" id="openModal">
+                                            <i class="fa-solid fa-pen-to-square "></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <td class="usuario-col">2</td>
+                                    <td>Antiguidade</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a href="#" class="edit-icon" id="openModal">
+                                            <i class="fa-solid fa-pen-to-square "></i>
+                                        </a>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="usuario-col">3</td>
+                                    <td>Colecionismo</td>
+                                    <td><button class="status inactive">Inativo</button></td>
+                                    <td>
+                                        <a href="#" class="edit-icon" id="openModal">
+                                            <i class="fa-solid fa-pen-to-square "></i>
+                                        </a>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="usuario-col">4</td>
+                                    <td>Cosmetologia</td>
+                                    <td><button class="status active">Ativo</button></td>
+                                    <td>
+                                        <a href="#" class="edit-icon" id="openModal">
+                                            <i class="fa-solid fa-pen-to-square "></i>
+                                        </a>
+                                        
+                                    </td>
+                                </tr>
+                                <td class="usuario-col">5</td>
+                                <td>Gastronomia</td>
                                 <td><button class="status inactive">Inativo</button></td>
                                 <td>
                                     <a href="#" class="edit-icon" id="openModal">
                                         <i class="fa-solid fa-pen-to-square "></i>
                                     </a>
-                                    <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-custom-modal"></i>
-                                    </a>
+                                    
                                 </td>
                                 </tr>
                                 <tr>
@@ -85,9 +98,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -98,9 +109,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -111,9 +120,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -124,9 +131,7 @@
                                         <a href="#" class="edit-icon" id="openModal">
                                             <i class="fa-solid fa-pen-to-square "></i>
                                         </a>
-                                        <a class="delete-icon">
-                                            <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                        </a>
+                                        
                                     </td>
                                 </tr>
                             </tbody>

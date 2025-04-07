@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-boleto.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <script src="../../../Public/js/js-adm/input-cadastro-boleto.js" defer></script>
     <title>Cadastro de Boletos</title>
 </head>
