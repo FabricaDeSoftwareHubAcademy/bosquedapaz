@@ -26,7 +26,7 @@
             </svg>
             <div class="dados">
               <p class="numeros">450</p>
-              <p class="feirantes">Quantidade de Feirantes</p>
+              <p class="feirantes">Quantidade de Expositores</p>
             </div>
             <div id="listra1">
             </div>
@@ -37,7 +37,7 @@
             </svg>
             <div class="dados">
               <p class="numeros">250</p>
-              <p class="feirantes-espera">Feirantes na Fila de Espera</p>
+              <p class="feirantes-espera">Expositores na Fila de Espera</p>
             </div>
             <div id="listra2">
             </div>
@@ -48,7 +48,7 @@
           </svg>
             <div class="dados">
               <p class="numeros">150</p>
-              <p class="feirantes-pagou">Feirantes Realizaram o Pagamento da Taxa</p>
+              <p class="feirantes-pagou">Expositores Realizaram o Pagamento da Taxa</p>
             </div>
             <div id="listra3">
             </div>
@@ -59,7 +59,7 @@
           </svg>
             <div class="dados">
               <p class="numeros">300</p>
-              <p class="feirantes-devendo">Feirantes em Débito</p>
+              <p class="feirantes-devendo">Expositores em Débito</p>
             </div>
             <div id="listra4">
             </div>
