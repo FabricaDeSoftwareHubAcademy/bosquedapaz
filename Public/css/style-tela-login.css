@@ -139,6 +139,8 @@
 .img-dog{
     transition: ease .5s;
     width: 49%;
+    top: 50%;
+    
 }
 
 .img-dog:hover{
@@ -419,7 +421,7 @@
     }
 
     .img-dog{
-        top: 6%;
+        top: 9%;
     }
 }
 
@@ -432,5 +434,9 @@
         top: 10%;
         width: 30%;
         left: 10%;
+    }
+
+    .img-dog{
+        top: 0%;
     }
 }

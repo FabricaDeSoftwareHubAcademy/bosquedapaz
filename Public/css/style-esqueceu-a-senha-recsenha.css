@@ -208,6 +208,7 @@ html,.body-recsenha{
 }
 
 .img-letter{
+    position: relative;
     transition: ease .5s;
     width: 49%;
 }
@@ -410,8 +411,12 @@ html,.body-recsenha{
         margin-bottom: 0%;
     }
 
+    .form-recsenha{
+        top: 32%;
+    }
+
     .img-letter{
-        top: 5%;
+        top: 12%;
     }
 
     .botao-cancelar{
