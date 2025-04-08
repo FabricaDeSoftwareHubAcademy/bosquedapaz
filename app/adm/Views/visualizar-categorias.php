@@ -140,7 +140,7 @@
                                     </div>
                                 </div>
             
-                                <h3>Ícone:</h3>
+                                <h3 class="titulo-modal">Ícone:</h3>
                                 <label for="file" class="custum-file-upload" onchange="loadFile(event)">
                                     <div class="icon">
                                         <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">

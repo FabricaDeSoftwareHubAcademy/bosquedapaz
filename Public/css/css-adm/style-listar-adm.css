@@ -360,7 +360,7 @@ button:hover {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .container {
@@ -476,7 +476,7 @@ button:hover {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .modal-content {
@@ -511,9 +511,9 @@ button:hover {
 
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
-    body {
+    /* body {
         background-color: blue;
-    }
+    } */
 
     .titulo {
         font-size: 28px;
@@ -635,9 +635,9 @@ button:hover {
 
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
-    body {
+    /* body {
         background-color: green;
-    }
+    } */
 
     .titulo {
         font-size: 24px;
@@ -735,7 +735,7 @@ button:hover {
     body {
         overflow-y: auto;
         max-height: 60vh;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .principal .box {
