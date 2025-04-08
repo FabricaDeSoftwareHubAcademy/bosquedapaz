@@ -511,9 +511,9 @@ button:hover {
 
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
-    body {
-        /* background-color: blue; */
-    }
+    /* body {
+        background-color: blue;
+    } */
 
     .titulo {
         font-size: 28px;
@@ -635,9 +635,9 @@ button:hover {
 
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
-    body {
-        /* background-color: green; */
-    }
+    /* body {
+        background-color: green;
+    } */
 
     .titulo {
         font-size: 24px;
