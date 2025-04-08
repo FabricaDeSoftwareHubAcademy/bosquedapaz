@@ -17,7 +17,7 @@
 
 .modal-content {
     width: 100%;
-    height: 70%;
+    height: 70vh;
     background-color: white;
     padding: 20px;
     max-width: 500px;
@@ -153,18 +153,20 @@
 .botoes button {
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
-    font-weight: 600;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    /* width: 30%; */
 }
 
 .cancelar {
+    width: 48%;
     background-color: #FF3877;
     color: white;
 }
 
 .salvar {
+    width: 48%;
     background-color: #007E70;
     color: white;
 }
@@ -191,12 +193,14 @@
 }
 
 .select-items {
+    height: 50%;
     position: absolute;
-    width: 40%;
+    width: 48%;
     background-color: white;
     border: 1px solid #ccc;
     display: none;
-    z-index: 1000;
+    z-index: 50;
+    margin-bottom: 30px;
 }
 
 .select-items div {
@@ -232,3 +236,6 @@ select {
     display: none;
   }
 
+.titulo-modal{
+    margin-top: 20px;
+}
