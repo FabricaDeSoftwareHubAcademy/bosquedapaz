@@ -80,7 +80,7 @@
                     <p class="nome-cat">Sustentabilidade</p>
                 </div>
                 <div class="item open-modal" data-modal="cadastro-categoria">
-                    <div class="bolota open-modal" id="b10">
+                    <div class="bolota" id="b10">
                         <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">
                     </div>
                     <p class="nome-cat">Nova Categoria</p>
