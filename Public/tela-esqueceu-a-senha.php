@@ -41,6 +41,16 @@
                         <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
                         <a href="#" class="botao-redefinir">Redefinir</a>
                     </div>
+
+                    <dialog id="recsenha-modal" class="recsenha-modal">
+                        <div class="modal-recsenha">
+                            <div class="modal-recpass">
+                                <h1 class="modal-title">Enviado!</h1>
+                                <p class="modal-text">Verifique sua caixa de entrada para redefinir sua senha</p>
+                                <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button>
+                            </div>
+                        </div>
+                    </dialog>
                     
                 </div>
 
@@ -50,5 +60,8 @@
             </div>
         </section>
     </main>
+
+    <script src="./js/js-modais/js-abrir-modal.js"></script>
+
 </body>
 </html>

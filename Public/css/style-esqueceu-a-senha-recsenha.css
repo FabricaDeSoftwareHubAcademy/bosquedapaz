@@ -151,6 +151,68 @@ html,.body-recsenha{
     box-shadow: 2px 2px 4px 1px #162868;
 }
 
+.recsenha-modal{
+    position: fixed;
+    border-radius: 15px;
+    margin: auto;
+    background-color: white;
+    border: none;
+    width: 30vw;
+    height: 25vh;
+}
+
+.recsenha-modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-recsenha{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal-recpass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-title{
+    text-align: center;
+}
+
+.modal-text{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.close-modal{
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 5%;
+    border-radius: 12px;
+    background-color: #FF3877;
+    border: none;
+    padding: 10px 25px;
+    margin: auto;
+}
 
 .botoes{
     display: flex;
@@ -270,6 +332,27 @@ html,.body-recsenha{
         position: relative;
     }
 
+    .recsenha-modal{
+        width: 80vw;
+        height: 170px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .close-modal{
+        width: 90px;
+        height: 40px;
+        font-size: 11.5px;
+    }
+
+    .modal-text{
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .botoes{
         justify-content: space-around;
     }
@@ -314,6 +397,16 @@ html,.body-recsenha{
         top: 27%;
     }
 
+    .recsenha-modal{
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .botoes{
         width: 100%;
     }
@@ -340,6 +433,19 @@ html,.body-recsenha{
         flex-direction: column;
         width: 48%;
         left: 0.5%;
+    }
+
+    .recsenha-modal{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        font-size: 17px;
+    }
+
+    .modal-title{
+        font-size: 20px;
     }
 
     .botao-cancelar{
@@ -389,6 +495,11 @@ html,.body-recsenha{
         top: 22%;
     }
 
+    .recsenha-modal{
+        width: 60vw;
+        height: 40vh;
+    }
+
     .title-recsenha{
         margin-bottom: 8%;
     }
@@ -417,6 +528,11 @@ html,.body-recsenha{
 
     .img-letter{
         top: 12%;
+    }
+
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
     }
 
     .botao-cancelar{
@@ -457,6 +573,11 @@ html,.body-recsenha{
         left: 9.5%;
         width: 30%;
         height: 60%;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
     }
     
     .forms-recsenha{
