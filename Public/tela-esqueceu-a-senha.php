@@ -39,7 +39,7 @@
                     
                     <div class="botoes">
                         <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
-                        <a href="#" class="botao-redefinir">Redefinir</a>
+                        <button id="abrir-modal recsenha-modal"  class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
                     </div>
 
                     <dialog id="recsenha-modal" class="recsenha-modal">
