@@ -18,13 +18,13 @@
 .imagem-enzo-fundo {
     position: absolute;
     top: 120px;
-    left: -50px;
+    left: 0px;
     z-index: -1;
 }
 
 .imagem-enzo-fundo2 {
     position: absolute;
-    right: -10px;
+    right: 0px;
     bottom: 0px;
     z-index: -1;
 }
@@ -32,7 +32,7 @@
 .imagem-enzo-fundo3 {
     position: absolute;
     top: 120px;
-    right: -50px;
+    right: 0px;
     z-index: -1;
 }
 
@@ -214,199 +214,87 @@
     background-color: rgb(0, 106, 94);
 }
 
-
-@media screen and (max-width: 500px) {
-    .title {
-        font-size: 24px;
-        font-weight: 600;
-        justify-content: center;
-        align-items: center;
+@media screen and (max-width: 1150px) {
+    .corpo {
+        overflow-y: hidden;
     }
-
-    .bolota {
-        display: flex;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: space-evenly;
-        cursor: pointer;
-        flex-direction: row;
+    .principal {
+        overflow-y: hidden;
     }
-
-    .icon-item {
-        width: 80%;
-        height: 80%;
-        /* padding: 20px; */
+    
+    .box {
+        height: auto;
+        justify-content: space-around;
     }
 
     .box-item {
-        width: 70%;
-        height: 75%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        overflow: scroll;
-        justify-content: space-evenly;
+        width: 100%;
     }
 
-    .box {
-        width: 85%;
-        height: 85vh;
-        margin: auto;
-        margin-top: 20px;
-        border-radius: 24px;
-        background-color: rgba(235, 235, 235, 0.65);
-        z-index: 3;
+    .item {
+        width: 25%;
     }
 
-    .imagem-enzo-fundo {
-        display: none;
+    .nome-cat {
+        font-size: .95rem;
+    }
+
+
+    .btns {
+        width: 15%;
+        position: absolute;
+        bottom: 0;
+        left: 40px;
     }
 
     .imagem-enzo-fundo2 {
-        display: none;
-    }
-
-    .imagem-enzo-fundo3 {
-        display: none;
-    }
-
-    .modal-content {
-        overflow-y: auto;
-        width: 90%;
-        max-width: 90%;
-        height: 70%;
-        padding: 15px;
-    }
-
-    .titulo {
-        font-size: 20px;
-    }
-
-    .form-box .nome-cat {
-        width: 80%;
-        font-size: 14px;
-    }
-
-    .botoes {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .botoes .cancelar{
-        width: 50%;
-    }
-
-    .botoes .salvar{
-        width: 50%;
+        position: absolute;
+        right: 0px;
+        bottom: -50px;
+        z-index: -1;
     }
 }
 
-@media screen and (max-width: 1045px) {
-    .bolota {
-        display: flex;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: space-evenly;
-        cursor: pointer;
-        flex-direction: column;
+@media screen and (max-width: 1150px) {
+
+    .box{
+        height: 85vh;
+    }
+    .btns {
+        width: 15%;
+        position: absolute;
+        bottom: 50px;
+        left: 40px;
     }
 
-    .icon-item {
-        width: 80%;
-        height: 80%;
-        /* padding: 20px; */
-    }
-
-    .modal-content {
-        width: 85%;
-        max-width: 85%;
-        height: 700px;
-        padding: 20px;  
-    }
-
-    .titulo {
-        font-size: 28px;
-    }
-
-    .form-box .nome-cat {
-        width: 50%;
-        font-size: 15px;
-    }
-
-    .botoes {
-        width: 50%;
-        flex-direction: row;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .botoes button {
-        width: 70%;
+    .imagem-enzo-fundo2 {
+        position: absolute;
+        right: 0px;
+        bottom: -50px;
+        z-index: -1;
     }
 }
 
-@media screen and (max-width: 1380px) {
-    .bolota {
-        display: flex;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: space-evenly;
-        cursor: pointer;
-        flex-direction: column;
-    }
-
-    .icon-item {
-        width: 80%;
-        height: 80%;
-        /* padding: 20px; */
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 1.5rem;
     }
 
     .box-item {
-        width: 70%;
-        height: 75%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        overflow: scroll;
-        justify-content: space-evenly;
+        padding: 40px 20px;
     }
 
-    .modal-content {
-        width: 80%;
-        max-width: 600px;
-        height: 500px;
-        padding: 25px;
-        overflow-y: auto;
+    .item {
+        width: 41%;
     }
 
-    .titulo {
-        font-size: 32px;
-        text-align: center;
+    .nome-cat {
+        font-size: .85rem;
     }
 
-    .form-box .nome-cat {
-        width: 70%;
-        font-size: 18px;
+    .btns {
+        width: 30%;
+        left: 20px;
+        bottom: 0px;
     }
-
-    .botoes {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 5px;
-    }
-
-    .botoes button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }  
 }

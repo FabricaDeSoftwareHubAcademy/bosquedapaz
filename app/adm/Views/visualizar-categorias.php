@@ -13,7 +13,8 @@
 
 
 
-<body>
+
+<body class="corpo">
     <?php
     include "../../../Public/assets/adm/menu-adm.html";
     ?>
