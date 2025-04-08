@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./assets/icons/folha.ico">
     <title>Bosque da Paz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icons/folha.ico">
 </head>
 <body class="body-login">
     <main>
@@ -72,6 +73,5 @@
             </div>
         </section>
     </main>
-   
 </body>
 </html>

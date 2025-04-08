@@ -4,304 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Boletos </title>
+    <title>Listar Boletos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-listar-boletos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
-
-<body class="boleto-body">
+<body class="body-listb" >
+    
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
-    <img class="boleto-bola1" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
+    <div class="listb-box">
+        <h1 class="listb-title">Listar Boletos</h1>
 
-    <img class="boleto-bola2" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
-
-    <img class="boleto-bola3" src="../../../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
-
-    <div class="boleto-box">
-        <section class="boletao-secao-titulo">
-            <h1 class="boleto-titulo">Listar de Boletos</h1>
-        </section>
-
-        <section class="boleto-secao-tabela">
-            <div class="boleto-tabela-container">
-                <table class="boleto-tabela-lista">
-                    <thead>
-                        <tr>
-                            <th>Número</th>
-                            <th>Vencimento</th>
-                            <th>Referência</th>
-                            <th>Valor</th>
-                            <th>Status</th>
-                            <th>Imprimir</th>
+        <section class="section-listb-tabela">
+            <div class="listb-tabela-container">
+                <table class="listb-table">
+                    <thead class="listb-head">
+                        <tr class="listb-row-name">
+                            <th class="listb-header-name">Número</th>
+                            <th class="listb-header-name">Vencimento</th>
+                            <th class="listb-header-name">Referência</th>
+                            <th class="listb-header-name">Valor</th>
+                            <th class="listb-header-name">Status</th>
+                            <th class="listb-header-name">Imprimir</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                    <tbody class="listb-body">
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pago">Pago</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.500,00</td>
-                            <td><button class="boleto-botao-pago">Pago</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Expositor</td>
-                            <td>13/05/2024</td>
-                            <td>Abril</td>
-                            <td>2.900,00</td>
-                            <td><button class="boleto-botao-pendente">Pendente</button></td>
-                            <td><a href="#" class="boleto-botao-editar"><i class="fa-solid fa-print"></i></a></td>
+                        <tr class="listb-tr" >
+                            <td class="listb-boleto-td">110054</td>
+                            <td class="listb-boleto-td">35/50/69</td>
+                            <td class="listb-boleto-td">Dezembro</td>
+                            <td class="listb-boleto-td">R$2513,25</td>
+                            <td class="listb-boleto-td"><button class="listb-btn-pendente">Pendente</button></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+        
+        <a href="../../adm/Views/Area-Adm.php" class="listb-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a>
     </div>
-    
-    <div class="boleto-seta-voltar">
-        <a href="../../../app/adm/Views/gerenciar-relatorios.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-    </div>
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <img class="listb-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
+    <img class="listb-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
+    <img class="listb-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
 </body>
+</html>
