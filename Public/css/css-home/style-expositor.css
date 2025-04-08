@@ -68,6 +68,7 @@
     justify-content: center;
 }
 
+
 .cards-perfis {
     width: 100%;
     height: auto;
@@ -295,6 +296,10 @@
 @media screen and (max-width: 500px) {
     .bar-title-expositor {
         height: 250px;
+    }
+
+    .cards-perfis2 {
+        display: none;
     }
 
     .conteiner-outros-expo {
