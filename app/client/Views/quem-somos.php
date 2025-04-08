@@ -26,9 +26,9 @@
             <p class="somos-apaixonados">Somos uma equipe apaixonada por conectar pessoas e promover a troca de ideias e experiências. Desde nossa fundação, nossa missão tem sido criar um espaço vibrante e acolhedor onde expositores e visitantes possam se encontrar, explorar novidades e celebrar a diversidade de talentos e produtos.</p>
         </div>
         <div class="div-img-animation">
-            <img src="../../../Public/imgs/quem-somos-img/imagem1.png" alt="imagem1" class="imagem1 img-sobre">
-            <img src="../../../Public/imgs/quem-somos-img/imagem2.png" alt="imagem2" class="imagem2 img-sobre">
-            <img src="../../../Public/imgs/quem-somos-img/imagem3.png" alt="imagem3" class="imagem3 img-sobre">
+            <img src="../../../Public/imgs/quem-somos-img/imagem1.webp" alt="imagem1" class="imagem1 img-sobre">
+            <img src="../../../Public/imgs/quem-somos-img/imagem2.webp" alt="imagem2" class="imagem2 img-sobre">
+            <img src="../../../Public/imgs/quem-somos-img/imagem3.webp" alt="imagem3" class="imagem3 img-sobre">
 
         </div>
     </main> <!--MAIN QUE TERMINA A PARTE INCIAL-->
@@ -45,19 +45,19 @@
             
             <div class="image-text-carina">
                 
-                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-carina.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-carina.webp" alt="">
                 <p class="carina">Carina Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
 
             <div class="image-text-denise">
-                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-denize.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-denize.webp" alt="">
                 <p class="denise">Denise Zamboni</p>
                 <span class="profission"> Produtora Cultural</span>
             </div>
    
             <div class="image-text-fernanda">
-                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-fernanda.png" alt="">
+                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-fernanda.webp" alt="">
                 <p class="fernanda">Fernanda Gutierrez</p>
                 <span class="profission">Advogada</span>
             </div>
@@ -95,11 +95,11 @@
 
     </div>
     <div class="fotos-parceiros-quem-somos">
-       <img src="../../../Public/imgs/quem-somos/bosque-ipe.png" alt="">
-        <img src="../../../Public/imgs/quem-somos/governo.png" alt="">
-        <img src="../../../Public/imgs/quem-somos/senac.png" alt="">
-        <img src="../../../Public/imgs/quem-somos/sebrae.png" alt="">
-        <img src="../../../Public/imgs/quem-somos/setur.png" alt="">
+       <img src="../../../Public/imgs/quem-somos/bosque-ipe.webp" alt="">
+        <img src="../../../Public/imgs/quem-somos/governo.webp" alt="">
+        <img src="../../../Public/imgs/quem-somos/senac.webp" alt="">
+        <img src="../../../Public/imgs/quem-somos/sebrae.webp" alt="">
+        <img src="../../../Public/imgs/quem-somos/setur.webp" alt="">
         
 
     </div>
