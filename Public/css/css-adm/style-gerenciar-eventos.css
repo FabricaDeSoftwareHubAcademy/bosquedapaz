@@ -419,7 +419,7 @@ table tbody tr:nth-child(even) {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .container {
@@ -509,7 +509,7 @@ table tbody tr:nth-child(even) {
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
     body {
-        background-color: blue;
+        /* background-color: blue; */
     }
 
     .titulo {
@@ -586,7 +586,7 @@ table tbody tr:nth-child(even) {
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
     body {
-        background-color: green;
+        /* background-color: green; */
     }
 
     .titulo {
@@ -658,7 +658,7 @@ table tbody tr:nth-child(even) {
     body {
         overflow-y: auto;
         max-height: 60vh;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .principal .box{

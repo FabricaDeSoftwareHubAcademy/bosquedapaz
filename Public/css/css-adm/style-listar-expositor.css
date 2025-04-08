@@ -468,7 +468,7 @@ dialog::backdrop{
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .container {
@@ -584,7 +584,7 @@ dialog::backdrop{
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .modal-content {
@@ -620,7 +620,7 @@ dialog::backdrop{
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
     body {
-        background-color: blue;
+        /* background-color: blue; */
     }
 
     .titulo {
@@ -744,7 +744,7 @@ dialog::backdrop{
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
     body {
-        background-color: green;
+        /* background-color: green; */
     }
 
     .titulo {
@@ -843,7 +843,7 @@ dialog::backdrop{
     body {
         overflow-y: auto;
         max-height: 60vh;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .principal .box {
