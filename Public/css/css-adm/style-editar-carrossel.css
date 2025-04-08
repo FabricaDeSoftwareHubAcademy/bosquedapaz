@@ -10,6 +10,7 @@
 
 .principal .box {
     height: auto;
+    justify-content: initial;
     min-height: 94%;
 }
 
@@ -20,12 +21,13 @@
 
 .formulario-ca {
     width: 100%;
-    height: 600px;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-top: 75px;
+    z-index: 2;
 }
 
 .up-imgs {
@@ -111,10 +113,24 @@
 }
 
 @media screen and (max-width: 1190px) {
+    .principal  {
+        height: 90vh;
+    }
+
+    .principal .box {
+        /* height: auto; */
+        min-height: auto;
+    }
+
+    .formulario-ca {
+        height: 75vh;
+    }
+    
     .up-imgs {
         width: 100%;
         height: auto;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -123,7 +139,7 @@
     }
 
     .uploads {
-        width: 250px;
+        width: 260px;
         height: auto;
         display: flex;
         gap: 5px;
@@ -139,6 +155,19 @@
         align-items: center;
         justify-content: center;
         background-color: white;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .formulario-ca {
+        padding-top: 30px;
+    }
+
+}
+@media screen and (max-width: 790px) {
+    .up-imgs {
+        flex-direction: row;
     }
 }
 
