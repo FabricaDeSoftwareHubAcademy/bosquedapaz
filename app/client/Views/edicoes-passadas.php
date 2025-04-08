@@ -6,6 +6,7 @@
     <title>EDIÇÕES PASSADAS</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edicoes-passadas.css">
     <link rel="stylesheet" href="../../../Public/css/css-modais/style-edicoes-passadas-modal.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <script src="../../../Public/js/js-modais/edicoes-passadas-abrir-modais.js" defer></script>
 </head>
 <body>
