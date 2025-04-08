@@ -18,13 +18,13 @@
 .imagem-enzo-fundo {
     position: absolute;
     top: 120px;
-    left: -50px;
+    left: 0px;
     z-index: -1;
 }
 
 .imagem-enzo-fundo2 {
     position: absolute;
-    right: -10px;
+    right: 0px;
     bottom: 0px;
     z-index: -1;
 }
@@ -32,7 +32,7 @@
 .imagem-enzo-fundo3 {
     position: absolute;
     top: 120px;
-    right: -50px;
+    right: 0px;
     z-index: -1;
 }
 
@@ -214,111 +214,87 @@
     background-color: rgb(0, 106, 94);
 }
 
-
-@media screen and (max-width: 500px) {
-    .title {
-        font-size: 24px;
-        font-weight: 600;
-        justify-content: center;
-        align-items: center;
+@media screen and (max-width: 1150px) {
+    .corpo {
+        overflow-y: hidden;
     }
-
-    .bolota {
-        display: flex;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: space-evenly;
-        cursor: pointer;
-        flex-direction: row;
+    .principal {
+        overflow-y: hidden;
     }
-
-    .icon-item {
-        width: 80%;
-        height: 80%;
-        /* padding: 20px; */
+    
+    .box {
+        height: auto;
+        justify-content: space-around;
     }
 
     .box-item {
-        width: 70%;
-        height: 75%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        overflow: scroll;
-        justify-content: space-evenly;
+        width: 100%;
     }
 
-    .box {
-        width: 85%;
-        height: 85vh;
-        margin: auto;
-        margin-top: 20px;
-        border-radius: 24px;
-        background-color: rgba(235, 235, 235, 0.65);
-        z-index: 3;
+    .item {
+        width: 25%;
     }
 
-    .imagem-enzo-fundo {
-        display: none;
+    .nome-cat {
+        font-size: .95rem;
+    }
+
+
+    .btns {
+        width: 15%;
+        position: absolute;
+        bottom: 0;
+        left: 40px;
     }
 
     .imagem-enzo-fundo2 {
-        display: none;
-    }
-
-    .imagem-enzo-fundo3 {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1045px) {
-    .bolota {
-        display: flex;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: space-evenly;
-        cursor: pointer;
-        flex-direction: column;
-    }
-
-    .icon-item {
-        width: 80%;
-        height: 80%;
-        /* padding: 20px; */
+        position: absolute;
+        right: 0px;
+        bottom: -50px;
+        z-index: -1;
     }
 }
 
-@media screen and (max-width: 1380px) {
-    .bolota {
-        display: flex;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: space-evenly;
-        cursor: pointer;
-        flex-direction: column;
+@media screen and (max-width: 1150px) {
+
+    .box{
+        height: 85vh;
+    }
+    .btns {
+        width: 15%;
+        position: absolute;
+        bottom: 50px;
+        left: 40px;
     }
 
-    .icon-item {
-        width: 80%;
-        height: 80%;
-        /* padding: 20px; */
+    .imagem-enzo-fundo2 {
+        position: absolute;
+        right: 0px;
+        bottom: -50px;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 1.5rem;
     }
 
     .box-item {
-        width: 70%;
-        height: 75%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        overflow: scroll;
-        justify-content: space-evenly;
+        padding: 40px 20px;
+    }
+
+    .item {
+        width: 41%;
+    }
+
+    .nome-cat {
+        font-size: .85rem;
+    }
+
+    .btns {
+        width: 30%;
+        left: 20px;
+        bottom: 0px;
     }
 }

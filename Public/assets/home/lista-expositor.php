@@ -115,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="cards-perfis">
+        <div class="cards-perfis cards-perfis2">
             <div class="card-per-expo">
                 <div class="head-card">
                     <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">

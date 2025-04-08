@@ -82,3 +82,60 @@
             items.style.display = "none";
         }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const openModalButtons = document.querySelectorAll(".open-modal");
+        const closeModalButtons = document.querySelectorAll(".close-modal");
+        
+        openModalButtons.forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
+                const modalId = this.getAttribute("data-modal");
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.showModal();
+                }
+            });
+        });
+    
+        closeModalButtons.forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
+                const modalId = this.getAttribute("data-modal");
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.close();
+                }
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("custom-modal");
+  const cancelBtn = document.getElementById("custom-cancel");
+  const confirmBtn = document.getElementById("custom-confirm");
+  const openButtons = document.querySelectorAll(".open-custom-modal");
+
+  openButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          modal.style.display = "flex";
+      });
+  });
+
+  function closeModal() {
+      modal.style.display = "none";
+  }
+
+  cancelBtn.addEventListener("click", closeModal);
+  confirmBtn.addEventListener("click", () => {
+      alert("Ação confirmada!");
+      closeModal();
+  });
+
+  modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+          closeModal();
+      }
+  });
+});
+    

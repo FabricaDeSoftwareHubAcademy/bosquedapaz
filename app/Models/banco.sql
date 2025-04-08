@@ -175,6 +175,17 @@ CREATE TABLE dadosFeira(
     PRIMARY KEY(id_dadosFeira)
 );
 
+CREATE TABLE boleto(
+	id_boleto INT NOT NULL AUTO_INCREMENT,
+    pdf VARCHAR(255) NOT NULL,
+    mes_referencia DATE NOT NULL,
+    valor NUMERIC(10,2) NOT NULL,
+    vencimento DATE NOT NULL,
+    id_expositor INT NOT NULL,
+    PRIMARY KEY(id_boleto),
+    FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
+);
+
 
 show tables;
 

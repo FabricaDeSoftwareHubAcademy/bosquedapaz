@@ -309,28 +309,38 @@
         gap: 50px;
         width: 90%;
     } 
+
+    .content-principal {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    } 
+
+
+    .select-area {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .procurar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pesquisa-expo {
+        width: 100%;
+    }
+
+    .input-pes {
+        width: 100%;
+    }
+
+    .cards-perfis{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
-
-    .cards-perfis {
-        width: 100%;
-        gap: 15px;
-    }
-    .card-per-expo {
-        width: 160px;
-        height: 415px;
-    }
-
-    .head-card {
-        min-width: 160px;
-        min-height: 160px;
-    } 
-
-    .body-card {
-        top: 60px;
-        gap: 0px;
-    }
 
     .para-cate {
         flex-direction: column;

@@ -316,7 +316,7 @@ label#salvar-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 .voltar {
@@ -585,7 +585,6 @@ label#salvar-btn {
         align-items: center;
         justify-content: center;
         padding: 0;
-        overflow: hidden;
     }
  
     .principal{

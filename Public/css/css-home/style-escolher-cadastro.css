@@ -33,16 +33,16 @@
 
     #linha-vertical-ec{
         height: 640px;
-        border-right: 3px solid rgba(0, 126, 112, 1);
+        border-right: 1px solid rgba(0, 126, 112, 1);
         position: fixed;
         left: 50%;
         top: 8%;
     }
 }
 
-.seta-ec{
+.seta-ec {
     position: relative;
-    top: 90%;
+    top: 93%;
     left: 2%;
 }
 
@@ -179,6 +179,7 @@
     right: 0px;
     bottom: 0px;
     z-index: -3;
+    width: 10vw;
 }
 
 #p-ed-kids{
@@ -232,24 +233,24 @@
     }
 }
 
+/* Responsividade Ipad Mini: */
 @media (max-width: 768px) and (min-height: 1024px){
-    .principal{
+    .principal {
         background-color: #ff387700;
-        height: 90vh;
+        height: 100vh;
+    }
+
+    .bolas-fundo .bola-rosa{
+        width: 20vw;
     }
 
     .area-img-ec{
-        background-color: #ff387700;
-        width: 40%;
-    }
-
-    .area-img-ec img{
-        width: 80%;
-        height: auto;
+        display: none;
     }
 
     .area-infs-ec{
-        width: 60%;
+        width: 100%;
+        margin-right: 2rem;
     }
 
     .principal .box{
@@ -257,9 +258,7 @@
         position: relative;
         right: 2%;
         #linha-vertical-ec{
-            left: 64%;
-            height: 400px;
-            top: 25%;
+            display: none;
         }
     }
 
@@ -267,8 +266,8 @@
         width: 90%;
     }
 
-    .text-input-ec p{
-        right: 10%;
+    .text-input-ec{
+        justify-content: flex-start;
     }
 
     .icon-input-ec{
@@ -284,33 +283,30 @@
     }
 }
 
+/* Responsividade Ipad Air: */
 @media (min-width: 820px) and (min-height: 1180px){
     .principal{
-        background-color: #ff387700;
-        height: 90vh;
+        height: 100vh;
+    }
+
+    .bolas-fundo .bola-rosa{
+        width: 20vw;
     }
 
     .area-img-ec{
-        background-color: #ff387700;
-        width: 40%;
-    }
-
-    .area-img-ec img{
-        width: 80%;
-        height: auto;
+        display: none;
     }
 
     .area-infs-ec{
-        width: 60%;
+        width: 80%;
+        margin-right: 2rem;
     }
 
     .principal .box{
         height: 80%;
         position: relative;
         #linha-vertical-ec{
-            height: 500px;
-            left: 63%;
-            top: 20%;
+            display: none;
         }
     }
 
@@ -319,8 +315,8 @@
         font-size: 20px;
     }
 
-    .text-input-ec p{
-        right: 5%;
+    .text-input-ec{
+        justify-content: flex-start;
     }
 
     .icon-input-ec{
@@ -337,6 +333,12 @@
 
     #p-ed-kids{
         right: 0%;
+    }
+
+    .seta-ec {
+        position: relative;
+        top: 93%;
+        left: 0%;
     }
 }
 

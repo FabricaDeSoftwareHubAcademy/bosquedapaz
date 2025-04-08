@@ -24,20 +24,22 @@ body{
     height: 90%;
     background-color: rgba(248, 245, 246, 0.65);
     margin: auto;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    position: relative;
+    top: 90px;
 }
 
-.btn-editar {
+/* .btn-editar {
     background-color: transparent;
     border: none;
     outline: none;
-}
+} */
 
 
 .bolas-fundo {

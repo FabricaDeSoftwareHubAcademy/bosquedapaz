@@ -13,7 +13,8 @@
 
 
 
-<body>
+
+<body class="corpo">
     <?php
     include "../../../Public/assets/adm/menu-adm.html";
     ?>
@@ -80,7 +81,7 @@
                     <p class="nome-cat">Sustentabilidade</p>
                 </div>
                 <div class="item open-modal" data-modal="cadastro-categoria">
-                    <div class="bolota open-modal" id="b10">
+                    <div class="bolota" id="b10">
                         <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">
                     </div>
                     <p class="nome-cat">Nova Categoria</p>
@@ -139,7 +140,7 @@
                                     </div>
                                 </div>
             
-                                <h3>Ícone:</h3>
+                                <h3 class="titulo-modal">Ícone:</h3>
                                 <label for="file" class="custum-file-upload" onchange="loadFile(event)">
                                     <div class="icon">
                                         <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">

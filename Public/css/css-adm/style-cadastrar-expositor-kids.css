@@ -81,12 +81,12 @@ body {
     border: none;
     position: relative;
     top: 20px;
+    position: relative;
 }
 
 .formularios div {
     display: flex;
     flex-direction: column;
-    /* height: 80%; */
 }
 
 .formularios input {
@@ -180,93 +180,6 @@ label#salvar-btn {
 }
 
 
-/* Estilo do modal */
-/* .modal {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-.title-modal{
-    font-weight: bold;
-    width: 100%;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #555;
-}
-
-.close:hover {
-    color: #000;
-}
-
-.modal-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-
-.modal-botoes {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.btn-confirmar {
-    background-color: #007E70;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-
-.btn-cancelar-modal {
-    background-color: #e91e63; 
-    color: white;
-    border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-
-.btn-cancelar {
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-} */
-
-/******* fim modal ******/
-
-
 .custom-dropdown input {
     width: 40vh;
     height: 47px;
@@ -303,7 +216,7 @@ label#salvar-btn {
 
 
 .voltar:hover {
-    transform: scale(1.1); /* Efeito ao passar o mouse */
+    transform: scale(1.1); 
 }
 
 
@@ -312,32 +225,31 @@ label#salvar-btn {
 
 .btn-finalizar{
     /* background-color: red; */
-    position: absolute;
-    width: 40%;
-    /* gap: 20px; */
-    left: 70%;
-    top: 50vh;
-    
-}
-.btn-finalizar button{
-    border: none;
-}
-
-.btn-salvar{
-    width: 20%;
-    height: 46px;
     position: relative;
-    left: 23%;
-    top: 45px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
+    top: 30vh;
+    left: -10%;
+    width: 100%;
+    display: flex;
 }
 .btn-cancelar{
-    width: 20%;
-    height: 46px;
+    width: 35%;
+    border: none;
+    height: 49px;    
 }
+.btn-salvar{
+    width: 35%;
+    position: relative;
+    left: 40%;
+    top: 48px;
+    padding: 12px 25px; 
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
 .btn-finalizar a{
     text-decoration: none;
     color: white;
@@ -347,12 +259,11 @@ label#salvar-btn {
 }
 
 
-
 .btn-finalizar 
 .btn-cancelar {
     background-color: #FF3877;
     border-radius: 10px;
-    /* padding: 11px 20px; */
+    padding: 12px 16px;
     
 }
 
@@ -362,7 +273,17 @@ label#salvar-btn {
     border-radius: 10px;    
 }
 
+
+
 /* fim botao finalizar */
+
+
+.form-pessoa,
+.form-loja,
+.form-expo{
+    position: relative;
+    left: 13%;
+}
 
 
 /*  celular pequeno: 480px
@@ -370,8 +291,6 @@ label#salvar-btn {
     tablet: 768 a 1024px
     desktop: acima de 1024px 
 */
-
-
 
 /* celular pequeno */
 @media screen and (max-width: 650px) {
@@ -397,12 +316,20 @@ label#salvar-btn {
     .formularios{
         display: flex;
         flex-direction: column;
+        position: relative;
+        left: -13%;
+    }
+
+    .formularios label{
+        position: relative;
+        left: 10px;
     }
 
     .btn-finalizar{
-        /* width: 100%; */
-        position: relative;
-        left: 0px;
+        width: 100%;
+        left: 25%;
+        top: -30px;
+        /* background-color: red; */
     }
 
     .select#todas_categorias.select{
@@ -414,6 +341,7 @@ label#salvar-btn {
     .voltar{
         position: relative;
         left: -15vh;
+        top: 5px;
     }
 }
     
@@ -443,6 +371,7 @@ label#salvar-btn {
     .formularios{
         display: flex;
         flex-direction: column;
+        
     }
 
     .formularios label{
@@ -470,7 +399,7 @@ label#salvar-btn {
 
 }
 
-@media screen and (min-width: 1024px) and (max-width:1500px) {
+@media screen and (min-width: 1024px) and (max-width:1250px) {
     .formularios{
         width: 100%;
     }
@@ -480,11 +409,37 @@ label#salvar-btn {
         left: 5%;
     }
 
-
-    .form-expo{
+    .form-pessoa{
         position: relative;
         left: 5%;
-        top: -10px;
+        top: 5px;
+    }
+
+    .form-pessoa input{
+        width: 110%;
+    }
+
+    .form-loja{
+        position: relative;
+        left: 10%;
+        top: 5px;
+    }
+
+    .form-expo{
+        /* background-color: red; */
+        position: relative;
+        left: 5%;
+    }
+    .form-loja input{
+        width: 76%;
+    }
+
+    .form-expo input{
+        width: 70%;
+    }
+
+    .select{
+        width: 70%;
     }
 
     #categorias{
@@ -494,11 +449,14 @@ label#salvar-btn {
 
     .btn-finalizar{
         position: relative;
-        left: 28vh;
-        top: 15vh;
+        left: 70%;
     }
 }
 
 /* @media screen and (min-width: 1251px){
+    .btn-finalizar{
+        position: relative;
+        left: 45vh;
+        top: 10vh;
+    }
 } */
-

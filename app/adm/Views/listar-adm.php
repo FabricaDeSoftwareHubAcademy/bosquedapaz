@@ -2,7 +2,6 @@
 require_once '../../../app/adm/Controller/Colaborador.php';
 
 $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-
 $adm = new Colaborador();
 $colaboradores = $adm->listar($busca);
 ?>
@@ -88,31 +87,25 @@ $colaboradores = $adm->listar($busca);
 
 
         <!-- modal excluir -->
-        <dialog id="modal-deleta" class="modal-deleta">
-          <div class="acao-recusar">
-            <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-                <div class="acao-botoes-recusar">
-                  <button class="close-modal-cancel" data-modal="modal-deleta">cancelar</button>
-                  <button class="close-modal-save" data-modal="modal-deleta">confirmar</button>
-                </div>
-            </div>
+      <dialog id="modal-deleta" class="modal-deleta">
+        <div class="acao-recusar">
+          <div class="acao-content-recusar">
+              <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+              <div class="acao-botoes-recusar">
+                <button class="close-modal" data-modal="modal-deleta">cancelar</button>
+                <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+              </div>
           </div>
         </div>
       </dialog>
 
-      <div class="btns">
-          <a href="Area-Adm.php" class="voltar">
-          <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-          </a>
-      </div>  
-      </div>
-    </main>
-    <div class="bolas-fundo">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
-        <img src="../../../Public/imgs/img-listar-colaboradores/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
-    </div>
+  </main>
+  <div class="bolas-fundo">
+    <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+    <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+    <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+  </div>
+</body>
 
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
