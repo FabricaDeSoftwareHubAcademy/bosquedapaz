@@ -132,7 +132,9 @@
                     <a class="link-modais" href="../../../app/adm/Views/lista-de-espera.php">
                         <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-relatorios">
                             <div class="area-icon-gabriel">
-                                <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+                                <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                            </svg>
                                 <p>Lista de Espera</p>
                             </div>
                         </div>
@@ -205,14 +207,45 @@
                     </div>
                 </div>
             </a>
-            <a href="gerenciar-eventos.php">
-                <div class="Botoes-gabriel">
+
+            <!-- Aqui -->
+            <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-evento">
                     <div class="area-icon-gabriel">
                         <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
                         <p>Eventos</p>
                     </div>
                 </div>
+
+           <!-- Modal Eventos -->
+
+           <dialog class="abrir-mais" id="abrir-mais-evento">
+                <div class="close-modal" data-modal="abrir-mais-evento">
+                    <h2>Eventos</h2>
+                    <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                </div>
+                <div class="modais">
+                    <a class="link-modais" href="../../../app/adm/Views/cadastrar-evento.php">
+                    <div class="Botoes-gabriel">
+                        <div class="area-icon-gabriel">
+                            <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                        <p>Cadastrar Eventos</p>
+                    </div>
+                </div>
+                    </a>
+                    <a class="link-modais" href="../../../app/adm/Views/gerenciar-eventos.php">
+                    <div class="Botoes-gabriel">
+                        <div class="area-icon-gabriel">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                        </svg>
+                        <p>Listar Eventos</p>
+                    </div>
+                </div>
             </a>
+            </dialog>
+
+
             <a href="grafico-central.php">
                 <div class="Botoes-gabriel">
                     <div class="area-icon-gabriel">
