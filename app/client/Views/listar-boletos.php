@@ -150,7 +150,7 @@
             </div>
         </section>
         
-        <a href="#" class="listb-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a>
+        <a href="../../adm/Views/Area-Adm.php" class="listb-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a>
     </div>
     <img class="listb-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
     <img class="listb-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
