@@ -8,7 +8,7 @@ function toggleSituacao(button, idExpositor) {
 
     // Botão SIM
     document.getElementById('btn-sim').onclick = () => {
-        fetch('../../../app/adm/Models/atualizar-status.php', {
+        fetch('../../../app/Models/atualizar-status.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

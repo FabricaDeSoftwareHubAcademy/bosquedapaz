@@ -26,6 +26,7 @@ try {
 </head>
 
 <body class="boleto-body">
+<?php include "../../../Public/assets/adm/menu-adm.html"?>
 
     <div class="boleto-box">
         <section class="boletao-secao-titulo">
@@ -87,7 +88,8 @@ try {
                                 <td><?= htmlspecialchars($row['nome_expositor']) ?></td>
                                 <td><?= htmlspecialchars($row['vencimento']) ?></td>
                                 <td><?= htmlspecialchars($row['referencia']) ?></td>
-                                <td><?= htmlspecialchars($row['valor']) ?></td>
+                                <td>R$ <?= htmlspecialchars(number_format($row['valor'], 2, ',', '.')) ?></td>
+
                                 <td>
                                     <button class="status <?php echo ($row['situacao'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>"
                                         onclick="toggleSituacao(this, <?php echo $row['id_expositor']; ?>)">

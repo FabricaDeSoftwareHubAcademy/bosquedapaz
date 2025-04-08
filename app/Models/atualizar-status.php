@@ -1,5 +1,5 @@
 <?php
-require_once '../../../app/adm/Controller/Boleto.php';
+require_once '../../app/adm/Controller/Boleto.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id_expositor'] ?? null;
