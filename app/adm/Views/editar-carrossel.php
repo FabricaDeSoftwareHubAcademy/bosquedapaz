@@ -11,9 +11,9 @@ $res = $car->buscar_id(1);
 
 // caminho das imgs padrao
 $imagens = [
-    'img1' => '../../../Public/imgs/uploads-carrosel/img1.jpg',
-    'img2' => '../../../Public/imgs/uploads-carrosel/img2.jpg',
-    'img3' => '../../../Public/imgs/uploads-carrosel/img3.jpg',
+    'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
+    'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
+    'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg',
 ];
 
 // verifica se aconsulta no db esta vazia
