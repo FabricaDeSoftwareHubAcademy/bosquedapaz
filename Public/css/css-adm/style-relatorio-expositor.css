@@ -268,8 +268,33 @@ table tbody tr:nth-child(even) {
     color: black;
 }
 
-.email-col{
-    font-size: 11px;
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+
+.bolas-fundo .folhaAzul1-yan {
+    position: absolute;
+    left: -40px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .folhaAzul2-yan {
+    position: absolute;
+    right: -50px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .folhaRosa-yan {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    z-index: -3;
 }
 
 .btns {
@@ -293,12 +318,8 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
-body{
-    overflow-y: hidden;
-}
-
-/* @media (max-width: 1042px) {
-    .principal .box {
+@media (max-width: 1042px) {
+    .box {
         padding: 15px;
     }
 
@@ -309,7 +330,11 @@ body{
     .search-bar input {
         width: 100%;
     }
-} */
+
+    .bolas-fundo {
+        display: none;
+    }
+}
 
 /* @media(max-width: 720px) {
     .search-bar {

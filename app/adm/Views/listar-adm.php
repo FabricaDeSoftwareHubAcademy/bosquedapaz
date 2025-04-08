@@ -2,7 +2,6 @@
 require_once '../../../app/adm/Controller/Colaborador.php';
 
 $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-
 $adm = new Colaborador();
 $colaboradores = $adm->listar($busca);
 ?>
@@ -88,15 +87,14 @@ $colaboradores = $adm->listar($busca);
 
 
         <!-- modal excluir -->
-        <dialog id="modal-deleta" class="modal-deleta">
-          <div class="acao-recusar">
-            <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-                <div class="acao-botoes-recusar">
-                  <button class="close-modal-cancel" data-modal="modal-deleta">cancelar</button>
-                  <button class="close-modal-save" data-modal="modal-deleta">confirmar</button>
-                </div>
-            </div>
+      <dialog id="modal-deleta" class="modal-deleta">
+        <div class="acao-recusar">
+          <div class="acao-content-recusar">
+              <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
+              <div class="acao-botoes-recusar">
+                <button class="close-modal" data-modal="modal-deleta">cancelar</button>
+                <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+              </div>
           </div>
         </div>
       </dialog>
