@@ -226,7 +226,6 @@
 }
  
 .div-esqueceu-senha-login{
-    margin-left: 20%;
     position: relative;
 }
  
@@ -298,7 +297,7 @@
         display: flex;
         flex-direction: column;
         width: 170px;
-        left: 12%;
+        left: 22%;
     }
 
     .botao-voltar{
@@ -321,7 +320,7 @@
     }
 
     .div-esqueceu-senha-login{
-        left: 14%;
+        left: 20%;
     }
 
     .img-dog{
@@ -363,6 +362,9 @@
         width: 50%;
     }
 
+    .div-esqueceu-senha-login{
+        left: 20%;
+    }
 }
 
 @media (min-width:992px){
@@ -402,13 +404,17 @@
     .area-img-login-h1-tiago{
         margin-bottom: 14%;
     }
+
+    .div-esqueceu-senha-login{
+        left: 26%;
+    }
 }
 
 @media (min-width:1200px){
 
     .area-form-login{
-        width: 30%;
-        left: 9%;
+        width: 40%;
+        left: 5%;
         box-sizing: border-box;
     }
 
@@ -422,6 +428,10 @@
 
     .img-dog{
         top: 9%;
+    }
+
+    .div-esqueceu-senha-login{
+        left: 28%;
     }
 }
 
@@ -438,5 +448,9 @@
 
     .img-dog{
         top: 0%;
+    }
+
+    .div-esqueceu-senha-login{
+        left: 29%;
     }
 }
