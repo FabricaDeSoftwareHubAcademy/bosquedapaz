@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Public/css/style-tela-login.css">
     <link rel="shortcut icon" href="./assets/icons/folha.ico">
-    <title>Bosque da Paz</title>
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
 </head>
