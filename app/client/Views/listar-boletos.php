@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Boletos</title>
+    <title>Meus Boletos</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-listar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
@@ -14,7 +14,7 @@
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <div class="listb-box">
-        <h1 class="listb-title">Listar Boletos</h1>
+        <h1 class="listb-title">Meus Boletos</h1>
 
         <section class="section-listb-tabela">
             <div class="listb-tabela-container">
