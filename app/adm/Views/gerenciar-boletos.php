@@ -20,7 +20,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Boletos </title>
-    <script src="../../../Public/js/js-adm/atualizar-status.js" defer></script>
+    <!-- <script src="../../../Public/js/js-adm/atualizar-status.js" defer></script> -->
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
@@ -105,14 +105,14 @@ try {
     </div>
 
     <!-- Modal de Confirmação -->
-    <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
+    <!-- <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
      background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
         <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center;">
             <p>Deseja realmente alterar o status?</p>
             <button id="btn-sim">Sim</button>
             <button id="btn-nao">Não</button>
         </div>
-    </div>
+    </div> -->
 
 
 </body>
