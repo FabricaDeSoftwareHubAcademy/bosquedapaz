@@ -78,6 +78,16 @@ body{
 h2 {
     font-size: 30px;
 }
+
+.setaV-cadastro {
+    position: relative;
+    top: 0vh;
+    right: 51rem;
+    display: block;
+    cursor: pointer;
+}
+
+
 .container {
     width: 90%;
     margin: 20px auto;
@@ -241,8 +251,6 @@ table tbody tr:nth-child(even) {
     font-size: 11px;
 }
 
-
-
 .status {
     width: 80px;
     padding: 5px 10px;
@@ -297,6 +305,7 @@ table tbody tr:nth-child(even) {
 
 
 button {
+    background-color: transparent;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
