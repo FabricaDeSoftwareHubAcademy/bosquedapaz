@@ -309,7 +309,7 @@ table tbody tr:nth-child(even) {
     height: 34px;
     border-radius: 8px;
     color: white;
-    background-color: #007E70;
+    background-color: rgb(32, 54, 139);
     font-size: 19px;
     padding: 1px 8px 4px 8px;
     border: none;
