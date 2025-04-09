@@ -227,7 +227,9 @@ select {
     transition:0s;
   } */
    
-  
+  dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.753);
+} 
   select option {
     color: #333;
   }
