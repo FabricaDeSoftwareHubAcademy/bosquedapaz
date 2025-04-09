@@ -119,14 +119,14 @@ try {
                             <td>14/04/2025</td>
                             <td>ref001</td>
                             <td>R$ 250,00</td>
-                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
                         </tr>
                         <tr>
                             <td>Rafaela Silva Andrade</td>
                             <td>17/04/2025</td>
                             <td>ref001</td>
                             <td>R$ 250,00</td>
-                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
                         </tr>
                         <tr>
                             <td>Mariana Cavalcante Dias</td>
@@ -147,7 +147,7 @@ try {
                             <td>24/04/2025</td>
                             <td>ref001</td>
                             <td>R$ 250,00</td>
-                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
                         </tr>
                         <tr>
                             <td>Ademar Santos Severino</td>
