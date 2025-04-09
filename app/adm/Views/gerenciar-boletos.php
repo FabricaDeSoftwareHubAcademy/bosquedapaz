@@ -174,7 +174,7 @@ try {
         <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
     </div>
 
-    <a href="gerenciar-relatorios.php" class="boleto-seta-voltar">
+    <a href="Area-adm.php" class="boleto-seta-voltar">
         <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
     </a>
 
