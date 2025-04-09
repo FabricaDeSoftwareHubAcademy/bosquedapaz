@@ -7,7 +7,6 @@ try {
 
     $boleto = new Boleto($pdo);
     $boletos = $boleto->listarBoletos();
-
 } catch (PDOException $e) {
     die("Erro ao conectar: " . $e->getMessage());
 }
@@ -26,6 +25,7 @@ try {
 </head>
 
 <body class="boleto-body">
+    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <div class="boleto-box">
         <section class="boletao-secao-titulo">
@@ -103,6 +103,22 @@ try {
             </div>
         </section>
     </div>
+
+    <div class="boleto-bola1">
+        <img src="../../../Public/imgs/img-area-adm/bola-1.png" alt="">
+    </div>
+
+    <div class="boleto-bola2">
+        <img src="../../../Public/imgs/img-area-adm/bola-2.png" alt="">
+    </div>
+
+    <div class="boleto-bola3">
+        <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
+    </div>
+
+    <a href="gerenciar-relatorios.php" class="boleto-seta-voltar">
+        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+    </a>
 
     <!-- Modal de Confirmação -->
     <!-- <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
