@@ -218,16 +218,10 @@ select {
     color: gray;
     transition: color 0s 2147483647s;
   }
-  
-  /* select:hover,
-  select:focus,
-  select:active,
-  select:focus {
-    color: red;
-    transition:0s;
-  } */
-   
-  
+
+  dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.753);
+} 
   select option {
     color: #333;
   }
