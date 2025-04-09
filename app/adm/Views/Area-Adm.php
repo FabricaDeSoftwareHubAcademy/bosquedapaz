@@ -21,7 +21,6 @@
     <script src="../js/main.js"></script>
 
     <!-- Área Dos Botões -->
-    <div id="overlay" class="overlay"></div>
 
     <main class="principal-gabriel">
 
