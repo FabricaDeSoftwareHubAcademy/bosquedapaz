@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once '../../../app/adm/Controller/Boleto.php';
 
 try {
@@ -11,7 +11,7 @@ try {
 } catch (PDOException $e) {
     die("Erro ao conectar: " . $e->getMessage());
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -83,7 +83,7 @@ try {
                         </tr>
                     </thead>
                     <tbody class="boleto-tabela-lista">
-                        <?php foreach ($boletos as $row): ?>
+                        <!-- <?php foreach ($boletos as $row): ?>
                             <tr>
                                 <td><?= htmlspecialchars($row['nome_expositor']) ?></td>
                                 <td><?= htmlspecialchars($row['vencimento']) ?></td>
@@ -99,7 +99,7 @@ try {
 
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php endforeach; ?> -->
                     </tbody>
                 </table>
             </div>
