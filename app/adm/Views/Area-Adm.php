@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body class="" id="corpo">
 
     <!-- Menu -->
 
@@ -21,6 +21,7 @@
     <script src="../js/main.js"></script>
 
     <!-- Área Dos Botões -->
+    <div id="overlay" class="overlay"></div>
 
     <main class="principal-gabriel">
 

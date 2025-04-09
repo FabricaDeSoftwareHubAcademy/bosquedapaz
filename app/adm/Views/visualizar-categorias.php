@@ -14,7 +14,7 @@
 
 
 
-<body class="corpo">
+<body class="corpo" id="corpo">
     <?php
     include "../../../Public/assets/adm/menu-adm.html";
     ?>
@@ -87,6 +87,7 @@
                     <p class="nome-cat">Nova Categoria</p>
                 </div>
                 <!-- Modal -->
+                <div id="overlay" class="overlay"></div>
                 <dialog class="cadastro-categoria" id="cadastro-categoria">
                     <div class="modal-content">
                         <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
