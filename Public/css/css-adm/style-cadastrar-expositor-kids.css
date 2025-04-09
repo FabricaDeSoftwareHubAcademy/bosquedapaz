@@ -80,8 +80,8 @@ body {
     align-items: center;
     border: none;
     position: relative;
-    top: 20px;
-    position: relative;
+    top: 25px;
+    left: 13%;
 }
 
 .formularios div {
@@ -232,12 +232,14 @@ label#salvar-btn {
     display: flex;
 }
 .btn-cancelar{
-    width: 35%;
+    width: 17%;
     border: none;
     height: 49px;    
+    position: relative;
+    left: 20%;
 }
 .btn-salvar{
-    width: 35%;
+    width: 17%;
     position: relative;
     left: 40%;
     top: 48px;
