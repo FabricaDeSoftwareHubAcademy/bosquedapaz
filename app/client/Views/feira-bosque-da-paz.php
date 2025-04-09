@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/css-parceiros-home.css">
 </head>
 <!-- inicio body -->
-<body class="home">
+<body class="home" id="home">
     <!-- incluindo o menu -->
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
     <?php include "../../../Public/assets/home/carrossel-home.php"; ?>

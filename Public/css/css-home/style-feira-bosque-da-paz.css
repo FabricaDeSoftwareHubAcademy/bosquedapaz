@@ -73,6 +73,10 @@
     font-weight: 600;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .all-para {
     font-size: 1.3rem;
 }

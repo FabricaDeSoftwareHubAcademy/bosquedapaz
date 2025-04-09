@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     border-top: .8px solid #c1c1c1;
+    padding: 20px;
 }
 
 .div-logo-parceiro {
