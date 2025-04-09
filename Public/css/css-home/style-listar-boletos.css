@@ -99,11 +99,11 @@
 }
 
 .listb-header-name{
-    padding: 20px;
+    padding: 15px;
 }
 
 .listb-boleto-td {
-    padding: 20px;
+    padding: 12px;
 }
 
 .listb-tr:nth-child(even){
@@ -113,6 +113,10 @@
 
 .listb-tr:nth-child(odd){
     background-color: #e6e6e6;
+}
+
+.listb-tr:nth-child(odd):hover{
+    background-color: #F1F1F1;
 }
 
 .listb-btn-pago{
@@ -125,6 +129,7 @@
     height: 45px;
     width: 100px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .listb-btn-pendente{
@@ -137,6 +142,7 @@
     height: 45px;
     width: 100px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* .listb-btn{
@@ -264,7 +270,7 @@
     .listb-inferior{
         width: 18%;
     }
-
+}
 @media (min-width: 992px){
 
     .listb-box{
@@ -276,7 +282,7 @@
         max-height: 72vh;
     }
 
-
+}
 @media (min-width: 1200px){
 
     .listb-box{
@@ -287,7 +293,7 @@
     .listb-tabela-container{
         max-height: 56vh;
     }
-
+}
 @media (min-width: 1400px){
 
     .listb-box{
