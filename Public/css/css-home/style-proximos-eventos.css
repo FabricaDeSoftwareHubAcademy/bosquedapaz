@@ -107,7 +107,7 @@
     top: 5%;
     overflow: hidden;
 
-    #linha-decorativa-ProEv {
+    /* #linha-decorativa-ProEv {
         height: 150px;
         border-right: 12px solid rgba(0, 126, 112, 1);
         border-radius: 10px;
@@ -115,7 +115,7 @@
         bottom: 25%;
         right: 46%;
         transform: rotate(70deg);
-    }
+    } */
 }
 
 .div-decoratica-do-cardres-ProEv {
@@ -123,11 +123,11 @@
     height: 40%;
     transform: rotate(-20deg);
     position: relative;
-    bottom: 30%;
+    top: 15%;
     left: 2%;
     background-color: rgba(0, 126, 112, 1);
 
-    #linha-decorativa2-ProEv {
+    /* #linha-decorativa2-ProEv {
         height: 130px;
         border-right: 10px solid rgb(255, 255, 255);
         border-radius: 10px;
@@ -135,7 +135,7 @@
         top: 32%;
         position: relative;
         transform: rotate(-90deg);
-    }
+    } */
 }
 
 
@@ -943,9 +943,8 @@
 /* Responsividades: */
 /* Responsividade Celular: Principalmente Iphone SE */
 @media screen and (max-width: 720px) {
-    .area-setaProEv {
-        position: relative;
-        top: 3%;
+    .area-setaProEv{
+        top: 1rem;
     }
 
     .area-principal-ProEv {
@@ -959,8 +958,8 @@
     .box-decorativa-ProEv {
         background-color: #f8f5f6c3;
         border-radius: 0px 0px 10px 10px;
-        height: 61%;
-        top: 66%;
+        height: 55%;
+        top: 60%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -968,7 +967,7 @@
     }
 
     .box-principal-ProEv {
-        height: 60%;
+        height: 57%;
         background-color: #f8f5f6c3;
         border-radius: 10px 10px 0px 0px;
         top: 12%;
@@ -1045,7 +1044,7 @@
         width: 65%;
         height: 30px;
         position: absolute;
-        left: 15%;
+        left: 18%;
         top: 0%;
         border-radius: 8px;
         font-size: 18px;
@@ -1282,20 +1281,18 @@
         top: 0%;
 
         #linha-decorativa-ProEv {
-            bottom: 48%;
-            right: 52%;
+            display: none;
         }
     }
 
     .div-decoratica-do-card-ProEv {
         position: relative;
-        bottom: 55%;
+        top: 10%;
     }
 
     .card-atracao-ProEv {
         #linha-decorativa2-ProEv {
-            top: 40%;
-            left: 26%;
+            display: none;
         }
     }
 
@@ -1476,7 +1473,7 @@
 /* Responsividade Ipad Pro: */
 @media screen and (min-height: 1366px) {
     .area-principal-ProEv {
-        height: 1255px;
+        height: 97vh;
     }
 
     .formas-decorativas-ProEv3 {
@@ -1490,7 +1487,7 @@
     }
 
     .div-decorativa-ProEv {
-        right: 22%;
+        right: 24%;
         bottom: 62%;
         transform: rotate(-21deg);
     }
@@ -1555,22 +1552,17 @@
         height: 40%;
         top: 5%;
         #linha-decorativa-ProEv {
-            height: 180px;
-            bottom: 40%;
-            right: 55%;
+            display: none;
         }
     }
-
     .div-decoratica-do-card-ProEv {
-        bottom: 35%;
+        top: 16%;
         left: 2%;
     }
 
     .card-atracao-ProEv {
         #linha-decorativa2-ProEv {
-            height: 185px;
-            top: 70%;
-            left: 26%;
+            display: none;
         }
     }
 
@@ -1588,8 +1580,7 @@
         background-color: rgba(0, 255, 255, 0);
 
         #linha-decorativa-dd {
-            bottom: 6%;
-            right: 47%;
+            display: none;
         }
     }
 
@@ -1600,9 +1591,8 @@
 
     .Nome-atracao-proev {
         font-size: 30px;
-        top: 5%;
+        top: 11%;
     }
-
 
     /* Modal */
     .dlog-modal-card-ProEv {
@@ -1644,7 +1634,6 @@
     .p-atracao-modal {
         font-size: 15px;
         width: 355px;
-        /* left: 55%;     */
     }
 
     .area-img-modal-ProEv {
@@ -1697,7 +1686,6 @@
     .p-atracao-modal2 {
         font-size: 15px;
         width: 355px;
-        /* left: 55%;     */
     }
 
     .area-img-modal2-ProEv {
@@ -1794,16 +1782,16 @@
 
     .div-decoratica-do-card-ProEv {
         width: 125%;
-        bottom: 40%;
+        top: 14%;
 
         #linha-decorativa2-ProEv {
-            top: 10%;
+            display: none;
         }
     }
 
     .card-atracao-ProEv {
         #linha-decorativa-ProEv {
-            bottom: 32%;
+            display: none;
         }
     }
 
@@ -1962,17 +1950,16 @@
     .div-decoratica-do-card-ProEv {
         width: 125%;
         left: 0;
-        bottom: 40%;
+        top: 12%;
+        font-size: 30px;
         #linha-decorativa2-ProEv {
-            top: 55%;
-            height: 140px;
+            display: none;
         }
     }
 
     .card-atracao-ProEv {
         #linha-decorativa-ProEv {
-            bottom: 35%;
-            right: 50%;
+            display: none;
         }
     }
 

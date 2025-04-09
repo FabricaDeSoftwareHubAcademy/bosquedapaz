@@ -27,7 +27,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Nome</th>
+                                <th class="nome">Nome</th>
                                 <th class="cpf">CPF</th>
                                 <th class="cat">Categoria</th>
                                 <th class="email">Email</th>
@@ -36,10 +36,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Lucas Martins</td>
+                                <td class="nome">Lucas Martins</td>
                                 <td class="cpf">111.222.333-44</td>
                                 <td class="cat">Expositor</td>
-                                <td class="email" id="email">lucas.martins@email.com</td>
+                                <td class="email">lucas.martins@email.com</td>
                                 <td class="perfil">
                                     <a href="validar-expositor.php">
                                         <i class="bi bi-person-badge"></i>
@@ -50,7 +50,7 @@
                                 <td>Lucas Martins</td>
                                 <td class="cpf">111.222.333-44</td>
                                 <td class="cat">Expositor</td>
-                                <td class="email" id="email">lucas.martins@email.com</td>
+                                <td class="email">lucas.martins@email.com</td>
                                 <td class="perfil">
                                     <a href="validar-expositor.php">
                                         <i class="bi bi-person-badge"></i>
@@ -61,7 +61,7 @@
                                 <td>Lucas Martins</td>
                                 <td class="cpf">111.222.333-44</td>
                                 <td class="cat">Expositor</td>
-                                <td class="email" id="email">lucas.martins@email.com</td>
+                                <td class="email">lucas.martins@email.com</td>
                                 <td class="perfil">
                                     <a href="validar-expositor.php">
                                         <i class="bi bi-person-badge"></i>
@@ -72,7 +72,7 @@
                                 <td>Lucas Martins</td>
                                 <td class="cpf">111.222.333-44</td>
                                 <td class="cat">Expositor</td>
-                                <td class="email" id="email">lucas.martins@email.com</td>
+                                <td class="email">lucas.martins@email.com</td>
                                 <td class="perfil">
                                     <a href="validar-expositor.php">
                                         <i class="bi bi-person-badge"></i>
@@ -83,7 +83,7 @@
                                 <td>Lucas Martins</td>
                                 <td class="cpf">111.222.333-44</td>
                                 <td class="cat">Expositor</td>
-                                <td class="email" id="email">lucas.martins@email.com</td>
+                                <td class="email">lucas.martins@email.com</td>
                                 <td class="perfil">
                                     <a href="validar-expositor.php">
                                         <i class="bi bi-person-badge"></i>
@@ -94,7 +94,7 @@
                                 <td>Lucas Martins</td>
                                 <td class="cpf">111.222.333-44</td>
                                 <td class="cat">Expositor</td>
-                                <td class="email" id="email">lucas.martins@email.com</td>
+                                <td class="email">lucas.martins@email.com</td>
                                 <td class="perfil">
                                     <a href="validar-expositor.php">
                                         <i class="bi bi-person-badge"></i>
