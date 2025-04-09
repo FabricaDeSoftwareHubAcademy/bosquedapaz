@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/css-parceiros-home.css">
 </head>
 <!-- inicio body -->
-<body class="home" id="home">
+<body class="home" id="corpo">
     <!-- incluindo o menu -->
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
     <?php include "../../../Public/assets/home/carrossel-home.php"; ?>
@@ -38,9 +38,10 @@
     <!-- importando o rodape -->
     <?php include "../../../Public/assets/home/rodape.html"; ?>
 
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <script src="../../../Public/js/js-home/carrossel.js" defer></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <!-- <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script> -->
     <script src="../../../Public/js/js-home/subir-num.js"></script>
 </body>
 </html>

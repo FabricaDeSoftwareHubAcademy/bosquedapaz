@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body class="" id="corpo">
 
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
@@ -616,6 +616,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="overlay" class="overlay"></div>
                 <dialog class="m-per-expo" id="m-per-expo">
                     <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
                 </dialog>

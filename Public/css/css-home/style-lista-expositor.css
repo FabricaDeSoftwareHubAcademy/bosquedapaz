@@ -27,6 +27,10 @@
     --color-branca: white;
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 .content-principal {
     width: 80vw;
     height: auto;
