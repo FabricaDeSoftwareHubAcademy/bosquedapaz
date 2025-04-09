@@ -203,14 +203,14 @@
 }
 
 .boleto-tabela-lista th {
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
     font-weight: 600;
 }
 
 .boleto-tabela-lista td {
-    padding: 20px;
+    padding: 12px;
     border: 1px solid #ddd;
     text-align: center;
     z-index: 1;
@@ -298,14 +298,14 @@
 
 .boleto-seta-voltar {
     position: absolute;
-    top: 90vh;
+    top: 88vh;
     left: 3.5vw;
     z-index: 2;
     cursor: pointer;
 }
 
 .boleto-seta-voltar img {
-    width: 100%;
+    width: 60px;
     height: auto;
 }
 

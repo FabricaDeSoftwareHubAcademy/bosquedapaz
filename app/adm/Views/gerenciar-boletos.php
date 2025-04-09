@@ -1,18 +1,3 @@
-<?php
-require_once '../../../app/adm/Controller/Boleto.php';
-
-try {
-    $pdo = new PDO("mysql:host=localhost;dbname=banco_expositor", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $boleto = new Boleto($pdo);
-    $boletos = $boleto->listarBoletos();
-
-} catch (PDOException $e) {
-    die("Erro ao conectar: " . $e->getMessage());
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -83,38 +68,82 @@ try {
                         </tr>
                     </thead>
                     <tbody class="boleto-tabela-lista">
-                        <?php foreach ($boletos as $row): ?>
-                            <tr>
-                                <td><?= htmlspecialchars($row['nome_expositor']) ?></td>
-                                <td><?= htmlspecialchars($row['vencimento']) ?></td>
-                                <td><?= htmlspecialchars($row['referencia']) ?></td>
-                                <td>R$ <?= htmlspecialchars(number_format($row['valor'], 2, ',', '.')) ?></td>
-
-                                <td>
-                                    <button class="status <?php echo ($row['situacao'] == 'pago') ? 'boleto-botao-pago' : 'boleto-botao-pendente'; ?>"
-                                        onclick="toggleSituacao(this, <?php echo $row['id_expositor']; ?>)">
-                                        <?php echo ucfirst($row['situacao']); ?>
-                                    </button>
-
-
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                        <tr>
+                            <td>José Arigão Silva</td>
+                            <td>12/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Andrade Bezerra</td>
+                            <td>13/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ana Julia Medeiros</td>
+                            <td>14/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Rafaela Silva Andrade</td>
+                            <td>17/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Mariana Cavalcante Dias</td>
+                            <td>18/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tiago Barros da Silva</td>
+                            <td>22/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Arlindo Alvez de Souza</td>
+                            <td>24/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ademar Santos Severino</td>
+                            <td>27/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
     </div>
 
-    <!-- Modal de Confirmação -->
-    <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
-     background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
-        <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center;">
-            <p>Deseja realmente alterar o status?</p>
-            <button id="btn-sim">Sim</button>
-            <button id="btn-nao">Não</button>
-        </div>
+    <div class="boleto-bola1">
+        <img src="../../../Public/imgs/img-area-adm/bola-1.png" alt="">
     </div>
 
+    <div class="boleto-bola2">
+        <img src="../../../Public/imgs/img-area-adm/bola-2.png" alt="">
+    </div>
+
+    <div class="boleto-bola3">
+        <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
+    </div>
+
+    <a href="Area-adm.php" class="boleto-seta-voltar">
+        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+    </a>
 
 </body>

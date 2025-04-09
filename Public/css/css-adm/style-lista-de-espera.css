@@ -187,6 +187,7 @@ table tbody tr:nth-child(even){
 }
 
 .perfil i{
+    color: #052347;
     cursor: pointer;
     font-size: 25px;
     text-align: center;
@@ -215,6 +216,23 @@ table tbody tr:nth-child(even){
     text-align: center;
     font-size: 14px;
     cursor: pointer;
+}
+
+.nome, .cpf, .cat{
+    width: 20%;
+}
+
+.cpf{
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.email{
+    width: 28%;
+}
+
+.perfil{
+    width: 12%;
 }
 
 @media (max-width: 1042px) {
@@ -261,11 +279,13 @@ table tbody tr:nth-child(even){
     }
 
     .table th {
-        font-size: 10px;
+        font-size: 8px;
     }
 
-    .btn-v {
-        display: none;
+    .btn-v .voltar {
+        position: absolute;
+        bottom: 51px;
+        left: 23px;
     }
 
     .bolas-fundo {

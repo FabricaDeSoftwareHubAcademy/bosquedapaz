@@ -98,7 +98,10 @@ $colaboradores = $adm->listar($busca);
           </div>
         </div>
       </dialog>
-
+    </div>
+    <div class="setaV-cadastro">
+      <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
+    </div>
   </main>
   <div class="bolas-fundo">
     <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
