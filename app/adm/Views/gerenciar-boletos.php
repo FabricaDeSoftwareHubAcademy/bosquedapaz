@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once '../../../app/adm/Controller/Boleto.php';
 
 try {
@@ -10,7 +10,7 @@ try {
 } catch (PDOException $e) {
     die("Erro ao conectar: " . $e->getMessage());
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -82,7 +82,7 @@ try {
                         </tr>
                     </thead>
                     <tbody class="boleto-tabela-lista">
-                        <?php foreach ($boletos as $row): ?>
+                        <!-- <?php foreach ($boletos as $row): ?>
                             <tr>
                                 <td><?= htmlspecialchars($row['nome_expositor']) ?></td>
                                 <td><?= htmlspecialchars($row['vencimento']) ?></td>
@@ -97,7 +97,63 @@ try {
 
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php endforeach; ?> -->
+                        <tr>
+                            <td>José Arigão Silva</td>
+                            <td>12/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Andrade Bezerra</td>
+                            <td>13/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ana Julia Medeiros</td>
+                            <td>14/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Rafaela Silva Andrade</td>
+                            <td>17/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Mariana Cavalcante Dias</td>
+                            <td>18/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tiago Barros da Silva</td>
+                            <td>22/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Arlindo Alvez de Souza</td>
+                            <td>24/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ademar Santos Severino</td>
+                            <td>27/04/2025</td>
+                            <td>ref001</td>
+                            <td>R$ 250,00</td>
+                            <td><button class="boleto-botao-pago">Pago</button></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
