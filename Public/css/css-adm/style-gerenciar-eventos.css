@@ -751,6 +751,7 @@ table tbody tr:nth-child(even) {
     }
 
     h2{
+        padding-top: 30px;
         font-size: 1.5rem;
     }
 
