@@ -217,7 +217,7 @@ table tbody tr:nth-child(even) {
 }
 
 .status.inactive {
-    background-color: #dee113;
+    background-color: #ff8000;
     color: white;
     border-radius: 8px;
 }
@@ -305,10 +305,11 @@ table tbody tr:nth-child(even) {
 }
 
 .novo-evento {
+    width: clamp(150px, 15%, 150px);
     height: 34px;
     border-radius: 8px;
     color: white;
-    background-color: rgb(255, 56, 119);
+    background-color: #007E70;
     font-size: 19px;
     padding: 1px 8px 4px 8px;
     border: none;
@@ -419,7 +420,7 @@ table tbody tr:nth-child(even) {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .container {
@@ -508,9 +509,9 @@ table tbody tr:nth-child(even) {
 
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
-    body {
+    /* body {
         background-color: blue;
-    }
+    } */
 
     .titulo {
         font-size: 28px;
@@ -585,9 +586,9 @@ table tbody tr:nth-child(even) {
 
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
-    body {
+    /* body {
         background-color: green;
-    }
+    } */
 
     .titulo {
         font-size: 24px;
@@ -658,7 +659,7 @@ table tbody tr:nth-child(even) {
     body {
         overflow-y: auto;
         max-height: 60vh;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .principal .box{
