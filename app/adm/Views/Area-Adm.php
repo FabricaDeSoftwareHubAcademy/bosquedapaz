@@ -246,8 +246,9 @@
             </dialog>
 
 
-            <a href="grafico-central.php">
-                <div class="Botoes-gabriel">
+            
+            <!-- Aqui -->
+                <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-financas">
                     <div class="area-icon-gabriel">
                         <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-bar-chart" viewBox="0 0 16 16">
                             <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
@@ -255,8 +256,47 @@
                         <p>Financeiro</p>
                     </div>
                 </div>
-                </a>
 
+                <!-- Modal Finanças -->
+                
+                <dialog class="abrir-mais abrir-mais-financas" id="abrir-mais-financas">
+                    <div class="close-modal" data-modal="abrir-mais-financas">
+                        <h2>Financeiro</h2>
+                            <i id="icon-sair" class="bi bi-x-square-fill"></i>
+                    </div>
+                    <div class="modais">
+                        <a class="link-modais" href="../../../app/adm/Views/grafico-central.php">
+                            <div class="Botoes-gabriel">
+                                <div class="area-icon-gabriel">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                                    <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+                                </svg>
+                            <p>Gráfico</p>
+                        </div>
+                    </div>
+                        </a>
+                        <a class="link-modais" href="../../../app/adm/Views/cadastro-boleto.php">
+                            <div class="Botoes-gabriel">
+                                <div class="area-icon-gabriel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                                    </svg>
+                            <p>Cadastrar Boletos</p>
+                        </div>
+                    </div>
+                    </a>
+                            <a class="link-modais" href="../../../app/adm/Views/gerenciar-boletos.php">
+                                <div class="Botoes-gabriel">
+                                    <div class="area-icon-gabriel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-stickies" viewBox="0 0 16 16">
+                                        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1z"/>
+                                        <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2zM3 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5V9h-4.5A1.5 1.5 0 0 0 9 10.5V15H3.5a.5.5 0 0 1-.5-.5zm7 11.293V10.5a.5.5 0 0 1 .5-.5h4.293z"/>
+                                    </svg>
+                                <p>Gerenciar Boletos</p>
+                            </div>
+                        </div>
+                    </a>
+                </dialog>
 
             <!-- aqui -->
             <div class="Botoes-gabriel open-modal" data-modal="abrir-mais-gerancia">
