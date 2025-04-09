@@ -298,14 +298,14 @@
 
 .boleto-seta-voltar {
     position: absolute;
-    top: 90vh;
-    left: 3.5vw;
+    top: 88vh;
+    left: 3.1vw;
     z-index: 2;
     cursor: pointer;
 }
 
 .boleto-seta-voltar img {
-    width: 100%;
+    width: 70px;
     height: auto;
 }
 

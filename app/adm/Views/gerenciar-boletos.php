@@ -162,15 +162,31 @@ try {
         </section>
     </div>
 
+    <div class="boleto-bola1">
+        <img src="../../../Public/imgs/img-area-adm/bola-1.png" alt="">
+    </div>
+
+    <div class="boleto-bola2">
+        <img src="../../../Public/imgs/img-area-adm/bola-2.png" alt="">
+    </div>
+
+    <div class="boleto-bola3">
+        <img src="../../../Public/imgs/img-area-adm/bola-3.png" alt="">
+    </div>
+
+    <a href="gerenciar-relatorios.php" class="boleto-seta-voltar">
+        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+    </a>
+
     <!-- Modal de Confirmação -->
-    <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
+    <!-- <div id="modal-confirmacao" style="display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
      background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
         <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center;">
             <p>Deseja realmente alterar o status?</p>
             <button id="btn-sim">Sim</button>
             <button id="btn-nao">Não</button>
         </div>
-    </div>
+    </div> -->
 
 
 </body>
