@@ -22,7 +22,7 @@
                 </a>
             </div>
 
-            <ul class="content nav-list" rule="link pages">
+            <ul class="content nav-list" id="nav-list" rule="links-pages">
                 <li class="nav-item">ínicio</li>
                 <li class="nav-item">exepositores</li>
                 <li class="nav-item">fale conosco</li>
@@ -30,11 +30,11 @@
             </ul>
 
             <div class="content conteiner-outros">
-                <div class="content-sandwich">
+                <div class="content-outros">
                     <!-- <img src="../../../Public/imgs/img-home/" alt="" class="sandwich"> -->
                     <i class="bi bi-list sandwich" id="sandwich"></i>
                 </div>
-                <div class="content-login">
+                <div class="content-outros">
                     <a href="" target="_blank" class="link-login">
                         <!-- <img src="../../../Public/imgs/img-home/login.png" alt="" class="login"> -->
                         <i class="bi bi-person-circle login"></i>
@@ -43,6 +43,8 @@
             </div>
         </nav>
     </header>
+
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>
 
@@ -62,7 +64,7 @@
 
 <!-- <?php //include "../../../Public/assets/home/rodape.html"; ?>  -->
 
-<!-- <script src="../../../Public/js/js-home/main.js" defer></script>
+<!-- 
 <script src="../../../Public/js/js-home/carrossel.js" defer></script>
 <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 <script src="../../../Public/js/js-home/subir-num.js"></script> -->

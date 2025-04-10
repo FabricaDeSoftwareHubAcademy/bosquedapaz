@@ -1,3 +1,10 @@
+const sandwich = document.getElementById('sandwich')
+const navMenu = document.getElementById('nav-list')
+sandwich.addEventListener('click', function(){
+    navMenu.classList.add('open')
+    console.log('click')
+})
+
 function menuShowHome() {
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
