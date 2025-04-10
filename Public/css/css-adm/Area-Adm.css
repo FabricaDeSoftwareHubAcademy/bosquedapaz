@@ -187,6 +187,11 @@ dialog::backdrop{
     color: #162868;
     cursor: pointer;
 }
+@media (max-width: 575.98px){
+    .modais{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 720px) {
     .box-gabriel{
         width: 93%;
