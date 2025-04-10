@@ -23,16 +23,17 @@
                 <h1 class="title-text">CADASTRO DE PARCEIRO</h1>
             </div>
 
-            <div class="formularios">
+            <form class="formularios" method="POST">
 
                 <div class="form-pessoa">
                     <div class="input">
                         <label>Parceiro:</label>
-                        <input type="text" name="" id="" placeholder="Digite o Nome" required>
+                        <input type="text" name="nome" id="" placeholder="Digite o Nome:" required>
                     </div>
+
                     <div class="input">
                         <label>E-mail:</label>
-                        <input type="text" name="" id="" placeholder="Digite o e-mail" required>
+                        <input type="text" name="e-mail" id="" placeholder="Digite o e-mail:" required>
                     </div>
 
                     <div class="input">
@@ -48,81 +49,49 @@
 
                     </div>
 
-                    <div class="input">
+                    <div class="input-group">
                         <label>Logo:</label>
-                        <input type="file" class="acao-input-edit" name="file" id="file" required>
+                        <input type="file" name="file[]" id="file" multiple="multiple">
                     </div>
-
                 </div>
 
                 <div class="form-loja">
-
+                    
                     <div class="input">
                         <label>Telefone:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu Telefone" required>
+                        <input type="text" name="telefone" id="" placeholder="Digite seu Telefone" required>
                     </div>
-
+                    
                     <div class="input">
                         <label>Contato:</label>
-                        <input type="text" name="" id="" placeholder="Digite o Nome de Contato" required>
+                        <input type="text" name="contato" id="" placeholder="Digite o Nome do Contato " required>
                     </div>
-
+                    
                     <div class="input">
                         <label>CPF/CNPJ:</label>
-                        <input type="text" name="" id="" placeholder="Digite o CPF/CNPJ" required>
-                    </div>
-
+                        <input type="text" name="cpf/cnpj" id="" placeholder="Digite o CPF/CNPJ" required>
+                    </div>  
                     <div class="input">
                         <label>CEP:</label>
-                        <input type="text" name="" id="" placeholder="Digite o CEP" required>
-                    </div>
-
+                        <input type="text" name="instagram" id="" placeholder="Digite o CEP" required>
+                    </div>  
                 </div>
 
-            </div>
-
-            <div class="form-finalizar">
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
-                        <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
-                            <button class="btn-cancelar-modal">Cancelar</button>
-                        </div>
-                    </div>
+                <div class="btn-finalizar">
+                    <button name="salvar" class="btn btn-salvar">SALVAR</button>
+                    <button class="btn-cancelar"><a href="Area-Adm.php">CANCELAR</a></button>
                 </div>
-
-
-            </div>
-
-
-            <div class="botoes">
-
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                    </div>
-                </div>
-
-            </div>
+            </form>
 
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
-                <div class="btn-cancelar-salvar">
-                    <button type="button" class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button type="submit" class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
             </div>
 
         </div>
+        </div>
+        
     </main>
 
     <div class="bolas-fundo">
@@ -133,5 +102,8 @@
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+
+
+</body>
 
 </html>
