@@ -17,16 +17,16 @@
     <header class="cabecalho">
         <nav class="list-menu">
             <div class="content content-logo">
-                <a href="#" class="link-home">
+                <a href="./feira-bosque-da-paz.php" class="link-home">
                     <img src="../../../Public/imgs/img-home/logo.png" alt="logo" class="img-logo">
                 </a>
             </div>
 
             <ul class="content nav-list" id="nav-list" rule="links-pages">
-                <li class="nav-item">ínicio</li>
-                <li class="nav-item">exepositores</li>
-                <li class="nav-item">fale conosco</li>
-                <li class="nav-item">quem somos</li>
+                <li class="nav-item"><a href="./feira-bosque-da-paz.php" class="link-ul">ínicio</a></li>
+                <li class="nav-item"><a href="./todos-expositores.php" class="link-ul">exepositores</a></li>
+                <li class="nav-item"><a href="./fale-conosco.php" class="link-ul">fale conosco</a></li>
+                <li class="nav-item"><a href="./quem-somos.php" class="link-ul">quem somos</a></li>
             </ul>
 
             <div class="content conteiner-outros">
@@ -35,7 +35,7 @@
                     <i class="bi bi-list sandwich" id="sandwich"></i>
                 </div>
                 <div class="content-outros">
-                    <a href="" target="_blank" class="link-login">
+                    <a href="../../../Public/tela-login.php" target="_blank" class="link-login">
                         <!-- <img src="../../../Public/imgs/img-home/login.png" alt="" class="login"> -->
                         <i class="bi bi-person-circle login"></i>
                     </a>

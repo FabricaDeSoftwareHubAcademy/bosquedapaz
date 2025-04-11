@@ -13,7 +13,6 @@
 }
 
 .list-menu {
-    width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
@@ -66,6 +65,11 @@
     width: 100%;
 }
 
+.link-ul {
+    text-decoration: none;
+    color: black;
+}
+
 .conteiner-outros {
     width: auto;
     display: flex;
@@ -101,13 +105,38 @@
 
     .open {
         background-color: white;
+        height: 0%;
         display: flex;
         flex-direction: column;
         padding: 15px 0px;
         position: absolute;
         top: 80px;
+        left: 0px;
         width: 100vw;
         height: auto;
+        overflow: hidden;
         border-bottom: 1px solid rgba(161, 161, 161, 0.788);
+        -moz-animation-duration: .2s;
+        -webkit-animation-duration: .2s;
+        animation-duration: .2s;
+        -webkit-animation-name: ani-open-menu;
+        -moz-animation-name: ani-open-menu;
+        animation-name: ani-open-menu;
+        -moz-animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -moz-animation-direction: alternative;
+        -webkit-animation-direction: alternative;
+        animation-direction: alternative;
+    }
+
+    @keyframes ani-open-menu {
+        from {
+            height: 0%;
+            transition: all .2s ease-in-out;
+        }
+        to {
+            height: auto;
+        }
     }
 }

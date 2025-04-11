@@ -1,8 +1,15 @@
 const sandwich = document.getElementById('sandwich')
 const navMenu = document.getElementById('nav-list')
 sandwich.addEventListener('click', function(){
-    navMenu.classList.add('open')
-    console.log('click')
+    if (navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open')
+        sandwich.classList.remove('bi-x')
+        sandwich.classList.add('bi-list')
+    } else {
+        navMenu.classList.add('open')
+        sandwich.classList.remove('bi-list')
+        sandwich.classList.add('bi-x')
+    }
 })
 
 function menuShowHome() {
