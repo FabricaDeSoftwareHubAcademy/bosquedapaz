@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edital-expositor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
 </head>
@@ -48,6 +49,6 @@
             </form>
         </section>
     </main>
-
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>

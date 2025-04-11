@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/style-proximos-eventos.css">
     <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
@@ -243,5 +244,6 @@
 
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>

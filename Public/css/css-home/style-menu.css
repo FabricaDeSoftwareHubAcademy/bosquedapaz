@@ -8,8 +8,11 @@
 }
 
 .cabecalho {
+    position: fixed;
+    background-color: white;
     width: 100vw;
     border-bottom: 1px solid rgba(161, 161, 161, 0.788);
+    z-index: 5;
 }
 
 .list-menu {
@@ -110,7 +113,7 @@
         flex-direction: column;
         padding: 15px 0px;
         position: absolute;
-        top: 80px;
+        top: 70px;
         left: 0px;
         width: 100vw;
         height: auto;

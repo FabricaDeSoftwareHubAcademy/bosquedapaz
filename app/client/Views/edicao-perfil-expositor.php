@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edicao-perfil-expositor.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Document</title>
 </head>
 <body>
@@ -154,5 +155,6 @@
             </div>
         </div>
     </section>
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>
