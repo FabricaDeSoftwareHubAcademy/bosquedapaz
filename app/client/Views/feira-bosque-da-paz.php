@@ -16,6 +16,21 @@
 <body class="home" id="corpo">
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
+    <section class="carrossel" id="carrossel">
+        <div class="conteiner-slider">
+            <div class="slider-all">
+                <div class="slider-swap">
+
+                </div>
+                <div class="slider">
+                    <div class="slider-content"></div>
+                    <div class="slider-content"></div>
+                    <div class="slider-content"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
