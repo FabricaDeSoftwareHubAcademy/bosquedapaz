@@ -20,16 +20,32 @@
         <div class="conteiner-slider">
             <div class="slider-all">
                 <div class="slider-swap">
-
+                    <div class="swap" id="arrow-left">
+                        <i class="bi bi-arrow-left arrow"></i>
+                    </div>
+                    <div class="swap" id="arrow-right">
+                        <i class="bi bi-arrow-right arrow"></i>
+                    </div>
                 </div>
                 <div class="slider">
-                    <div class="slider-content"></div>
-                    <div class="slider-content"></div>
-                    <div class="slider-content"></div>
+                    <div class="slider-content" id="slider-content">
+                        <img src="../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg" class="carrosel" alt="imagem carrossel 1">
+                    </div>
+                    <div class="slider-content" id="slider-content">
+                        <img src="../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg" class="carrosel" alt="imagem carrossel 2">
+                    </div>
+                    <div class="slider-content" id="slider-content">
+                        <img src="../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg" class="carrosel" alt="imagem carrossel 3">
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div class="slider-balls">
+            <!--<input type="radio" >-->
+            <div class="ball" id="ball"></div>
+            <div class="ball" id="ball"></div>
+            <div class="ball" id="ball"></div>
+        </div>
     </section>
 
     <script src="../../../Public/js/js-home/main.js" defer></script>

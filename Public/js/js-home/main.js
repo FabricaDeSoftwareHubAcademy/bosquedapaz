@@ -20,19 +20,69 @@ function menuShowHome() {
         menuMobile.classList.add('open')
     }
 }
-function inputShow() {
-    let menuMobile = document.querySelector('.pequisa-mobile .pesquisa .input');
-    if (menuMobile.classList.contains('inputOpen')) {
-        menuMobile.classList.remove('inputOpen')
-    } else {
-        menuMobile.classList.add('inputOpen')
-    }
+
+const arrowLeft = document.getElementById('arrow-left');
+const arrowRight = document.getElementById('arrow-right');
+const sliders = document.querySelectorAll('#slider-content')
+const balls = document.querySelectorAll('#ball')
+console.log(arrowLeft);
+console.log(arrowRight);
+console.log(balls);
+let count_carrossel = 0;
+let slider = sliders[0];
+let bola_carrossel = balls[0]
+const color_carrossel = '#0D592E';
+console.log(slider);
+
+slider.style.zIndex = 1;
+bola_carrossel.style.backgroundColor = color_carrossel;
+
+function trocaImagem (n){
+    slider.style.zIndex = 0;
+    bola_carrossel.style.backgroundColor = 'white';
+    slider = sliders[n];
+    bola_carrossel = balls[n]
+    slider.style.zIndex = 1
+    bola_carrossel.style.backgroundColor = color_carrossel;
+    count_carrossel = n
 }
-function inputShow2() {
-    let menuMobile = document.querySelector('.pesquisar-login .pesquisar .input');
-    if (menuMobile.classList.contains('inputOpen')) {
-        menuMobile.classList.remove('inputOpen')
-    } else {
-        menuMobile.classList.add('inputOpen')
+
+const interval = setInterval(() => {
+    if (count_carrossel == 0){
+        trocaImagem(1)
+    clearInterval()
     }
-}
+    else if (count_carrossel == 1){
+        trocaImagem(2)
+    clearInterval()
+    }
+    else if (count_carrossel == 2){
+        trocaImagem(0)
+    clearInterval()
+    }
+}, 3000)
+
+
+arrowLeft.addEventListener('click', () => {
+    if (count_carrossel == 0){
+        trocaImagem(2)
+    }
+    else if (count_carrossel == 2){
+        trocaImagem(1)
+    }
+    else if (count_carrossel == 1){
+        trocaImagem(0)
+    }
+})
+
+arrowRight.addEventListener('click', () => {
+    if (count_carrossel == 0){
+        trocaImagem(1)
+    }
+    else if (count_carrossel == 1){
+        trocaImagem(2)
+    }
+    else if (count_carrossel == 2){
+        trocaImagem(0)
+    }
+})
