@@ -28,9 +28,17 @@ class Boleto
 
     public function buscarPorNome($nome)
     {
-        $sql = "SELECT * FROM expositores WHERE nome_expositor LIKE :nome";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([':nome' => "%$nome%"]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $pesquisa = $_GET['pesquisa'] ?? '';
+        if ($pesquisa !== '') {
+            $sql = $pdo->prepare("SELECT * FROM banco_lista WHERE nome LIKE :nome");
+            $sql->execute([':nome' => "%$pesquisa%"]);
+        } else {
+            $sql = $pdo->query("SELECT * FROM banco_lista");
+        }
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        // Responde com JSON
+        header('Content-Type: application/json');
+        echo json_encode($dados);
     }
 }
