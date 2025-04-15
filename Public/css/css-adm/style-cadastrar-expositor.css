@@ -286,14 +286,7 @@ label#salvar-btn {
 }
 
 
-/*  celular pequeno: 480px
-    celular padrao: 767px
-    tablet: 768 a 1024px
-    desktop: acima de 1024px 
-*/
-
-/* celular pequeno */
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
     .bolas-fundo{
         display: none;
     }
@@ -307,7 +300,6 @@ label#salvar-btn {
     }
 
     .box{
-        /* background-color: red; */
         display: flex;
         flex-direction: column;
         height: auto;        
@@ -329,7 +321,6 @@ label#salvar-btn {
         width: 100%;
         left: 25%;
         top: -30px;
-        /* background-color: red; */
     }
 
     .select#todas_categorias.select{
@@ -347,7 +338,6 @@ label#salvar-btn {
     
 
 
-/* celular padrao */
 @media screen and (min-width: 651px) and (max-width:1023px) {
     .bola-verde2{
         width: 20%;
@@ -360,7 +350,6 @@ label#salvar-btn {
     }
 
     .principal{
-        /* height: 100vh; */
         overflow-y: auto;
     }
 
@@ -390,7 +379,6 @@ label#salvar-btn {
     }
 
     .voltar img{
-        /* background-color: red; */
         position: relative;
         top: -7vh;
         left: -28vh;
@@ -426,7 +414,6 @@ label#salvar-btn {
     }
 
     .form-expo{
-        /* background-color: red; */
         position: relative;
         left: 5%;
     }
@@ -443,7 +430,6 @@ label#salvar-btn {
     }
 
     #categorias{
-        /* background-color: red; */
         width: 76%;
     }
 
@@ -451,12 +437,37 @@ label#salvar-btn {
         position: relative;
         left: 70%;
     }
+} */
+
+
+
+@media (max-width: 575.98px) {
+    .box{
+        overflow-x: auto;
+    }
+    .formularios{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 65%;
+        left: -50px;
+    }
 }
 
-/* @media screen and (min-width: 1251px){
-    .btn-finalizar{
-        position: relative;
-        left: 45vh;
-        top: 10vh;
-    }
-} */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (width: 1024px) and (height: 600px){    
+}
+
+@media (min-width: 1200px) {    
+}
+
+@media (min-width: 1400px) { 
+}
