@@ -37,23 +37,15 @@ if (isset($_POST['REQUEST_METHOD'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor-kids.css">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
-
     <title>Bosque da Paz</title>
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-expositor-kids.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body>
-    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
+<?php include "../../../Public/assets/home/menu-home.html" ?>
+
 
     <main class="principal">
 
@@ -135,7 +127,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
             </form>
 
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="escolher-cadastro.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
