@@ -12,13 +12,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 10px;
     padding: 30px 0px;
-}
-
-.all-titles {
-    font-weight: 600;
-    font-size: 2rem;
-    text-transform: capitalize;
 }
 
 .paragrafo-intro {
@@ -37,6 +32,7 @@
 
 .content-numero {
     flex: auto;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,4 +48,37 @@
     font-weight: 500;
     font-size: 1.1rem;
     text-transform: capitalize;
+}
+
+@media screen and (max-width: 1150px) {
+    .content-intro-feira {
+        width: 90%;
+    } 
+
+    .paragrafo-intro {
+        font-size: .9rem;
+    }
+
+    .conteiner-numeros {
+        width: 90%;
+        
+    }
+    
+    .content-numero {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .icon-info{
+        width: 80px;
+    }
+
+    .text-info {
+        font-size: 1.1rem;
+    }
+
+    .span-info {
+        font-size: .9rem;
+    }
 }

@@ -13,3 +13,21 @@
 .home {
     overflow-x: hidden;
 }
+
+.all-titles {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1150px) {
+    .all-titles {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .all-titles {
+        font-size: 1.3rem;
+    }
+}

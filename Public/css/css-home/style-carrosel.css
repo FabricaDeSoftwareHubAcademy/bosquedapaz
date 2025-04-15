@@ -70,6 +70,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 5px;
     background-color: #c1c1c1;
 }
 
@@ -78,4 +79,20 @@
     height: .5rem;
     background-color: white;
     border-radius: .2rem;
+}
+
+@media screen and (max-width: 1150px) {
+    .carrossel {
+        height: 48vh;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carrossel {
+        height: 38vh;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+    }
 }
