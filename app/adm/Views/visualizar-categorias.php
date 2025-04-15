@@ -90,7 +90,7 @@
                     <div class="modal-content">
                         <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
                         <h1 class="titulo">Cadastrar Categoria</h1>
-                        <form action="" method="post">
+                        <form id="form_categoria" action="" method="post">
                             <div class="form-box">
                                 <h3>Nome:</h3>
                                 <input class="nome-cat" type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">

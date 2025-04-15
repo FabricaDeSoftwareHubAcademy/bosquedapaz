@@ -139,3 +139,34 @@
   });
 });
     
+
+let bot_categoria = document.querySelector('.btn-cad');
+let form_categoria = document.querySelector('#form_categoria')
+
+bot_categoria.addEventListener('click', function () {
+    chamaModal();
+
+    const formulario_modal = document.querySelector("#form_categoria");
+
+    formulario_modal.btn_cadastrar_cat.addEventListener('click', async function (event) {
+        event.preventDefault();
+
+        const new_form = document.getElementById("form_categoria");
+
+        const formData = new FormData(new_form);
+
+        let dados_php = await fetch('./actions/cadastrar_categoria.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        let response = await dados_php.json();
+
+        console.log(response);
+
+        if(response.status == "OK"){
+            alert("Cadastrado com sucesso");
+            fechaModal();
+        }
+    });
+});
