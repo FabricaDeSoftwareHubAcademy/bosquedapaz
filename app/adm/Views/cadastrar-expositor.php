@@ -164,6 +164,8 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
                 </div>
 
+                .
+
                 <div class="btn-finalizar">
                     <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
                     <button class="btn btn-cancelar"><a href="cadastrar-expositor.php">cancelar</a></button>
