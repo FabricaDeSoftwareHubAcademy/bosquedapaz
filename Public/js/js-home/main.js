@@ -12,15 +12,6 @@ sandwich.addEventListener('click', function(){
     }
 })
 
-function menuShowHome() {
-    let menuMobile = document.querySelector('.mobile-menu');
-    if (menuMobile.classList.contains('open')) {
-        menuMobile.classList.remove('open')
-    } else {
-        menuMobile.classList.add('open')
-    }
-}
-
 // pegando elementos do carrossel
 const arrowLeft = document.getElementById('arrow-left');
 const arrowRight = document.getElementById('arrow-right');
@@ -110,8 +101,8 @@ const intervalText = setInterval(() => {
 // let textInfo = document.getElementById('text-info')
 // console.log(textInfo)
 
-document.addEventListener("load", setTimeout( n = () => {
-    const ncs = document.querySelectorAll('.text-info');
+document.addEventListener("DOMContentLoaded", setTimeout( n = () => {
+    const ncs = document.querySelectorAll('.ncs');
     const speed = 200;
 
     ncs.forEach(counter => {
@@ -128,9 +119,10 @@ document.addEventListener("load", setTimeout( n = () => {
             }
         };
 
-        var elements = document.querySelector('#text-info');
+        var elements = document.querySelector('#inc');
         elements.addEventListener('mousehover', updateCount());
         // updateCount();
     });
-}, 3000)
-)
+}, 1700))
+
+
