@@ -1,86 +1,126 @@
-.expositores {
+.expositor {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    justify-content: space-around;
 }
 
 .bar-title-expositor {
     background-color:  #8B3AC4;
     width: 100%;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly;
 }
 
-.content-title-expo {
+.conteiner-title-expo {
     display: flex;
+    position: relative;
+}
+
+.line-before {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #f8621a;
+    border-left: 5px solid #f8621a;
+    position: relative;
+    top: 15px;
+    left: 20px;
 }
 
 .title-expositor {
-    font-size: 2rem;
-    text-transform: uppercase;
     color: white;
-    z-index: 1;
 }
 
-.lines-before {
+.line-after {
     background-color: transparent;
-    padding: 0px 25px;
-    border-bottom: 4px solid #FF9665;
-    border-left: 4px solid #FF9665;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid #f8621a;
+    border-right: 5px solid #f8621a;
     position: relative;
-    left: 40px;
-    top: 5px;
-    z-index: 2;
+    /* top: 20px; */
+    right: 20px;
 }
 
-.lines-after {
-    background-color: transparent;
-    padding: 0px 25px;
-    border-top: 4px solid #FF9665;
-    border-right: 4px solid #FF9665;
-    position: relative;
-    right: 40px;
-    bottom: 5px;
-    z-index: 2;
-}
-
-.para-title {
-    width: 50%;
-    color: #fff;
+.para-title-expo {
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
     text-align: center;
+}
+
+.content-seja-expositor {
+    height: 20px;
+}
+
+.btn-seja-expositor {
+    padding: 5px 20px;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.link-seja-exposior {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #8B3AC4;
+    text-transform: capitalize;
+    transition: all .2s ease-in-out;
+}
+
+.btn-seja-expositor:hover {
+    padding: 10px 30px;
+}
+
+.btn-seja-expositor:hover .link-seja-exposior{
     font-size: 1.3rem;
 }
 
-.listar-expositor {
-    width: 85%;
-    height: auto;
-    border-radius: 10px;
-    background-color: #F8F8F8;
-    margin-bottom: 75px;
+.content-mais-expositor {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-
-.cards-perfis {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 20px 0px;
-    background-color: #F8F8F8;
+.btn-mais-expositor {
+    background-color: white;
+    border: 2px solid #8B3AC4;
 }
 
+.listar-expositor {
+    background-color: #f8f8f8;
+    width: 80%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-listar-expositor {
+    height: 1000px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+}
 
 .card-per-expo {
     background-color: #7CC4BF;
@@ -233,77 +273,37 @@
   gap: 30px;
 }
 
-.btn-outros-expo {
-  background-color: white;
-  color: #8B3AC4;
-  /* border: 2px solid #8B3AC4; */
-  border: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: .5rem;
-  padding: 5px 10px;
-  text-transform: capitalize;
-  transition: all .2s ease-in;
+
+
+@media (max-width: 1300px) {
+
+    .content-listar-expositor {
+        height: auto;
+        flex-direction: row;
+    }
 }
 
-.btn-outros-expo:hover {
-  background-color: #8B3AC4;
-  color: white;
-}
-
-.content-seja-expositor {
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-}
-
-.btn-seja-expo:hover {
-    background-color: white;
-    padding: 5px 15px;
-    font-size: 1.3rem;
-    color: #8B3AC4;
-}
-
-.link-edital {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 1150px) {
-    .bar-title-expositor {
-        height: 300px;
+@media screen and (max-width: 550px) {
+    .conteiner-title-expo {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    .line-before {
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 10px;
+    }
+    .line-after {
+        width: 20px;
+        height: 20px;
+        right: 10px;
+        bottom: 5px;
     }
 
-    .para-title {
-        width: 70%;
+    .para-title-expo {
+        width: 90%;
+        font-size: .9rem;
     }
-
-    .cards-perfis {
-        /* height: auto; */
-        gap: 50px;
-        width: 70%;
-    } 
-}
-
-@media screen and (max-width: 500px) {
-    .bar-title-expositor {
-        height: 250px;
-    }
-
-    .cards-perfis2 {
-        display: none;
-    }
-
-    .conteiner-outros-expo {
-        flex-direction: column-reverse;
-    }
-
 }
