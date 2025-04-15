@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-artistas.css">
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    
+
 
 </head>
 
