@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Artista</title>
+    <title>Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-artistas.css">
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
