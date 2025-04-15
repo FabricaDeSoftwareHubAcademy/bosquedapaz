@@ -18,43 +18,45 @@
 
     <?php include "../../../Public/assets/home/carrossel-home.php"; ?>
 
-    <section class="informacoes-feira" id="informacoes-feira">
-        <div class="content-intro-feira">
-            <h1 class="all-titles title-intro" id="title-intro">bem vindo á feira bosque da paz</h1>
-            <p class="paragrafo-intro all-paragrafos">Venha viver uma experiência única em meio à natureza, onde a cultura local,  artesanato autêntico, delícias gastronômicas e a alegria de nossa comunidade se encontram!</p>
-        </div>
-        <div class="conteiner-numeros">
-            <div class="content-numero">
-                <div class="content-img">
-                    <img src="../../../Public/imgs/img-home/People.png" alt="" class="icon-info">
-                </div>
-                <div class="content-info">
-                    <p class="text-info">+46mil</p>
-                    <span class="span-info">visitantes</span>
-                </div>
+    <main class="conteiner-principal">
+        <section class="informacoes-feira" id="informacoes-feira">
+            <div class="content-intro-feira">
+                <h1 class="all-titles title-intro" id="title-intro"></h1>
+                <p class="paragrafo-intro all-paragrafos">Venha viver uma experiência única em meio à natureza, onde a cultura local,  artesanato autêntico, delícias gastronômicas e a alegria de nossa comunidade se encontram!</p>
             </div>
-            <div class="content-numero">
-                <div class="content-img">
-                        <img src="../../../Public/imgs/img-home/Shop.png"
-                        alt="" class="icon-info">
+            <div class="conteiner-numeros">
+                <div class="content-numero">
+                    <div class="content-img">
+                        <img src="../../../Public/imgs/img-home/People.png" alt="" class="icon-info">
                     </div>
                     <div class="content-info">
-                        <p class="text-info">+400</p>
-                        <span class="span-info">expositores</span>
+                        <p class="text-info" id="text-info" data-target="46">+46mil</p>
+                        <span class="span-info">visitantes</span>
+                    </div>
+                </div>
+                <div class="content-numero">
+                    <div class="content-img">
+                            <img src="../../../Public/imgs/img-home/Shop.png"
+                            alt="" class="icon-info">
+                        </div>
+                        <div class="content-info">
+                            <p class="text-info" id="text-info" data-target="400">+400</p>
+                            <span class="span-info">expositores</span>
+                    </div>
+                </div>
+                <div class="content-numero">
+                    <div class="content-img">
+                        <img src="../../../Public/imgs/img-home/Micro.png" alt="" class="icon-info">
+                    </div>
+                    <div class="content-info">
+                        <p class="text-info" id="text-info" data-target="30">+30</p>
+                        <span class="span-info">artistas</span>
+                    </div>
                 </div>
             </div>
-            <div class="content-numero">
-                <div class="content-img">
-                    <img src="../../../Public/imgs/img-home/Micro.png" alt="" class="icon-info">
-                </div>
-                <div class="content-info">
-                    <p class="text-info">+30</p>
-                    <span class="span-info">artistas</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+        </section>
+        
+    </main>
 
     <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>

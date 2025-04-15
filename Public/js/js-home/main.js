@@ -87,3 +87,50 @@ arrowRight.addEventListener('click', () => {
         trocaImagem(0)
     }
 })
+
+// informações
+const titleIntro = document.getElementById('title-intro')
+let textIntro = 'bem vindo á feira bosque da paz'
+let textSemIntro = ''
+console.log(textIntro.length)
+
+
+let i = 0
+const intervalText = setInterval(() => {
+    if(i < textIntro.length){
+        textSemIntro += textIntro[i]
+        titleIntro.innerText = textSemIntro
+        i++
+    }
+    else {
+        clearInterval()
+    }
+}, 50)
+
+// let textInfo = document.getElementById('text-info')
+// console.log(textInfo)
+
+document.addEventListener("load", setTimeout( n = () => {
+    const ncs = document.querySelectorAll('.text-info');
+    const speed = 200;
+
+    ncs.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const currentCount = +counter.innerText;
+            const increment = target / speed;
+
+            if (currentCount < target) {
+                counter.innerText = Math.ceil(currentCount + increment);
+                setTimeout(updateCount, 10);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        var elements = document.querySelector('#text-info');
+        elements.addEventListener('mousehover', updateCount());
+        // updateCount();
+    });
+}, 3000)
+)
