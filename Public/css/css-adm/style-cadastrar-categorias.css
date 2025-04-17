@@ -8,26 +8,18 @@
     font-family: "Poppins", sans-serif;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.753);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+.cadastro-categoria {
+    width: 500px;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
 }
 
 .modal-content {
-    height: 70%;
+    width: 100%;
+    height: 70vh;
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    width: 80%;
     max-width: 500px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -44,7 +36,6 @@
     display: flex;
     position: relative;
     bottom: 10px;
-    /* right: 10px; */
     font-size: 30px;
     cursor: pointer;
     color: #333;
@@ -69,10 +60,12 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 52%;
+    width: 65%;
     /* margin-right: 10px; */
     font-size: 16px;
-    box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    outline: none;
 }
 
 .form-box .botao-cor{
@@ -88,11 +81,12 @@
 }
 
 .custum-file-upload{
+    width: 40%;
+    margin: auto;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
 }
 
 .icon{
@@ -162,21 +156,23 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 30%;
+    /* width: 30%; */
 }
 
 .cancelar {
-    background-color: #ff3867;
+    width: 48%;
+    background-color: #FF3877;
     color: white;
 }
 
 .salvar {
-    background-color: #007e70;
+    width: 48%;
+    background-color: #007E70;
     color: white;
 }
 
 .custom-select {
-    width: 200px;
+    width: 240px;
 }
 
 .select-selected {
@@ -197,12 +193,14 @@
 }
 
 .select-items {
+    height: 50%;
     position: absolute;
-    width: 40%;
+    width: 48%;
     background-color: white;
     border: 1px solid #ccc;
     display: none;
-    z-index: 1000;
+    z-index: 50;
+    margin-bottom: 30px;
 }
 
 .select-items div {
@@ -220,16 +218,10 @@ select {
     color: gray;
     transition: color 0s 2147483647s;
   }
-  
-  /* select:hover,
-  select:focus,
-  select:active,
-  select:focus {
-    color: red;
-    transition:0s;
-  } */
-   
-  
+
+  dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.753);
+} 
   select option {
     color: #333;
   }
@@ -238,23 +230,6 @@ select {
     display: none;
   }
 
-
-@media (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        padding: 15px;
-    }
-    
-    .titulo {
-        font-size: 20px;
-    }
-    
-    .input-group input {
-        padding: 8px;
-    }
-    
-    .botoes button {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
+.titulo-modal{
+    margin-top: 20px;
 }

@@ -242,5 +242,6 @@
     </section>
 
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>

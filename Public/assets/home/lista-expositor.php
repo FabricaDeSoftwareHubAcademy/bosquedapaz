@@ -115,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="cards-perfis">
+        <div class="cards-perfis cards-perfis2">
             <div class="card-per-expo">
                 <div class="head-card">
                     <img src="../../../Public/imgs/img-home/decorart.png" alt="" class="img-perfil-expo">
@@ -216,6 +216,7 @@
             </div>
 
         </div>
+        <div id="overlay" class="overlay"></div>
         <dialog class="m-per-expo" id="m-per-expo">
             <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
         </dialog>
@@ -230,5 +231,6 @@
     
 
 </section>
+<script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 <!-- fim seja expositor -->
 

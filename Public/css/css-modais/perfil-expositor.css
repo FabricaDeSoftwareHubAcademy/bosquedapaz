@@ -2,10 +2,22 @@
 .m-per-expo {
     width: 80%;
     height: 85vh;
+    border: none;
     border-radius: 10px;
     z-index: 4;
     overflow: hidden;
     margin: auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.753);
+    z-index: 999;
+    display: none;
 }
 
 /* Area Principal do Modal: */
@@ -28,22 +40,27 @@
     left: 49%;
 }
 
-.btn {
-    position: absolute;
+.div-button{
     width: 50px;
     height: 50px;
-    background-color: #3b9cdc00;
-    border: none;
-    right: 0;
+    position: absolute;
+    left: 91rem;
 }
 
-.icon-sair {
+.btn{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#icon-sair{
     font-size: 25px;
     transition: all .2s ease-in-out;
 }
 
-#icon-sair:hover {
-    transform: scale(1.1);
+#icon-sair:hover{
     color: #FF3877;
 }
 
@@ -58,7 +75,7 @@
 
 .img-decoracao2 {
     position: absolute;
-    top: 77%;
+    top: 78%;
     left: 61%;
     z-index: 1;
     border-radius: 10px;
@@ -421,6 +438,11 @@
         overflow: scroll;
     }
 
+    .div-button{
+        left: 16rem;
+        z-index: 10;
+    }
+
     .box-principal {
         width: 90%;
         height: 150vh;
@@ -441,7 +463,7 @@
 
     .img-decoracao2 {
         top: 59rem;
-        left: 2rem;
+        left: 2.5rem;
         z-index: 2;
         width: 70vw;
     }
@@ -620,8 +642,12 @@
     }
 
     .img-decoracao2 {
-        top: 64rem;
-        left: 2.2rem;
+        top: 65rem;
+        left: 2.6rem;
+    }
+
+    .div-button{
+        left: 17rem;
     }
 }
 
@@ -642,8 +668,12 @@
     }
 
     .img-decoracao2 {
-        top: 66rem;
-        left: 2.2rem;
+        top: 66.2rem;
+        left: 2.7rem;
+    }
+
+    .div-button{
+        left: 18rem;
     }
 }
 
@@ -653,15 +683,19 @@
     }
 
     .img-decoracao2 {
-        top: 57rem;
-        left: 1.9rem;
+        top: 68rem;
+        left: 2.2rem;
+    }
+
+    .div-button{
+        left: 14rem;
     }
 }
 
 @media (max-width: 412px) and (min-height: 915px) {
     .img-decoracao2 {
-        top: 66rem;
-        left: 2.2rem;
+        top: 66.2rem;
+        left: 2.6rem;
     }
 }
 
@@ -713,6 +747,11 @@
 
     .div-numero{
         width: 45%;
+    }
+
+    .div-button{
+        left: 35rem;
+        z-index: 100;
     }
 }
 
@@ -766,7 +805,12 @@
 
     .img-decoracao2 {
         display: none;
-    }    
+    } 
+
+    .div-button{
+        left: 36rem;
+        z-index: 100;
+    }
 }
 
 @media (min-width: 1024px) and (min-height: 1366px){
@@ -891,8 +935,11 @@
     }
 
     .img-decoracao2{
-        top: 75%;
-        left: 46%;
+        display: none;
+    }
+
+    .div-button{
+        left: 48rem;
     }
 }
 
@@ -942,9 +989,15 @@
         font-size: 20px;
     }
 
-    .img-decoracao2{
-        top: 78%;
-        left: 48%;
+    .img-decoracao2 {
+        position: absolute;
+        top: 80%;
+        left: 57%;
+        width: 35vw;
+    }
+
+    .div-button{
+        left: 60rem;
     }
 }
 
@@ -1011,8 +1064,7 @@
     }
 
     .img-decoracao2{
-        top: 84%;
-        left: 48%;
+        display: none;
     }
 }
 

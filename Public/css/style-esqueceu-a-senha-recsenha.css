@@ -93,23 +93,16 @@ html,.body-recsenha{
     }
 }
 
-/* .img-voltar{
-    background-color: darkviolet;
-} */
-
 .form-recsenha{
     display: flex;
     flex-direction: column;
-    /* background-color: green; */
     position: relative;
     top: 32%;
     left: 9.5%;
     width: 30%;
-    /* height: 120px; */
 }
 
 .forms-recsenha{
-    /* background-color: red; */
     height: 150px;
     width: 100%;
     display: flex;
@@ -122,19 +115,10 @@ html,.body-recsenha{
     justify-content: center;
     margin-bottom: 5%;
     width: 100%;
-    /* background-color: chartreuse; */
 }
-
-/* 
-.label-email{
-    background-color: blueviolet;
-    left: 4%;
-    position: relative;
-} */
 
 .area-input-recsenha{
     display: flex;
-    /* background-color: aqua; */
     align-items: center;
     width: 95%;
     height: 42px;
@@ -207,13 +191,10 @@ html,.body-recsenha{
 }
 
 .modal-title{
-    /* background-color: orange; */
     text-align: center;
-    /* margin-bottom: 1%; */
 }
 
 .modal-text{
-    /* background-color: yellow; */
     text-align: center;
     margin-bottom: 5%;
 }
@@ -236,7 +217,6 @@ html,.body-recsenha{
 .botoes{
     display: flex;
     position: relative;
-    /* background-color: pink; */
     justify-content: space-evenly;
     width: 100%;
     height: 48px;
@@ -290,8 +270,13 @@ html,.body-recsenha{
 
 .img-letter{
     position: relative;
-    width: 50%;
-    z-index: -1;
+    transition: ease .5s;
+    width: 49%;
+}
+
+.img-letter:hover{
+    transition: ease .5s;
+    transform: scale(1.03);
 }
 
 .title-recsenha{
@@ -367,6 +352,27 @@ html,.body-recsenha{
         position: relative;
     }
 
+    .recsenha-modal{
+        width: 80vw;
+        height: 170px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .close-modal{
+        width: 90px;
+        height: 40px;
+        font-size: 11.5px;
+    }
+
+    .modal-text{
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .botoes{
         justify-content: space-around;
     }
@@ -421,6 +427,16 @@ html,.body-recsenha{
         top: 27%;
     }
 
+    .recsenha-modal{
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .botoes{
         width: 100%;
     }
@@ -447,6 +463,19 @@ html,.body-recsenha{
         flex-direction: column;
         width: 48%;
         left: 0.5%;
+    }
+
+    .recsenha-modal{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        font-size: 17px;
+    }
+
+    .modal-title{
+        font-size: 20px;
     }
 
     .botao-cancelar{
@@ -536,8 +565,17 @@ html,.body-recsenha{
         margin-bottom: 0%;
     }
 
+    .form-recsenha{
+        top: 32%;
+    }
+
     .img-letter{
-        top: 5%;
+        top: 12%;
+    }
+
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
     }
 
     .recsenha-modal{
@@ -576,7 +614,6 @@ html,.body-recsenha{
     }
     
     .form-recsenha{
-        /* background-color: green; */
         display: flex;
         flex-direction: column;
         position: relative;
@@ -584,6 +621,11 @@ html,.body-recsenha{
         left: 9.5%;
         width: 30%;
         height: 60%;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
     }
     
     .forms-recsenha{
@@ -604,7 +646,6 @@ html,.body-recsenha{
     }
     
     .title-recsenha{
-        /* background-color: red; */
         margin-bottom: 30%;
         top: 0%;
         left: 0%;

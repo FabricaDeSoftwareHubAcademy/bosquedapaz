@@ -111,7 +111,6 @@
     top: 20%;
     width: 27%;
     height: 65%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,28 +135,18 @@
     justify-content: center;
     flex-direction: column;
 }
- 
-/* ALTERAR HOVER IMG */
 
-/* .a-img-login{
-    width: 90%;
-    height: 600px;
-    background-color: #16286800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.img-dog{
+    transition: ease .5s;
+    width: 49%;
+    top: 50%;
+    
 }
- 
-.a-img-login img{
-    width: 100%;
-    height: auto;
-    transition: all 0.5s ease;
+
+.img-dog:hover{
+    transition: ease .5s;
+    transform: scale(1.03);
 }
- 
-.a-img-login img:hover{
-    transform: scale(1.05);
-   
-} */
  
 .area-img-login-h1-tiago{
     font-weight: 600;
@@ -237,9 +226,7 @@
 }
  
 .div-esqueceu-senha-login{
-    margin-left: 20%;
     position: relative;
-    /* background-color: red; */
 }
  
 .div-esqueceu-senha-login .esqueceu-a-senha-p{
@@ -257,9 +244,6 @@
 }
 
 @media (max-width:575.98px){
-    /* .body-login{
-        background-color: red;
-    } */
 
     #linha-login{
         display: none;
@@ -313,7 +297,7 @@
         display: flex;
         flex-direction: column;
         width: 170px;
-        left: 12%;
+        left: 22%;
     }
 
     .botao-voltar{
@@ -336,7 +320,7 @@
     }
 
     .div-esqueceu-senha-login{
-        left: 14%;
+        left: 20%;
     }
 
     .img-dog{
@@ -378,6 +362,9 @@
         width: 50%;
     }
 
+    .div-esqueceu-senha-login{
+        left: 20%;
+    }
 }
 
 @media (min-width:992px){
@@ -393,9 +380,6 @@
 }
 
 @media (width: 1024px) and (height: 600px){
-    /* .body-login{
-        background-color: blueviolet;
-    } */
 
     #linha-login{
         display: flex;
@@ -420,13 +404,17 @@
     .area-img-login-h1-tiago{
         margin-bottom: 14%;
     }
+
+    .div-esqueceu-senha-login{
+        left: 26%;
+    }
 }
 
 @media (min-width:1200px){
 
     .area-form-login{
-        width: 30%;
-        left: 9%;
+        width: 40%;
+        left: 5%;
         box-sizing: border-box;
     }
 
@@ -439,15 +427,30 @@
     }
 
     .img-dog{
-        top: 6%;
+        top: 9%;
+    }
+
+    .div-esqueceu-senha-login{
+        left: 28%;
     }
 }
 
 @media (min-width:1400px){
+    .box-login{
+        height: 83%;
+    }
 
     .area-form-login{
         top: 10%;
         width: 30%;
         left: 10%;
+    }
+
+    .img-dog{
+        top: 0%;
+    }
+
+    .div-esqueceu-senha-login{
+        left: 29%;
     }
 }

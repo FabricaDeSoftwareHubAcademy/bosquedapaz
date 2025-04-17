@@ -67,7 +67,7 @@
 
     #linha-vertical {
         height: 85%;
-        border-right: 3px solid #FF3877;
+        border-right: 1.5px solid #FF3877;
         position: fixed;
         left: 46%;
         bottom: 8%;
@@ -79,7 +79,7 @@
     backdrop-filter: blur(30px);
 
     #linha-vertical {
-        border-right: 3px solid #162868;
+        border-right: 1.5px solid #162868;
     }
 }
 
@@ -89,11 +89,6 @@
     top: 70vh;
     display: block;
     cursor: pointer;
-    transition: all .2s ease-in;
-}
-
-.setaV-cadastro:hover {
-    transform: scale(1.1);
 }
 
 /* Lado Esquerdo da Box: IMAGEM */
@@ -190,6 +185,14 @@
     justify-content: space-between;
 }
 
+.area-input2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ff387700;
+}
+
 .area-input i{
     position: absolute;
     margin-left: 0.8rem;
@@ -206,67 +209,35 @@
     background-color: white;
     border-radius: 6px;
     padding-left: 40px;
-    box-shadow: 3px 3px 4px #162868;
+    box-shadow: 3px 3px 0px #9d9fa1;
     border: none;
     outline: none;
     transition: border 0.3s ease;
+}
+.input2{
+    width: 95%;
+    height: 40px;
+    background-color: white;
+    border-radius: 6px;
+    padding-left: 11px;
+    box-shadow: 3px 3px 0px #9d9fa1;
+    border: none;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.uploads{
+    width: 100%;
+    height: 100%;
 }
 
 .input:focus {
     border: 2px solid #162868; /* Linha visível quando o campo é clicado */
 }
 
+
 /* Input de Cadastrar Img */
-.area-total-input-2 {
-    width: 50%;
-    height: 50px;
-    background-color: rgba(0, 0, 255, 0);
-    border: 2px dashed #FF3877;
-    border-radius: 10px;
-    padding: 6px;
-    cursor: pointer;
-    right: 1rem;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
 
-.uploads {
-    width: 100%;
-    height: 100%;
-    background-color: #FF3877;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-
-.uploads:hover {
-    background-color: #162868; 
-}
-
-.uploads input[type="file"] {
-    display: none;
-}
-
-.uploads::before {
-    content: "Clique para selecionar uma imagem";
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.uploads input[type="file"]:focus + .uploads::before {
-    content: "Imagem selecionada!";
-    color: #0F0;
-}
-
-.uploads input[type="file"]:hover {
-    cursor: pointer;
-}
 
 /* Area dos Botões */
 .area-button{
@@ -367,6 +338,7 @@
 
     .label-cad {
         font-size: 12px;
+        bottom: 0.3rem;
     }
 
     #iconOlho{
@@ -384,9 +356,11 @@
         font-size: 14px;
     }
 
-    .area-total-input-2 {
-        width: 90%;
-        right: 0.3rem;
+    .input2 {
+        width: 95%;
+        height: 78%;
+        padding-left: 5px;
+        font-size: 10px;
     }
 
     .uploads::before{
@@ -417,6 +391,14 @@
         height: 90%;
     }
 
+    .input2{
+        padding-left: 15px;
+    }
+
+    .lado-direito{
+        width: 100%;
+    }
+
     .lado-direito form {
         background-color: #16286800;
         left: 170px;
@@ -445,6 +427,18 @@
 
     .setaV-cadastro{
         top: 0;
+    }
+
+    .lado-esquerdo{
+        display: none;
+    }
+
+    #linha-vertical{
+        display: none;
+    }
+
+    #iconOlho {
+        margin-left: 27rem;
     }
 }
 
@@ -613,7 +607,14 @@
         margin-top: 0;
     }
 
+    .input2{
+        height: 28px;
+        padding-left: 10px;
+    }
+
 }
+
+
 
 /* Responsividade Next Pro*/
 @media (min-width: 1280px) and (max-height: 800px) {

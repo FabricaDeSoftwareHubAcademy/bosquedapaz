@@ -50,12 +50,10 @@
                             <td class="barraca-col">6</td>
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                  </a>
+                          
                             </td>
                           </tr>
                           <tr>
@@ -66,12 +64,10 @@
                             <td class="barraca-col">12</td>
                             <td><button class="status inactive">Inativo</button></td>
                             <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                             </td>
                           </tr>
                           <tr>
@@ -83,12 +79,10 @@
   
                             <td><button class="status active">Ativo</button></td>
                             <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                             </td>
                           </tr>
                           <tr>
@@ -100,12 +94,10 @@
   
                               <td><button class="status inactive">Inativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -117,12 +109,10 @@
   
                               <td><button class="status active">Ativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -134,12 +124,10 @@
   
                               <td><button class="status active">Ativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -151,12 +139,10 @@
   
                               <td><button class="status inactive">Inativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -168,12 +154,10 @@
   
                               <td><button class="status active">Ativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -185,12 +169,10 @@
   
                               <td><button class="status inactive">Inativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -202,12 +184,10 @@
   
                               <td><button class="status active">Ativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -219,12 +199,10 @@
   
                               <td><button class="status inactive">Inativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>
                           <tr>
@@ -236,12 +214,10 @@
   
                               <td><button class="status active">Ativo</button></td>
                               <td>
-                                <a class="edit-icon" href="editar-expositor.php">
+                                <a class="edit-icon" href="editar-perfil-expositor.php">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a class="delete-icon">
-                                          <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
-                                      </a>
+                                
                               </td>
                           </tr>  
                         </tbody>
@@ -263,6 +239,175 @@
             </dialog>
         </main>
 
+                <td><button class="status inactive">Inativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">05</td>
+                <td>Nara Helena</td>
+                <td class="email-col">nara.helena126@gmail.com</td>
+                <td class="fone-col">(67) 98345-6789</td>
+                <td class="barraca-col">45</td>
+
+                <td><button class="status active">Ativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">06</td>
+                <td>Fernanda Santos</td>
+                <td class="email-col">fernanda.santos126@gmail.com</td>
+                <td class="fone-col">(67) 97345-6623</td>
+                <td class="barraca-col">24</td>
+
+                <td><button class="status active">Ativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">07</td>
+                <td>Emanuelle Valadares</td>
+                <td class="email-col">manu.vala777@gmail.com</td>
+                <td class="fone-col">(67) 98885-6888</td>
+                <td class="barraca-col">26</td>
+
+                <td><button class="status inactive">Inativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">08</td>
+                <td>Kauan Ribeiro</td>
+                <td class="email-col">kauan.ribeiro753@gmail.com</td>
+                <td class="fone-col">(67) 99942-1110</td>
+                <td class="barraca-col">23</td>
+
+                <td><button class="status active">Ativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">09</td>
+                <td>Vini Count</td>
+                <td class="email-col">count.vini99@gmail.com</td>
+                <td class="fone-col">(67) 99210-2566</td>
+                <td class="barraca-col">75</td>
+
+                <td><button class="status inactive">Inativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">10</td>
+                <td>Isabela Oliveira</td>
+                <td class="email-col">isa.bela555@gmail.com</td>
+                <td class="fone-col">(67) 96841-5517</td>
+                <td class="barraca-col">2</td>
+
+                <td><button class="status active">Ativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">11</td>
+                <td>Kelvin Bach</td>
+                <td class="email-col">kelvin.bach0208@gmail.com</td>
+                <td class="fone-col">(67) 90208-5623</td>
+                <td class="barraca-col">44</td>
+
+                <td><button class="status inactive">Inativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="usuario-col">12</td>
+                <td>Paulo Henrique</td>
+                <td class="email-col">paulo.henrique33@gmail.com</td>
+                <td class="fone-col">(67) 98345-6789</td>
+                <td class="barraca-col">7</td>
+
+                <td><button class="status active">Ativo</button></td>
+                <td>
+                  <a class="edit-icon" href="editar-expositor.php">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="delete-icon">
+                    <i class="fa-solid fa-trash open-modal" data-modal="edit-modal"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btns">
+          <a href="gerenciar-expositores.php" class="voltar">
+            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+          </a>
+        </div>
+      </div>
+      <dialog id="edit-modal" class="modal-edit">
+        <h2>Confirmar Exclusão</h2>
+        <p>Tem certeza que deseja fazer isso?</p>
+        <div>
+          <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
+          <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
+        </div>
+      </dialog>
+  </main>
+  <div class="bolas-fundo">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+      </div>
 
 </body>
 

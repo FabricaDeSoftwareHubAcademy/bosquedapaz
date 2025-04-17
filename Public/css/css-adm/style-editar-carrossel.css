@@ -4,7 +4,14 @@
 @import url('../css-modais/css-m-form-e-perfil-expo.css');
 
 .principal {
-    height: 84vh;
+    height: 83vh;
+    overflow-y: auto;
+}
+
+.principal .box {
+    height: auto;
+    justify-content: initial;
+    min-height: 94%;
 }
 
 .titulo {
@@ -14,18 +21,18 @@
 
 .formulario-ca {
     width: 100%;
-    height: 90%;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-top: 75px;
+    z-index: 2;
 }
 
 .up-imgs {
     width: 100%;
     height: auto;
-    max-height: 380px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -106,11 +113,24 @@
 }
 
 @media screen and (max-width: 1190px) {
+    .principal  {
+        height: 90vh;
+    }
+
+    .principal .box {
+        /* height: auto; */
+        min-height: auto;
+    }
+
+    .formulario-ca {
+        height: 75vh;
+    }
+    
     .up-imgs {
         width: 100%;
         height: auto;
-        max-height: 380px;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -119,7 +139,7 @@
     }
 
     .uploads {
-        width: 250px;
+        width: 260px;
         height: auto;
         display: flex;
         gap: 5px;
@@ -138,6 +158,19 @@
     }
 }
 
+@media screen and (max-width: 850px) {
+
+    .formulario-ca {
+        padding-top: 30px;
+    }
+
+}
+@media screen and (max-width: 790px) {
+    .up-imgs {
+        flex-direction: row;
+    }
+}
+
 @media screen and (max-width: 860px) {
     .principal .box {
         gap: 0px;
@@ -150,7 +183,6 @@
     .up-imgs {
         width: 100%;
         height: auto;
-        max-height: 450px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
