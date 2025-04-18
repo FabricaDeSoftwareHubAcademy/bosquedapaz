@@ -6,7 +6,7 @@ class Database {
     private string $local = "127.0.0.1";
     private string $db = "bosquedapaz";
     private string $user = "root";
-    private string $password = "";
+    private string $password = "h4L!50N%&i$";
     private string $table;
 
     // metodo construtor que íncia chamando o médoto de conexão com o db 
