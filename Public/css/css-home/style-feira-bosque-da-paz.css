@@ -5,6 +5,7 @@
 @import url('style-informacoes-feira.css');
 @import url('style-expositor.css');
 @import url('style-categorias.css');
+@import url('style-avisos.css');
 
 * {
     margin: 0;
