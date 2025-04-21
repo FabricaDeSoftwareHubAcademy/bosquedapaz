@@ -7,11 +7,11 @@
 
 .prox-evento {
     width: 100%;
+    height: 850px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     background-color: #4A8AF1;
-    padding-bottom: 5%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
 }
 
@@ -41,7 +41,7 @@
 .para-prox-evento {
     color: white;
     font-size: 1.5rem;
-    font-weight: 600px;
+    font-weight: 500;
 }
 
 .content-prox-evento {
@@ -144,6 +144,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .title-info-card { 
@@ -164,5 +165,135 @@
 
 .btn-info-card:hover {
     background-color: #FEB850;
+    color: white;
+}
+
+.ulti-publica {
+    width: 100%;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner-ulti-publi {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.para-ulti-publi {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.conteiner-ulti-publica {
+    width: 100%;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+
+.content-card-ulti {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-ulti {
+    height: auto;
+    border-color: #007E70;
+}
+
+.descricao-card {
+    height: 100px;
+    overflow-y: auto;
+}
+
+.btn-card-ulti {
+    border-color: #007E70;
+}
+
+.btn-card-ulti:hover {
+    background-color: #007E70;
+}
+
+.content-ver-mais {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ver-mais {
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #007E70;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+}
+
+.btn-ver-mais:hover {
+    padding: 10px 25px;
+    font-size: 1.6rem;
+    background-color: #007E70;
+}
+
+.all-links {
+    color: black;
+}
+
+.btn-ver-mais:hover .all-links {
+    color: white;
+}
+
+.eventos-passados {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    background-color: #5EBB50;
+}
+
+.conteiner-evento-passados {
+    margin-top: 50px;
+}
+
+.card-event-pass{
+    border-color: #3DB4F4;
+    height: auto;
+}
+
+.btn-card-event-pass {
+    border-color: #3DB4F4;
+}
+
+.btn-card-event-pass:hover {
+    background-color: #3DB4F4;
+}
+
+.title-eventos-passados {
+    color: white;
+}
+
+.para-event-pass{
+    color: white;
+}
+
+.btn-mais-event {
+    border-color: #3DB4F4;
+}
+
+.btn-mais-event:hover {
+    background-color: #3DB4F4;
+}
+
+.link-mais-event {
     color: white;
 }

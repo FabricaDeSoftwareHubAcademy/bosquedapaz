@@ -25,7 +25,7 @@
     <?php include "../../../Public/assets/home/categoria.html"; ?>
 
     <section class="eventos" id="eventos">
-        <div class="prox-evento">
+        <div class="prox-evento" id="prox-evento" >
             <div class="contenier-prox-evento">
                 <div class="content-title-evento">
                     <h2 class="title-prox-evento all-titles" id="title-prox-evento">proximo evento</h1>
@@ -67,13 +67,100 @@
                
             </div>
         </div>
+
+        <div class="ulti-publica" id="ulti-publica">
+            <div class="conteiner-ulti-publi">
+                <div class="content-title-evento">
+                    <h2 class="title-ulti-publi all-titles" id="title-ulti-publi">ultilidades publicas</h1>
+                    <p class="all-para para-ulti-publi" id="para-ulti-publi">Nossas Utilidades Públicas são organizações para fins de interresse geral, onde prestamos serviços, sem fins lucrativos!</p>
+                </div>
+                <div class="conteiner-ulti-publica">
+                    <div class="content-card-ulti">
+
+                        <div class="card-eventos card-ulti" id="card-ulti">
+                            <img class="img-card-evento img-card-ulti" id="img-card-ulti" src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png">
+                            <div class="content-info-card-event">
+                                <h4 class="all-title title-info-card" id="title-info-card-ulti">title utilidades</h4>
+                                <p class="descricao-card" id="descricao-card-ulti">Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn-info-card btn-card-ulti" id="btn-card-ulti">saiba mais</button>
+                            </div>
+                        </div>
+
+                        <div class="card-eventos card-ulti" id="card-ulti">
+                            <img class="img-card-evento img-card-ulti" id="img-card-ulti" src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png">
+                            <div class="content-info-card-event">
+                                <h4 class="all-title title-info-card" id="title-info-card-ulti">title utilidades</h4>
+                                <p class="descricao-card" id="descricao-card-ulti">Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn-info-card btn-card-ulti" id="btn-card-ulti">saiba mais</button>
+                            </div>
+                        </div>
+
+                        <div class="card-eventos card-ulti" id="card-ulti">
+                            <img class="img-card-evento img-card-ulti" id="img-card-ulti" src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png">
+                            <div class="content-info-card-event">
+                                <h4 class="all-title title-info-card" id="title-info-card-ulti">title utilidades</h4>
+                                <p class="descricao-card" id="descricao-card-ulti">Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn-info-card btn-card-ulti" id="btn-card-ulti">saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-ver-mais">
+                        <button class="btn-ver-mais" id="btn-ver-mais-ulti"><a class="all-links" href="">ver outras ultilidades</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ulti-publica eventos-passados" id="eventos-passados">
+            <div class="conteiner-ulti-publi conteiner-evento-passados">
+                <div class="content-title-evento">
+                    <h2 class="title-eventos-passados all-titles" id="title-eventos-passados">eventos passados</h1>
+                    <p class="all-para para-ulti-publi para-event-pass" id="para-eventos-passados">Nossas Utilidades Públicas são organizações para fins de interresse geral, onde prestamos serviços, sem fins lucrativos!</p>
+                </div>
+                <div class="conteiner-ulti-publica">
+                    <div class="content-card-ulti">
+
+                        <div class="card-eventos card-event-pass" id="card-event-pass">
+                            <img class="img-card-evento img-card-ulti" id="img-card-event-pass" src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png">
+                            <div class="content-info-card-event">
+                                <h4 class="all-title title-info-card" id="title-info-card-event-pass">title utilidades</h4>
+                                <p class="descricao-card" id="descricao-card-event-pass">Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn-info-card btn-card-event-pass" id="btn-card-event-pass">saiba mais</button>
+                            </div>
+                        </div>
+
+ 
+                        <div class="card-eventos card-event-pass" id="card-event-pass">
+                            <img class="img-card-evento img-card-ulti" id="img-card-event-pass" src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png">
+                            <div class="content-info-card-event">
+                                <h4 class="all-title title-info-card" id="title-info-card-event-pass">title utilidades</h4>
+                                <p class="descricao-card" id="descricao-card-event-pass">Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn-info-card btn-card-event-pass" id="btn-card-event-pass">saiba mais</button>
+                            </div>
+                        </div>                                           
+ 
+                        <div class="card-eventos card-event-pass" id="card-event-pass">
+                            <img class="img-card-evento img-card-ulti" id="img-card-event-pass" src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png">
+                            <div class="content-info-card-event">
+                                <h4 class="all-title title-info-card" id="title-info-card-event-pass">title utilidades</h4>
+                                <p class="descricao-card" id="descricao-card-event-pass">Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn-info-card btn-card-event-pass" id="btn-card-event-pass">saiba mais</button>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="content-ver-mais">
+                        <button class="btn-ver-mais btn-mais-event" id="btn-ver-mais-event-pass"><a class="all-links link-mais-event" href="">ver outras ultilidades</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     </main>
 
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
-</html>
+</html
 
     
 
