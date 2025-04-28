@@ -25,6 +25,7 @@
     align-items: center;
     border-radius: 10px;
     background-color: rgba(244, 244, 244, 0.637);
+    /* background-color: rgb(255, 0, 0); */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -62,7 +63,7 @@ Inicio
 .suporte__subtitulo {
     width: 100%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     /* background-color: blue; */
 }
@@ -182,7 +183,7 @@ Inicio
 
 /* contatos titulo */
 .contatos__titulo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -207,7 +208,7 @@ Inicio
 }
 
 .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
     width: 70%;
@@ -216,7 +217,7 @@ Inicio
 
 .faleconosco__botao__voltar {
     position: absolute;
-    top: 39.5vw;
+    top: 43.5vw;
     left: 11vw;
 }
 
@@ -235,7 +236,8 @@ Inicio
 
 .faleconosco__bola2 {
     position: absolute;
-    top: 29.75vw;
+    /* top: 35.5vw; */
+    bottom: 0px;
     right: 0;
     z-index: -100;
     /* background-color: red; */
