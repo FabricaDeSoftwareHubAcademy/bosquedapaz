@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(style-menu.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.body__faleconosco {
+    height: 100vh;
+    display: flex;
+    background-color: #fcfcfc;
+}
+
+/* container principal */
+.container__faleconosco {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    margin-top: 6.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(244, 244, 244, 0.637);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* divisão de section */
+.section__suporte, .section__contatos {
+    flex: 1;
+    padding: 20px 20px;
+}
+
+/* ---------------------------
+ÁREA LADO DIREITO (Formulario)
+Inicio
+----------------------------- */
+
+/* section__suporte box */
+.section__suporte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    /* background-color: pink; */
+}
+
+/* section__suporte titulo */
+.suporte__titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    /* background-color: red; */
+}
+
+/* section__suporte subtitulo */
+.suporte__subtitulo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    /* background-color: blue; */
+}
+
+/* box formulario */
+.suporte__box__formulario {
+    height: 75%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+/* box content formulario */
+.suporte__content__formulario {
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: blue; */
+}
+
+/* grupo de inputs */
+.suporte__input__group {
+    display: flex;
+    flex-direction: column;
+    height: 17%;
+    width: 90%;
+    /* background-color: orange; */
+}
+
+/* grupo do textarea */
+.suporte__textarea__group {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 90%;
+    /* background-color: orange; */
+}
+
+/* label do input & textarea */
+.suporte__input__group label, .suporte__textarea__group label {
+    font-size: 1.2rem;
+}
+
+/* campo (input) do formulario */
+.suporte__input__group input {
+    height: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-right: 1px solid rgba(44, 44, 44, 0.646);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.646);
+}
+
+/* campo (textarea) do formulario */
+.suporte__textarea__group textarea {
+    height: 100%;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-right: 1px solid rgba(44, 44, 44, 0.646);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.646);
+}
+
+/* botao de enviar */
+.botao__enviar {
+    padding: 10px 100px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border: none;
+    background-color: #162868;
+    color: white;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+/* botao de enviar */
+.botao__enviar:hover {
+    box-shadow: 3px 3px 13px rgb(255, 44, 79);
+}
+
+/* section divisao */
+.section__divisao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* linhas de separação */
+.linha {
+    width: 1px;
+    height: 200px;
+    background-color: rgb(162, 162, 162);
+}
+
+/* section contatos */
+.section__contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    /* background-color: red; */
+}
+
+/* contatos titulo */
+.contatos__titulo {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.section__box__contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    /* background-color: red; */
+}
+
+/* contatos div */
+.contato__email, .contato__telefone, .contato__localizacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: blue; */
+}
+
+.contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    /* background-color: red; */
+}
+
+.faleconosco__botao__voltar {
+    position: absolute;
+    top: 39.5vw;
+    left: 11vw;
+}
+
+.faleconosco__botao__voltar img {
+    width: 40px;
+    height: 40px;
+}
+
+.faleconosco__bola1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
+    /* background-color: red; */
+}
+
+.faleconosco__bola2 {
+    position: absolute;
+    top: 29.75vw;
+    right: 0;
+    z-index: -100;
+    /* background-color: red; */
+}
+
+.faleconosco__bola3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    /* background-color: red; */
+}
+
+@media (max-width: 576px) {
+
+    .body__faleconosco {
+        height: 100%;
+        width: 100vw;
+    }
+
+    .container__faleconosco {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25%;
+        margin-bottom: 10%;
+        padding: 20px 0px;
+        width: 90%;
+    }
+
+    .section__suporte {
+        padding: 10px 10px;
+        gap: 0px;
+    }
+
+    /* .suporte__titulo {
+        background-color: red;
+    } */
+
+    .suporte__subtitulo {
+        font-size: .9rem;
+        width: 100%;
+        margin-bottom: 5%;
+        /* background-color: red; */
+    }
+
+    .suporte__input__group label, .suporte__textarea__group label {
+        font-size: 1rem;
+    }
+
+    .suporte__input__group, .suporte__textarea__group {
+        width: 90%;
+    }
+
+    .suporte__input__group input, .suporte__textarea__group textarea {
+        width: 100%;
+    }
+
+    .contatos__titulo {
+        font-size: 1.2rem;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+        /* background-color: red; */
+        padding: 0 10px;
+    }
+
+    .contato__email img, .contato__telefone img, .contato__localizacao img {
+        width: 30px;
+        height: auto;
+    }
+
+    .section__divisao {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .imagem-boneco {
+        width: 50px;
+        height: auto;
+    }
+
+    .linha {
+        width: 60px;
+        height: 1px;
+        background-color: rgb(162, 162, 162);
+    }
+
+    .faleconosco__botao__voltar {
+        position: absolute;
+        top: 28vw;
+        left: 7vw;
+    }
+    
+    .faleconosco__botao__voltar img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .faleconosco__bola1 {
+        position: absolute;
+        top: 20vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola2 {
+        position: absolute;
+        top: 150vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola3 {
+        position: absolute;
+        top: 10vw;
+        left: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    .body__faleconosco {
+        height: 100%;
+        width: 100vw;
+    }
+
+    .container__faleconosco {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        padding: 20px 0px;
+        width: 90%;
+        /* height: 1500px; */
+    }
+
+    .section__suporte {
+        padding: 20px 20px;
+        gap: 0px;
+    }
+
+    .suporte__titulo {
+        font-size: 2.5rem;
+    }
+
+    .suporte__subtitulo {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: 5%;
+        /* background-color: red; */
+    }
+
+    .suporte__box__formulario {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    .suporte__input__group label, .suporte__textarea__group label {
+        font-size: 1.5rem;
+    }
+
+    .suporte__input__group, .suporte__textarea__group {
+        width: 90%;
+    }
+
+    .suporte__input__group input, .suporte__textarea__group textarea {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .contatos__titulo {
+        font-size: 1.8rem;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+        /* background-color: red; */
+        padding: 0 10px;
+    }
+
+    .contato__email img, .contato__telefone img, .contato__localizacao img {
+        width: 60px;
+        height: auto;
+    }
+
+    .section__divisao {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .imagem-boneco {
+        width: 80px;
+        height: auto;
+    }
+
+    .linha {
+        width: 130px;
+        height: 2px;
+        background-color: rgb(162, 162, 162);
+    }
+
+    .faleconosco__botao__voltar {
+        position: absolute;
+        top: 18vw;
+        left: 7vw;
+    }
+    
+    .faleconosco__botao__voltar img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .faleconosco__bola1 {
+        position: absolute;
+        top: 20vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola2 {
+        position: absolute;
+        top: 150vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola3 {
+        position: absolute;
+        top: 10vw;
+        left: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .body__faleconosco {
+        height: 100%;
+        width: 100%;
+        /* overflow-x: hidden; */
+    }
+
+    .container__faleconosco {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        padding: 20px 0px;
+        width: 90%;
+        /* height: 1500px; */
+    }
+
+    .section__suporte {
+        padding: 20px 20px;
+        gap: 0px;
+    }
+
+    .suporte__titulo {
+        font-size: 2.5rem;
+    }
+
+    .suporte__subtitulo {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: 5%;
+        /* background-color: red; */
+    }
+
+    .suporte__box__formulario {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    .suporte__input__group label, .suporte__textarea__group label {
+        font-size: 1.5rem;
+    }
+
+    .suporte__input__group, .suporte__textarea__group {
+        width: 90%;
+    }
+
+    .suporte__input__group input, .suporte__textarea__group textarea {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .contatos__titulo {
+        font-size: 1.8rem;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+        /* background-color: red; */
+        padding: 0 10px;
+    }
+
+    .contato__email img, .contato__telefone img, .contato__localizacao img {
+        width: 60px;
+        height: auto;
+    }
+
+    .section__divisao {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .imagem-boneco {
+        width: 80px;
+        height: auto;
+    }
+
+    .linha {
+        width: 130px;
+        height: 2px;
+        background-color: rgb(162, 162, 162);
+    }
+
+    .faleconosco__botao__voltar {
+        position: absolute;
+        top: 18vw;
+        left: 7vw;
+    }
+    
+    .faleconosco__botao__voltar img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .faleconosco__bola1 {
+        position: absolute;
+        top: 20vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola2 {
+        position: absolute;
+        top: 150vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola3 {
+        position: absolute;
+        top: 10vw;
+        left: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    .body__faleconosco {
+        height: 100%;
+        width: 100%;
+        /* overflow-x: hidden; */
+        /* background-color: red; */
+    }
+
+    .container__faleconosco {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
+        margin-bottom: 10%;
+        padding: 20px 0px;
+        width: 90%;
+        /* height: 1500px; */
+    }
+
+    .section__suporte {
+        padding: 20px 20px;
+        gap: 0px;
+    }
+
+    .suporte__titulo {
+        font-size: 3rem;
+    }
+
+    .suporte__subtitulo {
+        font-size: 2rem;
+        width: 100%;
+        margin-bottom: 5%;
+        /* background-color: red; */
+    }
+
+    .suporte__box__formulario {
+        height: 700px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    .suporte__content__formulario {
+        display: flex;
+        gap: 50px;
+    }
+
+    .suporte__input__group label, .suporte__textarea__group label {
+        font-size: 2rem;
+    }
+
+    .botao__enviar {
+        padding: 20px 100px;
+        font-size: 1.5rem;
+    }
+
+    .suporte__input__group, .suporte__textarea__group {
+        width: 90%;
+    }
+
+    .suporte__input__group input, .suporte__textarea__group textarea {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
+    .contatos__titulo {
+        font-size: 2rem;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+        /* background-color: red; */
+        padding: 0 10px;
+    }
+
+    .contato__email img, .contato__telefone img, .contato__localizacao img {
+        width: 60px;
+        height: auto;
+    }
+
+    .section__divisao {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .imagem-boneco {
+        width: 80px;
+        height: auto;
+    }
+
+    .linha {
+        width: 130px;
+        height: 2px;
+        background-color: rgb(162, 162, 162);
+    }
+
+    .faleconosco__botao__voltar {
+        position: absolute;
+        top: 18vw;
+        left: 7vw;
+    }
+    
+    .faleconosco__botao__voltar img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .faleconosco__bola1 {
+        position: absolute;
+        top: 20vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola2 {
+        position: absolute;
+        top: 150vw;
+        right: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        /* background-color: red; */
+    }
+    
+    .faleconosco__bola3 {
+        position: absolute;
+        top: 10vw;
+        left: 0;
+        z-index: -100;
+        width: 80px;
+        height: 80px;
+        /* background-color: red; */
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1280px) {
+    
+    .container__faleconosco {
+        margin-top: 10%;
+    }
+
+    .contatos__titulo {
+        font-size: 1.3rem;
+    }
+
+    .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+        font-size: 1.2rem;
+    }
+
+    .faleconosco__botao__voltar {
+        position: absolute;
+        top: 56vw;
+    }
+
+    .faleconosco__bola1 {
+        width: 130px;
+        height: auto;
+    }
+
+    .faleconosco__bola2 {
+        width: 120px;
+        height: auto;
+        position: absolute;
+        top: 53.7vw;
+    }
+    
+    .faleconosco__bola3 {
+        width: 130px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .container__faleconosco {
+        margin-top: 7.5%;
+    }
+
+    .suporte__titulo {
+        font-size: 1.5rem;
+    }
+
+    .suporte__subtitulo {
+        font-size: .8rem;
+        width: 70%;
+    }
+
+    .suporte__input__group {
+        /* background-color: red; */
+        height: 18%;
+    }
+
+    .suporte__content__formulario label {
+        font-size: .8rem;
+    }
+
+    .suporte__content__formulario input {
+        height: 100%;
+        font-size: .8rem;
+        /* background-color: red; */
+    }
+
+    .botao__enviar {
+        padding: 7px 80px;
+        font-size: 1rem;
+    }
+
+    .linha {
+        height: 120px;
+    }
+
+    .imagem-boneco {
+        width: 40px;
+        height: auto;
+    }
+
+    .contatos__titulo {
+        font-size: 1.3rem;
+    }
+
+    .contato__email h1, .contato__telefone h1, .contato__localizacao h1 {
+        font-size: 1rem;
+    }
+
+    .contato__email img, .contato__telefone img, .contato__localizacao img {
+        width: 40px;
+        height: auto;
+    }
+
+    .faleconosco__botao__voltar {
+        top: 41vw;
+    }
+
+    .faleconosco__botao__voltar img {
+        width: 30px;
+        height: auto;
+    }
+
+    .faleconosco__bola1 {
+        width: 140px;
+        height: auto;
+    }
+
+    .faleconosco__bola3 {
+        width: 120px;
+        height: auto;
+        position: absolute;
+        top: 5vw;
+    }
+
+    .faleconosco__bola2 {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        top: 34.9vw;
+    }
+}
