@@ -11,7 +11,7 @@
 .body__faleconosco {
     height: 100vh;
     display: flex;
-    background-color: #fcfcfc;
+    background-color: #e1e1e1;
 }
 
 /* container principal */
@@ -211,8 +211,14 @@ Inicio
     font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
-    width: 70%;
+    width: 60%;
+    color: #333;
     /* background-color: red; */
+}
+
+a {
+    color: #333;
+    text-decoration: none;
 }
 
 .faleconosco__botao__voltar {
