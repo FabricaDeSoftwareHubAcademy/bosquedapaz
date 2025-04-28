@@ -90,10 +90,10 @@
                     <div class="modal-content">
                         <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
                         <h1 class="titulo">Cadastrar Categoria</h1>
-                        <form id="form_categoria" action="" method="post">
+                        <form id="form_categoria" action="../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
                             <div class="form-box">
                                 <h3>Nome:</h3>
-                                <input class="nome-cat" type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
+                                <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
                                 <h3>Cor:</h3>
                                 <div class="custom-select">
                                     <div class="select-selected" id="openModal">
@@ -122,7 +122,7 @@
                                         <div data-value="rgba(25, 169, 78, 0.3)">
                                             <div class="color-preview" style="background-color: rgba(25, 169, 78, 0.3);"></div> Cor 7
                                         </div>
-                                        <input id="file" type="file" style="display: none;">
+                                        <input type="hidden" name="cor" id="corInput" style="display: none;">
                                     </label>
 
                                 <!-- <div class="separacao">
@@ -135,7 +135,7 @@
 
                                     <div class="botoes">
                                         <button class="cancelar" onclick="fecharModal()">CANCELAR</button>
-                                        <button class="salvar" onclick="fecharModal()">SALVAR</button>
+                                        <button type="submit" id="btn_cadastrar_cat" class="salvar">SALVAR</button>
                                     </div>
                                 </div>
             
@@ -153,11 +153,11 @@
                                     <div class="text">
                                         <span style="color:grey">Selecione a Imagem</span>
                                     </div>
-                                    <input id="file" type="file" style="display: none;">
+                                    <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
                                 <div class="botoes">
                                     <button class="cancelar" onclick="fecharModal()">Cancelar</button>
-                                    <button class="salvar" onclick="fecharModal()">Salvar</button>
+                                    <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                             </div>
                         </form>

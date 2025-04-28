@@ -1,6 +1,5 @@
 <?php
-
-require_once('../../Models/Database.php');
+require_once __DIR__ . '/../../Models/Database.php';
     class Categoria{
         public int $id_categoria;
         public string $descricao;

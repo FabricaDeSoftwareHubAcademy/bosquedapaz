@@ -104,6 +104,7 @@
 }
 
 .custum-file-upload .icon svg {
+    cursor: pointer;
     height: 80px;
     fill: rgba(75, 85, 99, 1);
   }

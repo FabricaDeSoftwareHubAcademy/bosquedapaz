@@ -141,32 +141,43 @@
     
 
 let bot_categoria = document.querySelector('.btn-cad');
-let form_categoria = document.querySelector('#form_categoria')
+let form_categoria = document.querySelector('#form_categoria');
+let botao_cadastrar = document.querySelector('#btn_cadastrar_cat');
 
 bot_categoria.addEventListener('click', function () {
     chamaModal();
+});
 
-    const formulario_modal = document.querySelector("#form_categoria");
+botao_cadastrar.addEventListener('click', async function (event) {
+    event.preventDefault();
 
-    formulario_modal.btn_cadastrar_cat.addEventListener('click', async function (event) {
-        event.preventDefault();
+    const new_form = document.getElementById("form_categoria");
 
-        const new_form = document.getElementById("form_categoria");
+    const formData = new FormData(new_form);
 
-        const formData = new FormData(new_form);
+    let dados_php = await fetch('./actions/cadastrar_categoria.php', {
+        method: 'POST',
+        body: formData
+    });
 
-        let dados_php = await fetch('./actions/cadastrar_categoria.php', {
-            method: 'POST',
-            body: formData
-        });
+    let response = await dados_php.json();
 
-        let response = await dados_php.json();
+    console.log(response);
 
-        console.log(response);
+    if(response.status == "OK"){
+        alert("Cadastrado com sucesso");
+        fechaModal();
+    } else {
+        alert("Erro ao cadastrar!");
+    }
+});
 
-        if(response.status == "OK"){
-            alert("Cadastrado com sucesso");
-            fechaModal();
-        }
+const cores = document.querySelectorAll('.select-items div[data-value]');
+
+cores.forEach(div => {
+    div.addEventListener('click', function() {
+        const corSelecionada = this.getAttribute('data-value');
+        document.getElementById('selectedColor').style.backgroundColor = corSelecionada;
+        document.getElementById('corInput').value = corSelecionada;
     });
 });

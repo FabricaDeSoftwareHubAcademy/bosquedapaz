@@ -3,11 +3,18 @@
 class Database {
     //atributos do database
     private $conn;
-    private string $local = "127.0.0.1";
-    private string $db = "bosquedapaz";
-    private string $user = "root";
-    private string $password = "";
+    // private string $local = "127.0.0.1";
+    // private string $db = "bosquedapaz";
+    // private string $user = "root";
+    // private string $password = "";
+    // private string $table;
+
+    private String $local="localhost";
+    private string $db="bosquedapaz";
+    private string $user="root";
+    private string $password="4321";
     private string $table;
+
 
     // metodo construtor que íncia chamando o médoto de conexão com o db 
     function __construct($table = null){
