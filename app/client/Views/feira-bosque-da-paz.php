@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-feira-bosque-da-paz.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-proximos-eventos.css">
 </head>
 <!-- inicio body -->
 <body class="home" id="corpo">
@@ -33,7 +34,8 @@
     <?php include "../../../Public/assets/home/rodape.html"; ?> 
 
     <script src="../../../Public/js/js-home/main.js" defer></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
+    <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 </body>
 </html>
 

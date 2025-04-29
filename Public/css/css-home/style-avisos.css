@@ -69,6 +69,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 20px 0px;
     padding-top: 40px;
 }
@@ -115,8 +116,8 @@
 
 
 .card-eventos {
-    width: 250px;
-    height: 320px;
+    width: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +135,13 @@
 
 .img-card-evento {
     width: 100%;
+    max-height: 230px;
     border-radius: .5rem;
+}
+
+.descricao-atracao {
+    height: 150px;
+    overflow-y: auto;
 }
 
 .content-info-card-event {
@@ -208,10 +215,16 @@
     border-color: #007E70;
 }
 
+.data-card {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 .descricao-card {
-    height: 100px;
+    height: 150px;
     overflow-y: auto;
 }
+
 
 .btn-card-ulti {
     border-color: #007E70;
@@ -293,4 +306,77 @@
 
 .link-mais-event {
     color: white;
+}
+
+
+@media screen and (max-width: 1450px) {
+    .prox-evento {
+        padding-bottom: 120px;
+    }
+
+    .content-prox-evento {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .content-img-evento {
+        width: 100%;
+    }
+
+    .content-atracoes-evento {
+        width: 100%;
+    }
+    .content-card-ulti {
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .prox-evento {
+        padding-bottom: 50px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 98%);
+    }
+
+    .para-avisos-eventos {
+        font-size: 1rem;
+    }
+
+    .img-banner-event {
+        width: 300px;
+    }
+
+    .content-img-evento {
+        width: 90%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-info-prox-event {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .content-card-atracoes {
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .eventos-passados {
+        clip-path: polygon(0 0, 98% 2%, 100% 100%, 0% 100%);
+    }
+
+    .btn-ver-mais {
+        font-size: 1.2rem;
+    }
+    
+    .btn-ver-mais:hover {
+        font-size: 1.3rem;
+    }
 }

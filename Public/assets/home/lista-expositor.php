@@ -212,6 +212,6 @@
             </div>
         </div>
     </section>
-<script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
+
 <!-- fim seja expositor -->
 
