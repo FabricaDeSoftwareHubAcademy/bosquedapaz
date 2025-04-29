@@ -87,14 +87,14 @@
                             <td>14/04/2025</td>
                             <td>ref001</td>
                             <td>R$ 250,00</td>
-                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
                         </tr>
                         <tr>
                             <td>Rafaela Silva Andrade</td>
                             <td>17/04/2025</td>
                             <td>ref001</td>
                             <td>R$ 250,00</td>
-                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
                         </tr>
                         <tr>
                             <td>Mariana Cavalcante Dias</td>
@@ -115,7 +115,7 @@
                             <td>24/04/2025</td>
                             <td>ref001</td>
                             <td>R$ 250,00</td>
-                            <td><button class="boleto-botao-pendente">Pago</button></td>
+                            <td><button class="boleto-botao-pendente">Pendente</button></td>
                         </tr>
                         <tr>
                             <td>Ademar Santos Severino</td>
@@ -143,7 +143,7 @@
     </div>
 
     <a href="Area-adm.php" class="boleto-seta-voltar">
-        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+        <img src="../../../Public/imgs/imgs-fale-conosco/faleconosco-voltar.png" class="btn-voltar">
     </a>
 
 </body>

@@ -298,14 +298,14 @@
 
 .boleto-seta-voltar {
     position: absolute;
-    top: 88vh;
-    left: 3.5vw;
+    top: 90vh;
+    left: 4vw;
     z-index: 2;
     cursor: pointer;
 }
 
 .boleto-seta-voltar img {
-    width: 60px;
+    width: 45px;
     height: auto;
 }
 
@@ -537,7 +537,7 @@
     }
     
     .boleto-seta-voltar img {
-        width: 35px;
+        width: 20px;
         height: auto;
     }
 } /* Celulares */
