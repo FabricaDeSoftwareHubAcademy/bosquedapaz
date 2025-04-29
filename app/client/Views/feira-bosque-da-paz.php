@@ -26,7 +26,11 @@
 
     <?php include "../../../Public/assets/home/avisos.html"; ?>
     
-    </main>
+
+    <?php include "../../../Public/assets/home/mapa.html"; ?>
+    <?php include "../../../Public/assets/home/parceiros.html"; ?>
+
+    <?php include "../../../Public/assets/home/rodape.html"; ?> 
 
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
@@ -38,10 +42,7 @@
 
 
 
-<!-- <?php //include "../../../Public/assets/home/mapa.html"; ?> -->
-<!-- <?php //include "../../../Public/assets/home/parceiros.html"; ?> -->
 
-<!-- <?php //include "../../../Public/assets/home/rodape.html"; ?>  -->
 
 <!-- 
 <script src="../../../Public/js/js-home/carrossel.js" defer></script>

@@ -6,6 +6,9 @@
 @import url('style-expositor.css');
 @import url('style-categorias.css');
 @import url('style-avisos.css');
+@import url('style-mapa.css');
+@import url('style-parceiros-home.css');
+@import url('style-rodape.css');
 
 * {
     margin: 0;
