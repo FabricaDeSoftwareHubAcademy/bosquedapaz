@@ -155,12 +155,12 @@ body{
     height: 100%;
     padding: 35px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     gap: 25px;
 }
-
 .abrir-mais{
     border: none;
     border-radius: .3rem;
@@ -232,7 +232,9 @@ dialog::backdrop{
     .Botoes-gabriel{
         border-radius: 10px;
     }
-
+    .modais{
+        flex-direction: column;
+    }
 }
 
 @media (max-width:768px) and (min-height:1024px){
