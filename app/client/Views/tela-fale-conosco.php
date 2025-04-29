@@ -74,6 +74,7 @@
         <img src="../../../Public/imgs/imgs-fale-conosco/faleconosco-decoracao2.png" alt="" class="faleconosco__bola2">
         <img src="../../../Public/imgs/imgs-fale-conosco/faleconosco-decoracao3.png" alt="" class="faleconosco__bola3">
     </div>
-</body>
 
+    <script src="../../../Public/js/js-home/main.js"></script>
+</body>
 </html>
