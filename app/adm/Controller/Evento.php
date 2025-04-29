@@ -7,8 +7,7 @@ class Evento
     protected $nome_evento;
     protected $descricao;
     protected $data_evento;
-    protected $banner;
-    protected $status;
+    // protected $banner;
 
     public function getNome()
     {
@@ -25,10 +24,10 @@ class Evento
         return $this->data_evento;
     }
 
-    public function getBanner()
-    {
-        return $this->banner;
-    }
+    // public function getBanner()
+    // {
+    //     return $this->banner;
+    // }
     
 
     public function setNome($nome_evento){
@@ -43,14 +42,14 @@ class Evento
         $this->data = $data;
     }
 
-    public function setBanner($banner){
-        $this->banner = $banner;
-    }
+    // public function setBanner($banner){
+    //     $this->banner = $banner;
+    // }
 
     public function cadastrar()
     {
 
-        $db = new Database('pessoa');
+        $db = new Database('evento');
         $pes_id = $db->insert_lastid(
             [
                 'nome' => $this->nome,
