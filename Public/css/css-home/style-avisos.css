@@ -31,6 +31,20 @@
     height: 250px;
 }
 
+.descricao-banner-evento::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+}
+
+.descricao-banner-evento::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+.descricao-banner-evento::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
+}
+
 .title-atracoes-evento {
     color: white;
 }
@@ -46,7 +60,7 @@
 /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%); */
 
 .prox-evento {
-    min-height: 700px;
+    min-height: 750px;
     background-color: #4A8AF1;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
     display: flex;
@@ -77,7 +91,6 @@
 .content-prox-evento {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .content-img-evento {
@@ -110,18 +123,19 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 
 
 .card-eventos {
-    width: 300px;
-    height: auto;
     display: flex;
-    flex-direction: column;
+    flex: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     padding: 10px;
     border: 2px solid #FEB850;
     border-radius: .5rem;
@@ -135,13 +149,27 @@
 
 .img-card-evento {
     width: 100%;
-    max-height: 230px;
+    max-width: 450px;
     border-radius: .5rem;
 }
 
 .descricao-atracao {
     height: 150px;
     overflow-y: auto;
+}
+
+.descricao-atracao::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+}
+
+.descricao-atracao::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+.descricao-atracao::-webkit-scrollbar-thumb {
+    background-color: #636363;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
 }
 
 .content-info-card-event {
@@ -178,7 +206,7 @@
 
 .ulti-publica {
     width: 100%;
-    min-height: 700px;
+    min-height: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,7 +235,7 @@
     flex: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .card-ulti {
@@ -223,6 +251,20 @@
 .descricao-card {
     height: 150px;
     overflow-y: auto;
+}
+
+.descricao-card::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+}
+
+.descricao-card::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+.descricao-card::-webkit-scrollbar-thumb {
+    background-color: #636363;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
 }
 
 
@@ -310,13 +352,24 @@
 
 
 @media screen and (max-width: 1450px) {
+    
     .prox-evento {
-        padding-bottom: 120px;
+        padding-bottom: 100px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 95%);
+    }
+    
+    .eventos-passados {
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+    }
+    
+    
+    .content-prox-evento {
+            flex-direction: column;
+            gap: 20px;
     }
 
-    .content-prox-evento {
-        flex-wrap: wrap;
-        gap: 20px;
+    .content-card-atracoes {
+        gap: 10px;
     }
 
     .content-img-evento {
@@ -328,9 +381,36 @@
     }
     .content-card-ulti {
         gap: 20px;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .eventos-passados {
+        padding-top: 50px;
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+    }
+    .content-card-atracoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-eventos {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .img-card-evento {
+        width: 50%;
+    }
+
+    .content-card-ulti {
+        flex-direction: column;
+    }
+
+    .descricao-atracao {
+        height: 170px;
     }
 }
 
@@ -368,15 +448,24 @@
         justify-content: center;
     }
 
+    .card-eventos {
+        flex-direction: column;
+    }
+
+    .img-card-evento {
+        width: 85%;
+    }
+
     .eventos-passados {
-        clip-path: polygon(0 0, 98% 2%, 100% 100%, 0% 100%);
+        padding: 0px;
+        clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
     }
 
     .btn-ver-mais {
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
     
     .btn-ver-mais:hover {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 }

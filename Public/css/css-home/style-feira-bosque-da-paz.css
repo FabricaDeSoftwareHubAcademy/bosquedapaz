@@ -11,6 +11,20 @@
 @import url('style-rodape.css');
 @import url('style-modal-atracoes.css');
 
+:root {
+    --color-rua1: #ffde5a;
+    --color-rua2: #EC6627;
+    --color-rua3: #5EBB50;
+    --color-rua4: #8D55F2;
+    --color-rua5: #38B6FC;
+    --color-rua6: #959499;
+    --color-rua7: #A5569F;
+    --color-rua8: #E5AD95;
+    --color-rua9: #EE71CA;
+    --color-rua10: #010101;
+    --color-rua11: #EB2123;
+}
+
 * {
     margin: 0;
     padding: 0;

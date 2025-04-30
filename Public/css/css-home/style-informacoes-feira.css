@@ -71,6 +71,9 @@
 }
 
 @media screen and (max-width: 550px) {
+    .informacoes-feira {
+        padding: 0px;
+    }
     .icon-info{
         width: 80px;
     }

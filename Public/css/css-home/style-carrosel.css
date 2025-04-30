@@ -89,10 +89,27 @@
 
 @media screen and (max-width: 550px) {
     .carrossel {
-        height: 38vh;
+        height: 50vh;
+    }
+
+    .conteiner-slider {
+        height: calc(95% - 70px);
+    }
+
+    .slider-balls {
+        height: 5%;
+    }
+
+    .ball {
+        width: 10%;
     }
 
     .arrow {
         font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .carrossel {
+        height: 38vh;
     }
 }

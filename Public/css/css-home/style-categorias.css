@@ -93,6 +93,14 @@
 }
 
 @media screen and (max-width: 550px){
+    .bar-title-categoria {
+        height: 300px;
+    }
+
+    .para-title-cat {
+        font-size: 1.1rem;
+    }
+
     .categorias {
         padding: 5px;
         gap: 20px;

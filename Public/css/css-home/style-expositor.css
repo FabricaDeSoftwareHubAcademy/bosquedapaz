@@ -122,6 +122,11 @@
     gap: 50px;
 }
 
+.content-card-expo {
+    width: 245px;
+    height: 435px;
+}
+
 .card-per-expo {
     background-color: #7CC4BF;
     width: 230px;
@@ -138,7 +143,7 @@
 }
 
 .card-per-expo:hover {
-    margin-top: -15px;
+    margin-top: -10px;
 }
 
 .head-card {
@@ -168,7 +173,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 15px;
-    padding: 0px 15px 10px 15px;
     height: 70%;
     position: absolute;
     top: 130px;
@@ -191,7 +195,7 @@
 }
 
 .detalhes-expo {
-    width: 95%;
+    width: 100%;
     padding: 5px;
     border-top: 1px solid rgba(0, 0, 0, 0.237);
     border-bottom: 1px solid rgba(0, 0, 0, 0.237);
@@ -219,32 +223,29 @@
     align-items: center;
     justify-content: space-around;
     color: #575757;
+    text-transform: capitalize;
 }
 
 .span-color {
     font-weight: 500;
     padding: 2px 5px;
-    color: black;
+    color: white;
     border-radius: .5rem;
 }
 
-.color-amarela {
-    color: #494949;
+.amarela {
     background-color: var(--color-rua1);
 }
 
-.color-verde {
-    color: #494949;
+.verde {
     background-color: var(--color-rua3);
 }
 
-.color-roxo {
-    color: #494949;
+.roxo {
     background-color: var(--color-rua4);
 }
 
-.color-laranja {
-    color: #494949;
+.laranja {
     background-color: var(--color-rua2);
 }
 
@@ -284,6 +285,14 @@
 }
 
 @media screen and (max-width: 550px) {
+    .bar-title-expositor {
+        height: 300px;
+    }
+
+    .link-seja-exposior {
+        font-size: 1rem;
+    }
+    
     .conteiner-title-expo {
         width: 90%;
         align-items: center;
