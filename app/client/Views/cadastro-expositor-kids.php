@@ -135,7 +135,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
             </form>
 
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="escolher-cadastro.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
