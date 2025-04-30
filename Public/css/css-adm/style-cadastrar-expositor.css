@@ -341,7 +341,7 @@ label#salvar-btn {
     }
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .bolas-fundo {
         display: none;
     }
@@ -350,7 +350,7 @@ label#salvar-btn {
         flex-direction: column;
     }
 
-    .form-pessoa{
+    /* .form-pessoa{
         left: -30%;
     }
 
@@ -394,7 +394,7 @@ label#salvar-btn {
 
     .voltar {
         left: -50%;
-    }
+    } */
 }
 
 @media (min-width: 992px) {
@@ -664,10 +664,13 @@ label#salvar-btn {
         text-transform: uppercase;
         font-weight: 600;
     }
-} */
+} 
+
 
 @media (width: 1024px) and (height: 600px) {}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    
+}
 
 @media (min-width: 1400px) {}
