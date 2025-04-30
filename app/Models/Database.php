@@ -9,10 +9,10 @@ class Database {
     // private string $password = "";
     // private string $table;
 
-    private String $local="localhost";
+    private String $local="10.28.1.149";
     private string $db="bosquedapaz";
-    private string $user="root";
-    private string $password="4321";
+    private string $user="devweb";
+    private string $password="suporte@22";
     private string $table;
 
 

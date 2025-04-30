@@ -205,6 +205,10 @@
     margin-bottom: 30px;
 }
 
+.select-items.show {
+    display: block;
+}
+
 .select-items div {
     padding: 10px;
     cursor: pointer;

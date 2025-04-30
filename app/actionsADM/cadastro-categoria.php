@@ -1,16 +1,23 @@
 <?php
 require_once "../../app/adm/Controller/Categoria.php";
 
+// Define o cabeçalho como JSON
+header('Content-Type: application/json');
+
 if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone'])) {
     $descricao = $_POST['descricao'];
     $cor = $_POST['cor'];
     $arquivo = $_FILES['icone'];
 
     if ($arquivo['error']) {
-        die("Falha ao enviar arquivo");
+        echo json_encode([
+            'status' => 'Error',
+            'message' => 'Falha ao enviar arquivo'
+        ]);
+        exit;
     }
 
-    $pasta = './uploads-categoria/';
+    $pasta = '../../Public/imgs/uploads-categoria/'; //colocar caminho img
 
     if (!is_dir($pasta)) {
         mkdir($pasta, 0777, true);
@@ -21,7 +28,11 @@ if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone']
     $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
     if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif'])) {
-        die("Extensão do arquivo inválida");
+        echo json_encode([
+            'status' => 'Error',
+            'message' => 'Extensão do arquivo inválida'
+        ]);
+        exit;
     }
 
     $caminho = $pasta . $novo_nome . '.' . $extensao;
@@ -35,18 +46,25 @@ if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone']
         $res = $cat->cadastrar();
 
         if ($res) {
-            $response = array('status' => 'OK');
-            echo json_encode($response);
+            echo json_encode([
+                'status' => 'OK',
+                'message' => 'Categoria cadastrada com sucesso!'
+            ]);
         } else {
-            $response = array('status' => 'Error', 'message' => 'Erro ao cadastrar a categoria');
-            echo json_encode($response);
+            echo json_encode([
+                'status' => 'Error',
+                'message' => 'Erro ao cadastrar a categoria'
+            ]);
         }
     } else {
-        $response = array('status' => 'Error', 'message' => 'Falha ao mover o arquivo para o diretório');
-        echo json_encode($response);
+        echo json_encode([
+            'status' => 'Error',
+            'message' => 'Falha ao mover o arquivo para o diretório'
+        ]);
     }
 } else {
-    $response = array('status' => 'Error', 'message' => 'Dados do formulário inválidos');
-    echo json_encode($response);
+    echo json_encode([
+        'status' => 'Error',
+        'message' => 'Dados do formulário inválidos'
+    ]);
 }
-?>
