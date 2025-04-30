@@ -62,9 +62,63 @@ if(isset($_POST['cadastrar'])){
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <div class="container_box">
-        <div class="container_img"></div>
-        <div class="container_form"></div>
-    </div>
+        <div class="container_img">
+            <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
+            <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+        </div>
 
+        <div class="div__linha_decorativa"></div>
+
+        <div class="container_form">
+            <h1>Cadastro ADM</h1>
+            
+            <form class="form__cadastro" method="POST" enctype="multipart/form-data">
+                <div class="form__group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="tel">Telefone</label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+
+                <div class="form__group">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" id="cargo" name="cargo" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="confSenha">Confirmar Senha</label>
+                    <input type="password" id="confSenha" name="confSenha" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="imagem">Foto de Perfil</label>
+                    <input type="file" id="imagem" name="imagem" accept=".png, .jpg" required>
+                </div>
+
+                <div class="form__actions">
+                    <button type="submit" name="cadastrar" class="btn">Cadastrar</button>
+                    <button type="submit" name="cancelar" class="btn">Cadastrar</button>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
+    <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
+    <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
 </body>
 </html>

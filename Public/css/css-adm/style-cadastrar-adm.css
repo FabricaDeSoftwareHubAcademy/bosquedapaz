@@ -9,8 +9,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Colors Variaveis */
 :root{
-    --color-box: #f4f4f4a2;
+    --color-box-principal: #f4f4f4a2;
+    --color-box-hover: #f0f0f013;
 
     --color-box-shadow-input: #9d9fa1;
 
@@ -18,6 +20,7 @@
     --color-azul: #162868;
 }
 
+/* Corpo da Página */
 .body_main{
     height: 100vh;
 }
@@ -32,13 +35,152 @@
     justify-content: center;
     margin-top: 2%;
     border-radius: 10px;
-    background-color: var(--color-box);
+    backdrop-filter: blur(0px);
+    transition: all .5s ease-in-out;
+    background-color: var(--color-box-principal);
     z-index: 2;
 }
 
-/* Lado Esquerdo: Buttons, Lado Direito: Imagem */
+.container_box:hover{
+    background-color: var(--color-box-hover);
+    backdrop-filter: blur(30px);
+}
+
+/* Lado Esquerdo: Imagem, Lado Direito: Form */
 .container_img, .container_form{
     flex: 1;
     padding: 20px 20px;
+}
+
+/* Lado Esquerdo: Imagem */
+.container_img{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container_img img{
+    width: 70%;
+    height: auto;
+}
+
+/* Seta Voltar */
+.seta__voltar{
+    position: relative;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    top: 20%;
+    right: 45%;
+}
+
+/* Linha Decorativa Centro da Box */
+.div__linha_decorativa{
+    width: 1px;
+    height: 80%;
+    background-color: var(--color-rosa);
+}
+
+/* Lado Direito: Form */
+.container_form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: cornsilk;
+}
+
+.container_form h1{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form__cadastro{
+    width: 80%;
+    height: 90%;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.form__group{
+    width: 80%;
+    height: 20%;
+    background-color: #FF3877;
+}
+
+
+
+/* Imagens Decorativas */
+.imgs__dec1{
+    position: fixed;
+    top: 15vh;
+    left: 0;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec2{
+    position: fixed;
+    top: 20vh;
+    right: -12vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec3{
+    position: fixed;
+    bottom: -1vh;
+    right: -10vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec3 img{
+    width: 60%;
+    height: auto;
+}
+
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+
+}
+
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    
+}
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+}
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+   
+}
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    
+}
+
+/* Nest Hub */
+@media (min-width: 1024px) and (max-height: 600px){
+    
 }
 
