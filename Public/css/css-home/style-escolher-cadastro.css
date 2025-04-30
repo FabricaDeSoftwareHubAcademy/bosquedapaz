@@ -19,7 +19,7 @@
 }
 
 /* Corpo da Tela */
-.body_main{
+.body__main{
     height: 100vh;
     display: flex;
 }

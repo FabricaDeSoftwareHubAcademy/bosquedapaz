@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <!-- Corpo da Tela -->
-<body class="body_main">
+<body class="body__main">
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <!-- Box Principal dos Elementos -->
