@@ -29,11 +29,11 @@
 .container_box{
     margin: 0 auto;
     width: 90%;
-    height: 80%;
+    height: 83%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 1.5%;
     border-radius: 10px;
     backdrop-filter: blur(0px);
     transition: all .5s ease-in-out;
@@ -90,7 +90,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: cornsilk;
 }
 
 .container_form h1{
@@ -98,6 +97,7 @@
     font-weight: 600;
 }
 
+/* Form */
 .form__cadastro{
     width: 80%;
     height: 95%;
@@ -106,27 +106,90 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: aqua;
 }
 
+/* Area Principal dos Elementos: Label, Div, Icon e Input */
 .form__group{
     width: 100%;
     height: 25%;
-    background-color: crimson;
+    display: flex;
+    flex-direction: column;
 }
 
+.label__cad{
+    position: relative;
+    left: 40px;
+}
+
+/* Area do Input e icon */
+.area__input {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+/* Area input2: Imagem de Perfil */
+.area__input2 {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icones */
+.area__input #icon {
+    position: absolute;
+    left: 50px;
+    font-size: 18px;
+    color: black;
+}
+
+#icon__olho{
+    position: absolute;
+    left: 39rem;
+}
+
+/* Inputs */
+.area__input .input {
+    width: 90%;
+    height: 100%;
+    padding-left: 45px;
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px var(--color-box-shadow-input);
+}
+
+/* Label do Imagem Perfil */
+.area__input2 .uploads {
+    width: 90%;
+    height: 100%;
+    padding-left: 15px;
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px var(--color-box-shadow-input);
+}
+
+/* Area dos Botões */
 .form__actions{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    background-color: rgb(51, 255, 0);
 }
 
+/* Botões */
 .btn{
-    width: 250px;
-    height: 45px;
+    width: 230px;
+    height: 40px;
     border: none;
     border-radius: 6px;
     color: white;
@@ -149,9 +212,6 @@
     background-color: var(--color-rosa);
     box-shadow: 0px 3px 2px var(--color-azul);
 }
-
-
-
 
 /* Imagens Decorativas */
 .imgs__dec1{
