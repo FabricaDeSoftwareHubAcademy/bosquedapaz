@@ -73,15 +73,10 @@ if(isset($_POST['cadastrar'])){
             <h1>Cadastro ADM</h1>
             
             <form class="form__cadastro" method="POST" enctype="multipart/form-data">
-
-            <div class="form__">
-                <label class="label-cad" for="nome">Nome</label>
-                <div class="area-input">
-                    <i class="bi bi-person"></i>
-                    <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome" required><br><br>
+                
+                <div class="form__group">
+                    
                 </div>
-            </div>
-
 
 
                 <div class="form__actions">

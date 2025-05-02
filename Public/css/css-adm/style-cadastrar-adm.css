@@ -109,10 +109,10 @@
     background-color: aqua;
 }
 
-.g{
+.form__group{
     width: 100%;
-    height: 20%;
-    background-color: cornflowerblue;
+    height: 25%;
+    background-color: crimson;
 }
 
 .form__actions{
