@@ -75,33 +75,33 @@ if(isset($_POST['cadastrar'])){
             <form class="form__cadastro" method="POST" enctype="multipart/form-data">
                 <div class="form__group">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
                 </div>
 
                 <div class="form__group">
                     <label for="tel">Telefone</label>
-                    <input type="tel" id="tel" name="tel" required>
+                    <input type="tel" id="tel" name="tel" placeholder="Digite seu Telefone" required>
                 </div>
 
                 <div class="form__group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
                 </div>
 
 
                 <div class="form__group">
                     <label for="cargo">Cargo</label>
-                    <input type="text" id="cargo" name="cargo" required>
+                    <input type="text" id="cargo" name="cargo" placeholder="Digite seu Cargo" required>
                 </div>
 
                 <div class="form__group">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required>
                 </div>
 
                 <div class="form__group">
                     <label for="confSenha">Confirmar Senha</label>
-                    <input type="password" id="confSenha" name="confSenha" required>
+                    <input type="password" id="confSenha" name="confSenha" placeholder="Confirme sua Senha" required>
                 </div>
 
                 <div class="form__group">
@@ -110,9 +110,8 @@ if(isset($_POST['cadastrar'])){
                 </div>
 
                 <div class="form__actions">
-                    <button type="submit" name="cadastrar" class="btn">Cadastrar</button>
-                    <button type="submit" name="cancelar" class="btn">Cadastrar</button>
-                    
+                    <button type="submit" name="cadastrar" class="btn btn__rosa">Cancelar</button>
+                    <button type="submit" name="cancelar" class="btn btn__azul">Cadastrar</button>
                 </div>
             </form>
         </div>
