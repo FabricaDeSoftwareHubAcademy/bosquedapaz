@@ -73,41 +73,16 @@ if(isset($_POST['cadastrar'])){
             <h1>Cadastro ADM</h1>
             
             <form class="form__cadastro" method="POST" enctype="multipart/form-data">
-                <div class="form__group">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
-                </div>
 
-                <div class="form__group">
-                    <label for="tel">Telefone</label>
-                    <input type="tel" id="tel" name="tel" placeholder="Digite seu Telefone" required>
+            <div class="form__">
+                <label class="label-cad" for="nome">Nome</label>
+                <div class="area-input">
+                    <i class="bi bi-person"></i>
+                    <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome" required><br><br>
                 </div>
-
-                <div class="form__group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
-                </div>
+            </div>
 
 
-                <div class="form__group">
-                    <label for="cargo">Cargo</label>
-                    <input type="text" id="cargo" name="cargo" placeholder="Digite seu Cargo" required>
-                </div>
-
-                <div class="form__group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required>
-                </div>
-
-                <div class="form__group">
-                    <label for="confSenha">Confirmar Senha</label>
-                    <input type="password" id="confSenha" name="confSenha" placeholder="Confirme sua Senha" required>
-                </div>
-
-                <div class="form__group">
-                    <label for="imagem">Foto de Perfil</label>
-                    <input type="file" id="imagem" name="imagem" accept=".png, .jpg" required>
-                </div>
 
                 <div class="form__actions">
                     <button type="submit" name="cadastrar" class="btn btn__rosa">Cancelar</button>
