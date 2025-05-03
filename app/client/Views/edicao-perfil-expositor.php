@@ -147,7 +147,9 @@
             </form>
         </div>
 
-        
+        <div class="img__dec1"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img1.png" alt=""></div>
+        <div class="img__dec2"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img2.png" alt=""></div>
+        <div class="img__dec3"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img3.png" alt=""></div>
 
     </main>
 </body>
