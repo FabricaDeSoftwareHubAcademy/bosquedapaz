@@ -148,26 +148,28 @@
     height: 40%;
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
 }
 
-.container__sobre h2{
+.right__side h2{
     font-size: 26px;
     font-weight: 500;
 }
 
-.container__sobre h3{
+.right__side h3{
     font-size: 22px;
     font-weight: 500;
     margin-top: 0.5rem;
 }
 
 .area__text{
-    width: 100%;
-    height: 64%;
+    width: 95%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    box-sizing: content-box;
     text-align: justify;
-    overflow-y: auto;
-    background-color: #22bc9d;
+    padding-right: 10px;
 }
 
 /* Definições da barrinha de scroll */
@@ -187,16 +189,65 @@
 
 .container__infs{
     width: 100%;
-    height: 20%;
-    background-color: aqua;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    gap: 150px;
 }
 
 .container__contacts{
     width: 100%;
     height: 30%;
-    background-color: blue;
+    display: flex;
+    gap: 30px;
 }
 
+.icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #0077ff;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.icons:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+}
+
+#insta{
+    background-color: var(--color-button1);
+}
+#zap{
+    background-color: var(--color-button2);
+}
+#face{
+    background-color: var(--color-button3);
+}
+#email{
+    background-color: var(--color-button4);
+}
+
+
+.div__cor{
+    width: 120px;
+    height: 35px;
+    background-color: var(--color-rua);
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
