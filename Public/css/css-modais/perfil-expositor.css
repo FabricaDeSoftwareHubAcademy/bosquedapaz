@@ -95,7 +95,7 @@
 }
 
 .container__h1 h1{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -150,7 +150,26 @@
     width: 100%;
     height: 10%;
     display: flex;
-    background-color: aquamarine;
+    position: relative;
+    bottom: 2rem;
+    justify-content: right;
+}
+
+.btn{
+    width: 10%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#icon-sair{
+    font-size: 30px;
+    transition: all .2s ease-in-out;
+}
+
+#icon-sair:hover{
+    color: #FF3877;
 }
 
 .container__sobre{
@@ -158,7 +177,6 @@
     height: 40%;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
 }
 
 .right__side h2{
@@ -204,7 +222,6 @@
     display: flex;
     align-items: center;
     gap: 200px;
-    background-color: blue;
 }
 
 .container__contacts{
@@ -212,7 +229,6 @@
     height: 30%;
     display: flex;
     gap: 80px;
-    background-color: blueviolet;
 }
 
 .icons {
