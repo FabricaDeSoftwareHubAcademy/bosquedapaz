@@ -140,7 +140,17 @@
 
 .right__side{
     height: 100%;
-    background-color: cornsilk;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container__buttton{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    background-color: aquamarine;
 }
 
 .container__sobre{
@@ -148,6 +158,7 @@
     height: 40%;
     display: flex;
     flex-direction: column;
+    background-color: aqua;
 }
 
 .right__side h2{
@@ -192,14 +203,16 @@
     height: 15%;
     display: flex;
     align-items: center;
-    gap: 150px;
+    gap: 200px;
+    background-color: blue;
 }
 
 .container__contacts{
     width: 100%;
     height: 30%;
     display: flex;
-    gap: 30px;
+    gap: 80px;
+    background-color: blueviolet;
 }
 
 .icons {
@@ -222,17 +235,40 @@
     background-color: transparent;
 }
 
-#insta{
-    background-color: var(--color-button1);
+#insta {
+    background-color: #FF3877;
 }
-#zap{
-    background-color: var(--color-button2);
+#insta:hover {
+    background-color: #ff387700;
+    color: #FF3877;
+    border: 2px solid #FF3877;
 }
-#face{
-    background-color: var(--color-button3);
+
+#zap {
+    background-color: #22BC9D;
 }
-#email{
-    background-color: var(--color-button4);
+#zap:hover {
+    background-color: #ff387700;
+    color: #22BC9D;
+    border: 2px solid #22BC9D;
+}
+
+#face {
+    background-color: #3B9BDC;
+}
+#face:hover {
+    background-color: #ff387700;
+    color: #3B9BDC;
+    border: 2px solid #3B9BDC;
+}
+
+#email {
+    background-color: #F4DD53;
+}
+#email:hover {
+    background-color: #ff387700;
+    color: #F4DD53;
+    border: 2px solid #F4DD53;
 }
 
 
