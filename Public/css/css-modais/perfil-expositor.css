@@ -1,3 +1,4 @@
+/* Colors Variaveis */
 :root{
     --color-box-shadow: #cbcbcb;
 
@@ -22,12 +23,14 @@
     margin: auto;
 }
 
+/* Imagem Decorativa 1 */
 .decorative__img1{
     position: absolute;
     top: 0vh;
     left: 0vw;
 }
 
+/* Imagem Decorativa 2 */
 .decorative__img2{
     position: absolute;
     bottom: -1vh;
@@ -45,18 +48,21 @@
     display: none;
 }
 
+/* Box Principal dos Elementos */
 .conteiner__box{
     width: 100%;
     height: 100%;
     display: flex;
 }
 
+/* Lado Direito e Esquerdo */
 .left__side, .right__side{
     flex: 1;
     height: 100%;
     padding: 20px 20px;
 }
 
+/* Area Logo */
 .container__logo{
     width: 100%;
     height: 40%;
@@ -86,6 +92,7 @@
     border-radius: 50%;
 }
 
+/* Area Title */
 .container__h1{
     width: 100%;
     height: 10%;
@@ -99,6 +106,7 @@
     font-weight: 500;
 }
 
+/* Area das Imagens (Produtos) */
 .container__imgs {
     width: 100%;
     height: 50%;
@@ -131,6 +139,7 @@
     object-fit: cover;
 }
 
+/* Linha decorativa */
 .decorative_line{
     width: 2px;
     height: 100%;
@@ -138,6 +147,7 @@
 
 }
 
+/* Lado Direito: Informações sobre o Expositor/Barraca */
 .right__side{
     height: 100%;
     display: flex;
@@ -146,6 +156,7 @@
     flex-direction: column;
 }
 
+/* Area Botão Sair */
 .container__buttton{
     width: 100%;
     height: 10%;
@@ -154,7 +165,7 @@
     bottom: 2rem;
     justify-content: right;
 }
-
+ /* Botão */
 .btn{
     width: 10%;
     height: 100%;
@@ -172,6 +183,7 @@
     color: #FF3877;
 }
 
+/* Area Sobre a Empresa */
 .container__sobre{
     width: 100%;
     height: 40%;
@@ -216,6 +228,7 @@
     height: 1px;
 }
 
+/* Area Informações sobre a Barraca */
 .container__infs{
     width: 100%;
     height: 15%;
@@ -224,6 +237,7 @@
     gap: 200px;
 }
 
+/* Area Contatos */
 .container__contacts{
     width: 100%;
     height: 30%;
@@ -231,6 +245,7 @@
     gap: 80px;
 }
 
+/* icones */
 .icons {
     display: inline-flex;
     align-items: center;
@@ -287,7 +302,7 @@
     border: 2px solid #F4DD53;
 }
 
-
+/* Div cor da rua */
 .div__cor{
     width: 120px;
     height: 35px;
@@ -299,6 +314,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+
+}
+
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+
+}
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+
+}
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+}
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+
+}
+
+/* Nest Hub */
+@media (min-width: 1024px) and (max-height: 600px){
+
 }
 
 
