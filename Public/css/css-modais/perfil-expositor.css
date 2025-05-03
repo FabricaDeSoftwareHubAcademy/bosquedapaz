@@ -22,6 +22,18 @@
     margin: auto;
 }
 
+.decorative__img1{
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+}
+
+.decorative__img2{
+    position: absolute;
+    bottom: -1vh;
+    right: 0vw;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -37,17 +49,12 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: aqua;
 }
 
 .left__side, .right__side{
     flex: 1;
-    padding: 20px 20px;
-}
-
-.left__side{
     height: 100%;
-    background-color: cornflowerblue;
+    padding: 20px 20px;
 }
 
 .container__logo{
@@ -92,7 +99,7 @@
     font-weight: 500;
 }
 
-.container__imgs{
+.container__imgs {
     width: 100%;
     height: 50%;
     gap: 15px;
@@ -100,28 +107,28 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    align-items: center;
-    justify-content: center;
-}
-
-.container__imgs:hover{
-    transform: scale(1.1);
 }
 
 .div__img{
     width: calc(33.33% - 10px);
     height: 160px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+    bottom: 2rem;
     transition: all .2s ease-in-out;
 }
 
-.div__img img{
+.div__img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
+}
+
+.div__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .decorative_line{
@@ -134,6 +141,45 @@
 .right__side{
     height: 100%;
     background-color: cornsilk;
+}
+
+.container__sobre{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+}
+
+.container__sobre h2{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.container__sobre h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.area__text{
+    width: 100%;
+    height: 64%;
+    text-align: justify;
+    overflow-y: auto;
+    background-color: #22bc9d;
+}
+
+.container__infs{
+    width: 100%;
+    height: 20%;
+    background-color: aqua;
+}
+
+.container__contacts{
+    width: 100%;
+    height: 30%;
+    background-color: blue;
 }
 
 
