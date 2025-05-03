@@ -15,7 +15,7 @@
     <!-- Conteúdo Principal -->
     <main class="container__main">
         <div class="box__container">
-            <form action="salvar_perfil.php" method="POST" enctype="multipart/form-data">
+            <form class="form" action="salvar_perfil.php" method="POST" enctype="multipart/form-data">
                 <!-- Lado Esquerdo -->
                 <div class="lado__esquerdo">
                     <!-- Upload da Logo -->
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="text__produtos">
-                        <h1>Produtos</h1>
+                        <h2>Produtos</h2>
                     </div>
 
                     <!-- Upload de Fotos dos Produtos -->
@@ -68,9 +68,10 @@
                     </div>
                 </div>
 
+                <div class="linha"></div>
+
                 <!-- Lado Direito -->
                 <div class="lado__direito">
-
                     <!-- Título -->
                     <header class="area__h1">
                         <h1>Edição Perfil Expositor</h1>
@@ -101,9 +102,8 @@
 
                     <!-- Contatos -->
                     <div class="area__inf__corR">
+                        <h3 class="h3__infs__pessoais">Informações de Contato</h3>
                         <div class="area__total__form">
-                            <h3 class="h3__infs__pessoais">Informações de Contato</h3>
-
                             <div class="area__inputs">
                                 <label for="insta">Link Instagram:</label>
                                 <div class="input__container">
