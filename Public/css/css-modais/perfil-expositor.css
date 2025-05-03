@@ -1,3 +1,16 @@
+:root{
+    --color-box-shadow: #cbcbcb;
+
+    --color-linha: #e0e0e0;
+
+    --color-button1: #ff3877;
+    --color-button2: #22bc9d;
+    --color-button3: #3b9bdc;
+    --color-button4: #f4dd53;
+
+    --color-rua: #5cb74a;
+}
+
 /* Modal: */
 .m-per-expo {
     width: 80%;
@@ -20,1117 +33,110 @@
     display: none;
 }
 
-/* Area Principal do Modal: */
-.box-principal {
+.conteiner__box{
     width: 100%;
     height: 100%;
-    background-color: white;
-    margin: auto;
     display: flex;
-    align-items: flex-start;
-    border-radius: 10px;
-    z-index: 4;
+    background-color: aqua;
 }
 
-.linha {
-    width: 2px;
+.left__side, .right__side{
+    flex: 1;
+    padding: 20px 20px;
+}
+
+.left__side{
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.177);
-    position: relative;
-    left: 49%;
+    background-color: cornflowerblue;
 }
 
-.div-button{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 91rem;
-}
-
-.btn{
+.container__logo{
     width: 100%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#icon-sair{
-    font-size: 25px;
-    transition: all .2s ease-in-out;
-}
-
-#icon-sair:hover{
-    color: #FF3877;
-}
-
-/* Imagens decorativas do Modal */
-.img-decoracao1 {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    z-index: 1;
-    border-radius: 6px;
-}
-
-.img-decoracao2 {
-    position: absolute;
-    top: 78%;
-    left: 61%;
-    z-index: 1;
-    border-radius: 10px;
-}
-
-.img-decoracao2 img {
-    width: 100%;
-    height: auto;
-}
-
-/* Lado Esquerdo: Logo e Imagens */
-.lado-esquerdo {
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0, 0, 255, 0);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-/* Area da Logo: */
-.area-logo {
-    width: 100%;
-    height: 50%;
-    background-color: rgba(0, 255, 255, 0);
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
-.div-logo {
+.div__logo{
     width: 250px;
     height: 250px;
-    background-color: rgba(255, 255, 255, 0);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 50px;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.622);
+    background-color: white;
+    box-shadow: 0px 0px 15px var(--color-box-shadow);
     transition: all .2s ease-in-out;
-    margin-top: 1.5rem;
 }
 
-.div-logo:hover {
+.div__logo:hover{
     transform: scale(1.1);
 }
 
-.div-logo img {
+.div__logo img{
     width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 50%;
 }
 
-
-/* Mini Galeria de Imagens: */
-.galeria-imagens {
+.container__h1{
     width: 100%;
-    height: 60%;
-    background-color: rgba(100, 148, 237, 0);
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+.container__h1 h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.container__imgs{
+    width: 100%;
+    height: 50%;
     gap: 15px;
     padding: 50px;
-    position: relative;
-}
-
-.div-h1 {
-    width: 100%;
-    height: 5%;
-    background-color: rgba(255, 255, 255, 0);
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
     align-items: center;
     justify-content: center;
 }
 
-.div-h1 h1 {
-    font-weight: 400;
-    font-size: 38px;
-    position: relative;
-    top: 1.5rem;
+.container__imgs:hover{
+    transform: scale(1.1);
 }
 
-.div-img {
+.div__img{
     width: calc(33.33% - 10px);
     height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: all .2s ease-in-out;
     border-radius: 10px;
+    position: relative;
     transition: all .2s ease-in-out;
-    position: relative;
 }
 
-.div-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
-}
-
-.galeria-imagens img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* Lado Direito: Informações sobre a Empresa */
-.lado-direito {
-    width: 50%;
-    height: 100%;
-    background-color: rgba(137, 43, 226, 0);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.sobre-a-empresa {
-    width: 95%;
-    height: 31vh;
-    background-color: rgba(0, 255, 255, 0);
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 1rem;
-}
-
-.area-title {
-    width: 100%;
-    height: 25%;
-    background-color: rgba(136, 255, 9, 0);
-    position: relative;
-    top: 0rem;
-}
-
-.area-title h1 {
-    font-weight: 500;
-    position: relative;
-    bottom: 1em;
-}
-
-.area-text {
-    width: 95%;
-    height: 75%;
-    background-color: rgba(0, 255, 255, 0);
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    box-sizing: content-box;
-    padding-right: 10px;
-}
-
-/* Definições da barrinha de scroll */
-.area-text::-webkit-scrollbar {
-    width: 6px;
-}
-
-.area-text::-webkit-scrollbar-track {
-    background-color: #555;
-    border-radius: 10px;
-}
-
-.area-text::-webkit-scrollbar-thumb:hover {
-    background-color: #FF3877;
-    height: 1px;
-}
-
-.text-sobre {
-    text-align: justify;
-}
-
-.h2-sobre {
-    font-weight: 500;
-    position: relative;
-    bottom: 0.8rem;
-}
-
-.cat-num {
-    width: 95%;
-    height: 15vh;
-    background-color: rgba(25, 0, 255, 0);
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    position: relative;
-    top: 1rem;
-}
-
-.div-categoria {
-    width: 40%;
-    height: 100%;
-    background-color: rgba(245, 222, 179, 0);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.div-numero {
-    width: 60%;
-    height: 100%;
-    background-color: rgba(165, 42, 42, 0);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.div-categoria h2 {
-    font-weight: 500;
-}
-
-.div-numero h2 {
-    font-weight: 500;
-}
-
-
-.contacts-corR {
-    width: 95%;
-    height: 20vh;
-    background-color: rgba(255, 0, 60, 0);
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 1rem;
-}
-
-.contacts {
-    width: 40%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0);
-    position: relative;
-}
-
-.contacts h2 {
-    font-weight: 500;
-}
-
-.area-icons {
-    width: 100%;
-    height: 70%;
-    background-color: rgba(0, 0, 255, 0);
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    padding: 15px;
-    flex-wrap: wrap;
-}
-
-.area-icons a {
-    background-color: #55555500;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.icons {
-    width: 45px;
-    height: 45px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    transition: all .2s ease-in-out;
-    position: relative;
-    right: 1rem;
-}
-
-.icons:hover {
+.div__img img{
     transform: scale(1.1);
 }
 
-/* Definições dos Icons: */
-#insta {
-    background-color: #FF3877;
-    color: white;
-}
-
-#insta:hover {
-    background-color: #ff387700;
-    color: #FF3877;
-    border: 2px solid #FF3877;
-}
-
-#zap {
-    background-color: #22BC9D;
-    color: white;
-}
-
-#zap:hover {
-    background-color: #ff387700;
-    color: #22BC9D;
-    border: 2px solid #22BC9D;
-}
-
-#face {
-    background-color: #3B9BDC;
-    color: white;
-}
-
-#face:hover {
-    background-color: #ff387700;
-    color: #3B9BDC;
-    border: 2px solid #3B9BDC;
-}
-
-#email {
-    background-color: #F4DD53;
-    color: white;
-}
-
-#email:hover {
-    background-color: #ff387700;
-    color: #F4DD53;
-    border: 2px solid #F4DD53;
-}
-
-.cor-r {
-    width: 60%;
+.decorative_line{
+    width: 2px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.cor-r h2 {
-    font-weight: 500;
-}
-
-.cor-R h2 {
-    font-weight: 500;
-}
-
-.cor {
-    width: 40%;
-    height: 25px;
-    display: flex;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    background-color: #5CB74A;
-    font-weight: 600;
-    color: white;
-    margin-top: 2%;
-}
-
-/* Responsividade: */
-/* Responsividades Celulares: */
-@media screen and (max-width: 720px) {
-    .m-per-expo {
-        overflow: scroll;
-    }
-
-    .div-button{
-        left: 16rem;
-        z-index: 10;
-    }
-
-    .box-principal {
-        width: 90%;
-        height: 150vh;
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-
-    .linha {
-        display: none;
-    }
-
-    .img-decoracao1 {
-        position: relative;
-        top: -2%;
-        left: -6%;
-        z-index: 2;
-    }
-
-    .img-decoracao2 {
-        top: 59rem;
-        left: 2.5rem;
-        z-index: 2;
-        width: 70vw;
-    }
-
-    .lado-esquerdo {
-        width: 100%;
-        height: 50%;
-        background-color: rgba(0, 255, 255, 0);
-        z-index: 5;
-        position: relative;
-        bottom: 7rem;
-    }
-
-    .area-logo {
-        background-color: rgba(0, 255, 255, 0);
-        height: 34%;
-    }
-
-    .div-logo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .galeria-imagens {
-        background-color: rgba(100, 148, 237, 0);
-        height: 59%;
-        padding: 40px;
-    }
-
-    .div-h1 {
-        background-color: rgb(255, 255, 255);
-    }
-
-    .div-h1 h1 {
-        font-size: 18px;
-        top: 0;
-    }
-
-    .div-img {
-        width: calc(50% - 10px);
-        height: 75px;
-        position: relative;
-        bottom: 1.5rem;
-    }
-
-    .lado-direito {
-        width: 95%;
-        height: 65%;
-        position: relative;
-        bottom: 6.5rem;
-        left: 0.5rem;
-        z-index: 5;
-        background-color: rgba(0, 255, 255, 0);
-    }
-
-    .sobre-a-empresa {
-        background-color: rgba(0, 255, 255, 0);
-        margin-left: 0.5rem;
-    }
-
-    .cat-num {
-        background-color: rgba(25, 0, 255, 0);
-        margin-left: 0.5rem;
-    }
-
-    .div-categoria {
-        background-color: #5cb74a00;
-        width: 55%;
-    }
-
-    .div-numero {
-        background-color: #f4dc5300;
-        width: 45%;
-    }
-
-    .contacts-corR {
-        background-color: rgba(255, 0, 60, 0);
-        margin-left: 0.5rem;
-        height: 20vh;
-    }
-
-    .area-icons {
-        background-color: #3b9cdc00;
-        gap: 7px;
-    }
-
-    .area-title h1 {
-        font-size: 25px;
-        position: relative;
-        bottom: 1rem;
-    }
-
-    .h2-sobre {
-        font-size: 18px;
-        position: relative;
-        bottom: 0.5rem;
-    }
-
-    .text-sobre {
-        font-size: 14px;
-    }
-
-    .div-categoria h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .div-categoria p {
-        font-size: 14px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .div-numero h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .div-numero p {
-        font-size: 14px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .cor-r {
-        background-color: #22bc9d00;
-        flex-direction: column;
-        width: 45%;
-    }
-
-    .cor-r h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .cor {
-        width: 80%;
-        position: relative;
-        top: 0.5rem;
-        height: 20px;
-        font-size: 12px;
-        ;
-    }
-
-    .contacts {
-        background-color: #3b9cdc00;
-        width: 55%;
-    }
-
-    .contacts h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .icons {
-        width: 25px;
-        height: 25px;
-        font-size: 12px;
-    }
-
-    .area-icons a {
-        background-color: #f4dc5300;
-        width: 25px;
-        height: 25px;
-    }
+    background-color: var(--color-linha);
 
 }
 
-@media (max-width: 414px) and (min-height: 896px) {
-    .box-principal {
-        height: 110vh;
-    }
-
-    .img-decoracao2 {
-        top: 65rem;
-        left: 2.6rem;
-    }
-
-    .div-button{
-        left: 17rem;
-    }
+.right__side{
+    height: 100%;
+    background-color: cornsilk;
 }
 
-@media (max-width: 390px) and (min-height: 844px) {
-    .box-principal {
-        height: 120vh;
-    }
 
-    .img-decoracao2 {
-        top: 64rem;
-        left: 2rem;
-    }
-}
 
-@media (max-width: 430px) and (min-height: 932px) {
-    .box-principal {
-        height: 120vh;
-    }
 
-    .img-decoracao2 {
-        top: 66.2rem;
-        left: 2.7rem;
-    }
 
-    .div-button{
-        left: 18rem;
-    }
-}
-
-@media (max-width: 360px) and (min-height: 740px) {
-    .box-principal {
-        height: 130vh;
-    }
-
-    .img-decoracao2 {
-        top: 68rem;
-        left: 2.2rem;
-    }
-
-    .div-button{
-        left: 14rem;
-    }
-}
-
-@media (max-width: 412px) and (min-height: 915px) {
-    .img-decoracao2 {
-        top: 66.2rem;
-        left: 2.6rem;
-    }
-}
-
-/* Responsividade Ipad Mini: */
-@media (max-width: 768px) and (min-height: 1023px){
-    .box-principal{
-        flex-direction: column;
-        overflow: scroll;
-        position: relative;
-        height: 92vh;
-    }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .img-decoracao1{
-        position: absolute;
-        z-index: 0;
-    }
-
-    .img-decoracao2{
-        display: none;
-    }
-    
-    .contacts-corR{
-        background-color: #22bc9d00;
-    }
-
-    .contacts{
-        background-color: #5cb74a00;
-        width: 55%;
-    }
-
-    .cor-r{
-        background-color: #ff387700;
-        width: 45%;
-    }
-
-    .div-categoria{
-        width: 55%;
-    }
-
-    .div-numero{
-        width: 45%;
-    }
-
-    .div-button{
-        left: 35rem;
-        z-index: 100;
-    }
-}
-
-/* Responsividade Ipad Air: */
-@media (max-width: 820px) and (min-height: 1180px) {
-    .box-principal{
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .area-title{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .img-decoracao2 {
-        display: none;
-    } 
-
-    .div-button{
-        left: 36rem;
-        z-index: 100;
-    }
-}
-
-@media (min-width: 1024px) and (min-height: 1366px){
-    .box-principal{
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .area-title{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .img-decoracao2 {
-        display: none;
-    }    
-
-    .sobre-a-empresa{
-        background-color: #3b9cdc00;
-        height: 26vh;
-    }
-
-    .cat-num{
-        background-color: #22bc9d00;
-        height: 10vh;
-    }
-
-    .contacts-corR{
-        background-color: #ff387700;
-        height: 10vh;
-    }
-
-    .btn{
-        right: 20px;
-    }
-}
-
-@media (max-width: 1024px) and (max-height: 600px){
-    .div-logo{
-        width: 150px;
-        height: 150px;
-    }
-
-    .div-h1 h1{
-        font-size: 27px;
-    }
-    .div-img{
-        height: 87px;
-    }
-
-    .h2-sobre{
-        font-size: 18px;
-    }
-
-    .text-sobre{
-        font-size: 12px;
-    }
-
-    .div-categoria h2{
-        font-size: 18px;
-    }
-
-    .div-categoria p{
-        font-size: 12px;
-    }
-
-    .div-numero h2{
-        font-size: 18px;
-    }
-
-    .div-numero p{
-        font-size: 12px;
-    }
-
-    .contacts h2{
-        font-size: 18px;
-    }
-
-    .cor-r h2{
-        font-size: 18px;
-    }
-
-    .icons{
-        width: 40px;
-        height: 40px;
-    }
-
-    .img-decoracao2{
-        display: none;
-    }
-
-    .div-button{
-        left: 48rem;
-    }
-}
-
-@media (min-width: 1280px) and (max-height: 800px){
-    .div-logo{
-        width: 180px;
-        height: 180px;
-    }
-
-    .div-h1 h1{
-        font-size: 28px;
-    } 
-    
-    .div-img{
-        height: 130px;
-    }
-
-    .h2-sobre{
-        font-size: 20px;
-    }
-
-    .text-sobre{
-        font-size: 14px;
-    }
-
-    .div-categoria h2{
-        font-size: 20px;
-    }
-
-    .div-categoria p{
-        font-size: 14px;
-    }
-
-    .div-numero h2{
-        font-size: 20px;
-    }
-
-    .div-numero p{
-        font-size: 14px;
-    }
-
-    .contacts h2{
-        font-size: 20px;
-    }
-
-    .cor-r h2{
-        font-size: 20px;
-    }
-
-    .img-decoracao2 {
-        position: absolute;
-        top: 80%;
-        left: 57%;
-        width: 35vw;
-    }
-
-    .div-button{
-        left: 60rem;
-    }
-}
-
-@media (min-width: 912px) and (min-height: 1368px){
-    .box-principal{
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .area-title{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .sobre-a-empresa{
-        background-color: #3b9cdc00;
-        height: 26vh;
-    }
-
-    .cat-num{
-        background-color: #22bc9d00;
-        height: 10vh;
-    }
-
-    .contacts-corR{
-        background-color: #ff387700;
-        height: 10vh;
-    }
-
-    .img-decoracao2{
-        display: none;
-    }
-}
-
-@media (max-width: 853px) and (min-height: 1280px){
-    .box-principal{
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .area-title{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .sobre-a-empresa{
-        background-color: #3b9cdc00;
-        height: 26vh;
-    }
-
-    .cat-num{
-        background-color: #22bc9d00;
-        height: 10vh;
-    }
-
-    .contacts-corR{
-        background-color: #ff387700;
-        height: 15vh;
-    }
-
-    .img-decoracao2{
-       display: none;
-    }
-}

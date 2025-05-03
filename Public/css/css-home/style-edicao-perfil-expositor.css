@@ -21,11 +21,13 @@
     --color-button2: #007E70;
 }
 
+/* Corpo da Pagina */
 .body__main{
     height: 100vh;
     display: flex;
 }
 
+/* Main: Conteúdo Principal */
 .container__main{
     width: 100%;
     height: 100%;
@@ -34,6 +36,7 @@
     justify-content: center;
 }
 
+/* Box Principal */
 .box__container{
     margin: 0 auto;
     margin-top: 3%;
@@ -47,6 +50,7 @@
     background-color: var(--color-box);
 }
 
+/* Form */
 .form{
     width: 100%;
     height: 100%;
@@ -56,7 +60,7 @@
     justify-content: center;
 }
 
-
+/* Lado Esquerdo: Logo e Imagens (Produtos) */
 .lado__esquerdo {
     height: 100%;
     width: 40%;
@@ -66,7 +70,7 @@
     justify-content: start;
 }
 
-/* Container da logo */
+/* Container da logo: Upload da Logo */
 .container__logo {
     width: 100%;
     height: 40%;
@@ -109,7 +113,6 @@
     display: none;
 }
 
-
 /* Container de imagens dos produtos */
 .container__imgs {
     display: flex;
@@ -121,7 +124,7 @@
     margin-bottom: 6rem;
 }
 
-
+/* Label: Input/imagem */
 .label__img__prod {
     width: calc(33.3% - 10px); 
     height: 130px;
@@ -175,13 +178,14 @@
     margin-top: 10px;
 }
 
-
+/* Linha Decorativa */
 .linha{
     width: 2px;
     height: 100%;
     background-color: var(--color-linha);
 }
 
+/* Lado Direito: Informações do Expositor */
 .lado__direito{
     height: 100%;
     width: 60%;
@@ -194,6 +198,7 @@
     font-weight: 600;
 }
 
+/* Header Titulo (h1) */
 .area__h1{
     width: 100%;
     height: 15%;
@@ -202,6 +207,7 @@
     justify-content: center;
 }
 
+/* Sobre o Expositor */
 .area__text{
     width: 100%;
     height: 35%;
@@ -227,6 +233,7 @@
     box-shadow: 2px 4px 2px var(--color-input);
 }
 
+/* Informações da Barraca */
 .area__cat__num{
     width: 100%;
     height: 15%;
@@ -249,6 +256,7 @@
     background-color: #5CB74A;
 }
 
+/* Contatos */
 .area__inf__corR{   
     width: 100%;
     height: 35%;
@@ -256,7 +264,6 @@
     margin-left: 40px;
     display: flex;
     flex-direction: column;
-    /* background-color: #007E70; */
 }
 
 .h3__infs__pessoais{
@@ -315,6 +322,7 @@
     gap: 30px;
 }
 
+/* Botões */
 .buttons{
     width: 200px;
     height: 45px;
@@ -335,7 +343,7 @@
     background-color: var(--color-button2);
 }
 
-
+/* Imagens Decorativas */
 .img__dec1{
     position: fixed;
     top: 15vh;
@@ -370,4 +378,37 @@
     width: 60%;
     height: auto;
 }
+
+
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+
+}
+
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    
+}
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+}
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+   
+}
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    
+}
+
+/* Nest Hub */
+@media (min-width: 1024px) and (max-height: 600px){
+    
+}
+
 

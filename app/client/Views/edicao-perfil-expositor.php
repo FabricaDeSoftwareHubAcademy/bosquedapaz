@@ -7,14 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>Edição de Perfil | Play Artesanato</title>
 </head>
+<!-- Corpo da Pagina -->
 <body class="body__main">
 
-    <!-- Menu de Navegação -->
+    <!-- Include Menu de Navegação -->
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <!-- Conteúdo Principal -->
     <main class="container__main">
         <div class="box__container">
+            <!-- Form -->
             <form class="form" action="salvar_perfil.php" method="POST" enctype="multipart/form-data">
                 <!-- Lado Esquerdo -->
                 <div class="lado__esquerdo">
@@ -33,7 +35,6 @@
 
                     <!-- Upload de Fotos dos Produtos -->
                     <div class="container__imgs">
-                        <!-- Repetição com IDs únicos e descrições -->
                         <label for="produto1" class="label__img__prod">
                             <input type="file" name="produto1" id="produto1" class="input__img">
                             <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt="Produto 1">
@@ -70,7 +71,7 @@
 
                 <div class="linha"></div>
 
-                <!-- Lado Direito -->
+                <!-- Lado Direito: Informações do Expositor -->
                 <div class="lado__direito">
                     <!-- Título -->
                     <header class="area__h1">
@@ -84,7 +85,7 @@
                         <textarea name="descricao" id="descricao" class="input__text" placeholder="Edite o texto aqui..."></textarea>
                     </div>
 
-                    <!-- Informações do Barraco -->
+                    <!-- Informações da Barraca -->
                     <div class="area__cat__num">
                         <div class="cat">
                             <h3>Categoria</h3>
@@ -147,10 +148,10 @@
             </form>
         </div>
 
+        <!-- Imagens Decorativas -->
         <div class="img__dec1"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img1.png" alt=""></div>
         <div class="img__dec2"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img2.png" alt=""></div>
         <div class="img__dec3"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img3.png" alt=""></div>
-
     </main>
 </body>
 </html>
