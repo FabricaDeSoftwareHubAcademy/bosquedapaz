@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../Public/css/style-fale-conosco.css">
     <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 <body>
@@ -61,5 +62,6 @@
     </div>
 
     <script src="../../../Public/js/js-home/main.js"></script>
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>

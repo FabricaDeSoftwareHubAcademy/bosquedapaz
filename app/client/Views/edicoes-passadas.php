@@ -6,6 +6,7 @@
     <title>EDIÇÕES PASSADAS</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edicoes-passadas.css">
     <link rel="stylesheet" href="../../../Public/css/css-modais/style-edicoes-passadas-modal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <script src="../../../Public/js/js-modais/edicoes-passadas-abrir-modais.js" defer></script>
 </head>
 <body>
@@ -215,5 +216,6 @@
                 </div>
             </div>
         </div> 
+        <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>

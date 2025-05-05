@@ -39,6 +39,10 @@ if (isset($_POST['REQUEST_METHOD'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosque da paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor-kids.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-client.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -153,6 +157,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 
 
 </body>
