@@ -348,117 +348,352 @@ label#salvar-btn {
 }
     
 
+@media (max-width: 430px) {
 
-/* celular padrao */
-@media screen and (min-width: 651px) and (max-width:1023px) {
-    .bola-verde2{
-        width: 20%;
-        left: 80%;
+    .bolas-fundo .bola-verde1 {
+        /* width: 50px;
+        left: 0%;
+        top: 50px; */
+        display: none;
     }
-    .bola-rosa{
-        width: 30%;
+
+    .bolas-fundo .bola-verde2 {
+        /* width: 50px;
+        top: 90px;
+        left: 75%; */
+        display: none;
+    }
+
+    .bolas-fundo .bola-rosa {
+        /* width: 50px;
         top: 80%;
-        left: 70%;
+        left: 62%; */
+        display: none;
     }
 
-    .principal{
-        /* height: 100vh; */
+    .box {
         overflow-y: auto;
     }
 
-    .box{
-        height: auto;
-    }
-
-    .formularios{
+    .formularios {
+        /* background-color: #007E70; */
         display: flex;
         flex-direction: column;
-        
+        font-size: 14px;
+        top: 20px;
     }
 
-    .formularios label{
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
         position: relative;
-        left: 10px;
+        left: 5%;
     }
 
-    .btn-finalizar{
-        position: relative;
-        left: 0%;
-    }
-
-    .voltar{
-        position: relative;
-        left: 30px;
-    }
-
-    .voltar img{
-        /* background-color: red; */
-        position: relative;
-        top: -7vh;
-        left: -28vh;
-    }
-
-
-}
-
-@media screen and (min-width: 1024px) and (max-width:1250px) {
-    .formularios{
+    .btn-conf {
+        top: 97%;
+        left: 13%;
         width: 100%;
     }
 
-    .formularios label{
+    button.btn.btn-cancelar {
         position: relative;
-        left: 5%;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
     }
 
-    .form-pessoa{
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+    img.img-voltar {
+        width: 30%;
+        height: 30px;
+    }
+
+    .voltar {
         position: relative;
-        left: 5%;
-        top: 5px;
-    }
-
-    .form-pessoa input{
-        width: 110%;
-    }
-
-    .form-loja{
-        position: relative;
-        left: 10%;
-        top: 5px;
-    }
-
-    .form-expo{
-        /* background-color: red; */
-        position: relative;
-        left: 5%;
-    }
-    .form-loja input{
-        width: 76%;
-    }
-
-    .form-expo input{
-        width: 70%;
-    }
-
-    .select{
-        width: 70%;
-    }
-
-    #categorias{
-        /* background-color: red; */
-        width: 76%;
-    }
-
-    .btn-finalizar{
-        position: relative;
-        left: 70%;
+        left: 5px;
+        top: 51px;
     }
 }
 
-/* @media screen and (min-width: 1251px){
-    .btn-finalizar{
-        position: relative;
-        left: 45vh;
-        top: 10vh;
+@media (max-width:540px) {
+    .bolas-fundo .bola-verde1 {
+        /* width: 50px;
+        left: 0%;
+        top: 50px; */
+        display: none;
     }
-} */
+
+    .bolas-fundo .bola-verde2 {
+        /* width: 50px;
+        top: 90px;
+        left: 75%; */
+        display: none;
+    }
+
+    .bolas-fundo .bola-rosa {
+        /* width: 50px;
+        top: 80%;
+        left: 62%; */
+        display: none;
+    }
+}
+
+@media (max-width: 820px) {
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 75%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 120px;
+        top: 85%;
+        left: 62%;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .box {
+        overflow-y: auto;
+    }
+
+    .formularios {
+        /* background-color: #007E70; */
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+    }
+
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 5%;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 13%;
+        width: 100%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+    img.img-voltar {
+        width: 30%;
+        height: 30px;
+    }
+
+    .voltar {
+        position: relative;
+        left: 5px;
+        top: 51px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 80%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 120px;
+        top: 88%;
+        left: 65%;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .box {
+        overflow-y: auto;
+    }
+
+    .formularios {
+        /* background-color: #007E70; */
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+    }
+
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 5%;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 13%;
+        width: 100%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+    img.img-voltar {
+        width: 30%;
+        height: 30px;
+    }
+
+    .voltar {
+        position: relative;
+        left: 5px;
+        top: 51px;
+    }
+}
+
+@media (width: 1024px) and (height: 600px) {
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 80%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 120px;
+        top: 75%;
+        left: 68%;
+    }
+
+    .formularios {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        top: -20px;
+    }
+
+    .select {
+        width: 40vh;
+        height: 5vh;
+        margin: 10px;
+    }
+
+    .title {
+        position: relative;
+        top: -20px;
+    }
+
+    .form-expo .input-group input {
+        width: 40vh;
+        height: 5vh;
+        margin: 10px;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 77%;
+        width: 40%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+    
+
+}
+
+@media (width: 344px) and (height: 882px) {
+    .formularios {
+        /* background-color: #007E70; */
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+    }
+
+    .formularios input {
+        width: 260px;
+    }
+
+    .form-pessoa {
+        left: 10%;
+    }
+
+    .form-loja {
+        left: 10%;
+    }
+
+    .select {
+        width: 260px;
+        left: -30%;
+    }
+
+    .voltar {
+        left: -4%;
+    }
+}
