@@ -1,5 +1,236 @@
-@import url('../css-modais/style-edicoes-passadas-modal.css');
-/* titulos e paragrafos */
+.avisos {
+    width: 100%;
+    padding: 100px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao-da-tarde {
+    background-color: var(--color-prox-event);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 500px;
+    padding: 50px 150px 100px 150px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+}
+
+.secao-tarde-2 {
+    background-color: var(--color-edit-pass);
+    padding: 50px 150px;
+    clip-path: none;
+}
+.secao-tarde-3 {
+    background-color: var(--color-ulti-publi);
+    padding: 100px 150px 50px 150px;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
+
+.conteiner-img {
+    width: 37%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.conteiner-img-ulti-publi {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+
+.img-prox-event {
+    width: 90%;
+    transition: all .1s ease-in;
+}
+
+.img-prox-event:hover {
+    width: 95%;
+}
+/* .img-prox-event:hover {
+    width: 95%;
+} */
+
+.img-ulti-publi {
+    width: 45%;
+    border-radius: 10px;
+    transition: all .1s ease-in;
+}
+
+.img-ulti-publi:hover {
+    width: 50%;
+}
+
+.img-prox-event-m {
+    display: none;
+}
+
+.img-ulti-publi-m {
+    display: none;
+}
+
+.conteiner-sobre {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.title-evisos-edit {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.para-avisos-edit {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.title-meio {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: black;
+}
+
+.para-meio {
+    font-size: 1.1rem;
+    color: black;
+}
+
+.img-prox-event {
+    border-radius: 10px;
+}
+
+
+.btn-vermais {
+    background-color: white;
+    border: 2px solid #FEB850;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: all .2s ease-in-out;
+}
+
+.btn-vermais2 {
+    border: 2px solid #5CB74E;
+    background-color: #5CB74E;
+}
+.btn-vermais3 {
+    
+    border-color: #3DB4F4;
+}
+
+.text-verm {
+    color: #FEB850;
+    text-decoration: none;
+}
+
+.text-verm-2 {
+    color: #fff;
+    text-decoration: none;
+}
+.text-verm-3 {
+    color: #3DB4F4;
+    text-decoration: none;
+}
+
+.btn-vermais:hover {
+    background-color: #FEB850;
+    border: 2px solid #FEB850;
+}
+
+.btn-vermais:hover .text-verm {
+    color: white;
+}
+
+.btn-vermais2:hover {
+    background-color: #fff;
+    border: 2px solid #5CB74E;
+}
+
+.btn-vermais2:hover .text-verm-2 {
+    color: #5CB74E;
+}
+
+
+.btn-vermais3:hover {
+    background-color: #3DB4F4;
+    border: 2px solid #3DB4F4;
+}
+
+.btn-vermais3:hover .text-verm-3 {
+    color: white;
+}
+
+@media screen and (max-width: 1150px) {
+    .secao-da-tarde {
+        padding: 10px;
+    }
+
+    .conteiner-img {
+        width: 50%;
+    }
+
+    .img-ulti-publi {
+        width: 80%;
+    }
+
+    .img-ulti-publi2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .conteiner-img {
+        display: none;
+    }
+
+    .para-avisos-edit {
+        display: none;
+    }
+
+    .para-meio {
+        display: none;
+    }
+
+    .conteiner-sobre {
+        width: 100%;
+        margin: auto;
+    }
+    .img-prox-event-m {
+        display: block;
+        width: 70%;
+        border-radius: 10px;
+    }
+
+    .conteiner-img-ulti-publi {
+        display: none;
+    }
+
+    .img-ulti-publi-m {
+        display: block;
+        border-radius: 10px;
+        width: 50%;
+    }
+}
+
+/* @import url('../css-modais/style-edicoes-passadas-modal.css');
 
 .title-prox-evento {
     color: white;
@@ -33,17 +264,17 @@
 }
 
 .descricao-banner-evento::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
+    width: 5px;
 }
 
 .descricao-banner-evento::-webkit-scrollbar-track {
-    background: transparent;        /* color of the tracking area */
+    background: transparent;
 }
 
 .descricao-banner-evento::-webkit-scrollbar-thumb {
-    background-color: white;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: none;  /* creates padding around scroll thumb */
+    background-color: white;
+    border-radius: 20px;
+    border: none;
 }
 
 .title-atracoes-evento {
@@ -57,8 +288,6 @@
     display: flex;
     flex-direction: column;
 }
-
-/* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%); */
 
 .prox-evento {
     min-height: 750px;
@@ -144,10 +373,6 @@
     transition: all .2s ease-in-out;
 }
 
-/* .card-eventos:hover {
-    margin-top: -10px;
-} */
-
 .img-card-evento {
     width: 100%;
     max-width: 320px;
@@ -160,17 +385,17 @@
 }
 
 .descricao-atracao::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
+    width: 5px;
 }
 
 .descricao-atracao::-webkit-scrollbar-track {
-    background: transparent;        /* color of the tracking area */
+    background: transparent;
 }
 
 .descricao-atracao::-webkit-scrollbar-thumb {
-    background-color: #636363;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: none;  /* creates padding around scroll thumb */
+    background-color: #636363;
+    border-radius: 20px;
+    border: none;
 }
 
 .content-info-card-event {
@@ -255,17 +480,17 @@
 }
 
 .descricao-card::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
+    width: 5px;
 }
 
 .descricao-card::-webkit-scrollbar-track {
-    background: transparent;        /* color of the tracking area */
+    background: transparent;
 }
 
 .descricao-card::-webkit-scrollbar-thumb {
-    background-color: #636363;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: none;  /* creates padding around scroll thumb */
+    background-color: #636363;
+    border-radius: 20px;
+    border: none;
 }
 
 
@@ -469,4 +694,4 @@
     .btn-ver-mais:hover {
         font-size: 1rem;
     }
-}
+} */
