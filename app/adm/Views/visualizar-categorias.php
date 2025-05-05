@@ -144,7 +144,7 @@
                                     <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
                                 <div class="botoes">
-                                    <button type="button" class="cancelar" onclick="fecharModal()">Cancelar</button>
+                                    <button type="button" class="cancelar" onclick="fecharModal('cadastro-categoria')">Cancelar</button>
                                     <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                             </div>

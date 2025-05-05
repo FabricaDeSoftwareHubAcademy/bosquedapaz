@@ -150,6 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-    
 });
-
+function fecharModal(idModal) {
+    const modal = document.getElementById(idModal);
+    if (modal && typeof modal.close === 'function') {
+        modal.close();
+    }
+}
