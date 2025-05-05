@@ -1,0 +1,88 @@
+.informacoes-feira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 0px;
+}
+
+.content-intro-feira {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 30px 0px;
+}
+
+.paragrafo-intro {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.conteiner-numeros {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 0px;
+    gap: 10px;
+}
+
+.content-numero {
+    flex: auto;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.text-info {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.span-info {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1150px) {
+    .content-intro-feira {
+        width: 90%;
+    } 
+
+    .paragrafo-intro {
+        font-size: .9rem;
+    }
+
+    .conteiner-numeros {
+        width: 90%;
+        
+    }
+    
+    .content-numero {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .informacoes-feira {
+        padding: 0px;
+    }
+    .icon-info{
+        width: 80px;
+    }
+
+    .text-info {
+        font-size: 1.1rem;
+    }
+
+    .span-info {
+        font-size: .9rem;
+    }
+}

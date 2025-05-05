@@ -42,42 +42,34 @@ else{
 
 ?>
 
-<style>
-        .slider-item1 {
-            background-image: url(<?php echo "'". $img1. "'"; ?>);
-        }
-        .slider-item2 {
-            background-image: url(<?php echo "'". $img2. "'"; ?>);
-        }
-        .slider-item3 {
-            background-image: url(<?php echo "'". $img3. "'"; ?>);
-        }
-    </style>
-    <!-- inicio carrosel -->
-    <section class="carossel">
-        <div class="fundo"> <!-- fundo da imagem -->
-            <div class="conteiner-slider">
-                <div class="slider-all">
-                    <div class="slider-swap">
-                        <div class="swap" id="arrow-left"><i class="fa-solid fa-arrow-left arrow-swap"></i></div>
-                        <div class="swap" id="arrow-right"><i class="fa-solid fa-arrow-right arrow-swap"></i></div>
-                    </div>
-                    <div class="slider-item slider-item1" id="slider-item1">
-                        <!-- <div style="width: 100%; height: 100%; background-color: aqua;"></div> -->
-                    </div>
-                    <div class="slider-item slider-item2" id="slider-item2">
-                    </div>
-                    <div class="slider-item slider-item3" id="slider-item3">
-                    </div>
+<!-- inicio carrosel -->
+<section class="carrossel" id="carrossel">
+    <div class="conteiner-slider">
+        <div class="slider-all">
+            <div class="slider-swap">
+                <div class="swap" id="arrow-left">
+                    <i class="bi bi-arrow-left arrow"></i>
                 </div>
-                <div class="slider-balls">
-                    <input type="radio" name="btn-radio" id="radio1" hidden>
-                    <input type="radio" name="btn-radio" id="radio2" hidden>
-                    <input type="radio" name="btn-radio" id="radio3" hidden>
-
-                    <div class="ball ball1"></div>
-                    <div class="ball ball2"></div>
-                    <div class="ball ball3"></div>
+                <div class="swap" id="arrow-right">
+                    <i class="bi bi-arrow-right arrow"></i>
                 </div>
             </div>
-    </section>
+            <div class="slider">
+                <div class="slider-content" id="slider-content">
+                    <img src="<?php echo $img1; ?>" class="carrosel" alt="imagem carrossel 1">
+                </div>
+                <div class="slider-content" id="slider-content">
+                    <img src="<?php echo $img2; ?>" class="carrosel" alt="imagem carrossel 2">
+                </div>
+                <div class="slider-content" id="slider-content">
+                    <img src="<?php echo $img3; ?>" class="carrosel" alt="imagem carrossel 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-balls">
+        <div class="ball" id="ball"></div>
+        <div class="ball" id="ball"></div>
+        <div class="ball" id="ball"></div>
+    </div>
+</section>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Boletos</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-listar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
@@ -156,5 +157,6 @@
     <img class="listb-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
     <img class="listb-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
     <img class="listb-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
+    <script src="../../../Public/js/js-home/main.js" defer></script>
 </body>
 </html>

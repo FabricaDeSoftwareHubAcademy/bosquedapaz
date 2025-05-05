@@ -1,715 +1,110 @@
-/* modal */
+.modal-eventos {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    flex-direction: column;
+    border-radius: .5rem;
+    border: none;
+}
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+.div-close {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
-    z-index: 9;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 10px;
 }
 
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s 0s;
+.icon-sair {
+    font-size: 2rem;
+    transition: all .2s ease-in-out;
 }
 
-#modal1{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    width: 55%;
-    height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
-    background-color: white;
-    background-size: cover;
-    border-radius: 20px;
-    display: none;
+.icon-sair:hover {
+    color: #ff3877;
 }
-
-#modal3{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    width: 55%;
-    height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
-    background-color: white;
-    background-size: cover;
-    border-radius: 20px;
-    display: none;
-}
-
-#modal2{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    width: 55%;
-    height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
-    background-color: white;
-    background-size: cover;
-    border-radius: 20px;
-    display: none;
-}
-
-#modal4{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    width: 55%;
-    height: 65%;
-    background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
-    background-color: white;
-    background-size: cover;
-    border-radius: 20px;
-    display: none;
-}
-
 
 .modal-content-edpass {
-    height: 85%;
-    width: 80%;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 95%;
     display: flex;
+    padding: 10px 10px;
 }
 
 .modal-img {
-    flex: 1;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .gg-img {
-    width: 90%;
-    height: 65%;
-    border-radius: 3px;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    width: 350px;
+    border-radius: .5rem;
 }
 
 .area-img-p {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.p-img{
-    width: 22%;
-    height: auto;
-    border-radius: 3px;
+.p-img {
+    width: 100px;
+    border-radius: .5rem;
 }
 
 .txt-content-modal {
-    width: 40%;
-    height: auto; 
-    max-height: none; 
-    margin-top: 40px; 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
+    gap: .5rem;
 }
 
-.title-modal1{
+.modal-texto {
     width: 100%;
-    font-size: 2rem;
-    color: #FF3877;
-    text-align: left;
-    margin-top: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
+    height: 200px;
+    overflow-y: auto;
 }
 
-.title-modal2{
-    width: 100%;
-    font-size: 2rem;
-    color: #007E70;
-    text-align: left;
-    margin-top: 20px;
-    text-transform: uppercase;
+.modal-texto::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
 }
 
-.area-texto {
-    height: 50%; 
-    margin-top: 20px; 
-    scrollbar-gutter: stable both-edges;
-    overflow-y: auto; 
+.modal-texto::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
 }
 
-.modal-texto{
-    height: 90%; 
-    font-size: 16px;
-    line-height: 1.4;
-    overflow-y: auto; 
-    color: #505050;
-    text-align: left;
-    padding: 10px; 
+.modal-texto::-webkit-scrollbar-thumb {
+    background-color: #636363;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
 }
 
-::-webkit-scrollbar{
-    width: 2px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track{
-    background: #ffffff00;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #a1a0a3;
-    border-radius: 5px;
-}
-
-.close {
-    color: #000000;
-    font-size: 40px;
+.funco-imgs {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 
-.close:hover,
-.close:focus {
-    color: #666364;
-    text-decoration: none;
+.img-fundo1 {
+    position: absolute;
+    top: 0px;
 }
 
-@media screen and (max-width: 576px){
-    #modal1,#modal3{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        height: 30%;
-        background-image: none;
-        background-color: white;
-        border: 1px solid #FF3877;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    #modal2,#modal4{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 30%;
-        background-image: none;
-        background-color: white;
-        border: 1px solid #007E70;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    .modal-content-edpass {
-        height: 80%;
-        width: 75%;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    
-    .modal-img {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .gg-img {
-        width: 90%;
-        height: 65%;
-        border-radius: 3px;
-        margin-top: 28%;
-        margin-bottom: 5%;
-        border: 1px solid #9b9b9b;
-    }
-    
-    .p-img{
-        display: none;
-    }
-    
-    .txt-content-modal {
-        width: 50%;
-        height: auto; 
-        max-height: none; 
-        margin-top: 40px; 
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .title-modal1{
-        width: 100%;
-        font-size: 15px;
-        color: #FF3877;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .title-modal2{
-        width: 100%;
-        font-size: 15px;
-        color: #007E70;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .area-texto {
-        height: 50%; 
-        margin-top: 10px; 
-        width: 100%;
-        scrollbar-gutter: stable both-edges;
-    }
-    
-    .modal-texto{
-        height: 90%; 
-        width: 90%;
-        font-size: 10px;
-        line-height: 1.4;
-        overflow-y: none; 
-        color: #505050;
-        text-align: left;
-        padding: 10px; 
-    }
+.img-fundo2 {
+    width: 40%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
-
-@media screen and (min-width: 577px) and (max-width: 768px) {
-    #modal1,#modal3{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        height: 40%;
-        background-image: none;
-        background-color: white;
-        border: 1px solid #FF3877;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    #modal2,#modal4{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        height: 40%;
-        background-image: none;
-        background-color: white;
-        border: 1px solid #007E70;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    .modal-content-edpass {
-        height: 90%;
-        width: 85%;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    
-    .modal-img {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .gg-img {
-        width: 95%;
-        height: 70%;
-        border-radius: 3px;
-        margin-top: 20%;
-        margin-bottom: 5%;
-        border: 1px solid #9b9b9b;
-    }
-    
-    .p-img{
-        display: none;
-    }
-    
-    .txt-content-modal {
-        width: 50%;
-        height: auto; 
-        max-height: none; 
-        margin-top: 40px; 
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .title-modal1{
-        width: 100%;
-        font-size: 20px;
-        color: #FF3877;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .title-modal2{
-        width: 100%;
-        font-size: 20px;
-        color: #007E70;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .area-texto {
-        height: 50%; 
-        margin-top: 5%; 
-        width: 100%;
-        scrollbar-gutter: stable both-edges;
-    }
-    
-    .modal-texto{
-        height: 90%; 
-        width: 90%;
-        font-size: 12px;
-        line-height: 1.4;
-        overflow-y: none; 
-        color: #505050;
-        text-align: left;
-        padding: 10px; 
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 992px) {
-    #modal1,#modal3{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 45%;
-        background-image: none;
-        background-color: white;
-        border: 1px solid #FF3877;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    #modal2,#modal4{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 45%;
-        background-image: none;
-        background-color: white;
-        border: 1px solid #007E70;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    .modal-content-edpass {
-        height: 90%;
-        width: 85%;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    
-    .modal-img {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .gg-img {
-        width: 95%;
-        height: 75%;
-        border-radius: 3px;
-        margin-top: 15%;
-        margin-bottom: 5%;
-        border: 1px solid #9b9b9b;
-    }
-    
-    .p-img{
-        display: none;
-    }
-    
-    .txt-content-modal {
-        width: 50%;
-        height: auto; 
-        max-height: none; 
-        margin-top: 40px; 
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .title-modal1{
-        width: 100%;
-        font-size: 25px;
-        color: #FF3877;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .title-modal2{
-        width: 100%;
-        font-size: 25px;
-        color: #007E70;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .area-texto {
-        height: 50%; 
-        margin-top: 5%; 
-        width: 100%;
-        scrollbar-gutter: stable both-edges;
-    }
-    
-    .modal-texto{
-        height: 90%; 
-        width: 90%;
-        font-size: 15px;
-        line-height: 1.4;
-        overflow-y: none; 
-        color: #505050;
-        text-align: left;
-        padding: 10px; 
-    }
-}
-
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-    #modal1,#modal3{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 50%;
-        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
-        background-color: white;
-        border: 1px solid #FF3877;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    #modal2,#modal4{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 50%;
-        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
-        background-color: white;
-        border: 1px solid #007E70;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    .modal-content-edpass {
-        height: 90%;
-        width: 85%;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    
-    .modal-img {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .gg-img {
-        width: 95%;
-        height: 75%;
-        border-radius: 3px;
-        margin-top: 15%;
-        margin-bottom: 5%;
-    }
-    
-    .p-img{
-        display: none;
-    }
-    
-    .txt-content-modal {
-        width: 50%;
-        height: auto; 
-        max-height: none; 
-        margin-top: 40px; 
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .title-modal1{
-        width: 100%;
-        font-size: 30px;
-        color: #FF3877;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .title-modal2{
-        width: 100%;
-        font-size: 30px;
-        color: #007E70;
-        text-align: left;
-        margin-top: 5%;
-        text-transform: uppercase;
-    }
-    
-    .area-texto {
-        height: 50%; 
-        margin-top: 5%; 
-        width: 100%;
-        scrollbar-gutter: stable both-edges;
-    }
-    
-    .modal-texto{
-        height: 90%; 
-        width: 90%;
-        font-size: 15px;
-        line-height: 1.4;
-        overflow-y: none; 
-        color: #505050;
-        text-align: left;
-        padding: 10px; 
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1400px) {
-    #modal1,#modal3{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 75%;
-        height: 60%;
-        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalRosaEdpass.svg);
-        background-color: white;
-        border: 1px solid #FF3877;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    #modal2,#modal4{
-        position: fixed;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        width: 75%;
-        height: 60%;
-        background-image: url(../../../Public/imgs/edicoes-passadas-img/ModalVerdeEdpass.svg);
-        background-color: white;
-        border: 1px solid #007E70;
-        background-size: cover;
-        border-radius: 10px;
-        display: none;
-    }
-
-    .modal-content-edpass {
-        height: 90%;
-        width: 85%;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    
-    .modal-img {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .gg-img {
-        width: 95%;
-        height: 75%;
-        border-radius: 3px;
-        margin-top: 15%;
-        margin-bottom: 5%;
-    }
-    
-    .p-img{
-        display: none;
-    }
-    
-    .txt-content-modal {
-        width: 50%;
-        height: auto; 
-        max-height: none; 
-        margin-top: 40px; 
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .title-modal1{
-        width: 100%;
-        font-size: 32px;
-        color: #FF3877;
-        text-align: left;
-        margin-top: 6%;
-        text-transform: uppercase;
-    }
-    
-    .title-modal2{
-        width: 100%;
-        font-size: 32px;
-        color: #007E70;
-        text-align: left;
-        margin-top: 6%;
-        text-transform: uppercase;
-    }
-    
-    .area-texto {
-        height: 50%; 
-        margin-top: 5%; 
-        width: 100%;
-        scrollbar-gutter: stable both-edges;
-    }
-    
-    .modal-texto{
-        height: 90%; 
-        width: 90%;
-        font-size: 15px;
-        line-height: 1.4;
-        overflow-y: none; 
-        color: #505050;
-        text-align: left;
-        padding: 10px; 
-    }
-}
-

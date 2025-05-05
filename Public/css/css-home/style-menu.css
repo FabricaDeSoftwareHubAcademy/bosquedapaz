@@ -1,290 +1,145 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* propriedades padroes */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-/* cabeçalho */
 .cabecalho {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.24);
-    margin-bottom: 10px;
     position: fixed;
-    z-index: 3;
     background-color: white;
+    width: 100%;
+    border-bottom: 1px solid rgba(161, 161, 161, 0.788);
+    z-index: 5;
 }
 
-.link-logo {
+.list-menu {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.content-logo{
+    width: 10%;
+    height: 100%;
+    max-width: 150px;
+    min-width: 110px;
+}
+
+.link-home {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo {
-    width: 150px;
-    margin: 0px 0px 0px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .img-logo {
     width: 100%;
 }
 
-/* propriedades menu */
-.menu {
+.nav-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-}
-
-.menu-icon {
-    width: 50px;
-    height: 50px;
-    display: none;
-    cursor: pointer;
-}
-
-.btn-sandwich {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-}
-
-.img-sandwich {
-    width: 100%;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-}
-
-.lista-menu {
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 20px;
+    list-style: none;
 }
 
-.li-menu {
-    font-size: 1em;
+.nav-item {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
 }
 
-.li-menu:after{
+.nav-item::after{
     content: "";
+    width: 10%;
+    padding: 1.3px;
     background-color: #FF3877;
-    height: 3px;
-    width: 0%;
-    display: block;
-    width: 20%;
-    transition: 0.3s;
-
+    transition: all .2s ease-in-out;
 }
-
-.li-menu:hover::after{
+.nav-item:hover::after {
     width: 100%;
 }
 
-.link-menu {
+.link-ul {
     text-decoration: none;
-    font-weight: 500;
     color: black;
 }
 
-.pesquisar-login {
+.conteiner-outros {
     width: auto;
-    height: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
+    gap: 10px;
+}
+
+.sandwich {
+    display: none;
+    font-size: 2.4rem;
+    color: black;
+}
+
+.link-login {
+    text-decoration: none;
+    color: black;
 }
 
 .login {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-}   
-
-.img-login {
-    width: 100%;
+    font-size: 2.5rem;
 }
 
-.mobile-menu {
-    display: none;
-}
 
-@media(max-width: 1500px) {
-    .logo {
-        width: 150px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .img-logo {
-        width: 100%;
-    }
-
-    .lista-menu {
-        font-size: 0.9em;
-    }
-
-    .login {
-        width: 50px;
-        height: 50px;
-    }
-
-    .img-login{
-        width: 50px;
-        height: 50px;
-    }
-
-}
-
-@media screen and (max-width: 1050px) {
-    .cabecalho {
-        height: 70px;
-    }
-
-    .menu {
-        justify-content: space-between;
-        padding: 0px 20px 0px 20px;
-    }
-    .logo{
-        width: 150px;
-        padding: 0px;
-    }
-
-    .nav-bar {
+@media screen and (max-width: 678px) {
+    .nav-list {
         display: none;
     }
 
-    .menu-icon {
-        display: block;
-    }
-
-    .mobile-menu {
-        width: 100%;
-        height: 200px;
-        background-color: #fff;
-        position: fixed;
-        top: -20px;
-        margin-top: 90px;
-        z-index: 3;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-    }
-
-    .nav-ul {
-        width: 100%;
-        height: 100%;
+    .sandwich {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .nav-item  {
-        text-align: center;
-        margin-left: 0;
-        display: block;
-        text-decoration: none;
-        color: #000;
-    }
-
-    .nav-item:after{
-        content: "";
-        background-color: #FF3877;
-        height: 3px;
-        width: 0%;
-        display: block;
-        width: 20%;
-        transition: 0.3s;
-    
-    }
-    
-    .nav-item:hover::after{
-        width: 100%;
-    }
-
-    .btn-login {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .btnlogin {
-        width: 100px;
-        height: 30px;
-        border-radius: 5px;
-        border: none;
-        color: #fff;
-        font-weight: 600;
-        background-color: #0D592E;
-    }
-
-    .link-login {
-        text-decoration: none;
-        color: #fff;
     }
 
     .open {
-        display: block;
-    }
-
-    .pequisa-mobile {
-        height: 100%;
-        width: 60%;
+        background-color: white;
+        height: 0%;
         display: flex;
-        align-items: center;
-        justify-content: right;
+        flex-direction: column;
+        padding: 15px 0px;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(161, 161, 161, 0.788);
+        -moz-animation-duration: .2s;
+        -webkit-animation-duration: .2s;
+        animation-duration: .2s;
+        -webkit-animation-name: ani-open-menu;
+        -moz-animation-name: ani-open-menu;
+        animation-name: ani-open-menu;
+        -moz-animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -moz-animation-direction: alternative;
+        -webkit-animation-direction: alternative;
+        animation-direction: alternative;
     }
 
-    .pesquisar-login {
-        display: none;
+    @keyframes ani-open-menu {
+        from {
+            height: 0%;
+            transition: all .2s ease-in-out;
+        }
+        to {
+            height: auto;
+        }
     }
-    
-}
-
-@media screen and (max-width: 510px) {
-    .menu {
-        padding: 0px;
-    }
-    .logo {
-        width: 100px;
-    }
-    .pequisa-mobile {
-        justify-content: right;
-        padding-right: 15px;
-    }
-
-    .menu-icon {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .img-sandwich {
-        width: 100%;
-    }
-
 }

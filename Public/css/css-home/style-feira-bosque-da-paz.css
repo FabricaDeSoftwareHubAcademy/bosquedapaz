@@ -2,43 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('style-menu.css');
 @import url('style-carrosel.css');
-
-@import url('style-categorias.css');
+@import url('style-informacoes-feira.css');
 @import url('style-expositor.css');
+@import url('style-categorias.css');
 @import url('style-avisos.css');
 @import url('style-mapa.css');
-@import url('style-rodape.css');
 @import url('style-parceiros-home.css');
-@import url('../css-modais/perfil-expositor.css');
+@import url('style-rodape.css');
+@import url('style-modal-atracoes.css');
 
 :root {
-    --color-artesanato: rgba(13, 71, 161, 0.30);
-    --color-artesanato-bg: rgba(13, 72, 161, 0.6);
-
-    --color-antiguidade: rgba(255, 182, 0, 0.30);
-    --color-antiguidade-bg: rgba(255, 182, 0, 0.60);
-
-    --color-colecionismo: rgba(114, 9, 183, 0.30);
-    --color-colecionismo-bg: rgba(114, 9, 183, 0.60);
-
-    --color-cosmetica: rgba(217, 3, 104, 0.30);
-    --color-cosmetica-bg: rgba(217, 3, 104, 0.60);
-
-    --color-gastronomia: rgba(251, 86, 7, 0.30);
-    --color-gastronomia-bg: rgba(251, 86, 7, 0.60);
-
-    --color-literatura: rgba(23, 128, 118, 0.30);
-    --color-literatura-bg: rgba(23, 128, 118, 0.60);
-
-    --color-moda: rgba(15, 76, 92, 0.30);
-    --color-moda-bg: rgba(15, 76, 92, 0.60);
-
-    --color-planta: rgba(0, 128, 0, 0.30);
-    --color-planta-bg: rgba(0, 128, 0, 0.60);
-
-    --color-sustenta: rgba(108, 88, 76, 0.30);
-    --color-sustenta-bg: rgba(108, 88, 76, 0.60);
-
     --color-rua1: #ffde5a;
     --color-rua2: #EC6627;
     --color-rua3: #5EBB50;
@@ -54,230 +27,37 @@
     --color-prox-event: #4A8AF1;
     --color-edit-pass: #FFFFFF;
     --color-ulti-publi: #5CB748;
-
     --color-fundo-verde: #5EB64A;
-    /* #5EB64A #90C470 */
 }
 
-/* propriedades padroes */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.all-title {
+.home {
+    overflow-x: hidden;
+}
+
+.all-titles {
+    font-weight: 600;
     font-size: 2rem;
     text-transform: capitalize;
-    font-weight: 600;
 }
 
-.all-para {
-    font-size: 1.3rem;
+.all-links {
+    text-decoration: none;
 }
 
-.after-banner {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.content-carrossel {
-    max-width: 80%;
-    height: 250px;
-    background-color: transparent;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-welcome, .text-welcome-c {
-    color: black;
-    width: 100%;
-}
-
-/* informações sobre a feira */
-.informacoes {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;;
-    padding: 80px 0px;
-}
-
-.info {
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 5px;
-}
-
-.img-info {
-    width: 100px;
-}
-
-.especi {
-    width: 53%;
-    display: flex;
-    flex-direction: column;
-}
-
-.p-prin {
-    font-size: 30px;
-    width: 100%;
-    font-weight: 600;
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
-.p-compl{
-    font-size: 20px;
-    font-weight: 400;
-    margin-left: 10px;
-    margin-top: -10px;
-}
-
-.iu {
-    width: auto;
-}
-
-.imu {
-    width: 100px;
-    height: 100px;
-}
-
-.eu {
-    width: 70px;
-}
-
-.pu {
-    width: 70px;
-}
-
-.modal-ver-per-expo {
-    margin: auto;
-    z-index: 3;
-    border: none;
-    width: 1200px;
-    border-radius: 5px;
-}
-
-
-
-/* responsividade para 1500px */
-@media(max-width: 1500px) {
-
-}
-
-@media (max-width: 1150px) {
-
-    .all-title {
-        font-size: 1.4rem;
-    }
-
-    .all-para {
-        font-size: 1.1rem;
-    }
-
-    .text-carrossel {
-        top: 300px;
-        bottom: auto;
-    }
-
-    .img-info {
-        width: 60px;
-        height: 60px;
-    }
-
-    .especi {
-        width: 55%;
-    }
-
-    .p-prin {
-        font-size: 1.4rem;
-    }
-
-    .p-compl{
-        font-size: 1rem;
+@media screen and (max-width: 1150px) {
+    .all-titles {
+        font-size: 1.5rem;
     }
 }
 
-
-/* responsividade para 950px */
-@media (max-width: 800px) {
-    .informacoes {
-        gap: 10px;
-    }
-    .img-info {
-        width: 50px;
-        height: 50px;
-    }
-
-    .especi {
-        width: 55%;
-    }
-
-    .p-prin {
+@media screen and (max-width: 550px) {
+    .all-titles {
         font-size: 1.3rem;
-    }
-
-    .p-compl{
-        font-size: 1rem;
-    }
-}
-
-
-/* responsividade para mobile (500px) */
-@media(max-width: 500px) {
-
-    .all-title {
-        font-size: 1.1rem;
-    }
-
-    .all-para {
-        font-size: .9rem;
-    }
-
-    .text-welcome-c {
-        width: 100%;
-    }
-
-    /* informacaoe numeros */
-
-    .informacoes {
-        gap: 5px;
-        max-width: 85%;
-    }
-
-    .info {
-        width: 150px;
-    }
-
-    .img-info {
-        width: 35%;
-    }
-
-    .p-prin {
-        font-size: 18px;
-    }
-
-    .p-compl{
-        font-size: 16px;
-    }
-
-    .imu {
-        width: 50px;
-        height: 50px;
     }
 }

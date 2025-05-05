@@ -38,3 +38,9 @@
 .mapa-ampliado:hover {
   background-color: #f8621a;
 }
+
+@media screen and (max-width: 600px) {
+  .mapa-gabriel {
+    margin-top: 50px;
+  }
+}
