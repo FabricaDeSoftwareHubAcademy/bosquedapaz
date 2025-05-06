@@ -1,26 +1,45 @@
 <?php
 require_once '../Controller/Evento.php';
 
-if (isset($_POST['REQUEST_METHOD'])) {
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $evento = new Evento();
 
-    $evento->setNome($_POST['nome']);
-    $evento->setDescricao($_POST['descricao']);
-    $evento->setData($_POST['data']);
-    $evento->setBanner($_POST['banner']);
+    $evento->setNome($_POST['nomedoevento']);
+    $evento->setDescricao($_POST['descricaodoevento']);
+    $evento->setData($_POST['dataevento']); // corrigido para bater com o campo no HTML
 
+    // Upload do banner
+    if (isset($_FILES['file']) && $_FILES['file']['error'] === 0) {
+        $nome_arquivo = $_FILES['file']['name'];
+        $caminho_temp = $_FILES['file']['tmp_name'];
+        $destino = '../../../Public/uploads/' . $nome_arquivo;
+
+        // Cria o diretório, se não existir
+        if (!is_dir('../../../Public/uploads/')) {
+            mkdir('../../../Public/uploads/', 0755, true);
+        }
+
+        if (move_uploaded_file($caminho_temp, $destino)) {
+            $evento->setBanner($destino);
+        } else {
+            echo "<script>alert('Erro ao salvar o arquivo.');</script>";
+            exit;
+        }
+    } else {
+        echo "<script>alert('Erro no upload do banner.');</script>";
+        exit;
+    }
 
     $res = $evento->cadastrar();
 
     if ($res) {
-        echo '<script> alert("cadastrou") </script>';
+        echo '<script>alert("Evento cadastrado com sucesso!"); window.location.href="Area-Adm.php";</script>';
     } else {
-        echo '<script> alert(" não cadastrou") </script>';
+        echo '<script>alert("Erro ao cadastrar evento.");</script>';
     }
+
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +62,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
         <div class="box">
             <h1>CADASTRO DE EVENTO</h1>
             <div class="form-box">
-                <form action="#" method="POST">
+                <form method="POST" enctype="multipart/form-data">
                     <div id="form1">
                         <div class="input-group">
                             <label>Nome:</label>
@@ -57,7 +76,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         <div class="data-imagem">
                             <div class="input-group">
                                 <label>Data:</label>
-                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                                <input type="date" id="dataevento" name="dataevento">
                             </div>
                             <div class="input-group">
                                 <label>Imagem:</label>
@@ -81,9 +100,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         <a href="./Area-Adm.php">Cancelar</a>
                     </button>
 
-                    <button class="open-modal" data-modal="modal-deleta">
-                        Salvar
-                    </button>
+                    <button type="submit" class="btn btn-salvar">Salvar</button>
                         
                 </div>
             </div>
@@ -111,7 +128,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
 </body>
 
 </html>
