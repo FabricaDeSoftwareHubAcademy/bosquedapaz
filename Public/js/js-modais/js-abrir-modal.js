@@ -1,5 +1,5 @@
 const openButtons = document.querySelectorAll('.open-modal');
-console.log(openButtons)
+// console.log(openButtons)
 
 openButtons.forEach(button => {
     button.addEventListener('click', () => {

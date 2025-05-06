@@ -23,7 +23,7 @@
 
 .logo {
     width: 10%;
-    max-width: 150px;
+    min-width: 150px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -131,122 +131,121 @@
 }
 
 
-.nav-item:hover .submenu {
+/* .nav-item:hover .submenu {
     display: block;
-}
+} */
 
-.sandwich-menu {
-    display: none;
-}
 
-.login-menu {
-    width: 10%;
-    height: 100%;
+.conteiner-outros {
+    width: auto;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: end;
-    padding: 10px 0px;
     gap: 10px;
 }
 
-.login {
-    width: 75px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    overflow: hidden;
+
+.sandwich {
+    display: none;
+    font-size: 2.4rem;
+    color: black;
+}
+
+.link-login {
+    height: auto;
+    text-decoration: none;
+    color: black;
 }
 
 .img-login {
-    width: 100%;
+    width: 65px;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 1400px) {
-    .nav-bar {
-        display: none;
-    }
-
-    .logo {
-        width: 15%;
-    }
-
-    .login-menu {
-        width: 40%;
-    }
-
-    .login {
-        width: 60px;
-        height: 60px;
-    }
-
-    .sandwich-menu {
+    .nav-item {
+        height: auto;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 80px;
+    }
+    .submenu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #c1c1c1;
+        border-radius: 0px;
     }
 
-    .menu {
-        width: 100%;
-    }
-
-    .open {
-        position: absolute;
-        top: 0px;
-        margin-top: 110px;
-        width: 100%;
-        height: auto;
-        display: block;
-        padding: 20px;
-        background-color: white;
-        border-top: 2px solid rgba(0, 0, 0, 0.301);
-        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.301);
+    .sub-nav-item {
+        text-align: center;
     }
 
     .nav-list {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .nav-item{
-        width: 280px;
-        text-align: center;
-    }
-    .nav-item::after{
         display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
     }
 
-    .nav-item:hover{
-        height: auto;
+    .sandwich {
+        display: block;
     }
-    .nav-item:hover .submenu {
-        position: initial;
-        height: auto;
-        background-color: transparent;
+
+    .open {
+        background-color: white;
+        height: 0%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 5px;
+        padding: 15px 0px;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(161, 161, 161, 0.788);
+        -moz-animation-duration: 0s;
+        -webkit-animation-duration: 0s;
+        animation-duration: 0s;
+        -webkit-animation-name: ani-open-menu;
+        -moz-animation-name: ani-open-menu;
+        animation-name: ani-open-menu;
+        -moz-animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -moz-animation-direction: alternative;
+        -webkit-animation-direction: alternative;
+        animation-direction: alternative;
+    }
+
+    @keyframes ani-open-menu {
+        from {
+            height: 0%;
+            transition: all 2s ease-in-out;
+        }
+        to {
+            height: auto;
+        }
+    }
+
+    .submenu {
+        margin-top: 5px;
+        position: static;
+        padding: 0px 10px 10px 10px;
         box-shadow: none;
-        border-radius: 0px;
-        border-top: 2px solid rgba(0, 0, 0, 0.301);
-        border-bottom: 2px solid rgba(0, 0, 0, 0.301);
     }
 }
 
-@media(max-width: 1350px){
+/* @media(max-width: 1350px){
 
     .logo {
         width: 25%;
@@ -285,4 +284,4 @@
         font-size: .9rem;
         height: 20px;
     }
-}
+} */
