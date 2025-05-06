@@ -7,14 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>Edição de Perfil | Play Artesanato</title>
 </head>
-<!-- Corpo da Pagina -->
-<body class="body__main">
-
+<body>
     <!-- Include Menu de Navegação -->
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
-
-    <!-- Conteúdo Principal -->
-    <main class="container__main">
+    <!-- Corpo da Pagina -->
+    <section class="container__main">
+        <!-- Box Principal -->
         <div class="box__container">
             <!-- Form -->
             <form class="form" action="salvar_perfil.php" method="POST" enctype="multipart/form-data">
@@ -28,55 +26,54 @@
                         </label>
                         <p>Clique na logo para alterar</p>
                     </div>
-
+                    <!-- Area texto produto -->
                     <div class="text__produtos">
                         <h2>Produtos</h2>
                     </div>
-
                     <!-- Upload de Fotos dos Produtos -->
                     <div class="container__imgs">
-                        <label for="produto1" class="label__img__prod">
-                            <input type="file" name="produto1" id="produto1" class="input__img">
-                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt="Produto 1">
-                        </label>
+                        <!-- Area das Imagens -->
+                        <div class="galeria__imagens">
+                            <label for="produto1" class="label__img__prod">
+                                <input type="file" name="produto1" id="produto1" class="input__img">
+                                <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt="Produto 1">
+                            </label>
 
-                        <label for="produto2" class="label__img__prod">
-                            <input type="file" name="produto2" id="produto2" class="input__img">
-                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-2.jpeg" alt="Produto 2">
-                        </label>
+                            <label for="produto2" class="label__img__prod">
+                                <input type="file" name="produto2" id="produto2" class="input__img">
+                                <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-2.jpeg" alt="Produto 2">
+                            </label>
 
-                        <label for="produto3" class="label__img__prod">
-                            <input type="file" name="produto3" id="produto3" class="input__img">
-                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-3.jpeg" alt="Produto 3">
-                        </label>
+                            <label for="produto3" class="label__img__prod">
+                                <input type="file" name="produto3" id="produto3" class="input__img">
+                                <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-3.jpeg" alt="Produto 3">
+                            </label>
 
-                        <label for="produto4" class="label__img__prod">
-                            <input type="file" name="produto4" id="produto4" class="input__img">
-                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-4.jpeg" alt="Produto 4">
-                        </label>
+                            <label for="produto4" class="label__img__prod">
+                                <input type="file" name="produto4" id="produto4" class="input__img">
+                                <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-4.jpeg" alt="Produto 4">
+                            </label>
 
-                        <label for="produto5" class="label__img__prod">
-                            <input type="file" name="produto5" id="produto5" class="input__img">
-                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-5.jpeg" alt="Produto 5">
-                        </label>
+                            <label for="produto5" class="label__img__prod">
+                                <input type="file" name="produto5" id="produto5" class="input__img">
+                                <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-5.jpeg" alt="Produto 5">
+                            </label>
 
-                        <label for="produto6" class="label__img__prod">
-                            <input type="file" name="produto6" id="produto6" class="input__img">
-                            <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-6.jpeg" alt="Produto 6">
-                        </label>
-
-                        <p>Clique na imagem para alterar</p>
+                            <label for="produto6" class="label__img__prod">
+                                <input type="file" name="produto6" id="produto6" class="input__img">
+                                <img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-6.jpeg" alt="Produto 6">
+                            </label>
+                            <p>Clique na imagem para alterar</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="linha"></div>
-
+                <div class="linha__decorativa"></div>
                 <!-- Lado Direito: Informações do Expositor -->
                 <div class="lado__direito">
                     <!-- Título -->
-                    <header class="area__h1">
+                    <div class="area__h1">
                         <h1>Edição Perfil Expositor</h1>
-                    </header>
+                    </div>
 
                     <!-- Sobre o Expositor -->
                     <div class="area__text">
@@ -100,7 +97,6 @@
                             <div class="cor__rua"><p>Verde</p></div>
                         </div>
                     </div>
-
                     <!-- Contatos -->
                     <div class="area__inf__corR">
                         <h3 class="h3__infs__pessoais">Informações de Contato</h3>
@@ -138,7 +134,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Botões -->
                     <div class="area__buttons">
                         <button type="button" class="buttons" id="button__cancelar">Cancelar</button>
@@ -147,11 +142,10 @@
                 </div>
             </form>
         </div>
-
-        <!-- Imagens Decorativas -->
-        <div class="img__dec1"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img1.png" alt=""></div>
-        <div class="img__dec2"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img2.png" alt=""></div>
-        <div class="img__dec3"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img3.png" alt=""></div>
-    </main>
+    </section>
+    <!-- Imagens Decorativas -->
+    <div class="img__dec1"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img1.png" alt=""></div>
+    <div class="img__dec2"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img2.png" alt=""></div>
+    <div class="img__dec3"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img3.png" alt=""></div>
 </body>
 </html>

@@ -13,61 +13,51 @@
 :root{
     --color-box: #F8F5F6A6;
     --color-linha: #2B2B2B4B;
-
+    
     --color-input: #B6B6B6;
     --color-cor-rua: #5CB74A;
+    --color-box-shadow: #2B2B2B4B;
 
     --color-button1: #FF3877;
     --color-button2: #007E70;
 }
 
 /* Corpo da Pagina */
-.body__main{
+.container__main{
+    width: 100%;
     height: 100vh;
     display: flex;
 }
 
-/* Main: Conteúdo Principal */
-.container__main{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Box Principal */
 .box__container{
-    margin: 0 auto;
-    margin-top: 3%;
     width: 90%;
     height: 85%;
+    margin: 0 auto;
+    margin-top: 5%;
     z-index: 2;
-    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
     background-color: var(--color-box);
 }
 
 /* Form */
 .form{
     width: 100%;
-    height: 100%;
-    /* padding: 20px 20px; */
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Lado Esquerdo: Logo e Imagens (Produtos) */
-.lado__esquerdo {
-    height: 100%;
+.lado__esquerdo{
     width: 40%;
+    height: 100%;
+    gap: 15px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* Container da logo: Upload da Logo */
@@ -81,9 +71,10 @@
     justify-content: center;
 }
 
+/* Upload da Logo */
 .uploads{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     display: flex;
     cursor: pointer;
     border-radius: 50%;
@@ -101,13 +92,13 @@
     width: 100%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--color-linha);
+    box-shadow: 0px 0px 15px var(--color-box-shadow);
 }
 
-
+/* Area texto produto */
 .text__produtos{
     width: 100%;
-    height: 10%;
+    height: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,19 +115,29 @@
 
 /* Container de imagens dos produtos */
 .container__imgs {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Area das Imagens */
+.galeria__imagens{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
-    margin-bottom: 6rem;
+    margin-top: 1rem;
 }
 
 /* Label: Input/imagem */
 .label__img__prod {
     width: calc(33.3% - 10px); 
-    height: 130px;
+    height: 160px;
     align-items: center;
     justify-content: center;
     border-radius: 8px; 
@@ -188,29 +189,26 @@
 }
 
 /* Linha Decorativa */
-.linha{
+.linha__decorativa{
     width: 2px;
-    height: 100%;
     background-color: var(--color-linha);
 }
 
 /* Lado Direito: Informações do Expositor */
 .lado__direito{
-    height: 100%;
     width: 60%;
-    /* gap: 20px; */
+    gap: 50px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
-.lado__direito h1, h2, h3{
-    font-weight: 600;
-}
-
-/* Header Titulo (h1) */
+/* Título */
 .area__h1{
     width: 100%;
-    height: 15%;
+    height: 10%;
+    position: relative;
+    top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,143 +216,148 @@
 
 /* Sobre o Expositor */
 .area__text{
-    width: 100%;
-    height: 35%;
-    margin-left: 40px;
+    width: 90%;
+    height: 30%;
     display: flex;
+    margin-left: 50px;
     flex-direction: column;
 }
 
-.area__text label{
-    position: relative;
-    top: 0.5rem;
+.area__h1 h1{
+    font-size: 30px;
+}
+
+.lado__direito h1, h2, h3{
+    font-weight: 600;
 }
 
 .input__text{
-    width: 80%;
-    height: 60%;
-    padding-left: 5px;
+    width: 98%;
+    height: 150px;
     border: none;
     resize: none;
-    margin-top: 1rem;
     outline: none;
-    border-radius: 6px;
-    box-shadow: 2px 4px 2px var(--color-input);
+    border-radius: 8px;
+    box-shadow: 3px 2px 2px var(--color-input);
 }
 
 /* Informações da Barraca */
 .area__cat__num{
-    width: 100%;
-    height: 15%;
-    margin-left: 40px;
+    width: 90%;
+    height: 10%;
+    margin-left: 50px;
     display: flex;
     align-items: center;
 }
 
 .cat{
-    width: 33.3%;
+    width: 33.33%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+
 .num{
     width: 33.3%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+
 .area__cor{
     width: 33.3%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .cor__rua{
-    width: 110px;
+    width: 32%;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     color: white;
-    font-size: 20px;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
-    background-color: #5CB74A;
+    background-color: var(--color-cor-rua);
 }
 
 /* Contatos */
-.area__inf__corR{   
-    width: 100%;
+.area__inf__corR{
+    width: 90%;
     height: 35%;
-    gap: 15px;
-    margin-left: 40px;
+    margin-left: 50px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-}
-
-.h3__infs__pessoais{
-    position: relative;
-    top: 0.5rem;
 }
 
 .area__total__form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px 15px; 
-    margin-top: 0.5rem;
-    height: auto;   
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 950px;
+    border-radius: 8px;
 }
 
+/* Area principal dos Inputs:  */
 .area__inputs {
-    height: auto;
+    width: calc(50% - 10px); 
+    height: 100px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    border-radius: 8px; 
 }
 
 .input__container {
-    width: 90%;
-    position: relative;
+    width: 100%;
+    height: 45px;
     display: flex;
     align-items: center;
-    border-radius: 8px;
-    height: 45px;
+    position: relative;
 }
 
 .input__container i {
     position: absolute;
     left: 12px;
-    font-size: 18px;
-    color: #666;
 }
 
+/* Input:  */
 .input {
-    width: 90%;
-    height: 100%;
-    padding-left: 40px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    box-shadow: 3px 3px 2px var(--color-input);
-    background-color: transparent;
-}
-
-.area__buttons{
     width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    gap: 30px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 40px;
+    box-shadow: 2px 2px 2px var(--color-input);
 }
 
-/* Botões */
+/* Botões:  */
+.area__buttons{
+    width: 90%;
+    height: 15%;
+    position: relative;
+    bottom: 1rem;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
 .buttons{
     width: 200px;
     height: 45px;
+    border: none;
+    border-radius: 8px;
     color: white;
     font-size: 20px;
-    border: none;
-    position: relative;
-    right: 5.5rem;
-    border-radius: 6px;
-    font-weight: 500;
-    cursor: pointer;
+    font-weight: 600;
 }
 
 #button__cancelar{
@@ -404,461 +407,560 @@
 /* Responsividades: */
 /* Celulares pequenos (smartphones compactos) */
 @media (max-width: 575.98px){
+    /* Areas Principais: */
+    .container__main {
+        height: 100%;
+    }
     .box__container {
-        width: 95%;
-        height: 155vh;
-        margin-top: 73vh;
+        height: 100%;
+        margin-top: 20%;
     }
-
-    .form {
-        flex-direction: column;
-        margin-bottom: 15rem;
-    }
-
-    .lado__esquerdo {
-        height: 30%;
-        width: 80%;
-        margin-top: 10rem;
+    .form{
         gap: 10px;
+        flex-direction: column;
     }
+   
 
-    .lado__direito {
-        height: 50%;
+    /* Lado Esquerdo: */
+    .lado__esquerdo{
         width: 100%;
-        gap: 20px;
-        margin-top: 9rem;
+        gap: 5px;
     }
-
-    .img__dec1 img{
-        width: 40%;
-        height: auto;
+    .container__logo {
+        width: 100%;
+        height: 30%;
+        margin-top: 2rem;
     }
-    .img__dec2 {
-        right: -12vw;
-    }
-    .img__dec2 img{
-        width: 40%;
-        height: auto;
-    }
-    .img__dec3 {
-        bottom: -1vh;
-        right: -8vw;
-    }
-
-    .linha{
-        display: none;
-    }
-
     .uploads {
         width: 150px;
         height: 150px;
     }
-
     .container__logo p{
-        font-size: 10px;
+        font-size: 12px;
     }
-
     .text__produtos h2{
-        font-size: 18px;
+        font-size: 16px;
     }
-
+    .container__imgs {
+        width: 80%;
+    }
     .label__img__prod {
-        width: calc(50% - 10px); 
-        height: 85px;
+        width: calc(50% - 10px);
+        height: 100px;
+    }
+    .galeria__imagens p{
+        font-size: 12px;
     }
 
-    .container__imgs p{
-        font-size: 10px;
-    }
 
-    .area__h1 h1{
-        font-size: 20px;
+    /* Lado Direito: */
+    .lado__direito{
+        width: 100%;
+        gap: 30px;
     }
-
     .area__h1{
-        height: 10%;
+        position: relative;
+        top: 1rem;
     }
-
+    .area__h1 h1{
+        font-size: 22px;
+    }
+    .area__text{
+        margin-left: 18px;
+    }
     .title{
         font-size: 16px;
     }
-
-    .sobre{
-        font-size: 12px;
-    }
-
-    .area__text {
-        width: 90%;
-        height: 30%;
-        margin-left: 20px;
-    }
-
-    .area__cat__num h3{
-        font-size: 16px;
-    }
-
-    .area__cat__num p{
-        font-size: 12px;
-    }
-
-    .area__cat__num{
-        width: 90%;
-        height: 10%;
-        margin-left: 20px;
-    }
-
-    .cor__rua{
-        width: 60px;
-        height: 25px;
+    .lado__direito h3 {
         font-size: 14px;
     }
-
-    .area__inf__corR{
-        width: 90%;
-        height: 40%;
-        margin-left: 20px;
-    }
-
-    .h3__infs__pessoais{
-        font-size: 16px;
-    }
-
-    .area__inputs label{
+    .lado__direito .sobe, p {
         font-size: 12px;
     }
-
+    .area__cat__num{
+        margin-left: 20px;
+    }
+    .cor__rua{
+        width: 80%;
+        height: 30px;
+    }
+    .area__inf__corR{
+        margin-left: 20px;
+    }
+    .area__inputs {
+        width: 95%;
+    }
     .area__total__form{
-        display: flex;
-        flex-direction: column;
+        gap: 0;
     }
-
     .area__buttons{
-        width: 90%;
+        width: 100%;
+        gap: 10px;
         position: relative;
-        top: 7rem;
+        bottom: 1rem;
+        justify-content: center;
+    }
+    .buttons{
+        width: 120px;
+        height: 35px;
+        margin-right: 0px;
     }
 
-    .buttons{
-        width: 100px;
-        height: 35px;
-        font-size: 16px;
-        right: 0;
+
+    /* Imagens Decorativas:  */
+    .img__dec1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img__dec2 img{
+        width: 50%;
+        height: auto;
     }
 }
 
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
+     /* Areas Principais: */
+     .container__main {
+        height: 100%;
+    }
     .box__container {
-        width: 95%;
-        height: 150vh;
-        margin-top: 73vh;
+        height: 100%;
+        margin-top: 15%;
+        /* display: none; */
     }
-
-    .form {
-        flex-direction: column;
-        margin-bottom: 15rem;
-    }
-
-    .lado__esquerdo {
-        height: 30%;
-        width: 80%;
-        margin-top: 10rem;
+    .form{
         gap: 10px;
+        flex-direction: column;
     }
+   
 
-    .lado__direito {
-        height: 50%;
+    /* Lado Esquerdo: */
+    .lado__esquerdo{
         width: 100%;
-        gap: 20px;
-        margin-top: 9rem;
+        gap: 5px;
     }
-
-    .img__dec1 img{
-        width: 40%;
-        height: auto;
+    .container__logo {
+        width: 100%;
+        height: 30%;
+        margin-top: 2rem;
     }
-    .img__dec2 {
-        right: -12vw;
-    }
-    .img__dec2 img{
-        width: 40%;
-        height: auto;
-    }
-    .img__dec3 {
-        bottom: -1vh;
-        right: -8vw;
-    }
-
-    .linha{
-        display: none;
-    }
-
     .uploads {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
     }
-
     .container__logo p{
-        font-size: 10px;
+        font-size: 12px;
     }
-
     .text__produtos h2{
-        font-size: 18px;
+        font-size: 16px;
     }
-
+    .container__imgs {
+        width: 80%;
+    }
     .label__img__prod {
-        width: calc(33.3% - 10px);
-        height: 135px;
+        width: calc(50% - 10px);
+        height: 130px;
+    }
+    .galeria__imagens p{
+        font-size: 12px;
     }
 
-    .container__imgs p{
-        font-size: 10px;
-    }
 
-    .container__imgs{
-        position: relative;
-        top: 1rem;
+    /* Lado Direito: */
+    .lado__direito{
+        width: 100%;
+        gap: 30px;
     }
-    .text__produtos{
-        position: relative;
-        top: 1rem;
-    }
-
-    .area__h1 h1{
-        font-size: 20px;
-    }
-
     .area__h1{
-        height: 10%;
+        position: relative;
+        top: 1rem;
     }
-
+    .area__h1 h1{
+        font-size: 22px;
+    }
+    .area__text{
+        margin-left: 18px;
+    }
     .title{
         font-size: 16px;
     }
-
-    .sobre{
-        font-size: 12px;
-    }
-
-    .area__text {
-        width: 90%;
-        height: 30%;
-        margin-left: 20px;
-    }
-
-    .area__cat__num h3{
-        font-size: 16px;
-    }
-
-    .area__cat__num p{
-        font-size: 12px;
-    }
-
-    .area__cat__num{
-        width: 90%;
-        height: 10%;
-        margin-left: 20px;
-    }
-
-    .cor__rua{
-        width: 60px;
-        height: 25px;
+    .lado__direito h3 {
         font-size: 14px;
     }
-
-    .area__inf__corR{
-        width: 90%;
-        height: 40%;
-        margin-left: 20px;
-    }
-
-    .h3__infs__pessoais{
-        font-size: 16px;
-    }
-
-    .area__inputs label{
+    .lado__direito .sobe, p {
         font-size: 12px;
     }
-
+    .area__cat__num{
+        margin-left: 20px;
+    }
+    .cor__rua{
+        width: 40%;
+        height: 30px;
+    }
+    .area__inf__corR{
+        margin-left: 20px;
+    }
+    .area__inputs {
+        width: 95%;
+    }
     .area__total__form{
-        display: flex;
-        flex-direction: column;
+        gap: 0;
     }
-
     .area__buttons{
-        width: 90%;
+        width: 100%;
+        gap: 0px;
         position: relative;
-        top: 7rem;
+        bottom: 1rem;
+        justify-content: right;
+    }
+    .buttons{
+        width: 150px;
+        height: 45px;
+        position: relative;
+        right: 3.5rem;
     }
 
-    .buttons{
-        width: 100px;
-        height: 35px;
-        font-size: 16px;
-        right: 0;
+
+    /* Imagens Decorativas:  */
+    .img__dec1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img__dec2 img{
+        width: 50%;
+        height: auto;
     }
 }
 
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
+     /* Areas Principais: */
+     .container__main {
+        height: 100%;
+    }
     .box__container {
-        width: 95%;
-        height: 160vh;
-        margin-top: 83vh;
+        height: 100%;
+        margin-top: 10%;
     }
-
-    .form {
-        flex-direction: column;
-        margin-bottom: 15rem;
-    }
-
-    .lado__esquerdo {
-        height: 30%;
-        width: 80%;
-        margin-top: 10rem;
+    .form{
         gap: 10px;
+        flex-direction: column;
     }
+   
 
-    .lado__direito {
-        height: 50%;
+    /* Lado Esquerdo: */
+    .lado__esquerdo{
         width: 100%;
-        gap: 20px;
-        margin-top: 9rem;
+        gap: 5px;
     }
-
-    .img__dec1 img{
-        width: 40%;
-        height: auto;
+    .container__logo {
+        width: 100%;
+        height: 30%;
+        margin-top: 2rem;
     }
-    .img__dec2 {
-        right: -12vw;
-    }
-    .img__dec2 img{
-        width: 40%;
-        height: auto;
-    }
-    .img__dec3 {
-        bottom: -1vh;
-        right: -8vw;
-    }
-
-    .linha{
-        display: none;
-    }
-
     .uploads {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
-
     .container__logo p{
-        font-size: 10px;
+        font-size: 14px;
     }
-
     .text__produtos h2{
         font-size: 18px;
     }
-
+    .container__imgs {
+        width: 80%;
+    }
     .label__img__prod {
         width: calc(33.3% - 10px);
-        height: 130px;
+        height: 150px;
     }
-    .container__imgs p{
-        font-size: 10px;
-    }
-
-    .container__imgs{
-        margin-top: 2rem;
-    }
-
-    .text__produtos{
-        position: relative;
-        top: 2rem;
-    }
-
-    .area__h1 h1{
-        font-size: 20px;
-    }
-
-    .area__h1{
-        height: 10%;
-    }
-
-    .title{
-        font-size: 16px;
-    }
-
-    .sobre{
-        font-size: 12px;
-    }
-
-    .area__text {
-        width: 90%;
-        height: 30%;
-        margin-left: 20px;
-    }
-
-    .area__cat__num h3{
-        font-size: 16px;
-    }
-
-    .area__cat__num p{
-        font-size: 12px;
-    }
-
-    .area__cat__num{
-        width: 90%;
-        height: 10%;
-        margin-left: 20px;
-    }
-
-    .cor__rua{
-        width: 60px;
-        height: 25px;
+    .galeria__imagens p{
         font-size: 14px;
     }
 
-    .area__inf__corR{
-        width: 90%;
-        height: 40%;
+
+    /* Lado Direito: */
+    .lado__direito{
+        width: 100%;
+        gap: 30px;
+    }
+    .area__h1{
+        position: relative;
+        top: 1rem;
+    }
+    .area__h1 h1{
+        font-size: 24px;
+    }
+    .area__text{
+        margin-left: 18px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .lado__direito h3 {
+        font-size: 16px;
+    }
+    .lado__direito .sobe, p {
+        font-size: 14px;
+    }
+    .area__cat__num{
         margin-left: 20px;
     }
-
-    .h3__infs__pessoais{
-        font-size: 16px;
+    .area__inf__corR{
+        margin-left: 20px;
     }
-
-    .area__inputs label{
-        font-size: 12px;
+    .area__inputs {
+        width: 95%;
     }
-
     .area__total__form{
-        display: flex;
-        flex-direction: column;
+        gap: 0;
     }
-
     .area__buttons{
-        width: 90%;
+        width: 100%;
+        gap: 0px;
         position: relative;
-        top: 7rem;
+        bottom: 1rem;
+        justify-content: right;
+    }
+    .buttons{
+        width: 150px;
+        height: 45px;
+        position: relative;
+        right: 5.5rem;
     }
 
-    .buttons{
-        width: 100px;
-        height: 35px;
-        font-size: 16px;
-        right: 0;
+
+    /* Imagens Decorativas:  */
+    .img__dec1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img__dec2 img{
+        width: 50%;
+        height: auto;
     }
 }
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
-   
+    /* Areas Principais: */
+    .container__main {
+        height: 100%;
+    }
+    .box__container {
+        height: 100%;
+        margin-top: 10%;
+    }
+    .form{
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+
+    /* Lado Esquerdo: */
+    .lado__esquerdo{
+        width: 100%;
+        gap: 5px;
+    }
+    .container__logo {
+        width: 100%;
+        height: 30%;
+        margin-top: 2rem;
+    }
+    .uploads {
+        width: 200px;
+        height: 200px;
+    }
+    .container__logo p{
+        font-size: 14px;
+    }
+    .text__produtos h2{
+        font-size: 18px;
+    }
+    .container__imgs {
+        width: 80%;
+    }
+    .label__img__prod {
+        width: calc(33.3% - 10px);
+        height: 150px;
+    }
+    .galeria__imagens p{
+        font-size: 14px;
+    }
+
+
+    /* Lado Direito: */
+    .lado__direito{
+        width: 100%;
+        gap: 30px;
+    }
+    .area__h1{
+        position: relative;
+        top: 1rem;
+    }
+    .area__h1 h1{
+        font-size: 24px;
+    }
+    .area__text{
+        margin-left: 18px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .lado__direito h3 {
+        font-size: 16px;
+    }
+    .lado__direito .sobe, p {
+        font-size: 14px;
+    }
+    .area__cat__num{
+        margin-left: 20px;
+    }
+    .area__inf__corR{
+        margin-left: 20px;
+    }
+    .area__inputs {
+        width: 95%;
+    }
+    .area__total__form{
+        gap: 0;
+    }
+    .area__buttons{
+        width: 100%;
+        gap: 0px;
+        position: relative;
+        bottom: 1rem;
+        justify-content: right;
+    }
+    .buttons{
+        width: 150px;
+        height: 45px;
+        position: relative;
+        right: 5.5rem;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .img__dec1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img__dec2 img{
+        width: 50%;
+        height: auto;
+    }
 }
 
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
+    /* Areas Principais: */
+    .container__main {
+        height: 100%;
+    }
+    .box__container {
+        height: 100%;
+        margin-top: 8%;
+    }
+    .form{
+        gap: 10px;
+        flex-direction: column;
+    }
     
+
+    /* Lado Esquerdo: */
+    .lado__esquerdo{
+        width: 100%;
+        gap: 5px;
+    }
+    .container__logo {
+        width: 100%;
+        height: 30%;
+        margin-top: 2rem;
+    }
+    .uploads {
+        width: 200px;
+        height: 200px;
+    }
+    .container__logo p{
+        font-size: 16px;
+    }
+    .text__produtos h2{
+        font-size: 20px;
+    }
+    .container__imgs {
+        width: 80%;
+    }
+    .label__img__prod {
+        width: calc(33.3% - 10px);
+        height: 150px;
+    }
+    .galeria__imagens p{
+        font-size: 16px;
+    }
+
+
+    /* Lado Direito: */
+    .lado__direito{
+        width: 100%;
+        gap: 30px;
+    }
+    .area__h1{
+        position: relative;
+        top: 1rem;
+    }
+    .area__h1 h1{
+        font-size: 28px;
+    }
+    .area__text{
+        margin-left: 18px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .lado__direito h3 {
+        font-size: 18px;
+    }
+    .lado__direito .sobe, p {
+        font-size: 16px;
+    }
+    .area__cat__num{
+        margin-left: 20px;
+    }
+    .area__inf__corR{
+        margin-left: 20px;
+    }
+    .area__inputs {
+        width: calc(50% - 10px); 
+    }
+    .area__total__form{
+        gap: 20px;
+    }
+    .area__buttons{
+        width: 100%;
+        gap: 0px;
+        position: relative;
+        bottom: 1rem;
+        justify-content: right;
+    }
+    .buttons{
+        width: 150px;
+        height: 45px;
+        position: relative;
+        right: 5.5rem;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .img__dec1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img__dec2 img{
+        width: 50%;
+        height: auto;
+    }
 }
 
 /* Nest Hub */
