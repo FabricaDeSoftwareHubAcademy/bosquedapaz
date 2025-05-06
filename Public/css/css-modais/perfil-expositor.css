@@ -53,7 +53,10 @@
     width: 100%;
     height: 100%;
     display: flex;
+    /* position: relative; */
+    z-index: 1;
 }
+
 
 /* Lado Direito e Esquerdo */
 .left__side, .right__side{
@@ -72,8 +75,8 @@
 }
 
 .div__logo{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     display: flex;
     margin-top: 50px;
     border-radius: 50%;
@@ -157,20 +160,20 @@
 }
 
 /* Area Botão Sair */
-.container__buttton{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    position: relative;
-    bottom: 2rem;
-    justify-content: right;
-}
- /* Botão */
-.btn{
-    width: 10%;
-    height: 100%;
-    border: none;
+.container__buttton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
     background-color: transparent;
+    width: auto;
+    height: auto;
+}
+
+/* Botão:  */
+.btn {
+    background: transparent;
+    border: none;
     cursor: pointer;
 }
 
@@ -189,6 +192,7 @@
     height: 40%;
     display: flex;
     flex-direction: column;
+    margin-top: 5rem;
 }
 
 .right__side h2{
@@ -234,15 +238,44 @@
     height: 15%;
     display: flex;
     align-items: center;
-    gap: 200px;
+}
+
+.div__categoria{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: cornflowerblue;   */
+}
+
+.div__num{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: cornsilk;   */
 }
 
 /* Area Contatos */
 .container__contacts{
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
-    gap: 80px;
+}
+
+.div__contacts{
+    width: 45%;
+    height: 100%;
+}
+
+.div__cor__rua{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: cornsilk; */
 }
 
 /* icones */
@@ -316,37 +349,481 @@
     justify-content: center;
 }
 
+
 /* Responsividades: */
 /* Celulares pequenos (smartphones compactos) */
 @media (max-width: 575.98px){
+    /* Areas Principais:  */
+    .conteiner__box{
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 10px;
+    }
 
+
+    /* Lado Esquerdo: */
+    .div__logo {
+        width: 150px;
+        height: 150px;
+    }
+    .container__h1 h1 {
+        font-size: 20px;
+    }
+    .container__imgs {
+        margin-left: 2%;
+    }
+    .div__img {
+        width: calc(50% - 10px);
+        height: 85px;
+    }
+
+
+    /* Lado Direito:  */
+    .container__sobre{
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 0rem;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .right__side p{
+        font-size: 12px;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .container__infs{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .container__contacts{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .div__contacts{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+    .icons {
+        width: 40px;
+        height: 40px;
+    }
+    .div__cor{
+        width: 90px;
+        height: 25px;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        z-index: -1;
+    }
+    .decorative__img2 img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
+    /* Areas Principais:  */
+    .conteiner__box{
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 10px;
+    }
 
+    /* Lado Esquerdo: */
+    .div__logo {
+        width: 150px;
+        height: 150px;
+    }
+    .container__h1{
+        height: 5%;
+    }
+    .container__h1 h1 {
+        font-size: 20px;
+    }
+    .container__imgs {
+        width: 85%;
+        margin-left: 8%;
+    }
+    .div__img {
+        width: calc(50% - 10px);
+        height: 90px;
+    }
+
+
+    /* Lado Direito:  */
+    .right__side{
+        gap: 20px;
+    }
+    .container__sobre{
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 0rem;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .right__side p{
+        font-size: 12px;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .container__infs{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .container__contacts{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .div__contacts{
+        width: 45%;
+        flex-wrap: wrap;
+    }
+    .icons {
+        width: 40px;
+        height: 40px;
+    }
+    .div__cor{
+        width: 90px;
+        height: 25px;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        z-index: -1;
+    }
+    .decorative__img2 img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
+    /* Areas Principais:  */
+    .conteiner__box{
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 0px;
+    }
 
+
+    /* Lado Esquerdo: */
+    .div__logo {
+        width: 180px;
+        height: 180px;
+    }
+    .container__h1{
+        height: 5%;
+    }
+    .container__h1 h1 {
+        font-size: 20px;
+    }
+    .container__imgs {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .div__img {
+        width: calc(33.3% - 10px);
+        height: 120px;
+    }
+
+
+    /* Lado Direito:  */
+    .right__side{
+        gap: 20px;
+    }
+    .container__sobre{
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 0rem;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .right__side p{
+        font-size: 12px;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .container__infs{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .container__contacts{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .div__contacts{
+        width: 45%;
+        flex-wrap: wrap;
+    }
+    .icons {
+        width: 40px;
+        height: 40px;
+    }
+    .div__cor{
+        width: 90px;
+        height: 25px;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        z-index: -1;
+    }
+    .decorative__img2 img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
+    /* Areas Principais:  */
+    .conteiner__box{
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 0px;
+    }
 
+    /* Lado Esquerdo: */
+    .right__side{
+        gap: 20px;
+    }
+    .div__logo {
+        width: 180px;
+        height: 180px;
+    }
+    .container__h1{
+        height: 5%;
+    }
+    .container__h1 h1 {
+        font-size: 20px;
+    }
+    .container__imgs {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .div__img {
+        width: calc(33.3% - 10px);
+        height: 150px;
+    }
+
+
+    /* Lado Direito:  */
+    .container__sobre{
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 0rem;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .right__side p{
+        font-size: 12px;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .container__infs{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .container__contacts{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .div__contacts{
+        width: 45%;
+        flex-wrap: wrap;
+    }
+    .icons {
+        width: 40px;
+        height: 40px;
+    }
+    .div__cor{
+        width: 90px;
+        height: 25px;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        z-index: -1;
+    }
+    .decorative__img2 img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
+    /* Areas Principais:  */
+    .conteiner__box{
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 0px;
+    }
+    /* .left__side, .right__side{
+        padding: 0px 0px;
+    } */
 
+
+    /* Lado Esquerdo: */
+    .div__logo {
+        width: 180px;
+        height: 180px;
+    }
+    .container__h1{
+        height: 5%;
+    }
+    .container__h1 h1 {
+        font-size: 22px;
+    }
+    .container__imgs {
+        width: 75%;
+        margin-left: 12%;
+    }
+    .div__img {
+        width: calc(33.3% - 10px);
+        height: 150px;
+    }
+
+
+    /* Lado Direito:  */
+    .right__side{
+        gap: 20px;
+    }
+    .container__sobre{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .right__side h2{
+        font-size: 22px;
+    }
+    .right__side h3{
+        font-size: 18px;
+    }
+    .right__side p{
+        font-size: 14px;
+    }
+    .right__side h2{
+        font-size: 22px;
+    }
+    .container__infs{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .container__contacts{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .div__contacts{
+        width: 45%;
+        flex-wrap: wrap;
+    }
+    .icons {
+        width: 40px;
+        height: 40px;
+    }
+    .div__cor{
+        width: 90px;
+        height: 25px;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        z-index: -1;
+    }
+    .decorative__img2 img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Nest Hub */
 @media (min-width: 1024px) and (max-height: 600px){
+    .conteiner__box{
+        gap: 10px;
+    }
+    .container__h1 {
+        height: 10%;
+        margin-top: 2rem;
+    }
+    .container__imgs {
+        width: 75%;
+        margin-left: 12%;
+    }
+    .div__img {
+        width: calc(33.3% - 10px);
+        height: 100px;
+    }
+}
 
+@media (min-width: 1400px) and (max-height: 1650px){
+    .div__img {
+        width: calc(33.33% - 10px);
+        height: 140px;
+    }
+    .container__imgs {
+        width: 100%;
+        margin-left: 2%;
+    }
+    .container__h1 h1 {
+        font-size: 25px;
+    }
 }
 
 
+/* Pequenos Ajustes:  */
+@media (min-width: 700px) and (max-width: 767.98px){
+    .container__imgs {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .div__img {
+        width: calc(33.3% - 10px);
+        height: 120px;
+    }
+}
 
 
