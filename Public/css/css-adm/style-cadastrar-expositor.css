@@ -597,3 +597,59 @@ label#salvar-btn {
         left: -4%;
     }
 }
+
+@media (min-width:1200px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    .bolas-fundo {
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+        top: -90vh;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-verde1 {
+        position: relative;
+        left: -40px;
+        top: -10%;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-verde2 {
+        position: relative;
+        left: 87%;
+        top: 0;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-rosa {
+        position: relative;
+        left: 75%;
+        top: 70%;
+        z-index: -3;
+    }
+
+    .btn-conf {
+        /* background-color: red; */
+        position: absolute;
+        width: 24%;
+        top: 110%;
+        left: 85%;
+    
+    }
+
+    .voltar {
+        width: 100px;
+        height: 40px;
+        position: relative;
+        top: 20vh;
+        left: 0%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        display: flex;
+    }
+}
