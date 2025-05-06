@@ -34,7 +34,7 @@
     width: 90%;
     height: 85%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 6%;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -47,17 +47,19 @@
 .form{
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 /* Lado Esquerdo: Logo e Imagens (Produtos) */
 .lado__esquerdo{
-    width: 40%;
+    width: 35%;
     height: 100%;
     gap: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* background-color: #007E70; */
 }
 
 /* Container da logo: Upload da Logo */
@@ -129,7 +131,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    max-width: 650px;
+    max-width: 700px;
     margin: auto;
     margin-top: 1rem;
 }
@@ -175,8 +177,8 @@
     border-radius: 8px; 
 }
 
-.text__produtos h1 {
-    font-size: 18px;
+.text__produtos h2 {
+    font-size: 22px;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -191,13 +193,16 @@
 /* Linha Decorativa */
 .linha__decorativa{
     width: 2px;
+    height: 100%;
+    position: relative;
+    left: 35%;
     background-color: var(--color-linha);
 }
 
 /* Lado Direito: Informações do Expositor */
 .lado__direito{
-    width: 60%;
-    gap: 50px;
+    width: 65%;
+    gap: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -214,6 +219,10 @@
     justify-content: center;
 }
 
+.area__h1 h1{
+    font-size: 26px;
+}
+
 /* Sobre o Expositor */
 .area__text{
     width: 90%;
@@ -223,16 +232,17 @@
     flex-direction: column;
 }
 
-.area__h1 h1{
-    font-size: 30px;
+.title{
+    font-size: 22px;
 }
+
 
 .lado__direito h1, h2, h3{
     font-weight: 600;
 }
 
 .input__text{
-    width: 98%;
+    width: 95%;
     height: 150px;
     border: none;
     resize: none;
@@ -330,7 +340,7 @@
 
 /* Input:  */
 .input {
-    width: 100%;
+    width: 90%;
     height: 45px;
     border: none;
     border-radius: 8px;
@@ -351,13 +361,14 @@
 }
 
 .buttons{
-    width: 200px;
-    height: 45px;
+    width: 150px;
+    height: 40px;
     border: none;
     border-radius: 8px;
     color: white;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 #button__cancelar{
@@ -493,19 +504,23 @@
     .area__total__form{
         gap: 0;
     }
+    .input{
+        width: 98%;
+    }
     .area__buttons{
         width: 100%;
-        gap: 10px;
+        gap: 20px;
         position: relative;
         bottom: 1rem;
         justify-content: center;
     }
-    .buttons{
+    .buttons {
         width: 120px;
         height: 35px;
-        margin-right: 0px;
+        position: relative;
+        /* right: 4rem; */
+        font-size: 16px;
     }
-
 
     /* Imagens Decorativas:  */
     .img__dec1 img{
@@ -517,6 +532,7 @@
         height: auto;
     }
 }
+
 
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
@@ -607,18 +623,22 @@
     .area__total__form{
         gap: 0;
     }
+    .input{
+        width: 98%;
+    }
     .area__buttons{
         width: 100%;
-        gap: 0px;
+        gap: 20px;
         position: relative;
         bottom: 1rem;
         justify-content: right;
     }
-    .buttons{
-        width: 150px;
-        height: 45px;
+    .buttons {
+        width: 120px;
+        height: 35px;
         position: relative;
-        right: 3.5rem;
+        right: 4rem;
+        font-size: 18px;
     }
 
 
@@ -632,6 +652,7 @@
         height: auto;
     }
 }
+
 
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -717,18 +738,22 @@
     .area__total__form{
         gap: 0;
     }
+    .input{
+        width: 98%;
+    }
     .area__buttons{
         width: 100%;
-        gap: 0px;
+        gap: 20px;
         position: relative;
         bottom: 1rem;
         justify-content: right;
     }
-    .buttons{
-        width: 150px;
-        height: 45px;
+    .buttons {
+        width: 130px;
+        height: 35px;
         position: relative;
         right: 5.5rem;
+        font-size: 18px;
     }
 
 
@@ -742,6 +767,7 @@
         height: auto;
     }
 }
+
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -827,18 +853,22 @@
     .area__total__form{
         gap: 0;
     }
+    .input{
+        width: 98%;
+    }
     .area__buttons{
         width: 100%;
-        gap: 0px;
+        gap: 20px;
         position: relative;
         bottom: 1rem;
         justify-content: right;
     }
-    .buttons{
+    .buttons {
         width: 150px;
-        height: 45px;
+        height: 35px;
         position: relative;
-        right: 5.5rem;
+        right: 8rem;
+        font-size: 18px;
     }
 
 
@@ -852,6 +882,7 @@
         height: auto;
     }
 }
+
 
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
@@ -937,18 +968,22 @@
     .area__total__form{
         gap: 20px;
     }
+    .input{
+        width: 98%;
+    }
     .area__buttons{
         width: 100%;
-        gap: 0px;
+        gap: 20px;
         position: relative;
         bottom: 1rem;
         justify-content: right;
     }
-    .buttons{
+    .buttons {
         width: 150px;
-        height: 45px;
+        height: 35px;
         position: relative;
-        right: 5.5rem;
+        right: 4rem;
+        font-size: 18px;
     }
 
 
@@ -963,9 +998,110 @@
     }
 }
 
-/* Nest Hub */
-@media (min-width: 1024px) and (max-height: 600px){
-    
+
+/* Pequenos Ajustes */
+@media (min-width: 1400px) and (max-width: 1550px){
+    .linha__decorativa{
+        left: 35.5%;
+    }
+
+    .galeria__imagens {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 420px;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .label__img__prod {
+        width: calc(33.3% - 10px);
+        height: 135px;
+    }
+    .container__imgs{
+        margin-left: 1rem;
+    }
 }
+@media (min-width: 1551px){
+    .galeria__imagens {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 550px;
+        margin: auto;
+        margin-top: 1rem;
+    }
 
+    .label__img__prod {
+        width: calc(33.3% - 10px);
+        height: 135px;
+    }
 
+    .linha__decorativa{
+        left: 36%;
+    }
+    .container__imgs{
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 1420px) and (max-height: 1500px){
+    .galeria__imagens {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 440px;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .container__imgs{
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 1580px) and (max-height: 1699px){
+    .galeria__imagens {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    
+    .container__imgs{
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 1700px){
+    .galeria__imagens {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 550px;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    
+    .container__imgs{
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1575px){
+    .linha__decorativa{
+        left: 36%;
+    }
+}
+@media (min-width: 1576px) and (max-width: 1575px){
+    .linha__decorativa{
+        left: 36%;
+    }
+}
+@media (min-width: 1551px) and (max-width: 1575px){
+    .linha__decorativa{
+        left: 36%;
+    }
+}
