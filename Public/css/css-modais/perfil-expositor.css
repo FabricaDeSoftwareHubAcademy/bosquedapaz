@@ -825,5 +825,18 @@
         height: 120px;
     }
 }
+@media (min-width: 1400px) and (max-height: 750px){
+    .div__logo {
+        width: 180px;
+        height: 180px;
+        margin-top: 0px;
+    }
+    .div__img {
+        height: 120px;
+    }
+        .container__h1 {
+        height: 5%;
+    }
+}
 
 

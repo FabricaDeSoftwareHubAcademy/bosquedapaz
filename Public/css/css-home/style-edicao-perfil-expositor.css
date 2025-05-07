@@ -202,6 +202,7 @@
 /* Lado Direito: Informações do Expositor */
 .lado__direito{
     width: 65%;
+    height: 100%;
     gap: 30px;
     display: flex;
     justify-content: center;
@@ -998,6 +999,123 @@
     }
 }
 
+/* Computadores Largos e Compactos (Baixa Altura):  */
+@media (min-width: 1400px) and (max-height: 699.98px){
+    /* Areas Principais: */
+    .container__main {
+        height: 100%;
+    }
+    .box__container {
+        height: 100%;
+        margin-top: 6%;
+    }
+    .form{
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+
+    /* Lado Esquerdo: */
+    .lado__esquerdo{
+        width: 100%;
+        gap: 5px;
+    }
+    .container__logo {
+        width: 100%;
+        height: 30%;
+        margin-top: 2rem;
+    }
+    .uploads {
+        width: 220px;
+        height: 220px;
+    }
+    .container__logo p{
+        font-size: 14px;
+    }
+    .text__produtos h2{
+        font-size: 18px;
+    }
+    .container__imgs {
+        width: 80%;
+    }
+    .label__img__prod {
+        width: calc(33.3% - 10px);
+        height: 150px;
+    }
+    .galeria__imagens {
+        max-width: 750px;
+    }
+    .galeria__imagens p{
+        font-size: 14px;
+    }
+
+
+    /* Lado Direito: */
+    .lado__direito{
+        width: 100%;
+        gap: 30px;
+    }
+    .area__h1{
+        position: relative;
+        top: 1rem;
+    }
+    .area__h1 h1{
+        font-size: 24px;
+    }
+    .area__text{
+        margin-left: 18px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .lado__direito h3 {
+        font-size: 16px;
+    }
+    .lado__direito .sobe, p {
+        font-size: 14px;
+    }
+    .area__cat__num{
+        margin-left: 20px;
+    }
+    .area__inf__corR{
+        margin-left: 20px;
+    }
+    .area__inputs {
+        width: 95%;
+    }
+    .area__total__form{
+        gap: 0;
+    }
+    .input{
+        width: 98%;
+    }
+    .area__buttons{
+        width: 100%;
+        gap: 20px;
+        position: relative;
+        bottom: 1rem;
+        justify-content: right;
+    }
+    .buttons {
+        width: 150px;
+        height: 35px;
+        position: relative;
+        right: 8rem;
+        font-size: 18px;
+    }
+
+
+    /* Imagens Decorativas:  */
+    .img__dec1 img{
+        width: 50%;
+        height: auto;
+    }
+    .img__dec2 img{
+        width: 50%;
+        height: auto;
+    }
+}
+
 
 /* Pequenos Ajustes */
 @media (min-width: 1400px) and (max-width: 1550px){
@@ -1066,7 +1184,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
-        max-width: 500px;
+        max-width: 480px;
         margin: auto;
         margin-top: 1rem;
     }
@@ -1081,7 +1199,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
-        max-width: 550px;
+        max-width: 500px;
         margin: auto;
         margin-top: 1rem;
     }
@@ -1105,3 +1223,77 @@
         left: 36%;
     }
 }
+@media (min-width: 1400px) and (max-height: 860px){
+    .lado__esquerdo{
+        margin-top: 2%;
+    }
+    .uploads{
+        width: 180px;
+        height: 180px;
+    }
+    .area__buttons{
+        bottom: 2rem;
+    }
+    .buttons{
+        height: 30px;
+    }
+    .area__h1{
+        top: 2rem;
+    }
+}
+@media (min-width: 1400px) and (max-height: 760px){
+    .box__container{
+        margin-top: 6%;
+    }
+    .lado__esquerdo{
+        margin-top: 1%;
+    }
+    .lado__direito{
+        gap: 10px;
+    }
+    .uploads{
+        width: 150px;
+        height: 150px;
+    }
+    .area__buttons{
+        bottom: 1rem;
+    }
+    .buttons{
+        height: 30px;
+    }
+}
+@media (min-width: 2200px){
+    .box__container{
+        margin-top: 4%;
+    }
+    .galeria__imagens {
+        max-width: 700px;
+    }
+    .label__img__prod {
+        height: 150px;
+    }
+    .img__dec2 {
+        right: -16vw;
+    }
+}
+@media (min-width: 2500px){
+    .box__container{
+        margin-top: 8%;
+        height: 70%;
+    }
+    .uploads{
+        width: 250px;
+        height: 250px;
+    }
+    .galeria__imagens {
+        max-width: 900px;
+    }
+    .label__img__prod {
+        width: calc(33.3% - 10px);
+        height: 200px;
+    }
+    .img__dec2 {
+        right: -16vw;
+    }
+}
+
