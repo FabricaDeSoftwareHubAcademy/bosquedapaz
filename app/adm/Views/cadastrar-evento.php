@@ -61,63 +61,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main class="principal">
         <div class="box">
             <h1>CADASTRO DE EVENTO</h1>
-            <div class="form-box">
-                <form method="POST" enctype="multipart/form-data">
-                    <div id="form1">
-                        <div class="input-group">
-                            <label>Nome:</label>
-                            <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
-                                required>
-                        </div>
-                        <div class="input-group">
-                            <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
-                        </div>
-                        <div class="data-imagem">
+                <div class="form-box">
+                    <form method="POST" enctype="multipart/form-data">
+                        <div id="form1">
                             <div class="input-group">
-                                <label>Data:</label>
-                                <input type="date" id="dataevento" name="dataevento">
-                            </div>
-                            <div class="input-group">
-                                <label>Imagem:</label>
-                                <input type="file" name="file" id="file"
+                                <label>Nome:</label>
+                                <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                     required>
                             </div>
+                            <div class="input-group">
+                                <label>Descrição:</label>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
+                            </div>
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                    <label>Data:</label>
+                                    <input type="date" id="dataevento" name="dataevento" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Imagem:</label>
+                                    <input type="file" name="file" id="file"
+                                        required>
+                                </div>
+                            </div>
+                            <img class="preview" src="" alt="" id="preview-image">
                         </div>
-                        <img class="preview" src="" alt="" id="preview-image">
-                    </div>
 
-                </form>
+                        <div class="btn-cancelar-salvar">
+                            <button class="btn btn-cancelar">
+                                <a href="./Area-Adm.php">Cancelar</a>
+                            </button>
 
-            </div>
+                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                        
+                </div>
+
+                    </form>
+
+                </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button type="submit" class="btn btn-salvar">Salvar</button>
-                        
-                </div>
+                
             </div>
         </div>
-        </div>
-
-        <dialog id="modal-deleta" class="modal-deleta">
-          <div class="acao-recusar">
-            <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
-                <div class="acao-botoes-recusar">
-                  <!-- <button class="close-modal" data-modal="modal-deleta">cancelar</button> -->
-                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
-                </div>
-            </div>
-          </div>
-        </dialog>
+        
     </main>
 
     <div class="bolas-fundo">
