@@ -9,6 +9,7 @@ openButtons.forEach(button => {
         
         // Mostra o modal e a sobreposição
         modal.showModal();
+        document.body.style.overflowY = 'hidden';
         overlay.style.display = 'block'; // Exibe a sobreposição
         overlaay.style.display = 'block'; // Exibe a sobreposição
     })
@@ -23,6 +24,7 @@ closeButtons.forEach(button => {
         
         // Fecha o modal e esconde a sobreposição
         modal.close();
+        document.body.style.overflowY = 'scroll';
         overlay.style.display = 'none'; // Esconde a sobreposição
         overlaay.style.display = 'none'; // Esconde a sobreposição
     })
