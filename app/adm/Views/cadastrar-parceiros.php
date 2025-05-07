@@ -16,122 +16,117 @@
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <main class="principal">
-
         <div class="box">
-
-            <div class="title">
-                <h1 class="title-text">CADASTRO DE PARCEIRO</h1>
-            </div>
-
-            <div class="formularios">
-
-                <div class="form-pessoa">
-                    <div class="input">
-                        <label>Parceiro:</label>
-                        <input type="text" name="" id="" placeholder="Digite o Nome" required>
-                    </div>
-                    <div class="input">
-                        <label>E-mail:</label>
-                        <input type="text" name="" id="" placeholder="Digite o e-mail" required>
-                    </div>
-
-                    <div class="input">
-                        <label for="optionInput3">Tipo:</label>
-
-                        <select name="todas_categorias" id="todas_categorias" class="select">
-
-                            <option value="">selecione</option>
-                            <option value="artesanato">Fisica</option>
-                            <option value="gastronia">Jurídica</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="input">
-                        <label>Logo:</label>
-                        <input type="file" class="acao-input-edit" name="file" id="file" required>
-                    </div>
-
-                </div>
-
-                <div class="form-loja">
-
-                    <div class="input">
-                        <label>Telefone:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu Telefone" required>
-                    </div>
-
-                    <div class="input">
-                        <label>Contato:</label>
-                        <input type="text" name="" id="" placeholder="Digite o Nome de Contato" required>
-                    </div>
-
-                    <div class="input">
-                        <label>CPF/CNPJ:</label>
-                        <input type="text" name="" id="" placeholder="Digite o CPF/CNPJ" required>
-                    </div>
-
-                    <div class="input">
-                        <label>CEP:</label>
-                        <input type="text" name="" id="" placeholder="Digite o CEP" required>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="form-finalizar">
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
-                        <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
-                            <button class="btn-cancelar-modal">Cancelar</button>
+            <h1>CADASTRO DE PARCEIROS</h1>
+            <div class="form-box">
+                <form action="#" method="POST">
+                    <div id="form1">
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Parceiro:</label>
+                                <input type="text" id="data-inicio" placeholder="Digite o Nome" name="data-inicio" value="">
+                            </div>
+                            <div class="input-group">
+                                <label>Telefone:</label>
+                                <input type="text" placeholder="Digite seu Telefone" name="file" id="file"
+                                    required>
+                            </div>
                         </div>
+                        <img class="preview" src="" alt="" id="preview-image">
                     </div>
-                </div>
-
-
-            </div>
-
-
-            <div class="botoes">
-
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                        <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
+                </form>
+                <form action="#" method="POST">
+                    <div id="form1">
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>E-mail:</label>
+                                <input type="text" id="data-inicio" placeholder="Digite o e-mail" name="data-inicio" value="">
+                            </div>
+                            <div class="input-group">
+                                <label>Contato:</label>
+                                <input type="text" name="file" placeholder="Digite o Nome de Contato" id="file"
+                                    required>
+                            </div>
+                        </div>
+                        <img class="preview" src="" alt="" id="preview-image">
                     </div>
-                </div>
-
+                </form>
+                <form action="#" method="POST">
+                    <div id="form1">
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Tipo:</label>
+                                <input type="text" id="data-inicio" name="data-inicio" value="">
+                            </div>
+                            <div class="input-group">
+                                <label>CPF/CNPJ:</label>
+                                <input type="text" name="file" placeholder="Digite o CPF/CNPJ" id="file"
+                                    required>
+                            </div>
+                        </div>
+                        <img class="preview" src="" alt="" id="preview-image">
+                    </div>
+                </form>
+                <form action="#" method="POST">
+                    <div id="form1">
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Logo:</label>
+                                <input type="file" name="file" id="file"
+                                    required>
+                            </div>
+                            <div class="input-group">
+                                <label>CEP:</label>
+                                <input type="text" placeholder="Digite o CEP"name="file" id="file"
+                                    required>
+                            </div>
+                        </div>
+                        <img class="preview" src="" alt="" id="preview-image">
+                    </div>
+                </form>
+                
             </div>
-
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="gerenciar-eventos.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
+
                 <div class="btn-cancelar-salvar">
-                    <button type="button" class="btn btn-cancelar">
+                    <button class="btn btn-cancelar">
                         <a href="./Area-Adm.php">Cancelar</a>
                     </button>
 
-                    <button type="submit" class="btn btn-salvar">
-                        <a href="">Salvar</a>
+                    <button class="open-modal" data-modal="modal-deleta">
+                        Salvar
+                    </button>
+                        
                 </div>
             </div>
-
         </div>
+        </div>
+
+        <dialog id="modal-deleta" class="modal-deleta">
+          <div class="acao-recusar">
+            <div class="acao-content-recusar">
+                <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
+                <div class="acao-botoes-recusar">
+                  <!-- <button class="close-modal" data-modal="modal-deleta">cancelar</button> -->
+                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+                </div>
+            </div>
+          </div>
+        </dialog>
     </main>
 
     <div class="bolas-fundo">
-
         <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+</body>
 
 </html>
