@@ -204,7 +204,7 @@ label#salvar-btn {
 }
 
 .voltar {
-    width: 50px;
+    width: 80px;
     height: 40px;
     position: relative;
     top: 280px;
@@ -276,7 +276,6 @@ label#salvar-btn {
     left: 13%;
 }
 
-
 @media (max-width: 430px) {
 
     .bolas-fundo .bola-verde1 {
@@ -299,7 +298,7 @@ label#salvar-btn {
         display: flex;
         flex-direction: column;
         font-size: 14px;
-        top: 20px;
+        /* top: 20px; */
     }
 
     .title-text {
@@ -634,13 +633,8 @@ label#salvar-btn {
     }
 
     .voltar {
-        width: 100px;
-        height: 40px;
-        position: relative;
-        top: 20vh;
-        left: 0%;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-        display: flex;
+        top: 280px;
+        left: -90vh;
+       
     }
 }
