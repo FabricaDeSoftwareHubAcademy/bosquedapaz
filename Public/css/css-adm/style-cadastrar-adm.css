@@ -22,18 +22,20 @@
 
 /* Corpo da Página */
 .body_main{
-    height: 100vh;
+    width: 100%;
+    height: 88.5vh;
+    display: flex;
 }
 
 /* Box Principal dos Elementos */
 .container_box{
     margin: 0 auto;
     width: 90%;
-    height: 83%;
+    height: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5%;
+    margin-top: 1%;
     border-radius: 10px;
     backdrop-filter: blur(0px);
     transition: all .5s ease-in-out;
@@ -46,14 +48,10 @@
     backdrop-filter: blur(30px);
 }
 
-/* Lado Esquerdo: Imagem, Lado Direito: Form */
-.container_img, .container_form{
-    flex: 1;
-    padding: 20px 20px;
-}
 
 /* Lado Esquerdo: Imagem */
 .container_img{
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -83,22 +81,30 @@
     background-color: var(--color-rosa);
 }
 
+/* Linha com dois inputs */
+.form__row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
 /* Lado Direito: Form */
-.container_form{
-    height: 100%;
+.container_form {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.container_form h1{
+.container_form h1 {
     font-size: 28px;
     font-weight: 600;
 }
 
 /* Form */
-.form__cadastro{
+.form__cadastro {
     width: 80%;
     height: 95%;
     gap: 30px;
@@ -108,30 +114,37 @@
     flex-direction: column;
 }
 
+/* Agrupamento de inputs lado a lado */
+.row-double {
+    display: flex;
+    gap: 0px;
+    width: 100%;
+}
+
 /* Area Principal dos Elementos: Label, Div, Icon e Input */
-.form__group{
+.form__group {
     width: 100%;
     height: 25%;
     display: flex;
     flex-direction: column;
 }
 
-.label__cad{
+.label__cad {
     position: relative;
     left: 40px;
 }
 
-/* Area do Input e icon */
+/* Área do Input com ícone */
 .area__input {
     position: relative;
     width: 100%;
     height: 45px;
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
 }
 
-/* Area input2: Imagem de Perfil */
+/* Área input2: Imagem de Perfil */
 .area__input2 {
     width: 100%;
     height: 45px;
@@ -140,7 +153,7 @@
     justify-content: center;
 }
 
-/* Icones */
+/* Ícones */
 .area__input #icon {
     position: absolute;
     left: 50px;
@@ -148,9 +161,12 @@
     color: black;
 }
 
-#icon__olho{
+#icon__olho {
     position: absolute;
-    left: 39rem;
+    right: 50px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
 }
 
 /* Inputs */
@@ -165,7 +181,7 @@
     box-shadow: 3px 3px 2px var(--color-box-shadow-input);
 }
 
-/* Label do Imagem Perfil */
+/* Label do input de imagem */
 .area__input2 .uploads {
     width: 90%;
     height: 100%;
@@ -176,6 +192,7 @@
     border-radius: 6px;
     box-shadow: 3px 3px 2px var(--color-box-shadow-input);
 }
+
 
 /* Area dos Botões */
 .form__actions{
@@ -253,26 +270,402 @@
 /* Responsividades: */
 /* Celulares pequenos (smartphones compactos) */
 @media (max-width: 575.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
+        height: 100%;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
+    
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
 
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 22px;
+    }
+    .label__cad{
+        left: 5px;
+        font-size: 12px;
+    }
+    .area__input .input{
+        width: 100%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 15px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 10px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 18px;
+    }
+    .input2{
+        font-size: 12px;
+    }
+    .area__input2 .uploads{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 150px;
+        height: 35px;
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    .row-double{
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
+        height: 100%;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
     
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 22px;
+    }
+    .label__cad{
+        left: 5px;
+        font-size: 14px;
+    }
+    .area__input .input{
+        width: 100%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 15px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 18px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 10px;
+    }
+    .input2{
+        font-size: 14px;
+    }
+    .area__input2 .uploads{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+    .row-double{
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
+        height: 100%;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
     
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 24px;
+    }
+    .label__cad{
+        left: 5px;
+        font-size: 16px;
+    }
+    .area__input .input{
+        width: 100%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 15px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 15px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 18px;
+    }
+    .input2{
+        font-size: 16px;
+    }
+    .area__input2 .uploads{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    .row-double{
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
-   
+       /* Areas Principais:  */
+       .body_main{
+        width: 100%;
+        height: 100%;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
+    
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 26px;
+    }
+    .label__cad{
+        left: 50px;
+        font-size: 16px;
+    }
+    .area__input .input{
+        width: 90%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 53px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 35px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 45px;
+    }
+    .input2{
+        font-size: 16px;
+    }
+    .area__input2 .uploads{
+        width: 90%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
+    .container_img{
+        width: 40%;
+    }
+
+    .container_form{
+        width: 60%;
+    }
+    .label__cad {
+        left: 30px;
+    }
+    .area__input #icon {
+        left: 43px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 33px;
+    }
+}
+
+/* Computadores Largos e Compactos (Baixa Altura):  */
+@media (min-width: 1400px){
+    .label__cad {
+        position: relative;
+        left: 30px;
+    }
+    .area__input #icon {
+        left: 40px;
+    }
+    .area__input .input {
+        padding-left: 40px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 29px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 30px;
+    }
     
 }
 

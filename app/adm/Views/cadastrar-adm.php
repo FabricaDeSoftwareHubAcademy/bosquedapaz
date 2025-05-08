@@ -59,100 +59,108 @@ if(isset($_POST['cadastrar'])){
     <title>Cadastrado ADM</title>
 </head>
 <!-- Corpo da Página -->
-<body class="body_main">
+<body>
     <!-- Includ Menu -->
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
     <!-- Box Principal -->
-    <div class="container_box">
-        <!-- Area Esquerda: Imagem -->
-        <div class="container_img">
-            <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
-            <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
-        </div>
-        <!-- Linha Decorativa do Centro -->
-        <div class="div__linha_decorativa"></div>
-        <!-- Area Direita: Form -->
-        <div class="container_form">
-            <h1>Cadastro ADM</h1>
-            <!-- Form -->
-            <form class="form__cadastro" method="POST" enctype="multipart/form-data">
-                <!-- Nome -->
-                <div class="form__group">
-                    <label class="label__cad" for="nome">Nome</label>
-                    <div class="area__input">
-                        <i id="icon" class="bi bi-person"></i>
-                        <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
-                    </div>
-                </div>
+    <section class="body_main">
+        <div class="container_box">
+            <!-- Area Esquerda: Imagem -->
+            <div class="container_img">
+                <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
+                <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+            </div>
+            <!-- Linha Decorativa do Centro -->
+            <div class="div__linha_decorativa"></div>
+            <!-- Area Direita: Form -->
+            <div class="container_form">
+                <h1>Cadastro ADM</h1>
+                <!-- Form -->
+                <form class="form__cadastro" method="POST" enctype="multipart/form-data">
 
-                <!-- Telefone -->
-                <div class="form__group">
-                    <label class="label__cad" for="tel">Telefone</label>
-                    <div class="area__input">
-                        <i id="icon" class="bi bi-telephone"></i>
-                        <input class="input" type="tel" name="tel" id="tel" placeholder="Digite seu telefone" required>
+                    <!-- Nome -->
+                    <div class="form__group">
+                        <label class="label__cad" for="nome">Nome</label>
+                        <div class="area__input">
+                            <i id="icon" class="bi bi-person"></i>
+                            <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Email -->
-                <div class="form__group">
-                    <label class="label__cad" for="email">Email</label>
-                    <div class="area__input">
-                        <i id="icon" class="bi bi-envelope"></i>
-                        <input class="input" type="email" name="email" id="email" placeholder="Digite seu email" required>
+                    <!-- Telefone -->
+                    <div class="form__group">
+                        <label class="label__cad" for="tel">Telefone</label>
+                        <div class="area__input">
+                            <i id="icon" class="bi bi-telephone"></i>
+                            <input class="input" type="tel" name="tel" id="tel" placeholder="Digite seu telefone" required>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Cargo -->
-                <div class="form__group">
-                    <label class="label__cad" for="cargo">Cargo</label>
-                    <div class="area__input">
-                        <i id="icon" class="bi bi-briefcase"></i>
-                        <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
+                    <!-- Email -->
+                    <div class="form__group">
+                        <label class="label__cad" for="email">Email</label>
+                        <div class="area__input">
+                            <i id="icon" class="bi bi-envelope"></i>
+                            <input class="input" type="email" name="email" id="email" placeholder="Digite seu email" required>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Senha -->
-                <div class="form__group">
-                    <label class="label__cad" for="senha">Senha</label>
-                    <div class="area__input">
-                        <i id="icon" class="bi bi-shield-lock"></i>
-                        <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                        <i id="icon__olho" class="bi bi-eye-slash"></i>
+                    <!-- Cargo -->
+                    <div class="form__group">
+                        <label class="label__cad" for="cargo">Cargo</label>
+                        <div class="area__input">
+                            <i id="icon" class="bi bi-briefcase"></i>
+                            <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Confirmar Senha -->
-                <div class="form__group">
-                    <label class="label__cad" for="confSenha">Confirmar Senha</label>
-                    <div class="area__input">
-                        <i id="icon" class="bi bi-shield-lock"></i>
-                        <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
-                        <i id="icon__olho" class="bi bi-eye-slash"></i>
-                    </div>
-                </div>
+                    <!-- Imagem de Perfil -->
+                    <div class="form__group">
+                        <label class="label__cad" for="imagem">Imagem de Perfil</label>
+                        <div class="area__input2">
+                            <label for="imagem" class="uploads">
+                                <input class="input2" type="file" name="imagem" id="imagem" required>
+                            </label>
+                        </div>
+                    </div>                   
 
-                <!-- Imagem de Perfil -->
-                <div class="form__group">
-                    <label class="label__cad" for="imagem">Imagem de Perfil</label>
-                    <div class="area__input2">
-                        <label for="imagem" class="uploads">
-                            <input class="input2" type="file" name="imagem" id="imagem" required>
-                        </label>
+                    <!-- Senha e Confirmar Senha lado a lado -->
+                    <div class="row-double">
+                        <!-- Senha -->
+                        <div class="form__group">
+                            <label class="label__cad" for="senha">Senha</label>
+                            <div class="area__input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                                <i id="icon__olho" class="bi bi-eye-slash"></i>
+                            </div>
+                        </div>
+
+                        <!-- Confirmar Senha -->
+                        <div class="form__group">
+                            <label class="label__cad" for="confSenha">Confirmar Senha</label>
+                            <div class="area__input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                                <i id="icon__olho" class="bi bi-eye-slash"></i>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Botões -->
-                <div class="form__actions">
-                    <button type="submit" name="cadastrar" class="btn btn__rosa">Cancelar</button>
-                    <button type="submit" name="cancelar" class="btn btn__azul">Cadastrar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Imagens Decorativas -->
-    <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
-    <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
-    <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
+
+                    <!-- Botões -->
+                    <div class="form__actions">
+                        <button type="submit" name="cancelar" class="btn btn__rosa">Cancelar</button>
+                        <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>    
+        <!-- Imagens Decorativas -->
+        <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
+        <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
+        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
+    </section>
+    
 </body>
 </html>
