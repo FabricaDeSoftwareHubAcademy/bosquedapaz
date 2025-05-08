@@ -194,9 +194,9 @@ class Expositor extends Pessoa
 
         $db = new Database('imagem');
         $img_id = $db->insert_lastid([
-            'imagem1' => $this->imagens[0],
-            'imagem2' => $this->imagens[1],
-            'imagem3' => $this->imagens[2],
+            'imagem1' => $this->imagens[0] ?? '',
+            'imagem2' => $this->imagens[1] ?? '',
+            'imagem3' => $this->imagens[2] ?? '',
             'imagem4' => $this->imagens[3] ?? '',
             'imagem5' => $this->imagens[4] ?? ''
         ]);

@@ -53,11 +53,14 @@ if (isset($_POST['REQUEST_METHOD'])) {
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
     <title>Bosque da Paz</title>
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-expositor-kids.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body>
-    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
+<?php include "../../../Public/assets/home/menu-home.html" ?>
+
 
     <main class="principal">
 
@@ -139,7 +142,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
             </form>
 
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="escolher-cadastro.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>

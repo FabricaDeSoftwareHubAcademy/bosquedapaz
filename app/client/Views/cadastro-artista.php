@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Artista</title>
+    <title>Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
 
     <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-client.css">
@@ -18,12 +16,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-artistas.css">
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    
+
 
 </head>
 
 <body>
-<?php include "../../../Public/assets/home/menu-home.html"?>
+    <?php include "../../../Public/assets/home/menu-home.html" ?>
 
 
     <main class="principal">
@@ -34,172 +36,86 @@
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <div class="formularios">
+            <form class="formularios" method="POST">
 
                 <div class="form-pessoa">
                     <div class="input">
                         <label>Nome completo:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
-                    </div>
-                    <div class="input">
-                        <label>Nome artistico:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu nome artistico " required>
-                    </div>
-                    
-                    <div class="input">
-                        <label>E-mail:</label>
-                        <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
-                    </div>
-                    <div class="input">
-                        <label>Whatsapp:</label>
-                        <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                        <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
                     </div>
 
                     <div class="input">
-                        <label>Link:</label>
-                        <input type="text" name="" id="" placeholder="link instagram" required>
+                        <label>Idade:</label>
+                        <input type="text" name="idade" id="" placeholder="Idade:" required>
                     </div>
-                   
-                   
-                </div>
 
-                
-                <div class="form-expo">
-
-                    
                     <div class="input">
-                        <label>Qual sua linguagem artística?</label>
-                        <select name="todas_categorias" id="todas_categorias" class="select">
+                        <label>Nome do responsavel:</label>
+                        <input type="text" name="responsavel" id="" placeholder="Nome do responsavel:" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="optionInput3">Grau de parentesco</label>
+                        <select name="id_grauParentesco" id="grauParentesco" class="select" require>
                             <option value="">Selecione</option>
-                            <option value="teatro">Teatro</option>
-                            <option value="danca">Dança</option>
-                            <option value="circo">Circo</option>
-                            <option value="musica">Música</option>
+                            <option value="mae">Mãe</option>
+                            <option value="pai">Pai</option>
+                            <option value="responsavel">Responsavel</option>
                         </select>
                     </div>
-
-
-                    <div id="estilo_musica_container">
-                        <label>Qual o estilo de música você segue?</label>
-                        <select name="estilo_musica" id="estilo_musica" class="select">
-                            <option value="">Selecione</option>
-                            <option value="rock">Rock</option>
-                            <option value="pop">Pop</option>
-                            <option value="sertanejo">Sertanejo</option>
-                            <option value="eletronica">Eletrônica</option>
-                        </select>
-                    </div>
-
-                
 
                     <div class="input">
-                        <label for="optionInput3">Qual seu publico alvo?</label>
-    
-                        <select name="todas_categorias" id="todas_categorias" class="select">
-
-                            <option value="">selecione</option>
-                            <option value="artesanato">Adulto</option>
-                            <option value="gastronia">Infantil</option>
-                            <option value="antiguidade">Misto</option>
-                           
-                        </select>
-
-                        
-                        
+                        <label>Telefone:</label>
+                        <input type="text" name="telefone" id="" placeholder="Telefone para contato" required>
                     </div>
+                </div>
 
-                 
+                <div class="form-loja">
+                    <div class="input">
+                        <label for="optionInput3">Categorias</label>
+                        <select name="id_categoria" id="categorias" class="select" require>
 
-
-
-                    <label for="tipo-expo">Tempo médio da sua apresentação?</label>
-                    <div class="custom-dropdown">
-                        <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
-                        <select name="todas_categorias" id="todas_categorias" class="select">
-
-                            <option value="">selecione</option>
-                            <option value="trailer">30min</option>
-                            <option value="food-truck">50min</option>
-                            <option value="barrca">60min</option>
+                            <option value="">Selecione</option>
+                            <option value="<?= $categorias['$id_categoria'] ?>"></option>
 
                         </select>
                     </div>
 
-                    <label for="energia">Qual valor do cache?</label>
-                    <div class="custom-dropdown">
-                        <select name="todas_categorias" id="todas_categorias" class="select">  
-
-                            <option value="">selecione</option>
-                            <option value="sim">Até R$200</option>
-                            <option value="nao">Até R$500</option>
-                            <option value="nao">Até R$1.000</option>
-                        
-
-                        </select>
+                    <div class="input">
+                        <label>Produto:</label>
+                        <input type="text" name="produto" id="" placeholder="Digite seu produto" required>
                     </div>
 
-                </div>
+                    <div class="input">
+                        <label>Marca:</label>
+                        <input type="text" name="marca" id="" placeholder="Digite a marca " required>
+                    </div>
 
-
-
-               
-
-            </div>
-
-            <div class="form-finalizar">
-
-                <!-- <div class="edital-feira">
-                    <button><a href="#">Edital da Feira</a></button>
-                </div> -->
-
-                
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-
-                <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Deseja realmente salvar as alterações?</p>
-                        <div class="modal-botoes">
-                            <button class="btn-confirmar">Confirmar</button>
-                            <button class="btn-cancelar-modal">Cancelar</button>
-                        </div>
+                    <div class="input-group">
+                        <label>Escolher Imagens:</label>
+                        <input type="file" name="file[]" id="file" multiple="multiple">
+                    </div>
+                    <div class="input">
+                        <label>Link Instagram:</label>
+                        <input type="text" name="instagram" id="" placeholder="Link instagram" required>
                     </div>
                 </div>
 
+                <div class="btn-finalizar">
+                    <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
+                    <button class="btn btn-cancelar"><a href="cadastrar-expositor-kids-adm.php">cancelar</a></button>
+                </div>
+            </form>
+
 
             </div>
-
-         
-            <div class="botoes">
-                <div class="botoes-cancelar">
-                    <button onclick="" class="btn-cancelar">Cancelar</button>
-                </div>
-                    
-                <div class="salvar-resp">
-                    <div class="botoes-salvar">
-                    <button class="salvar" for="modal-checkbox" id="salvar-btn">Salvar</button>
-                </div>
-
-                    
-
-                
+            <div class="btns">
+                <a href="escolher-cadastro.php" class="voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
             </div>
-
 
         </div>
-        <div class="btns">
-            <a href="escolher-cadastro.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div>
-        
-    </div>
     </main>
 
     <div class="bolas-fundo">

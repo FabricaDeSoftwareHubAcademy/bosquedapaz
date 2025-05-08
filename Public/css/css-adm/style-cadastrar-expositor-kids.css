@@ -49,23 +49,23 @@ body {
 }
 
 .bolas-fundo .bola-verde1 {
-    position: absolute;
+    position: relative;
     left: -40px;
-    top: 6vh;
+    top: -10%;
     z-index: -3;
 }
 
 .bolas-fundo .bola-verde2 {
-    position: absolute;
-    right: -50px;
-    top: 6vh;
+    position: relative;
+    left: 87%;
+    top: 0;
     z-index: -3;
 }
 
 .bolas-fundo .bola-rosa {
-    position: absolute;
-    right: -100px;
-    bottom: -100px;
+    position: relative;
+    left: 75%;
+    top: 70%;
     z-index: -3;
 }
 
@@ -80,8 +80,8 @@ body {
     align-items: center;
     border: none;
     position: relative;
-    top: 25px;
-    left: 13%;
+    top: 130px;
+    left: -10%;
 }
 
 .formularios div {
@@ -204,15 +204,16 @@ label#salvar-btn {
 }
 
 .voltar {
-    width: 100px;
+    width: 80px;
     height: 40px;
     position: relative;
-    top:78px;
-    left: -80vh;
+    top: 280px;
+    left: -90vh;
     transition: transform 0.3s ease;
     cursor: pointer;
     display: flex;
 }
+
 
 
 .voltar:hover {
@@ -223,59 +224,47 @@ label#salvar-btn {
 /********** novo botao de salvar/cancelar ******/
 
 
-.btn-finalizar{
+.btn-conf {
     /* background-color: red; */
-    position: relative;
-    top: 30vh;
-    left: -10%;
-    width: 100%;
-    display: flex;
+    position: absolute;
+    width: 33%;
+    top: 120%;
+    left: 85%;
+
 }
-.btn-cancelar{
-    width: 17%;
+
+.btn-conf button {
+    width: 40%;
     border: none;
-    height: 49px;    
-    position: relative;
-    left: 20%;
-}
-.btn-salvar{
-    width: 17%;
-    position: relative;
-    left: 40%;
-    top: 48px;
-    padding: 12px 25px; 
-    border: none;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.btn-finalizar a{
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-
-.btn-finalizar 
-.btn-cancelar {
-    background-color: #FF3877;
+    /* padding: 12px 16px; */
     border-radius: 10px;
-    padding: 12px 16px;
-    
+
 }
 
-.btn-finalizar 
-.btn-salvar {
+.btn-finalizar {
+    width: 117%;
+}
+
+.btn-finalizar .btn-cancelar {
+    height: 50px;
+    background-color: #FF3877;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-finalizar .btn-salvar {
     background-color: #007E70;
-    border-radius: 10px;    
+    position: relative;
+    left: 45%;
+    top: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
 }
-
-
 
 /* fim botao finalizar */
 
@@ -287,178 +276,316 @@ label#salvar-btn {
     left: 13%;
 }
 
+@media (max-width: 430px) {
 
-/*  celular pequeno: 480px
-    celular padrao: 767px
-    tablet: 768 a 1024px
-    desktop: acima de 1024px 
-*/
-
-/* celular pequeno */
-@media screen and (max-width: 650px) {
-    .bolas-fundo{
+    .bolas-fundo .bola-rosa{
         display: none;
     }
 
-    .title-text{
-        font-size: 20px;
-    }
-
-    .principal{
-        overflow-y: auto;
-    }
-
-    .box{
-        /* background-color: red; */
-        display: flex;
-        flex-direction: column;
-        height: auto;        
-    }
-
     .formularios{
-        display: flex;
         flex-direction: column;
-        position: relative;
+        top: 20%;
         left: -13%;
     }
 
     .formularios label{
         position: relative;
-        left: 10px;
-    }
-
-    .btn-finalizar{
-        width: 100%;
-        left: 25%;
-        top: -30px;
-        /* background-color: red; */
-    }
-
-    .select#todas_categorias.select{
-        height: 40px;
-        width: 95%;
-    }
-
-
-    .voltar{
-        position: relative;
-        left: -15vh;
-        top: 5px;
-    }
-}
-    
-
-
-/* celular padrao */
-@media screen and (min-width: 651px) and (max-width:1023px) {
-    .bola-verde2{
-        width: 20%;
-        left: 80%;
-    }
-    .bola-rosa{
-        width: 30%;
-        top: 80%;
-        left: 70%;
-    }
-
-    .principal{
-        /* height: 100vh; */
-        overflow-y: auto;
+        left: 5%;
+        top: 8px;
     }
 
     .box{
-        height: auto;
+        overflow-y: auto;
     }
 
-    .formularios{
-        display: flex;
-        flex-direction: column;
-        
+    .title-text{
+        font-size: 18px;
     }
 
-    .formularios label{
-        position: relative;
-        left: 10px;
-    }
-
-    .btn-finalizar{
-        position: relative;
-        left: 0%;
+    .btn-conf{
+        width: 75%;
+        top: 115%;
+        left: 30%;
     }
 
     .voltar{
-        position: relative;
-        left: 30px;
+        top: 30px;
+        left: -104%;
     }
 
     .voltar img{
-        /* background-color: red; */
-        position: relative;
-        top: -7vh;
-        left: -28vh;
+        width: 30px;
+        height: 30px;
+    }
+} 
+
+
+
+ @media (max-width: 820px) {
+
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+    
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 75%;
+    }
+    
+    .bolas-fundo .bola-rosa {
+        width: 155px;
+        top: 82%;
+        left: 58%;
     }
 
+    .box {
+        overflow-y: auto;
+    }
 
-}
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20%;
+    }
 
-@media screen and (min-width: 1024px) and (max-width:1250px) {
-    .formularios{
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 3%;
+        top: 10px;
+    }
+
+    .btn-conf {
+        top: 115%;
+        left: 10%;
         width: 100%;
     }
 
-    .formularios label{
+    button.btn.btn-cancelar {
         position: relative;
-        left: 5%;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
     }
 
-    .form-pessoa{
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+
+    .voltar {
         position: relative;
-        left: 5%;
-        top: 5px;
+        left: -200%;
+        top: 30px;
+        /* background-color: #007E70; */
+    }
+}  
+
+@media (max-width: 1024px) {
+    .formularios{
+        flex-direction: column;
+        top: 20%;
+    }
+    .box{
+        overflow-y: auto;
     }
 
-    .form-pessoa input{
-        width: 110%;
+    .btn-conf {
+        top: 115%;
+        left: 60%;
+        width: 60%;
     }
 
-    .form-loja{
+    .voltar{
+        top: 0;
+        left: -200%;
+    }
+} 
+ @media (width: 1024px) and (height: 600px) {
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 80%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 120px;
+        top: 75%;
+        left: 68%;
+    }
+
+    .title-text{
         position: relative;
-        left: 10%;
-        top: 5px;
+        top: -10px;
     }
 
-    .form-expo{
-        /* background-color: red; */
+
+    .formularios {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        top: 10%;
+        left: -5%;
+    }
+
+    .select {
+        width: 40vh;
+        height: 5vh;
+        margin: 10px;
+    }
+
+    .title {
         position: relative;
-        left: 5%;
-    }
-    .form-loja input{
-        width: 76%;
+        top: -20px;
     }
 
-    .form-expo input{
-        width: 70%;
+    .form-loja .input-group input{
+        height: 5vh;
     }
 
-    .select{
-        width: 70%;
+    .form-expo .input-group input {
+        width: 40vh;
+        height: 5vh;
+        margin: 10px;
     }
 
-    #categorias{
-        /* background-color: red; */
-        width: 76%;
+    .btn-conf {
+        top: 115%;
+        left: 77%;
+        width: 40%;
     }
 
-    .btn-finalizar{
+    button.btn.btn-cancelar {
         position: relative;
-        left: 70%;
+        width: 30%;
+        height: 6vh;
+        left: 12%;
+        font-size: 16px;
+
     }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        height: 6vh;
+        font-size: 16px;
+        top: 36px;
+    }
+
+    .voltar{
+        top: 200px;
+        left: -80vh;
+    }
+
+
 }
 
-/* @media screen and (min-width: 1251px){
-    .btn-finalizar{
-        position: relative;
-        left: 45vh;
-        top: 10vh;
+@media (width: 344px) and (height: 882px) {
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20%;
     }
-} */
+
+    .title-text{
+        font-size: 14px;
+    }
+
+    .formularios input {
+        width: 260px;
+    }
+
+    .form-pessoa {
+        left: 10%;
+    }
+
+    .form-loja {
+        left: 10%;
+    }
+
+    .select {
+        width: 260px;
+        left: -30%;
+    }
+
+    .voltar {
+        left: -90%;
+        top: 20px;
+    }
+
+    
+} 
+
+@media (max-width:540px) {
+    .btn-conf{
+        width: 100%;
+        left: 10%;
+    }
+    
+}
+
+ @media (min-width:1200px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    .bolas-fundo {
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+        top: -90vh;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-verde1 {
+        position: relative;
+        left: -40px;
+        top: -10%;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-verde2 {
+        position: relative;
+        left: 87%;
+        top: 0;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-rosa {
+        position: relative;
+        left: 75%;
+        top: 70%;
+        z-index: -3;
+    }
+
+    .btn-conf {
+        position: absolute;
+        width: 24%;
+        top: 120%;
+        left: 85%;
+    
+    }
+
+    .voltar {
+        top: 280px;
+        left: -90vh;
+       
+    }
+} 

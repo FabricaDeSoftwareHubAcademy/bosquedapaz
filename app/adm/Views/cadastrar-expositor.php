@@ -71,110 +71,116 @@ if (isset($_POST['REQUEST_METHOD'])) {
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <form class="formularios" method="POST">
+            <form method="POST">
+                <div class="formularios">
 
-                <div class="form-pessoa">
-                    <div class="input">
-                        <label>Nome completo:</label>
-                        <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
-                    </div>
-                    <div class="input">
-                        <label>Whatsapp:</label>
-                        <input type="text" name="whatsapp" id="" placeholder="Número de whatsapp" required>
+                    <div class="form-pessoa">
+                        <div class="input">
+                            <label>Nome completo:</label>
+                            <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="input">
+                            <label>Whatsapp:</label>
+                            <input type="text" name="whatsapp" id="" placeholder="Número de whatsapp" required>
+                        </div>
+
+                        <div class="input">
+                            <label>E-mail:</label>
+                            <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="input">
+                            <label>Qual Cidade Reside:</label>
+                            <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
+                        </div>
                     </div>
 
-                    <div class="input">
-                        <label>E-mail:</label>
-                        <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
+                    <div class="form-loja">
+                        <div class="input">
+                            <label>Produto:</label>
+                            <input type="text" name="produto" id="" placeholder="Digite seu produto" required>
+                        </div>
+
+                        <div class="input">
+                            <label>Marca:</label>
+                            <input type="text" name="marca" id="" placeholder="Digite a marca " required>
+                        </div>
+
+                        <div class="input">
+                            <label for="optionInput3">Categorias</label>
+                            <select name="id_categoria" id="categorias" class="select" require>
+                                <option value="">Selecione</option>
+                                <?php foreach ($lista as $categoria) : ?>
+                                    <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['descricao'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label>Link:</label>
+                            <script>
+                                link
+                            </script>
+                            <input type="text" name="" id="" placeholder="link instagram" required>
+                        </div>
                     </div>
-                    <div class="input">
-                        <label>Qual Cidade Reside:</label>
-                        <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
+
+
+                    <div class="form-expo">
+                        <label for="tipo-expo">Tipo de exposição:</label>
+                        <div class="custom-dropdown">
+                            <select name="" id="" class="select">
+                                <option value="">Selecione</option>
+                                <option value="trailer">Trailer</option>
+                                <option value="food-truck">Food truck</option>
+                                <option value="barraca">Barraca</option>
+                            </select>
+                        </div>
+
+                        <label for="energia">Precisa de energia?</label>
+                        <div class="custom-dropdown">
+                            <select name="energia" id="energia" class="select">
+
+                                <option value="">Selecione</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+
+
+                            </select>
+                        </div>
+
+                        <label for="equipamentos">Voltagens dos equipamentos</label>
+                        <div class="custom-dropdown">
+                            <select name="voltagem" id="voltagem" class="select">
+
+                                <option value="">selecione</option>
+                                <option value="110v">110v</option>
+                                <option value="220v">220v</option>
+
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Escolher Imagens:</label>
+                            <input type="file" name="files[]" id="files" multiple="multiple">
+                        </div>
+
                     </div>
+
+                    <div class="btn-conf">
+                        <div class="btn-finalizar">
+                            <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
+                            <button class="btn btn-cancelar">cancelar</button>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="form-loja">
-                    <div class="input">
-                        <label>Produto:</label>
-                        <input type="text" name="produto" id="" placeholder="Digite seu produto" required>
-                    </div>
-
-                    <div class="input">
-                        <label>Marca:</label>
-                        <input type="text" name="marca" id="" placeholder="Digite a marca " required>
-                    </div>
-
-                    <div class="input">
-                        <label for="optionInput3">Categorias</label>
-                        <select name="id_categoria" id="categorias" class="select" require>
-                            <option value="">Selecione</option>
-                            <?php foreach($lista as $categoria) : ?>
-                                <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['descricao'] ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-
-                    <div class="input">
-                        <label>Link:</label>
-                        <script>
-                            link
-                        </script>
-                        <input type="text" name="" id="" placeholder="link instagram" required>
-                    </div>
-                </div>
-
-
-                <div class="form-expo">
-                    <label for="tipo-expo">Tipo de exposição:</label>
-                    <div class="custom-dropdown">
-                        <select name="" id="" class="select">
-                            <option value="">Selecione</option>
-                            <option value="trailer">Trailer</option>
-                            <option value="food-truck">Food truck</option>
-                            <option value="barraca">Barraca</option>
-                        </select>
-                    </div>
-
-                    <label for="energia">Precisa de energia?</label>
-                    <div class="custom-dropdown">
-                        <select name="energia" id="energia" class="select">
-
-                            <option value="">Selecione</option>
-                            <option value="sim">Sim</option>
-                            <option value="nao">Não</option>
-
-
-                        </select>
-                    </div>
-
-                    <label for="equipamentos">Voltagens dos equipamentos</label>
-                    <div class="custom-dropdown">
-                        <select name="voltagem" id="voltagem" class="select">
-
-                            <option value="">selecione</option>
-                            <option value="110v">110v</option>
-                            <option value="220v">220v</option>
-
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>Escolher Imagens:</label>
-                        <input type="file" name="files[]" id="files" multiple="multiple">
-                    </div>
-
-                </div>
-
-                <div class="btn-finalizar">
-                    <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
-                    <button class="btn btn-cancelar"><a href="cadastrar-expositor.php">cancelar</a></button>
+                <div class="btns">
+                    <a href="Area-Adm.php" class="voltar">
+                        <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    </a>
                 </div>
             </form>
 
-            <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
-            </div>
 
         </div>
 
