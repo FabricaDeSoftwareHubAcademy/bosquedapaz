@@ -313,8 +313,8 @@
         position: absolute;
         right: 18px;
     }
-    .input2{
-        font-size: 12px;
+    .input2 {
+        font-size: 11px;
     }
     .area__input2 .uploads{
         width: 100%;
@@ -669,8 +669,36 @@
     
 }
 
-/* Nest Hub */
-@media (min-width: 1024px) and (max-height: 600px){
-    
+@media (min-width: 1200px) and (max-height: 830px){
+    .body_main{
+        background-color: #9d9fa1;
+        overflow-y: hidden;
+    }
+
+    .container_form h1 {
+        font-size: 24px;
+    }
+    .btn{
+        width: 150px;
+        height: 30px;
+    }
+
+    .container_form{
+        /* overflow-y: auto; */
+        background-color: aqua;
+    }
+
+    .form__cadastro{
+        height: 100%;
+        gap: 20px;
+
+        background-color: aquamarine;
+    }
+
+    .label__cad{
+        font-size: 12px;
+    }
 }
+
+
 
