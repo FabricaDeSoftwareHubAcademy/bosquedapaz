@@ -11,7 +11,6 @@
 <!-- Corpo da Tela -->
 <body class="body__main">
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
-
     <!-- Box Principal dos Elementos -->
     <div class="container__box">
         <!-- Lado Esquerdo: Botões -->
@@ -24,12 +23,10 @@
                     <i class="bi bi-person-plus"></i>
                     <span>Cadstro de Expositor Kids</span>
                 </a>
-
                 <a href="cadastro-expositor-client.php" class="button" id="button2">
                     <i class="bi bi-shop-window"></i>
                     <span>Cadastro de Expositor</span>
                 </a>
-
                 <a href="cadastro-artista.php" class="button" id="button3">
                     <i class="bi bi-music-note-list"></i>
                     <span>Cadastro de Artista</span>
@@ -38,13 +35,11 @@
             <!-- Seta Voltar -->
             <div class="div__seta_voltar"> <a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></div></a>
         </div>
-
         <!-- Lado Direito: Imagem -->
         <div class="conteiner__img">
             <img src="../../../Public/imgs/img-escolher-cadastro/img-decoracao-principal.svg" alt="">
         </div>
     </div>
-
     <!-- Imagens Decorativas -->
     <div class="imgs__decorative1"><img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt=""></div>
     <div class="imgs__decorative2"><img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt=""></div>

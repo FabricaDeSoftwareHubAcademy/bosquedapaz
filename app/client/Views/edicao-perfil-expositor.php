@@ -14,6 +14,7 @@
     <section class="container__main">
         <!-- Box Principal -->
         <div class="box__container">
+            <!-- Linha Decorativa  -->
             <div class="linha__decorativa"></div>
             <!-- Form -->
             <form class="form" action="salvar_perfil.php" method="POST" enctype="multipart/form-data">
@@ -68,7 +69,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="linha__decorativa"></div> -->
                 <!-- Lado Direito: Informações do Expositor -->
                 <div class="lado__direito">
                     <!-- Título -->
