@@ -3,10 +3,10 @@
 class Database {
     //atributos do database
     private $conn;
-    private string $local = "localhost";
+    private string $local = "192.168.22.9";
     private string $db = "bosquedapaz";
-    private string $user = "root";
-    private string $password = "";
+    private string $user = "suporte";
+    private string $password = "fabrica33";
     private string $table;
 
 
