@@ -1,4 +1,5 @@
 <?php 
+
 require '../../../app/adm/Controller/Colaborador.php';
 
 if(isset($_POST['cadastrar'])){
@@ -62,14 +63,14 @@ if(isset($_POST['cadastrar'])){
 <body>
     <!-- Includ Menu -->
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
-
     <!-- Box Principal -->
     <section class="body_main">
         <div class="container_box">
+            <!-- Seta Voltar  -->
+            <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
             <!-- Area Esquerda: Imagem -->
             <div class="container_img">
                 <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
-                <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
             </div>
             <!-- Linha Decorativa do Centro -->
             <div class="div__linha_decorativa"></div>
@@ -78,7 +79,6 @@ if(isset($_POST['cadastrar'])){
                 <h1>Cadastro ADM</h1>
                 <!-- Form -->
                 <form class="form__cadastro" method="POST" enctype="multipart/form-data">
-
                     <!-- Nome -->
                     <div class="form__group">
                         <label class="label__cad" for="nome">Nome</label>
@@ -161,6 +161,5 @@ if(isset($_POST['cadastrar'])){
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </section>
-    
 </body>
 </html>

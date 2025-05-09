@@ -23,15 +23,15 @@
 /* Corpo da Página */
 .body_main{
     width: 100%;
-    height: 88.5vh;
+    height: 92vh;
     display: flex;
 }
 
 /* Box Principal dos Elementos */
-.container_box{
+.container_box {
     margin: 0 auto;
     width: 90%;
-    height: 95%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +48,16 @@
     backdrop-filter: blur(30px);
 }
 
+/* Seta Voltar */
+.seta__voltar {
+    position: fixed;      
+    bottom: 20px;         
+    left: 20px;           
+    width: 45px;
+    height: 45px;
+    z-index: 9999;        
+}
+
 
 /* Lado Esquerdo: Imagem */
 .container_img{
@@ -62,16 +72,6 @@
 .container_img img{
     width: 70%;
     height: auto;
-}
-
-/* Seta Voltar */
-.seta__voltar{
-    position: relative;
-    cursor: pointer;
-    width: 45px;
-    height: 45px;
-    top: 20%;
-    right: 45%;
 }
 
 /* Linha Decorativa Centro da Box */
@@ -280,6 +280,20 @@
         height: 95%;
         margin-top: 3%;
     }
+    .seta__voltar {
+        position: fixed;
+        bottom: 93%;
+        left: 7px;
+        width: 45px;
+        height: 45px;
+    }
+    .seta__voltar img{
+        width: 50%;
+        height: auto;
+    }
+    .div__linha_decorativa{
+        display: none;
+    }
     
     /* Lado Esquerdo:  */
     .container_img{
@@ -314,7 +328,7 @@
         right: 18px;
     }
     .input2 {
-        font-size: 11px;
+        font-size: 10px;
     }
     .area__input2 .uploads{
         width: 100%;
@@ -370,6 +384,9 @@
         width: 98%;
         height: 95%;
         margin-top: 3%;
+    }
+    .div__linha_decorativa{
+        display: none;
     }
     
     /* Lado Esquerdo:  */
@@ -461,6 +478,9 @@
         height: 95%;
         margin-top: 3%;
     }
+    .div__linha_decorativa{
+        display: none;
+    }
     
     /* Lado Esquerdo:  */
     .container_img{
@@ -541,8 +561,8 @@
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
-       /* Areas Principais:  */
-       .body_main{
+    /* Areas Principais:  */
+    .body_main{
         width: 100%;
         height: 100%;
     }
@@ -550,6 +570,9 @@
         width: 98%;
         height: 95%;
         margin-top: 3%;
+    }
+    .div__linha_decorativa{
+        display: none;
     }
     
     /* Lado Esquerdo:  */
@@ -573,7 +596,7 @@
     }
     .area__input #icon {
         position: absolute;
-        left: 53px;
+        left: 56px;
     }
     .area__input .bi-shield-lock {
         position: absolute;
@@ -627,6 +650,9 @@
 
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
+    body{
+        overflow: hidden;
+    }
     .container_img{
         width: 40%;
     }
@@ -648,6 +674,9 @@
 
 /* Computadores Largos e Compactos (Baixa Altura):  */
 @media (min-width: 1400px){
+    body{
+        overflow: hidden;
+    }
     .label__cad {
         position: relative;
         left: 30px;
@@ -655,8 +684,8 @@
     .area__input #icon {
         left: 40px;
     }
-    .area__input .input {
-        padding-left: 40px;
+    .area__input #icon {
+        left: 47px;
     }
     .area__input .bi-shield-lock {
         position: absolute;
@@ -666,12 +695,11 @@
         position: absolute;
         right: 30px;
     }
-    
 }
 
+/* Pequenos Ajustes:  */
 @media (min-width: 1200px) and (max-height: 830px){
     .body_main{
-        background-color: #9d9fa1;
         overflow-y: hidden;
     }
 
@@ -682,23 +710,24 @@
         width: 150px;
         height: 30px;
     }
-
-    .container_form{
-        /* overflow-y: auto; */
-        background-color: aqua;
-    }
-
     .form__cadastro{
         height: 100%;
         gap: 20px;
-
-        background-color: aquamarine;
     }
-
     .label__cad{
         font-size: 12px;
     }
 }
-
-
-
+@media (min-width: 1200px) and (max-height: 700px){
+    .body_main{
+        height: 82.5vh
+    }
+    .area__input .input {
+        height: 75%;
+    }
+}
+@media (min-width: 2000px){
+    .area__input #icon {
+        left: 56px;
+    }
+}
