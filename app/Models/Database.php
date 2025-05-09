@@ -9,6 +9,7 @@ class Database {
     private string $password = "";
     private string $table;
 
+
     // metodo construtor que íncia chamando o médoto de conexão com o db 
     function __construct($table = null){
         $this->table = $table;
