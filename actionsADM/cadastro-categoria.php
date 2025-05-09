@@ -1,5 +1,6 @@
 <?php
-require_once "../../app/adm/Controller/Categoria.php";
+// require_once "../../app/adm/Controller/Categoria.php";
+require_once "../app/adm/Controller/Categoria.php";
 
 // Define o cabeçalho como JSON
 header('Content-Type: application/json');
@@ -17,7 +18,7 @@ if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone']
         exit;
     }
 
-    $pasta = '../../Public/imgs/uploads-categoria/'; //colocar caminho img
+    $pasta = '../Public/imgs/uploads-categoria"'; //colocar caminho img
 
     if (!is_dir($pasta)) {
         mkdir($pasta, 0777, true);

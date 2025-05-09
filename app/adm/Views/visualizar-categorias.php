@@ -90,7 +90,7 @@
                     <div class="modal-content">
                         <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
                         <h1 class="titulo">Cadastrar Categoria</h1>
-                        <form id="form_categoria" action="../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
+                        <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
                             <div class="form-box">
                                 <h3>Nome:</h3>
                                 <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
@@ -100,7 +100,7 @@
                                         <div class="color-preview" id="selectedColor"></div>
                                         <span id="selectedText">Selecione uma cor</span>
                                     </div>
-                                    <div id="seletor-cor" class="select-items" onclick="teste()">
+                                    <div id="seletor-cor" class="select-items">
                                         <div data-value="rgba(13, 72, 161, 0.30)">
                                             <div class="color-preview" style="background-color: rgba(13, 72, 161, 0.30);"></div> Cor 1
                                         </div>

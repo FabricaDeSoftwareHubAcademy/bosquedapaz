@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = new FormData(form_categoria);
 
         try {
-            const dados_php = await fetch('../../actionsADM/cadastro-categoria.php', {
+            const dados_php = await fetch('../../../actionsADM/cadastro-categoria.php', {
                 method: 'POST',
                 body: formData
             });
