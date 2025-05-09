@@ -16,8 +16,6 @@
         table{
             border-collapse: collapse;
         }
-        /* #ft{ 
-        } */
     </style>
 </head>
 <body>
