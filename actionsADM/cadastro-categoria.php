@@ -18,7 +18,7 @@ if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone']
         exit;
     }
 
-    $pasta = '../Public/imgs/uploads-categoria"'; //colocar caminho img
+    $pasta = '../Public/imgs/uploads-categoria'; //colocar caminho img
 
     if (!is_dir($pasta)) {
         mkdir($pasta, 0777, true);
