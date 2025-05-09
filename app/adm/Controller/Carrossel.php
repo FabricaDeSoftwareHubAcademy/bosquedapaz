@@ -1,6 +1,6 @@
 <?php
 
-require_once('./app/Models/Database.php');
+require_once('../app/Models/Database.php');
 
 class Carrossel {
     public int $id;
