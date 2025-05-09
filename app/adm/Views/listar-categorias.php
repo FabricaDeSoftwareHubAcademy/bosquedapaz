@@ -136,6 +136,7 @@
                                         
                                     </td>
                                 </tr>
+                            
                             </tbody>
                         </table>
                     </div>
@@ -157,21 +158,21 @@
                 </div>
 
                 <!-- Codigo Editar Categoria -->
-                <div id="modalCadastro" class="modal">
+                <dialog class="cadastro-categoria" id="cadastro-categoria">
                     <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h1 class="titulo">Editar Categoria</h1>
-                        <form action="" method="post">
+                        <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
+                        <h1 class="titulo">Cadastrar Categoria</h1>
+                        <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
                             <div class="form-box">
                                 <h3>Nome:</h3>
-                                <input class="nome-cat" type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
+                                <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
                                 <h3>Cor:</h3>
                                 <div class="custom-select">
-                                    <div class="select-selected">
+                                    <div class="select-selected" id="openModal">
                                         <div class="color-preview" id="selectedColor"></div>
                                         <span id="selectedText">Selecione uma cor</span>
                                     </div>
-                                    <div class="select-items">
+                                    <div id="seletor-cor" class="select-items">
                                         <div data-value="rgba(13, 72, 161, 0.30)">
                                             <div class="color-preview" style="background-color: rgba(13, 72, 161, 0.30);"></div> Cor 1
                                         </div>
@@ -195,8 +196,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <input class="botao-cor" name="cor_sala" type="color"> -->
-                                <h3>Ícone:</h3>
+
+                                <input type="hidden" name="cor" id="corInput" required>
+
+                                <h3 class="titulo-modal">Ícone:</h3>
                                 <label for="file" class="custum-file-upload" onchange="loadFile(event)">
                                     <div class="icon">
                                         <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
@@ -210,26 +213,16 @@
                                     <div class="text">
                                         <span style="color:grey">Selecione a Imagem</span>
                                     </div>
-                                    <input id="file" type="file" style="display: none;">
+                                    <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
-
-                                <!-- <div class="separacao">
-                                    <h2>Prévia da Categoria</h2>
-                                    <div class="previa">
-                                        <img id="output" />
-                                        <h4 id="output-text"></h4>
-                                    </div>
-                                </div> -->
-
                                 <div class="botoes">
-                                    <button class="cancelar" onclick="fecharModal()">Cancelar</button>
-                                    <button class="salvar" onclick="fecharModal()">Salvar</button>
+                                    <button type="button" class="cancelar" onclick="fecharModal('cadastro-categoria')">Cancelar</button>
+                                    <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                             </div>
                         </form>
-
                     </div>
-                </div>
+                </dialog>
 
     </main>
 
