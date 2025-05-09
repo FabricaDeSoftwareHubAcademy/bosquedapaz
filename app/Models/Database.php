@@ -1,9 +1,11 @@
 <?php
 
+
+
 class Database {
     //atributos do database
     private $conn;
-    private string $local = "localhost";
+    private string $local = getenv('DB_HOST');
     private string $db = "bosquedapaz";
     private string $user = "root";
     private string $password = "";
@@ -20,15 +22,19 @@ class Database {
 
         try {
 
+            echo $this->local;
+
             $this->conn = new PDO("mysql:host=".$this->local.";dbname=".$this->db,$this->user,$this->password);
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
+            echo "foi";
+            exit;
         }
 
         catch(PDOException $err){
             die("Conection Failed".$err->getMessage());
         }
+
     }
 
     // médoto para executar o CRUD no db
