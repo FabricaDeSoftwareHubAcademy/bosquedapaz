@@ -14,7 +14,7 @@
 
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
-
+   
     <main class="principal">
         <div class="box">
             <h1>CADASTRO DE PARCEIROS</h1>
@@ -54,10 +54,19 @@
                 <form action="#" method="POST">
                     <div id="form1">
                         <div class="data-imagem">
-                            <div class="input-group">
+                            <!-- <div class="input-group">
                                 <label>Tipo:</label>
                                 <input type="text" id="data-inicio" name="data-inicio" value="">
+                            </div> -->
+                            <div class="input-group">
+                                <label for="tipo-parceiro">Tipo:</label>
+                                <select id="tipo-parceiro" name="tipo" required>
+                                    <option value="" disabled selected>Selecione o tipo</option>
+                                    <option value="juridica">Jurídica</option>
+                                    <option value="fisica">Física</option>
+                                </select>
                             </div>
+
                             <div class="input-group">
                                 <label>CPF/CNPJ:</label>
                                 <input type="text" name="file" placeholder="Digite o CPF/CNPJ" id="file"
@@ -110,7 +119,6 @@
             <div class="acao-content-recusar">
                 <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
                 <div class="acao-botoes-recusar">
-                  <!-- <button class="close-modal" data-modal="modal-deleta">cancelar</button> -->
                   <button class="close-modal" data-modal="modal-deleta">confirmar</button>
                 </div>
             </div>
@@ -124,7 +132,7 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
