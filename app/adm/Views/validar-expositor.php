@@ -8,7 +8,6 @@
     <!-- Bloco principal -->
     <title>Gerenciar e Validar</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <!-- Bloco principal -->
 </head>
@@ -204,6 +203,7 @@
     </div>
 
     <script src="../../../Public/js/js-adm/modal-validar-expositor.js" deffer></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>
