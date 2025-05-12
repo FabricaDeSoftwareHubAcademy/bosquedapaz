@@ -29,7 +29,7 @@ if(!empty($carrossel)){
         $img2 = $imagens['img2'];
     }
     if(empty($carrossel->img3)){
-        $img3 = $imagens['img3'];
+        $img3 = $imagens['img2'];
     }
 }
 //no caso de estar vazio, vem para cá e carrega imgs padrao
