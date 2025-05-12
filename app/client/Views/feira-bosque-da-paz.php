@@ -15,7 +15,7 @@
 </head>
 <!-- inicio body -->
 <body class="home" id="corpo">
-    <?php //include "../../../Public/assets/home/menu-home.html"; ?>
+    <?php include "../../../Public/assets/home/menu-home.html"; ?>
 
     <?php include "../../../Public/assets/home/carrossel-home.php"; ?>
 

@@ -1,6 +1,6 @@
 <?php
 
-include "../../app/Models/Env.php";
+include __DIR__ . "/Env.php";
 
 use app\Models\Env;
 $env = Env::load();
@@ -10,10 +10,10 @@ $env = Env::load();
 class Database {
     //atributos do database
     private $conn;
-    private string $local = "localhost";
-    private string $db = "bosquedapaz";
-    private string $user = "root";
-    private string $password = "";
+    private string $local;
+    private string $db;
+    private string $user;
+    private string $password;
     private string $table;
 
     // metodo construtor que íncia chamando o médoto de conexão com o db 
@@ -34,13 +34,13 @@ class Database {
 
         try {
 
+            $this->set_conn();
+
             // echo $this->local;
 
             $this->conn = new PDO("mysql:host=".$this->local.";dbname=".$this->db,$this->user,$this->password);
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            echo "foi";
-            exit;
         }
 
         catch(PDOException $err){
@@ -143,8 +143,5 @@ class Database {
         return ($result->rowCount() == 1) ? TRUE : FALSE;
     }
 }
-
-$obgdb = new Database('categoria');
-$obgdb->conecta();
 
 ?>
