@@ -5,13 +5,12 @@ include "../../app/Models/Env.php";
 use app\Models\Env;
 $env = Env::load();
 
- 
-// $oi = getenv("DB_HOST");
-// echo $oi;
+// print_r( $_ENV['DB_HOST']); 
+
 class Database {
     //atributos do database
     private $conn;
-    private string $local = getenv('DB_HOST');
+    private string $local = "localhost";
     private string $db = "bosquedapaz";
     private string $user = "root";
     private string $password = "";
@@ -23,6 +22,13 @@ class Database {
         $this->conecta();
     }
 
+    function set_conn(){
+        $this->local = $_ENV['DB_HOST'];
+        $this->db = $_ENV['DB_DATABASE'];
+        $this->user = $_ENV['DB_USER'];
+        $this->password = $_ENV['DB_PASSWORD'];
+    } 
+
     // se conecta com o db
     private function conecta(){
 
@@ -33,7 +39,7 @@ class Database {
             $this->conn = new PDO("mysql:host=".$this->local.";dbname=".$this->db,$this->user,$this->password);
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            // echo "foi";
+            echo "foi";
             exit;
         }
 
@@ -138,7 +144,7 @@ class Database {
     }
 }
 
-// $obgdb = new Database('categoria');
-// $obgdb->conecta();
+$obgdb = new Database('categoria');
+$obgdb->conecta();
 
 ?>
