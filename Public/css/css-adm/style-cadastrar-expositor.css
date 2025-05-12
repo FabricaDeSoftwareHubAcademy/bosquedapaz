@@ -277,7 +277,7 @@ label#salvar-btn {
 
 
 
-/* @media (max-width: 430px) {
+@media (max-width: 430px) {
 
     .bolas-fundo .bola-verde1 {
         display: none;
@@ -642,4 +642,4 @@ label#salvar-btn {
         cursor: pointer;
         display: flex;
     }
-} */
+}
