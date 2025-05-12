@@ -1,3 +1,16 @@
+<?php
+$conn = new mysqli("localhost", "root", "", "banco_info");
+
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM info_usuarios WHERE id_usuario = 7";
+$result = $conn->query($sql);
+
+$dados = $result->fetch_assoc();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,43 +68,43 @@
                         <!-- Campos superior -->
                         <div class="campos-formulario">
                             <label for="">Nome</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['nome'] ?>" readonly>
 
                             <label for="">Email</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['email'] ?>" readonly>
 
                             <label for="">Whatsapp</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['whatsapp'] ?>" readonly>
 
                             <label for="">CPF</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['cpf'] ?>" readonly>
 
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['cidade'] ?>" readonly>
 
                             <label for="">Instagram</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['instagram'] ?>" readonly>
                         </div>
 
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
                             <label for="">Marca</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['marca'] ?>" readonly>
 
                             <label for="">Tipo</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['tipo'] ?>" readonly>
 
                             <label for="">Energia</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['energia'] ?>" readonly>
 
                             <label for="">Voltagem</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['voltagem'] ?>" readonly>
 
                             <label for="">Endereço</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['endereco'] ?>" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" readonly>
+                            <input type="text" name="" id="" value="<?= $dados['categoria'] ?>" readonly>
                             <a href="">Alterar Categoria</a>
                         </div>
                     </div>
@@ -123,12 +136,13 @@
     <div class="modal modal-recusar-expositor-2" id="modal_recusar_expositor_2">
         <div class="modal-content-recusar-expositor">
             <h1 class="modal-texto-recusar-expositor">Justifique o Motivo</h1>
-            <form action="" method="" class="motivo-recusar-formulario">
+            <form action="" method="post" class="motivo-recusar-formulario" id="formulario-recusar-expositor">
+                <input type="hidden" name="id_usuario" value="<?= $dados['id_usuario'] ?>">
                 <textarea name="textarea-modal-recusar-expositor" id="motivo_recusar_expositor" class="motivo-recusar-expositor" placeholder="Digite aqui o motivo"></textarea>
-                
+
                 <div class="modal-botoes-recusar-expositor">
                     <button type="button" class="botoes-modal-recusar-expositor botao-cancelar" id="botao_cancelar_recusar_expositor_2">Cancelar</button>
-                    <button type="button" class="botoes-modal-recusar-expositor botao-confirmar" id="botao_confirmar_recusar_expositor_2">Confirmar</button>
+                    <button type="submit" name="recusar-expositor" class="botoes-modal-recusar-expositor botao-confirmar" id="botao_confirmar_recusar_expositor_2">Confirmar</button>
                 </div>
             </form>
         </div>
@@ -142,7 +156,7 @@
                 <button class="botoes-modal-recusar-expositor botao-ok" id="botao_ok_recusar">Ok</button>
             </div>
         </div>
-     </div>
+    </div>
 
     <!-- Modais - Validar Expositor -->
     <!-- ----------------------------- -->
@@ -173,10 +187,10 @@
                     <option value="roxa">Roxa</option>
                     <option value="verde">Verde</option>
                 </select>
-                
+
                 <div class="modal-botoes-validar-expositor">
                     <button type="button" class="botoes-modal-validar-expositor botao-cancelar" id="botao_cancelar_validar_expositor_2">Cancelar</button>
-                    <button  type="button" class="botoes-modal-validar-expositor botao-confirmar" id="botao_confirmar_validar_expositor_2">Confirmar</button>
+                    <button type="button" class="botoes-modal-validar-expositor botao-confirmar" id="botao_confirmar_validar_expositor_2">Confirmar</button>
                 </div>
             </form>
 
@@ -191,7 +205,7 @@
                 <button class="botoes-modal-validar-expositor botao-ok" id="botao_ok_validar">Ok</button>
             </div>
         </div>
-     </div>
+    </div>
 
     <div class="decoracoes">
         <img class="decoracao decoracao1" src="../../../Public/imgs/imgs-validar-expositor/decoracao1-validar-expositor.svg" alt="">
