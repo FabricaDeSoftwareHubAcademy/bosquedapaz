@@ -1,7 +1,13 @@
 <?php
 
+include "../../app/Models/Env.php";
 
+use app\Models\Env;
+$env = Env::load();
 
+ 
+// $oi = getenv("DB_HOST");
+// echo $oi;
 class Database {
     //atributos do database
     private $conn;
@@ -22,12 +28,12 @@ class Database {
 
         try {
 
-            echo $this->local;
+            // echo $this->local;
 
             $this->conn = new PDO("mysql:host=".$this->local.";dbname=".$this->db,$this->user,$this->password);
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            echo "foi";
+            // echo "foi";
             exit;
         }
 
@@ -131,5 +137,8 @@ class Database {
         return ($result->rowCount() == 1) ? TRUE : FALSE;
     }
 }
+
+// $obgdb = new Database('categoria');
+// $obgdb->conecta();
 
 ?>
