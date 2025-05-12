@@ -54,19 +54,16 @@ require_once '../../../actions/cadastrar_evento.php';
                             </button>
 
                             <button type="submit" class="btn btn-salvar">Salvar</button>
-                        
-                </div>
-
+                        </div>
                     </form>
-
                 </div>
-            <div class="btns">
-                <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
 
-                
-            </div>
+                    
+                <div class="btns">
+                    <a href="gerenciar-eventos.php" class="voltar">
+                        <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    </a>                  
+                </div>
         </div>
         
     </main>
