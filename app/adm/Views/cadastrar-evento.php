@@ -57,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
-
     <main class="principal">
         <div class="box">
             <h1>CADASTRO DE EVENTO</h1>
