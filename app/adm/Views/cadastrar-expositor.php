@@ -1,4 +1,35 @@
+<?php
+require_once '../Controller/Pessoa.php';
+require_once '../Controller/Expositor.php';
+require_once '../Controller/Categoria.php';
 
+$categoriaModel = new Categoria();
+
+// $lista = $categoriaModel->listar();
+
+if (isset($_POST['REQUEST_METHOD'])) {
+
+    $expositor = new Expositor();
+
+    $expositor->setNome($_POST['nome']);
+    $expositor->setWhats($_POST['whatsapp']);
+    $expositor->setEmail($_POST['email']);
+    $expositor->setTelefone($_POST['whatsapp']);
+    $expositor->setNome_marca($_POST['marca']);
+    $expositor->setVoltagem($_POST['voltagem']);
+    $expositor->setEnergia($_POST['energia']);
+    $expositor->setContato2($_POST['whatsapp']);
+    $expositor->setProduto($_POST['produto']);
+    $expositor->setId_categoria($_POST['id_categoria']);
+    $expositor->setImagens($_POST['files']);
+
+    $res = $expositor->cadastrar();
+
+    
+    exit;
+}
+
+?>
 
 
 <!DOCTYPE html>
