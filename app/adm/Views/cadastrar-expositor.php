@@ -65,6 +65,9 @@ if (isset($_POST['REQUEST_METHOD'])) {
 
     <main class="principal">
 
+
+    
+
         <div class="box">
 
             <div class="title">
