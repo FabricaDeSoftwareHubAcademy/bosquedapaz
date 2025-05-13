@@ -4,45 +4,48 @@ require_once("../app/adm/Controller/Carrossel.php");
 
 $car = new Carrossel();
 
-// $imagem1 = $_FILES['img1'];
-            
-// $nome_imagem1 = $imagem1['name'];
-// $nova_imagem1 = 'img-carrossel-1';
-// $extencao_imagem1 = strtolower(pathinfo($nome_imagem1, PATHINFO_EXTENSION));
+function update_carrossel($img,$num) {
+    $caminho = '../../../Public/uploads/uploads-carrosel/';
+    $new_img = $img['name'];
+    $new_name = 'imgsel-'.$num;
+    $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
 
-// // verificando a extencao
-// if($extencao_imagem1 != 'png' && $extencao_imagem1 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-// $caminho_img1 = $pasta . $nova_imagem1. '.'. $extencao_imagem1;
-// $upload_img1 = move_uploaded_file($imagem1['tmp_name'], $caminho_img1);
+    $size = getimagesize($img['tmp_name']);
+    
+    if ($extencao_imagem != 'png' && $extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg'){
+        return 'img invalida';
+    }else{
+        if ($size[0] > 1920 && $size > 1080){
+            return 'img invalida';
+        }else{
+            $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+        
+            $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
 
-// // cadastrando img no db
-// $img1 = $caminho_img1;
-// $car->img1 = $img1;
-
-// function update_carrossel(img) {
-
-// }
-
-echo "<pre>";
-print_r(getimagesize('../Public/uploads/uploads-carrosel/img-carrossel-1.jpg'));
-echo "</pre>";
-// if($_SERVER['REQUEST_METHOD'] == 'POST'){
-//     // $img1 = $_POST['img1'];
-//     // $img2 = $_POST['img2'];
-//     // $img3 = $_POST['img3'];
-//     $img1 = '1';
-//     $img2 = '2';
-//     $img3 = '3';
+            return $caminho_img;
+        }
+    }
 
 
+}
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if (!empty($_FILES['img1'])){
+        update_carrossel($_FILES['img1'], 1);
+        
+    }
+    else if (!empty($_FILES['img2'])){
+        update_carrossel($_FILES['img1'], 1);
+        
+    }
+    else if (!empty($_FILES['img3'])){
+        update_carrossel($_FILES['img1'], 1);
+
+    }
 
 
-//     $car->img1 = $img1;
-//     $car->img2 = $img2;
-//     $car->img3 = $img3;
-
-//     $car->atualizar();
-// }
+    $car->atualizar();
+}
 
 ?>
 

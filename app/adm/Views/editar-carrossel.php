@@ -7,28 +7,33 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
 // getimagesize('../Public/uploads/uploads-carrosel/img-carrossel-1.jpg')
 
 function update_carrossel($img,$num) {
-    $caminho = './uploads/uploads-carrosel/';
+    $caminho = '../../../Public/uploads/uploads-carrosel/';
     $new_img = $img['name'];
-    $new_name = 'img-carrossel-'.$num;
+    $new_name = 'imgsel-'.$num;
     $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
 
+    $size = getimagesize($img['tmp_name']);
+    
     if ($extencao_imagem != 'png' && $extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg'){
         return 'img invalida';
+    }else{
+        if ($size[0] > 1920 && $size > 1080){
+            return 'img invalida';
+        }else{
+            $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+        
+            $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
+        }
     }
 
-    $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
-
-    $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
 
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $img1 = $_FILES['img1'];
-    $img2 = $_FILES['img2'];
-    $img3 = $_FILES['img3'];
 
-    if (!empty($_POST['img1'])){
-        echo "temmmmm";
+    if (!empty($_FILES['img1'])){
+        // $ers = update_carrossel($_FILES['img1'], 2);
+        // echo $ers;
     }
 
     // echo 'temmmmmmm';
