@@ -35,3 +35,22 @@ document.getElementById("imagens-input").addEventListener("change", readImage, f
 document.getElementById("imagens-input2").addEventListener("change", readImage2, false);
 
 document.getElementById("imagens-input3").addEventListener("change", readImage3, false);
+
+
+$btnEditar = document.getElementById('editar');
+// console.log($formCarrossel);
+
+$btnEditar.addEventListener('click', async function (event){
+    event.preventDefault()
+
+    $formCarrossel = document.getElementById('form-carrossel');
+
+    const formData = new FormData();
+
+    let dados_php = await fetch("../../../actions/carrossel.php",{
+        method:"POST",
+        body:formData
+    });
+
+    let response = await dados_php.json();
+})

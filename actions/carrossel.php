@@ -7,44 +7,43 @@ $car = new Carrossel();
 function update_carrossel($img,$num) {
     $caminho = '../../../Public/uploads/uploads-carrosel/';
     $new_img = $img['name'];
-    $new_name = 'imgsel-'.$num;
+    $new_name = 'img-carrossel-'.$num;
     $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
 
-    $size = getimagesize($img['tmp_name']);
-    
-    if ($extencao_imagem != 'png' && $extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg'){
-        return 'img invalida';
-    }else{
-        if ($size[0] > 1920 && $size > 1080){
-            return 'img invalida';
-        }else{
-            $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+    $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
         
-            $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
+    $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
 
-            return $caminho_img;
-        }
-    }
-
-
+    return $caminho_img;
 }
 
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $res = $car->buscar_id(1);
     if (!empty($_FILES['img1'])){
-        update_carrossel($_FILES['img1'], 1);
-        
+        $img1 = update_carrossel($_FILES['img1'], 1);
+        $car->img1 = $img1;
     }
-    else if (!empty($_FILES['img2'])){
-        update_carrossel($_FILES['img1'], 1);
-        
+    else {
+        $car->img1 = $res->img1;
     }
-    else if (!empty($_FILES['img3'])){
-        update_carrossel($_FILES['img1'], 1);
-
+    if (!empty($_FILES['img2'])){
+        $img2 = update_carrossel($_FILES['img2'], 2);
+        $car->img2 = $img2; 
+    }
+    else {
+        $car->img2 = $res->img2;
+    }
+    if (!empty($_FILES['img3'])){
+        $img3 = update_carrossel($_FILES['img3'], 3);
+        $car->img3 = $img3;
+    }
+    else {
+        $car->img3 = $res->img3;
     }
 
 
-    $car->atualizar();
+    // $car->atualizar();
 }
 
 ?>

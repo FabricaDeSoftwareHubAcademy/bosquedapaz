@@ -4,40 +4,6 @@ $img1 = '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg';
 $img2 = '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg';
 $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
 
-// getimagesize('../Public/uploads/uploads-carrosel/img-carrossel-1.jpg')
-
-function update_carrossel($img,$num) {
-    $caminho = '../../../Public/uploads/uploads-carrosel/';
-    $new_img = $img['name'];
-    $new_name = 'imgsel-'.$num;
-    $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
-
-    $size = getimagesize($img['tmp_name']);
-    
-    if ($extencao_imagem != 'png' && $extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg'){
-        return 'img invalida';
-    }else{
-        if ($size[0] > 1920 && $size > 1080){
-            return 'img invalida';
-        }else{
-            $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
-        
-            $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
-        }
-    }
-
-
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    if (!empty($_FILES['img1'])){
-        // $ers = update_carrossel($_FILES['img1'], 2);
-        // echo $ers;
-    }
-
-    // echo 'temmmmmmm';
-}
 
 ?>
 
@@ -73,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             
             <!-- local de uploads de imgs para o carrossel -->
-            <form action="" method="post" class="formulario-ca" enctype='multipart/form-data'>
+            <form action="" method="post" class="formulario-ca" id="form-carrossel" enctype='multipart/form-data'>
                 <section class="up-imgs">
                     <div class="div-nome">
                         <h1 class="num">Imagem 1</h1>
@@ -125,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <a href="">Cancelar</a>
                             </button>
                             
-                            <button type="submit" name="editar" class="btn btn-salvar">
+                            <button type="submit" name="editar" id="editar" class="btn btn-salvar">
                                 Salvar
                             </button>
                         </div>
