@@ -1,12 +1,5 @@
 <?php
 
-require_once('../Controller/Carrossel.php');
-
-$car = new Carrossel();
-
-$carrossel = $car->buscar_id(3);
-
-
 // caminho das imgs padrao
 $imagens = [
     'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
@@ -14,30 +7,9 @@ $imagens = [
     'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg',
 ];
 
-// verifica se aconsulta no db esta vazia
-if(!empty($carrossel)){
-    //no caso de nao esta vem para aqui
-    $img1 = $carrossel->img1;
-    $img2 = $carrossel->img2;
-    $img3 = $carrossel->img3;
-
-    // ifs para saber se esta faltando uma img 
-    if(empty($carrossel->img1)){
-        $img1 = $imagens['img1'];
-    }
-    if(empty($carrossel->img2)){
-        $img2 = $imagens['img2'];
-    }
-    if(empty($carrossel->img3)){
-        $img3 = $imagens['img2'];
-    }
-}
-//no caso de estar vazio, vem para cá e carrega imgs padrao
-else{
-    $img1 = $imagens['img1'];
-    $img2 = $imagens['img2'];
-    $img3 = $imagens['img3'];
-}
+$img1 = $imagens['img1'];
+$img2 = $imagens['img2'];
+$img3 = $imagens['img3'];
 
 
 ?>
