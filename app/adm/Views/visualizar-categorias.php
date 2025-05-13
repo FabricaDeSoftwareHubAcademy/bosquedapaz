@@ -123,6 +123,12 @@
                                         <div data-value="rgba(25, 169, 78, 0.3)">
                                             <div class="color-preview" style="background-color: rgba(25, 169, 78, 0.3);"></div> Cor 7
                                         </div>
+                                        <div data-value="rgba(108, 88, 76, 0.30)">
+                                            <div class="color-preview" style="background-color: rgba(108, 88, 76, 0.30);"></div> Cor 8
+                                        </div>
+                                        <div data-value="rgba(17, 112, 96, 0.3)">
+                                            <div class="color-preview" style="background-color: rgba(17, 112, 96, 0.3);"></div> Cor 9
+                                        </div>
                                     </div>
                                 </div>
 

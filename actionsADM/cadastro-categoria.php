@@ -28,7 +28,7 @@ if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone']
     $novo_nome = uniqid();
     $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-    if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif'])) {
+    if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif', 'svg'])) {
         echo json_encode([
             'status' => 'Error',
             'message' => 'Extensão do arquivo inválida'

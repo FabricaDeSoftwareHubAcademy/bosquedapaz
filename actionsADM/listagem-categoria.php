@@ -36,7 +36,7 @@
                         <td><?php echo $categoria->id_categoria?></td>
                         <td><?php echo $categoria->descricao?></td>
                         <td><?php echo $categoria->cor?></td>
-                        <td><img id="ft" src="<?php echo $categoria->icone?>"></td>
+                        <td style="background-color: <?php echo $categoria->cor?>;"><img id="ft" src="<?php echo $categoria->icone?>"></td>
                         <td><a href="editar.php?id_categoria=<?php echo $categoria->id_categoria; ?>">Editar</a></td>
                         <td><a href="excluir.php?id_categoria=<?php echo $categoria->id_categoria; ?>">Excluir</a></td>
                       </tr>
