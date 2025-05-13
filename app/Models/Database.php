@@ -164,12 +164,22 @@ class Database {
             if($senha == $dados['senha']){
                 session_start();
                 $_SESSION['id_pessoa'] = $dados['id_pessoa'];
-                return true;
+                return $dados['id_pessoa'];
             }else{
                 return false;
             }
         }
         return false;
+    }
+
+    public function verific_perfil($id_pessoa){
+        $verificar = $this->conn->prepare("SELECT adm FROM pessoa WHERE id_pessoa = :p");
+        $verificar->bindValue(":p", $id_pessoa);
+        $verificar->execute();
+
+        $verf_pessoa = $verificar->fetch();
+        $res_adm = $verf_pessoa['adm'];
+        return $res_adm;
     }
 
 }

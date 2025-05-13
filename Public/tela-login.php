@@ -11,11 +11,18 @@ if(isset($_POST['email'])){
     $usuario = new Usuario();
 
     $res = $usuario->logar($email, $senha);
+    // print_r($res);
 
-    if($res == false){
+    if($res === false){
         echo "<script>alert('Email ou Senha incorreto!') </script>";
     }else{
-        echo "<script>alert('Logado') </script>";
+        $verfic_login = $usuario->perfil($res);
+        print_r($verfic_login);
+        if($verfic_login == 1){
+            echo "<script>alert('adm logado') </script>";
+        }elseif($verfic_login == 0){
+            echo "<script>alert('expositor ou artista logado') </script>";
+        }
     }
 
 }

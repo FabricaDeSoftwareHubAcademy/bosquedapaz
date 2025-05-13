@@ -13,10 +13,15 @@ class Usuario{
         $res = $db->login($email, $senha);
 
         if($res){
-            return true;
+            return $res;
         }else{
             return false;
         }
+    }
 
+    public function perfil($id_perfil){
+        $db = new Database('pessoa');
+        $res = $db->verific_perfil($id_perfil);
+        return $res;
     }
 }
