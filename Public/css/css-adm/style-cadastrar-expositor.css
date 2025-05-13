@@ -594,35 +594,7 @@ label#salvar-btn {
         overflow-x: hidden;
         overflow-y: hidden;
     }
-    
-    .bolas-fundo {
-        width: 100vw;
-        height: 90vh;
-        position: relative;
-        top: -90vh;
-        z-index: -3;
-    }
-    
-    .bolas-fundo .bola-verde1 {
-        position: relative;
-        left: -40px;
-        top: -10%;
-        z-index: -3;
-    }
-    
-    .bolas-fundo .bola-verde2 {
-        position: relative;
-        left: 87%;
-        top: 0;
-        z-index: -3;
-    }
-    
-    .bolas-fundo .bola-rosa {
-        position: relative;
-        left: 75%;
-        top: 70%;
-        z-index: -3;
-    }
+   
 
     .btn-conf {
         position: absolute;

@@ -5,10 +5,10 @@ require_once '../Controller/Categoria.php';
 
 $categoriaModel = new Categoria();
 
-// $lista = $categoriaModel->listar();
 
-if (isset($_POST['REQUEST_METHOD'])) {
+$lista = $categoriaModel->listar();
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor = new Expositor();
 
     $expositor->setNome($_POST['nome']);
@@ -21,15 +21,19 @@ if (isset($_POST['REQUEST_METHOD'])) {
     $expositor->setContato2($_POST['whatsapp']);
     $expositor->setProduto($_POST['produto']);
     $expositor->setId_categoria($_POST['id_categoria']);
-    $expositor->setImagens($_POST['files']);
+
+
+    if (isset($_FILES['files'])) {
+        $expositor->setImagens($_FILES['files']);
+    }
 
     $res = $expositor->cadastrar();
-
-
+    echo "cadastradp";
     exit;
 }
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -97,8 +101,9 @@ if (isset($_POST['REQUEST_METHOD'])) {
                             <select name="id_categoria" id="categorias" class="select" require>
                                 <option value="">Selecione</option>
                                 <?php foreach ($lista as $categoria) : ?>
-                                    <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['descricao'] ?></option>
+                                    <option value="<?= $categoria->id_categoria ?>"><?= $categoria->descricao ?></option>
                                 <?php endforeach; ?>
+
                             </select>
                         </div>
 
