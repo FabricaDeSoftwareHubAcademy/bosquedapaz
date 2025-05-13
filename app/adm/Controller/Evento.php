@@ -42,15 +42,22 @@ class Evento
     }
 
     public function cadastrar()
-{
-    $db = new Database('evento');
-    $res = $db->insert([
-        'nome_evento' => $this->nome_evento,
-        'descricao' => $this->descricao,
-        'data_evento' => $this->data_evento,
-        'banner' => $this->banner
-    ]);
+    {
+        $db = new Database('evento');
+        $res = $db->insert([
+            'nome_evento' => $this->nome_evento,
+            'descricao' => $this->descricao,
+            'data_evento' => $this->data_evento,
+            'banner' => $this->banner
+        ]);
 
-    return $res;
-}
+        return $res;
+    }
+
+    public function listar($where = null,$order = null,$limit = null){
+        $db = new Database('evento');
+        $res = $db->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+        
+        return $res;
+    }
 }

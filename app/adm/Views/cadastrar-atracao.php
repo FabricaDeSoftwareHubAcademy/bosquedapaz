@@ -16,48 +16,49 @@
     <main class="principal">
         <div class="box">
             <h2>CADASTRO DE ATRAÇÃO</h2>
-            <div class="form-box">
-                <form action="#" method="POST">
-                    <div id="form1">
+                <div class="form-box">
+                    <form action="#" method="POST">
+                        <div id="form1">
 
-                        <div class="input-group">
-                            <label>Nome:</label>
-                            <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
-                                required>
+                            <div class="input-group">
+                                <label>Nome:</label>
+                                <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
+                                    required>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Descrição:</label>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="file" id="file" required>
+                            </div>
+
+                            <div class="preview-img">
+                                <img class="preview" src="" alt="" id="preview-image">
+                            </div>
+
                         </div>
+                        
+                        <div class="btn-cancelar-salvar">
+                            <button class="btn btn-cancelar">
+                                <a href="./Area-Adm.php">Cancelar</a>
+                            </button>
 
-                        <div class="input-group">
-                            <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <button class="btn btn-salvar">
+                                <a href="">Salvar</a>
                         </div>
+                    </form>
 
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
-                        </div>
-
-                        <div class="preview-img">
-                            <img class="preview" src="" alt="" id="preview-image">
-                        </div>
-
-                    </div>
-
-                </form>
-
-            </div>
+                </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
+                
             </div>
         </div>
         </div>

@@ -18,22 +18,24 @@ require_once '../../../actions/cadastrar_evento.php';
 <body>
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
-
     <main class="principal">
         <div class="box">
             <h1>CADASTRO DE EVENTO</h1>
                 <div class="form-box">
                     <form method="POST" enctype="multipart/form-data">
                         <div id="form1">
+
                             <div class="input-group">
                                 <label>Nome:</label>
                                 <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
                                     required>
                             </div>
+
                             <div class="input-group">
                                 <label>Descrição:</label>
                                 <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
                             </div>
+                            
                             <div class="data-imagem">
                                 <div class="input-group">
                                     <label>Data:</label>

@@ -1,3 +1,8 @@
+<?php
+require_once '../../../actions/listar_evento.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,28 +41,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 1; $i <= 12; $i++): ?>
+                        <?php
+                            foreach($eventos as $event){
+                                echo '
                                 <tr>
-                                    <td class="usuario-col">Evento <?php echo $i; ?></td>
-                                    <td><?php echo ("10/$i/25"); ?></td>
-                                    <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Em curso' : 'Finalizado'; ?></button></td>
-                                    <td class="fone-col">
-                                        <a href="editar-evento.php">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <a href="./cadastrar-atracao.php">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <button class="open-modal" data-modal="modal-fotos">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </td>
+                                    <td> '. $event->nome_evento .' </td>
+                                    <td> '. $event->data_evento .' </td>
+                                    <td> '. $event->descricao .' </td>
                                 </tr>
-                            <?php endfor; ?>
+                                ';
+                            }
+                        ?>
+                            
                         </tbody>
                     </table>
                 </div>
