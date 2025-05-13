@@ -1,3 +1,30 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+require '../actions/usuario.php';
+
+if(isset($_POST['email'])){
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['password']);
+
+    $usuario = new Usuario();
+
+    $res = $usuario->logar($email, $senha);
+
+    if($res == false){
+        echo "<script>alert('Email ou Senha incorreto!') </script>";
+    }else{
+        echo "<script>alert('Logado') </script>";
+    }
+
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -43,7 +70,7 @@
 
                     <h1 class="area-img-login-h1-tiago">Login</h1>
                     
-                    <form action="#" class="forms-login">
+                    <form action="#" class="forms-login" method="POST">
  
                         <label>E-mail</label>
                         <div class="area-input-login">
@@ -56,6 +83,7 @@
                             <i class="bi bi-lock"></i>
                             <input class="input-login" type="password" name="password" id="password" placeholder="Digite sua senha" required>
                         </div>
+                        <button class="botao-login" type="submit">Login</button>
                     </form>
  
                     <div class="div-esqueceu-senha-login">
@@ -63,7 +91,6 @@
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
-                    <a class="botao-login" href="../app/adm/Views/Area-Adm.php">Login</a>
                    
                 </div>
                

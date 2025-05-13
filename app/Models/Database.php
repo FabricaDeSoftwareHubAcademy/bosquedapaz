@@ -143,6 +143,35 @@ class Database {
         
         return ($result->rowCount() == 1) ? TRUE : FALSE;
     }
+
+    public function login($email, $senha) {
+        $verificar = $this->conn->prepare("SELECT id_pessoa, senha FROM pessoa WHERE email = :e");
+        $verificar->bindValue(":e", $email);
+        $verificar->execute();
+        
+        if ($verificar->rowCount() > 0) {
+            $dados = $verificar->fetch();
+
+
+            
+            // Verifica a senha criptografada
+            // if (password_verify($senha, $dados['senha'])) {
+                //     session_start();
+                //     $_SESSION['id_pessoa'] = $dados['id_pessoa'];
+                //     return true;
+            // }
+            
+            if($senha == $dados['senha']){
+                session_start();
+                $_SESSION['id_pessoa'] = $dados['id_pessoa'];
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
+    }
+
 }
 
 ?>
