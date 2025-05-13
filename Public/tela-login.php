@@ -17,7 +17,7 @@ if(isset($_POST['email'])){
         echo "<script>alert('Email ou Senha incorreto!') </script>";
     }else{
         $verfic_login = $usuario->perfil($res);
-        print_r($verfic_login);
+        // print_r($verfic_login);
         if($verfic_login == 1){
             echo "<script>alert('adm logado') </script>";
         }elseif($verfic_login == 0){
