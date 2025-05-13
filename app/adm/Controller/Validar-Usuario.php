@@ -8,7 +8,7 @@ $pass = '';
 
 $conn = new mysqli($host, $user, $pass, $db);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recusar-expositor'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validar-expositor'])) {
     $id_usuario = $_POST['id_usuario'] ?? null;
 
     if ($id_usuario) {
@@ -25,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recusar-expositor']))
     } else {
         $_SESSION['status'] = 'error';
     }
+
+    
 
     $conn->close();
 

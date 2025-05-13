@@ -87,3 +87,12 @@ botaoOkValidar.addEventListener("click", () => {
     modalValidar3.style.display = "none";
     document.body.classList.remove("modal-aberto");
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    if (typeof mostrarModalRecusar3 !== "undefined" && mostrarModalRecusar3) {
+        if (modalRecusar3) {
+            modalRecusar3.style.display = "flex";
+            document.body.classList.add("modal-aberto");
+        }
+    }
+});

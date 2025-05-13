@@ -9,7 +9,7 @@
 }
 
 .body-validar-expositor {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: #e1e1e1;
     display: flex;
@@ -162,16 +162,22 @@
     margin-top: 3%;
 }
 
-.campos-formulario input {
+.formulario-campo-informacao {
     height: 8%;
     outline: none;
     border: none;
     border-radius: 5px;
+    background-color: white;
     border-right: 2px solid grey;
     border-bottom: 2px solid grey;
     color: #3f3f3f;
     /* margin-bottom: 3%; */
     padding: 10px;
+}
+
+.campo-link {
+    color: blue;
+    text-decoration: none;
 }
 
 .area-botoes-formulario {
@@ -417,7 +423,7 @@ VALIDAR EXPOSITOR */
 @media (max-width: 576px) {
 
     .body-validar-expositor {
-        height: 100%;
+        height: auto;
     }
 
     .main-box {
@@ -551,7 +557,7 @@ VALIDAR EXPOSITOR */
 
 @media (min-width: 577px) and (max-width: 768px) {
     .body-validar-expositor {
-        height: 100%;
+        height: auto;
         /* background-color: red; */
     }
 
@@ -706,7 +712,7 @@ VALIDAR EXPOSITOR */
 
 @media (min-width: 769px) and (max-width: 992px) {
     .body-validar-expositor {
-        height: 100%;
+        height: auto;
         /* background-color: red; */
     }
 
@@ -867,7 +873,7 @@ VALIDAR EXPOSITOR */
 
 @media (min-width: 993px) and (max-width: 1200px) {
     .body-validar-expositor {
-        height: 100%;
+        height: auto;
         /* background-color: red; */
     }
 
@@ -1033,7 +1039,7 @@ VALIDAR EXPOSITOR */
 
 @media (min-width: 1201px) and (max-width: 1280px) {
     .body-validar-expositor {
-        height: 100%;
+        height: auto;
         /* background-color: red; */
     }
 
@@ -1194,7 +1200,7 @@ VALIDAR EXPOSITOR */
 
 @media (min-width: 1300px) and (max-width: 1400px) {
     .body-validar-expositor {
-        height: 100vh-;
+        height: auto;
     }
 
     .main-box {
