@@ -48,9 +48,11 @@ $btnEditar.addEventListener('click', async function (event){
     const formData = new FormData();
 
     let dados_php = await fetch("../../../actions/carrossel.php",{
-        method:"POST",
+        method:"FILES",
         body:formData
     });
 
     let response = await dados_php.json();
+
+    console.log(response);
 })

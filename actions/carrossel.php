@@ -18,23 +18,23 @@ function update_carrossel($img,$num) {
 }
 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'FILES'){
     $res = $car->buscar_id(1);
-    if (!empty($_FILES['img1'])){
+    if (isset($_FILES['img1'])){
         $img1 = update_carrossel($_FILES['img1'], 1);
         $car->img1 = $img1;
     }
     else {
         $car->img1 = $res->img1;
     }
-    if (!empty($_FILES['img2'])){
+    if (isset($_FILES['img2'])){
         $img2 = update_carrossel($_FILES['img2'], 2);
         $car->img2 = $img2; 
     }
     else {
         $car->img2 = $res->img2;
     }
-    if (!empty($_FILES['img3'])){
+    if (isset($_FILES['img3'])){
         $img3 = update_carrossel($_FILES['img3'], 3);
         $car->img3 = $img3;
     }
@@ -43,15 +43,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
 
-    // $car->atualizar();
+    $res = $car->atualizar();
+
+    if($res == TRUE){
+        $response = array('status' => $car->img1);
+        echo json_encode($response);
+    }
+    else {
+        $response = array('status' => 'error');
+        echo json_encode($response);
+    }
+
 }
 
 ?>
-
-
-
-<!-- clico na img 
-    o javascript valida os arquivos e tamanhos(png,jpg,jpeg, fullhd), deposi mostra na tela e manda para o php
-
-chaa no php
-    valida o os arquivos e tamanhos(png,jpg,jpeg, fullhd) cria o arquivo na pasta , depois manda para o banco -->
