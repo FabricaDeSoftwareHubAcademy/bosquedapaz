@@ -19,7 +19,8 @@ if(isset($_POST['email'])){
         $verfic_login = $usuario->perfil($res);
         // print_r($verfic_login);
         if($verfic_login == 1){
-            echo "<script>alert('adm logado') </script>";
+            // echo "<script>alert('adm logado') </script>";
+        header("location: ../app/adm/Views/Area-Adm.php");
         }elseif($verfic_login == 0){
             echo "<script>alert('expositor ou artista logado') </script>";
         }
