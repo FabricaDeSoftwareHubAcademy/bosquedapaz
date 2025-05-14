@@ -5,7 +5,7 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM info_usuarios WHERE id_usuario = 3";
+$sql = "SELECT * FROM info_usuarios WHERE id_usuario = 18";
 $result = $conn->query($sql);
 
 $dados = $result->fetch_assoc();
@@ -14,10 +14,12 @@ $dados = $result->fetch_assoc();
 <?php session_start(); ?>
 
 <script>
-    const mostrarModalRecusar3 = <?= isset($_SESSION['status']) && $_SESSION['status'] === 'success' ? 'true' : 'false' ?>;
+    const mostrarModalValidar3 = <?= isset($_SESSION['status-validar']) && $_SESSION['status-validar'] === 'success' ? 'true' : 'false' ?>;
+    const mostrarModalRecusar3 = <?= isset($_SESSION['status-recusar']) && $_SESSION['status-recusar'] === 'success' ? 'true' : 'false' ?>;
 </script>
 
-<?php unset($_SESSION['status']); ?>
+<?php unset($_SESSION['status-recusar']); ?>
+<?php unset($_SESSION['status-validar']); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -78,43 +80,47 @@ $dados = $result->fetch_assoc();
                         <!-- Campos superior -->
                         <div class="campos-formulario">
                             <label for="">Nome</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['nome'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['nome'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Email</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['email'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['email'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Whatsapp</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['whatsapp'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['whatsapp'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">CPF</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cpf'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cpf'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cidade'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cidade'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Instagram</label>
-                            <a class="formulario-campo-informacao campo-link" href="<?= htmlspecialchars($dados['instagram']) ?>" target="_blank">Visitar Perfil</a>
+                            <a class="formulario-campo-informacao campo-link"
+                            href="<?= htmlspecialchars($dados['instagram'] ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
+                            target="_blank">
+                            <?= !empty($dados['instagram']) ? "Visitar Perfil" : "Perfil não encontrado"?>
+                            </a>
                         </div>
 
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
                             <label for="">Marca</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['marca'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['marca'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Tipo</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['tipo'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['tipo'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Energia</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['energia'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['energia'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Voltagem</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['voltagem'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['voltagem'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Endereço</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['endereco'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['endereco'] ?? 'Dados não encontrado.' ?>" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['categoria'] ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['categoria'] ?? 'Dados não encontrado.' ?>" readonly>
                             <a href="">Alterar Categoria</a>
                         </div>
                     </div>
@@ -186,11 +192,8 @@ $dados = $result->fetch_assoc();
         <div class="modal-content-validar-expositor">
             <h1 class="modal-texto-validar-expositor">Preencha as Informações</h1>
             <h2 class="modal-subtexto-validar-expositor">Informe numero da barraca e cor da rua em que o expositor ira atuar.</h2>
-            <form method="" action="" id="formulario-informacoes-validar-expositor" class="area-informacoes-validar-expositor">
+            <form action="../Controller/Validar_Usuario.php" method="post" id="formulario-informacoes-validar-expositor" class="area-informacoes-validar-expositor">
                 <input type="hidden" name="id_usuario" value="<?= $dados['id_usuario'] ?>">
-                <input type="hidden" name="nome" value="<?= $dados['nome'] ?>">
-                <input type="hidden" name="cpf" value="<?= $dados['cpf'] ?>">
-                <input type="hidden" name="marca" value="<?= $dados['marca'] ?>">
                 <label for="">Numero da Barraca</label>
                 <input type="text" name="numero_barraca" id="numero_barraca_expositor" class="campo-numero-barraca">
 

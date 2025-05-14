@@ -49,7 +49,6 @@ botaoCancelarRecusar2.addEventListener("click", () => {
 
 botaoConfirmarRecusar2.addEventListener("click", () => {
     modalRecusar2.style.display = "none";
-    modalRecusar3.style.display = "flex";
 
 });
 
@@ -80,7 +79,6 @@ botaoCancelarValidar2.addEventListener("click", () => {
 
 botaoConfirmarValidar2.addEventListener("click", () => {
     modalValidar2.style.display = "none";
-    modalValidar3.style.display = "flex";
 });
 
 botaoOkValidar.addEventListener("click", () => {
@@ -92,6 +90,15 @@ window.addEventListener("DOMContentLoaded", () => {
     if (typeof mostrarModalRecusar3 !== "undefined" && mostrarModalRecusar3) {
         if (modalRecusar3) {
             modalRecusar3.style.display = "flex";
+            document.body.classList.add("modal-aberto");
+        }
+    }
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    if (typeof mostrarModalValidar3 !== "undefined" && mostrarModalValidar3) {
+        if (modalValidar3) {
+            modalValidar3.style.display = "flex";
             document.body.classList.add("modal-aberto");
         }
     }

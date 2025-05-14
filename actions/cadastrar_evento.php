@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $obj->promo = $promo;
     
     // $objColab->foto = $caminho;
-
+    
     $res = $obj->cadastrar();
     if($res){
 
