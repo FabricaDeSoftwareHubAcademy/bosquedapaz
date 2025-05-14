@@ -5,7 +5,7 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM info_usuarios WHERE id_usuario = 18";
+$sql = "SELECT * FROM info_usuarios WHERE id_usuario = 1";
 $result = $conn->query($sql);
 
 $dados = $result->fetch_assoc();
