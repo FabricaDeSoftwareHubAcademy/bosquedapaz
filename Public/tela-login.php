@@ -1,38 +1,3 @@
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-require '../actions/usuario.php';
-
-if(isset($_POST['email'])){
-    $email = addslashes($_POST['email']);
-    $senha = addslashes($_POST['password']);
-
-    $usuario = new Usuario();
-
-    $res = $usuario->logar($email, $senha);
-    // print_r($res);
-
-    if($res === false){
-        echo "<script>alert('Email ou Senha incorreto!') </script>";
-    }else{
-        $verfic_login = $usuario->perfil($res);
-        // print_r($verfic_login);
-        if($verfic_login == 1){
-            // echo "<script>alert('adm logado') </script>";
-        header("location: ../app/adm/Views/Area-Adm.php");
-        }elseif($verfic_login == 0){
-            echo "<script>alert('expositor ou artista logado') </script>";
-        }
-    }
-
-}
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -78,7 +43,7 @@ if(isset($_POST['email'])){
 
                     <h1 class="area-img-login-h1-tiago">Login</h1>
                     
-                    <form action="#" class="forms-login" method="POST">
+                    <form action="./validar_login.php" class="forms-login" method="POST">
  
                         <label>E-mail</label>
                         <div class="area-input-login">
@@ -108,5 +73,11 @@ if(isset($_POST['email'])){
             </div>
         </section>
     </main>
-</body>
+    </body>
+
+<?php if (isset($_GET['erro']) && $_GET['erro'] == 1): ?>
+<script>
+    alert("Email ou senha incorrto!")
+</script>
+<?php endif; ?>
 </html>
