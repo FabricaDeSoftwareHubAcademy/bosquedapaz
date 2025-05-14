@@ -49,11 +49,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         $response = array("status" => status);
         echo json_encode($response);
-    } catch {
+    } catch (\Throwable $th) {
         $response = array("status" => 500);
         echo json_encode($response);
     }
     
+}
+
+if($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $carrossel = $car->buscar_id(1);
+
+    $response = array($carrossel, "status" => 200);
+    echo json_encode($response);
 }
 
 ?>
