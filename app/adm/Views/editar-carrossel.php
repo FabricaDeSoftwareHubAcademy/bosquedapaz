@@ -46,7 +46,7 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
                         <label class="uploads" id="label">
                             <input type="file" name="img1" id="imagens-input" class="input" id="input1">
                 
-                            <img <?php echo "src='".$img1."'"; ?> alt="Imagem do carrossel 3" id="img1" class="up-img">
+                            <!-- <img <?php //echo "src='".$img1."'"; ?> alt="Imagem do carrossel 3" id="img1" class="up-img"> -->
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
@@ -59,7 +59,7 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
                         <label class="uploads" id="label">
                             <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
                 
-                            <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" id="img2" class="up-img">
+                            <!-- <img <?php //echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" id="img2" class="up-img"> -->
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
@@ -72,7 +72,7 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
                         <label class="uploads" id="label">
                             <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
                 
-                            <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" id="img3" class="up-img">
+                            <!-- <img <?php //echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" id="img3" class="up-img"> -->
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
