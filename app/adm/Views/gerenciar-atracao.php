@@ -63,7 +63,7 @@
                 <div class="b-voltar">
                 </div>
                 <div class="botoes">
-                    <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Nova atração</button></a>
+                    <a href="../../../app/adm/Views/cadastrar-atracao.php"><button class="novo-evento">Nova atração</button></a>
                 </div>
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">

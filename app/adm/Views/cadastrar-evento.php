@@ -78,6 +78,7 @@ require_once '../../../actions/cadastrar_evento.php';
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/sanitizar-form-evento.js" defer></script>
     <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
 </body>
 

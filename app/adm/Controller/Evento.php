@@ -9,6 +9,10 @@ class Evento
     protected $data_evento;
     protected $banner;
 
+    public function getId() {
+        return $this->id_evento;
+    }
+    
     public function getNome() {
         return $this->nome_evento;
     }

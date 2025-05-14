@@ -42,16 +42,29 @@ require_once '../../../actions/listar_evento.php';
                         </thead>
                         <tbody>
                         <?php
-                            foreach($eventos as $event){
+                            foreach ($eventos as $event) {
                                 echo '
                                 <tr>
-                                    <td> '. $event->nome_evento .' </td>
-                                    <td> '. $event->data_evento .' </td>
-                                    <td> '. $event->descricao .' </td>
+                                    <td>' . htmlspecialchars($event->getNome()) . '</td>
+                                    <td>' . htmlspecialchars($event->getData()) . '</td>
+                                    <td>' . htmlspecialchars($event->getDescricao()) . '</td>
+                                    <td>
+                                        <a href="editar-evento.php?id=' . $event->getId() . '" class="editar-link">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="gerenciar-atracao.php?id=' . $event->getId() . '" class="atracoes-link">
+                                            <i class="fas fa-music"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <img src="' . htmlspecialchars($event->getBanner()) . '" alt="Banner do Evento" style="max-width: 100px; max-height: 100px;">
+                                    </td>
                                 </tr>
                                 ';
                             }
-                        ?>
+                            ?>
                             
                         </tbody>
                     </table>
