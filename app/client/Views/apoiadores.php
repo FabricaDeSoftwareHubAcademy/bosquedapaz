@@ -15,61 +15,21 @@
 
 
     <title>Bosque da Paz</title>
-    <script src="../../../Public/js/js-home/yan-carrossel.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 </head>
 <body>
 
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
+
+    <?php include "../../../Public/assets/home/carrossel-home.php"; ?>
     
-    <section class="slider">
-      <div class="slider-content">
-        <input type="radio" name="btn-radio" id="radio1">
-        <input type="radio" name="btn-radio" id="radio2">
-        <input type="radio" name="btn-radio" id="radio3">
-        
-        <div class="slide-box primeiro">
-            <img src="../../../Public/imgs/quem-somos-img/imagem1.webp" alt="imagem1" class="imagem1 img-sobre">
-        </div>
-        <div class="slide-box">
-            <img src="../../../Public/imgs/quem-somos-img/imagem2.webp" alt="imagem2" class="imagem2 img-sobre">
-        </div>
-        <div class="slide-box">
-            <img src="../../../Public/imgs/quem-somos-img/imagem3.webp" alt="imagem3" class="imagem3 img-sobre">
-        </div>
-        <div class="nav-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-        </div>
-        <div class="nav-manual">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-        </div>
-      </div>     
-    </section>
-
-    <!-- <main class="section-bosque-quem-somos">
-        <div class="div-text-sobre">
-            <h1 class="titulo">FEIRA BOSQUE <span>DA PAZ!</span></h1>
-            <p class="somos-apaixonados">Somos uma equipe apaixonada por conectar pessoas e promover a troca de ideias e experiências. Desde nossa fundação, nossa missão tem sido criar um espaço vibrante e acolhedor onde expositores e visitantes possam se encontrar, explorar novidades e celebrar a diversidade de talentos e produtos.</p>
-        </div>
-        <div class="div-img-animation">
-            <img src="../../../Public/imgs/quem-somos-img/imagem1.webp" alt="imagem1" class="imagem1 img-sobre">
-            <img src="../../../Public/imgs/quem-somos-img/imagem2.webp" alt="imagem2" class="imagem2 img-sobre">
-            <img src="../../../Public/imgs/quem-somos-img/imagem3.webp" alt="imagem3" class="imagem3 img-sobre">
-
-        </div>
-    </main> MAIN QUE TERMINA A PARTE INCIAL -->
-
     
         <section class="section-nosso-time-quem-somos">
             <div class="div-nt" >
             <h1 class="titulo-nosso-time-quem-somos">A <span class="tit">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
             
             </div>
-        </section> <!--section que termina o NOSSO TIME-->
+        </section> 
 
     <section class="section-colaboradoras-quem-somos">
             

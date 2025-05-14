@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('style-carrosel.css');
  *{
     margin: 0;
     padding: 0;
@@ -118,71 +119,6 @@ h1{
 }
 .tit{
     color: darkgreen;
-}
-.slider{
-    margin: 0 auto 100px;
-    width: 100%;
-    height: 80vh;
-    padding: 0 !important;
-    overflow: hidden;
-}
-.slider-content{
-    width: 400%;
-    height: auto;
-    display: flex;
-}
-.slider-content input{
-    display: none;
-}
-.slide-box{
-    width: 25%;
-    height: auto;
-    position: relative;
-    text-align: center;
-    transition: 1s;
-}
-.slide-box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-    image-rendering: auto;
-}
-.nav-auto, .nav-manual{
-    position: absolute;
-    width: 100%;
-    margin-top: 41%;
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-}
-.nav-auto div, .nav-manual .manual-btn{
-    border: 1px solid darkgreen;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
-    margin-right: 10px;
-}
-.nav-manual .manual-btn:hover{
-    background-color: darkgreen;
-}
-#radio1:checked ~ .nav-auto .auto-btn1, 
-#radio2:checked ~ .nav-auto .auto-btn2, 
-#radio3:checked ~ .nav-auto .auto-btn3{
-    background-color: darkgreen;
-} 
-#radio1:checked ~ .primeiro{
-    margin-left: 0%;
-}
-#radio2:checked ~ .primeiro{
-    margin-left: -25%;
-}
-#radio3:checked ~ .primeiro{
-    margin-left: -50%;
 }
 
 .section-parce2 h3{
