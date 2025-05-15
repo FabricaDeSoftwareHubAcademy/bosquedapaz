@@ -7,6 +7,7 @@ class Evento
     protected $nome_evento;
     protected $descricao;
     protected $data_evento;
+    protected $status;
     protected $banner;
 
     public function getId() {
@@ -24,6 +25,9 @@ class Evento
     public function getData() {
         return $this->data_evento;
     }
+    public function getStatus() {
+        return $this->id_evento;
+    }
 
     public function getBanner() {
         return $this->banner;
@@ -39,6 +43,10 @@ class Evento
 
     public function setData($data){
         $this->data_evento = $data;
+    }
+
+    public function setStatus($status){
+        $this->status = $status;
     }
 
     public function setBanner($banner){
@@ -64,4 +72,26 @@ class Evento
         
         return $res;
     }
+
+    public function buscarPorId($id) {
+        $db = new Database('evento');
+        $resultado = $db->select("id_evento = {$id}")
+                        ->fetchObject(self::class);
+        return $resultado;
+    }
+
+    public function atualizar($id)
+{
+    $db = new Database('evento');
+
+    $valores = [
+        'nome_evento' => $this->nome_evento,
+        'descricao' => $this->descricao,
+        'data_evento' => $this->data_evento,
+        'banner' => $this->banner,
+        'status' => $this->status
+    ];
+
+    return $db->update("id_evento = {$id}", $valores);
+}
 }

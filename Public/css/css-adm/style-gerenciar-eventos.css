@@ -414,6 +414,16 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
+.status-ativo {
+    color: green;
+    font-weight: bold;
+}
+
+.status-inativo {
+    color: red;
+    font-weight: bold;
+}
+
 
 /* 📱 Ajustes para telas menores que 1200px */
 @media (max-width: 1199.98px) {
