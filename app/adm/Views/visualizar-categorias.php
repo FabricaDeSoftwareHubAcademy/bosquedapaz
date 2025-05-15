@@ -1,3 +1,15 @@
+<?php
+    require_once '../Controller/Categoria.php';
+
+    $categoria = new Categoria();
+    $categorias = $categoria->listar();
+
+    print_r($categorias);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,13 +38,17 @@
         <div class="box">
             <h1 class="title">TODAS AS CATEGORIAS</h1>
             <div class="box-item">
-                <div class="item">
-                    <div class="bolota" id="b1">
-                        <img src="../../../Public/assets/icons/icones-categorias/Pincel.png" alt="" class="icon-item">
+                <?php foreach($categorias as $category): ?>
+                    <div class="item">
+                        <div style="background-color:<?= $category->cor; ?>;" class="bolota" id="b1">
+                            <img src="<?= $category->icone; ?>" alt="<?= $category->icone; ?>" class="icon-item">
+                        </div>
+                        <p class="nome-cat"><?= $category->descricao; ?></p>
                     </div>
-                    <p class="nome-cat">Artesanato</p>
-                </div>
-                <div class="item">
+                
+                <?php endforeach; ?>
+                
+                <!-- <div class="item">
                     <div class="bolota" id="b2">
                         <img src="../../../Public/assets/icons/icones-categorias/Papiro.png" alt="" class="icon-item">
                     </div>
@@ -79,7 +95,7 @@
                         <img src="../../../Public/assets/icons/icones-categorias/Reciclar.png" alt="" class="icon-item">
                     </div>
                     <p class="nome-cat">Sustentabilidade</p>
-                </div>
+                </div> -->
                 <div class="item open-modal" data-modal="cadastro-categoria">
                     <div class="bolota" id="b10">
                         <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">

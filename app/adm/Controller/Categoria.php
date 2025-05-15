@@ -28,6 +28,7 @@ require_once __DIR__ . '/../../Models/Database.php';
             $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS,self::class);
             return $res;
         }
+        
         public function listar_por_id($id){
             $db = new Database('categoria');
             $res = $db->select('id_categoria = ' . $id)->fetchObject(self::class);
