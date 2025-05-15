@@ -1,5 +1,5 @@
 <?php
-require '../../Models/Database.php';
+require_once '../Models/Database.php';
 
 class Evento
 {
@@ -26,7 +26,7 @@ class Evento
         return $this->data_evento;
     }
     public function getStatus() {
-        return $this->id_evento;
+        return $this->status;
     }
 
     public function getBanner() {

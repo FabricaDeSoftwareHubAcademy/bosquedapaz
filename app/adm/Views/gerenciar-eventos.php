@@ -41,19 +41,17 @@ require_once '../../../actions/listar_evento.php';
                             </tr>
                         </thead>
                         <tbody>
-                        <?php
-                            foreach ($eventos as $event) {
-                                echo '
+                        <?php foreach ($eventos as $event): ?>
                                 <tr>
-                                    <td>' . htmlspecialchars($event->getNome()) . '</td>
-                                    <td>' . htmlspecialchars($event->getData()) . '</td>
+                                    <td><?= htmlspecialchars($event->getNome()) ?></td>
+                                    <td><?= htmlspecialchars($event->getData()) ?></td>
                                     <td>
-                                        <span class="' . ($event->getStatus() ? 'status-ativo' : 'status-inativo') . '">
-                                            ' . ($event->getStatus() ? 'Ativo' : 'Inativo') . '
+                                        <span class="<?= $event->getStatus() ? 'status-ativo' : 'status-inativo' ?>">
+                                            <?= $event->getStatus() ? 'Ativo' : 'Inativo' ?>
                                         </span>
                                     </td>
                                     <td class="fone-col">
-                                        <a href="editar-evento.php?id=<?=           $event->getId() ?>">
+                                        <a href="editar-evento.php?id=<?= $event->getId() ?>">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                     </td>
@@ -68,9 +66,7 @@ require_once '../../../actions/listar_evento.php';
                                         </button>
                                     </td>
                                 </tr>
-                                ';
-                            }
-                            ?>
+                            <?php endforeach; ?>
                             
                         </tbody>
                     </table>
@@ -115,19 +111,3 @@ require_once '../../../actions/listar_evento.php';
 </body>
 
 </html>
-
-                                    <td class="fone-col">
-                                        <a href="editar-evento.php">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <a href="./cadastrar-atracao.php">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <button class="open-modal" data-modal="modal-fotos">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </td>

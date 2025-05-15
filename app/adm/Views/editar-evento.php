@@ -21,48 +21,45 @@
         <div class="box">
             <h2>EDITAR EVENTO</h2>
             <div class="form-box">
-                <form action="#" method="POST" action="../../../actions/atualizar_evento.php" method="POST" enctype="multipart/form-data">
-                    
-                    <div id="form1">
+            <form action="../../../actions/editar_evento.php" method="POST" enctype="multipart/form-data">
 
-                        <input type="hidden" name="id_evento" value="<?= $eventoSelecionado->getId() ?>">
-                    
-                        <div class="input-group">
-                            <label>Nome:</label>
-                            <input type="text" name="nomedoevento" id="nomedoevento"  value="<?= htmlspecialchars($eventoSelecionado->getNome()) ?>" placeholder="Digite o nome do evento"
-                                required>
-                        </div>
-                        <div class="input-group">
-                            <label>Descrição:</label>
-                            <textarea name="descricao" rows= "5" cols= "40"><?= htmlspecialchars($eventoSelecionado->getDescricao()) ?> </textarea>
-                        </div>
-                        <div class="data-imagem">
-                            <div class="input-group">
-                                <label>Data:</label>
-                                <input type="date" id="data-inicio" name="data-inicio" value="<?= $eventoSelecionado->getData() ?>" required>
-                            </div>
-                            <select name="status">
-                                <option value="1" <?= $eventoSelecionado->getStatus() ? 'selected' : '' ?>>Ativo</option>
-                                <option value="0" <?= !$eventoSelecionado->getStatus() ? 'selected' : '' ?>>Inativo</option>
-                            </select>
-                            <div class="input-group">
-                                <label>Imagem:</label>
-                                <input type="file" name="file" id="file"
-                                    required>
-                            </div>
-                        </div>
-                        <img src="../../../Public/uploads/banners/<?= $eventoSelecionado->getBanner() ?>" alt="Banner do Evento">
-                    </div>
-                    <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
+                <input type="hidden" name="id_evento" value="<?= $eventoSelecionado->getId() ?>">
 
-                    <button type="submit" class="btn btn-salvar">
-                        <a href="">Salvar</a>
+                <div class="input-group">
+                    <label>Nome:</label>
+                    <input type="text" name="nomedoevento" id="nomedoevento"  
+                        value="<?= htmlspecialchars($eventoSelecionado->getNome()) ?>" required>
                 </div>
 
-                </form>
+                <div class="input-group">
+                    <label>Descrição:</label>
+                    <textarea name="descricao" rows="5" cols="40"><?= htmlspecialchars($eventoSelecionado->getDescricao()) ?></textarea>
+                </div>
+
+                <div class="data-imagem">
+                    <div class="input-group">
+                        <label>Data:</label>
+                        <input type="date" name="dataevento" value="<?= $eventoSelecionado->getData() ?>" required>
+                    </div>
+
+                    <select name="status">
+                        <option value="1" <?= $eventoSelecionado->getStatus() ? 'selected' : '' ?>>Ativo</option>
+                        <option value="0" <?= !$eventoSelecionado->getStatus() ? 'selected' : '' ?>>Inativo</option>
+                    </select>
+
+                    <div class="input-group">
+                        <label>Imagem:</label>
+                        <input type="file" name="file">
+                    </div>
+                </div>
+
+                <img src="../../../Public/uploads/banners/<?= $eventoSelecionado->getBanner() ?>" alt="Banner do Evento">
+
+                <div class="btn-cancelar-salvar">
+                    <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
+                    <button type="submit" class="btn btn-salvar">Salvar</button>
+                </div>
+            </form>
 
             </div>
             <div class="btns">
