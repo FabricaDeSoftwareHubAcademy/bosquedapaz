@@ -21,7 +21,7 @@
         <div class="box">
             <h2>EDITAR EVENTO</h2>
             <div class="form-box">
-            <form action="../../../actions/editar_evento.php" method="POST" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
 
                 <input type="hidden" name="id_evento" value="<?= $eventoSelecionado->getId() ?>">
 

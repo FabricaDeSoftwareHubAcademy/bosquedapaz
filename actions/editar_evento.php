@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../app/adm/Controller/Evento.php';
+require_once '../Controller/Evento.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -21,6 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = (int) $_POST['id_evento'];
     $evento->atualizar($id);
 
-    header('Location: ../app/adm/Views/gerenciar-eventos.php');
+    header('Location: ../Views/gerenciar-eventos.php');
     exit;
 }
