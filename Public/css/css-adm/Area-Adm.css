@@ -36,19 +36,28 @@
 
 }
 
-.container__action__tile {
+.container__action__tile{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; 
-    background-color: cornflowerblue;
-  }
-  
-  .action__title.open-modal {
-    width: 22%;
-    padding: 10px;
-    background-color: cornsilk;
-  }
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: blueviolet;
+}
+
+.action__title{
+    width: calc(33.3% - 100px);
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background-color: white
+}
 
 /* Modais  */
 .abrir-mais {
