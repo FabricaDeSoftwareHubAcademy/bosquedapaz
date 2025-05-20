@@ -31,76 +31,65 @@
             </div>
         </section> 
 
-    <section class="section-colaboradoras-quem-somos">
-            
-            <div class="image-text-carina">
-                
-                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-carina.webp" alt="">
-                <p class="carina">Carina Zamboni</p>
-                <span class="profission"> Produtora Cultural</span>
-            </div>
-
-            <div class="image-text-denise">
-                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-denize.webp" alt="">
-                <p class="denise">Denise Zamboni</p>
-                <span class="profission"> Produtora Cultural</span>
-            </div>
-   
-            <div class="image-text-fernanda">
-                <img class="fotos" src="../../../Public/imgs/quem-somos-img/foto-fernanda.webp" alt="">
-                <p class="fernanda">Fernanda Gutierrez</p>
-                <span class="profission">Advogada</span>
-            </div>
-
-            </div>
-    </section>
-
-
-    <!----------------------------------------------------->
-
-
-    <section class="section-expositor-quem-somos">
-
-        <div class="expositor">
-            <h1 class="titulo-seja-expositor-quem-somos">SEJA UM EXPOSITOR</h1>
+        <section class="section-colaboradoras-quem-somos">
+    <div class="card-per-expo card1">
+        <div class="head-card" id="solidariedade">
+            <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-perfil-expo">
         </div>
-        
-        <div class="expositor-p">
-            <p class="acesse">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botao abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
-            
+        <div class="body-card">
+            <h3 class="nome-expo" >Solidariedade</h3>
+            <div class="detalhes-expo">
+                <p class="para-cate">
+                    Solidariedade faz parte de nossa identidade como empresa, por isso, realizamos ações beneficentes que envolvem doações de objetos  e projetos de adoção.
+                </p>
+            </div>
         </div>
-        
-        <a class="botao-expositor" href="../../../app/client/views/edital-expositor.php">
-        <div class="botao">
-            CLIQUE AQUI!
-       
-        </div>
-        </a>
-    </section>
-
-<!-- 
-    <section class="parceiros-quem-somos">
-    <div class="titulo-parceiros-quem-somos">
-        <h4>PARCEIROS</h4>
-
-    </div>
-    <div class="fotos-parceiros-quem-somos">
-       <img src="../../../Public/imgs/quem-somos/bosque-ipe.webp" alt="">
-        <img src="../../../Public/imgs/quem-somos/governo.webp" alt="">
-        <img src="../../../Public/imgs/quem-somos/senac.webp" alt="">
-        <img src="../../../Public/imgs/quem-somos/sebrae.webp" alt="">
-        <img src="../../../Public/imgs/quem-somos/setur.webp" alt="">
-        
-
     </div>
 
+    <div class="card-per-expo card2">
+        <div class="head-card">
+            <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-perfil-expo">
+        </div>
+        <div class="body-card">
+            <h3 class="nome-expo">Gastronomia</h3>
+            <div class="detalhes-expo">
+                <p class="para-cate">
+                A gastronomia valoriza sabores, ingredientes locais e tradições culinárias, promovendo experiências únicas e identidade cultural.
+                </p>
+            </div>
+        </div>
+    </div>
 
-</section> -->
+    <div class="card-per-expo card3">
+        <div class="head-card">
+            <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-perfil-expo">
+        </div>
+        <div class="body-card">
+            <h3 class="nome-expo">Cultura</h3>
+            <div class="detalhes-expo">
+                <p class="para-cate">
+                A cultura expressa a história, os costumes e as manifestações artísticas do nosso povo, fortalecendo vínculos e diversidade.
+                </p>
+            </div>
+        </div>
+    </div>
 
-   
+    <div class="card-per-expo card4">
+        <div class="head-card">
+            <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-perfil-expo">
+        </div>
+        <div class="body-card">
+            <h3 class="nome-expo">Sustentabilidade</h3>
+            <div class="detalhes-expo">
+                <p class="para-cate">
+                A sustentabilidade busca o equilíbrio entre o desenvolvimento e o cuidado com o meio ambiente, garantindo um futuro melhor para todos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    <!--------------------------------->
     <section class="section-parce2">
     <h3 class="title all-titles">Nossos Apoiadores</h3>
         <div class="all-parce">
