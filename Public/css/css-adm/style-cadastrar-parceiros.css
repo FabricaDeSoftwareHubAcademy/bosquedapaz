@@ -334,3 +334,9 @@ h1 {
         width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
     }
 }
+
+.box h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* para afastar dos próximos elementos */
+}
