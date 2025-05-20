@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
     font-family: "Poppins", sans-serif;
 }
 
@@ -14,45 +15,84 @@
     --color-border-e-letra: #162868;
 }
 
-.container__main {
+.container__main{
     width: 100%;
     height: 90vh;
-    background-color: aqua;
-    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
 }
 
 .container__box{
-    margin: 0 auto;
-    margin-top: 1.5%;
     width: 90%;
-    height: 85%;
-    border: 10px;
-    z-index: 5;
+    height: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 10px;
+    /* gap: 30px; */
     background-color: var(--color-box);
-
 }
 
-.container__action__tile {
+.container__title{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; 
-    background-color: cornflowerblue;
-  }
-  
-  .action__title.open-modal {
-    width: 22%;
-    padding: 10px;
-    background-color: cornsilk;
-  }
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 8%;
+    /* background-color: cornflowerblue; */
+}
 
-/* Modais  */
-.abrir-mais {
-    margin: auto;
+.container__action__tile{
+    width: 80%;
+    display: grid;
+    gap: 35px;
+    /* padding: 0px 120px; */
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: aqua;
+}
+
+.container__action{
+    width: 250px;
+    height: 250px;
+    margin-left: 25%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: solid 5px var(--color-border-e-letra);
+    background-color: white;
+}
+
+.area__action{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.area__action p{
+    position: relative;
+    top: 10%;
+    text-decoration: none;
+    color: var(--color-border-e-letra);
+}
+
+
+
+
+
+
+
+
+/* Modais:  */
+.link-modais:focus-visible{
+    outline: none;
 }
 
 .modais{
@@ -71,11 +111,9 @@
     border-radius: .3rem;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
 }
-
 dialog::backdrop{
     background-color: rgba(0, 0, 0, 0.753);
 }
-
 .close-modal{
     display: flex;
     width: 100%;
@@ -84,13 +122,11 @@ dialog::backdrop{
     padding: 5px 15px 0px;
     border-bottom: 1.5px solid #c1c1c1;
 }
-
 .close-modal h2{
     text-align: left;
     font-weight: 500;
     margin: 0;
 }
-
 #icon-sair{
     font-size: 25px;
     color: #162868;
