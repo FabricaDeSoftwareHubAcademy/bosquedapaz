@@ -26,7 +26,7 @@
 
 .container__box{
     width: 90%;
-    height: 95%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,20 +60,41 @@
 .container__action{
     width: 250px;
     height: 250px;
-    margin-bottom: 10%;
     border-radius: 10px;
     cursor: pointer;
+    background-color: white;
     border: solid 5px var(--color-border-e-letra);
-    /* background-color: white; */
     transition: all .3s ease-in-out;
-    background-color: aqua;
 }
 
 .container__action:hover{
-    /* transform: scale(1.05); */
+    transform: scale(1.05);
     border: none;
-    box-shadow: 4px 4px 2px var(--color-border-e-letra);
+    box-shadow: 5px 5px 8px var(--color-border-e-letra);
 }
+
+
+
+/* ----------> Card do Carrossel: <----------*/
+.container__action_a{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: solid 5px var(--color-border-e-letra);
+    background-color: white;
+    transition: all .3s ease-in-out;
+}
+
+.container__action_a:hover{
+    transform: scale(1.05);
+    border: none;
+    box-shadow: 4px 4px 10px var(--color-border-e-letra);
+}
+/* -------------------->  <--------------------*/
+
+
+
 
 .area__action{
     width: 100%;
@@ -103,6 +124,25 @@
 /* Modais:  */
 .link-modais:focus-visible{
     outline: none;
+}
+
+.link-modais{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carrossel{
+    width: 275px;
+    height: 275px;
+    display: flex;
+    align-items: center;
+}
+
+.abrir-mais {
+    margin: auto;
 }
 
 .modais{
@@ -177,3 +217,5 @@ dialog::backdrop{
     width: 70%;
     height: auto;
 }
+
+

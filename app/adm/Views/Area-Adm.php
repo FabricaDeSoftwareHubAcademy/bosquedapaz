@@ -31,7 +31,7 @@
                     <div class="area__action">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Parceiros</p>
-                        <div class="icon-gabriel"></div>
+                        <!-- <div class="icon-gabriel"></div> -->
                     </div>
                 </div>
 
@@ -47,19 +47,19 @@
                                 <div class="area__action">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                                     <p>Cadastrar Parceiros</p>
-                                    <div class="icon-gabriel"></div>
+                                    <!-- <div class="icon-gabriel"></div> -->
                                 </div>
                             </div>
                         </a>
                         <a class="link-modais" href="../../../app/adm/Views/listar-parceiros.php">
                             <div class="container__action open-modal"  data-modal="abrir-mais-parceiros">
                                 <div class="area__action">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
-                                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
-                                    <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-                                </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
+                                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                                        <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                    </svg>
                                     <p>Listar Parceiros</p>
-                                    <div class="icon-gabriel"></div>
+                                    <!-- <div class="icon-gabriel"></div> -->
                                 </div>
                             </div>
                         </a>
@@ -137,15 +137,15 @@
                                 </div>
                             </div>
                         </a>
-                    </div>    
-                    <a class="link-modais" href="../../../app/adm/Views/listar-adm.php">
-                        <div class="container__action open-modal" data-modal="abrir-mais-relatorios">
-                            <div class="area__action">
-                                <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                                <p>Relatório Usuários</p>
+                        <a class="link-modais" href="../../../app/adm/Views/listar-adm.php">
+                            <div class="container__action open-modal" data-modal="abrir-mais-relatorios">
+                                <div class="area__action">
+                                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                                    <p>Relatório Usuários</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>    
                 </dialog>
 
                 <!-- aqui -->
@@ -189,14 +189,14 @@
                 </dialog>
 
 
-                <a href="editar-carrossel.php">
-                    <div class="container__action">
-                        <div class="area__action">
-                            <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
-                            <p id="i">Carrossel</p>
-                        </div>
+                
+                <a class="container__action_a" href="editar-carrossel.php">
+                    <div class="area__action">
+                        <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
+                        <p id="i">Carrossel</p>
                     </div>
                 </a>
+                
 
                 <!-- Aqui -->
                 <div class="container__action open-modal" data-modal="abrir-mais-evento">
@@ -207,7 +207,6 @@
                 </div>
 
             <!-- Modal Eventos -->
-
                 <dialog class="abrir-mais" id="abrir-mais-evento">
                     <div class="close-modal" data-modal="abrir-mais-evento">
                         <h2>Eventos</h2>
@@ -217,27 +216,25 @@
                         <a class="link-modais" href="../../../app/adm/Views/cadastrar-evento.php">
                             <div class="container__action">
                                 <div class="area__action">
-                                <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
-                                <p>Cadastrar Eventos</p>
+                                    <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                                    <p>Cadastrar Eventos</p>
+                                </div>    
                             </div>
                         </a>    
-                    </div>
-                        
-                    <a class="link-modais" href="../../../app/adm/Views/gerenciar-eventos.php">
-                        <div class="container__action">
-                            <div class="area__action">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
-                                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
-                                    <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-                                </svg>
-                                <p>Listar Eventos</p>
+                        <a class="link-modais" href="../../../app/adm/Views/gerenciar-eventos.php">
+                            <div class="container__action">
+                                <div class="area__action">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
+                                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                                        <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                    </svg>
+                                    <p>Listar Eventos</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </dialog>
 
-
-            
                 <!-- Aqui -->
                 <div class="container__action open-modal" data-modal="abrir-mais-financas">
                     <div class="area__action">
@@ -266,7 +263,6 @@
                                 </div>   
                             </div>        
                         </a>
-                    </div>
                         <a class="link-modais" href="../../../app/adm/Views/cadastro-boleto.php">
                             <div class="container__action">
                                 <div class="area__action">
@@ -288,6 +284,7 @@
                                 </div>
                             </div>
                         </a>
+                    </div>
                 </dialog>
 
                 <!-- aqui -->
@@ -300,7 +297,7 @@
 
                 <!-- Modal ADM -->
                 <dialog class="abrir-mais" id="abrir-mais-gerancia">
-                <div class="close-modal" data-modal="abrir-mais-gerancia">
+                    <div class="close-modal" data-modal="abrir-mais-gerancia">
                         <h2>Gerenciar ADM</h2>
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
