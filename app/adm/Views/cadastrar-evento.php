@@ -1,5 +1,5 @@
 <?php
-require_once '../../../actions/cadastrar_evento.php';
+require_once '../../../actions/evento/cadastrar_evento.php';
 
 ?>
 

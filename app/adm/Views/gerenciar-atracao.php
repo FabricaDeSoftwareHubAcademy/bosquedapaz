@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+require_once '../../../actions/atracao/listar_atracao.php';
+
+?>
+
+
 <html lang="pt-br">
 
 <head>
@@ -11,15 +16,21 @@
 </head>
 
 <body>
-    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
+    <?php 
+    include "../../../Public/assets/adm/menu-adm.html"; 
+    require_once '../../../app/adm/Controller/Atracao.php';
+
+    $atracao = new Atracao();
+    $lista = $atracao->listar();
+    ?>
 
     <main class="principal">
         <div class="box">
             <h2>GERENCIAR ATRAÇÃO</h2>
             <div class="container">
                 <div class="search-bar">
-                    <label for="status">Procurar</label>
-                    <input type="text" id="status" placeholder="" />
+                    <label for="busca">Procurar</label>
+                    <input type="text" id="busca" placeholder="Buscar por nome da atração" />
                     <button class="search-button">BUSCAR</button>
                 </div>
                 <div class="table-container">
@@ -27,30 +38,32 @@
                         <thead>
                             <tr>
                                 <th class="usuario-col">Nome da atração</th>
-                                <th>Data</th>
-                                <th>Status</th>
-                                <th class="fone-col">Editar</th>
+                                <th>Descrição</th>
+                                <th>Evento</th>
+                                <th>Editar</th>
                                 <th>Foto</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 1; $i <= 12; $i++): ?>
+                            <?php foreach ($lista as $a): ?>
                                 <tr>
-                                    <td class="usuario-col">Atração <?php echo $i; ?></td>
-                                    <td>Data <?php echo $i; ?></td>
-                                    <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Inativo' : 'Ativo'; ?></button></td>
-                                    <td class="fone-col">
-                                        <a href="editar-expositor.php">
+                                    <td><?= htmlspecialchars($a->getNome()) ?></td>
+                                    <td><?= htmlspecialchars($a->getDescricao()) ?></td>
+                                    <td><?= htmlspecialchars($a->getIdEvento()) ?></td>
+                                    <td>
+                                        <a href="editar-atracao.php?id=<?= $a->getId() ?>">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </a>
                                     </td>
-                                    <td class="mais">
-                                        <button class="open-modal" data-modal="modal-fotos">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
+                                    <td>
+                                        <?php if (!empty($a->getFoto())): ?>
+                                            <img src="../../../Public/uploads/atracoes/<?= htmlspecialchars($a->getFoto()) ?>" alt="Foto da Atração" width="50">
+                                        <?php else: ?>
+                                            Sem imagem
+                                        <?php endif; ?>
                                     </td>
                                 </tr>
-                            <?php endfor; ?>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -60,19 +73,10 @@
                         <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
                     </a>
                 </button>
-                <div class="b-voltar">
-                </div>
+                <div class="b-voltar"></div>
+
                 <div class="botoes">
-                    <a href="../../../app/adm/Views/cadastrar-atracao.php"><button class="novo-evento">Nova atração</button></a>
-                </div>
-                <div class="modal" id="modal-fotos">
-                    <div class="modal-content">
-                        <span class="close-modal" data-modal="modal-fotos">&times;</span>
-                        <h3>Adicionar Fotos ao Evento</h3>
-                        <p>Limite de 5 Fotos por Evento</p>
-                        <input type="file" multiple>
-                        <button class="submit-fotos">Adicionar Fotos</button>
-                    </div>
+                    <a href="cadastrar-atracao.php"><button class="novo-evento">Nova atração</button></a>
                 </div>
             </div>
         </div>

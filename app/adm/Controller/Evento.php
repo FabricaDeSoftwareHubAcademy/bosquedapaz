@@ -75,13 +75,13 @@ class Evento
 
     public function buscarPorId($id) {
         $db = new Database('evento');
-        $resultado = $db->select("id_evento = {$id}")
+        $res = $db->select("id_evento = {$id}")
                         ->fetchObject(self::class);
-        return $resultado;
+
+        return $res;
     }
 
-    public function atualizar($id)
-{
+    public function atualizar($id){
     $db = new Database('evento');
 
     $valores = [
@@ -92,6 +92,6 @@ class Evento
         'status' => $this->status
     ];
 
-    return $db->update("id_evento = {$id}", $valores);
-}
+        return $db->update("id_evento = {$id}", $valores);
+    }
 }

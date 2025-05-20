@@ -1,5 +1,5 @@
-<?php require_once '../../../actions/buscar_evento.php'; ?>
-<?php require_once '../../../actions/editar_evento.php'; ?>
+<?php require_once '../../../actions/evento/buscar_evento.php'; ?>
+<?php require_once '../../../actions/evento/editar_evento.php'; ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

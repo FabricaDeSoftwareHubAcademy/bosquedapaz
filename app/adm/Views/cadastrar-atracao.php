@@ -1,3 +1,8 @@
+<?php
+require_once '../../../actions/atracao/cadastrar_atracao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +22,7 @@
         <div class="box">
             <h2>CADASTRO DE ATRAÇÃO</h2>
                 <div class="form-box">
-                    <form action="#" method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <div id="form1">
 
                             <div class="input-group">
