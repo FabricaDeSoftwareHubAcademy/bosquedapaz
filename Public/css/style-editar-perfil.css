@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('menu-adm.css');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+.perfilEdit-body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #e1e1e1;
+}
+
+.perfilEdit-superior-esquerda{
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    z-index: -1;
+}
+
+.perfilEdit-superior-direita{
+    position: fixed;
+    right: 0%;
+    top: 20%;
+    z-index: -1;
+}
+
+.perfilEdit-inferior{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    z-index: -1;
+    width: 12%;
+}
+
+.perfilEdit-box{
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(248, 245, 246, 0.705);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 95%;
+    top: 14%;
+    border-radius: 10px;
+    height: 80%;
+}
+
+.perfilEdit-title{
+    /* background-color: red; */
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    /* width: 100%; */
+    display: flex;
+    top: 1%;
+}
+
+form{
+    top: 2%;
+    /* background-color: blue; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 90%;
+}
+
+.perfilEdit-empresas{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 15%;
+}
+
+.perfilEdit-logo{
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    width: 20%;
+}
+
+.perfilEdit-foto{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, 0.705);
+}
+
+.perfilEdit-foto[type="file"]{
+    display: none;
+}
+
+.perfilEdit-name{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 20%;
+}
