@@ -20,13 +20,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .container__box{
     width: 90%;
     height: 85%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: var(--color-box);
+}
+
+.container__title{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    /* background-color: cornflowerblue; */
+}
+
+.container__action__tile{
+    width: 75%;
+    height: 85%;
+    gap: 30px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+}
+
+.action__title{
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    /* background-color: blueviolet; */
 }
 
 

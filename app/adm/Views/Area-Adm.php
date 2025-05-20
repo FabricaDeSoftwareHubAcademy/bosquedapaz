@@ -28,7 +28,6 @@
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
                         <p>Parceiros</p>
                     </div> 
-                    </div>
                 </div>
 
                 <!-- Modal Parceiros -->
