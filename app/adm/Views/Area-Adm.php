@@ -14,15 +14,17 @@
     <!-- Menu -->
     <?php include "../../../Public/assets/adm/menu-adm.html" ?>
 
-    <!-- Área Dos Botões -->
+    <!-- Área Principal da Página -->
     <main class="container__main">
+        <!-- Box dos Componentes -->
         <div class="container__box">
+            <!-- área do titulo -->
             <div class="container__title">
                 <h1>Área Administrativa</h1>
             </div>
-
+            <!-- área dos botões -->
             <div class="container__action__tile">
-                <!-- aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal"  data-modal="abrir-mais-parceiros">
                     <div class="action__content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
@@ -60,7 +62,7 @@
                 </dialog>
 
 
-                <!-- aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                     <div class="action__content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
@@ -97,7 +99,7 @@
                     </div>
                 </dialog>
 
-                <!-- aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
                     <div class="action__content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
@@ -141,7 +143,7 @@
                     </div>
                 </dialog>
 
-                <!-- aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-categoria">
                     <div class="action__content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
@@ -182,7 +184,7 @@
                 </dialog>
 
 
-                <a href="editar-carrossel.php">
+                <a id="action__carrossel" href="editar-carrossel.php">
                     <div class="action__title">
                         <div class="action__content">
                             <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
@@ -191,7 +193,7 @@
                     </div>
                 </a>
 
-                <!-- Aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-evento">
                     <div class="action__content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
@@ -230,7 +232,7 @@
 
 
             
-                <!-- Aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-financas">
                     <div class="action__content">
                         <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-bar-chart" viewBox="0 0 16 16">
@@ -280,7 +282,7 @@
                     </div>
                 </dialog>
 
-                <!-- aqui -->
+                <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-gerancia">
                     <div class="action__content">
                         <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
