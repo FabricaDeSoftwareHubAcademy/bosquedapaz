@@ -15,7 +15,7 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: #e1e1e1;
+    background-color: #9e9e9e;
 }
 
 .perfilEdit-superior-esquerda{
@@ -64,45 +64,139 @@
     top: 1%;
 }
 
-form{
+.perfilEdit-form{
     top: 2%;
     /* background-color: blue; */
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
+    align-items: center;
     height: 90%;
 }
 
 .perfilEdit-empresas{
-    /* background-color: red; */
+    /* background-color: rgba(255, 0, 0, 0.1); */
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 15%;
 }
 
 .perfilEdit-logo{
     display: flex;
     flex-direction: column;
-    /* background-color: yellow; */
-    width: 20%;
+    /* background-color: rgba(255, 255, 0, 0.5); */
+    width: 21%;
 }
+
+/* .perfilEdit-logoempresa */
 
 .perfilEdit-foto{
     background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 40%;
+    height: 50%;
     border-radius: 10px;
-    box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, 0.705);
+    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    padding-left: 3%;
+    padding-top: 3%;
 }
 
-.perfilEdit-foto[type="file"]{
+/* .perfilEdit-foto[type="file"]{
     display: none;
-}
+} */
 
 .perfilEdit-name{
     display: flex;
     flex-direction: column;
-    background-color: green;
-    width: 20%;
+    /* background-color: green; */
+    width: 21%;
+}
+
+/* .perfilEdit-nameEmpresa */
+
+.perfilEdit-nome{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    border: none;
+    padding-left: 3%;
+    outline: none;
+}
+
+.perfilEdit-desc{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 61%;
+}
+
+/* .perfilEdit-desc .perfilEdit-text-desc{
+    justify-content: center;
+    align-items: center;
+} */
+
+.perfilEdit-label-desc{
+    align-self: self-start;
+}
+
+.perfilEdit-text-desc{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 1px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    padding-left: 1%;
+    padding-top: 1%;
+    border: none;
+    resize: none;
+    outline: none;
+    /* margin: 0 auto; */
+}
+
+.perfilEdit-info{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+    justify-content: space-around;
+}
+
+.perfilEdit-info img{
+    width: auto;
+    height: 12%;
+}
+
+.perfilEdit-input-info{
+    background-color: rgb(255, 255, 255);
+    width: 14%;
+    height: 16%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    border: none;
+    outline: none;
+    padding-left: 1%;
+}
+
+.perfilEdit-info div{
+    /* background-color: yellow; */
+    height: fit-content;
+}
+
+.perfilEdit-foto-info{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    align-items: center;
+    /* background-color: coral; */
+    justify-content: center;
+}
+
+.perfilEdit-load-foto{
+    width: 10%;
+    height: 10%;
+    background-color: white;
 }
