@@ -26,7 +26,7 @@
     
         <section class="section-nosso-time-quem-somos">
             <div class="div-nt" >
-            <h1 class="titulo-nosso-time-quem-somos">A <span class="tit">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
+                <h1 class="titulo-nosso-time-quem-somos">A <span class="tit">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
             
             </div>
         </section> 
@@ -94,11 +94,13 @@
     <h3 class="title all-titles">Nossos Apoiadores</h3>
         <div class="all-parce">
             <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo shopping bosque dos ipes" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura de campo grande" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo senac" class="img-logo-parceiros"></div>
             <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac" class="img-logo-parceiros"></div>
             <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur" class="img-logo-parceiros"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae" class="img-logo-parceiros"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo senac" class="img-logo-parceiros"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura de campo grande" class="img-logo-parceiros"></div>
+            
+            
         </div>
     </section>
     

@@ -8,13 +8,41 @@
  }
 
  .section-parce2{
-    text-align: center;
     width: 100%;
-    display: flex;
+    padding: 40px 20px;
+    text-align: center;
     align-items: center;
     justify-content: center;
 }
- 
+.section-parce2 .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.all-parce{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;    
+
+
+}
+.div-logo-parceiro {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-logo-parceiros {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 .div-img-animation{
     display: flex;
     width: 50%;
@@ -101,10 +129,6 @@ h1{
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
-    /*
-    background-image: linear-gradient(to left, yellow, orangered, rgb(154, 14, 14));
-    background-size: 500% 100%;
-    animation: degrade-animado 5s infinite alternate;*/
 }
 .div-nt .titulo-nosso-time-quem-somos{
     width: 60%;
@@ -126,7 +150,6 @@ h1{
     margin-bottom: 15px;
     color: #7a7a7a;
     position: relative;
-    /* text-transform: uppercase; */
 }
 .card-per-expo {
     background-color: rgb(140, 67, 188);
@@ -217,18 +240,15 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     padding: 40px;
-    gap: 80px; /* Espaço entre os cards */
+    gap: 80px;
     background-color: rgb(244, 246, 246);
 }
 
     .section-colaboradoras-quem-somos .fotos{
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        /* align-items: center; */
     }
-      
-     
+         
     .section-colaboradoras-quem-somos .carina, .profission, .denise,  .fernanda,  .nájila{
         color: #565358;
         display: flex;
@@ -366,11 +386,6 @@ text-decoration: none;
     
 }
 
-
-
-
-
-
 .section-expositor-quem-somos .expositor-p{
     display: flex;
     align-items: center;
@@ -388,8 +403,6 @@ text-decoration: none;
     flex-direction: column;
     position: relative;
     top: 10%;
-    
-   
     
 }
 .section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
@@ -468,11 +481,6 @@ text-decoration: none;
    
 }
 
-
-
-
-
-
 .section-expositor-quem-somos .expositor-p{
     display: flex;
     align-items: center;
@@ -508,10 +516,6 @@ text-decoration: none;
 
 
 }
-
-
-
-
 
 
 @media(max-width:900px){
