@@ -56,7 +56,7 @@ require_once '../../../actions/evento/listar_evento.php';
                                         </a>
                                     </td>
                                     <td class="mais">
-                                        <a href="gerenciar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-music"></i>
+                                        <a href="gerenciar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-plus"></i>
                                         </a>
                                     </td>
                                     <td class="mais">

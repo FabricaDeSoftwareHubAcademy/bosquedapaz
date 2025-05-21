@@ -1,5 +1,5 @@
 <?php
-require_once '../Controllers/Atracao.php';
+require_once '../Controller/Atracao.php';
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
