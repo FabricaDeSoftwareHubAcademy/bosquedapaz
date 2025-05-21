@@ -33,7 +33,7 @@
 
         <section class="section-colaboradoras-quem-somos">
     <div class="card-per-expo card1">
-        <div class="head-card" id="solidariedade">
+        <div class="head-card">
             <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-perfil-expo">
         </div>
         <div class="body-card">
