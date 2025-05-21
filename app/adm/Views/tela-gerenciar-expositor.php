@@ -1,3 +1,11 @@
+<?php
+require '../Controller/Gerenciar-Expositor.php';
+$db = new Database();
+$conexao = $db->conectar();
+
+$dados = $db->listarPorId(1)
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -189,7 +197,7 @@
         </a>
     </div>
 
-    <script src="../../../Public/js/js-adm/modal-validar-expositor.js" deffer></script>
+    <script src="../../../Public/js/js-adm/modal-validar-expositor.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 

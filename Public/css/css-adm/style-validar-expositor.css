@@ -303,13 +303,14 @@ RECUSAR EXPOSITOR */
     flex-direction: column;
 }
 
-.motivo-recusar-expositor {
+.motivo-recusar-formulario .motivo-recusar-expositor {
     resize: none;
     width: 100%;
-    height: 100px;
+    height: 150px;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid grey;
+    margin: 10px;
 }
 
 /* ESTILIZAÇÃO MODAL 

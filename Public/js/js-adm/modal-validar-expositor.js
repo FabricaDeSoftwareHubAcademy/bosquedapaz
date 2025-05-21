@@ -4,7 +4,7 @@ const botaoValidar = document.getElementById("botao_validar");
 
 const modalRecusar1 = document.getElementById("modal_recusar_expositor_1");
 const modalRecusar2 = document.getElementById("modal_recusar_expositor_2");
-const modalRecusar3 = document.getElementById("modal_recusar_expositor_3");
+// const modalRecusar3 = document.getElementById("modal_recusar_expositor_3");
 
 const botaoCancelarRecusar1 = document.getElementById("botao_cancelar_recusar_expositor_1");
 const botaoConfirmarRecusar1 = document.getElementById("botao_confirmar_recusar_expositor_1");
@@ -16,7 +16,7 @@ const botaoOkRecusar = document.getElementById("botao_ok_recusar");
 
 const modalValidar1 = document.getElementById("modal_validar_expositor_1");
 const modalValidar2 = document.getElementById("modal_validar_expositor_2");
-const modalValidar3 = document.getElementById("modal_validar_expositor_3");
+// const modalValidar3 = document.getElementById("modal_validar_expositor_3");
 
 const botaoCancelarValidar1 = document.getElementById("botao_cancelar_validar_expositor_1");
 const botaoConfirmarValidar1 = document.getElementById("botao_confirmar_validar_expositor_1");
@@ -24,7 +24,7 @@ const botaoConfirmarValidar1 = document.getElementById("botao_confirmar_validar_
 const botaoCancelarValidar2 = document.getElementById("botao_cancelar_validar_expositor_2");
 const botaoConfirmarValidar2 = document.getElementById("botao_confirmar_validar_expositor_2");
 
-const botaoOkValidar = document.getElementById("botao_ok_validar");
+// const botaoOkValidar = document.getElementById("botao_ok_validar");
 
 botaoRecusar.addEventListener("click", () => {
     modalRecusar1.style.display = "flex";
@@ -52,10 +52,10 @@ botaoConfirmarRecusar2.addEventListener("click", () => {
 
 });
 
-botaoOkRecusar.addEventListener("click", () => {
-    modalRecusar3.style.display = "none";
-    document.body.classList.remove("modal-aberto");
-});
+// botaoOkRecusar.addEventListener("click", () => {
+//     modalRecusar3.style.display = "none";
+//     document.body.classList.remove("modal-aberto");
+// });
 
 botaoValidar.addEventListener("click", () => {
     modalValidar1.style.display = "flex";
@@ -81,25 +81,25 @@ botaoConfirmarValidar2.addEventListener("click", () => {
     modalValidar2.style.display = "none";
 });
 
-botaoOkValidar.addEventListener("click", () => {
-    modalValidar3.style.display = "none";
-    document.body.classList.remove("modal-aberto");
-});
+// botaoOkValidar.addEventListener("click", () => {
+//     modalValidar3.style.display = "none";
+//     document.body.classList.remove("modal-aberto");
+// });
 
-window.addEventListener("DOMContentLoaded", () => {
-    if (typeof mostrarModalRecusar3 !== "undefined" && mostrarModalRecusar3) {
-        if (modalRecusar3) {
-            modalRecusar3.style.display = "flex";
-            document.body.classList.add("modal-aberto");
-        }
-    }
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//     if (typeof mostrarModalRecusar3 !== "undefined" && mostrarModalRecusar3) {
+//         if (modalRecusar3) {
+//             modalRecusar3.style.display = "flex";
+//             document.body.classList.add("modal-aberto");
+//         }
+//     }
+// });
 
-window.addEventListener("DOMContentLoaded", () => {
-    if (typeof mostrarModalValidar3 !== "undefined" && mostrarModalValidar3) {
-        if (modalValidar3) {
-            modalValidar3.style.display = "flex";
-            document.body.classList.add("modal-aberto");
-        }
-    }
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//     if (typeof mostrarModalValidar3 !== "undefined" && mostrarModalValidar3) {
+//         if (modalValidar3) {
+//             modalValidar3.style.display = "flex";
+//             document.body.classList.add("modal-aberto");
+//         }
+//     }
+// });
