@@ -29,15 +29,15 @@ function readImage3() {
     }
 }
 
-let img1 = document.getElementById("imagens-input")
+let inputImg1 = document.getElementById("imagens-input")
 
-img1.addEventListener("change", readImage, false);
+inputImg1.addEventListener("change", readImage, false);
 
-let img2 = document.getElementById("imagens-input2")
-img2.addEventListener("change", readImage2, false);
+let inputImg2 = document.getElementById("imagens-input2")
+inputImg2.addEventListener("change", readImage2, false);
 
-let img3 = document.getElementById("imagens-input3")
-img3.addEventListener("change", readImage3, false);
+let inputImg3 = document.getElementById("imagens-input3")
+inputImg3.addEventListener("change", readImage3, false);
 
 
 $btnEditar = document.getElementById('editar');
@@ -49,13 +49,24 @@ $btnEditar.addEventListener('click', async function (event){
     let formCarrossel = document.querySelectorAll('[type=file]');
     
     const formData = new FormData();
-    
+
+    if(formCarrossel[0].files.length == 1){
+        var dados_img1 = formCarrossel[0].files;
+        var array_img1 = new Object();
+        for(var i = 0; i < dados_img1.length; i++){
+            console.log(dados_img1[i], "oi")
+        }
+    }
+
     for(var i = 0; i < formCarrossel.length; i++){
         var file = formCarrossel[i].files
+        console.log(file)
         for(var y = 0; y < file.length; y++){
             formData.append("files[]", file[y])
         }
     }
+
+    console.log(formData)
 
     let dados_php = await fetch("../../../actions/carrossel.php",{
         method:"POST",
@@ -71,9 +82,13 @@ async function getImage(){
 
     let resposta = await imagens.json()
 
-    // img1.src = resposta[0]['img1'];
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
 
-    console.log(resposta)
+    img1.src = `../../${resposta[0]['img1']}`;
+    img2.src = `../../${resposta[0]['img2']}`;
+    img3.src = `../../${resposta[0]['img3']}`;
 }
 
 getImage()
