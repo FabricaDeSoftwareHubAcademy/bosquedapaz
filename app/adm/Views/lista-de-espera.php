@@ -88,5 +88,31 @@ $expositores = $lista->listar($busca);
   </div>
 
   <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
+
+
+
+  <!-- ----------------------------< >-----------------------------  -->
+  <!--  Modal -->
+  <!-- modal 3 - recusar expositor  -->
+  <div class="modal modal-recusar-expositor-3" id="modal_recusar_expositor_3">
+      <div class="modal-content-recusar-expositor">
+          <h1 class="modal-texto-recusar-expositor">Expositor Recusado.</h1>
+          <div class="modal-botoes-recusar-expositor">
+              <button class="botoes-modal-recusar-expositor botao-ok" id="botao_ok_recusar">Ok</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- modal 3 - validar expositor  -->
+  <div class="modal modal-validar-expositor-3" id="modal_validar_expositor_3">
+      <div class="modal-content-validar-expositor">
+          <h1 class="modal-texto-validar-expositor">Expositor Validado.</h1>
+          <div class="modal-botoes-validar-expositor">
+              <button class="botoes-modal-validar-expositor botao-ok" id="botao_ok_validar">Ok</button>
+          </div>
+      </div>
+  </div>
+  <!-- ---------------------------< >-----------------------------  -->
+
 </body>
 </html>

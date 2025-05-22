@@ -207,9 +207,6 @@ table tbody tr:nth-child(even){
     transition: background-color 0.3s;
 }
 
-.btn-v .voltar:hover {
-    background-color: #041831;
-}
 
 /* Pequenos Ajustes  */
 .nome, .cpf, .cat{
@@ -261,6 +258,75 @@ table tbody tr:nth-child(even){
     z-index: -3;
     top: 80%;
 }
+
+
+
+/* -------------------> <------------------- *
+/* Modal:  */
+.modal-content-recusar-expositor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+ 
+.modal-texto-recusar-expositor {
+    font-size: 2rem;
+}
+ 
+.modal-content-validar-expositor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+ 
+.modal-texto-validar-expositor {
+    font-size: 2rem;
+}
+ 
+.modal-subtexto-validar-expositor {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+    /* background-color: red; */
+}
+ 
+.modal-botoes-validar-expositor {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+ 
+.botoes-modal-validar-expositor {
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ 
+.modal-botoes-recusar-expositor {
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+    /* background-color: red; */
+}
+ 
+.botoes-modal-recusar-expositor {
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* -------------------> <------------------- */
 
 
 /* Responsividades: */
@@ -486,7 +552,7 @@ table tbody tr:nth-child(even){
         width: 98%;
     }
 }
-@media (max-height: 713px){
+@media (max-height: 730px){
     .table__area{
         height: 40vh;
     }
