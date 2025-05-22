@@ -19,7 +19,7 @@
         <div class="box-principal">
             <div class="area-infs">
                 <div class="linha"></div>
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <form action="#" method="POST" id="formCarrossel" enctype="multipart/form-data">
                     <!-- Lado esquerdo - Upload de imagem (LOGO) -->
                     <div class="lado-esquerdo">
                         <div class="area-logo">

@@ -48,25 +48,53 @@ $btnEditar.addEventListener('click', async function (event){
 
     let formCarrossel = document.querySelectorAll('[type=file]');
     
-    const formData = new FormData();
+    const formData = new FormData(formCarrossel.target);
+
+    // var img1 = new Object()
+    // var img2 = new Object()
+    // var img3 = new Object()
 
     if(formCarrossel[0].files.length == 1){
         var dados_img1 = formCarrossel[0].files;
-        var array_img1 = new Object();
-        for(var i = 0; i < dados_img1.length; i++){
-            console.log(dados_img1[i], "oi")
-        }
+        
+        for (const chave in dados_img1) {
+            img1[chave] = dados_img1[chave]
+          }
+        img1["possicao"] = 1
+        // console.log(dados_img1)
     }
+    
+    // if(formCarrossel[1].files.length == 1){
+    //     var dados_img2 = formCarrossel[0].files[0];
+        
+    //     for (const chave in dados_img2) {
+    //         img2[chave] = dados_img2[chave]
+    //     }
+    //     img2["possicao"] = 2
+    //     formData.append("files[]", img2)
+    // }
+    
+    // if(formCarrossel[2].files.length == 1){
+    //     var dados_img3 = formCarrossel[0].files[0];
+        
+    //     for (const chave in dados_img3) {
+    //         img3[chave] = dados_img3[chave]
+    //     }
+    //     img3["possicao"] = 3
+    //     formData.append("files[]", img3)
+    // }
+
+
 
     for(var i = 0; i < formCarrossel.length; i++){
         var file = formCarrossel[i].files
-        console.log(file)
         for(var y = 0; y < file.length; y++){
+            // img1.append("files[]", file[y])
             formData.append("files[]", file[y])
         }
+        formData.append('num', i)
     }
 
-    console.log(formData)
 
     let dados_php = await fetch("../../../actions/carrossel.php",{
         method:"POST",
@@ -75,6 +103,8 @@ $btnEditar.addEventListener('click', async function (event){
 
     let response = await dados_php.json();
 
+    // console.log(img1)
+    console.log(response)
 })
 
 async function getImage(){

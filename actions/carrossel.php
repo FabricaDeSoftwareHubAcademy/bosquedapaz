@@ -20,39 +20,41 @@ function update_carrossel($img,$num) {
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $busca = $car->buscar_id(1);
-    $files = $_FILES['files'];
-    if (!empty($files['name'][0])){
-        $img1 = update_carrossel($files, 0);
-        $car->img1 = $img1;
-    }
-    else {
-        $car->img1 = $busca->img1;
-    }
-    if (!empty($files['name'][1])){
-        $img2 = update_carrossel($files, 1);
-        $car->img2 = $img2;
-    }
-    else {
-        $car->img2 = $busca->img2;
-    }
-    if (!empty($files['name'][2])){
-        $img3 = update_carrossel($files, 2);
-        $car->img3 = $img3;
-    }
-    else {
-        $car->img3 = $busca->img3;
-    }
+    $response = array("status" => $_FILES);
+    echo json_encode($response);
+    // $files = $_FILES['files'];
+    // if (!empty($files['name'][0])){
+    //     $img1 = update_carrossel($files, 0);
+    //     $car->img1 = $img1;
+    // }
+    // else {
+    //     $car->img1 = $busca->img1;
+    // }
+    // if (!empty($files['name'][1])){
+    //     $img2 = update_carrossel($files, 1);
+    //     $car->img2 = $img2;
+    // }
+    // else {
+    //     $car->img2 = $busca->img2;
+    // }
+    // if (!empty($files['name'][2])){
+    //     $img3 = update_carrossel($files, 2);
+    //     $car->img3 = $img3;
+    // }
+    // else {
+    //     $car->img3 = $busca->img3;
+    // }
     
-    try {
-        $res = $car->atualizar();
-        $status = $res ? 200 : 400;
+    // try {
+    //     $res = $car->atualizar();
+    //     $status = $res ? 200 : 400;
         
-        $response = array("status" => status);
-        echo json_encode($response);
-    } catch (\Throwable $th) {
-        $response = array("status" => 500);
-        echo json_encode($response);
-    }
+    //     $response = array("status" => $status);
+    //     echo json_encode($response);
+    // } catch (\Throwable $th) {
+    //     $response = array("status" => 500);
+    //     echo json_encode($response);
+    // }
     
 }
 
