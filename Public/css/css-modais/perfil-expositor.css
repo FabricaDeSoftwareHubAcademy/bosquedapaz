@@ -1,3 +1,17 @@
+/* Colors Variaveis */
+:root{
+    --color-box-shadow: #cbcbcb;
+
+    --color-linha: #e0e0e0;
+
+    --color-button1: #ff3877;
+    --color-button2: #22bc9d;
+    --color-button3: #3b9bdc;
+    --color-button4: #f4dd53;
+
+    --color-rua: #5cb74a;
+}
+
 /* Modal: */
 .m-per-expo {
     width: 80%;
@@ -9,6 +23,7 @@
     margin: auto;
 }
 
+/* Sombra de Fundo:  */
 .overlay {
     position: fixed;
     top: 0;
@@ -20,43 +35,27 @@
     display: none;
 }
 
-/* Area Principal do Modal: */
-.box-principal {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    margin: auto;
-    display: flex;
-    align-items: flex-start;
-    border-radius: 10px;
-    z-index: 4;
-}
 
-.linha {
-    width: 2px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.177);
-    position: relative;
-    left: 49%;
-}
-
-.div-button{
-    width: 50px;
-    height: 50px;
+/* Area Botão Sair */
+.container__buttton {
     position: absolute;
-    left: 91rem;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+    background-color: transparent;
+    width: auto;
+    height: auto;
 }
 
-.btn{
-    width: 100%;
-    height: 100%;
+/* Botão:  */
+.btn {
+    background: transparent;
     border: none;
-    background-color: transparent;
     cursor: pointer;
 }
 
 #icon-sair{
-    font-size: 25px;
+    font-size: 30px;
     transition: all .2s ease-in-out;
 }
 
@@ -64,303 +63,247 @@
     color: #FF3877;
 }
 
-/* Imagens decorativas do Modal */
-.img-decoracao1 {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    z-index: 1;
-    border-radius: 6px;
-}
 
-.img-decoracao2 {
-    position: absolute;
-    top: 78%;
-    left: 61%;
-    z-index: 1;
-    border-radius: 10px;
-}
-
-.img-decoracao2 img {
+/* Box Principal dos Elementos */
+.conteiner__box{
     width: 100%;
-    height: auto;
-}
-
-/* Lado Esquerdo: Logo e Imagens */
-.lado-esquerdo {
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0, 0, 255, 0);
+    margin-top: 2%;
+    z-index: 1;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
-/* Area da Logo: */
-.area-logo {
-    width: 100%;
-    height: 50%;
-    background-color: rgba(0, 255, 255, 0);
+
+/* Lado Esquerdo */
+.left__side {
+    width: 45%;
+    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    bottom: 2rem;
 }
 
-.div-logo {
-    width: 250px;
-    height: 250px;
-    background-color: rgba(255, 255, 255, 0);
+/* Imagem Decorativa 1 */
+.decorative__img1{
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+}
+
+/* Area Logo */
+.container__logo{
+    width: 100%;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.div__logo{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    margin-top: 50px;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.622);
+    background-color: white;
+    box-shadow: 0px 0px 15px var(--color-box-shadow);
     transition: all .2s ease-in-out;
-    margin-top: 1.5rem;
 }
 
-.div-logo:hover {
+.div__logo:hover{
     transform: scale(1.1);
 }
 
-.div-logo img {
+.div__logo img{
     width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 50%;
 }
 
-
-/* Mini Galeria de Imagens: */
-.galeria-imagens {
+/* Area Title */
+.container__h1{
     width: 100%;
-    height: 60%;
-    background-color: rgba(100, 148, 237, 0);
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+.container__h1 h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* Area das Imagens (Produtos) */
+.container__imgs {
+    width: 100%;
+    height: 50%;
     gap: 15px;
-
-}
-
-.div-h1 {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    padding: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.div-h1 h1 {
-    font-weight: 400;
-    font-size: 38px;
-}
-
-.div-img {
-    width: calc(30% - 10px);
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition: all .2s ease-in-out;
-    border-radius: 10px;
-    transition: all .2s ease-in-out;
+    flex-wrap: wrap;
     position: relative;
 }
 
-.div-img:hover {
+.div__img{
+    width: calc(33.33% - 10px);
+    height: 160px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    bottom: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.div__img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
 }
 
-.galeria-imagens img {
+.div__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
-/* Lado Direito: Informações sobre a Empresa */
-.lado-direito {
-    width: 50%;
+/* Linha decorativa */
+.decorative_line{
+    width: 2px;
     height: 100%;
-    background-color: rgba(137, 43, 226, 0);
+    position: absolute;
+    left: 44%;
+    background-color: var(--color-linha);
+}
+
+
+/* Lado Direito: Informações sobre o Expositor/Barraca */
+.right__side{
+    width: 55%;
+    gap: 30px;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
 }
 
-.sobre-a-empresa {
-    width: 95%;
-    height: 31vh;
-    background-color: rgba(0, 255, 255, 0);
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 1rem;
-}
-
-.area-title {
+/* Area Sobre a Empresa */
+.container__sobre{
     width: 100%;
-    height: 25%;
-    background-color: rgba(136, 255, 9, 0);
-    position: relative;
-    top: 0rem;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-left: 10px;
 }
 
-.area-title h1 {
+.right__side h2{
+    font-size: 26px;
     font-weight: 500;
-    position: relative;
-    bottom: 1em;
 }
 
-.area-text {
-    width: 95%;
-    height: 75%;
-    background-color: rgba(0, 255, 255, 0);
+.right__side h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.area__text{
+    max-width: 750px;
+    max-height: 200px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     box-sizing: content-box;
+    text-align: justify;
     padding-right: 10px;
 }
 
 /* Definições da barrinha de scroll */
-.area-text::-webkit-scrollbar {
+.area__text::-webkit-scrollbar {
     width: 6px;
 }
 
-.area-text::-webkit-scrollbar-track {
+.area__text::-webkit-scrollbar-track {
     background-color: #555;
     border-radius: 10px;
 }
 
-.area-text::-webkit-scrollbar-thumb:hover {
+.area__text::-webkit-scrollbar-thumb:hover {
     background-color: #FF3877;
     height: 1px;
 }
 
-.text-sobre {
-    text-align: justify;
-}
-
-.h2-sobre {
-    font-weight: 500;
-    position: relative;
-    bottom: 0.8rem;
-}
-
-.cat-num {
-    width: 95%;
-    height: 15vh;
-    background-color: rgba(25, 0, 255, 0);
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    position: relative;
-    top: 1rem;
-}
-
-.div-categoria {
-    width: 40%;
-    height: 100%;
-    background-color: rgba(245, 222, 179, 0);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.div-numero {
-    width: 60%;
-    height: 100%;
-    background-color: rgba(165, 42, 42, 0);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.div-categoria h2 {
-    font-weight: 500;
-}
-
-.div-numero h2 {
-    font-weight: 500;
-}
-
-
-.contacts-corR {
-    width: 95%;
-    height: 20vh;
-    background-color: rgba(255, 0, 60, 0);
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 1rem;
-}
-
-.contacts {
-    width: 40%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0);
-    position: relative;
-}
-
-.contacts h2 {
-    font-weight: 500;
-}
-
-.area-icons {
+/* Area Informações sobre a Barraca */
+.container__infs{
     width: 100%;
-    height: 70%;
-    background-color: rgba(0, 0, 255, 0);
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    padding: 15px;
-    flex-wrap: wrap;
-}
-
-.area-icons a {
-    background-color: #55555500;
-    width: 45px;
-    height: 45px;
+    height: 15%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    margin-left: 10px;
 }
 
+.div__categoria{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div__num{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Area Contatos */
+.container__contacts{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    margin-left: 10px;
+}
+
+.div__contacts{
+    width: 45%;
+    height: 100%;
+}
+
+.div__cor__rua{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* icones */
 .icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 45px;
     height: 45px;
-    border: none;
+    margin: 5px;
     border-radius: 50%;
-    cursor: pointer;
+    background-color: #0077ff;
+    color: white;
+    text-decoration: none;
     font-size: 20px;
     transition: all .2s ease-in-out;
-    position: relative;
-    right: 1rem;
 }
 
 .icons:hover {
     transform: scale(1.1);
+    background-color: transparent;
 }
 
-/* Definições dos Icons: */
 #insta {
     background-color: #FF3877;
-    color: white;
 }
-
 #insta:hover {
     background-color: #ff387700;
     color: #FF3877;
@@ -369,9 +312,7 @@
 
 #zap {
     background-color: #22BC9D;
-    color: white;
 }
-
 #zap:hover {
     background-color: #ff387700;
     color: #22BC9D;
@@ -380,9 +321,7 @@
 
 #face {
     background-color: #3B9BDC;
-    color: white;
 }
-
 #face:hover {
     background-color: #ff387700;
     color: #3B9BDC;
@@ -391,740 +330,539 @@
 
 #email {
     background-color: #F4DD53;
-    color: white;
 }
-
 #email:hover {
     background-color: #ff387700;
     color: #F4DD53;
     border: 2px solid #F4DD53;
 }
 
-.cor-r {
-    width: 60%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.cor-r h2 {
-    font-weight: 500;
-}
-
-.cor-R h2 {
-    font-weight: 500;
-}
-
-.cor {
-    width: 40%;
-    height: 25px;
-    display: flex;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    background-color: #5CB74A;
-    font-weight: 600;
+/* Div cor da rua */
+.div__cor{
+    width: 120px;
+    height: 35px;
+    background-color: var(--color-rua);
+    font-size: 20px;
     color: white;
-    margin-top: 2%;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Responsividade: */
-/* Responsividades Celulares: */
-@media screen and (max-width: 720px) {
-    .m-per-expo {
-        overflow: scroll;
-        overflow-x: hidden;
-    }
+/* Imagem Decorativa 2 */
+.decorative__img2{
+    position: absolute;
+    bottom: -1vh;
+    right: 0vw;
+}
 
-    .div-button{
-        left: 23rem;
-        z-index: 10;
-    }
 
-    .box-principal {
-        width: 90%;
-        height: 150vh;
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+    /* Areas Principais:  */
+    .m-per-expo{
+        overflow-y: auto;
+    }
+    .conteiner__box{
         flex-direction: column;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
-
-    .linha {
+    .decorative_line{
         display: none;
     }
 
-    .img-decoracao1 {
-        position: relative;
-        top: -2%;
-        left: -6%;
-        z-index: 2;
-    }
 
-    .img-decoracao2 {
-        left: 2.5rem;
-        top: 150%;
-        z-index: 2;
-    }
-
-    .lado-esquerdo {
+    /* Lado Esquerdo: */
+    .left__side{
         width: 100%;
-        height: 50%;
-        background-color: rgba(0, 255, 255, 0);
-        z-index: 5;
-        position: relative;
-        bottom: 7rem;
+        gap: 10px;
     }
-
-    .area-logo {
-        background-color: rgba(0, 255, 255, 0);
-        height: 34%;
-    }
-
-    .div-logo {
+    .div__logo{
         width: 120px;
         height: 120px;
     }
-
-    .galeria-imagens {
-        background-color: rgba(100, 148, 237, 0);
-        height: auto;
-        margin-top: 15px;
+    .container__h1{
+        height: 15%;
     }
-
-    .div-h1 {
-        background-color: rgb(255, 255, 255);
-        margin-top: 15px;
+    .container__h1 h1{
+        font-size: 20px;
+        font-weight: 500;
     }
-
-    .div-h1 h1 {
-        font-size: 18px;
+    .container__imgs{
+        max-height: 350px;
     }
-
-    .div-img {
+    .div__img {
         width: calc(50% - 10px);
-        height: 75px;
+        height: 90px;
     }
 
-    .lado-direito {
-        width: 95%;
-        height: 65%;
-        position: relative;
-        bottom: 6.5rem;
-        left: 0.5rem;
-        z-index: 5;
-        background-color: rgba(0, 255, 255, 0);
-    }
 
-    .sobre-a-empresa {
-        background-color: rgba(0, 255, 255, 0);
-        margin-left: 0.5rem;
+    /* Lado Direito:  */
+    .right__side{
+        width: 100%;
+        gap: 10px;
     }
-
-    .cat-num {
-        background-color: rgba(25, 0, 255, 0);
-        margin-left: 0.5rem;
-    }
-
-    .div-categoria {
-        background-color: #5cb74a00;
-        width: 55%;
-    }
-
-    .div-numero {
-        background-color: #f4dc5300;
-        width: 45%;
-    }
-
-    .contacts-corR {
-        background-color: rgba(255, 0, 60, 0);
-        margin-left: 0.5rem;
-        height: 20vh;
-    }
-
-    .area-icons {
-        background-color: #3b9cdc00;
-        gap: 7px;
-    }
-
-    .area-title h1 {
-        font-size: 25px;
-        position: relative;
-        bottom: 1rem;
-    }
-
-    .h2-sobre {
-        font-size: 18px;
-        position: relative;
-        bottom: 0.5rem;
-    }
-
-    .text-sobre {
-        font-size: 14px;
-    }
-
-    .div-categoria h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .div-categoria p {
-        font-size: 14px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .div-numero h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .div-numero p {
-        font-size: 14px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .cor-r {
-        background-color: #22bc9d00;
-        flex-direction: column;
-        width: 45%;
-    }
-
-    .cor-r h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
-    }
-
-    .cor {
+    .container__sobre{
         width: 80%;
-        position: relative;
-        top: 0.5rem;
-        height: 20px;
+        margin-left: 40px;
+        margin-top: 0rem;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .area__text {
+        max-width: 382px;
+        max-height: 130px;
+    }
+    .area__text p{
         font-size: 12px;
-        ;
     }
-
-    .contacts {
-        background-color: #3b9cdc00;
-        width: 55%;
+    .container__infs{
+        width: 80%;
+        font-size: 12px;
+        margin-left: 40px;
     }
-
-    .contacts h2 {
-        font-size: 18px;
-        position: relative;
-        top: 0.5rem;
+    .container__contacts{
+        width: 80%;
+        margin-left: 40px;
     }
-
     .icons {
-        width: 25px;
-        height: 25px;
-        font-size: 12px;
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .div__cor {
+        width: 90px;
+        height: 26px;
+        font-size: 14px;
     }
 
-    .area-icons a {
-        background-color: #f4dc5300;
-        width: 25px;
-        height: 25px;
-    }
 
-}
-
-@media (max-width: 414px) and (min-height: 896px) {
-    .box-principal {
-        height: 110vh;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
     }
-
-    .img-decoracao2 {
-        top: 65rem;
-        left: 2.6rem;
-    }
-
-    .div-button{
-        left: 17rem;
-    }
-}
-
-@media (max-width: 390px) and (min-height: 844px) {
-    .box-principal {
-        height: 120vh;
-    }
-
-    .img-decoracao2 {
-        top: 64rem;
-        left: 2rem;
-    }
-}
-
-@media (max-width: 430px) and (min-height: 932px) {
-    .box-principal {
-        height: 120vh;
-    }
-
-    .img-decoracao2 {
-        top: 66.2rem;
-        left: 2.7rem;
-    }
-
-    .div-button{
-        left: 18rem;
-    }
-}
-
-@media (max-width: 360px) and (min-height: 740px) {
-    .box-principal {
-        height: 130vh;
-    }
-
-    .img-decoracao2 {
-        top: 68rem;
-        left: 2.2rem;
-    }
-
-    .div-button{
-        left: 14rem;
-    }
-}
-
-@media (max-width: 412px) and (min-height: 915px) {
-    .img-decoracao2 {
-        top: 66.2rem;
-        left: 2.6rem;
-    }
-}
-
-/* Responsividade Ipad Mini: */
-@media (max-width: 768px) and (min-height: 1023px){
-    .box-principal{
-        flex-direction: column;
-        overflow: scroll;
-        position: relative;
-        height: 92vh;
-    }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .img-decoracao1{
-        position: absolute;
-        z-index: 0;
-    }
-
-    .img-decoracao2{
+    .decorative__img2{
+        z-index: -1;
         display: none;
     }
-    
-    .contacts-corR{
-        background-color: #22bc9d00;
-    }
-
-    .contacts{
-        background-color: #5cb74a00;
-        width: 55%;
-    }
-
-    .cor-r{
-        background-color: #ff387700;
-        width: 45%;
-    }
-
-    .div-categoria{
-        width: 55%;
-    }
-
-    .div-numero{
-        width: 45%;
-    }
-
-    .div-button{
-        left: 35rem;
-        z-index: 100;
-    }
 }
 
-/* Responsividade Ipad Air: */
-@media (max-width: 820px) and (min-height: 1180px) {
-    .box-principal{
-        flex-direction: column;
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    /* Areas Principais:  */
+    .m-per-expo{
         overflow-y: auto;
     }
-
-    .lado-esquerdo{
-        width: 100%;
-        z-index: 5;
-    }
-    
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
-
-    .area-title{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .img-decoracao2 {
-        display: none;
-    } 
-
-    .div-button{
-        left: 36rem;
-        z-index: 100;
-    }
-}
-
-@media (min-width: 1024px) and (min-height: 1366px){
-    .box-principal{
+    .conteiner__box{
         flex-direction: column;
-        overflow-y: auto;
+        margin-top: 2rem;
+    }
+    .decorative_line{
+        display: none;
     }
 
-    .lado-esquerdo{
+
+    /* Lado Esquerdo: */
+    .left__side{
         width: 100%;
-        z-index: 5;
+        gap: 10px;
+    }
+    .div__logo{
+        width: 140px;
+        height: 140px;
+    }
+    .container__h1{
+        height: 15%;
+    }
+    .container__h1 h1{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .container__imgs{
+        max-height: 280px;
+    }
+    .div__img {
+        width: calc(33.3% - 10px);
+        height: 110px;
+    }
+
+
+    /* Lado Direito:  */
+    .right__side{
+        width: 100%;
+        gap: 10px;
+    }
+    .container__sobre{
+        width: 80%;
+        margin-left: 50px;
+        margin-top: 0rem;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .area__text {
+        max-width: 525px;
+        max-height: 130px;
+    }
+    .area__text p{
+        font-size: 12px;
+    }
+    .container__infs{
+        width: 80%;
+        font-size: 12px;
+        margin-left: 50px;
+    }
+    .container__contacts{
+        width: 80%;
+        margin-left: 50px;
+    }
+    .icons {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .div__cor {
+        width: 90px;
+        height: 26px;
+        font-size: 14px;
     }
     
-    .lado-direito{
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        display: none;
+    }
+}
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    /* Areas Principais:  */
+    .m-per-expo{
+    overflow-y: auto;
+    }
+    .conteiner__box{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .decorative_line{
+        display: none;
+    }
+
+
+    /* Lado Esquerdo: */
+    .left__side{
         width: 100%;
-        z-index: 5;
+        gap: 10px;
     }
-
-    .area-title{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .img-decoracao2 {
-        display: none;
-    }    
-
-    .sobre-a-empresa{
-        background-color: #3b9cdc00;
-        height: 26vh;
-    }
-
-    .cat-num{
-        background-color: #22bc9d00;
-        height: 10vh;
-    }
-
-    .contacts-corR{
-        background-color: #ff387700;
-        height: 10vh;
-    }
-
-    .btn{
-        right: 20px;
-    }
-}
-
-@media (max-width: 1024px) and (max-height: 600px){
-    .div-logo{
-        width: 150px;
-        height: 150px;
-    }
-
-    .div-h1 h1{
-        font-size: 27px;
-    }
-    .div-img{
-        height: 87px;
-    }
-
-    .h2-sobre{
-        font-size: 18px;
-    }
-
-    .text-sobre{
-        font-size: 12px;
-    }
-
-    .div-categoria h2{
-        font-size: 18px;
-    }
-
-    .div-categoria p{
-        font-size: 12px;
-    }
-
-    .div-numero h2{
-        font-size: 18px;
-    }
-
-    .div-numero p{
-        font-size: 12px;
-    }
-
-    .contacts h2{
-        font-size: 18px;
-    }
-
-    .cor-r h2{
-        font-size: 18px;
-    }
-
-    .icons{
-        width: 40px;
-        height: 40px;
-    }
-
-    .img-decoracao2{
-        display: none;
-    }
-
-    .div-button{
-        left: 48rem;
-    }
-}
-
-@media (min-width: 1280px) and (max-height: 800px){
-    .div-logo{
+    .div__logo {
         width: 180px;
         height: 180px;
     }
-
-    .div-h1 h1{
-        font-size: 28px;
-    } 
-    
-    .div-img{
-        height: 130px;
+    .container__h1{
+        height: 15%;
     }
-
-    .h2-sobre{
+    .container__h1 h1{
         font-size: 20px;
+        font-weight: 500;
+    }
+    .container__imgs{
+        max-height: 300px;  
+    }
+    .div__img {
+        width: calc(33.3% - 20px);
+        position: relative;
+        left: 2%;
+        height: 120px;
     }
 
-    .text-sobre{
-        font-size: 14px;
-    }
 
-    .div-categoria h2{
-        font-size: 20px;
-    }
-
-    .div-categoria p{
-        font-size: 14px;
-    }
-
-    .div-numero h2{
-        font-size: 20px;
-    }
-
-    .div-numero p{
-        font-size: 14px;
-    }
-
-    .contacts h2{
-        font-size: 20px;
-    }
-
-    .cor-r h2{
-        font-size: 20px;
-    }
-
-    .img-decoracao2 {
-        position: absolute;
-        top: 80%;
-        left: 57%;
-        width: 35vw;
-    }
-
-    .div-button{
-        left: 60rem;
-    }
-}
-
-@media (min-width: 912px) and (min-height: 1368px){
-    .box-principal{
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .lado-esquerdo{
+    /* Lado Direito:  */
+    .right__side{
         width: 100%;
-        z-index: 5;
+        gap: 10px;
+    }
+    .container__sobre{
+        margin-top: 0rem;
+        margin-left: 60px;
+    }
+    .right__side h2{
+        font-size: 20px;
+    }
+    .right__side h3{
+        font-size: 16px;
+    }
+    .area__text {
+        max-width: 525px;
+        max-height: 130px;
+    }
+    .area__text p{
+        font-size: 12px;
+    }
+    .container__infs{
+        font-size: 12px;
+        margin-left: 60px;
+    }
+    .container__contacts{
+        margin-left: 60px;
+    }
+    .icons {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .div__cor {
+        width: 90px;
+        height: 26px;
+        font-size: 14px;
     }
     
-    .lado-direito{
-        width: 100%;
-        z-index: 5;
-    }
 
-    .area-title{
-        position: relative;
-        left: 15px;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
     }
-
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
-
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
-    }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
-    }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
-    }
-
-    .sobre-a-empresa{
-        background-color: #3b9cdc00;
-        height: 26vh;
-    }
-
-    .cat-num{
-        background-color: #22bc9d00;
-        height: 10vh;
-    }
-
-    .contacts-corR{
-        background-color: #ff387700;
-        height: 10vh;
-    }
-
-    .img-decoracao2{
+    .decorative__img2{
         display: none;
     }
 }
 
-@media (max-width: 853px) and (min-height: 1280px){
-    .box-principal{
-        flex-direction: column;
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    /* Areas Principais:  */
+    .m-per-expo{
         overflow-y: auto;
     }
+    .conteiner__box{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .decorative_line{
+        display: none;
+    }
 
-    .lado-esquerdo{
+
+    /* Lado Esquerdo: */
+    .left__side{
         width: 100%;
-        z-index: 5;
+        gap: 10px;
+    }
+    .div__logo {
+        width: 180px;
+        height: 180px;
+    }
+    .container__h1{
+        height: 15%;
+    }
+    .container__h1 h1{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .container__imgs{
+        max-height: 350px; 
+    }
+    .div__img {
+        width: calc(33.3% - 20px);
+        position: relative;
+        left: 2%;
+        height: 140px;
+    }
+
+
+    /* Lado Direito:  */
+    .right__side{
+        width: 100%;
+        gap: 10px;
+    }
+    .container__sobre{
+        width: 80%;
+        margin-top: 0rem;
+        margin-left: 60px;
+    }
+    .right__side h2{
+        font-size: 22px;
+    }
+    .right__side h3{
+        font-size: 18px;
+    }
+    .area__text {
+        max-width: 755px;
+        max-height: 130px;
+    }
+    .area__text p{
+        font-size: 14px;
+    }
+    .container__infs{
+        width: 80%;
+        font-size: 12px;
+        margin-left: 60px;
+    }
+    .container__contacts{
+        width: 80%;
+        margin-left: 60px;
+    }
+    .icons {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    .div__cor {
+        width: 90px;
+        height: 26px;
+        font-size: 18px;
     }
     
-    .lado-direito{
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        display: none;
+    }
+}
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    /* Areas Principais:  */
+    .m-per-expo{
+        overflow-y: auto;
+    }
+    .conteiner__box{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .decorative_line{
+        display: none;
+    }
+
+
+    /* Lado Esquerdo: */
+    .left__side{
         width: 100%;
-        z-index: 5;
+        gap: 10px;
     }
-
-    .area-title{
+    .div__logo {
+        width: 180px;
+        height: 180px;
+    }
+    .container__h1{
+        height: 15%;
+    }
+    .container__h1 h1{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .container__imgs {
+        max-height: 350px;
+    }
+    .div__img {
+        width: calc(33.3% - 80px);
         position: relative;
-        left: 15px;
+        left: 10%;
+        height: 150px;
     }
 
-    .area-text{
-        position: relative;
-        left: 15px;
-        background-color: #3b9cdc00;
-    }
 
-    .div-categoria h2{
-        position: relative;
-        left: 15px;
+    /* Lado Direito:  */
+    .right__side{
+        width: 100%;
+        gap: 10px;
     }
-
-    .div-categoria p{
-        position: relative;
-        left: 15px;
+    .container__sobre{
+        width: 80%;
+        margin-top: 0rem;
+        margin-left: 60px;
     }
-
-    .contacts h2{
-        position: relative;
-        left: 15px;
+    .right__side h2{
+        font-size: 22px;
     }
-
-    .area-icons{
-        position: relative;
-        left: 15px;
+    .right__side h3{
+        font-size: 18px;
     }
-
-    .sobre-a-empresa{
-        background-color: #3b9cdc00;
-        height: 26vh;
+    .area__text {
+        max-width: 885px;
+        max-height: 130px;
     }
-
-    .cat-num{
-        background-color: #22bc9d00;
-        height: 10vh;
+    .area__text p{
+        font-size: 14px;
     }
-
-    .contacts-corR{
-        background-color: #ff387700;
-        height: 15vh;
+    .container__infs{
+        width: 80%;
+        font-size: 12px;
+        margin-left: 60px;
     }
+    .container__contacts{
+        width: 80%;
+        margin-left: 60px;
+    }
+    .icons {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    .div__cor {
+        width: 90px;
+        height: 26px;
+        font-size: 18px;
+    }
+    
 
-    .img-decoracao2{
-       display: none;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        z-index: -1;
+    }
+    .decorative__img2{
+        display: none;
+    }
+}
+
+
+/* Pequenos Ajustes:  */
+@media (min-width: 1400px) and (max-height: 865px){
+    .container__imgs{
+        max-height: 290px;
+    }
+    .div__img{
+        max-height: 121px;
+    }
+    .decorative__img2{
+        display: none;
+    }
+    .decorative_line{
+        height: 749px;
+        display: none;
+    }
+}
+@media (min-width: 1400px) and (max-height: 720px){
+    .m-per-expo{
+        overflow-y: auto;
+    }
+}
+@media (min-width: 1400px) and (min-height: 1440px){
+    .m-per-expo {
+        width: 80%;
+        height: 54vh;
+    }
+    .conteiner__box{
+        margin-top: 2%;
+    }
+    .container__imgs{
+        max-height: 290px;
+    }
+    .div__img{
+        max-height: 121px;
     }
 }

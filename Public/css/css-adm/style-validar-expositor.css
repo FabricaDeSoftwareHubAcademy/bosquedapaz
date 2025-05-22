@@ -23,30 +23,23 @@
     background-color: rgba(238, 238, 238, 0.753);
     box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.719);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2%;
+    /* background-color: rgb(255, 0, 0); */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.452);
 }
 
-.secao-dados-empresa {
+.secao-informacoes-vexp {
+    flex: 2;
+}
+
+.secao-expositor-vexp {
     flex: 1;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* background-color: grey; */
 }
 
-.area-superior {
-    height: 40%;
-    width: 100%;
+.secao-expositor-vexp {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    /* background-color: red; */
+    border-right: 2px solid rgba(114, 114, 114, 0.514);
 }
 
 .area-superior-texto {

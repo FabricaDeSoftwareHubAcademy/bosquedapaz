@@ -1,63 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-bt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-escolher-cadastro.css">
-    <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-escolher-cadastro.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
 </head>
-<body>
+<!-- Corpo da Tela -->
+<body class="body__main">
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
-    <!-- inicio da parte principal da pagina -->
-    <main class="principal">
-        <!-- box principal -->
-        <div class="box">
-            <div class="seta-ec"><a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></a></div>
-            
-            <div id="linha-vertical-ec"></div>
-            <div class="area-infs-ec">
-                <h1>Escolher Cadastro</h1>
-                <a href="cadastro-expositor-client.php" class="area-total-button" id='button-ec-1'>
-                    <div class="icon-input-ec">
-                        <i id="icon-ec" class="bi bi-shop-window"></i>
-                    </div>
-                    <div class="text-input-ec">
-                        <p>Cadastro de Expositor</p>
-                    </div>
+    <!-- Box Principal dos Elementos -->
+    <div class="container__box">
+        <!-- Lado Esquerdo: Botões -->
+        <div class="conteiner__buttons">
+            <h1>Escolher Cadastro</h1>
+            <!-- Div dos Buttons -->
+            <div class="button_group">
+            <!-- Botões: -->
+                <a href="cadastro-expositor-kids.php" class="button" id="button1">
+                    <i class="bi bi-person-plus"></i>
+                    <span>Cadstro de Expositor Kids</span>
                 </a>
-                <a href="cadastro-expositor-kids.php" class="area-total-button" id='button-ec-2'>
-                    <div class="icon-input-ec">
-                        <i id="icon-ec" class="bi bi-person-plus"></i>
-                    </div>
-                    <div class="text-input-ec">
-                        <p id="p-ed-kids">Cadastro de Expositor Kids</p>
-                    </div>
+                <a href="cadastro-expositor-client.php" class="button" id="button2">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Cadastro de Expositor</span>
                 </a>
-                <a href="cadastro-artista.php" class="area-total-button" id='button-ec-3'>
-                    <div class="icon-input-ec">
-                        <i id="icon-ec" class="bi bi-music-note-list"></i>
-                    </div>
-                    <div class="text-input-ec">
-                        <p>Cadastro de Artistas</p>
-                    </div>
+                <a href="cadastro-artista.php" class="button" id="button3">
+                    <i class="bi bi-music-note-list"></i>
+                    <span>Cadastro de Artista</span>
                 </a>
             </div>
-            <div class="area-img-ec">
-                <img src="../../../Public/imgs/img-escolher-cadastro/img-ec.svg" alt="">
-            </div>
+            <!-- Seta Voltar -->
+            <div class="div__seta_voltar"> <a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></div></a>
         </div>
-    </main>
-    <!-- bolas de fundo -->
-    <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <!-- Lado Direito: Imagem -->
+        <div class="conteiner__img">
+            <img src="../../../Public/imgs/img-escolher-cadastro/img-decoracao-principal.svg" alt="">
+        </div>
     </div>
-    <!-- link do JavaScript -->
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-home/main.js" defer></script>
+    <!-- Imagens Decorativas -->
+    <div class="imgs__decorative1"><img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt=""></div>
+    <div class="imgs__decorative2"><img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt=""></div>
+    <div class="imgs__decorative3"><img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt=""></div>
+   
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>          
 </body>
 </html>
