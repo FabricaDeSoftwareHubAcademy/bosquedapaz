@@ -12,8 +12,32 @@
     --color-rua: #5cb74a;
 }
 
+
+dialog.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    width: 80vw;   /* Ocupa 80% da largura da tela */
+    height: 90vh;  /* Ocupa 90% da altura da tela */
+    /* max-width: 1200px; */
+    overflow: hidden;
+  }
+  
+  /* Fundo escuro ao redor do modal */
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+
 /* Modal: */
-.m-per-expo {
+/* .m-per-expo {
     width: 80%;
     height: 85vh;
     border: none;
@@ -21,7 +45,7 @@
     z-index: 4;
     overflow: hidden;
     margin: auto;
-}
+} */
 
 /* Sombra de Fundo:  */
 .overlay {
