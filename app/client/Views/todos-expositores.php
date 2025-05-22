@@ -17,6 +17,7 @@
 <body>
 
     <?php include "../../../Public/assets/home/menu-home.html"; ?>
+   
 
     <main class="content-principal">
         <h1 class="title-all-expo">expositores</h1>
@@ -616,9 +617,10 @@
                         </div>
                     </div>
                 </div>
-                <dialog class="m-per-expo" id="m-per-expo">
-                    <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
-                </dialog>
+                
+                <!-- Include do Modal -->
+                <?php  include '../../../Public/assets/home/perfil-expositor.html' ?>
+                
             </section>
         </div>
     </main>
