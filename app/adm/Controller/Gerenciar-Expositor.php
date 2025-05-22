@@ -6,6 +6,10 @@ class Database {
     private $senha = "";
     public $conexao;
 
+    public function __construct() {
+        $this->conectar();
+    }
+
     public function conectar() {
         $this->conexao = null;
 
@@ -21,19 +25,10 @@ class Database {
         return $this->conexao;
     }
 
-    // Comando para buscar todos os expositores
-    // SELECT * FROM expositores
-    public function listarExpositores() {
-        $sql = "SELECT * FROM expositores";
-        $stmt = $this->conexao->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
     // Comando para listar um expositor
-    // SELECT * FROM expositores WHERE id_expositor = ?
+    // SELECT * FROM expositores_pendentes WHERE id_expositor = ?
     public function listarPorId($id) {
-        $sql = "SELECT * FROM expositores WHERE id_expositor = :id";
+        $sql = "SELECT * FROM expositores_pendentes WHERE id_expositor = :id";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
@@ -41,9 +36,9 @@ class Database {
     }
 
     // Comando para deletar expositor da tabela
-    // DELETE FROM expositores WHERE id_expositor = ?
+    // DELETE FROM expositores_pendentes WHERE id_expositor = ?
     public function deletarExpositor($id) {
-        $sql = "DELETE FROM expositores WHERE id_expositor = :id";
+        $sql = "DELETE FROM expositores_pendentes WHERE id_expositor = :id";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindParam(":id", $id);
         return $stmt->execute();
@@ -59,11 +54,12 @@ class Database {
         $stmt->bindParam(":marca", $marca);
         $stmt->bindParam(":numero_barraca", $numero_barraca);
         $stmt->bindParam(":cor_rua", $cor_rua);
+        return $stmt->execute();
     }
 
     // Funcionalidade para deletar usuario e validar ao mesmo tempo
     public function validarExpositor($id, $numero_barraca, $cor_rua) {
-        $dados = $this->listarExpositores($id);
+        $dados = $this->listarPorId($id);
         if ($dados) {
             if ($this->cadastrarExpositorValidado(
                 $dados['nome'],

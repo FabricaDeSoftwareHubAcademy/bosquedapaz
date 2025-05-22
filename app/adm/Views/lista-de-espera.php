@@ -1,12 +1,9 @@
 <?php
 require_once '../Controller/Lista-espera.php';
+$db = new Database();
+$conexao = $db->conectar();
 
-
-$lista = new Lista_expositor();
-
-$busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-
-$expositores = $lista->listar($busca);
+$dados = $db->listarExpositores()
 ?>
 
 <!DOCTYPE html>
@@ -46,15 +43,15 @@ $expositores = $lista->listar($busca);
               </tr>
             </thead>
             <tbody>
-              <?php if (!empty($expositores)) : ?>
-                <?php foreach ($expositores as $expositor) : ?>
+              <?php if (!empty($dados)) : ?>
+                <?php foreach ($dados as $dados) : ?>
                   <tr>
-                    <td><?= htmlspecialchars($expositor['nome']) ?></td>
-                    <td><?= htmlspecialchars($expositor['email']) ?></td>
-                    <td><?= htmlspecialchars($expositor['categoria']) ?></td>
-                    <td><?= htmlspecialchars($expositor['telefone']) ?></td>
+                    <td><?= htmlspecialchars($dados['nome']) ?></td>
+                    <td><?= htmlspecialchars($dados['email']) ?></td>
+                    <td><?= htmlspecialchars($dados['categoria']) ?></td>
+                    <td><?= htmlspecialchars($dados['whatsapp']) ?></td>
                     <td class="perfil">
-                      <a href="validar-expositor.php?id=<?= $expositor['id_expositor'] ?>">
+                      <a href="tela-gerenciar-expositor.php?id=<?php echo $dados['id_expositor'] ?>">
                         <i class="bi bi-person-badge"></i>
                       </a>
                     </td>
