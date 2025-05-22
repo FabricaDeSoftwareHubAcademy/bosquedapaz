@@ -151,7 +151,7 @@ if(isset($_POST['cadastrar'])){
                     <!-- Botões -->
                     <div class="form__actions">
                         <button type="submit" name="cancelar" class="btn btn__rosa">Cancelar</button>
-                        <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
+                        <button type="submit" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
             </div>
@@ -161,5 +161,7 @@ if(isset($_POST['cadastrar'])){
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </section>
+
+    <script src="../../../Public/js/js-adm/listar-adm.js" defer></script>
 </body>
 </html>

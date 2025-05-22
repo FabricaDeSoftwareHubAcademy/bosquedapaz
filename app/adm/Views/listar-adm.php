@@ -33,10 +33,10 @@ $colaboradores = $adm->listar($busca);
       <div class="container">
 
       <!-- Formulário de Busca -->
-      <form action="" method="GET">
+      <form id="formBusca" action="" method="GET">
         <div class="search-bar">
           <label for="status">Procurar</label>
-          <input type="text" id="status" name="busca" placeholder="Colaborador" value="<?php echo htmlspecialchars($busca); ?>" />
+          <input type="text" id="busca" name="busca" placeholder="Colaborador" value="<?php echo htmlspecialchars($busca); ?>" />
           <button type="submit" class="search-button">BUSCAR</button>
         </div>
       </form>
@@ -54,7 +54,7 @@ $colaboradores = $adm->listar($busca);
               <th>Ações</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tbody-colaboradores">
             <?php if (!empty($colaboradores)) : ?>
               <?php foreach ($colaboradores as $colaborador) : ?>
                 <tr>

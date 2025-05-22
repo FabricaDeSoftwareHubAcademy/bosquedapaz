@@ -56,12 +56,7 @@ class Colaborador{
             $stmt = $db->execute($query);
         }
     
-        if ($stmt) {
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $result;
-        }
-        
-        return [];
+        return $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
     }
 }
 
