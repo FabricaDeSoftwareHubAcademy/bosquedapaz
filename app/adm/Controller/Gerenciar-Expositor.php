@@ -46,10 +46,12 @@ class Database {
 
     // Comando para adicionar expositor da tabela
     // INSERT INTO expositores_validados (nome, cpf, marca, numero_barraca, cor_rua) values (?, ?, ?, ?, ?)
-    public function cadastrarExpositorValidado($nome, $cpf, $marca, $numero_barraca, $cor_rua) {
-        $sql = "INSERT INTO expositores_validados (nome, cpf, marca, numero_barraca, cor_rua) values (:nome, :cpf, :marca, :numero_barraca, :cor_rua)";
+    public function cadastrarExpositorValidado($nome, $email, $whatsapp, $cpf, $marca, $numero_barraca, $cor_rua) {
+        $sql = "INSERT INTO expositores_validados (nome, email, whatsapp, cpf, marca, numero_barraca, cor_rua) values (:nome, :email, :whatsapp, :cpf, :marca, :numero_barraca, :cor_rua)";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":whatsapp", $whatsapp);
         $stmt->bindParam(":cpf", $cpf);
         $stmt->bindParam(":marca", $marca);
         $stmt->bindParam(":numero_barraca", $numero_barraca);
@@ -63,6 +65,8 @@ class Database {
         if ($dados) {
             if ($this->cadastrarExpositorValidado(
                 $dados['nome'],
+                $dados['email'],
+                $dados['whatsapp'],
                 $dados['cpf'],
                 $dados['marca'],
                 $numero_barraca,

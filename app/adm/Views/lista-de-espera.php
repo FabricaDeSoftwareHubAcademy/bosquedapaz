@@ -1,5 +1,5 @@
 <?php
-require_once '../Controller/Lista-espera.php';
+require_once '../Controller/Lista-Espera.php';
 $db = new Database();
 $conexao = $db->conectar();
 
