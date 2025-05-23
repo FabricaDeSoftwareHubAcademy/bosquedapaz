@@ -15,7 +15,7 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: #9e9e9e;
+    background-color: #e1e1e1;
 }
 
 .perfilEdit-superior-esquerda{
@@ -43,14 +43,14 @@
 .perfilEdit-box{
     left: 50%;
     transform: translate(-50%);
-    background-color: rgba(248, 245, 246, 0.705);
+    background-color: #f8f5f6b4;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
     width: 95%;
     top: 14%;
-    border-radius: 8px;
+    border-radius: 10px;
     height: 80%;
 }
 
@@ -62,46 +62,49 @@
     /* width: 100%; */
     display: flex;
     top: 1%;
+    padding-bottom: 2%;
 }
 
 .perfilEdit-form{
     /* top: 2%; */
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
     /* justify-content: center; */
     align-items: center;
     height: 90%;
     gap: 10px;
-    padding: 20px;
+    position: relative;
 }
 
 .perfilEdit-empresas{
-    background-color: aqua;
-    width: 61%;
+    /* background-color: aqua; */
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     height: 15%;
     position: relative;
-    
+    gap: 50px;
 }
 
 .perfilEdit-logo{
     display: flex;
     flex-direction: column;
     /* background-color: rgba(255, 255, 0, 0.5); */
-    width: 35%;
+    width: 50%;
 }
 
-/* .perfilEdit-logoempresa */
+label{
+    font-size: 20px;
+}
 
 .perfilEdit-foto{
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 50%;
-    border-radius: 8px;
-    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
     padding-left: 3%;
     padding-top: 3%;
 }
@@ -114,17 +117,16 @@
     display: flex;
     flex-direction: column;
     /* background-color: green; */
-    width: 35%;
+    width: 50%;
 }
 
-/* .perfilEdit-nameEmpresa */
 
 .perfilEdit-nome{
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 50%;
-    border-radius: 8px;
-    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
     border: none;
     padding-left: 3%;
     outline: none;
@@ -133,8 +135,8 @@
 .perfilEdit-desc{
     display: flex;
     flex-direction: column;
-    background-color: purple;
-    width: 61%;
+    /* background-color: purple; */
+    width: 100%;
     height: 20%;
     position: relative;
 }
@@ -144,16 +146,12 @@
     align-items: center;
 } */
 
-.perfilEdit-label-desc{
-    align-self: self-start;
-}
-
 .perfilEdit-text-desc{
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    box-shadow: 1px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
     padding-left: 1%;
     padding-top: 1%;
     border: none;
@@ -164,10 +162,10 @@
 
 .perfilEdit-info{
     position: relative;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
-    width: 61%;
+    width: 100%;
     height: 15%;
     justify-content: space-between;
     align-items: center;
@@ -179,31 +177,31 @@
 }
 
 .fa-square-instagram{
-    font-size: 25px;
+    font-size: 28px;
     color: #3b8bdc;
 }
 
 .fa-square-whatsapp{
-    font-size: 25px;
+    font-size: 28px;
     color: #22bc9d;
 }
 
 .fa-square-facebook{
-    font-size: 25px;
+    font-size: 27px;
     color: #f2c518;
 }
 
 .fa-envelope{
     color: #ff3877;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .perfilEdit-input-info{
     background-color: rgb(255, 255, 255);
     width: 88%;
     height: 100%;
-    border-radius: 8px;
-    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
     border: none;
     outline: none;
     display: flex;
@@ -215,17 +213,17 @@
     display: flex;
     flex-direction: row;
     width: 24%;
-    height: 40%;
+    height: 42%;
     align-items: center;
-    justify-content: space-between;
+    gap: 8px;
 }
 
 .perfilEdit-foto-info{
-    /* background-color: red; */
+    /* background-color: gold; */
     display: flex;
     flex-direction: column;
-    width: 61%;
-    height: 20%;
+    width: 100%;
+    height: 32%;
     position: relative;
 }
 
@@ -233,25 +231,73 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 80%;
+    height: 100%;
     /* background-color: blue; */
     gap: 20px;
 }
 
 .perfilEdit-load-foto{
-    background-color: purple;
+    /* background-color: purple; */
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 3px 5px 0px rgba(143, 143, 143, 0.71);
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
 }
 
-.perfilEdit-input-foto{
-    background-color: yellow;
-    display: flex;
-    width: 50%;
-    height: 40%;
+.bi-upload{
+    font-size: 35px;
+    color: #999999;
+}
+
+.perfilEdit-input-foto[type="file"]{
     display: none;
+}
+
+.perfilEdit-p{
+    color: #999999;
+    font-size: 12px;
+}
+
+.perfilEdit-btns{
+    align-self: flex-end;
+    justify-content: space-between;
+    display: flex;
+    width: 35%;
+    height: 8%;
+    margin-top: 1%;
+    /* background-color: red; */
+}
+
+.perfilEdit-btn{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    width: 35%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.perfilEdit-btn-cancel{
+    background-color: #ff3877;
+}
+
+.perfilEdit-btn-save{
+    background-color: #007e70;
+}
+
+.perfilEdit-link-voltar{
+    left: 5%;
+    bottom: 5%;
+    position: absolute;
 }

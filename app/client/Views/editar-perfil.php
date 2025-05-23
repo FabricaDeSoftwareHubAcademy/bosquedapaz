@@ -20,7 +20,7 @@
             <section class="perfilEdit-empresas">
                 <div class="perfilEdit-logo">
                     <label for="foto" class="perfilEdit-logoEmpresa">Logo da empresa: </label>
-                    <input type="file" name="foto" id="foto" class="perfilEdit-foto" placeholder="Selecione sua logo" required>
+                    <input type="file" name="foto" id="foto" class="perfilEdit-foto" required>
                 </div>
                 <div class="perfilEdit-name">
                     <label for="nome" class="perfilEdit-nameEmpresa">Nome da empresa: </label>
@@ -30,59 +30,73 @@
 
             <section class="perfilEdit-desc">
                 <label class="perfilEdit-label-desc" for="descricao" >Sobre a Empresa: </label>
-                <textarea name="descricao" id="descricao" cols="200" rows="10" class="perfilEdit-text-desc" placeholder="Digite uma breve descrição sobre sua empresa"></textarea>
+                <textarea name="descricao" id="descricao" class="perfilEdit-text-desc" placeholder="Digite uma breve descrição sobre sua empresa"></textarea>
             </section>
             
             <section class="perfilEdit-info">
                 <div>
                     <i class="fa-brands fa-square-instagram"></i>
-                    <input type="text" name="informacao" id="informacao" class="perfilEdit-input-info" placeholder="Digite seu instagram">
+                    <input type="text" name="instagram" class="perfilEdit-input-info" placeholder="Digite seu instagram">
                 </div>
                 <div>
                     <i class="fa-brands fa-square-whatsapp"></i>
-                    <input type="text" name="informacao" id="informacao" class="perfilEdit-input-info" placeholder="Digite seu whatsapp">
+                    <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="Digite seu whatsapp">
                 </div>
                 <div>
                     <i class="fa-brands fa-square-facebook"></i>
-                    <input type="text" name="informacao" id="informacao" class="perfilEdit-input-info" placeholder="Digite seu facebook">
+                    <input type="text" name="facebook" class="perfilEdit-input-info" placeholder="Digite seu facebook">
                 </div>
                 <div>
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="text" name="informacao" id="informacao" class="perfilEdit-input-info" placeholder="Digite seu e-mail">
+                    <input type="text" name="email" class="perfilEdit-input-info" placeholder="Digite seu e-mail">
                 </div>
             </section>
 
             <section class="perfilEdit-foto-info">
-                <label for="" class="perfilEdit-foto-info-label">Selecione fotos de seus produtos:</label>
+                <label for="foto" class="perfilEdit-foto-info-label">Selecione fotos de seus produtos:</label>
                 <div class="perfilEdit-div-group">
                     <div class="perfilEdit-load-foto">
-                        <input type="file" name="foto" id="foto" class="perfilEdit-input-foto">
+                        <i class="bi bi-upload"></i>
+                        <input type="file" name="foto" class="perfilEdit-input-foto">
+                        <p class="perfilEdit-p">Carregar foto 1</p>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <input type="file" name="foto" id="foto" class="perfilEdit-input-foto">
+                        <i class="bi bi-upload"></i>
+                        <input type="file" name="foto" class="perfilEdit-input-foto">
+                        <p class="perfilEdit-p">Carregar foto 2</p>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <input type="file" name="foto" id="foto" class="perfilEdit-input-foto">
+                        <i class="bi bi-upload"></i>
+                        <input type="file" name="foto" class="perfilEdit-input-foto">
+                        <p class="perfilEdit-p">Carregar foto 3</p>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <input type="file" name="foto" id="foto" class="perfilEdit-input-foto">
+                        <i class="bi bi-upload"></i>
+                        <input type="file" name="foto" class="perfilEdit-input-foto">
+                        <p class="perfilEdit-p">Carregar foto 4</p>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <input type="file" name="foto" id="foto" class="perfilEdit-input-foto">
+                        <i class="bi bi-upload"></i>
+                        <input type="file" name="foto" class="perfilEdit-input-foto">
+                        <p class="perfilEdit-p">Carregar foto 5</p>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <input type="file" name="foto" id="foto" class="perfilEdit-input-foto">
+                        <i class="bi bi-upload"></i>
+                        <input type="file" name="foto" class="perfilEdit-input-foto">
+                        <p class="perfilEdit-p">Carregar foto 6</p>
                     </div>
                 </div>
             </section>
 
-            <section class="perfilEdit-btn">
-                <button>Cancelar</button>
-                <button>Salvar</button>
+            <section class="perfilEdit-btns">
+                <button class="perfilEdit-btn-cancel perfilEdit-btn" >Cancelar</button>
+                <button class="perfilEdit-btn-save perfilEdit-btn" >Salvar</button>
             </section>
 
         </form>
-        <img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""><a href=""></a></img>
+
+        <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt="" class="perfilEdit-img-voltar"></a>
+
      </div>
 
     <img class="perfilEdit-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
