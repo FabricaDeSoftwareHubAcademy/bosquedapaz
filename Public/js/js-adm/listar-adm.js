@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function carregarColaboradores(busca = ''){
         tbody.innerHTML = `<tr><td colspan="7"Carregando...</td></tr>`;
 
-        fetch(`listar-adm-json.php?busca=${encodeURIComponent(busca)}`)
+        fetch(`Lista-adm-json.php?busca=${encodeURIComponent(busca)}`)
             .then(res => {
                 if (!res.ok) throw new Error('Erro ao buscar dados');
                 return res.json();

@@ -1,9 +1,9 @@
 <?php 
-require_once '../../../app/adm/Controller/Colaborador.php';
+// require_once '../../../app/adm/Controller/Colaborador.php';
 
-$busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-$adm = new Colaborador();
-$colaboradores = $adm->listar($busca);
+// $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
+// $adm = new Colaborador();
+// $colaboradores = $adm->listar($busca);
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +98,7 @@ $colaboradores = $adm->listar($busca);
           </div>
         </div>
       </dialog>
-    </div>
+    </div>  
     <div class="setaV-cadastro">
       <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
     </div>
@@ -110,6 +110,7 @@ $colaboradores = $adm->listar($busca);
   </div>
 </body>
 
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+  <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+  <script src="../../../Public/js/js-adm/listar-adm.js" defer></script>
 </body>
 </html>
