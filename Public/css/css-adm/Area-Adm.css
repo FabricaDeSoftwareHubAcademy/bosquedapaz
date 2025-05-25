@@ -12,7 +12,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #e1e1e1;
+    background-color: #ffffff;
     position: relative;
 }
 
@@ -148,10 +148,10 @@ body{
 }
 
 /* todos os celulares */
-/* @media (max-width:575.98px){
-    body{
+ @media (max-width:575.98px){
+    /* body{
         background-color: green;
-    }
+    } */
 
     .principal-gabriel{
         height: 85vh;
@@ -201,142 +201,6 @@ body{
     .Botoes-gabriel{
         border-radius: 10px;
     }
-
-} */
-
-/* iPad Air */
-@media (min-width:576px){
-    body{
-        background-color: darkred;
-    }
-}
-
-/* Resto dos iPad's e tablets */
-/* @media (min-width:768px){
-    body{
-        background-color: pink;
-    }
-    
-    .principal-gabriel{
-        height: 85vh;
-    }
-
-    .box-gabriel{
-        width: 93%;
-        background-color: #f8f5f64b;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        position: relative;
-        height: 92%;
-        top: 0%;
-    }
-
-    .area-botao-gabriel{
-        background-color: #16286800;
-        right: 7.6rem;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .seta-voltar-gabriel{
-        left: 0rem;
-        top: 122rem;
-    }
-
-    .nome-area-gabriel h1{
-        position: relative;
-        left: 6.7rem;
-        font-size: 1.8rem;
-        width: 135%;
-    }
-
-    .Bola-1-gabriel{
-        display: none;
-    }
-
-    .Bola-2-gabriel{
-        display: none;
-    }
-
-    .Bola-3-gabriel{
-        display: none;
-    }
-
-    .Botoes-gabriel{
-        border-radius: 10px;
-    }
-
-} */
-
-
-@media (min-width:992px){
-    body{
-        background-color: aqua;
-    }
-}
-
-
-@media (min-width:1200px){
-    body{
-        background-color: blueviolet;
-    }
-}
-
-@media (min-width:1400px){
-    body{
-        background-color: white;
-    }
-
-}
-
-/* 
-@media screen and (max-width: 720px) {
-    .box-gabriel{
-        width: 95%;
-        background-color: #f8f5f64b;
-        overflow-y: auto;
-        overflow-x: hidden;
-        top: 3%;
-        position: relative;
-    }
-
-    .area-botao-gabriel{
-        background-color: #16286800;
-        right: 5.2rem;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .seta-voltar-gabriel{
-        top: 122.4rem;
-        left: 1rem;
-        bottom: 0%;
-    }
-
-    .nome-area-gabriel h1{
-        bottom: 0;
-        left: 7.2rem;
-        font-size: 21px;
-        width: 135%;
-        position: relative;
-    }
-
-    .Bola-1-gabriel{
-        display: none;
-    }
-
-    .Bola-2-gabriel{
-        display: none;
-    }
-
-    .Bola-3-gabriel{
-        display: none;
-    }
-
-    .Botoes-gabriel{
-        border-radius: 10px;
-    }
-
 
 }
 
@@ -459,4 +323,46 @@ body{
     .Bola-3-gabriel{
         display: none;
     }
-} */
+}
+
+@media (max-width:1280px){
+    .box-gabriel{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 110%;
+        position: relative;
+        top: 5%;
+    }
+
+    .area-botao-gabriel{
+        position: relative;
+        left: -8rem;
+    }
+
+    .seta-voltar-gabriel {
+        position: relative;
+        top: 10rem;
+        top: 91rem;
+        z-index: 1;
+        left: -15rem;
+    }
+
+    .nome-area-gabriel h1{
+        position: relative;
+        left: 12rem;
+        width: 135%;
+        top: -29rem;
+    }
+
+    .Bola-1-gabriel{
+        display: none;
+    }
+
+    .Bola-2-gabriel{
+        display: none;
+    }
+
+    .Bola-3-gabriel{
+        display: none;
+    }
+}
