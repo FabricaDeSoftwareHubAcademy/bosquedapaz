@@ -3,56 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const formBusca = document.getElementById('formBusca');
     const inputBusca = document.getElementById('busca');
 
-    function criarLinha(colaborador){
+    function criarLinha(colaborador) {
         const tr = document.createElement('tr');
 
         tr.innerHTML = `
             <td class="usuario-col">${colaborador.id_colaborador}</td>
-            <td>${colaborador.nome}</td>
             <td class="email-col">${colaborador.email}</td>
             <td class="fone-col">${colaborador.telefone}</td>
             <td class="cargo-col">${colaborador.cargo}</td>
+            <td><button type="button" class="status active">Ativo</button></td>
             <td>
-                <button type="button" class"buscar active">Ativo</button>
-            </td>
-                <a class"edit-icon" href="editar-adm.php?id=${colaborador.id_colaborador}>
+                <a class="edit-icon" href="editar-adm.php?id=${colaborador.id_colaborador}">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a>
-                <button class="open-modal" data-modal="modal-deleta" data-id="${colaborador.id_colaborador}>
+                <button class="open-modal" data-modal="modal-deleta" data-id="${colaborador.id_colaborador}">    
                     <i class="fa-solid fa-trash"></i>
-                </button>    
-            </td>    
+                </button>
+            </td>        
         `;
-
         return tr;
     }
 
-    
-    function carregarColaboradores(busca = ''){
-        tbody.innerHTML = `<tr><td colspan="7"Carregando...</td></tr>`;
+    async function carregarColaboradores(busca = ''){
+        tbody.innerHTML  `<tr><td colspan="7">Carregando...</td></tr>`;
 
-        fetch(`Lista-adm-json.php?busca=${encodeURIComponent(busca)}`)
-            .then(res => {
-                if (!res.ok) throw new Error('Erro ao buscar dados');
-                return res.json();
-            })
-            .then(data => {
-                if(data.length === 0){
-                    tbody.innerHTML = `<tr><td colapsan="7">Nenhum colaborador encontrado.</td></tr>`;
-                    return;
-                }
+        try{
+            const resposta = await fetch(`listar-adm-json.php?busca=${encodeURIComponent(busca)}`);
+            if (!resposta.ok) throw new Error('Erro ao buscar dados do servidor');
 
-                tbody.innerHTML = '';
+            const dados = await resposta.json();
 
-                data.forEach(colaborador => {
-                    const linha = criarLinha(colaborador);
-                    tbody.appendChild(linha);
-                });
-            })
-            .catch(err => {
-                tbody.innerHTML = `<tr><td colspan="7">Erro ao carregar colaboradores.</td></tr>`;
-                console.error(err);
+            if(dados.legth === 0) {
+                tbody.innerHTML = `<tr><td colspan="7">Nenhum colaborador encontrado.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = '';
+            dados.forEach(colaborador => {
+                const linha = criarLinha(colaborador);
+                tbody.appendChild(linha);
             });
+        } catch (erro) {
+            console.error('Erro ao carregar colaboradores:', erro);
+            tbody.innerHTML = `<tr><td colspan="7">Erro ao carregar colaboradores.</td></tr>`;
+        }
+
     }
 
     formBusca.addEventListener('submit', e => {

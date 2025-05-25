@@ -1,59 +1,56 @@
 <?php
+require_once __DIR__ . '../../../app/Models/Database.php';
+require_once __DIR__ . '../../../app/adm/Controller/Colaborador.php';
 
-require(__DIR__ . '/../../app/adm/Controller/Colaborador.php');
+header('Content-Type: application/json');
 
-if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])){
-    
-    function limparInput($data){
-        return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
-    }
-
-    $nome = limparInput($_POST['nome'] ?? '');
-    $email = limparInput($_POST['email'] ?? '');
-    $telefone = limparInput($_POST['telefone'] ?? '');
-    $cargo = limparInput($_POST['cargo'] ?? '');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $telefone = $_POST['tel'] ?? '';
+    $cargo = $_POST['cargo'] ?? '';
     $senha = $_POST['senha'] ?? '';
     $confSenha = $_POST['confSenha'] ?? '';
 
-    $response = ['success' => false, 'message' => ''];
-
-    if (!$nome || !$email || !$telefone || !$cargo || !$senha || !$confSenha){
-        $response['message'] = 'Por favor, preencha todos os campos corretamente.';
-        echo json_encode($response);
+    if ($senha !== $confSenha) {
+        echo json_encode(['success' => false, 'message' => 'As senhas não coincidem.']);
         exit;
     }
 
-    if ($senha !== $confSenha){
-        $response['message'] = 'As senhas não coincidem!';
-        echo json_encode($response);
-        exit;
-    }
-
-    if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK){
-        $response['message'] = 'Falha ao enviar a foto';
-        echo json_encode($response);
+    if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK) {
+        echo json_encode(['success' => false, 'message' => 'Erro ao enviar a imagem.']);
         exit;
     }
 
     $arquivo = $_FILES['imagem'];
-    $pasta = '../../../Public/imgs/imgs-fotos-cadastro-adm/';
-    $nome_foto = $arquivo['name'];
-    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-    $extensoesPermitidas = ['png', 'jpg', 'jpeg'];
-    if(!in_array($extensao, $extensoesPermitidas)){
-        $response['message'] = 'Eztensã de imagem inválida';
-        echo json_encode($response);
+    // Caminho relativo para salvar na pasta 'Public/imgs/imgs-fotos-cadastro-adm'
+    $pasta_relativa = '../../../Public/imgs/img-cadastro-adm/';
+
+    // Caminho absoluto da pasta no sistema de arquivos
+    $pasta_absoluta = realpath(__DIR__ . '../../../Public/imgs/img-cadastro-adm/');
+
+    if ($pasta_absoluta === false) {
+        echo json_encode(['success' => false, 'message' => 'Diretório de destino não existe.']);
         exit;
     }
 
-    $novo_nome = uniqid('colab_', true) . '.' . $extensao;
-    $caminhoRelativo = 'Public/imgs/imgs-fotos-cadastro-adm/' . $novo_nome;
-    $caminhoCompleto = '../../../' . $caminhoRelativo;
+    $nome_foto = $arquivo['name'];
+    $novo_nome = uniqid();
+    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-    if(!move_uploaded_file($arquivo['tmp_name'], $caminhoCompleto)){
-        $response['message'] = 'Erro ao salvar a imagem';
-        echo json_encode($response);
+    if (!in_array($extensao, ['jpg', 'jpeg', 'png'])) {
+        echo json_encode(['success' => false, 'message' => 'Extensão do arquivo inválida. Use .jpg, .jpeg ou .png.']);
+        exit;
+    }
+
+    $caminho_absoluto_arquivo = $pasta_absoluta . DIRECTORY_SEPARATOR . $novo_nome . '.' . $extensao;
+    $caminho_relativo_arquivo = $pasta_relativa . $novo_nome . '.' . $extensao;
+
+    $fotoSalva = move_uploaded_file($arquivo['tmp_name'], $caminho_absoluto_arquivo);
+
+    if (!$fotoSalva) {
+        echo json_encode(['success' => false, 'message' => 'Falha ao mover o arquivo.']);
         exit;
     }
 
@@ -65,19 +62,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])){
     $objColab->telefone = $telefone;
     $objColab->cargo = $cargo;
     $objColab->senha = $senhaHash;
-    $objColab->imagem = $caminhoRelativo;
 
-    $res = $objColab->cadastar();
+    // Salva no banco o caminho relativo para usar no front-end
+    $objColab->imagem = $caminho_relativo_arquivo;
 
-    if ($res) {
-        $response['success'] = true;
-        $response['message'] = 'Cadastrado com sucesso!';
-    } else {
-        $response['message'] = 'Erro ao cadastrar no banco';
-    }    
+    $res = $objColab->cadastrar();
 
-    header('Content-Type: application/json');
-    echo json_encode($response);
-    exit;
+    echo json_encode([
+        'success' => $res,
+        'message' => $res ? 'Cadastrado com sucesso!' : 'Erro ao cadastrar no banco de dados.'
+    ]);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Requisição inválida.']);
 }
-?>

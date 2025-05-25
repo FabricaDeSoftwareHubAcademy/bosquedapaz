@@ -1,6 +1,7 @@
 <?php 
 
-require '../../Models/Database.php';
+require_once __DIR__ . '/../../Models/Database.php';
+
 
 class Colaborador{
    public int $id_colaborador;

@@ -1,36 +1,47 @@
 <?php 
-
 // require '../../../app/adm/Controller/Colaborador.php';
 
-// if(isset($_POST['cadastrar'])){
-//     $nome = $_POST['nome'];
-//     $email = $_POST['email'];
-//     $telefone = $_POST['tel'];
-//     $cargo = $_POST['cargo'];
-//     $senha = $_POST['senha'];
-//     $confSenha = $_POST['confSenha'];
+// header('Content-Type: application/json');
+
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     // Coleta os dados do formulário
+//     $nome = $_POST['nome'] ?? '';
+//     $email = $_POST['email'] ?? '';
+//     $telefone = $_POST['tel'] ?? '';
+//     $cargo = $_POST['cargo'] ?? '';
+//     $senha = $_POST['senha'] ?? '';
+//     $confSenha = $_POST['confSenha'] ?? '';
+
+//     if ($senha !== $confSenha) {
+//         echo json_encode(['success' => false, 'message' => 'As senhas não coincidem.']);
+//         exit;
+//     }
+
+//     if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK) {
+//         echo json_encode(['success' => false, 'message' => 'Erro ao enviar a imagem.']);
+//         exit;
+//     }
 
 //     $arquivo = $_FILES['imagem'];
-//     if ($arquivo['error']) die ("Falha ao enviar a foto");
 //     $pasta = '../../../Public/imgs/imgs-fotos-cadastro-adm/';
 //     $nome_foto = $arquivo['name'];
 //     $novo_nome = uniqid();
 //     $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-//     if ($extensao != 'png' && $extensao != 'jpg') die ("Extensão do arquivo inválida");
-//     $caminho = $pasta . $novo_nome . '.' . $extensao;
-//     $foto = move_uploaded_file($arquivo['tmp_name'], $caminho);
-
-//     if (!$foto) {
-//         die("Falha ao mover o arquivo para o diretório.");
-//     }
-
-//     if ($senha !== $confSenha){
-//         echo '<script> alert("As senhas não coincidem!"); window.history.back(); </script>';
+//     if (!in_array($extensao, ['jpg', 'jpeg', 'png'])) {
+//         echo json_encode(['success' => false, 'message' => 'Extensão do arquivo inválida. Use .jpg, .jpeg ou .png.']);
 //         exit;
 //     }
 
-//     $senhaHash = password_hash($senha,  PASSWORD_DEFAULT);
+//     $caminho = $pasta . $novo_nome . '.' . $extensao;
+//     $fotoSalva = move_uploaded_file($arquivo['tmp_name'], $caminho);
+
+//     if (!$fotoSalva) {
+//         echo json_encode(['success' => false, 'message' => 'Falha ao mover o arquivo.']);
+//         exit;
+//     }
+
+//     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
 //     $objColab = new Colaborador();
 //     $objColab->nome = $nome;
@@ -41,13 +52,18 @@
 //     $objColab->imagem = $caminho;
 
 //     $res = $objColab->cadastrar();
-//     if($res){
-//         echo '<script> alert("Cadastrado com sucesso!"); window.location.href = "../../../app/adm/Views/cadastrar-adm.php"; </script>';
+
+//     if ($res) {
+//         echo json_encode(['success' => true, 'message' => 'Cadastrado com sucesso!']);
 //     } else {
-//         echo '<script> alert("Erro ao cadastrar!"); </script>';
+//         echo json_encode(['success' => false, 'message' => 'Erro ao cadastrar no banco de dados.']);
 //     }
+
+// } else {
+//     echo json_encode(['success' => false, 'message' => 'Requisição inválida.']);
 // }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -151,7 +167,7 @@
                     <!-- Botões -->
                     <div class="form__actions">
                         <button type="button" name="cancelar" class="btn btn__rosa">Cancelar</button>
-                        <button type="submit" class="btn btn__azul">Cadastrar</button>
+                        <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
             </div>
@@ -162,6 +178,7 @@
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </section>
 
-    <script src="../../../Public/js/js-adm/js-cadastrar-adm.js" defer></script>
+    <script src="/bosquedapaz/Public/js/js-adm/js-cadastrar-adm.js"></script>
+
 </body>
 </html>
