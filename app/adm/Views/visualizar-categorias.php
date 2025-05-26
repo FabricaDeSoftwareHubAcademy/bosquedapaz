@@ -1,10 +1,11 @@
 <?php
     require_once '../Controller/Categoria.php';
+    $complemento_caminho =  '../../';
 
     $categoria = new Categoria();
     $categorias = $categoria->listar();
 
-    print_r($categorias);
+    // print_r($categorias);
 
 ?>
 
@@ -41,7 +42,7 @@
                 <?php foreach($categorias as $category): ?>
                     <div class="item">
                         <div style="background-color:<?= $category->cor; ?>;" class="bolota" id="b1">
-                            <img src="<?= $category->icone; ?>" alt="<?= $category->icone; ?>" class="icon-item">
+                            <img src="<?= $complemento_caminho . $category->icone; ?>" alt="<?= $category->icone; ?>" class="icon-item">
                         </div>
                         <p class="nome-cat"><?= $category->descricao; ?></p>
                     </div>
