@@ -19,71 +19,87 @@
 
             <section class="perfilEdit-empresas">
                 <div class="perfilEdit-logo">
-                    <label for="foto" class="perfilEdit-logoEmpresa">Logo da empresa: </label>
+                    <label class="perfilEdit-logoEmpresa perfilEdit-impotant-label">Logo da empresa: </label>
                     <input type="file" name="foto" id="foto" class="perfilEdit-foto" required>
+                    <label for="foto" class="perfilEdit-upload">
+                        Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
+                    </label>
                 </div>
                 <div class="perfilEdit-name">
-                    <label for="nome" class="perfilEdit-nameEmpresa">Nome da empresa: </label>
+                    <label for="nome" class="perfilEdit-nameEmpresa perfilEdit-impotant-label">Nome da empresa: </label>
                     <input type="text" name="nome" id="nome" class="perfilEdit-nome" placeholder="Digite seu nome" required>
                 </div>
             </section>
 
             <section class="perfilEdit-desc">
-                <label class="perfilEdit-label-desc" for="descricao" >Sobre a Empresa: </label>
+                <label class="perfilEdit-label-desc perfilEdit-impotant-label" for="descricao" >Sobre a Empresa: </label>
                 <textarea name="descricao" id="descricao" class="perfilEdit-text-desc" placeholder="Digite uma breve descrição sobre sua empresa"></textarea>
             </section>
             
             <section class="perfilEdit-info">
-                <div>
-                    <i class="fa-brands fa-square-instagram"></i>
-                    <input type="text" name="instagram" class="perfilEdit-input-info" placeholder="Digite seu instagram">
+
+                <div class="perfilEdit-info-coluna">
+                    <div>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <input type="text" name="instagram" class="perfilEdit-input-info" placeholder="Digite seu instagram">
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                        <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="(99) 982925477">
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-brands fa-square-whatsapp"></i>
-                    <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="Digite seu whatsapp">
+                
+                <div class="perfilEdit-info-coluna">
+                    <div>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <input type="text" name="facebook" class="perfilEdit-input-info" placeholder="Digite seu facebook">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" name="email" class="perfilEdit-input-info" placeholder="Digite seu e-mail">
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <input type="text" name="facebook" class="perfilEdit-input-info" placeholder="Digite seu facebook">
-                </div>
-                <div>
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="text" name="email" class="perfilEdit-input-info" placeholder="Digite seu e-mail">
-                </div>
+
             </section>
 
             <section class="perfilEdit-foto-info">
-                <label for="foto" class="perfilEdit-foto-info-label">Selecione fotos de seus produtos:</label>
+                <label for="foto" class="perfilEdit-foto-info-label perfilEdit-impotant-label">Selecione fotos de seus produtos:</label>
                 <div class="perfilEdit-div-group">
                     <div class="perfilEdit-load-foto">
-                        <i class="bi bi-upload"></i>
-                        <input type="file" name="foto" class="perfilEdit-input-foto">
-                        <p class="perfilEdit-p">Carregar foto 1</p>
+                        <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
+                        <label for="photo" class="perfilEdit-upload-label-square">
+                            <i class="bi bi-upload"></i> Carregar Foto 1
+                        </label>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <i class="bi bi-upload"></i>
-                        <input type="file" name="foto" class="perfilEdit-input-foto">
-                        <p class="perfilEdit-p">Carregar foto 2</p>
+                        <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
+                        <label for="photo" class="perfilEdit-upload-label-square">
+                            <i class="bi bi-upload"></i> Carregar Foto 2
+                        </label>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <i class="bi bi-upload"></i>
-                        <input type="file" name="foto" class="perfilEdit-input-foto">
-                        <p class="perfilEdit-p">Carregar foto 3</p>
+                        <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
+                        <label for="photo" class="perfilEdit-upload-label-square">
+                            <i class="bi bi-upload"></i> Carregar Foto 3
+                        </label>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <i class="bi bi-upload"></i>
-                        <input type="file" name="foto" class="perfilEdit-input-foto">
-                        <p class="perfilEdit-p">Carregar foto 4</p>
+                        <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
+                        <label for="photo" class="perfilEdit-upload-label-square">
+                            <i class="bi bi-upload"></i> Carregar Foto 4
+                        </label>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <i class="bi bi-upload"></i>
-                        <input type="file" name="foto" class="perfilEdit-input-foto">
-                        <p class="perfilEdit-p">Carregar foto 5</p>
+                        <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
+                        <label for="photo" class="perfilEdit-upload-label-square">
+                            <i class="bi bi-upload"></i> Carregar Foto 5
+                        </label>
                     </div>
                     <div class="perfilEdit-load-foto">
-                        <i class="bi bi-upload"></i>
-                        <input type="file" name="foto" class="perfilEdit-input-foto">
-                        <p class="perfilEdit-p">Carregar foto 6</p>
+                        <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
+                        <label for="photo" class="perfilEdit-upload-label-square">
+                            <i class="bi bi-upload"></i> Carregar Foto 6
+                        </label>
                     </div>
                 </div>
             </section>
