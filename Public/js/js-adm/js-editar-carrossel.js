@@ -60,7 +60,7 @@ btnEditar.addEventListener('click', async function (event) {
     let response = await dados_php.json();
 
 
-    // window.location.reload(true)
+    window.location.reload()
 })
 
 async function getImage() {

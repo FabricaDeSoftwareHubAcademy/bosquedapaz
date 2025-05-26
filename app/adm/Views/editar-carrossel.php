@@ -10,6 +10,7 @@
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-carrossel.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
@@ -20,48 +21,45 @@
     <main class="principal">
         <!-- box principal -->
         <div class="box">
-            <form action="" method="post" class="formulario-ca" id="form-carrossel" enctype='multipart/form-data'>
+            <form action="" method="post" class="formulario" id="form-carrossel" enctype='multipart/form-data'>
                 <h1 class="titulo">editar carrosel</h1>
             
                 <!-- local de uploads de imgs para o carrossel -->
-                <section class="up-imgs">
+                <section class="conteiner-imagens">
 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 1</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 1</h2>
+                        <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
                         <label class="uploads" id="label">
                             <input type="file" name="img1" id="imagens-input" class="input" id="input1">
                 
-                            <img src="" alt="Imagem do carrossel 3" id="img1" class="up-img">
+                            <img src="" alt="" id="img1" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
                         </label>
                     </div>
                 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 2</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 2</h2>
+                        <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
                         <label class="uploads" id="label">
                             <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
                 
-                            <img src="" alt="Imagem do carrossel 3" id="img2" class="up-img">
+                            <img src="" alt="" id="img2" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
                         </label>
                     </div>
                 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 3</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 3</h2>
+                        <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
                         <label class="uploads" id="label">
                             <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
                 
-                            <img src="" alt="Imagem do carrossel 3" id="img3" class="up-img">
+                            <img src="" alt="" id="img3" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
 
                         </label>
                     </div>
@@ -70,7 +68,7 @@
                 <!-- botoes parte de baixo -->
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
-                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="" class="btn-voltar">
                     </a>
                     <div class="btn-cancelar-salvar">
                             <button type="reset" class="btn btn-cancelar">
@@ -85,13 +83,12 @@
                 </div>
             </form>
         </div>
-        </div>
     </main>
 
     <!-- bolas de fundo -->
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
+    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="" class="bola-rosa">
 
 
     <!-- link do JavaScript -->

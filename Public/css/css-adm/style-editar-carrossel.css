@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('style-padrao.css');
 @import url('../menu-adm.css');
 
 * {
@@ -8,4 +7,167 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+/* imagem */
+
+.bola-verde1 {
+    position: absolute;
+    top: calc(0% + 200px);
+    z-index: -5;
+}
+
+.bola-verde2 {
+    position: absolute;
+    top: calc(0% + 200px);
+    right: 0%;
+    z-index: -5;
+}
+
+.bola-rosa {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: -5;
+}
+
+
+.principal {
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 90%;
+    height: auto;
+    min-height: 80%;
+    border-radius: .5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(235, 235, 235, 0.65);
+}
+
+.formulario {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    /* background-color: aqua; */
+}
+
+.titulo {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.conteiner-imagens {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.content-imagem {
+    flex: auto;
+    max-width: 35rem;
+}
+
+.num {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+
+.tamanho_img {
+    font-size: .9rem;
+    color: red;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.uploads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+    position: relative;
+}
+
+.input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.imagem {
+    width: 100%;
+}
+
+.editar {
+    font-size: 1.2rem;
+    transition: all ease-in .2s;
+}
+
+.editar:hover {
+    color: #007E70;
+}
+
+.btns {
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-cancelar-salvar {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: .5rem 1.7rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: .5rem;
+    border: none;
+    background-color: #007E70;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-cancelar {
+    background-color: #FF3877;
+}
+
+@media screen and (max-width: 500px) {
+    .btns {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .btn-cancelar-salvar {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
