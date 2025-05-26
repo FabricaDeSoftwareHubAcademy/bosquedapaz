@@ -29,7 +29,7 @@
 
                     <div class="content-imagem">
                         <h2 class="num">Imagem 1</h2>
-                        <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
                             <input type="file" name="img1" id="imagens-input" class="input">
                 
@@ -41,7 +41,7 @@
                 
                     <div class="content-imagem">
                         <h2 class="num">Imagem 2</h2>
-                        <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
                             <input type="file" name="img2" id="imagens-input2" class="input">
                 
@@ -53,7 +53,7 @@
                 
                     <div class="content-imagem">
                         <h2 class="num">Imagem 3</h2>
-                        <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
                             <input type="file" name="img3" id="imagens-input3" class="input">
                 
@@ -85,12 +85,13 @@
             <div class="overlay" id="overlay"></div>
             <?php include "../../../Public/include/modais/modal-aviso.html"; ?>
         </div>
+        
+        <!-- bolas de fundo -->
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+        <!-- <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="" class="bola-rosa"> -->
     </main>
 
-    <!-- bolas de fundo -->
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
-    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="" class="bola-rosa">
 
 
     <!-- link do JavaScript -->

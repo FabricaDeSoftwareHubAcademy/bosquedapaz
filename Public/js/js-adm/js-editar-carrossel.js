@@ -48,6 +48,8 @@ btnEditar = document.getElementById('editar');
 let overlay = document.getElementById('overlay')
 let closeModal = document.querySelector('.close-modal')
 let modalAviso = document.getElementById('modal-aviso');
+let mensagem = document.getElementById('mensagem')
+let explicacao = document.getElementById('explicacao')
 
 
 function abrirModal(){
@@ -72,35 +74,50 @@ btnEditar.addEventListener('click', async function (event) {
         closeModal.addEventListener('click', fecharModal)
     }
     else {
-    
-        let formCarrossel = document.getElementById('form-carrossel')
-
-        const formData = new FormData(formCarrossel);
-
-        let dados_php = await fetch("../../../actions/carrossel.php", {
-            method: "POST",
-            body: formData
+        let inputs = document.querySelectorAll('[type=file]')
+        let erro = ''
+        inputs.forEach(element => {
+            if(element.files.length != 0){
+                var tamanho = (element.files[0].size / 1024) / 1024
+                if (tamanho > 5){
+                    erro  += ` ${element.files[0].name} é muito grande. Por favor envie uma imagem menor.`
+                }
+            }
         });
 
-        let response = await dados_php.json();
-
-        if(response.erro == 0){
-            let mensagem = document.getElementById('mensagem')
-            let explicacao = document.getElementById('explicacao')
-            mensagem.innerText = response.message
-            explicacao.style.display = "none"
+        if (erro.length > 0){
+            mensagem.innerText = 'A imagem enviada não esta de acordo com os padrões';
+            explicacao.innerText = erro
             abrirModal()
             closeModal.addEventListener('click', fecharModal)
         }
-
-        else if(response.erro != 0){
-            let mensagem = document.getElementById('mensagem')
-            let explicacao = document.getElementById('explicacao')
-            mensagem.innerText = response.message
-            explicacao.innerText = response.erro
-            abrirModal()
-            closeModal.addEventListener('click', fecharModal)
+        else {
+            let formCarrossel = document.getElementById('form-carrossel')
+    
+            const formData = new FormData(formCarrossel);
+    
+            let dados_php = await fetch("../../../actions/carrossel.php", {
+                method: "POST",
+                body: formData
+            });
+    
+            let response = await dados_php.json();
+    
+            if(response.erro == 0){
+                mensagem.innerText = response.message
+                explicacao.style.display = "none"
+                abrirModal()
+                closeModal.addEventListener('click', fecharModal)
+            }
+    
+            else if(response.erro != 0){
+                mensagem.innerText = response.message
+                explicacao.innerText = response.erro
+                abrirModal()
+                closeModal.addEventListener('click', fecharModal)
+            }
         }
+
 
     }
 
