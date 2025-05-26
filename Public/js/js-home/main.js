@@ -18,7 +18,6 @@ sandwich.addEventListener('click', function(){
 const titleIntro = document.getElementById('title-intro')
 let textIntro = 'bem vindo á feira bosque da paz'
 let textSemIntro = ''
-console.log(textIntro.length)
 
 // troca texto  bemvindo
 let i = 0
@@ -38,36 +37,20 @@ const intervalText = setInterval(() => {
 //////////////////////////////////////////////////
 // troca imagens carrossel
 
-let sliders = document.querySelectorAll('.img-carrossel')
+let slider = document.getElementById('slider')
+let arrowLeft = document.getElementById('arrow-left')
+let arrowRight = document.getElementById('arrow-right')
 let balls = document.querySelectorAll('.ball')
 balls[0].style.backgroundColor = 'green'
 
-sliders[0].style.opacity = 100
-function trocaImagem (n,y){
-    sliders[n].style.opacity = 100
-    balls[n].style.backgroundColor = 'green'
-    balls[x].style.backgroundColor = 'white'
-    sliders[x].style.opacity = 0
-    x = n
-}
 
 let x = 0
-const interval = setInterval(() => {
-    if (x == 0){
-        trocaImagem(1,0)
-    clearInterval()
-    }
-    else if (x == 1){
-        trocaImagem(2,1)
-    clearInterval()
-    }
-    else if (x == 2){
-        trocaImagem(0,2)
-    clearInterval()
-    }
-}, 3000)
-
-
+function trocaImagem (img, n){
+    slider.style.backgroundImage = `url('../../${img}')`
+    balls[n].style.backgroundColor = 'green'
+    balls[x].style.backgroundColor = 'white'
+    x = n
+}
 
 
 // busca imagens do banco de dados
@@ -76,19 +59,44 @@ async function getImage() {
 
     let resposta = await imagens.json()
 
-    var img1 = document.getElementById('img-carrossel1');
-    var img2 = document.getElementById('img-carrossel2');
-    var img3 = document.getElementById('img-carrossel3');
 
-    if (resposta.imagens[0].posicao == 1){
-        img1.src = `../../${resposta.imagens[0].caminho}`
-    }
-    if (resposta.imagens[1].posicao == 2){
-        img2.src = `../../${resposta.imagens[1].caminho}`
-    }
-    if (resposta.imagens[2].posicao == 3){
-        img3.src = `../../${resposta.imagens[2].caminho}`
-    }
+    const interval = setInterval(() => {
+            if (x == 0){
+                trocaImagem(resposta.imagens[1].caminho,1)
+            }
+            else if (x == 1){
+                trocaImagem(resposta.imagens[2].caminho,2)
+            }
+            else if (x == 2){
+                trocaImagem(resposta.imagens[0].caminho ,0)
+        }
+    }, 3000)
+
+
+    arrowLeft.addEventListener('click', () => {
+        if (x == 0){
+            trocaImagem(resposta.imagens[2].caminho,2)
+        }
+        else if (x == 1){
+            trocaImagem(resposta.imagens[0].caminho,0)
+        }
+        else if (x == 2){
+            trocaImagem(resposta.imagens[1].caminho ,1)
+        }
+    })
+
+    arrowRight.addEventListener('click', () => {
+        if (x == 0){
+            trocaImagem(resposta.imagens[1].caminho,1)
+        }
+        else if (x == 1){
+            trocaImagem(resposta.imagens[2].caminho,2)
+        }
+        else if (x == 2){
+            trocaImagem(resposta.imagens[0].caminho ,0)
+        }
+    })
+
 }
 
 getImage()

@@ -7,17 +7,25 @@ $car = new Carrossel();
 // funcao para mover o arquivo para o pasta de uploads
 // o parametro $num serve para falar o  numero da img
 function update_carrossel($img,$num) {
-    chmod ("../Public/uploads/uploads-carrosel/", 0777);
-    $caminho = '../Public/uploads/uploads-carrosel/';
-    $new_img = $img['name'];
-    $new_name = 'img-carrossel-'.$num;
-    $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
-
-    $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+    try {
+        chmod ("../Public/uploads/uploads-carrosel/", 0777);
+        $caminho = '../Public/uploads/uploads-carrosel/';
+        $new_img = $img['name'];
+        $new_name = 'img-carrossel-'.$num;
+        $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
+    
+        $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+            
+        $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
+    
+        return $caminho_img;
         
-    $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
-
-    return $caminho_img;
+    } catch (\Throwable $th) {
+        return [
+            'erro' => 404,
+            'message' => 'Nao foi possivel enviar a imagens para o servidor'
+        ];
+    }
 }
 
 // quando chegar um POST sera feito uma atualizacao

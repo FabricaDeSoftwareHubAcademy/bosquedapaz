@@ -9,10 +9,7 @@
                 <i class="bi bi-arrow-right arrow"></i>
             </div>
         </div>
-        <div class="slider" id="sliders">
-            <img src="" class="img-carrossel" id="img-carrossel1" alt="">
-            <img src="" class="img-carrossel" id="img-carrossel2" alt="">
-            <img src="" class="img-carrossel" id="img-carrossel3" alt="">
+        <div class="slider" id="slider">
         </div>
     </div>
     <div class="slider-balls">
