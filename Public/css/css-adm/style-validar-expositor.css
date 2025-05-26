@@ -207,10 +207,6 @@ a {
     color: black;
 }
 
-.decoracao {
-    display: none;
-}
-
 .decoracao1 {
     display: flex;
     position: absolute;

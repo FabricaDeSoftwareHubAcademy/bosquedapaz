@@ -1,37 +1,18 @@
 <?php
-class Database {
-    private $servidor = "localhost";
-    private $banco_de_dados = "gerenciar_expositor";
-    private $usuario = "root";
-    private $senha = "";
-    public $conexao;
+require_once __DIR__ . '/../../Models/meuDatabase.php';
 
-    public function __construct() {
-        $this->conectar();
-    }
+class Expositor {
 
-    public function conectar() {
-        $this->conexao = null;
+    // public int $id_expositor;
+    // public string $nome;
+    // public string $email;
+    // public string $categoria;
+    // public string $whatsapp;
 
-        try {
-            $this->conexao = new PDO("mysql:host=" . $this->servidor . ";dbname=" . $this->banco_de_dados, $this->usuario, $this->senha);
-            $this->conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            // echo "Conexão estabelecida.";
-        } catch (PDOException $error) {
-            echo "Erro na conexão com o banco de dados.";
-            echo "<br>";
-            echo $error->getMessage();
-        }
-        return $this->conexao;
-    }
-
-    // Comando para listar um expositor
-    // SELECT * FROM expositores_pendentes
-    public function listarExpositores() {
-        $sql = "SELECT * FROM expositores_pendentes";
-        $stmt = $this->conexao->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    public function ListarExpositores($where = null, $order = null, $limit = null) {
+        $db = new Database("expositores_pendentes");
+        $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+        return $res;
     }
 }
 ?>

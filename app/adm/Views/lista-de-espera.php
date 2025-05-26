@@ -1,9 +1,8 @@
 <?php
-require_once '../Controller/Lista-Espera.php';
-$db = new Database();
-$conexao = $db->conectar();
+require_once __DIR__ . '../../Controller/Lista-Espera.php'; // Altere para o caminho real do arquivo ListaEspera
 
-$dados = $db->listarExpositores()
+$lista = new Expositor();
+$dados = $lista->ListarExpositores();
 ?>
 
 <!DOCTYPE html>
@@ -44,14 +43,14 @@ $dados = $db->listarExpositores()
             </thead>
             <tbody>
               <?php if (!empty($dados)) : ?>
-                <?php foreach ($dados as $dados) : ?>
+                <?php foreach ($dados as $dado) : ?>
                   <tr>
-                    <td><?= htmlspecialchars($dados['nome']) ?></td>
-                    <td><?= htmlspecialchars($dados['email']) ?></td>
-                    <td><?= htmlspecialchars($dados['categoria']) ?></td>
-                    <td><?= htmlspecialchars($dados['whatsapp']) ?></td>
+                    <td><?= htmlspecialchars($dado->nome) ?></td>
+                    <td><?= htmlspecialchars($dado->email) ?></td>
+                    <td><?= htmlspecialchars($dado->categoria) ?></td>
+                    <td><?= htmlspecialchars($dado->whatsapp) ?></td>
                     <td class="perfil">
-                      <a href="tela-gerenciar-expositor.php?id=<?php echo $dados['id_expositor'] ?>">
+                      <a href="tela-gerenciar-expositor.php?id=<?php echo $dado->id_expositor ?>">
                         <i class="bi bi-person-badge"></i>
                       </a>
                     </td>

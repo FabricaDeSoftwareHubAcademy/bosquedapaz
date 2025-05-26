@@ -1,9 +1,7 @@
 <?php
-require '../Controller/Gerenciar-Expositor.php';
-$db = new Database();
-$conexao = $db->conectar();
-
-$dados = $db->listarPorId($_GET['id'])
+require '../Controller/Gerenciar-Expositorr.php';
+$expositor = new Expositor();
+$dados = $expositor->ListarPorId($_GET['id']);
 ?>
 
 <!DOCTYPE html>
@@ -65,47 +63,47 @@ $dados = $db->listarPorId($_GET['id'])
                         <!-- Campos superior -->
                         <div class="campos-formulario">
                             <label for="">Nome</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['nome'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->nome ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Email</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['email'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->email ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Whatsapp</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['whatsapp'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->whatsapp ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">CPF</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cpf'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->cpf ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cidade'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->cidade ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Instagram</label>
                             <a class="formulario-campo-informacao campo-link"
-                            href="<?= htmlspecialchars($dados['instagram'] ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
+                            href="<?= htmlspecialchars($dados->instagram ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
                             target="_blank">
-                            <?= !empty($dados['instagram']) ? "Visitar Perfil" : "Perfil não encontrado"?>
+                            <?= !empty($dados->instagram) ? "Visitar Perfil" : "Perfil não encontrado"?>
                             </a>
                         </div>
 
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
                             <label for="">Marca</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['marca'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->marca ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Tipo</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['tipo'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->tipo ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Energia</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['energia'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->energia ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Voltagem</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['voltagem'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->voltagem ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Endereço</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['endereco'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->endereco ?? 'Dados não encontrado.') ?>" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['categoria'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->categoria ?? 'Dados não encontrado.') ?>" readonly>
                             <a href="">Alterar Categoria</a>
                         </div>
                     </div>
