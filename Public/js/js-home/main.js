@@ -38,7 +38,34 @@ const intervalText = setInterval(() => {
 //////////////////////////////////////////////////
 // troca imagens carrossel
 
+let sliders = document.querySelectorAll('.img-carrossel')
+let balls = document.querySelectorAll('.ball')
+balls[0].style.backgroundColor = 'green'
 
+sliders[0].style.opacity = 100
+function trocaImagem (n,y){
+    sliders[n].style.opacity = 100
+    balls[n].style.backgroundColor = 'green'
+    balls[x].style.backgroundColor = 'white'
+    sliders[x].style.opacity = 0
+    x = n
+}
+
+let x = 0
+const interval = setInterval(() => {
+    if (x == 0){
+        trocaImagem(1,0)
+    clearInterval()
+    }
+    else if (x == 1){
+        trocaImagem(2,1)
+    clearInterval()
+    }
+    else if (x == 2){
+        trocaImagem(0,2)
+    clearInterval()
+    }
+}, 3000)
 
 
 
