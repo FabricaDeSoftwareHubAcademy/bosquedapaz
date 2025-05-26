@@ -1,3 +1,4 @@
+// abre o menu da home
 const sandwich = document.getElementById('sandwich')
 const navMenu = document.getElementById('nav-list')
 sandwich.addEventListener('click', function(){
@@ -12,80 +13,14 @@ sandwich.addEventListener('click', function(){
     }
 })
 
-// pegando elementos do carrossel
-const arrowLeft = document.getElementById('arrow-left');
-const arrowRight = document.getElementById('arrow-right');
-const sliders = document.querySelectorAll('#slider-content')
-const balls = document.querySelectorAll('#ball')
-//iniciando valores padrao
-let count_carrossel = 0;
-let slider = sliders[0];
-let bola_carrossel = balls[0]
-const color_carrossel = '#0D592E';
-
-slider.style.zIndex = 1;
-bola_carrossel.style.backgroundColor = color_carrossel;
-
-// function de trocar imagem
-function trocaImagem (n){
-    slider.style.zIndex = 0;
-    bola_carrossel.style.backgroundColor = 'white';
-    slider = sliders[n];
-    bola_carrossel = balls[n]
-    slider.style.zIndex = 1
-    bola_carrossel.style.backgroundColor = color_carrossel;
-    count_carrossel = n
-}
-
-// intervalo de troca de imagem
-const interval = setInterval(() => {
-    if (count_carrossel == 0){
-        trocaImagem(1)
-    clearInterval()
-    }
-    else if (count_carrossel == 1){
-        trocaImagem(2)
-    clearInterval()
-    }
-    else if (count_carrossel == 2){
-        trocaImagem(0)
-    clearInterval()
-    }
-}, 3000)
-
-// ao clicar na seta esquerca volta para a imagem anterior
-arrowLeft.addEventListener('click', () => {
-    if (count_carrossel == 0){
-        trocaImagem(2)
-    }
-    else if (count_carrossel == 2){
-        trocaImagem(1)
-    }
-    else if (count_carrossel == 1){
-        trocaImagem(0)
-    }
-})
-
-// ao clicar na seta direita passa de imagem
-arrowRight.addEventListener('click', () => {
-    if (count_carrossel == 0){
-        trocaImagem(1)
-    }
-    else if (count_carrossel == 1){
-        trocaImagem(2)
-    }
-    else if (count_carrossel == 2){
-        trocaImagem(0)
-    }
-})
-
+////////////////////////////////////////////////
 // informações
 const titleIntro = document.getElementById('title-intro')
 let textIntro = 'bem vindo á feira bosque da paz'
 let textSemIntro = ''
 console.log(textIntro.length)
 
-
+// troca texto  bemvindo
 let i = 0
 const intervalText = setInterval(() => {
     if(i < textIntro.length){
@@ -98,9 +33,44 @@ const intervalText = setInterval(() => {
     }
 }, 50)
 
-// let textInfo = document.getElementById('text-info')
-// console.log(textInfo)
 
+
+//////////////////////////////////////////////////
+// troca imagens carrossel
+
+
+
+
+
+
+// busca imagens do banco de dados
+async function getImage() {
+    let imagens = await fetch("../../../actions/carrossel.php")
+
+    let resposta = await imagens.json()
+
+    var img1 = document.getElementById('img-carrossel1');
+    var img2 = document.getElementById('img-carrossel2');
+    var img3 = document.getElementById('img-carrossel3');
+
+    if (resposta.imagens[0].posicao == 1){
+        img1.src = `../../${resposta.imagens[0].caminho}`
+    }
+    if (resposta.imagens[1].posicao == 2){
+        img2.src = `../../${resposta.imagens[1].caminho}`
+    }
+    if (resposta.imagens[2].posicao == 3){
+        img3.src = `../../${resposta.imagens[2].caminho}`
+    }
+}
+
+getImage()
+
+
+
+
+////////////////////////////////////////////////////////////////
+// soma numeros nas informacoes
 document.addEventListener("DOMContentLoaded", setTimeout( n = () => {
     const ncs = document.querySelectorAll('.ncs');
     const speed = 200;
@@ -121,8 +91,5 @@ document.addEventListener("DOMContentLoaded", setTimeout( n = () => {
 
         var elements = document.querySelector('#inc');
         elements.addEventListener('mousehover', updateCount());
-        // updateCount();
     });
 }, 1700))
-
-
