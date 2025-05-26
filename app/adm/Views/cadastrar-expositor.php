@@ -198,7 +198,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
-
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>
 

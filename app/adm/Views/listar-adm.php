@@ -111,5 +111,6 @@ $colaboradores = $adm->listar($busca);
 </body>
 
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>

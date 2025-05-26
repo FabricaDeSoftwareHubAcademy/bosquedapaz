@@ -408,6 +408,8 @@
         <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
       </div>
+  
+  <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>
 

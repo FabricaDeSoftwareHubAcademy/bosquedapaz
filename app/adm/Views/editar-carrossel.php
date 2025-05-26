@@ -1,13 +1,3 @@
-<?php
-
-$img1 = '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg';
-$img2 = '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg';
-$img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,19 +18,14 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
-
         <!-- box principal -->
         <div class="box">
-
-
-            
-            <h1 class="titulo">editar carrosel</h1>
-
-
-            
-            <!-- local de uploads de imgs para o carrossel -->
             <form action="" method="post" class="formulario-ca" id="form-carrossel" enctype='multipart/form-data'>
+                <h1 class="titulo">editar carrosel</h1>
+            
+                <!-- local de uploads de imgs para o carrossel -->
                 <section class="up-imgs">
+
                     <div class="div-nome">
                         <h1 class="num">Imagem 1</h1>
                         <label class="uploads" id="label">
@@ -59,7 +44,7 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
                         <label class="uploads" id="label">
                             <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
                 
-                            <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" id="img2" class="up-img">
+                            <img src="" alt="Imagem do carrossel 3" id="img2" class="up-img">
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
@@ -72,7 +57,7 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
                         <label class="uploads" id="label">
                             <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
                 
-                            <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" id="img3" class="up-img">
+                            <img src="" alt="Imagem do carrossel 3" id="img3" class="up-img">
                 
                             <button class="btn-editar open-modal">
                                 <i class="fa-solid fa-pen editar"></i>
@@ -81,18 +66,19 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
                         </label>
                     </div>
                 </section>
+
                 <!-- botoes parte de baixo -->
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
                         <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                     </a>
                     <div class="btn-cancelar-salvar">
-                            <button class="btn btn-cancelar">
-                                <a href="">Cancelar</a>
+                            <button type="reset" class="btn btn-cancelar">
+                                cancelar
                             </button>
                             
                             <button type="submit" name="editar" id="editar" class="btn btn-salvar">
-                                Salvar
+                                salvar
                             </button>
                         </div>
                     </div>

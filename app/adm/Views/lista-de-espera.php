@@ -85,5 +85,6 @@ $expositores = $lista->listar($busca);
   </div>
 
   <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
+  <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>
