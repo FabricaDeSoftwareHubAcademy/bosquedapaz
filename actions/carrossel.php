@@ -4,7 +4,10 @@ require_once("../app/adm/Controller/Carrossel.php");
 
 $car = new Carrossel();
 
+// funcao para mover o arquivo para o pasta de uploads
+// o parametro $num serve para falar o  numero da img
 function update_carrossel($img,$num) {
+    chmod ("../Public/uploads/uploads-carrosel/", 0777);
     $caminho = '../Public/uploads/uploads-carrosel/';
     $new_img = $img['name'];
     $new_name = 'img-carrossel-'.$num;
@@ -17,18 +20,27 @@ function update_carrossel($img,$num) {
     return $caminho_img;
 }
 
+// quando chegar um POST sera feito uma atualizacao
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $response = array('status' => 200);
 
-    $i = 1;
 
+    $i = 1; // contador para saber qual img
+    // percorre todos os arquivos
     foreach ($_FILES as $chave => $dados) {
         if(!empty($dados['name'])){
             $caminho = update_carrossel($dados, $i);
             $car->caminho = $caminho;
-            $car->possicao = $i;
+            $car->posicao = $i;
             $atualizacao = $car->atualizar($i);
-            array_push($response, $atualizacao);
+
+            // mensagem de retorno para o usuario
+            if ($atualizacao == TRUE){
+                $response["message"] = "carrossel atualizado com sucesso.";
+            }
+            else if ($atualizacao == FALSE){
+                $response["massage"] = "não foi possível atualizar o carrossel.";
+            }
         }
 
         $i++;

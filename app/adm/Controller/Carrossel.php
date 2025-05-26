@@ -5,14 +5,14 @@ require_once('../app/Models/Database.php');
 class Carrossel {
     public int $id;
     public string $caminho;
-    public int $possicao;
+    public int $posicao;
 
     public function atualizar(int $id){
         $db = new Database('carrossel');
 
         $values = [
             "caminho" => $this->caminho,
-            "possicao" => $this->possicao
+            "posicao" => $this->posicao
         ];
 
         $res = $db->update('id_carrossel = '. $id, $values);

@@ -59,7 +59,8 @@ btnEditar.addEventListener('click', async function (event) {
 
     let response = await dados_php.json();
 
-    console.log(response)
+
+    // window.location.reload(true)
 })
 
 async function getImage() {
@@ -70,6 +71,16 @@ async function getImage() {
     var img1 = document.getElementById('img1');
     var img2 = document.getElementById('img2');
     var img3 = document.getElementById('img3');
+
+    if (resposta.imagens[0].posicao == 1){
+        img1.src = `../../${resposta.imagens[0].caminho}`
+    }
+    if (resposta.imagens[1].posicao == 2){
+        img2.src = `../../${resposta.imagens[1].caminho}`
+    }
+    if (resposta.imagens[2].posicao == 3){
+        img3.src = `../../${resposta.imagens[2].caminho}`
+    }
 }
 
 getImage()
