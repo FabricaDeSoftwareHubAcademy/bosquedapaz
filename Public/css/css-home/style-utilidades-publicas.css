@@ -103,6 +103,23 @@
     position: relative;
     background-color: black;
 }
+.por-cima-card{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    z-index: 2;
+    position: absolute;
+}
+
+.parte-superior{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+}
+
+/* .parte-inferior{
+    width: 100%;
+} */
 
 .div__decorativa{
     width: 400px;
@@ -112,16 +129,31 @@
     left: -5px;
     background-color: #3F49EA;
     transform: rotate(-25deg);
+    z-index: 1;
 }
 
 .linha__decorativa1{
-    width: 20px;
-    height: 20%;
+    width: 15px;
+    height: 34%;
     position: absolute;
-    top: 45vh;
-    left: 0px;
-    background-color: blueviolet;
+    top: 39vh;
+    left: 63px;
+    background-color: #3F49EA;
+    border-radius: 10px;
     transform: rotate(65deg);
+    z-index: 1;
+}
+
+.linha__decorativa2{
+    width: 15px;
+    height: 34%;
+    position: absolute;
+    top: 34vh;
+    left: 237px;
+    background-color: white;
+    border-radius: 10px;
+    transform: rotate(65deg);
+    z-index: 1;
 }
 
 .cards:hover {

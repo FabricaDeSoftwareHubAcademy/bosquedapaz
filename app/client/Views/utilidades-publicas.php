@@ -21,6 +21,10 @@
                     <div class="div__decorativa"></div>
                     <div class="linha__decorativa1"></div>
                     <div class="linha__decorativa2"></div>
+                    <div class="por-cima-card">
+                        <div class="parte-superior"></div>
+                        <div class="parte-inferior"></div>
+                    </div>
                     
                 </div>
 
