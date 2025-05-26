@@ -31,7 +31,7 @@
                         <h2 class="num">Imagem 1</h2>
                         <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img1" id="imagens-input" class="input" id="input1">
+                            <input type="file" name="img1" id="imagens-input" class="input">
                 
                             <img src="" alt="" id="img1" class="imagem">
                 
@@ -43,7 +43,7 @@
                         <h2 class="num">Imagem 2</h2>
                         <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
+                            <input type="file" name="img2" id="imagens-input2" class="input">
                 
                             <img src="" alt="" id="img2" class="imagem">
                 
@@ -55,7 +55,7 @@
                         <h2 class="num">Imagem 3</h2>
                         <span class="tamanho_img">Tamanho permitido: 1920 x 1080 pixels</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
+                            <input type="file" name="img3" id="imagens-input3" class="input">
                 
                             <img src="" alt="" id="img3" class="imagem">
                 
@@ -82,6 +82,8 @@
                     </div>
                 </div>
             </form>
+            <div class="overlay" id="overlay"></div>
+            <?php include "../../../Public/include/modais/modal-aviso.html"; ?>
         </div>
     </main>
 

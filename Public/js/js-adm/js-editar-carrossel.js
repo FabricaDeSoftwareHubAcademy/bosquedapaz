@@ -29,6 +29,8 @@ function readImage3() {
     }
 }
 
+// troca pela img selecionada
+
 let inputImg1 = document.getElementById("imagens-input")
 
 inputImg1.addEventListener("change", readImage, false);
@@ -40,27 +42,71 @@ let inputImg3 = document.getElementById("imagens-input3")
 inputImg3.addEventListener("change", readImage3, false);
 
 
+
 btnEditar = document.getElementById('editar');
-// console.log($formCarrossel);
+
+let overlay = document.getElementById('overlay')
+let closeModal = document.querySelector('.close-modal')
+let modalAviso = document.getElementById('modal-aviso');
+
+
+function abrirModal(){
+    overlay.style.display = "block"
+    modalAviso.showModal();
+}
+
+function fecharModal(){
+    document.getElementById(closeModal.getAttribute('data-modal')).close()
+    overlay.style.display = "none"
+    window.location.reload()
+}
 
 btnEditar.addEventListener('click', async function (event) {
     event.preventDefault()
 
-    let formCarrossel = document.getElementById('form-carrossel')
+    let allInputs = document.getElementsByClassName('input')
+    
+    if(allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0){
+        abrirModal();
 
-    const formData = new FormData(formCarrossel);
+        closeModal.addEventListener('click', fecharModal)
+    }
+    else {
+    
+        let formCarrossel = document.getElementById('form-carrossel')
 
-    // console.log(formData)
+        const formData = new FormData(formCarrossel);
 
-    let dados_php = await fetch("../../../actions/carrossel.php", {
-        method: "POST",
-        body: formData
-    });
+        let dados_php = await fetch("../../../actions/carrossel.php", {
+            method: "POST",
+            body: formData
+        });
 
-    let response = await dados_php.json();
+        let response = await dados_php.json();
+
+        if(response.erro == 0){
+            let mensagem = document.getElementById('mensagem')
+            let explicacao = document.getElementById('explicacao')
+            mensagem.innerText = response.message
+            explicacao.style.display = "none"
+            abrirModal()
+            closeModal.addEventListener('click', fecharModal)
+        }
+
+        else if(response.erro != 0){
+            let mensagem = document.getElementById('mensagem')
+            let explicacao = document.getElementById('explicacao')
+            mensagem.innerText = response.message
+            explicacao.innerText = response.erro
+            abrirModal()
+            closeModal.addEventListener('click', fecharModal)
+        }
+
+    }
 
 
-    window.location.reload()
+
+
 })
 
 async function getImage() {

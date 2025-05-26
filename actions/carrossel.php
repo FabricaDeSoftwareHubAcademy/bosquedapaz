@@ -36,10 +36,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             // mensagem de retorno para o usuario
             if ($atualizacao == TRUE){
-                $response["message"] = "carrossel atualizado com sucesso.";
+                $response["message"] = "Carrossel atualizado com sucesso";
+                $response["erro"] = "0";
             }
             else if ($atualizacao == FALSE){
-                $response["massage"] = "não foi possível atualizar o carrossel.";
+                $response["message"] = "Não foi possível atualizar o carrossel";
+                $response["erro"] = "Tente mandar a imagem novamente.";
             }
         }
 
