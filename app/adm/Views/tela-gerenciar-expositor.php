@@ -136,7 +136,7 @@ $dados = $expositor->ListarPorId($_GET['id']);
         <div class="modal-content-recusar-expositor">
             <h1 class="modal-texto-recusar-expositor">Justifique o Motivo</h1>
             <form action="../../../actionsADM/actions-gerenciar-expositor/recusar-expositor-action.php" method="post" class="motivo-recusar-formulario" id="formulario-recusar-expositor">
-                <input type="hidden" name="id_expositor" value="<?= $dados['id_expositor'] ?>">
+                <input type="hidden" name="id_expositor" value="<?= $dados->id_expositor ?>">
                 <textarea name="textarea-modal-recusar-expositor" id="motivo_recusar_expositor" class="motivo-recusar-expositor" placeholder="Digite aqui o motivo"></textarea>
 
                 <div class="modal-botoes-recusar-expositor">
@@ -168,10 +168,12 @@ $dados = $expositor->ListarPorId($_GET['id']);
             <h2 class="modal-subtexto-validar-expositor">Informe numero da barraca e cor da rua em que o expositor ira atuar.</h2>
 
             <form action="../../../actionsADM/actions-gerenciar-expositor/validar-expositor-action.php" method="POST" id="formulario-informacoes-validar-expositor" class="area-informacoes-validar-expositor">
-                <input type="hidden" name="id_expositor" value="<?= $dados['id_expositor'] ?>">
-                <input type="hidden" name="nome_expositor" value="<?= $dados['nome'] ?>">
-                <input type="hidden" name="cpf_expositor" value="<?= $dados['cpf'] ?>">
-                <input type="hidden" name="marca_expositor" value="<?= $dados['marca'] ?>">
+                <input type="hidden" name="id_expositor" value="<?= $dados->id_expositor ?>">
+                <input type="hidden" name="nome_expositor" value="<?= $dados->nome ?>">
+                <input type="hidden" name="email_expositor" value="<?= $dados->email ?>">
+                <input type="hidden" name="whatsapp_expositor" value="<?= $dados->whatsapp ?>">
+                <input type="hidden" name="cpf_expositor" value="<?= $dados->cpf ?>">
+                <input type="hidden" name="marca_expositor" value="<?= $dados->marca ?>">
                 <label for="">Numero da Barraca</label>
                 <input type="text" name="numero_barraca" id="numero_barraca_expositor" class="campo-numero-barraca">
 

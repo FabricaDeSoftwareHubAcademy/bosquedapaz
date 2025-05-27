@@ -1198,10 +1198,12 @@ VALIDAR EXPOSITOR */
 @media (min-width: 1300px) and (max-width: 1400px) {
     .body-validar-expositor {
         height: auto;
+        /* background-color: red; */
     }
 
     .main-box {
         margin-top: .7%;
+        height: 80vh;
     }
 
     .area-superior-imagem {

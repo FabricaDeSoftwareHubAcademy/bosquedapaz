@@ -1,16 +1,18 @@
 <?php
-require_once '../../app/adm/Controller/Gerenciar-Expositor.php';
-$model = new Database;
+require_once '../../app/adm/Controller/Gerenciar-Expositorr.php';
+$expositor = new Expositor;
 
 if(isset($_POST['botao-validar-expositor'])) {
-    $id = $_POST['id_expositor'];
-    $nome = $_POST['nome_expositor'];
-    $cpf = $_POST['cpf_expositor'];
-    $marca = $_POST['marca_expositor'];
-    $numero_barraca = $_POST['numero_barraca'];
-    $cor_rua = $_POST['selecao-cores'];
+    $expositor->id_expositor = $_POST['id_expositor'];
+    $expositor->nome = $_POST['nome_expositor'];
+    $expositor->email = $_POST['email_expositor'];
+    $expositor->whatsapp = $_POST['whatsapp_expositor'];
+    $expositor->cpf = $_POST['cpf_expositor'];
+    $expositor->marca = $_POST['marca_expositor'];
+    $expositor->numero_barraca = $_POST['numero_barraca'];
+    $expositor->cor_rua = $_POST['selecao-cores'];
 
-    $model->validarExpositor($id, $numero_barraca, $cor_rua);
+    $expositor->validarExpositor($expositor->id_expositor, $expositor->numero_barraca, $expositor->cor_rua);
     header('Location: ../../app/adm/Views/lista-de-espera.php');
     exit;
 }
