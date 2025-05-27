@@ -35,7 +35,7 @@
         <form id="formBusca">
           <div class="search-bar">
             <label for="busca">Procurar</label>
-            <input type="text" id="busca" name="busca" placeholder="Colaborador" value="<?php echo htmlspecialchars($busca); ?>" />
+            <input type="text" id="busca" name="busca" placeholder="Colaborador" />
             <button type="submit" class="search-button">BUSCAR</button>
           </div>
         </form>
@@ -109,6 +109,5 @@
   </div>
 
   <script src="../../../Public/js/js-adm/listar-adm.js" defer></script>
-  <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php 
 
-require_once __DIR__ . '/../../Models/Database.php';
+require_once __DIR__ . '/../../../Models/Database.php';
 
 
 class Colaborador{
@@ -14,6 +14,8 @@ class Colaborador{
 
 //    Cadastro:
     public function cadastrar(){
+        $senhaHash = password_hash($this->senha, PASSWORD_DEFAULT);
+
         $dbPessoa = new Database('pessoa');
         $resPessoa = $dbPessoa->insert([
             'nome'=> $this->nome,
@@ -32,7 +34,9 @@ class Colaborador{
                 'imagem' => $this->imagem,
             ]);
 
-            return $resColaborador;
+            if($resColaborador){
+                return $dbColaborador->getConnection()->lastInsertId();
+            }
         }
         return false;
     }
