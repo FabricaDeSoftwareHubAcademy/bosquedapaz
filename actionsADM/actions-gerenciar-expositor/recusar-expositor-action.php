@@ -1,5 +1,5 @@
 <?php
-require_once '../../app/adm/Controller/Gerenciar-Expositorr.php';
+require_once '../../app/adm/Controller/Gerenciar-Expositor.php';
 $expositor = new Expositor;
 
 if(isset($_POST['botao-recusar-expositor'])) {

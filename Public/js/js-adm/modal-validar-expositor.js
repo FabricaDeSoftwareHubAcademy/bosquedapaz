@@ -86,20 +86,43 @@ botaoConfirmarValidar2.addEventListener("click", () => {
 //     document.body.classList.remove("modal-aberto");
 // });
 
-window.addEventListener("DOMContentLoaded", () => {
-    if (typeof mostrarModalRecusar3 !== "undefined" && mostrarModalRecusar3) {
-        if (modalRecusar3) {
-            modalRecusar3.style.display = "flex";
-            document.body.classList.add("modal-aberto");
-        }
-    }
-});
+const botaoAlterarCategoria = document.getElementById("botao_alterar_categoria");
+const modalCategoria = document.getElementById("modal_alterar_categoria");
+const botaoCancelarCategoria = document.getElementById("botao_cancelar_alterar_categoria");
 
-window.addEventListener("DOMContentLoaded", () => {
-    if (typeof mostrarModalValidar3 !== "undefined" && mostrarModalValidar3) {
-        if (modalValidar3) {
-            modalValidar3.style.display = "flex";
-            document.body.classList.add("modal-aberto");
-        }
-    }
-});
+if (botaoAlterarCategoria) {
+    botaoAlterarCategoria.addEventListener("click", () => {
+        modalCategoria.style.display = "flex";
+        document.body.classList.add("modal-aberto");
+    });
+}
+
+function fecharModal() {
+    modalCategoria.style.display = "none";
+    document.body.classList.remove("modal-aberto");
+}
+
+if (botaoCancelarCategoria) {
+    botaoCancelarCategoria.addEventListener("click", fecharModal);
+}
+
+
+// JAVASCRIPT DOS MODAIS DE MENSAGEM DE SUCESSO
+
+// window.addEventListener("DOMContentLoaded", () => {
+//     if (typeof mostrarModalRecusar3 !== "undefined" && mostrarModalRecusar3) {
+//         if (modalRecusar3) {
+//             modalRecusar3.style.display = "flex";
+//             document.body.classList.add("modal-aberto");
+//         }
+//     }
+// });
+
+// window.addEventListener("DOMContentLoaded", () => {
+//     if (typeof mostrarModalValidar3 !== "undefined" && mostrarModalValidar3) {
+//         if (modalValidar3) {
+//             modalValidar3.style.display = "flex";
+//             document.body.classList.add("modal-aberto");
+//         }
+//     }
+// });

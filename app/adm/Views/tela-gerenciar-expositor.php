@@ -1,7 +1,17 @@
 <?php
-require '../Controller/Gerenciar-Expositorr.php';
-$expositor = new Expositor();
-$dados = $expositor->ListarPorId($_GET['id']);
+require '../Controller/Gerenciar-Expositor.php';
+
+if (isset($_GET['id'])) {
+    $expositor = new Expositor();
+    $dados = $expositor->ListarPorId($_GET['id']);
+} else {
+    echo "Nenhum ID recebido.";
+    echo "<br>";
+    echo "Você será redirecionado em 5 segundos.";
+    header('Refresh: 5; url=lista-de-espera.php');
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +26,6 @@ $dados = $expositor->ListarPorId($_GET['id']);
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Bloco principal -->
 </head>
 
@@ -79,9 +88,9 @@ $dados = $expositor->ListarPorId($_GET['id']);
 
                             <label for="">Instagram</label>
                             <a class="formulario-campo-informacao campo-link"
-                            href="<?= htmlspecialchars($dados->instagram ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
-                            target="_blank">
-                            <?= !empty($dados->instagram) ? "Visitar Perfil" : "Perfil não encontrado"?>
+                                href="<?= htmlspecialchars($dados->instagram ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
+                                target="_blank">
+                                <?= !empty($dados->instagram) ? "Visitar Perfil" : "Perfil não encontrado" ?>
                             </a>
                         </div>
 
@@ -104,7 +113,7 @@ $dados = $expositor->ListarPorId($_GET['id']);
 
                             <label for="">Categoria</label>
                             <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= htmlspecialchars($dados->categoria ?? 'Dados não encontrado.') ?>" readonly>
-                            <a href="">Alterar Categoria</a>
+                            <a id="botao_alterar_categoria">Alterar Categoria</a>
                         </div>
                     </div>
 
@@ -117,6 +126,33 @@ $dados = $expositor->ListarPorId($_GET['id']);
             </div>
         </section>
     </main>
+
+    <!-- Modal de Categoria -->
+    <div class="modal modal-alterar-categoria" id="modal_alterar_categoria">
+        <div class="modal-content-alterar-categoria">
+            <h1 class="modal-texto-alterar-categoria">Selecione a Categoria</h1>
+            <form action="../../../actionsADM/actions-gerenciar-expositor/alterar-categoria-action.php" method="POST" class="form-modal-alterar-categoria" id="">
+                <input type="hidden" name="id_expositor" value="<?= $dados->id_expositor ?>">
+                <select class="select-categoria" name="select-alterar-categoria" id="select_alterar_categoria">
+                    <option value="Artesanato">Artesanato</option>
+                    <option value="Antiguidade">Antiguidade</option>
+                    <option value="Colecionismo">Colecionismo</option>
+                    <option value="Cosmetologia">Cosmetologia</option>
+                    <option value="Gastronomia">Gastronomia</option>
+                    <option value="Literatura">Literatura</option>
+                    <option value="Moda_Autoral">Moda Autoral</option>
+                    <option value="Plantas">Plantas</option>
+                    <option value="Sustentabilidade">Sustentabilidade</option>
+                </select>
+
+                <div class="modal-botoes-alterar-categoria">
+                    <button type="button" class="botoes-modal-alterar-categoria botao-cancelar" id="botao_cancelar_alterar_categoria">Cancelar</button>
+                    <button type="submit" name="botao-alterar-categoria" class="botoes-modal-alterar-categoria botao-confirmar" id="botao_confirmar_alterar_categoria">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
     <!-- Modais - Recusar Expositor -->
     <!-- ------------------------------ -->

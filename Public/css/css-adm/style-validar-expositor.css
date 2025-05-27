@@ -205,6 +205,7 @@
 
 a {
     color: black;
+    cursor: pointer;
 }
 
 .decoracao1 {
@@ -255,6 +256,54 @@ a {
 body.modal-aberto {
     overflow: hidden;
 }
+
+/* ESTILIZAÇÃO MODAL
+ALTERAR CATEGORIA */
+
+.modal-content-alterar-categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white; 
+}
+
+.form-modal-alterar-categoria {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 10px; */
+    /* background-color: red; */
+}
+
+.select-categoria {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.modal-botoes-alterar-categoria {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+
+.botoes-modal-alterar-categoria {
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ESTILIZAÇÃO MODAL
+ALTERAR CATEGORIA */
 
 /* ESTILIZAÇÃO MODAL 
 RECUSAR EXPOSITOR */
@@ -510,14 +559,21 @@ VALIDAR EXPOSITOR */
     }
 
     .modal-content-recusar-expositor,
-    .modal-content-validar-expositor {
+    .modal-content-validar-expositor,
+    .modal-content-alterar-categoria {
         width: 90%;
     }
 
     .modal-texto-recusar-expositor,
-    .modal-texto-validar-expositor {
+    .modal-texto-validar-expositor, 
+    .modal-texto-alterar-categoria {
         font-size: 1.1rem;
         /* background-color: red; */
+    }
+
+
+    .select-categoria {
+        font-size: 1rem;
     }
 
     .modal-subtexto-validar-expositor {
@@ -531,14 +587,16 @@ VALIDAR EXPOSITOR */
     }
 
     .modal-botoes-recusar-expositor,
-    .modal-botoes-validar-expositor {
+    .modal-botoes-validar-expositor,
+    .modal-botoes-alterar-categoria {
         gap: 10px;
     }
 
     .botoes-modal-recusar-expositor,
-    .botoes-modal-validar-expositor {
-        font-size: 1.2rem;
-        padding: 10px 20px;
+    .botoes-modal-validar-expositor,
+    .botoes-modal-alterar-categoria {
+        font-size: 1rem;
+        padding: 10px 10px;
     }
 
     .area-informacoes-validar-expositor {
@@ -547,9 +605,11 @@ VALIDAR EXPOSITOR */
 
     .area-informacoes-validar-expositor input,
     .area-informacoes-validar-expositor select {
-        font-size: 1.3rem;
+        font-size: 1rem;
         width: 100%;
     }
+
+    
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -666,7 +726,8 @@ VALIDAR EXPOSITOR */
     }
 
     .modal-content-recusar-expositor,
-    .modal-content-validar-expositor {
+    .modal-content-validar-expositor,
+    .modal-content-alterar-categoria {
         width: 90%;
         padding: 55px;
     }
@@ -678,11 +739,19 @@ VALIDAR EXPOSITOR */
     .area-informacoes-validar-expositor input,
     .area-informacoes-validar-expositor select {
         font-size: 1.4rem;
+    }
 
+    .form-modal-alterar-categoria {
+        height: 150px;
+    }
+    
+    .select-categoria {
+        font-size: 1.3rem;
     }
 
     .modal-texto-recusar-expositor,
-    .modal-texto-validar-expositor {
+    .modal-texto-validar-expositor,
+    .modal-texto-alterar-categoria {
         font-size: 2rem;
     }
 
@@ -696,7 +765,8 @@ VALIDAR EXPOSITOR */
     }
 
     .botoes-modal-recusar-expositor,
-    .botoes-modal-validar-expositor {
+    .botoes-modal-validar-expositor,
+    .botoes-modal-alterar-categoria {
         padding: 20px 45px;
         font-size: 1.3rem;
     }
@@ -822,13 +892,15 @@ VALIDAR EXPOSITOR */
     }
 
     .modal-content-recusar-expositor,
-    .modal-content-validar-expositor {
+    .modal-content-validar-expositor,
+    .modal-content-alterar-categoria {
         width: 90%;
         padding: 60px;
     }
 
     .modal-texto-recusar-expositor,
-    .modal-texto-validar-expositor {
+    .modal-texto-validar-expositor,
+    .modal-texto-alterar-categoria {
         font-size: 2.5rem;
     }
 
@@ -849,6 +921,14 @@ VALIDAR EXPOSITOR */
         font-size: 2rem;
     }
 
+    .form-modal-alterar-categoria {
+        height: 150px;
+    }
+    
+    .select-categoria {
+        font-size: 1.3rem;
+    }
+
     .area-informacoes-validar-expositor input,
     .area-informacoes-validar-expositor select {
         height: 60px;
@@ -857,7 +937,8 @@ VALIDAR EXPOSITOR */
     }
 
     .botoes-modal-recusar-expositor,
-    .botoes-modal-validar-expositor {
+    .botoes-modal-validar-expositor,
+    .botoes-modal-alterar-categoria {
         padding: 20px 50px;
         font-size: 1.5rem;
     }
@@ -987,13 +1068,15 @@ VALIDAR EXPOSITOR */
     }
 
     .modal-content-recusar-expositor,
-    .modal-content-validar-expositor {
+    .modal-content-validar-expositor,
+    .modal-content-alterar-categoria {
         width: 90%;
         padding: 30px;
     }
 
     .modal-texto-recusar-expositor,
-    .modal-texto-validar-expositor {
+    .modal-texto-validar-expositor,
+    .modal-texto-alterar-categoria {
         font-size: 3rem;
     }
 
@@ -1014,6 +1097,14 @@ VALIDAR EXPOSITOR */
     .area-informacoes-validar-expositor label {
         font-size: 2rem;
     }
+    
+    .form-modal-alterar-categoria {
+        height: 200px;
+    }
+    
+    .select-categoria {
+        font-size: 1.5rem;
+    }
 
     .area-informacoes-validar-expositor input,
     .area-informacoes-validar-expositor select {
@@ -1023,7 +1114,8 @@ VALIDAR EXPOSITOR */
     }
 
     .botoes-modal-recusar-expositor,
-    .botoes-modal-validar-expositor {
+    .botoes-modal-validar-expositor,
+    .botoes-modal-alterar-categoria {
         padding: 15px 50px;
         font-size: 2rem;
     }

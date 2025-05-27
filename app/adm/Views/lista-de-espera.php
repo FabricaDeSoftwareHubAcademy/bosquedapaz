@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '../../Controller/Lista-Espera.php'; // Altere para o caminho real do arquivo ListaEspera
-
+require_once __DIR__ . '../../Controller/Lista-Espera.php';
 $lista = new Expositor();
 $dados = $lista->ListarExpositores();
 ?>
