@@ -106,7 +106,6 @@
     
 
     <?php include "../../../Public/assets/home/rodape.html"; ?>
-    <script src="../../../Public/js/js-home/main.js" defer></script>
 
 </body>
 </html>

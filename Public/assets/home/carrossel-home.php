@@ -18,3 +18,5 @@
         <div class="ball" id="ball"></div>
     </div>
 </section>
+
+<script src="../../../Public/js/js-home/carrossel.js"></script>
