@@ -1,9 +1,14 @@
 <?php
 require_once '../Controller/Atracao.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $id_evento = $_GET['id_evento'] ?? null;
+}
+
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validação básica dos campos
+    $id_evento = $_POST['id_evento'] ?? null;
     $nome = $_POST['nome_atracao'] ?? '';
     $descricao = $_POST['descricao_atracao'] ?? '';
     $id_evento = $_POST['id_evento'] ?? '';

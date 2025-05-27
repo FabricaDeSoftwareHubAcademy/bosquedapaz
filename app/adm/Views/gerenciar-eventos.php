@@ -43,7 +43,7 @@ require_once '../../../actions/evento/listar_evento.php';
                         <tbody>
                         <?php foreach ($eventos as $event): ?>
                                 <tr>
-                                    <td><?= htmlspecialchars($event->getNome()) ?></td>
+                                    <td class="nome-evento"><?= htmlspecialchars($event->getNome()) ?></td>
                                     <td><?= htmlspecialchars($event->getData()) ?></td>
                                     <td>
                                         <span class="<?= $event->getStatus() ? 'status-ativo' : 'status-inativo' ?>">
@@ -56,7 +56,7 @@ require_once '../../../actions/evento/listar_evento.php';
                                         </a>
                                     </td>
                                     <td class="mais">
-                                        <a href="gerenciar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-plus"></i>
+                                        <a href="cadastrar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-plus"></i>
                                         </a>
                                     </td>
                                     <td class="mais">

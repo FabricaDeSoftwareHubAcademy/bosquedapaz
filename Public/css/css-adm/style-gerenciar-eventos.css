@@ -112,6 +112,9 @@ h2 {
     border-collapse: collapse;
     text-align: center;
 }
+.nome-evento{
+    overflow: hidden;
+}
 
 
 /* .collaborators-table thead {

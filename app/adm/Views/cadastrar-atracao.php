@@ -23,23 +23,22 @@ require_once '../../../actions/atracao/cadastrar_atracao.php';
             <h2>CADASTRO DE ATRAÇÃO</h2>
                 <div class="form-box">
                     <form method="POST" enctype="multipart/form-data">
-                        <div id="form1">
+                        <input type="hidden" name="id_evento" value="<?= htmlspecialchars($id_evento) ?>">
 
-                            <div class="input-group">
-                                <label>Nome:</label>
-                                <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
-                                    required>
-                            </div>
+                        <div class="input-group">
+                            <label>Nome:</label>
+                            <input type="text" name="nome_atracao" placeholder="Digite o nome da atração" required>
+                        </div>
 
-                            <div class="input-group">
-                                <label>Descrição:</label>
-                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
-                            </div>
+                        <div class="input-group">
+                            <label>Descrição:</label>
+                            <textarea name="descricao_atracao" placeholder="Digite uma breve descrição da atração" required></textarea>
+                        </div>
 
-                            <div class="input-group">
-                                <label>Imagem:</label>
-                                <input type="file" name="file" id="file" required>
-                            </div>
+                        <div class="input-group">
+                            <label>Imagem:</label>
+                            <input type="file" name="foto_atracao" required>
+                        </div>
 
                             <div class="preview-img">
                                 <img class="preview" src="" alt="" id="preview-image">
@@ -52,8 +51,7 @@ require_once '../../../actions/atracao/cadastrar_atracao.php';
                                 <a href="./Area-Adm.php">Cancelar</a>
                             </button>
 
-                            <button class="btn btn-salvar">
-                                <a href="">Salvar</a>
+                            <button type="submit" class="btn btn-salvar">Salvar</button>
                         </div>
                     </form>
 
@@ -77,6 +75,7 @@ require_once '../../../actions/atracao/cadastrar_atracao.php';
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/get-id-evento.js" defer></script>
 </body>
 
 </html>
