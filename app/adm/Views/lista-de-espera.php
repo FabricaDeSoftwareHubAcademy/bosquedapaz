@@ -1,7 +1,6 @@
 <?php
 require_once '../Controller/Lista-espera.php';
 
-
 $lista = new Lista_expositor();
 
 $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
@@ -11,7 +10,6 @@ $expositores = $lista->listar($busca);
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,20 +19,24 @@ $expositores = $lista->listar($busca);
   <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" />
   <title>Adm - Bosque da Paz</title>
 </head>
-
 <body>
+  <!-- Include do Menu  -->
   <?php include "../../../Public/assets/adm/menu-adm.html" ?>
-
-  <main class="principal">
-    <div class="box">
+  
+  <!-- Área Principal  -->
+  <main class="container__main">
+    <!-- Box dos Elementos -->
+    <div class="container__box">
       <h2>Lista de Espera</h2>
-      <div class="area-pesquisa">
+      <!-- Área Barra de Pesquisa  -->
+      <div class="container__area__pesquisa">
         <form method="GET" class="div-pesquisa">
           <input type="text" name="busca" placeholder="Expositor" value="<?= htmlspecialchars($busca) ?>" />
-          <button class="button-buscar" type="submit">BUSCAR</button>
+          <div class="div__button"><button class="button__buscar" type="submit">BUSCAR</button></div>
         </form>
-
-        <div class="table-area">
+        <!-- Área Table -->
+        <div class="table__area">
+          <!-- Table -->
           <table class="table">
             <thead>
               <tr>
@@ -42,7 +44,7 @@ $expositores = $lista->listar($busca);
                 <th class="email">Email</th>
                 <th class="cat">Categoria</th>
                 <th class="telefone">Telefone</th>
-                <th>Perfil</th>
+                <th class="perfil">Perfil</th>
               </tr>
             </thead>
             <tbody>
@@ -50,7 +52,7 @@ $expositores = $lista->listar($busca);
                 <?php foreach ($expositores as $expositor) : ?>
                   <tr>
                     <td><?= htmlspecialchars($expositor['nome']) ?></td>
-                    <td><?= htmlspecialchars($expositor['email']) ?></td>
+                    <td class="email"><?= htmlspecialchars($expositor['email']) ?></td>
                     <td><?= htmlspecialchars($expositor['categoria']) ?></td>
                     <td><?= htmlspecialchars($expositor['telefone']) ?></td>
                     <td class="perfil">
@@ -68,7 +70,7 @@ $expositores = $lista->listar($busca);
             </tbody>
           </table>
         </div>
-
+        <!-- Seta Voltar -->
         <div class="btn-v">
           <a href="Area-Adm.php" class="voltar">
             <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar" />
@@ -78,12 +80,40 @@ $expositores = $lista->listar($busca);
     </div>
   </main>
 
-  <div class="bolas-fundo">
-    <img class="bola-azul1" src="../../../Public/imgs/imagens-bolas/azul-sem-fundo1.png" alt="" />
-    <img class="bola-azul2" src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="" />
-    <img class="bola-azul3" src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="" />
+  <!-- Imagens Decorativas -->
+  <div class="imgs__dec">
+    <img class="img__dec1" src="../../../Public/imgs/imagens-bolas/azul-sem-fundo1.png" alt="" />
+    <img class="img__dec2" src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="" />
+    <img class="img__dec3" src="../../../Public/imgs/imagens-bolas/azul-sem-fundo3.png" alt="" />
   </div>
 
   <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
+
+
+
+  <!-- ----------------------------< >-----------------------------  -->
+  <!--  Modal -->
+  <!-- modal 3 - recusar expositor  -->
+  <div class="modal modal-recusar-expositor-3" id="modal_recusar_expositor_3">
+      <div class="modal-content-recusar-expositor">
+          <h1 class="modal-texto-recusar-expositor">Expositor Recusado.</h1>
+          <div class="modal-botoes-recusar-expositor">
+              <button class="botoes-modal-recusar-expositor botao-ok" id="botao_ok_recusar">Ok</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- modal 3 - validar expositor  -->
+  <div class="modal modal-validar-expositor-3" id="modal_validar_expositor_3">
+      <div class="modal-content-validar-expositor">
+          <h1 class="modal-texto-validar-expositor">Expositor Validado.</h1>
+          <div class="modal-botoes-validar-expositor">
+              <button class="botoes-modal-validar-expositor botao-ok" id="botao_ok_validar">Ok</button>
+          </div>
+      </div>
+  </div>
+  <!-- ---------------------------< >-----------------------------  -->
+
+  <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>

@@ -7,11 +7,11 @@
         </div>
 
         <!-- itens de navegação -->
-        <nav class="nav-bar">
-            <ul class="nav-list">
+        <nav class="nav-bar" id="nav-bar">
+            <ul class="nav-list" id="nav-list">
 
-                <li class="nav-item">Cadastro
-                    <ul class="submenu">
+                <li class="nav-item" id="cadastro">Cadastro
+                    <ul class="submenu" id="sub-cadastro">
                         
                         <li class="sub-nav-item">
                             <a href="../../../app/adm/Views/cadastrar-adm.php" class="item-submenu">
@@ -61,7 +61,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">Financeiro
+                <li class="nav-item" id="financeiro">Financeiro
                     <ul class="submenu">
                         <li class="sub-nav-item">
                             <a href="../../../app/adm/Views/grafico-central.php" class="item-submenu">
@@ -81,7 +81,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">Listas
+                <li class="nav-item" id="lista">Listas
                     <ul class="submenu">
                         
                         
@@ -114,14 +114,9 @@
                 </li>
 
 
-                <li class="nav-item">Relatórios
+                <li class="nav-item" id="relatorios">Relatórios
                     <ul class="submenu">
   
-                        <!-- <li class="sub-nav-item">
-                            <a href="../../../app/adm/Views/relatorio-expositor.php" class="item-submenu">
-                                Relatório de Expositores
-                            </a>
-                        </li> -->
                         <li class="sub-nav-item">
                             <a href="../../../app/adm/Views/listar-expositor.php" class="item-submenu">
                                 Expositores
@@ -145,16 +140,15 @@
         </nav>
 
         <!-- exibir menu mobile -->
-        <div class="login-menu">
-            <div class="sandwich-menu" onclick="menuShowAdm()">
-                <img src="../../../Public/imgs/img-menu/menu.png" alt="menu" class="menu">
+        <div class="content conteiner-outros">
+            <div class="content-outros">
+                <i class="bi bi-list sandwich" id="sandwich"></i>
             </div>
-            <!-- login normal -->
-            <a href="../../../app/adm/Views/editar-adm.php" class="link-login">
-                <div class="login">
+            <div class="content-outros">
+                <a href="../../../app/adm/Views/editar-adm.php" class="link-login">
                     <img src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Botão de login" class="img-login">
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
 </header>
 

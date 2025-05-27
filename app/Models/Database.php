@@ -1,13 +1,21 @@
 <?php
 
+include __DIR__ . "/Env.php";
+
+use app\Models\Env;
+$env = Env::load();
+
+// print_r( $_ENV['DB_HOST']); 
+
 class Database {
     //atributos do database
     private $conn;
-    private string $local = "192.168.22.9";
-    private string $db = "bosquedapaz";
-    private string $user = "suporte";
-    private string $password = "fabrica33";
+    private string $local;
+    private string $db;
+    private string $user;
+    private string $password;
     private string $table;
+
 
     // metodo construtor que íncia chamando o médoto de conexão com o db 
     function __construct($table = null){
@@ -15,20 +23,31 @@ class Database {
         $this->conecta();
     }
 
+    function set_conn(){
+        $this->local = $_ENV['DB_HOST'];
+        $this->db = $_ENV['DB_DATABASE'];
+        $this->user = $_ENV['DB_USER'];
+        $this->password = $_ENV['DB_PASSWORD'];
+    } 
+
     // se conecta com o db
     private function conecta(){
 
         try {
 
+            $this->set_conn();
+
+            // echo $this->local;
+
             $this->conn = new PDO("mysql:host=".$this->local.";dbname=".$this->db,$this->user,$this->password);
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
         }
 
         catch(PDOException $err){
             die("Conection Failed".$err->getMessage());
         }
+
     }
 
     // médoto para executar o CRUD no db

@@ -104,6 +104,7 @@
 }
 
 .custum-file-upload .icon svg {
+    cursor: pointer;
     height: 80px;
     fill: rgba(75, 85, 99, 1);
   }
@@ -143,6 +144,7 @@
 }
 
 .botoes {
+    text-align: center;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -201,6 +203,10 @@
     display: none;
     z-index: 50;
     margin-bottom: 30px;
+}
+
+.select-items.show {
+    display: block;
 }
 
 .select-items div {

@@ -1,650 +1,733 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../menu-adm.css');
 
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow: hidden;
 }
 
-.principal{
+/* Colors Variaveis */
+:root{
+    --color-box-principal: #f4f4f4a2;
+    --color-box-hover: #f0f0f013;
+
+    --color-box-shadow-input: #9d9fa1;
+
+    --color-rosa: #FF3877;
+    --color-azul: #162868;
+}
+
+/* Corpo da Página */
+.body_main{
     width: 100%;
-    height: 89vh;
+    height: 92vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Imagens */
-.img1{
-    position: fixed;
-    top: 15vh;
-    left: 0;
-    z-index: 1;
-    width: 20vw;
-}
-
-.img2{
-    position: fixed;
-    top: 25vh;
-    left: 92vw;
-    z-index: 1;
-    width: 20vw;
-}
-
-.img2 img{
-    width: 50%;
-    height: auto;
-}
-
-.img3{
-    position: fixed;
-    top: 70vh;
-    left: 84vw;
-    z-index: 1;
-    width: 20vw;
-}
-
-.img3 img{
-    width: 80%;
-    height: auto;
-}
-
-/* Box Principal */
-.box{
+/* Box Principal dos Elementos */
+.container_box {
+    margin: 0 auto;
     width: 90%;
     height: 90%;
-    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    border-radius: 10px;
     backdrop-filter: blur(0px);
-    background-color: rgba(248, 245, 246, 0.705);
-    display: flex;
-    border-radius: 12px;
-    padding: 20px;
-    transition: all .5s ease;
-    position: relative;
-
-    #linha-vertical {
-        height: 85%;
-        border-right: 1.5px solid #FF3877;
-        position: fixed;
-        left: 46%;
-        bottom: 8%;
-    }
+    transition: all .5s ease-in-out;
+    background-color: var(--color-box-principal);
+    z-index: 2;
 }
 
-.box:hover {
-    background-color: #f0f0f013;
+.container_box:hover{
+    background-color: var(--color-box-hover);
     backdrop-filter: blur(30px);
-
-    #linha-vertical {
-        border-right: 1.5px solid #162868;
-    }
 }
 
-/* Elementos da Box */
-.setaV-cadastro {
-    position: relative;
-    top: 70vh;
-    display: block;
-    cursor: pointer;
+/* Seta Voltar */
+.seta__voltar {
+    position: fixed;      
+    bottom: 20px;         
+    left: 20px;           
+    width: 45px;
+    height: 45px;
+    z-index: 9999;        
 }
 
-/* Lado Esquerdo da Box: IMAGEM */
-.lado-esquerdo{
-    width: 45%;
+
+/* Lado Esquerdo: Imagem */
+.container_img{
+    width: 50%;
     height: 100%;
-    background-color: rgba(95, 158, 160, 0);
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-}
-
-.area-img{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #ff387700;
-    position: relative;
-    right: 3rem;
 }
 
-.area-img img{
-    width: 95%;
+.container_img img{
+    width: 70%;
     height: auto;
 }
 
-
-/* Lado Direito da Box: Form */
-.lado-direito{
-    width: 55%;
-    height: 100%;
-    background-color: rgba(222, 184, 135, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lado-direito form{
-    width: 95%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0);
-    display: flex;
-    flex-direction: column;
-}
-
-.area-h1{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 248, 220, 0);
-}
-
-.area-h1 h1{
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.area-form{
-    width: 100%;
+/* Linha Decorativa Centro da Box */
+.div__linha_decorativa{
+    width: 1px;
     height: 80%;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(100, 148, 237, 0);
+    background-color: var(--color-rosa);
 }
 
-/* Inputs normais: */
-.area-total-input{
-    width: 65%;
-    height: 80px;
-    background-color: rgba(0, 0, 255, 0);
+/* Linha com dois inputs */
+.form__row {
     display: flex;
-    flex-direction: column;
-}
-
-.label-cad{
-    font-size: 14px;
-    position: relative;
-    bottom: 0.3rem;
-}
-.area-input{
+    gap: 20px;
     width: 100%;
-    height: 45px;
-    background-color: #a5abc200;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-.area-input2{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #ff387700;
-}
-
-.area-input i{
-    position: absolute;
-    margin-left: 0.8rem;
-    font-size: 18px;
-}
-
-#iconOlho{
-    margin-left: 31rem;
-}
-
-.input{
-    width: 95%;
-    height: 90%;
-    background-color: white;
-    border-radius: 6px;
-    padding-left: 40px;
-    box-shadow: 3px 3px 0px #9d9fa1;
-    border: none;
-    outline: none;
-    transition: border 0.3s ease;
-}
-.input2{
-    width: 95%;
-    height: 40px;
-    background-color: white;
-    border-radius: 6px;
-    padding-left: 11px;
-    box-shadow: 3px 3px 0px #9d9fa1;
-    border: none;
-    outline: none;
-    transition: border 0.3s ease;
-}
-
-.uploads{
-    width: 100%;
-    height: 100%;
-}
-
-.input:focus {
-    border: 2px solid #162868; /* Linha visível quando o campo é clicado */
-}
-
-
-/* Input de Cadastrar Img */
-
-
-/* Area dos Botões */
-.area-button{
-    width: 100%;
-    height: 10%;
+/* Lado Direito: Form */
+.container_form {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    background-color: rgba(220, 20, 60, 0);
+    flex-direction: column;
+}
+
+.container_form h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Form */
+.form__cadastro {
+    width: 80%;
+    height: 95%;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Agrupamento de inputs lado a lado */
+.row-double {
+    display: flex;
+    gap: 0px;
+    width: 100%;
+}
+
+/* Area Principal dos Elementos: Label, Div, Icon e Input */
+.form__group {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.label__cad {
+    position: relative;
+    left: 40px;
+}
+
+/* Área do Input com ícone */
+.area__input {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Área input2: Imagem de Perfil */
+.area__input2 {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ícones */
+.area__input #icon {
+    position: absolute;
+    left: 50px;
+    font-size: 18px;
+    color: black;
+}
+
+#icon__olho {
+    position: absolute;
+    right: 50px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Inputs */
+.area__input .input {
+    width: 90%;
+    height: 100%;
+    padding-left: 45px;
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px var(--color-box-shadow-input);
+}
+
+/* Label do input de imagem */
+.area__input2 .uploads {
+    width: 90%;
+    height: 100%;
+    padding-left: 15px;
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px var(--color-box-shadow-input);
+}
+
+
+/* Area dos Botões */
+.form__actions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Botões */
-.buttons{
-    width: 20%;
+.btn{
+    width: 230px;
     height: 40px;
-    background-color: #FF3877;
-    box-shadow: 0 5px 3px #162868;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     color: white;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all .2s ease-in-out;
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
-    margin-top: 1rem;
+    transition: all .2s ease-in-out;
 }
 
-.buttons:hover{
+.btn:hover{
     transform: scale(1.1);
 }
 
-#button-azul{
-    background-color: #162868;
-    box-shadow: 0 5px 3px #FF3877;
+.btn__azul{
+    background-color: var(--color-azul);
+    box-shadow: 0px 3px 2px var(--color-rosa);
+}
+
+.btn__rosa{
+    background-color: var(--color-rosa);
+    box-shadow: 0px 3px 2px var(--color-azul);
+}
+
+/* Imagens Decorativas */
+.imgs__dec1{
+    position: fixed;
+    top: 15vh;
+    left: 0;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec2{
+    position: fixed;
+    top: 20vh;
+    right: -12vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec3{
+    position: fixed;
+    bottom: -1vh;
+    right: -10vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec3 img{
+    width: 60%;
+    height: auto;
 }
 
 
-/* Responsividade */
-/* Responsividade Celular*/
-@media screen and (max-width: 720px) {  
-    .img1{
-        top: 20vh;
-
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
+        height: 100%;
     }
-    .img1 img{
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
+    .seta__voltar {
+        position: fixed;
+        bottom: 93%;
+        left: 7px;
+        width: 45px;
+        height: 45px;
+    }
+    .seta__voltar img{
         width: 50%;
         height: auto;
     }
-    .img3 {
-        top: 94vh;
+    .div__linha_decorativa{
+        display: none;
     }
-
-    .box{
-        height: 98%;
-    }
-
-    #linha-vertical{
+    
+    /* Lado Esquerdo:  */
+    .container_img{
         display: none;
     }
 
-    .setaV-cadastro{
-        width: 30px;
-        height: 30px;
-        top: 0;
-        right: 0rem;
-        z-index: 1;
-        background-color: rgba(0, 255, 0, 0);
-    }
-
-    .setaV-cadastro img{
+    /* Lado Direito:  */
+    .container_form{
         width: 100%;
-        height: auto;
     }
-
-    .lado-esquerdo{
-        display: none;
+    .container_form h1{
+        font-size: 22px;
     }
-
-    .lado-direito{
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        position: relative;
-        right: 0.5rem;
-        background-color: rgba(0, 255, 255, 0);
-    }
-
-    .area-h1 h1{
-        font-size: 20px;
-    }
-
-    .lado-direito form{
-        width: 100%;
-        height: 100%;
-        background-color: #16286800;
-    }
-
-    .label-cad {
+    .label__cad{
+        left: 5px;
         font-size: 12px;
-        bottom: 0.3rem;
     }
-
-    #iconOlho{
-        margin-left: 13rem;
-    }
-
-    .area-total-input{
-        width: 90%;
-        background-color: rgba(0, 255, 0, 0);
-    }
-
-    .buttons {
-        width: 35%;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .input2 {
-        width: 95%;
-        height: 78%;
-        padding-left: 5px;
-        font-size: 10px;
-    }
-
-    .uploads::before{
-        font-size: 10px;
-    }
-
-}
-
-/* Responsividade Ipad Mini*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .img1{
-        top: 20vh;
-    }
-    .img1 img{
-        width: 70%;
-        height: auto;
-    }
-    .img3 {
-        top: 90vh;
-    }
-
-    .area-h1 h1{
-        font-size: 25px;
-    }
-
-    .input{
-        width: 97%;
-        height: 90%;
-    }
-
-    .input2{
-        padding-left: 15px;
-    }
-
-    .lado-direito{
+    .area__input .input{
         width: 100%;
+        padding-left: 40px;
     }
-
-    .lado-direito form {
-        background-color: #16286800;
-        left: 170px;
-        bottom: 50px;
-        width: 600px;
-        height: 700px;
-    }
-
-    .area-total-input{
-        width: 80%;
-    }
-
-    .area-total-input-2 {
-        width: 75%;
-        right: 0rem;
-    }
-
-    .uploads::before {
-        font-size: 10px;
-    }
-
-    .buttons {
-        width: 35%;
-        height: 35px;
-    }
-
-    .setaV-cadastro{
-        top: 0;
-    }
-
-    .lado-esquerdo{
-        display: none;
-    }
-
-    #linha-vertical{
-        display: none;
-    }
-
-    #iconOlho {
-        margin-left: 27rem;
-    }
-}
-
-
-/* Responsividade Ipad Pro*/
-@media screen and (min-height: 1366px) {
-    .img1{
-        top: 20vh;
-    }
-    .img1 img{
-        width: 70%;
-        height: auto;
-    }
-    .img3 {
-        top: 90vh;
-    }
-
-    .lado-esquerdo{
-        position: relative;
-        right: 1.5rem;
-        background-color: rgba(0, 255, 0, 0);
-    }
-
-    .area-img {
-        width: 100%;
-        height: 100%;
-        right: 1rem;
-        background-color: #ff387700;
-    }
-
-    .setaV-cadastro{
-        width: 30px;
-        height: 30px;
-        top: 0;
-        right: 0.5rem;
-        z-index: 1;
-        background-color: rgba(0, 255, 0, 0);
-    }
-
-    .setaV-cadastro img{
-        width: 100%;
-        height: auto;
-    }
-
-    .area-h1{
-        margin-top: 15rem;
-    }
-
-    .area-h1 h1 {
-        font-size: 30px;
-        font-weight: 700;
-    }
-
-    .area-total-input {
-        width: 90%;
-    }
-
-    #iconOlho{
-        margin-left: 21rem;
-    }
-
-    .area-total-input-2 {
-        width: 90%;
-        right: 0rem;
-    }
-
-    .area-form {
-        width: 100%;
-        height: 45%;
-        margin-left: 1rem;
-    }
-
-    .buttons {
-        width: 37%;
-        position: relative;
-        bottom: 0px;
+    .area__input #icon {
+        position: absolute;
         left: 15px;
     }
-}
-
-/* Responsividade Surface Pro 7 */
-@media (max-width: 912px) and (min-height: 1368px) {
-    .lado-direito form{
-        height: 90vh;
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 10px;
     }
-}
+    #icon__olho {
+        position: absolute;
+        right: 18px;
+    }
+    .input2 {
+        font-size: 10px;
+    }
+    .area__input2 .uploads{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 150px;
+        height: 35px;
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    .row-double{
+        gap: 30px;
+        flex-direction: column;
+    }
 
-/* Responsividade Next Hub */
-@media (min-width: 1024px) and (max-height: 600px) {
-    .img1{
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
         top: 20vh;
-    }
-    .img1 img{
-        width: 70%;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
         height: auto;
     }
-    .img3 {
-        top: 90vh;
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
     }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
+}
 
-    .box{
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
         height: 100%;
-        margin-bottom: 3rem;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
+    .div__linha_decorativa{
+        display: none;
+    }
+    
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 22px;
+    }
+    .label__cad{
+        left: 5px;
+        font-size: 14px;
+    }
+    .area__input .input{
+        width: 100%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 15px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 18px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 10px;
+    }
+    .input2{
+        font-size: 14px;
+    }
+    .area__input2 .uploads{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+    .row-double{
+        gap: 30px;
+        flex-direction: column;
     }
 
-    .lado-esquerdo{
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
+        height: 100%;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
+    .div__linha_decorativa{
+        display: none;
+    }
+    
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 24px;
+    }
+    .label__cad{
+        left: 5px;
+        font-size: 16px;
+    }
+    .area__input .input{
+        width: 100%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 15px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 15px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 18px;
+    }
+    .input2{
+        font-size: 16px;
+    }
+    .area__input2 .uploads{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    .row-double{
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    /* Areas Principais:  */
+    .body_main{
+        width: 100%;
+        height: 100%;
+    }
+    .container_box{
+        width: 98%;
+        height: 95%;
+        margin-top: 3%;
+    }
+    .div__linha_decorativa{
+        display: none;
+    }
+    
+    /* Lado Esquerdo:  */
+    .container_img{
+        display: none;
+    }
+    /* Lado Direito:  */
+    .container_form{
+        width: 100%;
+    }
+    .container_form h1{
+        font-size: 26px;
+    }
+    .label__cad{
+        left: 50px;
+        font-size: 16px;
+    }
+    .area__input .input{
+        width: 90%;
+        padding-left: 40px;
+    }
+    .area__input #icon {
+        position: absolute;
+        left: 56px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 35px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 45px;
+    }
+    .input2{
+        font-size: 16px;
+    }
+    .area__input2 .uploads{
+        width: 90%;
+        padding-left: 5px;
+    }
+    .form__actions{
+        gap: 20px;
+    }
+    .btn{
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+
+    /* Imagens Decorativas:  */
+    .imgs__dec1 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec2 {
+        position: fixed;
+        top: 20vh;
+        right: -10vw;
+    }    
+    .imgs__dec2 img{
+        width: 60%;
+        height: auto;
+    }
+    .imgs__dec3 {
+        position: fixed;
+        bottom: -1vh;
+        right: -5vw;
+    }
+    .imgs__dec3 img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    body{
+        overflow: hidden;
+    }
+    .container_img{
+        width: 40%;
+    }
+
+    .container_form{
+        width: 60%;
+    }
+    .label__cad {
+        left: 30px;
+    }
+    .area__input #icon {
+        left: 43px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 33px;
+    }
+}
+
+/* Computadores Largos e Compactos (Baixa Altura):  */
+@media (min-width: 1400px){
+    body{
+        overflow: hidden;
+    }
+    .label__cad {
         position: relative;
-        right: 1.5rem;
-        background-color: rgba(0, 255, 0, 0);
+        left: 30px;
+    }
+    .area__input #icon {
+        left: 40px;
+    }
+    .area__input #icon {
+        left: 47px;
+    }
+    .area__input .bi-shield-lock {
+        position: absolute;
+        left: 29px;
+    }
+    #icon__olho {
+        position: absolute;
+        right: 30px;
+    }
+}
+
+/* Pequenos Ajustes:  */
+@media (min-width: 1200px) and (max-height: 830px){
+    .body_main{
+        overflow-y: hidden;
     }
 
-    .area-img {
-        width: 100%;
-        height: 100%;
-        right: 1rem;
-        background-color: #ff387700;
+    .container_form h1 {
+        font-size: 24px;
     }
-
-    .setaV-cadastro{
-        width: 30px;
+    .btn{
+        width: 150px;
         height: 30px;
-        top: 1rem;
-        right: 0.5rem;
-        z-index: 1;
-        background-color: rgba(0, 255, 0, 0);
     }
-
-    .setaV-cadastro img{
-        width: 100%;
-        height: auto;
+    .form__cadastro{
+        height: 100%;
+        gap: 20px;
     }
-
-    .area-h1 h1 {
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    .label-cad{
+    .label__cad{
         font-size: 12px;
     }
-
-    .area-total-input {
-        width: 90%;
-    }
-
-    #iconOlho{
-        margin-left: 21rem;
-    }
-
-    .area-total-input-2 {
-        width: 90%;
-        right: 0rem;
-    }
-
-    .area-form {
-        width: 100%;
-        height: 82%;
-        margin-left: 1rem;
-    }
-
-    .buttons {
-        width: 30%;
-        height: 25px;
-        position: relative;
-        left: 1rem;
-        margin-top: 0;
-    }
-
-    .input2{
-        height: 28px;
-        padding-left: 10px;
-    }
-
 }
-
-
-
-/* Responsividade Next Pro*/
-@media (min-width: 1280px) and (max-height: 800px) {
-    .img3 {
-        top: 80vh;
-        left: 88vw;
+@media (min-width: 1200px) and (max-height: 700px){
+    .body_main{
+        height: 82.5vh
     }
-
-    .img3 img{
-        width: 70%;
-        height: auto;
+    .area__input .input {
+        height: 75%;
     }
-
-    .area-h1 h1 {
-        font-size: 25px;
-    }
-
-    #iconOlho{
-        margin-left: 19rem;
-    }
-
-    .area-total-input-2 {
-        width: 58%;
-        height: 50px;
-        right: 0.5rem;
-    }
-
-    .buttons {
-        width: 22%;
-        height: 35px;
-        margin-top: 0rem;
+}
+@media (min-width: 2000px){
+    .area__input #icon {
+        left: 56px;
     }
 }

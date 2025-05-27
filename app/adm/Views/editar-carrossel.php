@@ -1,149 +1,3 @@
-<?php
-
-require_once('../Controller/Carrossel.php');
-
-$car = new Carrossel();
-
-
-// busca no banco
-$res = $car->buscar_id(1);
-
-
-// caminho das imgs padrao
-$imagens = [
-    'img1' => '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg',
-    'img2' => '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg',
-    'img3' => '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg',
-];
-
-// verifica se aconsulta no db esta vazia
-if(!empty($res)){
-    //no caso de nao esta vem para aqui
-    $img1 = $res->img1;
-    $img2 = $res->img2;
-    $img3 = $res->img3;
-    
-    // ifs para saber se esta faltando uma img 
-    if(empty($res->img1)){
-        $img1 = $imagens['img1'];
-    }
-    if(empty($res->img2)){
-        $img2 = $imagens['img2'];
-    }
-    if(empty($res->img3)){
-        $img3 = $imagens['img3'];
-    }
-}
- //no caso de estar vazio, vem para cá e carrega imgs padrao
- else{
-    $img1 = $imagens['img1'];
-    $img2 = $imagens['img2'];
-    $img3 = $imagens['img3'];
- }
-
-
-//verifica post para atualizar os dados do carrossel
-if (isset($_POST['editar'])){
-    //caminho padrao das imagens
-    $pasta = '../../../Public/imgs/uploads-carrosel/';
-
-    try{
-
-        // verifica se o file esta vazio
-        if (!empty($_FILES['img1']['name'])){
-            // pegando o arquivo e gerando um novo nome e caminho
-            $imagem1 = $_FILES['img1'];
-            
-            $nome_imagem1 = $imagem1['name'];
-            $nova_imagem1 = 'img-carrossel-1';
-            $extencao_imagem1 = strtolower(pathinfo($nome_imagem1, PATHINFO_EXTENSION));
-            
-            // verificando a extencao
-            if($extencao_imagem1 != 'png' && $extencao_imagem1 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-            $caminho_img1 = $pasta . $nova_imagem1. '.'. $extencao_imagem1;
-            $upload_img1 = move_uploaded_file($imagem1['tmp_name'], $caminho_img1);
-            
-            // cadastrando img no db
-            $img1 = $caminho_img1;
-            $car->img1 = $img1;
-        }
-        // no de caso de nao ter nenhuma img, ele cadrasta o mesmo caminho
-        else {
-            if(empty($res->img1)){
-                $car->img1 = $imagens['img1'];
-            }
-            else{
-                $car->img1 = $img1;
-            }
-        }
-        
-        if (!empty($_FILES['img2']['name'])){
-            // pegando o arquivo e gerando um novo nome e caminho
-            $imagem2 = $_FILES['img2'];
-            
-            $nome_imagem2 = $imagem2['name'];
-            $nova_imagem2 = 'img-carrossel-2';
-            $extencao_imagem2 = strtolower(pathinfo($nome_imagem2, PATHINFO_EXTENSION));
-            
-            // verificando a extencao
-            if($extencao_imagem2 != 'png' && $extencao_imagem2 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-            $caminho_img2 = $pasta . $nova_imagem2. '.'. $extencao_imagem2;
-            $upload_img2 = move_uploaded_file($imagem2['tmp_name'], $caminho_img2);
-            
-            // cadastrando img no db
-            $img2 = $caminho_img2;
-            $car->img2 = $img2;
-        }else {
-            if(empty($res->img2)){
-                $car->img2 = $imagens['img2'];
-            }
-            else{
-                $car->img2 = $img2;
-            }
-        }
-        
-        if (!empty($_FILES['img3']['name'])){
-            // pegando o arquivo e gerando um novo nome e caminho
-            $imagem3 = $_FILES['img3'];
-        
-            $nome_imagem3 = $imagem3['name'];
-            $nova_imagem3 = 'img-carrossel-3';
-            $extencao_imagem3 = strtolower(pathinfo($nome_imagem3, PATHINFO_EXTENSION));
-
-            // verificando a extencao
-            if($extencao_imagem3 != 'png' && $extencao_imagem3 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-            $caminho_img3 = $pasta . $nova_imagem3. '.'. $extencao_imagem3;
-            $upload_img3 = move_uploaded_file($imagem3['tmp_name'], $caminho_img3);
-
-            // cadastrando img no db
-            $img3 = $caminho_img3;
-            $car->img3 = $img3;
-        }else {
-            if(empty($res->img3)){
-                $car->img3 = $imagens['img3'];
-            }
-            else{
-                $car->img3 = $img3;
-            }
-        }
-
-        $atualizado = $car->atualizar();
-        
-        if($atualizado){
-            echo "<script>alert('Atualizado com sucesso.')</script>";
-        }
-    }
-    catch (\Throwable $th) {
-        // echo "<script>alert('Não foi possivel atualizar.')</script>";
-        echo $th;
-    }
-}
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -156,6 +10,7 @@ if (isset($_POST['editar'])){
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-carrossel.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
@@ -164,84 +19,79 @@ if (isset($_POST['editar'])){
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
-
         <!-- box principal -->
         <div class="box">
-
-
+            <form action="" method="post" class="formulario" id="form-carrossel" enctype='multipart/form-data'>
+                <h1 class="titulo">editar carrosel</h1>
             
-            <h1 class="titulo">editar carrosel</h1>
+                <!-- local de uploads de imgs para o carrossel -->
+                <section class="conteiner-imagens">
 
-
-            
-            <!-- local de uploads de imgs para o carrossel -->
-            <form action="" method="post" class="formulario-ca" enctype='multipart/form-data'>
-                <section class="up-imgs">
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 1</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 1</h2>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img1" id="imagens-input" class="input" id="input1">
+                            <input type="file" name="img1" id="imagens-input" class="input">
                 
-                            <img <?php echo "src='".$img1."'"; ?> alt="Imagem do carrossel 3" id="img1" class="up-img">
+                            <img src="" alt="" id="img1" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
                         </label>
                     </div>
                 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 2</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 2</h2>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
+                            <input type="file" name="img2" id="imagens-input2" class="input">
                 
-                            <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" id="img2" class="up-img">
+                            <img src="" alt="" id="img2" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
                         </label>
                     </div>
                 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 3</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 3</h2>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
+                            <input type="file" name="img3" id="imagens-input3" class="input">
                 
-                            <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" id="img3" class="up-img">
+                            <img src="" alt="" id="img3" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
 
                         </label>
                     </div>
                 </section>
+
                 <!-- botoes parte de baixo -->
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
-                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="" class="btn-voltar">
                     </a>
                     <div class="btn-cancelar-salvar">
-                            <button class="btn btn-cancelar">
-                                <a href="">Cancelar</a>
+                            <button type="reset" class="btn btn-cancelar">
+                                cancelar
                             </button>
                             
-                            <button type="submit" name="editar" class="btn btn-salvar">
-                                Salvar
+                            <button type="submit" name="editar" id="editar" class="btn btn-salvar">
+                                salvar
                             </button>
                         </div>
                     </div>
                 </div>
             </form>
+            <div class="overlay" id="overlay"></div>
+            <?php include "../../../Public/include/modais/modal-aviso.html"; ?>
         </div>
-        </div>
+        
+        <!-- bolas de fundo -->
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+        <!-- <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="" class="bola-rosa"> -->
     </main>
 
-    <!-- bolas de fundo -->
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
 
 
     <!-- link do JavaScript -->

@@ -118,7 +118,7 @@
   <img class="imagem-fundo1" src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="">
   <img class="imagem-fundo2" src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="">
   <img class="imagem-fundo3" src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="">
-  <script src="../../js/js-menu/js-menu.js"></script>
+  <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>

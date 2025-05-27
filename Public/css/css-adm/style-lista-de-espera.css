@@ -1,4 +1,5 @@
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../menu-adm.css');
 
 * {
@@ -9,49 +10,27 @@
     overflow-y: hidden;
 }
 
-.bolas-fundo {
-    width: 100vw;
-    height: 90vh;
-    position: relative;
-    top: -90vh;
-    z-index: -3;
+/* Variaveis Colors */
+:root{
+    --color-box: #FAF8F9;
+    --color-table-button: #20368B;
+    --color: #DDDDDD;
 }
 
-.bolas-fundo .bola-azul1 {
-    position: absolute;
-    left: -40px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-azul2 {
-    position: absolute;
-    right: -50px;
-    top: 6vh;
-    z-index: -3;
-    left: 93%;
-}
-
-.bolas-fundo .bola-azul3 {
-    position: absolute;
-    right: -100px;
-    bottom: -50px;
-    z-index: -3;
-    top: 80%;
-}
-
-.principal{
+/* Areas Principais */
+.container__main{
     width: 100vw;
     height: 90vh;
     z-index: 1;
 }
 
-.box{
+.container__box{
+    position: relative;
     width: 90%;
     height: 90%;
     background-color: rgba(248, 245, 246, 0.65);
     margin: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -64,7 +43,8 @@ h2{
     font-size: 30px;
 }
 
-.area-pesquisa{
+/* Area Barra de Pesquisa  */
+.container__area__pesquisa{
     width: 90%;
     margin: 20px auto;
     overflow-y: auto;
@@ -78,7 +58,6 @@ h2{
     justify-content: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
     padding: 10px;
     background-color: rgba(248, 245, 246, 0.65);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -101,8 +80,16 @@ h2{
     border-radius: 5px;
 }
 
-.button-buscar{
-    padding: 8px 16px;
+.div__button{
+    width: 10%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgba(32, 54, 139, 1);
+}
+
+.button__buscar{
+    width: 100%;
+    height: 100%;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -110,17 +97,20 @@ h2{
     background-color: rgba(32, 54, 139, 1);
 }
 
-.button-buscar:hover{
+.button__buscar:hover{
     background-color: #041831;
 }
 
-.table-area{
+
+/* Área Table  */
+.table__area{
     width: 100%;
-    max-height: 50vh;
+    max-height: 59vh;
     overflow: auto;
     border: 1px solid #ddd;
 }
 
+/* Table  */
 .table{
     text-align: center;
     width: 100%;
@@ -197,27 +187,28 @@ table tbody tr:nth-child(even){
     color: #003d8c;
 }
 
+/* Seta Voltar  */
 .btn-v {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
 }
 
 .btn-v .voltar {
-    position: absolute;
-    bottom: 20px;
-    left: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 15px;
     color: #fff;
-    border: none;
     border-radius: 5px;
     text-decoration: none;
-    text-align: center;
     font-size: 14px;
-    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+
+/* Pequenos Ajustes  */
 .nome, .cpf, .cat{
     width: 20%;
 }
@@ -235,85 +226,334 @@ table tbody tr:nth-child(even){
     width: 12%;
 }
 
-@media (max-width: 1042px) {
-    .principal .box {
-        padding: 15px;
-    }
 
-    h2 {
-        font-size: 22px;
-    }
-
-    .div-pesquisa input {
-        width: 95%;
-    }
-
-    .button-buscar{
-        margin-top: 1rem;
-        margin-left: 2.5rem;
-        width: 70%;
-    }
+/* Imagens Decorativas:  */
+.imgs__dec {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
 }
 
-@media(max-width: 720px) {
+.imgs__dec .img__dec1 {
+    position: absolute;
+    left: -40px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.imgs__dec .img__dec2 {
+    position: absolute;
+    right: -50px;
+    top: 6vh;
+    z-index: -3;
+    left: 93%;
+}
+
+.imgs__dec .img__dec3{
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    z-index: -3;
+    top: 80%;
+}
+
+
+
+/* -------------------> <------------------- *
+/* Modal:  */
+.modal-content-recusar-expositor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+ 
+.modal-texto-recusar-expositor {
+    font-size: 2rem;
+}
+ 
+.modal-content-validar-expositor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+ 
+.modal-texto-validar-expositor {
+    font-size: 2rem;
+}
+ 
+.modal-subtexto-validar-expositor {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+    /* background-color: red; */
+}
+ 
+.modal-botoes-validar-expositor {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+ 
+.botoes-modal-validar-expositor {
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ 
+.modal-botoes-recusar-expositor {
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+    /* background-color: red; */
+}
+ 
+.botoes-modal-recusar-expositor {
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* -------------------> <------------------- */
+
+
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
     .div-pesquisa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        align-items: stretch;
+        gap: 10px;
+        overflow-x: hidden;
     }
-
-    .div-pesquisa label {
-        font-size: 14px;
+    .div-pesquisa input{
+        width: 250px;
     }
-
+    .div__button {
+        width: 60%;
+    }
+    .table__area{
+        height: 50vh;
+    }
     .table {
         font-size: 10px;
     }
-
     #email{
         font-size: 6px;
     }
-
     .table th,
     .table td {
         padding: 6px;
     }
-
     .table th {
         font-size: 8px;
     }
-
-    .btn-v .voltar {
-        position: absolute;
-        bottom: 51px;
-        left: 23px;
+    .btn-v {
+        bottom: -3px;
+        left: -8px;
     }
-
-    .bolas-fundo {
+    .imgs__dec {
         display: none;
     }
-
     .perfil i{
         font-size: 10px;
     }
-
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 18px;
-    }
-
-    .area-pesquisa input {
-        font-size: 12px;
-    }
-
-    .area-pesquisa .button-buscar {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
 }
 
 
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    .div-pesquisa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+        overflow-x: hidden;
+    }
+    .div-pesquisa input{
+        width: 400px;
+    }
+    .div__button {
+        width: 15%;
+    }
+    .table__area{
+        height: 50vh;
+    }
+    .table {
+        font-size: 10px;
+    }
+    #email{
+        font-size: 6px;
+    }
+    .table th,
+    .table td {
+        padding: 6px;
+    }
+    .table th {
+        font-size: 8px;
+    }
+    .btn-v {
+        bottom: 2px;
+        left: -2px;
+    }
+    .imgs__dec {
+        display: none;
+    }
+    .perfil i{
+        font-size: 10px;
+    }
+}
 
 
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .div-pesquisa {
+        overflow-x: hidden;
+    }
+    .div-pesquisa input{
+        width: 400px;
+    }
+    .div__button {
+        width: 20%;
+    }
+    .table__area{
+        height: 50vh;
+    }
+    .table {
+        font-size: 12px;
+    }
+    #email{
+        font-size: 6px;
+    }
+    .table th,
+    .table td {
+        padding: 6px;
+    }
+    .table th {
+        font-size: 10px;
+    }
+    .btn-v {
+        bottom: 6px;
+        left: 0px;
+    }
+    .imgs__dec {
+        display: none;
+    }
+    .perfil i{
+        font-size: 12px;
+    }
+}
 
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .div-pesquisa {
+        overflow-x: hidden;
+    }
+    .div-pesquisa input{
+        width: 500px;
+    }
+    .div__button {
+        width: 10%;
+    }
+    .table__area{
+        height: 50vh;
+    }
+    .table {
+        font-size: 14px;
+    }
+    #email{
+        font-size: 8px;
+    }
+    .table th,
+    .table td {
+        padding: 6px;
+    }
+    .table th {
+        font-size: 14px;
+    }
+    .btn-v {
+        bottom: 6px;
+        left: 7px;
+    }
+    .imgs__dec {
+        display: none;
+    }
+    .perfil i{
+        font-size: 14px;
+    }
+}
+
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    .div-pesquisa {
+        overflow-x: hidden;
+    }
+    .div-pesquisa input{
+        width: 600px;
+    }
+    .div__button {
+        width: 10%;
+    }
+    .table__area{
+        height: 50vh;
+    }
+    .table {
+        font-size: 14px;
+    }
+    #email{
+        font-size: 8px;
+    }
+    .table th,
+    .table td {
+        padding: 6px;
+    }
+    .table th {
+        font-size: 14px;
+    }
+    .btn-v {
+        bottom: 6px;
+        left: 7px;
+    }
+    .perfil i{
+        font-size: 14px;
+    }
+}
+
+
+/* Computadores Largos e Compactos (Baixa Altura):  */
+@media (min-width: 1400px) and (max-height: 845px){
+    .container__box{
+        margin-top: 10px;
+    }
+}
+/* Pequenos Ajustes */
+@media (max-width: 779px){
+    .container__area__pesquisa{
+        width: 100%;
+    }
+    .container__box{
+        width: 98%;
+    }
+}
+@media (max-height: 730px){
+    .table__area{
+        height: 40vh;
+    }
+}

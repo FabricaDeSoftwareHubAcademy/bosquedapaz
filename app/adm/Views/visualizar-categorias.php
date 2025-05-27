@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-visualizar-categoria.css">
-    <link rel="stylesheet" href="../Public/assets/adm/menu-adm.html">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
 </head>
 
 
@@ -91,17 +91,17 @@
                     <div class="modal-content">
                         <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
                         <h1 class="titulo">Cadastrar Categoria</h1>
-                        <form action="" method="post">
+                        <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
                             <div class="form-box">
                                 <h3>Nome:</h3>
-                                <input class="nome-cat" type="text" name="nome" id="nome" placeholder="Digite o nome da categoria">
+                                <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
                                 <h3>Cor:</h3>
                                 <div class="custom-select">
                                     <div class="select-selected" id="openModal">
                                         <div class="color-preview" id="selectedColor"></div>
                                         <span id="selectedText">Selecione uma cor</span>
                                     </div>
-                                    <div class="select-items">
+                                    <div id="seletor-cor" class="select-items">
                                         <div data-value="rgba(13, 72, 161, 0.30)">
                                             <div class="color-preview" style="background-color: rgba(13, 72, 161, 0.30);"></div> Cor 1
                                         </div>
@@ -123,23 +123,11 @@
                                         <div data-value="rgba(25, 169, 78, 0.3)">
                                             <div class="color-preview" style="background-color: rgba(25, 169, 78, 0.3);"></div> Cor 7
                                         </div>
-                                        <input id="file" type="file" style="display: none;">
-                                    </label>
-
-                                <!-- <div class="separacao">
-                                    <h2>Prévia da Categoria</h2>
-                                    <div class="previa">
-                                        <img id="output" />
-                                        <h4 id="output-text"></h4>
-                                    </div>
-                                </div> -->
-
-                                    <div class="botoes">
-                                        <button class="cancelar" onclick="fecharModal()">CANCELAR</button>
-                                        <button class="salvar" onclick="fecharModal()">SALVAR</button>
                                     </div>
                                 </div>
-            
+
+                                <input type="hidden" name="cor" id="corInput" required>
+
                                 <h3 class="titulo-modal">Ícone:</h3>
                                 <label for="file" class="custum-file-upload" onchange="loadFile(event)">
                                     <div class="icon">
@@ -154,27 +142,27 @@
                                     <div class="text">
                                         <span style="color:grey">Selecione a Imagem</span>
                                     </div>
-                                    <input id="file" type="file" style="display: none;">
+                                    <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
                                 <div class="botoes">
-                                    <button class="cancelar" onclick="fecharModal()">Cancelar</button>
-                                    <button class="salvar" onclick="fecharModal()">Salvar</button>
+                                    <button type="button" class="cancelar" onclick="fecharModal('cadastro-categoria')">Cancelar</button>
+                                    <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </dialog>
-            
-                </div>
-        <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div>
+
+            </div>
+            <div class="btns">
+                <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div>
     </main>
-    <script src="../../js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
-    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+
 </body>
 
 </html>
