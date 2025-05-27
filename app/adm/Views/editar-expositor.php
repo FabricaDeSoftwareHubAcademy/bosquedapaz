@@ -126,6 +126,8 @@
         <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="bola fundo 3" class="bola-fundo3">
     </div>
 
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+
 </body>
 
 </html>

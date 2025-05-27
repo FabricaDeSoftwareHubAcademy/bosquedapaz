@@ -4,28 +4,26 @@ require_once('../app/Models/Database.php');
 
 class Carrossel {
     public int $id;
-    public string $img1;
-    public string $img2;
-    public string $img3;
+    public string $caminho;
+    public int $posicao;
 
-    public function atualizar(){
-        $db = new Database('carrosel');
+    public function atualizar(int $id){
+        $db = new Database('carrossel');
 
         $values = [
-            "img1" => $this->img1,
-            "img2" => $this->img2,
-            "img3" => $this->img3
+            "caminho" => $this->caminho,
+            "posicao" => $this->posicao
         ];
 
-        $res = $db->update('id_carrosel = 1', $values);
+        $res = $db->update('id_carrossel = '. $id, $values);
 
         return $res ? true : false;
     }
 
-    public function buscar_id($id){
-        $db = new Database('carrosel');
+    public function get_imagem(){
+        $db = new Database('carrossel');
 
-        $res = $db->select("id_carrosel = ". $id)->fetchObject(self::class);
+        $res = $db->select()->fetchAll(PDO::FETCH_CLASS,self::class);
         return $res;
     }
 }

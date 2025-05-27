@@ -48,25 +48,25 @@
 
 
 .img-prox-event {
-    width: 90%;
+    width: 78%;
     transition: all .1s ease-in;
 }
 
 .img-prox-event:hover {
-    width: 95%;
+    width: 80%;
 }
 /* .img-prox-event:hover {
     width: 95%;
 } */
 
 .img-ulti-publi {
-    width: 45%;
+    width: 35%;
     border-radius: 10px;
     transition: all .1s ease-in;
 }
 
 .img-ulti-publi:hover {
-    width: 50%;
+    width: 40%;
 }
 
 .img-prox-event-m {

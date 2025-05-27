@@ -164,7 +164,7 @@
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
-
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>
 

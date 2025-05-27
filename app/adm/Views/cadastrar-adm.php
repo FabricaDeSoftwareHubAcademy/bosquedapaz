@@ -161,5 +161,6 @@ if(isset($_POST['cadastrar'])){
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </section>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>
