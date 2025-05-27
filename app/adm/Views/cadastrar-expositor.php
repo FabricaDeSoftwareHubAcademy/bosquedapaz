@@ -1,7 +1,7 @@
 <?php
-require_once '../Controller/Pessoa.php';
-require_once '../Controller/Expositor.php';
-require_once '../Controller/Categoria.php';
+    require_once '../Controller/Pessoa.php';
+    require_once '../Controller/Expositor.php';
+    require_once '../Controller/Categoria.php';
 
 $categoriaModel = new Categoria();
 

@@ -1,8 +1,9 @@
 <?php 
 
 require '../../Models/Database.php';
+require 'Endereco.php';
 
-class Parceiro {
+class Parceiro extends Endereco {
     public int $id_parceiro;
     public string $nome_parceiro;
     public string $telefone;
@@ -11,12 +12,25 @@ class Parceiro {
     public string $tipo;
     public string $cpf_cnpj;
     public string $logo;
-    public ?int $id_endereco; 
+    // public int $id_endereco;
 
     public function cadastrar() {
-        $dbParceiro = new Database('parceiro');
 
-        $resParceiro = $dbParceiro->insert([
+        // cadastro do endereco para pegar o id
+        $db = new Database("endereco");
+        $id_endereco = $db->insert_lastid([
+            "cep" => $this->cep,
+            "logradouro" => $this->logradouro,
+            "complemento" => $this->complemento,
+            "num_residencia" => $this->num_residencia,
+            "bairro" => $this->bairro,
+            "cidade" => $this->cidade
+        ]);
+
+
+        // cadasto do parceiro
+        $db = new Database('parceiro');
+        $resParceiro = $db->insert([
             'nome_parceiro' => $this->nome_parceiro,
             'telefone' => $this->telefone,
             'email' => $this->email,
@@ -24,7 +38,7 @@ class Parceiro {
             'tipo' => $this->tipo,
             'cpf_cnpj' => $this->cpf_cnpj,
             'logo' => $this->logo,
-            'id_endereco' => $this->id_endereco
+            'id_endereco' => $id_endereco
         ]);
 
         return $resParceiro;

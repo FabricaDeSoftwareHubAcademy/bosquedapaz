@@ -280,7 +280,100 @@ h1 {
     font-family: "Poppins", sans-serif;
 }
 
+/* --- Manter as outras regras iguais --- */
 
+#form1 {
+    /* trocar flex por grid para 3 colunas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px; /* espaço vertical e horizontal entre os itens */
+    width: 100%;
+}
+
+/* Os grupos de input continuam com flex vertical */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Manter a estilização dos labels e inputs */
+.input-group label {
+    font-weight: bold;
+    color: #3d3d3d;
+}
+
+/* inputs e selects continuam com seu estilo padrão */
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-family: "Poppins", sans-serif;
+    color: #3d3d3d;
+    font-size: 1rem;
+}
+
+/* Remove o uso da .data-imagem para não conflitar com o grid */
+/* Você pode retirar o display:flex da .data-imagem se ela estiver no caminho */
+
+.data-imagem {
+    display: block; /* ou remova esta classe do html para evitar conflito */
+    gap: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 950px) {
+    #form1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    }
+    .box .form-box {
+        width: 100%;
+    }
+    #form1 {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    #form1 {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+    .principal .box {
+        padding: 10px;
+    }
+    .btn {
+        width: 100%;
+    }
+    .btn-cancelar-salvar .btn {
+        width: clamp(80px, 25%, 120px);
+    }
+    .btn-cancelar-salvar .open-modal {
+        width: clamp(80px, 25%, 120px);
+    }
+}
+
+@media (max-width: 650px) {
+    .data-imagem {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* restante do seu css permanece igual */
+    
 
 
 
