@@ -20,15 +20,21 @@ if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone']
 
     $pasta = '../Public/imgs/uploads-categoria/'; //colocar caminho img
 
-    if (!is_dir($pasta)) {
-        mkdir($pasta, 0777, true);
-    }
+    // if (!is_dir($pasta)) {
+    //     try{
+    //         mkdir($pasta, 0777, true);
+    //     }catch (Exception $error){
+    //         $passou = "erro ao criar a pasta";
+    //     }
+
+
+    // }
 
     $nome_foto = $arquivo['name'];
     $novo_nome = uniqid();
     $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-    if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif'])) {
+    if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif', 'svg'])) {
         echo json_encode([
             'status' => 'Error',
             'message' => 'Extensão do arquivo inválida'
