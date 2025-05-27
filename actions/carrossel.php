@@ -7,7 +7,6 @@ $car = new Carrossel();
 // funcao para mover o arquivo para o pasta de uploads
 // o parametro $num serve para falar o  numero da img
 function update_carrossel($img,$num) {
-    try {
         chmod ("../Public/uploads/uploads-carrosel/", 0777);
         $caminho = '../Public/uploads/uploads-carrosel/';
         $new_img = $img['name'];
@@ -19,44 +18,43 @@ function update_carrossel($img,$num) {
         $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
     
         return $caminho_img;
-        
-    } catch (\Throwable $th) {
-        return [
-            'erro' => 404,
-            'message' => 'Nao foi possivel enviar a imagens para o servidor'
-        ];
-    }
 }
 
 // quando chegar um POST sera feito uma atualizacao
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $response = array('status' => 200);
-
-
-    $i = 1; // contador para saber qual img
-    // percorre todos os arquivos
-    foreach ($_FILES as $chave => $dados) {
-        if(!empty($dados['name'])){
-            $caminho = update_carrossel($dados, $i);
-            $car->caminho = $caminho;
-            $car->posicao = $i;
-            $atualizacao = $car->atualizar($i);
-
-            // mensagem de retorno para o usuario
-            if ($atualizacao == TRUE){
-                $response["message"] = "Carrossel atualizado com sucesso";
-                $response["erro"] = "0";
+    try {
+        $response = array('status' => 200);
+    
+    
+        $i = 1; // contador para saber qual img
+        // percorre todos os arquivos
+        foreach ($_FILES as $chave => $dados) {
+            if(!empty($dados['name'])){
+                $caminho = update_carrossel($dados, $i);
+                $car->caminho = $caminho;
+                $car->posicao = $i;
+                $atualizacao = $car->atualizar($i);
+    
+                // mensagem de retorno para o usuario
+                if ($atualizacao == TRUE){
+                    $response["message"] = "Carrossel atualizado com sucesso";
+                    $response["erro"] = "0";
+                }
+                else if ($atualizacao == FALSE){
+                    $response["message"] = "Não foi possível atualizar o carrossel";
+                    $response["erro"] = "Tente mandar a imagem novamente.";
+                }
             }
-            else if ($atualizacao == FALSE){
-                $response["message"] = "Não foi possível atualizar o carrossel";
-                $response["erro"] = "Tente mandar a imagem novamente.";
-            }
+    
+            $i++;
         }
-
-        $i++;
+    
+        echo json_encode($response);
+        
+    } catch (\Throwable $th) {
+        $response = array('status' => 500);
+        echo json_encode($response);
     }
-
-    echo json_encode($response);
     
 }
 
