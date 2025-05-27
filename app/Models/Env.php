@@ -2,10 +2,6 @@
 
 namespace app\Models;
 
-// echo "<pre>";
-// var_dump(getenv());
-// echo "</pre>";
-
 class Env {
 
     public static function load(string $dotEnv = "../.env"):void
