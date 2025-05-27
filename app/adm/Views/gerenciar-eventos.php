@@ -1,3 +1,8 @@
+<?php
+require_once '../../../actions/evento/listar_evento.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,19 +41,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 1; $i <= 12; $i++): ?>
+                        <?php foreach ($eventos as $event): ?>
                                 <tr>
-                                    <td class="usuario-col">Evento <?php echo $i; ?></td>
-                                    <td><?php echo ("10/$i/25"); ?></td>
-                                    <td><button class="status <?php echo ($i % 2 == 0) ? 'inactive' : 'active'; ?>"> <?php echo ($i % 2 == 0) ? 'Em curso' : 'Finalizado'; ?></button></td>
+                                    <td class="nome-evento"><?= htmlspecialchars($event->getNome()) ?></td>
+                                    <td><?= htmlspecialchars($event->getData()) ?></td>
+                                    <td>
+                                        <span class="<?= $event->getStatus() ? 'status-ativo' : 'status-inativo' ?>">
+                                            <?= $event->getStatus() ? 'Ativo' : 'Inativo' ?>
+                                        </span>
+                                    </td>
                                     <td class="fone-col">
-                                        <a href="editar-evento.php">
-                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        <a href="editar-evento.php?id=<?= $event->getId() ?>">
+                                            <i class="fas fa-edit"></i>
                                         </a>
                                     </td>
                                     <td class="mais">
-                                        <a href="./cadastrar-atracao.php">
-                                            <i class="fa-solid fa-plus"></i>
+                                        <a href="cadastrar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-plus"></i>
                                         </a>
                                     </td>
                                     <td class="mais">
@@ -57,7 +65,8 @@
                                         </button>
                                     </td>
                                 </tr>
-                            <?php endfor; ?>
+                            <?php endforeach; ?>
+                            
                         </tbody>
                     </table>
                 </div>

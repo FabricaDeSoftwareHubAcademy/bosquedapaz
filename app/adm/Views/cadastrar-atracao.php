@@ -1,3 +1,8 @@
+<?php
+require_once '../../../actions/atracao/cadastrar_atracao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,48 +21,47 @@
     <main class="principal">
         <div class="box">
             <h2>CADASTRO DE ATRAÇÃO</h2>
-            <div class="form-box">
-                <form action="#" method="POST">
-                    <div id="form1">
+                <div class="form-box">
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="id_evento" value="<?= htmlspecialchars($id_evento) ?>">
 
                         <div class="input-group">
                             <label>Nome:</label>
-                            <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
-                                required>
+                            <input type="text" name="nome_atracao" placeholder="Digite o nome da atração" required>
                         </div>
 
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <textarea name="descricao_atracao" placeholder="Digite uma breve descrição da atração" required></textarea>
                         </div>
 
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="foto_atracao" required>
                         </div>
 
-                        <div class="preview-img">
-                            <img class="preview" src="" alt="" id="preview-image">
+                            <div class="preview-img">
+                                <img class="preview" src="" alt="" id="preview-image">
+                            </div>
+
                         </div>
+                        
+                        <div class="btn-cancelar-salvar">
+                            <button class="btn btn-cancelar">
+                                <a href="./Area-Adm.php">Cancelar</a>
+                            </button>
 
-                    </div>
+                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                        </div>
+                    </form>
 
-                </form>
-
-            </div>
+                </div>
             <div class="btns">
                 <a href="gerenciar-eventos.php" class="voltar">
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
+                
             </div>
         </div>
         </div>
@@ -71,6 +75,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/get-id-evento.js" defer></script>
 </body>
 
 </html>

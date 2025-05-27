@@ -1,3 +1,6 @@
+<?php require_once '../../../actions/evento/buscar_evento.php'; ?>
+<?php require_once '../../../actions/evento/editar_evento.php'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,32 +21,45 @@
         <div class="box">
             <h2>EDITAR EVENTO</h2>
             <div class="form-box">
-                <form action="#" method="POST">
-                    <div id="form1">
-                        <div class="input-group">
-                            <label>Nome:</label>
-                            <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
-                                required>
-                        </div>
-                        <div class="input-group">
-                            <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
-                        </div>
-                        <div class="data-imagem">
-                            <div class="input-group">
-                                <label>Data:</label>
-                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
-                            </div>
-                            <div class="input-group">
-                                <label>Imagem:</label>
-                                <input type="file" name="file" id="file"
-                                    required>
-                            </div>
-                        </div>
-                        <img class="preview" src="" alt="" id="preview-image">
+            <form method="POST" enctype="multipart/form-data">
+
+                <input type="hidden" name="id_evento" value="<?= $eventoSelecionado->getId() ?>">
+
+                <div class="input-group">
+                    <label>Nome:</label>
+                    <input type="text" name="nomedoevento" id="nomedoevento"  
+                        value="<?= htmlspecialchars($eventoSelecionado->getNome()) ?>" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Descrição:</label>
+                    <textarea name="descricao" rows="5" cols="40"><?= htmlspecialchars($eventoSelecionado->getDescricao()) ?></textarea>
+                </div>
+
+                <div class="data-imagem">
+                    <div class="input-group">
+                        <label>Data:</label>
+                        <input type="date" name="dataevento" value="<?= $eventoSelecionado->getData() ?>" required>
                     </div>
 
-                </form>
+                    <select name="status">
+                        <option value="1" <?= $eventoSelecionado->getStatus() ? 'selected' : '' ?>>Ativo</option>
+                        <option value="0" <?= !$eventoSelecionado->getStatus() ? 'selected' : '' ?>>Inativo</option>
+                    </select>
+
+                    <div class="input-group">
+                        <label>Imagem:</label>
+                        <input type="file" name="file">
+                    </div>
+                </div>
+
+                <img src="../../../Public/uploads/banners/<?= $eventoSelecionado->getBanner() ?>" alt="Banner do Evento">
+
+                <div class="btn-cancelar-salvar">
+                    <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
+                    <button type="submit" class="btn btn-salvar">Salvar</button>
+                </div>
+            </form>
 
             </div>
             <div class="btns">
@@ -51,14 +67,7 @@
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
+                
             </div>
         </div>
         </div>

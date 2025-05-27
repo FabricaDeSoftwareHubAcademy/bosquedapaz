@@ -1,5 +1,5 @@
 <?php
-require '../../Models/Database.php';
+require_once '../../Models/Database.php';
 
 class Evento
 {
@@ -7,8 +7,13 @@ class Evento
     protected $nome_evento;
     protected $descricao;
     protected $data_evento;
+    protected $status;
     protected $banner;
 
+    public function getId() {
+        return $this->id_evento;
+    }
+    
     public function getNome() {
         return $this->nome_evento;
     }
@@ -19,6 +24,9 @@ class Evento
 
     public function getData() {
         return $this->data_evento;
+    }
+    public function getStatus() {
+        return $this->status;
     }
 
     public function getBanner() {
@@ -37,20 +45,53 @@ class Evento
         $this->data_evento = $data;
     }
 
+    public function setStatus($status){
+        $this->status = $status;
+    }
+
     public function setBanner($banner){
         $this->banner = $banner;
     }
 
     public function cadastrar()
-{
+    {
+        $db = new Database('evento');
+        $res = $db->insert([
+            'nome_evento' => $this->nome_evento,
+            'descricao' => $this->descricao,
+            'data_evento' => $this->data_evento,
+            'banner' => $this->banner
+        ]);
+
+        return $res;
+    }
+
+    public function listar($where = null,$order = null,$limit = null){
+        $db = new Database('evento');
+        $res = $db->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+        
+        return $res;
+    }
+
+    public function buscarPorId($id) {
+        $db = new Database('evento');
+        $res = $db->select("id_evento = {$id}")
+                        ->fetchObject(self::class);
+
+        return $res;
+    }
+
+    public function atualizar($id){
     $db = new Database('evento');
-    $res = $db->insert([
+
+    $valores = [
         'nome_evento' => $this->nome_evento,
         'descricao' => $this->descricao,
         'data_evento' => $this->data_evento,
-        'banner' => $this->banner
-    ]);
+        'banner' => $this->banner,
+        'status' => $this->status
+    ];
 
-    return $res;
-}
+        return $db->update("id_evento = {$id}", $valores);
+    }
 }
