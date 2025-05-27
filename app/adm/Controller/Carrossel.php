@@ -1,6 +1,9 @@
 <?php
 
-require_once('../app/Models/Database.php');
+require_once('../vendor/autoload.php');
+// require_once('../app/Models/Database.php');
+
+use app\Models\Database;
 
 class Carrossel {
     public int $id;

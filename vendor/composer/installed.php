@@ -3,7 +3,7 @@
         'name' => 'desenvolvedor/bosquedapaz',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '280a9f7d9ae8a4a5407f5992d11d8aebe26fedaa',
+        'reference' => 'c13e3528d4013bfee36ca352d96523eb655829fa',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'desenvolvedor/bosquedapaz' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '280a9f7d9ae8a4a5407f5992d11d8aebe26fedaa',
+            'reference' => 'c13e3528d4013bfee36ca352d96523eb655829fa',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

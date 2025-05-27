@@ -5,7 +5,10 @@
     "autoload": {
         "psr-4": {
             "app\\": "app/"
-        }
+        },
+        "classmap": [
+            "app/Models/Database"
+        ]
     },
     "authors": [
         {
