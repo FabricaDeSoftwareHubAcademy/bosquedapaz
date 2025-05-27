@@ -1,3 +1,17 @@
+<?php
+$host = 'localhost';
+$user = 'root';
+$pass = '';
+$db = 'bosquedapaz';
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    echo("Erro na conexão");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
