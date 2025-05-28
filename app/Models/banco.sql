@@ -180,9 +180,10 @@ CREATE TABLE boleto(
 );
 
 
-insert into carrosel (caminho, posicao) values ("../Public/uploads/uploads-carrosel/img-carrossel-1.png" 1);
-insert into carrosel (caminho, posicao) values ("../Public/uploads/uploads-carrosel/img-carrossel-2.png" 2);
-insert into carrosel (caminho, posicao) values ("../Public/uploads/uploads-carrosel/img-carrossel-3.png" 3);
+insert into carrossel (caminho, posicao) values 
+("../Public/uploads/uploads-carrosel/img-carrossel-1.png", 1),
+("../Public/uploads/uploads-carrosel/img-carrossel-2.png", 2),
+("../Public/uploads/uploads-carrosel/img-carrossel-3.png", 3);
 
 
 insert into imagem values (default,"A","A","A","A","A");

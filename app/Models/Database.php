@@ -5,6 +5,7 @@ namespace app\Models;
 require_once('../vendor/autoload.php');
 
 use app\Models\Env;
+use PDO;
 $env = Env::load();
 
 class Database {

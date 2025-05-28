@@ -1,8 +1,11 @@
 <?php
 
-require_once("../app/adm/Controller/Carrossel.php");
+require_once('../vendor/autoload.php');
+
+use app\Controller\Carrossel;
 
 $car = new Carrossel();
+
 
 // funcao para mover o arquivo para o pasta de uploads
 // o parametro $num serve para falar o  numero da img
