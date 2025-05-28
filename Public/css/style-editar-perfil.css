@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     background-color: #e1e1e1;
+    overflow-x: hidden
 }
 
 .perfilEdit-superior-esquerda{
@@ -274,6 +275,10 @@ label{
     display: none;
 }
 
+.perfilEdit-label-desc{
+    overflow-y: hidden;
+}
+
 .perfilEdit-upload-label-square{
     display: flex;
     flex-direction: column;
@@ -430,7 +435,7 @@ label{
 
 /* respondividade tablets */
 
-/* @media (min-width: 576px){
+@media (min-width: 576px){
     .perfilEdit-form{
         width: 95%;
     }
@@ -471,24 +476,79 @@ label{
 
 @media (min-width:768px){
     .perfilEdit-body{
-        background-color: purple;
+        /* background-color: purple; */
+        overflow-x: hidden;
     }
+
+    .perfilEdit-logo{
+        height: 80%;
+    }
+
+    .perfilEdit-name{
+        height: 80%;
+    }
+
+
 }
 
 @media (min-width:992px){
-    .perfilEdit-body{
+    /* .perfilEdit-body{
         background-color: red;
+    } */
+
+    /* .perfilEdit-box{} */
+
+    .perfilEdit-form{
+        height: 100%;
+    }
+
+
+}
+
+/* nest hub */
+
+@media (width: 1024px) and (height: 600px){
+    .perfilEdit-body{
+        /* background-color: aqua; */
+        overflow-y: auto;
+    }
+
+    .perfilEdit-box{
+        min-height: 150vh;
+        position: relative;
+        top: 3%;
     }
 
     .perfilEdit-form{
-        overflow-y: auto;
-        min-height: 70%;
+        /* background-color: pink; */
+        height: 100%;   
     }
 }
 
+/* @media (min-width: 992px) and (max-width: 1199.98px){
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px){
+
+} */
+
 @media (min-width:1200px){
     .perfilEdit-body{
-        background-color: yellow;
+        /* background-color: yellow; */
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .perfilEdit-box{
+        top: 3%;
+        min-height: 140vh;
+        position: relative;
+        width: 90%;
+    }
+
+    .perfilEdit-load-foto{
+        min-width: 20%;
     }
 }
 
@@ -496,4 +556,4 @@ label{
     .perfilEdit-body{
         background-color: lime;
     }
-} */
+}

@@ -287,3 +287,9 @@
         height: 80px;
     }
 }
+
+@media (max-width:1350px){
+    .menu-adm{
+        height: 85px;
+    }
+}
