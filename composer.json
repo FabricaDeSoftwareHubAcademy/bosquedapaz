@@ -7,7 +7,7 @@
             "app\\": "app/"
         },
         "classmap": [
-            "app/Models/Database"
+            "./app/Models/Database.php"
         ]
     },
     "authors": [

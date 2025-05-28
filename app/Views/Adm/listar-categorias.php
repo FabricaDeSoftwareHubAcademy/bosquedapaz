@@ -1,5 +1,6 @@
 <?php
-require_once '../../adm/Controller/Categoria.php';
+    require_once '../../../vendor/autoload.php';
+    use app\Controller\Categoria;
 
 $cat = new Categoria();
 $cats = $cat->listar();
