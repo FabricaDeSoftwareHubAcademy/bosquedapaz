@@ -1,29 +1,3 @@
-<?php
-
-    require "../Controller/Parceiro.php";
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $parceiro = new Parceiro();
-
-        $parceiro->nome_parceiro = $_POST["nome_parceiro"];
-        $parceiro->telefone = $_POST["telefone"];
-        $parceiro->email = $_POST["email"];
-        $parceiro->nome_contato = $_POST["nome_contato"];
-        $parceiro->tipo = $_POST["tipo"];
-        $parceiro->cpf_cnpj = $_POST["cpf_cnpj"];
-        $parceiro->logo = $_POST["logo"];
-        $parceiro->cep = $_POST["cep"];
-        $parceiro->logradouro = $_POST["logradouro"];
-        $parceiro->num_residencia = $_POST["num_residencia"];
-        $parceiro->bairro = $_POST["bairro"];
-        $parceiro->cidade = $_POST["cidade"];
-        $parceiro->complemento = $_POST["complemento"];
-
-
-        $parceiro->cadastrar();
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -45,7 +19,7 @@
         <div class="box">
             <h1>CADASTRO DE PARCEIROS</h1>
             <div class="form-box">
-                <form action="" method="POST">
+                <form id="form_cadastrar_parceiro"  method="POST">
                     <div id="form1" class="form-grid">
                         <div class="input-group">
                             <label>Parceiro:</label>
@@ -109,7 +83,7 @@
                         <button type="button" class="btn btn-cancelar">
                         <a href="./Area-Adm.php">Cancelar</a>
                         </button>
-                        <button type="submit" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
+                        <button type="submit" id="botao_cadastrar" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
                     </div>
                 </form>
 
@@ -143,6 +117,37 @@
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+
+
+    <script>
+
+        let btn_cadastrar =  document.getElementById("botao_cadastrar");
+
+        btn_cadastrar.addEventListener('click', async function(event){
+
+            event.preventDefault();
+            let formulario = document.getElementById("form_cadastrar_parceiro");
+
+            let formData = new FormData(formulario);
+
+            let dados_php = await fetch('../../../actions/cadastrar_parceiro.php',{
+                method:'POST',
+                body: formData
+            });
+            
+            let response = await dados_php.json();
+
+            if(response.status == 200){
+                console.log(response.msg);
+                alert("Cadastrado com sucesso!!!!") /// SUBSTITUIR PELO MODAL mostraModal()
+            }else{
+                console.log(response.msg);
+                alert("Cadastrado com sucesso!!!!") /// SUBSTITUIR PELO MODAL mostraModal()
+            }
+        })
+ 
+    </script>
+
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 // require '../../Models/Database.php';
 
 class Endereco {
+    
     public int $id_endereco;
     public string $cep;
     public string $logradouro;
