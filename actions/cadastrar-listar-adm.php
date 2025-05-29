@@ -1,81 +1,61 @@
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-require __DIR__ . '/../app/adm/controller/Colaborador.php';
+<?php 
+require '../app/adm/Controller/Colaborador.php';
 
 header('Content-Type: application/json');
 
-$colab = new Colaborador();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Coleta os dados do formulário
+    $nome = $_POST['nome'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $telefone = $_POST['tel'] ?? '';
+    $cargo = $_POST['cargo'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+    $confSenha = $_POST['confSenha'] ?? '';
 
-$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
-
-if ($method === 'POST') {
-    $action = $_POST['action'] ?? '';
-
-    if ($action === 'listar') {
-        $busca = $_POST['busca'] ?? null;
-        $lista = $colab->listar($busca);
-        echo json_encode(['success' => true, 'dados' => $lista]);
+    if ($senha !== $confSenha) {
+        echo json_encode(['success' => false, 'message' => 'As senhas não coincidem.']);
         exit;
     }
 
-    if ($action === 'cadastrar') {
-        $colab->nome = $_POST['nome'] ?? '';
-        $colab->email = $_POST['email'] ?? '';
-        $colab->telefone = $_POST['telefone'] ?? '';
-        $colab->cargo = $_POST['cargo'] ?? '';
-        $colab->senha = $_POST['senha'] ?? '';
-
-        if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
-            $extensoesPermitidas = ['png', 'jpg', 'jpeg'];
-            $nomeArquivo = $_FILES['imagem']['name'];
-            $ext = strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
-
-            if (!in_array($ext, $extensoesPermitidas)) {
-                echo json_encode(['success' => false, 'erro' => 'Formato de imagem não permitido']);
-                exit;
-            }
-
-            $novoNome = uniqid() . '.' . $ext;
-            $pastaUpload = __DIR__ . '/../../../Public/imgs/imgs-fotos-cadastro-adm/';
-
-            if (!is_dir($pastaUpload)) {
-                mkdir($pastaUpload, 0755, true);
-            }
-
-            $destino = $pastaUpload . $novoNome;
-
-            if (move_uploaded_file($_FILES['imagem']['tmp_name'], $destino)) {
-                $colab->imagem = 'imgs-fotos-cadastro-adm/' . $novoNome;
-            } else {
-                echo json_encode(['success' => false, 'erro' => 'Erro ao mover arquivo']);
-                exit;
-            }
-        } else {
-            $colab->imagem = ''; 
-        }
-
-        $res = $colab->cadastrar();
-
-        if ($res) {
-            echo json_encode(['success' => true, 'mensagem' => 'Colaborador cadastrado com sucesso', 'id' => $res]);
-        } else {
-            echo json_encode(['success' => false, 'erro' => 'Erro ao cadastrar colaborador']);
-        }
+    if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK) {
+        echo json_encode(['success' => false, 'message' => 'Erro ao enviar a imagem.']);
         exit;
     }
 
-    echo json_encode(['success' => false, 'erro' => 'Ação desconhecida']);
-    exit;
-}
+    $arquivo = $_FILES['imagem'];
+    $pasta = '../Public/imgs/imgs-fotos-cadastro-adm/';
+    $nome_foto = $arquivo['name'];
+    $novo_nome = uniqid();
+    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-if ($method === 'GET') {
-    $busca = $_GET['busca'] ?? null;
-    $lista = $colab->listar($busca);
-    echo json_encode(['success' => true, 'dados' => $lista]);
-    exit;
-}
+    $caminho = $pasta . $novo_nome . '.' . $extensao;
+    $fotoSalva = move_uploaded_file($arquivo['tmp_name'], $caminho);
 
-echo json_encode(['success' => false, 'erro' => 'Método HTTP não suportado']);
-exit;
+
+    if (!$fotoSalva) {
+        echo json_encode(['success' => false, 'message' => 'Falha ao mover o arquivo.']);
+        exit;
+    }
+
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+    $objColab = new Colaborador();
+    $objColab->nome = $nome;
+    $objColab->email = $email;
+    $objColab->telefone = $telefone;
+    $objColab->cargo = $cargo;
+    $objColab->senha = $senhaHash;
+    $objColab->imagem = $caminho;
+
+    $res = $objColab->cadastrar();
+
+    if ($res) {
+        echo json_encode(['success' => true, 'message' => 'Cadastrado com sucesso!']);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Erro ao cadastrar no banco de dados.']);
+    }
+
+} else {
+    echo json_encode(['success' => false, 'message' => 'Requisição inválida.']);
+}
+?>

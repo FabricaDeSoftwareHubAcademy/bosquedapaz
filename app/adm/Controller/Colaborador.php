@@ -1,7 +1,6 @@
 <?php 
 
-require_once __DIR__ . '/../../../Models/Database.php';
-
+require_once __DIR__ . '/../../Models/Database.php';
 
 class Colaborador{
    public int $id_colaborador;
@@ -30,7 +29,7 @@ class Colaborador{
             $resColaborador = $dbColaborador->insert([
                 'id_pessoa' => $id_pessoa,
                 'cargo' => $this->cargo,
-                'senha' => $this->senha,
+                'senha' => $senhaHash,
                 'imagem' => $this->imagem,
             ]);
 

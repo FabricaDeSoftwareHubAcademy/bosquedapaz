@@ -1,30 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const formCadastro = document.getElementById("formCadastro");
-
-    formCadastro.addEventListener("submit", async (e) => {
-        e.defaultPrevented();
-
-        const formData = new FormData(formCadastro);
-        formData.append("action", "cadastrar");
-
-        try{
-            const response = await fetch("../../../actions/cadastro-listagem-adm.php", {
-                method: "POST",
-                body: formData,
-            });
-
-            const result = await response.json();
-
-            if (result.success){
-                alert("Colaborador cadastrado com sucesso!");
-                formCadastro.reset();
-            } else{
-                alert("Erro ao cadastrar: " + result.message);
-            }
-
-        } catch (error){
-            console.error("Erro ao cadastrar:", error);
-            alert("Erro na requisição");
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('formCadastro');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+        const formData = new FormData(form);
+        let dados_php = await fetch('../../../actions/cadastrar-listar-adm.php', 
+            {method: "POST",
+            body: formData}
+        );
+        
+        let response = await dados_php.json();
+        
+        console.log(response);
+  
     });
-});
+  });
+  

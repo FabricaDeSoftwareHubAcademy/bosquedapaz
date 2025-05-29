@@ -1,67 +1,5 @@
 <?php 
-// require '../../../app/adm/Controller/Colaborador.php';
-
-// header('Content-Type: application/json');
-
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     // Coleta os dados do formulário
-//     $nome = $_POST['nome'] ?? '';
-//     $email = $_POST['email'] ?? '';
-//     $telefone = $_POST['tel'] ?? '';
-//     $cargo = $_POST['cargo'] ?? '';
-//     $senha = $_POST['senha'] ?? '';
-//     $confSenha = $_POST['confSenha'] ?? '';
-
-//     if ($senha !== $confSenha) {
-//         echo json_encode(['success' => false, 'message' => 'As senhas não coincidem.']);
-//         exit;
-//     }
-
-//     if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK) {
-//         echo json_encode(['success' => false, 'message' => 'Erro ao enviar a imagem.']);
-//         exit;
-//     }
-
-//     $arquivo = $_FILES['imagem'];
-//     $pasta = '../../../Public/imgs/imgs-fotos-cadastro-adm/';
-//     $nome_foto = $arquivo['name'];
-//     $novo_nome = uniqid();
-//     $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
-
-//     if (!in_array($extensao, ['jpg', 'jpeg', 'png'])) {
-//         echo json_encode(['success' => false, 'message' => 'Extensão do arquivo inválida. Use .jpg, .jpeg ou .png.']);
-//         exit;
-//     }
-
-//     $caminho = $pasta . $novo_nome . '.' . $extensao;
-//     $fotoSalva = move_uploaded_file($arquivo['tmp_name'], $caminho);
-
-//     if (!$fotoSalva) {
-//         echo json_encode(['success' => false, 'message' => 'Falha ao mover o arquivo.']);
-//         exit;
-//     }
-
-//     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-
-//     $objColab = new Colaborador();
-//     $objColab->nome = $nome;
-//     $objColab->email = $email;
-//     $objColab->telefone = $telefone;
-//     $objColab->cargo = $cargo;
-//     $objColab->senha = $senhaHash;
-//     $objColab->imagem = $caminho;
-
-//     $res = $objColab->cadastrar();
-
-//     if ($res) {
-//         echo json_encode(['success' => true, 'message' => 'Cadastrado com sucesso!']);
-//     } else {
-//         echo json_encode(['success' => false, 'message' => 'Erro ao cadastrar no banco de dados.']);
-//     }
-
-// } else {
-//     echo json_encode(['success' => false, 'message' => 'Requisição inválida.']);
-// }
+require '../../../app/adm/Controller/Colaborador.php';
 ?>
 
 <!DOCTYPE html>
@@ -94,7 +32,7 @@
             <div class="container_form">
                 <h1>Cadastro ADM</h1>
                 <!-- Form -->
-                <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
+                <form class="form__cadastro" id="formCadastro" enctype="multipart/form-data">
                     <!-- Nome -->
                     <div class="form__group">
                         <label class="label__cad" for="nome">Nome</label>
@@ -136,7 +74,7 @@
                         <label class="label__cad" for="imagem">Imagem de Perfil</label>
                         <div class="area__input2">
                             <label for="imagem" class="uploads">
-                                <input class="input2" type="file" name="imagem" id="imagem" required>
+                                <input class="input2" type="file" name="imagem" id="imagem" accept="image/*" required>
                             </label>
                         </div>
                     </div>                   
@@ -169,6 +107,8 @@
                         <button type="button" name="cancelar" class="btn btn__rosa">Cancelar</button>
                         <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
+
+                    <div id="msgRetorno" style="margin-top: 10px; font-weight: bold;"></div>
                 </form>
             </div>
         </div>    
@@ -178,7 +118,6 @@
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </section>
 
-    <script src="/bosquedapaz/Public/js/js-adm/js-cadastrar-adm.js"></script>
-
+    <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
 </body>
 </html>
