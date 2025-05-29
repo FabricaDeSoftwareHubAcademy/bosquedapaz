@@ -140,7 +140,7 @@ if (isset($_GET['id'])) {
                     <option value="Cosmetologia">Cosmetologia</option>
                     <option value="Gastronomia">Gastronomia</option>
                     <option value="Literatura">Literatura</option>
-                    <option value="Moda_Autoral">Moda Autoral</option>
+                    <option value="Moda Autoral">Moda Autoral</option>
                     <option value="Plantas">Plantas</option>
                     <option value="Sustentabilidade">Sustentabilidade</option>
                 </select>
