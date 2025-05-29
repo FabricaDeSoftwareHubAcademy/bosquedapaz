@@ -73,6 +73,7 @@ CREATE TABLE expositor(
     num_barraca INT NULL,
     voltagem VARCHAR(45) NULL,
     energia VARCHAR(10) NULL,
+    tipo VARCHAR(255) NULL,
     contato2 CHAR(11) NULL,
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
