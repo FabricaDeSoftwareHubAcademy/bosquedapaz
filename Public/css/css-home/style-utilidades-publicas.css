@@ -98,35 +98,84 @@
 
 .cards{
     width: 320px;
-    height: 500px;
+    height: 450px;
     overflow: hidden;
     position: relative;
-    background-color: black;
+    background-color: white;
+    border-radius: 10px;
 }
 .por-cima-card{
     width: 100%;
     height: 100%;
-    background-color: aquamarine;
+    background-color: transparent;
     z-index: 2;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .parte-superior{
     width: 100%;
     height: 50%;
-    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* .parte-inferior{
+.parte-superior img{
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.parte-inferior{
     width: 100%;
-} */
+    height: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+    flex-direction: column;
+    padding: 50px;
+}
+
+.parte-inferior h1{
+    position: relative;
+    bottom: 40px;
+}
+
+.saiba-mais{
+    width: 85%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #3F49EA;
+    color: #3F49EA;
+    font-size: 17px;
+    font-weight: 800;
+    background-color: white;
+    position: relative;
+    top: 24px;
+    z-index: 1;
+    transition: all .2s ease-in-out;
+}
+
+.saiba-mais:hover{
+    background-color: #3F49EA;
+    border: 1px solid white;
+    color: white;
+}
 
 .div__decorativa{
-    width: 400px;
-    height: 40%;
+    width: 380px;
+    height: 43%;
     position: absolute;
-    top: 45vh;
-    left: -5px;
+    top: 34vh;
+    left: 1px;
     background-color: #3F49EA;
     transform: rotate(-25deg);
     z-index: 1;
@@ -134,10 +183,10 @@
 
 .linha__decorativa1{
     width: 15px;
-    height: 34%;
+    height: 38%;
     position: absolute;
-    top: 39vh;
-    left: 63px;
+    top: 28vh;
+    left: 64px;
     background-color: #3F49EA;
     border-radius: 10px;
     transform: rotate(65deg);
@@ -146,10 +195,10 @@
 
 .linha__decorativa2{
     width: 15px;
-    height: 34%;
+    height: 38%;
     position: absolute;
-    top: 34vh;
-    left: 237px;
+    top: 23vh;
+    left: 238px;
     background-color: white;
     border-radius: 10px;
     transform: rotate(65deg);
@@ -197,64 +246,6 @@
     color: white;
 }
 
-.dec-img {
-    width: 20%;
-    height: 14%;
-    background-color: rgb(255, 0, 0);
-    transform: rotate(142deg);
-    position: fixed;
-    z-index: 3;
-    top: -46%;
-    left: -45%;
-}
-
-.img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    position: relative;
-    top: 4%;
-}
-
-.img img {
-    width: 87%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.dec-button {
-    width: 128%;
-    height: 83%;
-    transform: rotate(-24deg);
-    position: relative;
-    top: 14%;
-    left: 0%;
-    background-color: #FF3877;
-}
-
-.dec-menor-button {
-    height: 259px;
-    border-right: 15px solid #FF3877;
-    border-radius: 10px;
-    position: relative;
-    bottom: 168%;
-    right: 46%;
-    transform: rotate(66deg);
-}
-
-.dec-menor-dentro-button {
-    height: 198px;
-    border-right: 15px solid white;
-    border-radius: 10px;
-    left: 49%;
-    bottom: 166%;
-    position: relative;
-    transform: rotate(-114deg);
-}
-
 #border-card-azul {
     border: 1px solid #3F49EA;
 }
@@ -265,17 +256,6 @@
 
 #h1-rosa-utl {
     color: #FF3877;
-}
-
-#button-azul-utl {
-    border: 1px solid #3F49EA;
-    color: #3F49EA;
-}
-
-#button-azul-utl:hover {
-    background-color: #3F49EA;
-    color: white;
-    border: 1px solid white;
 }
 
 #dec-azul-utl {
