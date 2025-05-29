@@ -164,7 +164,6 @@ CREATE TABLE dadosFeira(
     qtd_visitantes BIGINT NOT NULL,
     qtd_expositores BIGINT NOT NULL,
     qtd_artistas BIGINT NOT NULL,
-    qtd_paises BIGINT NOT NULL,
     PRIMARY KEY(id_dadosFeira)
 );
 
