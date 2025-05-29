@@ -51,7 +51,7 @@
                                 <a href="./Area-Adm.php">Cancelar</a>
                             </button>
 
-                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                            <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
                         </div>
                     </form>
                 </div>
