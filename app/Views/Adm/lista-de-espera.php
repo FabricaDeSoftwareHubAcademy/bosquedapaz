@@ -1,13 +1,3 @@
-<?php
-require_once '../Controller/Lista-espera.php';
-
-$lista = new Lista_expositor();
-
-$busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-
-$expositores = $lista->listar($busca);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -51,12 +41,12 @@ $expositores = $lista->listar($busca);
               <?php if (!empty($expositores)) : ?>
                 <?php foreach ($expositores as $expositor) : ?>
                   <tr>
-                    <td><?= htmlspecialchars($expositor['nome']) ?></td>
-                    <td class="email"><?= htmlspecialchars($expositor['email']) ?></td>
-                    <td><?= htmlspecialchars($expositor['categoria']) ?></td>
-                    <td><?= htmlspecialchars($expositor['telefone']) ?></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td class="perfil">
-                      <a href="validar-expositor.php?id=<?= $expositor['id_expositor'] ?>">
+                      <a href="validar-expositor.php?id=">
                         <i class="bi bi-person-badge"></i>
                       </a>
                     </td>
