@@ -1,7 +1,3 @@
-<?php
-require_once '../../../actions/evento/cadastrar_evento.php';
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

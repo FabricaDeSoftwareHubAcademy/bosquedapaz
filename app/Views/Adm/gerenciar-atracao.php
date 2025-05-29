@@ -1,8 +1,3 @@
-<?php
-require_once '../../../actions/atracao/listar_atracao.php';
-
-?>
-
 
 <html lang="pt-br">
 

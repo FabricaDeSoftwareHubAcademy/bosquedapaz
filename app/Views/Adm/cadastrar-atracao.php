@@ -1,7 +1,4 @@
-<?php
-require_once '../../../actions/atracao/cadastrar_atracao.php';
 
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
