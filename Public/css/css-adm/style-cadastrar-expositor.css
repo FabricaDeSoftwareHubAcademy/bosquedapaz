@@ -272,6 +272,14 @@ label#salvar-btn {
 /************ fim botao finalizar *************/
 
 
+.oculta{
+    visibility: hidden;
+}
+
+.chama{
+    visibility: visible;
+    background-color: red;
+}
 
 /************* RESPONSIVIDADE ***************/
 

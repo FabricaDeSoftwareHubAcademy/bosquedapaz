@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_FILES['files'])) {
         $expositor->setImagens($_FILES['files']);
+
     }
 
     $res = $expositor->cadastrar();
@@ -62,7 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <form method="POST">
+            <form id="form_expositor" method="POST" enctype="multipart/form-data">
+
                 <div class="formularios">
 
                     <div class="form-pessoa">
@@ -115,7 +117,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <script>
                                 link
                             </script>
-                            <input type="text" name="" id="" placeholder="link instagram" required>
+                         <input type="text" name="link" placeholder="link instagram" required>
+
                         </div>
                     </div>
 
@@ -167,6 +170,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
 
+                    
+
                 </div>
 
                 <div class="btns">
@@ -189,7 +194,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-editar-adm.js"></script>
 
 
 </body>
