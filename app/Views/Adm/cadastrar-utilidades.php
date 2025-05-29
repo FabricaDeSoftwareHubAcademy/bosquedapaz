@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +21,7 @@
             <h2>CADASTRO DE UTILIDADES PÚBLICAS</h2>
             <div class="form-container">
                 <div class="form-box">
-                    <form action="#">
+                    <form id="form_cadastrar_utilidade" method="POST">
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
@@ -27,16 +29,16 @@
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <textarea name="descricao" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
                         <div class="data">
                             <div class="input-group">
                                 <label>Data início</label>
-                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                                <input name="data_inicio" type="date" id="data-inicio">
                             </div>
                             <div class="input-group">
                                 <label>Data fim</label>
-                                <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                                <input name="data_fim" type="date" id="data-fim">
                             </div>
                         </div>
                         <div class="input-group">
@@ -56,7 +58,7 @@
                         <a href="">Cancelar</a>
                     </button>
 
-                    <button class="btn btn-salvar">
+                    <button id="botao_cadastrar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
                         <a href="">Salvar</a>
                 </div>
             </div>
