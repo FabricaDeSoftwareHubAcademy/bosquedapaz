@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 <body class="perfilEdit-body">
-    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
+    <?php include "../../../Public/assets/home/menu-expositor.html" ?>
 
      <div class="perfilEdit-box">
         <h1 class="perfilEdit-title">Editar Perfil</h1>
@@ -18,14 +18,14 @@
         <form action="#" class="perfilEdit-form">
 
             <section class="perfilEdit-empresas">
-                <div class="perfilEdit-logo">
+                <div class="perfilEdit-logo perfilEdit-important-input">
                     <label class="perfilEdit-logoEmpresa perfilEdit-impotant-label">Logo da empresa: </label>
                     <input type="file" name="foto" id="foto" class="perfilEdit-foto" required>
                     <label for="foto" class="perfilEdit-upload">
                         Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
                     </label>
                 </div>
-                <div class="perfilEdit-name">
+                <div class="perfilEdit-name perfilEdit-important-input">
                     <label for="nome" class="perfilEdit-nameEmpresa perfilEdit-impotant-label">Nome da empresa: </label>
                     <input type="text" name="nome" id="nome" class="perfilEdit-nome" placeholder="Digite seu nome" required>
                 </div>
@@ -38,26 +38,22 @@
             
             <section class="perfilEdit-info">
 
-                <div class="perfilEdit-info-coluna">
-                    <div>
-                        <i class="fa-brands fa-square-instagram"></i>
-                        <input type="text" name="instagram" class="perfilEdit-input-info" placeholder="Digite seu instagram">
-                    </div>
-                    <div>
-                        <i class="fa-brands fa-square-whatsapp"></i>
-                        <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="(99) 982925477">
-                    </div>
+                <div>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <input type="text" name="instagram" class="perfilEdit-input-info" placeholder="Digite seu instagram">
                 </div>
-                
-                <div class="perfilEdit-info-coluna">
-                    <div>
-                        <i class="fa-brands fa-square-facebook"></i>
-                        <input type="text" name="facebook" class="perfilEdit-input-info" placeholder="Digite seu facebook">
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="text" name="email" class="perfilEdit-input-info" placeholder="Digite seu e-mail">
-                    </div>
+                <div>
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                    <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="(99) 982925477">
+                </div>
+            
+                <div>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <input type="text" name="facebook" class="perfilEdit-input-info" placeholder="Digite seu facebook">
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" name="email" class="perfilEdit-input-info" placeholder="Digite seu e-mail">
                 </div>
 
             </section>
