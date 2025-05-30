@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 <body class="perfilEdit-body">
-    <?php include "../../../Public/assets/home/menu-expositor.html" ?>
+    <?php include "../../../Public/include/home/menu-expositor.html" ?>
 
      <div class="perfilEdit-box">
         <h1 class="perfilEdit-title">Editar Perfil</h1>

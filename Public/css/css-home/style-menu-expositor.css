@@ -10,7 +10,7 @@
 .cabecalho {
     position: fixed;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid rgba(161, 161, 161, 0.788);
     z-index: 5;
 }
