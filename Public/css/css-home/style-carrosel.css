@@ -1,23 +1,18 @@
+.cabecalho .list-menu {
+    display: flex;
+}
+
 .carrossel {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    height: auto;
     background-color: #c1c1c1;
+    padding-top: 70px;
 }
 
 .conteiner-slider {
-    width: 100%;
-    height: calc(97% - 80px);
-}
-
-.slider-all {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -25,91 +20,68 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
+    padding: 0px 1rem;
+    z-index: 1;
+    /* background-color: rgba(255, 255, 255, 0.452); */
 }
 
 .swap {
-    height: 20px;
-    padding: 0px 20px;
+    padding: 1rem;
     cursor: pointer;
 }
 
 .arrow {
     font-size: 2rem;
+    color: black;
 }
 
 .slider {
     width: 100%;
+    height: 90vh;
+    background-image: url("../../uploads/uploads-carrosel/img-carrossel-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     z-index: 0;
 }
 
-.slider-content{
-    position: absolute;
+.slider-balls {
     width: 100%;
-    height: 100%;
+    height: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    object-fit: cover;
-}
-
-.carrosel {
-    width: 100%;
-}
-
-.slider-balls{
-    width: 100%;
-    height: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 5px;
+    gap: .5rem;
     background-color: #c1c1c1;
 }
 
 .ball {
-    width: 4%;
-    height: .5rem;
+    width: 4rem;
+    height: .8rem;
+    border-radius: .3rem;
     background-color: white;
-    border-radius: .2rem;
 }
 
-@media screen and (max-width: 1150px) {
-    .carrossel {
-        height: 48vh;
+@media screen and (max-width: 1400px) {
+    .slider {
+        height: 85vh;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .carrossel {
-        height: 50vh;
-    }
-
-    .conteiner-slider {
-        height: calc(95% - 70px);
-    }
-
-    .slider-balls {
-        height: 5%;
-    }
-
-    .ball {
-        width: 10%;
-    }
-
-    .arrow {
-        font-size: 1.5rem;
+@media screen and (max-width: 1050px) {
+    .slider {
+        height: 40vh;
     }
 }
+
 @media screen and (max-width: 500px) {
-    .carrossel {
-        height: 38vh;
+    .slider {
+        height: 25vh;
     }
 }

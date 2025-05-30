@@ -1,11 +1,12 @@
 <?php
 
-include __DIR__ . "/Env.php";
+namespace app\Models;
+
+require_once('../vendor/autoload.php');
 
 use app\Models\Env;
+use PDO;
 $env = Env::load();
-
-// print_r( $_ENV['DB_HOST']); 
 
 class Database {
     //atributos do database

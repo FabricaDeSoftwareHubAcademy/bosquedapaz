@@ -1,70 +1,62 @@
-var cont = 1
+let slider = document.getElementById('slider')
+let arrowLeft = document.getElementById('arrow-left')
+let arrowRight = document.getElementById('arrow-right')
+let balls = document.querySelectorAll('.ball')
+balls[0].style.backgroundColor = 'green'
 
-const menu = document.getElementById('cabecalho')
-const ul = document.getElementsByClassName('link-menu')
-const arrow_left = document.getElementById("arrow-left")
-const arrow_right = document.getElementById("arrow-right")
 
-const slide_item = document.getElementById("slider-item")
+let x = 0
+function trocaImagem (img, n){
+    slider.style.backgroundImage = `url('../../${img}')`
+    balls[n].style.backgroundColor = 'green'
+    balls[x].style.backgroundColor = 'white'
+    x = n
+}
 
-document.getElementById('radio1').checked = true
 
-const interval = setInterval(() => {
-    slider()
-}, 3000)
+async function getImage() {
+    let imagens = await fetch("../../../actions/carrossel.php")
 
-function slider(){
-    cont += 1
-    if (cont > 3){
-        document.getElementById('slider-item3').style.zIndex = 0
-        document.getElementById('slider-item2').style.zIndex = 0
-        // document.getElementById('slider-item1').style.zIndex = 0
-        cont = 1
-    }
-    
-    document.getElementById('radio' + cont).checked = true
-    document.getElementById('slider-item' + cont).style.zIndex = 1
+    let resposta = await imagens.json()
 
-    // slide_item.style.backgroundImage = `url('imgs/img-home/imagem-carrossel-${cont}.JPG')`
+
+    const interval = setInterval(() => {
+            if (x == 0){
+                trocaImagem(resposta.imagens[1].caminho,1)
+            }
+            else if (x == 1){
+                trocaImagem(resposta.imagens[2].caminho,2)
+            }
+            else if (x == 2){
+                trocaImagem(resposta.imagens[0].caminho ,0)
+        }
+    }, 3000)
+
+
+    arrowLeft.addEventListener('click', () => {
+        if (x == 0){
+            trocaImagem(resposta.imagens[2].caminho,2)
+        }
+        else if (x == 1){
+            trocaImagem(resposta.imagens[0].caminho,0)
+        }
+        else if (x == 2){
+            trocaImagem(resposta.imagens[1].caminho ,1)
+        }
+    })
+
+    arrowRight.addEventListener('click', () => {
+        if (x == 0){
+            trocaImagem(resposta.imagens[1].caminho,1)
+        }
+        else if (x == 1){
+            trocaImagem(resposta.imagens[2].caminho,2)
+        }
+        else if (x == 2){
+            trocaImagem(resposta.imagens[0].caminho ,0)
+        }
+    })
 
 }
 
-arrow_left.addEventListener("click", function(){
-    cont--
-    if (cont < 1){
-        cont = 3
-        document.getElementById('radio' + cont).checked = true
-        document.getElementById('slider-item3').style.zIndex = 1
-        document.getElementById('slider-item2').style.zIndex = 0
-        document.getElementById('slider-item1').style.zIndex = 0
-    }
-    if (cont == 1){
-        console.log(cont)
-        document.getElementById('radio' + cont).checked = true
-        document.getElementById('slider-item3').style.zIndex = 0
-        document.getElementById('slider-item2').style.zIndex = 0
-        document.getElementById('slider-item' + cont).style.zIndex = 1
-    }
-    else if (cont == 2){
-        console.log(cont)
-        document.getElementById('radio' + cont).checked = true
-        document.getElementById('slider-item3').style.zIndex = 0
-        document.getElementById('slider-item1').style.zIndex = 0
-        document.getElementById('slider-item' + cont).style.zIndex = 1
-    }
-    // slide_item.style.backgroundImage = `url('imgs/img-home/imagem-carrossel-${cont}.JPG')`
-})
-arrow_right.addEventListener("click", function(){
-    cont++
-    if (cont > 3){
-        cont = 1
-        document.getElementById('slider-item3').style.zIndex = 0
-        document.getElementById('slider-item2').style.zIndex = 0
-        document.getElementById('slider-item1').style.zIndex = 1
-    }
-    // console.log(cont)
-    document.getElementById('radio' + cont).checked = true
-    document.getElementById('slider-item' + cont).style.zIndex = 1
-    // slide_item.style.backgroundImage = `url('imgs/img-home/imagem-carrossel-${cont}.JPG')`
-
-})
+getImage()

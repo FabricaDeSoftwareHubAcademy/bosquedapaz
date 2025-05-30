@@ -63,7 +63,7 @@
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
-                    <a class="botao-login" href="../app/adm/Views/Area-Adm.php">Login</a>
+                    <a class="botao-login" href="../app/Views/Adm/Area-Adm.php">Login</a>
                    
                 </div>
                

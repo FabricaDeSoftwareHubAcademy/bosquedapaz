@@ -48,8 +48,6 @@ CREATE TABLE pessoa(
     FOREIGN KEY(id_login) REFERENCES login(id_login)
 );
 
-select * from pessoa;
-
 CREATE TABLE imagem(
 	id_imagem INT NOT NULL AUTO_INCREMENT,
     imagem1 VARCHAR(255) NOT NULL,
@@ -75,21 +73,19 @@ CREATE TABLE expositor(
     num_barraca INT NULL,
     voltagem VARCHAR(45) NULL,
     energia VARCHAR(10) NULL,
+    tipo VARCHAR(255) NULL,
     contato2 CHAR(11) NULL,
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
+    status_exp ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
     FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria),
     FOREIGN KEY(id_imagem) REFERENCES imagem(id_imagem)
 );
-
-select * from pessoa;
-
-DELETE FROM pessoa WHERE id_pessoa > 1;
 
 CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
@@ -158,12 +154,11 @@ CREATE TABLE parceiro(
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
 
-CREATE TABLE carrosel(
-	id_carrosel INT NOT NULL AUTO_INCREMENT,
-    img1 VARCHAR(255) NOT NULL,
-    img2 VARCHAR(255) NOT NULL,
-    img3 VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id_carrosel)
+CREATE TABLE carrossel(
+	id_carrossel INT NOT NULL AUTO_INCREMENT,
+	caminho varchar(255),
+    posicao int,
+    PRIMARY KEY(id_carrossel)
 );
 
 CREATE TABLE dadosFeira(
@@ -187,12 +182,11 @@ CREATE TABLE boleto(
 );
 
 
-show tables;
+insert into carrossel (caminho, posicao) values 
+("../Public/uploads/uploads-carrosel/img-carrossel-1.png", 1),
+("../Public/uploads/uploads-carrosel/img-carrossel-2.png", 2),
+("../Public/uploads/uploads-carrosel/img-carrossel-3.png", 3);
 
-select * from pessoa;
-select * from expositor;
-
-select * from imagem;
 
 insert into imagem values (default,"A","A","A","A","A");
 

@@ -1,0 +1,21 @@
+{
+    "name": "desenvolvedor/bosquedapaz",
+    "description": "Projeto feira bosque da paz",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        },
+        "classmap": [
+            "app/Models/Database"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Halyson Reis",
+            "email": "halysondasilvadosreis@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
