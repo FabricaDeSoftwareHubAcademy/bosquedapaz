@@ -120,6 +120,20 @@ class Database {
         return $this->execute($query);
     }
 
+    public function select_colaborador($where = null, $order = null, $limit = null){
+        $where = strlen($where) ? ' WHERE '.$where : '';
+        $order = strlen($order) ? ' ORDER BY '.$order : '';
+        $limit = strlen($limit) ? ' LIMIT '.$limit : '';
+
+        $query = 'SELECT 
+        col.id_colaborador, col.cargo, pes.nome, pes.email, pes.telefone
+        from colaborador as col 
+        inner join pessoa as pes 
+        on col.id_pessoa = pes.id_pessoa'.$where;
+        
+        return $this->execute($query);
+    }
+
     // método update, com parametros $where, $values
     public function update($where, $values){
         $fields = array_keys($values);

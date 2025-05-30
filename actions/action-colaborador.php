@@ -2,15 +2,14 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
 
-$colab = new Colaborador;
+$colab = new Colaborador();
 
 
 
-if($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $colab = $colab->get_imagem();
+// if($_SERVER['REQUEST_METHOD'] == 'GET') {
+//     $res = $colab->buscar_por_id(1);
 
-    $response = array($colab, "status" => 200);
-    echo json_encode($response);
-}
+//     echo json_encode($res);
+// }
 
 ?>

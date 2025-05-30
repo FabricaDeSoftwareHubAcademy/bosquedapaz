@@ -20,20 +20,14 @@ CREATE TABLE endereco(
     PRIMARY KEY(id_endereco)
 );
 
-CREATE TABLE login(
-	id_login INT NOT NULL AUTO_INCREMENT,
-	usuario VARCHAR(150) NOT NULL,
-    senha VARCHAR(200) NOT NULL,
-    perfil CHAR(3) NOT NULL,
-    PRIMARY KEY(id_login)
-);
-
 
 CREATE TABLE pessoa( 
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
     email VARCHAR(200) NULL,
+    senha VARCHAR(200) NULL,
+    perfil CHAR(3) NULL,
     whats CHAR(11) NULL,
     telefone CHAR(11) NULL,
     link_instagram VARCHAR(255) NULL,
@@ -42,10 +36,8 @@ CREATE TABLE pessoa(
     data_nasc DATE NULL,
     img_perfil VARCHAR(255) NULL,
     id_endereco INT NULL,
-    id_login INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
-    FOREIGN KEY(id_login) REFERENCES login(id_login)
 );
 
 CREATE TABLE imagem(
@@ -91,9 +83,7 @@ CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
-    profissao VARCHAR(100) NOT NULL,
     imagem VARCHAR(255) NULL,
-    senha VARCHAR(150) NOT NULL,
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -191,3 +181,13 @@ insert into carrossel (caminho, posicao) values
 insert into imagem values (default,"A","A","A","A","A");
 
 insert into categoria values (default,"BURGERS","ROXO","blablabla");
+
+insert into login(usuario, senha, perfil) values("matheus", "159", "1");
+
+insert into pessoa(nome, email, telefone, id_login) values ("matheus", "matheus@gmail.com", "0000000000", 1);
+
+insert into colaborador(id_pessoa, cargo, imagem) values (1, "ADM", "hdiajbdfiasbiuabsodubdbjdBD");
+
+select 
+col.id_colaborador, col.cargo, col.imagem, pes.id_pessoa, pes.nome, pes.email, pes.telefone, log.id_login, log.usuario, log.senha
+from colaborador as col inner join pessoa as pes on col.id_pessoa = pes.id_pessoa inner join login as log on pes.id_login = log.id_login;
