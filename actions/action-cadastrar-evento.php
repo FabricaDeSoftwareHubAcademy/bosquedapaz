@@ -2,6 +2,10 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Evento;
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+header('Content-Type: application/json');
+
 function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
@@ -18,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     
     if (empty($nome) || empty($descricao) || empty($data) || !validarData($data)) {
-        echo "<script>alert('Preencha todos os campos corretamente.'); window.history.back();</script>";
+       echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos corretamente."]);
         exit;
     }
 
@@ -62,11 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     
     if ($evento->cadastrar()) {
-        echo '<script>alert("Evento cadastrado com sucesso!"); window.location.href="Area-Adm.php";</script>';
+        echo json_encode(["status" => "sucesso", "mensagem" => "Evento cadastrado com sucesso!"]);
     } else {
-        echo '<script>alert("Erro ao cadastrar evento."); window.history.back();</script>';
+        echo json_encode(["status" => "erro", "mensagem" => "Erro ao cadastrar evento."]);
     }
-
     exit;
 }
 ?>
