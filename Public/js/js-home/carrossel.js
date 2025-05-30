@@ -15,12 +15,38 @@ function trocaImagem (img, n){
 
 
 async function getImage() {
-    let imagens = await fetch("../../../actions/carrossel.php")
-
-    let resposta = await imagens.json()
-
-
-    const interval = setInterval(() => {
+    try {
+        let imagens = await fetch("../../../actions/carrossel.php")
+    
+        let resposta = await imagens.json()
+    
+    
+        const interval = setInterval(() => {
+                if (x == 0){
+                    trocaImagem(resposta.imagens[1].caminho,1)
+                }
+                else if (x == 1){
+                    trocaImagem(resposta.imagens[2].caminho,2)
+                }
+                else if (x == 2){
+                    trocaImagem(resposta.imagens[0].caminho ,0)
+            }
+        }, 3000)
+    
+    
+        arrowLeft.addEventListener('click', () => {
+            if (x == 0){
+                trocaImagem(resposta.imagens[2].caminho,2)
+            }
+            else if (x == 1){
+                trocaImagem(resposta.imagens[0].caminho,0)
+            }
+            else if (x == 2){
+                trocaImagem(resposta.imagens[1].caminho ,1)
+            }
+        })
+    
+        arrowRight.addEventListener('click', () => {
             if (x == 0){
                 trocaImagem(resposta.imagens[1].caminho,1)
             }
@@ -29,33 +55,47 @@ async function getImage() {
             }
             else if (x == 2){
                 trocaImagem(resposta.imagens[0].caminho ,0)
-        }
-    }, 3000)
+            }
+        })
+    } catch (error) {
 
-
-    arrowLeft.addEventListener('click', () => {
-        if (x == 0){
-            trocaImagem(resposta.imagens[2].caminho,2)
-        }
-        else if (x == 1){
-            trocaImagem(resposta.imagens[0].caminho,0)
-        }
-        else if (x == 2){
-            trocaImagem(resposta.imagens[1].caminho ,1)
-        }
-    })
-
-    arrowRight.addEventListener('click', () => {
-        if (x == 0){
-            trocaImagem(resposta.imagens[1].caminho,1)
-        }
-        else if (x == 1){
-            trocaImagem(resposta.imagens[2].caminho,2)
-        }
-        else if (x == 2){
-            trocaImagem(resposta.imagens[0].caminho ,0)
-        }
-    })
+        const interval = setInterval(() => {
+                if (x == 0){
+                    trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-1.jpg',1)
+                }
+                else if (x == 1){
+                    trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-2.jpg',2)
+                }
+                else if (x == 2){
+                    trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-3.jpg',0)
+            }
+        }, 3000)
+    
+    
+        arrowLeft.addEventListener('click', () => {
+            if (x == 0){
+                trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-1.jpg',2)
+            }
+            else if (x == 1){
+                trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-2.jpg',0)
+            }
+            else if (x == 2){
+                trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-3.jpg' ,1)
+            }
+        })
+    
+        arrowRight.addEventListener('click', () => {
+            if (x == 0){
+                trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-1.jpg',1)
+            }
+            else if (x == 1){
+                trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-2.jpg',2)
+            }
+            else if (x == 2){
+                trocaImagem('../../../Public/uploads/uploads-carrosel/img-carrossel-3.jpg' ,0)
+            }
+        })     
+    }
 
 }
 

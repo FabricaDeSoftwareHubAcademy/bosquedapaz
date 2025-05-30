@@ -21,7 +21,7 @@
 
     <?php include "../../../Public/include/home/info-sobre-feira.html"; ?>
     
-    <?php //include "../../../Public/include/home/lista-expositor.php"; ?>
+    <?php include "../../../Public/include/home/lista-expositor.php"; ?>
 
     <?php include "../../../Public/include/home/categoria.html"; ?>
 
