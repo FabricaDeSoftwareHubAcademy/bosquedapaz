@@ -1,6 +1,10 @@
 <?php 
 
-require_once __DIR__ . '/../../Models/Database.php';
+namespace app\Controller;
+
+require_once('../vendor/autoload.php');
+use PDO;
+use app\Models\Database;
 
 class Colaborador{
    public int $id_colaborador;
@@ -40,27 +44,8 @@ class Colaborador{
         return false;
     }
 
-    public function listar($busca = null){
-        $db = new Database('colaborador');
-        
-        if ($busca) {
-            $query = "
-                SELECT c.id_colaborador, p.nome, p.email, p.telefone, c.cargo, c.imagem
-                FROM colaborador c
-                JOIN pessoa p ON p.id_pessoa = c.id_pessoa
-                WHERE p.nome LIKE ?
-            ";
-            $stmt = $db->execute($query, ["%$busca%"]);
-        } else {
-            $query = "
-                SELECT c.id_colaborador, p.nome, p.email, p.telefone, c.cargo, c.imagem
-                FROM colaborador c
-                JOIN pessoa p ON p.id_pessoa = c.id_pessoa
-            ";
-            $stmt = $db->execute($query);
-        }
-    
-        return $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
+    public function buscar(){
+        $dbPessoa = new Database()
     }
 }
 ?>

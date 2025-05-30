@@ -1,7 +1,3 @@
-<?php 
-require '../../../app/adm/Controller/Colaborador.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
