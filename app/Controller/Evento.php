@@ -72,7 +72,7 @@ class Evento
 
     public function listar($where = null,$order = null,$limit = null){
         $db = new Database('evento');
-        $res = $db->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+        $res = $db->select($where,$order,$limit)->fetchAll(PDO::FETCH_ASSOC);
         
         return $res;
     }

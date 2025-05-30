@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,34 +35,9 @@
                                 <th>Foto</th>
                             </tr>
                         </thead>
-                        <tbody>
-                        <?php foreach ($eventos as $event): ?>
-                                <tr>
-                                    <td class="nome-evento"><?= htmlspecialchars($event->getNome()) ?></td>
-                                    <td><?= htmlspecialchars($event->getData()) ?></td>
-                                    <td>
-                                        <span class="<?= $event->getStatus() ? 'status-ativo' : 'status-inativo' ?>">
-                                            <?= $event->getStatus() ? 'Ativo' : 'Inativo' ?>
-                                        </span>
-                                    </td>
-                                    <td class="fone-col">
-                                        <a href="editar-evento.php?id=<?= $event->getId() ?>">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <a href="cadastrar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-plus"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <button class="open-modal" data-modal="modal-fotos">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                            
-                        </tbody>
+                            <tbody id="lista-eventos">
+        <!-- Eventos serão adicionados aqui via JS -->
+                            </tbody>
                     </table>
                 </div>
 
@@ -103,6 +77,7 @@
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/status-evento.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-gerenciar-evento.js" defer></script>
 </body>
 
 </html>

@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (resultado.status === 'sucesso') {
                 alert(resultado.mensagem);
-                window.location.href = './Area-Adm.php';
+                window.location.href = './gerenciar-eventos.php';
             } else {
                 alert(resultado.mensagem);
             }
