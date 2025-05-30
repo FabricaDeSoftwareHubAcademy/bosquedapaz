@@ -1,7 +1,6 @@
 const sandwich = document.getElementById('sandwich')
 const navMenu = document.getElementById('nav-bar')
 const navList = document.getElementById('nav-list')
-console.log(navMenu);
 sandwich.addEventListener('click', function(){
     if (navMenu.classList.contains('open')) {
         navMenu.classList.remove('open')

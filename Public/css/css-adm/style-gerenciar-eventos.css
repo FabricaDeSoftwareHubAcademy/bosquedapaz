@@ -112,6 +112,9 @@ h2 {
     border-collapse: collapse;
     text-align: center;
 }
+.nome-evento{
+    overflow: hidden;
+}
 
 
 /* .collaborators-table thead {
@@ -412,6 +415,16 @@ table tbody tr:nth-child(even) {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.status-ativo {
+    color: green;
+    font-weight: bold;
+}
+
+.status-inativo {
+    color: red;
+    font-weight: bold;
 }
 
 
