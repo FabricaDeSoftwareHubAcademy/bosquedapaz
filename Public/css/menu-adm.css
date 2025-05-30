@@ -279,9 +279,17 @@
 
 }
 
-@media screen and (max-width: 450px) {
-    .nav-item {
-        font-size: .9rem;
-        height: 20px;
-    }
+
 } */
+
+@media screen and (max-width: 550px) {
+    .menu-adm{
+        height: 80px;
+    }
+}
+
+@media (max-width:1350px){
+    .menu-adm{
+        height: 85px;
+    }
+}
