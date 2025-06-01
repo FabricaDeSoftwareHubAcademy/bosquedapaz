@@ -56,24 +56,34 @@
                         </div>
                     </div>
 
-                    <!-- Cargo -->
-                    <div class="form__group">
-                        <label class="label__cad" for="cargo">Cargo</label>
-                        <div class="area__input">
-                            <i id="icon" class="bi bi-briefcase"></i>
-                            <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
-                        </div>
-                    </div>
-
                     <!-- Imagem de Perfil -->
                     <div class="form__group">
                         <label class="label__cad" for="imagem">Imagem de Perfil</label>
                         <div class="area__input2">
                             <label for="imagem" class="uploads">
-                                <input class="input2" type="file" name="imagem" id="imagem" accept="image/*" required>
+                                <input class="input2" type="file" name="imagem" id="imagem" accept="image/*">
                             </label>
                         </div>
-                    </div>                   
+                    </div>      
+
+                    <div class="row-double">
+                        <!-- Cargo -->
+                        <div class="form__group">
+                            <label class="label__cad" for="cargo">Cargo</label>
+                            <div class="area__input">
+                                <i id="iconn" class="bi bi-briefcase"></i>
+                                <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="label__cad" for="perfil">Perfil</label>
+                            <div class="area__input">
+                                <i id="iconn" class="bi bi-briefcase"></i>
+                                <input class="input" type="text" name="perfil" id="perfil" placeholder="Digite seu perfil" required>
+                            </div>
+                        </div>
+                    </div>             
 
                     <!-- Senha e Confirmar Senha lado a lado -->
                     <div class="row-double">
@@ -103,8 +113,6 @@
                         <button type="button" name="cancelar" class="btn btn__rosa">Cancelar</button>
                         <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
-
-                    <div id="msgRetorno" style="margin-top: 10px; font-weight: bold;"></div>
                 </form>
             </div>
         </div>    

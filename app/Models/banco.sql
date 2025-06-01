@@ -37,7 +37,7 @@ CREATE TABLE pessoa(
     img_perfil VARCHAR(255) NULL,
     id_endereco INT NULL,
     PRIMARY KEY(id_pessoa),
-    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
+    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
 
 CREATE TABLE imagem(
@@ -182,12 +182,12 @@ insert into imagem values (default,"A","A","A","A","A");
 
 insert into categoria values (default,"BURGERS","ROXO","blablabla");
 
-insert into login(usuario, senha, perfil) values("matheus", "159", "1");
+insert into pessoa(nome, email, perfil, telefone) values ("matheus", "matheus@gmail.com", "ADM", "0000000000");
 
-insert into pessoa(nome, email, telefone, id_login) values ("matheus", "matheus@gmail.com", "0000000000", 1);
-
-insert into colaborador(id_pessoa, cargo, imagem) values (1, "ADM", "hdiajbdfiasbiuabsodubdbjdBD");
+insert into colaborador(id_pessoa, cargo, imagem) values (1, "Financeiro", "hdiajbdfiasbiuabsodubdbjdBD");
 
 select 
-col.id_colaborador, col.cargo, col.imagem, pes.id_pessoa, pes.nome, pes.email, pes.telefone, log.id_login, log.usuario, log.senha
-from colaborador as col inner join pessoa as pes on col.id_pessoa = pes.id_pessoa inner join login as log on pes.id_login = log.id_login;
+col.id_colaborador, col.cargo, col.imagem, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil
+from colaborador as col inner join pessoa as pes on col.id_pessoa = pes.id_pessoa;
+
+

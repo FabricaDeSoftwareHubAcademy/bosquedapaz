@@ -168,6 +168,13 @@
     color: black;
     cursor: pointer;
 }
+#iconn {
+    position: absolute;
+    left: 30px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
 
 /* Inputs */
 .area__input .input {
