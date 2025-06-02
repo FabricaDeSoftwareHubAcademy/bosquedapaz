@@ -40,7 +40,8 @@ class Colaborador extends Pessoa
         $this->imagem = $imagem;
     }
 
-    // Método para cadastrar o colaborador no banco
+
+
     public function cadastrar()
     {
         // Insere na tabela pessoa
@@ -54,10 +55,9 @@ class Colaborador extends Pessoa
         ]);
 
         if (!$idPessoa) {
-            return false; // falha na inserção da pessoa
+            return false;
         }
 
-        // Insere na tabela colaborador
         $dbColab = new Database('colaborador');
         $res = $dbColab->insert([
             'cargo' => $this->cargo,
