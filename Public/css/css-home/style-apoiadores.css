@@ -19,27 +19,62 @@
     margin-bottom: 30px;
 }
 
-.all-parce{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 30px;
-    justify-items: center;
+.carrossel-parceiros {
+    display: flex;
     align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;    
-
-
+    gap: 40px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* max-width: 100%; */
+    padding: 20px 0;
+    white-space: nowrap;
+    height: 120px;
+    box-sizing: border-box;
+    /* position: relative; */
+    
 }
-  
-  .div-logo-parceiro {
+
+.slider-parceiros {
+    display: inline-flex;
+    gap: 30px;
+    animation: deslizar 40s linear infinite;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.div-logo-parceiro {
     flex: 0 0 auto;
-    padding: 0 20px;
-  }
-  
-  .img-logo-parceiros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.div-logo-parceiro img{
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(0);
+    transition: transform 0.3s ease;
+}
+.div-logo-parceiro img:hover {
+    transform: scale(1.05);
+}
+
+/* .img-logo-parceiros {
     height: 80px;
     width: auto;
-  }
+} */
+
+@media (max-width: 768px) {
+    .slider-parceiros {
+        animation: none;
+    }
+}
+
   
 
 .section-bosque-quem-somos{
@@ -189,14 +224,6 @@ h1{
 }
 
 
-
-@keyframes degrade-animado{
-    0%{
-        background-position-x: 0%;
-    }
-    100%{
-        background-position-x: 100%;
-    }}
 
     .section-colaboradoras-quem-somos {
     width: 100%;

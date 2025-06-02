@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-apoiadores.css">
-
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-apoiadores.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+    <script src="../../../Public/js/js-home/slider-apoiadores.js" defer></script>
 
     <title>Bosque da Paz</title>
     
@@ -92,20 +89,28 @@
 
     <section class="section-parce2">
     <h3 class="title all-titles">Nossos Apoiadores</h3>
-        <div class="all-parce">
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo shopping bosque dos ipes" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo senac" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura de campo grande" class="img-logo-parceiros"></div>
-            
-            
-        </div>
+    <div class="carrossel-parceiros">
+        <div class="slider-parceiros" id="carrosselTrack">
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo hub"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo hub"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura"></div>
+            </div>
+    </div>
+
     </section>
     
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
+    
 
 </body>
 </html>
