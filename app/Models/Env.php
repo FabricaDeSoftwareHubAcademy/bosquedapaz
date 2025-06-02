@@ -4,11 +4,11 @@ namespace app\Models;
 
 class Env {
 
-    public static function load(string $dotEnv = null):void
+    public static function load(string $dotEnv = __DIR__ . '/../../.env'):void
     {
-        if($dotEnv === null){
-            $dotEnv = __DIR__ . '/../../.env';
-        }
+        // if($dotEnv === null){
+        //     $dotEnv = __DIR__ . '/../../.env';
+        // }
         
         if(file_exists($dotEnv)){
             $env = parse_ini_file($dotEnv);
