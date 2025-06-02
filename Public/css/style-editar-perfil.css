@@ -187,7 +187,7 @@ label{
 
 .perfilEdit-input-info{
     background-color: rgb(255, 255, 255);
-    width: 88%;
+    width: 90%;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
@@ -297,19 +297,19 @@ label{
     position: absolute;
 }
 
-/* @media (max-width: 575.98px){
+@media (max-width: 543.98px){
     .perfilEdit-body{
         overflow-y: auto;
         position: relative;
-        min-height: 140vh;
+        min-height: 110vh;
     }
 
     .perfilEdit-box{
         position: relative;
-        height: 125vh;
+        height: 100vh;
         width: 90vw;
-        overflow-x: hidden;
         margin-top: 22%;
+        overflow-y: hidden;
     }
 
     .perfilEdit-title{
@@ -326,7 +326,7 @@ label{
         flex-direction: column;
         position: relative;
         gap: 8px;
-        height: 14%;
+        height: 18%;
     }
     
     .perfilEdit-important-input{
@@ -360,7 +360,7 @@ label{
 
     .perfilEdit-info{
         flex-direction: column;
-        height: 22%;
+        height: 25%;
         gap: 7%;
     }
 
@@ -369,7 +369,7 @@ label{
     }
 
     .perfilEdit-foto-info{
-        height: 18%;
+        height: 23%;
         width: 100%;
     }
 
@@ -411,20 +411,21 @@ label{
 
     .perfilEdit-btns{
         position: relative;
-        top: 3%;
-        width: 100%;
-        justify-content: flex-end;
+        top: 2%;
+        width: 75%;
+        height: 6%;
+        justify-content: space-between;
         gap: 10px;
     }
 
     .perfilEdit-btn{
-        width: 33%;
-        height: 90%;
+        width: 60%;
+        height: 100%;
         font-size: 18px;
     }
 
     .perfilEdit-link-voltar{
-        bottom: 1%;
+        bottom: 2%;
     }
 
     .perfilEdit-superior-esquerda{
@@ -434,7 +435,7 @@ label{
     .perfilEdit-superior-direita{
         width: 20%;
     }
-} */
+}
 
 /* iPhone SE */
 @media (width: 375px) and (height: 667px) {
@@ -442,7 +443,6 @@ label{
         overflow-y: auto;
         position: relative;
         min-height: 145vh;
-        background-color: darkgrey;
     }
 
     .perfilEdit-box{
@@ -700,7 +700,7 @@ label{
     }
 
     .perfilEdit-btn{
-        width: 33%;
+        width: 28%;
         height: 100%;
         font-size: 18px;
     }
@@ -892,12 +892,13 @@ label{
             flex-direction: column;
             position: relative;
             gap: 8px;
-            height: 18%;
+            min-height: 18%;
         }
         
         .perfilEdit-important-input{
             width: 100%;
             height: 100%;
+            /* background-color: yellowgreen; */
         }
     
         .perfilEdit-upload{
@@ -906,6 +907,7 @@ label{
     
         .perfilEdit-nome{
             height: 100%;
+            /* background-color: purple; */
         }
     
         .perfilEdit-nome::placeholder{
@@ -914,6 +916,7 @@ label{
     
         .perfilEdit-upload{
             font-size: 11px;
+            /* background-color: red; */
         }
     
         .perfilEdit-upload .perfilEdit-upload-label{
@@ -1004,13 +1007,691 @@ label{
 
 
 @media (min-width: 576px){
+    .perfilEdit-body{
+        overflow-y: auto;
+        position: relative;
+        min-height: 115vh;
+    }
+
+    .perfilEdit-box{
+        position: relative;
+        height: 100vh;
+        width: 90vw;
+        overflow-x: hidden;
+        margin-top: 16%;
+    }
+
+    .perfilEdit-title{
+        font-size: 32px;
+    }
 
     .perfilEdit-form{
-        width: 95%;
+        width: 90%;
+        gap: 18px;
+        height: 90%;
+    }
+
+    .perfilEdit-empresas{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 8px;
+        min-height: 18%;
+    }
+    
+    .perfilEdit-important-input{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellowgreen; */
+    }
+
+    .perfilEdit-upload{
+        height: 100%;
+    }
+
+    .perfilEdit-nome{
+        height: 100%;
+        /* background-color: purple; */
+    }
+
+    .perfilEdit-nome::placeholder{
+        font-size: 11px;
+    }
+
+    .perfilEdit-upload{
+        font-size: 11px;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-upload .perfilEdit-upload-label{
+        font-size: 14px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 26%;
+        gap: 7%;
+    }
+
+    .perfilEdit-load-info{
+        height: 10%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 25%;
+        width: 100%;
+    }
+
+    .perfilEdit-div-group{
+        height: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
     }
 
     .perfilEdit-load-foto{
-        height: 150px;
+        min-width: 152px;
+        height: 152px;
+    }
+
+    .fa-square-instagram{
+        font-size: 19px;
+        color: #3b8bdc;
+    }
+    
+    .fa-square-whatsapp{
+        font-size: 19px;
+        color: #22bc9d;
+    }
+    
+    .fa-square-facebook{
+        font-size: 18px;
+        color: #f2c518;
+    }
+    
+    .fa-envelope{
+        color: #ff3877;
+        font-size: 15px;
+    }
+
+    .perfilEdit-btns{
+        position: relative;
+        top: 2%;
+        width: 50%;
+        height: 6%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .perfilEdit-btn{
+        width: 60%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    .perfilEdit-link-voltar{
+        bottom: 1.5%;
+    }
+
+    .perfilEdit-superior-esquerda{
+        width: 20%;
+    }
+
+    .perfilEdit-superior-direita{
+        width: 20%;
+    }
+}
+
+@media (min-width:768px){
+    .perfilEdit-body{
+        overflow-y: auto;
+        position: relative;
+        min-height: 110vh;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-box{
+        position: relative;
+        height: 100vh;
+        width: 90vw;
+        overflow-x: hidden;
+        margin-top: 11%;
+    }
+
+    .perfilEdit-title{
+        font-size: 32px;
+    }
+
+    .perfilEdit-form{
+        width: 90%;
+        gap: 18px;
+        height: 90%;
+    }
+
+    .perfilEdit-empresas{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 8px;
+        min-height: 14%;
+    }
+    
+    .perfilEdit-important-input{
+        width: 100%;
+        height: 100%;
+        /* background-color: yellowgreen; */
+    }
+
+    .perfilEdit-nome{
+        height: 100%;
+        /* background-color: purple; */
+    }
+
+    .perfilEdit-nome::placeholder{
+        font-size: 11px;
+    }
+
+    .perfilEdit-upload{
+        font-size: 11px;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-upload .perfilEdit-upload-label{
+        font-size: 14px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 26%;
+        gap: 7%;
+    }
+
+    .perfilEdit-input-info{
+        width: 90%;
+    }
+
+    .perfilEdit-load-info{
+        height: 10%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 25%;
+        width: 100%;
+    }
+
+    .perfilEdit-div-group{
+        height: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+
+    .perfilEdit-load-foto{
+        min-width: 25vw;
+        min-height: 17vh;
+    }
+
+    .fa-square-instagram{
+        font-size: 19px;
+        color: #3b8bdc;
+    }
+    
+    .fa-square-whatsapp{
+        font-size: 19px;
+        color: #22bc9d;
+    }
+    
+    .fa-square-facebook{
+        font-size: 18px;
+        color: #f2c518;
+    }
+    
+    .fa-envelope{
+        color: #ff3877;
+        font-size: 15px;
+    }
+
+    .perfilEdit-btns{
+        position: relative;
+        top: 3%;
+        bottom: 4%;
+        width: 50%;
+        height: 6%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .perfilEdit-btn{
+        width: 60%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    .perfilEdit-link-voltar{
+        bottom: 3%;
+    }
+
+    .perfilEdit-superior-esquerda{
+        width: 20%;
+    }
+
+    .perfilEdit-superior-direita{
+        width: 20%;
+    }
+}
+
+@media (min-width:992px){
+    .perfilEdit-body{
+        overflow-y: auto;
+        position: relative;
+        min-height: 90vh;
+    }
+
+    .perfilEdit-box{
+        position: relative;
+        height: 85vh;
+        width: 90vw;
+        overflow-x: hidden;
+        margin-top: 11%;
+    }
+
+    .perfilEdit-title{
+        font-size: 32px;
+    }
+
+    .perfilEdit-form{
+        width: 90%;
+        gap: 18px;
+        height: 90%;
+    }
+
+    .perfilEdit-empresas{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 8px;
+        min-height: 15%;
+    }
+    
+    .perfilEdit-important-input{
+        width: 100%;
+        height: 90%;
+        /* background-color: yellowgreen; */
+    }
+
+    .perfilEdit-upload{
+        height: 100%;
+    }
+
+    .perfilEdit-nome{
+        height: 100%;
+        /* background-color: purple; */
+    }
+
+    .perfilEdit-nome::placeholder{
+        font-size: 11px;
+    }
+
+    .perfilEdit-upload{
+        font-size: 11px;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-upload .perfilEdit-upload-label{
+        font-size: 14px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 24%;
+        width: 100%;
+        gap: 7%;
+    }
+
+    .perfilEdit-info div{
+        width: 100%;
+    }
+
+    .perfilEdit-input-info{
+        width: 90%;
+    }
+
+    .perfilEdit-load-info{
+        height: 10%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 25%;
+        width: 100%;
+    }
+
+    .perfilEdit-div-group{
+        height: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+
+    .perfilEdit-load-foto{
+        min-width: 21vw;
+        min-height: 14vh;
+    }
+
+    .fa-square-instagram{
+        font-size: 19px;
+        color: #3b8bdc;
+    }
+    
+    .fa-square-whatsapp{
+        font-size: 19px;
+        color: #22bc9d;
+    }
+    
+    .fa-square-facebook{
+        font-size: 18px;
+        color: #f2c518;
+    }
+    
+    .fa-envelope{
+        color: #ff3877;
+        font-size: 15px;
+    }
+
+    .perfilEdit-btns{
+        position: relative;
+        top: 4%;
+        width: 40%;
+        height: 6%;
+        justify-content: space-between;
+        gap: 28px;
+    }
+
+    .perfilEdit-btn{
+        width: 60%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    .perfilEdit-link-voltar, .perfilEdit-img-voltar{
+        bottom: 3%;
+        width: 35px;
+        height: 35px;
+        
+    }
+
+    .perfilEdit-superior-esquerda{
+        width: 20%;
+    }
+
+    .perfilEdit-superior-direita{
+        width: 20%;
+    }
+}
+
+@media (min-width: 1000px){
+    .perfilEdit-body{
+        overflow-y: auto;
+        position: relative;
+        min-height: 200vh;
+    }
+
+    .perfilEdit-box{
+        position: relative;
+        height: 175vh;
+        width: 90vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 11%;
+    }
+
+    .perfilEdit-title{
+        font-size: 32px;
+    }
+
+    .perfilEdit-form{
+        width: 90%;
+        gap: 18px;
+        height: 90%;
+    }
+
+    .perfilEdit-empresas{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 8px;
+        min-height: 15%;
+    }
+    
+    .perfilEdit-important-input{
+        width: 100%;
+        height: 90%;
+        /* background-color: yellowgreen; */
+    }
+
+    .perfilEdit-upload{
+        height: 100%;
+    }
+
+    .perfilEdit-nome{
+        height: 100%;
+        /* background-color: purple; */
+    }
+
+    .perfilEdit-nome::placeholder{
+        font-size: 11px;
+    }
+
+    .perfilEdit-upload{
+        font-size: 11px;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-upload .perfilEdit-upload-label{
+        font-size: 14px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 24%;
+        width: 100%;
+        gap: 7%;
+    }
+
+    .perfilEdit-info div{
+        width: 100%;
+    }
+
+    .perfilEdit-input-info{
+        width: 95%;
+    }
+
+    .perfilEdit-load-info{
+        height: 10%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 25%;
+        width: 100%;
+    }
+
+    .perfilEdit-div-group{
+        height: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+
+    .perfilEdit-load-foto{
+        min-width: 20vw;
+        min-height: 30vh;
+    }
+
+    .fa-square-instagram{
+        font-size: 19px;
+        color: #3b8bdc;
+    }
+    
+    .fa-square-whatsapp{
+        font-size: 19px;
+        color: #22bc9d;
+    }
+    
+    .fa-square-facebook{
+        font-size: 18px;
+        color: #f2c518;
+    }
+    
+    .fa-envelope{
+        color: #ff3877;
+        font-size: 15px;
+    }
+
+    .perfilEdit-btns{
+        position: relative;
+        top: 2%;
+        width: 40%;
+        height: 5.5%;
+        justify-content: space-between;
+        gap: 28px;
+    }
+
+    .perfilEdit-btn{
+        width: 60%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    .perfilEdit-link-voltar, .perfilEdit-img-voltar{
+        bottom: 3%;
+        width: 35px;
+        height: 35px;
+        
+    }
+
+    .perfilEdit-superior-esquerda{
+        width: 20%;
+    }
+
+    .perfilEdit-superior-direita{
+        width: 20%;
+    }
+}
+
+@media (min-width:1200px){
+    .perfilEdit-body{
+        overflow-y: auto;
+        position: relative;
+        min-height: 160vh;
+    }
+
+    .perfilEdit-box{
+        position: relative;
+        height: 140vh;
+        width: 90vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 8%;
+    }
+
+    .perfilEdit-title{
+        font-size: 32px;
+    }
+
+    .perfilEdit-form{
+        width: 90%;
+        gap: 18px;
+        height: 90%;
+    }
+
+    .perfilEdit-empresas{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 8px;
+        min-height: 15%;
+        margin-bottom: 2%;
+    }
+    
+    .perfilEdit-important-input{
+        width: 100%;
+        min-height: 11vh;
+    }
+
+    .perfilEdit-upload{
+        height: 100%;
+    }
+
+    .perfilEdit-nome{
+        height: 100%;
+        /* background-color: purple; */
+    }
+
+    .perfilEdit-nome::placeholder{
+        font-size: 11px;
+    }
+
+    .perfilEdit-upload{
+        font-size: 11px;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-upload .perfilEdit-upload-label{
+        font-size: 14px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 24%;
+        width: 100%;
+        gap: 7%;
+    }
+
+    .perfilEdit-info div{
+        width: 100%;
+    }
+
+    .perfilEdit-input-info{
+        width: 95%;
+    }
+
+    .perfilEdit-load-info{
+        height: 10%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 25%;
         width: 100%;
     }
 
@@ -1021,90 +1702,217 @@ label{
         padding-top: 1%;
         overflow-x: auto;
         flex-wrap: nowrap;
-        -webkit-overflow-scrolling: touch;
         display: flex;
     }
 
     .perfilEdit-load-foto{
-        min-width: 30%;
-        height: 100%;
+        min-width: 14vw;
+        min-height: 20vh;
     }
 
-    .perfilEdit-info{
-        flex-direction: column;
+    .fa-square-instagram{
+        font-size: 19px;
+        color: #3b8bdc;
+    }
+    
+    .fa-square-whatsapp{
+        font-size: 19px;
+        color: #22bc9d;
+    }
+    
+    .fa-square-facebook{
+        font-size: 18px;
+        color: #f2c518;
+    }
+    
+    .fa-envelope{
+        color: #ff3877;
+        font-size: 15px;
     }
 
     .perfilEdit-btns{
-        width: 55%;
-        height: 6%;
-        top: 3%;
         position: relative;
+        top: 2%;
+        width: 40%;
+        height: 5.5%;
+        justify-content: space-between;
+        gap: 28px;
     }
 
-}
-
-@media (min-width:768px){
-
-    .perfilEdit-important-input{
-        height: 80%;
-    }
-}
-
-@media (min-width:992px){
-    .perfilEdit-form{
+    .perfilEdit-btn{
+        width: 60%;
         height: 100%;
-    }
-}
-
-
-@media (width: 1024px) and (height: 600px){
-    .perfilEdit-body{
-        overflow-y: auto;
+        font-size: 18px;
     }
 
-    .perfilEdit-box{
-        min-height: 150vh;
-        position: relative;
-        top: 3%;
+    .perfilEdit-link-voltar, .perfilEdit-img-voltar{
+        bottom: 3%;
+        width: 35px;
+        height: 35px;
+        
     }
 
-    .perfilEdit-form{
-        height: 100%;   
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px){
-
-}
-
-@media (min-width: 1200px) and (max-width: 1399.98px){}
-
-@media (min-width:1200px){
-    .perfilEdit-body{
-        overflow-y: auto;
+    .perfilEdit-superior-esquerda{
+        width: 20%;
     }
 
-    .perfilEdit-box{
-        top: 3%;
-        min-height: 140vh;
-        position: relative;
-        width: 90%;
-    }
-
-    .perfilEdit-load-foto{
-        min-width: 20%;
+    .perfilEdit-superior-direita{
+        width: 20%;
     }
 }
 
 @media (min-width:1400px){
     .perfilEdit-body{
-        width: 100vw;
-        height: 100vh;
+        overflow-y: auto;
+        position: relative;
+        min-height: 160vh;
+    }
+
+    .perfilEdit-box{
+        position: relative;
+        height: 140vh;
+        width: 90vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 8%;
+    }
+
+    .perfilEdit-title{
+        font-size: 32px;
+    }
+
+    .perfilEdit-form{
+        width: 90%;
+        gap: 18px;
+        height: 90%;
+    }
+
+    .perfilEdit-empresas{
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 0;
-        background-color: #e1e1e1;
+        position: relative;
+        gap: 8px;
+        min-height: 15%;
+        margin-bottom: 2%;
+    }
+    
+    .perfilEdit-important-input{
+        width: 100%;
+        min-height: 11vh;
+    }
+
+    .perfilEdit-upload{
+        height: 100%;
+    }
+
+    .perfilEdit-nome{
+        height: 100%;
+        /* background-color: purple; */
+    }
+
+    .perfilEdit-nome::placeholder{
+        font-size: 11px;
+    }
+
+    .perfilEdit-upload{
+        font-size: 11px;
+        /* background-color: red; */
+    }
+
+    .perfilEdit-upload .perfilEdit-upload-label{
+        font-size: 14px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 24%;
+        width: 100%;
+        gap: 7%;
+    }
+
+    .perfilEdit-info div{
+        width: 100%;
+    }
+
+    .perfilEdit-input-info{
+        width: 95%;
+    }
+
+    .perfilEdit-load-info{
+        height: 10%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 25%;
+        width: 100%;
+    }
+
+    .perfilEdit-div-group{
+        height: 80%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+
+    .perfilEdit-load-foto{
+        min-width: 14vw;
+        min-height: 20vh;
+    }
+
+    .fa-square-instagram{
+        font-size: 19px;
+        color: #3b8bdc;
+    }
+    
+    .fa-square-whatsapp{
+        font-size: 19px;
+        color: #22bc9d;
+    }
+    
+    .fa-square-facebook{
+        font-size: 18px;
+        color: #f2c518;
+    }
+    
+    .fa-envelope{
+        color: #ff3877;
+        font-size: 15px;
+    }
+
+    .perfilEdit-btns{
+        position: relative;
+        top: 2%;
+        width: 40%;
+        height: 5.5%;
+        justify-content: space-between;
+        gap: 28px;
+    }
+
+    .perfilEdit-btn{
+        width: 60%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    .perfilEdit-link-voltar, .perfilEdit-img-voltar{
+        bottom: 3%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .perfilEdit-superior-esquerda{
+        width: 20%;
+    }
+
+    .perfilEdit-superior-direita{
+        width: 20%;
     }
     
 }
