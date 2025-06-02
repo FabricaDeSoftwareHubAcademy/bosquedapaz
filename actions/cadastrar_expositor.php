@@ -4,10 +4,14 @@ require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
 use app\Controller\Categoria;
 
-$categoriaModel = new Categoria();
+if(isset($_GET['listar'])){
+    
+    $categoria = new Categoria();
+    $opcoes = $categoria->listar();
 
+    echo json_encode($opcoes);
+}
 
-$lista = $categoriaModel->listar();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor = new Expositor();
@@ -21,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor->setEnergia($_POST['energia']);
     $expositor->setContato2($_POST['whatsapp']);
     $expositor->setProduto($_POST['produto']);
-    $expositor->setId_categoria($_POST['id_categoria']);
+    $expositor->setId_categoria($_POST['id_categoria']); /// SELECIONAR CATEGORIA DO BANCO
 
 
     if (isset($_FILES['files'])) {
@@ -29,8 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $res = $expositor->cadastrar();
-    echo "cadastradp";
-    exit;
+
+    if($res){
+        echo json_encode( ['status' => 'ok', 'msg' => 'Expositor cadastrado com sucesso!'] );
+    }else{
+        echo json_encode( ['status' => 'erro', 'msg' => 'Erro ao cadastrar o expositor!'] );
+    }
 }
 
 ?>
