@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,39 +18,37 @@
         <div class="box">
             <h2>EDITAR EVENTO</h2>
             <div class="form-box">
-            <form method="POST" enctype="multipart/form-data">
-
-                <input type="hidden" name="id_evento" value="<?= $eventoSelecionado->getId() ?>">
+            <form id="form-editar-evento" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id_evento" id="id_evento">
 
                 <div class="input-group">
                     <label>Nome:</label>
-                    <input type="text" name="nomedoevento" id="nomedoevento"  
-                        value="<?= htmlspecialchars($eventoSelecionado->getNome()) ?>" required>
+                    <input type="text" name="nomedoevento" id="nomedoevento" required>
                 </div>
 
                 <div class="input-group">
                     <label>Descrição:</label>
-                    <textarea name="descricao" rows="5" cols="40"><?= htmlspecialchars($eventoSelecionado->getDescricao()) ?></textarea>
+                    <textarea name="descricao" id="descricao" rows="5" cols="40"></textarea>
                 </div>
 
                 <div class="data-imagem">
                     <div class="input-group">
                         <label>Data:</label>
-                        <input type="date" name="dataevento" value="<?= $eventoSelecionado->getData() ?>" required>
+                        <input type="date" name="dataevento" id="dataevento" required>
                     </div>
 
-                    <select name="status">
-                        <option value="1" <?= $eventoSelecionado->getStatus() ? 'selected' : '' ?>>Ativo</option>
-                        <option value="0" <?= !$eventoSelecionado->getStatus() ? 'selected' : '' ?>>Inativo</option>
+                    <select name="status" id="status">
+                        <option value="1">Ativo</option>
+                        <option value="0">Inativo</option>
                     </select>
 
                     <div class="input-group">
                         <label>Imagem:</label>
-                        <input type="file" name="file">
+                        <input type="file" name="file" id="file">
                     </div>
                 </div>
 
-                <img src="../../../Public/uploads/banners/<?= $eventoSelecionado->getBanner() ?>" alt="Banner do Evento">
+                <img id="preview-banner" src="" alt="Banner do Evento">
 
                 <div class="btn-cancelar-salvar">
                     <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
@@ -79,6 +76,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-editar-evento.js" defer></script>
 </body>
 
 </html>
