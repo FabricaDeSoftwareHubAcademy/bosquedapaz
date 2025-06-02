@@ -1,4 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -72,6 +77,7 @@
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/cadastrar-utilidade.js"></script>
 </body>
 
 </html>

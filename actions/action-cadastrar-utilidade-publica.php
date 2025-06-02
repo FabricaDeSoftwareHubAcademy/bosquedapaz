@@ -15,9 +15,9 @@
 
             $utilidadePublica->titulo = $titulo;
             $utilidadePublica->descricao = $descricao;
-            $utilidadePublica->data_inicio = '2025-05-29';
-            $utilidadePublica->data_fim = '2025-05-31';
-            $utilidadePublica->imagem = 'yeste guigui';
+            $utilidadePublica->data_inicio = $data_inicio;
+            $utilidadePublica->data_fim = $data_fim;
+            $utilidadePublica->imagem = $imagem;
 
 
             if ($utilidadePublica->cadastrar()) {
