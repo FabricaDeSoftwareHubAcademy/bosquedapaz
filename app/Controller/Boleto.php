@@ -139,49 +139,4 @@ class Boleto
         return $execucao;
     }
 
-    public function ListarBoletos(?string $nome = null) {
-        $bancoPessoa = new Database('pessoa');
-        $bancoExpositor = new Database('expositor');
-        $bancoBoleto = new Database('boleto');
-
-        $listagem = [];
-
-        if ($nome) { 
-            // verificando se existe uma pesquisa sendo realizada
-            // por um nome de expositor especifico. 
-            $pessoas = $bancoPessoa->select("nome LIKE '%{$nome}%'")->fetchAll(PDO::FETCH_ASSOC);
-            if (!$pessoas) {
-                return []; // retornando nenhuma pessoa encontrada. 
-            }
-        } else {
-            // se não existe nenhuma pesquisa sendo realizada
-            // a tabela volta a listar todas as pessoas.
-            $pessoas = $bancoPessoa->select()->fetchAll(PDO::FETCH_ASSOC);
-        }
-
-        foreach($pessoas as $pessoa) {
-            // verificando se a pessoa é um expositor.
-            $expositor = $bancoExpositor->select("id_pessoa = {$pessoa['id_pessoa']}")->fetch(PDO::FETCH_ASSOC);
-            if (!$expositor) continue; // se não é um expositor, é ignorado.
-
-            // verificando se o expositor possui um boleto.
-            $boleto = $bancoBoleto->select("id_expositor = {$expositor['id_expositor']}")->fetch(PDO::FETCH_ASSOC);
-            if (!$boleto) continue; // se não possui um boleto, não é listado.
-
-            // juntando todas as informações.
-            $dados = new Boleto();
-            $dados->id_boleto = $boleto['id_boleto'];
-            $dados->nome_expositor = $pessoa['nome'];
-            $dados->cpf = $pessoa['cpf'];
-            $dados->boleto_pdf = $boleto['pdf'];
-            $dados->vencimento = $boleto['vencimento'];
-            $dados->mes_referencia = $boleto['mes_referencia'];
-            $dados->valor = $boleto['valor'];
-            $dados->status_exp = $expositor['status_exp'];
-            $dados->id_expositor = $expositor['id_expositor'];
-
-            $listagem[] = $dados;
-        }
-        return $listagem;
-    }
 }

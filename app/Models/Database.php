@@ -144,6 +144,29 @@ class Database {
         
         return ($result->rowCount() == 1) ? TRUE : FALSE;
     }
+
+    public function listar_boletos(?string $nome = null) {
+        $query = 'SELECT
+            e.id_expositor, p.nome, p.cpf, 
+            e.status_exp, b.id_boleto, b.vencimento, 
+            b.mes_referencia, b.valor, b.pdf 
+            FROM expositor e
+            INNER JOIN pessoa p on e.id_pessoa = p.id_pessoa
+            INNER JOIN boleto b on b.id_expositor = e.id_expositor';
+    
+        $binds = [];
+    
+        if (!empty($nome)) {
+            $query .= ' WHERE p.nome LIKE :nome';
+            $binds[':nome'] = $nome;
+        }
+    
+        $query .= ' ORDER BY e.id_expositor, b.vencimento';
+    
+        return $this->execute($query, $binds);
+    }
+    
+    
 }
 
 ?>
