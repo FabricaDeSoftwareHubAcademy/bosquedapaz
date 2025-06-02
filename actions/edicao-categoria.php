@@ -6,7 +6,7 @@ use app\Controller\Categoria;
 // Define o cabeçalho como JSON
 header('Content-Type: application/json');
 
-if (isset($_POST['id_categoria']) && isset($_POST['descricao']) && isset($_POST['cor'])) {
+if (isset($_POST['id_categoria'], $_POST['descricao'], $_POST['cor'])) {
     $id = $_POST['id_categoria'];
     $descricao = $_POST['descricao'];
     $cor = $_POST['cor'];
@@ -14,7 +14,7 @@ if (isset($_POST['id_categoria']) && isset($_POST['descricao']) && isset($_POST[
 
     $cat = new Categoria();
 
-    // Pega a categoria atual para manter o ícone caso não seja enviado novo arquivo
+    // Busca a categoria atual para manter o ícone caso não seja enviado novo arquivo
     $categoriaAtual = $cat->listar_por_id($id);
 
     if (!$categoriaAtual) {
@@ -35,7 +35,10 @@ if (isset($_POST['id_categoria']) && isset($_POST['descricao']) && isset($_POST[
         $novo_nome = uniqid();
         $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
 
-        if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif', 'svg'])) {
+        // Extensões permitidas
+        $permitidos = ['png', 'jpg', 'jpeg', 'jfif', 'svg'];
+
+        if (!in_array($extensao, $permitidos)) {
             echo json_encode([
                 'status' => 'Error',
                 'message' => 'Extensão do arquivo inválida'
@@ -45,6 +48,7 @@ if (isset($_POST['id_categoria']) && isset($_POST['descricao']) && isset($_POST[
 
         $novo_caminho = $pasta . $novo_nome . '.' . $extensao;
 
+        // Tenta mover o arquivo
         if (move_uploaded_file($arquivo['tmp_name'], $novo_caminho)) {
             $caminho = $novo_caminho;
         } else {
@@ -56,11 +60,13 @@ if (isset($_POST['id_categoria']) && isset($_POST['descricao']) && isset($_POST[
         }
     }
 
+    // Preenche o objeto categoria
     $cat->id_categoria = $id;
     $cat->descricao = $descricao;
     $cat->cor = $cor;
     $cat->icone = $caminho;
 
+    // Tenta atualizar no banco
     if ($cat->atualizar()) {
         echo json_encode([
             'status' => 'OK',

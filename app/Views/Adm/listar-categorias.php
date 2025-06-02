@@ -14,7 +14,6 @@ $cats = $cat->listar();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página para gerenciar categorias e suas informações.">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-categorias.css">
-    <meta name="description" content="Página para gerenciar parceiros e suas informações.">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-categoria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -66,105 +65,6 @@ $cats = $cat->listar();
                                 <?php
                                 endforeach;
                                 ?>
-                                <!-- <tr>
-                                    <td class="usuario-col">1</td>
-                                    <td>Artesanato</td>
-                                    <td><button class="status active">Ativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td class="usuario-col">2</td>
-                                    <td>Antiguidade</td>
-                                    <td><button class="status active">Ativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="usuario-col">3</td>
-                                    <td>Colecionismo</td>
-                                    <td><button class="status inactive">Inativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="usuario-col">4</td>
-                                    <td>Cosmetologia</td>
-                                    <td><button class="status active">Ativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                                <td class="usuario-col">5</td>
-                                <td>Gastronomia</td>
-                                <td><button class="status inactive">Inativo</button></td>
-                                <td>
-                                    <a href="#" class="edit-icon" id="openModal">
-                                        <i class="fa-solid fa-pen-to-square "></i>
-                                    </a>
-                                    
-                                </td>
-                                </tr>
-                                <tr>
-                                    <td class="usuario-col">6</td>
-                                    <td>Literatura</td>
-                                    <td><button class="status active">Ativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="usuario-col">7</td>
-                                    <td>Moda Autoral</td>
-                                    <td><button class="status active">Ativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="usuario-col">8</td>
-                                    <td>Plantas</td>
-                                    <td><button class="status inactive">Inativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="usuario-col">9</td>
-                                    <td>Sustentabilidade</td>
-                                    <td><button class="status active">Ativo</button></td>
-                                    <td>
-                                        <a href="#" class="edit-icon" id="openModal">
-                                            <i class="fa-solid fa-pen-to-square "></i>
-                                        </a>
-                                        
-                                    </td>
-                                </tr>
-                             -->
                             </tbody>
                         </table>
                     </div>
@@ -190,7 +90,7 @@ $cats = $cat->listar();
                         <div class="modal-content">
                             <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
                             <h1 class="titulo">Editar Categoria</h1>
-                            <form id="form_categoria" action="../../../actionsADM/edicao-categoria.php" method="post" enctype="multipart/form-data">
+                            <form id="form_categoria" action="../../../actions/edicao-categoria.php" method="post" enctype="multipart/form-data">
                                 <div class="form-box">
                                     <h3>Nome:</h3>
                                     <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
@@ -253,7 +153,7 @@ $cats = $cat->listar();
                                         <button type="button" class="cancelar" onclick="fecharModal('cadastro-categoria')">Cancelar</button>
                                         <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                     </div>
-                                    <input type="hidden" name="id_categoria" id="id">
+                                    <input type="hidden" name="id_categoria" id="id_categoria">
 
                                 </div>
                             </form>
@@ -269,8 +169,8 @@ $cats = $cat->listar();
     </div>
 
     <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
+    <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
+    <script src="../../../Public/js/js-adm/js-editar-categoria.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
