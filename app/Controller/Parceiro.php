@@ -1,0 +1,54 @@
+<?php 
+
+require_once __DIR__ . '/../../Models/Database.php';
+
+class Parceiro {
+    public int $id_parceiro;
+    public string $nome_parceiro;
+    public string $telefone;
+    public string $email;
+    public string $nome_contato;
+    public string $tipo;
+    public string $cpf_cnpj;
+    public string $logo;
+    // public int $id_endereco;
+
+    public function cadastrar($endereco) {
+
+        //print_r($endereco);
+
+        // cadastro do endereco para pegar o id
+        $db = new Database("endereco");
+        $id_endereco = $db->insert_lastid([
+            "cep" => $endereco->cep,
+            "logradouro" => $endereco->logradouro,
+            "complemento" => $endereco->complemento,
+            "num_residencia" => $endereco->num_residencia,
+            "bairro" => $endereco->bairro,
+            "cidade" => $endereco->cidade
+        ]);
+
+        // VERIFICANDO SE CADASTROU O ENDERECO
+        // print_r($id_endereco);
+        // exit;
+
+
+        // cadasto do parceiro
+        $db = new Database('parceiro');
+        $resParceiro = $db->insert([
+            'nome_parceiro' => $this->nome_parceiro,
+            'telefone' => $this->telefone,
+            'email' => $this->email,
+            'nome_contato' => $this->nome_contato,
+            'tipo' => $this->tipo,
+            'cpf_cnpj' => $this->cpf_cnpj,
+            'logo' => $this->logo,
+            'id_endereco' => $id_endereco
+        ]);
+
+        return $resParceiro;
+    }
+
+}
+
+?>
