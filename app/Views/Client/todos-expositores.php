@@ -616,9 +616,7 @@
                         </div>
                     </div>
                 </div>
-                <dialog class="m-per-expo" id="m-per-expo">
                     <?php  include '../../../Public/include/home/perfil-expositor.html' ?>
-                </dialog>
             </section>
         </div>
     </main>

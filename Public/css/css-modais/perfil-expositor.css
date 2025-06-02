@@ -26,7 +26,7 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 background-color: white;
 width: 80vw;
 height: 90vh; 
-overflow: hidden;
+overflow-x: hidden;
 }
 
 /* Sombra de Fundo:  */
@@ -363,7 +363,7 @@ background-color: rgba(0, 0, 0, 0.6);
 @media (max-width: 575.98px){
     /* Areas Principais:  */
     .m-per-expo{
-        overflow-y: auto;
+        overflow-y: scroll;
     }
     .conteiner__box{
         flex-direction: column;
