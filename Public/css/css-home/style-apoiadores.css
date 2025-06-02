@@ -139,6 +139,7 @@ h1{
 
 .section-parce2 h3{
     font-size: 24px;
+    font-weight: 500; 
     margin-bottom: 15px;
     color: #7a7a7a;
     position: relative;
