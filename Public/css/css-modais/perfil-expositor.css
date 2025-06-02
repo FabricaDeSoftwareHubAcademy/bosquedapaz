@@ -13,26 +13,25 @@
 }
 
 /* Modal: */
-.m-per-expo {
-    width: 80%;
-    height: 85vh;
-    border: none;
-    border-radius: 10px;
-    z-index: 4;
-    overflow: hidden;
-    margin: auto;
+dialog.modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+margin: 0;
+padding: 0;
+border: none;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+background-color: white;
+width: 80vw;
+height: 90vh; 
+overflow: hidden;
 }
 
 /* Sombra de Fundo:  */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.753);
-    z-index: 999;
-    display: none;
+dialog::backdrop {
+background-color: rgba(0, 0, 0, 0.6);
 }
 
 
