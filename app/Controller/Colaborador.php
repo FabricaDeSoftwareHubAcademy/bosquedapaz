@@ -3,12 +3,12 @@
 namespace app\Controller;
 
 require_once('../vendor/autoload.php');
+use PDO;
 use app\Models\Database;
 
 class Colaborador extends Pessoa
 {
     private string $cargo;
-    private ?string $imagem = null;
 
     // Setters públicos para propriedades herdadas protegidas da Pessoa
     public function setNome(string $nome): void {
@@ -37,7 +37,7 @@ class Colaborador extends Pessoa
     }
 
     public function setImagem(?string $imagem): void {
-        $this->imagem = $imagem;
+        $this->foto_perfil = $imagem;
     }
 
 
@@ -52,6 +52,7 @@ class Colaborador extends Pessoa
             'email' => $this->email,
             'senha' => $this->senha,
             'perfil' => $this->perfil,
+            'img_perfil' => $this->foto_perfil
         ]);
 
         if (!$idPessoa) {
@@ -61,8 +62,7 @@ class Colaborador extends Pessoa
         $dbColab = new Database('colaborador');
         $res = $dbColab->insert([
             'cargo' => $this->cargo,
-            'id_pessoa' => $idPessoa,
-            'imagem' => $this->imagem
+            'id_pessoa' => $idPessoa
         ]);
 
         return $res;
@@ -70,13 +70,35 @@ class Colaborador extends Pessoa
     
     public function buscar() {
         $dbPessoa = new Database('colaborador');
-        $res = $dbPessoa->select_colaborador()->fetchAll(PDO::FETCH_ASSOC);
+        $res = $dbPessoa->select_all('pessoa', 'id_pessoa' )->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
 
     public function buscar_por_id($id) {
         $dbPessoa = new Database('colaborador');
-        $res = $dbPessoa->select_colaborador('id_colaborador = ' . $id)->fetchObject();
+        $res = $dbPessoa->select_all('pessoa', 'id_pessoa', 'id_colaborador = ' . $id)->fetchObject();
         return $res;
     }
+
+    public function atualizar($id){
+        $db = new Database('colaborador');
+
+        $values1 = [
+            'cargo' => $this->cargo
+        ];
+
+        $values2 = [
+            'nome' => $this->nome,
+            'telefone' => $this->telefone,
+            'email' => $this->email,
+            'senha' => $this->senha,
+            'perfil' => 'ADM',
+            'img_perfil' => $this->foto_perfil,
+        ];
+
+        $res = $db->update_all($values1, $values2, 'pessoa', 'id_pessoa', 'id_colaborador = '. $id);
+
+        return $res ? TRUE : FALSE;
+    }
+
 }

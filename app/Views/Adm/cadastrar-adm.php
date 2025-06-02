@@ -111,7 +111,7 @@
                     <!-- Botões -->
                     <div class="form__actions">
                         <button type="button" name="cancelar" class="btn btn__rosa">Cancelar</button>
-                        <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
+                        <button type="submit" name="cadastrar" value="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
             </div>

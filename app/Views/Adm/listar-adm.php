@@ -1,11 +1,3 @@
-<?php 
-// require_once '../../../app/adm/Controller/Colaborador.php';
-
-// $busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-// $adm = new Colaborador();
-// $colaboradores = $adm->listar($busca);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -50,36 +42,9 @@
                 <th class="fone-col">Telefone</th>
                 <th class="cargo-col">Cargo</th>
                 <th>Status</th>
-                <th>Ações</th>
               </tr>
             </thead>
             <tbody id="tbody-colaboradores">
-              <?php if (!empty($colaboradores)) : ?>
-                <?php foreach ($colaboradores as $colaborador) : ?>
-                  <tr>
-                    <td class="usuario-col"><?php echo htmlspecialchars($colaborador['id_colaborador']); ?></td>
-                    <td><?php echo htmlspecialchars($colaborador['nome']); ?></td>
-                    <td class="email-col"><?php echo htmlspecialchars($colaborador['email']); ?></td>
-                    <td class="fone-col"><?php echo htmlspecialchars($colaborador['telefone']); ?></td>
-                    <td class="cargo-col"><?php echo htmlspecialchars($colaborador['cargo']); ?></td>
-                    <td>
-                      <button type="button" class="status active">Ativo</button>
-                    </td>
-                    <td>
-                      <a class="edit-icon" href="editar-adm.php?id=<?php echo $colaborador['id_colaborador']; ?>">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                      </a>
-                      <button class="open-modal" data-modal="modal-deleta" data-id="<?php echo $colaborador['id_colaborador']; ?>">
-                        <i class="fa-solid fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                <?php endforeach; ?>
-              <?php else : ?>
-                <tr>
-                  <td colspan="6">Nenhum colaborador encontrado.</td>
-                </tr>
-              <?php endif; ?>
             </tbody>
           </table>
         </div>
@@ -111,5 +76,6 @@
   <script src="../../../Public/js/js-adm/listar-adm.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-listar-adm.js"></script>
 </body>
 </html>
