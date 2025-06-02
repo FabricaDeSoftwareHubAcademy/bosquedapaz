@@ -33,6 +33,56 @@
                     
                 </div>
 
+                <div class="cards" id="border-card-azul">
+                    <div class="div__decorativa"></div>
+                    <div class="linha__decorativa1"></div>
+                    <div class="linha__decorativa2"></div>
+                    <div class="por-cima-card">
+                        <div class="parte-superior">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                        </div>
+                        <div class="parte-inferior">
+                            <h1 id="h1-azul-card">Primavera</h1>
+                            <button class="saiba-mais">Saiba Mais</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="cards" id="border-card-azul">
+                    <div class="div__decorativa"></div>
+                    <div class="linha__decorativa1"></div>
+                    <div class="linha__decorativa2"></div>
+                    <div class="por-cima-card">
+                        <div class="parte-superior">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                        </div>
+                        <div class="parte-inferior">
+                            <h1 id="h1-azul-card">Primavera</h1>
+                            <button class="saiba-mais">Saiba Mais</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="cards" id="border-card-azul">
+                    <div class="div__decorativa"></div>
+                    <div class="linha__decorativa1"></div>
+                    <div class="linha__decorativa2"></div>
+                    <div class="por-cima-card">
+                        <div class="parte-superior">
+                            <img src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
+                        </div>
+                        <div class="parte-inferior">
+                            <h1 id="h1-azul-card">Primavera</h1>
+                            <button class="saiba-mais">Saiba Mais</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+
                 <!-- <div class="cards">
                     <div class="area-img">
                         <div class="dec-img"></div>
