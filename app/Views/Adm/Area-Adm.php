@@ -77,7 +77,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-expositor.php">
+                        <a class="link-modais" href="../Adm/cadastrar-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">

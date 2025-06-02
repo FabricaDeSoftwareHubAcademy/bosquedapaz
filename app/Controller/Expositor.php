@@ -1,6 +1,9 @@
 <?php
-require '../../Models/Database.php';
-require 'Imagem.php';
+namespace app\Controller;
+require_once('../vendor/autoload.php');
+use PDO;
+use app\Controller\Pessoa;
+use app\Models\Database;
 
 
 class Expositor extends Pessoa
