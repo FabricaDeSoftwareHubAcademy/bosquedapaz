@@ -23,19 +23,16 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
-    /* max-width: 100%; */
     padding: 20px 0;
     white-space: nowrap;
     height: 120px;
-    box-sizing: border-box;
-    /* position: relative; */
-    
+    box-sizing: border-box;    
 }
 
 .slider-parceiros {
-    display: inline-flex;
+    display: flex;
     gap: 30px;
     animation: deslizar 40s linear infinite;
 }
@@ -64,10 +61,6 @@
     transform: scale(1.05);
 }
 
-/* .img-logo-parceiros {
-    height: 80px;
-    width: auto;
-} */
 
 @media (max-width: 768px) {
     .slider-parceiros {
@@ -75,7 +68,7 @@
     }
 }
 
-  
+ 
 
 .section-bosque-quem-somos{
     margin-top: 50px;

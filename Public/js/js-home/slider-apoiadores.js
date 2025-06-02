@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector(".carrosselTrack");
-    const clone = track.innerHTML;
-    track.innerHTML += clone;
+    const track = document.getElementById('carrosselTrack');
+    const logos = track.innerHTML;
+    track.innerHTML += logos;
 
 });
