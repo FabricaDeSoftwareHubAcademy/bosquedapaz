@@ -75,6 +75,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
         echo json_encode($res);
     }
+    else if (isset($_POST['palavra'])) {
+        $colab = new Colaborador();
+        $termo = trim($_POST['palavra']);
+        $res = $colab->busca_selecionada($termo);
+
+        $html = '';
+        foreach ($res as $colaborador) {
+            $html .= '<tr>';
+            $html .= '<td>' . htmlspecialchars($colaborador['nome']) . '</td>';
+            $html .= '<td>' . htmlspecialchars($colaborador['email']) . '</td>';
+            $html .= '<td>' . htmlspecialchars($colaborador['telefone']) . '</td>';
+            $html .= '<td>' . htmlspecialchars($colaborador['cargo']) . '</td>';
+            $html .= '<td><span class="status ativo">Ativo</span></td>';
+            $html .= '</tr>';
+        }
+
+        echo $html;
+        exit;
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
@@ -108,8 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     }
 }
 
-$dadosPesq = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+// $dadosPesq = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-$retorna = ['status' => true, 'dados' = $dadosPesq['busca']];
+// $retorna = ['status' => true, 'dados' = $dadosPesq['busca']];
 
-echo json_encode($retorna);
+// echo json_encode($retorna);

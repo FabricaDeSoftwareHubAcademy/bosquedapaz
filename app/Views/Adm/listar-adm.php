@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
+    <!-- jQuery -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <!-- Scripts -->
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <script type="text/javascript" src="../../../Public/js/js-adm/js-busca-adm.js"></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
@@ -24,11 +28,11 @@
       <h2>LISTAR ADM</h2>
       <div class="container">
         <!-- Formulário de Busca -->
-        <form id="formBusca">
+        <form method="POST" id="formBusca">
           <div class="search-bar">
             <label for="busca">Procurar</label>
-            <input type="text" id="busca" name="busca" placeholder="Colaborador" />
-            <button type="submit" id="btn-pesquisa" value="pesquisa" name="pesquisarUser" class="search-button">BUSCAR</button>
+            <input type="text" id="campoBusca" name="palavra" placeholder="Colaborador" />
+            <button type="submit" id="btn-pesquisa" value="pesquisar" name="enviar" class="search-button">BUSCAR</button>
           </div>
         </form>
         <!-- Tabela de Colaboradores -->
@@ -74,8 +78,8 @@
   </div>
 
   <script src="../../../Public/js/js-adm/listar-adm.js" defer></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-listar-adm.js"></script>
+  <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+  <script src="../../../Public/js/js-menu/js-menu.js"></script>
+  <script src="../../../Public/js/js-adm/js-listar-adm.js"></script>
 </body>
 </html>

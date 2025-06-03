@@ -101,4 +101,36 @@ class Colaborador extends Pessoa
         return $res ? TRUE : FALSE;
     }
 
+    public function busca_selecionada(){
+        $db = new Database('colaborador');
+
+        $query = "SELECT 
+            pes.*, col.cargo
+            FROM pessoa pes
+            JOIN colaborador col ON pes.id_pessoa = col.id_pessoa
+            ";
+        if(!empty($termo)){
+            $query .= " WHERE pes.nome LIKE :termo
+                        OR pes.email LIKE :termo
+                        OR pes.telefone LIKE :termo
+                        OR pes.id_pessoa = :id            
+            ";
+        }    
+
+        $stmt = $db->prepare($query);
+
+        if (!empty($termo)){
+            $id = is_numeric($termo) ? (int)$termo : 0;
+            $likeTermo = "%$termo%";
+
+            stmt->bindParam(":termo", $likeTermo, PDO::PARAM_STR);
+            stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        }
+
+
+        $stmt->execute(); 
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }

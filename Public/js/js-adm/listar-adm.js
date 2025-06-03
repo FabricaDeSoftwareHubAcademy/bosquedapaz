@@ -56,23 +56,23 @@ async function listarColaboradores(busca = "") {
 }
 
 // Pesquisa:
-const formPesquisa = document.getElementById('formBusca');
+// const formPesquisa = document.getElementById('formBusca');
 
-if (formPesquisa){
-    formPesquisa.addEventListener("submit", async (e) => {
-        e.preventDefault();
+// if (formPesquisa){
+//     formPesquisa.addEventListener("submit", async (e) => {
+//         e.preventDefault();
 
-        const formData = new FormData(formPesquisa);
+//         const formData = new FormData(formPesquisa);
 
-        const busca = await fetch('../../../actions/action-colaborador.php', {
-            method: "POST",
-            body: dadosForm
-        });
+//         const busca = await fetch('../../../actions/action-colaborador.php', {
+//             method: "POST",
+//             body: dadosForm
+//         });
 
-        const resposta = await dadosPesq.json();
-        console.log(resposta);
+//         const resposta = await dadosPesq.json();
+//         console.log(resposta);
 
-    });
-}
+//     });
+// }
 
 
