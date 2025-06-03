@@ -108,3 +108,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     }
 }
 
+$dadosPesq = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+$retorna = ['status' => true, 'dados' = $dadosPesq['busca']];
+
+echo json_encode($retorna);

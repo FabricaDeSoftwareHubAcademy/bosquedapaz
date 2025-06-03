@@ -54,3 +54,25 @@ async function listarColaboradores(busca = "") {
         tbody.innerHTML = "<tr><td colspan='7'>Erro ao carregar os dados.</td></tr>";
     }
 }
+
+// Pesquisa:
+const formPesquisa = document.getElementById('formBusca');
+
+if (formPesquisa){
+    formPesquisa.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(formPesquisa);
+
+        const busca = await fetch('../../../actions/action-colaborador.php', {
+            method: "POST",
+            body: dadosForm
+        });
+
+        const resposta = await dadosPesq.json();
+        console.log(resposta);
+
+    });
+}
+
+

@@ -28,7 +28,7 @@
           <div class="search-bar">
             <label for="busca">Procurar</label>
             <input type="text" id="busca" name="busca" placeholder="Colaborador" />
-            <button type="submit" class="search-button">BUSCAR</button>
+            <button type="submit" id="btn-pesquisa" value="pesquisa" name="pesquisarUser" class="search-button">BUSCAR</button>
           </div>
         </form>
         <!-- Tabela de Colaboradores -->
