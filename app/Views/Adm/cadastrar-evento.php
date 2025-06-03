@@ -17,7 +17,7 @@
         <div class="box">
             <h1>CADASTRO DE EVENTO</h1>
                 <div class="form-box">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" id="form-evento">
                         <div id="form1">
 
                             <div class="input-group">

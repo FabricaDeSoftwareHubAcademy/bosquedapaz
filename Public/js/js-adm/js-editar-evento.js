@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert('Evento não encontrado.');
         }
 
-        // Mover o listener pra dentro do DOMContentLoaded e após o form estar definido
+        
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 

@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnSalvar = document.getElementById('salvar');
-    const form = document.querySelector('form');
+    const form = document.getElementById('form-evento');
 
-    btnSalvar.addEventListener('click', async (event) => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const nome = document.getElementById('nomedoevento').value.trim();
