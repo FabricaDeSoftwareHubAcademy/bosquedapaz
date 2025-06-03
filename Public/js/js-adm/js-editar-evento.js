@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('dataevento').value = evento.data_evento;
             document.getElementById('status').value = evento.status;
 
-            const banner = document.getElementById('preview-banner');
+            const banner = document.getElementById('preview-image');
             banner.src = `../../../Public/uploads/${evento.banner}`;
         } else {
             alert('Evento não encontrado.');
