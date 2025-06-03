@@ -139,4 +139,8 @@ class Boleto
         return $execucao;
     }
 
+    public function ListarBoletos() {
+        
+    }
+
 }
