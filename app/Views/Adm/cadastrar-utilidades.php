@@ -48,7 +48,7 @@ error_reporting(E_ALL);
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="imagem" id="imagem" required>
                         </div>
                     </form>
                 </div>

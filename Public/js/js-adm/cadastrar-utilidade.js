@@ -1,5 +1,3 @@
-alert('oi');
-
 let btn_cadastrar =  document.getElementById("botao_cadastrar_utilidade");
 
 btn_cadastrar.addEventListener('click', async function(event){
