@@ -147,11 +147,31 @@ class Database {
 
 
     public function listar_todos_boletos() {
+        $query = "SELECT
+        e.id_expositor,
+        p.nome as nome_expositor,
+        b.vencimento, b.mes_referencia,
+        b.valor, e.status_exp
+        FROM pessoa p
+        INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
+        INNER JOIN boleto b ON e.id_expositor = b.id_expositor;";
 
+        return $this->execute($query);
     }
 
-    public function listar_boleto_pesquisado() {
+    public function listar_boleto_pesquisado($nome) {
+        $query = "SELECT
+        b.id_boleto, 
+        p.nome as nome_expositor,
+        b.vencimento,
+        b.mes_referencia, b.valor, e.status_exp
+        FROM pessoa p
+        INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
+        INNER JOIN boleto b ON e.id_expositor = b.id_expositor
+        WHERE p.nome LIKE :nome;";
 
+        $binds = [':nome' => "%$nome"];
+        return $this->execute($query, $binds);
     }
     
 }

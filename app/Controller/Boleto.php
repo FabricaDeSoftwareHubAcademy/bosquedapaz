@@ -139,8 +139,13 @@ class Boleto
         return $execucao;
     }
 
-    public function ListarBoletos() {
-        
+    public function ListarBoletos($nome = null) {
+        $banco = new Database();
+        if (!empty($nome)) {
+            return $banco->listar_boleto_pesquisado($nome)->fetchAll(PDO::FETCH_CLASS, self::class);
+        } else {
+            return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_CLASS, self::class);
+        }
     }
 
 }
