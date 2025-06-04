@@ -1,149 +1,118 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+
+/* Áreas Principais:  */
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+:root{
+    --color-box: #f4f4f4a2;
+    --color-border-e-letra: #162868;
+}
+
+body, html{
     overflow: hidden;
-    overflow-x: hidden;
+}
+
+.container__main{
     width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    position: relative;
-}
-
-.principal-gabriel {
-    margin: 10px;
-    padding: 0;
+    height: 90vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80vh;
-    background-color: #ffffff;
+    justify-content: center;
+    /* background-color: aqua; */
 }
 
-.nome-area-gabriel h1 {
-    color: black;
-    position: relative;
-    top: -34vh;
-    z-index: 1;
-    left: 62vh;
-}
-
-.Bola-1-gabriel {
-    position: fixed;
-    top: 15%;
-    left: 0%;
-    z-index: 1;
-}
-
-.Bola-2-gabriel {
-    display: flex;
-    position: fixed;
-    top: 20vh;
-    right: 0%;
-    z-index: 1;
-}
-
-.Bola-3-gabriel {
-    display: flex;
-    height: fit-content;
-    position: fixed;
-    right: 0%;
-    bottom: 0%;
-    z-index: 1;
-}
-
-
-.box-gabriel {
+/* Box dos Componente: */
+.container__box{
     width: 90%;
-    height: 100%;
-    background-color: #f8f5f679;
+    height: 90%;
     border-radius: 10px;
-    padding: 20px;
+    margin-bottom: 2%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
+    flex-direction: column;
+    background-color: var(--color-box);
 }
 
-.seta-voltar-gabriel {
-    position: relative;
-    position: absolute;
-    top: 800px;
-    left: 150px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+/* Área do titulo */
+.container__title{
+    width: 100%;
+    height: 15%;
     display: flex;
+    align-items: end;
+    justify-content: center;
 }
 
-.seta-voltar-gabriel:hover {
-    transform: scale(1.1);
+.container__title h1{
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.area-botao-gabriel {
-    width: 70%;
-    height: 100%;
+/* Área dos botões */
+.container__action__tile{
+    width: 75%;
+    height: 85%;
+    gap: 30px;
+    padding: 50px;
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 40px;
-    padding: 100px;
-    right: 11%;
-    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
-.Botoes-gabriel {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    border: 100px;
+/* Botão */
+.action__title{
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    max-width: 500px;
-    position: relative;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    background-color: white;
+    transition: all .3s ease-in-out;
+    border: 4px solid var(--color-border-e-letra);
 }
 
-.Botoes-gabriel:hover {
-    transform: scale(1.1);
+.action__title:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 8px var(--color-border-e-letra);
+    border: none;
 }
 
-.area-icon-gabriel {
-    width: 200px;
-    height: 200px;
+#action__carrossel{
+    text-decoration: none;
+}
+
+.action__content{
+    width: 100%;
+    height: 100%;
     display: flex;
-    border: 4px solid #162868;
-    border-radius: 10px;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    position: absolute;
-    transition: all .3s ease;
+    flex-direction: column;
+    color: var(--color-border-e-letra);
+    font-weight: 500;
 }
+
+.action__content p{
+    position: relative;
+    top: 6%;
+    font-size: 16px;
+}
+
+
+/* Modais  */
 .link-modais:focus-visible{
     outline: none;
-}
-
-.area-icon-gabriel img {
-    width: 40%;
-    height: auto;
-}
-
-.area-icon-gabriel p {
-    position: absolute;
-    top: 160px;
-    color: #162868;
-    font-size: 16px;
 }
 
 .abrir-mais {
@@ -187,213 +156,392 @@ dialog::backdrop{
     color: #162868;
     cursor: pointer;
 }
-@media screen and (max-width: 720px) {
-    .box-gabriel{
-        width: 93%;
-        background-color: #f8f5f64b;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        position: relative;
-        height: 92%;
-        top: 0%;
+
+
+
+/* Imagens Decorativas:  */
+.decorative__img1 {
+    position: fixed;
+    top: 15vh;
+    left: 0vw;
+    width: 20vw;
+    z-index: -1;
+}
+
+.decorative__img2 {
+    position: fixed;
+    top: 20vh;
+    right: -10vw;
+    width: 20vw;
+    z-index: -1;
+}
+
+.decorative__img2 img{
+    width: 50%;
+    height: auto;
+}
+
+.decorative__img3 {
+    position: fixed;
+    right: -6vw;
+    bottom: -1vw;
+    width: 20vw;
+    z-index: -1;
+}
+
+.decorative__img3 img{
+    width: 70%;
+    height: auto;
+}
+
+
+/* Responsividades: */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+    .container__box{
+        overflow: hidden;
+        overflow-y: auto;
     }
 
-    .area-botao-gabriel{
-        background-color: #16286800;
-        right: 7.6rem;
+    .container__title{
+        height: 10%;
+        /* background-color: cornsilk; */
+    }
+
+    .container__title h1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .container__action__tile{
         width: 100%;
-        justify-content: center;
-    }
-
-    .seta-voltar-gabriel{
-        left: 0rem;
-        top: 122rem;
-    }
-
-    .nome-area-gabriel h1{
+        height: 90%;
         position: relative;
-        left: 6.7rem;
-        font-size: 1.8rem;
-        width: 135%;
+        bottom: 5%;
+        /* background-color: cornflowerblue; */
     }
 
-    .Bola-1-gabriel{
-        display: none;
+    .action__title{
+        width: 180px;
+        height: 180px;
     }
 
-    .Bola-2-gabriel{
-        display: none;
+    .action__content p{
+        font-size: 14px;
     }
 
-    .Bola-3-gabriel{
-        display: none;
+    /* MODAL  */
+    .modais {
+        flex-direction: column;
     }
 
-    .Botoes-gabriel{
-        border-radius: 10px;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
     }
-
-}
-
-@media (max-width:768px) and (min-height:1024px){
-    .box-gabriel{
-        overflow-y: auto;
-        overflow-x: hidden;
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
     }
-
-    .seta-voltar-gabriel{
-        position: relative;
-        left: -35%;
-        top: 201%;
-    }
-
-    .nome-area-gabriel h1{
-        position: relative;
-        left: 19vh;
-        font-size: 1.9rem;
-        width: 135%;
-    }
-
-    .area-botao-gabriel{
-        position: relative;
-        left: -13vh;
-    }
-
-    .Bola-1-gabriel{
-        display: none;
-    }
-
-    .Bola-2-gabriel{
-        display: none;
-    }
-
-    .Bola-3-gabriel{
-        display: none;
+    .decorative__img3{
+        bottom: -2vw;
     }
 }
 
-@media (max-width:820px) and (min-height:1180px){
-    .box-gabriel{
+
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    .container__box{
+        overflow: hidden;
         overflow-y: auto;
-        overflow-x: hidden;
-        height: 110%;
+    }
+
+    .container__title{
+        height: 10%;
+        /* background-color: cornsilk; */
+    }
+
+    .container__title h1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .container__action__tile{
+        width: 100%;
+        height: 90%;
         position: relative;
-        top: 5%;
+        bottom: 5%;
+        /* background-color: cornflowerblue; */
     }
 
-    .area-botao-gabriel{
-        position: relative;
-        left: -8rem;
+    .action__title{
+        width: 180px;
+        height: 180px;
     }
 
-    .seta-voltar-gabriel {
-        position: relative;
-        top: 10rem;
-        top: 91rem;
-        z-index: 1;
-        left: -15rem;
+    .action__content p{
+        font-size: 14px;
     }
 
-    .nome-area-gabriel h1{
-        position: relative;
-        left: 12rem;
-        width: 135%;
-        top: -29rem;
+    /* MODAL  */
+    .modais {
+        flex-direction: row;
     }
 
-    .Bola-1-gabriel{
-        display: none;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
     }
-
-    .Bola-2-gabriel{
-        display: none;
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
     }
-
-    .Bola-3-gabriel{
-        display: none;
+    .decorative__img3{
+        bottom: -2vw;
     }
 }
 
-@media (max-width:1024px) and (min-height:1366px){
-    .box-gabriel{
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .container__box{
+        overflow: hidden;
         overflow-y: auto;
-        overflow-x: hidden;
-        height: 110%;
+    }
+
+    .container__title{
+        height: 10%;
+        /* background-color: cornsilk; */
+    }
+
+    .container__title h1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .container__action__tile{
+        width: 100%;
+        height: 90%;
         position: relative;
-        top: 5%;
+        bottom: 5%;
+        /* background-color: cornflowerblue; */
     }
 
-    .area-botao-gabriel{
-        position: relative;
-        left: -10rem;
+    .action__title{
+        width: 180px;
+        height: 180px;
     }
 
-    .seta-voltar-gabriel {
-        position: relative;
-        top: 91rem;
-        z-index: 1;
-        left: -18rem;
+    .action__content p{
+        font-size: 14px;
     }
 
-    .nome-area-gabriel h1{
-        position: relative;
-        left: 16rem;
-        width: 135%;
-        top: -33rem;
-        font-size: 36px;
+    /* MODAL  */
+    .modais {
+        flex-direction: row;
     }
 
-    .Bola-1-gabriel{
-        display: none;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
     }
-
-    .Bola-2-gabriel{
-        display: none;
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
     }
-
-    .Bola-3-gabriel{
-        display: none;
+    .decorative__img3{
+        bottom: -2vw;
     }
 }
 
-@media (max-width:1280px){
-    .box-gabriel{
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .container__box{
+        overflow: hidden;
         overflow-y: auto;
-        overflow-x: hidden;
-        height: 110%;
+    }
+
+    .container__title{
+        height: 10%;
+        /* background-color: cornsilk; */
+    }
+
+    .container__title h1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .container__action__tile{
+        width: 100%;
+        height: 90%;
         position: relative;
-        top: 5%;
+        bottom: 5%;
+        /* background-color: cornflowerblue; */
     }
 
-    .area-botao-gabriel{
+    .action__title{
+        width: 180px;
+        height: 180px;
+    }
+
+    .action__content p{
+        font-size: 14px;
+    }
+
+    /* MODAL  */
+    .modais {
+        flex-direction: row;
+    }
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
+}
+
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    .container__box{
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .container__title{
+        height: 10%;
+        /* background-color: cornsilk; */
+    }
+
+    .container__title h1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .container__action__tile{
+        width: 100%;
+        height: 90%;
         position: relative;
-        left: -8rem;
+        bottom: 5%;
+        /* background-color: cornflowerblue; */
     }
 
-    .seta-voltar-gabriel {
+    .action__title{
+        width: 210px;
+        height: 210px;
+    }
+
+    .action__content p{
+        font-size: 14px;
+    }
+
+    /* MODAL  */
+    .modais {
+        flex-direction: row;
+    }
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
+}
+
+
+/* Computadores Largos e Compactos (Baixa Altura):  */
+@media (min-width: 1400px) and (max-height: 699.98px){
+    .container__box{
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .container__title{
+        height: 10%;
+        /* background-color: cornsilk; */
+    }
+
+    .container__title h1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .container__action__tile{
+        width: 100%;
+        height: 90%;
         position: relative;
-        top: 10rem;
-        top: 91rem;
-        z-index: 1;
-        left: -15rem;
+        bottom: 5%;
+        /* background-color: cornflowerblue; */
     }
 
-    .nome-area-gabriel h1{
-        position: relative;
-        left: 12rem;
-        width: 135%;
-        top: -29rem;
+    .action__title{
+        width: 180px;
+        height: 180px;
     }
 
-    .Bola-1-gabriel{
-        display: none;
+    .action__content p{
+        font-size: 14px;
     }
 
-    .Bola-2-gabriel{
-        display: none;
+    /* MODAL  */
+    .modais {
+        flex-direction: row;
     }
 
-    .Bola-3-gabriel{
-        display: none;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
+}
+
+
+
+/* Pequenos Ajustes */
+@media (min-width: 1400px){
+    .container__box{
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .action__title{
+        width: 180px;
+        height: 180px;
+    }
+
+}
+@media (min-height: 844px){
+    .container__action__tile{
+        padding: 100px;
+    }
+}
+@media (min-width: 1728px){
+    .action__title{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (min-width: 2000px){
+    .action__title{
+        width: 250px;
+        height: 250px;
     }
 }

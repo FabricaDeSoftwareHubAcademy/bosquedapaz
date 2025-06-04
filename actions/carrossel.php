@@ -4,27 +4,65 @@ require_once("../app/adm/Controller/Carrossel.php");
 
 $car = new Carrossel();
 
-$imagem1 = $_FILES['img1'];
+// funcao para mover o arquivo para o pasta de uploads
+// o parametro $num serve para falar o  numero da img
+function update_carrossel($img,$num) {
+        chmod ("../Public/uploads/uploads-carrosel/", 0777);
+        $caminho = '../Public/uploads/uploads-carrosel/';
+        $new_img = $img['name'];
+        $new_name = 'img-carrossel-'.$num;
+        $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
+    
+        $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
             
-$nome_imagem1 = $imagem1['name'];
-$nova_imagem1 = 'img-carrossel-1';
-$extencao_imagem1 = strtolower(pathinfo($nome_imagem1, PATHINFO_EXTENSION));
+        $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
+    
+        return $caminho_img;
+}
 
-// verificando a extencao
-if($extencao_imagem1 != 'png' && $extencao_imagem1 != 'jpg') echo "<script>alert('Arquivo inválido')</script>";
-$caminho_img1 = $pasta . $nova_imagem1. '.'. $extencao_imagem1;
-$upload_img1 = move_uploaded_file($imagem1['tmp_name'], $caminho_img1);
+// quando chegar um POST sera feito uma atualizacao
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    try {
+        $response = array('status' => 200);
+    
+    
+        $i = 1; // contador para saber qual img
+        // percorre todos os arquivos
+        foreach ($_FILES as $chave => $dados) {
+            if(!empty($dados['name'])){
+                $caminho = update_carrossel($dados, $i);
+                $car->caminho = $caminho;
+                $car->posicao = $i;
+                $atualizacao = $car->atualizar($i);
+    
+                // mensagem de retorno para o usuario
+                if ($atualizacao == TRUE){
+                    $response["message"] = "Carrossel atualizado com sucesso";
+                    $response["erro"] = "0";
+                }
+                else if ($atualizacao == FALSE){
+                    $response["message"] = "Não foi possível atualizar o carrossel";
+                    $response["erro"] = "Tente mandar a imagem novamente.";
+                }
+            }
+    
+            $i++;
+        }
+    
+        echo json_encode($response);
+        
+    } catch (\Throwable $th) {
+        $response = array('status' => 500);
+        echo json_encode($response);
+    }
+    
+}
 
-// cadastrando img no db
-$img1 = $caminho_img1;
-$car->img1 = $img1;
+if($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $img = $car->get_imagem();
+
+    $response = array("imagens" => $img, "status" => 200);
+    echo json_encode($response);
+}
 
 ?>
-
-
-
-<!-- clico na img 
-    o javascript valida os arquivos e tamanhos(png,jpg,jpeg, fullhd), deposi mostra na tela e manda para o php
-
-chaa no php
-    valida o os arquivos e tamanhos(png,jpg,jpeg, fullhd) cria o arquivo na pasta , depois manda para o banco -->

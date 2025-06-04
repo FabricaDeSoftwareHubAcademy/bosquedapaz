@@ -146,4 +146,6 @@
         <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
     </a>
 
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+
 </body>

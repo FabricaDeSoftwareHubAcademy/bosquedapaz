@@ -36,37 +36,20 @@ h2 {
     font-size: 30px;
 }
 
-
-/* Estilo do ícone de editar */
 .edit-icon i {
     color: #333;
-    /* Cor do ícone de editar */
     margin-right: 12px;
-    /* Espaçamento à direita do ícone */
     font-size: 18px;
-    /* Tamanho do ícone (ajuste conforme necessário) */
 }
 
-/* Estilo do ícone de excluir */
 .delete-icon i {
     color: #333;
-    /* Cor do ícone de excluir */
     font-size: 18px;
-    /* Tamanho do ícone (ajuste conforme necessário) */
 }
 
-/* Remover o sublinhado dos links */
-.edit-icon,
-.delete-icon {
-    text-decoration: none;
-    /* Remove o sublinhado */
-}
-
-/* Cor ao passar o mouse (hover) */
 .edit-icon:hover i,
 .delete-icon:hover i {
     color: #007bff;
-    /* Cor de hover para os ícones (ajuste conforme necessário) */
 }
 
 #modal-validar,
@@ -604,6 +587,12 @@ table tbody tr:nth-child(even) {
 }
 
 .edit-icon {
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.delete-icon {
     cursor: pointer;
     font-size: 16px;
     text-align: center;

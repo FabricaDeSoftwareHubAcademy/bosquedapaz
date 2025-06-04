@@ -1,12 +1,3 @@
-<?php
-
-$img1 = '../../../Public/imgs/uploads-carrosel/img-carrossel-1.jpg';
-$img2 = '../../../Public/imgs/uploads-carrosel/img-carrossel-2.jpg';
-$img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,6 +10,7 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
     <!-- link com style padrao da pagina adm -->
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-carrossel.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
@@ -27,84 +19,79 @@ $img3 = '../../../Public/imgs/uploads-carrosel/img-carrossel-3.jpg';
 
     <!-- inicio da parte principal da pagina -->
     <main class="principal">
-
         <!-- box principal -->
         <div class="box">
-
-
+            <form action="" method="post" class="formulario" id="form-carrossel" enctype='multipart/form-data'>
+                <h1 class="titulo">editar carrosel</h1>
             
-            <h1 class="titulo">editar carrosel</h1>
+                <!-- local de uploads de imgs para o carrossel -->
+                <section class="conteiner-imagens">
 
-
-            
-            <!-- local de uploads de imgs para o carrossel -->
-            <form action="" method="post" class="formulario-ca" enctype='multipart/form-data'>
-                <section class="up-imgs">
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 1</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 1</h2>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img1" id="imagens-input" class="input" id="input1">
+                            <input type="file" name="img1" id="imagens-input" class="input">
                 
-                            <img <?php echo "src='".$img1."'"; ?> alt="Imagem do carrossel 3" id="img1" class="up-img">
+                            <img src="" alt="" id="img1" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
                         </label>
                     </div>
                 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 2</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 2</h2>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img2" id="imagens-input2" class="input" id="input2">
+                            <input type="file" name="img2" id="imagens-input2" class="input">
                 
-                            <img <?php echo "src='".$img2."'"; ?> alt="Imagem do carrossel 3" id="img2" class="up-img">
+                            <img src="" alt="" id="img2" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
                         </label>
                     </div>
                 
-                    <div class="div-nome">
-                        <h1 class="num">Imagem 3</h1>
+                    <div class="content-imagem">
+                        <h2 class="num">Imagem 3</h2>
+                        <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img3" id="imagens-input3" class="input" id="input3">
+                            <input type="file" name="img3" id="imagens-input3" class="input">
                 
-                            <img <?php echo "src='".$img3."'"; ?> alt="Imagem do carrossel 3" id="img3" class="up-img">
+                            <img src="" alt="" id="img3" class="imagem">
                 
-                            <button class="btn-editar open-modal">
-                                <i class="fa-solid fa-pen editar"></i>
-                            </button>
+                            <i class="fa-solid fa-pen editar"></i>
 
                         </label>
                     </div>
                 </section>
+
                 <!-- botoes parte de baixo -->
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
-                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="" class="btn-voltar">
                     </a>
                     <div class="btn-cancelar-salvar">
-                            <button class="btn btn-cancelar">
-                                <a href="">Cancelar</a>
+                            <button type="reset" class="btn btn-cancelar">
+                                cancelar
                             </button>
                             
-                            <button type="submit" name="editar" class="btn btn-salvar">
-                                Salvar
+                            <button type="submit" name="editar" id="editar" class="btn btn-salvar">
+                                salvar
                             </button>
                         </div>
                     </div>
                 </div>
             </form>
+            <div class="overlay" id="overlay"></div>
+            <?php include "../../../Public/include/modais/modal-aviso.html"; ?>
         </div>
-        </div>
+        
+        <!-- bolas de fundo -->
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
+        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+        <!-- <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="" class="bola-rosa"> -->
     </main>
 
-    <!-- bolas de fundo -->
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-    <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-    <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
 
 
     <!-- link do JavaScript -->

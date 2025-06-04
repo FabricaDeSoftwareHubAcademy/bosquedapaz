@@ -87,6 +87,7 @@
         <img src="../../../Public/imgs/img-editar-adm/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
         <img src="../../../Public/imgs/img-editar-adm/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
     </div>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>

@@ -5,11 +5,10 @@ require_once '../Controller/Categoria.php';
 
 $categoriaModel = new Categoria();
 
+
 $lista = $categoriaModel->listar();
 
-// Verifica se é POST
-if (isset($_POST['REQUEST_METHOD'])) {
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor = new Expositor();
 
     $expositor->setNome($_POST['nome']);
@@ -17,35 +16,24 @@ if (isset($_POST['REQUEST_METHOD'])) {
     $expositor->setEmail($_POST['email']);
     $expositor->setTelefone($_POST['whatsapp']);
     $expositor->setNome_marca($_POST['marca']);
-    // verificar o input de voltagem
     $expositor->setVoltagem($_POST['voltagem']);
-    // verificar o input de energia
     $expositor->setEnergia($_POST['energia']);
     $expositor->setContato2($_POST['whatsapp']);
-    // verificar o input de descricao
-    // $expositor->setDescricao('teste');
-    // verificar o input de metodo pagamento
-    // $expositor->setMetodos_pgto('DINHEIRO SEMPRE');
     $expositor->setProduto($_POST['produto']);
-    // verificar o input cor rua
-    // $expositor->setCor_rua('vermelha');
-    // verificar o input id_categoria
     $expositor->setId_categoria($_POST['id_categoria']);
-    // verificar o input id_imagem
-    $expositor->setImagens($_POST['files']);
+
+
+    if (isset($_FILES['files'])) {
+        $expositor->setImagens($_FILES['files']);
+    }
 
     $res = $expositor->cadastrar();
-
-    if ($res) {
-        header("Location: cadastrar-expositor.php");
-        echo '<script> alert("cadastrou") </script>';
-    } else {
-        echo '<script> alert(" não cadastrou") </script>';
-    }
+    echo "cadastradp";
     exit;
 }
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -84,8 +72,11 @@ if (isset($_POST['REQUEST_METHOD'])) {
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="text" name="whatsapp" id="" placeholder="Número de whatsapp" required>
+                            <input type="tel" name="whatsapp" placeholder="Número de whatsapp"
+                                pattern="[0-9]{10,11}" required
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
+
 
                         <div class="input">
                             <label>E-mail:</label>
@@ -113,8 +104,9 @@ if (isset($_POST['REQUEST_METHOD'])) {
                             <select name="id_categoria" id="categorias" class="select" require>
                                 <option value="">Selecione</option>
                                 <?php foreach ($lista as $categoria) : ?>
-                                    <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['descricao'] ?></option>
+                                    <option value="<?= $categoria->id_categoria ?>"><?= $categoria->descricao ?></option>
                                 <?php endforeach; ?>
+
                             </select>
                         </div>
 
@@ -198,7 +190,7 @@ if (isset($_POST['REQUEST_METHOD'])) {
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
-
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>
 
