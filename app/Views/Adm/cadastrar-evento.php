@@ -46,9 +46,8 @@
                         </div>
 
                         <div class="btn-cancelar-salvar">
-                            <button class="btn btn-cancelar">
-                                <a href="./Area-Adm.php">Cancelar</a>
-                            </button>
+                            
+                            <a class="btn btn-cancelar" href="./Area-Adm.php">Cancelar</a>
 
                             <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
                         </div>

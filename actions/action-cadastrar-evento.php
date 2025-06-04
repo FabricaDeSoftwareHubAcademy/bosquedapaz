@@ -2,8 +2,6 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Evento;
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 header('Content-Type: application/json');
 
 function sanitizarTexto($input) {
@@ -33,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
    
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        chmod("../Public/uploads/uploads-eventos/", 0777);
         $arquivoTmp = $_FILES['file']['tmp_name'];
         $nomeOriginal = basename($_FILES['file']['name']);
         $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
@@ -48,6 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pastaDestino = '../Public/uploads/uploads-eventos/';
         $caminhoFinal = $pastaDestino . $nomeSeguro;
 
+        
+
         if (!is_dir($pastaDestino)) {
             mkdir($pastaDestino, 0755, true);
         }
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         
-        $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
+        $evento->setBanner('../../../Public/uploads/uploads-eventos/' . $nomeSeguro);
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
         exit;
