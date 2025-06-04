@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <?php include "../../../Public/assets/adm/menu-adm.html" ?>
+    <?php include "../../../Public/include/menu-adm.html" ?>
    
     <main class="principal">
         <div class="box">
