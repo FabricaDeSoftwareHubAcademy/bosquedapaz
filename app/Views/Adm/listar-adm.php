@@ -30,9 +30,7 @@
         <!-- Formulário de Busca -->
         <form method="POST" id="formBusca">
           <div class="search-bar">
-            <label for="busca">Procurar</label>
-            <input type="text" id="busca" name="palavra" placeholder="Colaborador" />
-            <button type="submit" id="btn-pesquisa" value="pesquisar" name="enviar" class="search-button">BUSCAR</button>
+            <input type="text" id="busca" name="palavra" placeholder="Pesquisar por Administrador" />
           </div>
         </form>
         <!-- Tabela de Colaboradores -->

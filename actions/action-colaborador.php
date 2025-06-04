@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($res) {
         foreach ($res as $colaborador) {
             $html .= '<tr>';
-            $html .= '<td class="usuario-col">' . htmlspecialchars($colaborador['id_pessoa']) . '</td>';
+            $html .= '<td class="usuario-col">' . htmlspecialchars($colaborador['id_colaborador']) . '</td>';
             $html .= '<td>' . htmlspecialchars($colaborador['nome']) . '</td>';
             $html .= '<td class="email-col">' . htmlspecialchars($colaborador['email']) . '</td>';
             $html .= '<td class="fone-col">' . htmlspecialchars($colaborador['telefone']) . '</td>';

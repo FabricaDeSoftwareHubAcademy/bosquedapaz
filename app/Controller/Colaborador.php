@@ -106,7 +106,7 @@ class Colaborador extends Pessoa
         $conn = $db->getConnection();
 
         $query = "SELECT 
-            pes.*, col.cargo
+            pes.*, col.cargo, col.id_colaborador
             FROM pessoa pes
             JOIN colaborador col ON pes.id_pessoa = col.id_pessoa
             ";
@@ -115,7 +115,7 @@ class Colaborador extends Pessoa
             $query .= " WHERE pes.nome LIKE :termo
                         OR pes.email LIKE :termo
                         OR pes.telefone LIKE :termo
-                        OR pes.id_pessoa = :id            
+                        OR col.id_colaborador = :id            
             ";
         }    
 

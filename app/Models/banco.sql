@@ -83,7 +83,6 @@ CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
-    imagem VARCHAR(255) NULL,
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -182,12 +181,12 @@ insert into imagem values (default,"A","A","A","A","A");
 
 insert into categoria values (default,"BURGERS","ROXO","blablabla");
 
-insert into pessoa(nome, email, perfil, telefone) values ("matheus", "matheus@gmail.com", "ADM", "0000000000");
+insert into pessoa(nome, email, perfil, telefone, img_perfil) values ("matheus", "matheus@gmail.com", "ADM", "0000000000");
 
-insert into colaborador(id_pessoa, cargo, imagem) values (1, "Financeiro", "hdiajbdfiasbiuabsodubdbjdBD");
+insert into colaborador(id_pessoa, cargo) values (1, "Financeiro", "hdiajbdfiasbiuabsodubdbjdBD");
 
 select 
-col.id_colaborador, col.cargo, col.imagem, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil
+col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
 from colaborador as col inner join pessoa as pes on col.id_pessoa = pes.id_pessoa;
 
 
