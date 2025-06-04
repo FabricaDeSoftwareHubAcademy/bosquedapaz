@@ -157,8 +157,8 @@
 }
 
 .saiba-mais{
-    width: 85%;
-    padding: 13px;
+    width: 111%;
+    padding: 18px;
     border-radius: 10px;
     border: 1px solid #3F49EA;
     color: #3F49EA;
@@ -192,7 +192,7 @@
     width: 15px;
     height: 38%;
     position: absolute;
-    top: 28vh;
+    top: 27vh;
     left: 64px;
     background-color: #3F49EA;
     border-radius: 10px;
@@ -204,7 +204,7 @@
     width: 15px;
     height: 38%;
     position: absolute;
-    top: 23vh;
+    top: 24vh;
     left: 238px;
     background-color: white;
     border-radius: 10px;
@@ -284,18 +284,18 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 70vh;
+    top: 27rem;
    }
 
    .box-principal-utl{
     overflow-y: auto;
     position: relative;
-    top: 8vh;
+    top: 4rem;
    }
 
    .cards{
-    width: 70%;
-    height: 45vh;
+    width: 200px;
+    height: 19rem;
    }
 
     .div__decorativa{
@@ -314,10 +314,10 @@
     }
 
     .saiba-mais{
-        width: 81%;
-        padding: 9%;
+        width: 106%;
+        padding: 8%;
         top: 10%;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .container__h1{
@@ -329,13 +329,83 @@
  
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
-  
+    .area-cards{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 25rem;
+    }
+
+    .box-principal-utl{
+        overflow-y: auto;
+        position: relative;
+        top: 4rem;
+    }
+
+    .cards{
+        width: 265px;
+        height: 18rem;
+    }
+
+    .div__decorativa{
+        top: 21rem;
+    }
+
+    .linha__decorativa1{
+        top: 10rem;
+    }
+
+    .linha__decorativa2{
+        top: 15rem;
+    }
 }
  
  
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
-   
+    .area-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+    }
+
+    .box-principal-utl{
+        position: relative;
+        top: 3rem;
+    }
+
+    .container__h1{
+        position: relative;
+        bottom: 40px;
+    }
+    
+    .cards{
+        width: 200px;
+        height: 19rem;
+        left: 23%;
+    }
+
+    .div__decorativa{
+        top: 68%;
+    }
+
+    .linha__decorativa1{
+        top: 66%;
+        left: 15%;
+    }
+
+    .linha__decorativa2{
+        top: 58%;
+        left: 79%;
+    }
+
+    .saiba-mais{
+        width: 106%;
+        padding: 8%;
+        top: 0%;
+        font-size: 13px;
+    }
+    
 }
  
  
@@ -356,4 +426,4 @@
   
 }
 
-Pequenos Ajustes: 
+/* Pequenos Ajustes:  */
