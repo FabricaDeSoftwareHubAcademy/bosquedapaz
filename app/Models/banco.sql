@@ -34,6 +34,8 @@ CREATE TABLE pessoa(
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
     email VARCHAR(200) NULL,
+    senha VARCHAR(200) NULL,
+    perfil INT DEFAULT 0,
     whats CHAR(11) NULL,
     telefone CHAR(11) NULL,
     link_instagram VARCHAR(255) NULL,
@@ -42,12 +44,9 @@ CREATE TABLE pessoa(
     data_nasc DATE NULL,
     img_perfil VARCHAR(255) NULL,
     id_endereco INT NULL,
-    id_login INT NULL,
     PRIMARY KEY(id_pessoa),
-    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
-    FOREIGN KEY(id_login) REFERENCES login(id_login)
+    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
-
 CREATE TABLE imagem(
 	id_imagem INT NOT NULL AUTO_INCREMENT,
     imagem1 VARCHAR(255) NOT NULL,

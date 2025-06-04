@@ -43,7 +43,7 @@
 
                     <h1 class="area-img-login-h1-tiago">Login</h1>
                     
-                    <form action="#" class="forms-login">
+                    <form action="./validar_login.php" class="forms-login" method="POST">
  
                         <label>E-mail</label>
                         <div class="area-input-login">
@@ -56,6 +56,7 @@
                             <i class="bi bi-lock"></i>
                             <input class="input-login" type="password" name="password" id="password" placeholder="Digite sua senha" required>
                         </div>
+                        <button class="botao-login" type="submit">Login</button>
                     </form>
  
                     <div class="div-esqueceu-senha-login">
@@ -63,7 +64,6 @@
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
                    
-                    <a class="botao-login" href="../app/Views/Adm/Area-Adm.php">Login</a>
                    
                 </div>
                
@@ -73,5 +73,11 @@
             </div>
         </section>
     </main>
-</body>
+    </body>
+
+<?php if (isset($_GET['erro']) && $_GET['erro'] == 1): ?>
+<script>
+    alert("Email ou senha incorrto!")
+</script>
+<?php endif; ?>
 </html>
