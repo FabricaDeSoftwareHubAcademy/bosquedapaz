@@ -1,5 +1,7 @@
 <?php
 
+namespace app\Controller;
+require_once('../vendor/autoload.php');
 
 class Pessoa
 {

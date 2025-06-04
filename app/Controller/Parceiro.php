@@ -1,6 +1,8 @@
 <?php 
 
-require_once __DIR__ . '/../../Models/Database.php';
+namespace app\Controller;
+require_once('../vendor/autoload.php');
+use app\Controller\Pessoa;
 
 class Parceiro {
     public int $id_parceiro;

@@ -1,7 +1,8 @@
 <?php
 
-    require "../app/adm/Controller/Endereco.php";
-    require "../app/adm/Controller/Parceiro.php";
+require_once('../vendor/autoload.php');
+
+use app\Controller\Parceiro;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
