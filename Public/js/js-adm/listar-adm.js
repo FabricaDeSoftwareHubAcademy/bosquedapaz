@@ -37,14 +37,6 @@ async function listarColaboradores(busca = "") {
                 <td class="fone-col">${colaborador.telefone}</td>
                 <td class="cargo-col">${colaborador.cargo}</td>
                 <td><button type="button" class="status active">Ativo</button></td>
-                <td>
-                    <a class="edit-icon" href="editar-adm.php?id=${colaborador.id_colaborador}">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                    <button class="open-modal" data-modal="modal-deleta" data-id="${colaborador.id_colaborador}">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </td>
             `;
 
             tbody.appendChild(tr);

@@ -78,21 +78,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     else if (isset($_POST['palavra'])) {
         $colab = new Colaborador();
         $termo = trim($_POST['palavra']);
+
         $res = $colab->busca_selecionada($termo);
 
         $html = '';
+        if ($res) {
         foreach ($res as $colaborador) {
             $html .= '<tr>';
+            $html .= '<td class="usuario-col">' . htmlspecialchars($colaborador['id_pessoa']) . '</td>';
             $html .= '<td>' . htmlspecialchars($colaborador['nome']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($colaborador['email']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($colaborador['telefone']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($colaborador['cargo']) . '</td>';
+            $html .= '<td class="email-col">' . htmlspecialchars($colaborador['email']) . '</td>';
+            $html .= '<td class="fone-col">' . htmlspecialchars($colaborador['telefone']) . '</td>';
+            $html .= '<td class="cargo-col">' . htmlspecialchars($colaborador['cargo']) . '</td>';
             $html .= '<td><span class="status ativo">Ativo</span></td>';
             $html .= '</tr>';
         }
+        } else {
+            $html = '<tr><td colspan="5">Nenhum colaborador encontrado.</td></tr>';
+        }
+        
 
         echo $html;
-        exit;
+
     }
 }
 

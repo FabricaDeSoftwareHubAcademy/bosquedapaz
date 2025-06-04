@@ -9,7 +9,7 @@
     <!-- Scripts -->
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <script type="text/javascript" src="../../../Public/js/js-adm/js-busca-adm.js"></script>
+    <script type="text/javascript" src="../../../Public/js/js-adm/js-busca-adm.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
@@ -31,7 +31,7 @@
         <form method="POST" id="formBusca">
           <div class="search-bar">
             <label for="busca">Procurar</label>
-            <input type="text" id="campoBusca" name="palavra" placeholder="Colaborador" />
+            <input type="text" id="busca" name="palavra" placeholder="Colaborador" />
             <button type="submit" id="btn-pesquisa" value="pesquisar" name="enviar" class="search-button">BUSCAR</button>
           </div>
         </form>
