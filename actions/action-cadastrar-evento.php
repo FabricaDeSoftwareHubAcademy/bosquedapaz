@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         $nomeSeguro = uniqid('evento_', true) . '.' . $extensao;
-        $pastaDestino = dirname(__DIR__, 2) . '/Public/uploads/uploads-eventos/'; // Caminho absoluto
+        $pastaDestino = '../Public/uploads/uploads-eventos/';
         $caminhoFinal = $pastaDestino . $nomeSeguro;
 
         if (!is_dir($pastaDestino)) {
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
 
-        // Caminho relativo salvo no banco
+        
         $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
