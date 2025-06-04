@@ -80,7 +80,7 @@
     align-items: center;
     justify-content: center;
     /* background-color: aqua; */
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .container__h1 h1{
@@ -284,6 +284,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 70vh;
    }
 
    .box-principal-utl{
@@ -296,6 +297,33 @@
     width: 70%;
     height: 45vh;
    }
+
+    .div__decorativa{
+        top: 70%;
+    }
+    
+    
+    .linha__decorativa1{
+        top: 67%;
+        left: 15%;
+    }
+
+    .linha__decorativa2{
+        top: 57%;
+        left: 77%;
+    }
+
+    .saiba-mais{
+        width: 81%;
+        padding: 9%;
+        top: 10%;
+        font-size: 12px;
+    }
+
+    .container__h1{
+        position: relative;
+        top: 10rem;
+    }
 }
  
  
@@ -328,4 +356,4 @@
   
 }
 
-/* Pequenos Ajustes:  */
+Pequenos Ajustes: 
