@@ -18,17 +18,17 @@
             <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>
 
             <div class="area-formulario-guilherme">
-                <form class="formulario-guilherme">
+                <form class="formulario-guilherme" id="form" method="post" enctype='multipart/form-data'>
                     <label>Nome completo</label>
-                    <input type="text" name="campo1" id="campo-1" placeholder="Digite seu nome completo" required>
+                    <input type="text" name="nome" id="campo-1" placeholder="Digite seu nome completo" required>
 
                     <label>E-mail</label>
-                    <input type="email" name="campo2" id="campo-2" placeholder="exemplo@gmail.com" required>
+                    <input type="email" name="email" id="campo-2" placeholder="exemplo@gmail.com" required>
 
                     <label>Mensagem</label>
-                    <textarea name="campo3" class="campo-3-guilherme" placeholder="Digite aqui sua mensagem." required></textarea>
+                    <textarea name="mensagem" class="mensagem" placeholder="Digite aqui sua mensagem." required></textarea>
                     
-                    <button class="botao-enviar-guilherme">Enviar</button>
+                    <button class="botao-enviar-guilherme" name="enviar" value="enviar">Enviar</button>
                 </form>
             </div>
         </section>
@@ -61,7 +61,6 @@
         <img src="../../../Public/imgs/imagens-bolas/decoracao3.png" alt="deco3" class="decoracao3-guilherme">
     </div>
 
-    <script src="../../../Public/js/js-home/main.js"></script>
-    <script src="../../../Public/js/js-home/main.js" defer></script>
+    <script src="../../../Public/js/js-home/js-fale-conosco.js"></script>
 </body>
 </html>
