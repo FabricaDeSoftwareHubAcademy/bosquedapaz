@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --franch-rose:#FF3877;
+    --royal-blue: #162868;
+}
+
+html,.body-recsenha{
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e1e1e1;
+    position: relative;
+}
+
+.section-recsenha{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgg-inferior-direita-recsenha{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
+
+.imgg-inferior-esquerda-recsenha{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+}
+
+.imgg-superior-direita-recsenha{
+    position: fixed;
+    top: 10%;
+    right: 0%;
+}
+
+.imgg-superior-esquerda-recsenha{
+    position: fixed;
+    top: 12%;
+    left: 0%;
+}
+
+.box-recsenha{
+    width: 85%;
+    height: 83%;
+    display: flex;
+    backdrop-filter: blur(0px);
+    background-color: rgba(248, 245, 246, 0.705);
+    border-radius: 15px;
+    align-items: self-start;
+    justify-content: space-between;
+    transition: all .5s ease;
+    will-change: transform;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    #linha-bet-recsenha{
+        height: 82%;
+        position: absolute;
+        border-right: 1.5px solid #ec6a93;
+        left: 50%;
+        border-radius: 20px;
+        top: 10%;
+        bottom: 10%;
+    }
+}
+
+.box-recsenha:hover{
+    background-color: rgba(240, 240, 240, 0.075);
+    backdrop-filter: blur(30px);
+
+    #linha-bet-recsenha{
+        border-right: 1.5px solid #162868;
+    }
+}
+
+.form-recsenha{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 32%;
+    left: 9.5%;
+    width: 30%;
+}
+
+.forms-recsenha{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.area-input-recsenha{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 42px;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.area-input-recsenha i{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.input-recsenha{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 35px;
+    border-color: #162868;
+    border-width: 0 0.5px 0.5px 0;
+    border-style: solid;
+    box-shadow: 2px 2px 4px 1px #162868;
+}
+
+.recsenha-modal{
+    position: fixed;
+    border-radius: 15px;
+    margin: auto;
+    background-color: white;
+    border: none;
+    width: 30vw;
+    height: 25vh;
+}
+
+.recsenha-modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-recsenha{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal-recpass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-title{
+    text-align: center;
+}
+
+.modal-text{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.close-modal{
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 5%;
+    border-radius: 12px;
+    background-color: #FF3877;
+    border: none;
+    padding: 10px 25px;
+    margin: auto;
+}
+
+.botoes{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+}
+
+.botao-cancelar{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+    transition: all .5s ease;
+    box-shadow: 1px 3px 5px 2px #7d7d7d;
+    display: flex;
+    background-color: #162868;
+}
+
+.botao-cancelar:hover{
+    box-shadow: 1px 3px 5px 2px #FF3877;
+}
+
+.botao-redefinir{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+    transition: all .5s ease;
+    box-shadow: 1px 3px 5px 2px #7d7d7d;
+    display: flex;
+    background-color: #FF3877;
+}
+
+.botao-redefinir:hover{
+    box-shadow: 1px 3px 5px 2px #162868;
+}
+
+.img-letter{
+    position: relative;
+    transition: ease .5s;
+    width: 49%;
+}
+
+.img-letter:hover{
+    transition: ease .5s;
+    transform: scale(1.03);
+}
+
+.title-recsenha{
+    font-weight: 600;
+    left: 10%;
+    top: 12%;
+    position: absolute;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerNovaSenha{
+    width: 100%;
+    position: relative;
+}
+.containerConfNovaSenha{
+    width: 100%;
+    margin-top: 20px;
+    /* position: relative; */
+}
+.inpRecuperar{
+    width: 100%;
+    height: 40px;
+    background-color: none;
+    border: 2px solid #FF3877;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 15px;
+    outline: none;
+}
+
+@media (max-width:575.98px){
+    .box-recsenha{
+        width: 90%;
+        height: 90%;
+    }
+
+    .recsenha-modal{
+        width: 80vw;
+        height: 170px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .close-modal{
+        width: 90px;
+        height: 40px;
+        font-size: 11.5px;
+    }
+
+    .modal-text{
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .imgg-inferior-direita-recsenha, .imgg-inferior-esquerda-recsenha, .imgg-superior-direita-recsenha, .imgg-superior-esquerda-recsenha{
+        display: flex;
+        width: 30%;
+    }
+
+    #linha-bet-recsenha{
+        display: none;
+    }
+
+    .img-letter{
+        display: none;
+    }
+
+    .title-recsenha{
+        margin-bottom: 20%;
+        left: 0%;
+        position: relative;
+        display: flex;
+        font-size: 23px;
+    }
+
+    .form-recsenha{
+        top: 20%;
+        position: absolute;
+        width: 87%;
+        left: 6%;
+    }
+
+    .text{
+        text-align: center;
+        margin-bottom: 4%;
+        display: flex;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .recsenha-modal{
+        width: 80vw;
+        height: 170px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .close-modal{
+        width: 90px;
+        height: 40px;
+        font-size: 11.5px;
+    }
+
+    .modal-text{
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .botoes{
+        justify-content: space-around;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+
+}
+
+@media (min-width:576px){
+
+    .box-recsenha{
+        padding: 10px;
+    }
+
+    .recsenha-modal{
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .form-recsenha{
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        left: 0.5%;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+    .title-recsenha{
+        text-align: center;
+        left: 0%;
+        position: relative;
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+
+    .img-letter{
+        top: 27%;
+    }
+
+    .recsenha-modal{
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .botoes{
+        width: 100%;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+}
+
+@media (min-width:768px){
+
+    .box-recsenha{
+        height: 88%;
+        padding: 10px;
+    }
+
+    .form-recsenha{
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        left: 0.5%;
+    }
+
+    .recsenha-modal{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        font-size: 17px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .botao-cancelar{
+        width: 40%;
+    }
+
+    .botao-redefinir{
+        width: 40%;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+    .img-letter{
+        top: 28%;
+    }
+
+    .title-recsenha{
+        left: 0%;
+        position: relative;
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+
+    .recsenha-modal{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        font-size: 17px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+}
+
+@media (min-width:992px){
+
+    .imgg-inferior-direita-recsenha, 
+    .imgg-inferior-esquerda-recsenha, 
+    .imgg-superior-direita-recsenha, 
+    .imgg-superior-esquerda-recsenha{
+        width: 28%;
+    }   
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+
+    .imgg-inferior-direita-recsenha, 
+    .imgg-inferior-esquerda-recsenha, 
+    .imgg-superior-direita-recsenha, 
+    .imgg-superior-esquerda-recsenha{
+        width: 18%;
+    }
+
+    .form-recsenha{
+        top: 22%;
+    }
+
+    .recsenha-modal{
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .title-recsenha{
+        margin-bottom: 8%;
+    }
+
+    .img-letter{
+        top: 7%;
+    }
+}
+
+@media (min-width:1200px){
+    
+    .imgg-inferior-direita-recsenha, 
+    .imgg-inferior-esquerda-recsenha, 
+    .imgg-superior-direita-recsenha, 
+    .imgg-superior-esquerda-recsenha{
+        width: 18%;
+    }
+
+    .title-recsenha{
+        margin-bottom: 0%;
+    }
+
+    .form-recsenha{
+        top: 32%;
+    }
+
+    .img-letter{
+        top: 12%;
+    }
+
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
+    }
+
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
+    }
+
+    .botao-cancelar{
+        width: 30%;
+    }
+
+    .botao-redefinir{
+        width: 30%;
+    }
+}
+
+@media (min-width:1400px){
+    /* .box-recsenha{
+        height: 82%;
+    } */
+    
+    .imgg-inferior-direita-recsenha{
+        width: 18%;
+    }
+
+    .imgg-inferior-esquerda-recsenha{
+        width: 11%;
+    }
+
+    .imgg-superior-direita-recsenha{
+        width: 12%;
+    }
+
+    .imgg-superior-esquerda-recsenha{
+        width: 11%;
+    }
+    
+    .form-recsenha{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 20%;
+        left: 9.5%;
+        width: 30%;
+        height: 60%;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
+    }
+    
+    .forms-recsenha{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
+    }
+    
+    .img-letter{
+        top: 0%;
+    }
+    
+    .title-recsenha{
+        margin-bottom: 30%;
+        top: 0%;
+        left: 0%;
+        position: relative;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }    
+}
