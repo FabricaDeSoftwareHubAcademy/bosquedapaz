@@ -77,9 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     else if (isset($_POST['palavra'])) {
         $colab = new Colaborador();
-        $termo = trim($_POST['palavra']);
+        $nome = trim($_POST['palavra']);
 
-        $res = $colab->busca_selecionada($termo);
+        $res = $colab->listarColaboradores($nome);
 
         $html = '';
         if ($res) {
@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     if(isset($_GET['id'])){
         $colab = new Colaborador();
-        $res = $colab->buscar_por_id($_GET['id']);
+        $res = $colab->listarColaboradores($_GET['id']);
         $dados = array();
         
         foreach ($res as $key => $value) {
@@ -120,17 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     }
     else{
         $colab = new Colaborador();
-        $res = $colab->buscar();
-        $dados = array();
+        $res = $colab->listarColaboradores();
         
-        foreach ($res as $key => $value) {
-            if ($value != null){
-                $dados[$key] = $value;
-            }
-            
-        }
-        
-        echo json_encode([$dados, "status" => 200]);
+        echo json_encode([$res, "status" => 200]);
     }
 }
 

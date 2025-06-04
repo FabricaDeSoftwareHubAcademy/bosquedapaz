@@ -67,18 +67,6 @@ class Colaborador extends Pessoa
 
         return $res;
     }
-    
-    public function buscar() {
-        $dbPessoa = new Database('colaborador');
-        $res = $dbPessoa->select_all('pessoa', 'id_pessoa' )->fetchAll(PDO::FETCH_ASSOC);
-        return $res;
-    }
-
-    public function buscar_por_id($id) {
-        $dbPessoa = new Database('colaborador');
-        $res = $dbPessoa->select_all('pessoa', 'id_pessoa', 'id_colaborador = ' . $id)->fetchObject();
-        return $res;
-    }
 
     public function atualizar($id){
         $db = new Database('colaborador');
@@ -101,38 +89,12 @@ class Colaborador extends Pessoa
         return $res ? TRUE : FALSE;
     }
 
-    public function busca_selecionada($termo = ''){
+    public function listarColaboradores($nome = null){
         $db = new Database('colaborador');
-        $conn = $db->getConnection();
-
-        $query = "SELECT 
-            pes.*, col.cargo, col.id_colaborador
-            FROM pessoa pes
-            JOIN colaborador col ON pes.id_pessoa = col.id_pessoa
-            ";
-
-        if(!empty($termo)){
-            $query .= " WHERE pes.nome LIKE :termo
-                        OR pes.email LIKE :termo
-                        OR pes.telefone LIKE :termo
-                        OR col.id_colaborador = :id            
-            ";
-        }    
-
-        $stmt = $conn->prepare($query);
-
-        if (!empty($termo)){
-            $id = is_numeric($termo) ? (int)$termo : 0;
-            $likeTermo = "%$termo%";
-
-            $stmt->bindParam(":termo", $likeTermo, PDO::PARAM_STR);
-            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        if (!empty($nome)) {
+            return $db->filtrar_colaboradores($nome)->fetchAll(PDO::FETCH_CLASS, self::class);
+        } else {
+            return $db->listar_colaboradores()->fetchAll(PDO::FETCH_CLASS, self::class);
         }
-
-
-        $stmt->execute(); 
-
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
 }

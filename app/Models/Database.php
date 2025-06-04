@@ -168,6 +168,42 @@ class Database {
         $query = "UPDATE ". $this->table. " SET status = 0 WHERE ". $where;
         return $this->execute($query) ? true : false;
     }
+
+    public function listar_colaboradores() {
+        $query = "SELECT
+        c.id_colaborador,
+        p.nome,
+        p.email,
+        p.telefone,
+        c.cargo,
+        c.status_col
+        FROM colaborador c
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+        return $this->execute($query);
+    }
+
+    public function filtrar_colaboradores($nome) {
+        $query = "SELECT
+        c.id_colaborador,
+        p.nome,
+        p.email,
+        p.telefone,
+        c.cargo,
+        c.status_col
+        FROM colaborador c
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+
+        $binds = [];
+
+        if(!empty($nome)) {
+            $query .= " WHERE p.nome LIKE :nome";
+            $binds[":nome"] = "%$nome%";
+        }
+
+        return $this->execute($query, $binds);
+    }
+
+
 }
 
 ?>

@@ -83,6 +83,7 @@ CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
+    status_col ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );

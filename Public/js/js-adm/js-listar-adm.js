@@ -2,7 +2,7 @@ async function listar(){
 
     let dados = await fetch("../../../actions/action-colaborador.php");
 
-    let response = await dados.json();
+    let response = await dados.text();
     console.log(response);
 
     let linha = '';
