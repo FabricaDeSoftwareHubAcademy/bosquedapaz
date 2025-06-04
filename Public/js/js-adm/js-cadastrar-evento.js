@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const resultado = await resposta.json();
+            console.log('Resposta JSON:', resultado);
 
             if (resultado.status === 'sucesso') {
                 alert(resultado.mensagem);

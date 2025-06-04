@@ -37,16 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nomeOriginal = basename($_FILES['file']['name']);
         $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
 
-        
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+
         if (!in_array($extensao, $extensoesPermitidas)) {
-            echo "<script>alert('Formato de imagem inválido.'); window.history.back();</script>";
+            echo json_encode(["status" => "erro", "mensagem" => "Formato de imagem inválido."]);
             exit;
         }
 
-        
         $nomeSeguro = uniqid('evento_', true) . '.' . $extensao;
-        $pastaDestino = '../../../Public/uploads/';
+        $pastaDestino = dirname(__DIR__, 2) . '/Public/uploads/uploads-eventos/'; // Caminho absoluto
         $caminhoFinal = $pastaDestino . $nomeSeguro;
 
         if (!is_dir($pastaDestino)) {
@@ -54,13 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if (!move_uploaded_file($arquivoTmp, $caminhoFinal)) {
-            echo "<script>alert('Erro ao salvar o arquivo.'); window.history.back();</script>";
+            echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar o arquivo."]);
             exit;
         }
 
-        $evento->setBanner($caminhoFinal);
+        // Caminho relativo salvo no banco
+        $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
     } else {
-        echo "<script>alert('Erro no upload do banner.'); window.history.back();</script>";
+        echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
         exit;
     }
 
