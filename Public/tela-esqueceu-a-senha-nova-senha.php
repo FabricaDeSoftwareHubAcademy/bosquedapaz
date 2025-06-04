@@ -59,7 +59,7 @@
                                 <h1 class="modal-title">Enviado!</h1>
                                 <p class="modal-text">Verifique sua caixa de entrada para redefinir sua senha</p>
                                 <!-- <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button> -->
-                                 <a href="./tela-esqueceu-a-senha-nova-senha.html" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
+                                 <a href="./tela-esqueceu-a-senha-nova-senha.php" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
                             </div>
                         </div>
                     </dialog>

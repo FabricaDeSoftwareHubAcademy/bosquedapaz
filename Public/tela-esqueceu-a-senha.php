@@ -1,3 +1,42 @@
+
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+session_start();
+// require './teste2.php';
+
+if (isset($_POST['enviar'])) {
+    $email = $_POST['email'];
+
+    if (empty($email)) {
+        echo "O campo de e-mail não pode estar vazio.";
+    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Gerar código de 5 dígitos
+        // $codigo = rand(10000, 99999);
+        $codigo = "11abc";
+
+        // Armazenar o código e o e-mail na sessão
+        $_SESSION['codigo_recuperacao'] = $codigo;
+        $_SESSION['email_recuperacao'] = $email;
+
+        // Chamar a função de envio de e-mail e capturar o retorno
+        // $emailService = new EmailService();
+        // $mensagem = $emailService->enviarEmail($email, $codigo);
+
+        // Exibir a mensagem de retorno
+        echo $mensagem;
+        header('Location: ./tela-esqueceu-a-senha-codigo.php');
+
+    } else {
+        echo "E-mail inválido. Tente novamente.";
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,32 +67,36 @@
                 <div class="form-recsenha">
                     <h1 class="title-recsenha">Redefinição De Senha</h1>
                     
-                    <form action="#" class="forms-recsenha">
+                    <form action="#" method="POST" class="forms-recsenha">
                         <p class="text">Digite seu email abaixo para redefinir sua senha</p>
-                        <label class="label-email">Email</label>
+                        <div class="containerLabel">
+                            <label class="label-email">Email</label>
+                        </div>
                         <div class="area-input-recsenha">
                             <i class="bi bi-envelope"></i>
                             <input class="input-recsenha" type="email" name="email" id="email" placeholder="Digite seu email" required>
                         </div>
+
+                        <div class="botoes">
+                            <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
+                            <button type="submit" name="enviar" id="abrir-modal recsenha-modal" class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
+                        </div>
+
                     </form>
 
                     
                     
-                    <div class="botoes">
-                        <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
-                        <button id="abrir-modal recsenha-modal"  class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
-                    </div>
 
-                    <dialog id="recsenha-modal" class="recsenha-modal">
+                    <!-- <dialog id="recsenha-modal" class="recsenha-modal">
                         <div class="modal-recsenha">
                             <div class="modal-recpass">
                                 <h1 class="modal-title">Enviado!</h1>
                                 <p class="modal-text">Verifique sua caixa de entrada para redefinir sua senha</p>
-                                <!-- <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button> -->
-                                 <a href="./tela-esqueceu-a-senha-codigo.html" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
+                                <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button>
+                                 <a href="./tela-esqueceu-a-senha-codigo.php" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
                             </div>
                         </div>
-                    </dialog>
+                    </dialog> -->
                     
                 </div>
 

@@ -1,3 +1,31 @@
+
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+session_start();
+
+if (isset($_POST['validar'])) {
+    // Captura os 5 dígitos do código enviado no formulário
+    $codigo_informado = $_POST['codigo1'] . $_POST['codigo2'] . $_POST['codigo3'] . $_POST['codigo4'] . $_POST['codigo5'];
+    // echo($_SESSION['codigo_recuperacao']);
+
+    // Verifica se o código informado corresponde ao código armazenado na sessão
+    if (empty($codigo_informado)) {
+        echo "Por favor, insira o código.";
+    } elseif ($codigo_informado == $_SESSION['codigo_recuperacao']) {
+        // Código correto, direciona para a página de recuperação de senha
+        header('Location: ./tela-esqueceu-a-senha-nova-senha.php');
+        exit();
+    } else {
+        echo "Código inválido. Tente novamente.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +35,7 @@
     <link rel="stylesheet" href="../Public/css/css-recuperar-senha/style-esquceu-a-senha-codigo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
-    <script src="js/js-recuperar-senha/recuperar-senha-nova-senha.js" defer></script>
+    <script src="./js/js-recuperar-senha/recuperar-senha-codigo.js" defer></script>
 </head>
 <body class="body-recsenha">
     <main>
@@ -29,35 +57,35 @@
                 <div class="form-recsenha">
                     <h1 class="title-recsenha">Redefinição De Senha</h1>
                     
-                    <form action="#" class="forms-recsenha">
+                    <form action="#" method="POST" class="forms-recsenha">
                         <p class="text">Digite o codigo</p>
                 <div class="container_input">
-                    <input type="text" class="input_codigo" name="" id="input_1" maxlength="1" required onkeyup="mudaFoco(this, 1, input_2)">
-                    <input type="text" class="input_codigo" name="" id="input_2" maxlength="1" required onkeyup="mudaFoco(this, 1, input_3)">
-                    <input type="text" class="input_codigo" name="" id="input_3" maxlength="1" required onkeyup="mudaFoco(this, 1, input_4)">
-                    <input type="text" class="input_codigo" name="" id="input_4" maxlength="1" required onkeyup="mudaFoco(this, 1, input_5)">
-                    <input type="text" class="input_codigo" name="" id="input_5" maxlength="1" required onkeyup="mudaFoco(this, 1, null)">
+                    <input type="text" class="input_codigo" name="codigo1" id="input_1" maxlength="1" required onkeyup="mudaFoco(this, 1, input_2)">
+                    <input type="text" class="input_codigo" name="codigo2" id="input_2" maxlength="1" required onkeyup="mudaFoco(this, 1, input_3)">
+                    <input type="text" class="input_codigo" name="codigo3" id="input_3" maxlength="1" required onkeyup="mudaFoco(this, 1, input_4)">
+                    <input type="text" class="input_codigo" name="codigo4" id="input_4" maxlength="1" required onkeyup="mudaFoco(this, 1, input_5)">
+                    <input type="text" class="input_codigo" name="codigo5" id="input_5" maxlength="1" required onkeyup="mudaFoco(this, 1, null)">
                 </div>
 
+                <div class="botoes">
+                    <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
+                    <button type="submit" name="validar" id="abrir-modal recsenha-modal"  class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
+                </div>
                     </form>
 
                     
                     
-                    <div class="botoes">
-                        <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
-                        <button id="abrir-modal recsenha-modal"  class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
-                    </div>
 
-                    <dialog id="recsenha-modal" class="recsenha-modal">
+                    <!-- <dialog id="recsenha-modal" class="recsenha-modal">
                         <div class="modal-recsenha">
                             <div class="modal-recpass">
                                 <h1 class="modal-title">Enviado!</h1>
                                 <p class="modal-text">Verifique sua caixa de entrada para redefinir sua senha</p>
-                                <!-- <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button> -->
+                                <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button>
                                  <a href="./tela-esqueceu-a-senha-nova-senha.html" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
                             </div>
                         </div>
-                    </dialog>
+                    </dialog> -->
                     
                 </div>
 

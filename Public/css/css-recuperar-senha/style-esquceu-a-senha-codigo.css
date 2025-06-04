@@ -307,7 +307,7 @@ html,.body-recsenha{
     border: 2px solid #FF3877;
     border-radius: 10px;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 20px;
 }
 
