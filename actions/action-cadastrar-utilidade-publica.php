@@ -51,10 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     if ($utilidadePublica->cadastrar()) {
         // Redirecionamento ou resposta de sucesso
         // header('Location: ../Views/Adm/cadastrar-utilidades.php?status=success');
-        echo "Cadastro realizado com sucesso!";
-        exit;
+        echo json_encode( ['status' => 200, 'msg' => 'Cadastrado com sucesso!!'] );
     } else {
-        echo "Erro ao cadastrar utilidade pública no banco de dados.";
+        echo json_encode( ['status' => 400, 'msg' => 'Erro ao Cadastrar!'] );
     }
 }
 ?>
