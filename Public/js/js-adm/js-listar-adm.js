@@ -1,5 +1,5 @@
 // -------------------------------------------------- 
-// Script para Listar Os Colaboradores
+// Script Para Listar os Colaboradores:
 async function listar(){
     try{
         const resposta = await fetch("../../../actions/action-colaborador.php");
@@ -40,8 +40,9 @@ async function listar(){
 }
 listar();
 
+
 // -------------------------------------------------- 
-// Script para Buscar colaborador pelo Input 
+// Script Para Buscar Colaborador (Busca feita pelo Input):
 document.addEventListener('DOMContentLoaded', () => {
     const inputBusca = document.getElementById('busca');
     const tbody = document.getElementById('tbody-colaboradores');
@@ -103,3 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }   
 });
+
+
+// -------------------------------------------------- 
+// Script Para Ativar/Inativar Status do Colaborador:
