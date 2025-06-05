@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const descricaoInput = document.getElementById('descricaodoevento');
+    const contador = document.getElementById('contador-caracteres');
+
+    descricaoInput.addEventListener('input', () => {
+        const restante = 250 - descricaoInput.value.length;
+        contador.textContent = `${restante} caracteres restantes`;
+        console.log(`Digitado: ${descricaoInput.value.length} caracteres`);
+    });
+
     const form = document.getElementById('form-evento');
 
     form.addEventListener('submit', async (event) => {

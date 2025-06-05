@@ -18,6 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descricao = sanitizarTexto($_POST['descricaodoevento'] ?? '');
     $data = $_POST['dataevento'] ?? '';
 
+    if (strlen($descricao) > 250) {
+        echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 250 caracteres."]);
+        exit;
+    }    
+
     
     if (empty($nome) || empty($descricao) || empty($data) || !validarData($data)) {
        echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos corretamente."]);
