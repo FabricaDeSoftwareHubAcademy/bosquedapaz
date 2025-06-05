@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                         </a>
                     </td>
                     <td class="mais">
-                        <a href="cadastrar-atracao.php?id_evento=${event.id_evento}">
-                            <i class="fa-solid fa-plus"></i>
+                        <a href="gerenciar-atracao.php?id_evento=${event.id_evento}">
+                            <i class="fa-solid fa-list"></i>
                         </a>
                     </td>
                     <td class="mais">

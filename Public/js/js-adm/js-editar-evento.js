@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    const descricaoInput = document.getElementById('descricao');
+    const contador = document.getElementById('contador-caracteres');
+
+    const atualizarContador = () => {
+        const restante = 250 - descricaoInput.value.length;
+        contador.textContent = `${restante} caracteres restantes`;
+        console.log(`Digitado: ${descricaoInput.value.length} caracteres`);
+    };
+
+    descricaoInput.addEventListener('input', atualizarContador);
+
+    setTimeout(() => {
+        atualizarContador();
+    }, 100);
+
+
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
 

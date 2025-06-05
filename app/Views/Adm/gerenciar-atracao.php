@@ -1,4 +1,3 @@
-
 <html lang="pt-br">
 
 <head>
@@ -13,15 +12,11 @@
 <body>
     <?php
     include "../../../Public/include/menu-adm.html";
-    require_once '../../../app/adm/Controller/Atracao.php';
-
-    $atracao = new Atracao();
-    $lista = $atracao->listar();
     ?>
 
     <main class="principal">
         <div class="box">
-            <h2>GERENCIAR ATRAÇÃO</h2>
+            <h2>Gerenciar Atração</h2>
             <div class="container">
                 <div class="search-bar">
                     <label for="busca">Procurar</label>
@@ -33,32 +28,15 @@
                         <thead>
                             <tr>
                                 <th class="usuario-col">Nome da atração</th>
-                                <th>Descrição</th>
-                                <th>Evento</th>
+                                <th>Data</th>
                                 <th>Editar</th>
                                 <th>Foto</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <?php foreach ($lista as $a): ?>
-                                <tr>
-                                    <td><?= htmlspecialchars($a->getNome()) ?></td>
-                                    <td><?= htmlspecialchars($a->getDescricao()) ?></td>
-                                    <td><?= htmlspecialchars($a->getIdEvento()) ?></td>
-                                    <td>
-                                        <a href="editar-atracao.php?id=<?= $a->getId() ?>">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <?php if (!empty($a->getFoto())): ?>
-                                            <img src="../../../Public/uploads/atracoes/<?= htmlspecialchars($a->getFoto()) ?>" alt="Foto da Atração" width="50">
-                                        <?php else: ?>
-                                            Sem imagem
-                                        <?php endif; ?>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+                        
+                        <tbody id="lista-atrações">
+        <!-- Eventos serão adicionados aqui via JS -->
+                            
                         </tbody>
                     </table>
                 </div>
@@ -86,6 +64,7 @@
     <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../public/js/js-gerenciar-atracao.js"></script>
 </body>
 
 </html>

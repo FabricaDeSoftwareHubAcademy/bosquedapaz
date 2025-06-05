@@ -28,7 +28,7 @@
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (250 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
                                 <small id="contador-caracteres">250 caracteres restantes</small>
                             </div>
                             
@@ -47,11 +47,10 @@
                         </div>
 
                         <div class="btn-cancelar-salvar">
-                            
-                            <a class="btn btn-cancelar" href="./Area-Adm.php">Cancelar</a>
-
+                            <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
                             <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
                         </div>
+                        
                     </form>
                 </div>
 

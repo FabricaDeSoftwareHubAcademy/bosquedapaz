@@ -1,13 +1,33 @@
 <?php
-require_once('../vendor/autoload.php');
-use app\Controller\Atracao; 
+require_once '../vendor/autoload.php';
 
-$id_evento = isset($_GET['id_evento']) ? (int) $_GET['id_evento'] : 0;
+use app\Controller\Atracao;
 
-    if ($id_evento <= 0) {
-        echo "<p>Evento não encontrado.</p>";
-        exit;
-    }
+header('Content-Type: application/json');
 
-$atracao = new Atracao();
-$atracoes = $atracao->listar("id_evento = {$id_evento}");
+if (!isset($_GET['id_evento'])) {
+    echo json_encode([
+        'status' => 'error',
+        'mensagem' => 'ID do evento não fornecido.'
+    ]);
+    exit;
+}
+
+$id_evento = intval($_GET['id_evento']);
+
+try {
+    $atracao = new Atracao();
+    // WHERE: apenas atrações deste evento
+    $atracoes = $atracao->listar("id_evento = {$id_evento}");
+
+    echo json_encode([
+        'status' => 'success',
+        'dados' => $atracoes
+    ], JSON_PRETTY_PRINT);
+
+} catch (Exception $e) {
+    echo json_encode([
+        'status' => 'error',
+        'mensagem' => $e->getMessage()
+    ]);
+}
