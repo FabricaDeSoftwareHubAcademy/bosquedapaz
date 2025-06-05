@@ -32,7 +32,7 @@
                     </div> 
                 </div>
 
-                <div class="cards" id="border-card-azul">
+                <!-- <div class="cards" id="border-card-azul">
                     <div class="div__decorativa"></div>
                     <div class="linha__decorativa1"></div>
                     <div class="linha__decorativa2"></div>
@@ -62,9 +62,9 @@
                         </div>
                     </div>
                     
-                </div>
+                </div> -->
 
-                <div class="cards" id="border-card-azul">
+                <!-- <div class="cards" id="border-card-azul">
                     <div class="div__decorativa"></div>
                     <div class="linha__decorativa1"></div>
                     <div class="linha__decorativa2"></div>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     
-                </div>
+                </div> -->
 
                 
 
