@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 <body>
+<?php include "../../../Public/include/home/menu-home.html"; ?>
+
     <!-- formas -->
     <main class="main">
         <section class="section-b">
@@ -39,7 +41,7 @@
                 </div>
                 <div class="card-content">
                     <h2 class="title-card">Bloquinho de Carnaval</h2>
-                        <button id="btn-cardRosa" class="btn-ver-mais" data-modal1="modal1">Saiba Mais!</button>
+                        <button id="btn-cardRosa" class="btn-ver-mais" data-modal="modal1">Saiba Mais!</button>
                     </div>
                 </div>
 
@@ -50,7 +52,7 @@
                 </div>
                 <div class="card-content">
                     <h2 class="title-card">Colônia de Férias</h2>
-                    <button id="btn-cardVerde" class="btn-ver-mais" data-modal1="modal2">Saiba Mais!</button>
+                    <button id="btn-cardVerde" class="btn-ver-mais" data-modal="modal2">Saiba Mais!</button>
                 </div>
             </div> 
             <!-- card 3 -->
@@ -60,7 +62,7 @@
                     </div>
                     <div class="card-content">
                         <h2 class="title-card">Natal Encantado no Bosque</h2>
-                            <button id="btn-cardRosa" class="btn-ver-mais" data-modal1="modal3">Saiba Mais!</button>
+                            <button id="btn-cardRosa" class="btn-ver-mais" data-modal="modal3">Saiba Mais!</button>
                         </div>
                 </div>
             <!-- card 4 -->
@@ -70,7 +72,7 @@
                 </div>
                 <div class="card-content">
                     <h2 class="title-card">Black Weekend</h2>
-                        <button id="btn-cardVerde" class="btn-ver-mais" data-modal1="modal4">Saiba Mais!</button>
+                        <button id="btn-cardVerde" class="btn-ver-mais" data-modal="modal4">Saiba Mais!</button>
                     </div>
             </div>  
 
