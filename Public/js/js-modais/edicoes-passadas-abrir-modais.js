@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const modalId = btn.getAttribute('data-modal');
+            const modalId = btn.getAttribute('data-modal1');
             const modal = document.getElementById(modalId);
             modal.style.display = 'flex';
             overlay.classList.add('active');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closes.forEach(close => {
         close.addEventListener('click', () => {
-            const modalId = close.getAttribute('data-modal');
+            const modalId = close.getAttribute('data-modal1');
             const modal = document.getElementById(modalId);
             modal.style.display = 'none';
             overlay.classList.remove('active');

@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-.forma-1-edpass{
+.forma-1{
     position: absolute;
     top: 15vh; 
     right: 80vw; 
@@ -23,7 +23,7 @@ body {
     width: 20vw; 
 }
 
-.forma-3-edpass{
+.forma-3{
     position: absolute;
     top: 10vh;
     left: 89vw;
@@ -32,14 +32,14 @@ body {
     height: 100vh;
 }
 
-.forma-4-edpass{
+.forma-4{
     position: absolute;
     top: 75vh;
     left: 85vw;
     z-index: 1;
 }
 
-.box-edpass{
+.box{
     width: 85%;
     height: 750px;
     max-width: 2000px;
@@ -65,7 +65,7 @@ body {
     position: relative;
 }
 
-.ed-edpass {
+.ed {
     margin-top: -50rem;
     position: relative;
     text-align: center;
@@ -74,7 +74,7 @@ body {
     font-weight: 500;
 }
 
-.area-card-edpass {
+.area-card {
     width: 80%;
     height: 630px;
     display: grid;
@@ -85,7 +85,7 @@ body {
     justify-items: center;
 }
 
-.cardRosa-edpass {
+.cardRosa {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -101,7 +101,7 @@ body {
     justify-items: center;
 }
 
-.cardVerde-edpass {
+.cardVerde {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -117,12 +117,12 @@ body {
     justify-items: center;
 }
 
-.cardRosa-edpass:hover, .cardVerde-edpass:hover {
+.cardRosa:hover, .cardVerde:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.card-img-edpass img {
+.card-img img {
     width: 97%;
     height: 160px;
     object-fit: cover;
@@ -131,17 +131,17 @@ body {
     margin-top: 30px;
 }
 
-.card-edpass:hover {
+.card:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
-.card1-edpass:hover {
+.card1:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
-.title-card-edpass {
+.title-card {
     width: 100%;
     font-size: 1rem;
     font-weight: 400;
@@ -152,7 +152,7 @@ body {
     height: 100%;
 }
 
-#btn-voltar-edpass {
+#btn-voltar {
     font-size: 30px;
     margin-right: 78%;
     margin-top: 34%;
@@ -162,7 +162,7 @@ body {
     cursor: pointer;
 }
 
-#btn-cardVerde-edpass {
+#btn-cardVerde {
     display: inline-block;
     width: 70%;
     padding: 8px;
@@ -176,14 +176,14 @@ body {
     margin: 35% 15%;
     text-align: center;
 }
-#btn-cardVerde-edpass:hover {
+#btn-cardVerde:hover {
     color: white;
     background-color: #007E70;
     cursor: pointer;
     border: 1px solid #ffffff;
 }
 
-#btn-cardRosa-edpass {
+#btn-cardRosa {
     display: inline-block;
     width: 70%;
     padding: 8px;
@@ -198,14 +198,14 @@ body {
     text-align: center;
 }
 
-#btn-cardRosa-edpass:hover {
+#btn-cardRosa:hover {
     color: white;
     background-color: #FF3877;
     cursor: pointer;
     border: 1px solid #ffffff;
 }
 
-.card-content-edpass {
+.card-content {
     display: flex;
     flex-direction: column;
     padding: 15px;
