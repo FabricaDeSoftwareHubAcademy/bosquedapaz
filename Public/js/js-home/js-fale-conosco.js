@@ -3,7 +3,9 @@ let form = document.getElementById('form')
 form.addEventListener('submit',async function email (e){
     e.preventDefault()
 
-    const formData = new FormData(form)
+    let enviar = document.getElementById('enviar')
+
+    const formData = new FormData(form, enviar)
 
     let dados_php = await fetch('../../../actions/actions_email.php', {
         method: 'POST',
@@ -11,5 +13,7 @@ form.addEventListener('submit',async function email (e){
     });
 
     let response = await dados_php.json()
+
+    alert(response.mensage)
 
 })

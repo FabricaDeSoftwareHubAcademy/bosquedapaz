@@ -28,7 +28,7 @@
                     <label>Mensagem</label>
                     <textarea name="mensagem" class="mensagem" placeholder="Digite aqui sua mensagem." required></textarea>
                     
-                    <button class="botao-enviar-guilherme" name="enviar" value="enviar">Enviar</button>
+                    <button class="botao-enviar-guilherme" id="enviar" name="enviar" value="enviar">Enviar</button>
                 </form>
             </div>
         </section>

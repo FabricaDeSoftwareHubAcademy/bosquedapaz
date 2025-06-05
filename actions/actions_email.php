@@ -6,8 +6,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-if(!isset($_POST['enviar'])){
-    $mail = new PHPMailer(true);
+if(isset($_POST['enviar'])){
+    $mail = new PHPMailer();
     try {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
@@ -16,8 +16,8 @@ if(!isset($_POST['enviar'])){
         $mail->Password = 'elpb yivy xjhx qmgm'; 
         $mail->Port = 587;
 
-        $mail->setFrom('gui.m.neves.teste@gmail.com');
-        $mail->addAddress('halysondasilvadosreis@gmail.com');
+        $mail->setFrom('gui.m.neves.teste@gmail.com', 'Feira bosque da paz');
+        $mail->addAddress($_POST['email']);
 
         $mail->isHTML(true);
         $mail->Subject = 'FALE CONOSCO';
@@ -48,5 +48,4 @@ if(!isset($_POST['enviar'])){
         echo json_encode($response);
     }
 }
-
 ?>
