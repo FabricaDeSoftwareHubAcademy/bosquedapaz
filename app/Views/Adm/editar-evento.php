@@ -45,7 +45,7 @@
 
                                 <div class="input-group">
                                     <label>Imagem:</label>
-                                    <input type="file" name="file" id="file">
+                                    <input type="file" name="banner" id="file">
                                 </div>
                             </div>
                             <img class="preview" src="" alt="" id="preview-image">

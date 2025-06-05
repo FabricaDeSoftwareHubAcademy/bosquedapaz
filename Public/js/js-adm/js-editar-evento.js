@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('status').value = evento.status;
 
             const banner = document.getElementById('preview-image');
-            banner.src = `../../../Public/uploads/${evento.banner}`;
+            banner.src = `../../../Public/${evento.banner}`;
+            banner.alt = evento.nome_evento ?? 'Imagem do evento';
         } else {
             alert('Evento não encontrado.');
         }

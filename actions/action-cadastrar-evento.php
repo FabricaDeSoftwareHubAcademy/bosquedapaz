@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         
-        $evento->setBanner('../Public/uploads/uploads-eventos/' . $nomeSeguro);
+        $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
         exit;
