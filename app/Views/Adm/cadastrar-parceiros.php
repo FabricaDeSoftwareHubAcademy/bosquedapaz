@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-parceiros.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-
 </head>
 
 <body>
@@ -45,6 +44,8 @@
                                 <option value="fisica">Física</option>
                             </select>
                         </div>
+                    </div>
+                    <div id="form1" class="form-grid">
                         <div class="input-group">
                             <label>CPF/CNPJ:</label>
                             <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF/CNPJ" required>
@@ -61,6 +62,8 @@
                             <label>Logradouro:</label>
                             <input type="text" id="logradouro" name="logradouro" placeholder="Digite o Logradouro" required>
                         </div>
+                    </div>
+                    <div id="form1" class="form-grid">
                         <div class="input-group">
                             <label>Número:</label>
                             <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o Número da Residência" required>
@@ -77,14 +80,15 @@
                             <label>Complemento:</label>
                             <input type="text" id="complemento" name="complemento" placeholder="Digite o Complemento" required>
                         </div>
+                        <div class="btn-cancelar-salvar">
+                            <button type="button" class="btn btn-cancelar">
+                                <a href="./Area-Adm.php">Cancelar</a>
+                            </button>
+                            <button type="submit" id="botao_cadastrar" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
+                        </div>
                     </div>
 
-                    <div class="btn-cancelar-salvar">
-                        <button type="button" class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                        </button>
-                        <button type="submit" id="botao_cadastrar" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
-                    </div>
+                 
                 </form>
 
             </div>
