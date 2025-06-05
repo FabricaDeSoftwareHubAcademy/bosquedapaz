@@ -25,6 +25,23 @@
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
                     <button class="search-button">BUSCAR</button>
+                    <div id="results-container"></div>
+                    <?php
+                        $searchTerm = $_POST['search'];
+
+                        // Sua lógica de pesquisa no banco de dados ou fonte de dados
+                        $results = array(); // Substitua com seus resultados
+                        $results[] = "Resultado 1 para " . $searchTerm;
+                        $results[] = "Resultado 2 para " . $searchTerm;
+
+                        // Renderiza os resultados como HTML
+                        $html = "<ul>";
+                        foreach ($results as $result) {
+                        $html .= "<li>" . $result . "</li>";
+                        }
+                        $html .= "</ul>";
+                        echo $html; // Retorna o HTML para o AJAX
+                        ?>
                 </div>
                 <div class="table-container">
                     <table class="collaborators-table">
