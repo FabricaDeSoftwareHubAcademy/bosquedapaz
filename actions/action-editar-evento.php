@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($_FILES['banner']['name'])) {
         $extensao = pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION);
         $nomeBase = pathinfo($_FILES['banner']['name'], PATHINFO_FILENAME);
-        $nomeSeguro = preg_replace('/[^a-zA-Z0-9_-]/', '_', $nomeBase) . '_' . time() . '.' . $extensao;
+        $nomeSeguro = uniqid('evento_', true) . '.' . $extensao;
 
         $caminhoTemporario = $_FILES['banner']['tmp_name'];
         $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-eventos/';
