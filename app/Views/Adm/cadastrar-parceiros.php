@@ -96,7 +96,7 @@
                 
             </div>
             <div class="btns">
-                <a href="gerenciar-eventos.php" class="voltar">
+                <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 

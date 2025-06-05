@@ -9,6 +9,7 @@
     <!-- Scripts -->
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
@@ -25,6 +26,8 @@
   <main class="principal">
     <div class="box">
       <h2>LISTAR ADM</h2>
+      <!-- Seta Voltar  -->
+      <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a></div>
       <div class="container">
         <!-- Formulário de Busca -->
         <form method="POST" id="formBusca">
@@ -64,9 +67,6 @@
         </dialog>
       </div>  
     </div>  
-    <div class="setaV-cadastro">
-      <a href="../../../app/adm/Views/Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a>
-    </div>
   </main>
   <div class="bolas-fundo">
     <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">

@@ -65,13 +65,16 @@ h2 {
     font-size: 30px;
 }
 
-.setaV-cadastro {
-    position: relative;
-    top: 0vh;
-    right: 51rem;
-    display: block;
-    cursor: pointer;
+/* Seta Voltar */
+.seta__voltar {
+    position: fixed;
+    bottom: 40px;
+    left: 110px;
+    width: 45px;
+    height: 43px;
+    z-index: 9999;
 }
+
 
 
 .container {
