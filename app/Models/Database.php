@@ -191,19 +191,12 @@ class Database {
         c.cargo,
         c.status_col
         FROM colaborador c
-        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
+        WHERE p.nome LIKE :nome";
 
-        $binds = [];
-
-        if(!empty($nome)) {
-            $query .= " WHERE p.nome LIKE :nome";
-            $binds[":nome"] = "%$nome%";
-        }
-
+        $binds = [":nome" => "%$nome%"];
         return $this->execute($query, $binds);
     }
-
-
 }
 
 ?>

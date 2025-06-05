@@ -9,7 +9,6 @@
     <!-- Scripts -->
     <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <script type="text/javascript" src="../../../Public/js/js-adm/js-busca-adm.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link
@@ -75,7 +74,8 @@
     <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
   </div>
 
-  <script src="../../../Public/js/js-adm/listar-adm.js" defer></script>
+  <!-- <script src="../../../Public/js/js-adm/listar-adm.js" defer></script> -->
+  <script type="text/javascript" src="../../../Public/js/js-adm/listar-adm.js" defer></script>
   <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/js-listar-adm.js"></script>

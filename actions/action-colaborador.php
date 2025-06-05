@@ -1,18 +1,40 @@
 <?php
+// session_start();
+// if (!isset($_SESSION['usuario_logado']) || $_SESSION['perfil'] !== 'ADM') {
+//     echo json_encode(['success' => false, 'message' => 'Acesso negado']);
+//     exit;
+// }
 
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST["cadastrar"])){
-        $colab = new Colaborador();
+function sanitizeString($str) {
+    return filter_var(trim($str), FILTER_SANITIZE_STRING);
+}
 
-        $colab->setNome($_POST['nome'] ?? '');
-        $colab->setTelefone($_POST['tel'] ?? '');
-        $colab->setEmail($_POST['email'] ?? '');
-        $colab->setCargo($_POST['cargo'] ?? '');
-        $colab->setSenha(password_hash($_POST['senha'], PASSWORD_DEFAULT));
-        $colab->setPerfil($_POST['perfil'] ?? '');
+$requestMethod = $_SERVER['REQUEST_METHOD'];
+
+if ($requestMethod === 'POST') {
+    $colab = new Colaborador();
+
+    if (isset($_POST["cadastrar"])) {
+        $nome = sanitizeString($_POST['nome'] ?? '');
+        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+        $telefone = sanitizeString($_POST['tel'] ?? '');
+        $cargo = sanitizeString($_POST['cargo'] ?? '');
+        $senha = $_POST['senha'] ?? '';
+
+        if (!$email) {
+            echo json_encode(['success' => false, 'message' => 'Email inválido']);
+            exit;
+        }
+
+        $colab->setNome($nome);
+        $colab->setTelefone($telefone);
+        $colab->setEmail($email);
+        $colab->setCargo($cargo);
+        $colab->setImagem(null);
+        $colab->setSenha(password_hash($senha, PASSWORD_DEFAULT));
 
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
             $diretorio = __DIR__ . '/../../Public/uploads/uploads-ADM/';
@@ -38,29 +60,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($res) {
             echo json_encode(['success' => true, 'message' => 'ADM cadastrado com sucesso!']);
+            exit;
         } else {
             echo json_encode(['success' => false, 'message' => 'Erro ao cadastrar ADM.']);
+            exit;
         }
     }
-    else if (isset($_POST["atualizar"])){
-        $colab = new Colaborador();
-    
-        $colab->setNome($_POST['nome'] ?? '');
-        $colab->setTelefone($_POST['tel'] ?? '');
-        $colab->setEmail($_POST['email'] ?? '');
-        $colab->setCargo($_POST['cargo'] ?? '');
-        $colab->setPerfil($_POST['perfil'] ?? '');
-    
+
+    else if (isset($_POST["atualizar"])) {
+        $id = filter_var($_POST['id'] ?? '', FILTER_VALIDATE_INT);
+        if (!$id) {
+            echo json_encode(['success' => false, 'message' => 'ID inválido']);
+            exit;
+        }
+
+        $nome = sanitizeString($_POST['nome'] ?? '');
+        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+        $telefone = sanitizeString($_POST['tel'] ?? '');
+        $cargo = sanitizeString($_POST['cargo'] ?? '');
+
+        if (!$email) {
+            echo json_encode(['success' => false, 'message' => 'Email inválido']);
+            exit;
+        }
+
+        $colab->setNome($nome);
+        $colab->setTelefone($telefone);
+        $colab->setEmail($email);
+        $colab->setCargo($cargo);
+
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
             $diretorio = __DIR__ . '/../../Public/uploads/uploads-ADM/';
-    
+
             if (!is_dir($diretorio)) {
                 mkdir($diretorio, 0755, true);
             }
-    
+
             $nomeImagem = uniqid() . '-' . basename($_FILES['imagem']['name']);
             $caminhoCompleto = $diretorio . $nomeImagem;
-    
+
             if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoCompleto)) {
                 $colab->setImagem('Public/uploads/uploads-ADM/' . $nomeImagem);
             } else {
@@ -70,64 +108,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $colab->setImagem(null);
         }
-    
-        $res = $colab->atualizar($_POST['id']);
-    
-        echo json_encode($res);
-    }
-    else if (isset($_POST['palavra'])) {
-        $colab = new Colaborador();
-        $nome = trim($_POST['palavra']);
 
+        $res = $colab->atualizar($id);
+        if ($res) {
+            echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!']);
+            exit;
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Erro ao editar ADM.']);
+            exit;
+        }
+    }
+
+    else if (isset($_POST['palavra'])) {
+        $nome = sanitizeString($_POST['palavra']);
         $res = $colab->listarColaboradores($nome);
 
-        $html = '';
         if ($res) {
-        foreach ($res as $colaborador) {
-            $html .= '<tr>';
-            $html .= '<td class="usuario-col">' . htmlspecialchars($colaborador['id_colaborador']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($colaborador['nome']) . '</td>';
-            $html .= '<td class="email-col">' . htmlspecialchars($colaborador['email']) . '</td>';
-            $html .= '<td class="fone-col">' . htmlspecialchars($colaborador['telefone']) . '</td>';
-            $html .= '<td class="cargo-col">' . htmlspecialchars($colaborador['cargo']) . '</td>';
-            $html .= '<td><span class="status ativo">Ativo</span></td>';
-            $html .= '</tr>';
-        }
+            $dados = array_map(function($c) {
+                return [
+                    'id_colaborador' => $c['id_colaborador'],
+                    'nome' => $c['nome'],
+                    'email' => $c['email'],
+                    'telefone' => $c['telefone'],
+                    'cargo' => $c['cargo'],
+                    'status_col' => $c['status_col'],
+                ];
+            }, $res);
+
+            echo json_encode(['data' => $dados]);
+            exit;
         } else {
-            $html = '<tr><td colspan="5">Nenhum colaborador encontrado.</td></tr>';
+            echo json_encode(['data' => []]);
+            exit;
         }
-        
-
-        echo $html;
-
     }
+
+    echo json_encode(['success' => false, 'message' => 'Requisição inválida']);
+    exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET'){
-    if(isset($_GET['id'])){
-        $colab = new Colaborador();
-        $res = $colab->listarColaboradores($_GET['id']);
-        $dados = array();
-        
-        foreach ($res as $key => $value) {
-            if ($value != null){
-                $dados[$key] = $value;
-            }
-            
+if ($requestMethod === 'GET') {
+    $colab = new Colaborador();
+
+    if (isset($_GET['id'])) {
+        $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+        if (!$id) {
+            echo json_encode(['success' => false, 'message' => 'ID inválido']);
+            exit;
         }
-        
-        echo json_encode([$dados, "status" => 200]);
-    }
-    else{
-        $colab = new Colaborador();
+
+        $res = $colab->listarColaboradores($id);
+        $dados = array_filter($res, fn($v) => $v != null);
+        echo json_encode(['data' => $dados, 'status' => 200]);
+        exit;
+    } else {
         $res = $colab->listarColaboradores();
-        
-        echo json_encode([$res, "status" => 200]);
+        echo json_encode(['data' => $res, 'status' => 200]);
+        exit;
     }
 }
-
-// $dadosPesq = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-// $retorna = ['status' => true, 'dados' = $dadosPesq['busca']];
-
-// echo json_encode($retorna);

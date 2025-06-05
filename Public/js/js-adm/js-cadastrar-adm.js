@@ -11,35 +11,26 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  let cadastrar = document.querySelector("button[value=cadastrar]")
+  const formData = new FormData(form);
+  formData.append("cadastrar", "1");
 
-  const formData = new FormData(form, cadastrar);
+  try {
+    const response = await fetch("../../../actions/action-colaborador.php", {
+      method: "POST",
+      body: formData,
+    });
 
-  const response = await fetch("../../../actions/action-colaborador.php", {
-    method: "POST",
-    body: formData,
-  });
+    const data = await response.json();
+    console.log("Resposta do servidor:", data);
 
-  const text = await response.json();
-  console.log("Resposta bruta do servidor:", text);
-// try {
-
-//   // Tente converter para JSON só se a resposta parecer JSON
-//   let data;
-//   try {
-//     data = JSON.parse(text);
-//   } catch (e) {
-//     throw new Error("Resposta não é JSON válida");
-//   }
-
-//   if (data.success) {
-//     alert("Cadastro realizado com sucesso!");
-//     form.reset();
-//   } else {
-//     alert("Erro: " + data.message);
-//   }
-// } catch (error) {
-//   console.error("Erro na requisição:", error);
-// }
-
+    if (data.success) {
+      alert("Cadastro realizado com sucesso!");
+      form.reset();
+    } else {
+      alert("Erro: " + data.message);
+    }
+  } catch (error) {
+    console.error("Erro na requisição:", error);
+    alert("Ocorreu um erro ao tentar cadastrar. Verifique o console.");
+  }
 });

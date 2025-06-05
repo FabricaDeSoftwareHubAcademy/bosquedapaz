@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="input-group">
                                     <label>Telefone:</label>
-                                    <input type="number" name="telefone" id="telefone" placeholder="Digite o seu número de telefone" required>
+                                    <input type="number" name="tel" id="telefone" placeholder="Digite o seu número de telefone" required>
                                 </div>
                             </div>
                             <div class="input-row">
@@ -58,7 +58,7 @@
                                     <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
                                 </div>
                                 <div class="input-group">
-                                    <label>Profissão:</label>
+                                    <label>Cargo:</label>
                                     <input type="text" name="cargo" id="cargo" placeholder="Digite a sua cargo" required>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                                 <a href="./Area-Adm.php">Cancelar</a>
                             </button>
                             
-                            <button type="submit" class="btn btn-salvar" value="atualizar" name="atualizar">
+                            <button type="submit" class="btn btn-salvar" id="atualizar" value="atualizar" name="atualizar">
                                 Salvar
                             </div>
                         </div>

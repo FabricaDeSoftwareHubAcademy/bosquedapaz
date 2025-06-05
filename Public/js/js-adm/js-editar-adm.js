@@ -13,22 +13,32 @@ function previewImagem() {
     }
 }
 
-let formulario = document.getElementById("formulario");
+const formulario = document.getElementById("formulario");
 
 formulario.addEventListener("submit", async (e) => {
     e.preventDefault();
-    
-    let atualizar = document.querySelector("button[value=atualizar]")
-    const formData = new FormData(formulario, atualizar);
 
-    let dados = await fetch("../../../actions/action-colaborador.php", {
-        method: "POST",
-        body: formData,
-    });
+    const formData = new FormData(formulario);
+    formData.append("atualizar", "true");
 
-    console.log(formulario);
+    try {
+        const response = await fetch("../../../actions/action-colaborador.php", {
+            method: "POST",
+            body: formData,
+        });
 
-    let response = await dados.json();
-    console.log(response);
-    
-})
+        const data = await response.json();
+        console.log("Resposta do servidor:", data);
+
+        if (data.success) {
+            alert("Edição realizada com sucesso!");
+            formulario.reset();
+            document.getElementById("previewFoto").src = "";
+        } else {
+            alert("Erro: " + data.message);
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+        alert("Ocorreu um erro ao tentar editar. Verifique o console.");
+    }
+});

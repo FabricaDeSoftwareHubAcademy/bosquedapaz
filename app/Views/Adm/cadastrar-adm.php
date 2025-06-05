@@ -28,7 +28,7 @@
             <div class="container_form">
                 <h1>Cadastro ADM</h1>
                 <!-- Form -->
-                <form class="form__cadastro" id="formCadastro" enctype="multipart/form-data">
+                <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
                     <!-- Nome -->
                     <div class="form__group">
                         <label class="label__cad" for="nome">Nome</label>
@@ -56,6 +56,16 @@
                         </div>
                     </div>
 
+                    
+                    <!-- Cargo -->
+                    <div class="form__group">
+                        <label class="label__cad" for="cargo">Cargo</label>
+                        <div class="area__input">
+                            <i id="iconn" class="bi bi-briefcase"></i>
+                            <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
+                        </div>
+                    </div>
+
                     <!-- Imagem de Perfil -->
                     <div class="form__group">
                         <label class="label__cad" for="imagem">Imagem de Perfil</label>
@@ -65,26 +75,7 @@
                             </label>
                         </div>
                     </div>      
-
-                    <div class="row-double">
-                        <!-- Cargo -->
-                        <div class="form__group">
-                            <label class="label__cad" for="cargo">Cargo</label>
-                            <div class="area__input">
-                                <i id="iconn" class="bi bi-briefcase"></i>
-                                <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
-                            </div>
-                        </div>
-
-                        <div class="form__group">
-                            <label class="label__cad" for="perfil">Perfil</label>
-                            <div class="area__input">
-                                <i id="iconn" class="bi bi-briefcase"></i>
-                                <input class="input" type="text" name="perfil" id="perfil" placeholder="Digite seu perfil" required>
-                            </div>
-                        </div>
-                    </div>             
-
+                    
                     <!-- Senha e Confirmar Senha lado a lado -->
                     <div class="row-double">
                         <!-- Senha -->

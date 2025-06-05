@@ -42,8 +42,7 @@ class Colaborador extends Pessoa
 
 
 
-    public function cadastrar()
-    {
+    public function cadastrar() {
         // Insere na tabela pessoa
         $dbPessoa = new Database('pessoa');
         $idPessoa = $dbPessoa->insert_lastid([
@@ -51,7 +50,7 @@ class Colaborador extends Pessoa
             'telefone' => $this->telefone,
             'email' => $this->email,
             'senha' => $this->senha,
-            'perfil' => $this->perfil,
+            'perfil' => 'ADM',
             'img_perfil' => $this->foto_perfil
         ]);
 
@@ -89,12 +88,13 @@ class Colaborador extends Pessoa
         return $res ? TRUE : FALSE;
     }
 
-    public function listarColaboradores($nome = null){
+    public function listarColaboradores(?string $nome = null){
         $db = new Database('colaborador');
+        
         if (!empty($nome)) {
-            return $db->filtrar_colaboradores($nome)->fetchAll(PDO::FETCH_CLASS, self::class);
+            return $db->filtrar_colaboradores($nome)->fetchAll(PDO::FETCH_ASSOC);
         } else {
-            return $db->listar_colaboradores()->fetchAll(PDO::FETCH_CLASS, self::class);
+            return $db->listar_colaboradores()->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 }
