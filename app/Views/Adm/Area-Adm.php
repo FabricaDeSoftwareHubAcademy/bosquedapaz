@@ -77,7 +77,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-expositor.php">
+                        <a class="link-modais" href="../Adm/cadastrar-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
@@ -114,7 +114,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/lista-de-espera.php">
+                        <a class="link-modais" href="../Adm/lista-de-espera.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
                                 <div class="action__content">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-hourglass-split" viewBox="0 0 16 16">

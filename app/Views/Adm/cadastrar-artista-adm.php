@@ -13,7 +13,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
 
 </head>
 
@@ -47,7 +46,9 @@
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="text" name="" id="" placeholder="Número de whatsapp" required>
+                            <input type="tel" name="whatsapp" placeholder="Número de whatsapp"
+                                pattern="[0-9]{10,11}" required
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
 
                         <div class="input">
@@ -92,10 +93,10 @@
 
                             <select name="todas_categorias" id="todas_categorias" class="select">
 
-                                <option value="">selecione</option>
-                                <option value="artesanato">Adulto</option>
-                                <option value="gastronia">Infantil</option>
-                                <option value="antiguidade">Misto</option>
+                                <option value="">Selecione</option>
+                                <option value="adulto">Adulto</option>
+                                <option value="infantil">Infantil</option>
+                                <option value="misto">Misto</option>
 
                             </select>
 
@@ -112,10 +113,10 @@
                             <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
                             <select name="todas_categorias" id="todas_categorias" class="select">
 
-                                <option value="">selecione</option>
-                                <option value="trailer">30min</option>
-                                <option value="food-truck">50min</option>
-                                <option value="barrca">60min</option>
+                                <option value="">Selecione</option>
+                                <option value="30min">30min</option>
+                                <option value="50min">50min</option>
+                                <option value="60min">60min</option>
 
                             </select>
                         </div>
@@ -124,10 +125,10 @@
                         <div class="custom-dropdown">
                             <select name="todas_categorias" id="todas_categorias" class="select">
 
-                                <option value="">selecione</option>
-                                <option value="sim">Até R$200</option>
-                                <option value="nao">Até R$500</option>
-                                <option value="nao">Até R$1.000</option>
+                                <option value="">Selecione</option>
+                                <option value="200">Até R$200</option>
+                                <option value="500">Até R$500</option>
+                                <option value="1000">Até R$1.000</option>
 
 
                             </select>

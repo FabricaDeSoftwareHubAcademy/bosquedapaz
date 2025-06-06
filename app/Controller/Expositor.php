@@ -1,6 +1,12 @@
 <?php
-require '../../Models/Database.php';
-require 'Imagem.php';
+
+namespace app\Controller;
+
+require_once('../vendor/autoload.php');
+
+use PDO;
+use app\Controller\Pessoa;
+use app\Models\Database;
 
 
 class Expositor extends Pessoa
@@ -158,39 +164,7 @@ class Expositor extends Pessoa
             ]
         );
 
-        
-        //     // Verifica se existem arquivos e os percorre
-        // for ($i = 0; $i < count($this->imagens); $i++) {
 
-        //     // Verifica se houve erro no upload
-        //     // if ($fileError === UPLOAD_ERR_OK) {
-        //     //     $uploadDir = 'uploads/'; // Define o diretório de upload
-        //     //     $uploadFile = $uploadDir . basename($fileName);
-
-        //     //     // Move o arquivo para o diretório final
-        //     //     if (move_uploaded_file($fileTmp, $uploadFile)) {
-
-        //     //         $db = new Database('imagem');
-        //     //         $img_id = $db->insert_lastid([
-        //     //             'imagem1' => "$fileName",
-        //     //             'imagem2' => "$fileName",
-        //     //             'imagem3' => "$fileName",
-        //     //             'imagem4' => "$fileName",
-        //     //             'imagem5' => "$fileName"
-        //     //         ]);
-        //     //         $fileIds[] = $img_id;
-        //     //     }
-        //     // }
-
-        //     $db = new Database('imagem');
-        //     $img_id = $db->insert_lastid([
-        //         'imagem1' => $this->imagens[0],
-        //         'imagem2' => $this->imagens[1],
-        //         'imagem3' => $this->imagens[2],
-        //         'imagem4' => $this->imagens[3],
-        //         'imagem5' => $this->imagens[4]
-        //     ]);
-        // }
 
         $db = new Database('imagem');
         $img_id = $db->insert_lastid([

@@ -1,41 +1,4 @@
-<?php
-require_once '../Controller/Pessoa.php';
-require_once '../Controller/Expositor.php';
-require_once '../Controller/Categoria.php';
-
-$categoriaModel = new Categoria();
-
-
-$lista = $categoriaModel->listar();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $expositor = new Expositor();
-
-    $expositor->setNome($_POST['nome']);
-    $expositor->setWhats($_POST['whatsapp']);
-    $expositor->setEmail($_POST['email']);
-    $expositor->setTelefone($_POST['whatsapp']);
-    $expositor->setNome_marca($_POST['marca']);
-    $expositor->setVoltagem($_POST['voltagem']);
-    $expositor->setEnergia($_POST['energia']);
-    $expositor->setContato2($_POST['whatsapp']);
-    $expositor->setProduto($_POST['produto']);
-    $expositor->setId_categoria($_POST['id_categoria']);
-
-
-    if (isset($_FILES['files'])) {
-        $expositor->setImagens($_FILES['files']);
-    }
-
-    $res = $expositor->cadastrar();
-    echo "cadastradp";
-    exit;
-}
-
-?>
-
-
-
+<?php ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
-<body>
+<body onload="getCategorias()">
     <?php include "../../../Public/include/menu-adm.html" ?>
 
 
@@ -62,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
-            <form method="POST">
+            <form id="fomulario_cad_expositor" method="POST">
                 <div class="formularios">
 
                     <div class="form-pessoa">
@@ -102,11 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="input">
                             <label for="optionInput3">Categorias</label>
                             <select name="id_categoria" id="categorias" class="select" require>
-                                <option value="">Selecione</option>
-                                <?php foreach ($lista as $categoria) : ?>
-                                    <option value="<?= $categoria->id_categoria ?>"><?= $categoria->descricao ?></option>
-                                <?php endforeach; ?>
-
+                               
+                                <!-- OPTIONS GERADOS PELO JS -->
                             </select>
                         </div>
 
@@ -162,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <div class="btn-conf">
                         <div class="btn-finalizar">
-                            <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
+                            <button id="btn_salvar" name="salvar" class="btn btn-salvar">salvar</button>
                             <button class="btn btn-cancelar">cancelar</button>
                         </div>
                     </div>
@@ -189,8 +149,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js"></script>
 
 </body>
 
