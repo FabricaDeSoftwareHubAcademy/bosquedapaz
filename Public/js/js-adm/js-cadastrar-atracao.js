@@ -5,10 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const formData = new FormData(form);
-        const id_evento = new URLSearchParams(window.location.search).get('id_evento');
 
-        if (!id_evento) {
-            alert("Evento não identificado.");
+        // Pegando parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+        const id_evento = params.get('id_evento');
+        const nome_evento = params.get('nome_evento');
+
+        if (!id_evento || !nome_evento) {
+            alert("Evento não identificado corretamente.");
             return;
         }
 
@@ -24,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.status === 'sucesso') {
                 alert(data.mensagem);
-                window.location.href = `gerenciar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(formData.get('nome_evento'))}`;
+                window.location.href = `gerenciar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}`;
             } else {
-                alert(data.mensagem);
+                alert(data.mensagem || "Erro ao cadastrar atração.");
             }
 
         } catch (error) {
             console.error('Erro ao cadastrar atração:', error);
-            alert("Erro ao cadastrar atração.");
+            alert("Erro inesperado ao cadastrar atração.");
         }
     });
 });
