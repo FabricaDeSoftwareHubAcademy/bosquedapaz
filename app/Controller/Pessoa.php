@@ -17,16 +17,83 @@ class Pessoa
     protected $foto_perfil;
     protected $perfil;
 
-    public function setNome($id_pessoa)
+    public function getNome()
     {
-        $this->id_pessoa = $id_pessoa;
+        return $this->nome;
     }
-    public function setd_pessoa($id_pessoa)
+
+    public function getEmail()
     {
-        $this->id_pessoa = $id_pessoa;
+        return $this->email;
     }
-    public function setd_pessoa($id_pessoa)
+
+    public function getTelefone()   
     {
-        $this->id_pessoa = $id_pessoa;
+        return $this->telefone;
+    }
+
+    public function getWhats()
+    {
+        return $this->whats;
+    }
+    public function getLink_instagram()
+    {
+        return $this->link_instagram;
+    }
+
+    public function getLink_facebook()
+    {
+        return $this->link_facebook;
+    }
+
+    public function getLink_whats()
+    {
+        return $this->link_whats;
+    }
+
+    public function getData_nasc()
+    {
+        return $this->data_nasc;
+    }
+
+    public function getImg_perfil()
+    {
+        return $this->foto_perfil;
+    }
+
+    public function setNome($nome){
+        $this->nome = $nome;
+    }
+
+    public function setEmail($email){
+        $this->email = $email;
+    }
+
+    public function setWhats($whats){
+        $this->whats = $whats;
+    }
+
+    public function setTelefone($telefone){
+        $this->telefone = $telefone;
+    }
+
+    public function setlink_instagram($link_instagram){
+        $this->link_instagram = $link_instagram;
+    }
+
+    public function setLink_facebook($link_facebook){
+        $this->link_facebook = $link_facebook;
+    }
+
+    public function setLink_whats($link_whats){
+        $this->link_whats = $link_whats;
+    }
+
+    public function setData_nasc($data_nasc){
+        $this->data_nasc = $data_nasc;
+    }
+
+    public function setImg_perfil($img_perfil){
+        $this->foto_perfil = $img_perfil;
     }
 }

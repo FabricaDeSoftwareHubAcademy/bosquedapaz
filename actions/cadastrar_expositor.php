@@ -35,9 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $res = $expositor->cadastrar();
 
     if($res){
-        echo json_encode( ['status' => 'ok', 'msg' => 'Expositor cadastrado com sucesso!'] );
+        echo json_encode( ['status' => 200, 'msg' => 'Expositor cadastrado com sucesso!', 'code' => 100] );
     }else{
-        echo json_encode( ['status' => 'erro', 'msg' => 'Erro ao cadastrar o expositor!'] );
+        echo json_encode( ['status' => 400, 'msg' => 'Erro ao cadastrar o expositor!','code' => 101] );
     }
 }
 

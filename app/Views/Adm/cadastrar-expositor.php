@@ -130,12 +130,7 @@
 
                 </div>
 
-                <dialog id="modal_salvar" class="modal-sucesso">
-                    <div class="modal-conteudo">
-                        <p>Salvo com sucesso!</p>
-                    </div>
-                </dialog> 
-
+           
 
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
@@ -149,6 +144,16 @@
 
         </div>
 
+        
+    <div id="modal_salvar" class="oculta">
+            <div class="modal-conteudo">
+                <p>Salvo com sucesso!</p>
+                <form method="dialog">
+                    <button id="fechar_modal">Close</button>
+                </form>
+            </div>
+    </div> 
+
         </div>
     </main>
 
@@ -159,8 +164,11 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js"></script>
+       
+
+
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>
 

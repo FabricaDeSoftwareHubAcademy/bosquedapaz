@@ -282,8 +282,12 @@ label#salvar-btn {
 
 /****************** modal teste ***********************/
 
-.modal-sucesso {
-    display: none; 
+.oculta{
+    visibility: hidden;
+}
+
+.show_modal {
+    visibility: visible;
     position: fixed;
     top: 0;
     left: 0;
@@ -294,15 +298,13 @@ label#salvar-btn {
     align-items: center;
     z-index: 1000;
 }
-
+/* 
 .modal-sucesso .modal-conteudo {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-}
-
-
+} */
 
 
 /* fim modal */
