@@ -198,5 +198,4 @@ class Database {
         return $this->execute($query, $binds);
     }
 }
-
 ?>

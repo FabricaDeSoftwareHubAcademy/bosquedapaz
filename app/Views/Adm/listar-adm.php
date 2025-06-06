@@ -7,11 +7,9 @@
     <!-- jQuery -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <!-- Scripts -->
-    <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-adm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -52,19 +50,6 @@
             </tbody>
           </table>
         </div>
-
-        <!-- modal excluir -->
-        <dialog id="modal-deleta" class="modal-deleta">
-          <div class="acao-recusar">
-            <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Deseja excluir o ADM?</h1>
-                <div class="acao-botoes-recusar">
-                  <button class="close-modal" data-modal="modal-deleta">cancelar</button>
-                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
-                </div>
-            </div>
-          </div>
-        </dialog>
       </div>  
     </div>  
   </main>
@@ -74,10 +59,8 @@
     <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
   </div>
 
-  <!-- <script src="../../../Public/js/js-adm/listar-adm.js" defer></script> -->
-  <script type="text/javascript" src="../../../Public/js/js-adm/listar-adm.js" defer></script>
-  <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
-  <script src="../../../Public/js/js-adm/js-listar-adm.js"></script>
+  <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
+  <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
 </body>
 </html>

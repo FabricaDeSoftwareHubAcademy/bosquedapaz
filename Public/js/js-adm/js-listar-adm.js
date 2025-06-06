@@ -107,4 +107,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // -------------------------------------------------- 
-// Script Para Ativar/Inativar Status do Colaborador:
+// Script Para Ativar/Inativar Status do Colaborador: No Arquivo (status-colaborador.js)
