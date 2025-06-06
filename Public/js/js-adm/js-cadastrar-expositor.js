@@ -34,9 +34,11 @@ btn_salvar.addEventListener('click', async function(event){
     });
 
     
-    let response = await dados_php.json();
+    let response = await dados_php.text();
+    console.log(response);
 
     if(response.status == "ok"){
-        alert('cadatsrado com sucesso');
+        let modal = document.getElementById("modal_salvar");
+        modal.showModal();
     }
  })

@@ -75,9 +75,7 @@
 
                         <div class="input">
                             <label>Link:</label>
-                            <script>
-                                link
-                            </script>
+ 
                             <input type="text" name="" id="" placeholder="link instagram" required>
                         </div>
                     </div>
@@ -132,11 +130,11 @@
 
                 </div>
 
-                <div id="modal_salvar" class="modal-sucesso">
+                <dialog id="modal_salvar" class="modal-sucesso">
                     <div class="modal-conteudo">
                         <p>Salvo com sucesso!</p>
                     </div>
-                </div> 
+                </dialog> 
 
 
                 <div class="btns">

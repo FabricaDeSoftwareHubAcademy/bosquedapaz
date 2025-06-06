@@ -16,4 +16,17 @@ class Pessoa
     protected $data_nasc;
     protected $foto_perfil;
     protected $perfil;
+
+    public function setNome($id_pessoa)
+    {
+        $this->id_pessoa = $id_pessoa;
+    }
+    public function setd_pessoa($id_pessoa)
+    {
+        $this->id_pessoa = $id_pessoa;
+    }
+    public function setd_pessoa($id_pessoa)
+    {
+        $this->id_pessoa = $id_pessoa;
+    }
 }
