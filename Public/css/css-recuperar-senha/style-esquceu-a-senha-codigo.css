@@ -96,8 +96,6 @@ html,.body-recsenha{
 .form-recsenha{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     top: 32%;
     left: 9.5%;
@@ -105,7 +103,7 @@ html,.body-recsenha{
 }
 
 .forms-recsenha{
-    height: 300px;
+    height: 150px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -118,24 +116,14 @@ html,.body-recsenha{
     margin-bottom: 5%;
     width: 100%;
 }
-.containerLabel{
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    
-    width: 95%;
-    height: 30px;
-    position: relative;
-    margin: 0 auto;
-}
+
 .area-input-recsenha{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
     width: 95%;
     height: 42px;
     position: relative;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -232,7 +220,6 @@ html,.body-recsenha{
     justify-content: space-evenly;
     width: 100%;
     height: 48px;
-    margin-top: 20px;
 }
 
 .botao-cancelar{
@@ -300,6 +287,28 @@ html,.body-recsenha{
     font-size: 30px;
     display: flex;
     justify-content: center;
+}
+
+.container_input{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+
+.input_codigo{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #FF3877;
+    border-radius: 10px;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-size: 20px;
 }
 
 @media (max-width:575.98px){
@@ -627,6 +636,8 @@ html,.body-recsenha{
     }
     
     .form-recsenha{
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: 20%;
         left: 9.5%;
@@ -640,8 +651,11 @@ html,.body-recsenha{
     }
     
     .forms-recsenha{
-        height: 250px;
+        height: 150px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
 
     .recsenha-modal{

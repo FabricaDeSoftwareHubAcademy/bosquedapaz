@@ -1,39 +1,28 @@
 
 <?php
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-// require './teste2.php';
 
-if (isset($_POST['enviar'])) {
-    $email = $_POST['email'];
+if (isset($_POST['validar'])) {
+    // Captura os 5 dígitos do código enviado no formulário
+    $codigo_informado = $_POST['codigo1'] . $_POST['codigo2'] . $_POST['codigo3'] . $_POST['codigo4'] . $_POST['codigo5'];
+    // echo($_SESSION['codigo_recuperacao']);
 
-    if (empty($email)) {
-        echo "O campo de e-mail não pode estar vazio.";
-    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Gerar código de 5 dígitos
-        // $codigo = rand(10000, 99999);
-        $codigo = "11abc";
-
-        // Armazenar o código e o e-mail na sessão
-        $_SESSION['codigo_recuperacao'] = $codigo;
-        $_SESSION['email_recuperacao'] = $email;
-
-        // Chamar a função de envio de e-mail e capturar o retorno
-        // $emailService = new EmailService();
-        // $mensagem = $emailService->enviarEmail($email, $codigo);
-
-        // Exibir a mensagem de retorno
-        echo $mensagem;
-        header('Location: ./tela-esqueceu-a-senha-codigo.php');
-
+    // Verifica se o código informado corresponde ao código armazenado na sessão
+    if (empty($codigo_informado)) {
+        echo "Por favor, insira o código.";
+    } elseif ($codigo_informado == $_SESSION['codigo_recuperacao']) {
+        // Código correto, direciona para a página de recuperação de senha
+        header('Location: ./tela-esqueceu-a-senha-nova-senha.php');
+        exit();
     } else {
-        echo "E-mail inválido. Tente novamente.";
+        echo "Código inválido. Tente novamente.";
     }
 }
-
 ?>
 
 
@@ -43,9 +32,10 @@ if (isset($_POST['enviar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir de senha</title>
-    <link rel="stylesheet" href="../Public/css/style-esqueceu-a-senha-recsenha.css">
+    <link rel="stylesheet" href="../Public/css/css-recuperar-senha/style-esquceu-a-senha-codigo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
+    <script src="./js/js-recuperar-senha/recuperar-senha-codigo.js" defer></script>
 </head>
 <body class="body-recsenha">
     <main>
@@ -68,20 +58,19 @@ if (isset($_POST['enviar'])) {
                     <h1 class="title-recsenha">Redefinição De Senha</h1>
                     
                     <form action="#" method="POST" class="forms-recsenha">
-                        <p class="text">Digite seu email abaixo para redefinir sua senha</p>
-                        <div class="containerLabel">
-                            <label class="label-email">Email</label>
-                        </div>
-                        <div class="area-input-recsenha">
-                            <i class="bi bi-envelope"></i>
-                            <input class="input-recsenha" type="email" name="email" id="email" placeholder="Digite seu email" required>
-                        </div>
+                        <p class="text">Digite o codigo</p>
+                <div class="container_input">
+                    <input type="text" class="input_codigo" name="codigo1" id="input_1" maxlength="1" required onkeyup="mudaFoco(this, 1, input_2)">
+                    <input type="text" class="input_codigo" name="codigo2" id="input_2" maxlength="1" required onkeyup="mudaFoco(this, 1, input_3)">
+                    <input type="text" class="input_codigo" name="codigo3" id="input_3" maxlength="1" required onkeyup="mudaFoco(this, 1, input_4)">
+                    <input type="text" class="input_codigo" name="codigo4" id="input_4" maxlength="1" required onkeyup="mudaFoco(this, 1, input_5)">
+                    <input type="text" class="input_codigo" name="codigo5" id="input_5" maxlength="1" required onkeyup="mudaFoco(this, 1, null)">
+                </div>
 
-                        <div class="botoes">
-                            <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
-                            <button type="submit" name="enviar" id="abrir-modal recsenha-modal" class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
-                        </div>
-
+                <div class="botoes">
+                    <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
+                    <button type="submit" name="validar" id="abrir-modal recsenha-modal"  class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
+                </div>
                     </form>
 
                     
@@ -93,7 +82,7 @@ if (isset($_POST['enviar'])) {
                                 <h1 class="modal-title">Enviado!</h1>
                                 <p class="modal-text">Verifique sua caixa de entrada para redefinir sua senha</p>
                                 <button id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</button>
-                                 <a href="./tela-esqueceu-a-senha-codigo.php" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
+                                 <a href="./tela-esqueceu-a-senha-nova-senha.html" id="fechar-modal" class="close-modal" data-modal="recsenha-modal">Fechar</a>
                             </div>
                         </div>
                     </dialog> -->
