@@ -112,7 +112,7 @@ CREATE TABLE artista(
 CREATE TABLE evento(
 	id_evento INT NOT NULL AUTO_INCREMENT,
     nome_evento VARCHAR(150) NOT NULL,
-    descricao VARCHAR(200) NOT NULL,
+    descricao VARCHAR(250) NOT NULL,
     data_evento DATE NOT NULL,
     banner VARCHAR(255) NOT NULL,
     status BOOLEAN DEFAULT(0),
@@ -121,13 +121,13 @@ CREATE TABLE evento(
 
 CREATE TABLE atracao(
 	id_atracao INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(150) NOT NULL,
-    tipo VARCHAR(50) NOT NULL,
-    horario DATETIME NOT NULL,
+    nome_atracao VARCHAR(150) NOT NULL,
+    descricao_atracao VARCHAR(250) NOT NULL,
     foto_atracao VARCHAR(255) NOT NULL,
+    status BOOLEAN DEFAULT(0),
     id_evento INT NOT NULL,
-    PRIMARY KEY(id_atracao),
-    FOREIGN KEY(id_evento) REFERENCES evento (id_evento)
+    PRIMARY KEY(id_atracao),  
+    FOREIGN KEY(id_evento) REFERENCES evento(id_evento)
 );
 
 

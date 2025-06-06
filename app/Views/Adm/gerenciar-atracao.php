@@ -1,9 +1,3 @@
-<?php
-require_once '../../../actions/atracao/listar_atracao.php';
-
-?>
-
-
 <html lang="pt-br">
 
 <head>
@@ -18,15 +12,11 @@ require_once '../../../actions/atracao/listar_atracao.php';
 <body>
     <?php
     include "../../../Public/include/menu-adm.html";
-    require_once '../../../app/adm/Controller/Atracao.php';
-
-    $atracao = new Atracao();
-    $lista = $atracao->listar();
     ?>
 
     <main class="principal">
         <div class="box">
-            <h2>GERENCIAR ATRAÇÃO</h2>
+            <h2 id="titulo-atracoes">Gerenciar Atrações</h2>
             <div class="container">
                 <div class="search-bar">
                     <label for="busca">Procurar</label>
@@ -38,32 +28,15 @@ require_once '../../../actions/atracao/listar_atracao.php';
                         <thead>
                             <tr>
                                 <th class="usuario-col">Nome da atração</th>
-                                <th>Descrição</th>
-                                <th>Evento</th>
+                                <th>Data</th>
                                 <th>Editar</th>
                                 <th>Foto</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <?php foreach ($lista as $a): ?>
-                                <tr>
-                                    <td><?= htmlspecialchars($a->getNome()) ?></td>
-                                    <td><?= htmlspecialchars($a->getDescricao()) ?></td>
-                                    <td><?= htmlspecialchars($a->getIdEvento()) ?></td>
-                                    <td>
-                                        <a href="editar-atracao.php?id=<?= $a->getId() ?>">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <?php if (!empty($a->getFoto())): ?>
-                                            <img src="../../../Public/uploads/atracoes/<?= htmlspecialchars($a->getFoto()) ?>" alt="Foto da Atração" width="50">
-                                        <?php else: ?>
-                                            Sem imagem
-                                        <?php endif; ?>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+                        
+                        <tbody id="lista-atrações">
+        <!-- Eventos serão adicionados aqui via JS -->
+                            
                         </tbody>
                     </table>
                 </div>
@@ -76,7 +49,7 @@ require_once '../../../actions/atracao/listar_atracao.php';
                 <div class="b-voltar"></div>
 
                 <div class="botoes">
-                    <a href="cadastrar-atracao.php"><button class="novo-evento">Nova atração</button></a>
+                    <button id="nova-atracao">Nova Atração</button>
                 </div>
             </div>
         </div>
@@ -88,9 +61,8 @@ require_once '../../../actions/atracao/listar_atracao.php';
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
-    <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../public/js/js-adm/js-gerenciar-atracao.js"></script>
 </body>
 
 </html>

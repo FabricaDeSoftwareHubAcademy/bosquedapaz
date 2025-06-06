@@ -1,8 +1,3 @@
-<?php
-require_once '../../../actions/evento/cadastrar_evento.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,7 +17,7 @@ require_once '../../../actions/evento/cadastrar_evento.php';
         <div class="box">
             <h1>CADASTRO DE EVENTO</h1>
                 <div class="form-box">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" id="form-evento">
                         <div id="form1">
 
                             <div class="input-group">
@@ -33,7 +28,8 @@ require_once '../../../actions/evento/cadastrar_evento.php';
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento" required cols="30" rows="5" style="resize: none"></textarea>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (250 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
+                                <small id="contador-caracteres">250 caracteres restantes</small>
                             </div>
                             
                             <div class="data-imagem">
@@ -51,12 +47,10 @@ require_once '../../../actions/evento/cadastrar_evento.php';
                         </div>
 
                         <div class="btn-cancelar-salvar">
-                            <button class="btn btn-cancelar">
-                                <a href="./Area-Adm.php">Cancelar</a>
-                            </button>
-
-                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                            <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
+                            <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
                         </div>
+                        
                     </form>
                 </div>
 
@@ -78,8 +72,7 @@ require_once '../../../actions/evento/cadastrar_evento.php';
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
-    <script src="../../../Public/js/js-adm/sanitizar-form-evento.js" defer></script>
-    <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
+    <script src="../../../Public/js/js-adm/js-cadastrar-evento.js" defer></script>
 </body>
 
 </html>

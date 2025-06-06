@@ -1,22 +1,40 @@
 @charset "UTF-8";
- 
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../menu-adm.css');
- 
- 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    overflow-y: hidden;
+}
+.evento-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.titulo {
+    text-transform: uppercase;
+    font-size: 30px;
+    height: 10%;
     font-family: "poppins", sans-serif;
 }
- 
+
 .principal {
     width: 100vw;
     height: 90vh;
     z-index: 1;
 }
- 
+
 .principal .box {
     width: 90%;
     height: 90%;
@@ -30,11 +48,12 @@
     justify-content: space-around;
     padding: 20px;
 }
- 
+
 h2 {
     font-size: 30px;
+    text-align: center;
 }
- 
+
 .container {
     width: 90%;
     margin: 20px auto;
@@ -43,27 +62,28 @@ h2 {
     overflow-x: hidden; */
     height: 90vh;
 }
- 
- 
+
+
 .search-bar {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     background: white;
-    z-index: 1000;
+    z-index: 1;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
- 
- 
+
+
 .search-bar label {
     font-weight: bold;
     font-size: 20px;
     margin-right: 10px;
 }
- 
+
 .search-bar input {
     padding: 8px;
     border: 1px solid #ccc;
@@ -73,7 +93,7 @@ h2 {
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
- 
+
 .search-bar .search-button {
     background-color: rgb(32, 54, 139);
     color: #fff;
@@ -82,25 +102,28 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 }
- 
+
 .search-bar .search-button:hover {
     background-color: #041831;
 }
- 
+
 .table-container {
     width: 100%;
     max-height: 50vh;
     overflow-y: auto;
     border: 1px solid #ddd;
 }
- 
+
 .collaborators-table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
- 
- 
+.nome-evento{
+    overflow: hidden;
+}
+
+
 /* .collaborators-table thead {
     position: sticky;
     top: 0;
@@ -108,35 +131,35 @@ h2 {
     color: white;
     z-index: 10;
 } */
- 
+
 /* .collaborators-table th, .collaborators-table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: center;
     width: 20%;
 } */
- 
- 
+
+
 .collaborators-table tr {
     display: table;
     width: 100%;
     table-layout: fixed;
 }
- 
- 
+
+
 .collaborators-table {
     text-align: center;
     width: 100%;
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
- 
+
 .collaborators-table tbody{
-    display: block;
+    display: table-row-group;
     max-height: 50vh;
     width: 100%;
 }
- 
+
 .collaborators-table thead {
     position: sticky;
     top: 0;
@@ -145,50 +168,50 @@ h2 {
     z-index: 2;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
- 
+
 .collaborators-table thead tr,
 .collaborators-table tbody tr{
     display: table;
     width: 100%;
     table-layout: fixed;
 }
- 
+
 .collaborators-table tbody tr td{
     text-align: center;
     height: 15%;
 }
- 
- 
+
+
 .collaborators-table th,
 .collaborators-table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: center;
 }
- 
-/* .collaborators-table td{
+
+.collaborators-table th{
     padding: 12px 15px;
-} */
- 
+}
+
 table tbody tr:nth-child(odd) {
     font-size: 80%;
     background-color: white;
     /* Cor clara */
 }
- 
+
 table tbody tr:nth-child(even) {
     font-size: 80%;
     background-color: #e6e6e6;
     /* Cor mais escura */
 }
- 
+
 .collaborators-table tbody tr:hover {
     background-color: #f1f1f1;
 }
- 
- 
+
+
 .status {
-    width: 80px;
+    width: 90px;
     padding: 5px 10px;
     border: none;
     border-radius: 15px;
@@ -196,29 +219,29 @@ table tbody tr:nth-child(even) {
     text-align: center;
     cursor: pointer;
 }
- 
+
 .status.active {
     background-color: #28a745;
     color: white;
     border-radius: 8px;
 }
- 
+
 .status.inactive {
-    background-color: #dc3545;
+    background-color: #ff8000;
     color: white;
     border-radius: 8px;
 }
- 
+
 .edit-icon {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
 }
- 
+
 .edit-icon:hover {
     color: #003d8c;
 }
- 
+
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -227,7 +250,7 @@ table tbody tr:nth-child(even) {
     z-index: -3;
     /* animation: bolaAnim 5s infinite; */
 }
- 
+
 /* @keyframes bolaAnim {
     0% {
         transform: translateY(0);
@@ -239,21 +262,21 @@ table tbody tr:nth-child(even) {
         transform: translateY(0);
     }
 } */
- 
+
 .bolas-fundo .bola-verde1 {
     position: absolute;
     left: 0px;
     top: 6vh;
     z-index: -3;
 }
- 
+
 .bolas-fundo .bola-verde2 {
     position: absolute;
     right: 0px;
     top: 6vh;
     z-index: -3;
 }
- 
+
 .bolas-fundo .bola-rosa {
     position: absolute;
     right: 0px;
@@ -261,41 +284,42 @@ table tbody tr:nth-child(even) {
     z-index: -3;
     /* top: 55%; */
 }
- 
- 
+
+
 .voltar-link {
     width: 60%;
     height: 12%;
     align-items: center;
     position: relative;
-    bottom: -60px;
+    bottom: -40px;
     display: flex;
     gap: 50px;
     cursor: default;
-    left: -50%;
+    left: -80%;
 }
- 
+
 .voltar {
     background-color: transparent;
     border: none;
     justify-content: left;
     justify-self: left;
 }
- 
+
 .voltar-link .btn-voltar {
     width: 100%;
     height: 50%;
 }
- 
+
 .btn-voltar {
     cursor: pointer;
 }
- 
+
 .novo-evento {
+    width: clamp(150px, 15%, 150px);
     height: 34px;
     border-radius: 8px;
     color: white;
-    background-color: rgb(255, 56, 119);
+    background-color: rgb(32, 54, 139);
     font-size: 19px;
     padding: 1px 8px 4px 8px;
     border: none;
@@ -303,7 +327,7 @@ table tbody tr:nth-child(even) {
     align-items: center;
     /* width: 150px; */
 }
- 
+
 .botoes {
     border-radius: 20px;
     position: relative;
@@ -312,24 +336,24 @@ table tbody tr:nth-child(even) {
     display: flex;
     gap: 50px;
 }
- 
+
 .botoes a {
     display: flex;
     flex-direction: row;
     text-decoration: none;
 }
- 
+
 .botoes a button {
     height: 100%;
     width: 100%;
     display: flex;
 }
- 
+
 .fone-col i{
     font-size: 25px;
     color: black;
 }
- 
+
 .mais i{
     font-size: 25px;
     color: black;
@@ -342,12 +366,12 @@ table tbody tr:nth-child(even) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.753);
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
- 
+
 .modal-content {
     background-color: white;
     padding: 20px;
@@ -356,7 +380,7 @@ table tbody tr:nth-child(even) {
     max-width: 500px;
     text-align: center;
 }
- 
+
 .modal .close-modal {
     justify-content: end;
     display: flex;
@@ -367,18 +391,18 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
     color: #333;
 }
- 
+
 .modal h3 {
     font-size: 18px;
     margin-bottom: 20px;
 }
- 
+
 .modal input[type="file"] {
     margin: 10px 0;
     padding: 10px;
     font-size: 16px;
 }
- 
+
 .modal .submit-fotos {
     background-color: rgb(32, 54, 139);
     color: white;
@@ -388,161 +412,371 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
     font-size: 16px;
 }
- 
+
 .modal .submit-fotos:hover {
     background-color: rgb(40, 60, 180);
 }
- 
- 
+
+
 .open-modal {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
- 
-@media only screen and (max-width: 768px) {
-    .principal {
-        width: 100%;
-        height: 100vh;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        /* margin-top: 10%; */
+
+.status-ativo {
+    color: green;
+    font-weight: bold;
+}
+
+.status-inativo {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* 📱 Ajustes para telas menores que 1200px */
+@media (max-width: 1199.98px) {
+    body {
+        max-height: 50vh;
+        overflow-y: auto;
+        /* background-color: aqua; */
     }
- 
-    .principal .box {
-        width: 90%;
-        height: 85%;
-        gap: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 3%;
-    }
- 
-    .form-box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+
+    .container {
+        padding: 20px;
         height: auto;
-        gap: 20px;
     }
- 
-    .botoes {
-        left: -1px;
-        display: flex;
-        position: relative;
-        /* flex-direction: column; */
-        gap: 10px;
-        align-items: center;
-        /* width: 100%; */
-        margin-top: 20px;
-        justify-content: center;
-        /* padding-left: 50px; */
+
+    .titulo {
+        font-size: 32px;
+        text-align: center;
     }
- 
-    .botoes a button {
-        align-items: center;
+
+    .search-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-bar input {
+        width: 80%;
+        font-size: 18px;
+        padding: 12px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .table-container {
         width: 100%;
-        height: 50px;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 55vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 1000px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 12px;
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 16px;
+    }
+
+    .status {
+        font-size: 14px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .novo-evento {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .principal .box{
+        margin-top: 0;
+        justify-content: center;
+        height: 92vh;
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: -8.5%;
+    }
+
+    .voltar-link{
+        width: 70%;
+        bottom: -40px;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 992px */
+@media (max-width: 991.98px) {
+    /* body {
+        background-color: blue;
+    } */
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .search-bar input {
+        width: 100%;
         font-size: 16px;
         padding: 10px;
-        border-radius: 8px;
+        outline: none;
     }
- 
-    .voltar-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        bottom: -10.5%;
-        right: 15px;
-        /* left: 30%; */
-    }
- 
-    .b-voltar {
-        position: absolute;
-        width: 40%;
-        /* height: 50%; */
-        /* bottom: -18.5%; */
-        left: 5%;
-    }
- 
-    .voltar-link .voltar {
-        left: -19px;
-        width: 100%;
-        height: 100%;
-    }
- 
-    .titulo {
-        font-size: 24px;
-        text-align: center;
-    }
- 
-    .bolas-fundo img {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 0.5;
-    }
- 
-    .bolas-fundo .bola-verde1 {
-        width: 150px;
-        left: -30px;
-    }
- 
-    .bolas-fundo .bola-verde2 {
-        width: 100px;
-        left: 77%;
-    }
- 
-    .bolas-fundo .bola-rosa {
-        width: 250px;
-        left: 250px;
-        top: 60%;
-    }
- 
-    header .nav-bar ul {
-        flex-direction: column;
-        padding: 0;
-    }
- 
-    header .nav-bar .nav-item {
-        text-align: center;
-    }
- 
-    header .btn-login a {
+
+    .search-bar .search-button {
+        width: auto;
+        font-size: 16px;
         padding: 10px;
     }
- 
-    .div-tabela {
+
+    .table-container {
         width: 100%;
-        height: 80%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 60vh;
+        padding: initial;
+        border: 1px solid #ccc;
     }
- 
-    .input-pesquisar {
+
+    .collaborators-table {
         width: 100%;
-        height: 100%;
+        min-width: 800px;
+        border-collapse: collapse;
     }
- 
-    .input-pesquisar button {
-        width: 25%;
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 10px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 14px;
+    }
+
+    .status {
         font-size: 12px;
     }
- 
-    .input-pesquisar h3 {
-        font-size: 16px;
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
- 
-    tbody tr td .finalizado {
-        width: 80%;
-        font-size: 60%;
+
+    .novo-evento {
+        font-size: 14px;
+        padding: 8px 18px;
     }
- 
-    tbody tr td .em_curso {
-        width: 80%;
-        font-size: 60%;
+
+    .principal .box{
+        height: 100%;
+    }
+
+    .voltar-link{
+        bottom: -60px
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: -5%;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 768px */
+@media (max-width: 767.98px) {
+    /* body {
+        background-color: green;
+    } */
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 50vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 8px;
+        font-size: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .novo-evento {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+}
+
+/* 📱 Ajustes para telas menores que 576px */
+@media (max-width: 575.98px) {
+    body {
+        overflow-y: auto;
+        max-height: 60vh;
+        /* background-color: red; */
+    }
+
+    .principal .box{
+        height: 85vh;
+        padding: 0;
+        width: 88%;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px;
+        outline: none;
+    }
+
+    .search-bar .search-button {
+        position: relative;
+        right: 3px;
+        width: 100%;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 40vh;
+        padding: initial;
+        border: 1px solid #ccc;
+    }
+
+    .collaborators-table {
+        width: 100%;
+        min-width: 400px;
+        border-collapse: collapse;
+    }
+
+    .collaborators-table th, .collaborators-table td {
+        padding: 6px;
+        font-size: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .collaborators-table thead {
+        top: -3.5px;
+        font-size: 10px;
+    }
+
+    .status {
+        width: 50px;
+        font-size: 8px;
+    }
+
+    .botoes {
+        width: 50%;
+        bottom: 2rem;
+        display: flex;
+        justify-content: right;
+        margin-top: 20px;
+        left: 3rem;
+    }
+
+    .novo-evento {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .voltar-link{
+        width: 50%;
+        bottom: -2rem;
+        left: -1rem;
+    }
+
+    .fone-col i{
+        font-size: 15px;
+    }
+
+    .mais i{
+        font-size: 15px;
+    }
+
+    .container{
+        padding: inherit;
+    }
+
+    h2{
+        padding-top: 30px;
+        font-size: 1.5rem;
+    }
+
+    .bolas-fundo .bola-rosa{
+        bottom: 0   ;
     }
 }

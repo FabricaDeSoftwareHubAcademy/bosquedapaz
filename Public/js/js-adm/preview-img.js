@@ -1,19 +1,9 @@
-const input = document.querySelector("#file");//#file é o id da classe input do tipo file
-
-input.addEventListener("change", function(e) {
-    
-    const tgt = e.target || window.event.srcElement;
-
-    const files = tgt.files;
-
+const input = document.querySelector("#file");
+input.addEventListener("change", function (e) {
+    const file = e.target.files[0];
     const fr = new FileReader();
-
-    fr.onload = function(){
-
+    fr.onload = () => {
         document.querySelector("#preview-image").src = fr.result;
-
-    }
-
-    fr.readAsDataURL(files[0]);
-
+    };
+    if (file) fr.readAsDataURL(file);
 });

@@ -1,8 +1,3 @@
-<?php
-require_once '../../../actions/listar_evento.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,38 +31,13 @@ require_once '../../../actions/listar_evento.php';
                                 <th>Data</th>
                                 <th>Status</th>
                                 <th class="fone-col">Editar</th>
-                                <th class="fone-col">Atração</th>
-                                <th>Foto</th>
+                                <th class="fone-col">Atrações</th>
+                                <th>Fotos</th>
                             </tr>
                         </thead>
-                        <tbody>
-                        <?php foreach ($eventos as $event): ?>
-                                <tr>
-                                    <td class="nome-evento"><?= htmlspecialchars($event->getNome()) ?></td>
-                                    <td><?= htmlspecialchars($event->getData()) ?></td>
-                                    <td>
-                                        <span class="<?= $event->getStatus() ? 'status-ativo' : 'status-inativo' ?>">
-                                            <?= $event->getStatus() ? 'Ativo' : 'Inativo' ?>
-                                        </span>
-                                    </td>
-                                    <td class="fone-col">
-                                        <a href="editar-evento.php?id=<?= $event->getId() ?>">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <a href="cadastrar-atracao.php?id_evento=<?=    $event->getId() ?>"><i class="fa-solid fa-plus"></i>
-                                        </a>
-                                    </td>
-                                    <td class="mais">
-                                        <button class="open-modal" data-modal="modal-fotos">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                            
-                        </tbody>
+                            <tbody id="lista-eventos">
+        <!-- Eventos serão adicionados aqui via JS -->
+                            </tbody>
                     </table>
                 </div>
 
@@ -79,7 +49,7 @@ require_once '../../../actions/listar_evento.php';
                 <div class="b-voltar">
                 </div>
                 <div class="botoes">
-                    <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
+                    <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
                 </div>
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">
@@ -107,6 +77,7 @@ require_once '../../../actions/listar_evento.php';
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/status-evento.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-gerenciar-evento.js" defer></script>
 </body>
 
 </html>

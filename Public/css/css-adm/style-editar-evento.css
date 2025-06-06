@@ -111,7 +111,7 @@ h1 {
     width: 100%;
 }
 
-.input-group textarea { 
+.input-group textarea {
     padding: 0.5rem;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -120,9 +120,9 @@ h1 {
 
 .input-group small#contador-caracteres {
     font-size: 0.875rem;
-    color: #6c757d; 
-    align-self: flex-end; 
-    margin-top: -15px; 
+    color: #6c757d;
+    align-self: flex-end;
+    margin-top: -15px;
 }
 
 .input-group label {
