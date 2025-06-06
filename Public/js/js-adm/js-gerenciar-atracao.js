@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const id_evento = params.get('id_evento');
     const nome_evento = params.get('nome_evento');
 
-    console.log("Nome do evento:", nome_evento);
-    console.log("Título encontrado:", document.getElementById('titulo-atracoes'));
 
     if (nome_evento) {
         const titulo = document.getElementById('titulo-atracoes');
@@ -18,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`../../../actions/action-listar-atracoes.php?id_evento=${id_evento}`);
+        const response = await fetch(`../../../actions/action-listar-atracao.php?id_evento=${id_evento}`);
 
         if (!response.ok) {
             throw new Error(`Erro HTTP: ${response.status}`);
@@ -41,7 +39,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 tr.innerHTML = `
                     <td>${sanitize(atracao.nome_atracao)}</td>
-                    <td>${sanitize(atracao.nome_evento)}</td>
                     <td>
                         <a href="editar-atracao.php?id_atracao=${atracao.id_atracao}">
                             <i class="fas fa-edit"></i>

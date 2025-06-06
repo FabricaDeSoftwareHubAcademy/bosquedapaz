@@ -28,7 +28,6 @@
                         <thead>
                             <tr>
                                 <th class="usuario-col">Nome da atração</th>
-                                <th>Data</th>
                                 <th>Editar</th>
                                 <th>Foto</th>
                             </tr>

@@ -4,35 +4,26 @@ use app\Controller\Atracao;
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id_evento'])) {
-    $id_evento = (int) $_GET['id_evento'];
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
+    $id = (int) $_GET['id'];
     $atracao = new Atracao();
+    $atracaoSelecionada = $atracao->buscarPorId($id);
 
-    // Usamos o parâmetro where para filtrar as atrações pelo evento
-    $atracoes = $atracao->listar("id_evento = $id_evento", "nome_atracao ASC");
-
-    if ($atracoes) {
-        // Criar array com dados limpos para enviar ao frontend
-        $dados = array_map(function($a) {
-            return [
-                'id_atracao' => $a->getId(),            // ou $a->id_atracao se o atributo for público/protegido
-                'nome_atracao' => $a->getNome(),
-                'descricao_atracao' => $a->getDescricao(),
-                'foto' => $a->getFoto(),
-                'id_evento' => $a->getIdEvento()
-            ];
-        }, $atracoes);
-
+    if ($atracaoSelecionada) {
         echo json_encode([
             'status' => 'success',
-            'dados' => $dados
+            'atracao' => [
+                'id_atracao' => $atracaoSelecionada->getId(),
+                'id_evento' => $atracaoSelecionada->getIdEvento(),
+                'nome_atracao' => $atracaoSelecionada->getNome(),
+                'descricao_atracao' => $atracaoSelecionada->getDescricao(),
+                'status' => $atracaoSelecionada->getStatus(),
+                'foto_atracao' => $atracaoSelecionada->getBanner()
+            ]
         ]);
     } else {
-        echo json_encode([
-            'status' => 'success',
-            'dados' => []  // vazio, mas sucesso na resposta
-        ]);
+        echo json_encode(['status' => 'error', 'mensagem' => 'Atração não encontrada']);
     }
 } else {
-    echo json_encode(['status' => 'error', 'mensagem' => 'Parâmetro id_evento não fornecido']);
+    echo json_encode(['status' => 'error', 'mensagem' => 'Requisição inválida']);
 }
