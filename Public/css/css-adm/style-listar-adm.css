@@ -18,20 +18,7 @@ body{
     position: relative;
     top: -90vh;
     z-index: -3;
-    /* animation: bolaAnim 5s infinite; */
 }
-
-/* @keyframes bolaAnim {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-} */
 
 .bolas-fundo .bola-verde1 {
     position: absolute;
@@ -52,7 +39,6 @@ body{
     right: 0px;
     bottom: 0px;
     z-index: -3;
-    /* top: 55%; */
 }
 
 .principal {
@@ -79,13 +65,16 @@ h2 {
     font-size: 30px;
 }
 
-.setaV-cadastro {
-    position: relative;
-    top: 0vh;
-    right: 51rem;
-    display: block;
-    cursor: pointer;
+/* Seta Voltar */
+.seta__voltar {
+    position: fixed;
+    bottom: 40px;
+    left: 110px;
+    width: 45px;
+    height: 43px;
+    z-index: 9999;
 }
+
 
 
 .container {
@@ -98,10 +87,8 @@ h2 {
 }
 
 .search-bar {
-    /* position: sticky; */
     top: 0;
     background: white;
-    /* z-index: 1000; */
     padding: 20px;
     display: flex;
     align-items: center;
@@ -131,20 +118,6 @@ h2 {
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
 
-.search-bar .search-button {
-    background-color: rgb(32, 54, 139);
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar .search-button:hover {
-    background-color: #041831;
-}
-
-
 .table-container {
     width: 100%;
     max-height: 50vh;
@@ -157,23 +130,6 @@ h2 {
     border-collapse: collapse;
     text-align: center;
 }
-
-
-/* .collaborators-table thead {
-    position: sticky;
-    top: 0;
-    background-color: rgb(32, 54, 139);
-    color: white;
-    z-index: 10;
-} */
-
-/* .collaborators-table th, .collaborators-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 20%;
-} */
-
 
 .collaborators-table tr {
     display: table;
@@ -226,10 +182,6 @@ h2 {
 .collaborators-table th{
     padding: 12px 15px;
 }
-
-/* .collaborators-table td{
-    padding: 12px 15px;
-} */
 
 table tbody tr:nth-child(odd) {
     font-size: 80%;
@@ -395,11 +347,6 @@ button:hover {
         outline: none;
     }
 
-    .search-bar .search-button {
-        font-size: 18px;
-        padding: 12px;
-    }
-
     .table-container {
         width: 100%;
         overflow-x: auto;
@@ -535,12 +482,6 @@ button:hover {
         outline: none;
     }
 
-    .search-bar .search-button {
-        width: auto;
-        font-size: 16px;
-        padding: 10px;
-    }
-
     .table-container {
         width: 100%;
         overflow-x: auto;
@@ -664,12 +605,6 @@ button:hover {
         outline: none;
     }
 
-    .search-bar .search-button {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-    }
-
     .table-container {
         width: 100%;
         overflow-x: auto;
@@ -763,14 +698,6 @@ button:hover {
         font-size: 12px;
         padding: 6px;
         outline: none;
-    }
-
-    .search-bar .search-button {
-        position: relative;
-        right: 3px;
-        width: 100%;
-        font-size: 12px;
-        padding: 8px;
     }
 
     .table-container {

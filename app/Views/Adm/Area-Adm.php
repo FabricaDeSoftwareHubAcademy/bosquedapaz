@@ -39,7 +39,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-parceiros.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/cadastrar-parceiros.php">
                             <div class="action__title open-modal"  data-modal="abrir-mais-parceiros">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
@@ -47,7 +47,7 @@
                                 </div> 
                              </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/listar-parceiros.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/listar-parceiros.php">
                             <div class="action__title open-modal"  data-modal="abrir-mais-parceiros">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
@@ -77,7 +77,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../Adm/cadastrar-expositor.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/cadastrar-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/listar-expositor.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/listar-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
@@ -114,7 +114,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../Adm/lista-de-espera.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/lista-de-espera.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
                                 <div class="action__content">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-hourglass-split" viewBox="0 0 16 16">
@@ -124,19 +124,11 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/relatorio-expositor.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/relatorio-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
                                     <p>Relatório Expositor</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="link-modais" href="../../../app/adm/Views/listar-adm.php">
-                            <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
-                                <div class="action__content">
-                                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
-                                    <p>Relatório Usuários</p>
                                 </div>
                             </div>
                         </a>
@@ -158,7 +150,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/listar-categorias.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/listar-categorias.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-categoria">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
@@ -169,7 +161,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/visualizar-categorias.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/visualizar-categorias.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-categoria">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-eye" viewBox="0 0 16 16">
@@ -208,7 +200,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-evento.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/cadastrar-evento.php">
                             <div class="action__title">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
@@ -216,7 +208,7 @@
                                 </div>    
                             </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/gerenciar-eventos.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/gerenciar-eventos.php">
                             <div class="action__title">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">
@@ -249,7 +241,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/grafico-central.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/grafico-central.php">
                             <div class="action__title">
                                 <div class="action__content">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-bar-chart" viewBox="0 0 16 16">
@@ -258,7 +250,7 @@
                                 <p>Gráfico</p>
                             </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/cadastro-boleto.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/cadastro-boleto.php">
                             <div class="action__title">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-currency-dollar" viewBox="0 0 16 16">
@@ -268,7 +260,7 @@
                                 </div>
                             </div>    
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/gerenciar-boletos.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/gerenciar-boletos.php">
                             <div class="action__title">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-stickies" viewBox="0 0 16 16">
@@ -297,7 +289,7 @@
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
                     <div class="modais">
-                        <a class="link-modais" href="../../../app/adm/Views/cadastrar-adm.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/cadastrar-adm.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-gerancia">
                                 <div class="action__content">
                                     <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
@@ -305,7 +297,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="link-modais" href="../../../app/adm/Views/listar-adm.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/listar-adm.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-gerancia">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#162868" class="bi bi-card-list" viewBox="0 0 16 16">

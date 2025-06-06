@@ -120,6 +120,12 @@ class Database {
         return $this->execute($query);
     }
 
+    public function select_all($tableP, $id_name, $where = null){
+        $where = strlen($where) ? " WHERE ". $where : '';
+        $query = "SELECT * FROM ". $this->table. " AS A INNER JOIN ". $tableP. " AS B ON ". "A.".$id_name. " = B.". $id_name. ' '. $where;
+        return $this->execute($query);
+    }
+
     // método update, com parametros $where, $values
     public function update($where, $values){
         $fields = array_keys($values);
@@ -136,17 +142,63 @@ class Database {
         }
     }
 
-    //método de deletar
-    public function delete($where){
-        $query = 'DELETE FROM '. $this->table. ' WHERE '.$where;
+    public function update_all($values1, $values2, $tableP, $id_name, $where){
+        $where = strlen($where) ? " WHERE ". $where : '';
+        $fields = array_keys($values1);
+        $fields2 = array_keys($values2);
+        $masterArray = array_merge($values1, $values2);
+        $param = array_values($masterArray);
 
-        $result = $this->execute($query);
+        $query = "UPDATE ". $this->table. " SET ". implode('=?,', $fields). "=? ". $where. "; UPDATE ". $tableP. " SET ". implode('=?,', $fields2). "=? WHERE ". $id_name. " = ( SELECT ". $id_name. " FROM ".$this->table. $where. ")";
         
-        return ($result->rowCount() == 1) ? TRUE : FALSE;
+        $res = $this->execute($query, $param);
+        return $res ? TRUE : FALSE;
+    }
+
+    //método de deletar
+    // public function delete($where){
+    //     $query = 'DELETE FROM '. $this->table. ' WHERE '.$where;
+
+    //     $result = $this->execute($query);
+        
+    //     return ($result->rowCount() == 1) ? TRUE : FALSE;
+    // }
+
+    public function delete($where){
+        $query = "UPDATE ". $this->table. " SET status = 0 WHERE ". $where;
+        return $this->execute($query) ? true : false;
+    }
+
+    public function listar_colaboradores() {
+        $query = "SELECT
+        c.id_colaborador,
+        p.nome,
+        p.email,
+        p.telefone,
+        c.cargo,
+        c.status_col
+        FROM colaborador c
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+        return $this->execute($query);
+    }
+
+    public function filtrar_colaboradores($nome) {
+        $query = "SELECT
+        c.id_colaborador,
+        p.nome,
+        p.email,
+        p.telefone,
+        c.cargo,
+        c.status_col
+        FROM colaborador c
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
+        WHERE p.nome LIKE :nome";
+
+        $binds = [":nome" => "%$nome%"];
+        return $this->execute($query, $binds);
     }
 
 
 
 }
-
 ?>

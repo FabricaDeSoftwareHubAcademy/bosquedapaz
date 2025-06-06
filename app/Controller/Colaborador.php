@@ -1,70 +1,100 @@
-<?php 
+<?php
 
-require '../../Models/Database.php';
+namespace app\Controller;
 
-class Colaborador{
-   public int $id_colaborador;
-   public string $nome;
-   public string $email; 
-   public string $telefone; 
-   public string $cargo; 
-   public string $senha; 
-   public string $imagem; 
+require_once('../vendor/autoload.php');
+use PDO;
+use app\Models\Database;
 
-//    Cadastro:
-    public function cadastrar(){
+class Colaborador extends Pessoa
+{
+    private string $cargo;
+
+    // Setters públicos para propriedades herdadas protegidas da Pessoa
+    public function setNome(string $nome): void {
+        $this->nome = $nome;
+    }
+
+    public function setTelefone(string $telefone): void {
+        $this->telefone = $telefone;
+    }
+
+    public function setEmail(string $email): void {
+        $this->email = $email;
+    }
+
+    public function setSenha(string $senha): void {
+        $this->senha = $senha;
+    }
+
+    public function setPerfil(string $perfil): void {
+        $this->perfil = $perfil;
+    }
+
+    // Setters para propriedades próprias
+    public function setCargo(string $cargo): void {
+        $this->cargo = $cargo;
+    }
+
+    public function setImagem(?string $imagem): void {
+        $this->foto_perfil = $imagem;
+    }
+
+
+
+    public function cadastrar() {
+        // Insere na tabela pessoa
         $dbPessoa = new Database('pessoa');
-        $resPessoa = $dbPessoa->insert([
-            'nome'=> $this->nome,
-            'email'=> $this->email,
+        $idPessoa = $dbPessoa->insert_lastid([
+            'nome' => $this->nome,
             'telefone' => $this->telefone,
+            'email' => $this->email,
+            'senha' => $this->senha,
+            'perfil' => 'ADM',
+            'img_perfil' => $this->foto_perfil
         ]);
 
-        if($resPessoa){
-            $id_pessoa = $dbPessoa->getConnection()->lastInsertId();
-
-            $dbColaborador = new Database('colaborador');
-            $resColaborador = $dbColaborador->insert([
-                'id_pessoa' => $id_pessoa,
-                'cargo' => $this->cargo,
-                'senha' => $this->senha,
-                'imagem' => $this->imagem,
-            ]);
-
-            return $resColaborador;
+        if (!$idPessoa) {
+            return false;
         }
-        return false;
+
+        $dbColab = new Database('colaborador');
+        $res = $dbColab->insert([
+            'cargo' => $this->cargo,
+            'id_pessoa' => $idPessoa
+        ]);
+
+        return $res;
     }
 
-    public function listar($busca = null){
+    public function atualizar($id){
+        $db = new Database('colaborador');
+
+        $values1 = [
+            'cargo' => $this->cargo
+        ];
+
+        $values2 = [
+            'nome' => $this->nome,
+            'telefone' => $this->telefone,
+            'email' => $this->email,
+            'senha' => $this->senha,
+            'perfil' => 'ADM',
+            'img_perfil' => $this->foto_perfil,
+        ];
+
+        $res = $db->update_all($values1, $values2, 'pessoa', 'id_pessoa', 'id_colaborador = '. $id);
+
+        return $res ? TRUE : FALSE;
+    }
+
+    public function listarColaboradores(?string $nome = null){
         $db = new Database('colaborador');
         
-        if ($busca) {
-            $query = "
-                SELECT c.id_colaborador, p.nome, p.email, p.telefone, c.cargo, c.imagem
-                FROM colaborador c
-                JOIN pessoa p ON p.id_pessoa = c.id_pessoa
-                WHERE p.nome LIKE ?
-            ";
-            $stmt = $db->execute($query, ["%$busca%"]);
+        if (!empty($nome)) {
+            return $db->filtrar_colaboradores($nome)->fetchAll(PDO::FETCH_ASSOC);
         } else {
-            $query = "
-                SELECT c.id_colaborador, p.nome, p.email, p.telefone, c.cargo, c.imagem
-                FROM colaborador c
-                JOIN pessoa p ON p.id_pessoa = c.id_pessoa
-            ";
-            $stmt = $db->execute($query);
+            return $db->listar_colaboradores()->fetchAll(PDO::FETCH_ASSOC);
         }
-    
-        if ($stmt) {
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $result;
-        }
-        
-        return [];
     }
 }
-
-
-?>
-

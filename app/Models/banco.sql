@@ -20,14 +20,6 @@ CREATE TABLE endereco(
     PRIMARY KEY(id_endereco)
 );
 
-CREATE TABLE login(
-	id_login INT NOT NULL AUTO_INCREMENT,
-	usuario VARCHAR(150) NOT NULL,
-    senha VARCHAR(200) NOT NULL,
-    perfil CHAR(3) NOT NULL,
-    PRIMARY KEY(id_login)
-);
-
 
 CREATE TABLE pessoa( 
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
@@ -93,9 +85,7 @@ CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
-    profissao VARCHAR(100) NOT NULL,
-    imagem VARCHAR(255) NULL,
-    senha VARCHAR(150) NOT NULL,
+    status_col ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -183,7 +173,11 @@ CREATE TABLE boleto(
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
 );
 
+SELECT 
+col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
+FROM colaborador as col INNER JOIN pessoa as pes ON col.id_pessoa = pes.id_pessoa;
 
+-- Inserts: 
 insert into carrossel (caminho, posicao) values 
 ("../Public/uploads/uploads-carrosel/img-carrossel-1.png", 1),
 ("../Public/uploads/uploads-carrosel/img-carrossel-2.png", 2),
@@ -193,3 +187,7 @@ insert into carrossel (caminho, posicao) values
 insert into imagem values (default,"A","A","A","A","A");
 
 insert into categoria values (default,"BURGERS","ROXO","blablabla");
+
+
+
+

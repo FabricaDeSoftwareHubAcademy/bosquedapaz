@@ -1,53 +1,3 @@
-<?php 
-
-require '../../../app/adm/Controller/Colaborador.php';
-
-if(isset($_POST['cadastrar'])){
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['tel'];
-    $cargo = $_POST['cargo'];
-    $senha = $_POST['senha'];
-    $confSenha = $_POST['confSenha'];
-
-    $arquivo = $_FILES['imagem'];
-    if ($arquivo['error']) die ("Falha ao enviar a foto");
-    $pasta = '../../../Public/imgs/imgs-fotos-cadastro-adm/';
-    $nome_foto = $arquivo['name'];
-    $novo_nome = uniqid();
-    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
-
-    if ($extensao != 'png' && $extensao != 'jpg') die ("Extensão do arquivo inválida");
-    $caminho = $pasta . $novo_nome . '.' . $extensao;
-    $foto = move_uploaded_file($arquivo['tmp_name'], $caminho);
-
-    if (!$foto) {
-        die("Falha ao mover o arquivo para o diretório.");
-    }
-
-    if ($senha !== $confSenha){
-        echo '<script> alert("As senhas não coincidem!"); window.history.back(); </script>';
-        exit;
-    }
-
-    $senhaHash = password_hash($senha,  PASSWORD_DEFAULT);
-
-    $objColab = new Colaborador();
-    $objColab->nome = $nome;
-    $objColab->email = $email;
-    $objColab->telefone = $telefone;
-    $objColab->cargo = $cargo;
-    $objColab->senha = $senhaHash;
-    $objColab->imagem = $caminho;
-
-    $res = $objColab->cadastrar();
-    if($res){
-        echo '<script> alert("Cadastrado com sucesso!"); window.location.href = "../../../app/adm/Views/cadastrar-adm.php"; </script>';
-    } else {
-        echo '<script> alert("Erro ao cadastrar!"); </script>';
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -78,7 +28,7 @@ if(isset($_POST['cadastrar'])){
             <div class="container_form">
                 <h1>Cadastro ADM</h1>
                 <!-- Form -->
-                <form class="form__cadastro" method="POST" enctype="multipart/form-data">
+                <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
                     <!-- Nome -->
                     <div class="form__group">
                         <label class="label__cad" for="nome">Nome</label>
@@ -106,11 +56,12 @@ if(isset($_POST['cadastrar'])){
                         </div>
                     </div>
 
+                    
                     <!-- Cargo -->
                     <div class="form__group">
                         <label class="label__cad" for="cargo">Cargo</label>
                         <div class="area__input">
-                            <i id="icon" class="bi bi-briefcase"></i>
+                            <i id="iconn" class="bi bi-briefcase"></i>
                             <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
                         </div>
                     </div>
@@ -120,11 +71,11 @@ if(isset($_POST['cadastrar'])){
                         <label class="label__cad" for="imagem">Imagem de Perfil</label>
                         <div class="area__input2">
                             <label for="imagem" class="uploads">
-                                <input class="input2" type="file" name="imagem" id="imagem" required>
+                                <input class="input2" type="file" name="imagem" id="imagem" accept="image/*">
                             </label>
                         </div>
-                    </div>                   
-
+                    </div>      
+                    
                     <!-- Senha e Confirmar Senha lado a lado -->
                     <div class="row-double">
                         <!-- Senha -->
@@ -150,8 +101,8 @@ if(isset($_POST['cadastrar'])){
 
                     <!-- Botões -->
                     <div class="form__actions">
-                        <button type="submit" name="cancelar" class="btn btn__rosa">Cancelar</button>
-                        <button type="submit" name="cadastrar" class="btn btn__azul">Cadastrar</button>
+                        <button type="button" name="cancelar" class="btn btn__rosa">Cancelar</button>
+                        <button type="submit" name="cadastrar" value="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
             </div>
@@ -161,6 +112,8 @@ if(isset($_POST['cadastrar'])){
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </section>
+
+    <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>

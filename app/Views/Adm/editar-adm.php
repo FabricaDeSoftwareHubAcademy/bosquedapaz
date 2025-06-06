@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-editar-adm.js"></script>
+    <script src="../../../Public/js/js-adm/js-editar-adm.js" defer></script>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link
@@ -15,6 +14,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -38,17 +38,18 @@
             </div>
 
             <div class="form-box">
-                <form action="" method="post">
+                <form action="" method="post" id="formulario" enctype="multipart/form-data">
                     <div id="form1">
                         <div class="input-container">
                             <div class="input-row">
+                                <input type="text" name="id" style="opacity: 0;" id="id" value="4">
                                 <div class="input-group">
                                     <label>Nome:</label>
                                     <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
                                 </div>
                                 <div class="input-group">
                                     <label>Telefone:</label>
-                                    <input type="number" name="telefone" id="telefone" placeholder="Digite o seu número de telefone" required>
+                                    <input type="number" name="tel" id="telefone" placeholder="Digite o seu número de telefone" required>
                                 </div>
                             </div>
                             <div class="input-row">
@@ -57,28 +58,28 @@
                                     <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
                                 </div>
                                 <div class="input-group">
-                                    <label>Profissão:</label>
-                                    <input type="text" name="profissao" id="profissao" placeholder="Digite a sua profissão" required>
+                                    <label>Cargo:</label>
+                                    <input type="text" name="cargo" id="cargo" placeholder="Digite a sua cargo" required>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <div class="btns">
+                        <a href="listar-adm.php" class="voltar">
+                            <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        </a>
+                        <div class="btn-cancelar-salvar">
+                            <button type="button" class="btn btn-cancelar">
+                                <a href="./Area-Adm.php">Cancelar</a>
+                            </button>
+                            
+                            <button type="submit" class="btn btn-salvar" id="atualizar" value="atualizar" name="atualizar">
+                                Salvar
+                            </div>
+                        </div>
+                    
                 </form>
-            </div>
-            <div class="btns">
-                <a href="listar-adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
-                <div class="btn-cancelar-salvar">
-                    <button type="button" class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button type="submit" class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
-            </div>
-
 
         </div>
     </main>
