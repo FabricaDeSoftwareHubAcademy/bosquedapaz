@@ -47,6 +47,9 @@ CREATE TABLE pessoa(
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
+
+insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "123456", 1);
+
 CREATE TABLE imagem(
 	id_imagem INT NOT NULL AUTO_INCREMENT,
     imagem1 VARCHAR(255) NOT NULL,

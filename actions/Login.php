@@ -1,6 +1,9 @@
 <?php
+namespace actions;
 
-require '../app/Models/Database.php';
+require_once('../vendor/autoload.php');
+
+use app\Models\Database;
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);

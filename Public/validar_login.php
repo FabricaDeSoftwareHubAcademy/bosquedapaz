@@ -4,7 +4,10 @@
 // error_reporting(E_ALL);
 
 session_start();
-require __DIR__ . '/../actions/Login.php';
+require_once('../vendor/autoload.php');
+require_once('../actions/Login.php');
+
+use actions\Login;
 
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -17,15 +20,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if($login){
         $_SESSION['login'] = [
             'nome' => $login->nome,
-            'adm' => $login->adm,
+            'perfil' => $login->perfil,
         ];
 
         // print_r($_SESSION['login']['adm']);
 
-        if($_SESSION['login']['adm'] == 1){
-            header('Location: ../app/adm/Views/Area-Adm.php');
+        if($_SESSION['login']['perfil'] == 1){
+            header('Location: ../app/Views/adm/Area-Adm.php');
         }else{
-            header('Location: ../app/client/Views/area-expo.php');
+            header('Location: ../app/Views/client/area-expo.php');
         }
         exit;
     } else{
