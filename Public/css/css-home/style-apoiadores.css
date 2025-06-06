@@ -5,19 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
- }
+}
 
  .section-parce2{
     width: 100%;
+    height: 50vh;
     padding: 40px 20px;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
-.section-parce2 .title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
+
 
 .carrossel-parceiros {
     display: flex;
@@ -27,6 +25,7 @@
     scroll-behavior: smooth;
     padding: 20px 0;
     white-space: nowrap;
+    width: 100%;
     height: 120px;
     box-sizing: border-box;    
 }
@@ -70,80 +69,54 @@
 
  
 
-.section-bosque-quem-somos{
-    margin-top: 50px;
-    height: 110vh;
-
-    
-}
-
-h1{
-    font-size: 2.5rem;
-}
-
-.div-text-sobre .somos-apaixonados{
-    font-size: 1.65rem;
-    width: 50%;
-    margin-left: 12%;
-    display: flex;
-    position: relative;
-    right: 10%;
-   
-
-}
-.div-text-sobre{
-    position: relative;
-    top: 350px;
-   
-}
-.div-text-sobre .titulo{
-    display: flex;
-    width: 50%;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    font-size: 2.5rem;
-    color: #ff5029;
-
-}
-.div-text-sobre .titulo span{
-    padding-left: 1%;
-}
-.div-text-sobre span:hover{
-    color: #8b3ac4;
-    transition: all .10s ease-in-out;
-   
-}
-
 .section-nosso-time-quem-somos{
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    background-color: #ffffff;
+    align-items: center;
+    padding: 50px;    
 }
-.div-nt .titulo-nosso-time-quem-somos{
-    width: 60%;
+
+.sobre_a_feira{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre_a_feira h1{
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-size: 2.1rem;
+    font-weight: bold;   
+}
+.descricao-sobre-a-feira{
     margin: 0 auto;
-    margin-top: 200px;
-    color: #110707;
-    position: relative;
-    font-size: 20px;
-    font-weight: 500;
     text-align: center;
-    justify-content: center;
+    font-size: 1.50rem;
+    font-weight: 400;
+    
 }
+.sobre-apoiadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.sobre-apoiadores h1{
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-size: 2.1rem;
+    font-weight: bold;
+
+}
+
+
 .tit{
     color: darkgreen;
 }
 
-.section-parce2 h3{
-    font-size: 24px;
-    font-weight: 500; 
-    margin-bottom: 15px;
-    color: #7a7a7a;
-    position: relative;
-}
 .card-per-expo {
     background-color: rgb(140, 67, 188);
     width: 230px;
@@ -173,8 +146,6 @@ h1{
 .card4 {
     background-color: rgb(238, 115, 55);
 }
-
-
 
 .card-per-expo:hover {
     margin-top: -15px;
@@ -217,10 +188,9 @@ h1{
     transition: all .2s ease-in;
 }
 
-
-
-    .section-colaboradoras-quem-somos {
+.section-cards-apoios {
     width: 100%;
+    height: 50vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -229,92 +199,16 @@ h1{
     background-color: rgb(244, 246, 246);
 }
 
-    .section-colaboradoras-quem-somos .fotos{
-        display: flex;
-        flex-direction: column;
-    }
-         
-    .section-colaboradoras-quem-somos .carina, .profission, .denise,  .fernanda,  .nájila{
-        color: #565358;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.40rem;
-        transition: all;
-        margin-top: 3%;
-       
-       
-    }
-    .profission:hover{
-        color: #ff5029 ;
-    }
-     
-    .section-colaboradoras-quem-somos .profission{
-        font-weight: bold;
-       
-    }
-    .section-expositor-quem-somos{
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        background-color: #8b3ac4;
-
-    }
-
     
-    .section-expositor-quem-somos .titulo-seja-expositor-quem-somos{
-        display: flex;
-        color: #ffffff;
-        position: relative;
-        width: 100%;
-      
-        top: 70px;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    .section-expositor-quem-somos .expositor-p{
-        display: flex;
-        color: #ffffff;
-        flex-direction: column;
-        margin-top: 140px;
-        margin-left: 10%;
-        margin-right: 10%;
-       
-        text-align: center; 
-   }
-   .section-expositor-quem-somos .botao-expositor{
+.section-expositor-quem-somos{
+    width: 100%;
+    height: 50vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width:20%;
-    height: 10%;
-    background-color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
-    margin-left: 40.1%;
-     margin-top: 60px; 
-    border-radius: 10px;
-   }
-   
- 
-.botao-expositor .botao{
-    color: #8b3ac4;
-    background-clip: none;
-    -webkit-background-clip: text;
-text-decoration: none;
-
+    flex-direction: column;
+    background-color: #8b3ac4;
 }
-    
-    
-.botao-expositor:hover{
-    transition: .2s ;
-    cursor: pointer;
-    transform: scale(1.05);
-}  
 
+    
 @media(max-width:1669px){
 
     .div-img-animation{
@@ -349,66 +243,23 @@ text-decoration: none;
         
     }
    
-   
-    
-
 .section-nosso-time-quem-somos .div-nt{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 80%;
+
 }
 .section-nosso-time-quem-somos .div-nt .titulo-nosso-time-quem-somos{
     right: 0%;
     left: 0%;
+    font-size: 1.25rem;
+    font-weight: 200;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-
-
-.section-colaboradoras-quem-somos .fotos{
-    height: 50vh;
-    width: 100%;
-    
-}
-
-.section-expositor-quem-somos .expositor-p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 0%;
-    top: 3%;
-}
-.section-expositor-quem-somos .botao-expositor{
-    left: 0%;
-    top: 5%;
-}
-.section-expositor-quem-somos .expositor{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 10%;
-    
-}
-.section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
-    display: flex;
-    left: 0%;
-   
-}
-.parceiros-quem-somos .titulo-parceiros-quem-somos{
-    right: 0%;
-    left: 0%;
-    font-size: 2.25rem;
-    padding: 0%;
-}
-.parceiros-quem-somos .fotos-parceiros-quem-somos{
-    display: flex;
-    height: 5%;
-    width: 100%;
-}
-
-
-}
 
 @media(max-width:1400px){
 
@@ -444,85 +295,15 @@ text-decoration: none;
         
     }
    
-   
-    
-
 .section-nosso-time-quem-somos .div-nt{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.section-nosso-time-quem-somos .div-nt .titulo-nosso-time-quem-somos{
-    right: 0%;
-    left: 0%;
-}
 
 
 
-.section-colaboradoras-quem-somos .fotos{
-    height: 50vh;
-    width: 100%;
-   
-}
-
-.section-expositor-quem-somos .expositor-p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 0%;
-    top: 6%;
-}
-.section-expositor-quem-somos .botao-expositor{
-    left: 0%;
-    top: 5%;
-    height: 15%;
-}
-.section-expositor-quem-somos .expositor{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    
-   
-    
-}
-.section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
-    display: flex;
-    left: 0%;
-   
-}
-.parceiros-quem-somos .titulo-parceiros-quem-somos{
-    right: 0%;
-    left: 0%;
-    font-size: 2.25rem;
-    padding: 0%;
-}
-
-
-}
-
-
-@media(max-width:900px){
-    .section-expositor-quem-somos .expositor {
-        position: relative;
-        bottom: 50px;
-
-
-    }
-    .section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
-        font-size: 2rem;
-
-    }
-    .section-expositor-quem-somos .expositor-p .acesse{
-        position: relative;
-        bottom: 25%;
-    }
-    .section-expositor-quem-somos .botao-expositor{
-    width: 20%;
-    left: 1%;
-    right: 0%;
-  }
 }
 
 @media(max-width:768px){
@@ -533,78 +314,11 @@ text-decoration: none;
     .section-nosso-time-quem-somos .div-nt .titulo-nosso-time-quem-somos{
         font-size: 2rem;
     }
-    .section-colaboradoras-quem-somos .fotos{
-        height: 250px;
-    }
-    .section-expositor-quem-somos .expositor{
-        bottom: 15%;
-
-    }
-    .section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
-        font-size: 2rem;
-    }
-    .section-expositor-quem-somos .expositor-p .acesse{
-        position: relative;
-        display: flex;
-        bottom: 30px;
-    }
-    .section-expositor-quem-somos .botao-expositor{
-        position: relative;
-        left: 0%;
-        margin-top: -0.5%;
-    }
-    .section-colaboradoras-quem-somos .fotos{
-        width: 100%;
-        height: 50vh;
-    }
-    
-    
-
 
 }
 
-@media(max-width:560px){
-    .section-expositor-quem-somos .expositor{
-        top: -20%;
-    }
-    .section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
-        font-size: 1.7rem;
-    }
-    .section-expositor-quem-somos .expositor-p{
-        text-align: justify;
-        top: -15%;
-    }
-    .section-expositor-quem-somos .botao-expositor{
-        top: -15%;
-        height: 10%;
-    }
-    .section-expositor-quem-somos .botao-expositor .botao{
-        display: flex;
-        font-size: 0.9rem;
-      
-    }
-    .section-colaboradoras-quem-somos .fotos{
-        width: 100%;
-        height: 50vh;
-    }
-    
-}
-@media(max-width:470px){
-    .section-bosque-quem-somos .titulo{
-        font-size: 1.7rem;
-    }
-    .section-expositor-quem-somos .botao-expositor{
-        width: 30%;
-        margin-left: 35%;
-        display: flex;
 
-    }
-    .section-colaboradoras-quem-somos .fotos{
-        width: 100%;
-        height: 50vh;
-    }
-    
-}
+
 @media(max-width:400px){
     .section-bosque-quem-somos .titulo{
         font-size: 1.4rem;
@@ -616,19 +330,5 @@ text-decoration: none;
         margin-top: 70%;
 
     }
-    .section-expositor-quem-somos .expositor{
-        position: relative;
-        bottom: 130px;
-    }
-    .section-expositor-quem-somos .expositor .titulo-seja-expositor-quem-somos{
-        font-size: 1.5rem;
-    }
-    .section-expositor-quem-somos .expositor-p p{
-        font-size: 0.9rem;
-    }
-    .section-expositor-quem-somos .botao-expositor{
-        position: relative;
-        margin-top: 0%;
-        
-    }
+}
 }
