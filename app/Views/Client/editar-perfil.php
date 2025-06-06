@@ -68,37 +68,37 @@
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
                             <label for="photo" class="perfilEdit-upload-label-square">
-                                <i class="bi bi-upload"></i> Carregar Foto 1
+                                Carregar Foto 1 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
                             <label for="photo" class="perfilEdit-upload-label-square">
-                                <i class="bi bi-upload"></i> Carregar Foto 2
+                                Carregar Foto 2 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
                             <label for="photo" class="perfilEdit-upload-label-square">
-                                <i class="bi bi-upload"></i> Carregar Foto 3
+                                Carregar Foto 3 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
                             <label for="photo" class="perfilEdit-upload-label-square">
-                                <i class="bi bi-upload"></i> Carregar Foto 4
+                                Carregar Foto 4 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
                             <label for="photo" class="perfilEdit-upload-label-square">
-                                <i class="bi bi-upload"></i> Carregar Foto 5
+                                Carregar Foto 5 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
                             <label for="photo" class="perfilEdit-upload-label-square">
-                                <i class="bi bi-upload"></i> Carregar Foto 6
+                                Carregar Foto 6 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                     </div>

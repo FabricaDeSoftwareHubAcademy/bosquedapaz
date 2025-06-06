@@ -63,29 +63,217 @@
 }
 
 .perfilEdit-title{
-    background-color: red;
-    font-size: 40px;
+    /* background-color: red; */
+    font-size: 35px;
 }
 
 .perfilEdit-form{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 12px;
+    padding-bottom: 10px;
     align-items: center;
     height: 100%;
-    background-color: purple;
-    width: 75%;
+    /* background-color: purple; */
+    width: 80%;
 }
 
 .perfilEdit-empresas{
     display: flex;
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 100%;
+    height: 15%;
     justify-content: space-between;
+}
+
+.perfilEdit-logo, .perfilEdit-important-input{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    width: 40%;
+    height: 100%;
+}
+
+.perfilEdit-upload{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
+    display: flex;
+    color: grey;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-size: 12.9px;
+}
+
+.perfilEdit-nome{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-size: 12.9px;
+}
+
+.perfilEdit-nome::placeholder{
+    color: grey;
 }
 
 .perfilEdit-foto{
     display: none;
+}
+
+.perfilEdit-desc{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    /* background-color: aqua; */
+}
+
+.perfilEdit-text-desc{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
+    border-radius: 10px;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: 12.9px;
+}
+
+.perfilEdit-info{
+    display: flex;
+    /* background-color: purple; */
+    width: 100%;
+    height: 7.5%;
+    justify-content: space-between;
+}
+
+.perfilEdit-info div{
+    gap: 10px;
+    height: 100%;
+    width: 24%;
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.fa-brands, .fa-solid{
+    font-size: 20px;
+}
+
+.fa-square-instagram{
+    color: #038edf;
+}
+
+.fa-square-whatsapp{
+    color: #0fe04e;
+}
+
+.fa-square-facebook{
+    color: #f4f80e;
+}
+
+.fa-envelope{
+    color: #f11890;
+}
+
+.perfilEdit-input-info{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
+    padding-left: 2%;
+}
+
+.perfilEdit-foto-info{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 34%;
+}
+
+.perfilEdit-div-group{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    /* background-color: #f11890; */
+}
+
+.perfilEdit-laod-foto{
+    background-color: #038edf;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfilEdit-input-foto{
+    display: none;
+}
+
+.perfilEdit-upload-label-square{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
+    width: 11vw;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.perfilEdit-btns{
+    display: flex;
+    align-self: flex-end;
+    /* background-color: #f4f80e; */
+    justify-content: space-between;
+    width: 28%;
+    height: 9%;
+}
+
+.perfilEdit-btn-cancel{
+    background-color: #FF3877;
+}
+
+.perfilEdit-btn-save{
+    background-color: #007E70;
+}
+
+.perfilEdit-btn{
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    width: 40%;
+    color: white;
+    font-size: 15px;
+}
+
+.perfilEdit-link-voltar{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
 }
 
 /* .perfilEdit-box{
