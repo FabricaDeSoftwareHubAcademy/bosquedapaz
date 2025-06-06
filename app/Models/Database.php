@@ -198,7 +198,25 @@ class Database {
         return $this->execute($query, $binds);
     }
 
+    public function filtrar_expositor($filtro){
+        $query = "
+        SELECT * FROM expositor AS exp 
+        INNER JOIN categoria AS cat 
+        ON cat.id_categoria = exp.id_categoria 
+        INNER JOIN pessoa AS pes 
+        ON pes.id_pessoa = exp.id_pessoa
+        INNER JOIN imagem AS img 
+        ON img.id_imagem = exp.id_imagem
+        WHERE pes.nome LIKE '%$filtro%'
+        OR exp.nome_marca LIKE '%$filtro%'
+        OR exp.produto LIKE '%$filtro%' 
+        OR exp.num_barraca LIKE '%$filtro%'
+        OR cat.descricao = '$filtro'
+        ";
 
+        return $this->execute($query);
+    }
 
 }
+
 ?>
