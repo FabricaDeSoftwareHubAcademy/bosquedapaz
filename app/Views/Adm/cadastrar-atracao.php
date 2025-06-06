@@ -18,31 +18,36 @@
             <h1>CADASTRO DE ATRAÇÃO</h1>
                 <div class="form-box">
                     <form method="POST" enctype="multipart/form-data" id="form-atracao">
-                        <input type="hidden" name="id_evento" id="id_evento" value="<?php echo $_GET['id_evento'] ?? 0; ?>">
+                        <div id="form1">
 
-                        <div class="input-group">
-                            <label>Nome:</label>
-                            <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome da atração" required>
-                        </div>
+                                <input type="hidden" name="id_evento" id="id_evento" value="<?php echo $_GET['id_evento'] ?? 0; ?>">
 
-                        <div class="input-group">
-                            <label>Descrição:</label>
-                            <textarea name="descricao_atracao" id="descricao_atracao" placeholder="Digite uma breve descrição da atração (250 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
-                            <small id="contador-caracteres">250 caracteres restantes</small>
-                        </div>
+                                <div class="input-group">
+                                    <label>Nome:</label>
+                                    <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome da atração" required>
+                                </div>
 
-                        <div class="data-imagem">
-                            <div class="input-group">
-                                <label>Imagem:</label>
-                                <input type="file" name="foto" id="file" required>
-                            </div>
+                                <div class="input-group">
+                                    <label>Descrição:</label>
+                                    <textarea name="descricao_atracao" id="descricao_atracao" placeholder="Digite uma breve descrição da atração (250 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
+                                    <small id="contador-caracteres">250 caracteres restantes</small>
+                                </div>
+
+                                <div class="data-imagem">
+                                    <div class="input-group">
+                                        <label>Imagem:</label>
+                                        <input type="file" name="foto" id="file" required>
+                                    </div>
+                                </div>
+                                <img class="preview" src="" alt="" id="preview-image">
+
                         </div>
-                        <img class="preview" src="" alt="" id="preview-image">
 
                         <div class="btn-cancelar-salvar">
                             <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
-                            <button type="submit" class="btn btn-salvar" id="salvar-atracao">Salvar</button>
+                            <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
                         </div>
+                        
                     </form>
                 </div>
 
@@ -64,7 +69,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
-    <script src="../../../public/js/js-cadastrar-atracao.js" defer></script>
+    <script src="../../../public/js/js-adm/js-cadastrar-atracao.js" defer></script>
 </body>
 
 </html>
