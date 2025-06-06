@@ -111,6 +111,20 @@ h1 {
     width: 100%;
 }
 
+.input-group textarea { 
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.input-group small#contador-caracteres {
+    font-size: 0.875rem;
+    color: #6c757d; 
+    align-self: flex-end; 
+    margin-top: -15px; 
+}
+
 .input-group label {
     font-weight: bold;
     color: #3d3d3d;
@@ -156,24 +170,78 @@ h1 {
 .btn-cancelar-salvar {
     display: flex;
     gap: 30px;
-    /* background-color: aquamarine; */
     width: 100%;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
+/* Estilo base unificado para todos os botões */
 .btn {
     padding: 10px 20px;
+    border: none;
     border-radius: 10px;
-    color: white;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* remove sublinhado mesmo em <a> */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 45px;
 }
 
-.btn-cancelar-salvar .btn {
-    width: clamp(100px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
+/* Botão SALVAR */
+.btn-salvar {
+    background-color: #007E70;
+    box-shadow: 0px 5px 10px rgba(0, 126, 111, 0.5);
+}
+
+/* Botão CANCELAR */
+.btn-cancelar {
+    background-color: #FF3877;
+    box-shadow: 0px 5px 10px rgba(255, 56, 119, 0.5);
+}
+
+.modal-deleta {
+    margin: auto;
+}
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.521);
+}
+.modal-deleta{
+    border: none;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+}
+.acao-recusar{
+    /* background-color: brown; */
+    height: 100%;
+}
+.acao-content-recusar{
+    /* background-color: coral; */
+    height: 100%;
+}
+.acao-texto-recusar{
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    padding-top: 7%;
+}
+.acao-botoes-recusar{
+    /* background-color: darkmagenta; */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+.close-modal{
+    width: clamp(150px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
     /* padding: 10px 20px; */
     height: clamp(40px, 15%, 30px);
     display: flex;
@@ -188,21 +256,6 @@ h1 {
     transition: 0.3s;
 }
 
-.btn-cancelar-salvar .btn-salvar {
-    background-color: #007E70;
-    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
-}
-
-.btn-cancelar-salvar .btn-cancelar {
-    background-color: #FF3877;
-}
-
-.btn-cancelar-salvar .btn a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-}
 
 @media (max-width: 950px) {
     .box .form-box {
@@ -226,6 +279,9 @@ h1 {
     .btn-cancelar-salvar .btn {
         width: clamp(80px, 25%, 120px); /* Ajuste proporcional em telas menores */
     }
+    .btn-cancelar-salvar .open-modal {
+        width: clamp(80px, 25%, 120px); /* Ajuste proporcional em telas menores */
+    }
 }
 
 @media (max-width: 410px) {
@@ -238,7 +294,7 @@ h1 {
     .btn-cancelar-salvar .btn {
         width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
     }
-    .box{
-        padding: 1px;
+    .open-modal {
+        width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
     }
 }

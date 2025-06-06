@@ -1,50 +1,61 @@
 <?php
 require_once('../vendor/autoload.php');
-use app\Controller\Atracao; 
+use app\Controller\Atracao;
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $id_evento = $_GET['id_evento'] ?? null;
+header('Content-Type: application/json');
+
+function sanitizarTexto($input) {
+    return htmlspecialchars(strip_tags(trim($input)));
 }
 
-// Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Validação básica dos campos
-    $id_evento = $_POST['id_evento'] ?? null;
-    $nome = $_POST['nome_atracao'] ?? '';
-    $descricao = $_POST['descricao_atracao'] ?? '';
-    $id_evento = $_POST['id_evento'] ?? '';
+    $nome = sanitizarTexto($_POST['nome_atracao'] ?? '');
+    $descricao = sanitizarTexto($_POST['descricao_atracao'] ?? '');
+    $id_evento = intval($_POST['id_evento'] ?? 0);
 
-    // Verifica se foi feito upload da imagem
-    if (isset($_FILES['foto_atracao']) && $_FILES['foto_atracao']['error'] === UPLOAD_ERR_OK) {
-        $fotoTmp = $_FILES['foto_atracao']['tmp_name'];
-        $fotoNome = uniqid() . '_' . basename($_FILES['foto_atracao']['name']);
-        $destino = '../../Uploads/Atracoes/' . $fotoNome;
-
-        if (!is_dir('../../Uploads/Atracoes/')) {
-            mkdir('../../Uploads/Atracoes/', 0777, true);
-        }
-
-        if (move_uploaded_file($fotoTmp, $destino)) {
-            // Instancia a classe e define os valores
-            $atracao = new Atracao();
-            $atracao->setNome($nome);
-            $atracao->setDescricao($descricao);
-            $atracao->setFoto($fotoNome);
-            $atracao->setIdEvento($id_evento);
-
-            // Tenta cadastrar
-            if ($atracao->cadastrar()) {
-                header('Location: ../Views/atracoes.php?status=success');
-                exit;
-            } else {
-                echo "Erro ao cadastrar atração no banco de dados.";
-            }
-        } else {
-            echo "Falha ao mover a imagem para o diretório de destino.";
-        }
-    } else {
-        echo "Imagem da atração não enviada corretamente.";
+    if (!$nome || !$descricao || !$id_evento) {
+        echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos obrigatórios."]);
+        exit;
     }
-} else {
-    echo "Requisição inválida.";
+
+    $atracao = new Atracao();
+    $atracao->setNome($nome);
+    $atracao->setDescricao($descricao);
+    $atracao->setIdEvento($id_evento);
+
+    // Upload da imagem
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+        $tmp = $_FILES['foto']['tmp_name'];
+        $nomeOriginal = basename($_FILES['foto']['name']);
+        $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
+        $mime = mime_content_type($tmp);
+
+        $permitidas = ['jpg', 'jpeg', 'png', 'gif'];
+        $mimePermitidos = ['image/jpeg', 'image/png', 'image/gif'];
+
+        if (!in_array($extensao, $permitidas) || !in_array($mime, $mimePermitidos)) {
+            echo json_encode(["status" => "erro", "mensagem" => "Formato ou tipo de imagem inválido."]);
+            exit;
+        }
+
+        $nomeFinal = uniqid('atracao_', true) . '.' . $extensao;
+        $pasta = '../Public/uploads/atracoes/';
+
+        if (!is_dir($pasta)) {
+            mkdir($pasta, 0755, true);
+        }
+
+        if (!move_uploaded_file($tmp, $pasta . $nomeFinal)) {
+            echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar imagem."]);
+            exit;
+        }
+
+        $atracao->setFoto("atracoes/" . $nomeFinal);
+    }
+
+    if ($atracao->cadastrar()) {
+        echo json_encode(["status" => "sucesso", "mensagem" => "Atração cadastrada com sucesso!"]);
+    } else {
+        echo json_encode(["status" => "erro", "mensagem" => "Erro ao cadastrar atração."]);
+    }
 }

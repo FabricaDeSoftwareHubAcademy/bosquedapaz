@@ -31,8 +31,8 @@
                                 <th>Data</th>
                                 <th>Status</th>
                                 <th class="fone-col">Editar</th>
-                                <th class="fone-col">Atração</th>
-                                <th>Foto</th>
+                                <th class="fone-col">Atrações</th>
+                                <th>Fotos</th>
                             </tr>
                         </thead>
                             <tbody id="lista-eventos">
@@ -49,7 +49,7 @@
                 <div class="b-voltar">
                 </div>
                 <div class="botoes">
-                    <a href="../../../app/adm/Views/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
+                    <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
                 </div>
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">

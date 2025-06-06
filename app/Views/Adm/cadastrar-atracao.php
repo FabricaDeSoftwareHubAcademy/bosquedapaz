@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,51 +15,45 @@
 
     <main class="principal">
         <div class="box">
-            <h2>CADASTRO DE ATRAÇÃO</h2>
+            <h1>CADASTRO DE ATRAÇÃO</h1>
                 <div class="form-box">
-                    <form method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="id_evento" value="<?= htmlspecialchars($id_evento) ?>">
+                    <form method="POST" enctype="multipart/form-data" id="form-atracao">
+                        <input type="hidden" name="id_evento" id="id_evento" value="<?php echo $_GET['id_evento'] ?? 0; ?>">
 
                         <div class="input-group">
                             <label>Nome:</label>
-                            <input type="text" name="nome_atracao" placeholder="Digite o nome da atração" required>
+                            <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome da atração" required>
                         </div>
 
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricao_atracao" placeholder="Digite uma breve descrição da atração" required></textarea>
+                            <textarea name="descricao_atracao" id="descricao_atracao" placeholder="Digite uma breve descrição da atração (250 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
+                            <small id="contador-caracteres">250 caracteres restantes</small>
                         </div>
 
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="foto_atracao" required>
-                        </div>
-
-                            <div class="preview-img">
-                                <img class="preview" src="" alt="" id="preview-image">
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="foto" id="file" required>
                             </div>
-
                         </div>
-                        
-                        <div class="btn-cancelar-salvar">
-                            <button class="btn btn-cancelar">
-                                <a href="./Area-Adm.php">Cancelar</a>
-                            </button>
+                        <img class="preview" src="" alt="" id="preview-image">
 
-                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                        <div class="btn-cancelar-salvar">
+                            <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
+                            <button type="submit" class="btn btn-salvar" id="salvar-atracao">Salvar</button>
                         </div>
                     </form>
-
                 </div>
-            <div class="btns">
-                <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
 
-                
-            </div>
+                    
+                <div class="btns">
+                    <a href="gerenciar-eventos.php" class="voltar">
+                        <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    </a>                  
+                </div>
         </div>
-        </div>
+        
     </main>
 
     <div class="bolas-fundo">
@@ -72,7 +64,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
-    <script src="../../../Public/js/js-adm/get-id-evento.js" defer></script>
+    <script src="../../../public/js/js-cadastrar-atracao.js" defer></script>
 </body>
 
 </html>

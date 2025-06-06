@@ -16,7 +16,7 @@
 
     <main class="principal">
         <div class="box">
-            <h2>Gerenciar Atração</h2>
+            <h2 id="titulo-atracoes">Gerenciar Atrações</h2>
             <div class="container">
                 <div class="search-bar">
                     <label for="busca">Procurar</label>
@@ -49,7 +49,7 @@
                 <div class="b-voltar"></div>
 
                 <div class="botoes">
-                    <a href="cadastrar-atracao.php"><button class="novo-evento">Nova atração</button></a>
+                    <button id="nova-atracao">Nova Atração</button>
                 </div>
             </div>
         </div>
@@ -61,10 +61,8 @@
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
-    <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../public/js/js-gerenciar-atracao.js"></script>
+    <script src="../../../public/js/js-adm/js-gerenciar-atracao.js"></script>
 </body>
 
 </html>

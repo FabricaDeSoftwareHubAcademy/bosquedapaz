@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
                 tr.innerHTML = `
                     <td class="nome-evento">${sanitize(event.nome_evento)}</td>
-                    <td>${sanitize(event.data_evento)}</td>
+                    <td>${sanitize(formatarDataBR(event.data_evento))}</td>
                     <td>
                         <span class="${event.status == 1 ? 'status-ativo' : 'status-inativo'}">
                             ${event.status == 1 ? 'Ativo' : 'Inativo'}
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                         </a>
                     </td>
                     <td class="mais">
-                        <a href="gerenciar-atracao.php?id_evento=${event.id_evento}">
+                        <a href="gerenciar-atracao.php?id_evento=${event.id_evento}&nome_evento=${encodeURIComponent(event.nome_evento)}">
                             <i class="fa-solid fa-list"></i>
                         </a>
                     </td>
@@ -53,6 +53,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     } catch (error) {
         console.error('Erro na requisição:', error);
         tabelaEventos.innerHTML = '<tr><td colspan="6">Erro na requisição dos dados.</td></tr>';
+    }
+    
+
+    function formatarDataBR(dataISO) {
+    if (!dataISO) return '';
+    const [ano, mes, dia] = dataISO.split('-');
+    return `${dia}/${mes}/${ano}`;
     }
 
     // Sanitize para evitar XSS

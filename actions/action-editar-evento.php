@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    if (empty($nome) || empty($descricao) || empty($data) || empty($status) || !validarData($data)) {
+    if (empty($nome) || empty($descricao) || empty($data) || !isset($_POST['status']) || !in_array($status, ['0', '1']) || !validarData($data)) {
         echo json_encode(['status' => 'error', 'mensagem' => 'Preencha todos os campos corretamente.']);
         exit;
     }
