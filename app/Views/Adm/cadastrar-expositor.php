@@ -1,4 +1,7 @@
-<?php ?>
+
+<?php
+// require_once './actions/cadastrar_expositor.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +20,7 @@
     <main class="principal">
 
 
-    
+
 
         <div class="box">
 
@@ -65,7 +68,7 @@
                         <div class="input">
                             <label for="optionInput3">Categorias</label>
                             <select name="id_categoria" id="categorias" class="select" require>
-                               
+
                                 <!-- OPTIONS GERADOS PELO JS -->
                             </select>
                         </div>
@@ -129,12 +132,21 @@
 
                 </div>
 
+                <div id="modal_salvar" class="modal-sucesso">
+                    <div class="modal-conteudo">
+                        <p>Salvo com sucesso!</p>
+                    </div>
+                </div> 
+
+
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
                         <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                     </a>
                 </div>
             </form>
+
+
 
 
         </div>
@@ -155,3 +167,4 @@
 </body>
 
 </html>
+

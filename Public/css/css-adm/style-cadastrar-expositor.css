@@ -1,3 +1,7 @@
+
+
+
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../menu-adm.css');
@@ -268,9 +272,40 @@ label#salvar-btn {
     font-weight: 600;
 }
 
+.btn-finalizar .btn-salvar:hover {
+    background-color: #0a645a;
+
+}
+
 
 /************ fim botao finalizar *************/
 
+/****************** modal teste ***********************/
+
+.modal-sucesso {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-sucesso .modal-conteudo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+/* fim modal */
 
 
 /************* RESPONSIVIDADE ***************/

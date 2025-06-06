@@ -19,6 +19,8 @@ async function getCategorias(){
 
 let btn_salvar = document.getElementById("btn_salvar");
 
+
+
 btn_salvar.addEventListener('click', async function(event){ 
      
     event.preventDefault();
@@ -31,7 +33,10 @@ btn_salvar.addEventListener('click', async function(event){
         body: dadosForms
     });
 
+    
     let response = await dados_php.json();
 
-    console.log(response);
+    if(response.status == "ok"){
+        alert('cadatsrado com sucesso');
+    }
  })
