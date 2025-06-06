@@ -61,6 +61,7 @@
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
+  <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>
   <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
 </body>
 </html>

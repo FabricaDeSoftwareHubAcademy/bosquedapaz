@@ -171,7 +171,11 @@ CREATE TABLE boleto(
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
 );
 
+SELECT 
+col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
+FROM colaborador as col INNER JOIN pessoa as pes ON col.id_pessoa = pes.id_pessoa;
 
+-- Inserts: 
 insert into carrossel (caminho, posicao) values 
 ("../Public/uploads/uploads-carrosel/img-carrossel-1.png", 1),
 ("../Public/uploads/uploads-carrosel/img-carrossel-2.png", 2),
@@ -182,12 +186,6 @@ insert into imagem values (default,"A","A","A","A","A");
 
 insert into categoria values (default,"BURGERS","ROXO","blablabla");
 
-insert into pessoa(nome, email, perfil, telefone, img_perfil) values ("matheus", "matheus@gmail.com", "ADM", "0000000000");
 
-insert into colaborador(id_pessoa, cargo) values (1, "Financeiro", "hdiajbdfiasbiuabsodubdbjdBD");
-
-select 
-col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
-from colaborador as col inner join pessoa as pes on col.id_pessoa = pes.id_pessoa;
 
 
