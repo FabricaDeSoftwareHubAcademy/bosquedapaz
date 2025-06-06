@@ -1,5 +1,12 @@
 <?php
-require_once '../../Models/Database.php';
+
+require_once('../vendor/autoload.php');
+
+namespace app\Controller;
+use PDO;
+use app\Models\Database;
+
+
 
 class Lista_expositor
 {

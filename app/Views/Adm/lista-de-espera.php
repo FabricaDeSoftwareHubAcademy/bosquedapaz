@@ -1,12 +1,4 @@
-<?php
-require_once '../Controller/Lista-espera.php';
-
-$lista = new Lista_expositor();
-
-$busca = isset($_GET['busca']) ? $_GET['busca'] : null;
-
-$expositores = $lista->listar($busca);
-?>
+<?php ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
