@@ -7,7 +7,7 @@
 
     <!-- bloco principal -->
     <title>Gerenciamento de Boletos</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-g_boleto.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- bloco principal -->
@@ -56,7 +56,7 @@
         </section>
 
         <!-- tabela de dados -->
-        <!-- <section class="area-tabela-de-dados">
+        <section class="area-tabela-de-dados">
             <table class="table-tabela-de-dados">
                 <thead class="thead-tabela-de-dados">
                     <tr class="tr-tabela-de-dados">
@@ -132,7 +132,7 @@
                         <td class="td-tabela-de-dados"><button class="botao-status status-pago">Pago</button></td>
                     </tr>
                     <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Lambda Equipamentos</td>
+                        <td class="td-tabela-de-dados">Lambda Equipamentos Palmeirenses Paulistoes</td>
                         <td class="td-tabela-de-dados">28/07/2025</td>
                         <td class="td-tabela-de-dados">JUL/2025</td>
                         <td class="td-tabela-de-dados">R$ 4.750,00</td>
@@ -140,7 +140,7 @@
                     </tr>
                 </tbody>
             </table>
-        </section> -->
+        </section>
 
 
         <!-- decorações -->
