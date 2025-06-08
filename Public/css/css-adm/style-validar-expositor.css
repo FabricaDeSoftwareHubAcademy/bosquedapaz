@@ -9,7 +9,7 @@
 }
 
 .body-validar-expositor {
-    height: auto;
+    height: 100vh;
     width: 100%;
     background-color: #e1e1e1;
     display: flex;
@@ -238,7 +238,7 @@ a {
 .botao-voltar {
     display: flex;
     position: absolute;
-    top: 860px;
+    top: 785px;
     left: 6vw;
     cursor: pointer;
 }

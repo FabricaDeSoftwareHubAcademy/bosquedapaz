@@ -1,25 +1,4 @@
-<?php
-$conn = new mysqli("localhost", "root", "", "banco_info");
 
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM info_usuarios WHERE id_usuario = 1";
-$result = $conn->query($sql);
-
-$dados = $result->fetch_assoc();
-?>
-
-<?php session_start(); ?>
-
-<script>
-    const mostrarModalValidar3 = <?= isset($_SESSION['status-validar']) && $_SESSION['status-validar'] === 'success' ? 'true' : 'false' ?>;
-    const mostrarModalRecusar3 = <?= isset($_SESSION['status-recusar']) && $_SESSION['status-recusar'] === 'success' ? 'true' : 'false' ?>;
-</script>
-
-<?php unset($_SESSION['status-recusar']); ?>
-<?php unset($_SESSION['status-validar']); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
