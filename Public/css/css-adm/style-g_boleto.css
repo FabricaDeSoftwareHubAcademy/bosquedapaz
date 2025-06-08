@@ -14,9 +14,8 @@
     height: 80%;
     margin-top: 2%;
     background-color: rgba(224, 224, 224, 0.473);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.452);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.281);
     border-radius: 10px;
-    gap: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +26,7 @@
     width: 90%;
     height: 20%;
     border-radius: 10px;
+    margin: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,16 +47,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 5%;
     /* background-color: red; */
 }
 
-/* .filtrar-por-nome #label-filtragem-de-nome {} */
+.filtrar-por-nome #label-filtragem-de-nome {
+    font-size: 1.2rem;
+}
 
 .filtrar-por-nome #input-filtragem-de-nome {
-    width: 95%;
+    width: 90%;
     height: 40%;
     border-radius: 10px;
     padding: 10px;
+    font-size: 1rem;
     border: none;
     outline: none;
 }
@@ -84,6 +88,7 @@
 .botao-pesquisar {
     display: flex;
     flex-direction: column;
+    gap: 5%;
 }
 
 .campos-de-filtro {
@@ -95,14 +100,19 @@
     /* background-color: pink; */
 }
 
+.campos-de-filtro #label-filtragem-de-data {
+    font-size: 1.2rem;
+}
+
 .campos-de-filtro #input-filtragem-de-data {
     width: 100%;
     height: 40%;
     border-radius: 10px;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .botao-pesquisar {
@@ -114,10 +124,15 @@
     /* background-color: aquamarine; */
 }
 
+.botao-pesquisar #label-botao-de-filtragem {
+    font-size: 1.2rem;
+}
+
 .botao-pesquisar #botao-de-filtragem {
     width: 100%;
     height: 40%;
     border-radius: 10px;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     background-color: #20368B;
@@ -131,6 +146,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 5%;
     /* background-color: blue; */
 }
 
@@ -138,23 +154,26 @@
     text-align: center;
 }
 
+.filtrar-por-status #label-filtragem-de-status {
+    font-size: 1.2rem;
+}
+
 .filtrar-por-status #campo-filtragem-de-status {
-    width: 95%;
+    width: 90%;
     height: 40%;
     border-radius: 10px;
     padding: 10px;
+    font-size: 1rem;
     border: none;
     outline: none;
     cursor: pointer;
 }
 
 .area-tabela-de-dados {
-    max-height: 350px;
+    max-height: 410px;
     overflow-y: auto;
     overflow-x: auto;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 20px auto;
     width: 90%;
 }
 
@@ -164,36 +183,98 @@
     min-width: 600px;
     border-collapse: collapse;
     text-align: center;
+    outline: none;
     font-family: Arial, sans-serif;
 }
 
 .thead-tabela-de-dados {
-    background-color: #f0f0f0;
+    background-color: #20368B;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 1;
 }
 
-.th-tabela-de-dados,
+.th-tabela-de-dados {
+    padding: 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
 .td-tabela-de-dados {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
 }
 
 /* Zebra striping nas linhas */
-.tr-tabela-de-dados:nth-child(even) {
-    background-color: #f9f9f9;
+.tbody-tabela-de-dados .tr-tabela-de-dados:nth-child(even) {
+    background-color: #e6e6e6;
 }
 
-.tr-tabela-de-dados:hover {
-    background-color: #efefef;
+.tbody-tabela-de-dados .tr-tabela-de-dados {
+    background-color: white;
+}
+
+.tbody-tabela-de-dados .tr-tabela-de-dados:hover {
+    background-color: #F1F1F1;
 }
 
 /* Estilização adicional (opcional) */
 .th-tabela-de-dados {
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
 }
+
+.botao-status {
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.status-pago {
+    background-color: #28A745;
+    color: white;
+}
+
+.status-pendente {
+    background-color: #DC3545;
+    color: white;
+}
+
+.decoracao {
+    position: absolute;
+}
+
+.decoracao-1 {
+    top: 50px;
+    left: 0;
+    z-index: -1;
+}
+
+.decoracao-2 {
+    top: 80px;
+    right: 0;
+    z-index: -1;
+}
+
+.decoracao-3 {
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.botao-voltar {
+    width: 70px;
+    height: auto;
+    top: 42vw;
+    left: 3vw;
+}
+
