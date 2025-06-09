@@ -173,6 +173,17 @@ CREATE TABLE boleto(
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
 );
 
+CREATE TABLE utilidade_publica (
+	id_utilidade_publica INT NOT NULL AUTO_INCREMENT,
+    titulo VARCHAR(50) NOT NULL,
+    descricao TEXT,
+    data_inicio DATE NOT NULL,
+    data_fim DATE NOT NULL,
+    imagem VARCHAR(255),
+    status_utilidade TINYINT(1) DEFAULT 1,
+    PRIMARY KEY(id_utilidade_publica)
+);
+
 -- SELECT 
 -- col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
 -- FROM colaborador as col INNER JOIN pessoa as pes ON col.id_pessoa = pes.id_pessoa;
