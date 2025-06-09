@@ -2,6 +2,10 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Atracao;
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 header('Content-Type: application/json');
 
 function sanitizarTexto($input) {
@@ -11,7 +15,7 @@ function sanitizarTexto($input) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = sanitizarTexto($_POST['nome_atracao'] ?? '');
     $descricao = sanitizarTexto($_POST['descricao_atracao'] ?? '');
-    $id_evento = intval($_POST['id_evento'] ?? 0);
+    $id_evento = intval($_POST['id_evento'] ?? '');
 
     if (!$nome || !$descricao || !$id_evento) {
         echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos obrigatórios."]);

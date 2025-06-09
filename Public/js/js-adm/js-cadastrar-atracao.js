@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form-atracao');
 
@@ -9,9 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Pegando parâmetros da URL
         const params = new URLSearchParams(window.location.search);
         const id_evento = params.get('id_evento');
-        const nome_evento = params.get('nome_evento');
 
-        if (!id_evento || !nome_evento) {
+        if (!id_evento) {
             alert("Evento não identificado corretamente.");
             return;
         }
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.status === 'sucesso') {
                 alert(data.mensagem);
-                window.location.href = `gerenciar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}`;
+                window.location.href = `gerenciar-atracao.php?id_evento=${id_evento}`;
             } else {
                 alert(data.mensagem || "Erro ao cadastrar atração.");
             }
