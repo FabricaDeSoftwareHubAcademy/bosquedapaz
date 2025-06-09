@@ -1,29 +1,52 @@
 <!-- começo cebecalho -->
-<header class="cabecalho">
-    <nav class="list-menu">
-        <div class="content content-logo">
-            <a href="./feira-bosque-da-paz.php" class="link-home">
-                <img src="../../../Public/imgs/img-home/logo.png" alt="logo" class="img-logo">
-            </a>
-        </div>
+<!-- começo cebecalho -->
+<header class="menu-adm" id="menu-adm">
+        
+    <!-- logo da feira -->
+    <div class="logo">
+        <a href="../../../app/Views/Adm/Area-Adm.php"> <img src="../../../Public/imgs/img-menu/logo.png" alt="Logo da Feira" class="img-logo" href=""></a>
+    </div>
 
-        <ul class="content nav-list" id="nav-list" rule="links-pages">
-            <li class="nav-item"><a href="#" class="link-ul">ínicio</a></li>
-            <li class="nav-item"><a href="#" class="link-ul">meus boletos</a></li>
-            <li class="nav-item"><a href="#" class="link-ul">editar perfil</a></li>
-        </ul>
+    <!-- itens de navegação -->
+    <nav class="nav-bar" id="nav-bar">
+        <ul class="nav-list" id="nav-list">
 
-        <div class="content conteiner-outros">
-            <div class="content-outros">
-                <i class="bi bi-list sandwich" id="sandwich"></i>
-            </div>
-            <div class="content-outros">
-                <a href="../../../Public/tela-login.php" target="_blank" class="link-login">
+            <li class="nav-item" id="cadastro">Cadastro</li>
+
+            <li class="nav-item">
+                <a href="../../../app/Views/Adm/editar-carrossel.php">
+                    Carrossel
+                </a>
+            </li>
+
+            <li class="nav-item" id="financeiro">Financeiro</li>
+
+            <li class="nav-item" id="lista">Listas</li>
+
+
+            <li class="nav-item" id="relatorios">Relatórios</li>
+            
+            <div class="content-outros login-mobile">
+                <a href="../../../app/Views/Adm/editar-adm.php" class="link-login">
                     <img src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Botão de login" class="img-login">
                 </a>
             </div>
-        </div>
+        </ul>
+        
     </nav>
+
+    <!-- exibir menu mobile -->
+    <div class="content conteiner-outros">
+        <div class="content-outros">
+            <i class="bi bi-list sandwich" id="sandwich"></i>
+        </div>
+        <div class="content-outros btn-login-1">
+            <a href="../../../app/Views/Adm/editar-adm.php" class="link-login">
+                <img src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Botão de login" class="img-login">
+            </a>
+        </div>
+    </div>
 </header>
+
 
 <script src="../../js/js-menu/js-menu-expositor.js"></script>

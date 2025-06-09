@@ -120,6 +120,10 @@
     color: #c1c1c1;
 }
 
+.li-login {
+    display: none;
+}
+
 .btn-mobile {
     display: none;
     padding: 0px 15px;
@@ -142,6 +146,10 @@
 
     .list-menu{
         height: 90px;
+    }
+
+    .li-login {
+        display: block;
     }
 
     .btn-login {

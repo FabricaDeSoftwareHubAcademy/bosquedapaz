@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Menu -->
-    <?php include "../../../Public/include/menu-adm.html" ?>
+    <?php include "../../../Public/include/home/menu-expositor.html" ?>
 
     <!-- Área Principal da Página -->
     <main class="container__main">
