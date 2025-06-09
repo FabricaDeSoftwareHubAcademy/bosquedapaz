@@ -155,15 +155,6 @@ class Database {
         return $res ? TRUE : FALSE;
     }
 
-    //método de deletar
-    // public function delete($where){
-    //     $query = 'DELETE FROM '. $this->table. ' WHERE '.$where;
-
-    //     $result = $this->execute($query);
-        
-    //     return ($result->rowCount() == 1) ? TRUE : FALSE;
-    // }
-
     public function delete($where){
         $query = "UPDATE ". $this->table. " SET status = 0 WHERE ". $where;
         return $this->execute($query) ? true : false;
@@ -199,8 +190,7 @@ class Database {
     }
 
     public function filtrar_expositor($filtro){
-        $query = "
-        SELECT * FROM expositor AS exp 
+        $query = "SELECT * FROM expositor AS exp 
         INNER JOIN categoria AS cat 
         ON cat.id_categoria = exp.id_categoria 
         INNER JOIN pessoa AS pes 
@@ -213,6 +203,18 @@ class Database {
         OR exp.num_barraca LIKE '%$filtro%'
         OR cat.descricao = '$filtro'
         ";
+
+        return $this->execute($query);
+    }
+    
+    public function select_expositor(){
+        $query = "SELECT * FROM expositor AS exp 
+        INNER JOIN categoria AS cat 
+        ON cat.id_categoria = exp.id_categoria 
+        INNER JOIN pessoa AS pes 
+        ON pes.id_pessoa = exp.id_pessoa
+        INNER JOIN imagem AS img 
+        ON img.id_imagem = exp.id_imagem";
 
         return $this->execute($query);
     }

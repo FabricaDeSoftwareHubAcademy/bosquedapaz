@@ -10,7 +10,7 @@ if (isset($_GET['filtro'])){
     $exp = new Expositor();
     
     try {
-        $response = $exp->filtrarExpositor($_GET['filtro']);
+        $response = $exp->listar($_GET['filtro']);
         echo json_encode(["expositores" => $response, 'status' => 200]);       
     } catch (\Throwable $th) {
         $response = ['status' => '500'];
@@ -18,4 +18,15 @@ if (isset($_GET['filtro'])){
     }
 
 
+}
+if(!isset($_GET['filtro'])){
+    $exp = new Expositor();
+    
+    try {
+        $response = $exp->listar();
+        echo json_encode(["expositores" => $response, 'status' => 200]);       
+    } catch (\Throwable $th) {
+        $response = ['status' => '500'];
+        echo json_encode($response);
+    }
 }
