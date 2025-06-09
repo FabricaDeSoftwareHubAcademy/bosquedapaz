@@ -16,4 +16,10 @@ class Pessoa
     protected $data_nasc;
     protected $foto_perfil;
     protected $perfil;
+    
+
+    public function novaSenha($nvSenha){
+        $db = new Database('pessoa');
+         
+    }
 }

@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-// require './teste2.php';
+require './sendEmail.php';
 
 if (isset($_POST['enviar'])) {
     $email = $_POST['email'];
@@ -14,16 +14,15 @@ if (isset($_POST['enviar'])) {
         echo "O campo de e-mail não pode estar vazio.";
     } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Gerar código de 5 dígitos
-        // $codigo = rand(10000, 99999);
-        $codigo = "11abc";
+        $codigo = rand(10000, 99999);
 
         // Armazenar o código e o e-mail na sessão
         $_SESSION['codigo_recuperacao'] = $codigo;
         $_SESSION['email_recuperacao'] = $email;
 
         // Chamar a função de envio de e-mail e capturar o retorno
-        // $emailService = new EmailService();
-        // $mensagem = $emailService->enviarEmail($email, $codigo);
+        $emailService = new EmailService();
+        $mensagem = $emailService->enviarEmail($email, $codigo);
 
         // Exibir a mensagem de retorno
         echo $mensagem;

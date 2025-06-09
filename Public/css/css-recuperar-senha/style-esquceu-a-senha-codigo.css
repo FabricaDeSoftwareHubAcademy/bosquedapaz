@@ -103,7 +103,7 @@ html,.body-recsenha{
 }
 
 .forms-recsenha{
-    height: 150px;
+    height: 250px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -219,7 +219,7 @@ html,.body-recsenha{
     position: relative;
     justify-content: space-evenly;
     width: 100%;
-    height: 48px;
+    height: 80px;
 }
 
 .botao-cancelar{
@@ -651,7 +651,7 @@ html,.body-recsenha{
     }
     
     .forms-recsenha{
-        height: 150px;
+        /* height: 150px; */
         width: 100%;
         display: flex;
         flex-direction: column;

@@ -119,6 +119,12 @@ class Database {
 
         return $this->execute($query);
     }
+    
+    public function selectWhere($where, $binds = [], $fields = '*', $order = null) {
+        $order = $order ? " ORDER BY $order" : '';
+        $query = "SELECT $fields FROM $this->table WHERE $where $order";
+        return $this->execute($query, $binds);
+    }
 
     public function select_all($tableP, $id_name, $where = null){
         $where = strlen($where) ? " WHERE ". $where : '';

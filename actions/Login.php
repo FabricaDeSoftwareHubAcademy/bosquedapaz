@@ -23,4 +23,16 @@ class Login{
         }
     }
 
+
+    // public function autenticar($email, $senha){
+    // $db = new Database('usuario');
+
+    // $login = $db->selectWhere("email = ?", [$email])->fetchObject();
+
+    //     if($login && password_verify($senha, $login->senha)){
+    //         return $login;
+    //     } else {
+    //         return null;
+    //     }
+    // }
 }
