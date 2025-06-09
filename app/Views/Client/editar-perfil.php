@@ -22,21 +22,28 @@
             <form action="#" class="perfilEdit-form">
 
                 <section class="perfilEdit-empresas">
+
                     <div class="perfilEdit-logo perfilEdit-important-input">
-                        <label class="perfilEdit-logoEmpresa perfilEdit-impotant-label">Logo da empresa: </label>
+
+                        <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
                         <input type="file" name="foto" id="foto" class="perfilEdit-foto" required>
                         <label for="foto" class="perfilEdit-upload">
                             Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
                         </label>
+
                     </div>
+
                     <div class="perfilEdit-name perfilEdit-important-input">
-                        <label for="nome" class="perfilEdit-nameEmpresa perfilEdit-impotant-label">Nome da empresa: </label>
+
+                        <label for="nome" class="perfilEdit-nameEmpresa perfilEdit-important-label">Nome da empresa: </label>
                         <input type="text" name="nome" id="nome" class="perfilEdit-nome" placeholder="Digite seu nome" required>
+
                     </div>
+
                 </section>
 
                 <section class="perfilEdit-desc">
-                    <label class="perfilEdit-label-desc perfilEdit-impotant-label" for="descricao">Sobre a Empresa: </label>
+                    <label class="perfilEdit-label-desc perfilEdit-important-label" for="descricao">Sobre a Empresa: </label>
                     <textarea name="descricao" id="descricao" class="perfilEdit-text-desc" placeholder="Digite uma breve descrição sobre sua empresa"></textarea>
                 </section>
 
@@ -63,7 +70,7 @@
                 </section>
 
                 <section class="perfilEdit-foto-info">
-                    <label for="foto" class="perfilEdit-foto-info-label perfilEdit-impotant-label">Selecione fotos de seus produtos:</label>
+                    <label for="foto" class="perfilEdit-foto-info-label perfilEdit-important-label">Selecione fotos de seus produtos:</label>
                     <div class="perfilEdit-div-group">
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
