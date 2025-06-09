@@ -2,428 +2,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../../../bosquedapaz/css/menu-home.css');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-.bola-1 {
-    position: fixed;
-    top: 15vh;
-    right: 80vw;
-    z-index: 1;
-    width: 20vw;
-    z-index: -1;
-}
-
-.bola-1 img {
-    width: 50%;
-    height: auto;
-}
-
-.bola-2 {
-    position: fixed;
-    top: 18vh;
-    left: 90vw;
-    z-index: 1;
-    width: 20vw;
-    z-index: -1;
-}
-
-.bola-2 img {
-    width: 50%;
-    height: auto;
-}
-
-.bola-3 {
-    position: fixed;
-    top: 75vh;
-    left: 82vw;
-    z-index: 1;
-    width: 20vw;
-    z-index: -1;
-}
-
-.bola-3 img {
-    width: 100%;
-    height: auto;
 }
 
 .principal-tela-utl {
     width: 100%;
-    height: 90vh;
-    background-color: rgba(0, 255, 255, 0);
+    padding-top: 100px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .box-principal-utl {
-    width: 85%;
+    width: 90%;
     height: 90%;
-    background-color: rgba(248, 245, 246, 0.705); 
-    border-radius: 10px;
-    z-index: 2;
+    border-radius: .5rem;
+    background-color: rgba(248, 245, 246, 0.705);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    margin-top: 8%;
-}
-
-.container__h1{
-    width: 100%;
-    height: 10%;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    /* background-color: aqua; */
-    /* margin-bottom: 50px; */
+    justify-content: space-between;
 }
 
-.container__h1 h1{
-    font-size: 30px;
-    font-weight: 600;
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 1rem 0px;
+    justify-self: flex-start;
 }
 
 .area-cards {
     width: 100%;
-    /* height: 90%; */
-    background-color: transparent; 
+    padding: 4rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-evenly;
 }
 
-.cards{
-    width: 320px;
-    height: 450px;
-    overflow: hidden;
-    position: relative;
+.cards {
     background-color: white;
-    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: .5rem;
+    overflow: hidden;
+    border: 1px solid blue;
     transition: all .2s ease-in-out;
 }
 
 .cards:hover {
-    transform: scale(1.1);
-}
-
-.por-cima-card{
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    z-index: 2;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.parte-superior{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.parte-superior img{
-    width: 85%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.parte-inferior{
-    width: 100%;
-    height: 50%;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px;
-}
-
-.parte-inferior h1{
-    position: relative;
-    bottom: 40px;
-}
-
-.saiba-mais{
-    width: 111%;
-    padding: 18px;
-    border-radius: 10px;
-    border: 1px solid #3F49EA;
-    color: #3F49EA;
-    font-size: 17px;
-    font-weight: 800;
-    background-color: white;
-    position: relative;
-    top: 24px;
-    z-index: 1;
+    margin-top: -50px;
     transition: all .2s ease-in-out;
 }
 
-.saiba-mais:hover{
-    background-color: #3F49EA;
-    border: 1px solid white;
-    color: white;
-}
-
-.div__decorativa{
-    width: 380px;
-    height: 43%;
-    position: absolute;
-    top: 34vh;
-    left: 1px;
-    background-color: #3F49EA;
+.div__decorativa {
+    width: 400px;
+    height: 50%;
     transform: rotate(-25deg);
-    z-index: 1;
+    position: absolute;
+    bottom: -100px;
+    left: 5px;
+    z-index: 0;
+    background-color: blue;
 }
 
-.linha__decorativa1{
-    width: 15px;
-    height: 38%;
+.linha__decorativa1 {
     position: absolute;
-    top: 27vh;
-    left: 64px;
-    background-color: #3F49EA;
-    border-radius: 10px;
-    transform: rotate(65deg);
-    z-index: 1;
-}
-
-.linha__decorativa2{
-    width: 15px;
-    height: 38%;
-    position: absolute;
-    top: 24vh;
-    left: 238px;
+    width: 200px;
+    height: 1rem;
+    border-radius: 1rem;
+    bottom: 120px;
+    left: 150px;
+    transform: rotate(-25deg);
     background-color: white;
-    border-radius: 10px;
-    transform: rotate(65deg);
-    z-index: 1;
+}
+.linha__decorativa2 {
+    position: absolute;
+    width: 200px;
+    height: 1rem;
+    bottom: 90px;
+    left: -30px;
+    border-radius: 1rem;
+    transform: rotate(-25deg);
+    background-color: blue;
 }
 
-
-.area-img {
+.por-cima-card {
     width: 100%;
-    height: 50%;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-    align-items: center;
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0px;
 }
 
-.area-button {
-    width: 100%;
-    height: 50%;
-    background-color: rgb(255, 255, 255);
-}
-
-.botao-saiba-mais {
-    width: 75%;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #FF3877;
-    color: #FF3877;
-    font-size: 17px;
-    font-weight: 800;
-    background-color: white;
-    position: relative;
+.parte-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     z-index: 1;
-    top: 43%;
-    left: 13%;
+}
+
+.saiba-mais {
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    border: 1px solid blue;
     transition: all .2s ease-in-out;
 }
 
-.botao-saiba-mais:hover {
-    background-color: #FF3877;
-    border: 1px solid white;
+.saiba-mais:hover {
+    background-color: blue;
+    border-color: white;
     color: white;
+    transition: all .2s ease-in-out;
+} 
+
+.img-card {
+    width: 220px;
+    border-radius: .5rem;
 }
 
-#border-card-azul {
-    border: 1px solid #3F49EA;
-}
-
-#h1-azul-card {
-    color: #3F49EA;
-}
-
-#h1-rosa-utl {
-    color: #FF3877;
-}
-
-#dec-azul-utl {
-    background-color: #3F49EA;
-}
-
-#dec2-azul-utl {
-    border-right: 15px solid #3F49EA;
-}
-
-#seta-voltar {
-    right: 47%;
-    position: relative;
-}
-
-
-
-/* Responsividades: */
-/* Celulares pequenos (smartphones compactos) */
-@media (max-width: 575.98px){
-   .area-cards{
+.parte-inferior {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 27rem;
-   }
-
-   .box-principal-utl{
-    overflow-y: auto;
-    position: relative;
-    top: 4rem;
-   }
-
-   .cards{
-    width: 200px;
-    height: 19rem;
-   }
-
-    .div__decorativa{
-        top: 70%;
-    }
-    
-    
-    .linha__decorativa1{
-        top: 67%;
-        left: 15%;
-    }
-
-    .linha__decorativa2{
-        top: 57%;
-        left: 77%;
-    }
-
-    .saiba-mais{
-        width: 106%;
-        padding: 8%;
-        top: 10%;
-        font-size: 13px;
-    }
-
-    .container__h1{
-        position: relative;
-        top: 10rem;
-    }
+    z-index: 1;
 }
- 
- 
-/* Celulares médios e grandes (smartphones modernos) */
-@media (min-width: 576px) and (max-width: 767.98px){
-    .area-cards{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 25rem;
-    }
 
-    .box-principal-utl{
-        overflow-y: auto;
-        position: relative;
-        top: 4rem;
-    }
-
-    .cards{
-        width: 265px;
-        height: 18rem;
-    }
-
-    .div__decorativa{
-        top: 21rem;
-    }
-
-    .linha__decorativa1{
-        top: 10rem;
-    }
-
-    .linha__decorativa2{
-        top: 15rem;
-    }
+.seta-volt {
+    width: 100%;
+    padding: 1.5rem;
 }
- 
- 
-/* Tablets e celulares em paisagem */
-@media (min-width: 768px) and (max-width: 991.98px){
-    .area-cards{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        position: relative;
+
+@media screen and (max-width: 1400px) {
+    .cards {
+        width: 250px;
+        height: 400px;
     }
 
-    .box-principal-utl{
-        position: relative;
-        top: 3rem;
-    }
-
-    .container__h1{
-        position: relative;
-        bottom: 40px;
+    .div__decorativa {
+        bottom: -80px;
+        left: 5px;
+        z-index: 0;
     }
     
-    .cards{
+    .linha__decorativa1 {
+        bottom: 120px;
+        left: 150px;
+    }
+    .linha__decorativa2 {
+        width: 150px;
+        bottom: 70px;
+        left: -30px;
+
+    }
+
+    .img-card {
         width: 200px;
-        height: 19rem;
-        left: 23%;
     }
 
-    .div__decorativa{
-        top: 68%;
+    .principal-tela-utl {
+        padding-bottom: 2rem;
     }
+}
 
-    .linha__decorativa1{
-        top: 66%;
-        left: 15%;
+@media screen and (max-width: 1300px) {
+    .area-cards {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        max-height: 1000px;
+        gap: 2rem;
     }
-
-    .linha__decorativa2{
-        top: 58%;
-        left: 79%;
-    }
-
-    .saiba-mais{
-        width: 106%;
-        padding: 8%;
-        top: 0%;
-        font-size: 13px;
+}
+@media screen and (max-width: 550px) {
+    .area-cards {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-height: 2000px;
+        gap: 2rem;
     }
     
-}
- 
- 
-/* Notebooks e desktops padrão */
-@media (min-width: 992px) and (max-width: 1199.98px){
-  
-}
- 
- 
-/* Desktops grandes e telas Full HD */
-@media (min-width: 1200px) and (max-width: 1399.98px){
-    
-}
- 
- 
-/* Computadores Largos e Compactos (Baixa Altura):  */
-@media (min-width: 1400px) and (max-height: 699.98px){
-  
-}
+    .cards {
+        min-width: 250px;
+        min-height: 400px;
+    }
 
-/* Pequenos Ajustes:  */
+    .linha__decorativa1 {
+        bottom: 120px;
+        left: 150px;
+    }
+    .linha__decorativa2 {
+        width: 150px;
+        bottom: 90px;
+        left: -30px;
+
+    }
+}
