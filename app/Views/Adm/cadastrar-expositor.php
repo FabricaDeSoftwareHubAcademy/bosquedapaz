@@ -146,10 +146,10 @@
 
         
     <div id="modal_salvar" class="oculta">
-            <div class="modal-conteudo">
-                <p>Salvo com sucesso!</p>
-                <form method="dialog">
-                    <button id="fechar_modal">Close</button>
+            <div class="modal_conteudo">
+                <p class="text_modal">Cadastro salvo com sucesso!</p>
+                <form method="dialog" class="fecha_modal">
+                    <button id="fechar_modal">Fechar</button>
                 </form>
             </div>
     </div> 

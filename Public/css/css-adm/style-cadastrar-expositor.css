@@ -282,8 +282,23 @@ label#salvar-btn {
 
 /****************** modal teste ***********************/
 
+
 .oculta{
     visibility: hidden;
+}
+
+
+.modal_conteudo{
+    height: 100px;
+    /* width: ; */
+    background-color: #58b1a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 45%;
 }
 
 .show_modal {
