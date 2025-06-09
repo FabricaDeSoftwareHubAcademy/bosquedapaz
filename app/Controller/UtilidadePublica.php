@@ -14,10 +14,11 @@ use app\Models\Database;
         public string $data_inicio;
         public string $data_fim;
         public string $imagem;
+        public int $status_utilidade;
 
         public function cadastrar()
         {
-            $db = new Database('utilidadesPublica');
+            $db = new Database('utilidade_publica');
             $res = $db->insert(
                 [
                     'titulo' => $this->titulo,
@@ -29,6 +30,16 @@ use app\Models\Database;
             );
             return $res;
         } 
+
+
+        public function listar($where = null, $order = null, $limit = null) {
+            $db = new Database('utilidade_publica');
+            $res = $db->select($where, $order, $limit)
+                      ->fetchAll(PDO::FETCH_CLASS, self::class);
+    
+            return $res;
+        }
+    
     }
 
 ?>
