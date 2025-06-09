@@ -22,17 +22,17 @@
     
     
         <section class="section-nosso-time-quem-somos">
-            <div class='sobre_a_feira'>
-                <h1>Sobre a Feira</h1>
+            <div class='sobre-a-feira'>
+                <h1>Conexões que geram mudança</h1>
             </div>
              
-            <div class="div-nt" >
-                <h1 class="descricao-sobre-a-feira">A <span class="tit">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
+            <div class="div-descricao" >
+                <h1 class="descricao-sobre-a-feira">A <span class="subtitulo-feira">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
             </div>
         </section> 
 
-<section class="section-cards-apoios">
-    <div class="card-per-expo card1">
+<section class="section-cards-apoio">
+    <div class="card-apoio card1">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-perfil-expo">
         </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="card-per-expo card2">
+    <div class="card-apoio card2">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-perfil-expo">
         </div>
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div class="card-per-expo card3">
+    <div class="card-apoio card3">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-perfil-expo">
         </div>
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="card-per-expo card4">
+    <div class="card-apoio card4">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-perfil-expo">
         </div>
@@ -90,13 +90,13 @@
 </section>
 
 
-    <section class="section-parce2">
+    <section class="section-apoiadores">
         <div class="sobre-apoiadores">
-            <h1>Nossos Apoiadores</h3>
+            <h1>Nossos apoiadores</h3>
         </div>
     
-    <div class="carrossel-parceiros">
-        <div class="slider-parceiros" id="carrosselTrack">
+    <div class="carrossel-apoiadores">
+        <div class="slider-apoiadores" id="carrosselTrack">
             <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
             <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
             <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
