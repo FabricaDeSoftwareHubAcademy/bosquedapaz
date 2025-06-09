@@ -1,96 +1,126 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const modalCadastro = document.getElementById("cadastro-categoria");
-    const form_categoria = document.getElementById('form_categoria');
-    const botao_cadastrar = document.getElementById("btn_cadastrar_cat");
+document.addEventListener('DOMContentLoaded', () => {
+    // Referências para os elementos do modal e do formulário
+    const dialog = document.getElementById('cadastro-categoria');
+    const form = document.getElementById('form_categoria');
 
-    // Abertura do modal e preenchimento dos campos
-    document.querySelectorAll(".open-modal").forEach(button => {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
+    if (!dialog || !form) {
+        console.error('O dialog de edição ou o formulário não foram encontrados no HTML.');
+        return;
+    }
 
-            const id = this.dataset.id;
-            const nome = this.dataset.nome;
-            const cor = this.dataset.cor;
+    // --- LÓGICA PARA ABRIR E PREENCHER O MODAL ---
+    
+    // Adiciona um 'ouvinte' de clique em todos os botões/ícones de edição
+    document.querySelectorAll('.open-modal').forEach(button => {
+        button.addEventListener('click', async (e) => {
+            e.preventDefault(); // Impede que o link navegue para href="#"
 
-            document.querySelector('input[name="id_categoria"]').value = id;
-            document.querySelector('input[name="descricao"]').value = nome;
-            document.getElementById('corInput').value = cor;
+            // Pega o ID da categoria guardado no atributo data-id
+            const id = button.dataset.id;
+            if (!id) {
+                alert('Não foi possível encontrar o ID da categoria.');
+                return;
+            }
 
-            document.getElementById('selectedText').textContent = cor;
-            document.getElementById('selectedColor').style.backgroundColor = cor;
+            try {
+                // Busca os dados da categoria específica no backend
+                const response = await fetch(`../../../actions/action-buscar-categoria.php?id=${id}`);
+                const data = await response.json();
 
-            modalCadastro.showModal();
+                if (data.status === 'success' && data.categoria) {
+                    const categoria = data.categoria;
+
+                    // Preenche os campos do formulário DENTRO do dialog
+                    form.querySelector('#id_categoria').value = categoria.id_categoria;
+                    form.querySelector('#descricao').value = categoria.descricao;
+                    
+                    // Preenche o campo de cor oculto e atualiza a pré-visualização
+                    const corInput = form.querySelector('#corInput');
+                    const selectedColorDiv = form.querySelector('#selectedColor');
+                    const selectedTextSpan = form.querySelector('#selectedText');
+                    
+                    corInput.value = categoria.cor;
+                    selectedColorDiv.style.backgroundColor = categoria.cor;
+                    selectedTextSpan.textContent = `Cor selecionada`; // Atualiza o texto
+
+                    // Finalmente, abre o dialog
+                    dialog.showModal();
+
+                } else {
+                    alert('Erro ao buscar os dados da categoria: ' + (data.mensagem || 'Categoria não encontrada.'));
+                }
+
+            } catch (error) {
+                console.error('Erro na requisição para buscar categoria:', error);
+                alert('Ocorreu um erro de comunicação ao buscar os dados.');
+            }
         });
     });
+    const selected = document.querySelector(".select-selected");
+    const selectedText = document.getElementById("selectedText");
+    const selectedColor = document.getElementById("selectedColor");
+    const items = document.querySelector(".select-items");
 
-    // Fechar modal nos botões com classe close-modal
-    document.querySelectorAll(".close-modal").forEach(button => {
-        button.addEventListener("click", function () {
-            modalCadastro.close();
-        });
-    });
-
-    // Fechar modal clicando fora do conteúdo
-    modalCadastro.addEventListener("click", function (event) {
-        if (event.target === modalCadastro) {
-            modalCadastro.close();
+    selected?.addEventListener("click", () => {
+        if (items) {
+            items.style.display = items.style.display === "block" ? "none" : "block";
         }
     });
 
-    // Enviar formulário de categoria (edição)
-    botao_cadastrar?.addEventListener("click", async function (event) {
-        event.preventDefault();
+    document.querySelectorAll(".select-items div").forEach(item => {
+        item.addEventListener("click", function () {
+            if (selectedText && selectedColor) {
+                selectedText.textContent = this.textContent.trim();
+                selectedColor.style.backgroundColor = this.dataset.value;
+                document.getElementById("corInput").value = this.dataset.value;
+            }
+            if (items) {
+                items.style.display = "none";
+            }
+        });
+    });
 
-        if (!form_categoria) {
-            console.error("Formulário 'form_categoria' não encontrado!");
-            alert("Erro interno: formulário não encontrado.");
-            return;
-        }
+    // --- LÓGICA PARA ENVIAR O FORMULÁRIO DE EDIÇÃO ---
 
-        const formData = new FormData(form_categoria);
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        const formData = new FormData(form);
 
         try {
-            const resposta = await fetch('../../../actions/edicao-categoria.php', {
+            // Envia os dados atualizados para o script de edição no backend
+            const response = await fetch('../../../actions/action-editar-categoria.php', {
                 method: 'POST',
                 body: formData
             });
 
-            const resultado = await resposta.json();
-            console.log(resultado);
+            // É sempre bom verificar a resposta como texto primeiro para depurar
+            const responseText = await response.text();
+            console.log('Resposta bruta do servidor:', responseText);
 
-            if (resultado.status === "OK") {
-                alert("Editado com sucesso");
-                modalCadastro?.close();
-                setTimeout(() => location.reload(), 1000);
+            const data = JSON.parse(responseText);
+
+            if (data.status === 'success') {
+                alert(data.message || 'Categoria atualizada com sucesso!');
+                dialog.close(); // Fecha o modal
+                window.location.reload(); // Recarrega a página para mostrar os dados atualizados
             } else {
-                alert("Erro ao editar: " + (resultado.message || 'Erro desconhecido'));
+                alert('Falha ao atualizar: ' + (data.message || 'Ocorreu um erro desconhecido.'));
             }
+
         } catch (error) {
-            console.error("Erro no envio:", error);
-            alert("Erro inesperado.");
+            console.error('Erro ao enviar o formulário de edição:', error);
+            alert('Ocorreu um erro de comunicação ao salvar as alterações.');
         }
     });
 
-    // Selecionador de cor no modal
-    const colorItems = document.querySelectorAll("#seletor-cor div");
-    const corInput = document.getElementById("corInput");
-    const selectedText = document.getElementById("selectedText");
-    const selectedColor = document.getElementById("selectedColor");
+    // --- LÓGICA PARA FECHAR O MODAL ---
 
-    colorItems.forEach(item => {
-        item.addEventListener("click", () => {
-            const selectedValue = item.getAttribute("data-value");
-            corInput.value = selectedValue;
-            selectedColor.style.backgroundColor = selectedValue;
-            selectedText.textContent = selectedValue;
+    // Adiciona evento para os botões de fechar/cancelar
+    dialog.querySelectorAll('.close-modal, .cancelar').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            dialog.close();
         });
     });
 });
-
-// Função global para fechar modal por ID
-function fecharModal(idModal) {
-    const modal = document.getElementById(idModal);
-    if (modal && typeof modal.close === 'function') {
-        modal.close();
-    }
-}

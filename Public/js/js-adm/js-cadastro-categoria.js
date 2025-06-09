@@ -114,19 +114,24 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(response);
 
             if (response.status === "OK") {
-                alert("Cadastrado com sucesso");
+                alert("✅ " + response.message);
                 modalCadastro?.close();
                 setTimeout(() => {
-                    location.reload(); 
-                }, 3000); 
+                    location.reload();
+                }, 2000);
+            } else if (response.status === "Error") {
+                // Exibe a mensagem de erro vinda do PHP
+                alert("❌ " + response.message);
             } else {
-                alert("Erro ao cadastrar!");
+                // Caso alguma estrutura inesperada seja retornada
+                alert("❌ Ocorreu um erro desconhecido.");
             }
         } catch (error) {
             console.error("Erro no envio:", error);
-            alert("Erro inesperado.");
+            alert("❌ Erro inesperado ao enviar o formulário.");
         }
     });
+
 
     // Botão de abrir modal (opcional duplicado)
     const bot_categoria = document.querySelector(".btn-cad");
@@ -162,4 +167,4 @@ function fecharModal(idModal) {
     }
 }
 
-  
+

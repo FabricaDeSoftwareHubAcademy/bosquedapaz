@@ -1,80 +1,93 @@
 <?php
-// require_once "../../app/adm/Controller/Categoria.php";
 require_once('../vendor/autoload.php');
 
-use app\Models\Database;
 use app\Controller\Categoria;
 
-// Define o cabeçalho como JSON
 header('Content-Type: application/json');
 
-if (isset($_POST['descricao']) && isset($_POST['cor']) && isset($_FILES['icone'])) {
-    $descricao = $_POST['descricao'];
-    $cor = $_POST['cor'];
+// Função para sanitizar texto
+function sanitizarTexto($input) {
+    return htmlspecialchars(strip_tags(trim($input)));
+}
+
+// Verifica se todos os dados esperados foram recebidos via POST
+if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
+    $descricao = sanitizarTexto($_POST['descricao']);
+    $cor = $_POST['cor']; // Não precisa de sanitização complexa como texto
     $arquivo = $_FILES['icone'];
 
-    if ($arquivo['error']) {
-        echo json_encode([
-            'status' => 'Error',
-            'message' => 'Falha ao enviar arquivo'
-        ]);
+    // --- Validações ---
+    if (empty($descricao)) {
+        echo json_encode(['status' => 'error', 'message' => 'A descrição da categoria é obrigatória.']);
+        exit;
+    }
+    if (empty($cor)) {
+        echo json_encode(['status' => 'error', 'message' => 'A cor é obrigatória.']);
+        exit;
+    }
+    if ($arquivo['error'] !== UPLOAD_ERR_OK) {
+        echo json_encode(['status' => 'error', 'message' => 'Nenhum ícone foi enviado ou ocorreu um erro no upload.']);
         exit;
     }
 
-    $pasta = '../Public/imgs/uploads-categoria/'; //colocar caminho img
-
-    if (!is_dir($pasta)) {
-        try{
-            mkdir($pasta, 0777, true);
-        }catch (Exception $error){
-            $passou = "erro ao criar a pasta";
-        }
-
-
-    }
-
-    $nome_foto = $arquivo['name'];
-    $novo_nome = uniqid();
-    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
-
-    if (!in_array($extensao, ['png', 'jpg', 'jpeg', 'jfif', 'svg'])) {
-        echo json_encode([
-            'status' => 'Error',
-            'message' => 'Extensão do arquivo inválida'
-        ]);
+    // --- Validação e Processamento do Arquivo ---
+    $extensao = strtolower(pathinfo($arquivo['name'], PATHINFO_EXTENSION));
+    $extensoesPermitidas = ['png', 'jpg', 'jpeg', 'jfif', 'svg'];
+    if (!in_array($extensao, $extensoesPermitidas)) {
+        echo json_encode(['status' => 'error', 'message' => 'Formato de ícone inválido. Use jpg, png, svg ou gif.']);
         exit;
     }
 
-    $caminho = $pasta . $novo_nome . '.' . $extensao;
+    $tamanhoMaximo = 2 * 1024 * 1024; // 2MB
+    if ($arquivo['size'] > $tamanhoMaximo) {
+        echo json_encode(['status' => 'error', 'message' => 'Arquivo muito grande. O máximo permitido é 2MB.']);
+        exit;
+    }
 
-    if (move_uploaded_file($arquivo['tmp_name'], $caminho)) {
-        $cat = new Categoria();
-        $cat->descricao = $descricao;
-        $cat->cor = $cor;
-        $cat->icone = $caminho;
+    // --- Tratamento de Caminhos e Upload ---
+    
+    // Caminho no sistema de arquivos para onde o arquivo será movido (com '../')
+    $diretorioDeUpload = __DIR__ . '/../Public/imgs/uploads-categoria/';
+    
+    // Caminho que será salvo no banco de dados (sem '../', relativo à pasta Public)
+    $caminhoParaBanco = 'imgs/uploads-categoria/';
 
-        $res = $cat->cadastrar();
+    // Cria o diretório se ele não existir
+    if (!is_dir($diretorioDeUpload)) {
+        mkdir($diretorioDeUpload, 0777, true);
+    }
 
-        if ($res) {
-            echo json_encode([
-                'status' => 'OK',
-                'message' => 'Categoria cadastrada com sucesso!'
-            ]);
-        } else {
-            echo json_encode([
-                'status' => 'Error',
-                'message' => 'Erro ao cadastrar a categoria'
-            ]);
-        }
+    $novo_nome = uniqid('cat_', true) . '.' . $extensao;
+    $caminhoCompletoParaMover = $diretorioDeUpload . $novo_nome;
+
+    if (!move_uploaded_file($arquivo['tmp_name'], $caminhoCompletoParaMover)) {
+        echo json_encode(['status' => 'error', 'message' => 'Falha ao salvar o arquivo no servidor.']);
+        exit;
+    }
+    
+    $caminhoFinalParaBanco = $caminhoParaBanco . $novo_nome;
+
+    // --- Criação e Cadastro do Objeto ---
+
+    // Cria uma nova instância da Categoria
+    $cat = new Categoria();
+    
+    // **CORREÇÃO PRINCIPAL:** Usa os métodos SETTERS para definir os valores
+    $cat->setDescricao($descricao);
+    $cat->setCor($cor);
+    $cat->setIcone($caminhoFinalParaBanco); // Salva o caminho limpo no objeto
+
+    // Chama o método para cadastrar no banco
+    $res = $cat->cadastrar();
+
+    if ($res) {
+        echo json_encode(['status' => 'OK', 'message' => 'Categoria cadastrada com sucesso!']);
     } else {
-        echo json_encode([
-            'status' => 'Error',
-            'message' => 'Falha ao mover o arquivo para o diretório'
-        ]);
+        // Em caso de falha, é uma boa prática remover o arquivo que foi salvo
+        unlink($caminhoCompletoParaMover);
+        echo json_encode(['status' => 'error', 'message' => 'Erro ao cadastrar a categoria no banco de dados.']);
     }
+
 } else {
-    echo json_encode([
-        'status' => 'Error',
-        'message' => 'Dados do formulário inválidos'
-    ]);
+    echo json_encode(['status' => 'error', 'message' => 'Dados do formulário incompletos ou inválidos.']);
 }
