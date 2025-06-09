@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 
 session_start();
 require './sendEmail.php';
+require_once '../app/Controller/Pessoa.php';
+use app\Controller\Pessoa;
 
 if (isset($_POST['enviar'])) {
     $email = $_POST['email'];
@@ -13,24 +15,39 @@ if (isset($_POST['enviar'])) {
     if (empty($email)) {
         echo "O campo de e-mail não pode estar vazio.";
     } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Gerar código de 5 dígitos
-        $codigo = rand(10000, 99999);
 
-        // Armazenar o código e o e-mail na sessão
-        $_SESSION['codigo_recuperacao'] = $codigo;
-        $_SESSION['email_recuperacao'] = $email;
+        $verificarEmail = new Pessoa();
+        $verificarEmail->setEmail($email);
+        $emailExiste = $verificarEmail->verificar_email();
 
-        // Chamar a função de envio de e-mail e capturar o retorno
-        $emailService = new EmailService();
-        $mensagem = $emailService->enviarEmail($email, $codigo);
+        print_r($verificarEmail);
 
-        // Exibir a mensagem de retorno
-        echo $mensagem;
-        header('Location: ./tela-esqueceu-a-senha-codigo.php');
-
-    } else {
-        echo "E-mail inválido. Tente novamente.";
-    }
+        if (!$emailExiste) {
+        echo "<script>
+                alert('Email não encontrado.');
+                window.location.href = './tela-esqueceu-a-senha.php';
+            </script>";
+            exit;
+        }else{
+            // Gerar código de 5 dígitos
+            $codigo = rand(10000, 99999);
+            
+            // Armazenar o código e o e-mail na sessão
+            $_SESSION['codigo_recuperacao'] = $codigo;
+            $_SESSION['email_recuperacao'] = $email;
+            
+            // Chamar a função de envio de e-mail e capturar o retorno
+            $emailService = new EmailService();
+            $mensagem = $emailService->enviarEmail($email, $codigo);
+            
+            // Exibir a mensagem de retorno
+            echo $mensagem;
+            header('Location: ./tela-esqueceu-a-senha-codigo.php');
+            
+        }
+        } else {
+            echo "E-mail inválido. Tente novamente.";
+        }
 }
 
 ?>
