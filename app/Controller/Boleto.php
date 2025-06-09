@@ -33,5 +33,26 @@ class Boleto {
         ]);
         return $execucao;
     }
+
+    public function ListarBoletos($nome) {
+        $banco = new Database();
+        if(!empty($nome)) {
+            return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+            return $banco->filtrar_boletos_por_nome($nome)->fetchAll(PDO::FETCH_ASSOC);
+        }
+    }
+
+    public function FiltrarPorStatus($status) {
+        $banco = new Database();
+        return $banco->filtrar_boletos_por_status($status)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function FiltrarPorData($data_inicial, $data_final) {
+        $banco = new Database();
+        return $banco->filtrar_boletos_por_data($data_inicial, $data_final);
+    }
+
+    // fazer filtragem por id se necessário
 }
 ?>

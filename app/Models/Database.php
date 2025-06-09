@@ -145,21 +145,6 @@ class Database
         return $this->execute($query, $binds);
     }
 
-    public function filtrar_boletos_por_status($status) {
-        $query = "SELECT
-        b.id_boleto, e.id_expositor
-        p.nome, b.vencimento,
-        b.mes_referencia,
-        b.valor, e.status_exp
-        FROM boleto b 
-        INNER JOIN expositor e ON b.id_expositor = e.id_expositor
-        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
-        WHERE e.status_exp = :status_exp;";
-
-        $binds = [":status_exp" => "$status"];
-        return $this->execute($query, $binds);
-    }
-
     public function filtrar_boletos_por_data($data_inicial, $data_final) {
         $query = "SELECT
         b.id_boleto, e.id_expositor
@@ -176,6 +161,21 @@ class Database
             ":data_inicial" => $data_inicial,
             ":data_final" => $data_final
         ];
+        return $this->execute($query, $binds);
+    }
+
+    public function filtrar_boletos_por_status($status) {
+        $query = "SELECT
+        b.id_boleto, e.id_expositor
+        p.nome, b.vencimento,
+        b.mes_referencia,
+        b.valor, e.status_exp
+        FROM boleto b 
+        INNER JOIN expositor e ON b.id_expositor = e.id_expositor
+        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
+        WHERE e.status_exp = :status_exp;";
+
+        $binds = [":status_exp" => "$status"];
         return $this->execute($query, $binds);
     }
 

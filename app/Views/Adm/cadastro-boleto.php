@@ -1,11 +1,3 @@
-<?php
-session_start();
-
-$expositor = $_SESSION['expositor'] ?? ['nome' => '', 'cpf' => '', 'id_expositor' => '' ];
-
-// Opcional: limpa a sessão para não mostrar dados antigos na próxima visita
-unset($_SESSION['expositor']);
-?>
 <!DOCTYPE html>
 <html lang="pt/br">
 
@@ -45,16 +37,16 @@ unset($_SESSION['expositor']);
                 <nav class="area-form-cb">
                     <h1 class="title-cb">CADASTRO DE BOLETO</h1>
                     <form method="POST" action="../../../actions/actions-boletos/action-buscar-expositor.php" class="pesquisa-cb">
-                        <input type="hidden" value="<?= htmlspecialchars($expositor['id_expositor']) ?>" class="input-cb" name="id_expositor" type="text" placeholder="Pesquisar nome do expositor">
+                        <input type="hidden" class="input-cb" name="id_expositor" type="text" placeholder="Pesquisar nome do expositor">
                         <input class="input-cb" name="nome" type="text" placeholder="Pesquisar nome do expositor">
                         <button type="submit" class="bola-cb" style="cursor: pointer;"></button>
                     </form>
                     <form method="POST" action="../../../actions/actions-boletos/action-cadastrar-boleto.php" class="form-cb">
-                        <input type="hidden" value="<?= htmlspecialchars($expositor['id_expositor']) ?>" class="input-cb" name="id_expositor" type="text" placeholder="Pesquisar nome do expositor">
+                        <input type="hidden" class="input-cb" name="id_expositor" type="text" placeholder="Pesquisar nome do expositor">
                         <div class="area-div-1-cb">
                             <div class="form-group-cb">
                                 <label class="label-cb">Expositor:</label>
-                                <input type="text" value="<?= htmlspecialchars($expositor['nome']) ?>" name="nome-exp" id="nome-exp" class="form-cb-input" placeholder="Nome do Expositor" required>
+                                <input type="text" name="nome-exp" id="nome-exp" class="form-cb-input" placeholder="Nome do Expositor" required>
                             </div>
 
                             <div class="form-group-cb">
@@ -75,7 +67,7 @@ unset($_SESSION['expositor']);
                         <div class="area-div-2-cb">
                             <div class="form-group-cb">
                                 <label class="label-cb">CPF/CNPJ:</label>
-                                <input type="text" value="<?= htmlspecialchars($expositor['cpf']) ?>" name="cpf-cb" id="cpf-cb" class="form-cb-input" placeholder="000.000.000-00  |  00.000.000/0000-00">
+                                <input type="text" name="cpf-cb" id="cpf-cb" class="form-cb-input" placeholder="000.000.000-00  |  00.000.000/0000-00">
                             </div>
 
                             <div class="form-group-cb">
