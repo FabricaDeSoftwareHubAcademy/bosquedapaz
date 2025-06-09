@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const formData = new FormData(form);
 
             try {
-                const response = await fetch('../../../Actions/action-editar-atracao.php', {
+                const response = await fetch('../../../actions/action-editar-atracao.php', {
                     method: 'POST',
                     body: formData
                 });
