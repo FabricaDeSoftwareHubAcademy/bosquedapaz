@@ -13,7 +13,7 @@ $categorias = $catController->listar();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página para gerenciar categorias e suas informações.">
-    <title>Adm - Gerenciar Categorias</title>
+    <title>Adm - Listar Categorias</title>
 
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-categorias.css">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-categoria.css">

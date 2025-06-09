@@ -116,9 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.status === "OK") {
                 alert("✅ " + response.message);
                 modalCadastro?.close();
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
+                window.location.reload();
             } else if (response.status === "Error") {
                 // Exibe a mensagem de erro vinda do PHP
                 alert("❌ " + response.message);

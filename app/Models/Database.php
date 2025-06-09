@@ -6,7 +6,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 use app\Models\Env;
 use PDO;
-$env = Env::load();
+Env::load();
 
 class Database {
     //atributos do database

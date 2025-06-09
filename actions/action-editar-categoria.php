@@ -4,7 +4,7 @@ use app\Controller\Categoria;
 
 header('Content-Type: application/json');
 
-// 🧼 Função auxiliar para limpar os dados de texto
+//  Função auxiliar para limpar os dados de texto
 function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
