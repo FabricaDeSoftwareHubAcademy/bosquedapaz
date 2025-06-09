@@ -47,8 +47,8 @@ class Atracao
         $this->descricao_atracao = $descricao;
     }
 
-    public function setFoto($foto) {
-        $this->foto_atracao = $foto;
+    public function setBanner($banner_atracao) {
+        $this->banner_atracao = $banner_atracao;
     }
 
     public function setIdEvento($id_evento) {
