@@ -120,6 +120,20 @@
     color: #c1c1c1;
 }
 
+.li-login {
+    display: none;
+}
+
+.btn-mobile {
+    display: none;
+    padding: 0px 15px;
+    border-radius: .5rem;
+    border: none;
+    /* background-color: #7CC4BF; */
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
 
 @media screen and (max-width: 678px) {
     .nav-list {
@@ -130,22 +144,47 @@
         display: flex;
     }
 
+    .list-menu{
+        height: 90px;
+    }
+
+    .li-login {
+        display: block;
+    }
+
+    .btn-login {
+        display: none;
+    }
+    
+    .btn-mobile {
+        display: flex;
+    }
+
+    .li-login::after {
+        display: none;
+    }
+
+    .conteiner-outros {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
     .open {
         background-color: white;
-        height: 0%;
         display: flex;
         flex-direction: column;
-        padding: 15px 0px;
         position: absolute;
-        top: 70px;
+        padding: 15px 0px;
+        top: 80px;
         left: 0px;
         width: 100vw;
-        height: auto;
         overflow: hidden;
         border-bottom: 1px solid rgba(161, 161, 161, 0.788);
-        -moz-animation-duration: .2s;
-        -webkit-animation-duration: .2s;
-        animation-duration: .2s;
+        -moz-animation-duration: .5s;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
         -webkit-animation-name: ani-open-menu;
         -moz-animation-name: ani-open-menu;
         animation-name: ani-open-menu;
@@ -158,12 +197,11 @@
     }
 
     @keyframes ani-open-menu {
-        from {
-            height: 0%;
-            transition: all .2s ease-in-out;
+        0% {
+            height: 0px;
         }
-        to {
-            height: auto;
+        100% {
+            height: 275px;
         }
     }
 }
