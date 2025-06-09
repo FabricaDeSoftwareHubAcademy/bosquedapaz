@@ -33,27 +33,27 @@
                     <div class="form-pessoa">
                         <div class="input">
                             <label>Nome completo:</label>
-                            <input type="text" name="" id="" placeholder="Digite seu nome completo" required>
+                            <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
                         </div>
                         <div class="input">
                             <label>Nome artistico:</label>
-                            <input type="text" name="" id="" placeholder="Digite seu nome artistico " required>
+                            <input type="text" name="" id="nome_artistico" placeholder="Digite seu nome artistico " required>
                         </div>
 
                         <div class="input">
                             <label>E-mail:</label>
-                            <input type="text" name="" id="" placeholder="Digite seu e-mail" required>
+                            <input type="text" name="" id="email" placeholder="Digite seu e-mail" required>
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whatsapp" placeholder="Número de whatsapp"
+                            <input type="tel" id="whats" name="whatsapp" placeholder="Número de whatsapp"
                                 pattern="[0-9]{10,11}" required
                                 oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
 
                         <div class="input">
-                            <label>Link:</label>
-                            <input type="text" name="" id="" placeholder="link instagram" required>
+                            <label>Link instagram:</label>
+                            <input type="text" name="link_instagram" id="" placeholder="link instagram" required>
                         </div>
 
 
@@ -65,7 +65,7 @@
 
                         <div class="input">
                             <label>Qual sua linguagem artística?</label>
-                            <select name="todas_categorias" id="todas_categorias" class="select">
+                            <select name="todas_categorias" id="linguagem_artistica" class="select">
                                 <option value="">Selecione</option>
                                 <option value="teatro">Teatro</option>
                                 <option value="danca">Dança</option>
@@ -91,7 +91,7 @@
                         <div class="input">
                             <label for="optionInput3">Qual seu publico alvo?</label>
 
-                            <select name="todas_categorias" id="todas_categorias" class="select">
+                            <select name="todas_categorias" id="publico_alvo" class="select">
 
                                 <option value="">Selecione</option>
                                 <option value="adulto">Adulto</option>
@@ -111,7 +111,7 @@
                         <label for="tipo-expo">Tempo médio da sua apresentação?</label>
                         <div class="custom-dropdown">
                             <!-- <input type="text" id="tipo-expo" name="tipo-expo" placeholder="Selecione" autocomplete="off"> -->
-                            <select name="todas_categorias" id="todas_categorias" class="select">
+                            <select name="todas_categorias" id="tempo_apresentacao" class="select">
 
                                 <option value="">Selecione</option>
                                 <option value="30min">30min</option>
@@ -123,7 +123,7 @@
 
                         <label for="energia">Qual valor do cache?</label>
                         <div class="custom-dropdown">
-                            <select name="todas_categorias" id="todas_categorias" class="select">
+                            <select name="todas_categorias" id="valor_cache" class="select">
 
                                 <option value="">Selecione</option>
                                 <option value="200">Até R$200</option>

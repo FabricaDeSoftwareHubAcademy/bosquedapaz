@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="input">
-                            <label>Link:</label>
+                            <label>Link instagram:</label>
  
                             <input type="text" name="" id="" placeholder="link instagram" required>
                         </div>
