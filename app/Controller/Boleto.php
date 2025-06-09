@@ -37,9 +37,9 @@ class Boleto {
     public function ListarBoletos($nome) {
         $banco = new Database();
         if(!empty($nome)) {
-            return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_ASSOC);
-        } else {
             return $banco->filtrar_boletos_por_nome($nome)->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+            return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 

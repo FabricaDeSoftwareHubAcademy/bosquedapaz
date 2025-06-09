@@ -27,14 +27,14 @@
             <div class="linha-de-separacao"></div>
 
             <div class="filtrar-por-data">
-                <form action="" method="" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
+                <form action="../../../actions/actions-boletos/action-filtrar-data.php" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Inicial</label>
-                        <input type="date" name="" id="input-filtragem-de-data">
+                        <input type="date" name="data_inicial"" id="input-filtragem-de-data">
                     </div>
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Final</label>
-                        <input type="date" name="" id="input-filtragem-de-data">
+                        <input type="date" name="data_final"" id="input-filtragem-de-data">
                     </div>
                     <div class="botao-pesquisar">
                         <label for="" id="label-botao-de-filtragem">Ações</label>
@@ -68,76 +68,7 @@
                     </tr>
                 </thead>
                 <tbody class="tbody-tabela-de-dados">
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Empresa Alfa</td>
-                        <td class="td-tabela-de-dados">10/06/2025</td>
-                        <td class="td-tabela-de-dados">JUN/2025</td>
-                        <td class="td-tabela-de-dados">R$ 2.500,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pago">Pago</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Comercial Beta</td>
-                        <td class="td-tabela-de-dados">15/06/2025</td>
-                        <td class="td-tabela-de-dados">JUN/2025</td>
-                        <td class="td-tabela-de-dados">R$ 3.000,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pendente">Pendente</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Loja Gama</td>
-                        <td class="td-tabela-de-dados">20/06/2025</td>
-                        <td class="td-tabela-de-dados">JUN/2025</td>
-                        <td class="td-tabela-de-dados">R$ 1.750,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pendente">Pendente</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Delta Ltda</td>
-                        <td class="td-tabela-de-dados">25/06/2025</td>
-                        <td class="td-tabela-de-dados">JUN/2025</td>
-                        <td class="td-tabela-de-dados">R$ 4.100,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pago">Pago</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Zeta Digital</td>
-                        <td class="td-tabela-de-dados">01/07/2025</td>
-                        <td class="td-tabela-de-dados">JUL/2025</td>
-                        <td class="td-tabela-de-dados">R$ 2.850,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pendente">Pendente</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Omega Corp</td>
-                        <td class="td-tabela-de-dados">08/07/2025</td>
-                        <td class="td-tabela-de-dados">JUL/2025</td>
-                        <td class="td-tabela-de-dados">R$ 3.600,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pendente">Pendente</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Teta Ventures</td>
-                        <td class="td-tabela-de-dados">12/07/2025</td>
-                        <td class="td-tabela-de-dados">JUL/2025</td>
-                        <td class="td-tabela-de-dados">R$ 2.200,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pago">Pago</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Sigma Store</td>
-                        <td class="td-tabela-de-dados">18/07/2025</td>
-                        <td class="td-tabela-de-dados">JUL/2025</td>
-                        <td class="td-tabela-de-dados">R$ 3.150,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pendente">Pendente</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Kappa Móveis</td>
-                        <td class="td-tabela-de-dados">22/07/2025</td>
-                        <td class="td-tabela-de-dados">JUL/2025</td>
-                        <td class="td-tabela-de-dados">R$ 1.980,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pago">Pago</button></td>
-                    </tr>
-                    <tr class="tr-tabela-de-dados">
-                        <td class="td-tabela-de-dados">Lambda Equipamentos Palmeirenses Paulistoes</td>
-                        <td class="td-tabela-de-dados">28/07/2025</td>
-                        <td class="td-tabela-de-dados">JUL/2025</td>
-                        <td class="td-tabela-de-dados">R$ 4.750,00</td>
-                        <td class="td-tabela-de-dados"><button class="botao-status status-pendente">Pendente</button></td>
-                    </tr>
+
                 </tbody>
             </table>
         </section>
@@ -161,6 +92,7 @@
                 <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_buscar_nome_tempo_real.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 

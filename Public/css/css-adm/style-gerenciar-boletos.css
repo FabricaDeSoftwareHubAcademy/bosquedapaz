@@ -218,7 +218,7 @@
 
 /* Zebra striping nas linhas */
 .tbody-tabela-de-dados .tr-tabela-de-dados:nth-child(even) {
-    background-color: #e6e6e6;
+    background-color: #000000;
 }
 
 .tbody-tabela-de-dados .tr-tabela-de-dados {

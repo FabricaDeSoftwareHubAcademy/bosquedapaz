@@ -119,7 +119,7 @@ class Database
 
     public function listar_todos_boletos() {
         $query = "SELECT
-        b.id_boleto, e.id_expositor
+        b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
         b.mes_referencia,
         b.valor, e.status_exp
@@ -132,7 +132,7 @@ class Database
 
     public function filtrar_boletos_por_nome($nome) {
         $query = "SELECT
-        b.id_boleto, e.id_expositor
+        b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
         b.mes_referencia,
         b.valor, e.status_exp
@@ -147,7 +147,7 @@ class Database
 
     public function filtrar_boletos_por_data($data_inicial, $data_final) {
         $query = "SELECT
-        b.id_boleto, e.id_expositor
+        b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
         b.mes_referencia,
         b.valor, e.status_exp
@@ -178,6 +178,9 @@ class Database
         $binds = [":status_exp" => "$status"];
         return $this->execute($query, $binds);
     }
+
+    // fazer se caso necessario uma function query 
+    // para alterar status_exp entre ativo inativo 
 
     // Database Matheus
     public function listar_colaboradores()
