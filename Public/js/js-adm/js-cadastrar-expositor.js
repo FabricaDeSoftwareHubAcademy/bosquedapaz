@@ -33,6 +33,7 @@ btn_salvar.addEventListener('click', async function(event){
         body: dadosForms
     });
 
+    ////////// abre modal ////////////
     
     let response = await dados_php.json();
 
@@ -41,6 +42,8 @@ btn_salvar.addEventListener('click', async function(event){
         formulario.reset();
         modal.classList.remove("oculta");
         modal.classList.add("show_modal");
+
+        /////////////// botao fechar ///////////////
 
         let fechar_modal = document.getElementById("fechar_modal");
 
