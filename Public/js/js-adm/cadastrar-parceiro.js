@@ -7,7 +7,7 @@ btn_cadastrar.addEventListener('click', async function(event){
 
     let formData = new FormData(formulario);
 
-    let dados_php = await fetch('../../../actions/cadastrar_parceiro.php',{
+    let dados_php = await fetch('../../../actions/cadastrar-parceiro.php',{
         method:'POST',
         body: formData
     });

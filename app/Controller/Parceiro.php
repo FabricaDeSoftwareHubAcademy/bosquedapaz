@@ -3,6 +3,7 @@
 namespace app\Controller;
 require_once('../vendor/autoload.php');
 use app\Controller\Pessoa;
+use app\Models\Database;
 
 class Parceiro {
     public int $id_parceiro;

@@ -3,6 +3,7 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\Parceiro;
+use app\Controller\Endereco;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
