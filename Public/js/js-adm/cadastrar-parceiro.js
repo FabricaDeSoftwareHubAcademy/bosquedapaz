@@ -16,10 +16,10 @@ btn_cadastrar.addEventListener('click', async function(event){
 
     if(response.status == 200){
         console.log(response.msg);
-        alert("Cadastrado com sucesso!!!!") /// SUBSTITUIR PELO MODAL mostraModal()
+        alert("Cadastrado com sucesso!") /// SUBSTITUIR PELO MODAL mostraModal()
     }else{
         console.log(response.msg);
-        alert("Cadastrado com sucesso!!!!") /// SUBSTITUIR PELO MODAL mostraModal()
+        alert("Cadastrado com sucesso!") /// SUBSTITUIR PELO MODAL mostraModal()
     }
 })
 
