@@ -23,7 +23,7 @@ const intervalText = setInterval(() => {
 
 ////////////////////////////////////////////////////////////////
 // soma numeros nas informacoes
-document.addEventListener("DOMContentLoaded", setTimeout( n = () => {
+document.addEventListener("DOMContentLoaded", () => setTimeout( n = () => {
     const ncs = document.querySelectorAll('.ncs');
     const speed = 200;
 

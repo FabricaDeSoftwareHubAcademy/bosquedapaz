@@ -96,7 +96,7 @@ btnEditar.addEventListener('click', async function (event) {
     
             const formData = new FormData(formCarrossel);
     
-            let dados_php = await fetch("../../../actions/carrossel.php", {
+            let dados_php = await fetch("../../../actions/action-carrossel.php", {
                 method: "POST",
                 body: formData
             });
@@ -127,7 +127,7 @@ btnEditar.addEventListener('click', async function (event) {
 })
 
 async function getImage() {
-    let imagens = await fetch("../../../actions/carrossel.php")
+    let imagens = await fetch("../../../actions/action-carrossel.php")
 
     let resposta = await imagens.json()
 
