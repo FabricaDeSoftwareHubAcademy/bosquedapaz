@@ -59,6 +59,9 @@ h2 {
     display: none;
 }
 
+.search-bar{
+    background-color: rgba(248, 245, 246, 0.65);
+}
 
 #modal-recusar:target {
     display: flex;
@@ -101,7 +104,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
 }
 
@@ -151,7 +154,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
 }
 
@@ -212,7 +215,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     padding: 20px;
     /* Adicionando padding para não colar nos cantos */
@@ -295,7 +298,7 @@ h2 {
 }
 
 .botao-cancelar {
-    background-color: #FF3877;
+    /* background-color: #FF3877; */
     color: white;
 }
 
@@ -370,7 +373,7 @@ h2 {
     flex-direction: column;
     gap: 10px;
     border-radius: 10px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 
@@ -810,7 +813,7 @@ table tbody tr:nth-child(even) {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .container {
@@ -824,7 +827,7 @@ table tbody tr:nth-child(even) {
     }
 
     .search-bar {
-        background-color: #ffffff;
+        background-color: transparent;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -926,7 +929,7 @@ table tbody tr:nth-child(even) {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .modal-content {
@@ -962,7 +965,7 @@ table tbody tr:nth-child(even) {
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
     body {
-        background-color: blue;
+        /* background-color: blue; */
     }
 
     .titulo {
@@ -1086,7 +1089,7 @@ table tbody tr:nth-child(even) {
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
     body {
-        background-color: green;
+        /* background-color: green; */
     }
 
     .titulo {
@@ -1185,7 +1188,7 @@ table tbody tr:nth-child(even) {
     body {
         overflow-y: auto;
         max-height: 60vh;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .principal .box {

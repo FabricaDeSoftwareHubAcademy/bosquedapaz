@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-utilidades.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../../Public/js/js-adm/listar-utilidades-publicas.js" defer></script>
 
 
 </head>
@@ -25,57 +26,20 @@
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
                     <button class="search-button">BUSCAR</button>
+                    <div id="results-container"></div>
                 </div>
                 <div class="table-container">
                     <table class="collaborators-table">
                         <thead>
                             <tr>
                                 <th class="usuario-col">Nome</th>
+                                <th>Data Início</th>
+                                <th>Data Fim</th>
                                 <th>Status</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="usuario-col">Doação de Sangue</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="./editar-utilidades.php" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">Adoção de Pets</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="./editar-utilidades.php" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="usuario-col">Campanha do Agasalho</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="./editar-utilidades.php" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                    <a href="#modal-recusar" class="delete-icon">
-                                        <i class="fa-solid fa-trash open-modal" data-modal="delete-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
-                            
+                        <tbody id="corpo_table">
 
                         </tbody>
                     </table>
