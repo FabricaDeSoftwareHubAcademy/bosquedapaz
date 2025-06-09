@@ -30,7 +30,7 @@ $categorias = $catController->listar();
                 <form action="" method="post">
                     <div class="search-bar">
                         <label for="status">Procurar</label>
-                        <input type="text" id="status" placeholder="Categorias" />
+                        <input type="text" id="input-busca" placeholder="Categorias" />
                         <button class="search-button">BUSCAR</button>
                     </div>
                 </form>
@@ -44,7 +44,7 @@ $categorias = $catController->listar();
                                 <th>Editar</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tabela-categoria">
                             <?php foreach ($categorias as $categoria): ?>
                                 <tr>
                                     <td class="usuario-col"><?php echo $categoria->getId(); ?></td>

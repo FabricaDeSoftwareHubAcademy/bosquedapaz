@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- LÓGICA PARA ABRIR E PREENCHER O MODAL ---
-    
+
     // Adiciona um 'ouvinte' de clique em todos os botões/ícones de edição
     document.querySelectorAll('.open-modal').forEach(button => {
         button.addEventListener('click', async (e) => {
@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Preenche os campos do formulário DENTRO do dialog
                     form.querySelector('#id_categoria').value = categoria.id_categoria;
                     form.querySelector('#descricao').value = categoria.descricao;
-                    
+
                     // Preenche o campo de cor oculto e atualiza a pré-visualização
                     const corInput = form.querySelector('#corInput');
                     const selectedColorDiv = form.querySelector('#selectedColor');
                     const selectedTextSpan = form.querySelector('#selectedText');
-                    
+
                     corInput.value = categoria.cor;
                     selectedColorDiv.style.backgroundColor = categoria.cor;
                     selectedTextSpan.textContent = `Cor selecionada`; // Atualiza o texto
@@ -122,5 +122,35 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             dialog.close();
         });
+    });
+
+
+    // CODIGO PARA BUSCAR CATEGORIA
+
+    const INPUT_BUSCA = document.getElementById('input-busca');
+    const TABELA_CATEGORIAS = document.getElementById('tabela-categoria');
+
+    INPUT_BUSCA.addEventListener('keyup', () => {
+        let expressao = INPUT_BUSCA.value.toLowerCase();
+
+        if (expressao.length === 1) {
+            return;
+        }
+
+        let linhas = TABELA_CATEGORIAS.getElementsByTagName('tr');
+
+        for (let posicao in linhas) {
+            if (true === isNaN(posicao)) {
+                continue;
+            }
+
+            let conteudoDaLinha = linhas[posicao].innerHTML.toLowerCase();
+
+            if (true === conteudoDaLinha.includes(expressao)) {
+                linhas[posicao].style.display = '';
+            } else {
+                linhas[posicao].style.display = 'none';
+            }
+        }
     });
 });
