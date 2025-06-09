@@ -115,7 +115,7 @@ CREATE TABLE evento(
     descricao VARCHAR(250) NOT NULL,
     data_evento DATE NOT NULL,
     banner VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(0),
+    status BOOLEAN DEFAULT(1),
     PRIMARY KEY(id_evento)
 );
 
@@ -123,8 +123,8 @@ CREATE TABLE atracao(
 	id_atracao INT NOT NULL AUTO_INCREMENT,
     nome_atracao VARCHAR(150) NOT NULL,
     descricao_atracao VARCHAR(250) NOT NULL,
-    foto_atracao VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(0),
+    banner_atracao VARCHAR(255) NOT NULL,
+    status BOOLEAN DEFAULT(1),
     id_evento INT NOT NULL,
     PRIMARY KEY(id_atracao),  
     FOREIGN KEY(id_evento) REFERENCES evento(id_evento)

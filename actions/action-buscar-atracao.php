@@ -4,8 +4,8 @@ use app\Controller\Atracao;
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
-    $id = (int) $_GET['id'];
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id_atracao'])) {
+    $id = (int) $_GET['id_atracao'];
     $atracao = new Atracao();
     $atracaoSelecionada = $atracao->buscarPorId($id);
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
                 'nome_atracao' => $atracaoSelecionada->getNome(),
                 'descricao_atracao' => $atracaoSelecionada->getDescricao(),
                 'status' => $atracaoSelecionada->getStatus(),
-                'foto_atracao' => $atracaoSelecionada->getBanner()
+                'banner_atracao' => $atracaoSelecionada->getBanner()
             ]
         ]);
     } else {

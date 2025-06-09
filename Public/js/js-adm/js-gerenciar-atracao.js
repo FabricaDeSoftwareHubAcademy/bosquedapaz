@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 tr.innerHTML = `
                     <td>${sanitize(atracao.nome_atracao)}</td>
-                    <td>
+                    <td class="fone-col">
                         <a href="editar-atracao.php?id_atracao=${atracao.id_atracao}">
                             <i class="fas fa-edit"></i>
                         </a>
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     if (botaoNovaAtracao) {
         botaoNovaAtracao.addEventListener('click', () => {
+            console.log('clicked');
             if (id_evento && nome_evento) {
                 window.location.href = `cadastrar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}`;
             } else {

@@ -11,8 +11,9 @@ class Atracao
     protected $id_atracao;
     protected $nome_atracao;
     protected $descricao_atracao;
-    protected $foto_atracao;
+    protected $banner_atracao;
     protected $id_evento;
+    protected $status;
 
     public function getId() {
         return $this->id_atracao;
@@ -26,8 +27,12 @@ class Atracao
         return $this->descricao_atracao;
     }
 
-    public function getFoto() {
-        return $this->foto_atracao;
+    public function getBanner() {
+        return $this->banner_atracao;
+    }
+
+    public function getStatus() {
+        return $this->status;
     }
 
     public function getIdEvento() {
@@ -55,7 +60,7 @@ class Atracao
         $res = $db->insert([
             'nome_atracao' => $this->nome_atracao,
             'descricao_atracao' => $this->descricao_atracao,
-            'foto_atracao' => $this->foto_atracao,
+            'banner_atracao' => $this->banner_atracao,
             'id_evento' => $this->id_evento
         ]);
 
@@ -84,7 +89,7 @@ class Atracao
         $valores = [
             'nome_atracao' => $this->nome_atracao,
             'descricao_atracao' => $this->descricao_atracao,
-            'foto_atracao' => $this->foto_atracao,
+            'banner_atracao' => $this->banner_atracao,
             'id_evento' => $this->id_evento
         ];
 

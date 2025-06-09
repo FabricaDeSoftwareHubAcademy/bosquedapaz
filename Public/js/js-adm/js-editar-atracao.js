@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const descricaoInput = document.getElementById('descricao');
+    const descricaoInput = document.getElementById('descricao_atracao');
     const contador = document.getElementById('contador-caracteres');
 
     const atualizarContador = () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(atualizarContador, 100);
 
     const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
+    const id = params.get('id_atracao');
 
     if (!id) {
         alert('ID da atração não fornecido.');
@@ -21,21 +21,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     const form = document.getElementById('form-editar-atracao');
 
     try {
-        const response = await fetch(`../../../actions/action-buscar-atracao.php?id=${id}`);
+        const response = await fetch(`../../../actions/action-buscar-atracao.php?id_atracao=${id}`);
         const data = await response.json();
 
         if (data.status === 'success') {
             const atracao = data.atracao;
 
+            console.log("id_atracao:", document.getElementById('id_atracao'));
+            console.log("id_evento:", document.getElementById('id_evento'));
+            console.log("nome_atracao:", document.getElementById('nome_atracao'));
+            console.log("descricao_atracao:", document.getElementById('descricao_atracao'));
+            console.log("status:", document.getElementById('status'));
+
             document.getElementById('id_atracao').value = atracao.id_atracao;
             document.getElementById('id_evento').value = atracao.id_evento;
-            document.getElementById('nomeatracao').value = atracao.nome_atracao;
-            document.getElementById('descricao').value = atracao.descricao_atracao;
+            document.getElementById('nome_atracao').value = atracao.nome_atracao;
+            document.getElementById('descricao_atracao').value = atracao.descricao_atracao;
             document.getElementById('status').value = atracao.status;
 
             const imagem = document.getElementById('preview-image');
-            if (atracao.foto_atracao) {
-                imagem.src = `../../../uploads/atracoes/${atracao.foto_atracao}`;
+            if (atracao.banner_atracao) {
+                imagem.src = `../../../Public/${atracao.banner_atracao}`;
                 imagem.alt = atracao.nome_atracao ?? 'Imagem da atração';
             }
         } else {
