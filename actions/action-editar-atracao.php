@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    if (empty($nome) || empty($descricao) || !in_array($status, ['0', '1']) || $id_evento === 0) {
+    if (empty($nome) || empty($descricao) || !isset($_POST['status']) || !in_array($status, ['0', '1']) || $id_evento === 0) {
         echo json_encode(['status' => 'error', 'mensagem' => 'Preencha todos os campos corretamente.']);
         exit;
     }
@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $atracao->setStatus($status);
     $atracao->setIdEvento($id_evento);
 
-    // 👇 Upload de imagem apenas se fornecido
     if (!empty($_FILES['foto_atracao']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
         $extensao = strtolower(pathinfo($_FILES['banner_atracao']['name'], PATHINFO_EXTENSION));
@@ -59,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     unlink($caminhoAntigo);
                 }
             }
-            $atracao->setBanner('uploads/uploads-atracoes/' . $nomeSeguro);
+            $atracao->setBanner('uploads/atracoes/' . $nomeSeguro);
         } else {
             echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
             exit;

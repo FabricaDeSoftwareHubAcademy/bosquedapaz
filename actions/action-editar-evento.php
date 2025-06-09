@@ -4,7 +4,6 @@ use app\Controller\Evento;
 
 header('Content-Type: application/json');
 
-// 🧼 Sanitização e validação
 function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
@@ -38,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $evento->setData($data);
     $evento->setStatus($status);
 
-    // 👇 Upload de imagem apenas se fornecido
+    
     if (!empty($_FILES['banner']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
         $extensao = strtolower(pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION));
