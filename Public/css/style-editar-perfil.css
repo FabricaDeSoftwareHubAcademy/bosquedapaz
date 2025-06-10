@@ -313,32 +313,37 @@
     } */
 
     .perfilEdit-body{
-        overflow-y: auto;
-        overflow-x: hidden;
-        height: auto;
+        height: 140vh;
     }
 
     .perfilEdit-main{
-        margin-top: 21%;
-        position: static;
-        height: auto;
-        align-items: stretch;
+        height: 140vh;
+        position: relative;
+        overflow-y: auto;
     }
 
     .perfilEdit-box{
-        height: 100%;
-        width: 95%;
+        height: 125vh;
+        margin-top: 10vh;
+    }
+
+    .perfilEdit-title{
+        bottom: 2%;
     }
 
     .perfilEdit-form{
         height: 80%;
-        width: 95%;
+        width: 90%;
     }
 
-    .perfilEdit-div-group{
-        max-width: 100%;
-        width: 90%;
-        position: relative;
-        overflow-x: auto;
+    .perfilEdit-empresas{
+        flex-direction: column;
+        /* background-color: red; */
+        height: 20%;
+    }
+
+    .perfilEdit-important-input{
+        /* background-color: yellow; */
+        width: 100%;
     }
 }
