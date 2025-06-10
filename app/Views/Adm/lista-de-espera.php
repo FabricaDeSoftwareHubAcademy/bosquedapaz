@@ -1,11 +1,12 @@
 <?php
-
-use app\Controller\ListaEspera;
-use app\Controller\Expositor;
+require_once('../../Controller/Expositor.php');
+require_once('../../Models/Database.php');
 
 $busca = $_GET['busca'] ?? '';
-$expositor = new Expositor();
-$expositores = $expositor->listar($busca);
+
+$expositorController = new Expositor();
+$expositores = $expositorController->listar($busca);
+
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +53,24 @@ $expositores = $expositor->listar($busca);
             </thead>
             <tbody>
               <?php if (!empty($expositores)) : ?>
+                <?php foreach ($expositores as $expositor) : ?>
+                  <tr>
+                    <td><?= htmlspecialchars($expositor['nome']) ?></td>
+                    <td class="email"><?= htmlspecialchars($expositor['email']) ?></td>
+                    <td><?= htmlspecialchars($expositor['descricao']) ?></td>
+                    <td><?= htmlspecialchars($expositor['telefone']) ?></td>
+                    <td class="perfil">
+                      <a href="validar-expositor.php?id=<?= $expositor['id_expositor'] ?>">
+                        <i class="bi bi-person-badge"></i>
+                      </a>
+                    </td>
+                  </tr>
+                <?php endforeach; ?>
+              <?php else : ?>
+                <tr>
+                  <td colspan="5" style="text-align: center;">Nenhum expositor encontrado.</td>
+                </tr>
+                <?php endif; ?><?php if (!empty($expositores)) : ?>
                 <?php foreach ($expositores as $expositor) : ?>
                   <tr>
                     <td><?= htmlspecialchars($expositor['nome']) ?></td>
