@@ -56,7 +56,7 @@
     position: relative;
     border-radius: .5rem;
     overflow: hidden;
-    border: 1px solid blue;
+    border: 1px solid #3F49EA;
     transition: all .2s ease-in-out;
 }
 
@@ -73,7 +73,7 @@
     bottom: -100px;
     left: 5px;
     z-index: 0;
-    background-color: blue;
+    background-color: #3F49EA;
 }
 
 .linha__decorativa1 {
@@ -94,7 +94,7 @@
     left: -30px;
     border-radius: 1rem;
     transform: rotate(-25deg);
-    background-color: blue;
+    background-color: #3F49EA;
 }
 
 .por-cima-card {
@@ -122,12 +122,12 @@
     font-weight: 600;
     border-radius: .5rem;
     text-transform: capitalize;
-    border: 1px solid blue;
+    border: 1px solid #3F49EA;
     transition: all .2s ease-in-out;
 }
 
 .saiba-mais:hover {
-    background-color: blue;
+    background-color: #3F49EA;
     border-color: white;
     color: white;
     transition: all .2s ease-in-out;
