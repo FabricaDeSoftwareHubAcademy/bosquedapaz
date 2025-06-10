@@ -12,6 +12,7 @@ function preencherTabela(dados) {
 
     dados.forEach(item => {
         const tr = document.createElement('tr');
+        tr.classList.add('tr-tabela-de-dados')
 
         const status = item.status_exp || '';
         const statusClass = status.toLowerCase() === 'ativo' 
