@@ -54,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     
-        // ✅ Setando no objeto corretamente
         $atracao->setBanner("uploads/atracoes/" . $nomeFinal);
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Imagem obrigatória."]);
