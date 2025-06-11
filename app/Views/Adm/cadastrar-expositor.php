@@ -1,7 +1,4 @@
 
-<?php
-// require_once './actions/cadastrar_expositor.php';
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

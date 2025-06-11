@@ -4,7 +4,7 @@ require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
 use app\Controller\Categoria;
 
-if(isset($_GET['listar'])){
+if(isset($_GET['filtro'])){
     
     $categoria = new Categoria();
     $opcoes = $categoria->listar();

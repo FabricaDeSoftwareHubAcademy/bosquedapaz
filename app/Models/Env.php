@@ -4,7 +4,7 @@ namespace app\Models;
 
 class Env {
 
-    public static function load(string $dotEnv = __DIR__ . '/../../.env'):void
+    public static function load(string $dotEnv = '../.env'):void
     {
         // if($dotEnv === null){
         //     $dotEnv = __DIR__ . '/../../.env';

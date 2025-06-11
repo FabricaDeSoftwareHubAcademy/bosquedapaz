@@ -1,15 +1,9 @@
-
-
-{/* <tr>
-
-</tr> */}
-
-
-
 async function carrega_expositor() {
     let tbody = document.getElementById('tbody')
     let response = await fetch('../../../actions/actions-listar-expositor.php');
     response = await response.json();
+
+    console.log(response)
 
     if (response.status == 201) {
         tbody.innerHTML = '<td colspan="5" style="text-align: center;">Nenhum expositor encontrado.</td>'
@@ -19,7 +13,7 @@ async function carrega_expositor() {
             expositores += `<tr>
         <td>${element.nome}</td>
         <td class="email">${element.email}</td>
-        <td>${element.categoria}</td>
+        <td>${element.descricao}</td>
         <td>${element.telefone}</td>
         <td class="perfil">
             <a href="validar-expositor.php?id=${element.id_expositor}">

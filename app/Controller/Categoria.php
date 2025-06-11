@@ -1,7 +1,7 @@
 <?php
 
 namespace app\Controller;
-
+require_once('../vendor/autoload.php');
 use PDO;
 use app\Models\Database;
 
@@ -30,7 +30,7 @@ class Categoria
     {
         $db = new Database('categoria');
         // Alterado para fetchAll(PDO::FETCH_CLASS), que funciona melhor com propriedades privadas e setters
-        $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
+        $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
 
