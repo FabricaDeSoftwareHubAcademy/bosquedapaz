@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Bloco principal -->
 </head>
 
@@ -57,47 +56,43 @@
                         <!-- Campos superior -->
                         <div class="campos-formulario">
                             <label for="">Nome</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['nome'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Email</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['email'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Whatsapp</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['whatsapp'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">CPF</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cpf'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cidade'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Instagram</label>
-                            <a class="formulario-campo-informacao campo-link"
-                            href="<?= htmlspecialchars($dados['instagram'] ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
-                            target="_blank">
-                            <?= !empty($dados['instagram']) ? "Visitar Perfil" : "Perfil não encontrado"?>
-                            </a>
+                            <a class="formulario-campo-informacao campo-link"> </a>
                         </div>
 
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
                             <label for="">Marca</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['marca'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Tipo</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['tipo'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Energia</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['energia'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Voltagem</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['voltagem'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Endereço</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['endereco'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['categoria'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
                             <a href="">Alterar Categoria</a>
                         </div>
                     </div>
