@@ -109,7 +109,7 @@
         <!-- Modal de Delete -->
         <div class="acao-recusar" id="modal-recusar">
             <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Deseja excluir o expositor?</h1>
+                <h1 class="acao-texto-recusar">Deseja Excluir a Utilidade?</h1>
                 <div class="acao-botoes-recusar">
                     <a href=""><button class="botao-cancelar">Cancelar</button></a>
                     <a href="#recusado-sucesso"><button class="botao-confirmar">Excluir</button></a>
@@ -120,7 +120,7 @@
         <!-- Modal confirmação -->
         <div class="mensagem-recusar" id="recusado-sucesso">
             <div class="mensagem-content-recusar">
-                <h1 class="mensagem-texto-recusar">Concluído com sucesso!</h1>
+                <h1 class="mensagem-texto-recusar">Concluído com Sucesso!</h1>
                 <a href="#"><button class="botao-confirmar">Confirmar</button></a>
             </div>
         </div>
