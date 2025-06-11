@@ -40,9 +40,16 @@ async function listar(){
 }
 listar();
 
+// Script para Mudar Status: 
+document.addEventListener('click', async function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains('status')) {
+        const btn = e.target;
+        const id = e.target;
+        const statusAtual = e.target;
+    }
+})
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)
-
-// -------------------------------------------------- 
-// Script Para Ativar/Inativar Status do Colaborador: No Arquivo (status-colaborador.js)

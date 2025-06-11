@@ -97,4 +97,17 @@ class Colaborador extends Pessoa
             return $db->listar_colaboradores()->fetchAll(PDO::FETCH_ASSOC);
         }
     }
+
+    public function mudar_status($id_colaborador, $statusAtual) {
+        $novoStatus = $statusAtual === "ativo" ? "inativo" : "ativo";
+
+        $db = new Database();
+        $res = $db->sts_adm($id_colaborador, $novoStatus);
+
+        if ($res) {
+            return ['message' => 'Status alterado com Sucesso!', 'novoStatus' => $novoStatus, 'novoStatusTexto' => ucfirst($novoStatus)];
+        } else {
+            return ['message' => 'Erro ao alterar status.', 'novoStatus' => $statusAtual, 'novoStatusTexto' => ucfirst($statusAtual)];
+        }
+    }
 }

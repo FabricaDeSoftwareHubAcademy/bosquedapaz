@@ -17,6 +17,7 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 if ($requestMethod === 'POST') {
     $colab = new Colaborador();
 
+    // Cadastro
     if (isset($_POST["cadastrar"])) {
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
@@ -67,6 +68,8 @@ if ($requestMethod === 'POST') {
         }
     }
 
+
+    // Update = Edição dos dados
     else if (isset($_POST["atualizar"])) {
         $id = filter_var($_POST['id'] ?? '', FILTER_VALIDATE_INT);
         if (!$id) {
@@ -119,6 +122,7 @@ if ($requestMethod === 'POST') {
         }
     }
 
+    // Busca
     else if (isset($_POST['palavra'])) {
         $nome = sanitizeString($_POST['palavra']);
         $res = $colab->listarColaboradores($nome);
@@ -147,6 +151,8 @@ if ($requestMethod === 'POST') {
     exit;
 }
 
+
+// Listagem
 if ($requestMethod === 'GET') {
     $colab = new Colaborador();
 
@@ -166,4 +172,15 @@ if ($requestMethod === 'GET') {
         echo json_encode(['data' => $res, 'status' => 200]);
         exit;
     }
+}
+
+// Alterar Status:
+$input = json_decode(file_get_contents('php://input'), true);
+
+if (isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+    $res = new Colaborador();
+    $result = $res->mudar_status($input['id_colaborador'], $input['status_atual']);
+
+    echo json_encode($result);
+    exit;
 }

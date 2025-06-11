@@ -169,6 +169,7 @@ class Database {
         return $this->execute($query) ? true : false;
     }
 
+    //Funções do fluxo do ADM: 
     public function listar_colaboradores() {
         $query = "SELECT
         c.id_colaborador,
@@ -198,7 +199,10 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-
-
+    public function sts_adm($id_colaborador, $novoStatus) {
+        $query = "UPDATE colaborador SET status_col = ? id_colaborador = ?";
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute([$novoStatus, $id_colaborador]);
+    }
 }
 ?>

@@ -17,6 +17,25 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <style>
+        #form_modal {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .oculta {
+          visibility: hidden;
+        }
+
+        .chama {
+          visibility: visible;
+          background-color: red;
+        }
+
+    </style>
 </head>
 <body>
   <?php include "../../../Public/include/menu-adm.html" ?>
@@ -63,5 +82,22 @@
   <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
   <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>
   <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
+
+      <!-- Modal de Confirmação -->
+  <div id="modal-confirmacao" class="modal" style="display:none;">
+    <div class="modal-conteudo">
+      <p id="mensagem-confirmacao"></p>
+      <button id="btn-sim">Sim</button>
+      <button id="btn-nao">Não</button>
+    </div>
+  </div>
+
+  <!-- Modal de Sucesso -->
+  <div id="modal-sucesso" class="modal" style="display:none;">
+    <div class="modal-conteudo">
+      <p id="mensagem-sucesso"></p>
+      <button id="btn-ok">OK</button>
+    </div>
+  </div>
 </body>
 </html>
