@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-apoiadores.css">
-
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
-
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+    <script src="../../../Public/js/js-home/slider-apoiadores.js" defer></script>
 
     <title>Bosque da Paz</title>
     
@@ -25,14 +22,17 @@
     
     
         <section class="section-nosso-time-quem-somos">
-            <div class="div-nt" >
-                <h1 class="titulo-nosso-time-quem-somos">A <span class="tit">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
-            
+            <div class='sobre-a-feira'>
+                <h1>Conexões que geram mudança</h1>
+            </div>
+             
+            <div class="div-descricao" >
+                <h1 class="descricao-sobre-a-feira">A <span class="subtitulo-feira">Feira Bosque da Paz </span> impacta diretamente a vida de mais de 500 famílias sul-mato-grossenses, impulsionando a economia local e diversos setores, como a gastronomia, artesanato, sustentabilidade, literatura, entre outros. O evento também promove ações de impacto social, valorizando expositores que utilizam conhecimentos e materiais de povos originários e quilombolas. Além disso, celebra a diversidade cultural com apresentações musicais e teatrais.</h1 >
             </div>
         </section> 
 
-        <section class="section-colaboradoras-quem-somos">
-    <div class="card-per-expo card1">
+<section class="section-cards-apoio">
+    <div class="card-apoio card1">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-perfil-expo">
         </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="card-per-expo card2">
+    <div class="card-apoio card2">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-perfil-expo">
         </div>
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div class="card-per-expo card3">
+    <div class="card-apoio card3">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-perfil-expo">
         </div>
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="card-per-expo card4">
+    <div class="card-apoio card4">
         <div class="head-card">
             <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-perfil-expo">
         </div>
@@ -90,22 +90,33 @@
 </section>
 
 
-    <section class="section-parce2">
-    <h3 class="title all-titles">Nossos Apoiadores</h3>
-        <div class="all-parce">
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo shopping bosque dos ipes" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo senac" class="img-logo-parceiros"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura de campo grande" class="img-logo-parceiros"></div>
-            
-            
+    <section class="section-apoiadores">
+        <div class="sobre-apoiadores">
+            <h1>Nossos apoiadores</h3>
         </div>
+    
+    <div class="carrossel-apoiadores">
+        <div class="slider-apoiadores" id="carrosselTrack">
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo hub"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo hub"></div>
+            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura"></div>
+            </div>
+    </div>
+
     </section>
     
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
+    
 
 </body>
 </html>
