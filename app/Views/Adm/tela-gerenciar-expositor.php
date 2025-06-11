@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bloco principal -->
-    <title>Gerenciar e Validar</title>
+    <title>Gerenciar Expositor</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Bloco principal -->
 </head>
 
@@ -23,7 +22,7 @@
         <!-- Seção de dados da empresa -->
         <section class="secao-dados-empresa">
             <div class="area-superior">
-                <h1 class="area-superior-texto">Foto da Empresa</h1>
+                <h1 class="area-superior-texto">Nome da Empresa</h1>
                 <img class="area-superior-imagem" src="../../../Public/imgs/imgs-validar-expositor/logomarca.png" alt="logo da empresa">
             </div>
             <div class="area-inferior">
@@ -57,47 +56,43 @@
                         <!-- Campos superior -->
                         <div class="campos-formulario">
                             <label for="">Nome</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['nome'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Email</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['email'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Whatsapp</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['whatsapp'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">CPF</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cpf'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['cidade'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Instagram</label>
-                            <a class="formulario-campo-informacao campo-link"
-                            href="<?= htmlspecialchars($dados['instagram'] ?? '') ?>"
-                            target="_blank">
-                            <?= !empty($dados['instagram']) ? "Visitar Perfil" : "Perfil não encontrado"?>
-                            </a>
+                            <a class="formulario-campo-informacao campo-link"> </a>
                         </div>
 
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
                             <label for="">Marca</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['marca'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Tipo</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['tipo'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Energia</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['energia'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Voltagem</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['voltagem'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Endereço</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['endereco'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" value="<?= $dados['categoria'] ?? 'Dados não encontrado.' ?>" readonly>
+                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
                             <a href="">Alterar Categoria</a>
                         </div>
                     </div>
@@ -141,16 +136,6 @@
         </div>
     </div>
 
-    <!-- modal 3 - recusar expositor  -->
-    <!-- <div class="modal modal-recusar-expositor-3" id="modal_recusar_expositor_3">
-        <div class="modal-content-recusar-expositor">
-            <h1 class="modal-texto-recusar-expositor">Expositor Recusado.</h1>
-            <div class="modal-botoes-recusar-expositor">
-                <button class="botoes-modal-recusar-expositor botao-ok" id="botao_ok_recusar">Ok</button>
-            </div>
-        </div>
-    </div> -->
-
     <!-- Modais - Validar Expositor -->
     <!-- ----------------------------- -->
     <!-- modal 1 - validar expositor -->
@@ -189,16 +174,6 @@
             </form>
         </div>
     </div>
-
-    <!-- modal 3 - validar expositor  -->
-    <!-- <div class="modal modal-validar-expositor-3" id="modal_validar_expositor_3">
-        <div class="modal-content-validar-expositor">
-            <h1 class="modal-texto-validar-expositor">Expositor Validado.</h1>
-            <div class="modal-botoes-validar-expositor">
-                <button class="botoes-modal-validar-expositor botao-ok" id="botao_ok_validar">Ok</button>
-            </div>
-        </div>
-    </div> -->
 
     <div class="decoracoes">
         <img class="decoracao decoracao1" src="../../../Public/imgs/imgs-validar-expositor/decoracao1-validar-expositor.svg" alt="">
