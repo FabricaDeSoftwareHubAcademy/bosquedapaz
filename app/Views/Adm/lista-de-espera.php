@@ -24,8 +24,8 @@
       <!-- Área Barra de Pesquisa  -->
       <div class="container__area__pesquisa">
         <form method="GET" class="div-pesquisa">
-          <input type="text" name="busca" placeholder="Expositor" value="1" />
-          <div class="div__button"><button class="button__buscar" type="submit">BUSCAR</button></div>
+          <input type="text" id="buscar_expositor" name="busca" placeholder="Expositor"/>
+          <!-- <div class="div__button"><button class="button__buscar" type="submit">BUSCAR</button></div> -->
         </form>
         <!-- Área Table -->
         <div class="table__area">
