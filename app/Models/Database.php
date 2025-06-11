@@ -2,11 +2,11 @@
 
 namespace app\Models;
 
-require_once('../vendor/autoload.php');
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use app\Models\Env;
 use PDO;
-$env = Env::load();
+Env::load();
 
 class Database {
     //atributos do database
@@ -45,7 +45,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }
 
-        catch(PDOException $err){
+        catch(\PDOException $err){
             die("Conection Failed".$err->getMessage());
         }
 
@@ -61,7 +61,7 @@ class Database {
             return $stmt;
 
         }
-        catch (PDOException $err){
+        catch (\PDOException $err){
             die("Connection failed". $err->getMessage());
         }
     }

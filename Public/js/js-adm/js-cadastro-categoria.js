@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = new FormData(form_categoria);
 
         try {
-            const dados_php = await fetch('../../../actionsADM/cadastro-categoria.php', {
+            const dados_php = await fetch('../../../actions/cadastro-categoria.php', {
                 method: 'POST',
                 body: formData
             });
@@ -114,19 +114,22 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(response);
 
             if (response.status === "OK") {
-                alert("Cadastrado com sucesso");
+                alert("✅ " + response.message);
                 modalCadastro?.close();
-                setTimeout(() => {
-                    location.reload(); 
-                }, 3000); 
+                window.location.reload();
+            } else if (response.status === "Error") {
+                // Exibe a mensagem de erro vinda do PHP
+                alert("❌ " + response.message);
             } else {
-                alert("Erro ao cadastrar!");
+                // Caso alguma estrutura inesperada seja retornada
+                alert("❌ Ocorreu um erro desconhecido.");
             }
         } catch (error) {
             console.error("Erro no envio:", error);
-            alert("Erro inesperado.");
+            alert("❌ Erro inesperado ao enviar o formulário.");
         }
     });
+
 
     // Botão de abrir modal (opcional duplicado)
     const bot_categoria = document.querySelector(".btn-cad");
@@ -162,48 +165,4 @@ function fecharModal(idModal) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const modalCadastro = document.getElementById("cadastro-categoria");
-  
-    // Seleciona todos os links que abrem modal para editar
-    const openModalButtons = document.querySelectorAll(".open-modal");
-  
-    openModalButtons.forEach(button => {
-      button.addEventListener("click", function(event) {
-        event.preventDefault();
-  
-        // Pega os dados do data-attributes
-        const id = this.dataset.id;
-        const nome = this.dataset.nome;
-        const cor = this.dataset.cor;
-  
-        // Preenche os campos do modal
-        document.querySelector('input[name="id_categoria"]').value = id;
-        document.querySelector('input[name="descricao"]').value = nome;
-        document.getElementById('corInput').value = cor;
-  
-        // Atualiza a exibição da cor no modal
-        document.getElementById('selectedText').textContent = cor;
-        document.getElementById('selectedColor').style.backgroundColor = cor;
-  
-        // Abre o modal
-        modalCadastro.showModal();
-      });
-    });
-  
-    // Botões de fechar modal
-    const closeModalButtons = document.querySelectorAll(".close-modal");
-    closeModalButtons.forEach(button => {
-      button.addEventListener("click", function() {
-        modalCadastro.close();
-      });
-    });
-  
-    // Fecha modal ao clicar fora do conteúdo
-    modalCadastro.addEventListener("click", function(event) {
-      if (event.target === modalCadastro) {
-        modalCadastro.close();
-      }
-    });
-  });
-  
+

@@ -1,17 +1,11 @@
 <?php
-    require_once('../../../vendor/autoload.php');
-    use app\Controller\Categoria;
-    $complemento_caminho =  '../../';
+require_once '../../../vendor/autoload.php';
 
-    $categoria = new Categoria();
-    $categorias = $categoria->listar();
+use app\Controller\Categoria;
 
-    // print_r($categorias);
-
+$categoria = new Categoria();
+$categorias = $categoria->listar();
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,14 +13,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
-    <title>Adm - Bosque da Paz</title>
+    <title>Adm - Visualizar Categorias</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-visualizar-categoria.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
 </head>
-
-
-
 
 <body class="corpo">
     <?php include "../../../Public/include/menu-adm.html" ?>
@@ -38,71 +29,27 @@
         <div class="box">
             <h1 class="title">TODAS AS CATEGORIAS</h1>
             <div class="box-item">
-                <?php foreach($categorias as $category): ?>
-                    <div class="item">
-                        <div style="background-color:<?= $category->cor; ?>;" class="bolota" id="b1">
-                            <img src="<?= $complemento_caminho . $category->icone; ?>" alt="<?= $category->icone; ?>" class="icon-item">
+
+                <?php if (!empty($categorias)): ?>
+                    <?php foreach ($categorias as $category): ?>
+                        <div class="item">
+                            <div style="background-color: <?= htmlspecialchars($category->getCor()); ?>;" class="bolota">
+                                <img src="../../../Public/<?= htmlspecialchars($category->getIcone()); ?>" alt="Ícone da categoria <?= htmlspecialchars($category->getDescricao()); ?>" class="icon-item">
+                            </div>
+                            <p class="nome-cat"><?= htmlspecialchars($category->getDescricao()); ?></p>
                         </div>
-                        <p class="nome-cat"><?= $category->descricao; ?></p>
-                    </div>
-                
-                <?php endforeach; ?>
-                
-                <!-- <div class="item">
-                    <div class="bolota" id="b2">
-                        <img src="../../../Public/assets/icons/icones-categorias/Papiro.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Antiguidade</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b3">
-                        <img src="../../../Public/assets/icons/icones-categorias/Quadrados.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Colecionismo</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b4">
-                        <img src="../../../Public/assets/icons/icones-categorias/Frasco.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Cosmetologia</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b5">
-                        <img src="../../../Public/assets/icons/icones-categorias/Frasco.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Gastronomia</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b6">
-                        <img src="../../../Public/assets/icons/icones-categorias/Livros.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Literatura</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b7">
-                        <img src="../../../Public/assets/icons/icones-categorias/Tesoura.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Moda Autoral</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b8">
-                        <img src="../../../Public/assets/icons/icones-categorias/Planta.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Plantas</p>
-                </div>
-                <div class="item">
-                    <div class="bolota" id="b9">
-                        <img src="../../../Public/assets/icons/icones-categorias/Reciclar.png" alt="" class="icon-item">
-                    </div>
-                    <p class="nome-cat">Sustentabilidade</p>
-                </div> -->
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Nenhuma categoria cadastrada ainda.</p>
+                <?php endif; ?>
+
                 <div class="item open-modal" data-modal="cadastro-categoria">
                     <div class="bolota" id="b10">
-                        <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="" class="icon-item">
+                        <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="Adicionar nova categoria" class="icon-item">
                     </div>
                     <p class="nome-cat">Nova Categoria</p>
                 </div>
-                <!-- Modal -->
+
                 <dialog class="cadastro-categoria" id="cadastro-categoria">
                     <div class="modal-content">
                         <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
@@ -147,11 +94,9 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <input type="hidden" name="cor" id="corInput" required>
-
                                 <h3 class="titulo-modal">Ícone:</h3>
-                                <label for="file" class="custum-file-upload" onchange="loadFile(event)">
+                                <label for="file" class="custum-file-upload">
                                     <div class="icon">
                                         <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -167,24 +112,24 @@
                                     <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
                                 <div class="botoes">
-                                    <button type="button" class="cancelar" onclick="fecharModal('cadastro-categoria')">Cancelar</button>
+                                    <button type="button" class="cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
                                     <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </dialog>
-
             </div>
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
                     <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
+        </div>
     </main>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-
 </body>
 
 </html>
