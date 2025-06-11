@@ -1,4 +1,7 @@
-<?php ?>
+
+<?php
+// require_once './actions/cadastrar_expositor.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +20,7 @@
     <main class="principal">
 
 
-    
+
 
         <div class="box">
 
@@ -65,16 +68,14 @@
                         <div class="input">
                             <label for="optionInput3">Categorias</label>
                             <select name="id_categoria" id="categorias" class="select" require>
-                               
+
                                 <!-- OPTIONS GERADOS PELO JS -->
                             </select>
                         </div>
 
                         <div class="input">
-                            <label>Link:</label>
-                            <script>
-                                link
-                            </script>
+                            <label>Link instagram:</label>
+ 
                             <input type="text" name="" id="" placeholder="link instagram" required>
                         </div>
                     </div>
@@ -129,6 +130,8 @@
 
                 </div>
 
+           
+
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
                         <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
@@ -137,7 +140,19 @@
             </form>
 
 
+
+
         </div>
+
+        
+    <div id="modal_salvar" class="oculta">
+            <div class="modal_conteudo">
+                <p class="text_modal">Cadastro salvo com sucesso!</p>
+                <form method="dialog" class="fecha_modal">
+                    <button id="fechar_modal">Fechar</button>
+                </form>
+            </div>
+    </div> 
 
         </div>
     </main>
@@ -149,9 +164,13 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js"></script>
+       
+
+
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>
 
 </html>
+

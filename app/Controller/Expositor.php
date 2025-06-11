@@ -39,7 +39,7 @@ class Expositor extends Pessoa
         $this->imagens = $imagens;
     }
 
-    public function setd_pessoa($id_pessoa)
+    public function setId_pessoa($id_pessoa)
     {
         $this->id_pessoa = $id_pessoa;
     }
@@ -47,10 +47,7 @@ class Expositor extends Pessoa
     {
         $this->id_categoria = $id_categoria;
     }
-    // public function setId_imagem($id_imagem)
-    // {
-    //     $this->id_imagem = $id_imagem;
-    // }
+
     public function setNome_marca($nome_marca)
     {
         $this->nome_marca = $nome_marca;
@@ -106,10 +103,7 @@ class Expositor extends Pessoa
     {
         return $this->id_categoria;
     }
-    // public function getId_imagem()
-    // {
-    //     return $this->id_imagem;
-    // }
+
     public function getNome_marca()
     {
         return $this->nome_marca;
