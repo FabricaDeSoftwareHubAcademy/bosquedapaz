@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bloco principal -->
-    <title>Gerenciar Expositor</title>
+    <title>Gerenciar e Validar</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -23,7 +23,7 @@
         <!-- Seção de dados da empresa -->
         <section class="secao-dados-empresa">
             <div class="area-superior">
-                <h1 class="area-superior-texto">Nome da Empresa</h1>
+                <h1 class="area-superior-texto">Foto da Empresa</h1>
                 <img class="area-superior-imagem" src="../../../Public/imgs/imgs-validar-expositor/logomarca.png" alt="logo da empresa">
             </div>
             <div class="area-inferior">
@@ -73,7 +73,7 @@
 
                             <label for="">Instagram</label>
                             <a class="formulario-campo-informacao campo-link"
-                            href="<?= htmlspecialchars($dados['instagram'] ?? 'https://www.letras.mus.br/palmeiras/397875/') ?>"
+                            href="<?= htmlspecialchars($dados['instagram'] ?? '') ?>"
                             target="_blank">
                             <?= !empty($dados['instagram']) ? "Visitar Perfil" : "Perfil não encontrado"?>
                             </a>
@@ -141,6 +141,16 @@
         </div>
     </div>
 
+    <!-- modal 3 - recusar expositor  -->
+    <div class="modal modal-recusar-expositor-3" id="modal_recusar_expositor_3">
+        <div class="modal-content-recusar-expositor">
+            <h1 class="modal-texto-recusar-expositor">Expositor Recusado.</h1>
+            <div class="modal-botoes-recusar-expositor">
+                <button class="botoes-modal-recusar-expositor botao-ok" id="botao_ok_recusar">Ok</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Modais - Validar Expositor -->
     <!-- ----------------------------- -->
     <!-- modal 1 - validar expositor -->
@@ -177,6 +187,16 @@
                     <button type="submit" name="validar-expositor" class="botoes-modal-validar-expositor botao-confirmar" id="botao_confirmar_validar_expositor_2">Confirmar</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- modal 3 - validar expositor  -->
+    <div class="modal modal-validar-expositor-3" id="modal_validar_expositor_3">
+        <div class="modal-content-validar-expositor">
+            <h1 class="modal-texto-validar-expositor">Expositor Validado.</h1>
+            <div class="modal-botoes-validar-expositor">
+                <button class="botoes-modal-validar-expositor botao-ok" id="botao_ok_validar">Ok</button>
+            </div>
         </div>
     </div>
 
