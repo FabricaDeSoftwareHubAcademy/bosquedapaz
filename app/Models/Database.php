@@ -107,7 +107,8 @@ class Database
     }
 
     // Database Guilherme
-    public function listar_expositor_para_cadastro($nome) {
+    public function listar_expositor_para_cadastro($nome)
+    {
         $query = "SELECT
         p.nome, p.cpf, e.id_expositor
         FROM pessoa p
@@ -117,7 +118,8 @@ class Database
         return $this->execute($query, $binds);
     }
 
-    public function listar_todos_boletos() {
+    public function listar_todos_boletos()
+    {
         $query = "SELECT
         b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
@@ -130,7 +132,8 @@ class Database
         return $this->execute($query);
     }
 
-    public function filtrar_boletos_por_nome($nome) {
+    public function filtrar_boletos_por_nome($nome)
+    {
         $query = "SELECT
         b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
@@ -145,7 +148,8 @@ class Database
         return $this->execute($query, $binds);
     }
 
-    public function filtrar_boletos_por_data($data_inicial, $data_final) {
+    public function filtrar_boletos_por_data($data_inicial, $data_final)
+    {
         $query = "SELECT
         b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
@@ -164,7 +168,8 @@ class Database
         return $this->execute($query, $binds);
     }
 
-    public function filtrar_boletos_por_status($status) {
+    public function filtrar_boletos_por_status($status)
+    {
         $query = "SELECT
         b.id_boleto, e.id_expositor
         p.nome, b.vencimento,
@@ -179,8 +184,21 @@ class Database
         return $this->execute($query, $binds);
     }
 
-    // fazer se caso necessario uma function query 
-    // para alterar status_exp entre ativo inativo 
+    public function capturar_boleto_por_id($id)
+    {
+        $query = "SELECT
+        e.id_expositor, b.id_boleto,
+        p.nome, b.vencimento,
+        b.mes_referencia,
+        b.valor, b.status_bol
+        FROM pessoa p
+        INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
+        INNER JOIN boleto b on e.id_expositor = b.id_expositor
+        WHERE e.id_expositor = :id_expositor;";
+
+        $binds = [":id_expositor" => "$id"];
+        return $this->execute($query, $binds);
+    }
 
     // Database Matheus
     public function listar_colaboradores()

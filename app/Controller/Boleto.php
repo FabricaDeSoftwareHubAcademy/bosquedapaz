@@ -53,6 +53,14 @@ class Boleto {
         return $banco->filtrar_boletos_por_data($data_inicial, $data_final);
     }
 
-    // fazer filtragem por id se necessário
+    public function CapturarBoletoPorId($id) {
+        if (isset($_SESSION['id_expositor'])) {
+            $id = $_SESSION['id_expositor'];
+            $banco = new Database();
+            return $banco->capturar_boleto_por_id($id);
+        } else {
+            return null;
+        }
+    }
 }
 ?>
