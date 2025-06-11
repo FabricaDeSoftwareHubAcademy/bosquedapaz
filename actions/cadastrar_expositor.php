@@ -31,9 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $res = $expositor->cadastrar();
 
-    if($res){
+    if(isset($res["ok"])){
         echo json_encode( ['status' => 200, 'msg' => 'Expositor cadastrado com sucesso!', 'code' => 100] );
-    }else{
+    }else if (isset($res["erro"])){
+        echo json_encode( ['status' => 404, 'msg' => 'Erro ao enviar E-mail, usuário não cadastrado', 'code' => 100] );
+    }
+    else{
         echo json_encode( ['status' => 400, 'msg' => 'Erro ao cadastrar o expositor!','code' => 101] );
     }
 }

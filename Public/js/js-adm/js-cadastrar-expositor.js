@@ -40,10 +40,7 @@ btn_salvar.addEventListener('click', async function(event){
     let response = await dados_php.json();
 
     ////////// abre modal ////////////
-    
-
-    console.log(response);
-
+    console.log(response)
     if(response.status == 200){
 
         formulario.reset();
@@ -59,8 +56,11 @@ btn_salvar.addEventListener('click', async function(event){
             modal.classList.add("oculta");
         })
 
-    }else{
-        alert("ERRROOOOOOO")
+    }else if (response.status == 404){
+        alert("Email não foi enviado")
+    }
+    else {
+        alert("ERROOOOOOOOOO")
     }
 
     
