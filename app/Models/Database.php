@@ -200,7 +200,7 @@ class Database {
     }
 
     public function sts_adm($id_colaborador, $novoStatus) {
-        $query = "UPDATE colaborador SET status_col = ? id_colaborador = ?";
+        $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
     }

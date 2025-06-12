@@ -5,6 +5,10 @@
 //     exit;
 // }
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
 
@@ -16,6 +20,41 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 if ($requestMethod === 'POST') {
     $colab = new Colaborador();
+
+    $input = json_decode(file_get_contents('php://input'), true);
+
+    if ($input !== null && isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+        $colab = new Colaborador();
+
+        $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
+        $statusAtual = $input['status_atual'] ?? null;
+
+        if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
+            echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
+            exit;
+        }
+
+        try {
+            $novoStatus = $statusAtual === 'ativo' ? 'inativo' : 'ativo';
+
+            $result = $colab->mudar_status($id, $novoStatus);
+
+            if ($result) {
+                echo json_encode([
+                    'success' => true,
+                    'message' => "Status alterado para $novoStatus com sucesso!",
+                    'novoStatus' => $novoStatus,
+                    'novoStatusTexto' => ucfirst($novoStatus)
+                ]);
+            } else {
+                echo json_encode(['success' => false, 'message' => 'Erro ao alterar status.']);
+            }
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => 'Erro interno: ' . $e->getMessage()]);
+        }
+        exit;
+    }
+
 
     // Cadastro
     if (isset($_POST["cadastrar"])) {
@@ -147,6 +186,13 @@ if ($requestMethod === 'POST') {
         }
     }
 
+
+    // Mudar Status: 
+    
+
+
+
+
     echo json_encode(['success' => false, 'message' => 'Requisição inválida']);
     exit;
 }
@@ -174,13 +220,30 @@ if ($requestMethod === 'GET') {
     }
 }
 
-// Alterar Status:
-$input = json_decode(file_get_contents('php://input'), true);
+// $input = json_decode(file_get_contents('php://input'), true);
+// if (isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+//     $colab = new Colaborador();
+//     $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
+//     $statusAtual = $input['status_atual'];
 
-if (isset($input['acao']) && $input['acao'] === 'alternarStatus') {
-    $res = new Colaborador();
-    $result = $res->mudar_status($input['id_colaborador'], $input['status_atual']);
+//     if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
+//         echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
+//         exit;
+//     }
 
-    echo json_encode($result);
-    exit;
-}
+//     $novoStatus = $statusAtual === 'ativo' ? 'inativo' : 'ativo';
+
+//     $result = $colab->mudar_status($id, $novoStatus);
+
+//     if ($result) {
+//         echo json_encode([
+//             'success' => true,
+//             'message' => "Status alterado para $novoStatus com sucesso!",
+//             'novoStatus' => $novoStatus,
+//             'novoStatusTexto' => ucfirst($novoStatus)
+//         ]);
+//     } else {
+//         echo json_encode(['success' => false, 'message' => 'Erro ao alterar status.']);
+//     }
+//     exit;
+// }
