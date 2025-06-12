@@ -13,7 +13,6 @@ class Categoria
     private string $cor;
     private string $icone;
 
-    // --- MÉTODOS DE ACESSO AO BANCO DE DADOS (JÁ EXISTENTES) ---
 
     public function cadastrar()
     {
@@ -29,7 +28,6 @@ class Categoria
     public function listar($where = null, $order = null, $limit = null)
     {
         $db = new Database('categoria');
-        // Alterado para fetchAll(PDO::FETCH_CLASS), que funciona melhor com propriedades privadas e setters
         $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
@@ -37,7 +35,6 @@ class Categoria
     public function buscarPorId($id)
     {
         $db = new Database('categoria');
-        // O ideal é renomear 'listar_por_id' para 'buscarPorId' para consistência
         $res = $db->select('id_categoria = ' . $id)->fetchObject(self::class);
         return $res;
     }
