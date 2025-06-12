@@ -57,22 +57,29 @@ linhaBaixo2.style.borderRadius = '.2rem'
 linhaBaixo2.style.margin = 'auto'
 linhaBaixo2.style.transform = 'rotate(40deg)'
 linhaBaixo2.style.position = 'relative'
-linhaBaixo2.style.top = '.05rem'
+linhaBaixo2.style.top = '.0rem'
 linhaBaixo2.style.left = '.3rem'
 linhaBaixo2.style.backgroundColor = 'black'
 
 btnVoltar.addEventListener('mouseover', () => {
     linhaCima2.style.display = 'block'
     linhaBaixo2.style.display = 'block'
+    linhaBaixo2.style.transition = 'all .2s ease-in'
+    linhaCima2.style.transition = 'all .2s ease-in'
     linhaCima.style.left = `-.3rem`
     linhaBaixo.style.left = `-.3rem`
-    
+    linhaBaixo.style.transition = 'all .2s ease-in'
+    linhaCima.style.transition = 'all .2s ease-in'
 })
 btnVoltar.addEventListener('mouseout', () => {
     linhaCima2.style.display = 'none'
     linhaBaixo2.style.display = 'none'
+    linhaBaixo2.style.transition = 'all .2s ease-in'
+    linhaCima2.style.transition = 'all .2s ease-in'
     linhaCima.style.left = '-.1rem'
     linhaBaixo.style.left = '-.1rem'
+    linhaBaixo.style.transition = 'all .2s ease-in'
+    linhaCima.style.transition = 'all .2s ease-in'
 })
 
 let btnsSalvarCancelar = document.getElementById('btns-salvar-cancelar')
@@ -91,7 +98,12 @@ btnReset.style.backgroundColor = '#FF3877'
 btnReset.style.color = 'white'
 
 btnReset.addEventListener('mouseover', () => {
-    
+    btnReset.style.boxShadow = '0px 0px 5px black'
+    btnReset.style.transition = 'all .2s ease-in'
+})
+btnReset.addEventListener('mouseout', () => {
+    btnReset.style.boxShadow = 'none'
+    btnReset.style.transition = 'all .2s ease-in'
 })
 
 let btnSalvar = document.getElementById('btn-salvar')
@@ -102,3 +114,12 @@ btnSalvar.style.border = 'none'
 btnSalvar.style.borderRadius = '.5rem'
 btnSalvar.style.backgroundColor = '#007E70'
 btnSalvar.style.color = 'white'
+
+btnSalvar.addEventListener('mouseover', () => {
+    btnSalvar.style.boxShadow = '0px 0px 5px black'
+    btnSalvar.style.transition = 'all .2s ease-in'
+})
+btnSalvar.addEventListener('mouseout', () => {
+    btnSalvar.style.boxShadow = 'none'
+    btnSalvar.style.transition = 'all .2s ease-in'
+})
