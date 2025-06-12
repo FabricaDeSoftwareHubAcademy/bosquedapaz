@@ -1,31 +1,85 @@
-document.addEventListener("click", async (event) => {
+// Script para Mudar Status: 
+document.addEventListener("DOMContentLoaded", () => {
+  const tbody = document.getElementById("tbody-colaboradores");
+  const modalConfirm = document.getElementById("modal-confirm");
+  const modalSuccess = document.getElementById("modal-success");
+  const modalConfirmMsg = document.getElementById("modal-confirm-msg");
+  const modalSuccessMsg = document.getElementById("modal-success-msg");
+  const btnSim = document.getElementById("modal-confirm-sim");
+  const btnNao = document.getElementById("modal-confirm-nao");
+  const btnOk = document.getElementById("modal-success-ok");
 
-  event.preventDefault();
+  let currentButton = null;
+  let novoStatus = "";
+  let idColaborador = null;
 
-  let modal = document.getElementById("modal");
+  tbody.addEventListener("click", (e) => {
+    if (e.target && e.target.matches("button.status")) {
+      currentButton = e.target;
+      idColaborador = currentButton.getAttribute("data-id");
+      const statusAtual = currentButton.getAttribute("data-status");
+      novoStatus = statusAtual === "ativo" ? "inativo" : "ativo";
 
-  console.log(modal)
+      modalConfirmMsg.textContent = `Deseja realmente ${novoStatus === "ativo" ? "ativar" : "inativar"} este ADM?`;
+      modalConfirm.style.display = "flex";
+    }
+  });
 
+  btnNao.addEventListener("click", () => {
+    modalConfirm.style.display = "none";
+    currentButton = null;
+  });
 
-  let dados_php = await fetch("../../../actions/action-colaborador.php?id=1");
+  btnSim.addEventListener("click", async () => {
+    if (!currentButton || !idColaborador) {
+      modalConfirm.style.display = "none";
+      return;
+    }
 
-  let response = await dados_php.json()
+    try {
+      const response = await fetch("../../../actions/action-colaborador.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          acao: "alternarStatus",
+          id_colaborador: idColaborador,
+          status_atual: currentButton.getAttribute("data-status"),
+        }),
+      });
 
-  console.log(response)
+      const text = await response.text();
+      console.log("Resposta do servidor:", text);
 
-  if(response.status == 200){
-     modal.classList.remove("oculta");
-     modal.classList.add("chama");
-  }
+      const data = JSON.parse(text);
 
+      if (response.ok && data.success) {
+        currentButton.textContent = data.novoStatusTexto;
+        currentButton.setAttribute("data-status", data.novoStatus);
+        if (data.novoStatus === "ativo") {
+          currentButton.classList.remove("inactive");
+          currentButton.classList.add("active");
+        } else {
+          currentButton.classList.remove("active");
+          currentButton.classList.add("inactive");
+        }
 
-  // if (event.target.classList.contains("status")) {
-  //   event.target.classList.toggle("active");
-  //   event.target.classList.toggle("inactive");
-  //   event.target.textContent = event.target.classList.contains("active") ? "Ativo" : "Inativo";
-    
-  // }
+        modalConfirm.style.display = "none";
 
-  // console.log("KKKKKKK")
+        modalSuccessMsg.textContent = data.message;
+        modalSuccess.style.display = "flex";
+      } else {
+        alert(data.message || "Erro ao tentar mudar o status.");
+        modalConfirm.style.display = "none";
+      }
+    } catch (error) {
+      alert("Erro na comunicação com o servidor.");
+      modalConfirm.style.display = "none";
+      console.error("Erro no fetch/parse JSON:", error);
+    }
+  });
+
+  btnOk.addEventListener("click", () => {
+    modalSuccess.style.display = "none";
+    currentButton = null;
+  });
 });
-

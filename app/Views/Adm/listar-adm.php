@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
 
-<style>
+  <style>
     /* Estilos básicos para modais */
     .modal-overlay {
       position: fixed;
@@ -44,21 +44,6 @@
     }
     .modal.show {
       display: flex !important;
-    }
-    /* Botões de status */
-    button.status.active {
-      background-color: green;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-    }
-    button.status.inactive {
-      background-color: red;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
     }
   </style>
 
@@ -123,9 +108,8 @@
   </div>
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
-  <!-- <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script> -->
   <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>
+  <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
   <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
-
 </body>
 </html>

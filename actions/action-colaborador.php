@@ -5,10 +5,6 @@
 //     exit;
 // }
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
 
@@ -17,44 +13,10 @@ function sanitizeString($str) {
 }
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
-
 if ($requestMethod === 'POST') {
     $colab = new Colaborador();
 
     $input = json_decode(file_get_contents('php://input'), true);
-
-    if ($input !== null && isset($input['acao']) && $input['acao'] === 'alternarStatus') {
-        $colab = new Colaborador();
-
-        $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
-        $statusAtual = $input['status_atual'] ?? null;
-
-        if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
-            echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
-            exit;
-        }
-
-        try {
-            $novoStatus = $statusAtual === 'ativo' ? 'inativo' : 'ativo';
-
-            $result = $colab->mudar_status($id, $novoStatus);
-
-            if ($result) {
-                echo json_encode([
-                    'success' => true,
-                    'message' => "Status alterado para $novoStatus com sucesso!",
-                    'novoStatus' => $novoStatus,
-                    'novoStatusTexto' => ucfirst($novoStatus)
-                ]);
-            } else {
-                echo json_encode(['success' => false, 'message' => 'Erro ao alterar status.']);
-            }
-        } catch (Exception $e) {
-            echo json_encode(['success' => false, 'message' => 'Erro interno: ' . $e->getMessage()]);
-        }
-        exit;
-    }
-
 
     // Cadastro
     if (isset($_POST["cadastrar"])) {
@@ -105,6 +67,40 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Erro ao cadastrar ADM.']);
             exit;
         }
+    }
+
+    
+    // Alterar Status
+    else if ($input !== null && isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+        $colab = new Colaborador();
+
+        $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
+        $statusAtual = $input['status_atual'] ?? null;
+
+        if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
+            echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
+            exit;
+        }
+
+        try {
+            $novoStatus = $statusAtual === 'ativo' ? 'inativo' : 'ativo';
+
+            $result = $colab->mudar_status($id, $novoStatus);
+
+            if ($result) {
+                echo json_encode([
+                    'success' => true,
+                    'message' => "Status alterado para $novoStatus com sucesso!",
+                    'novoStatus' => $novoStatus,
+                    'novoStatusTexto' => ucfirst($novoStatus)
+                ]);
+            } else {
+                echo json_encode(['success' => false, 'message' => 'Erro ao alterar status.']);
+            }
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => 'Erro interno: ' . $e->getMessage()]);
+        }
+        exit;
     }
 
 
@@ -185,14 +181,6 @@ if ($requestMethod === 'POST') {
             exit;
         }
     }
-
-
-    // Mudar Status: 
-    
-
-
-
-
     echo json_encode(['success' => false, 'message' => 'Requisição inválida']);
     exit;
 }
@@ -219,31 +207,3 @@ if ($requestMethod === 'GET') {
         exit;
     }
 }
-
-// $input = json_decode(file_get_contents('php://input'), true);
-// if (isset($input['acao']) && $input['acao'] === 'alternarStatus') {
-//     $colab = new Colaborador();
-//     $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
-//     $statusAtual = $input['status_atual'];
-
-//     if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
-//         echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
-//         exit;
-//     }
-
-//     $novoStatus = $statusAtual === 'ativo' ? 'inativo' : 'ativo';
-
-//     $result = $colab->mudar_status($id, $novoStatus);
-
-//     if ($result) {
-//         echo json_encode([
-//             'success' => true,
-//             'message' => "Status alterado para $novoStatus com sucesso!",
-//             'novoStatus' => $novoStatus,
-//             'novoStatusTexto' => ucfirst($novoStatus)
-//         ]);
-//     } else {
-//         echo json_encode(['success' => false, 'message' => 'Erro ao alterar status.']);
-//     }
-//     exit;
-// }
