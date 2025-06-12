@@ -9,6 +9,46 @@
     box-sizing: border-box;
 }
 
+/* Imgs Decorativas */
+.bola-1 {
+    position: fixed;
+    top: 15vh;
+    right: 80vw;
+    width: 20vw;
+    z-index: -1;
+}
+ 
+.bola-1 img {
+    width: 40%;
+    height: auto;
+}
+ 
+.bola-2{
+    position: fixed;
+    top: 20vh;
+    left: 92vw;
+    width: 20vw;
+    z-index: -1;
+}
+ 
+.bola-2 img {
+    width: 40%;
+    height: auto;
+}
+ 
+.bola-3 {
+    position: fixed;
+    top: 80vh;
+    left: 85vw;
+    width: 20vw;
+    z-index: -1;
+}
+ 
+.bola-3 img {
+    width: 100%;
+    height: auto;
+}
+
 .principal-tela-utl {
     width: 100%;
     padding-top: 100px;
@@ -47,8 +87,8 @@
 
 .cards {
     background-color: white;
-    width: 300px;
-    height: 450px;
+    width: 320px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +98,7 @@
     overflow: hidden;
     border: 1px solid #3F49EA;
     transition: all .2s ease-in-out;
+    box-shadow: 1px 5px 10px rgba(124, 124, 124, 0.733);
 }
 
 .cards:hover {
@@ -78,19 +119,19 @@
 
 .linha__decorativa1 {
     position: absolute;
-    width: 200px;
+    width: 270px;
     height: 1rem;
     border-radius: 1rem;
-    bottom: 120px;
-    left: 150px;
+    bottom: 128px;
+    left: 71px;
     transform: rotate(-25deg);
     background-color: white;
 }
 .linha__decorativa2 {
     position: absolute;
-    width: 200px;
+    width: 240px;
     height: 1rem;
-    bottom: 90px;
+    bottom: 123px;
     left: -30px;
     border-radius: 1rem;
     transform: rotate(-25deg);
@@ -117,9 +158,12 @@
 }
 
 .saiba-mais {
-    padding: .5rem 2rem;
+    padding: .9rem 4.5rem;
+    background-color: white;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 800;
+    font-size: 18px;
+    color: #3F49EA;
     border-radius: .5rem;
     text-transform: capitalize;
     border: 1px solid #3F49EA;
@@ -179,6 +223,11 @@
     .principal-tela-utl {
         padding-bottom: 2rem;
     }
+
+    .saiba-mais{
+        padding: .8rem 2rem;
+        font-size: 1rem;
+    } 
 }
 
 @media screen and (max-width: 1300px) {
@@ -203,13 +252,12 @@
     }
 
     .linha__decorativa1 {
-        bottom: 120px;
-        left: 150px;
+        bottom: 122px;
+        left: 132px;
     }
     .linha__decorativa2 {
         width: 150px;
-        bottom: 90px;
+        bottom: 70px;
         left: -30px;
-
     }
 }
