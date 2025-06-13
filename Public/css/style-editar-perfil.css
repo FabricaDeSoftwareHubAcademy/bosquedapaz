@@ -326,7 +326,7 @@ input[type="file"]{
 
     .perfilEdit-box{
         height: 150vh;
-        width: 90%;
+        width: 92%;
     }
 
     .perfilEdit-title{
@@ -374,11 +374,16 @@ input[type="file"]{
         max-height: 205px;
     }
 
-    .perfilEdit-load-foto{
-        min-width: 165px;
+    .perfilEdit-foto-info-label{
+        position: relative;
     }
 
-    .perfilEdit-div-group{
+    .perfilEdit-load-foto{
+        min-width: 165px;
+        max-width: 165px;
+    }
+
+    .perfilEdit-div-group{  
         max-width: 140vh;
         position: relative;
         overflow-x: auto;
@@ -408,11 +413,17 @@ input[type="file"]{
 }
 
 @media (min-width: 576px){
-
 }
 
 @media (min-width: 768px){
+    .perfilEdit-title{
+        margin-top: 10%;
+    }
 
+    .perfilEdit-form{
+        width: 90%;
+        background-color: red;
+    }
 }
 
 @media (min-width: 992px){
