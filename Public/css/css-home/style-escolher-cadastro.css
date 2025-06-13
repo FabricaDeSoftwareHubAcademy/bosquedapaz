@@ -18,18 +18,27 @@
     --color-button3: #f2c41e;
 }
 
-/* Corpo da Tela */
-
-
 .main__principal{
     width: 100%;
-    height: ;
-    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* Box Principal dos Elementos */
-
+.container__box{
+    width: 85%;
+    height: 80%;
+    margin-top: 7%;
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-box);
+}
 
 
 /* Lado Esquerdo: Buttons, Lado Direito: Imagem */
@@ -163,9 +172,9 @@
 /* Celulares pequenos (smartphones compactos) */
 @media (max-width: 575.98px){
     /* Box Principal dos Elementos */
-    /* .container__box{
+    .container__box{
         margin-top: 30%;
-    } */
+    }
 
     /* Lado Esquerdo: Botões: */
     .conteiner__buttons h1{
@@ -277,6 +286,10 @@
         width: 50%;
         height: auto;
     }
+
+    .conteiner__img {
+        display: none;
+    }
 }
 
 
@@ -302,10 +315,6 @@
 
 /* Nest Hub */
 @media (min-width: 1024px) and (max-height: 600px){
-    .container__box{
-        margin-top: 10%;
-    }
-
     /* Lado Direito: Imagem: */
     .conteiner__buttons h1{
         font-size: 25px;
@@ -330,3 +339,4 @@
         bottom: -2vh;
     }
 }
+
