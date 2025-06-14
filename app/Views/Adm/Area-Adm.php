@@ -240,14 +240,15 @@
                         <h2>Financeiro</h2>
                         <i id="icon-sair" class="bi bi-x-square-fill"></i>
                     </div>
-                    <div class="modais">
+                    <div class="modais" id="modal-financeiro">
                         <a class="link-modais" href="../../../app/Views/Adm/grafico-central.php">
                             <div class="action__title">
                                 <div class="action__content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-bar-chart" viewBox="0 0 16 16">
-                                    <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
-                                </svg>
-                                <p>Gráfico</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                                        <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+                                    </svg>
+                                    <p>Gráfico</p>
+                                </div>
                             </div>
                         </a>
                         <a class="link-modais" href="../../../app/Views/Adm/cadastro-boleto.php">
