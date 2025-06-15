@@ -213,7 +213,7 @@ dialog::backdrop{
     }
 
     .container__title h1{
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 600;
     }
 
@@ -226,8 +226,8 @@ dialog::backdrop{
     }
 
     .action__title{
-        width: 180px;
-        height: 180px;
+        width: 130px;
+        height: 130px;
     }
 
     .action__content p{
@@ -430,7 +430,7 @@ dialog::backdrop{
     }
 
     .container__action__tile{
-        /* width: 100%; */
+        width: 100%;
         height: 90%;
         position: relative;
         bottom: 5%;
@@ -474,7 +474,6 @@ dialog::backdrop{
 
     .container__title{
         height: 10%;
-        /* background-color: cornsilk; */
     }
 
     .container__title h1{
@@ -482,12 +481,11 @@ dialog::backdrop{
         font-weight: 600;
     }
 
-    .container__action__tile{
-        width: 100%;
+    .container__action__tile {
+        width: 70%;
         height: 90%;
         position: relative;
         bottom: 5%;
-        /* background-color: cornflowerblue; */
     }
 
     .action__title{
@@ -532,9 +530,9 @@ dialog::backdrop{
     }
 
 }
-@media (min-height: 844px){
-    .container__action__tile{
-        padding: 100px;
+@media (min-height: 844px) {
+    .container__action__tile {
+        padding: 67px;
     }
 }
 @media (min-width: 1728px){
@@ -549,7 +547,7 @@ dialog::backdrop{
         height: 250px;
     }
 
-        .container__action__tile {
+    .container__action__tile {
         width: 71%;
     }
 }
@@ -561,8 +559,12 @@ dialog::backdrop{
     }
 
     .container__action__tile {
-        width: 69%;
+        width: 50%;
     }
 }
 
-@media (max-height: )
+@media (min-width: 1660px){
+    .container__action__tile {
+        width: 67%;
+    }
+}
