@@ -326,24 +326,53 @@ h1 {
     margin: 0 auto;
   }
 
-@media (max-width: 950px) {
+  @media (max-width: 1800px) {
     .box .form-box {
-        width: 100%;
+      display: flex;
+      flex-wrap: wrap; /* permite quebrar para linha de baixo */
+      gap: 20px;
+      width: 100%;
     }
-    #form1 {
-        width: 100%;
+    #form1, #form2, #form3 {
+      flex: 1 1 33.33%; /* cada coluna tenta 1/3 da largura */
+      min-width: 280px; /* evita ficar muito pequeno */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    #form2 {
-        width: 100%;
+  }
+  
+  @media (max-width: 1024px) {
+    #form1, #form2, #form3 {
+      flex: 1 1 45%; /* 2 colunas em telas médias */
+      min-width: 45%;
     }
-    #form3 {
-        width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    #form1, #form2, #form3 {
+      flex: 1 1 100%; /* 1 coluna em telas pequenas */
+      min-width: 100%;
+    }
+  }
+  
+  
+
+  @media (max-width: 950px) {
+    .box .form-box {
+      width: 100%;
+    }
+    #form1, #form2, #form3 {
+      flex: 1 1 45%; /* duas colunas */
+      min-width: 300px;
     }
     .btn {
-        width: 100%;
+      width: auto; /* ou 100% se for botão de tela pequena */
     }
-}
+  }
+  
 
+  
 @media (max-width: 650px) {
     .principal .box {
         padding: 10px;
@@ -380,4 +409,57 @@ h1 {
     .open-modal {
         width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
     }
+}
+@media (max-width: 1400px) and (min-width: 700px) {
+    .box .form-box {
+      flex-wrap: nowrap; /* evita quebras de linha */
+      flex-direction: column; /* coloca os forms em coluna única */
+      width: 100%;
+    }
+  
+    #form1, #form2, #form3 {
+      flex: 1 1 100%; /* cada form ocupa 100% da largura */
+      max-width: 100%;
+      margin: 0 auto 20px auto; /* espaçamento embaixo */
+    }
+  }
+
+  /* Acima de 1461px — layout maior */
+@media (min-width: 1461px) {
+  .box .form-box {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+  }
+  #form1, #form2, #form3 {
+    flex: 1 1 32%;
+    max-width: 20%;
+  }
+}
+
+/* De 1401px até 1460px — mesmo layout grande, para evitar bug */
+@media (min-width: 1401px) and (max-width: 1460px) {
+  .box .form-box {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+  }
+  #form1, #form2, #form3 {
+    flex: 1 1 32%;
+    max-width: 32%;
+  }
+}
+
+/* De 700px até 1400px — layout em 1 coluna */
+@media (min-width: 700px) and (max-width: 1400px) {
+  .box .form-box {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  #form1, #form2, #form3 {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
