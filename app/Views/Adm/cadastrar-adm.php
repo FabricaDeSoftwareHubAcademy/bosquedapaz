@@ -13,20 +13,22 @@
 <body>
     <!-- Includ Menu -->
     <?php include "../../../Public/include/menu-adm.html" ?>
-    <!-- Box Principal -->
-    <section class="body_main">
-        <div class="container_box">
+    <main>
+        <section class="container_box">
             <!-- Seta Voltar  -->
-            <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+            <!-- <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div> -->
+            
             <!-- Area Esquerda: Imagem -->
-            <div class="container_img">
+            <div class="left-side">
+                <h1>Cadastro ADM</h1>
                 <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
             </div>
+           
             <!-- Linha Decorativa do Centro -->
             <div class="div__linha_decorativa"></div>
+            
             <!-- Area Direita: Form -->
-            <div class="container_form">
-                <h1>Cadastro ADM</h1>
+            <div class="right-side">
                 <!-- Form -->
                 <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
                     <!-- Nome -->
@@ -105,13 +107,16 @@
                         <button type="submit" name="cadastrar" value="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
-            </div>
-        </div>    
+            </div>   
+        </section>
+
         <!-- Imagens Decorativas -->
-        <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
+        <!-- <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
-    </section>
+        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div> -->
+    </main>
+
+    
 
     <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
