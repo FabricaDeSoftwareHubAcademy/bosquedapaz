@@ -30,11 +30,11 @@
                 <form action="../../../actions/actions-boletos/action-filtrar-data.php" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Inicial</label>
-                        <input type="date" name="data_inicial"" id="input-filtragem-de-data">
+                        <input type="date" name="data_inicial" id="input-filtragem-de-data">
                     </div>
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Final</label>
-                        <input type="date" name="data_final"" id="input-filtragem-de-data">
+                        <input type="date" name="data_final" id="input-filtragem-de-data">
                     </div>
                     <div class="botao-pesquisar">
                         <label for="" id="label-botao-de-filtragem">Ações</label>
@@ -92,7 +92,8 @@
                 <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_buscar_nome_tempo_real.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_nome.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_status.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 

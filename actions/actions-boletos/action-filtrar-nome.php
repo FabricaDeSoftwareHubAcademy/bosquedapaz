@@ -1,12 +1,14 @@
 <?php
-header('Content-Type: application/json');
-require_once '../../app/Models/Database.php';
 require_once '../../app/Controller/Boleto.php';
 
-$nome = isset($_GET['nome']) ? trim($_GET['nome']) : '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'] ?? '';
 
-$classe = new Boleto();
-$dados = $classe->ListarBoletos($nome);
+    $suaClasse = new Boleto();
+    $dados = $suaClasse->ListarBoletos($nome);
 
-echo json_encode($dados);
+    header('Content-Type: application/json');
+    echo json_encode($dados);
+    exit;
+}
 ?>

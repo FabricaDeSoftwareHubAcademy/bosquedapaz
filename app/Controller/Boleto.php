@@ -14,7 +14,7 @@ class Boleto {
     public ?string $vencimento = null;
     public ?string $mes_referencia = null;
     public ?float $valor = null;
-    public ? string $status = null;
+    public ?string $status = null;
     public ?string $pdf = null;
 
     public function PesquisarExpositor($nome) {
@@ -50,17 +50,19 @@ class Boleto {
 
     public function FiltrarPorData($data_inicial, $data_final) {
         $banco = new Database();
-        return $banco->filtrar_boletos_por_data($data_inicial, $data_final);
+        return $banco->filtrar_boletos_por_data($data_inicial, $data_final)->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function CapturarBoletoPorId($id) {
-        if (isset($_SESSION['id_expositor'])) {
+    public function CapturarBoletoPorId($id = null) {
+        if ($id === null && isset($_SESSION['id_expositor'])) {
             $id = $_SESSION['id_expositor'];
-            $banco = new Database();
-            return $banco->capturar_boleto_por_id($id);
-        } else {
-            return null;
         }
+        if ($id !== null) {
+            $banco = new Database();
+            return $banco->capturar_boleto_por_id($id)->fetch(PDO::FETCH_ASSOC);
+        }
+        return null;
     }
+    
 }
 ?>
