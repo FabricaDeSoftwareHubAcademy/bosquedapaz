@@ -2,1652 +2,341 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../../../bosquedapaz/css/menu-home.css');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
-.bola-1{
+/* Imgs Decorativas */
+.bola-1 {
     position: fixed;
     top: 15vh;
     right: 80vw;
-    z-index: 1;
     width: 20vw;
     z-index: -1;
 }
-
-.bola-1 img{
-    width: 50%;
+ 
+.bola-1 img {
+    width: 40%;
     height: auto;
 }
-
+ 
 .bola-2{
     position: fixed;
-    top: 18vh;
-    left: 90vw;
-    z-index: 1;
+    top: 20vh;
+    left: 92vw;
     width: 20vw;
     z-index: -1;
 }
-
-.bola-2 img{
-    width: 50%;
+ 
+.bola-2 img {
+    width: 40%;
     height: auto;
 }
-
-.bola-3{
+ 
+.bola-3 {
     position: fixed;
-    top: 75vh;
-    left: 82vw;
-    z-index: 1;
+    top: 80vh;
+    left: 85vw;
     width: 20vw;
     z-index: -1;
 }
-
-.bola-3 img{
+ 
+.bola-3 img {
     width: 100%;
     height: auto;
 }
 
-.principal-tela-utl{
+.principal-tela-utl {
     width: 100%;
-    height: 90vh;
-    background-color: rgba(0, 255, 255, 0);
+    padding-top: 150px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.box-principal-utl{
-    width: 85%;
-    height: 90%;
+.box-principal-utl {
+    width: 90%;
+    border-radius: .5rem;
     background-color: rgba(248, 245, 246, 0.705);
-    z-index: 2;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    margin-top: 8%;
-}
-
-#titulo-ult{
-    position: relative;
-    font-size: 30px;
-    font-weight: bold;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.box-principal-utl h1{
-    position: relative;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.area-cards{
-    width: 99%;
-    height: 80%;
-    background-color:  transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-.cards{
-    width: 18%;
-    height: 80%;
-    background-color: black;
-    display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 1rem 0px;
+    justify-self: flex-start;
+}
+
+.area-cards {
+    width: 100%;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cards {
+    background-color: white;
+    width: 320px;
+    height: 500px;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: .5rem;
     overflow: hidden;
-    border-radius: 10px;
-    border: 1px solid #FF3877;
+    border: 1px solid #3F49EA;
     transition: all .2s ease-in-out;
     box-shadow: 1px 5px 10px rgba(124, 124, 124, 0.733);
 }
 
-.cards:hover{
-    transform: scale(1.1);
-}
-
-.area-img{
-    width: 100%;
-    height: 50%;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.area-button{
-    width: 100%;
-    height: 50%;
-    background-color: rgb(255, 255, 255);
-}
-
-.botao-saiba-mais{
-    width: 75%;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #FF3877;
-    color: #FF3877;
-    font-size: 17px;
-    font-weight: 800;
-    background-color: white;
-    position: relative;
-    z-index: 1;
-    top: 43%;
-    left: 13%;
+.cards:hover {
+    margin-top: -50px;
     transition: all .2s ease-in-out;
 }
 
-.botao-saiba-mais:hover{
-    background-color: #FF3877;
-    border: 1px solid white;
-    color: white;
-}
-
-.dec-img{
-    width: 20%;
-    height: 14%;
-    background-color: rgb(0, 0, 0);
-    transform: rotate(142deg);
-    position: fixed;
-    z-index: 3;
-    top: -46%;
-    left: -45%;
-}
-
-.img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    position: relative;
-    top: 4%;
-}
-
-.img img{
-    width: 87%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.dec-button{
-    width: 128%;
-    height: 83%;
-    transform: rotate(-24deg);
-    position: relative;
-    top: 14%;
-    left: 0%;
-    background-color: #FF3877;
-}
-
-.dec-menor-button{
-    height: 259px;
-    border-right: 15px solid #FF3877;
-    border-radius: 10px;
-    position: relative;
-    bottom: 168%;
-    right: 46%;
-    transform: rotate(66deg);
-}
-
-.dec-menor-dentro-button{
-    height: 198px;
-    border-right: 15px solid white;
-    border-radius: 10px;
-    left: 49%;
-    bottom: 166%;
-    position: relative;
-    transform: rotate(-114deg);
-}
-
-#border-card-azul{
-    border: 1px solid #3F49EA;
-}
-
-#h1-azul-card{
-    color: #3F49EA;
-}
-
-#h1-rosa-utl{
-    color: #FF3877;
-}
-
-#button-azul-utl{
-    border: 1px solid #3F49EA;
-    color: #3F49EA;
-}
-
-#button-azul-utl:hover{
-    background-color: #3F49EA;
-    color: white;
-    border: 1px solid white;
-}
-
-#dec-azul-utl{
-    background-color: #3F49EA;
-}
-
-#dec2-azul-utl{
-    border-right: 15px solid #3F49EA;
-}
-
-#seta-voltar{
-    right: 47%;
-    position: relative;
-}
-
-  /* MODAL 1*/
-
-.dlog-modal-card-ProEv {
-    width: 75%;
-    height: 80%;
-    background-color: white;
-    position: absolute;
-    top: 12%;
-    left: 12%;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 1000;
-}
-
-.div-decorativa-modal {
-    width: 30%;
-    height: 30%;
-    background-color: #3F49EA;
-    transform: rotate(-25deg);
-    position: absolute;
-    bottom: 88%;
-    right: 79%;
-    z-index: -1;
-
-    #linha-dec1-modal {
-        height: 150px;
-        border-right: 10px solid white;
-        transform: rotate(85deg);
-        position: absolute;
-        top: 30%;
-        right: 45%;
-        border-radius: 10px;
-    }
-}
-
-.div-decorativa2-modal {
-    width: 60%;
+.div__decorativa {
+    width: 400px;
     height: 50%;
-    background-color: #3F49EA;
     transform: rotate(-25deg);
     position: absolute;
-    top: 80%;
-    left: 50%;
-    z-index: -1;
-
-    #linha-dec2-modal {
-        height: 250px;
-        border-right: 10px solid white;
-        transform: rotate(90deg);
-        position: absolute;
-        bottom: 42%;
-        left: 80%;
-        border-radius: 10px;
-    }
-
-    #linha-dec3-modal {
-        height: 150px;
-        border-right: 10px solid white;
-        transform: rotate(90deg);
-        position: absolute;
-        bottom: 20%;
-        left: 80%;
-        border-radius: 10px;
-    }
-
-    #linha-dec4-modal {
-        height: 250px;
-        border-right: 10px solid white;
-        transform: rotate(90deg);
-        position: absolute;
-        bottom: 22%;
-        left: 60%;
-        border-radius: 10px;
-    }
+    bottom: -100px;
+    left: 5px;
+    z-index: 0;
+    background-color: #3F49EA;
 }
 
-.div-infs-evento-modal {
+.linha__decorativa1 {
+    position: absolute;
+    width: 270px;
+    height: 1rem;
+    border-radius: 1rem;
+    bottom: 128px;
+    left: 71px;
+    transform: rotate(-25deg);
+    background-color: white;
+}
+.linha__decorativa2 {
+    position: absolute;
+    width: 240px;
+    height: 1rem;
+    bottom: 123px;
+    left: -30px;
+    border-radius: 1rem;
+    transform: rotate(-25deg);
+    background-color: #3F49EA;
+}
+
+.por-cima-card {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 255, 255, 0);
-    z-index: 2;
-    position: absolute;
     display: flex;
-    justify-content: space-between;
-    align-items: self-start;
-    top: 0;
-    left: 0;
-}
-
-.areatl-img-modal-ProEv {
-    width: 60%;
-    height: 100%;
-    background-color: rgba(0, 0, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.area-img-modal-ProEv {
-    width: 85%;
-    height: 55%;
-    background-color: rgba(255, 0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 7%;
-}
-
-.area-img-modal-ProEv img {
-    width: 92%;
-    height: auto;
-    top: 4%;
-    position: relative;
-}
-
-.area-text-modal-ProEv {
-    width: 50%;
-    height: 100%;
-    background-color: rgba(137, 43, 226, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-align: left;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0px;
 }
 
-.title-atracao-modal{
-    font-size: 40px;
+.parte-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.saiba-mais {
+    padding: .9rem 4.5rem;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    font-size: 18px;
     color: #3F49EA;
-    position: absolute;
-    bottom: 28%;
-    left: -3%;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    border: 1px solid #3F49EA;
+    transition: all .2s ease-in-out;
 }
 
-.p-atracao-modal {
-    width: 500px;
-    position: absolute;
-    top: 37%;
-}
-
-#b-sari-modal {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    left: 95%;
-    top: 2%;
-    cursor: pointer;
-
-}
-
-.overlaay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.616);
-    z-index: 999;
-    display: none;
-}
-
-        /* MODAL 2*/
-
-    .dlog-modal-card-ProEv2 {
-            width: 75%;
-            height: 80%;
-            background-color: white;
-            position: absolute;
-            top: 12%;
-            left: 12%;
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            z-index: 1000;
-        }
-        
-        .div-decorativa-modal2 {
-            width: 30%;
-            height: 30%;
-            background-color: #FF3877;
-            transform: rotate(-25deg);
-            position: absolute;
-            bottom: 88%;
-            right: 79%;
-            z-index: -1;
-        
-            #linha-dec1-modal2 {
-                height: 150px;
-                border-right: 10px solid white;
-                transform: rotate(85deg);
-                position: absolute;
-                top: 30%;
-                right: 45%;
-                border-radius: 10px;
-            }
-        }
-        
-        .div-decorativa2-modal2 {
-            width: 60%;
-            height: 50%;
-            background-color: #FF3877;
-            transform: rotate(-25deg);
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            z-index: -1;
-        
-            #linha-dec2-modal2 {
-                height: 250px;
-                border-right: 10px solid white;
-                transform: rotate(90deg);
-                position: absolute;
-                bottom: 42%;
-                left: 80%;
-                border-radius: 10px;
-            }
-        
-            #linha-dec3-modal2 {
-                height: 150px;
-                border-right: 10px solid white;
-                transform: rotate(90deg);
-                position: absolute;
-                bottom: 20%;
-                left: 80%;
-                border-radius: 10px;
-            }
-        
-            #linha-dec4-modal2 {
-                height: 250px;
-                border-right: 10px solid white;
-                transform: rotate(90deg);
-                position: absolute;
-                bottom: 22%;
-                left: 60%;
-                border-radius: 10px;
-            }
-        }
-        
-        .div-infs-evento-modal2 {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 255, 255, 0);
-            z-index: 2;
-            position: absolute;
-            display: flex;
-            justify-content: space-between;
-            align-items: self-start;
-            top: 0;
-            left: 0;
-        }
-        
-        .areatl-img-modal-ProEv2 {
-            width: 60%;
-            height: 100%;
-            background-color: rgba(0, 0, 255, 0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .area-img-modal-ProEv2 {
-            width: 85%;
-            height: 55%;
-            background-color: rgba(255, 0, 0, 0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            left: 7%;
-        }
-        
-        .area-img-modal-ProEv2 img {
-            width: 92%;
-            height: auto;
-            top: 4%;
-            position: relative;
-        }
-        
-        .area-text-modal-ProEv2 {
-            width: 50%;
-            height: 100%;
-            background-color: rgba(137, 43, 226, 0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: left;
-            gap: 20px;
-        }
-        
-        .title-atracao-modal2{
-            font-size: 40px;
-            color: #FF3877;
-            position: absolute;
-            bottom: 28%;
-            left: -3%;
-        }
-        
-        .p-atracao-modal2 {
-            width: 500px;
-            position: absolute;
-            top: 37%;
-        }
-        
-        #b-sari-modal {
-            background-color: transparent;
-            border: none;
-            position: absolute;
-            left: 95%;
-            top: 2%;
-            cursor: pointer;
-        
-        }
-        
-        .overlaay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.616);
-            z-index: 999;
-            display: none;
-        }
-
-
-
-        /* CELULARES */
-
-@media (max-width:575.98px){
-    .box-principal-utl{
-        overflow: hidden;
-        top: 69%;
-        position: relative;
-        height: 217%;
-    }
-
-    .cards{
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 57%;
-    }
-
-    #titulo-ult{
-        position: relative;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 13%;
-        top: -1;
-    }
-
-    #h1-rosa-utl {
-        position: relative;
-        font-size: 19px;
-        top: 10%;
-    }
-
-    #h1-azul-card {
-        position: relative;
-        font-size: 19px;
-        top: 10%;
-    }
-
-    .img img{
-        width: 85%;
-        top: 11%;
-        position: relative;
-    }
-
-    .area-cards{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        overflow-y: auto;
-        top: -2%;
-        height: 100%;
-    }
-
-    .dec-menor-button{
-       display: none;
-    }
-
-    .dec-menor-dentro-button{
-        display: none;
-    }
-
-    .botao-saiba-mais{
-        width: 68%;
-        height: -2%;
-        z-index: 1;
-        top: 24%;
-        font-size: 11px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        left: 16%;
-        display: flex;
-    }
-
-    .dec-button{
-        display: none
-;
-    }
-
-    .bola-3{
-       display: none;
-    }
- 
-    #seta-voltar{
-        position: relative;
-        left: -43%;
-        top: -1%;
-    }
-
-        /* MODAL 1  */
-
-    .dlog-modal-card-ProEv {
-        width: 90%;
-        height: 25%;
-        left: 5%;
-        top: 35%;
-    }
-
-    .div-decorativa-modal {
-        bottom: 90%;
-        height: 10%;
-
-        #linha-dec1-modal {
-            display: none;
-        }
-    }
-
-    .div-decorativa2-modal {
-        top: 90%;
-        left: 52%;
-
-        #linha-dec2-modal {
-            display: none;
-        }
-
-        #linha-dec3-modal {
-            display: none;
-        }
-
-        #linha-dec4-modal {
-            display: none;
-        }
-    }
-
-    .title-atracao-modal {
-        font-size: 5px;
-        display: none;
-        position: relative;
-        left: 106%;
-    }
-
-    .p-atracao-modal {
-        font-size: 6px;
-        width: 150px;
-        /* left: 55%;     */
-        top: 25%;
-    }
-
-    .area-img-modal-ProEv {
-        left: 2%;
-    }
-
-    #b-sari-modal {
-        left: 90%;
-        top: 5%;
-    }
-
-    #b-sari-modal img {
-        width: 70%;
-        height: auto;
-    }
-
-    .div-decorativa2-modal {
-        width: 50%;
-        height: 30%;
-        background-color: #3F49EA;
-        position: relative;
-        top: 55%;
-        left: 65%;
-        transform: rotate(-25deg);
-    }
-
-    .div-decorativa-modal {
-        width: 30%;
-        height: 30%;
-        background-color: #3F49EA;
-        position: relative;
-        bottom: 20%;
-        right: 5%;
-        transform: rotate(-25deg);
-    }
-
-        /* MODAL 2 */
-
-     .dlog-modal-card-ProEv2 {
-        width: 90%;
-        height: 25%;
-        left: 5%;
-        top: 35%;
-    }
-
-    .div-decorativa-modal2 {
-        bottom: 90%;
-        height: 10%;
-
-        #linha-dec1-modal2 {
-            display: none;
-        }
-    }
-
-    .div-decorativa2-modal2 {
-        top: 90%;
-        left: 52%;
-
-        #linha-dec2-modal2 {
-            display: none;
-        }
-
-        #linha-dec3-modal2 {
-            display: none;
-        }
-
-        #linha-dec4-modal2 {
-            display: none;
-        }
-    }
-
-    .title-atracao-modal2 {
-        font-size: 5px;
-        display: none;
-        position: relative;
-        left: 106%;
-    }
-
-    .p-atracao-modal2 {
-        font-size: 6px;
-        width: 150px;
-        top: 25%;
-    }
-
-    .area-img-modal-ProEv2 {
-        left: 2%;
-    }
-
-    #b-sari-modal {
-        left: 90%;
-        top: 5%;
-    }
-
-    #b-sari-modal img {
-        width: 70%;
-        height: auto;
-    }
-
-    .div-decorativa2-modal2 {
-        width: 50%;
-        height: 30%;
-        background-color: #FF3877;
-        position: relative;
-        top: 55%;
-        left: 65%;
-        transform: rotate(-25deg);
-    }
-
-    .div-decorativa-modal2 {
-        width: 30%;
-        height: 30%;
-        background-color: #FF3877;
-        position: relative;
-        bottom: 20%;
-        right: 5%;
-        transform: rotate(-25deg);
-    } 
-
-}
-
-        /* IPHONE XR */
-
-@media (max-width:414px) and (min-height:896px){
-    .box-principal-utl{
-        overflow: hidden;
-        top: 69%;
-        position: relative;
-        height: 217%;
-    }
-
-    .cards{
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 64%;
-        height: 20%;
-    }
-
-    #titulo-ult{
-        position: relative;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 13%;
-        top: -1;
-    }
-
-    #h1-rosa-utl {
-        position: relative;
-        font-size: 23px;
-        top: 5%;
-    }
-
-    #h1-azul-card {
-        position: relative;
-        font-size: 23px;
-        top: 5%;
-    }
-
-    .img img{
-        width: 85%;
-        top: 1%;
-        position: relative;
-    }
-
-    .area-cards{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        overflow-y: auto;
-        top: -4%;
-        height: 100%;
-    }
-
-    .dec-menor-button{
-       display: none;
-    }
-
-    .dec-menor-dentro-button{
-        display: none;
-    }
-
-    .botao-saiba-mais{
-        width: 68%;
-        height: -2%;
-        z-index: 1;
-        top: 33%;
-        font-size: 11px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        left: 16%;
-        display: flex;
-    }
-
-    .dec-button{
-        display: none
-;
-    }
-
-    .bola-3{
-       display: none;
-    }
- 
-    #seta-voltar{
-        position: relative;
-        left: -43%;
-        top: -1%;
-    }
-}
-
-
-        /* IPHONE 12 PRO */
-
-@media (max-width:390px) and (min-height:844px){
-    .box-principal-utl{
-        overflow: hidden;
-        top: 69%;
-        position: relative;
-        height: 217%;
-    }
-
-    .cards{
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 69%;
-    }
-
-    #titulo-ult{
-        position: relative;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 13%;
-        top: -1;
-    }
-
-    #h1-rosa-utl {
-        position: relative;
-        font-size: 23px;
-        top: 0%;
-    }
-
-    #h1-azul-card {
-        position: relative;
-        font-size: 23px;
-        top: 0%;
-    } 
-
-    .img img{
-        width: 85%;
-        top: 1%;
-        position: relative;
-    }
-
-    .area-cards{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        overflow-y: auto;
-        top: -2%;
-        height: 100%;
-    }
-
-    .dec-menor-button{
-       display: none;
-    }
-
-    .dec-menor-dentro-button{
-        display: none;
-    }
-
-    .botao-saiba-mais{
-        width: 70%;
-        height: -2%;
-        z-index: 1;
-        top: 37%;
-        font-size: 11px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        left: 15%;
-        display: flex;
-    }
-
-    .dec-button{
-        display: none
-;
-    }
-
-    .bola-3{
-       display: none;
-    }
- 
-    #seta-voltar{
-        position: relative;
-        left: -43%;
-        top: -1%;
-    }
-}
-
-        /* IPHONE 14 PRO */
-
-@media (max-width:430px) and (min-height:932px){
-    .box-principal-utl{
-        overflow: hidden;
-        top: 69%;
-        position: relative;
-        height: 217%;
-    }
-
-    .cards{
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 69%;
-    }
-
-    #titulo-ult{
-        position: relative;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 13%;
-        top: -1;
-    }
-
-    #h1-rosa-utl {
-        position: relative;
-        font-size: 26px;
-        top: 1%;
-    }
-
-    #h1-azul-card {
-        position: relative;
-        font-size: 26px;
-        top: 1%;
-    }
-
-    .img img{
-        width: 85%;
-        top: 1%;
-        position: relative;
-    }
-
-    .area-cards{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        overflow-y: auto;
-        top: -2%;
-        height: 100%;
-    }
-
-    .dec-menor-button{
-       display: none;
-    }
-
-    .dec-menor-dentro-button{
-        display: none;
-    }
-
-    .botao-saiba-mais{
-        width: 70%;
-        height: -2%;
-        z-index: 1;
-        top: 39%;
-        font-size: 11px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        left: 15%;
-        display: flex;
-    }
-
-    .dec-button{
-        display: none
-;
-    }
-
-    .bola-3{
-       display: none;
-    }
- 
-    #seta-voltar{
-        position: relative;
-        left: -43%;
-        top: -1%;
-    }
-}
-
-        /* TELA GRANDES */
-
-@media (min-width:1200px){
-    .principal-tela-utl{
-        width: 100%;
-        height: 90vh;
-        background-color: rgba(0, 255, 255, 0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .box-principal-utl{
-        width: 85%;
-        height: 90%;
-        background-color: rgba(248, 245, 246, 0.705);
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 8%;
-    }
-    
-    #titulo-ult{
-        position: relative;
-        font-size: 30px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    
-    .box-principal-utl h1{
-        position: relative;
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    
-    .area-cards{
-        width: 99%;
-        height: 80%;
-        background-color:  transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-    }
-    
-    .cards{
-        width: 18%;
-        height: 80%;
-        background-color: black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-direction: column;
-        overflow: hidden;
-        border-radius: 10px;
-        border: 1px solid #FF3877;
-        transition: all .2s ease-in-out;
-        box-shadow: 1px 5px 10px rgba(124, 124, 124, 0.733);
-    }
-    
-    .cards:hover{
-        transform: scale(1.1);
-    }
-    
-    .area-img{
-        width: 100%;
-        height: 50%;
-        background-color: rgb(255, 255, 255);
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-    
-    .area-button{
-        width: 100%;
-        height: 50%;
-        background-color: rgb(255, 255, 255);
-    }
-    
-    .botao-saiba-mais{
-        width: 75%;
-        padding: 14px;
-        border-radius: 10px;
-        border: 1px solid #FF3877;
-        color: #FF3877;
-        font-size: 17px;
-        font-weight: 800;
-        background-color: white;
-        position: relative;
-        z-index: 1;
-        top: 43%;
-        left: 13%;
-        transition: all .2s ease-in-out;
-    }
-    
-    .botao-saiba-mais:hover{
-        background-color: #FF3877;
-        border: 1px solid white;
-        color: white;
-    }
-    
-    .dec-img{
-        width: 20%;
-        height: 14%;
-        background-color: rgb(0, 0, 0);
-        transform: rotate(142deg);
-        position: fixed;
-        z-index: 3;
-        top: -46%;
-        left: -45%;
-    }
-    
-    .img{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-        position: relative;
-        top: 4%;
-    }
-    
-    .img img{
-        width: 87%;
-        height: auto;
-        border-radius: 10px;
-    }
-    
-    .dec-button{
-        width: 128%;
-        height: 83%;
-        transform: rotate(-24deg);
-        position: relative;
-        top: 14%;
-        left: 0%;
-        background-color: #FF3877;
-    }
-    
-    .dec-menor-button{
-        height: 259px;
-        border-right: 15px solid #FF3877;
-        border-radius: 10px;
-        position: relative;
-        bottom: 168%;
-        right: 46%;
-        transform: rotate(66deg);
-    }
-    
-    .dec-menor-dentro-button{
-        height: 198px;
-        border-right: 15px solid white;
-        border-radius: 10px;
-        left: 49%;
-        bottom: 166%;
-        position: relative;
-        transform: rotate(-114deg);
-    }
-    
-    #border-card-azul{
-        border: 1px solid #3F49EA;
-    }
-    
-    #h1-azul-card{
-        color: #3F49EA;
-    }
-    
-    #h1-rosa-utl{
-        color: #FF3877;
-    }
-    
-    #button-azul-utl{
-        border: 1px solid #3F49EA;
-        color: #3F49EA;
-    }
-    
-    #button-azul-utl:hover{
-        background-color: #3F49EA;
-        color: white;
-        border: 1px solid white;
-    }
-    
-    #dec-azul-utl{
-        background-color: #3F49EA;
-    }
-    
-    #dec2-azul-utl{
-        border-right: 15px solid #3F49EA;
-    }
-    
-    #seta-voltar{
-        right: 47%;
-        position: relative;
-    }
+.saiba-mais:hover {
+    background-color: #3F49EA;
+    border-color: white;
+    color: white;
+    transition: all .2s ease-in-out;
 } 
 
+.img-card {
+    width: 220px;
+    border-radius: .5rem;
+}
 
+.parte-inferior {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
 
-        /* TABLETS */
+.seta-volt {
+    width: 100%;
+    padding: 1.5rem;
+}
 
-@media (max-width:768px) and (min-height:1024px){
-    .box-principal-utl{
-        position: relative;
-        width: 94%;
-        height: 200%;
-        right: 1%;
-        top: 51%;
+    /* MODAL */
+
+.modal-Ult{
+    width: 1200px;
+    height: 700px;
+    background-color: white;
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    overflow: hidden;
+}
+
+.div__decorativa-card1{
+    background-color: #3F49EA;
+    width: 500px;
+    height: 34%;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: -18%;
+    left: -7%;
+    z-index: -1;
+}
+
+.linha_docorativa-modal-cima-1{
+    position: absolute;
+    width: 353px;
+    height: 1rem;
+    border-radius: 1rem;
+    bottom: 74px;
+    left: 112px;
+    transform: rotate(0deg);
+    background-color: white;
+}
+
+.div__decorativa-card2{
+    background-color: #3F49EA;
+    width: 800px;
+    height: 50%;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 74%;
+    left: 54%;
+    z-index: -1;
+}
+
+.linha_docorativa-modal1{
+    position: absolute;
+    width: 353px;
+    height: 1rem;
+    border-radius: 1rem;
+    bottom: 281px;
+    left: 280px;
+    transform: rotate(0deg);
+    background-color: white;
+}
+
+.linha_docorativa-modal2{
+    position: absolute;
+    width: 353px;
+    height: 1rem;
+    border-radius: 1rem;
+    bottom: 230px;
+    left: 160px;
+    transform: rotate(0deg);
+    background-color: white;
+}
+
+.modal-por-cima{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+}
+
+#b-sari-modal{
+    left: 96%;
+    position: absolute;
+}
+
+@media screen and (max-width: 1400px) {
+    .cards {
+        width: 250px;
+        height: 400px;
     }
 
-    .area-cards{
-        width: 100%;
-        height: 100%;
-        position: relative;
+    .div__decorativa {
+        bottom: -80px;
+        left: 5px;
+        z-index: 0;
+    }
+    
+    .linha__decorativa1 {
+        bottom: 120px;
+        left: 150px;
+    }
+    .linha__decorativa2 {
+        width: 150px;
+        bottom: 70px;
+        left: -30px;
+
+    }
+
+    .img-card {
+        width: 200px;
+    }
+
+    .principal-tela-utl {
+        padding-bottom: 2rem;
+    }
+
+    .saiba-mais{
+        padding: .8rem 2rem;
+        font-size: 1rem;
+    } 
+}
+
+@media screen and (max-width: 1300px) {
+    .area-cards {
         flex-direction: column;
-    }
-    
-    .cards{
-        width: 42%;
-        height: 21%;
-        position: relative;
-        top: 1%;
-    }
-    
-    #seta-voltar{
-        position: relative;
-        bottom: 3%;
-    }
-    
-    #titulo-ult{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        top: 3%;
-    }
-    
-    .img img{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 68%;
-        top: -4;
-    }
-    
-    .botao-saiba-mais{
-        position: relative;
-        width: 54%;
-        font-size: 17px;
-        height: 25%;
-        left: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 36%;
-    }
-    
-    .dec-button{
-        display: none;
-    }
-    
-    .dec-menor-dentro-button{
-        display: none;
-    }
-    
-    .dec-menor-button{
-        display: none;
+        flex-wrap: wrap-reverse;
+        max-height: 1000px;
+        gap: 2rem;
     }
 }
-
-@media (max-width: 820px) and (min-height: 1180px){
-    .box-principal-utl{
-        position: relative;
-        width: 94%;
-        height: 200%;
-        right: 1%;
-        top: 51%;
-    }
-    
-    .area-cards{
-        width: 100%;
-        height: 100%;
-        position: relative;
+@media screen and (max-width: 550px) {
+    .area-cards {
         flex-direction: column;
+        flex-wrap: nowrap;
+        min-height: 2000px;
+        gap: 2rem;
     }
     
-    .cards{
-        width: 42%;
-        height: 21%;
-        position: relative;
-        top: 1%;
-    }
-    
-    #seta-voltar{
-        position: relative;
-        bottom: 3%;
-    }
-    
-    #titulo-ult{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        top: 3%;
-    }
-    
-    .img img{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 68%;
-        top: -4;
-    }
-    
-    .botao-saiba-mais{
-        position: relative;
-        width: 54%;
-        font-size: 17px;
-        height: 25%;
-        left: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 36%;
+    .cards {
+        min-width: 250px;
+        min-height: 400px;
     }
 
-    .dec-button{
-        display: none;
+    .linha__decorativa1 {
+        bottom: 122px;
+        left: 132px;
     }
-    
-    .dec-menor-dentro-button{
-        display: none;
-    }
-    
-    .dec-menor-button{
-        display: none;
+    .linha__decorativa2 {
+        width: 150px;
+        bottom: 70px;
+        left: -30px;
     }
 }
-
-@media (max-width: 1024px) and (min-height: 1366px){
-    .box-principal-utl{
-        position: relative;
-        width: 94%;
-        height: 200%;
-        right: 1%;
-        top: 51%;
-    }
-    
-    .area-cards{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        flex-direction: column;
-    }
-    
-    .cards{
-        width: 42%;
-        height: 21%;
-        position: relative;
-        top: 1%;
-    }
-    
-    #seta-voltar{
-        position: relative;
-        bottom: 3%;
-    }
-    
-    #titulo-ult{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        top: 3%;
-    }
-
-    .img img{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 68%;
-        top: -4;
-    }
-    
-    .botao-saiba-mais{
-        position: relative;
-        width: 54%;
-        font-size: 17px;
-        height: 25%;
-        left: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 36%;
-    }
-    
-    .dec-button{
-        display: none;
-    }
-    
-    .dec-menor-dentro-button{
-        display: none;
-    }
-    
-    .dec-menor-button{
-        display: none;
-    }
-}
-        /* NEST HBU MAX */
-
-@media (max-width: 1280px) and (min-height: 800px){
-    .dec-button{
-        display: none;
-    }
-
-    .dec-menor-button{
-        display: none;
-    }
-
-    .dec-menor-dentro-button{
-        display: none;
-    }
-}
-
-@media (max-width: 1400px) and (min-height: 700px){
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    /* @media (max-width:720px){
-        .box-principal-utl{
-            height: 200%;
-            top: 50%;
-            position: relative;
-        }
-    
-        .cards{
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            overflow: hidden;
-            width: 57%;
-        }
-    
-        #titulo-ult{
-            position: relative;
-            font-size: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 13%;
-            top: -1;
-        }
-    
-        .box-principal-utl h1{
-            display: none;
-        }
-    
-        .img img{
-            width: 75%;
-            top: 11%;
-            position: relative;
-        }
-    
-        .area-cards{
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-            top: -2%;
-            height: 93%;
-        }
-    
-        .dec-menor-button{
-           display: none;
-        }
-    
-        .dec-menor-dentro-button{
-            display: none;
-        }
-    
-        .botao-saiba-mais{
-            width: 68%;
-            height: -2%;
-            z-index: 1;
-            top: 50%;
-            font-size: 11px;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            left: 16%;
-            display: flex;
-        }
-    
-        .dec-button{
-            display: none
-    ;
-        }
-    
-        .bola-3{
-            position: absolute;
-            top: 157%;
-        }
-     
-        #seta-voltar{
-            position: relative;
-            left: -43%;
-            top: -1%;
-        }
-    
-    } */
