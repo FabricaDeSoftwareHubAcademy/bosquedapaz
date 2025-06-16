@@ -34,11 +34,11 @@
         <section class="section-cards-apoio">
     <div class="card-apoio card1">
         <div class="top-card">
-            <div class="head-card">
+            <div class="cabeca-card">
                 <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-perfil-expo">
             </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Solidariedade</h3>
             <div class="detalhes-expo">
                 <p class="texto-card">
@@ -50,11 +50,11 @@
 
     <div class="card-apoio card2">
         <div class="top-card">
-            <div class="head-card">
+            <div class="cabeca-card">
                 <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-perfil-expo">
             </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Gastronomia</h3>
             <div class="detalhes-expo">
                 <p class="texto-card">
@@ -66,11 +66,11 @@
 
     <div class="card-apoio card3">
         <div class="top-card">
-            <div class="head-card">
+            <div class="cabeca-card">
                 <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-perfil-expo">
             </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Cultura</h3>
             <div class="detalhes-expo">
                 <p class="texto-card">
@@ -82,11 +82,11 @@
 
     <div class="card-apoio card4">
         <div class="top-card">
-            <div class="head-card">
+            <div class="cabeca-card">
                 <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-perfil-expo">
             </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Sustentabilidade</h3>
             <div class="detalhes-expo">
                 <p class="texto-card">

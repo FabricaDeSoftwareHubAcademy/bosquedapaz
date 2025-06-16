@@ -66,7 +66,7 @@
     margin-top:  -15px;
 }
 
-.card-apoio:hover .head-card{
+.card-apoio:hover .cabeca-card{
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
@@ -91,7 +91,7 @@
     justify-content: center;
 }
 
-.head-card {
+.cabeca-card {
     background-color: #DCDCDC;
     width: 7.5rem;
     height: 7.5rem;
@@ -106,7 +106,7 @@
     height: 3.8rem;
 }
 
-.body-card {
+.corpo-card {
     background-color: white;
     display: flex;
     flex-direction: column;
