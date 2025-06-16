@@ -142,16 +142,14 @@ class Database {
         }
     }
 
-    public function update_all($values1, $values2, $tableP, $id_name, $where){
-        $where = strlen($where) ? " WHERE ". $where : '';
-        $fields = array_keys($values1);
-        $fields2 = array_keys($values2);
-        $masterArray = array_merge($values1, $values2);
-        $param = array_values($masterArray);
+    public function update_pai($where, $values, $tabelaP){
+        $fields = array_keys($values);
+        $param = array_values($values);
 
-        $query = "UPDATE ". $this->table. " SET ". implode('=?,', $fields). "=? ". $where. "; UPDATE ". $tableP. " SET ". implode('=?,', $fields2). "=? WHERE ". $id_name. " = ( SELECT ". $id_name. " FROM ".$this->table. $where. ")";
-        
+        $query = "UPDATE $tabelaP SET ". implode("=?,", $fields). "=? WHERE id_$tabelaP = (SELECT id_$tabelaP from ". $this->table. " WHERE ". $where. ")";
+
         $res = $this->execute($query, $param);
+
         return $res ? TRUE : FALSE;
     }
 
@@ -195,8 +193,6 @@ class Database {
         ON cat.id_categoria = exp.id_categoria 
         INNER JOIN pessoa AS pes 
         ON pes.id_pessoa = exp.id_pessoa
-        INNER JOIN imagem AS img 
-        ON img.id_imagem = exp.id_imagem
         WHERE pes.nome LIKE '%$filtro%'
         OR exp.nome_marca LIKE '%$filtro%'
         OR exp.produto LIKE '%$filtro%' 
@@ -212,9 +208,7 @@ class Database {
         INNER JOIN categoria AS cat 
         ON cat.id_categoria = exp.id_categoria 
         INNER JOIN pessoa AS pes 
-        ON pes.id_pessoa = exp.id_pessoa
-        INNER JOIN imagem AS img 
-        ON img.id_imagem = exp.id_imagem";
+        ON pes.id_pessoa = exp.id_pessoa";
 
         return $this->execute($query);
     }

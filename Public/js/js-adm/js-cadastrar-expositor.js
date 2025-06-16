@@ -38,9 +38,8 @@ btn_salvar.addEventListener('click', async function(event){
     });
 
     let response = await dados_php.json();
-
+    console.log(response);
     ////////// abre modal ////////////
-    console.log(response)
     if(response.status == 200){
 
         formulario.reset();

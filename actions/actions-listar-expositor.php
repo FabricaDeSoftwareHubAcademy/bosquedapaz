@@ -30,7 +30,8 @@ if(!isset($_GET['filtro'])){
         $response = $exp->listar();
 
         if (count($response) < 1){
-            echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
+            echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201, $response]);
+
         }else{
             echo json_encode(["expositores" => $response, 'status' => 200]);
         }

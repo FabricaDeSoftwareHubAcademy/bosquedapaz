@@ -4,6 +4,7 @@ namespace app\Controller;
 class Pessoa
 {
     protected $id_pessoa; 
+    protected $cpf;
     protected $nome; 
     protected $email; 
     protected $senha; 
@@ -16,6 +17,10 @@ class Pessoa
     protected $foto_perfil;
     protected $perfil;
 
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
     public function getNome()
     {
         return $this->nome;

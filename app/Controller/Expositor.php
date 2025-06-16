@@ -3,9 +3,7 @@
 namespace app\Controller;
 
 require_once('../vendor/autoload.php');
-require_once('../Public/sendEmail.php');
 
-use app\Controller\EmailService;
 
 use PDO;
 use app\Controller\Pessoa;
@@ -29,7 +27,6 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
-    protected $imagens;
 
 
     public function setId_expositor($id_expositor)
@@ -37,10 +34,7 @@ class Expositor extends Pessoa
         $this->id_expositor = $id_expositor;
     }
 
-    public function setImagens($imagens)
-    {
-        $this->imagens = $imagens;
-    }
+
 
     public function setId_pessoa($id_pessoa)
     {
@@ -149,58 +143,28 @@ class Expositor extends Pessoa
         return $this->produto;
     }
 
-    public function geradorSenha(){
-        $tamanhoSenha = 10;
-     
-        $caracteresPermitidos = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-     
-        $senha = '';
-        for ($i = 0; $i < $tamanhoSenha; $i++) {
-        $senha .= $caracteresPermitidos[rand(0, strlen($caracteresPermitidos) - 1)];
-        }
-    
-        return $senha;
-    }
 
     public function cadastrar()
     {
 
-        $email = new EmailService();
+        $db = new Database('pessoa');
+        $pes_id = $db->insert_lastid(
+            [
+                'nome' => $this->nome,
+                'email' => $this->email,
+                'telefone' => $this->whats,
+                'perfil' => 1,
+            ]
+        );
 
-        $senha = $this->geradorSenha();
-        $enviandoEmail = $email->eviarMSM($this->nome, $this->email, 'a sua senha é: '. $senha);
-        if($enviandoEmail['mensage'] == 'enviado'){
+        if (!empty($pes_id)) {
 
-            $db = new Database('pessoa');
-            $pes_id = $db->insert_lastid(
-                [
-                    'nome' => $this->nome,
-                    'email' => $this->email,
-                    'telefone' => $this->whats,
-                    'senha' => password_hash($senha, PASSWORD_DEFAULT),
-                    'perfil' => 1,
-                ]
-            );
-    
-    
-    
-            $db = new Database('imagem');
-            $img_id = $db->insert_lastid([
-                'imagem1' => $this->imagens[0] ?? '',
-                'imagem2' => $this->imagens[1] ?? '',
-                'imagem3' => $this->imagens[2] ?? '',
-                'imagem4' => $this->imagens[3] ?? '',
-                'imagem5' => $this->imagens[4] ?? ''
-            ]);
-    
-    
             $db = new Database('expositor');
-            $res = $db->insert(
+            $res = $db->insert_lastid(
                 [
                     'id_expositor' => $this->id_expositor,
                     'id_pessoa' => $pes_id,
                     'id_categoria' => $this->id_categoria,
-                    'id_imagem' => $img_id,
                     'nome_marca' => $this->nome_marca,
                     'num_barraca' => $this->num_barraca,
                     'voltagem' => $this->voltagem,
@@ -213,12 +177,14 @@ class Expositor extends Pessoa
                     'produto' => $this->produto
                 ]
             );
-            return ['ok' => 'enviado', 'status' => 200];
-        }
-        else if ($enviandoEmail['mensage'] == 'erro'){
-            return ['erro' => 'erro ao enviar o email', 'status => 500'];
+
+            return $res;
+        } else {
+            return false;
         }
     }
+
+   
 
     public function listar($busca = null)
     {
@@ -229,6 +195,45 @@ class Expositor extends Pessoa
             return $res;
         } else {
             $res = $db->select_expositor()->fetchAll(PDO::FETCH_ASSOC);
+            return $res;
+        }
+    }
+
+    public function atualizar($id)
+    {
+        $values1 = [
+            'nome' => $this->nome,
+            'email' => $this->email,
+            'whats' => $this->whats,
+            'telefone' => $this->telefone,
+            'link_instagram' => $this->link_instagram,
+            'link_facebook' => $this->link_facebook,
+            'link_whats' => $this->link_whats,
+            'img_perfil' => $this->foto_perfil,
+        ];
+
+        $db = new Database('expositor');
+
+        $res = $db->update_pai('id_expositor = ' . $id, $values1, 'pessoa');
+
+        if ($res) {
+            $db = new Database('expositor');
+
+            $values2 = [
+                'nome_marca' => $this->nome_marca,
+                'id_categoria' => $this->id_categoria,
+                'num_barraca' => $this->num_barraca,
+                'voltagem' => $this->voltagem,
+                'energia' => $this->energia,
+                'contato2' => $this->contato2,
+                'descricao' => $this->descricao,
+                'metodos_pgto' => $this->metodos_pgto,
+                'cor_rua' => $this->cor_rua,
+                'responsavel' => $this->responsavel,
+                'produto' => $this->produto,
+            ];
+
+            $res = $db->update('id_expositor = ' . $id, $values2);
             return $res;
         }
     }
