@@ -14,10 +14,8 @@
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
     width: 100%;
+    overflow: hidden;
     font-family: "Poppins", sans-serif;
 }
 
@@ -25,19 +23,92 @@ main{
     min-height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .container_box{
     width: 85%;
-    height: 85vh;
+    height: 80vh;
     display: flex;
     overflow: hidden;
     border-radius: 10px;
-    background-color: var(--color-box-principal);
+    backdrop-filter: blur(0px);
+    transition: all .5s ease-in-out;
+    background-color: bisque;
+    /* background-color: var(--color-box-principal); */
+    z-index: 2;
 }
-.container_box:hover{
+/* .container_box:hover{
     background-color: var(--color-box-hover);
+    backdrop-filter: blur(30px);
+} */
+
+.left-side{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.left-side img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.right-side{
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 30px;
+}
+
+.form__cadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form__group {
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+}
+
+.label__cad {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.area__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.area__input i {
+    position: absolute;
+    left: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* espaço pro ícone */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+

@@ -111,9 +111,9 @@
         </section>
 
         <!-- Imagens Decorativas -->
-        <!-- <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
+        <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div> -->
+        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
     </main>
 
     
