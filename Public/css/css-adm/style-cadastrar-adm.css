@@ -168,13 +168,6 @@
     color: black;
     cursor: pointer;
 }
-#iconn {
-    position: absolute;
-    left: 30px;
-    font-size: 18px;
-    color: black;
-    cursor: pointer;
-}
 
 /* Inputs */
 .area__input .input {
@@ -205,9 +198,8 @@
 .form__actions{
     width: 100%;
     display: flex;
-    align-items: center;
+    /* background-color: aqua; */
     justify-content: center;
-    gap: 30px;
 }
 
 /* Botões */
@@ -216,6 +208,7 @@
     height: 40px;
     border: none;
     border-radius: 6px;
+    margin-right: 15px;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -240,27 +233,35 @@
 /* Imagens Decorativas */
 .imgs__dec1{
     position: fixed;
-    top: 15vh;
+    top: 25vh;
     left: 0;
     width: 20vw;
     z-index: -1;
     pointer-events: none;
     user-select: none;
 }
+.imgs__dec1 img{
+    width: 40%;
+    height: auto;
+}
 
 .imgs__dec2{
     position: fixed;
     top: 20vh;
-    right: -12vw;
+    right: -14vw;
     width: 20vw;
     z-index: -1;
     pointer-events: none;
     user-select: none;
 }
+.imgs__dec2 img{
+    width: 40%;
+    height: auto;
+}
 
 .imgs__dec3{
     position: fixed;
-    bottom: -1vh;
+    bottom: -2vh;
     right: -10vw;
     width: 20vw;
     z-index: -1;
@@ -284,7 +285,6 @@
     }
     .container_box{
         width: 98%;
-        height: 95%;
         margin-top: 3%;
     }
     .seta__voltar {
@@ -353,30 +353,6 @@
     .row-double{
         gap: 30px;
         flex-direction: column;
-    }
-
-    /* Imagens Decorativas:  */
-    .imgs__dec1 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec2 {
-        position: fixed;
-        top: 20vh;
-        right: -10vw;
-    }    
-    .imgs__dec2 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec3 {
-        position: fixed;
-        bottom: -1vh;
-        right: -5vw;
-    }
-    .imgs__dec3 img{
-        width: 80%;
-        height: auto;
     }
 }
 
@@ -447,30 +423,6 @@
         gap: 30px;
         flex-direction: column;
     }
-
-    /* Imagens Decorativas:  */
-    .imgs__dec1 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec2 {
-        position: fixed;
-        top: 20vh;
-        right: -10vw;
-    }    
-    .imgs__dec2 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec3 {
-        position: fixed;
-        bottom: -1vh;
-        right: -5vw;
-    }
-    .imgs__dec3 img{
-        width: 80%;
-        height: auto;
-    }
 }
 
 /* Tablets e celulares em paisagem */
@@ -540,30 +492,6 @@
         gap: 30px;
         flex-direction: column;
     }
-
-    /* Imagens Decorativas:  */
-    .imgs__dec1 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec2 {
-        position: fixed;
-        top: 20vh;
-        right: -10vw;
-    }    
-    .imgs__dec2 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec3 {
-        position: fixed;
-        bottom: -1vh;
-        right: -5vw;
-    }
-    .imgs__dec3 img{
-        width: 80%;
-        height: auto;
-    }
 }
 
 /* Notebooks e desktops padrão */
@@ -629,41 +557,21 @@
         font-size: 18px;
         margin-bottom: 1rem;
     }
-
-    /* Imagens Decorativas:  */
-    .imgs__dec1 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec2 {
-        position: fixed;
-        top: 20vh;
-        right: -10vw;
-    }    
-    .imgs__dec2 img{
-        width: 60%;
-        height: auto;
-    }
-    .imgs__dec3 {
-        position: fixed;
-        bottom: -1vh;
-        right: -5vw;
-    }
-    .imgs__dec3 img{
-        width: 80%;
-        height: auto;
-    }
 }
 
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
-    body{
-        overflow: hidden;
+    .body_main{
+        width: 100%;
+        height: 115vh;
+        background-color: aqua;
+    }
+    .container_box{
+        height: 90%;
     }
     .container_img{
         width: 40%;
     }
-
     .container_form{
         width: 60%;
     }
@@ -677,12 +585,19 @@
         position: absolute;
         left: 33px;
     }
+    .btn{
+        font-size: 16px;
+        width: 180px;
+        height: 30px;
+    }
 }
 
 /* Computadores Largos e Compactos (Baixa Altura):  */
 @media (min-width: 1400px){
-    body{
-        overflow: hidden;
+    .body_main{
+        width: 100%;
+        height: 110vh;
+        background-color: aqua;
     }
     .label__cad {
         position: relative;
@@ -702,6 +617,10 @@
         position: absolute;
         right: 30px;
     }
+    .btn {
+        width: 180px;
+        height: 40px;
+    }
 }
 
 /* Pequenos Ajustes:  */
@@ -715,7 +634,7 @@
     }
     .btn{
         width: 150px;
-        height: 30px;
+        height: 35px;
     }
     .form__cadastro{
         height: 100%;
@@ -725,10 +644,14 @@
         font-size: 12px;
     }
 }
-@media (min-width: 1200px) and (max-height: 700px){
-    .body_main{
-        height: 82.5vh
+@media (min-width: 1200px) and (max-height: 830px){
+        .body_main{
+        width: 100%;
+        height: 110vh;
+        background-color: aqua;
     }
+}
+@media (min-width: 1200px) and (max-height: 700px){
     .area__input .input {
         height: 75%;
     }

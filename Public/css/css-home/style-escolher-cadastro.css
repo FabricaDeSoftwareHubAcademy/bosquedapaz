@@ -18,25 +18,26 @@
     --color-button3: #f2c41e;
 }
 
-/* Corpo da Tela */
-.body__main{
+.main__principal{
+    width: 100%;
     height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* Box Principal dos Elementos */
 .container__box{
-    margin: 0 auto;
-    width: 90%;
+    width: 85%;
     height: 80%;
+    margin-top: 7%;
+    z-index: 2;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 7%;
-    border-radius: 10px;
     background-color: var(--color-box);
-    z-index: 2;
 }
 
 
@@ -144,7 +145,7 @@
 .imgs__decorative2{
     position: fixed;
     top: 20vh;
-    right: -12vw;
+    right: -15vw;
     width: 20vw;
     z-index: 1;
     pointer-events: none;
@@ -172,7 +173,7 @@
 @media (max-width: 575.98px){
     /* Box Principal dos Elementos */
     .container__box{
-        margin-top: 27%;
+        margin-top: 30%;
     }
 
     /* Lado Esquerdo: Botões: */
@@ -285,6 +286,10 @@
         width: 50%;
         height: auto;
     }
+
+    .conteiner__img {
+        display: none;
+    }
 }
 
 
@@ -310,10 +315,6 @@
 
 /* Nest Hub */
 @media (min-width: 1024px) and (max-height: 600px){
-    .container__box{
-        margin-top: 10%;
-    }
-
     /* Lado Direito: Imagem: */
     .conteiner__buttons h1{
         font-size: 25px;
@@ -338,3 +339,4 @@
         bottom: -2vh;
     }
 }
+

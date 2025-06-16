@@ -13,10 +13,12 @@ function sanitizeString($str) {
 }
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
-
 if ($requestMethod === 'POST') {
     $colab = new Colaborador();
 
+    $input = json_decode(file_get_contents('php://input'), true);
+
+    // Cadastro <----------------------------------------------->
     if (isset($_POST["cadastrar"])) {
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
@@ -24,8 +26,35 @@ if ($requestMethod === 'POST') {
         $cargo = sanitizeString($_POST['cargo'] ?? '');
         $senha = $_POST['senha'] ?? '';
 
+        // Validação: 
         if (!$email) {
             echo json_encode(['success' => false, 'message' => 'Email inválido']);
+            exit;
+        }
+        if (empty($nome) || empty($telefone) || empty($cargo) || empty($senha)) {
+            echo json_encode(['success' => false, 'message' => 'Preencha todos os campos obrigátorios.']);
+            exit;
+        }
+        if (strlen($nome) < 3 || strlen($nome) > 100) {
+            echo json_encode(['success' => false, 'message' => 'O nome deve ter entre 3 e 100 caracteres.']);
+            exit;
+        }
+        if(!preg_match('/^\d{10,11}$/', $telefone)) {
+            echo json_encode(['success' => false, 'message' => 'Telefone inválido. Informe apenas números com DDD.']);
+            exit;
+        }
+        if (strlen($senha) < 4) {
+            echo json_encode(['success' => false, 'message' => 'A senha deve ter pelo menos 4 caracteres..']);
+            exit;
+        }
+
+        // Validação: Somente Letras no input de Nome e Cargo: 
+        if (!Colaborador::validarSomenteLetra($nome)) {
+            echo json_encode(['success' => false, 'message' => 'Nome inválido. Apenas letras são permitidas.']);
+            exit;
+        }
+        if (!Colaborador::validarSomenteLetra($cargo)) {
+            echo json_encode(['success' => false, 'message' => 'Cargo inválido. Apenas letras são permitidas.']);
             exit;
         }
 
@@ -36,22 +65,18 @@ if ($requestMethod === 'POST') {
         $colab->setImagem(null);
         $colab->setSenha(password_hash($senha, PASSWORD_DEFAULT));
 
+
+        // Imagem: <----------------------------------------------->
+        $uploadDir = __DIR__ . '/../../Public/uploads/uploads-ADM/';
+        $imagemSalva = null;
+
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
-            $diretorio = __DIR__ . '/../../Public/uploads/uploads-ADM/';
-
-            if (!is_dir($diretorio)) {
-                mkdir($diretorio, 0755, true);
-            }
-
-            $nomeImagem = uniqid() . '-' . basename($_FILES['imagem']['name']);
-            $caminhoCompleto = $diretorio . $nomeImagem;
-
-            if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoCompleto)) {
-                $colab->setImagem('Public/uploads/uploads-ADM/' . $nomeImagem);
-            } else {
-                echo json_encode(['success' => false, 'message' => 'Erro ao mover arquivo.']);
+            $imagemSalva = Colaborador::uploadImagem($_FILES['imagem'], $uploadDir);
+            if ($imagemSalva === false) {
+                echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
+            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
             $colab->setImagem(null);
         }
@@ -67,6 +92,42 @@ if ($requestMethod === 'POST') {
         }
     }
 
+    
+    // Alterar Status <----------------------------------------------->
+    else if ($input !== null && isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+        $colab = new Colaborador();
+
+        $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
+        $statusAtual = $input['status_atual'] ?? null;
+
+        if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
+            echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
+            exit;
+        }
+
+        try {
+            $novoStatus = $statusAtual === 'ativo' ? 'inativo' : 'ativo';
+
+            $result = $colab->mudar_status($id, $novoStatus);
+
+            if ($result) {
+                echo json_encode([
+                    'success' => true,
+                    'message' => "Status alterado para $novoStatus com sucesso!",
+                    'novoStatus' => $novoStatus,
+                    'novoStatusTexto' => ucfirst($novoStatus)
+                ]);
+            } else {
+                echo json_encode(['success' => false, 'message' => 'Erro ao alterar status.']);
+            }
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => 'Erro interno: ' . $e->getMessage()]);
+        }
+        exit;
+    }
+
+
+    // Update = Edição dos dados <----------------------------------------------->
     else if (isset($_POST["atualizar"])) {
         $id = filter_var($_POST['id'] ?? '', FILTER_VALIDATE_INT);
         if (!$id) {
@@ -79,32 +140,52 @@ if ($requestMethod === 'POST') {
         $telefone = sanitizeString($_POST['tel'] ?? '');
         $cargo = sanitizeString($_POST['cargo'] ?? '');
 
+        // Validações: 
         if (!$email) {
             echo json_encode(['success' => false, 'message' => 'Email inválido']);
             exit;
         }
+        if (empty($nome) || ($telefone) || ($cargo)) {
+            echo json_encode(['success' => false, 'message' => 'Preencha todos os campos obrigatórios.']);
+            exit;
+        }
+        if (strlen($nome) < 3 || strlen($nome) > 100) {
+            echo json_encode(['success' => false, 'message' => 'O nome deve ter entre 3 e 100 caracteres.']);
+            exit;
+        }
+        if (!preg_match('/^\d{10,11}$/', $telefone)) {
+            echo json_encode(['success' => false, 'message' => 'Telefone inválido. Informe apenas números com DDD.']);
+            exit;
+        }
 
+        // Validação: Somente Letras no input de Nome e Cargo: 
+        if (!Colaborador::validarSomenteLetra($nome)) {
+            echo json_encode(['success' => false, 'message' => 'Nome inválido. Apenas letras são permitidas.']);
+            exit;
+        }
+        if (!Colaborador::validarSomenteLetra($cargo)) {
+            echo json_encode(['success' => false, 'message' => 'Cargo inválido. Apenas letras são permitidas.']);
+            exit;
+        }
+
+        
         $colab->setNome($nome);
         $colab->setTelefone($telefone);
         $colab->setEmail($email);
         $colab->setCargo($cargo);
 
+
+        // Imagem: <----------------------------------------------->
+        $uploadDir = __DIR__ . '/../../Public/uploads/uploads-ADM/';
+        $imagemSalva = null;
+
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
-            $diretorio = __DIR__ . '/../../Public/uploads/uploads-ADM/';
-
-            if (!is_dir($diretorio)) {
-                mkdir($diretorio, 0755, true);
-            }
-
-            $nomeImagem = uniqid() . '-' . basename($_FILES['imagem']['name']);
-            $caminhoCompleto = $diretorio . $nomeImagem;
-
-            if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoCompleto)) {
-                $colab->setImagem('Public/uploads/uploads-ADM/' . $nomeImagem);
-            } else {
-                echo json_encode(['success' => false, 'message' => 'Erro ao mover arquivo.']);
+            $imagemSalva = Colaborador::uploadImagem($_FILES['imagem'], $uploadDir);
+            if ($imagemSalva === false) {
+                echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
+            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
             $colab->setImagem(null);
         }
@@ -119,6 +200,7 @@ if ($requestMethod === 'POST') {
         }
     }
 
+    // Busca <----------------------------------------------->
     else if (isset($_POST['palavra'])) {
         $nome = sanitizeString($_POST['palavra']);
         $res = $colab->listarColaboradores($nome);
@@ -142,11 +224,12 @@ if ($requestMethod === 'POST') {
             exit;
         }
     }
-
     echo json_encode(['success' => false, 'message' => 'Requisição inválida']);
     exit;
 }
 
+
+// Listagem <----------------------------------------------->
 if ($requestMethod === 'GET') {
     $colab = new Colaborador();
 

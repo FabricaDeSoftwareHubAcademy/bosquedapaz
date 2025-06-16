@@ -17,6 +17,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+  <style>
+    /* Estilos básicos para modais */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 400px;
+      text-align: center;
+    }
+    .modal button {
+      margin: 0 10px;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .modal.show {
+      display: flex !important;
+    }
+  </style>
+
 </head>
 <body>
   <?php include "../../../Public/include/menu-adm.html" ?>
@@ -53,6 +83,24 @@
       </div>  
     </div>  
   </main>
+
+  <!-- MODAL 1: Confirmar mudança -->
+  <div id="modal-confirm" class="modal-overlay">
+    <div class="modal">
+      <p id="modal-confirm-msg">Deseja realmente ativar/inativar este ADM?</p>
+      <button id="modal-confirm-sim">Sim</button>
+      <button id="modal-confirm-nao">Não</button>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Sucesso -->
+  <div id="modal-success" class="modal-overlay">
+    <div class="modal">
+      <p id="modal-success-msg">Status alterado com sucesso!</p>
+      <button id="modal-success-ok">OK</button>
+    </div>
+  </div>
+
   <div class="bolas-fundo">
     <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
     <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
@@ -60,8 +108,8 @@
   </div>
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
-  <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
   <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>
+  <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
   <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
 </body>
 </html>
