@@ -86,7 +86,6 @@
                             <div class="area__input">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                                <i id="icon__olho" class="bi bi-eye-slash"></i>
                             </div>
                         </div>
 
@@ -96,7 +95,6 @@
                             <div class="area__input">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
-                                <i id="icon__olho" class="bi bi-eye-slash"></i>
                             </div>
                         </div>
                     </div>
