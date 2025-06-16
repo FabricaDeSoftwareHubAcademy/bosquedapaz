@@ -575,12 +575,12 @@ input[type="file"]{
     }
 
     .perfilEdit-info{
-        height: 20%;
+        height: 30%;
     }
 
     .perfilEdit-foto-info{
-        min-height: 195px;
-        max-height: 195px;
+        min-height: 185px;
+        max-height: 185px;
         position: relative;
         top: 1%;
     }
