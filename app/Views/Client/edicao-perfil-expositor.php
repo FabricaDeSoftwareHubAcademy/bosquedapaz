@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Include Menu de Navegação -->
-    <?php include "../../../Public/include/home/menu-home.html"; ?>
+    <?php include "../../../Public/include/home/menu-expositor.html"; ?>
     <!-- Corpo da Pagina -->
     <section class="container__main">
         <!-- Box Principal -->

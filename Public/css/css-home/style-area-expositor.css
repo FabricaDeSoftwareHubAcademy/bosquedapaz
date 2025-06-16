@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.img-1 {
+    position: absolute;
+    top: 10rem;
+}
+.img-2 {
+    position: absolute;
+    top: 10rem;
+    right: 0rem;
+}
+.img-3 {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+}
+
+.content-principal {
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
+    position: relative;
+    top: 2rem;
+    z-index: 2;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f4f4f4a2;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.conteiner-cards {
+    width: 100%;
+    height: calc(100% - 3rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.link-card {
+    text-decoration: none;
+}
+
+.card-conteiner {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content {
+    width: 210px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #162868;
+    border-radius: .5rem;
+    gap: .5rem;
+    transition: all .2s ease-in-out;
+}
+
+.card-content:hover {
+    width: 230px;
+    height: 230px;
+    border: none;
+    box-shadow: 5px 5px 10px #162868;
+}
+
+.text-card {
+    color: #162868;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 900px) {
+    /* .content-principal {
+        height: auto;
+    } */
+    .conteiner-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /* .img-3 {
+        display: none;
+    } */
+}
+@media screen and (max-width: 550px) {
+    .content-principal {
+        height: auto;
+        margin-bottom: 3rem;
+        gap: 1rem;
+    }
+    .conteiner-cards {
+        flex-direction: column;
+    }
+    .img-1 {
+        display: none;
+    }
+    .img-2 {
+        display: none;
+    }
+    .img-3 {
+        display: none;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+}
