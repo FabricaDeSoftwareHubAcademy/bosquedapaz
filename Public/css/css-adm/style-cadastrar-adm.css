@@ -67,6 +67,10 @@ main{
     padding: 20px 30px;
 }
 
+.right-side h1{
+    text-align: center;
+}
+
 .form__cadastro{
     display: flex;
     flex-direction: column;
@@ -112,3 +116,81 @@ main{
 }
 
 
+/* Area dos Botões */
+.form__actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Botões */
+.btn{
+    width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.btn__azul{
+    background-color: var(--color-azul);
+    box-shadow: 0px 3px 2px var(--color-rosa);
+}
+
+.btn__rosa{
+    background-color: var(--color-rosa);
+    box-shadow: 0px 3px 2px var(--color-azul);
+}
+
+/* Imagens Decorativas */
+.imgs__dec1{
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec1 img{
+    width: 40%;
+    height: auto;
+}
+
+.imgs__dec2{
+    position: fixed;
+    top: 20vh;
+    right: -14vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec2 img{
+    width: 40%;
+    height: auto;
+}
+
+.imgs__dec3{
+    position: fixed;
+    bottom: -2vh;
+    right: -10vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec3 img{
+    width: 60%;
+    height: auto;
+}

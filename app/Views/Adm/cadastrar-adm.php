@@ -20,7 +20,6 @@
             
             <!-- Area Esquerda: Imagem -->
             <div class="left-side">
-                <h1>Cadastro ADM</h1>
                 <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
             </div>
            
@@ -29,6 +28,7 @@
             
             <!-- Area Direita: Form -->
             <div class="right-side">
+                <h1>Cadastro ADM</h1>
                 <!-- Form -->
                 <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
                     <!-- Nome -->
