@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                         </a>
                     </td>
                     <td class="mais">
-                        <button class="open-modal" data-modal="modal-fotos">
+                        <a href="cadastrar-fotos-evento.php?id=${evento.id_evento}">
                             <i class="fa-solid fa-plus"></i>
-                        </button>
+                        </a>
                     </td>
                 `;
 

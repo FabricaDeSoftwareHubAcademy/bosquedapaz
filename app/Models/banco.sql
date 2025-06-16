@@ -130,6 +130,14 @@ CREATE TABLE atracao(
     FOREIGN KEY(id_evento) REFERENCES evento(id_evento)
 );
 
+CREATE TABLE fotos_evento (
+    id_foto INT AUTO_INCREMENT PRIMARY KEY,
+    id_evento INT NOT NULL,
+    caminho VARCHAR(255) NOT NULL,
+    legenda VARCHAR(255),
+    FOREIGN KEY (id_evento) REFERENCES evento(id_evento) ON DELETE CASCADE
+);
+
 
 CREATE TABLE desenvolvedor(
 	id_desenvolvedor INT NOT NULL AUTO_INCREMENT,
