@@ -1,0 +1,98 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+.btns-forms-padrao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+}
+
+.btn-voltar {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seta {
+    font-size: 1.7rem;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns-salvar-cancelar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-acoes {
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: all .2s ease-in;
+}
+
+.envolta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 45px;
+}
+
+.btn-reset {
+    background-color: #FF3877;
+}
+
+.btn-reset:hover {
+    font-size: 1.1rem;
+    background-color: #8a1e40;
+    transition: all .2s ease-in;
+}
+
+.btn-salvar {
+    background-color: #007E70;
+}
+
+.btn-salvar:hover {
+    font-size: 1.1rem;
+    background-color: #00443c;
+    transition: all .2s ease-in;
+}
+
+@media screen and (max-width: 500px) {
+    .btns-forms-padrao {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+    .btn-voltar {
+        width: 35px;
+        height: 35px;
+        align-self: flex-start;
+    }
+    .seta {
+        font-size: 1.6rem;
+    }
+    .btns-salvar-cancelar {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .envolta-btn {
+        width: 80%;
+    }
+    .btn-acoes {
+        width: 100%;
+    }
+}
