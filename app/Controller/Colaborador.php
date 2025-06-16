@@ -41,7 +41,6 @@ class Colaborador extends Pessoa
     }
 
 
-
     public function cadastrar() {
         // Insere na tabela pessoa
         $dbPessoa = new Database('pessoa');
@@ -101,5 +100,38 @@ class Colaborador extends Pessoa
     public function mudar_status($id_colaborador, $novoStatus) {
         $db = new Database('colaborador');
         return $db->sts_adm($id_colaborador, $novoStatus); // Retorna true ou false diretamente
+    }
+
+    public static function validarSomenteLetra($texto) {
+        return preg_match('/^[\p{L} ]+$/u', $texto);
+    }
+
+    public static function uploadImagem(array $file, string $uploadDir, array $allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'], int $maxSize = 2 * 1024 * 1024) {
+        if (!isset($file) || $file['error'] !== UPLOAD_ERR_OK) {
+            return false;
+        }
+
+        if ($file['size'] > $maxSize) {
+            return false;
+        }
+
+        if (!in_array(mime_content_type($file['tmp_name']), $allowedTypes)) {
+            return false;
+        }
+
+        $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+        $filename = uniqid('img_', true) . '.' . $ext;
+
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        $destination = $uploadDir . $filename;
+
+        if (move_uploaded_file($file['tmp_name'], $destination)) {
+            return $filename;
+        } else {
+            return false;
+        }
     }
 }
