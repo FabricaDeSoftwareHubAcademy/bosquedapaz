@@ -29,7 +29,7 @@
     
 
     <?php include "../../../Public/include/home/mapa.html"; ?>
-    <?php include "../../../Public/include/home/parceiros.php"; ?>
+    <?php include "../../../Public/include/home/section-apoiadores.php"; ?>
 
     <?php include "../../../Public/include/home/rodape.html"; ?> 
 
