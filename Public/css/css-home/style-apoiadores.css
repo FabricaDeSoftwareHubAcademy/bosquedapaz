@@ -165,7 +165,6 @@
     display: flex;
     gap: 1.875rem;
     animation: deslizar 40s linear infinite;
-
 }
 
 @keyframes deslizar {
@@ -191,7 +190,6 @@
 .div-logo-parceiro img:hover {
     transform: scale(1.05);
 }
-
 
 @media (max-width: 768px) {
     .slider-parceiros {
@@ -227,7 +225,6 @@
     align-items: center;
     justify-content: center;
 }
-
 }
 
 @media(max-width:768px){
