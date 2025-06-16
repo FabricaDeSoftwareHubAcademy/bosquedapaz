@@ -66,21 +66,7 @@
                 </section>
 
                 <!-- botoes parte de baixo -->
-                <div class="btns">
-                    <a href="Area-Adm.php" class="voltar">
-                        <img src="../../../Public/imgs/img-cadastro-carrosel/btn-voltar.png" alt="" class="btn-voltar">
-                    </a>
-                    <div class="btn-cancelar-salvar">
-                            <button type="reset" class="btn btn-cancelar">
-                                cancelar
-                            </button>
-                            
-                            <button type="submit" name="editar" id="editar" class="btn btn-salvar">
-                                salvar
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
             <div class="overlay" id="overlay"></div>
             <?php include "../../../Public/include/modais/modal-aviso.html"; ?>

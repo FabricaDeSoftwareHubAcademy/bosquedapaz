@@ -43,7 +43,7 @@ inputImg3.addEventListener("change", readImage3, false);
 
 
 
-btnEditar = document.getElementById('editar');
+btnEditar = document.getElementById('btn-salvar');
 
 let overlay = document.getElementById('overlay')
 let closeModal = document.querySelector('.close-modal')

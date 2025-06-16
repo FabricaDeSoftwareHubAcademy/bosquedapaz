@@ -20,35 +20,19 @@
         <h1 class="title">Área do Expositor</h1>
 
         <div class="conteiner-cards">
-            <a href="" class="link-card">
+            <a href="../../../app/Views/Client/listar-boletos.php" class="link-card">
                 <div class="card-conteiner">
                     <div class="card-content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                        <img src="../../../Public/imgs/img-area-adm/Vector%20Relatorio.png" alt="">
                         <p class="text-card">meus boletos</p>
                     </div>
                 </div>
             </a>
-            <a href="" class="link-card">
+            <a href="../../../app/Views/Client/edicao-perfil-expositor.php" class="link-card">
                 <div class="card-conteiner">
                     <div class="card-content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p class="text-card">meus boletos</p>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link-card">
-                <div class="card-conteiner">
-                    <div class="card-content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p class="text-card">meus boletos</p>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link-card">
-                <div class="card-conteiner">
-                    <div class="card-content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p class="text-card">meus boletos</p>
+                        <p class="text-card">editar perfil</p>
                     </div>
                 </div>
             </a>

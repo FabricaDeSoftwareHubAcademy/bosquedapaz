@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 .btns-forms-padrao {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;

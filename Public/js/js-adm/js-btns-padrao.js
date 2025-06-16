@@ -2,7 +2,7 @@ const headElement  = document.getElementsByTagName('head')[0];
 const link  = document.createElement('link');
 link.rel  = 'stylesheet';
 link.type = 'text/css';
-link.href = 'http://localhost/bosquedapaz/Public/css/btn-padrao.css';
+link.href = '../../../Public/css/btn-padrao.css';
 headElement.appendChild(link);
 
 let btnVoltar = document.getElementById('btn-voltar')
