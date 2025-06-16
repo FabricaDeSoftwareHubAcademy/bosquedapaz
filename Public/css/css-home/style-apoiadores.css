@@ -101,10 +101,8 @@
     justify-content: center;
 }
 
-.img-perfil-expo {
-    width: 3.8rem;
-    height: 3.8rem;
-}
+.img-card {
+    width: 70%;}
 
 .corpo-card {
     background-color: white;
