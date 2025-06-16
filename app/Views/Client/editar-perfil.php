@@ -55,7 +55,7 @@
                     </div>
                     <div>
                         <i class="fa-brands fa-square-whatsapp"></i>
-                        <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="(99) 982925477">
+                        <input type="text" name="whatsapp" class="perfilEdit-input-info" placeholder="(99) 99999-9999">
                     </div>
 
                     <div>
