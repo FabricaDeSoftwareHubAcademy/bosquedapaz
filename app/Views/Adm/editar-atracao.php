@@ -17,34 +17,34 @@
         <div class="box">
             <h2>EDITAR ATRAÇÃO</h2>
             <div class="form-box">
-                <form id="form-editar-atracao" action="#" method="POST">
+                <form id="form-editar-atracao" method="POST" enctype="multipart/form-data">
 
                     <div id="form1">
                         <input type="hidden" name="id_evento" id="id_evento">
                         <input type="hidden" name="id_atracao" id="id_atracao">
                         <div class="input-group">
                             <label>Nome:</label>
-                            <input type="text" name="nome" id="nome_atracao" placeholder="Digite o nome do evento"
+                            <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome do evento"
                                 required>
                         </div>
 
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricao" id="descricao_atracao" placeholder="Digite uma breve descrição do evento (250 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none"></textarea>
+                            <textarea name="descricao_atracao" id="descricao_atracao" placeholder="Digite uma breve descrição do evento (250 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none"></textarea>
                             <small id="contador-caracteres">250 caracteres restantes</small>
                         </div>
 
                         <div class="input-group">
                             <label>Status:</label>
                             <select name="status" id="status" required>
-                                <option value="ativo">Ativo</option>
-                                <option value="inativo">Inativo</option>
+                                <option value="1">Ativo</option>
+                                <option value="0">Inativo</option>
                             </select>
                         </div>
 
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="banner_atracao" id="file" required>
                         </div>
 
                         <div class="preview-img">

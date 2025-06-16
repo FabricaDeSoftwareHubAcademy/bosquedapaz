@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $atracao->setStatus($status);
     $atracao->setIdEvento($id_evento);
 
-    if (!empty($_FILES['foto_atracao']['name'])) {
+    if (!empty($_FILES['banner_atracao']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
         $extensao = strtolower(pathinfo($_FILES['banner_atracao']['name'], PATHINFO_EXTENSION));
 
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $nomeSeguro = uniqid('atracao_', true) . '.' . $extensao;
         $caminhoTemporario = $_FILES['banner_atracao']['tmp_name'];
-        $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-atracoes/';
+        $diretorioDestino = __DIR__ . '/../Public/uploads/atracoes/';
         $destino = $diretorioDestino . $nomeSeguro;
 
         if (!is_dir($diretorioDestino)) {

@@ -54,6 +54,9 @@ class Atracao
     public function setIdEvento($id_evento) {
         $this->id_evento = $id_evento;
     }
+    public function setStatus($status) {
+        $this->status = $status;
+    }
 
     public function cadastrar() {
         $db = new Database('atracao');
@@ -90,7 +93,8 @@ class Atracao
             'nome_atracao' => $this->nome_atracao,
             'descricao_atracao' => $this->descricao_atracao,
             'banner_atracao' => $this->banner_atracao,
-            'id_evento' => $this->id_evento
+            'id_evento' => $this->id_evento,
+            'status' => $this->status
         ];
 
         return $db->update("id_atracao = {$id}", $valores);
