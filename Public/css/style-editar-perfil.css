@@ -304,13 +304,7 @@ input[type="file"]{
 }
 
 @media (max-width: 575.98px){
-    /* *{
-        outline: 1px solid red;
-    } */
-
-    /* .perfilEdit-body{
-        height: 140vh;
-    } */
+    
 
     .perfilEdit-main{
         position: static;
@@ -320,8 +314,7 @@ input[type="file"]{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px 0px 30px 0px;
     }
 
     .perfilEdit-box{
@@ -331,24 +324,25 @@ input[type="file"]{
 
     .perfilEdit-title{
         bottom: 2%;
-        /* background-color: red; */
+        
     }
 
     .perfilEdit-form{
         height: 85%;
         width: 90%;
-        gap: 10px;
-        /* background-color: purple; */
+        gap: 15px;
+        justify-content: unset;
+        
     }
 
     .perfilEdit-empresas{
         flex-direction: column;
-        /* background-color: red; */
+        
         height: 18%;
     }
 
     .perfilEdit-important-input{
-        /* background-color: yellow; */
+        
         width: 100%;
     }
 
@@ -358,7 +352,7 @@ input[type="file"]{
 
     .perfilEdit-info{
         flex-direction: column;
-        /* background-color: yellow; */
+        
         height: 25%;
         gap: 10px;
     }
@@ -369,7 +363,7 @@ input[type="file"]{
 
     .perfilEdit-foto-info{
         margin-top: 8%;
-        /* background-color: purple; */
+        
         min-height: 205px;
         max-height: 205px;
     }
@@ -390,11 +384,11 @@ input[type="file"]{
         padding-right: 2%;
         padding-left: 2%;
         padding-bottom: 4%;
-        /* background-color: red; */
+        
     }
 
     .perfilEdit-btns{
-        /* background-color: red; */
+        
         width: 80%;
         min-height: 50px;
         max-height: 50px;
@@ -413,25 +407,209 @@ input[type="file"]{
 }
 
 @media (min-width: 576px){
-}
-
-@media (min-width: 768px){
-    .perfilEdit-title{
-        margin-top: 10%;
+    .perfilEdit-box{
+        height: 94%;
     }
 
     .perfilEdit-form{
         width: 90%;
-        background-color: red;
+    }
+}
+
+@media (min-width: 768px){
+    
+
+    .perfilEdit-title{
+        position: relative;
+        top: 0%;
+    }
+
+    .perfilEdit-box{
+        height: 93%;
+    }
+
+    .perfilEdit-form{
+        width: 90%;
+        height: 85%;
+        justify-content: space-between;
+        
+    }
+
+    .perfilEdit-empresas{
+        height: 85px;
+    }
+
+    .perfilEdit-desc{
+        padding-bottom: 2%;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        gap: 10px;
+        
+        height: 200px;
+    }
+
+    .perfilEdit-info div{
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .perfilEdit-foto-info{
+        
+        height: 180px;
+    }
+
+    .perfilEdit-load-foto{
+        max-width: 145px;
+        min-width: 145px;
+    }
+
+    .perfilEdit-div-group{
+        width: 100%;
+        position: relative;
+        overflow-x: auto;
+        padding: 0% 2% 2% 2%;
+    }
+
+    .perfilEdit-btns{
+        
+        width: 45%;
+        min-height: 60px;
+        max-height: 60px;
+        bottom: 0%;
+        position: relative
+    }
+
+    .perfilEdit-link-voltar{
+        right: 42%;
+        bottom: 2%;
+        
+    }
+}
+
+@media (min-width: 820px){
+    
+
+    .perfilEdit-box{
+        height: 90%;
+    }
+
+    .perfilEdit-form{
+        height: 80%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 190px;
     }
 }
 
 @media (min-width: 992px){
+    
 
+    .perfilEdit-empresas{
+        height: 90px;
+    }
+
+    .perfilEdit-foto-info{
+        height: 195px;
+    }
+}
+
+@media (min-width: 992px) and (orientation: landscape) {
+
+    .perfilEdit-main{
+        overflow-y: auto;
+        height: 185vh;
+        position: static;
+    }
+
+    .perfilEdit-box{
+        height: 85%;
+        margin-top: 6%;
+    }
+
+    .perfilEdit-form{
+        height: 85%;
+    }
+
+    .perfilEdit-empresas{
+        height: 85px;
+    }
+
+    .perfilEdit-info{
+        margin-bottom: 3%;
+        height: 210px;
+    }
+
+    .perfilEdit-foto-info{
+        height: 190px;
+    }
 }
 
 @media (min-width: 1200px){
+    
+    .perfilEdit-main{
+        height: 100vh;
+    }
 
+    .perfilEdit-box{
+        height: 86%;
+        margin-top: 5%;
+    }
+
+    .perfilEdit-title{
+        margin-top: 1%;
+    }
+
+    .perfilEdit-form{
+        height: 100%;
+        width: 75%;
+        justify-content: space-between;
+    }
+
+    .perfilEdit-desc{
+        height: 30%;
+    }
+
+    .perfilEdit-label-desc{
+        height: 30%;
+    }
+
+    .perfilEdit-info{
+        display: flex;
+        flex-direction: row;
+        height: 45px;
+        margin-bottom: 1%;
+    }
+
+    .perfilEdit-foto-info{
+        height: 180px;
+    }
+
+    .perfilEdit-div-group{
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+        gap: 0;
+        padding: 0 0 1% 0;
+    }
+
+    .perfilEdit-load-foto{
+        max-width: 145px;
+        min-width: 145px;
+    }
+
+    .perfilEdit-btns{
+        max-height: 45px;
+        min-height: 45px;
+        width: 30%;
+    }
+
+    .perfilEdit-link-voltar{
+        bottom: 8%;
+    }
 }
 
 @media (min-width: 1400px){
