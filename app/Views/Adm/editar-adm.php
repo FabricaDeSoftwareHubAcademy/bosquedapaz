@@ -27,29 +27,32 @@
         <div class="box">
             <h2>Editar ADM</h2>
 
-            <div class="foto-container">
-                <input type="file" id="uploadFoto" accept="image/*" onchange="previewImagem()">
-                <label for="uploadFoto">
-                    <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
-                    <div class="icone-editar">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </div>
-                </label>
-            </div>
-
             <div class="form-box">
                 <form action="" method="post" id="formulario" enctype="multipart/form-data">
+                    
+                    <!-- Campo oculto para o id -->
+                    <input type="hidden" name="id" id="id" value="1">
+
+                    <div class="foto-container">
+                        <input type="file" id="uploadFoto" name="imagem" accept="image/*" onchange="previewImagem()">
+                        <label for="uploadFoto">
+                            <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
+                            <div class="icone-editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </label>
+                    </div>
+
                     <div id="form1">
                         <div class="input-container">
                             <div class="input-row">
-                                <input type="text" name="id" style="opacity: 0;" id="id" value="1">
                                 <div class="input-group">
                                     <label>Nome:</label>
                                     <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
                                 </div>
                                 <div class="input-group">
                                     <label>Telefone:</label>
-                                    <input type="number" name="tel" id="telefone" placeholder="Digite o seu número de telefone" required>
+                                    <input type="tel" name="tel" id="telefone" placeholder="Digite o seu número de telefone" required>
                                 </div>
                             </div>
                             <div class="input-row">
@@ -64,23 +67,19 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+
                     <div class="btns">
                         <a href="listar-adm.php" class="voltar">
                             <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                         </a>
                         <div class="btn-cancelar-salvar">
-                            <button type="button" class="btn btn-cancelar">
-                                <a href="./Area-Adm.php">Cancelar</a>
-                            </button>
-                            
-                            <button type="submit" class="btn btn-salvar" id="atualizar" value="atualizar" name="atualizar">
-                                Salvar
+                            <button type="button" class="btn btn-cancelar" onclick="window.location.href='./Area-Adm.php'">Cancelar</button>
+                            <button type="submit" class="btn btn-salvar" id="atualizar" value="atualizar" name="atualizar">Salvar</button>
                             </div>
                         </div>
-                    
+                    </div>    
                 </form>
-
+            </div>
         </div>
     </main>
     <div class="bolas-fundo">

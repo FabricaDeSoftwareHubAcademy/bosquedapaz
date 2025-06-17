@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['usuario_logado']) || $_SESSION['perfil'] !== 'ADM') {
-//     echo json_encode(['success' => false, 'message' => 'Acesso negado']);
-//     exit;
-// }
+session_start();
+if (!isset($_SESSION['login']) || $_SESSION['login']['perfil'] != 1) {
+    echo json_encode(['success' => false, 'message' => 'Acesso negado']);
+    exit;
+}
 
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
@@ -145,7 +145,7 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Email inválido']);
             exit;
         }
-        if (empty($nome) || ($telefone) || ($cargo)) {
+        if (empty($nome) || empty($telefone) || empty($cargo)) {
             echo json_encode(['success' => false, 'message' => 'Preencha todos os campos obrigatórios.']);
             exit;
         }
@@ -187,7 +187,8 @@ if ($requestMethod === 'POST') {
             }
             $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
-            $colab->setImagem(null);
+            $imagemAtual = $colab->buscarImagemAtual($id);  // ← Você teria que criar esse método no Colaborador
+            $colab->setImagem($imagemAtual);
         }
 
         $res = $colab->atualizar($id);
@@ -233,6 +234,38 @@ if ($requestMethod === 'POST') {
 if ($requestMethod === 'GET') {
     $colab = new Colaborador();
 
+    if (isset($_GET['perfil']) && $_GET['perfil'] === 'meu') {
+        $id = $_SESSION['id_colaborador'] ?? null;
+
+        if (!$id) {
+            echo json_encode(['success' => false, 'message' => 'Usuário não logado']);
+            exit;
+        }
+
+        $res = $colab->listarColaboradores($id);
+
+        if ($res && isset($res[0])) {
+            $c = $res[0];
+            $dados = [
+                'id_colaborador' => $c['id_colaborador'],
+                'nome' => $c['nome'],
+                'email' => $c['email'],
+                'tel' => $c['telefone'],
+                'cargo' => $c['cargo'],
+                'foto_perfil' => $c['foto_perfil'],
+            ];
+            echo json_encode([
+                'success' => true,
+                'message' => 'Perfil carregado com sucesso.',
+                'data' => $dados
+            ]);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Nenhum dado encontrado para o seu perfil']);
+            exit;
+        }
+    }
+
+    // Listar: 
     if (isset($_GET['id'])) {
         $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
         if (!$id) {

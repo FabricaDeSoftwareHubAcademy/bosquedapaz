@@ -225,6 +225,24 @@ class Database {
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
     }
+
+    public function buscarImagemPorColaborador(int $id_colaborador): ?string {
+        $sql = "
+            SELECT p.img_perfil
+            FROM pessoa p
+            INNER JOIN colaborador c ON p.id_pessoa = c.id_pessoa
+            WHERE c.id_colaborador = :id
+            LIMIT 1
+        ";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id_colaborador, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $imagem = $stmt->fetchColumn();
+
+        return $imagem ?: null;
+    }
 }
 
 ?>

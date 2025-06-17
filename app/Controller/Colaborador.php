@@ -134,4 +134,9 @@ class Colaborador extends Pessoa
             return false;
         }
     }
+
+    public function buscarImagemAtual(int $id_colaborador): ?string {
+        $db = new Database('colaborador');
+        return $db->buscarImagemPorColaborador($id_colaborador);
+    }
 }
