@@ -2,7 +2,7 @@
 
 namespace app\Controller;
 
-require_once('../vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 use PDO;
 use app\Models\Database;
 
@@ -11,32 +11,32 @@ class Colaborador extends Pessoa
     private string $cargo;
 
     // Setters públicos para propriedades herdadas protegidas da Pessoa
-    public function setNome(string $nome): void {
+    public function setNome($nome) {
         $this->nome = $nome;
     }
 
-    public function setTelefone(string $telefone): void {
+    public function setTelefone($telefone) {
         $this->telefone = $telefone;
     }
 
-    public function setEmail(string $email): void {
+    public function setEmail($email) {
         $this->email = $email;
     }
 
-    public function setSenha(string $senha): void {
+    public function setSenha($senha) {
         $this->senha = $senha;
     }
 
-    public function setPerfil(string $perfil): void {
+    public function setPerfil($perfil) {
         $this->perfil = $perfil;
     }
 
     // Setters para propriedades próprias
-    public function setCargo(string $cargo): void {
+    public function setCargo($cargo) {
         $this->cargo = $cargo;
     }
 
-    public function setImagem(?string $imagem): void {
+    public function setImagem($imagem) {
         $this->foto_perfil = $imagem;
     }
 
