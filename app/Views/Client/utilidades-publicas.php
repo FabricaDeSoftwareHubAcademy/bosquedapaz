@@ -69,6 +69,7 @@
                         <div class="parte-superior">
                             <img class="img-card" src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt="">
                             <h1 id="h1-azul-card">Primavera</h1>
+                            
                         </div>
                         <div class="parte-inferior">
                             <button class="saiba-mais open-modal" data-modal="modal-card-Ult">Saiba Mais</button>
@@ -83,7 +84,33 @@
 
         <!-- MODAL 1 -->
         <dialog class="modal-Ult" id="modal-card-Ult">
-            <div class="modal-por-cima"></div>
+            <div class="modal-por-cima">
+                <!-- Lado Esquerdo: Imagem:  -->
+                <div class="div__left"><img class="img-porcima-modal" src="../../../Public/imgs/imagens-utilidades/Captura de tela 2025-02-19 140715.png" alt=""></div>
+
+                <!-- Lado Direito: Text -->
+                <div class="div__right">
+                    <h1 id="titulo-modal">Primavera</h1>
+                    <div class="div__text">
+                        <p id="texto-modal">Entre os galhos retorcidos de 
+                            uma árvore antiga, o vento sussurrava segredos esquecidos.
+                            Naquela manhã nublada, ninguém imaginava que uma simples 
+                            caminhada pela floresta revelaria um portão de pedra coberto 
+                            por musgo, escondido entre raízes e sombras. Cada passo adiante 
+                            parecia puxar o mundo real para trás, como se o tempo ali dentro 
+                            escorresse mais devagar. Havia algo no ar — não era medo, mas uma 
+                            estranha sensação de que algo grande estava prestes a acontecer.Entre os galhos retorcidos de 
+                            uma árvore antiga, o vento sussurrava segredos esquecidos.
+                            Naquela manhã nublada, ninguém imaginava que uma simples 
+                            caminhada pela floresta revelaria um portão de pedra coberto 
+                            por musgo, escondido entre raízes e sombras. Cada passo adiante 
+                            parecia puxar o mundo real para trás, como se o tempo ali dentro 
+                            escorresse mais devagar. Havia algo no ar — não era medo, mas uma 
+                            estranha sensação de que algo grande estava prestes a acontecer.
+                        </p>
+                    </div>
+                </div>                
+            </div>
             
             <div class="div__decorativa-card1">
                 <div class="linha_docorativa-modal-cima-1"></div>
@@ -97,39 +124,9 @@
                 <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
             </button>
         </dialog>
-        
-        <!-- MODAL 2 -->
-            <dialog class="dlog-modal2-card-ProEv" id="modal2-card-ProEv">
-                <div class="div-decorativa-modal2">
-                    <div id="linha-dec1-modal2"></div>
-                </div>
-                <div class="div-decorativa2-modal2">
-                    <div id="linha-dec2-modal2"></div>
-                    <div id="linha-dec3-modal2"></div>
-                    <div id="linha-dec4-modal2"></div>  
-                </div>
-                <div class="div-infs-evento-modal2">
-                    <div class="areatl-img-modal2-ProEv">
-                        <div class="area-img-modal2-ProEv">
-                            <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="">
-                        </div>
-                    </div>
-                    <div class="area-text-modal2-ProEv">
-                        <h1 class="title-atracao-modal2">Sampari</h1>
-                        <p class="p-atracao-modal2">Lorem ipsum dolor sit amet consectetur. 
-                            Fames metus ac egestas turpis ipsum Lorem 
-                            ipsum dolor sit amet consectetur. Lorem ipsum 
-                            dolor sit amet consectetur. Fames metus ac egestas 
-                            turpis ipsum Lorem ipsum dolor sit amet consectetur.
-                            Lorem ipsum 
-                            dolor sit amet consectetur. Fames metus ac egestas 
-                            turpis ipsum Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <button id="b-sari-modal2" class="close-modal" data-modal="modal2-card-ProEv">
-                        <img src="../../../Public/imgs/Proximos-Eventos-img/arrow-circle-left.png" alt="">
-                    </button>
-                </div>
-            </dialog>
+
+
+
 
         <!-- Imagens Decorativas -->
         <div class="bola-1">
