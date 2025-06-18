@@ -52,9 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-eventos/';
         $destino = $diretorioDestino . $nomeSeguro;
 
-        if (!is_dir($diretorioDestino)) {
-            mkdir($diretorioDestino, 0777, true);
-        }
 
         if (move_uploaded_file($caminhoTemporario, $destino)) {
             $eventoExistente = $evento->buscarPorId($id);

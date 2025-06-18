@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log("nome_atracao:", document.getElementById('nome_atracao'));
             console.log("descricao_atracao:", document.getElementById('descricao_atracao'));
             console.log("status:", document.getElementById('status'));
+            console.log("banner_atracao:", document.getElementById('banner_atracao'));
 
             document.getElementById('id_atracao').value = atracao.id_atracao;
             document.getElementById('id_evento').value = atracao.id_evento;

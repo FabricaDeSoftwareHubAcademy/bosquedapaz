@@ -44,7 +44,7 @@
 
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="banner_atracao" id="file" required>
+                            <input type="file" name="banner_atracao" id="banner_atracao">
                         </div>
 
                         <div class="preview-img">
