@@ -32,12 +32,6 @@
             <div class="box-login">
                 <div id="linha-login"></div>
                 
-                <div class="botao-voltar">
-                    <a href="../index.php" class="volte">
-                        <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
-                    </a>
-                </div>
-                
                 <!-- Area Form -->
                 <div class="area-form-login">
 
@@ -56,28 +50,43 @@
                             <i class="bi bi-lock"></i>
                             <input class="input-login" type="password" name="password" id="password" placeholder="Digite sua senha" required>
                         </div>
-                        <button class="botao-login" type="submit">Login</button>
+                        
                     </form>
  
                     <div class="div-esqueceu-senha-login">
                         <a class="esqueceu-a-senha-p" href="tela-esqueceu-a-senha.php">Esqueceu a senha?</a>
                         <div class="linha-embaixo-recsenha-tiago"></div>
                     </div>
-                   
+
+                    <button id="botao-login" data-modal="modal-login" class="botao-login open-modal" type="submit">Login</button>
                    
                 </div>
-               
+
+                <dialog id="modal-login" class="recsenha-modal">
+                    <div class="modal-recsenha">
+                        <div class="modal-recpass">
+                            <h1 class="modal-title">Dados incorretos</h1>
+                            <p class="modal-text">Verifique seu email e/ou senha e tente novamente!</p>
+                            <button id="fechar-modal" class="close-modal" data-modal="modal-login">Fechar</button>
+                        </div>
+                    </div>
+                </dialog>
+
+                <a href="../index.php" class="botao-voltar">
+                    <img src="../Public/imgs/img-login/arrow-circle-left.svg" alt="">
+                </a>
  
                 <!-- Area da Imagem -->
                 <img class="img-dog" src="../Public/imgs/img-login/dog-walking-79-12053-1.svg" alt="">
             </div>
         </section>
     </main>
+        <script src="./js/js-modais/js-abrir-modal.js"></script>
     </body>
 
 <?php if (isset($_GET['erro']) && $_GET['erro'] == 1): ?>
 <script>
-    alert("Email ou senha incorrto!")
+    alert("Email ou senha incorreto!")
 </script>
 <?php endif; ?>
 </html>
