@@ -31,90 +31,74 @@
             </div>
         </section> 
 
-<section class="section-cards-apoio">
+        <section class="section-cards-apoio">
     <div class="card-apoio card1">
-        <div class="head-card">
-            <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-perfil-expo">
+        <div class="top-card">
+            <div class="cabeca-card">
+                <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-card">
+            </div>
         </div>
-        <div class="body-card">
-            <h3 class="nome-expo" >Solidariedade</h3>
+        <div class="corpo-card">
+            <h3 class="nome-expo">Solidariedade</h3>
             <div class="detalhes-expo">
-                <p class="para-cate">
-                    Solidariedade faz parte de nossa identidade como empresa, por isso, realizamos ações beneficentes que envolvem doações de objetos  e projetos de adoção.
+                <p class="texto-card">
+                    Solidariedade faz parte de nossa identidade como empresa, por isso, realizamos ações beneficentes que envolvem doações de objetos e projetos de adoção.
                 </p>
             </div>
         </div>
     </div>
 
     <div class="card-apoio card2">
-        <div class="head-card">
-            <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-perfil-expo">
+        <div class="top-card">
+            <div class="cabeca-card">
+                <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-card">
+            </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Gastronomia</h3>
             <div class="detalhes-expo">
-                <p class="para-cate">
-                A gastronomia valoriza sabores, ingredientes locais e tradições culinárias, promovendo experiências únicas e identidade cultural.
+                <p class="texto-card">
+                    A gastronomia valoriza sabores, ingredientes locais e tradições culinárias, promovendo experiências únicas e identidade cultural.
                 </p>
             </div>
         </div>
     </div>
 
     <div class="card-apoio card3">
-        <div class="head-card">
-            <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-perfil-expo">
+        <div class="top-card">
+            <div class="cabeca-card">
+                <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-card">
+            </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Cultura</h3>
             <div class="detalhes-expo">
-                <p class="para-cate">
-                A cultura expressa a história, os costumes e as manifestações artísticas do nosso povo, fortalecendo vínculos e diversidade.
+                <p class="texto-card">
+                    A cultura expressa a história, os costumes e as manifestações artísticas do nosso povo, fortalecendo vínculos e diversidade.
                 </p>
             </div>
         </div>
     </div>
 
     <div class="card-apoio card4">
-        <div class="head-card">
-            <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-perfil-expo">
+        <div class="top-card">
+            <div class="cabeca-card">
+                <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-card">
+            </div>
         </div>
-        <div class="body-card">
+        <div class="corpo-card">
             <h3 class="nome-expo">Sustentabilidade</h3>
             <div class="detalhes-expo">
-                <p class="para-cate">
-                A sustentabilidade busca o equilíbrio entre o desenvolvimento e o cuidado com o meio ambiente, garantindo um futuro melhor para todos.
+                <p class="texto-card">
+                    A sustentabilidade busca o equilíbrio entre o desenvolvimento e o cuidado com o meio ambiente, garantindo um futuro melhor para todos.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-
-    <section class="section-apoiadores">
-        <div class="sobre-apoiadores">
-            <h1>Nossos apoiadores</h3>
-        </div>
     
-    <div class="carrossel-apoiadores">
-        <div class="slider-apoiadores" id="carrosselTrack">
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo hub"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-bosque-ipes.png" alt="logo bosque dos ipês"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-senac.jpg" alt="logo senac"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-setur.png" alt="logo setur"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-sebrae.png" alt="logo sebrae"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-hub.jpg" alt="logo hub"></div>
-            <div class="div-logo-parceiro"><img src="../../../Public/imgs/img-home/logo-prefeitura.png" alt="logo prefeitura"></div>
-            </div>
-    </div>
-
-    </section>
-    
-
+    <?php include "../../../Public/include/home/section-apoiadores.php"; ?>
     <?php include "../../../Public/include/home/rodape.html"; ?>
     
 
