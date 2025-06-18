@@ -14,7 +14,7 @@
 
 <body>
     <?php include "../../../Public/include/menu-adm.html" ?>
-   
+
     <main class="principal">
         <div class="box">
             <h1>CADASTRO DE PARCEIROS</h1>
@@ -86,14 +86,14 @@
                             </div>
                             <div class="input-group">
                                 <label>CEP:</label>
-                                <input type="text" placeholder="Digite o CEP"name="file" id="file"
+                                <input type="text" placeholder="Digite o CEP" name="file" id="file"
                                     required>
                             </div>
                         </div>
                         <img class="preview" src="" alt="" id="preview-image">
                     </div>
                 </form>
-                
+
             </div>
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
@@ -108,21 +108,21 @@
                     <button class="open-modal" data-modal="modal-deleta">
                         Salvar
                     </button>
-                        
+
                 </div>
             </div>
         </div>
         </div>
 
         <dialog id="modal-deleta" class="modal-deleta">
-          <div class="acao-recusar">
-            <div class="acao-content-recusar">
-                <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
-                <div class="acao-botoes-recusar">
-                  <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+            <div class="acao-recusar">
+                <div class="acao-content-recusar">
+                    <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
+                    <div class="acao-botoes-recusar">
+                        <button class="close-modal" data-modal="modal-deleta">confirmar</button>
+                    </div>
                 </div>
             </div>
-          </div>
         </dialog>
     </main>
 
