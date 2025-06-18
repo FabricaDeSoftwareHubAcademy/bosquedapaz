@@ -12,7 +12,7 @@
 </head>
 
 <body class="perfilEdit-body">
-    <?php include "../../../Public/include/home/menu-expositor.html" ?>
+    <?php include "../../../Public/include/menu-adm.html" ?>
 
     <main class="perfilEdit-main">
 
