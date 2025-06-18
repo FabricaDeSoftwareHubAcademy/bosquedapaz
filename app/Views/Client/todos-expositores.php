@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="area-all-cards" id="inicio">
+        <div class="area-all-cards" id="content-cards">
             
         </div>
     </main>
@@ -43,6 +43,7 @@
     <?php include '../../../Public/include/home/perfil-expositor.html' ?>
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
+    <script src="../../../Public/js/js-home/todos-expositores.js"></script>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ if (isset($_GET['filtro'])){
     }
 
 }
-if(!isset($_GET['filtro'])){
+else if(!isset($_GET['filtro'])){
     $exp = new Expositor();
     
     try {
