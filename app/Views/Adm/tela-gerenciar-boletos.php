@@ -27,7 +27,7 @@
             <div class="linha-de-separacao"></div>
 
             <div class="filtrar-por-data">
-                <form action="../../../actions/actions-boletos/action-filtrar-data.php" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
+                <form action="" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Inicial</label>
                         <input type="date" name="data_inicial" id="input-filtragem-de-data">
@@ -94,6 +94,7 @@
         </section>
         <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_nome.js"></script>
         <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_status.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_datas.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
