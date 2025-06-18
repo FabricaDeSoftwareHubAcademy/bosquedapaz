@@ -212,6 +212,7 @@ html,.body-recsenha{
 }
 
 .close-modal{
+    text-decoration: none;
     transition: all 0.3s ease;
     font-weight: bold;
     font-size: 16px;
