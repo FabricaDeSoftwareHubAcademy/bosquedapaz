@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function () {
+async function getExpositor() {
     let dados = await fetch('../../../actions/actions-listar-expositor.php');
 
     let response = await dados.json()
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     </p>
                     <p class="para-color">
                         Rua:
-                        <span class="span-color" style="background-color: red;">
+                        <span class="span-color" style="background-color: ${element.cor_rua};">
                         </span>
                     </p>
                 </div>
@@ -37,4 +37,20 @@ document.addEventListener('DOMContentLoaded', async function () {
     </div>
         `
     });
+}
+
+document.addEventListener('DOMContentLoaded', getExpositor())
+
+let inputPesquiar = document.getElementById('input_pesquisa')
+
+inputPesquiar.addEventListener('keyup', async function (e) {
+    if(inputPesquiar.value.length > 1) {
+        let dados = await fetch(`../../../actions/actions-listar-expositor.php?filtro=${inputPesquiar.value}`);
+
+        let response = await dados.json()
+        console.log(response)
+    }
+    else if (inputPesquiar.value.length < 2){
+        getExpositor()
+    }
 })

@@ -31,7 +31,7 @@
             <div class="procurar">
                 <h3 class="title-pes">Pesquisar por expositor:</h3>
                 <div class="pesquisa-expo"> <!-- area de pesquisa -->
-                    <input class="input-pes" type="text" placeholder="Pesquisar por...">
+                    <input class="input-pes" id="input_pesquisa" type="text" placeholder="Pesquisar por...">
                 </div>
             </div>
         </div>
