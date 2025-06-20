@@ -268,7 +268,7 @@ body {
 }
 
 @media (max-width: 950px) {
-    
+        
     .formularios {
         flex-direction: column;
     }
