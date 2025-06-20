@@ -19,22 +19,23 @@ main{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* padding-top: 110px; */
+    padding-top: 110px;
 }
 
 .tela-ult{
-    background-color: blue;
+    background-color: rgba(248, 245, 246, 0.705);
     width: 90%;
     height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .conteiner__cards{
     width: 100%;
-    background-color: blueviolet;
+    background-color: transparent;
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -44,7 +45,49 @@ main{
 
 .card{
     width: 300px;
-    height: 350px;
-    background-color: aquamarine;
+    height: 450px;
+    background-color: white;
+    /* border-radius: 10px; */
 }
 
+.por-cima-card{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.parte-superior{
+    width: 100%;
+    height: 50%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parte-inferior{
+    width: 100%;
+    height: 50%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nome-card{
+    position: absolute;
+    bottom: 38%;
+}
+
+/* .linha-decorativa-1{
+    width: 200px;
+    height: 18px;
+    background-color: chocolate;
+    position: absolute;
+} */
+
+/* .container__decorativo{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: tomato;
+} */

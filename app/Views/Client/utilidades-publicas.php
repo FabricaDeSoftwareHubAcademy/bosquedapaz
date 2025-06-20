@@ -14,10 +14,42 @@
     <section class="tela-ult">
         <h1>Utilidades Publicas</h1>
         <div class="conteiner__cards">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card">
+                <div class="por-cima-card">
+                    <div class="parte-superior"></div>
+                    <div class="parte-inferior">
+                        <h1 id="nome-card">Nome</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="por-cima-card">
+                    <div class="parte-superior"></div>
+                    <div class="parte-inferior">
+                        <h1 id="nome-card">Nome</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="por-cima-card">
+                    <div class="parte-superior"></div>
+                    <div class="parte-inferior">
+                        <h1 id="nome-card">Nome</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="por-cima-card">
+                    <div class="parte-superior"></div>
+                    <div class="parte-inferior">
+                        <h1 id="nome-card">Nome</h1>
+                        <div class="linha-decorativa-1"></div>
+                        <div class="container__decorativo">
+                            <div class="linha-decorativa-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
