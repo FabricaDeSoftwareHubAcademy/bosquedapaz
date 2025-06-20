@@ -69,8 +69,8 @@
                     </div>
 
                     <div class="form-expo">
-                        <label for="tipo-expo">Tipo de exposição:</label>
-                        <div class="custom-dropdown">
+                        <div class="form-group">
+                            <label for="tipo-expo">Tipo de exposição:</label>
                             <select name="" id="" class="select">
                                 <option value="">Selecione</option>
                                 <option value="trailer">Trailer</option>
@@ -79,33 +79,30 @@
                             </select>
                         </div>
 
-                        <label for="energia">Precisa de energia?</label>
-                        <div class="custom-dropdown">
+                        <div class="form-group">
+                            <label for="energia">Precisa de energia?</label>
                             <select name="energia" id="energia" class="select">
-
                                 <option value="">Selecione</option>
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
-
                             </select>
                         </div>
 
-                        <label for="equipamentos">Voltagens dos equipamentos</label>
-                        <div class="custom-dropdown">
+                        <div class="form-group">
+                            <label for="equipamentos">Voltagens dos equipamentos</label>
                             <select name="voltagem" id="voltagem" class="select">
-
                                 <option value="">selecione</option>
                                 <option value="110v">110v</option>
                                 <option value="220v">220v</option>
-
                             </select>
                         </div>
-                        <div class="input-group">
+
+                        <div class="form-group">
                             <label>Escolher Imagens:</label>
                             <input type="file" name="files[]" id="files" multiple="multiple">
                         </div>
-
                     </div>
+
 
                     <div class="btn-conf">
                         <div class="btn-finalizar">

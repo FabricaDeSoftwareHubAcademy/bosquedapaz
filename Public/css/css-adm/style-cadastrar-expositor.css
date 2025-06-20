@@ -81,7 +81,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     /* background-color: blue; */
@@ -107,10 +107,23 @@ body {
     /* gap: 20px; */
 }
 
+.form-pessoa{
+    position: relative;
+    left: -20%;
+}
+
+.form-loja{
+    position: relative;
+    left: 10%;
+}
+
 .form-expo{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    position: relative;
+    left: 40%;
+    gap: 10px;
 }
 
 .input,
@@ -120,12 +133,15 @@ body {
     width: 100%;
 }
 
-
+.formularios label{
+    width: 120%;
+}
 
 .input input,
 .input-group input,
 .input-group textarea {
-    width: 120%;
+    width: 230%;
+    height: 50px;
     min-height: 45px;
     padding: 5px;
     border: none;
@@ -137,8 +153,11 @@ body {
     border-right: 2px solid #9d9fa1;
     font-size: 1rem;
     color: #3d3d3d;
+    /* background-color: blue; */
 }
-
+#categorias{
+    width: 230%;
+}
 .select{
     width: 100%;
     min-height: 45px;
@@ -152,6 +171,7 @@ body {
     border-right: 2px solid #9d9fa1;
     font-size: 1rem;
     color: #3d3d3d;
+    /* background-color: red; */
 }
 
 .custom-dropdown {
@@ -248,9 +268,8 @@ body {
 }
 
 @media (max-width: 950px) {
-    .form-pessoa,
-    .form-loja,
-    .form-expo {
+    
+    .formularios {
         flex-direction: column;
     }
 }
