@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
     overflow: hidden;
 }
@@ -89,7 +90,7 @@ body {
     top: -80px;
 }
 
-.formularios div{
+.formularios div {
     display: flex;
     flex-direction: column;
     /* background-color: pink; */
@@ -107,17 +108,17 @@ body {
     /* gap: 20px; */
 }
 
-.form-pessoa{
+.form-pessoa {
     position: relative;
     left: -20%;
 }
 
-.form-loja{
+.form-loja {
     position: relative;
     left: 10%;
 }
 
-.form-expo{
+.form-expo {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -133,7 +134,7 @@ body {
     width: 100%;
 }
 
-.formularios label{
+.formularios label {
     width: 120%;
 }
 
@@ -155,10 +156,12 @@ body {
     color: #3d3d3d;
     /* background-color: blue; */
 }
-#categorias{
+
+#categorias {
     width: 230%;
 }
-.select{
+
+.select {
     width: 100%;
     min-height: 45px;
     padding: 5px;
@@ -179,19 +182,19 @@ body {
     margin-bottom: 20px;
 }
 
+/******* BOTAO FINALIZAR ********/
 .btn-conf {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/******* BOTAO FINALIZAR ********/
 
 .btn-finalizar {
     display: flex;
     gap: 20px;
-    position: absolute;
-    top: 85%;
+    position: relative;
+    top: 210px;
 }
 
 
@@ -267,24 +270,220 @@ body {
     cursor: pointer;
 }
 
+
+/* RESPONSIVIDADE COMPLETA */
+@media (max-width: 1200px) {
+    .form-pessoa {
+        left: 0%;
+    }
+
+    .form-loja {
+        left: 0%;
+    }
+
+    .form-expo {
+        left: 0%;
+        justify-content: center;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 80%;
+    }
+
+    .formularios label {
+        width: 100%;
+    }
+
+    .btn-salvar {
+        left: 0;
+        top: 0;
+        width: 160px;
+    }
+
+    .btn-cancelar {
+        width: 160px;
+    }
+
+    .btn-finalizar {
+        top: auto;
+        position: static;
+        justify-content: center;
+        flex-direction: row;
+        /* lado a lado */
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .btn {
+        width: clamp(150px, 40%, 200px);
+    }
+}
+
 @media (max-width: 950px) {
-        
     .formularios {
         flex-direction: column;
+        align-items: stretch;
+        top: 0;
+    }
+
+    .form-pessoa,
+    .form-loja,
+    .form-expo {
+        width: 100%;
+        position: static;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 90%;
+    }
+
+    .btn-finalizar {
+        flex-direction: row;
+        /* ainda lado a lado */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 140px;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    .btn-salvar {
+        left: 0;
+        top: 0;
+    }
+
+    .box {
+        padding: 15px;
     }
 }
 
 @media (max-width: 650px) {
+    .title-text {
+        font-size: 1.5rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 100%;
+    }
+
+
+
     .box {
         padding: 10px;
     }
 
     .btn-finalizar {
-        flex-direction: column;
-        align-items: stretch;
+        position: static !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
     }
 
     .btn {
-        width: 100%;
+        width: clamp(120px, 45%, 160px);
+        font-size: 0.85rem;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-text {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 85%;
+        position: relative;
+        left: 8%;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 8%;
+    }
+
+    .form-expo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-finalizar {
+        flex-direction: row;
+        /* manter lado a lado */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn {
+        width: clamp(100px, 40%, 150px);
+        /* largura menor e flexível */
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+}
+
+/*S8 */
+
+@media (max-width: 360px) {
+    .title-text {
+        font-size: 1rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 80%;
+        font-size: 0.9rem;
+        padding: 4px;
+        position: relative;
+        left: 10%;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 10%;
+    }
+
+    .btn-finalizar {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .btn {
+        width: clamp(90px, 45%, 120px);
     }
 }
