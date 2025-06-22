@@ -85,7 +85,6 @@ body {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    /* background-color: blue; */
     position: relative;
     top: -80px;
 }
@@ -93,19 +92,13 @@ body {
 .formularios div {
     display: flex;
     flex-direction: column;
-    /* background-color: pink; */
     justify-content: center;
 }
-
-
-
-
 .form-pessoa,
 .form-loja {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* gap: 20px; */
 }
 
 .form-pessoa {
@@ -154,7 +147,6 @@ body {
     border-right: 2px solid #9d9fa1;
     font-size: 1rem;
     color: #3d3d3d;
-    /* background-color: blue; */
 }
 
 #categorias {
@@ -185,7 +177,6 @@ body {
     border-right: 2px solid #9d9fa1;
     font-size: 1rem;
     color: #3d3d3d;
-    /* background-color: red; */
 }
 
 .custom-dropdown {
@@ -260,26 +251,6 @@ body {
 
 /********* FIM BTN-FINALIZAR *********/
 
-/* .modal_conteudo {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.text_modal {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.fecha_modal button {
-    padding: 10px 20px;
-    background-color: #007E70;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-} */
 
 .oculta {
     visibility: hidden;
@@ -312,9 +283,237 @@ body {
     z-index: 1000;
 }
 
+/* 1200px para baixo - notebooks e tablets grandes */
+@media (max-width: 1200px) {
+    .form-pessoa,
+    .form-loja,
+    .form-expo {
+        left: 0;
+        justify-content: center;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 80%;
+    }
+
+    .formularios label {
+        width: 100%;
+    }
+
+    .btn-salvar,
+    .btn-cancelar {
+        left: 0;
+        top: 0;
+        width: 160px;
+    }
+
+    .btn-finalizar {
+        position: static;
+        justify-content: center;
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: clamp(150px, 40%, 200px);
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* 950px para baixo - tablets médios e pequenos */
+@media (max-width: 950px) {
+    .formularios {
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+    }
+
+    .form-pessoa,
+    .form-loja,
+    .form-expo {
+        width: 100%;
+        position: static;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 90%;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    .btn-finalizar {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 140px;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+}
+
+/* 768px para cima - ajustes pontuais para desktop/tablet */
+@media (min-width: 768px) {
+    #tipo_expo {
+        width: 96%;
+        left: -2%;
+    }
+
+    #energia {
+        width: 189%;
+        left: -55%;
+    }
+
+    #energia_label {
+        left: -50%;
+    }
+
+    #volt_label {
+        left: -15%;
+    }
+
+    #voltagem {
+        width: 126%;
+        left: -20%;
+    }
+}
+
+/* 650px para baixo - celulares grandes */
+@media (max-width: 650px) {
+    .title-text {
+        font-size: 1.5rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 100%;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .btn-finalizar {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .btn {
+        width: clamp(120px, 45%, 160px);
+        font-size: 0.85rem;
+        padding: 10px 14px;
+    }
+}
+
+/* 480px para baixo - celulares médios */
+@media (max-width: 480px) {
+    .title-text {
+        font-size: 1.2rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 85%;
+        left: 8%;
+    }
+
+    .formularios label {
+        left: 8%;
+    }
+
+    .select {
+        width: 111%;
+        left: -5%;
+    }
+
+    .form-files {
+        width: 76%;
+    }
+
+    #tipo_expo {
+        width: 91%;
+        left: 2%;
+    }
+
+    #energia {
+        width: 171%;
+        left: -36%;
+    }
+
+    #energia_label {
+        left: -32%;
+    }
+
+    #volt_label {
+        left: -4%;
+    }
+
+    #expo_label {
+        left: 3%;
+    }
+
+    .btns {
+        left: 5%;
+    }
+
+    .btn {
+        width: clamp(100px, 40%, 150px);
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+}
+
+/* 360px para baixo - celulares pequenos como Galaxy S8 */
+@media (max-width: 360px) {
+    .title-text {
+        font-size: 1rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 80%;
+        font-size: 0.9rem;
+        padding: 4px;
+        left: 10%;
+    }
+
+    .formularios label {
+        left: 10%;
+    }
+
+    .btn {
+        width: clamp(90px, 45%, 120px);
+    }
+}
+
+
 
 /* RESPONSIVIDADE COMPLETA */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .form-pessoa {
         left: 0%;
     }
@@ -354,7 +553,6 @@ body {
         position: static;
         justify-content: center;
         flex-direction: row;
-        /* lado a lado */
         gap: 15px;
         margin-top: 20px;
     }
@@ -374,6 +572,7 @@ body {
         flex-direction: column;
         align-items: stretch;
         top: 0;
+        background-color: red;
     }
 
     .form-pessoa,
@@ -395,7 +594,6 @@ body {
 
     .btn-finalizar {
         flex-direction: row;
-        /* ainda lado a lado */
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -415,6 +613,34 @@ body {
 
     .box {
         padding: 15px;
+    }
+}
+
+@media (min-width:768px) {
+    #tipo_expo {
+        width: 96%;
+        position: relative;
+        left: -2%;
+    }
+
+    #energia {
+        width: 189%;
+        position: relative;
+        left: -55%;
+    }
+
+    #energia_label{
+        position: relative;
+        left: -50%;
+    }
+    #volt_label{
+        position: relative;
+        left: -15%;
+    }
+    #voltagem{
+        width: 126%;
+        position: relative;
+        left: -20%;
     }
 }
 
@@ -476,45 +702,55 @@ body {
         left: 8%;
     }
 
-    .form-expo {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .select {
-        width: 100%;
+        width: 111%;
+        position: relative;
+        left: -5%;
     }
 
-    #tipo_expo{
-        width: 92%;
+    .form-files {
+        width: 76%;
+    }
+
+    #tipo_expo {
+        width: 91%;
         position: relative;
         left: 2%;
     }
 
-    #energia{
-        width:170%;
-        background-color: red;
+    #energia {
+        width: 171%;
         position: relative;
-        left: -30%;
+        left: -36%;
     }
 
-    .btn-finalizar {
-        flex-direction: row;
-        /* manter lado a lado */
-        justify-content: center;
-        gap: 10px;
+    #energia_label {
+        position: relative;
+        left: -32%;
+    }
+
+    #volt_label {
+        position: relative;
+        left: -4%;
+    }
+
+    #expo_label {
+        position: relative;
+        left: 3%;
     }
 
     .btn {
         width: clamp(100px, 40%, 150px);
-        /* largura menor e flexível */
         font-size: 0.8rem;
         padding: 8px 10px;
     }
 
+    .btns{
+        position: relative;
+        left: 5%;
+    }
 }
 
-/*S8 */
 
 @media (max-width: 360px) {
     .title-text {
@@ -537,13 +773,7 @@ body {
         left: 10%;
     }
 
-    .btn-finalizar {
-        flex-direction: row;
-        justify-content: center;
-        gap: 8px;
-    }
-
     .btn {
         width: clamp(90px, 45%, 120px);
     }
-}
+} */

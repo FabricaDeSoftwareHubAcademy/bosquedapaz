@@ -70,7 +70,7 @@
 
                     <div class="form-expo">
                         <div id="tipo_expo" class="form-group">
-                            <label for="tipo-expo">Tipo de exposição:</label>
+                            <label id="expo_label" for="tipo-expo">Tipo de exposição:</label>
                             <select name="" id="tipo_expo" class="select">
                                 <option value="">Selecione</option>
                                 <option value="trailer">Trailer</option>
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="energia">Precisa de energia?</label>
+                            <label id="energia_label" for="energia">Precisa de energia?</label>
                             <select name="energia" id="energia" class="select">
                                 <option value="">Selecione</option>
                                 <option value="sim">Sim</option>
@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="equipamentos">Voltagens dos equipamentos</label>
+                            <label id="volt_label" for="equipamentos">Voltagens dos equipamentos</label>
                             <select name="voltagem" id="voltagem" class="select">
                                 <option value="">selecione</option>
                                 <option value="110v">110v</option>
@@ -97,7 +97,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-files">
                             <label>Escolher Imagens:</label>
                             <input type="file" name="files[]" id="files" multiple="multiple">
                         </div>
