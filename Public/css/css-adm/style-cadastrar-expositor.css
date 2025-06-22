@@ -159,6 +159,17 @@ body {
 
 #categorias {
     width: 230%;
+    padding: 5px;
+    min-height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
 }
 
 .select {
@@ -249,7 +260,7 @@ body {
 
 /********* FIM BTN-FINALIZAR *********/
 
-.modal_conteudo {
+/* .modal_conteudo {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -268,6 +279,37 @@ body {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+} */
+
+.oculta {
+    visibility: hidden;
+}
+
+
+.modal_conteudo {
+    height: 100px;
+    /* width: ; */
+    background-color: #58b1a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.show_modal {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 
@@ -349,6 +391,7 @@ body {
     #categorias {
         width: 90%;
     }
+
 
     .btn-finalizar {
         flex-direction: row;
@@ -436,6 +479,23 @@ body {
     .form-expo {
         flex-direction: column;
         align-items: center;
+    }
+
+    .select {
+        width: 100%;
+    }
+
+    #tipo_expo{
+        width: 92%;
+        position: relative;
+        left: 2%;
+    }
+
+    #energia{
+        width:170%;
+        background-color: red;
+        position: relative;
+        left: -30%;
     }
 
     .btn-finalizar {

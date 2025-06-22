@@ -56,7 +56,7 @@
 
                         <div class="input">
                             <label for="optionInput3">Categorias</label>
-                            <select name="id_categoria" id="categorias" class="select" require>
+                            <select name="id_categoria" id="categorias" class="" require>
                                 <!-- OPTIONS GERADOS PELO JS -->
                             </select>
                         </div>
@@ -69,9 +69,9 @@
                     </div>
 
                     <div class="form-expo">
-                        <div class="form-group">
+                        <div id="tipo_expo" class="form-group">
                             <label for="tipo-expo">Tipo de exposição:</label>
-                            <select name="" id="" class="select">
+                            <select name="" id="tipo_expo" class="select">
                                 <option value="">Selecione</option>
                                 <option value="trailer">Trailer</option>
                                 <option value="food-truck">Food truck</option>
@@ -121,7 +121,7 @@
             </form>
 
         </div>
-<!-- 
+
         <div id="modal_salvar" class="oculta">
             <div class="modal_conteudo">
                 <p class="text_modal">Cadastro salvo com sucesso!</p>
@@ -129,7 +129,7 @@
                     <button id="fechar_modal">Fechar</button>
                 </form>
             </div>
-        </div> -->
+        </div>
 
         </div>
     </main>
