@@ -20,25 +20,28 @@ body {
 }
 
 .box {
+    margin: 0 auto;
     width: 90%;
     height: 90%;
-    background-color: rgba(249, 239, 239, 0.423);
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 12px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    margin-top: 1%;
+    border-radius: 10px;
+    backdrop-filter: blur(0px);
+    transition: all .5s ease-in-out;
+    background-color: #FCF8F8;
+    z-index: 2;
 }
 
+
 .title {
-    margin-top: -50rem;
-    position: relative;
+    display: flex;
     text-align: center;
     font-size: 32px;
     z-index: 2;
     font-weight: 500;
+    margin-top: -50rem;
 }
 
 .search{
@@ -62,20 +65,73 @@ body {
 }
 
 .search label{
-    height: 20px;
+    height: 15px;
 }
 
-.section{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 255, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.formularios{
+    margin-top: 20rem;
 }
 
-.area-form{
+.form1{
+    background-color: red;
+}
+/*
+.form2{
+
+}
+
+.input{
+
+}
+
+.label{
+
+}
+
+.form-input{
+
+}
+
+.btn{
+
+}
+
+.btn-fim{
+
+}
+
+.btn-salvar{
+
+}
+
+.btn-cancelar{
+
+}
+
+.button{
+
+}
+
+.voltar{
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .area-form{
     width: 90%;
     height: 90%;
     margin-top: 110%;
@@ -184,7 +240,7 @@ body {
     height: 10%;
     gap: 280px;
     margin-left: 55%;
-}
+} */
 
 /* .pesquisa {
     display: flex;
@@ -220,7 +276,7 @@ body {
     margin-top: 30px;
     margin-left: 3%;
 } */
-
+/* 
 input[type="file"] {
     display: none;
 }
@@ -286,4 +342,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     left: 75%;
     top: 70%;
-}
+} */

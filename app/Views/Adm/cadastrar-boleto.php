@@ -9,7 +9,9 @@
     <title>Cadastro de Boleto</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-boleto.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <script src="../../../Public/js/js-adm/input-cadastro-boleto.js" defer></script>
+    
 </head>
 <body>
 <?php include "../../../Public/include/menu-adm.html" ?>
@@ -24,7 +26,7 @@
                 <label for="searchInput">
                     <span class="material-symbols-outlined"> search </span>
                 </label>
-                <input type="text" id="searchInput" placeholder="Pesquisar">
+                <input type="text" id="searchInput" placeholder="Pesquisar por expositor...">
             </div>
 
             <form method="POST">
