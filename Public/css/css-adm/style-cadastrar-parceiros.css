@@ -217,7 +217,7 @@ h1 {
 
 .btn-cancelar-salvar .btn-cancelar {
     background-color: #FF3877; 
-    box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
+    box-shadow: 0px 5px 10px 0px rgba(179, 72, 122, 0.699);
 }
 
 .btn-cancelar-salvar .btn a {
@@ -269,7 +269,7 @@ h1 {
     padding-top: 3%;
 }
 .close-modal{
-    width: clamp(150px, 15%, 150px); /* Tamanho mínimo de 100px, cresce até 150px */
+    width: clamp(150px, 15%, 150px);
     /* padding: 10px 20px; */
     height: clamp(40px, 15%, 30px);
     display: flex;
@@ -303,7 +303,7 @@ h1 {
 .box h1 {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px; /* para afastar dos próximos elementos */
+    margin-bottom: 20px; 
 }
 
 .form-container {
@@ -329,13 +329,14 @@ h1 {
   @media (max-width: 1800px) {
     .box .form-box {
       display: flex;
-      flex-wrap: wrap; /* permite quebrar para linha de baixo */
+      flex-wrap: wrap; 
       gap: 20px;
       width: 100%;
     }
+
     #form1, #form2, #form3 {
-      flex: 1 1 33.33%; /* cada coluna tenta 1/3 da largura */
-      min-width: 280px; /* evita ficar muito pequeno */
+      flex: 1 1 33.33%; 
+      min-width: 280px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -344,34 +345,30 @@ h1 {
   
   @media (max-width: 1024px) {
     #form1, #form2, #form3 {
-      flex: 1 1 45%; /* 2 colunas em telas médias */
+      flex: 1 1 45%; 
       min-width: 45%;
     }
   }
   
   @media (max-width: 600px) {
     #form1, #form2, #form3 {
-      flex: 1 1 100%; /* 1 coluna em telas pequenas */
+      flex: 1 1 100%;
       min-width: 100%;
     }
   }
-  
-  
 
   @media (max-width: 950px) {
     .box .form-box {
       width: 100%;
     }
     #form1, #form2, #form3 {
-      flex: 1 1 45%; /* duas colunas */
+      flex: 1 1 45%; 
       min-width: 300px;
     }
     .btn {
-      width: auto; /* ou 100% se for botão de tela pequena */
+      width: auto; 
     }
   }
-  
-
   
 @media (max-width: 650px) {
     .principal .box {
@@ -395,7 +392,6 @@ h1 {
     }
 }
 
-
 @media (max-width: 410px) {
     h2 {
         font-size: 1.5rem;
@@ -404,27 +400,27 @@ h1 {
         width: 100%;
     }
     .btn-cancelar-salvar .btn {
-        width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
+        width: clamp(60px, 40%, 100px); 
     }
     .open-modal {
-        width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
+        width: clamp(60px, 40%, 100px);
     }
 }
 @media (max-width: 1400px) and (min-width: 700px) {
     .box .form-box {
-      flex-wrap: nowrap; /* evita quebras de linha */
-      flex-direction: column; /* coloca os forms em coluna única */
+      flex-wrap: nowrap;
+      flex-direction: column; 
       width: 100%;
     }
   
     #form1, #form2, #form3 {
-      flex: 1 1 100%; /* cada form ocupa 100% da largura */
+      flex: 1 1 100%; 
       max-width: 100%;
-      margin: 0 auto 20px auto; /* espaçamento embaixo */
+      margin: 0 auto 20px auto;
     }
   }
 
-  /* Acima de 1461px — layout maior */
+
 @media (min-width: 1461px) {
   .box .form-box {
     flex-wrap: nowrap;
@@ -437,7 +433,6 @@ h1 {
   }
 }
 
-/* De 1401px até 1460px — mesmo layout grande, para evitar bug */
 @media (min-width: 1401px) and (max-width: 1460px) {
   .box .form-box {
     flex-wrap: nowrap;
@@ -450,7 +445,6 @@ h1 {
   }
 }
 
-/* De 700px até 1400px — layout em 1 coluna */
 @media (min-width: 700px) and (max-width: 1400px) {
   .box .form-box {
     flex-wrap: nowrap;
@@ -463,3 +457,24 @@ h1 {
     margin-bottom: 20px;
   }
 }
+
+@media (min-width: 1400px) {
+  .btn-cancelar-salvar {
+    position: fixed;
+    bottom: 100px;
+    right: 200px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+    background-color: transparent; /* Opcional: se quiser que os botões não tenham fundo */
+  }
+}
+
+@media (max-width: 1399px) {
+  .btn-cancelar-salvar {
+    position: static; /* volta pro fluxo normal da página */
+    justify-content: center; /* ou o que você já usa hoje */
+    margin-top: 20px;
+  }
+}
+
