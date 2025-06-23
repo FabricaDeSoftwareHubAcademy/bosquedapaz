@@ -490,14 +490,33 @@ body {
         width: 85% !important;
         left: 8%;
     }
+
+    .formularios{
+        position: relative;
+        left:7%;
+    }
+
+    .select{
+        width: 84%;
+    }
     
     .formularios label {
         left: 8%;
     }
     
-    .btn {
+    .btn-conf {
         font-size: 0.8rem;
-        padding: 8px 10px;
+        padding: 10px 100px;
+    }
+
+    .btn-salvar{
+        position: relative;
+        left: 37%;
+    }
+
+    .btn-cancelar{
+        position: relative;
+        left: -72%;
     }
     
     .btns {
@@ -505,25 +524,3 @@ body {
     }
 }
 
-@media (max-width: 360px) {
-    .title-text {
-        font-size: 1rem;
-    }
-    
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 80% !important;
-        left: 10%;
-        font-size: 0.9rem;
-    }
-    
-    .formularios label {
-        left: 10%;
-    }
-    
-    .btn {
-        width: clamp(90px, 45%, 120px);
-    }
-}
