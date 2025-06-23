@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../../../app/helpers/auth.php';
 require_once '../../../vendor/autoload.php';
 
 use app\Controller\Categoria;

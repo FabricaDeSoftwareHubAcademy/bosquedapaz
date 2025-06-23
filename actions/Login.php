@@ -16,7 +16,7 @@ class Login{
         $pessoa = $db->select("email = '$email'")->fetchObject();
 
         // Validação simples, sem hash
-        if ($pessoa && password_verify($pessoa->senha) === $senha) {
+        if ($pessoa && $pessoa->senha === $senha) {
             return $pessoa;
         } else {
             return null;
