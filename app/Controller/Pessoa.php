@@ -19,6 +19,7 @@ class Pessoa
     protected $data_nasc;
     protected $foto_perfil;
     protected $perfil;
+    protected $nvSenha;
 
     public function getNome()
     {
