@@ -19,22 +19,25 @@ use app\Controller\Endereco;
 
         if (isset($_FILES['logo']) && $_FILES['logo']['error'] === 0) {
             $nome_arquivo = $_FILES['logo']['name'];
-            $caminho_temp = $_FILES['logo']['tmp_name'];
-            $destino = '../../../Public/uploads/logos' . $nome_arquivo;
-    
-            // Cria o diretório, se não existir
+            $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
+        
+            // Gera nome único
+            $nome_arquivo_unico = uniqid('logo_', true) . '.' . $extensao;
+        
+            $destino = '../../../Public/uploads/logos/' . $nome_arquivo_unico;
+        
+            // Cria a pasta se não existir
             if (!is_dir('../../../Public/uploads/logos')) {
                 mkdir('../../../Public/uploads/logos', 0755, true);
             }
-    
-            if (move_uploaded_file($caminho_temp, $destino)) {
-
+        
+            if (move_uploaded_file($_FILES['logo']['tmp_name'], $destino)) {
                 $parceiro->logo = $destino;
-
             } else {
-                echo json_encode( ["status" => "erro", "msg" => " Erro ao fazer upload da foto!!"]);
+                echo json_encode(["status" => "erro", "msg" => "Erro ao salvar a logo!"]);
+                exit;
             }
-        }
+        }        
 
         $endereco->cep = $_POST["cep"];
         $endereco->logradouro = $_POST["logradouro"];

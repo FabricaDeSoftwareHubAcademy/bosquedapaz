@@ -51,7 +51,6 @@ class Parceiro {
 
         return $resParceiro;
     }
-
 }
 
 ?>
