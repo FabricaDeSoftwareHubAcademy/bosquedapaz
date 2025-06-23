@@ -1,19 +1,13 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
 .modal-loading {
     padding: 1rem 0rem;
     border: none;
     border-radius: .5rem;
     margin: auto;
     outline: none;
+}
+
+.modal-loading::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .content-close {
@@ -57,7 +51,7 @@
     padding: 1.5rem;
 }
 
-.loading-text {
+.deletar-text {
     font-weight: 600;
     font-size: 1.4rem;
 }
@@ -74,7 +68,7 @@
     gap: .5rem;
 }
 
-.btn-modal-confirmar {
+.btn-modal-deletar {
     flex: auto;
     font-size: 1rem;
     font-weight: 600;
@@ -87,24 +81,24 @@
     cursor: pointer;
 }
 
-#btn-modal-cancelar {
+.deletar-modal-salvar {
     border: 2px solid #FF3877;
     background-color: transparent;
     color: black;
 }
 
-#btn-modal-cancelar:hover {
+.deletar-modal-salvar:hover {
     background-color: #8a1e40;
     border-color: #8a1e40;
     color: white;
     transition: all .2s ease-in;
 }
 
-#btn-modal-salvar {
+.deletar-modal-cancelar {
     background-color: red;
 }
 
-#btn-modal-salvar:hover {
+.deletar-modal-cancelar:hover {
     background-color: darkred;
     transition: all .2s ease-in;
 }

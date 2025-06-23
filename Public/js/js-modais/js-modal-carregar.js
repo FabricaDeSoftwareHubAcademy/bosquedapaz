@@ -1,15 +1,9 @@
-const headElement  = document.getElementsByTagName('head')[0];
-const link  = document.createElement('link');
-link.rel  = 'stylesheet';
-link.type = 'text/css';
-link.href = '../../../Public/css/css-modais/style-modal-carregar.css';
-headElement.appendChild(link);
-
-
-const linkBootstrap = document.createElement('link')
-linkBootstrap.rel = 'stylesheet'
-linkBootstrap.href = 'https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css'
-headElement.appendChild(linkBootstrap)
+const headElementLoading  = document.getElementsByTagName('head')[0];
+const linkLoading  = document.createElement('link');
+linkLoading.rel  = 'stylesheet';
+linkLoading.type = 'text/css';
+linkLoading.href = '../../../Public/css/css-modais/style-modal-carregar.css';
+headElementLoading.appendChild(link);
 
 function openModalLoading() {
     let modal = document.getElementById('modal-loading')
