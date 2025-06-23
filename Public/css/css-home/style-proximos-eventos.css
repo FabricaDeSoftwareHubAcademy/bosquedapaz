@@ -351,7 +351,7 @@ main #title{
 /* Imagens Decorativas */
 .imgs__dec1 {
     position: fixed;
-    top: 12vh;
+    top: 14vh;
     left: -58px;
     width: 20vw;
     z-index: -1;
@@ -365,8 +365,8 @@ main #title{
 
 .imgs__dec2 {
     position: fixed;
-    top: 13vh;
-    right: -15vw;
+    top: 14vh;
+    right: -17vw;
     width: 20vw;
     z-index: -1;
     pointer-events: none;
@@ -380,7 +380,7 @@ main #title{
 .imgs__dec3 {
     position: fixed;
     bottom: -8vh;
-    right: -11vw;
+    right: -13vw;
     width: 20vw;
     z-index: -1;
     pointer-events: none;
