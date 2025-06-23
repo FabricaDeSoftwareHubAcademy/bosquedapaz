@@ -252,7 +252,7 @@ body {
     z-index: 999;
 }
 
-/********* FIM BTN-FINALIZAR *********/
+
 
 
 .oculta {
@@ -262,7 +262,6 @@ body {
 
 .modal_conteudo {
     height: 100px;
-    /* width: ; */
     background-color: #58b1a6;
     display: flex;
     justify-content: center;
@@ -286,7 +285,7 @@ body {
     z-index: 1000;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .formularios {
         flex-direction: column;
         top: 0;
@@ -429,45 +428,102 @@ body {
     .btn {
         width: clamp(90px, 45%, 120px);
     }
-}
+} */
 
-/* @media (max-width: 1024px) {
+/* RESPONSIVIDADE SIMPLIFICADA */
+
+@media (max-width: 1024px) {
     .formularios {
         flex-direction: column;
         top: 0;
     }
-}
-
-@media (max-width: 768px) {
+    
+    .form-pessoa,
+    .form-loja,
+    .form-expo {
+        position: static;
+        width: 100%;
+    }
+    
     .input input,
     .input-group input,
     .input-group textarea,
-    #categorias,
-    .formularios label {
-        width: 95%;
+    #categorias {
+        width: 100% !important;
+    }
+    
+    .btn-finalizar {
+        position: static;
+        top: 0;
+        left: 0;
+        justify-content: center;
+    }
+    
+    .btn-salvar {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        width: 100%;
+    }
+    
+    .title-text {
+        font-size: 1.5rem;
+    }
+    
+    .select {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+    .title-text {
+        font-size: 1.2rem;
+    }
+    
     .input input,
     .input-group input,
     .input-group textarea,
-    #categorias,
+    #categorias {
+        width: 85% !important;
+        left: 8%;
+    }
+    
     .formularios label {
-        width: 90%;
-        font-size: 0.9rem;
-        padding: 8px;
+        left: 8%;
+    }
+    
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+    
+    .btns {
+        left: 5%;
     }
 }
 
 @media (max-width: 360px) {
+    .title-text {
+        font-size: 1rem;
+    }
+    
     .input input,
     .input-group input,
     .input-group textarea,
-    #categorias,
-    .formularios label {
-        width: 85%;
-        font-size: 0.85rem;
-        padding: 6px;
+    #categorias {
+        width: 80% !important;
+        left: 10%;
+        font-size: 0.9rem;
     }
-}    */
+    
+    .formularios label {
+        left: 10%;
+    }
+    
+    .btn {
+        width: clamp(90px, 45%, 120px);
+    }
+}
