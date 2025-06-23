@@ -205,7 +205,9 @@ class Database {
         OR cat.descricao = '$filtro'
         ";
 
-        return $this->execute($query);
+        $res = $this->execute($query);
+
+        return $res ? $res : FALSE;
     }
     
     public function select_expositor(){

@@ -31,11 +31,11 @@
             <div class="procurar">
                 <h3 class="title-pes">Pesquisar por expositor:</h3>
                 <div class="pesquisa-expo"> <!-- area de pesquisa -->
-                    <input class="input-pes" type="text" placeholder="Pesquisar por...">
+                    <input class="input-pes" id="input_pesquisa" type="text" placeholder="Pesquisar por...">
                 </div>
             </div>
         </div>
-        <div class="area-all-cards" id="inicio">
+        <div class="area-all-cards" id="content-cards">
             
         </div>
     </main>
@@ -43,6 +43,7 @@
     <?php include '../../../Public/include/home/perfil-expositor.html' ?>
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
+    <script src="../../../Public/js/js-home/todos-expositores.js"></script>
 </body>
 
 </html>

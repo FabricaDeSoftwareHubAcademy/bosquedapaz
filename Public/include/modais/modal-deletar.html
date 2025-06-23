@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+</head>
+<body>
+
+    <dialog id="modal-delete" class="modal-loading">
+        <div class="content-close">
+            <i class="bi bi-x-square-fill close-modal fechar-modal-loading"></i>
+        </div>
+        <div class="content-modal">
+
+            <i class="bi bi-exclamation-circle danger"></i>
+
+            <div class="content-text">
+                <h2 class="loading-text" id="loading-text">Tem certeza que deseja deletar?</h2>
+                <p class="msm-modal">Clique em deletar para confirmar.</p>
+            </div>
+        </div>
+        <div class="content-btns">
+            <button class="btn-modal-confirmar" id="btn-modal-salvar">Deletar</button>
+            <button class="btn-modal-confirmar" id="btn-modal-cancelar">Cancelar</button>
+        </div>
+    </dialog>
+
+    <script src="../../js/js-modais/js-modal-deletar.js"></script>
+</body>
+</html>

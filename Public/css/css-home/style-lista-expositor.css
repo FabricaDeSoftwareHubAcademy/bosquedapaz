@@ -105,37 +105,24 @@
 .area-all-cards {
     width: 100%;
     background-color: #F8F8F8;
-    padding: 10px;
+    padding: 1rem;
     border-radius: .5rem;
-}
-
-.vir-aqui {
-    width: 4%;
-    height: 40px;
-}
-
-.secao-expo {
-    width: 100%;
-    margin-top: 30px;
-}
-
-.content-title-sec {
-    /* background-color: aqua; */
-    padding: 20px;
-    padding-left: 70px;
-}
-
-.cards-perfis {
-    width: 100%;
-    height: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    gap: 1rem;
     flex-wrap: wrap;
-    padding: 20px 0px;
-    background-color: #F8F8F8;
+    align-items: center;
+    justify-content: center;
 }
+
+.sobre_card {
+    width: 250px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 .card-per-expo {

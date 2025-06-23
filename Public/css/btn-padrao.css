@@ -41,6 +41,7 @@
     font-size: 1rem;
     font-weight: 600;
     color: white;
+    cursor: pointer;
     transition: all .2s ease-in;
 }
 
