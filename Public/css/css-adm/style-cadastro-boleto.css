@@ -30,7 +30,7 @@ body {
     border-radius: 10px;
     backdrop-filter: blur(0px);
     transition: all .5s ease-in-out;
-    background-color: #FCF8F8;
+    background-color: #c82727;
     z-index: 2;
 }
 
