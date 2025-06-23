@@ -92,9 +92,7 @@
                 <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_nome.js"></script>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_status.js"></script>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_filtrar_datas.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 

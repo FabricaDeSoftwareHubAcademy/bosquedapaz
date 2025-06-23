@@ -121,13 +121,17 @@ class Database
     public function listar_todos_boletos()
     {
         $query = "SELECT
-        b.id_boleto, e.id_expositor,
-        p.nome, b.vencimento,
+        b.id_boleto, 
+        e.id_expositor,
+        p.nome, 
+        DATE_FORMAT(b.vencimento, '%d/%m/%Y') AS vencimento,
         b.mes_referencia,
-        b.valor, e.status_exp
+        b.valor, 
+        e.status_exp
         FROM boleto b 
         INNER JOIN expositor e ON b.id_expositor = e.id_expositor
         INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa;";
+
 
         return $this->execute($query);
     }
@@ -181,7 +185,7 @@ class Database
 
         $binds = [];
 
-        if(!empty($status)) {
+        if (!empty($status)) {
             $query .= " WHERE e.status_exp = :status_exp;";
             $binds = [":status_exp" => "$status"];
         }

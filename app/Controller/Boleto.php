@@ -34,13 +34,14 @@ class Boleto {
         return $execucao;
     }
 
-    public function ListarBoletos($nome) {
+    public function ListarBoletos() {
         $banco = new Database();
-        if(!empty($nome)) {
-            return $banco->filtrar_boletos_por_nome($nome)->fetchAll(PDO::FETCH_ASSOC);
-        } else {
-            return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_ASSOC);
-        }
+        return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function FiltrarPorNome($nome) {
+        $banco = new Database();
+        return $banco->filtrar_boletos_por_nome($nome)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function FiltrarPorStatus($status) {
