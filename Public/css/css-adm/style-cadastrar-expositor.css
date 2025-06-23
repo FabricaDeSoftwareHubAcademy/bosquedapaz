@@ -330,10 +330,25 @@ body {
     .select {
         width: 100%;
     }
+
+    .btn-conf{
+        width: 114%;
+    }
+
+    .btn-salvar {
+        width: 40%;
+        position: relative;
+        left: 60%;
+    }
+
+    .btn-cancelar{
+        width: 40%;
+    }
 }
 
 @media (max-width: 480px) {
     .title-text {
+        width: 104%;
         font-size: 1.2rem;
     }
     
@@ -367,16 +382,25 @@ body {
     }
 
     .btn-conf{
-        background-color: red;
         flex-direction: row;
         display: flex;
         justify-self:center;
         align-items: center;
     }
 
-    .btn {
+    .btn-salvar {
         font-size: 0.8rem;
-        padding: 8px 10px;
+        width: 40%;
+        position: relative;
+        left: 26%;
+        top: 53px;
+    }
+
+    .btn-cancelar{
+        font-size: 0.8rem;
+        width: 40%;
+        position: relative;
+        left: -90%;
     }
     
     .btns {
