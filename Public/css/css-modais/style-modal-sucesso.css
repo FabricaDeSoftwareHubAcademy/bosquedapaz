@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.modal-loading {
+    padding: 1rem 0rem;
+    border: none;
+    border-radius: .5rem;
+    margin: auto;
+    outline: none;
+    width: 25rem;
+}
+
+.content-close {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 1rem 0px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.fechar-modal-loading {
+    font-size: 1.5rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.fechar-modal-loading:hover {
+    color: #FF3877;
+    transition: all .2s ease-in;
+}
+
+.content-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.content-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.icon-chexk {
+    font-size: 4rem;
+    color: #007E70;
+}
+
+.loading-text {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #007E70;
+}
+
