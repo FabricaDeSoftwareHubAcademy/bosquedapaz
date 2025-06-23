@@ -21,6 +21,7 @@ main #title{
     top: 25px;
 }
 
+
 /* Sections Carrossel:  */
 .carousel-section {
     position: relative;
@@ -47,7 +48,7 @@ main #title{
     top: 0;
     left: 50%;
     height: 100%;
-    width: 1700px; /* largura grande da central */
+    width: 1700px; 
     max-width: none;
     background-size: cover;
     background-position: center;
@@ -72,7 +73,7 @@ main #title{
     pointer-events: auto;
     transform: translateX(calc(-50% - 1100px)) scale(0.8);
     z-index: 2;
-    width: 500px; /* menor que o central para caber */
+    width: 500px;
 }
 
 .carousel-item.next {
@@ -80,7 +81,7 @@ main #title{
     pointer-events: auto;
     transform: translateX(calc(-50% + 1100px)) scale(0.8);
     z-index: 2;
-    width: 500px; /* idem */
+    width: 500px;
 }
 
 .carousel-item.hidden {
@@ -88,7 +89,7 @@ main #title{
     pointer-events: none;
     transform: translateX(-50%) scale(0.5);
     z-index: 0;
-    width: 0; /* opcional para não interferir */
+    width: 0;
 }
 
 /* Setas */
@@ -221,7 +222,7 @@ main #title{
     white-space: pre-line;
 }
 
-/* Scrollbar estilizada (Chrome, Edge e Firefox) */
+/* Scrollbar estilizada */
 .div__info::-webkit-scrollbar {
     width: 8px;
 }
@@ -361,8 +362,6 @@ main #title{
 }
 
 
-
-
 /* Imagens Decorativas */
 .imgs__dec1 {
     position: fixed;
@@ -406,4 +405,6 @@ main #title{
     width: 60%;
     height: auto;
 }
+
+/* Responsividades:  */
 
