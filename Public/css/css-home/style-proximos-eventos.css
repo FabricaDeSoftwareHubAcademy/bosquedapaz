@@ -1,24 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url(style-menu.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('style-menu.css');
 
-body {
-    margin: 0;
+/* Areas Principais:  */
+*{
     padding: 0;
+    border: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 main {
-    padding-top: 130px;
-    /* background-color: blue; */
+    width: 100%;
+    padding-top: 150px;
+    margin: 0 auto;
 }
 
-main h1 {
+main #title{
     position: relative;
     text-align: center;
-    top: 2rem;
+    top: 25px;
 }
 
+/* Sections Carrossel:  */
 .carousel-section {
     position: relative;
     height: 80vh;
@@ -26,76 +29,69 @@ main h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background: #222; */
 }
 
 .carousel-track {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 80%;
+    margin: 0 auto;
     width: 100%;
     overflow: hidden;
     position: relative;
-    /* background-color: aqua; */
 }
 
 .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 50%;
     height: 100%;
+    width: 1700px; /* largura grande da central */
+    max-width: none;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-    opacity: 0.5;
-    flex-shrink: 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
-    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center center;
+    z-index: 1;
 }
 
 /* Posicionamento dos slides */
-.carousel-item.prev,
-.carousel-item.active,
-.carousel-item.next {
-    margin: 0 10px;
-}
-
-/* Central - Grande */
 .carousel-item.active {
-    width: 90%;
     opacity: 1;
-    transform: scale(1);
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
     z-index: 3;
-    order: 2; /* Central */
 }
 
-/* Esquerda - Pequena */
 .carousel-item.prev {
-    width: 5%;
     opacity: 0.7;
-    transform: scale(0.8);
+    pointer-events: auto;
+    transform: translateX(calc(-50% - 1100px)) scale(0.8);
     z-index: 2;
-    order: 1; /* Esquerda */
+    width: 500px; /* menor que o central para caber */
 }
 
-/* Direita - Pequena */
 .carousel-item.next {
-    width: 5%;
     opacity: 0.7;
-    transform: scale(0.8);
+    pointer-events: auto;
+    transform: translateX(calc(-50% + 1100px)) scale(0.8);
     z-index: 2;
-    order: 3; /* Direita */
+    width: 500px; /* idem */
 }
 
-/* Oculta os demais */
 .carousel-item.hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) scale(0.5);
+    z-index: 0;
+    width: 0; /* opcional para não interferir */
 }
 
-/* Botões de Navegação */
+/* Setas */
 .nav {
     position: absolute;
     top: 50%;
@@ -110,26 +106,27 @@ main h1 {
 }
 
 .nav.prev {
-    left: calc(5% + 10px); /* 5% vem da margem antes do slide ativo + 10px de padding */
+    left: calc(5% + 20px);
 }
 
 .nav.next {
-    right: calc(5% + 10px);
+    right: calc(5% + 20px);
 }
 
-/* ---------------------- NOVO: overlay escuro + conteúdo flex ---------------------- */
+/* overlay escuro e conteúdo:  */
 .carousel-item .overlay {
     position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
-    background-color: rgba(0, 0, 0, 0.911); /* sombra escura */
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.911); 
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     color: white;
-    pointer-events: none; /* impede que o overlay capture cliques, se quiser alterar tire isso */
+    pointer-events: none; 
 }
 
 .carousel-item .overlay-content {
@@ -137,7 +134,7 @@ main h1 {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    pointer-events: auto; /* permitir interação nos filhos */
+    pointer-events: auto; 
 }
 
 .carousel-item .text-left {
@@ -162,19 +159,19 @@ main h1 {
 }
 
 .carousel-item .text-left p {
-    margin: 8px 0; /* espaço vertical entre os <p> */
+    margin: 8px 0; 
     display: flex;
     align-items: center;
-    gap: 12px; /* espaço entre ícone e texto */
+    gap: 12px; 
     font-size: 1rem;
     opacity: 0.9;
 }
 
 /* Caixa do banner à direita */
 .carousel-item .banner-right {
-    width: 500px; /* quadrado */
+    width: 500px;
     height: 350px;
-    background-color: #222; /* fallback caso não tenha imagem */
+    background-color: #222;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
@@ -191,154 +188,222 @@ main h1 {
     display: block;
 }
 
-/* -------- Responsividade -------- */
-@media (max-width: 900px) {
-    .carousel-item .overlay-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .carousel-item .banner-right {
-        width: 100%;
-        height: 150px;
-        margin-top: 15px;
-    }
-
-    .carousel-item .text-left h2 {
-        font-size: 2rem;
-    }
+.carousel-item.active .overlay {
+    opacity: 1;
 }
 
-/* ------------------------- Outros estilos existentes -------------------------- */
 
-.secion__descricao {
-    position: relative;
-    max-height: 50vh;
+/* Section Informações do Evento:  */
+.container__informacao{
     padding: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    box-sizing: border-box;
+    gap: 10px;
 }
 
-.container_descricao {
-    width: 92%;
-    min-height: 150px;
-    max-height: 300px;
-    overflow-y: auto;
-    text-align: justify;
-    flex-direction: column;
-    padding: 30px;
-    margin-left: 70px;
-    box-shadow: 0px 0px 10px #666;
-    border-radius: 8px;
-    box-sizing: border-box;
+.container__informacao h2{
+    margin-left: 80px;
 }
 
-.container_descricao p {
-    margin: 0;
-    line-height: 1.5;
+.div__info {
+    width: 80%;
+    max-height: 350px;
+    margin-left: 80px;
+    background-color: white;
+    color: black;
     font-size: 1rem;
-    color: #333;
-    white-space: pre-line;
-    word-break: break-word;
+    line-height: 1.5;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.secion__atracao {
-    position: relative;
+.div__info p{
+    white-space: pre-line;
+}
+
+/* Scrollbar estilizada (Chrome, Edge e Firefox) */
+.div__info::-webkit-scrollbar {
+    width: 8px;
+}
+
+.div__info::-webkit-scrollbar-thumb {
+    background-color: #0D592E;
+    border-radius: 4px;
+}
+
+.div__info::-webkit-scrollbar-track {
+    background-color: #07421a;
+}
+
+
+
+/* Section dos Cards do Evento:  */
+.container__cards{
+    padding: 20px;
     display: flex;
-    gap: 15px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 0;
-}
-
-.div__h2 {
-    width: 90%;
-}
-
-.div__h2 h2 {
-    margin-left: 65px;
-}
-
-.container_atracao {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
-.cards {
-    width: 300px;
-    height: 350px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border: 1px solid rgba(200, 200, 200, 0.8);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
+.h1_atracao{
+    width: 91.5%;
 }
 
-.cards:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.div__imagem {
-    width: 100%;
-    height: 55%;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.div__imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.cards:hover .div__imagem img {
-    transform: scale(1.05);
-}
-
-.div__texts {
-    width: 100%;
-    height: 45%;
-    display: flex;
-    flex-direction: column;
+.area__cards{
+    width: 91.5%;
+    display: grid;
+    align-items: center;
     justify-content: center;
-    padding: 15px;
-    text-align: left;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.div__texts h3 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 600;
+/* Cards  */
+.card {
+  width: 100%;
+  background: #fffdfa;
+  border-radius: 18px;
+  box-shadow:
+    0 10px 20px rgba(13,89,46, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1.5px solid transparent;
+  background-image:
+    linear-gradient(white, white);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
-.div__texts p {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.4;
+.card:hover {
+  box-shadow:
+    0 15px 30px rgba(13,89,46, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-15px);
+  background-image:
+    linear-gradient(white, white);
 }
 
-@media (max-width: 768px) {
-    .carousel-item.active {
-        width: 80%;
-    }
-
-    .carousel-item.prev,
-    .carousel-item.next {
-        width: 10%;
-    }
+.card__image {
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card__image img {
+  transform: scale(1.08);
+}
+
+/* Selo: Atração */
+.selo {
+  position: absolute;
+  top: 15px;
+  left: -45px;
+  width: 140px;
+  background: #0D592E;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  transform: rotate(-45deg);
+  padding: 6px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  user-select: none;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  z-index: 10;
+}
+
+.card__content {
+  padding: 24px 28px 32px 28px;
+  position: relative;
+}
+
+.card__content h2 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.card__content h4 {
+  margin: 0 0 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.data svg {
+  flex-shrink: 0;
+  fill: black;
+}
+
+
+
+
+/* Imagens Decorativas */
+.imgs__dec1 {
+    position: fixed;
+    top: 12vh;
+    left: -58px;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec1 img{
+    width: 40%;
+    height: auto;
+}
+
+.imgs__dec2 {
+    position: fixed;
+    top: 13vh;
+    right: -15vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec2 img{
+    width: 40%;
+    height: auto;
+}
+
+.imgs__dec3 {
+    position: fixed;
+    bottom: -8vh;
+    right: -11vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.imgs__dec3 img{
+    width: 60%;
+    height: auto;
+}
+

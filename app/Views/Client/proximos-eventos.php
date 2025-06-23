@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-
     <?php include "../../../Public/include/home/menu-home.html"?>
+    
     <main>
-        <h1>PRÓXIMOS EVENTOS</h1>
+        <h1 id="title">PRÓXIMOS EVENTOS</h1>
         <section class="carousel-section">
             <button class="nav prev">&#10094;</button>
 
@@ -93,11 +93,11 @@
             <button class="nav next">&#10095;</button>
         </section>
 
-        <!-- Descrição do Evento -->
-        <section class="secion__descricao">
-            <div class="container_descricao">
-                <h2>Descrição do Evento</h2>
-                <p>🎉 Vem aí uma edição especial em clima de Carnaval! Uma programação cheia de cores, ritmos e diversão para toda a família:
+        <section class="container__informacao">
+            <h2>Descrição do Evento</h2>
+            <div class="div__info">
+                <p>🎉 Vem aí uma edição especial em clima de Carnaval! 
+                    Uma programação cheia de cores, ritmos e diversão para toda a família:
                     🎭 Grupo Mahila abre a festa com um show de dança envolvente - 09h no palco principal
                     🎨 Oficina de máscaras para as crianças soltarem a criatividade - 09:30h às 10:30h no palco principal
                     👑 Desfile infantil com fantasias e muito encanto 
@@ -105,104 +105,111 @@
                     🎶 Show com Koisabamba para animar geral - 12h no palco principal
                     💃 Aulão de FitDance para encerrar com muita energia - 14:30h às 15h no palco principal
                     ✨ Vista sua fantasia e venha curtir essa festa com a gente!
-                    👑 Desfile infantil com fantasias e muito encanto 
-                    🎺 Ensaio do Bloco Barra da Saia em parceria com o projeto Infância no Carnaval - 11h às 12h no palco principal
-                    🎶 Show com Koisabamba para animar geral - 12h no palco principal
-                    💃 Aulão de FitDance para encerrar com muita energia - 14:30h às 15h no palco principal
-                    ✨ Vista sua fantasia e venha curtir essa festa com a gente!
-                    👑 Desfile infantil com fantasias e muito encanto 
-
                 </p>
             </div>
         </section>
 
-        <!-- Atrações do Evento -->
-        <section class="secion__atracao">
-            <div class="div__h2">
-                <h2>Atração do Dia</h2>
-            </div>
+        <!-- Cards do Evento:  -->
+        <section class="container__cards">
+            <div class="h1_atracao"><h1>Atrações do Dia</h1></div>
             
-            <div class="container_atracao">
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
+            <!-- Cards  -->
+            <div class="area__cards">
+                <div class="card">
+                    <div class="card__image">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <div class="selo">Atração</div>
+                    </div>
+                    <div class="card__content">
+                        <h2>Grupo Mahila</h2>
+                        <h4>Abre a festa com um show de dança envolvente</h4>
+                        <div class="data">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#a67c52" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 8px;">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
+                            </svg>
+                            <span>23 de Junho de 2025</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <div class="selo">Atração</div>
+                    </div>
+                    <div class="card__content">
+                        <h2>Grupo Mahila</h2>
+                        <h4>Abre a festa com um show de dança envolvente</h4>
+                        <div class="data">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#a67c52" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 8px;">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
+                            </svg>
+                            <span>23 de Junho de 2025</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <div class="selo">Atração</div>
+                    </div>
+                    <div class="card__content">
+                        <h2>Grupo Mahila</h2>
+                        <h4>Abre a festa com um show de dança envolvente</h4>
+                        <div class="data">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#a67c52" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 8px;">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
+                            </svg>
+                            <span>23 de Junho de 2025</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <div class="selo">Atração</div>
+                    </div>
+                    <div class="card__content">
+                        <h2>Grupo Mahila</h2>
+                        <h4>Abre a festa com um show de dança envolvente</h4>
+                        <div class="data">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#a67c52" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 8px;">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
+                            </svg>
+                            <span>23 de Junho de 2025</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <div class="selo">Atração</div>
+                    </div>
+                    <div class="card__content">
+                        <h2>Grupo Mahila</h2>
+                        <h4>Abre a festa com um show de dança envolvente</h4>
+                        <div class="data">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#a67c52" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 8px;">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
+                            </svg>
+                            <span>23 de Junho de 2025</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div class="div__imagem"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/foto-produto-1.jpeg" alt=""></div>
-                    <div class="div__texts">
-                        <h3>Grupo Mahila</h3>
-                        <p>Abre a festa com um show de dança envolvente</p>
-                    </div>
-                </div>
+                
             </div>
         </section>
-    </main>
-    
 
+        <!-- Imagens Decorativas -->
+        <div class="imgs__dec1"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-1.svg" alt=""></div>
+        <div class="imgs__dec2"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-2.svg" alt=""></div>
+        <div class="imgs__dec3"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-3.svg" alt=""></div>
+    </main>
 
     <script src="script.js"></script>
 
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-home/main.js" defer></script>
+    
 </body>
 </html>
