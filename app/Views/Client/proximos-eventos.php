@@ -21,16 +21,16 @@
                 <div class="carousel-item" style="background-image: url('../../../Public/imgs/Proximos-Eventos-img/imagem_fundo.png');">
                     <div class="overlay">
                         <div class="overlay-content">
-                        <div class="text-left">
-                            <h2>Bloquinho do Bosque</h2>
-                            <h3>Uma viagem no tempo para os apaixonados pelo vintage!</h3>
-                            <p><i class="bi bi-calendar-event"></i> Data: 16/02</p>
-                            <p><i class="bi bi-clock"></i> Horário: 09h às 15h</p>
-                            <p><i class="bi bi-geo-alt"></i> Av. Cônsul Assaf Trad, 4796 - Parque dos Novos Estados, Campo Grande - MS, 79035-900</p>
-                        </div>
-                        <div class="banner-right">
-                            <img src="../../../Public/imgs/Proximos-Eventos-img/imagem_fundo.png" alt="Banner do evento" />
-                        </div>
+                            <div class="text-left">
+                                <h2>Bloquinho do Bosque</h2>
+                                <h3>Uma viagem no tempo para os apaixonados pelo vintage!</h3>
+                                <p><i class="bi bi-calendar-event"></i> Data: 16/02</p>
+                                <p><i class="bi bi-clock"></i> Horário: 09h às 15h</p>
+                                <p><i class="bi bi-geo-alt"></i> Av. Cônsul Assaf Trad, 4796 - Parque dos Novos Estados, Campo Grande - MS, 79035-900</p>
+                            </div>
+                            <div class="banner-right">
+                                <img src="../../../Public/imgs/Proximos-Eventos-img/imagem_fundo.png" alt="Banner do evento" />
+                            </div>
                         </div>
                     </div>
                 </div>

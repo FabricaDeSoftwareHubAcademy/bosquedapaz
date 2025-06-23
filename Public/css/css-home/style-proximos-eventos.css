@@ -48,7 +48,7 @@ main #title{
     top: 0;
     left: 50%;
     height: 100%;
-    width: 1700px; 
+    width: 1550px; 
     max-width: none;
     background-size: cover;
     background-position: center;
@@ -71,7 +71,7 @@ main #title{
 .carousel-item.prev {
     opacity: 0.7;
     pointer-events: auto;
-    transform: translateX(calc(-50% - 1100px)) scale(0.8);
+    transform: translateX(calc(-50% - 1000px)) scale(0.8);
     z-index: 2;
     width: 500px;
 }
@@ -79,7 +79,7 @@ main #title{
 .carousel-item.next {
     opacity: 0.7;
     pointer-events: auto;
-    transform: translateX(calc(-50% + 1100px)) scale(0.8);
+    transform: translateX(calc(-50% + 1000px)) scale(0.8);
     z-index: 2;
     width: 500px;
 }
@@ -222,20 +222,6 @@ main #title{
     white-space: pre-line;
 }
 
-/* Scrollbar estilizada */
-.div__info::-webkit-scrollbar {
-    width: 8px;
-}
-
-.div__info::-webkit-scrollbar-thumb {
-    background-color: #0D592E;
-    border-radius: 4px;
-}
-
-.div__info::-webkit-scrollbar-track {
-    background-color: #07421a;
-}
-
 
 
 /* Section dos Cards do Evento:  */
@@ -265,7 +251,7 @@ main #title{
 .card {
   width: 100%;
   background: #fffdfa;
-  border-radius: 18px;
+  /* border-radius: 18px; */
   box-shadow:
     0 10px 20px rgba(13,89,46, 0.15),
     0 4px 8px rgba(0, 0, 0, 0.07);
@@ -324,7 +310,7 @@ main #title{
   user-select: none;
   letter-spacing: 1px;
   font-size: 0.85rem;
-  z-index: 10;
+  z-index: 4;
 }
 
 .card__content {
@@ -406,5 +392,391 @@ main #title{
     height: auto;
 }
 
-/* Responsividades:  */
 
+
+/* Responsividades:  */
+/* Celulares pequenos (smartphones compactos) */
+@media (max-width: 575.98px){
+    /* Areas Principais:  */
+    main {
+        padding-top: 75px;
+    }
+    main #title {
+        font-size: 20px;
+        top: 45px;
+    }
+
+    /* Carrossel:  */
+    .carousel-item{
+        width: 350px;
+    }
+    .carousel-item .overlay-content{
+        flex-direction: column;
+    }
+    .carousel-item .text-left {
+        margin-left: 40px;
+    }
+    .carousel-item .banner-right {
+        display: none;
+    }
+    .carousel-item.prev {
+        transform: translateX(calc(-50% - 385px)) scale(0.8);
+    }
+    .carousel-item.next {
+        transform: translateX(calc(-50% + 385px)) scale(0.8);
+    }
+    .nav.prev {
+        left: calc(5% + 0px);
+    }
+    .nav.next {
+        right: calc(5% + 0px);
+    }
+    .carousel-item .text-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item .text-left h3 {
+        font-size: 0.8rem;
+    }
+
+    .carousel-item .text-left p {
+        font-size: 0.6rem;
+    }
+
+    /* Informações:  */
+    .container__informacao{
+        align-items: center;
+        justify-content: center;text-align: left;
+    }
+    .container__informacao h2{
+        margin-left: 0px;
+    }
+    .div__info{
+        width: 83%;
+        margin-left: 0;
+    }
+
+    /* Cards:  */
+    .container__cards{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .h1_atracao{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .area__cards{
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Celulares médios e grandes (smartphones modernos) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    /* Areas Principais:  */
+    main {
+        padding-top: 75px;
+    }
+    main #title {
+        font-size: 20px;
+        top: 45px;
+    }
+
+    /* Carrossel:  */
+    .carousel-item{
+        width: 450px;
+    }
+    .carousel-item .overlay-content{
+        flex-direction: column;
+    }
+    .carousel-item .text-left {
+        margin-left: 40px;
+    }
+    .carousel-item .banner-right {
+        display: none;
+    }
+    .carousel-item.prev {
+        transform: translateX(calc(-50% - 450px)) scale(0.8);
+    }
+    .carousel-item.next {
+        transform: translateX(calc(-50% + 450px)) scale(0.8);
+    }
+    .nav.prev {
+        left: calc(5% + 45px);
+    }
+    .nav.next {
+        right: calc(5% + 45px);
+    }
+    .carousel-item .text-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-item .text-left h3 {
+        font-size: 0.9rem;
+    }
+
+    .carousel-item .text-left p {
+        font-size: 0.7rem;
+    }
+
+    /* Informações:  */
+    .container__informacao{
+        align-items: center;
+        justify-content: center;text-align: left;
+    }
+    .container__informacao h2{
+        margin-left: 0px;
+    }
+    .div__info{
+        width: 83%;
+        margin-left: 0;
+    }
+
+    /* Cards:  */
+    .container__cards{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .h1_atracao{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .area__cards{
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Tablets e celulares em paisagem */
+@media (min-width: 768px) and (max-width: 991.98px){
+    /* Areas Principais:  */
+    main {
+        padding-top: 75px;
+    }
+    main #title {
+        font-size: 20px;
+        top: 45px;
+    }
+
+    /* Carrossel:  */
+    .carousel-item{
+        width: 650px;
+    }
+    .carousel-item .overlay-content{
+        flex-direction: column;
+    }
+    .carousel-item .text-left {
+        margin-left: 40px;
+    }
+    .carousel-item .banner-right {
+        display: none;
+    }
+    .carousel-item.prev {
+        transform: translateX(calc(-50% - 550px)) scale(0.8);
+    }
+    .carousel-item.next {
+        transform: translateX(calc(-50% + 550px)) scale(0.8);
+    }
+    .nav.prev {
+        left: calc(5% + 50px);
+    }
+    .nav.next {
+        right: calc(5% + 50px);
+    }
+    .carousel-item .text-left h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-item .text-left h3 {
+        font-size: 1rem;
+    }
+
+    .carousel-item .text-left p {
+        font-size: 0.8rem;
+    }
+
+    /* Informações:  */
+    .container__informacao{
+        align-items: center;
+        justify-content: center;text-align: left;
+    }
+    .container__informacao h2{
+        margin-left: 0px;
+    }
+    .div__info{
+        width: 83%;
+        margin-left: 0;
+    }
+
+    /* Cards:  */
+    .container__cards{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .h1_atracao{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .area__cards{
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Notebooks e desktops padrão */
+@media (min-width: 992px) and (max-width: 1199.98px){
+        /* Areas Principais:  */
+    main {
+        padding-top: 85px;
+    }
+    main #title {
+        font-size: 25px;
+        top: 50px;
+    }
+
+    /* Carrossel:  */
+    .carousel-item{
+        width: 850px;
+    }
+    .carousel-item .overlay-content{
+        flex-direction: column;
+    }
+    .carousel-item .text-left {
+        margin-left: 40px;
+    }
+    .carousel-item .banner-right {
+        display: none;
+    }
+    .carousel-item.prev {
+        transform: translateX(calc(-50% - 650px)) scale(0.8);
+    }
+    .carousel-item.next {
+        transform: translateX(calc(-50% + 650px)) scale(0.8);
+    }
+    .nav.prev {
+        left: calc(5% + 40px);
+    }
+    .nav.next {
+        right: calc(5% + 40px);
+    }
+    .carousel-item .text-left h2 {
+        font-size: 2.2rem;
+    }
+
+    .carousel-item .text-left h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item .text-left p {
+        font-size: 1rem;
+    }
+
+    /* Cards:  */
+    .container__cards{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .h1_atracao{
+        width: 86%;
+    }
+    .area__cards{
+        width: 86%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Desktops grandes e telas Full HD */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    /* Areas Principais:  */
+    main {
+        padding-top: 85px;
+    }
+    main #title {
+        font-size: 25px;
+        top: 50px;
+    }
+
+    /* Carrossel:  */
+    .carousel-item{
+        width: 1100px;
+    }
+    .carousel-item .text-left {
+        margin-left: 40px;
+    }
+    .carousel-item .banner-right {
+       width: 400px;
+       height: 300px;
+    }
+    .carousel-item.prev {
+        transform: translateX(calc(-50% - 770px)) scale(0.8);
+    }
+    .carousel-item.next {
+        transform: translateX(calc(-50% + 770px)) scale(0.8);
+    }
+    .nav.prev {
+        left: calc(5% + 10px);
+    }
+    .nav.next {
+        right: calc(5% + 10px);
+    }
+    .carousel-item .text-left h2 {
+        font-size: 2.2rem;
+    }
+
+    .carousel-item .text-left h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item .text-left p {
+        font-size: 1rem;
+    }
+
+    /* Cards:  */
+    .container__cards{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .h1_atracao{
+        width: 86%;
+    }
+    .area__cards{
+        width: 86%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Pequenos Ajustes:  */
+@media (min-width: 1400px) and (max-width: 1700px) {
+    .carousel-item{
+        width: 1320px;
+    }
+    .carousel-item .banner-right {
+       width: 400px;
+       height: 300px;
+    }
+    .carousel-item.prev {
+        transform: translateX(calc(-50% - 880px)) scale(0.8);
+    }
+    .carousel-item.next {
+        transform: translateX(calc(-50% + 880px)) scale(0.8);
+    }
+    .nav.prev {
+        left: calc(5% + 0px);
+    }
+    .nav.next {
+        right: calc(5% + 0px);
+    }
+        .carousel-item .text-left {
+        margin-left: 45px;
+    }
+}
