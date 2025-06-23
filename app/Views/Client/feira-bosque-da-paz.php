@@ -29,7 +29,7 @@
     
 
     <?php include "../../../Public/include/home/mapa.html"; ?>
-    <?php include "../../../Public/include/home/parceiros.html"; ?>
+    <?php include "../../../Public/include/home/section-apoiadores.php"; ?>
 
     <?php include "../../../Public/include/home/rodape.html"; ?> 
 
@@ -38,14 +38,3 @@
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 </body>
 </html>
-
-    
-
-
-
-
-
-
-<!-- 
-<script src="../../../Public/js/js-home/carrossel.js" defer></script>
-<script src="../../../Public/js/js-home/subir-num.js"></script> -->

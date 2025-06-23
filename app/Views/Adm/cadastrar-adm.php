@@ -13,20 +13,24 @@
 <body>
     <!-- Includ Menu -->
     <?php include "../../../Public/include/menu-adm.html" ?>
-    <!-- Box Principal -->
-    <section class="body_main">
-        <div class="container_box">
-            <!-- Seta Voltar  -->
-            <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+    <main>
+        <section class="container_box">
             <!-- Area Esquerda: Imagem -->
-            <div class="container_img">
+            <div class="left-side">
                 <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
             </div>
+           
             <!-- Linha Decorativa do Centro -->
             <div class="div__linha_decorativa"></div>
+            
             <!-- Area Direita: Form -->
-            <div class="container_form">
+            <div class="right-side">
+                <!-- Seta Voltar 2  -->
+                <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+                
+                <!-- Titulo   -->
                 <h1>Cadastro ADM</h1>
+                
                 <!-- Form -->
                 <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
                     <!-- Nome -->
@@ -75,27 +79,22 @@
                             </label>
                         </div>
                     </div>      
-                    
-                    <!-- Senha e Confirmar Senha lado a lado -->
-                    <div class="row-double">
-                        <!-- Senha -->
-                        <div class="form__group">
-                            <label class="label__cad" for="senha">Senha</label>
-                            <div class="area__input">
-                                <i class="bi bi-shield-lock"></i>
-                                <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                                <i id="icon__olho" class="bi bi-eye-slash"></i>
-                            </div>
+                
+                    <!-- Senha -->
+                    <div class="form__group">
+                        <label class="label__cad" for="senha">Senha</label>
+                        <div class="area__input">
+                            <i class="bi bi-shield-lock"></i>
+                            <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
                         </div>
+                    </div>
 
-                        <!-- Confirmar Senha -->
-                        <div class="form__group">
-                            <label class="label__cad" for="confSenha">Confirmar Senha</label>
-                            <div class="area__input">
-                                <i class="bi bi-shield-lock"></i>
-                                <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
-                                <i id="icon__olho" class="bi bi-eye-slash"></i>
-                            </div>
+                    <!-- Confirmar Senha -->
+                    <div class="form__group">
+                        <label class="label__cad" for="confSenha">Confirmar Senha</label>
+                        <div class="area__input">
+                            <i class="bi bi-shield-lock"></i>
+                            <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
                         </div>
                     </div>
 
@@ -105,14 +104,18 @@
                         <button type="submit" name="cadastrar" value="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
-            </div>
-        </div>    
+            </div> 
+            
+            <!-- Seta Voltar 1  -->
+            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+        </section>
+        
         <!-- Imagens Decorativas -->
         <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
         <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
-    </section>
-
+    </main>
+    <!-- Scripts:  -->
     <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>

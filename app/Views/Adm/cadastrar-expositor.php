@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,27 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
+    <!-- <link rel="stylesheet" href="../../../Public/css/css-adm/teste.css"> -->
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body onload="getCategorias()">
     <?php include "../../../Public/include/menu-adm.html" ?>
 
-
     <main class="principal">
 
-
-    
-
         <div class="box">
-
             <div class="title">
                 <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
             </div>
 
             <form id="fomulario_cad_expositor" method="POST">
                 <div class="formularios">
-
                     <div class="form-pessoa">
                         <div class="input">
                             <label>Nome completo:</label>
@@ -39,8 +33,6 @@
                                 pattern="[0-9]{10,11}" required
                                 oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
-
-
                         <div class="input">
                             <label>E-mail:</label>
                             <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
@@ -65,20 +57,16 @@
                         <div class="input">
                             <label for="optionInput3">Categorias</label>
                             <select name="id_categoria" id="categorias" class="select" require>
-                               
                                 <!-- OPTIONS GERADOS PELO JS -->
                             </select>
                         </div>
 
                         <div class="input">
-                            <label>Link:</label>
-                            <script>
-                                link
-                            </script>
+                            <label>Link instagram:</label>
+
                             <input type="text" name="" id="" placeholder="link instagram" required>
                         </div>
                     </div>
-
 
                     <div class="form-expo">
                         <label for="tipo-expo">Tipo de exposição:</label>
@@ -98,7 +86,6 @@
                                 <option value="">Selecione</option>
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
-
 
                             </select>
                         </div>
@@ -136,8 +123,16 @@
                 </div>
             </form>
 
-
         </div>
+<!-- 
+        <div id="modal_salvar" class="oculta">
+            <div class="modal_conteudo">
+                <p class="text_modal">Cadastro salvo com sucesso!</p>
+                <form method="dialog" class="fecha_modal">
+                    <button id="fechar_modal">Fechar</button>
+                </form>
+            </div>
+        </div> -->
 
         </div>
     </main>
@@ -149,8 +144,11 @@
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js"></script>
+
+
+
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>
 

@@ -4,14 +4,12 @@ require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
 use app\Controller\Categoria;
 
-if(isset($_GET['listar'])){
-    
+if(isset($_GET['filtro'])){
     $categoria = new Categoria();
     $opcoes = $categoria->listar();
 
     echo json_encode($opcoes);
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor = new Expositor();
@@ -25,8 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor->setEnergia($_POST['energia']);
     $expositor->setContato2($_POST['whatsapp']);
     $expositor->setProduto($_POST['produto']);
-    $expositor->setId_categoria($_POST['id_categoria']); /// SELECIONAR CATEGORIA DO BANCO
-
+    $expositor->setId_categoria($_POST['id_categoria']);
 
     if (isset($_FILES['files'])) {
         $expositor->setImagens($_FILES['files']);

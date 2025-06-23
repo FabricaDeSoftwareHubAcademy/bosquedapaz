@@ -2,11 +2,11 @@
 
 namespace app\Models;
 
-require_once('../vendor/autoload.php');
+require_once '../vendor/autoload.php';
 
 use app\Models\Env;
 use PDO;
-$env = Env::load();
+Env::load();
 
 class Database {
     //atributos do database
@@ -45,7 +45,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }
 
-        catch(PDOException $err){
+        catch(\PDOException $err){
             die("Conection Failed".$err->getMessage());
         }
 
@@ -61,7 +61,7 @@ class Database {
             return $stmt;
 
         }
-        catch (PDOException $err){
+        catch (\PDOException $err){
             die("Connection failed". $err->getMessage());
         }
     }
@@ -119,12 +119,6 @@ class Database {
 
         return $this->execute($query);
     }
-    
-    public function selectWhere($where, $binds = [], $fields = '*', $order = null) {
-        $order = $order ? " ORDER BY $order" : '';
-        $query = "SELECT $fields FROM $this->table WHERE $where $order";
-        return $this->execute($query, $binds);
-    }
 
     public function select_all($tableP, $id_name, $where = null){
         $where = strlen($where) ? " WHERE ". $where : '';
@@ -166,6 +160,7 @@ class Database {
         return $this->execute($query) ? true : false;
     }
 
+    //Funções do fluxo do ADM: 
     public function listar_colaboradores() {
         $query = "SELECT
         c.id_colaborador,
@@ -210,7 +205,9 @@ class Database {
         OR cat.descricao = '$filtro'
         ";
 
-        return $this->execute($query);
+        $res = $this->execute($query);
+
+        return $res ? $res : FALSE;
     }
     
     public function select_expositor(){
@@ -225,6 +222,11 @@ class Database {
         return $this->execute($query);
     }
 
+    public function sts_adm($id_colaborador, $novoStatus) {
+        $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute([$novoStatus, $id_colaborador]);
+    }
 }
 
 ?>

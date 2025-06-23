@@ -9,9 +9,9 @@
 </head>
 <body>
     <!-- Include Menu de Navegação -->
-    <?php include "../../../Public/include/home/menu-home.html"; ?>
+    <?php include "../../../Public/include/home/menu-expositor.html"; ?>
     <!-- Corpo da Pagina -->
-    <section class="container__main">
+    <main class="container__main">
         <!-- Box Principal -->
         <div class="box__container">
             <!-- Linha Decorativa  -->
@@ -143,7 +143,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </main>
     <!-- Imagens Decorativas -->
     <div class="img__dec1"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img1.png" alt=""></div>
     <div class="img__dec2"><img src="../../../Public/imgs/imgs-edicao-perfil-expo/img2.png" alt=""></div>

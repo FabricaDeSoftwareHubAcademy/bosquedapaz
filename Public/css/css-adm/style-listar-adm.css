@@ -203,6 +203,7 @@ table tbody tr:nth-child(even) {
     font-size: 11px;
 }
 
+/* Botões de status */
 .status {
     width: 80px;
     padding: 5px 10px;
@@ -212,13 +213,11 @@ table tbody tr:nth-child(even) {
     text-align: center;
     cursor: pointer;
 }
-
 .status.active {
     background-color: #28a745;
     color: white;
     border-radius: 8px;
 }
-
 .status.inactive {
     background-color: #dc3545;
     color: white;

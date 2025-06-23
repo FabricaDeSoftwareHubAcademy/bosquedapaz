@@ -117,6 +117,70 @@
     flex-direction: column;
     box-sizing: border-box;
 }
+
+.recsenha-modal{
+    position: fixed;
+    border-radius: 15px;
+    margin: auto;
+    background-color: white;
+    border: none;
+    width: 30vw;
+    height: 25vh;
+}
+
+.recsenha-modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-recsenha{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal-recpass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-title{
+    text-align: center;
+}
+
+.modal-text{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.close-modal{
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 5%;
+    border-radius: 12px;
+    background-color: #FF3877;
+    border: none;
+    padding: 10px 25px;
+    margin: auto;
+}
  
 .forms-login{
     width: 100%;
@@ -280,6 +344,27 @@
         top: 3%;
     }
 
+    .recsenha-modal{
+        width: 80vw;
+        height: 170px;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .close-modal{
+        width: 90px;
+        height: 40px;
+        font-size: 11.5px;
+    }
+
+    .modal-text{
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .botao-login{
         display: flex;
         right: 2%;
@@ -315,6 +400,17 @@
         left: 4%;
         box-sizing: border-box;
     }
+
+    .recsenha-modal{
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .forms-login{
         width: 100%;
     }
@@ -345,6 +441,19 @@
         left: 4%;
         position: fixed;
         box-sizing: border-box;
+    }
+
+    .recsenha-modal{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    .modal-text{
+        font-size: 17px;
+    }
+
+    .modal-title{
+        font-size: 20px;
     }
 
     .forms-login{
@@ -397,6 +506,11 @@
         height: 90%;
     }
 
+    .recsenha-modal{
+        width: 60vw;
+        height: 40vh;
+    }
+
     .img-dog{
         top: 10%;
     }
@@ -426,6 +540,16 @@
         height: 90%;
     }
 
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
+    }
+
+    .recsenha-modal{
+        height: 30vh;
+        width: 50vw;
+    }
+
     .img-dog{
         top: 9%;
     }
@@ -444,6 +568,21 @@
         top: 10%;
         width: 30%;
         left: 10%;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
+    }
+    
+    .forms-recsenha{
+        height: 250px;
+        width: 100%;
+    }
+
+    .recsenha-modal{
+        width: 30vw;
+        height: 25vh;
     }
 
     .img-dog{

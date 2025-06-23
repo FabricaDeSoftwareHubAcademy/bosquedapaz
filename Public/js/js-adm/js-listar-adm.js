@@ -40,9 +40,8 @@ async function listar(){
 }
 listar();
 
+// -------------------------------------------------- 
+// Script para Mudar Status: No Arquivo (status-colaborador.js)
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)
-
-// -------------------------------------------------- 
-// Script Para Ativar/Inativar Status do Colaborador: No Arquivo (status-colaborador.js)

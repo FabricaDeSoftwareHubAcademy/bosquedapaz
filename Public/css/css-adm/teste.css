@@ -1,0 +1,665 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../menu-adm.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.box {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(249, 239, 239, 0.423);
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 20px;
+    /* overflow-y: auto; */
+}
+
+.btn-editar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -60vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde1 {
+    position: relative;
+    left: -30px;
+    top: 10%;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde2 {
+    position: relative;
+    left: 89%;
+    top: 10%;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-rosa {
+    position: relative;
+    left: 75%;
+    top: 80%;
+    z-index: -3;
+}
+
+
+.formularios {
+    width: 100%;
+    /* height: 64%; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: relative;
+    top: 90px;
+    left: -13%;
+}
+
+.formularios div {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+.formularios input {
+    width: 40vh;
+    height: 5vh;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    outline: none;
+}
+
+
+
+.input-group input {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.caixa-formulario label {
+    font-size: 14px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+
+.caixa-contato {
+    position: relative;
+    top: -25px;
+}
+
+.caixa-contato input {
+    width: 170px;
+    margin: 20px;
+}
+
+.caixa-contato label {
+    font-size: 14px;
+    margin-bottom: -20px;
+    margin-left: 20px;
+}
+
+.carregar-src {
+    background-color: rgb(126, 126, 126);
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.carregar-src a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.form-opc {
+    position: relative;
+    top: 5px;
+}
+
+.form-opc label {
+    font-size: 14px;
+    margin-bottom: -8px;
+    margin-left: 10px;
+}
+
+
+
+label#salvar-btn {
+    display: inline-block;
+    background-color: #FF3877;
+    color: white;
+    padding: 9px 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+
+.custom-dropdown input {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+
+.select {
+    width: 40vh;
+    height: 47px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+}
+
+.voltar {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    top: 20vh;
+    left: -15%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.voltar:hover {
+    transform: scale(1.1);
+}
+
+
+.form-pessoa,
+.form-loja,
+.form-expo {
+    position: relative;
+    left: 13%;
+}
+
+
+
+/********** novo botao de salvar/cancelar ******/
+
+.btn-conf {
+    /* background-color: red; */
+    position: absolute;
+    width: 24%;
+    top: 110%;
+    left: 85%;
+
+}
+
+.btn-conf button {
+    width: 40%;
+    border: none;
+    /* padding: 12px 16px; */
+    border-radius: 10px;
+
+}
+
+.btn-finalizar {
+    width: 117%;
+}
+
+.btn-finalizar .btn-cancelar {
+    height: 50px;
+    background-color: #FF3877;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-finalizar .btn-salvar {
+    background-color: #007E70;
+    position: relative;
+    left: 45%;
+    top: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-finalizar .btn-salvar:hover {
+    background-color: #0a645a;
+
+}
+
+
+/************ fim botao finalizar *************/
+
+/****************** modal teste ***********************/
+
+
+.oculta{
+    visibility: hidden;
+}
+
+
+.modal_conteudo{
+    height: 100px;
+    /* width: ; */
+    background-color: #58b1a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.show_modal {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* 
+.modal-sucesso .modal-conteudo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+} */
+
+
+/* fim modal */
+
+
+/************* RESPONSIVIDADE ***************/
+
+
+
+@media (max-width: 430px) {
+
+    .bolas-fundo .bola-verde1 {
+        display: none;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        display: none;
+    }
+
+    .bolas-fundo .bola-rosa {
+        display: none;
+    }
+    
+   
+
+    .box {
+       overflow-y: auto;
+        background-color: #007E70;
+    }
+
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+        
+    }
+
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 5%;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 13%;
+        width: 100%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+    img.img-voltar {
+        width: 30%;
+        height: 30px;
+    }
+
+    .voltar {
+        position: relative;
+        left: 5px;
+        top: 51px;
+    }
+}
+
+
+
+@media (max-width: 820px) {
+
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+    
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 75%;
+    }
+    
+    .bolas-fundo .bola-rosa {
+        width: 155px;
+        top: 82%;
+        left: 58%;
+    }
+
+    .box {
+        overflow-y: auto;
+    }
+
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+    }
+
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 5%;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 13%;
+        width: 100%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+    img.img-voltar {
+        width: 30%;
+        height: 30px;
+    }
+
+    .voltar {
+        position: relative;
+        left: 5px;
+        top: 51px;
+    }
+} 
+
+@media (max-width: 1024px) {
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 80%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 120px;
+        top: 88%;
+        left: 65%;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .box {
+        overflow-y: auto;
+    }
+
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+    }
+
+    .title-text {
+        font-size: 18px;
+    }
+
+    .formularios label {
+        position: relative;
+        left: 5%;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 13%;
+        width: 100%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+    img.img-voltar {
+        width: 30%;
+        height: 30px;
+    }
+
+    .voltar {
+        position: relative;
+        left: 5px;
+        top: 51px;
+    }
+} 
+
+@media (width: 1024px) and (height: 600px) {
+    .bolas-fundo .bola-verde1 {
+        width: 100px;
+        left: 0%;
+        top: 50px;
+    }
+
+    .bolas-fundo .bola-verde2 {
+        width: 99px;
+        top: 90px;
+        left: 80%;
+    }
+
+    .bolas-fundo .bola-rosa {
+        width: 120px;
+        top: 75%;
+        left: 68%;
+    }
+
+    .formularios {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        top: -20px;
+    }
+
+    .select {
+        width: 40vh;
+        height: 5vh;
+        margin: 10px;
+    }
+
+    .title {
+        position: relative;
+        top: -20px;
+    }
+
+    .form-expo .input-group input {
+        width: 40vh;
+        height: 5vh;
+        margin: 10px;
+    }
+
+    .btn-conf {
+        top: 97%;
+        left: 77%;
+        width: 40%;
+    }
+
+    button.btn.btn-cancelar {
+        position: relative;
+        width: 30%;
+        left: 12%;
+        font-size: 16px;
+
+    }
+
+    button.btn.btn-salvar {
+        width: 30%;
+        font-size: 16px;
+
+    }
+
+
+}
+
+@media (width: 344px) and (height: 882px) {
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        top: 20px;
+    }
+
+    .formularios input {
+        width: 260px;
+    }
+
+    .form-pessoa {
+        left: 10%;
+    }
+
+    .form-loja {
+        left: 10%;
+    }
+
+    .select {
+        width: 260px;
+        left: -30%;
+    }
+
+    .voltar {
+        left: -4%;
+    }
+}
+
+@media (min-width:1200px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+   
+
+    .btn-conf {
+        position: absolute;
+        width: 24%;
+        top: 110%;
+        left: 85%;
+    
+    }
+
+    .voltar {
+        width: 100px;
+        height: 40px;
+        position: relative;
+        top: 20vh;
+        left: 0%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        display: flex;
+    }
+}
