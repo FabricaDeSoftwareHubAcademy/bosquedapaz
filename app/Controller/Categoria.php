@@ -13,6 +13,7 @@ class Categoria
     private string $cor;
     private string $icone;
 
+    private string $status_cat;
 
     public function cadastrar()
     {
@@ -60,6 +61,15 @@ class Categoria
         return $res;
     }
 
+        public function alterarStatus($id, $novoStatus)
+    {
+        $db = new Database('categoria');
+        return $db->update(
+            'id_categoria = ' . $id,
+            ['status_cat' => $novoStatus]
+        );
+    }
+
     // --- MÉTODOS GETTERS E SETTERS ADICIONADOS ---
 
     /**
@@ -84,6 +94,11 @@ class Categoria
     {
         return $this->icone ?? ''; // Retorna string vazia se for nulo
     }
+    
+        public function getStatus(): string
+    {
+        return $this->status_cat;
+    }
 
     /**
      * Setters - Métodos para DEFINIR o valor de uma propriedade
@@ -106,5 +121,10 @@ class Categoria
     public function setIcone(string $icone)
     {
         $this->icone = $icone;
+    }
+
+        public function setStatus(string $status)
+    {
+        $this->status_cat = $status;
     }
 }

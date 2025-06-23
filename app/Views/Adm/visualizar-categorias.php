@@ -111,7 +111,7 @@
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
     <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-listar-categoria.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-visualizar-categoria.js" defer></script>
 </body>
 
 </html>

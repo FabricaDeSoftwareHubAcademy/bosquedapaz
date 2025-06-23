@@ -1,11 +1,3 @@
-<?php
-require_once '../../../vendor/autoload.php';
-
-use app\Controller\Categoria;
-
-$catController = new Categoria();
-$categorias = $catController->listar();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -45,25 +37,6 @@ $categorias = $catController->listar();
                             </tr>
                         </thead>
                         <tbody id="tabela-categoria">
-                            <?php foreach ($categorias as $categoria): ?>
-                                <tr>
-                                    <td class="usuario-col"><?php echo $categoria->getId(); ?></td>
-
-                                    <td><?php echo htmlspecialchars($categoria->getDescricao()); ?></td>
-
-                                    <td><button class="status active">Ativo</button></td>
-
-                                    <td>
-                                        <a href="#"
-                                            class="edit-icon open-modal"
-                                            data-id="<?php echo $categoria->getId(); ?>"
-                                            data-nome="<?php echo htmlspecialchars($categoria->getDescricao(), ENT_QUOTES); ?>"
-                                            data-cor="<?php echo htmlspecialchars($categoria->getCor()); ?>">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -167,6 +140,8 @@ $categorias = $catController->listar();
     </div>
 
     <script src="../../../Public/js/js-adm/js-editar-categoria.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-alterar-status-cat.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
