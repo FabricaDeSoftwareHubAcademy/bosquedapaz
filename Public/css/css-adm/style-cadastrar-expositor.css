@@ -191,6 +191,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 
@@ -285,410 +286,49 @@ body {
     z-index: 1000;
 }
 
-/* @media (max-width: 1200px) {
-    .form-pessoa,
-    .form-loja,
-    .form-expo {
-        left: 0;
-        justify-content: center;
-    }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 80%;
-    }
-
-    .formularios label {
-        width: 100%;
-    }
-
-    .btn-salvar,
-    .btn-cancelar {
-        left: 0;
-        top: 0;
-        width: 160px;
-    }
-
-    .btn-finalizar {
-        position: static;
-        justify-content: center;
-        flex-direction: row;
-        gap: 15px;
-        margin-top: 20px;
-    }
-
-    .btn {
-        width: clamp(150px, 40%, 200px);
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .formularios {
         flex-direction: column;
-        align-items: center;
         top: 0;
     }
-
+    
     .form-pessoa,
     .form-loja,
     .form-expo {
-        width: 100%;
         position: static;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 90%;
-    }
-
-    .box {
-        padding: 15px;
-    }
-
-    .btn-finalizar {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .btn {
-        width: 140px;
-        font-size: 0.85rem;
-        padding: 8px 14px;
-    }
-}
-
-@media (min-width: 768px) {
-    #tipo_expo {
-        width: 96%;
-        left: -2%;
-    }
-
-    #energia {
-        width: 189%;
-        left: -55%;
-    }
-
-    #energia_label {
-        left: -50%;
-    }
-
-    #volt_label {
-        left: -15%;
-    }
-
-    #voltagem {
-        width: 126%;
-        left: -20%;
-    }
-}
-
-@media (max-width: 650px) {
-    .title-text {
-        font-size: 1.5rem;
-    }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
         width: 100%;
     }
-
-    .box {
-        padding: 10px;
-    }
-
-    .btn-finalizar {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .btn {
-        width: clamp(120px, 45%, 160px);
-        font-size: 0.85rem;
-        padding: 10px 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title-text {
-        font-size: 1.2rem;
-    }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 85%;
-        left: 8%;
-    }
-
-    .formularios label {
-        left: 8%;
-    }
-
-    .select {
-        width: 111%;
-        left: -5%;
-    }
-
-    .form-files {
-        width: 76%;
-    }
-
-    #tipo_expo {
-        width: 91%;
-        left: 2%;
-    }
-
-    #energia {
-        width: 171%;
-        left: -36%;
-    }
-
-    #energia_label {
-        left: -32%;
-    }
-
-    #volt_label {
-        left: -4%;
-    }
-
-    #expo_label {
-        left: 3%;
-    }
-
-    .btns {
-        left: 5%;
-    }
-
-    .btn {
-        width: clamp(100px, 40%, 150px);
-        font-size: 0.8rem;
-        padding: 8px 10px;
-    }
-}
-
-@media (max-width: 360px) {
-    .title-text {
-        font-size: 1rem;
-    }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 80%;
-        font-size: 0.9rem;
-        padding: 4px;
-        left: 10%;
-    }
-
-    .formularios label {
-        left: 10%;
-    }
-
-    .btn {
-        width: clamp(90px, 45%, 120px);
-    }
-} */
-
-
-
-/* RESPONSIVIDADE COMPLETA */
-
-@media (max-width: 1024px) {
+    
     .input input,
     .input-group input,
     .input-group textarea,
     #categorias {
         width: 100% !important;
-       justify-content: center;
-       align-items: center;
     }
-
-    .form-expo, .form-pessoa,
-    .form-loja{
-        position: relative;
-        left: 0;
-    }
-
-    .formularios{
-        flex-direction: column !important;
-        top: 0 !important;
-        /* background-color: red; */
-    }
-
-   
-}
-
-
- /* @media (max-width: 1024px) {
-
     
-
- 
-    .form-pessoa {
-        left: 0%;
-    }
-
-    .form-loja {
-        left: 0%;
-    }
-
-    .form-expo {
-        left: 0%;
+    .btn-finalizar {
+        position: static;
+        top: 0;
+        left: 0;
         justify-content: center;
     }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 100%;
-    }
-
-    .formularios label {
-        width: 100%;
-    }
-
+    
     .btn-salvar {
         left: 0;
-        top: 0;
-        width: 160px;
-    }
-
-    .btn-cancelar {
-        width: 160px;
-    }
-
-    .btn-finalizar {
-        top: auto;
-        position: static;
-        justify-content: center;
-        flex-direction: row;
-        gap: 15px;
-        margin-top: 20px;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .btn {
-        width: clamp(150px, 40%, 200px);
-    }
-} */
-
-@media (max-width: 950px) {
-    .formularios {
-        flex-direction: column;
-        align-items: stretch;
-        top: 0;
-        background-color: red;
-    }
-
-    .form-pessoa,
-    .form-loja,
-    .form-expo {
-        width: 87%;
-        position: static;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        width: 90%;
-    }
-
-    .form-expo{
-        width: 103%;
-    }
-
-    .btn-finalizar {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .btn {
-        width: 140px;
-        font-size: 0.85rem;
-        padding: 8px 14px;
-    }
-
-    .btn-salvar {
-        left: 0;
-        top: 0;
-    }
-
-    .box {
-        padding: 15px;
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+    .title {
+        width: 100%;
+    }
     
-    .title{
-        width: 100%;
-    }
-
-
-    .select{
-        width: 100%;
-        background-color: blue;
-    }
-}
-
-@media (max-width: 650px) {
     .title-text {
         font-size: 1.5rem;
     }
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
+    
+    .select {
         width: 100%;
-    }
-
-    .box {
-        padding: 10px;
-    }
-
-    .btn-finalizar {
-        position: static !important;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .btn {
-        width: clamp(120px, 45%, 160px);
-        font-size: 0.85rem;
-        padding: 10px 14px;
     }
 }
 
@@ -696,97 +336,114 @@ body {
     .title-text {
         font-size: 1.2rem;
     }
-
-    .btn {
-        font-size: 0.8rem;
-    }
-
+    
     .input input,
     .input-group input,
     .input-group textarea,
     #categorias {
-        width: 85%;
-        position: relative;
+        width: 85% !important;
         left: 8%;
     }
 
+    .formularios{
+        position: relative;
+        left: 10%;
+    }
+
+    .form-expo{
+        width: 100%;
+    }
+
+    .select{
+        width: 83%;
+    }
+
+    .form-files{
+        width: 90%;
+    }
+    
     .formularios label {
-        position: relative;
         left: 8%;
     }
 
-    .select {
-        width: 111%;
-        position: relative;
-        left: -5%;
-    }
-
-    .form-files {
-        width: 76%;
-    }
-
-    #tipo_expo {
-        width: 91%;
-        position: relative;
-        left: 2%;
-    }
-
-    #energia {
-        width: 171%;
-        position: relative;
-        left: -36%;
-    }
-
-    #energia_label {
-        position: relative;
-        left: -32%;
-    }
-
-    #volt_label {
-        position: relative;
-        left: -4%;
-    }
-
-    #expo_label {
-        position: relative;
-        left: 3%;
+    .btn-conf{
+        background-color: red;
+        flex-direction: row;
+        display: flex;
+        justify-self:center;
+        align-items: center;
     }
 
     .btn {
-        width: clamp(100px, 40%, 150px);
         font-size: 0.8rem;
         padding: 8px 10px;
     }
-
-    .btns{
-        position: relative;
+    
+    .btns {
         left: 5%;
     }
 }
-
 
 @media (max-width: 360px) {
     .title-text {
         font-size: 1rem;
     }
-
+    
     .input input,
     .input-group input,
     .input-group textarea,
     #categorias {
-        width: 80%;
+        width: 80% !important;
+        left: 10%;
         font-size: 0.9rem;
-        padding: 4px;
-        position: relative;
-        left: 10%;
     }
-
+    
     .formularios label {
-        position: relative;
         left: 10%;
     }
-
+    
     .btn {
         width: clamp(90px, 45%, 120px);
     }
-} 
+}
+
+/* @media (max-width: 1024px) {
+    .formularios {
+        flex-direction: column;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias,
+    .formularios label {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias,
+    .formularios label {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias,
+    .formularios label {
+        width: 85%;
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+}    */
