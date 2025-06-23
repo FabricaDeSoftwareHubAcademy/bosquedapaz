@@ -67,9 +67,11 @@ body {
 }
 
 .title {
-    width: 100%;
+    width: 70%;
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
+    left:2%;
 }
 
 .title-text {
@@ -86,7 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -80px;
+    top: -90px;
 }
 
 .formularios div {
@@ -283,8 +285,7 @@ body {
     z-index: 1000;
 }
 
-/* 1200px para baixo - notebooks e tablets grandes */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .form-pessoa,
     .form-loja,
     .form-expo {
@@ -325,7 +326,6 @@ body {
     }
 }
 
-/* 950px para baixo - tablets médios e pequenos */
 @media (max-width: 950px) {
     .formularios {
         flex-direction: column;
@@ -367,7 +367,6 @@ body {
     }
 }
 
-/* 768px para cima - ajustes pontuais para desktop/tablet */
 @media (min-width: 768px) {
     #tipo_expo {
         width: 96%;
@@ -393,7 +392,6 @@ body {
     }
 }
 
-/* 650px para baixo - celulares grandes */
 @media (max-width: 650px) {
     .title-text {
         font-size: 1.5rem;
@@ -425,7 +423,6 @@ body {
     }
 }
 
-/* 480px para baixo - celulares médios */
 @media (max-width: 480px) {
     .title-text {
         font-size: 1.2rem;
@@ -485,7 +482,6 @@ body {
     }
 }
 
-/* 360px para baixo - celulares pequenos como Galaxy S8 */
 @media (max-width: 360px) {
     .title-text {
         font-size: 1rem;
@@ -508,12 +504,22 @@ body {
     .btn {
         width: clamp(90px, 45%, 120px);
     }
-}
+} */
 
 
 
 /* RESPONSIVIDADE COMPLETA */
-/* @media (max-width: 1200px) {
+ @media (max-width: 1024px) {
+
+    .formularios {
+        width: 150%;
+        flex-direction: column;
+        align-items: stretch;
+        left: -21%;
+        top: 0;
+        background-color: rgb(0, 29, 117);
+    }
+
     .form-pessoa {
         left: 0%;
     }
@@ -531,7 +537,7 @@ body {
     .input-group input,
     .input-group textarea,
     #categorias {
-        width: 80%;
+        width: 100%;
     }
 
     .formularios label {
@@ -591,7 +597,6 @@ body {
         width: 90%;
     }
 
-
     .btn-finalizar {
         flex-direction: row;
         justify-content: center;
@@ -616,13 +621,15 @@ body {
     }
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
     #tipo_expo {
         width: 96%;
         position: relative;
         left: -2%;
     }
-
+    .title{
+        width: 100%;
+    }
     #energia {
         width: 189%;
         position: relative;
@@ -638,9 +645,9 @@ body {
         left: -15%;
     }
     #voltagem{
-        width: 126%;
+        width: 113%;
         position: relative;
-        left: -20%;
+        left: -6%;
     }
 }
 
