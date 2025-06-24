@@ -25,9 +25,9 @@ main{
 }
 
 .tela-ult{
-    background-color: rgba(255, 0, 85, 0.705);
     width: 90%;
     height: 90%;
+    background-color: #f4f4f4a2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,6 @@ main{
 
 .conteiner__cards{
     /* width: 100%; */
-    background-color: aqua;
     display: flex;
     gap: 50px;
     justify-content: center;
