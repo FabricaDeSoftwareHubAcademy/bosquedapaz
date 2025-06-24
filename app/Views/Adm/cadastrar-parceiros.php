@@ -31,9 +31,38 @@
                                 <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
                             </div>
                             <div class="input-group">
+                                <label for="logo">Logo:</label>
+                                <input type="file" id="logo" name="logo" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+                            </div>       
+                            <div class="input-group">
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+                            </div>                      
+                        </div>
+                        <div id="form2" class="form-grid">
+                            <div class="input-group">
                                 <label for="email">E-mail:</label>
                                 <input type="email" id="email" name="email" placeholder="Digite o e-mail" required>
                             </div>
+                            <div class="input-group">
+                                <label for="cpf_cnpj">CPF/CNPJ:</label>
+                                <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="num_residencia">Número:</label>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
+                            </div> 
+                            <div class="input-group">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                            </div>  
+                        </div>
+
+                        <div id="form3" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_contato">Contato:</label>
                                 <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" required>
@@ -46,17 +75,6 @@
                                     <option value="fisica">Física</option>
                                 </select>
                             </div>
-                        </div>
-
-                        <div id="form2" class="form-grid">
-                            <div class="input-group">
-                                <label for="cpf_cnpj">CPF/CNPJ:</label>
-                                <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="logo">Logo:</label>
-                                <input type="file" id="logo" name="logo" required>
-                            </div>
                             <div class="input-group">
                                 <label for="cep">CEP:</label>
                                 <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
@@ -64,26 +82,7 @@
                             <div class="input-group">
                                 <label for="logradouro">Logradouro:</label>
                                 <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
-                            </div>
-                        </div>
-
-                        <div id="form3" class="form-grid">
-                            <div class="input-group">
-                                <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="complemento">Complemento:</label>
-                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
-                            </div>
+                            </div>  
 
                             <div class="btn-cancelar-salvar">
                                 <button type="button" class="btn btn-cancelar">
