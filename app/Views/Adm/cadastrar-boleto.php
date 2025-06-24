@@ -87,29 +87,29 @@
                         </div>
                     </div>
 
-                    <!-- <div class="btn">
+                    <div class="btn">
                         <div class="btn-fim">
                             <button name="REQUEST_METHOD" class="btn-salvar">salvar</button>
                             <button class="btn-cancelar">cancelar</button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
 
-                <!-- <div class="button">
+                <div class="button">
                     <a href="Area-Adm.php" class="voltar">
                         <img src="../../../Public/imgs/edicoes-passadas-img/voltar.svg" alt="Botão de voltar" class="btn-voltar">
                     </a>
-                </div> -->
+                </div>
             </form>
         </div>
 
     </main>
 
-    <!-- <div class="formas">
+    <div class="formas">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Forma 1" class="forma1">
         <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Forma 2" class="forma2">
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Forma3" class="forma3">
-    </div> -->
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>

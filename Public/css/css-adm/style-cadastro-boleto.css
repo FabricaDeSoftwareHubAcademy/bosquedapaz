@@ -36,9 +36,8 @@ body {
 
 
 .title {
-    display: flex;
     text-align: center;
-    font-size: 32px;
+    font-size: 15px;
     z-index: 2;
     font-weight: 500;
     margin-top: -50rem;
@@ -69,17 +68,27 @@ body {
 }
 
 .formularios{
-    margin-top: 20rem;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: red;
 }
 
 .form1{
-    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.form2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 /*
-.form2{
-
-}
-
 .input{
 
 }
