@@ -10,6 +10,7 @@
 body,html{
     width: 100%;
     display: flex;
+    overflow-y: none;
 }
 
 main{
@@ -19,11 +20,12 @@ main{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    overflow-y: auto;
     padding-top: 110px;
 }
 
 .tela-ult{
-    background-color: rgba(248, 245, 246, 0.705);
+    background-color: rgba(255, 0, 85, 0.705);
     width: 90%;
     height: 90%;
     display: flex;
@@ -31,6 +33,7 @@ main{
     justify-content: center;
     flex-direction: column;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .nome-tela{
@@ -41,8 +44,8 @@ main{
 }
 
 .conteiner__cards{
-    width: 100%;
-    background-color: transparent;
+    /* width: 100%; */
+    background-color: aqua;
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -302,16 +305,21 @@ main{
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
 
+    .tela-ult{
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
     .conteiner__cards{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 3fr;
     }
 
     .card {
-        width: 221px;
-        height: 257px;
+        width: 250px;
+        height: 350px;
         position: relative;
-        left: 24%;
+        /* left: 24%; */
     }
 
     .nome-tela{
