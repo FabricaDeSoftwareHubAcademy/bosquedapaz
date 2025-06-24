@@ -60,6 +60,12 @@ main{
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.733);
 }
 
+.img-ult{
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .card:hover {
     transform: translateY(-20px);
 }
@@ -155,17 +161,40 @@ main{
 
     .conteiner__cards{
         flex-direction: column;
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .card {
         position: relative;
         top: 12%;
+        width: 260px;
+        height: 370px;
     }
 
     .nome-tela {
         position: relative;
-        top: 8%;
+        top: 5%;
+    }
+
+    .linha-decorativa-1{
+        top: 18%;
+    }
+
+    .container__decorativo{
+        top: 14%;
+    }
+
+    .meu-botao{
+        padding: 10px 20px;
+    }
+
+    .nome-card{
+        font-size: 20px;
+    }
+
+    .img-ult{
+        width: 70%;
+        height: auto;
     }
     
 }
@@ -213,6 +242,11 @@ main{
         left: 4%;
         top: 13%;
     }
+
+    .img-ult{
+        width: 60%;
+        height: auto;
+    }
   
 }
  
@@ -255,6 +289,11 @@ main{
     .linha-decorativa-2 {
         left: 4%;
         top: 13%;
+    }
+
+    .img-ult{
+        width: 70%;
+        height: auto;
     }
   
 }
@@ -299,6 +338,11 @@ main{
     .linha-decorativa-2 {
         left: 4%;
         top: 13%;
+    }
+
+    .img-ult{
+        width: 70%;
+        height: auto;
     }
   
 }
