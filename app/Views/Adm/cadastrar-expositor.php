@@ -79,7 +79,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group-energia">
                             <label id="energia_label" for="energia">Precisa de energia?</label>
                             <select name="energia" id="energia" class="select">
                                 <option value="">Selecione</option>
