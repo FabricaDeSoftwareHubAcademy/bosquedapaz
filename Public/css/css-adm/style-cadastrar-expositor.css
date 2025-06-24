@@ -285,6 +285,12 @@ body {
     z-index: 1000;
 }
 
+@media (max-width:1280px) {
+    .formularios{
+        background-color: red;
+    }
+}
+
 @media (width: 1024px) and (height: 600px) {
 
     .title-text{
@@ -305,7 +311,7 @@ body {
 
     .form-files{
         position: relative;
-        top: -20px;
+        top: -2 0px;
     }
 
     #tipo_expo{
