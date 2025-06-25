@@ -773,11 +773,9 @@ input[type="file"]{
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
-        /* gap: 12px; */
         justify-content: space-between;
         align-items: center;
         height: 80%;
-        /* background-color: purple; */
         width: 70%;
     }
 
@@ -787,6 +785,10 @@ input[type="file"]{
         top: unset;
         position: relative;
         height: 32%;
+    }
+
+    .perfilEdit-label-desc{
+        height: 17%;
     }
 
     .perfilEdit-div-group{
