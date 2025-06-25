@@ -13,35 +13,7 @@ class FotosEvento
     protected $caminho;
     protected $legenda;
 
-    // Getters
-    public function getId() {
-        return $this->id_foto;
-    }
 
-    public function getIdEvento() {
-        return $this->id_evento;
-    }
-
-    public function getCaminho() {
-        return $this->caminho;
-    }
-
-    public function getLegenda() {
-        return $this->legenda;
-    }
-
-    // Setters
-    public function setIdEvento($id_evento) {
-        $this->id_evento = $id_evento;
-    }
-
-    public function setCaminho($caminho) {
-        $this->caminho = $caminho;
-    }
-
-    public function setLegenda($legenda) {
-        $this->legenda = $legenda;
-    }
 
 
     public function cadastrar() {

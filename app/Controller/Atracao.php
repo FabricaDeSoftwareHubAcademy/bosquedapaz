@@ -15,49 +15,6 @@ class Atracao
     protected $id_evento;
     protected $status;
 
-    public function getId() {
-        return $this->id_atracao;
-    }
-
-    public function getNome() {
-        return $this->nome_atracao;
-    }
-
-    public function getDescricao() {
-        return $this->descricao_atracao;
-    }
-
-    public function getBanner() {
-        return $this->banner_atracao;
-    }
-
-    public function getStatus() {
-        return $this->status;
-    }
-
-    public function getIdEvento() {
-        return $this->id_evento;
-    }
-
-    public function setNome($nome) {
-        $this->nome_atracao = $nome;
-    }
-
-    public function setDescricao($descricao) {
-        $this->descricao_atracao = $descricao;
-    }
-
-    public function setBanner($banner_atracao) {
-        $this->banner_atracao = $banner_atracao;
-    }
-
-    public function setIdEvento($id_evento) {
-        $this->id_evento = $id_evento;
-    }
-    public function setStatus($status) {
-        $this->status = $status;
-    }
-
     public function cadastrar() {
         $db = new Database('atracao');
         $res = $db->insert([

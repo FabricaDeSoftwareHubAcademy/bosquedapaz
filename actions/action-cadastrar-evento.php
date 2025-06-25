@@ -30,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $evento = new Evento();
-    $evento->setNome($nome);
-    $evento->setDescricao($descricao);
-    $evento->setData($data);
+    $evento->nome_evento = $nome;
+    $evento->descricao = $descricao;
+    $evento->data_evento = $data;
 
    
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         
-        $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
+        $evento->banner = 'uploads/uploads-eventos/' . $nomeSeguro;
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
         exit;
