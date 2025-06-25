@@ -32,27 +32,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // 🚀 Envio assíncrono
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
-        const formData = new FormData(form);
-        const idEvento = formData.get('id_evento');
-
+    
+        const formData = new FormData();
+        formData.append('id_evento', document.getElementById('id_evento').value);
+    
+        const arquivos = inputFotos.files;
+        if (arquivos.length === 0) {
+            alert('Nenhuma foto selecionada!');
+            return;
+        }
+    
+        Array.from(arquivos).forEach((arquivo) => {
+            formData.append('fotos[]', arquivo); // Aqui está o segredo
+        });
+    
         try {
             const response = await fetch('../../../actions/action-upload-fotos.php', {
                 method: 'POST',
                 body: formData
             });
-
+    
             const texto = await response.text();
             console.log('Resposta bruta:', texto);
             const data = JSON.parse(texto);
-
+    
             if (data.status === 'success') {
                 alert(data.mensagem);
-                window.location.href = `galeria-fotos.php?id_evento=${idEvento}`;
+                window.location.href = `galeria-fotos.php?id_evento=${formData.get('id_evento')}`;
             } else {
                 alert('Erro: ' + data.mensagem);
             }
-
+    
         } catch (error) {
             console.error('Erro no upload:', error);
             alert('Erro no envio das fotos.');

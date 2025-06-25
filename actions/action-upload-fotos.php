@@ -58,9 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (move_uploaded_file($tmp, $destino)) {
             $foto = new FotosEvento();
-            $foto->setIdEvento($id_evento);
-            $foto->setCaminho('uploads/fotos-eventos/' . $nomeSeguro);
-            $foto->setLegenda('');
+            $foto->id_evento = $id_evento;
+            $foto->caminho = 'uploads/fotos-eventos/' . $nomeSeguro;
+            $foto->legenda = ('');
 
             $foto->cadastrar();
 

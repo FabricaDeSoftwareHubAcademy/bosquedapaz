@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-evento.css">
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-fotos-evento.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
 </head>
@@ -53,7 +53,7 @@
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <!-- <script src="../../../Public/js/js-adm/preview-img.js" defer></script> -->
     <script src="../../../Public/js/js-adm/js-upload-fotos.js" defer></script>
 </body>
 
