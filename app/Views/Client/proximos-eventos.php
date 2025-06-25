@@ -198,18 +198,11 @@
                 
             </div>
         </section>
-
-        <!-- Imagens Decorativas -->
-        <div class="imgs__dec1"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-1.svg" alt=""></div>
-        <div class="imgs__dec2"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-2.svg" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-3.svg" alt=""></div>
     </main>
 
-   
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <script src="../../../Public/js/js-home/js-proximos-eventos.js"></script>
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
-    
 </body>
 </html>

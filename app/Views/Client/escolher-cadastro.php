@@ -34,19 +34,19 @@
                     </a>
                 </div>
                 <!-- Seta Voltar -->
-                <div class="div__seta_voltar"> <a href="edital-expositor.php"><img src="../../../Public/imgs/img-escolher-cadastro/seta-ec.png" alt=""></div></a>
+                <div class="div__seta_voltar"> <a href="edital-expositor.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></div></a>
             </div>
             <!-- Lado Direito: Imagem -->
             <div class="conteiner__img">
-                <img src="../../../Public/imgs/img-escolher-cadastro/img-decoracao-principal.svg" alt="">
+                <img src="../../../Public/imgs/img-decoracao-principal.svg" alt="">
             </div>
         </div>
     </main>
     
     <!-- Imagens Decorativas -->
-    <div class="imgs__decorative1"><img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt=""></div>
-    <div class="imgs__decorative2"><img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt=""></div>
-    <div class="imgs__decorative3"><img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt=""></div>
+    <div class="imgs__decorative1"><img src="../../../Public/assets/img-bolas/bola-verde1.png" alt=""></div>
+    <div class="imgs__decorative2"><img src="../../../Public/assets/img-bolas/bola-verde2.png" alt=""></div>
+    <div class="imgs__decorative3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
    
     <script src="../../../Public/js/js-menu/js-menu.js"></script>          
 </body>
