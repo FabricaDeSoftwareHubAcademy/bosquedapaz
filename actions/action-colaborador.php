@@ -67,7 +67,7 @@ if ($requestMethod === 'POST') {
 
 
         // Imagem: <----------------------------------------------->
-        $uploadDir = __DIR__ . '/../../Public/uploads/uploads-ADM/';
+        $uploadDir = '../Public/uploads/uploads-ADM/';
         $imagemSalva = null;
 
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
