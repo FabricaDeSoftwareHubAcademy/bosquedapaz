@@ -23,10 +23,10 @@
             </div>
 
             <div class="search">
-                <label for="searchInput">
-                    <span class="material-symbols-outlined"> search </span>
-                </label>
                 <input type="text" id="searchInput" placeholder="Pesquisar por expositor...">
+                <label for="searchInput" class="label">
+                    <span class="material-symbols-outlined" id="lupa"> search </span>
+                </label>
             </div>
 
             <form method="POST">
@@ -43,7 +43,7 @@
                         <div class="input">
                             <label class="label">Arquivo em PDF:</label>
                             <label for="aquivo" class="label">
-                                <span id="file-text">Selecionar Arquivo em PDF</span>
+                                <span id="file-text" class="form-input">Selecionar Arquivo em PDF</span>
                                 <img class="img-input" src="../../../Public/imgs/edicoes-passadas-img/Upload.svg" alt="">
                             </label>
                             <input type="file" name="arquivo" id="arquivo" accept=".pdf" class="form-input" required>
@@ -86,13 +86,13 @@
                             <input type="date" name="val" id="val" class="form-input" placeholder="00/00/0000" required>
                         </div>
                     </div>
-
                     <div class="btn">
                         <div class="btn-fim">
-                            <button name="REQUEST_METHOD" class="btn-salvar">salvar</button>
                             <button class="btn-cancelar">cancelar</button>
+                            <button name="REQUEST_METHOD" class="btn-salvar">salvar</button>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="button">
