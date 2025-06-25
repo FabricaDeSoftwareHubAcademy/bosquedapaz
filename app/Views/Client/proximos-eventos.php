@@ -198,11 +198,6 @@
                 
             </div>
         </section>
-
-        <!-- Imagens Decorativas -->
-        <div class="imgs__dec1"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-1.svg" alt=""></div>
-        <div class="imgs__dec2"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-2.svg" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/imgs/Proximos-Eventos-img/forma-proev-3.svg" alt=""></div>
     </main>
 
    

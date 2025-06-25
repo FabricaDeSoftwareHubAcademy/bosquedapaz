@@ -118,7 +118,7 @@ main #title{
 .carousel-item .overlay {
     position: absolute;
     inset: 0; 
-    background-color: rgba(0, 0, 0, 0.911); 
+    background-color: rgba(0, 0, 0, 0.70); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,16 +240,16 @@ main #title{
 
 .area__cards{
     width: 91.5%;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
 }
 
 /* Cards  */
 .card {
-  width: 100%;
+  max-width: 100%;
+  width: 350px;
   background: #fffdfa;
   /* border-radius: 18px; */
   box-shadow:
@@ -346,53 +346,6 @@ main #title{
   flex-shrink: 0;
   fill: black;
 }
-
-
-/* Imagens Decorativas */
-.imgs__dec1 {
-    position: fixed;
-    top: 14vh;
-    left: -58px;
-    width: 20vw;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-.imgs__dec1 img{
-    width: 40%;
-    height: auto;
-}
-
-.imgs__dec2 {
-    position: fixed;
-    top: 14vh;
-    right: -17vw;
-    width: 20vw;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-.imgs__dec2 img{
-    width: 40%;
-    height: auto;
-}
-
-.imgs__dec3 {
-    position: fixed;
-    bottom: -8vh;
-    right: -13vw;
-    width: 20vw;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-
-.imgs__dec3 img{
-    width: 60%;
-    height: auto;
-}
-
-
 
 /* Responsividades:  */
 /* Celulares pequenos (smartphones compactos) */
