@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="por-cima-card">
                         <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/imagens-utilidades/primavera.png" alt="">
+                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
                         </div>
                         <div class="parte-inferior">
                             <h1 class="nome-card">Nome</h1>
@@ -32,7 +32,7 @@
                 <div class="card">
                     <div class="por-cima-card">
                         <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/imagens-utilidades/primavera.png" alt="">
+                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
                         </div>
                         <div class="parte-inferior">
                             <h1 class="nome-card">Nome</h1>
@@ -47,7 +47,7 @@
                 <div class="card">
                     <div class="por-cima-card">
                         <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/imagens-utilidades/primavera.png" alt="">
+                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
                         </div>
                         <div class="parte-inferior">
                             <h1 class="nome-card">Nome</h1>
@@ -62,7 +62,7 @@
                 <div class="card">
                     <div class="por-cima-card">
                         <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/imagens-utilidades/primavera.png" alt="">
+                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
                         </div>
                         <div class="parte-inferior">
                             <h1 class="nome-card">Nome</h1>
