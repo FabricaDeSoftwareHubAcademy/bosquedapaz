@@ -18,15 +18,17 @@
 
     <main class="principal">
         <div class="box">
-            <div class="title">
-                <h1>CADASTRO DE BOLETO</h1>
-            </div>
+            <div class="container">
+                <div class="title">
+                    <h1>CADASTRO DE BOLETO</h1>
+                </div>
 
-            <div class="search">
-                <input type="text" id="searchInput" placeholder="Pesquisar por expositor...">
-                <label for="searchInput" class="label">
-                    <span class="material-symbols-outlined" id="lupa"> search </span>
-                </label>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Pesquisar por expositor...">
+                    <label for="searchInput" class="label">
+                        <span class="material-symbols-outlined" id="lupa"> search </span>
+                    </label>
+                </div>
             </div>
 
             <form method="POST">
@@ -86,13 +88,13 @@
                             <input type="date" name="val" id="val" class="form-input" placeholder="00/00/0000" required>
                         </div>
                     </div>
+
                     <div class="btn">
                         <div class="btn-fim">
                             <button class="btn-cancelar">cancelar</button>
                             <button name="REQUEST_METHOD" class="btn-salvar">salvar</button>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="button">

@@ -34,6 +34,12 @@ body {
     z-index: 2;
 }
 
+.container{
+    width: 95%;
+    height: 20%;
+    margin-top: 70rem;
+}
+
 
 .title {
     text-align: center;
@@ -66,7 +72,6 @@ body {
     width: 100%;
     outline: none;
     display: flex;
-    margin-top: -50rem;
     z-index: 2;
 }
 
