@@ -1,4 +1,6 @@
 .env
 /Public/uploads/uploads-eventos/
 /Public/uploads/atracoes/
+/Public/uploads/fotos-eventos/
+
 # /vendor/

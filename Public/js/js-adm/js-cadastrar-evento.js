@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 body: formData
             });
-            const textoBruto = await resposta.text();
-            console.log('Resposta bruta do servidor:', textoBruto);
 
             const resultado = await resposta.json();
             console.log('Resposta JSON:', resultado);

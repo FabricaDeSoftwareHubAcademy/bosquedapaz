@@ -27,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $atracao = new Atracao();
-    $atracao->setNome($nome);
-    $atracao->setDescricao($descricao);
-    $atracao->setStatus($status);
-    $atracao->setIdEvento($id_evento);
+    $atracao->nome_atracao = $nome;
+    $atracao->descricao_atracao = $descricao;
+    $atracao->status = $status;
+    $atracao->id_evento = $id_evento;
 
     if (!empty($_FILES['banner_atracao']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     unlink($caminhoAntigo);
                 }
             }
-            $atracao->setBanner('uploads/atracoes/' . $nomeSeguro);
+            $atracao->banner = 'uploads/atracoes/' . $nomeSeguro;
         } else {
             echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
             exit;
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $atracaoExistente = $atracao->buscarPorId($id);
         if ($atracaoExistente) {
-            $atracao->setBanner($atracaoExistente->getBanner());
+            $atracao->banner_atracao = $atracaoExistente->banner_atracao;
         }
     }
 

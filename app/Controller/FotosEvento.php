@@ -8,12 +8,10 @@ use app\Models\Database;
 
 class FotosEvento
 {
-    protected $id_foto;
-    protected $id_evento;
-    protected $caminho;
-    protected $legenda;
-
-
+    public int $id_foto;
+    public int $id_evento;
+    public string $caminho;
+    public string $legenda;
 
 
     public function cadastrar() {

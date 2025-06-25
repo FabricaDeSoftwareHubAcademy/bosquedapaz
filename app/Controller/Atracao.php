@@ -8,12 +8,12 @@ use app\Models\Database;
 
 class Atracao
 {
-    protected $id_atracao;
-    protected $nome_atracao;
-    protected $descricao_atracao;
-    protected $banner_atracao;
-    protected $id_evento;
-    protected $status;
+    public int $id_atracao;
+    public string $nome_atracao;
+    public string $descricao_atracao;
+    public string $banner_atracao;
+    public int $id_evento;
+    public int $status;
 
     public function cadastrar() {
         $db = new Database('atracao');

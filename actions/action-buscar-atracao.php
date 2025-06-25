@@ -13,12 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id_atracao'])) {
         echo json_encode([
             'status' => 'success',
             'atracao' => [
-                'id_atracao' => $atracaoSelecionada->getId(),
-                'id_evento' => $atracaoSelecionada->getIdEvento(),
-                'nome_atracao' => $atracaoSelecionada->getNome(),
-                'descricao_atracao' => $atracaoSelecionada->getDescricao(),
-                'status' => $atracaoSelecionada->getStatus(),
-                'banner_atracao' => $atracaoSelecionada->getBanner()
+                'id_atracao' => $atracaoSelecionada->id_atracao,
+                'id_evento' => $atracaoSelecionada->id_evento,
+                'nome_atracao' => $atracaoSelecionada->nome_atracao,
+                'descricao_atracao' => $atracaoSelecionada->descricao_atracao,
+                'status' => $atracaoSelecionada->status,
+                'banner_atracao' => $atracaoSelecionada->banner_atracao
             ]
         ]);
     } else {

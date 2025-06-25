@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $evento = new Evento();
-    $evento->setNome($nome);
-    $evento->setDescricao($descricao);
-    $evento->setData($data);
-    $evento->setStatus($status);
+    $evento->nome_evento = $nome;
+    $evento->descricao = $descricao;
+    $evento->data_evento = $data;
+    $evento->status = (int) $status;
 
-    
+    // Upload de imagem (opcional)
     if (!empty($_FILES['banner']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
         $extensao = strtolower(pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION));
@@ -52,16 +52,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-eventos/';
         $destino = $diretorioDestino . $nomeSeguro;
 
-
         if (move_uploaded_file($caminhoTemporario, $destino)) {
             $eventoExistente = $evento->buscarPorId($id);
             if ($eventoExistente) {
-                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->getBanner();
+                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner;
                 if (file_exists($caminhoAntigo)) {
                     unlink($caminhoAntigo);
                 }
             }
-            $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
+            $evento->banner = 'uploads/uploads-eventos/' . $nomeSeguro;
         } else {
             echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
             exit;
@@ -69,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $eventoExistente = $evento->buscarPorId($id);
         if ($eventoExistente) {
-            $evento->setBanner($eventoExistente->getBanner());
+            $evento->banner = $eventoExistente->banner;
         }
     }
 

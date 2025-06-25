@@ -2,10 +2,6 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Atracao;
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 header('Content-Type: application/json');
 
 function sanitizarTexto($input) {
@@ -23,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $atracao = new Atracao();
-    $atracao->setNome($nome);
-    $atracao->setDescricao($descricao);
-    $atracao->setIdEvento($id_evento);
+    $atracao->nome_atracao = $nome;
+    $atracao->descricao_atracao = $descricao;
+    $atracao->id_evento = $id_evento;
 
     // Upload da imagem
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -45,16 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nomeFinal = uniqid('atracao_', true) . '.' . $extensao;
         $pasta = '../Public/uploads/atracoes/';
     
-        if (!is_dir($pasta)) {
-            mkdir($pasta, 0755, true);
-        }
     
         if (!move_uploaded_file($tmp, $pasta . $nomeFinal)) {
             echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar imagem."]);
             exit;
         }
     
-        $atracao->setBanner("uploads/atracoes/" . $nomeFinal);
+        $atracao->banner_atracao = "uploads/atracoes/" . $nomeFinal;
+        
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Imagem obrigatória."]);
         exit;
