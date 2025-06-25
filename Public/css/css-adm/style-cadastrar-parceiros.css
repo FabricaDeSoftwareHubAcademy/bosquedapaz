@@ -466,14 +466,14 @@ h1 {
     display: flex;
     gap: 15px;
     z-index: 10;
-    background-color: transparent; /* Opcional: se quiser que os botões não tenham fundo */
+    background-color: transparent; 
   }
 }
 
 @media (max-width: 1399px) {
   .btn-cancelar-salvar {
-    position: static; /* volta pro fluxo normal da página */
-    justify-content: center; /* ou o que você já usa hoje */
+    position: static; 
+    justify-content: center; 
     margin-top: 20px;
   }
 }

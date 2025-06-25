@@ -33,15 +33,15 @@
                             <div class="input-group">
                                 <label for="logo">Logo:</label>
                                 <input type="file" id="logo" name="logo" required>
-                            </div>
+                            </div>                                
+                            <div class="input-group">
+                                <label for="num_residencia">Número:</label>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
+                            </div>                          
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>
                                 <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
-                            </div>       
-                            <div class="input-group">
-                                <label for="complemento">Complemento:</label>
-                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
-                            </div>                      
+                            </div>                       
                         </div>
                         <div id="form2" class="form-grid">
                             <div class="input-group">
@@ -53,15 +53,18 @@
                                 <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
                             </div>
                             <div class="input-group">
-                                <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
-                            </div> 
+                                <label for="cep">CEP:</label>
+                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+                            </div>
                             <div class="input-group">
-                                <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="cidade">Estado:</label>
+                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
                             </div>  
                         </div>
-
                         <div id="form3" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_contato">Contato:</label>
@@ -76,20 +79,19 @@
                                 </select>
                             </div>
                             <div class="input-group">
-                                <label for="cep">CEP:</label>
-                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
-                            </div>
-                            <div class="input-group">
                                 <label for="logradouro">Logradouro:</label>
                                 <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
+                            </div>   
+                            <div class="input-group">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
                             </div>  
-
-                            <div class="btn-cancelar-salvar">
+                        </div>
+                        <div class="btn-cancelar-salvar">
                                 <button type="button" class="btn btn-cancelar">
                                     <a href="./Area-Adm.php">Cancelar</a>
                                 </button>
                                 <button type="submit" id="botao_cadastrar" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
-                            </div>
                         </div>
                     </div>
                 </form>

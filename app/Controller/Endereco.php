@@ -11,6 +11,5 @@ class Endereco {
     public int $num_residencia;
     public string $bairro;
     public string $cidade;
-
-
+    public string $estado;
 }

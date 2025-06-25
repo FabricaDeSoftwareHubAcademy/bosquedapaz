@@ -18,8 +18,6 @@ class Parceiro {
 
     public function cadastrar($endereco) {
 
-        //print_r($endereco);
-
         // cadastro do endereco para pegar o id
         $db = new Database("endereco");
         $id_endereco = $db->insert_lastid([
@@ -28,15 +26,11 @@ class Parceiro {
             "complemento" => $endereco->complemento,
             "num_residencia" => $endereco->num_residencia,
             "bairro" => $endereco->bairro,
-            "cidade" => $endereco->cidade
+            "cidade" => $endereco->cidade,
+            "estado" => $endereco->estado // ← Adicionado aqui
         ]);
 
-        // VERIFICANDO SE CADASTROU O ENDERECO
-        // print_r($id_endereco);
-        // exit;
-
-
-        // cadasto do parceiro
+        // cadastro do parceiro
         $db = new Database('parceiro');
         $resParceiro = $db->insert([
             'nome_parceiro' => $this->nome_parceiro,
@@ -52,5 +46,3 @@ class Parceiro {
         return $resParceiro;
     }
 }
-
-?>

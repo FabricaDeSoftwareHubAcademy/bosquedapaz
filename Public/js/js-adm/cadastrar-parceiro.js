@@ -4,6 +4,31 @@ btn_cadastrar.addEventListener('click', async function(event){
     event.preventDefault();
     let formulario = document.getElementById("form_cadastrar_parceiro");
 
+    const camposObrigatorios = [
+        'nome_parceiro',
+        'email',
+        'nome_contato',
+        'telefone', 
+        'cpf_cnpj',
+        'tipo',
+        'logo',
+        'num_residencia',    
+        'cep',
+        'cidade',
+        'bairro',
+        'logradouro',
+        'estado'
+    ];
+
+    for (let id of camposObrigatorios) {
+        const campo = document.getElementById(id);
+        if (!campo || campo.value.trim() === '') {
+            alert(`Por favor, preencha o campo: ${campo?.placeholder || campo?.name || id}`);
+            campo?.focus();
+            return;
+        }
+    }
+
     let telefone = document.getElementById('telefone').value.trim();
     let email = document.getElementById('email').value.trim();
     let tipo = document.getElementById('tipo').value;
@@ -83,7 +108,7 @@ btn_cadastrar.addEventListener('click', async function(event){
     }
 });
 
-// Máscara Telefone
+// Máscaras
 function mascaraTelefone(input, e) {
     let key = e.inputType;
     if (key === 'deleteContentBackward') return;
@@ -100,7 +125,6 @@ function mascaraTelefone(input, e) {
     }
 }
 
-// Máscara CEP
 function mascaraCep(input, e) {
     let key = e.inputType;
     if (key === 'deleteContentBackward') return;
@@ -113,7 +137,6 @@ function mascaraCep(input, e) {
     }
 }
 
-// Máscara CPF/CNPJ
 function mascaraCpfCnpj(input, e) {
     let key = e.inputType;
     if (key === 'deleteContentBackward') return;
@@ -144,7 +167,7 @@ document.getElementById('cpf_cnpj').addEventListener('input', function(e){
     mascaraCpfCnpj(this, e);
 });
 
-// Validador CPF/CNPJ
+// Validação CPF/CNPJ
 function validarCpfCnpj(valor) {
     valor = valor.replace(/[^\d]+/g,'');
 
@@ -163,7 +186,6 @@ function validarCpfCnpj(valor) {
         if(resto !== parseInt(valor.charAt(10))) return false;
 
         return true;
-
     } else if (valor.length === 14){
         if (/^(\d)\1+$/.test(valor)) return false;
 
@@ -196,6 +218,7 @@ function validarCpfCnpj(valor) {
     return false;
 }
 
+// Preenchimento automático via ViaCEP
 document.getElementById('cep').addEventListener('blur', async function () {
     const cep = this.value.replace(/\D/g, '');
 
@@ -208,6 +231,7 @@ document.getElementById('cep').addEventListener('blur', async function () {
                 document.getElementById('logradouro').value = data.logradouro;
                 document.getElementById('bairro').value = data.bairro;
                 document.getElementById('cidade').value = data.localidade;
+                document.getElementById('estado').value = data.uf;
                 document.getElementById('complemento').value = data.complemento || '';
             } else {
                 alert("CEP não encontrado!");
