@@ -50,11 +50,11 @@
             <div class="section__box__contatos">
                 <div class="contato__email">
                     <img src="../../../Public/imgs/imgs-fale-conosco/img-email.png" alt="">
-                    <h1><a href="mailto:contato@feirabosque.com.br">contato@feirabosque.com.br</a></h1>
+                    <h1><a href="mailto:contato@feirabosque.com.br">feirabosquedapaz@gmail.com</a></h1>
                 </div>
                 <div class="contato__telefone">
                     <img src="../../../Public/imgs/imgs-fale-conosco/img-telefone.png" alt="">
-                    <h1>(67)4002-9822</h1>
+                    <h1>(67) 9 9955-0017</h1>
                 </div>
                 <div class="contato__localizacao">
                     <img src="../../../Public/imgs/imgs-fale-conosco/img-localizacao.png" alt="">
