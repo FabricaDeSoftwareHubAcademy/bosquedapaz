@@ -32,7 +32,7 @@
             <div class="foto-container">
                 <input type="file" id="uploadFoto" accept="image/*" onchange="previewImagem()">
                 <label for="uploadFoto">
-                    <img id="previewFoto" src="../../../Public/imgs/img-editar-adm/MOCA.png" alt="Foto do Administrador">
+                    <img id="previewFoto" src="../../../Public/assets/MOCA.png" alt="Foto do Administrador">
                     <div class="icone-editar">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </div>
@@ -68,8 +68,8 @@
                     </div>
                     </div>
                     <div class="btns">
-                        <a href="listar-adm.php" class="voltar">
-                            <img src="../../../Public/imgs/img-editar-adm/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        <a href="Area-Adm.php" class="voltar">
+                            <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
                         </a>
                         <div class="btn-cancelar-salvar">
                             <button type="button" class="btn btn-cancelar">
@@ -86,9 +86,9 @@
         </div>
     </main>
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/img-editar-adm/Elemento1.FolhaAzul.png" alt="FolhaAzul" class="folhaAzul1-yan">
-        <img src="../../../Public/imgs/img-editar-adm/Elemento2.FolhaAzul.png" alt="FolhaAzul2" class="folhaAzul2-yan">
-        <img src="../../../Public/imgs/img-editar-adm/Elemento3.ElipseAzul.png" alt="FolhaRosa" class="folhaRosa-yan">
+        <img src="../../../Public/assets/img-bolas/Elemento1.FolhaAzul.svg" alt="FolhaAzul" class="folhaAzul1-yan">
+        <img src="../../../Public/assets/img-bolas/Elemento2.FolhaAzul.svg" alt="FolhaAzul2" class="folhaAzul2-yan">
+        <img src="../../../Public/assets/img-bolas/bola-3.png" alt="FolhaRosa" class="folhaRosa-yan">
     </div>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
