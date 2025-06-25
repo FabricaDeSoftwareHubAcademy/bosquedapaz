@@ -103,7 +103,7 @@ html,.body-recsenha{
 }
 
 .forms-recsenha{
-    height: 150px;
+    height: 250px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -254,7 +254,7 @@ html,.body-recsenha{
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    height: 100%;
+    height: 50px;
     width: 30%;
     border-radius: 10px;
     position: relative;
@@ -403,9 +403,9 @@ html,.body-recsenha{
         width: 40%;
     }
 
-    .botao-redefinir{
+    /* .botao-redefinir{
         width: 40%;
-    }
+    } */
 
 }
 
@@ -467,9 +467,9 @@ html,.body-recsenha{
         width: 40%;
     }
 
-    .botao-redefinir{
+    /* .botao-redefinir{
         width: 40%;
-    }
+    } */
 }
 
 @media (min-width:768px){
@@ -504,9 +504,9 @@ html,.body-recsenha{
         width: 40%;
     }
 
-    .botao-redefinir{
+    /* .botao-redefinir{
         width: 40%;
-    }
+    } */
 
     .text{
         text-align: center;
