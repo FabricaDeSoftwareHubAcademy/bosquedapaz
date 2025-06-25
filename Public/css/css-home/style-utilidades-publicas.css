@@ -13,16 +13,6 @@ body,html{
     overflow-y: none;
 }
 
-main{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    overflow-y: auto;
-    padding-top: 110px;
-}
 
 .tela-ult{
     width: 90%;
