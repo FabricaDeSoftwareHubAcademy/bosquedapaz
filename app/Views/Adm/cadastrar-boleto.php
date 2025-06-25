@@ -30,11 +30,9 @@
                 </div>
             </div>
 
-            <form method="POST">
-
-                <div class="formularios">
+            <form method="POST" class="form">
                     
-                    <div class="form1">
+                    <div class="form-content">
 
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>
@@ -43,9 +41,9 @@
 
                         <div class="input">
                             <label class="label">Arquivo em PDF:</label>
-                            <label for="aquivo" class="label">
-                                <span id="file-text" class="form-input">Selecionar Arquivo em PDF</span>
-                                <img class="img-input" src="../../../Public/imgs/edicoes-passadas-img/Upload.svg" alt="">
+                            <label for="arquivo" class="custom-file-label">
+                                <span id="file-text">Selecionar Arquivo em PDF</span>
+                                <img src="../../../Public/imgs/Upload.svg" alt="">
                             </label>
                             <input type="file" name="arquivo" id="arquivo" accept=".pdf" class="form-input" required>
                         </div>
@@ -54,10 +52,6 @@
                             <label class="label" for="valor">Valor:</label>
                             <input type="text" name="valor" id="valor" class="form-input" placeholder="R$ 0,00" autocomplete="off" required>
                         </div>
-
-                    </div>
-
-                    <div class="form2">
                         
                         <div class="input">
                             <label for="cnpj-cpf" class="label">CNPJ/CPF:</label>
@@ -83,7 +77,7 @@
                         </div>
 
                         <div class="input">
-                            <label for="vencimento" class="label"></label>
+                            <label for="vencimento" class="label">Vencimento</label>
                             <input type="date" name="val" id="val" class="form-input" placeholder="00/00/0000" required>
                         </div>
                     </div>
@@ -94,7 +88,6 @@
                             <button name="REQUEST_METHOD" class="btn-salvar">salvar</button>
                         </div>
                     </div>
-                </div>
 
                 <div class="button">
                     <a href="Area-Adm.php" class="voltar">
