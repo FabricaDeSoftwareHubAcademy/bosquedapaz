@@ -35,11 +35,10 @@ body {
 }
 
 .container{
-    width: 95%;
+    width: 90%;
     height: 20%;
-    margin-top: 70rem;
+    margin-top: 65rem;
 }
-
 
 .title {
     text-align: center;
@@ -81,9 +80,8 @@ body {
 
 .formularios{
     width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    height: 50%;
+    margin-top: 20rem;
 }
 
 .form1{
