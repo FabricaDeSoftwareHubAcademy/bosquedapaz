@@ -1,24 +1,16 @@
 <?php
 require_once '../vendor/autoload.php';
-
 use app\Controller\Atracao;
 
 header('Content-Type: application/json');
 
-if (!isset($_GET['id_evento'])) {
-    echo json_encode([
-        'status' => 'error',
-        'mensagem' => 'ID do evento não fornecido.'
-    ]);
-    exit;
-}
-
-$id_evento = intval($_GET['id_evento']);
-
 try {
     $atracao = new Atracao();
-    // WHERE: apenas atrações deste evento
-    $atracoes = $atracao->listar("id_evento = {$id_evento}");
+
+    $id_evento = isset($_GET['id_evento']) ? (int)$_GET['id_evento'] : null;
+    $where = $id_evento ? "id_evento = {$id_evento}" : null;
+
+    $atracoes = $atracao->listar($where);
 
     echo json_encode([
         'status' => 'success',
