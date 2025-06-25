@@ -18,7 +18,7 @@
 
             <div class="carousel-track">
                 <!-- Slide 1 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/Proximos-Eventos-img/imagem_fundo.png');">
+                <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem_fundo.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                             <div class="text-left">
@@ -29,14 +29,14 @@
                                 <p><i class="bi bi-geo-alt"></i> Av. Cônsul Assaf Trad, 4796 - Parque dos Novos Estados, Campo Grande - MS, 79035-900</p>
                             </div>
                             <div class="banner-right">
-                                <img src="../../../Public/imgs/Proximos-Eventos-img/imagem_fundo.png" alt="Banner do evento" />
+                                <img src="../../../Public/imgs/imagem_fundo.png" alt="Banner do evento" />
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/Proximos-Eventos-img/imagem-fundo2.png');">
+                <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem-fundo2.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                         <div class="text-left">
@@ -47,14 +47,14 @@
                             <p><i class="bi bi-geo-alt"></i> Av. Cônsul Assaf Trad, 4796 - Parque dos Novos Estados, Campo Grande - MS, 79035-900</p>
                         </div>
                         <div class="banner-right">
-                            <img src="../../../Public/imgs/Proximos-Eventos-img/imagem-fundo2.png" alt="Banner do evento" />
+                            <img src="../../../Public/imgs/imagem-fundo2.png" alt="Banner do evento" />
                         </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/Proximos-Eventos-img/imagem-fundo3.png');">
+                <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem-fundo3.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                         <div class="text-left">
@@ -65,14 +65,14 @@
                             <p><i class="bi bi-geo-alt"></i> Av. Cônsul Assaf Trad, 4796 - Parque dos Novos Estados, Campo Grande - MS, 79035-900</p>
                         </div>
                         <div class="banner-right">
-                            <img src="../../../Public/imgs/Proximos-Eventos-img/imagem-fundo3.png" alt="Banner do evento" />
+                            <img src="../../../Public/imgs/imagem-fundo3.png" alt="Banner do evento" />
                         </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 4 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png');">
+                <div class="carousel-item" style="background-image: url('../../../Public/imgs/img-atracao-proev.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                         <div class="text-left">
@@ -83,7 +83,7 @@
                             <p><i class="bi bi-geo-alt"></i> Av. Cônsul Assaf Trad, 4796 - Parque dos Novos Estados, Campo Grande - MS, 79035-900</p>
                         </div>
                         <div class="banner-right">
-                            <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Banner do evento" />
+                            <img src="../../../Public/imgs/img-atracao-proev.png" alt="Banner do evento" />
                         </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
             <div class="area__cards">
                 <div class="card">
                     <div class="card__image">
-                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <img src="../../../Public/imgs/img-atracao-proev.png" alt="Produto artesanal" />
                         <div class="selo">Atração</div>
                     </div>
                     <div class="card__content">
@@ -133,7 +133,7 @@
                 </div>
                 <div class="card">
                     <div class="card__image">
-                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <img src="../../../Public/imgs/img-atracao-proev.png" alt="Produto artesanal" />
                         <div class="selo">Atração</div>
                     </div>
                     <div class="card__content">
@@ -149,7 +149,7 @@
                 </div>
                 <div class="card">
                     <div class="card__image">
-                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <img src="../../../Public/imgs/img-atracao-proev.png" alt="Produto artesanal" />
                         <div class="selo">Atração</div>
                     </div>
                     <div class="card__content">
@@ -165,7 +165,7 @@
                 </div>
                 <div class="card">
                     <div class="card__image">
-                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <img src="../../../Public/imgs/img-atracao-proev.png" alt="Produto artesanal" />
                         <div class="selo">Atração</div>
                     </div>
                     <div class="card__content">
@@ -181,7 +181,7 @@
                 </div>
                 <div class="card">
                     <div class="card__image">
-                        <img src="../../../Public/imgs/Proximos-Eventos-img/img-atracao-proev.png" alt="Produto artesanal" />
+                        <img src="../../../Public/imgs/img-atracao-proev.png" alt="Produto artesanal" />
                         <div class="selo">Atração</div>
                     </div>
                     <div class="card__content">

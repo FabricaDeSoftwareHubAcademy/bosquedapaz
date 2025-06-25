@@ -58,7 +58,7 @@
     <div class="box">
       <h2>LISTAR ADM</h2>
       <!-- Seta Voltar  -->
-      <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/imgs/imgs-lista-de-espera/seta-lispe.png" alt=""></a></div>
+      <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png"  alt=""></a></div>
       <div class="container">
         <!-- Formulário de Busca -->
         <form method="POST" id="formBusca">
@@ -105,9 +105,9 @@
   </div>
 
   <div class="bolas-fundo">
-    <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-    <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-    <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+    <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+    <img src="../../../Public/assets/img-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+    <img src="../../../Public/assets/img-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
   </div>
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
