@@ -1,66 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../../../Public/css/style-fale-conosco.css">
-    <title>Bosque da Paz</title>
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <!-- --> <!-- --> <!-- -->
+    <title>Suporte e Contato</title>
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-fale-conosco.css">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+    <!--  --> <!-- --> <!-- -->
 </head>
-<body>
-    <?php include "../../../Public/include/home/menu-home.html"?>
-    <div class="box-guilherme">
-        <section class="secao-formulario-guilherme">
-            <h1 class="titulo-formulario-guilherme">Fale Conosco!</h1>
 
-            <div class="area-formulario-guilherme">
-                <form class="formulario-guilherme" id="form" method="post" enctype='multipart/form-data'>
-                    <label>Nome completo</label>
-                    <input type="text" name="nome" id="campo-1" placeholder="Digite seu nome completo" required>
-
-                    <label>E-mail</label>
-                    <input type="email" name="email" id="campo-2" placeholder="exemplo@gmail.com" required>
-
-                    <label>Mensagem</label>
-                    <textarea name="mensagem" class="mensagem" placeholder="Digite aqui sua mensagem." required></textarea>
-                    
-                    <button class="botao-enviar-guilherme" id="enviar" name="enviar" value="enviar">Enviar</button>
+<body class="body__faleconosco">
+    <?php include "../../../Public/include/home/menu-home.html" ?>
+    <div class="container__faleconosco">
+        <!-- Lado direito -->
+        <div class="section__suporte">
+            <h1 class="suporte__titulo">Fale Conosco</h1>
+            <h1 class="suporte__subtitulo">Contate nossa equipe em casos de sugestões, duvidas, reclamações ou problemas.</h1>
+            <div class="suporte__box__formulario">
+                <form method="" action="" class="suporte__content__formulario">
+                    <div class="suporte__input__group">
+                        <label>Nome</label>
+                        <input type="text" name="campo-nome" id="campo_nome" class="campo__nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="suporte__input__group">
+                        <label>Email</label>
+                        <input type="email" name="campo-email" id="campo_email" class="campo__email" placeholder="exemplo@hotmail.com">
+                    </div>
+                    <div class="suporte__textarea__group">
+                        <label>Mensagem</label>
+                        <textarea name="campo-mensagem" id="campo_mensagem" class="campo__mensagem" placeholder="Escreva sua mensagem"></textarea>
+                    </div>
+                    <button type="submit" name="botao-enviar" id="botao_enviar" class="botao__enviar">Enviar</button>
                 </form>
             </div>
-        </section>
-
-        <section class="secao-informacoes-guilherme">
-            <div class="informacao-introducao-guilherme">
-                <div class="fundo-guilherme">
-                    <img src="../../../Public/imgs/img-area-contate/boneco-contate.png" alt="boneco" class="imagem-boneco-guilherme">
+        </div>
+        <!-- Lado direito -->
+        <!-- Separação -->
+        <div class="section__divisao">
+            <div class="linha"></div>
+                <img src="../../../Public/assets/boneco-contate.png" alt="" class="imagem-boneco">
+            <div class="linha"></div>
+        </div>
+        <!-- Separação -->
+        <!-- Lado esquerdo -->
+        <div class="section__contatos">
+            <h1 class="contatos__titulo">Você também pode entrar em contato conosco através<br>de nossos outros meios de comunicação.</h1>
+            <div class="section__box__contatos">
+                <div class="contato__email">
+                    <img src="../../../Public/assets/img-email.png" alt="">
+                    <h1><a href="mailto:contato@feirabosque.com.br">feirabosquedapaz@gmail.com</a></h1>
                 </div>
-                <h1 class="msg-guilherme">Possui dúvidas, reclamações, sugestões ou problemas? Entre em contato com nossa equipe preenchendo o formulário</h1>
+                <div class="contato__telefone">
+                    <img src="../../../Public/assets/img-telefone.png" alt="">
+                    <h1>(67) 9 9955-0017</h1>
+                </div>
+                <div class="contato__localizacao">
+                    <img src="../../../Public/assets/img-localizacao.png" alt="">
+                    <h1><a href="https://www.google.com/maps/place/R.+Kame+Takaiassu,+500+-+Carand%C3%A1+Bosque,+Campo+Grande+-+MS,+79032-290/@-20.4414258,-54.5750927,17z/data=!4m6!3m5!1s0x9486e8fa46b35bf1:0x4692d06d51800aa7!8m2!3d-20.4420265!4d-54.5745459!16s%2Fg%2F11bw3hvfwk?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D">R. Kame Takaiassu, 500 - Carandá Bosque, Campo Grande - MS</a></h1>
+                </div>
             </div>
-
-            <div class="informacao-contatos-guilherme">
-                <div class="informacao-titulo-guilherme">
-                    <h1>OUTROS MEIOS DE CONTATO</h1>
-                </div>
-                <div class="contatos-guilherme">
-                    <h1 class="contato-guilherme telefone"><strong>TELEFONE: </strong>(67) 4002-9822.</h1>
-                    <h1 class="contato-guilherme email"><strong>E-MAIL: </strong><a href="https://outlook.live.com">contato@feirabosque.com.br</a></h1>
-                    <h1 class="contato-guilherme localizacao"><strong>LOCALIZAÇÃO: </strong> R. Kame Takaiassu, Carandá Bosque, MS.</h1>
-                </div>
-            </div>
-        </section>
+        </div>
+        <!-- Lado esquerdo -->
     </div>
 
-    <div class="decoracoes-guilherme">
-        <a href="../../../index.php"><img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="btnVoltar" class="botao-voltar-guilherme"></a>
-        <img src="../../../Public/imgs/imagens-bolas/decoracao1.png" alt="deco1" class="decoracao1-guilherme">
-        <img src="../../../Public/imgs/imagens-bolas/azul-sem-fundo2.png" alt="deco2" class="decoracao2-guilherme">
-        <img src="../../../Public/imgs/imagens-bolas/decoracao3.png" alt="deco3" class="decoracao3-guilherme">
+    <div class="faleconosco__botao__voltar">
+        <a href="../../../index.php"><img src="../../../Public/assets/faleconosco-voltar.png" alt=""></a>
     </div>
 
-    <script src="../../../Public/js/js-home/js-fale-conosco.js"></script>
+    <div class="faleconosco__decoracao">
+        <img src="../../../Public/assets/faleconosco-decoracao1.png" alt="" class="faleconosco__bola1">
+        <img src="../../../Public/assets/faleconosco-decoracao2.png" alt="" class="faleconosco__bola2">
+        <img src="../../../Public/assets/faleconosco-decoracao3.png" alt="" class="faleconosco__bola3">
+    </div>
+
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
+
 </html>
