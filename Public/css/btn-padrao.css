@@ -7,6 +7,13 @@
     padding: .5rem 2rem;
 }
 
+.link-area-adm {
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+}
+
 .btn-voltar {
     width: 40px;
     height: 40px;

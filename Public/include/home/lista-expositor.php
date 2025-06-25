@@ -1,14 +1,14 @@
 <?php
 
 $src_imgs = [
-    0 => '../../../Public/imgs/img-home/akj-prime.png',
-    1 => '../../../Public/imgs/img-home/decorart.png',
-    2 => '../../../Public/imgs/img-home/cake-pet.png',
-    3 => '../../../Public/imgs/img-home/retalhos-e-chica.png',
-    4 => '../../../Public/imgs/img-home/akj-prime.png',
-    5 => '../../../Public/imgs/img-home/decorart.png',
-    6 => '../../../Public/imgs/img-home/cake-pet.png',
-    7 => '../../../Public/imgs/img-home/retalhos-e-chica.png',
+    0 => '../../../Public/imgs/akj-prime.png',
+    1 => '../../../Public/imgs/decorart.png',
+    2 => '../../../Public/imgs/retalhos-e-chica.png',
+    3 => '../../../Public/imgs/retalhos-e-chica.png',
+    4 => '../../../Public/imgs/akj-prime.png',
+    5 => '../../../Public/imgs/decorart.png',
+    6 => '../../../Public/imgs/retalhos-e-chica.png',
+    7 => '../../../Public/imgs/retalhos-e-chica.png',
 ];
 
 $colors = [

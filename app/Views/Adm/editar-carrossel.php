@@ -72,12 +72,14 @@
                 <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
             <div class="overlay" id="overlay"></div>
-            <?php include "../../../Public/include/modais/modal-aviso.html"; ?>
+            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+            <?php include "../../../Public/include/modais/modal-error.html"; ?>
         </div>
         
         <!-- bolas de fundo -->
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="" class="bola-verde2">
         <!-- <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="" class="bola-rosa"> -->
     </main>
 

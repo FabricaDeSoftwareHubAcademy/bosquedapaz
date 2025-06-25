@@ -45,81 +45,81 @@ inputImg3.addEventListener("change", readImage3, false);
 
 btnEditar = document.getElementById('btn-salvar');
 
-let overlay = document.getElementById('overlay')
-let closeModal = document.querySelector('.close-modal')
-let modalAviso = document.getElementById('modal-aviso');
-let mensagem = document.getElementById('mensagem')
-let explicacao = document.getElementById('explicacao')
-
-
-function abrirModal(){
-    overlay.style.display = "block"
-    modalAviso.showModal();
-}
-
-function fecharModal(){
-    document.getElementById(closeModal.getAttribute('data-modal')).close()
-    overlay.style.display = "none"
-    window.location.reload()
-}
 
 btnEditar.addEventListener('click', async function (event) {
     event.preventDefault()
 
-    let allInputs = document.getElementsByClassName('input')
+    openModalAtualizar()
+    document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
+    document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
+
+    // quando clicar no btn salvar envia para o banco
+    document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+        closeModalAtualizar()
+
+        let allInputs = document.getElementsByClassName('input')
     
-    if(allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0){
-        abrirModal();
-
-        closeModal.addEventListener('click', fecharModal)
-    }
-    else {
-        let inputs = document.querySelectorAll('[type=file]')
-        let erro = ''
-        inputs.forEach(element => {
-            if(element.files.length != 0){
-                var tamanho = (element.files[0].size / 1024) / 1024
-                if (tamanho > 5){
-                    erro  += ` ${element.files[0].name} é muito grande. Por favor envie uma imagem menor.`
-                }
-            }
-        });
-
-        if (erro.length > 0){
-            mensagem.innerText = 'A imagem enviada não esta de acordo com os padrões';
-            explicacao.innerText = erro
-            abrirModal()
-            closeModal.addEventListener('click', fecharModal)
+        // caso não seja feito nenhum upload cai nesse if que chama o modal erro
+        if(allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0){
+            document.getElementById('erro-title').innerText = 'Por favor envie alguma imagem'
+            document.getElementById('erro-text').innerText = 'Nâo é possivel atualizar o carrossel, nenhuma imagem enviada'
+            openModalError()
+    
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
         }
+
+        // caso evie algoma imagem cai no else
         else {
-            let formCarrossel = document.getElementById('form-carrossel')
-    
-            const formData = new FormData(formCarrossel);
-    
-            let dados_php = await fetch("../../../actions/action-carrossel.php", {
-                method: "POST",
-                body: formData
+            let inputs = document.querySelectorAll('[type=file]')
+            let erro = ''
+            inputs.forEach(element => {
+                if(element.files.length != 0){
+                    var tamanho = (element.files[0].size / 1024) / 1024
+                    if (tamanho > 5){
+                        erro  += ` ${element.files[0].name} é muito grande. Por favor envie uma imagem menor.`
+                    }
+                }
             });
     
-            let response = await dados_php.json();
+            // caso de erro em uma imagem entra no if
+            if (erro.length > 0){
+                document.getElementById('erro-title').innerText = 'Erro, imagem fora do padrão'
+                document.getElementById('erro-text').innerText = erro
+                openModalError()
     
-            if(response.erro == 0){
-                mensagem.innerText = response.message
-                explicacao.style.display = "none"
-                abrirModal()
-                closeModal.addEventListener('click', fecharModal)
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            }
+            // caso nao tenha nenhum erro faz o fecth
+            else {
+                let formCarrossel = document.getElementById('form-carrossel')
+        
+                const formData = new FormData(formCarrossel);
+        
+                let dados_php = await fetch("../../../actions/action-carrossel.php", {
+                    method: "POST",
+                    body: formData
+                });
+        
+                let response = await dados_php.json();
+        
+                if(response.erro == 0){
+                    openModalSucesso()
+                    document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
+                    document.getElementById('msm-sucesso').innerHTML = 'Edição realizada com sucesso'
+                    document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+                }
+        
+                else if(response.erro != 0){
+                    openModalError()
+                    document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+                }
             }
     
-            else if(response.erro != 0){
-                mensagem.innerText = response.message
-                explicacao.innerText = response.erro
-                abrirModal()
-                closeModal.addEventListener('click', fecharModal)
-            }
+    
         }
+    })
 
 
-    }
 
 
 
