@@ -65,3 +65,28 @@ btn_salvar.addEventListener('click', async function(event){
 
     
  })
+
+
+ function formatWhatsAppNumber(input) {
+    let value = input.value.replace(/\D/g, '');
+    let formattedValue = '';
+    
+    if (value.length > 0) {
+        // Assume código do Brasil se não informado
+        if (!value.startsWith('') && value.length <= 11) {
+            value = '' + value;
+        }
+        
+        // Formata: (dd) nnnnn-nnnn
+        formattedValue = '(' + value.substring(0, 2) + ') ';
+        
+        if (value.length > 2) {
+            formattedValue += value.substring(2, 7);
+            if (value.length > 7) {
+                formattedValue += '-' + value.substring(7, 11);
+            }
+        }
+    }
+    
+    input.value = formattedValue;
+}

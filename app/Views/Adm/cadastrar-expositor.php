@@ -29,9 +29,7 @@
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whatsapp" placeholder="Número de whatsapp"
-                                pattern="[0-9]{10,11}" required
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            <input type="tel" name="whatsapp" id="whatsapp" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
                         </div>
                         <div class="input">
                             <label>E-mail:</label>

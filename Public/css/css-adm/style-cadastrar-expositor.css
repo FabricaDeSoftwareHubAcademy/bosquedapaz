@@ -84,11 +84,10 @@ body {
     height: auto;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -90px;
+    top: -120px;
 }
 
 .formularios div {
@@ -199,12 +198,13 @@ body {
     display: flex;
     gap: 20px;
     position: relative;
-    top: 210px;
+    top: 250px;
+    left: 25%;
 }
 
 
 .btn {
-    padding: 10px 20px;
+    padding: 10px 0px;
     border-radius: 10px;
     color: white;
     font-weight: bold;
@@ -216,14 +216,16 @@ body {
 }
 
 .btn-salvar {
+    width: 80%;
     background-color: #007E70;
     box-shadow: 0px 5px 10px rgba(0, 126, 111, 0.5);
     position: relative;
-    left: 120%;
+    left: 90%;
     top: 60px;
 }
 
 .btn-cancelar {
+    width: 80%;
     background-color: #FF3877;
     box-shadow: 0px 5px 10px rgba(0, 126, 111, 0.5);
 }
@@ -231,8 +233,9 @@ body {
 .btns {
     width: 100%;
     display: flex;
-    justify-content: start;
     margin-top: 20px;
+    position: relative;
+    left: -50%;
 }
 
 .voltar .img-voltar {
@@ -283,6 +286,14 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+}
+
+@media (max-width:1500px) {
+    .formularios{
+        position: relative;
+        top: -40px;
+        left: 5%;
+    }
 }
 
 
@@ -465,7 +476,7 @@ body {
 
     .btn-salvar{
         position: relative;
-        left: 37%;
+        left: 20%;
     }
 
     .btn-cancelar{
