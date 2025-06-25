@@ -35,7 +35,7 @@ class Boleto {
     }
 
     public function ListarBoletos() {
-        $banco = new Database();
+        $banco = new Database(); 
         return $banco->listar_todos_boletos()->fetchAll(PDO::FETCH_ASSOC);
     }
 
