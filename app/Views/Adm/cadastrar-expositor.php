@@ -32,9 +32,7 @@
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whatsapp" placeholder="Número de whatsapp"
-                                pattern="[0-9]{10,11}" required
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            <input type="tel" name="whatsapp" id="whatsapp" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
                         </div>
                         <div class="input">
                             <label>E-mail:</label>
@@ -59,7 +57,7 @@
 
                         <div class="input">
                             <label for="optionInput3">Categorias</label>
-                            <select name="id_categoria" id="categorias" class="select" require>
+                            <select name="id_categoria" id="categorias" class="" require>
                                 <!-- OPTIONS GERADOS PELO JS -->
                             </select>
                         </div>
@@ -72,9 +70,9 @@
                     </div>
 
                     <div class="form-expo">
-                        <label for="tipo-expo">Tipo de exposição:</label>
-                        <div class="custom-dropdown">
-                            <select name="" id="" class="select">
+                        <div id="tipo_expo" class="form-group">
+                            <label id="expo_label" for="tipo-expo">Tipo de exposição:</label>
+                            <select name="" id="tipo_expo" class="select">
                                 <option value="">Selecione</option>
                                 <option value="trailer">Trailer</option>
                                 <option value="food-truck">Food truck</option>
@@ -82,33 +80,30 @@
                             </select>
                         </div>
 
-                        <label for="energia">Precisa de energia?</label>
-                        <div class="custom-dropdown">
+                        <div class="form-group-energia">
+                            <label id="energia_label" for="energia">Precisa de energia?</label>
                             <select name="energia" id="energia" class="select">
-
                                 <option value="">Selecione</option>
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
-
                             </select>
                         </div>
 
-                        <label for="equipamentos">Voltagens dos equipamentos</label>
-                        <div class="custom-dropdown">
+                        <div class="form-group">
+                            <label id="volt_label" for="equipamentos">Voltagens dos equipamentos</label>
                             <select name="voltagem" id="voltagem" class="select">
-
                                 <option value="">selecione</option>
                                 <option value="110v">110v</option>
                                 <option value="220v">220v</option>
-
                             </select>
                         </div>
-                        <div class="input-group">
+
+                        <div class="form-files">
                             <label>Escolher Imagens:</label>
                             <input type="file" name="files[]" id="files" multiple="multiple">
                         </div>
-
                     </div>
+
 
                     <div class="btn-conf">
                         <div class="btn-finalizar">
@@ -127,7 +122,7 @@
             </form>
 
         </div>
-<!-- 
+
         <div id="modal_salvar" class="oculta">
             <div class="modal_conteudo">
                 <p class="text_modal">Cadastro salvo com sucesso!</p>
@@ -135,7 +130,7 @@
                     <button id="fechar_modal">Fechar</button>
                 </form>
             </div>
-        </div> -->
+        </div>
 
         </div>
     </main>
