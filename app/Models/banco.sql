@@ -40,7 +40,7 @@ CREATE TABLE pessoa(
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
 
-insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "123456", 1);
+-- insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "123456", 1);
 
 CREATE TABLE imagem(
 	id_imagem INT NOT NULL AUTO_INCREMENT,
@@ -51,11 +51,6 @@ CREATE TABLE imagem(
     imagem5 VARCHAR(255) NOT NULL,
     PRIMARY KEY(id_imagem)
 );
-
--- CREATE TABLE tipo_expositor(
--- 	id_tipo INT NOT NULL AUTO_INCREMENT,
---     
--- );
 
 
 CREATE TABLE expositor(

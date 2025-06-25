@@ -9,7 +9,7 @@ use app\Controller\Expositor;
 if (isset($_GET['filtro'])){
     $exp = new Expositor();
     try {
-        $response = $exp->listar($_GET['filtro']);
+        $response = $exp->filtrar_expositro($_GET['filtro']);
 
         if (count($response) < 1){
             echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
@@ -23,17 +23,28 @@ if (isset($_GET['filtro'])){
     }
 
 }
-else if(!isset($_GET['filtro'])){
+if(isset($_GET['buscar'])){
     $exp = new Expositor();
     
-    try {
+    if (empty($_GET['buscar'])){
         $response = $exp->listar();
+    
+        if (count($response) < 1){
+            echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
+        }else{
+            echo json_encode(["expositores" => $response, 'status' => 200]);
+        }
+    }
+    else if (!empty($_GET['buscar'])){
+        $response = $exp->listar($id = $_GET['buscar']);
 
         if (count($response) < 1){
             echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
         }else{
             echo json_encode(["expositores" => $response, 'status' => 200]);
         }
+    }
+    try {
        
     } catch (\Throwable $th) {
         $response = ['status' => '500'];
