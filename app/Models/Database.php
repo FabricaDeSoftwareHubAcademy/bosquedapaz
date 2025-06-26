@@ -192,7 +192,7 @@ class Database {
 
     public function filter_exp($filtro){
         
-        $query = "SELECT exp.id_pessoa, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
+        $query = "SELECT exp.id_pessoa, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
         pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
         cat.id_categoria, cat.descricao, cat.cor, cat.icone
         FROM expositor AS exp 
@@ -215,7 +215,7 @@ class Database {
     public function select_exp($where = null){
         $where = $where != null ? ' WHERE '.$where : '';
 
-        $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
+        $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
         pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
         cat.id_categoria, cat.descricao, cat.cor, cat.icone
         FROM expositor AS exp 
