@@ -346,7 +346,7 @@
 
                 <td><button class="status active">Ativo</button></td>
                 <td>
-                  <a class="edit-icon" href="editar-expositor.php">
+                  <a class="edit-icon" href="editar-expositor.php?id=123&nome=Joao&email=joao@email.com">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                   <a class="delete-icon">

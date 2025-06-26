@@ -128,5 +128,5 @@
     <img class="perfilEdit-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
     <img class="perfilEdit-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
 </body>
-
+<script src="../../../Public/js/js-adm/js-editar-editar-expositor.js"></script>
 </html>
