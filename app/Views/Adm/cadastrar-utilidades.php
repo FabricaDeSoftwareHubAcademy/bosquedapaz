@@ -77,7 +77,7 @@ error_reporting(E_ALL);
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/cadastrar-utilidade.js"></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
 </body>
 
 </html>

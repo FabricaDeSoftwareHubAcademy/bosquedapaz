@@ -39,6 +39,29 @@ use app\Models\Database;
     
             return $res;
         }
+
+        public function editar($id, $titulo, $descricao, $data_inicio, $data_fim, $imagem) {
+            $db = new Database('utilidade_publica');
+            $res = $db->editar("id =" . $id ,[
+                'titulo' => $titulo,
+                'descricao' => $descricao,
+                'data_inicio' => $data_inicio,
+                'data_fim' => $data_fim,
+                'imagem' => $imagem
+            ]);
+    
+            return $res;
+        }
+
+        public function excluir($id) {
+           try {
+            $db = new Database('utilidade_publica');
+            $res = $db->excluir("id =" . $id);
+
+           } catch (\Throwable $th) {
+            //throw $th;
+           }
+        }
     
     }
 
