@@ -11,64 +11,66 @@
 <?php include "../../../Public/include/home/menu-home.html" ?>
 
         <section class="tela-ult">
-            <h1 class="nome-tela">Utilidades Publicas</h1>
-            <div class="conteiner__cards">
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
+            <div class="conteiner__ult">
+                <h1 class="nome-tela">Utilidades Publicas</h1>
+                <div class="conteiner__cards">
+                    <div class="card">
+                        <div class="por-cima-card">
+                            <div class="parte-superior">
+                                <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
+                            </div>
+                            <div class="parte-inferior">
+                                <h1 class="nome-card">Nome</h1>
+                                <button class="meu-botao">Saiba Mais</button>
+                                <div class="linha-decorativa-1"></div>
+                                <div class="container__decorativo">
+                                    <div class="linha-decorativa-2"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
+                    <div class="card">
+                        <div class="por-cima-card">
+                            <div class="parte-superior">
+                                <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
+                            </div>
+                            <div class="parte-inferior">
+                                <h1 class="nome-card">Nome</h1>
+                                <button class="meu-botao">Saiba Mais</button>
+                                <div class="linha-decorativa-1"></div>
+                                <div class="container__decorativo">
+                                    <div class="linha-decorativa-2"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
-                            </div> 
+                    <div class="card">
+                        <div class="por-cima-card">
+                            <div class="parte-superior">
+                                <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
+                            </div>
+                            <div class="parte-inferior">
+                                <h1 class="nome-card">Nome</h1>
+                                <button class="meu-botao">Saiba Mais</button>
+                                <div class="linha-decorativa-1"></div>
+                                <div class="container__decorativo">
+                                    <div class="linha-decorativa-2"></div>
+                                </div> 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
+                    <div class="card">
+                        <div class="por-cima-card">
+                            <div class="parte-superior">
+                                <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
+                            </div>
+                            <div class="parte-inferior">
+                                <h1 class="nome-card">Nome</h1>
+                                <button class="meu-botao">Saiba Mais</button>
+                                <div class="linha-decorativa-1"></div>
+                                <div class="container__decorativo">
+                                    <div class="linha-decorativa-2"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
