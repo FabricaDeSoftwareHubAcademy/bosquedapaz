@@ -15,6 +15,17 @@ body,html{
 
 
 .tela-ult{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: 110px;
+}
+
+.conteiner__ult{
     width: 90%;
     height: 90%;
     background-color: #f4f4f4a2;
@@ -152,7 +163,7 @@ body,html{
 
 
 /* Responsividades: */
-/* @media (max-width: 575.98px){
+@media (max-width: 575.98px){
 
     .conteiner__cards{
         flex-direction: column;
@@ -305,7 +316,7 @@ body,html{
 
     .conteiner__cards{
         display: grid;
-        grid-template-columns: 3fr 3fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .card {
@@ -352,6 +363,16 @@ body,html{
  
 @media (min-width: 1200px) and (max-width: 1399.98px){
 
+    .conteiner__ult{
+        overflow: hidden;
+    }
+
+    .conteiner__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
+
     .card {
         width: 223px;
         height: 400px;
@@ -385,4 +406,4 @@ body,html{
         height: 400px;
         position: relative;
     }
-} */
+}
