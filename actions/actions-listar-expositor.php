@@ -6,48 +6,56 @@ require_once('../vendor/autoload.php');
 
 use app\Controller\Expositor;
 
-if (isset($_GET['filtro'])){
-    $exp = new Expositor();
+if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     try {
-        $response = $exp->filtrar_expositro($_GET['filtro']);
+        $expositor = new Expositor();
 
-        if (count($response) < 1){
-            echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
-        }else{
-            echo json_encode(["expositores" => $response , 'status' => 200]);
+        if(isset($_GET['filtro'])){
+            $filtrar = $expositor->filtrar_exp($_GET['filtro']);
+            if ($filtrar) {
+                $response = [
+                    'expositores' => $filtrar,
+                    'status' => 200
+                ];
+            }else {
+                $response = [
+                    'status' => 400,
+                    'msg' => 'Nenhum expositor encontrado'
+                ];
+            }
+            echo json_encode($response);
         }
-       
+        else if (isset($_GET['buscar'])){
+            $buscar_id = $expositor->listar($_GET['buscar']);
+            if ($buscar_id) {
+                $response = [
+                    'expositores' => $buscar_id,
+                    'status' => 200
+                ];
+            }else {
+                $response = [
+                    'status' => 400,
+                    'msg' => 'Nenhum expositor encontrado'
+                ];
+            }
+            echo json_encode($response);
+        }else {
+            $buscar = $expositor->listar();
+            if ($buscar) {
+                $response = [
+                    'expositores' => $buscar,
+                    'status' => 200
+                ];
+            }else {
+                $response = [
+                    'status' => 400,
+                    'msg' => 'Nenhum expositor encontrado'
+                ];
+            }
+            echo json_encode($response);
+        }
+
     } catch (\Throwable $th) {
-        $response = ['status' => '500'];
-        echo json_encode($response);
-    }
-
-}
-if(isset($_GET['buscar'])){
-    $exp = new Expositor();
-    
-    if (empty($_GET['buscar'])){
-        $response = $exp->listar();
-    
-        if (count($response) < 1){
-            echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
-        }else{
-            echo json_encode(["expositores" => $response, 'status' => 200]);
-        }
-    }
-    else if (!empty($_GET['buscar'])){
-        $response = $exp->listar($id = $_GET['buscar']);
-
-        if (count($response) < 1){
-            echo json_encode(["msg" => "Nenhum expositor encontrado.", 'status' => 201]);
-        }else{
-            echo json_encode(["expositores" => $response, 'status' => 200]);
-        }
-    }
-    try {
-       
-    } catch (\Throwable $th) {
-        $response = ['status' => '500'];
-        echo json_encode($response);
+        //throw $th;
     }
 }

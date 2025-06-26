@@ -209,24 +209,32 @@ class Expositor extends Pessoa
         return $res;
     }
     
-    public function filtrar_expositro($filtro){
-        $db = new Database('expositor');
-        
-        $res = $db->filtrar_expositor($filtro)->fetchAll(PDO::FETCH_ASSOC);
-        return $res;
+    public function filtrar_exp($filtro){
+        if (!empty($filtro)){
+            $db = new Database('expositor');
+
+            $filtrar = $db->filter_exp($filtro)->fetchAll(PDO::FETCH_ASSOC);
+
+            return $filtrar;
+        }else {
+            return FALSE;
+        }
     }
 
     public function listar($id = null)
     {
-        $db = new Database('expositor');
-        
-        if ($id){
-            $res = $db->select_expositor("id_expositor = ".$id)->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
-        }
-         else {
-            $res = $db->select_expositor()->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
+        if (empty($id)){
+            $db = new Database('expositor');
+
+            $buscar = $db->select_exp()->fetchAll(PDO::FETCH_ASSOC);
+
+            return $buscar;
+        }else {
+            $db = new Database('expositor');
+
+            $buscar_id = $db->select_exp('id_expositor = '.$id)->fetch(PDO::FETCH_ASSOC);
+
+            return $buscar_id;
         }
     }
 }

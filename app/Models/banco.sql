@@ -42,22 +42,11 @@ CREATE TABLE pessoa(
 
 -- insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "123456", 1);
 
-CREATE TABLE imagem(
-	id_imagem INT NOT NULL AUTO_INCREMENT,
-    imagem1 VARCHAR(255) NOT NULL,
-    imagem2 VARCHAR(255) NOT NULL,
-    imagem3 VARCHAR(255) NOT NULL,
-    imagem4 VARCHAR(255) NOT NULL,
-    imagem5 VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id_imagem)
-);
-
 
 CREATE TABLE expositor(
 	id_expositor INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     id_categoria INT NOT NULL,
-    id_imagem INT NOT NULL,
     nome_marca VARCHAR(100) NOT NULL,
     num_barraca INT NULL,
     voltagem VARCHAR(45) NULL,
@@ -72,8 +61,16 @@ CREATE TABLE expositor(
     status_exp ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
-    FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria),
-    FOREIGN KEY(id_imagem) REFERENCES imagem(id_imagem)
+    FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria)
+);
+
+CREATE TABLE imagem(
+	id_imagem INT NOT NULL AUTO_INCREMENT,
+    caminho varchar(255),
+    posicao int,
+    id_expositor int not null,
+    PRIMARY KEY(id_imagem),
+    FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
 );
 
 CREATE TABLE colaborador(
