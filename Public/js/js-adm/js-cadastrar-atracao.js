@@ -1,41 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const descricaoInput = document.getElementById('descricao_atracao');
+    const contador = document.getElementById('contador-caracteres');
     const form = document.getElementById('form-atracao');
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    const idEvento = document.getElementById('id_evento').value;
 
-        const formData = new FormData(form);
+    descricaoInput.addEventListener('input', () => {
+        const restante = 250 - descricaoInput.value.length;
+        contador.textContent = `${restante} caracteres restantes`;
+    });
 
-        // Pegando parâmetros da URL
-        const params = new URLSearchParams(window.location.search);
-        const id_evento = params.get('id_evento');
-        const nome_evento = params.get('nome_evento');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-        if (!id_evento || !nome_evento) {
-            alert("Evento não identificado corretamente.");
+        const nome = document.getElementById('nome_atracao').value.trim();
+        const descricao = descricaoInput.value.trim();
+        const imagem = document.getElementById('file').files[0];
+
+        if (!nome || !descricao || !imagem || !idEvento) {
+            alert('Preencha todos os campos obrigatórios e selecione uma imagem.');
             return;
         }
 
-        formData.append('id_evento', id_evento);
+        const formData = new FormData();
+        formData.append('nome_atracao', nome);
+        formData.append('descricao_atracao', descricao);
+        formData.append('id_evento', idEvento);
+        formData.append('file', imagem);
 
         try {
-            const response = await fetch('../../../actions/action-cadastrar-atracao.php', {
+            const resposta = await fetch('../../../actions/action-cadastrar-atracao.php', {
                 method: 'POST',
                 body: formData
             });
 
-            const data = await response.json();
+            const texto = await resposta.text();
 
-            if (data.status === 'sucesso') {
-                alert(data.mensagem);
-                window.location.href = `gerenciar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}`;
-            } else {
-                alert(data.mensagem || "Erro ao cadastrar atração.");
+            try {
+                const resultado = JSON.parse(texto);
+                console.log('Resposta JSON:', resultado);
+
+                if (resultado.status === 'sucesso') {
+                    alert(resultado.mensagem);
+                    window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
+                } else {
+                    alert(resultado.mensagem);
+                }
+            } catch (erroJson) {
+                console.error('Resposta não é JSON válido:', texto);
+                alert('Erro inesperado: resposta inválida do servidor.');
             }
 
         } catch (error) {
             console.error('Erro ao cadastrar atração:', error);
-            alert("Erro inesperado ao cadastrar atração.");
+            alert('Erro inesperado. Tente novamente mais tarde.');
         }
     });
 });

@@ -1,3 +1,5 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,7 +38,7 @@
                             </tr>
                         </thead>
                             <tbody id="lista-eventos">
-        <!-- Eventos serão adicionados aqui via JS -->
+                            <!--JS -->
                             </tbody>
                     </table>
                 </div>

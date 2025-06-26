@@ -1,0 +1,120 @@
+.modal-loading {
+    padding: 1rem 0rem;
+    border: none;
+    border-radius: .5rem;
+    margin: auto;
+    outline: none;
+}
+
+.modal-loading::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.content-close {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 1rem 0px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.fechar-modal-loading {
+    font-size: 1.5rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.fechar-modal-loading:hover {
+    color: #FF3877;
+    transition: all .2s ease-in;
+}
+
+.content-modal {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.danger {
+    font-size: 4rem;
+    color: red;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.deletar-text {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.msm-modal {
+    font-size: 1rem;
+}
+
+.content-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.btn-modal-deletar {
+    flex: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem 0px;
+    border-radius: .5rem;
+    border: none;
+    transition: all .2s ease-in;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.deletar-modal-salvar {
+    border: 2px solid #FF3877;
+    background-color: transparent;
+    color: black;
+}
+
+.deletar-modal-salvar:hover {
+    background-color: #8a1e40;
+    border-color: #8a1e40;
+    color: white;
+    transition: all .2s ease-in;
+}
+
+.deletar-modal-cancelar {
+    background-color: red;
+}
+
+.deletar-modal-cancelar:hover {
+    background-color: darkred;
+    transition: all .2s ease-in;
+}
+
+@media screen and (max-width: 550px) {
+    .content-btns {
+        flex-direction: column;
+        width: 100%;
+        align-items: normal;
+    }
+
+    .loading-text {
+        font-size: 1.2rem;
+    }
+
+    .msm-modal {
+        font-size: .9rem;
+    }
+}

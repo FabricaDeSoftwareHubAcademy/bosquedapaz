@@ -38,14 +38,3 @@
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 </body>
 </html>
-
-    
-
-
-
-
-
-
-<!-- 
-<script src="../../../Public/js/js-home/carrossel.js" defer></script>
-<script src="../../../Public/js/js-home/subir-num.js"></script> -->

@@ -44,7 +44,7 @@
     </main>
     
     <!-- Imagens Decorativas -->
-    <div class="imgs__decorative1"><img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt=""></div>
+    <div class="imgs__decorative1"><img src="../../../Public/assets/imagens-bolas/bola-verde1.png" alt=""></div>
     <div class="imgs__decorative2"><img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt=""></div>
     <div class="imgs__decorative3"><img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt=""></div>
    

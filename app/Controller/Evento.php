@@ -7,55 +7,13 @@ use app\Models\Database;
 
 class Evento
 {
-    protected $id_evento;
-    protected $nome_evento;
-    protected $descricao;
-    protected $data_evento;
-    protected $status;
-    protected $banner;
+    public int $id_evento;
+    public string $nome_evento;
+    public string $descricao;
+    public string  $data_evento;
+    public int $status;
+    public string $banner;
 
-    public function getId() {
-        return $this->id_evento;
-    }
-    
-    public function getNome() {
-        return $this->nome_evento;
-    }
-
-    public function getDescricao() {
-        return $this->descricao;
-    }
-
-    public function getData() {
-        return $this->data_evento;
-    }
-    public function getStatus() {
-        return $this->status;
-    }
-
-    public function getBanner() {
-        return $this->banner;
-    }
-
-    public function setNome($nome_evento){
-        $this->nome_evento = $nome_evento;
-    }
-
-    public function setDescricao($descricao){
-        $this->descricao = $descricao;
-    }
-
-    public function setData($data){
-        $this->data_evento = $data;
-    }
-
-    public function setStatus($status){
-        $this->status = $status;
-    }
-
-    public function setBanner($banner){
-        $this->banner = $banner;
-    }
 
     public function cadastrar()
     {

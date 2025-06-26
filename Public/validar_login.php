@@ -23,15 +23,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             'perfil' => $login->perfil,
         ];
 
-        // print_r($_SESSION['login']['adm']);
-
         if($_SESSION['login']['perfil'] == 1){
-            header('Location: ../app/Views/adm/Area-Adm.php');
+            header('Location: ../app/Views/Adm/Area-Adm.php');
+            exit;
         }else{
-            header('Location: ../app/Views/client/area-expo.php');
+            header('Location: ../app/Views/Client/area-expo.php');
+            exit;
         }
         exit;
-    } else{
+    } 
+    else{
         header('Location: tela-login.php?erro=1');
         exit;
     }

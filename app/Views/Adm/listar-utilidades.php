@@ -1,3 +1,5 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+
 <?php include "../../../Public/include/menu-adm.html" ?>
 
 <!DOCTYPE html>

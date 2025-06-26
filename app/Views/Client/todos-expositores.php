@@ -22,20 +22,22 @@
         <h1 class="title-all-expo">expositores</h1>
         <div class="select-area">
             <select name="selecao-categoria" id="select-cat" class="select-cat">
-                <option value="inicio" class="opcoes-cat">Todas as Categorias</option>
+                <option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>
                 <option value="artesanato" class="opcoes-cat">Artesanato</option>
-                <option value="antiguidade" class="opcoes-cat">Antiguidade</option>
+                <option value="tempora" class="opcoes-cat">tempora</option>
+                <option value="autem" class="opcoes-cat">autem</option>
+                <option value="iusto" class="opcoes-cat">iusto</option>
                 <option value="colecionismo" class="opcoes-cat">Colecionismo</option>
             </select>
             <div class="vir-aqui" id="artesanato"></div>
             <div class="procurar">
                 <h3 class="title-pes">Pesquisar por expositor:</h3>
                 <div class="pesquisa-expo"> <!-- area de pesquisa -->
-                    <input class="input-pes" type="text" placeholder="Pesquisar por...">
+                    <input class="input-pes" id="input_pesquisa" type="text" placeholder="Pesquisar por...">
                 </div>
             </div>
         </div>
-        <div class="area-all-cards" id="inicio">
+        <div class="area-all-cards" id="content-cards">
             
         </div>
     </main>
@@ -43,6 +45,7 @@
     <?php include '../../../Public/include/home/perfil-expositor.html' ?>
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
+    <script src="../../../Public/js/js-home/todos-expositores.js"></script>
 </body>
 
 </html>

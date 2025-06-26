@@ -1,3 +1,6 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+
+
 <html lang="pt-br">
 
 <head>
@@ -28,7 +31,6 @@
                         <thead>
                             <tr>
                                 <th class="usuario-col">Nome da atração</th>
-                                <th>Data</th>
                                 <th>Editar</th>
                                 <th>Foto</th>
                             </tr>
@@ -48,9 +50,8 @@
                 </button>
                 <div class="b-voltar"></div>
 
-                <div class="botoes">
-                    <button id="nova-atracao">Nova Atração</button>
-                </div>
+
+                <button id="nova-atracao" >Nova Atração</button>
             </div>
         </div>
     </main>
@@ -62,7 +63,7 @@
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../public/js/js-adm/js-gerenciar-atracao.js"></script>
+    <script src="../../../Public/js/js-adm/js-gerenciar-atracao.js"></script>
 </body>
 
 </html>
