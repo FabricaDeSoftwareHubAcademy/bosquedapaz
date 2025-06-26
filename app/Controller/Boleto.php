@@ -29,6 +29,7 @@ class Boleto {
             'mes_referencia' => $this->mes_referencia,
             'valor' => $this->valor,
             'vencimento' => $this->vencimento,
+            'status_exp' => $this->status,
             'id_expositor' => $this->id_expositor
         ]);
         return $execucao;

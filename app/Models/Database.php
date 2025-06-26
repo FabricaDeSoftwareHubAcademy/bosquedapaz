@@ -156,14 +156,14 @@ class Database
     {
         $query = "SELECT
         b.id_boleto, e.id_expositor,
-        p.nome, b.vencimento,
+        p.nome, b.vencimento as vencimento,
         b.mes_referencia,
         b.valor, e.status_exp
         FROM boleto b 
         INNER JOIN expositor e ON b.id_expositor = e.id_expositor
         INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
-        WHERE b.vencimento BETWEEN :data_inicial and :data_final
-        ORDER BY b.vencimento ASC;";
+        WHERE b.vencimento BETWEEN STR_TO_DATE(:data_inicial, '%d/%m/%Y') and STR_TO_DATE(:data_final, '%d/%m/%Y')
+        ORDER BY b.vencimento ASC";
 
         $binds = [
             ":data_inicial" => $data_inicial,
