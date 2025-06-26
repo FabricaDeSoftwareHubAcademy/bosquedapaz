@@ -50,19 +50,25 @@
                         </div>
 
                         <div class="btn-cancelar-salvar">
+                            <a href="gerenciar-eventos.php" class="voltar">
+                                    <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
+                            </a> 
+
                             <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
+                            
                             <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
+ 
                         </div>
                         
                     </form>
                 </div>
 
                     
-                <div class="btns">
+                <!-- <div class="btns">
                     <a href="gerenciar-eventos.php" class="voltar">
                         <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
                     </a>                  
-                </div>
+                </div> -->
         </div>
         
     </main>
