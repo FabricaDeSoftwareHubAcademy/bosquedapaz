@@ -19,7 +19,7 @@
         <div class="perfilEdit-box">
             <h1 class="perfilEdit-title">Editar Perfil</h1>
 
-            <form action="#" class="perfilEdit-form">
+            <form action="../../../actions/action-editar-expositor.php" method="POST" class="perfilEdit-form" id="perfilEdit-form-id">
 
                 <section class="perfilEdit-empresas">
 

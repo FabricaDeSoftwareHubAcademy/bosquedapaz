@@ -222,42 +222,16 @@ class Expositor extends Pessoa
         }
     }
 
-    public function editar($id){
+    public function editar($id,$nome_marca,$descricao){
+
         $db = new Database('expositor');
         $res = $db->update(
             'id_expositor = ' . $id, // Usa o ID recebido
             [
-                'descricao' => $this->descricao,
-                'nome_marca' => $this->nome_marca,
+                'descricao' => $descricao,
+                'nome_marca' => $nome_marca,
             ]
         );
-        return $res;
-
-        $db = new Database('pessoa');
-        $res = $db->update(
-            'id_pessoa = ' . $id,
-            [
-                'telefone' => $this->telefone,
-                'link_instagram' => $this->link_instagram,
-                'link_facebook' => $this->link_facebook,
-                'link_whats' => $this->link_whats
-            ] 
-        );
-
-        return $res;
-
-        $db = new Database('imagem');
-        $res = $db->update(
-            'id_imagem = ' . $id,
-            [
-                'imagem1' => $this->imagem1,
-                'imagem2' => $this->imagem2,
-                'imagem3' => $this->imagem3,
-                'imagem4' => $this->imagem4,
-                'imagem5' => $this->imagem5
-            ]
-        );
-
         return $res;
     }
 }
