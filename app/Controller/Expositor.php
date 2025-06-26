@@ -7,6 +7,7 @@ require_once('../vendor/autoload.php');
 use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
+use app\Controller\Imagem;
 
 
 class Expositor extends Pessoa
@@ -231,9 +232,13 @@ class Expositor extends Pessoa
             return $buscar;
         }else {
             $db = new Database('expositor');
+            $imagem = new Imagem();
+
+            $buscar_img = $imagem->listar($id)->fetchAll(PDO::FETCH_ASSOC);
 
             $buscar_id = $db->select_exp('id_expositor = '.$id)->fetch(PDO::FETCH_ASSOC);
 
+            $buscar_id['imagens'] = $buscar_img;
             return $buscar_id;
         }
     }

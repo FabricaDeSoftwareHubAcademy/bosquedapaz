@@ -208,6 +208,7 @@ class Database {
 
         $res = $this->execute($query);
 
+
         return $res ? $res : FALSE;
     }
     
@@ -224,6 +225,17 @@ class Database {
         ON pes.id_pessoa = exp.id_pessoa ". $where;
 
         return $this->execute($query);
+    }
+
+    public function select_img($id = null){
+        if (!empty($id)){
+
+            $query = "SELECT * FROM imagem WHERE id_expositor = ". $id;
+    
+            return $this->execute($query);
+        }else {
+            return false;
+        }
     }
 
     public function sts_adm($id_colaborador, $novoStatus) {

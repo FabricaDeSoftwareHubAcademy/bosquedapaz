@@ -56,6 +56,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
         }
 
     } catch (\Throwable $th) {
-        //throw $th;
+        $response = [
+            'status' => 500,
+            'msg' => 'Erro no servidor'. $th
+        ];
+        echo json_encode($response);
     }
 }
