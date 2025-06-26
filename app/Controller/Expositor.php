@@ -221,6 +221,17 @@ class Expositor extends Pessoa
             return FALSE;
         }
     }
+    public function filtrar_exp_categoria($cat){
+        if (!empty($cat)){
+            $db = new Database('expositor');
+
+            $buscar_cat = $db->select_exp_catgoria($cat)->fetchAll(PDO::FETCH_ASSOC);
+
+            return $buscar_cat;
+        }else {
+            return FALSE;
+        }
+    }
 
     public function listar($id = null)
     {

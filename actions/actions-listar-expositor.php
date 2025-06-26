@@ -39,6 +39,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
                 ];
             }
             echo json_encode($response);
+        }else if (isset($_GET['categoria'])){
+            $buscar_cat = $expositor->filtrar_exp_categoria($_GET['categoria']);
+            if ($buscar_cat) {
+                $response = [
+                    'expositores' => $buscar_cat,
+                    'status' => 200
+                ];
+            }else {
+                $response = [
+                    'status' => 400,
+                    'msg' => 'Nenhum expositor encontrado'
+                ];
+            }
+            echo json_encode($response);
         }else {
             $buscar = $expositor->listar();
             if ($buscar) {

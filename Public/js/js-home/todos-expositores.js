@@ -192,3 +192,52 @@ inputPesquisar.addEventListener('keyup', async () => {
         GetExpositores()
     }
 })
+
+let opcoesCategoria = document.getElementById('select-cat')
+
+opcoesCategoria.addEventListener('change', async () => {
+    console.log(opcoesCategoria.value)
+    let dados = await fetch(`../../../actions/actions-listar-expositor.php?categoria=${opcoesCategoria.value}`)
+
+    let response = await dados.json()
+
+    contentCards.innerHTML = ''
+
+    if (response.status == 200) {
+        response.expositores.forEach(element => {
+            
+            contentCards.innerHTML += `
+            <div class="sobre_card">
+                 <div class="content-card-expo" id="card">
+                     <div class="card-per-expo">
+                         <div class="head-card">
+                             <img src="" alt="" class="img-perfil-expo">
+                         </div>
+                         <div class="body-card">
+                             <h3 class="nome-expo">${element.nome_marca}</h3>
+                             <div class="detalhes-expo">
+                                 <p class="para-cate">
+                                     Categoria:
+                                     <span class="span-cate">
+                                         ${element.descricao}
+                                     </span>
+                                 </p>
+                                 <p class="para-color">
+                                     Rua:
+                                     <span class="span-color" style="background-color: ${element.cor_rua};">
+                                     </span>
+                                 </p>
+                             </div>
+                             <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             `
+        });
+    }
+    else {
+        contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
+    }
+}
+)
