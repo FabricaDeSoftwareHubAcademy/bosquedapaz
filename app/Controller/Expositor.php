@@ -7,6 +7,7 @@ require_once('../vendor/autoload.php');
 use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
+use app\Controller\Imagem;
 
 
 class Expositor extends Pessoa
@@ -208,17 +209,37 @@ class Expositor extends Pessoa
         );
         return $res;
     }
+    
+    public function filtrar_exp($filtro){
+        if (!empty($filtro)){
+            $db = new Database('expositor');
 
-    public function listar($busca = null)
+            $filtrar = $db->filter_exp($filtro)->fetchAll(PDO::FETCH_ASSOC);
+
+            return $filtrar;
+        }else {
+            return FALSE;
+        }
+    }
+
+    public function listar($id = null)
     {
-        $db = new Database('expositor');
-        
-        if ($busca) {
-            $res = $db->filtrar_expositor($busca)->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
-        } else {
-            $res = $db->select_expositor()->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
+        if (empty($id)){
+            $db = new Database('expositor');
+
+            $buscar = $db->select_exp()->fetchAll(PDO::FETCH_ASSOC);
+
+            return $buscar;
+        }else {
+            $db = new Database('expositor');
+            $imagem = new Imagem();
+
+            $buscar_img = $imagem->listar($id)->fetchAll(PDO::FETCH_ASSOC);
+
+            $buscar_id = $db->select_exp('id_expositor = '.$id)->fetch(PDO::FETCH_ASSOC);
+
+            $buscar_id['imagens'] = $buscar_img;
+            return $buscar_id;
         }
     }
 }

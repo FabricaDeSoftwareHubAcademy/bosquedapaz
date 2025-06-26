@@ -190,36 +190,52 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function filtrar_expositor($filtro){
-        $query = "SELECT * FROM expositor AS exp 
+    public function filter_exp($filtro){
+        
+        $query = "SELECT exp.id_pessoa, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
+        pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
+        cat.id_categoria, cat.descricao, cat.cor, cat.icone
+        FROM expositor AS exp 
         INNER JOIN categoria AS cat 
         ON cat.id_categoria = exp.id_categoria 
         INNER JOIN pessoa AS pes 
         ON pes.id_pessoa = exp.id_pessoa
-        INNER JOIN imagem AS img 
-        ON img.id_imagem = exp.id_imagem
         WHERE pes.nome LIKE '%$filtro%'
         OR exp.nome_marca LIKE '%$filtro%'
         OR exp.produto LIKE '%$filtro%' 
-        OR exp.num_barraca LIKE '%$filtro%'
-        OR cat.descricao = '$filtro'
+        OR cat.descricao = '%$filtro%';
         ";
 
         $res = $this->execute($query);
 
+
         return $res ? $res : FALSE;
     }
     
-    public function select_expositor(){
-        $query = "SELECT * FROM expositor AS exp 
+    public function select_exp($where = null){
+        $where = $where != null ? ' WHERE '.$where : '';
+
+        $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
+        pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
+        cat.id_categoria, cat.descricao, cat.cor, cat.icone
+        FROM expositor AS exp 
         INNER JOIN categoria AS cat 
         ON cat.id_categoria = exp.id_categoria 
         INNER JOIN pessoa AS pes 
-        ON pes.id_pessoa = exp.id_pessoa
-        INNER JOIN imagem AS img 
-        ON img.id_imagem = exp.id_imagem";
+        ON pes.id_pessoa = exp.id_pessoa ". $where;
 
         return $this->execute($query);
+    }
+
+    public function select_img($id = null){
+        if (!empty($id)){
+
+            $query = "SELECT * FROM imagem WHERE id_expositor = ". $id;
+    
+            return $this->execute($query);
+        }else {
+            return false;
+        }
     }
 
     public function sts_adm($id_colaborador, $novoStatus) {
