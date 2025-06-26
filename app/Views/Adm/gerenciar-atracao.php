@@ -50,8 +50,9 @@
                 </button>
                 <div class="b-voltar"></div>
 
-
-                <button id="nova-atracao" >Nova Atração</button>
+                <div class="botoes">
+                    <button id="nova-atracao" class="novo-evento">Nova Atração</button>
+                </div>
             </div>
         </div>
     </main>
