@@ -38,12 +38,12 @@
         </div>
         <div class="imagens-flutuantes">
             <div class="carrossel-imagens">
-              <img class="fotos1" src="../../Views/" alt="imagem1">
-              <img class="fotos1" src="../imagem21.png" alt="imagem2">
-              <img class="fotos1" src="../TESTE DE NOVO BICHO/FOTOS/imagem22.png" alt="imagem3">
-              <img class="fotos1" src="../TESTE DE NOVO BICHO/FOTOS/imagem23.png" alt="imagem4">
-              <img class="fotos1" src="../TESTE DE NOVO BICHO/FOTOS/imagem24.png" alt="imagem5">  
-              <img class="fotos1" src="../TESTE DE NOVO BICHO/FOTOS/imagem25.png" alt="imagem6">  
+              <img class="fotos1" src="../../../Public/imgs/imagem20.png" alt="imagem1">
+              <img class="fotos1" src="../../../Public/imgs/imagem21.png" alt="imagem2">
+              <img class="fotos1" src="../../../Public/imgs/imagem22.png" alt="imagem3">
+              <img class="fotos1" src="../../../Public/imgs/imagem23.png" alt="imagem4">
+              <img class="fotos1" src="../../../Public/imgs/imagem24.png" alt="imagem5">  
+              <img class="fotos1" src="../../../Public/imgs/imagem25.png" alt="imagem6">  
             </div>
           </div>
           
@@ -64,9 +64,9 @@
 
     <section class="imagens-bosque-quem-somos">
         <div class="imagens2">
-            <!---<img class="img" src="../TESTE DE NOVO BICHO/FOTOS/img1.png" alt="">
-            <img class="img" src="../TESTE DE NOVO BICHO/FOTOS/img1.png" alt="">
-            <img class="img" src="../TESTE DE NOVO BICHO/FOTOS/img1.png" alt="">-->
+            <!---<img class="img" src="../../../Public/imgs/img1.png" alt="">
+            <img class="img" src="../../../Public/imgs/img1.png" alt="">
+            <img class="img" src="../../../Public/imgs/img1.png" alt="">-->
         </div>
     </section>
 
@@ -79,19 +79,19 @@
     <section class="section-colaboradoras-quem-somos">
            
         <div class="image-text-carina">
-            <img class="fotos" src="./FOTOS/foto-carina.png" alt="">
+            <img class="fotos" src="../../../Public/imgs/foto-carina.png" alt="">
             <p class="carina">Carina Zamboni</p>
             <span class="profission"> Produtora Cultural</span>
         </div>
 
         <div class="image-text-denise">
-            <img class="fotos" src="./FOTOS/foto-denize.png" alt="">
+            <img class="fotos" src="../../../Public/imgs/foto-denize.png" alt="">
             <p class="denise">Denise Zamboni</p>
             <span class="profission"> Produtora Cultural</span>
         </div>
 
         <div class="image-text-fernanda">
-            <img class="fotos" src="./FOTOS/foto-fernanda.png" alt="">
+            <img class="fotos" src="../../../Public/imgs/foto-fernanda.png" alt="">
             <p class="fernanda">Fernanda Gutierrez</p>
             <span class="profission">Advogada</span>
         </div>
@@ -149,18 +149,18 @@
 
             <div class="imagens3">
                     <div class="galeria">
-                    <img src="./FOTOS/imagem26.png" alt="">
-                    <img src="./FOTOS/imagem27.png" alt="">
-                    <img src="./FOTOS/imagem28.png" alt="">
-                    <img src="./FOTOS/imagem29.png" alt="">
-                    <img src="./FOTOS/imagem30.png" alt="">
-                    <img src="./FOTOS/imagem31.png" alt="">
-                    <img src="./FOTOS/imagem32.png" alt="">
-                    <img src="./FOTOS/imagem33.png" alt="">
-                    <img src="./FOTOS/imagem43.png" alt="">
-                    <img src="./FOTOS/imagem44.png" alt="">
-                    <img src="./FOTOS/imagem45.png" alt="">
-                    <img src="./FOTOS/imagem46.png" alt="">
+                    <img src="../../../Public/imgs/imagem26.png" alt="">
+                    <img src="../../../Public/imgs/imagem27.png" alt="">
+                    <img src="../../../Public/imgs/imagem28.png" alt="">
+                    <img src="../../../Public/imgs/imagem29.png" alt="">
+                    <img src="../../../Public/imgs/imagem30.png" alt="">
+                    <img src="../../../Public/imgs/imagem31.png" alt="">
+                    <img src="../../../Public/imgs/imagem32.png" alt="">
+                    <img src="../../../Public/imgs/imagem33.png" alt="">
+                    <img src="../../../Public/imgs/imagem43.png" alt="">
+                    <img src="../../../Public/imgs/imagem44.png" alt="">
+                    <img src="../../../Public/imgs/imagem45.png" alt="">
+                    <img src="../../../Public/imgs/imagem46.png" alt="">
 
 
 
