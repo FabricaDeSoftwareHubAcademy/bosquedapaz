@@ -9,7 +9,7 @@ async function chamarModalExpositor(id){
     let contentModal = document.getElementById('conteiner__box')
     
     let modal = document.getElementById('m-per-expo')
-    if (response.status != 200) {
+    if (response.status == 200) {
         modal.showModal()
 
         let ConteudoModal = `
