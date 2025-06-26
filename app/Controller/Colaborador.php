@@ -130,4 +130,11 @@ class Colaborador extends Pessoa
             return false;
         }
     }
+
+    public function buscarPorIdPessoa(int $idPessoa) {
+        $db = new Database('colaborador');
+        return $db->buscarPorIdPessoa($idPessoa);
+    }
+    
+    
 }

@@ -1,18 +1,22 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['usuario_logado']) || $_SESSION['perfil'] !== 'ADM') {
-//     echo json_encode(['success' => false, 'message' => 'Acesso negado']);
-//     exit;
-// }
+session_start();
 
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
+
+if (!isset($_SESSION['login']['id_pessoa'])) {
+    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
+    exit;
+}
 
 function sanitizeString($str) {
     return filter_var(trim($str), FILTER_SANITIZE_STRING);
 }
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
+
+
+
 if ($requestMethod === 'POST') {
     $colab = new Colaborador();
 
@@ -78,7 +82,10 @@ if ($requestMethod === 'POST') {
             }
             $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
-            $colab->setImagem(null);
+            // Se não enviou nova imagem, mantenha a atual
+            // Buscar a imagem atual para manter
+            $colaboradorAtual = $colab->buscarPorIdPessoa($_SESSION['login']['id_pessoa']);
+            $colab->setImagem($colaboradorAtual['img_perfil'] ?? null);
         }
 
         $res = $colab->cadastrar();
@@ -145,7 +152,7 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Email inválido']);
             exit;
         }
-        if (empty($nome) || ($telefone) || ($cargo)) {
+        if (empty($nome) || empty($telefone) || empty($cargo)) {
             echo json_encode(['success' => false, 'message' => 'Preencha todos os campos obrigatórios.']);
             exit;
         }
@@ -176,7 +183,7 @@ if ($requestMethod === 'POST') {
 
 
         // Imagem: <----------------------------------------------->
-        $uploadDir = __DIR__ . '/../../Public/uploads/uploads-ADM/';
+        $uploadDir = '../Public/uploads/uploads-ADM/';
         $imagemSalva = null;
 
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
@@ -187,7 +194,10 @@ if ($requestMethod === 'POST') {
             }
             $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
-            $colab->setImagem(null);
+            // Se não enviou nova imagem, mantenha a atual
+            // Buscar a imagem atual para manter
+            $colaboradorAtual = $colab->buscarPorIdPessoa($_SESSION['login']['id_pessoa']);
+            $colab->setImagem($colaboradorAtual['img_perfil'] ?? null);
         }
 
         $res = $colab->atualizar($id);
@@ -233,6 +243,25 @@ if ($requestMethod === 'POST') {
 if ($requestMethod === 'GET') {
     $colab = new Colaborador();
 
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['meu_perfil']) && $_GET['meu_perfil'] === '1') {
+        if(!isset($_SESSION['login']['id_pessoa'])) {
+            echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
+            exit;
+        }
+    
+        $idSessao = $_SESSION['login']['id_pessoa'];
+    
+        // Instancia seu controller
+        $colab = new \app\Controller\Colaborador();
+    
+        $dados = $colab->buscarPorIdPessoa($idSessao);
+    
+        // DEBUG: para garantir que só vem UM registro
+        header('Content-Type: application/json');
+        echo json_encode(['success' => true, 'data' => $dados]);
+        exit;
+    }
+    
     if (isset($_GET['id'])) {
         $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
         if (!$id) {

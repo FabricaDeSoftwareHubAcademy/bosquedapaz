@@ -205,9 +205,7 @@ class Database {
         OR cat.descricao = '$filtro'
         ";
 
-        $res = $this->execute($query);
-
-        return $res ? $res : FALSE;
+        return $this->execute($query);
     }
     
     public function select_expositor(){
@@ -227,6 +225,28 @@ class Database {
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
     }
+
+    public function buscarPorIdPessoa($idPessoa) {
+        $query = "SELECT 
+            c.id_colaborador,
+            p.id_pessoa,
+            p.nome,
+            p.email,
+            p.telefone,
+            c.cargo,
+            p.img_perfil
+        FROM colaborador c
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
+        WHERE p.id_pessoa = ?";
+    
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$idPessoa]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);  // retorna 1 registro associativo
+    }
+    
+    
+    
+    
 }
 
 ?>

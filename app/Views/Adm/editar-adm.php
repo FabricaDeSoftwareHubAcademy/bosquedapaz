@@ -35,7 +35,7 @@
                     <!-- input file dentro do form -->
                     <input type="file" id="uploadFoto" name="imagem" accept="image/*" onchange="previewImagem()" />
                     <label for="uploadFoto">
-                        <img id="previewFoto" src="../../../Public/assets/MOCA.png" alt="Foto do Administrador" />
+                        <img id="previewFoto" src="" alt="Foto do Administrador" />
                         <div class="icone-editar">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </div>

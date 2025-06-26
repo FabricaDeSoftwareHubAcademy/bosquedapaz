@@ -20,8 +20,10 @@ form.addEventListener("submit", async (e) => {
       body: formData,
     });
 
-    const data = await response.json();
-    console.log("Resposta do servidor:", data);
+    const text = await response.text(); // 👈 pega como texto primeiro
+    console.log("Resposta bruta:", text);
+  
+    const data = JSON.parse(text);
 
     if (data.success) {
       alert("Cadastro realizado com sucesso!");
