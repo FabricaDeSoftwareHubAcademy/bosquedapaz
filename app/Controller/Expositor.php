@@ -221,4 +221,65 @@ class Expositor extends Pessoa
             return $res;
         }
     }
+
+
+   public function buscar($where = null, $order = null, $limit = null)
+{
+    $conn = new \PDO("mysql:host=10.28.1.115;dbname=bosquedapaz", "devweb", "suporte@22");
+
+    $sql = "SELECT 
+        expositor.id_expositor,
+        expositor.nome_marca,
+        expositor.num_barraca,
+        expositor.voltagem,
+        expositor.energia,
+        expositor.contato2,
+        expositor.descricao,
+        expositor.metodos_pgto,
+        expositor.cor_rua,
+        expositor.responsavel,
+        expositor.produto,
+
+        pessoa.id_pessoa,
+        pessoa.nome AS nome_pessoa,
+        pessoa.email,
+        pessoa.whats,
+        pessoa.telefone,
+        pessoa.link_instagram,
+        pessoa.link_facebook,
+        pessoa.link_whats,
+        pessoa.data_nasc,
+        pessoa.img_perfil,
+
+        categoria.id_categoria,
+        categoria.descricao AS categoria,
+        categoria.cor AS categoria_cor,
+        categoria.icone AS categoria_icone,
+
+        imagem.imagem1,
+        imagem.imagem2,
+        imagem.imagem3,
+        imagem.imagem4,
+        imagem.imagem5
+
+    FROM expositor
+    INNER JOIN pessoa    ON expositor.id_pessoa    = pessoa.id_pessoa
+    INNER JOIN categoria ON expositor.id_categoria = categoria.id_categoria
+    INNER JOIN imagem    ON expositor.id_imagem    = imagem.id_imagem";
+
+    if ($where) {
+        $sql .= " WHERE $where";
+    }
+    if ($order) {
+        $sql .= " ORDER BY $order";
+    }
+    if ($limit) {
+        $sql .= " LIMIT $limit";
+    }
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
 }
