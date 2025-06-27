@@ -40,14 +40,14 @@ use app\Models\Database;
             return $res;
         }
 
-        public function editar($id, $titulo, $descricao, $data_inicio, $data_fim, $imagem) {
+        public function editar() {
             $db = new Database('utilidade_publica');
-            $res = $db->editar("id =" . $id ,[
-                'titulo' => $titulo,
-                'descricao' => $descricao,
-                'data_inicio' => $data_inicio,
-                'data_fim' => $data_fim,
-                'imagem' => $imagem
+            $res = $db->update("id =" . $id ,[
+                'titulo' => $this->titulo,
+                'descricao' => $this->descricao,
+                'data_inicio' => $this->data_inicio,
+                'data_fim' => $this->data_fim,
+                'imagem' => $this->imagem
             ]);
     
             return $res;

@@ -19,7 +19,7 @@
             <h2>EDITAR UTILIDADE PÚBLICA</h2>
             <div class="form-container">
                 <div class="form-box">
-                    <form action="form_editar_utilidade">
+                    <form id="form_editar_utilidade" method='POST'>
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"

@@ -1,42 +1,64 @@
 window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
 
+    // Preenche os campos com os parâmetros da URL
     document.querySelector('input[name="titulo"]').value = params.get('titulo') || '';
     document.querySelector('textarea[name="descricaodoevento"]').value = params.get('descricao') || '';
     document.querySelector('input[name="data-inicio"]').value = params.get('data_inicio') || '';
     document.querySelector('input[name="data-fim"]').value = params.get('data_fim') || '';
-    document.querySelector('input[name="file"]').value = params.get('imagem') || '';
 
-    // Se quiser, guarde o id no formulário
+    // Não é possível setar valor de input file via JS por segurança, então removido
+    // document.querySelector('input[type="file"]').value = params.get('imagem') || '';
+
     const form = document.getElementById('form_editar_utilidade');
     if (form && params.get('id')) {
-        form.dataset.id = params.get('id');
+        const id = params.get('id');
+        form.dataset.id = id;
+
+        // Adiciona ou atualiza input hidden para enviar o id ao backend
+        let inputId = form.querySelector('input[name="id"]');
+        if (!inputId) {
+            inputId = document.createElement('input');
+            inputId.type = 'hidden';
+            inputId.name = 'id';
+            form.appendChild(inputId);
+        }
+        inputId.value = id;
     }
 });
 
-let btn_editar = document.getElementById("edit-icon");
+const botao_editar_utilidade = document.getElementById('botao_editar_utilidade');
 
-btn_editar.addEventListener('click', async function (event) {
+if (botao_editar_utilidade) {
+    botao_editar_utilidade.addEventListener('click', async function (event) {
+        event.preventDefault();
 
-    event.preventDefault();
-    let formulario = document.getElementById("form_editar_utilidade");
+        const formulario = document.getElementById('form_editar_utilidade');
+        if (!formulario) {
+            alert("Formulário não encontrado.");
+            return;
+        }
 
-    let formData = new FormData(formulario);
+        const formData = new FormData(formulario);
 
-    console.log(formData);
+        try {
+            const dados_php = await fetch('../../../actions/action-editar-utilidade-publica.php', {
+                method: 'POST',
+                body: formData
+            });
 
-    let dados_php = await fetch('../../../actions/action-editar-utilidade-publica.php', {
-        method: 'POST',
-        body: formData
+            const response = await dados_php.json();
+
+            if (response.status == 200) {
+                console.log(response.msg);
+                alert("Editado com sucesso!"); // substituir pelo seu modal
+            } else {
+                console.error(response.msg);
+                alert("Erro ao Editar!");
+            }
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+            alert("Erro na comunicação com o servidor.");
+        }
     });
-
-    let response = await dados_php.json();
-
-    if (response.status == 200) {
-        console.log(response.msg);
-        alert("Editado com sucesso!") /// SUBSTITUIR PELO MODAL mostraModal()
-    } else {
-        console.log(response.msg);
-        alert("Erro ao Editar!") /// SUBSTITUIR PELO MODAL mostraModal()
-    }
-})
+}
