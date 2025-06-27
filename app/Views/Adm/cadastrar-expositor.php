@@ -28,7 +28,7 @@
                     <div class="form-pessoa">
                         <div class="input">
                             <label>Nome completo:</label>
-                            <input type="text" name="nome" id="" placeholder="Digite seu nome completo" required>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
@@ -36,23 +36,23 @@
                         </div>
                         <div class="input">
                             <label>E-mail:</label>
-                            <input type="text" name="email" id="" placeholder="Digite seu e-mail" required>
+                            <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
                         </div>
                         <div class="input">
                             <label>Qual Cidade Reside:</label>
-                            <input type="text" name="cidade" id="" placeholder="Digite sua cidade">
+                            <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
                         </div>
                     </div>
 
                     <div class="form-loja">
                         <div class="input">
                             <label>Produto:</label>
-                            <input type="text" name="produto" id="" placeholder="Digite seu produto" required>
+                            <input type="text" name="produto" id="produto" placeholder="Digite seu produto" required>
                         </div>
 
                         <div class="input">
                             <label>Marca:</label>
-                            <input type="text" name="marca" id="" placeholder="Digite a marca " required>
+                            <input type="text" name="marca" id="marca" placeholder="Digite a marca " required>
                         </div>
 
                         <div class="input">
@@ -65,7 +65,7 @@
                         <div class="input">
                             <label>Link instagram:</label>
 
-                            <input type="text" name="" id="" placeholder="link instagram" required>
+                            <input type="text" name="" id="link_instagram" placeholder="link instagram" required>
                         </div>
                     </div>
 
