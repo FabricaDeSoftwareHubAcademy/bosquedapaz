@@ -13,7 +13,8 @@ body,html{
     overflow-y: none;
 }
 
-main{
+
+.tela-ult{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -24,7 +25,7 @@ main{
     padding-top: 110px;
 }
 
-.tela-ult{
+.conteiner__ult{
     width: 90%;
     height: 90%;
     background-color: #f4f4f4a2;
@@ -157,8 +158,11 @@ main{
     border: 2px solid white;
 }
 
+
+
+
+
 /* Responsividades: */
-/* Celulares pequenos (smartphones compactos) */
 @media (max-width: 575.98px){
 
     .conteiner__cards{
@@ -198,12 +202,11 @@ main{
         width: 70%;
         height: auto;
     }
+
+
     
 }
 
- 
- 
-/* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
 
      .conteiner__cards{
@@ -215,7 +218,6 @@ main{
         width: 221px;
         height: 266px;
         position: relative;
-        left: 14%;
     }
 
     .nome-tela{
@@ -253,8 +255,12 @@ main{
 }
  
  
-/* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
+
+    .tela-ult{
+        height: 95%;
+    }
+
    .conteiner__cards{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -264,11 +270,10 @@ main{
         width: 221px;
         height: 257px;
         position: relative;
-        left: 16%;
     }
 
     .nome-tela{
-        top: 0%;
+        top: -5%;
     }
     .nome-card{
         font-size: 17px;
@@ -301,28 +306,29 @@ main{
 }
  
  
-/* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
 
     .tela-ult{
         overflow: hidden;
         overflow-y: auto;
+        height: 95%;
     }
 
     .conteiner__cards{
         display: grid;
-        grid-template-columns: 3fr 3fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .card {
         width: 250px;
         height: 350px;
         position: relative;
-        /* left: 24%; */
+        position: relative;
+        top: 50%;
     }
 
     .nome-tela{
-        top: 0%;
+        top: 11%;
     }
     .nome-card{
         font-size: 17px;
@@ -355,8 +361,17 @@ main{
 }
  
  
-/* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
+
+    .conteiner__ult{
+        overflow: hidden;
+    }
+
+    .conteiner__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
 
     .card {
         width: 223px;
@@ -383,7 +398,6 @@ main{
 }
  
  
-/* Computadores Largos e Compactos (Baixa Altura):  */
 @media (min-width: 1400px) and (max-height: 699.98px){
     
 
