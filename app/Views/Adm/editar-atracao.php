@@ -20,30 +20,44 @@
         <div class="box">
             <h2>EDITAR ATRAÇÃO</h2>
             <div class="form-box">
-                <form action="#" method="POST">
-                    <div id="form1">
+                <form id="form-editar-atracao" method="POST" enctype="multipart/form-data">
 
+                    <div id="form1">
+                        <input type="hidden" name="id_evento" id="id_evento">
+                        <input type="hidden" name="id_atracao" id="id_atracao">
                         <div class="input-group">
                             <label>Nome:</label>
-                            <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
+                            <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome do evento"
                                 required>
                         </div>
 
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <input type="text" name="descricaodoevento" id="descricaodoevento"
-                                placeholder="Digite uma breve descrição do evento" required>
+                            <textarea name="descricao_atracao" id="descricao_atracao" placeholder="Digite uma breve descrição do evento (250 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none"></textarea>
+                            <small id="contador-caracteres">250 caracteres restantes</small>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Status:</label>
+                            <select name="status" id="status" required>
+                                <option value="1">Ativo</option>
+                                <option value="0">Inativo</option>
+                            </select>
                         </div>
 
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="banner_atracao" id="banner_atracao">
                         </div>
 
                         <div class="preview-img">
                             <img class="preview" src="" alt="" id="preview-image">
                         </div>
+                    </div>
 
+                    <div class="btn-cancelar-salvar">
+                        <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
+                        <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
                     </div>
 
                 </form>
@@ -54,14 +68,7 @@
                     <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
 
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
 
-                    <button class="btn btn-salvar">
-                        <a href="">Salvar</a>
-                </div>
             </div>
         </div>
         </div>
@@ -75,6 +82,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-editar-atracao.js" defer></script>
 </body>
 
 </html>

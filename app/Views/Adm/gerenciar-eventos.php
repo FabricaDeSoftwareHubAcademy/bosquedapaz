@@ -38,7 +38,7 @@
                             </tr>
                         </thead>
                             <tbody id="lista-eventos">
-        <!-- Eventos serão adicionados aqui via JS -->
+                            <!--JS -->
                             </tbody>
                     </table>
                 </div>

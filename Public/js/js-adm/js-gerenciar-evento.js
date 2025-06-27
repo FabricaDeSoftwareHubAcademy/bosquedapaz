@@ -15,31 +15,31 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             tabelaEventos.innerHTML = '';
 
-            eventos.forEach(event => {
+            eventos.forEach(evento => {
                 const tr = document.createElement('tr');
 
                 tr.innerHTML = `
-                    <td class="nome-evento">${sanitize(event.nome_evento)}</td>
-                    <td>${sanitize(formatarDataBR(event.data_evento))}</td>
+                    <td class="nome-evento">${sanitize(evento.nome_evento)}</td>
+                    <td>${sanitize(formatarDataBR(evento.data_evento))}</td>
                     <td>
-                        <span class="${event.status == 1 ? 'status-ativo' : 'status-inativo'}">
-                            ${event.status == 1 ? 'Ativo' : 'Inativo'}
+                        <span class="${evento.status == 1 ? 'status-ativo' : 'status-inativo'}">
+                            ${evento.status == 1 ? 'Ativo' : 'Inativo'}
                         </span>
                     </td>
                     <td class="fone-col">
-                        <a href="editar-evento.php?id=${event.id_evento}">
+                        <a href="editar-evento.php?id=${evento.id_evento}">
                             <i class="fas fa-edit"></i>
                         </a>
                     </td>
                     <td class="mais">
-                        <a href="gerenciar-atracao.php?id_evento=${event.id_evento}&nome_evento=${encodeURIComponent(event.nome_evento)}">
+                        <a href="gerenciar-atracao.php?id_evento=${evento.id_evento}&nome_evento=${encodeURIComponent(evento.nome_evento)}">
                             <i class="fa-solid fa-list"></i>
                         </a>
                     </td>
                     <td class="mais">
-                        <button class="open-modal" data-modal="modal-fotos">
+                        <a href="cadastrar-fotos-evento.php?id=${evento.id_evento}">
                             <i class="fa-solid fa-plus"></i>
-                        </button>
+                        </a>
                     </td>
                 `;
 
