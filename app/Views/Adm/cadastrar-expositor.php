@@ -104,14 +104,6 @@
                         </div>
                     </div>
 
-
-                    <!-- <div class="btn-conf">
-                        <div class="btn-finalizar">
-                            <button id="btn_salvar" name="salvar" class="btn btn-salvar">salvar</button>
-                            <button class="btn btn-cancelar">cancelar</button>
-                        </div>
-                    </div> -->
-
                 </div>
 
                 <?php include '../../../Public/include/Butons-forms.html'; ?>
