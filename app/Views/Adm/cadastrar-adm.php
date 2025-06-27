@@ -20,7 +20,7 @@
         <section class="container_box">
             <!-- Area Esquerda: Imagem -->
             <div class="left-side">
-                <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
+                <img src="../../../Public/assets/imagem-dec.svg" alt="">
             </div>
            
             <!-- Linha Decorativa do Centro -->
@@ -29,7 +29,7 @@
             <!-- Area Direita: Form -->
             <div class="right-side">
                 <!-- Seta Voltar 2  -->
-                <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+                <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
                 
                 <!-- Titulo   -->
                 <h1>Cadastro ADM</h1>
@@ -110,13 +110,13 @@
             </div> 
             
             <!-- Seta Voltar 1  -->
-            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
         
         <!-- Imagens Decorativas -->
-        <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
-        <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
+        <div class="imgs__dec1"><img src="../../../Public/assets/img-bolas/bola-1.png" alt=""></div>
+        <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-2.png" alt=""></div>
+        <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
     </main>
     <!-- Scripts:  -->
     <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>

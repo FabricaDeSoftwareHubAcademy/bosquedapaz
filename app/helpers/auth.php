@@ -6,7 +6,6 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-
 $perfilUsuario = $_SESSION['login']['perfil'];
 $idUsuario = $_SESSION['login']['id_pessoa'];
-echo $perfilUsuario;
+// echo $idUsuario;

@@ -111,9 +111,9 @@ class Database {
 
     // método de select
     public function select($where = null, $order = null, $limit = null, $fields = "*") {
-        $where = strlen($where) ? ' WHERE '.$where : '';
-        $order = strlen($order) ? ' ORDER BY '.$order : '';
-        $limit = strlen($limit) ? ' LIMIT '.$limit : '';
+        $where = $where != null ? ' WHERE '.$where : '';
+        $order = $order != null ? ' ORDER BY '.$order : '';
+        $limit = $limit != null ? ' LIMIT '.$limit : '';
 
         $query = 'SELECT '. $fields. ' FROM '. $this->table . ' '. $where. ' '. $order. ' '. $limit;
 
@@ -257,6 +257,28 @@ class Database {
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
     }
+
+    public function buscarPorIdPessoa($idPessoa) {
+        $query = "SELECT 
+            c.id_colaborador,
+            p.id_pessoa,
+            p.nome,
+            p.email,
+            p.telefone,
+            c.cargo,
+            p.img_perfil
+        FROM colaborador c
+        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
+        WHERE p.id_pessoa = ?";
+    
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$idPessoa]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);  // retorna 1 registro associativo
+    }
+    
+    
+    
+    
 }
 
 ?>

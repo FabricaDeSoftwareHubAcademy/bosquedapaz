@@ -40,7 +40,12 @@ CREATE TABLE pessoa(
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
 
--- insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "123456", 1);
+insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
+
+-- CREATE TABLE tipo_expositor(
+-- 	id_tipo INT NOT NULL AUTO_INCREMENT,
+--     
+-- );
 
 
 CREATE TABLE expositor(
