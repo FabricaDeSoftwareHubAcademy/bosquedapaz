@@ -6,7 +6,7 @@ async function carregarDadosADM() {
         });
 
         const text = await response.text();
-        console.log('Resposta bruta do servidor:', text); // <-- DEBUG
+        console.log('Resposta bruta do servidor:', text);
 
         try {
             const data = JSON.parse(text);
@@ -14,14 +14,14 @@ async function carregarDadosADM() {
             if (data.success && data.data) {
                 const usuario = data.data;
 
-                document.getElementById('id').value = usuario.id_pessoa || usuario.id_colaborador || '';
+                document.getElementById('id').value = usuario.id_colaborador;
                 document.getElementById('nome').value = usuario.nome || '';
                 document.getElementById('telefone').value = usuario.telefone || '';
                 document.getElementById('email').value = usuario.email || '';
                 document.getElementById('cargo').value = usuario.cargo || '';
 
                 if (usuario.img_perfil) {
-                    document.getElementById('previewFoto').src = '/bosquedapaz/' + usuario.img_perfil;
+                    document.getElementById('previewFoto').src = '../../../' + usuario.img_perfil;
                 }
                 
             } else {
@@ -60,28 +60,29 @@ const formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(formulario);
-    formData.append("atualizar", "true");
 
     try {
+        const formData = new FormData(formulario);
+        formData.append("atualizar", "true");
+    
         const response = await fetch("../../../actions/action-colaborador.php", {
             method: "POST",
             body: formData,
         });
-
+    
         const data = await response.json();
         console.log("Resposta do servidor:", data);
-
+    
         if (data.success) {
             alert("Edição realizada com sucesso!");
-
-             document.getElementById('nome').value = data.data.nome;
+    
+            document.getElementById('nome').value = data.data.nome;
             document.getElementById('telefone').value = data.data.telefone;
             document.getElementById('email').value = data.data.email;
             document.getElementById('cargo').value = data.data.cargo;
-
+    
             if (data.data.img_perfil) {
-                document.getElementById("previewFoto").src = '/bosquedapaz/' + data.data.img_perfil;
+                document.getElementById("previewFoto").src = '../../../' + data.data.img_perfil;
             }
         } else {
             alert("Erro: " + data.message);

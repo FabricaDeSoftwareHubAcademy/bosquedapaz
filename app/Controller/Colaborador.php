@@ -49,7 +49,7 @@ class Colaborador extends Pessoa
             'telefone' => $this->telefone,
             'email' => $this->email,
             'senha' => $this->senha,
-            'perfil' => 'ADM',
+            'perfil' => '1',
             'img_perfil' => $this->foto_perfil
         ]);
 
@@ -77,9 +77,7 @@ class Colaborador extends Pessoa
             'nome' => $this->nome,
             'telefone' => $this->telefone,
             'email' => $this->email,
-            'senha' => $this->senha,
-            'perfil' => 'ADM',
-            'img_perfil' => $this->foto_perfil,
+            'img_perfil' => $this->foto_perfil
         ];
 
         $res = $db->update_all($values1, $values2, 'pessoa', 'id_pessoa', 'id_colaborador = '. $id);

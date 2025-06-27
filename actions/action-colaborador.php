@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+error_log("ID da sessão: " . ($_SESSION['login']['id_pessoa'] ?? 'não definido'));
 
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
@@ -203,7 +205,9 @@ if ($requestMethod === 'POST') {
         $res = $colab->atualizar($id);
         if ($res) {
 
-            $dadosAtualizados = $colab->buscarPorIdPessoa($id);
+            $idSessao = $_SESSION['login']['id_pessoa'];
+
+            $dadosAtualizados = $colab->buscarPorIdPessoa($idSessao);
             echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!', 'data' => $dadosAtualizados]);
             exit;
         } else {
@@ -250,17 +254,16 @@ if ($requestMethod === 'GET') {
             echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
             exit;
         }
-    
         $idSessao = $_SESSION['login']['id_pessoa'];
-    
+        
         // Instancia seu controller
         $colab = new \app\Controller\Colaborador();
-    
+        
         $dados = $colab->buscarPorIdPessoa($idSessao);
-    
+        
         // DEBUG: para garantir que só vem UM registro
         header('Content-Type: application/json');
-        echo json_encode(['success' => true, 'data' => $dados]);
+        echo json_encode(['success' => true, 'data' => $dados, $idSessao]);
         exit;
     }
     
