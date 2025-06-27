@@ -21,7 +21,7 @@ async function carregarDadosADM() {
                 document.getElementById('cargo').value = usuario.cargo || '';
 
                 if (usuario.img_perfil) {
-                    document.getElementById('previewFoto').src = '/AulaPHPDev33/bosquedapaz/' + usuario.img_perfil;
+                    document.getElementById('previewFoto').src = '/bosquedapaz/' + usuario.img_perfil;
                 }
                 
             } else {
@@ -74,8 +74,15 @@ formulario.addEventListener("submit", async (e) => {
 
         if (data.success) {
             alert("Edição realizada com sucesso!");
-            formulario.reset();
-            document.getElementById("previewFoto").src = "";
+
+             document.getElementById('nome').value = data.data.nome;
+            document.getElementById('telefone').value = data.data.telefone;
+            document.getElementById('email').value = data.data.email;
+            document.getElementById('cargo').value = data.data.cargo;
+
+            if (data.data.img_perfil) {
+                document.getElementById("previewFoto").src = '/bosquedapaz/' + data.data.img_perfil;
+            }
         } else {
             alert("Erro: " + data.message);
         }

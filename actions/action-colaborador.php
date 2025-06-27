@@ -202,7 +202,9 @@ if ($requestMethod === 'POST') {
 
         $res = $colab->atualizar($id);
         if ($res) {
-            echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!']);
+
+            $dadosAtualizados = $colab->buscarPorIdPessoa($id);
+            echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!', 'data' => $dadosAtualizados]);
             exit;
         } else {
             echo json_encode(['success' => false, 'message' => 'Erro ao editar ADM.']);
