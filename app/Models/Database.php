@@ -111,9 +111,9 @@ class Database {
 
     // método de select
     public function select($where = null, $order = null, $limit = null, $fields = "*") {
-        $where = strlen($where) ? ' WHERE '.$where : '';
-        $order = strlen($order) ? ' ORDER BY '.$order : '';
-        $limit = strlen($limit) ? ' LIMIT '.$limit : '';
+        $where = $where != null ? ' WHERE '.$where : '';
+        $order = $order != null ? ' ORDER BY '.$order : '';
+        $limit = $limit != null ? ' LIMIT '.$limit : '';
 
         $query = 'SELECT '. $fields. ' FROM '. $this->table . ' '. $where. ' '. $order. ' '. $limit;
 
