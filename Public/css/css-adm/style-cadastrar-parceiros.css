@@ -461,8 +461,8 @@ h1 {
 @media (min-width: 1400px) {
   .btn-cancelar-salvar {
     position: fixed;
-    bottom: 150px;
-    right: 350px;
+    bottom: 100px;
+    right: 200px;
     display: flex;
     gap: 15px;
     z-index: 10;
