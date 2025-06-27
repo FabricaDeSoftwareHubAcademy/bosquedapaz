@@ -87,7 +87,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -120px;
+    top:-60px;
 }
 
 .formularios div {
@@ -97,30 +97,32 @@ body {
 }
 
 .form-pessoa,
-.form-loja {
+#estilo_musica_container,
+.form-expo {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
 }
+
+.form-expo{
+    width: 150%;
+    display: flex;
+    position: relative;
+    left: 30%;
+    top: 0px;
+}
+
 
 .form-pessoa {
     position: relative;
-    left: -20%;
+    left: -15%;
+    top: -12px;
 }
 
-.form-loja {
-    position: relative;
-    left: 10%;
-}
-
-.form-expo {
-    display: flex;
+#estilo_musica_container {
     width: 100%;
-    flex-wrap: wrap;
-    position: relative;
-    left: 40%;
-    gap: 10px;
 }
+
+
 
 .input,
 .input-group {
@@ -151,8 +153,14 @@ body {
     color: #3d3d3d;
 }
 
-#categorias {
-    width: 230%;
+
+
+#linguagem_artistica,
+#publico_alvo,
+#tempo_apresentacao,
+#valor_cache,
+#estilo_musica {
+    width: 150%;
     padding: 5px;
     min-height: 45px;
     border: none;
@@ -167,7 +175,7 @@ body {
 }
 
 .select {
-    width: 100%;
+    width: 150%;
     min-height: 45px;
     padding: 5px;
     border: none;
@@ -186,14 +194,12 @@ body {
     margin-bottom: 20px;
 }
 
-/******* BOTAO FINALIZAR ********/
 .btn-conf {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-
 
 .btn-finalizar {
     display: flex;
@@ -202,7 +208,6 @@ body {
     top: 250px;
     left: 25%;
 }
-
 
 .btn {
     padding: 10px 0px;
@@ -239,7 +244,7 @@ body {
     left: -50%;
 }
 
-.voltar .img-voltar {
+.voltar .btn-voltar {
     width: 40px;
 }
 
@@ -256,13 +261,9 @@ body {
     z-index: 999;
 }
 
-
-
-
 .oculta {
     visibility: hidden;
 }
-
 
 .modal_conteudo {
     height: 100px;
@@ -297,13 +298,10 @@ body {
     }
 }
 
-
 @media (width: 1024px) and (height: 600px) {
-
     .title-text {
         font-size: 1.1rem;
     }
-
     .formularios {
         width: 133%;
         flex-direction: row !important;
@@ -311,62 +309,23 @@ body {
         position: relative;
         left: 15%;
     }
-
     .select {
         width: 70%;
     }
-
-    .form-files {
-        position: relative;
-        top: -2 0px;
-    }
-
-    #tipo_expo {
-        position: relative;
-        top: -4px;
-    }
-
-    #energia {
-        position: relative;
-        top: -16px;
-    }
-
-    #voltagem {
-        position: relative;
-        top: -26px;
-    }
-
-    #volt_label {
-        position: relative;
-        top: -25px;
-    }
-
-    .form-group-energia label {
-        position: relative;
-        top: -16px;
-    }
-
-
-
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        height: 0px;
-
-    }
-
-    .select {
-        height: 0px;
-    }
-
     .btn-conf {
         position: relative;
         top: 181px;
         left: -35%;
     }
-
-
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #linguagem_artistica {
+        height: 0px;
+    }
+    .select {
+        height: 0px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -374,68 +333,55 @@ body {
         flex-direction: column;
         top: 0;
     }
-
     .form-pessoa,
-    .form-loja,
     .form-expo {
         position: static;
         width: 100%;
     }
-
     .input input,
     .input-group input,
     .input-group textarea,
-    #categorias {
+    #linguagem_artistica {
         width: 100% !important;
     }
-
     .btn-finalizar {
         top: 0;
     }
-
     .btn-conf {
         width: 104%;
         font-size: 0.8rem;
         padding: 10px 189px;
     }
-
     .btn-salvar {
         position: relative;
         left: 37%;
     }
-
     .btn-cancelar {
         position: relative;
         left: -72%;
     }
-
 }
 
 @media (max-width: 768px) {
     .title {
         width: 100%;
     }
-
     .title-text {
         font-size: 1.5rem;
     }
-
     .btn-conf {
         width: 101%;
         font-size: 0.8rem;
         padding: 10px 160px;
     }
-
     .btn-salvar {
         position: relative;
         left: 37%;
     }
-
     .btn-cancelar {
         position: relative;
         left: -72%;
     }
-
     .select {
         width: 100%;
     }
@@ -448,45 +394,37 @@ body {
         left: -22px;
         font-size: 1.1rem;
     }
-
     .input input,
     .input-group input,
     .input-group textarea,
-    #categorias {
+    #linguagem_artistica {
         width: 80% !important;
         left: 8%;
     }
-
     .formularios {
         position: relative;
         left: 10%;
     }
-
     .select {
         width: 80%;
     }
-
     .formularios label {
         left: 8%;
     }
-
     .btn-conf {
         font-size: 0.8rem;
         padding: 10px 106px;
         position: relative;
         left: -10px;
     }
-
     .btn-salvar {
         position: relative;
         left: 20%;
     }
-
     .btn-cancelar {
         position: relative;
         left: -72%;
     }
-
     .btns {
         position: relative;
         left: 3%;

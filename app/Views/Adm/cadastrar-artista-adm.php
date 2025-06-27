@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php'; ?>
 
 
 <!DOCTYPE html>
@@ -58,14 +58,9 @@
                             <label>Link instagram:</label>
                             <input type="text" name="link_instagram" id="" placeholder="link instagram" required>
                         </div>
-
-
                     </div>
 
-
                     <div class="form-expo">
-
-
                         <div class="input">
                             <label>Qual sua linguagem artística?</label>
                             <select name="todas_categorias" id="linguagem_artistica" class="select">
@@ -76,7 +71,6 @@
                                 <option value="musica">Música</option>
                             </select>
                         </div>
-
 
                         <div id="estilo_musica_container">
                             <label>Qual o estilo de música você segue?</label>
@@ -89,27 +83,17 @@
                             </select>
                         </div>
 
-
-
                         <div class="input">
                             <label for="optionInput3">Qual seu publico alvo?</label>
 
                             <select name="todas_categorias" id="publico_alvo" class="select">
-
                                 <option value="">Selecione</option>
                                 <option value="adulto">Adulto</option>
                                 <option value="infantil">Infantil</option>
                                 <option value="misto">Misto</option>
 
                             </select>
-
-
-
                         </div>
-
-
-
-
 
                         <label for="tipo-expo">Tempo médio da sua apresentação?</label>
                         <div class="custom-dropdown">
@@ -149,12 +133,11 @@
 
                 <div class="btns">
                     <a href="Area-Adm.php" class="voltar">
-                        <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                        <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
                     </a>
                 </div>
 
             </form>
-        </div>
 
         </div>
 
@@ -162,9 +145,9 @@
 
     <div class="bolas-fundo">
 
-        <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
