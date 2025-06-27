@@ -27,7 +27,7 @@ function filtrarBoletos($boletos, $nome, $status, $data_inicial, $data_final)
 
     if ($status) {
         $todos = array_filter($todos, function ($b) use ($status) {
-            return strtolower($b['status_exp']) === strtolower($status);
+            return strtolower($b['status_boleto']) === strtolower($status);
         });
     }
 

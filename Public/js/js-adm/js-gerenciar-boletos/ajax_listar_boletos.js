@@ -24,13 +24,24 @@ async function carregarBoletos(filtros) {
 
     if (data.length > 0) {
       data.forEach(boleto => {
+
+        let classeStatus = '';
+        if (boleto.status_boleto === 'Pago') {
+          classeStatus = 'status-pago';
+        } else if (boleto.status_boleto === 'Pendente') {
+          classeStatus = 'status-pendente';
+        }
+
+
         const row = `
-          <tr class="tr-tabela-de-dados">
-            <td class="td-tabela-de-dados">${boleto.nome || boleto.expositor}</td>
+          <tr class="tr-tabela-de-dados" data-id-expositor="${boleto.id_expositor}">
+            <td class="td-tabela-de-dados">${boleto.nome}</td>
             <td class="td-tabela-de-dados">${boleto.vencimento}</td>
-            <td class="td-tabela-de-dados">${boleto.mes_referencia || boleto.referencia}</td>
+            <td class="td-tabela-de-dados">${boleto.mes_referencia}</td>
             <td class="td-tabela-de-dados">R$ ${parseFloat(boleto.valor).toFixed(2)}</td>
-            <td class="td-tabela-de-dados">${boleto.status_exp || boleto.status}</td>
+            <td class="td-tabela-de-dados">
+              <button class="botao-status ${classeStatus}">${boleto.status_boleto}</button>
+            </td>
           </tr>
         `;
         tbody.innerHTML += row;

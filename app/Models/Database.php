@@ -127,10 +127,11 @@ class Database
         DATE_FORMAT(b.vencimento, '%d/%m/%Y') AS vencimento,
         b.mes_referencia,
         b.valor, 
-        e.status_exp
+        b.status_boleto
         FROM boleto b 
         INNER JOIN expositor e ON b.id_expositor = e.id_expositor
-        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa;";
+        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
+        ORDER BY b.vencimento ASC";
 
 
         return $this->execute($query);
@@ -142,7 +143,7 @@ class Database
         b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
         b.mes_referencia,
-        b.valor, e.status_exp
+        b.valor, b.status_boleto
         FROM boleto b 
         INNER JOIN expositor e ON b.id_expositor = e.id_expositor
         INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
@@ -158,7 +159,7 @@ class Database
         b.id_boleto, e.id_expositor,
         p.nome, b.vencimento as vencimento,
         b.mes_referencia,
-        b.valor, e.status_exp
+        b.valor, b.status_boleto
         FROM boleto b 
         INNER JOIN expositor e ON b.id_expositor = e.id_expositor
         INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
@@ -178,7 +179,7 @@ class Database
         b.id_boleto, e.id_expositor,
         p.nome, b.vencimento,
         b.mes_referencia,
-        b.valor, e.status_exp
+        b.valor, b.status_boleto
         FROM boleto b 
         INNER JOIN expositor e ON b.id_expositor = e.id_expositor
         INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa";
@@ -186,9 +187,20 @@ class Database
         $binds = [];
 
         if (!empty($status)) {
-            $query .= " WHERE e.status_exp = :status_exp;";
-            $binds = [":status_exp" => "$status"];
+            $query .= " WHERE b.status_boleto = :status_boleto;";
+            $binds = [":status_boleto" => "$status"];
         }
+        return $this->execute($query, $binds);
+    }
+
+    public function alterar_status($status, $id) {
+        $query = "UPDATE boleto set status_boleto = :status_boleto
+        WHERE id_expositor = :id_expositor";
+
+        $binds = [
+            ":status_boleto" => $status,
+            ":id_expositor" => $id
+        ];
         return $this->execute($query, $binds);
     }
 
@@ -198,7 +210,7 @@ class Database
         e.id_expositor, b.id_boleto,
         p.nome, b.vencimento,
         b.mes_referencia,
-        b.valor, b.status_bol
+        b.valor, b.status_boleto
         FROM pessoa p
         INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
         INNER JOIN boleto b on e.id_expositor = b.id_expositor

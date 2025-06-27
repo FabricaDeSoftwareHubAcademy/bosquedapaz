@@ -29,7 +29,7 @@ class Boleto {
             'mes_referencia' => $this->mes_referencia,
             'valor' => $this->valor,
             'vencimento' => $this->vencimento,
-            'status_exp' => $this->status,
+            'status_boleto' => $this->status,
             'id_expositor' => $this->id_expositor
         ]);
         return $execucao;
@@ -48,6 +48,11 @@ class Boleto {
     public function FiltrarPorStatus($status) {
         $banco = new Database();
         return $banco->filtrar_boletos_por_status($status)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function AlterarStatus($status, $id) {
+        $banco = new Database();
+        return $banco->alterar_status($status, $id);
     }
 
     public function FiltrarPorData($data_inicial, $data_final) {

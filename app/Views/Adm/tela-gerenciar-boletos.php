@@ -49,8 +49,8 @@
                 <label for="" id="label-filtragem-de-status">Pesquisar por Status</label>
                 <select name="campo-filtragem-de-status" id="campo-filtragem-de-status">
                     <option value="">Todos os Status</option>
-                    <option value="ativo">Ativo</option>
-                    <option value="inativo">Inativo</option>
+                    <option value="Pago">Pago</option>
+                    <option value="Pendente">Pendente</option>
                 </select>
             </div>
         </section>
@@ -73,6 +73,16 @@
             </table>
         </section>
 
+        <div id="modalConfirmacao" class="modal-confirmacao" style="display: none;">
+            <div class="modal-confirmacao-conteudo">
+                <p>Deseja realmente alterar o status?</p>
+                <div class="modal-confirmacao-botoes">
+                    <button id="confirmarAlteracao" class="modal-confirmacao-botao botao-sim">Sim</button>
+                    <button id="cancelarAlteracao" class="modal-confirmacao-botao botao-nao">Não</button>
+                </div>
+            </div>
+        </div>
+
 
         <!-- decorações -->
         <section class="area-decoracoes">
@@ -93,6 +103,7 @@
             </a>
         </section>
         <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_alterar_status.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
