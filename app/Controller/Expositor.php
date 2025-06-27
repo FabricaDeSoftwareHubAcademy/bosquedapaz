@@ -166,8 +166,7 @@ class Expositor extends Pessoa
         $senha = $this->geradorSenha();
         
         $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid(
-            [
+        $pes_id = $db->insert_lastid([
                 'nome' => $this->nome,
                 'email' => $this->email,
                 'telefone' => $this->whats,
@@ -180,11 +179,9 @@ class Expositor extends Pessoa
 
         $db = new Database('imagem');
         $img_id = $db->insert_lastid([
-            'imagem1' => $this->imagens[0] ?? '',
-            'imagem2' => $this->imagens[1] ?? '',
-            'imagem3' => $this->imagens[2] ?? '',
-            'imagem4' => $this->imagens[3] ?? '',
-            'imagem5' => $this->imagens[4] ?? ''
+            'caminho' => '../caminho/imagem.jpg',
+            'posicao' => '',
+            'id_expositor' => 4
         ]);
 
 
@@ -194,7 +191,6 @@ class Expositor extends Pessoa
                 'id_expositor' => $this->id_expositor,
                 'id_pessoa' => $pes_id,
                 'id_categoria' => $this->id_categoria,
-                'id_imagem' => $img_id,
                 'nome_marca' => $this->nome_marca,
                 'num_barraca' => $this->num_barraca,
                 'voltagem' => $this->voltagem,

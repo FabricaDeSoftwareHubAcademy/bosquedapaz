@@ -19,14 +19,14 @@
         <div class="perfilEdit-box">
             <h1 class="perfilEdit-title">Editar Perfil</h1>
 
-            <form action="#" class="perfilEdit-form">
+            <form action="#" class="perfilEdit-form" id="perfilEdit_form" method="POST">
 
                 <section class="perfilEdit-empresas">
 
                     <div class="perfilEdit-logo perfilEdit-important-input">
 
                         <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
-                        <input type="file" name="foto" id="foto" class="perfilEdit-foto" required>
+                        <input type="file" name="foto" id="foto" class="perfilEdit-foto">
                         <label for="foto" class="perfilEdit-upload">
                             Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
                         </label>
@@ -113,20 +113,21 @@
 
                 <section class="perfilEdit-btns">
                     <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>
-                    <button class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
+                    <button id="btn_salvar" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
                 </section>
     
             </form>
             
-            <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt="" class="perfilEdit-img-voltar"></a>
+            <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/assets/icons/voltar.svg" alt="" class="perfilEdit-img-voltar"></a>
 
         </div>
         
     </main>
 
-    <img class="perfilEdit-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
-    <img class="perfilEdit-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
-    <img class="perfilEdit-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
+    <img class="perfilEdit-superior-esquerda" src="../../../Public/assets/img-bolas/img-superior-esquerda.svg" alt="">
+    <img class="perfilEdit-superior-direita" src="../../../Public/assets/img-bolas/img-superior-direita.svg" alt="">
+    <img class="perfilEdit-inferior" src="../../../Public/assets/img-bolas/img-inferior-boleto.svg" alt="">
+    <script src="../../../Public/js/js-adm/js-editar-expositor.js"></script>
 </body>
 
 </html>
