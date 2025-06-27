@@ -1,4 +1,36 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php'; 
+<?php 
+require_once '../../../app/Controller/Artista.php';
+
+
+use app\Controller\Artista;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $artista = new Artista();
+
+    // Dados pessoa
+    $artista->setNome($_POST['nome']);
+    $artista->setEmail($_POST['email']);
+    $artista->setWhats($_POST['whatsapp']);
+    $artista->setLink_instagram($_POST['link_instagram']);
+
+    // Dados artista
+    $artista->setNome_artistico($_POST['nome_artistico']);
+    $artista->setLinguagem_artistica($_POST['linguagem_artistica']);
+    $artista->setEstilo_musica($_POST['estilo_musica']);
+    $artista->setPublico_alvo($_POST['publico_alvo']);
+    $artista->setTempo_apresentacao($_POST['tempo_apresentacao']);
+    $artista->setValor_cache($_POST['valor_cache']);
+
+    $res = $artista->cadastrar();
+
+    if ($res) {
+        echo "Cadastrado com sucesso!";
+        // ou redireciona para página de sucesso
+    } else {
+        echo "Erro ao cadastrar.";
+    }
+}
 
 
 
