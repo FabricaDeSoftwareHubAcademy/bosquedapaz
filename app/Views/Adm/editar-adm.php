@@ -22,9 +22,9 @@
 </head>
 <body>
     <?php include "../../../Public/include/menu-adm.html" ?>
-    <div class="sandwich-menu" onclick="mostrarMenu()">
+    <!-- <div class="sandwich-menu" onclick="mostrarMenu()">
         <img src="../../../Public/imgs/Proximos-Eventos-img/menu.png" alt="menu" class="menu" />
-    </div>
+    </div> -->
 
     <main class="principal">
         <div class="box">
@@ -72,20 +72,11 @@
                     </div>
                 </div>
 
-                <div class="btns">
-                    <a href="Area-Adm.php" class="voltar">
-                        <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar" />
-                    </a>
-
-                    <div class="btn-cancelar-salvar">
-                        <button type="button" class="btn btn-cancelar">
-                            <a href="./Area-Adm.php">Cancelar</a>
-                        </button>
-
-                        <button type="submit" class="btn btn-salvar" id="atualizar" name="atualizar" value="atualizar" >Salvar</button>
-                    </div>
-                </div>
+                <?php include '../../../Public/include/Butons-forms.html' ?>
             </form>
+            <!-- <a href="Area-Adm.php" class="voltar">
+                <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar" />
+            </a> -->
         </div>
     </main>
 

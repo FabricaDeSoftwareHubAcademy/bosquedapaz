@@ -30,12 +30,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
 }
 h2{
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 .foto-container {
@@ -45,7 +45,7 @@ h2{
 }
 
 .foto-container img {
-    max-width: 180px;
+    max-width: 250px;
     height: auto;
     border-radius: 5%;
     object-fit: cover;
@@ -112,13 +112,23 @@ input[type="file"]{
     opacity: 1;
 }
 
+#formulario{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: blue; */
+}
 
 .form-box{
-    width: 100%;
+    width: 50%;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    /* background-color: aqua; */
     /* text-align: center; */
 }
 .form-box form {
@@ -138,6 +148,7 @@ input[type="file"]{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: auto;
     width: 100%;
 }
 .input-row {
@@ -191,6 +202,7 @@ input[type="file"]{
     justify-content: space-between;
     width: 100%;
     height: 8%;
+    /* background-color: ; */
     padding-right: 50px;
 }
 .voltar .btn-voltar {
@@ -292,6 +304,10 @@ input[type="file"]{
 
 
 @media only screen and (max-width: 650px) {
+     main{
+        overflow-y: auto;
+    } 
+
     .principal {
         flex-direction: column;
         height: auto;
@@ -303,6 +319,7 @@ input[type="file"]{
         flex-direction: column;
         width: 100%;
         height: auto;
+        overflow-y: auto;
     }
 
     .form-box {
@@ -347,6 +364,10 @@ input[type="file"]{
     .btns .voltar {
         display: flex;
     }
+
+    .bolas-fundo {
+       display: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -385,6 +406,9 @@ input[type="file"]{
         font-size: 0.6rem;
         padding: 4px;
     }
+    .bolas-fundo {
+        display: none;
+     }
 
 }
 
@@ -415,6 +439,9 @@ input[type="file"]{
     .btns .btn {
         height: 30px;
     }
+    .bolas-fundo {
+        display: none;
+     }
 }
 @media (max-width: 600px){
     .input-row{

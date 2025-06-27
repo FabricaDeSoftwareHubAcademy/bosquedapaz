@@ -25,7 +25,7 @@ CREATE TABLE pessoa(
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
-    email VARCHAR(200) NULL,
+    email VARCHAR(200) NULL UNIQUE,
     senha VARCHAR(200) NULL,
     perfil INT DEFAULT 0,
     whats CHAR(11) NULL,

@@ -57,3 +57,34 @@ else if(document.body.clientWidth <= 1400){
     showSubMenuClick(relatorios)
 }
 
+async function menuAdm() {
+    try {
+        const response = await fetch('../../../actions/action-colaborador.php?meu_perfil=1', {
+            method: 'GET',
+            credentials: 'include'
+        });
+        
+        const text = await response.json();
+        console.log('Resposta bruta do servidor:', text);
+
+        let imgLogin = document.querySelectorAll('#img-login');
+
+        imgLogin.forEach(element => {
+            element.src = '../../../' + text.data.img_perfil;
+        });
+
+        console.log(imgLogin);
+
+    } catch (error) {
+        let imgLogin = document.querySelectorAll('#img-login');
+
+        imgLogin.forEach(element => {
+            element.src = '../../../Public/assets/MOCA.png';
+        });
+
+        console.log(imgLogin);
+    }
+}
+
+menuAdm();
+
