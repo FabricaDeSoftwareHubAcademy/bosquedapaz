@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php'; ?>
 
 
 <!DOCTYPE html>
@@ -105,41 +105,33 @@
                     </div>
 
 
-                    <div class="btn-conf">
+                    <!-- <div class="btn-conf">
                         <div class="btn-finalizar">
                             <button id="btn_salvar" name="salvar" class="btn btn-salvar">salvar</button>
                             <button class="btn btn-cancelar">cancelar</button>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
-                <div class="btns">
-                    <a href="Area-Adm.php" class="voltar">
-                        <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                    </a>
-                </div>
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
+
             </form>
 
-        </div>
-
-        <div id="modal_salvar" class="oculta">
-            <div class="modal_conteudo">
-                <p class="text_modal">Cadastro salvo com sucesso!</p>
-                <form method="dialog" class="fecha_modal">
-                    <button id="fechar_modal">Fechar</button>
-                </form>
-            </div>
-        </div>
+            <div class="overlay" id="overlay"></div>
+            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+            <?php include "../../../Public/include/modais/modal-error.html"; ?>
 
         </div>
     </main>
 
     <div class="bolas-fundo">
 
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+
     </div>
 
 

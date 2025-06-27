@@ -141,7 +141,7 @@ body {
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: red;
     outline: none;
     margin-bottom: 20px;
     border-bottom: 2px solid #9d9fa1;
@@ -186,7 +186,7 @@ body {
 }
 
 /******* BOTAO FINALIZAR ********/
-.btn-conf {
+/* .btn-conf {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -286,7 +286,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
+} */
 
 @media (max-width:1500px) {
     .formularios{

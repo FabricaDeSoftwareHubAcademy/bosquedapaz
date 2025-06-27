@@ -36,8 +36,6 @@
 }
 
 .btns-salvar-cancelar {
-    width: 0%;
-    gap: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
