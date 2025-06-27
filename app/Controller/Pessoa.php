@@ -1,7 +1,7 @@
 <?php
 namespace app\Controller;
 
-require_once('../vendor/autoload.php');
+require_once('../../../bosquedapaz/vendor/autoload.php');
 use PDO;
 use app\Models\Database;
 

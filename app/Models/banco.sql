@@ -98,6 +98,7 @@ CREATE TABLE artista(
     linguagem_artistica VARCHAR(100) NOT NULL,
     tempo_apresentacao TIME NOT NULL,
     valor_cache FLOAT NOT NULL,
+    publico_alvo VARCHAR(50) NOT NULL,
     PRIMARY KEY(id_artista),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
