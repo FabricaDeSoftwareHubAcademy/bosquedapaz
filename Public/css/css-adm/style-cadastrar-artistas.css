@@ -87,7 +87,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top:-60px;
+    top:-30px;
 }
 
 .formularios div {
@@ -107,14 +107,15 @@ body {
     width: 150%;
     display: flex;
     position: relative;
-    left: 30%;
-    top: 0px;
+    left: 20%;
+    top: 4px;
+    
 }
 
 
 .form-pessoa {
     position: relative;
-    left: -15%;
+    left: -40%;
     top: -12px;
 }
 
@@ -194,7 +195,15 @@ body {
     margin-bottom: 20px;
 }
 
-.btn-conf {
+.link-area-adm{
+    position: relative;
+    left: -50%;
+}
+
+
+/* botao finalizar */
+
+/* .btn-conf {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -242,7 +251,9 @@ body {
     margin-top: 20px;
     position: relative;
     left: -50%;
-}
+} */
+
+/* fim */
 
 .voltar .btn-voltar {
     width: 40px;

@@ -122,23 +122,22 @@
                         </div>
                     </div>
 
-                    <div class="btn-conf">
+                    <!-- <div class="btn-conf">
                         <div class="btn-finalizar">
                             <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
                             <button class="btn btn-cancelar">cancelar</button>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
-                <div class="btns">
-                    <a href="Area-Adm.php" class="voltar">
-                        <img class="img-voltar" src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                    </a>
-                </div>
-
+                <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
-
+            <div class="overlay" id="overlay"></div>
+            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+            <?php include "../../../Public/include/modais/modal-error.html"; ?>
+            
         </div>
 
     </main>
