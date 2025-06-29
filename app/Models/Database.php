@@ -46,6 +46,8 @@ class Database
         $fields = array_keys($values);
         $binds = array_pad([], count($fields), '?');
         $query = 'INSERT INTO ' . $this->table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
+
+        print_r(array_values($values));
         return $this->execute($query, array_values($values)) ? true : false;
     }
 
@@ -195,11 +197,11 @@ class Database
 
     public function alterar_status($status, $id) {
         $query = "UPDATE boleto set status_boleto = :status_boleto
-        WHERE id_expositor = :id_expositor";
+        WHERE id_boleto = :id_boleto";
 
         $binds = [
             ":status_boleto" => $status,
-            ":id_expositor" => $id
+            ":id_boleto" => $id
         ];
         return $this->execute($query, $binds);
     }

@@ -37,7 +37,7 @@
                 <nav class="area-form-cb">
                     <h1 class="title-cb">CADASTRO DE BOLETO</h1>
                     <form method="POST" action="../../../actions/actions-boletos/action-buscar-expositor.php" class="pesquisa-cb">
-                        <input type="hidden" class="input-cb" name="id_expositor" type="text" placeholder="Pesquisar nome do expositor">
+                        <input type="hidden" class="input-cb" name="id_expositor" placeholder="id">
                         <input class="input-cb" name="nome" type="text" placeholder="Pesquisar nome do expositor">
                         <button type="submit" class="bola-cb" style="cursor: pointer;"></button>
                     </form>
@@ -104,6 +104,7 @@
 
             </main>
             <script src="../../../Public/js/js-menu/js-menu.js"></script>
+            <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_buscar_expositor.js"></script>
 </body>
 
 </html>

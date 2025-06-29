@@ -17,19 +17,20 @@ class Boleto {
     public ?string $status = null;
     public ?string $pdf = null;
 
+
     public function PesquisarExpositor($nome) {
         $banco = new Database();
         return $banco->listar_expositor_para_cadastro($nome)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function CadastrarBoletos() {
+        var_dump($this->status);
         $banco = new Database('boleto');
         $execucao = $banco->insert([
             'pdf' => $this->pdf,
             'mes_referencia' => $this->mes_referencia,
             'valor' => $this->valor,
             'vencimento' => $this->vencimento,
-            'status_boleto' => $this->status,
             'id_expositor' => $this->id_expositor
         ]);
         return $execucao;

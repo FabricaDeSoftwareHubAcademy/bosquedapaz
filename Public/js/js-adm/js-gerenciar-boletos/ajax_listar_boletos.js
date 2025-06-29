@@ -34,7 +34,7 @@ async function carregarBoletos(filtros) {
 
 
         const row = `
-          <tr class="tr-tabela-de-dados" data-id-expositor="${boleto.id_expositor}">
+          <tr class="tr-tabela-de-dados" data-id-boleto="${boleto.id_boleto}">
             <td class="td-tabela-de-dados">${boleto.nome}</td>
             <td class="td-tabela-de-dados">${boleto.vencimento}</td>
             <td class="td-tabela-de-dados">${boleto.mes_referencia}</td>

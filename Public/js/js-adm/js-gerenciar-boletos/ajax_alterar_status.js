@@ -1,4 +1,4 @@
-let idExpositorSelecionado = null;
+let idBoletoSelecionado = null;
 let statusAtualSelecionado = null;
 let botaoClicado = null;
 
@@ -10,10 +10,10 @@ document.addEventListener('click', function (e) {
         statusAtualSelecionado = botaoClicado.textContent.trim();
         
         const tr = botaoClicado.closest('tr');
-        idExpositorSelecionado = tr.getAttribute('data-id-expositor'); 
+        idBoletoSelecionado = tr.getAttribute('data-id-boleto'); 
 
-        if (!idExpositorSelecionado) {
-            console.error('ID do expositor não encontrado na linha.');
+        if (!idBoletoSelecionado) {
+            console.error('ID do boleto não encontrado na linha.');
             return;
         }
 
@@ -32,7 +32,7 @@ document.getElementById('confirmarAlteracao').addEventListener('click', () => {
     fetch('../../../actions/actions-boletos/action-alterar-status.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `id=${idExpositorSelecionado}&status=${novoStatus}`
+        body: `id=${idBoletoSelecionado}&status=${novoStatus}`
     })
     .then(response => response.json())
     .then(data => {
