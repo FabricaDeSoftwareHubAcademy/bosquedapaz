@@ -24,7 +24,6 @@ class Boleto {
     }
 
     public function CadastrarBoletos() {
-        var_dump($this->status);
         $banco = new Database('boleto');
         $execucao = $banco->insert([
             'pdf' => $this->pdf,
