@@ -136,11 +136,17 @@
 
 
 .conteiner-outros {
-    width: auto;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: end;
     gap: 10px;
+    /* position: relative; */
+}
+
+.login-mobile {
+    display: none;
+    align-items: center;
 }
 
 
@@ -162,10 +168,69 @@
     height: 70px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-.login-mobile {
-    display: none;
+.content-opcoes-menu {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    background-color: white;
+    width: 150px;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    overflow: hidden;
+    border-bottom-left-radius: .5rem;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.301);
+    transition: all .2s ease-in;
+}
+
+.open-opcoes-menu {
+    height: 110px;
+    transition: all .2s ease-in;
+}
+
+.link-opcoes-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: .2rem 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.link-opcoes-menu:nth-child(1){
+    border: none;
+}
+
+
+.icon-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    border-radius: .5rem;
+    gap: .5rem;
+    width: auto;
+    padding: .1rem .5rem;
+    transition: all .2s ease-in;
+}
+
+.icon-login:hover {
+    background-color: #FC1269;
+    color: white;
+    transition: all .2s ease-in;
+}
+
+.icon-login-editar:hover {
+    background-color: transparent;
+    color: black;
 }
 
 @media screen and (max-width: 1400px) {
@@ -207,7 +272,32 @@
     }
 
     .login-mobile {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-opcoes-menu1 {
+        position: static;
+        top: 110px;
+        right: 0px;
+        background-color: white;
+        width: 100%;
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        overflow: hidden;
+        margin-top: 5px;
+        transition: all .2s ease-in;
+    }
+    
+    .open-opcoes-menu1 {
+        height: 110px;
+        border-top: 1px solid rgba(0, 0, 0, 0.301);
+        transition: all .2s ease-in;
     }
  
     .open {

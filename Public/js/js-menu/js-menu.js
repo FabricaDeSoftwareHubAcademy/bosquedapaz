@@ -15,6 +15,7 @@ sandwich.addEventListener('click', function(){
     }
 })
 
+
 const cadastro = document.getElementById("cadastro");
 const financeiro = document.getElementById("financeiro");
 const lista = document.getElementById("lista");
@@ -65,15 +66,16 @@ async function menuAdm() {
         });
         
         const text = await response.json();
-        console.log('Resposta bruta do servidor:', text);
+        // console.log('Resposta bruta do servidor:', text);
 
         let imgLogin = document.querySelectorAll('#img-login');
 
         imgLogin.forEach(element => {
-            element.src = '../../../' + text.data.img_perfil;
+            // element.src = '../../../' + text.data.img_perfil;
+            element.src = '../../../Public/assets/MOCA.png';
+
         });
 
-        console.log(imgLogin);
 
     } catch (error) {
         let imgLogin = document.querySelectorAll('#img-login');
@@ -82,9 +84,30 @@ async function menuAdm() {
             element.src = '../../../Public/assets/MOCA.png';
         });
 
-        console.log(imgLogin);
+        // console.log(imgLogin);
     }
 }
 
 menuAdm();
+
+let loginImg = document.querySelectorAll('#img-login')
+
+loginImg.forEach(element => {
+    
+    element.addEventListener('click', () => {
+        let contentOpcoesMenu = document.getElementById('content-opcoes-menu')
+        if (contentOpcoesMenu.classList.contains('open-opcoes-menu')) {
+            contentOpcoesMenu.classList.remove('open-opcoes-menu')
+        } else {
+            contentOpcoesMenu.classList.add('open-opcoes-menu')
+        }
+        let contentOpcoesMenu1 = document.getElementById('content-opcoes-menu1')
+        if (contentOpcoesMenu1.classList.contains('open-opcoes-menu1')) {
+            contentOpcoesMenu1.classList.remove('open-opcoes-menu1')
+        } else {
+            contentOpcoesMenu1.classList.add('open-opcoes-menu1')
+        }
+    })
+});
+
 
