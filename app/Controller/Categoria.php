@@ -13,7 +13,7 @@ class Categoria
     private string $cor;
     private string $icone;
 
-    // --- MÉTODOS DE ACESSO AO BANCO DE DADOS (JÁ EXISTENTES) ---
+    private string $status_cat;
 
     public function cadastrar()
     {
@@ -29,7 +29,6 @@ class Categoria
     public function listar($where = null, $order = null, $limit = null)
     {
         $db = new Database('categoria');
-        // Alterado para fetchAll(PDO::FETCH_CLASS), que funciona melhor com propriedades privadas e setters
         $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
@@ -37,7 +36,6 @@ class Categoria
     public function buscarPorId($id)
     {
         $db = new Database('categoria');
-        // O ideal é renomear 'listar_por_id' para 'buscarPorId' para consistência
         $res = $db->select('id_categoria = ' . $id)->fetchObject(self::class);
         return $res;
     }
@@ -61,6 +59,15 @@ class Categoria
         $db = new Database('categoria');
         $res = $db->delete('id_categoria = ' . $this->id_categoria);
         return $res;
+    }
+
+        public function alterarStatus($id, $novoStatus)
+    {
+        $db = new Database('categoria');
+        return $db->update(
+            'id_categoria = ' . $id,
+            ['status_cat' => $novoStatus]
+        );
     }
 
     // --- MÉTODOS GETTERS E SETTERS ADICIONADOS ---
@@ -87,6 +94,11 @@ class Categoria
     {
         return $this->icone ?? ''; // Retorna string vazia se for nulo
     }
+    
+        public function getStatus(): string
+    {
+        return $this->status_cat;
+    }
 
     /**
      * Setters - Métodos para DEFINIR o valor de uma propriedade
@@ -109,5 +121,10 @@ class Categoria
     public function setIcone(string $icone)
     {
         $this->icone = $icone;
+    }
+
+        public function setStatus(string $status)
+    {
+        $this->status_cat = $status;
     }
 }
