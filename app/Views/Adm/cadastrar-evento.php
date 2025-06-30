@@ -76,26 +76,11 @@
                             <img class="preview" src="" alt="" id="preview-image">
                         </div>
 
-                        <div class="btn-cancelar-salvar">
-                            <a href="gerenciar-eventos.php" class="voltar">
-                                    <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
-                            </a> 
-
-                            <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
-                            
-                            <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
- 
-                        </div>
-                        
+                        <?php include '../../../Public/include/Butons-forms.html';?>
+                       
                     </form>
                 </div>
 
-                    
-                <!-- <div class="btns">
-                    <a href="gerenciar-eventos.php" class="voltar">
-                        <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
-                    </a>                  
-                </div> -->
         </div>
         
     </main>

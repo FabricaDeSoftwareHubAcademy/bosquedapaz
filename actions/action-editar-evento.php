@@ -63,9 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $destino = $diretorioDestino . $nomeSeguro;
 
         if (move_uploaded_file($caminhoTemporario, $destino)) {
-            $eventoExistente = $evento->buscarPorId($id);
+            $eventoExistente = $evento->buscarPorId_evento($id);
             if ($eventoExistente) {
-                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner;
+                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner_evento;
                 if (file_exists($caminhoAntigo)) {
                     unlink($caminhoAntigo);
                 }
