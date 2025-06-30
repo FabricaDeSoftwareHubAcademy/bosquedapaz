@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contador = document.getElementById('contador-caracteres');
 
     descricaoInput.addEventListener('input', () => {
-        const restante = 250 - descricaoInput.value.length;
+        const restante = 500 - descricaoInput.value.length;
         contador.textContent = `${restante} caracteres restantes`;
         console.log(`Digitado: ${descricaoInput.value.length} caracteres`);
     });
@@ -14,19 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const nome = document.getElementById('nomedoevento').value.trim();
+        const subtitulo = document.getElementById('subtitulo').value.trim();
         const descricao = document.getElementById('descricaodoevento').value.trim();
         const data = document.getElementById('dataevento').value;
+        const hora_inicio = document.getElementById('hora_inicio').value;
+        const hora_fim = document.getElementById('hora_fim').value;
+        const endereco = document.getElementById('endereco').value.trim();
         const imagem = document.getElementById('file').files[0];
 
-        if (!nome || !descricao || !data || !imagem) {
+        if (!nome || !descricao || !data || !imagem || !subtitulo || !hora_inicio || !hora_fim || !endereco) {
             alert('Preencha todos os campos e selecione uma imagem.');
             return;
         }
 
         const formData = new FormData();
         formData.append('nomedoevento', nome);
+        formData.append('subtitulo', subtitulo);
         formData.append('descricaodoevento', descricao);
         formData.append('dataevento', data);
+        formData.append('hora_inicio', hora_inicio);
+        formData.append('hora_fim', hora_fim);
+        formData.append('endereco', endereco);
         formData.append('file', imagem);
 
         try {

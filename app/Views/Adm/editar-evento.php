@@ -25,15 +25,25 @@
                         
                         <div id="form1">
                             <input type="hidden" name="id_evento" id="id_evento">
-                            <div class="input-group">
-                                <label>Nome:</label>
-                                <input type="text" name="nomedoevento" id="nomedoevento" required>
+
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                    <label>Nome:</label>
+                                    <input type="text" name="nomedoevento" id="nomedoevento" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Subtítulo:</label>
+                                    <input type="text" name="subtitulo" id="subtitulo" placeholder="Digite o nome do evento"
+                                        required>
+                                </div>
+
                             </div>
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição do evento (250 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
-                                <small id="contador-caracteres">250 caracteres restantes</small>
+                                <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
+                                <small id="contador-caracteres">500 caracteres restantes</small>
                             </div>
 
                             <div class="data-imagem">
@@ -42,16 +52,38 @@
                                     <input type="date" name="dataevento" id="dataevento" required>
                                 </div>
 
+                                <div class="input-group">
+                                    <label>Hora Início:</label>
+                                    <input type="time" name="hora_inicio" id="hora_inicio"
+                                        required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Hora Fim:</label>
+                                    <input type="time" name="hora_fim" id="hora_fim"
+                                        required>
+                                </div>
+
                                 <select name="status" id="status">
                                     <option value="1">Ativo</option>
                                     <option value="0">Inativo</option>
                                 </select>
 
+                            </div>
+
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                        <label>Local:</label>
+                                        <input type="text" name="endereco" id="endereco" placeholder="Digite o nome do evento"
+                                            required>
+                                </div>
                                 <div class="input-group">
                                     <label>Imagem:</label>
-                                    <input type="file" name="banner" id="file">
+                                    <input type="file" name="file" id="file"
+                                        required>
                                 </div>
                             </div>
+                            
                             <img class="preview" src="" alt="" id="preview-image">
                         </div>
 

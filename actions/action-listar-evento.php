@@ -7,7 +7,7 @@ header('Content-Type: application/json');
 
 try {
     $evento = new Evento();
-    $eventos = $evento->listar(); // retorna array associativo
+    $eventos = $evento->listar_evento(); // retorna array associativo
 
     echo json_encode([
         'status' => 'success',
