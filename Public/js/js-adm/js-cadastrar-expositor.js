@@ -1,4 +1,4 @@
-
+// categorias
 async function getCategorias(){
 
     let categorias = document.getElementById("categorias");
@@ -17,7 +17,7 @@ async function getCategorias(){
     categorias.innerHTML = html;
 }
 
-
+// cadastro
 
 let btn_salvar = document.getElementById("btn_salvar");
 let modal = document.getElementById("modal_salvar");

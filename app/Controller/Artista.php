@@ -2,11 +2,12 @@
 
 namespace app\Controller;
 
-require_once('../../../vendor/autoload.php');
-use PDO;
+require_once('../vendor/autoload.php');
 
+
+use PDO;
 use app\Controller\Pessoa;
-use app\Models\Database;
+use app\Models\Database;        
 
 
 class Artista extends Pessoa
@@ -99,7 +100,7 @@ class Artista extends Pessoa
 
     public function cadastrar()
     {
-        // 1. Inserir dados na tabela pessoa
+        
         $db = new Database('pessoa');
         $pes_id = $db->insert_lastid([
             'nome' => $this->nome,
@@ -108,10 +109,10 @@ class Artista extends Pessoa
             'link_instagram' => $this->link_instagram,
         ]);
     
-        // 2. Usar o ID retornado da pessoa
+
         $db = new Database('artista');
         $res = $db->insert([
-            'id_pessoa' => $pes_id, // <- CORRETO AQUI
+            'id_pessoa' => $pes_id, 
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
             'estilo_musica' => $this->estilo_musica,

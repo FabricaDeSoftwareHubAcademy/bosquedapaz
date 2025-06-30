@@ -13,22 +13,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+
 </head>
 
 <body>
     <?php include "../../../Public/include/menu-adm.html" ?>
 
-
     <main class="principal">
-
         <div class="box">
-
             <div class="title">
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data" id="form-artista">
                 <div class="formularios">
                     <div class="form-pessoa">
                         <div class="input">
@@ -60,7 +57,7 @@
                     <div class="form-expo">
                         <div class="input">
                             <label>Qual sua linguagem artística?</label>
-                            <select name="todas_categorias" id="linguagem_artistica" class="select">
+                            <select name="linguagem_artistica" id="linguagem_artistica" class="select">
                                 <option value="">Selecione</option>
                                 <option value="teatro">Teatro</option>
                                 <option value="danca">Dança</option>
@@ -140,7 +137,7 @@
     
     </div>
 
-    <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-artista.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>

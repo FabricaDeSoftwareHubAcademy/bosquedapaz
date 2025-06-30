@@ -192,6 +192,8 @@ class Expositor extends Pessoa
         return $res;
     }
 
+    // listagem
+
     public function listar($busca = null)
     {
         $db = new Database('expositor');
