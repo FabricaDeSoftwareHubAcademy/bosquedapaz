@@ -175,18 +175,10 @@ class Expositor extends Pessoa
             ]
         );
 
-
-
-        $db = new Database('imagem');
-        $img_id = $db->insert_lastid([
-            'caminho' => '../caminho/imagem.jpg',
-            'posicao' => '',
-            'id_expositor' => 4
-        ]);
-
+        //INSERINDO NA TABELA EXPOSITOR
 
         $db = new Database('expositor');
-        $res = $db->insert(
+        $exp_id = $db->insert_lastid(
             [
                 'id_expositor' => $this->id_expositor,
                 'id_pessoa' => $pes_id,
@@ -203,7 +195,16 @@ class Expositor extends Pessoa
                 'produto' => $this->produto
             ]
         );
-        return $res;
+ 
+
+        $db = new Database('imagem');
+        $img_id = $db->insert_lastid([
+            'caminho' => '../caminho/imagem.jpg',
+            'posicao' => '',
+            'id_expositor' => $exp_id 
+        ]);
+
+        return $img_id;
     }
     
     public function filtrar_exp($filtro){
@@ -248,5 +249,30 @@ class Expositor extends Pessoa
             $buscar_id['imagens'] = $buscar_img;
             return $buscar_id;
         }
+    }
+
+    public function getIdPessoaExpositor($id) {
+        $db = new Database('pessoa');
+        $result = $db->select_exp_catgoria($id)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function atualizar($id) // Recebe o ID como parâmetro
+    {
+
+        $db = new Database('expositor');
+        $ids_pessoa_expositor = $db->select_pessoa_expositor($id)->fetch(PDO::FETCH_ASSOC);
+
+        $db = new Database('pessoa');
+        $res = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            [
+                'nome' => $this->nome,
+                'link_instagram' => $this->link_instagram,
+                'whats' => $this->whats,
+                'link_facebook' => $this->link_facebook,
+                'email' => $this->email
+            ]
+        );
+        return $res;
     }
 }

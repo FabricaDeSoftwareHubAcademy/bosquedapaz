@@ -67,13 +67,13 @@ if (isset($_POST['enviar'])) {
     <main>
         <section class="section-recsenha">
 
-            <img class="imgg-superior-direita-recsenha" src="../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt="">
+        <img class="imgg-superior-direita-recsenha" src="../Public/assets/img-bolas/imagem-superior-direito.svg" alt="">
         
-            <img class="imgg-superior-esquerda-recsenha" src="../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt="">
-            
-            <img class="imgg-inferior-direita-recsenha" src="../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt="">
-            
-            <img class="imgg-inferior-esquerda-recsenha" src="../Public/imgs/imagens-bolas/imagem-inferior-esquerdo.svg" alt="">
+        <img class="imgg-superior-esquerda-recsenha" src="../Public/assets/img-bolas/imagem-superior-esquerdo.svg" alt="">
+        
+        <img class="imgg-inferior-direita-recsenha" src="../Public/assets/img-bolas/imagem-inferior-direito.svg" alt="">
+        
+        <img class="imgg-inferior-esquerda-recsenha" src="../Public/assets/img-bolas/imagem-inferior-esquerdo.svg" alt="">
             
             <div class="box-recsenha">
                 
@@ -118,7 +118,7 @@ if (isset($_POST['enviar'])) {
 
                 <div id="linha-bet-recsenha"></div>
 
-                <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
+                <img src="assets/message-sent.svg" alt="" class="img-letter">
             </div>
         </section>
     </main>
