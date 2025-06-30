@@ -1,5 +1,5 @@
 <?php
-require_once '../../../vendor/autoload.php';
+require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
 
 if (isset($_POST['id'], $_POST['status'])) {

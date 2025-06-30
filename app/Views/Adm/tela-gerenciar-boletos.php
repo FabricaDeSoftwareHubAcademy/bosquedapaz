@@ -87,19 +87,19 @@
         <!-- decorações -->
         <section class="area-decoracoes">
             <div>
-                <img src="../../../Public/imgs/imgs-validar-expositor/decoracao1-validar-expositor.svg" alt="" class="decoracao decoracao-1">
+                <img src="../../../Public/assets/faleconosco-decoracao3.png" alt="" class="decoracao decoracao-1">
             </div>
 
             <div>
-                <img src="../../../Public/imgs/imgs-validar-expositor/decoracao2-validar-expositor.svg" alt="" class="decoracao decoracao-2">
+                <img src="../../../Public/assets/faleconosco-decoracao1.png" alt="" class="decoracao decoracao-2">
             </div>
 
             <div>
-                <img src="../../../Public/imgs/imgs-validar-expositor/decoracao3-validar-expositor.svg" alt="" class="decoracao decoracao-3">
+                <img src="../../../Public/assets/faleconosco-decoracao2.png" alt="" class="decoracao decoracao-3">
             </div>
 
             <a href="Area-adm.php">
-                <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="decoracao botao-voltar">
+                <img src="../../../Public/assets/faleconosco-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>
         <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js"></script>

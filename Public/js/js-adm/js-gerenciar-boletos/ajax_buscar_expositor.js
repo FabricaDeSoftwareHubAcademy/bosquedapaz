@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        fetch("../../../actions/actions-boletos/action-buscar-expositor.php", {
+        fetch("../../../actions/action-procurar-expositor-boleto.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

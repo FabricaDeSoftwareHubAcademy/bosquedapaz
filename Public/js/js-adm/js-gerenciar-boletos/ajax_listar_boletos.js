@@ -12,7 +12,7 @@ async function carregarBoletos(filtros) {
     if (filtros.data_inicial) formData.append('data_inicial', filtros.data_inicial);
     if (filtros.data_final) formData.append('data_final', filtros.data_final);
 
-    const resposta = await fetch('../../../actions/actions-boletos/action-listar-boletos.php', {
+    const resposta = await fetch('../../../actions/action-listar-boletos.php', {
       method: 'POST',
       body: formData
     });

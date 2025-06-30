@@ -28,7 +28,7 @@ document.getElementById('confirmarAlteracao').addEventListener('click', () => {
     
     const novoStatus = (statusAtualSelecionado === 'Pago') ? 'Pendente' : 'Pago';
 
-    fetch('../../../actions/actions-boletos/action-alterar-status.php', {
+    fetch('../../../actions/action-alterar-status-boleto.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `id=${idBoletoSelecionado}&status=${novoStatus}`

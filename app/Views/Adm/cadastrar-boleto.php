@@ -38,6 +38,7 @@
 
                     <div class="input">
                         <label class="label" for="expositor">Expositor:</label>
+                        <input type="hidden" name="id_expositor">
                         <input type="text" name="nome-exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" required>
                     </div>
 
@@ -110,6 +111,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_buscar_expositor.js" defer></script>
     <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script>
         $('#valor').mask('000.000.000.000.000,00', {
