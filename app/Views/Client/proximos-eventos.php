@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem-fundo2.png');">
+                <!-- <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem-fundo2.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                         <div class="text-left">
@@ -51,10 +51,10 @@
                         </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem-fundo3.png');">
+                <!-- <div class="carousel-item" style="background-image: url('../../../Public/imgs/imagem-fundo3.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                         <div class="text-left">
@@ -69,10 +69,10 @@
                         </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Slide 4 -->
-                <div class="carousel-item" style="background-image: url('../../../Public/imgs/img-atracao-proev.png');">
+                <!-- <div class="carousel-item" style="background-image: url('../../../Public/imgs/img-atracao-proev.png');">
                     <div class="overlay">
                         <div class="overlay-content">
                         <div class="text-left">
@@ -87,7 +87,7 @@
                         </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <button class="nav next">&#10095;</button>

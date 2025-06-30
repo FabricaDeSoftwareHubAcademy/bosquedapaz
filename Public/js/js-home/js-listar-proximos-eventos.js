@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         eventos.forEach((evento, index) => {
             const item = document.createElement('div');
             item.className = 'carousel-item';
-            item.style.backgroundImage = `url('../../../Public/uploads/uploads-eventos/${evento.banner}')`;
+            item.style.backgroundImage = `url('../../../Public/${evento.banner}')`;
             item.dataset.index = index;
 
             item.innerHTML = `
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <p><i class="bi bi-geo-alt"></i> ${sanitize(evento.endereco)}</p>
                         </div>
                         <div class="banner-right">
-                            <img src="../../../Public/uploads/uploads-eventos/${evento.banner}" />
+                            <img src="../../../Public/${evento.banner}" />
                         </div>
                     </div>
                 </div>
