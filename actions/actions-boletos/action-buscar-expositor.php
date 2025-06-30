@@ -1,9 +1,8 @@
 <?php
 header("Content-Type: application/json");
 
-require_once "../../app/Controller/Boleto.php"; // Ajuste o caminho conforme necessário
+require_once "../../app/Controller/Boleto.php";
 
-// Recebe o JSON da requisição
 $inputJSON = file_get_contents('php://input');
 $input = json_decode($inputJSON, true);
 
@@ -20,10 +19,8 @@ $nome = trim($input['nome']);
 $expositorModel = new Boleto();
 $resultado = $expositorModel->PesquisarExpositor($nome);
 
-// Verifica se encontrou algo
 if ($resultado && count($resultado) > 0) {
     
-    // Aqui, pego o primeiro resultado, você pode adaptar conforme necessidade
     $expositor = $resultado[0];
 
     echo json_encode([

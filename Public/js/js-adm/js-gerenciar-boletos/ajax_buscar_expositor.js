@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botaoBuscar = document.querySelector(".bola-cb");
 
     botaoBuscar.addEventListener("click", (e) => {
-        e.preventDefault(); // Impede o envio tradicional do formulário
+        e.preventDefault();
 
         const nome = document.querySelector("input[name='nome']").value.trim();
 
@@ -23,11 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             if (data.status === "ok") {
                 
-                // Preenche os campos
                 document.getElementById("nome-exp").value = data.expositor.nome;
                 document.getElementById("cpf-cb").value = data.expositor.cpf;
 
-                // Se quiser colocar o ID em campos hidden:
+
                 const inputsHidden = document.querySelectorAll("input[name='id_expositor']");
                 inputsHidden.forEach(input => {
                     input.value = data.expositor.id;
