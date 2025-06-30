@@ -39,6 +39,29 @@ use app\Models\Database;
     
             return $res;
         }
+
+        public function editar() {
+            $db = new Database('utilidade_publica');
+            $res = $db->update("id =" . $id ,[
+                'titulo' => $this->titulo,
+                'descricao' => $this->descricao,
+                'data_inicio' => $this->data_inicio,
+                'data_fim' => $this->data_fim,
+                'imagem' => $this->imagem
+            ]);
+    
+            return $res;
+        }
+
+        public function excluir($id) {
+           try {
+            $db = new Database('utilidade_publica');
+            $res = $db->excluir("id =" . $id);
+
+           } catch (\Throwable $th) {
+            //throw $th;
+           }
+        }
     
     }
 

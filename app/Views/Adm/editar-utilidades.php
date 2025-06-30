@@ -22,7 +22,7 @@
             <h2>EDITAR UTILIDADE PÚBLICA</h2>
             <div class="form-container">
                 <div class="form-box">
-                    <form action="#">
+                    <form id="form_editar_utilidade" method='POST'>
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
@@ -59,7 +59,7 @@
                         <a href="">Cancelar</a>
                     </button>
 
-                    <button class="btn btn-salvar">
+                    <button id="botao_editar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
                         <a href="">Salvar</a>
                 </div>
             </div>
@@ -73,6 +73,7 @@
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-editar-utilidade.js"></script>
 </body>
 
 </html>
