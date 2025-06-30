@@ -1,12 +1,3 @@
-<?php
-require_once __DIR__ . '/../../../app/helpers/auth.php';
-require_once '../../../vendor/autoload.php';
-
-use app\Controller\Categoria;
-
-$categoria = new Categoria();
-$categorias = $categoria->listar();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,26 +21,15 @@ $categorias = $categoria->listar();
         <div class="box">
             <h1 class="title">TODAS AS CATEGORIAS</h1>
             <div class="box-item">
+                <div id="lista-categoria">
+                </div>
 
-                <?php if (!empty($categorias)): ?>
-                    <?php foreach ($categorias as $category): ?>
-                        <div class="item">
-                            <div style="background-color: <?= htmlspecialchars($category->getCor()); ?>;" class="bolota">
-                                <img src="../../../Public/<?= htmlspecialchars($category->getIcone()); ?>" alt="Ícone da categoria <?= htmlspecialchars($category->getDescricao()); ?>" class="icon-item">
-                            </div>
-                            <p class="nome-cat"><?= htmlspecialchars($category->getDescricao()); ?></p>
-                        </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p>Nenhuma categoria cadastrada ainda.</p>
-                <?php endif; ?>
-
-                <div class="item open-modal" data-modal="cadastro-categoria">
+                <!-- <div class="item open-modal" data-modal="cadastro-categoria">
                     <div class="bolota" id="b10">
                         <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="Adicionar nova categoria" class="icon-item">
                     </div>
                     <p class="nome-cat">Nova Categoria</p>
-                </div>
+                </div> -->
 
                 <dialog class="cadastro-categoria" id="cadastro-categoria">
                     <div class="modal-content">
@@ -131,6 +111,7 @@ $categorias = $categoria->listar();
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
     <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-visualizar-categoria.js" defer></script>
 </body>
 
 </html>
