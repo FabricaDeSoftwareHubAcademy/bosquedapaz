@@ -204,7 +204,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <!-- <script src="../../../Public/js/js-home/main.js" defer></script> -->
-    <script src="../../../Public/js/js-home/js-listar-proximos-eventos.js"></script>
+    <script src="../../../Public/js/js-home/js-listar-proximos-eventos.js" defer></script>
     <!-- <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script> -->
 </body>
 </html>

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         eventos.forEach((evento, index) => {
             const item = document.createElement('div');
             item.className = 'carousel-item';
-            item.style.backgroundImage = `url('../../../Public/${evento.banner}')`;
+            item.style.backgroundImage = `url('../../../Public/${evento.banner_evento}')`;
             item.dataset.index = index;
 
             item.innerHTML = `
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function atualizarDescricaoEEspacos(evento) {
-        infoContainer.innerHTML = `<p>${sanitize(evento.descricao)}</p>`;
+        infoContainer.innerHTML = `<p>${sanitize(evento.descricao_evento)}</p>`;
 
         try {
             const atracoesRes = await fetch(`../../../actions/action-listar-atracoes-por-evento.php?id_evento=${evento.id_evento}`);
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     card.className = 'card';
                     card.innerHTML = `
                         <div class="card__image">
-                            <img src="../../../Public/uploads/${atracao.banner_atracao}" alt="Banner Atração" />
+                            <img src="../../../Public/${atracao.banner_atracao}" alt="Banner Atração" />
                             <div class="selo">Atração</div>
                         </div>
                         <div class="card__content">

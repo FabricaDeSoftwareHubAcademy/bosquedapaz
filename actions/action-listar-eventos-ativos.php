@@ -7,7 +7,7 @@ header('Content-Type: application/json');
 
 try {
     $evento = new Evento();
-    $eventos = $evento->listar("status = 1"); // ou "status = 'ativo'" dependendo do seu DB
+    $eventos = $evento->listar_evento("status = 1"); // ou "status = 'ativo'" dependendo do seu DB
 
     echo json_encode([
         'status' => 'success',
