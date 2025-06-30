@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <h3>${sanitize(evento.subtitulo_evento)}</h3>
                             <p><i class="bi bi-calendar-event"></i> Data: ${formatarDataBR(evento.data_evento)}</p>
                             <p><i class="bi bi-clock"></i> Horário: ${evento.hora_inicio} às ${evento.hora_fim}</p>
-                            <p><i class="bi bi-geo-alt"></i> ${sanitize(evento.endereco)}</p>
+                            <p><i class="bi bi-geo-alt"></i> ${sanitize(evento.endereco_evento)}</p>
                         </div>
                         <div class="banner-right">
-                            <img src="../../../Public/${evento.banner}" />
+                            <img src="../../../Public/${evento.banner_evento}" />
                         </div>
                     </div>
                 </div>
