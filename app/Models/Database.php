@@ -277,9 +277,119 @@ class Database {
     }
 
     
-    
-    
-    
+    // BLOCO DE CODIGOS PARA CLASSE BOLETO
+    public function listar_expositor_para_cadastro($nome)
+    {
+        $query = "SELECT
+        p.nome, p.cpf, e.id_expositor
+        FROM pessoa p
+        INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
+        WHERE p.nome LIKE :nome";
+        $binds = [":nome" => "%$nome%"];
+        return $this->execute($query, $binds);
+    }
+
+    public function listar_todos_boletos()
+    {
+        $query = "SELECT
+        b.id_boleto, 
+        e.id_expositor,
+        p.nome, 
+        DATE_FORMAT(b.vencimento, '%d/%m/%Y') AS vencimento,
+        b.mes_referencia,
+        b.valor, 
+        b.status_boleto
+        FROM boleto b 
+        INNER JOIN expositor e ON b.id_expositor = e.id_expositor
+        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
+        ORDER BY b.vencimento ASC";
+
+
+        return $this->execute($query);
+    }
+
+    public function filtrar_boletos_por_nome($nome)
+    {
+        $query = "SELECT
+        b.id_boleto, e.id_expositor,
+        p.nome, b.vencimento,
+        b.mes_referencia,
+        b.valor, b.status_boleto
+        FROM boleto b 
+        INNER JOIN expositor e ON b.id_expositor = e.id_expositor
+        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
+        WHERE p.nome LIKE :nome;";
+
+        $binds = [":nome" => "%$nome%"];
+        return $this->execute($query, $binds);
+    }
+
+    public function filtrar_boletos_por_data($data_inicial, $data_final)
+    {
+        $query = "SELECT
+        b.id_boleto, e.id_expositor,
+        p.nome, b.vencimento as vencimento,
+        b.mes_referencia,
+        b.valor, b.status_boleto
+        FROM boleto b 
+        INNER JOIN expositor e ON b.id_expositor = e.id_expositor
+        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa
+        WHERE b.vencimento BETWEEN STR_TO_DATE(:data_inicial, '%d/%m/%Y') and STR_TO_DATE(:data_final, '%d/%m/%Y')
+        ORDER BY b.vencimento ASC";
+
+        $binds = [
+            ":data_inicial" => $data_inicial,
+            ":data_final" => $data_final
+        ];
+        return $this->execute($query, $binds);
+    }
+
+    public function filtrar_boletos_por_status($status)
+    {
+        $query = "SELECT
+        b.id_boleto, e.id_expositor,
+        p.nome, b.vencimento,
+        b.mes_referencia,
+        b.valor, b.status_boleto
+        FROM boleto b 
+        INNER JOIN expositor e ON b.id_expositor = e.id_expositor
+        INNER JOIN pessoa p ON e.id_pessoa = p.id_pessoa";
+
+        $binds = [];
+
+        if (!empty($status)) {
+            $query .= " WHERE b.status_boleto = :status_boleto;";
+            $binds = [":status_boleto" => "$status"];
+        }
+        return $this->execute($query, $binds);
+    }
+
+    public function alterar_status($status, $id) {
+        $query = "UPDATE boleto set status_boleto = :status_boleto
+        WHERE id_boleto = :id_boleto";
+
+        $binds = [
+            ":status_boleto" => $status,
+            ":id_boleto" => $id
+        ];
+        return $this->execute($query, $binds);
+    }
+
+    public function capturar_boleto_por_id($id)
+    {
+        $query = "SELECT
+        e.id_expositor, b.id_boleto,
+        p.nome, b.vencimento,
+        b.mes_referencia,
+        b.valor, b.status_boleto
+        FROM pessoa p
+        INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
+        INNER JOIN boleto b on e.id_expositor = b.id_expositor
+        WHERE e.id_expositor = :id_expositor;";
+
+        $binds = [":id_expositor" => "$id"];
+        return $this->execute($query, $binds);
+    }
 }
 
 ?>
