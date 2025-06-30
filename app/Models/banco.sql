@@ -6,6 +6,7 @@ CREATE TABLE categoria(
     descricao VARCHAR(200) NOT NULL,
     cor VARCHAR(50) NOT NULL,
     icone VARCHAR(255) NOT NULL,
+    status_cat ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_categoria)
 );
 
