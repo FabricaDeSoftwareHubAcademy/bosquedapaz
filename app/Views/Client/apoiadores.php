@@ -35,7 +35,7 @@
     <div class="card-apoio card1">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Handshake Heart.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -51,7 +51,7 @@
     <div class="card-apoio card2">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Meal.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -67,7 +67,7 @@
     <div class="card-apoio card3">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Theatre Mask.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -83,7 +83,7 @@
     <div class="card-apoio card4">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Sustainability.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">

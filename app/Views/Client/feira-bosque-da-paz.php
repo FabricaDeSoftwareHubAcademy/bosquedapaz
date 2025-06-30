@@ -23,7 +23,7 @@
     
     <?php include "../../../Public/include/home/lista-expositor.php"; ?>
 
-    <?php include "../../../Public/include/home/categoria.html"; ?>
+    <?php include "../../../Public/include/home/categorias-home.php"; ?>
 
     <?php include "../../../Public/include/home/avisos.html"; ?>
     

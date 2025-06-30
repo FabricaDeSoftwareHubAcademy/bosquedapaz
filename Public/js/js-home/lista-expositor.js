@@ -1,6 +1,6 @@
 async function carregarExpositores() {
     try {
-        const response = await fetch("http://localhost/AulaPHPDev33/bosquedapaz/actions/action-home.php");
+        const response = await fetch("http://localhost/AulaPHPDev33/bosquedapaz/actions/action-home-expositor.php");
         const data = await response.json();
 
         const container = document.getElementById("expositores-container");
