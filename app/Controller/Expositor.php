@@ -146,36 +146,19 @@ class Expositor extends Pessoa
         return $this->produto;
     }
 
-    public function geradorSenha(){
-        $tamanhoSenha = 10;
-     
-        $caracteresPermitidos = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-     
-        $senha = '';
-        for ($i = 0; $i < $tamanhoSenha; $i++) {
-        $senha .= $caracteresPermitidos[rand(0, strlen($caracteresPermitidos) - 1)];
-        }
-    
-        return $senha;
-    }
 
     public function cadastrar()
     {
 
-        $senha = $this->geradorSenha();
-        
         $db = new Database('pessoa');
         $pes_id = $db->insert_lastid(
             [
                 'nome' => $this->nome,
                 'email' => $this->email,
                 'telefone' => $this->whats,
-                'senha' => password_hash($senha, PASSWORD_DEFAULT),
                 'perfil' => 1,
             ]
         );
-
-
 
         $db = new Database('imagem');
         $img_id = $db->insert_lastid([

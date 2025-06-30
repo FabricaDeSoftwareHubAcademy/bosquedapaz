@@ -1,41 +1,4 @@
-<?php 
-require_once '../../../app/Controller/Artista.php';
-
-
-use app\Controller\Artista;
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    $artista = new Artista();
-
-    // Dados pessoa
-    $artista->setNome($_POST['nome']);
-    $artista->setEmail($_POST['email']);
-    $artista->setWhats($_POST['whatsapp']);
-    $artista->setLink_instagram($_POST['link_instagram']);
-
-    // Dados artista
-    $artista->setNome_artistico($_POST['nome_artistico']);
-    $artista->setLinguagem_artistica($_POST['linguagem_artistica']);
-    $artista->setEstilo_musica($_POST['estilo_musica']);
-    $artista->setPublico_alvo($_POST['publico_alvo']);
-    $artista->setTempo_apresentacao($_POST['tempo_apresentacao']);
-    $artista->setValor_cache($_POST['valor_cache']);
-
-    $res = $artista->cadastrar();
-
-    if ($res) {
-        echo "Cadastrado com sucesso!";
-        // ou redireciona para página de sucesso
-    } else {
-        echo "Erro ao cadastrar.";
-    }
-}
-
-
-
-?>
-
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,9 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
+        
 </head>
 
 <body>
@@ -99,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <div class="form-expo">
                         <div class="input">
                             <label>Qual sua linguagem artística?</label>
-                            <select name="todas_categorias" name="linguagem_artistica" id="linguagem_artistica" class="select">
+                            <select name="todas_categorias" id="linguagem_artistica" class="select">
                                 <option value="">Selecione</option>
                                 <option value="teatro">Teatro</option>
                                 <option value="danca">Dança</option>
