@@ -7,5 +7,5 @@ if (!isset($_SESSION['login'])) {
 }
 
 $perfilUsuario = $_SESSION['login']['perfil'];
-$idUsuario = $_SESSION['login']['id_pessoa'];
+// $idUsuario = $_SESSION['login']['id_pessoa'];
 // echo $idUsuario;
