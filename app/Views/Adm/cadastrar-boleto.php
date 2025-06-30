@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <form method="POST" class="form">
+            <form method="POST" enctype="multipart/form-data">
 
                 <div class="form-content">
 
