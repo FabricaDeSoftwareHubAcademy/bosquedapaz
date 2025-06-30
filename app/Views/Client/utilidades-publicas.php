@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-utilidades-publicas.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <title>Document</title>
+    <title>utilidades Publicas</title>
 </head>
 <body>
-<?php include "../../../Public/include/home/menu-home.html" ?>
+
+    <!-- Includ do Menu:  -->
+    <?php include "../../../Public/include/home/menu-home.html" ?>
 
     <main>
         <section class="container__box">
             <div class="titulo"><h1>Utilidades Publicas</h1></div>
-            
             <div class="conteiner__cards">
                 <div class="card">
                     <div class="por-cima-card">
@@ -82,30 +83,43 @@
 
     <!-- Modal:  -->
     <dialog id="modal-info" class="custom-modal">
-        <div class="modal-content-decorated">
+        <div class="modal-wrapper">
 
-            <!-- Decoração: Bolas -->
-            <div class="modal-ball ball1"></div>
-            <div class="modal-ball ball2"></div>
+            <!-- Botão fechar -->
+            <button class="btn-fechar close-modal" data-modal="modal-info"><i class="bi bi-x-circle"></i></button>
 
-            <!-- Decoração: Linha Diagonal -->
-            <div class="modal-diagonal"></div>
+            <!-- Imagens decorativas posicionadas -->
+            <img src="../../../Public/assets/img-decoracao-ult1.png" alt="Decor 1" class="modal-decor decor-top-left">
+            <img src="../../../Public/assets/img-decoracao-ult2.png" alt="Decor 2" class="modal-decor decor-bottom-right">
 
-            <!-- Imagem à esquerda -->
-            <div class="modal-img">
-            <img src="../../../Public/imgs/primavera.png" alt="Imagem Modal">
-            </div>
-
-            <!-- Texto à direita -->
-            <div class="modal-text">
-            <h2>Título Decorado</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus sem ut nisi 
-                pulvinar, nec euismod tortor bibendum. Vivamus in ex libero. Morbi iaculis 
-                facilisis dui non sodales. <br><br>
-                (Role o texto para ver o scroll funcionando)
-            </p>
-            <button class="close-modal" data-modal="modal-info">Fechar</button>
+            <!-- Conteúdo -->
+            <div class="modal-content">
+                <div class="modal-left">
+                    <img src="../../../Public/imgs/primavera.png" alt="Imagem do Evento">
+                </div>
+                <div class="modal-right">
+                    <div class="modal-text-content">
+                    <h2>Primavera</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
+                    </p>
+                    </div>
+                </div>
             </div>
         </div>
     </dialog>
@@ -116,6 +130,5 @@
     <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
 
     <script src="../../../Public/js/js-modais/modal-utilidades-publi.js"></script>
-
 </body>
 </html>
