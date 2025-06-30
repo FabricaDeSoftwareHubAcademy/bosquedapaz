@@ -1,10 +1,4 @@
-// --- IMPORTAR CSS DO MODAL SUCESSO (se ainda não fez) ---
-const headElementSucesso = document.getElementsByTagName('head')[0];
-const linkSucesso = document.createElement('link');
-linkSucesso.rel = 'stylesheet';
-linkSucesso.type = 'text/css';
-linkSucesso.href = '../../../Public/css/css-modais/style-modal-sucesso.css'; // ajuste o caminho conforme seu projeto
-headElementSucesso.appendChild(linkSucesso);
+
 
 let btn_cadastrar = document.getElementById("btn-salvar");
 let formulario = document.getElementById("form_cadastrar_parceiro");
