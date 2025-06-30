@@ -80,11 +80,10 @@
         </div>
     </main>
 
-    <div class="bolas-fundo">
-        <img src="../../../Public/assets/img-bolas/Elemento1.FolhaAzul.svg" alt="FolhaAzul" class="folhaAzul1-yan" />
-        <img src="../../../Public/assets/img-bolas/Elemento2.FolhaAzul.svg" alt="FolhaAzul2" class="folhaAzul2-yan" />
-        <img src="../../../Public/assets/img-bolas/bola-3.png" alt="FolhaRosa" class="folhaRosa-yan" />
-    </div>
+    <!-- Imagens Decorativas  -->
+    <div class="decorative__img1"><img src="../../../Public/assets/img-bolas/bola-verde1.png" alt=""></div>
+    <div class="decorative__img2"><img src="../../../Public/assets/img-bolas/bola-verde2.png" alt=""></div>
+    <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>

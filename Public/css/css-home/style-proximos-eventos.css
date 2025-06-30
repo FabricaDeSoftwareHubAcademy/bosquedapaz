@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('style-menu.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Colors variáveis */
+:root{
+    --color-selo: #0D592E;
+}
 
 /* Areas Principais:  */
 *{
@@ -15,6 +20,7 @@ main {
     margin: 0 auto;
 }
 
+/* Titulo da tela  */
 main #title{
     position: relative;
     text-align: center;
@@ -22,7 +28,7 @@ main #title{
 }
 
 
-/* Sections Carrossel:  */
+/* Section do Carrossel:  */
 .carousel-section {
     position: relative;
     height: 80vh;
@@ -105,11 +111,9 @@ main #title{
     padding: 10px;
     z-index: 4;
 }
-
 .nav.prev {
     left: calc(5% + 20px);
 }
-
 .nav.next {
     right: calc(5% + 20px);
 }
@@ -181,7 +185,6 @@ main #title{
     justify-content: center;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-
 .carousel-item .banner-right img {
     width: 100%;
     height: 100%;
@@ -221,7 +224,6 @@ main #title{
 .div__info p{
     white-space: pre-line;
 }
-
 
 
 /* Section dos Cards do Evento:  */
@@ -265,7 +267,6 @@ main #title{
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-
 .card:hover {
   box-shadow:
     0 15px 30px rgba(13,89,46, 0.3),
@@ -282,14 +283,12 @@ main #title{
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
-
 .card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
 .card:hover .card__image img {
   transform: scale(1.08);
 }
@@ -300,7 +299,7 @@ main #title{
   top: 15px;
   left: -45px;
   width: 140px;
-  background: #0D592E;
+  background: var(--color-selo);
   color: white;
   font-weight: 700;
   text-align: center;
@@ -465,11 +464,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 1.8rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 0.9rem;
     }
-
     .carousel-item .text-left p {
         font-size: 0.7rem;
     }
@@ -544,11 +541,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 2rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 1rem;
     }
-
     .carousel-item .text-left p {
         font-size: 0.8rem;
     }
@@ -586,7 +581,7 @@ main #title{
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
-        /* Areas Principais:  */
+    /* Areas Principais:  */
     main {
         padding-top: 85px;
     }
@@ -623,11 +618,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 2.2rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 1.2rem;
     }
-
     .carousel-item .text-left p {
         font-size: 1rem;
     }
@@ -684,11 +677,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 2.2rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 1.2rem;
     }
-
     .carousel-item .text-left p {
         font-size: 1rem;
     }
@@ -733,3 +724,5 @@ main #title{
         margin-left: 45px;
     }
 }
+
+/* Matheus Manja */

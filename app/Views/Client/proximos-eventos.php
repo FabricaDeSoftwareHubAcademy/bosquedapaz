@@ -13,7 +13,9 @@
     
     <main>
         <h1 id="title">PRÓXIMOS EVENTOS</h1>
+        <!-- Section Do Carrossel:  -->
         <section class="carousel-section">
+            <!-- Seta-1 -->
             <button class="nav prev">&#10094;</button>
 
             <div class="carousel-track">
@@ -71,7 +73,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 4 -->
+                <!-- Slide-4 -->
                 <div class="carousel-item" style="background-image: url('../../../Public/imgs/img-atracao-proev.png');">
                     <div class="overlay">
                         <div class="overlay-content">
@@ -90,6 +92,7 @@
                 </div>
             </div>
 
+            <!-- Seta 2 -->
             <button class="nav next">&#10095;</button>
         </section>
 
@@ -206,3 +209,5 @@
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
 </body>
 </html>
+
+<!-- Matheus Manja -->

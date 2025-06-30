@@ -2,21 +2,19 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../../../Public/css/menu-adm.css" />
+  <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" />
   <link rel="stylesheet" href="../../../Public/css/css-adm/style-lista-de-espera.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" />
   <title>Adm - Bosque da Paz</title>
 </head>
 
 <body>
   <!-- Include do Menu  -->
   <?php include "../../../Public/include/menu-adm.html" ?>
-
 
   <!-- Área Principal  -->
   <main class="container__main">
@@ -65,8 +63,6 @@
 
   <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
 
-
-
   <!-- ----------------------------< >-----------------------------  -->
   <!--  Modal -->
   <!-- modal 3 - recusar expositor  -->
@@ -93,5 +89,6 @@
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/js-lista-de-espera.js"></script>
 </body>
-
 </html>
+
+<!-- Matheus Manja -->

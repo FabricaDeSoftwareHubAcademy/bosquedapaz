@@ -1,6 +1,5 @@
 <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,6 +15,7 @@
 <body>
     <!-- Includ Menu -->
     <?php include "../../../Public/include/menu-adm.html" ?>
+
     <main>
         <section class="container_box">
             <!-- Area Esquerda: Imagem -->
@@ -83,21 +83,24 @@
                         </div>
                     </div>      
                 
-                    <!-- Senha -->
-                    <div class="form__group">
-                        <label class="label__cad" for="senha">Senha</label>
-                        <div class="area__input">
-                            <i class="bi bi-shield-lock"></i>
-                            <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    <!-- Senha e Confirmar Senha -->
+                    <div class="form__group senha__linha">
+                        <!-- Senha -->
+                        <div class="senha__coluna">
+                            <label class="label__cad" for="senha">Senha</label>
+                            <div class="area__input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Confirmar Senha -->
-                    <div class="form__group">
-                        <label class="label__cad" for="confSenha">Confirmar Senha</label>
-                        <div class="area__input">
-                            <i class="bi bi-shield-lock"></i>
-                            <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                        <!-- Confirmar Senha -->
+                        <div class="senha__coluna">
+                            <label class="label__cad" for="confSenha">Confirmar Senha</label>
+                            <div class="area__input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                            </div>
                         </div>
                     </div>
 
@@ -118,8 +121,11 @@
         <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-2.png" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
     </main>
+
     <!-- Scripts:  -->
     <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 </html>
+
+<!-- Matheus Manja -->

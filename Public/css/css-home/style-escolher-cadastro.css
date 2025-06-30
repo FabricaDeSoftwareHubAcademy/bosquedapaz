@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("style-menu.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin: 0;
@@ -89,11 +89,9 @@
     transition: all .2s ease-in-out;
     box-shadow: 0px 4px 5px rgba(54, 54, 54, 0.404);
 }
-
 .button:hover{
     transform: scale(1.1);
 }
-
 .button i{
     font-size: 25px;
 }
@@ -161,7 +159,6 @@
     pointer-events: none;
     user-select: none;
 }
-
 .imgs__decorative3 img{
     width: 60%;
     height: auto;
@@ -339,4 +336,6 @@
         bottom: -2vh;
     }
 }
+
+/* Matheus Manja */
 

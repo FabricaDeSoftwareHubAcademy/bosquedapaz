@@ -11,6 +11,7 @@
 <!-- Corpo da Tela -->
 <body>
     <?php include "../../../Public/include/home/menu-home.html"; ?>
+
     <main class="main__principal">
         <!-- Box Principal dos Elementos -->
         <div class="container__box">
@@ -48,6 +49,8 @@
     <div class="imgs__decorative2"><img src="../../../Public/assets/img-bolas/bola-verde2.png" alt=""></div>
     <div class="imgs__decorative3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
    
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>          
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>     
 </body>
 </html>
+
+<!-- Matheus Manja -->
