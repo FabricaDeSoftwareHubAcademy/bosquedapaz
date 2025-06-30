@@ -45,21 +45,22 @@
 
                 <button class="voltar">
                     <a href="Area-Adm.php" class="voltar-link">
-                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                        <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
                     </a>
                 </button>
                 <div class="b-voltar"></div>
 
-
-                <button id="nova-atracao" >Nova Atração</button>
+                <div class="botoes">
+                    <button id="nova-atracao" class="novo-evento">Nova Atração</button>
+                </div>
             </div>
         </div>
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-azul.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
