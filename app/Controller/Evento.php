@@ -35,10 +35,16 @@ class Evento
         return $res;
     }
 
+    public function listarAtivos(){
+        $db = new Database('evento');
+        $res = $db->select("status = 1")->fetchAll(PDO::FETCH_ASSOC);
+
+        return $res;
+    }
+
     public function buscarPorId($id) {
         $db = new Database('evento');
-        $res = $db->select("id_evento = {$id}")
-                        ->fetchObject(self::class);
+        $res = $db->select("id_evento = {$id}")->fetchObject(self::class);
 
         return $res;
     }
