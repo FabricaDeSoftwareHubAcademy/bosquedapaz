@@ -1,4 +1,9 @@
+@import url('style-menu.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-box: #f4f4f4a2;
+}
 
 * {
     padding: 0;
@@ -7,62 +12,70 @@
     font-family: "Poppins", sans-serif;
 }
 
-body,html{
-    width: 100%;
-    display: flex;
-    overflow-y: none;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-
-.tela-ult{
+main {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    padding-top: 100px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    overflow-y: auto;
-    padding-top: 110px;
 }
 
-.conteiner__ult{
+.container__box {
     width: 90%;
-    height: 90%;
-    background-color: #f4f4f4a2;
+    height: 95%;
+    background-color: var(--color-box);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     border-radius: 10px;
+    padding: 20px;
     overflow: hidden;
 }
 
-.nome-tela{
-    position: relative;
-    top: -12%;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.conteiner__cards{
-    /* width: 100%; */
+.titulo{
+    width: 100%;
+    height: 15%;
     display: flex;
-    gap: 50px;
-    justify-content: center;
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
 }
 
-.card{
-    width: 300px;
+.titulo h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.conteiner__cards {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;         
+  justify-content: center;  
+  align-items: center;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+.card {
+    max-width: 300px;
+    min-width: 200px; 
     height: 450px;
     background-color: white;
     border-radius: 10px;
     border: 2px solid #3F49EA;
     transition: transform 0.9s ease-in-out, box-shadow 0.9s ease-in-out;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.733);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-
 .img-ult{
     width: 80%;
     height: auto;
@@ -70,7 +83,7 @@ body,html{
 }
 
 .card:hover {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 
 .nome-card {
@@ -111,7 +124,7 @@ body,html{
     position: absolute;
     border-radius: 10px 10px;
     transform: rotate(68deg);
-    top: 38%;
+    top: 22%;
     left: 21%;
 }
 
@@ -120,7 +133,7 @@ body,html{
     height: 22rem;
     background-color: #3F49EA;
     position: absolute;
-    top: 36%;
+    top: 20%;
     left: 30%;
     transform: rotate(69deg);
 }
@@ -130,7 +143,7 @@ body,html{
     height: 185px;
     background-color: white;
     position: absolute;
-    top: -2%;
+    top: -5%;
     left: 5%;
     border-radius: 10px 10px;
 }
@@ -159,251 +172,434 @@ body,html{
 }
 
 
+/* Fundo escuro */
+.custom-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Centralizado */
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* Container principal */
+.modal-content-decorated {
+  width: 800px;
+  max-width: 95vw;
+  height: 500px;
+  border-radius: 15px;
+  background: white;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagem esquerda */
+.modal-img {
+  width: 40%;
+  background-color: #3F49EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-img img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+/* Texto direita */
+.modal-text {
+  width: 60%;
+  padding: 30px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.modal-text h2 {
+  color: #3F49EA;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-text p {
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Botão fechar */
+.modal-text .close-modal {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid #3F49EA;
+  border-radius: 8px;
+  background: white;
+  color: #3F49EA;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-text .close-modal:hover {
+  background: #3F49EA;
+  color: white;
+}
+
+/* Linha Diagonal */
+.modal-diagonal {
+  position: absolute;
+  width: 10px;
+  height: 160px;
+  background: #3F49EA;
+  top: 20%;
+  left: 45%;
+  transform: rotate(55deg);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* Bolas Decorativas */
+.modal-ball {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.ball1 {
+  width: 120px;
+  height: 120px;
+  background: #3F49EA;
+  top: -40px;
+  right: -40px;
+}
+
+.ball2 {
+  width: 80px;
+  height: 80px;
+  background: #3F49EA;
+  bottom: -30px;
+  left: -30px;
+}
 
 
+/* Imagens Decorativas:  */
+.decorative__img1 {
+    position: fixed;
+    top: 15vh;
+    left: 0vw;
+    width: 20vw;
+    z-index: -1;
+}
+
+.decorative__img2 {
+    position: fixed;
+    top: 20vh;
+    right: -12vw;
+    width: 20vw;
+    z-index: -1;
+}
+
+.decorative__img2 img{
+    width: 40%;
+    height: auto;
+}
+
+.decorative__img3 {
+    position: fixed;
+    right: -6vw;
+    bottom: -1vw;
+    width: 20vw;
+    z-index: -1;
+}
+
+.decorative__img3 img{
+    width: 70%;
+    height: auto;
+}
 
 /* Responsividades: */
 @media (max-width: 575.98px){
-
-    .conteiner__cards{
-        flex-direction: column;
+    main{
+        padding-top: 100px;
+    }
+    .container__box{
+        height: 100%;
         overflow-y: auto;
     }
-
-    .card {
-        position: relative;
-        top: 12%;
-        width: 260px;
-        height: 370px;
+    .titulo{
+        height: 10%;
     }
-
-    .nome-tela {
-        position: relative;
-        top: 5%;
+    .titulo h1{
+        font-size: 25px;
     }
-
+    .conteiner__cards {
+        height: 90%;
+        justify-content: center;
+    }
+    .card{
+        height: 450px;
+    }
+    .card:hover{
+        transform: translateY(0px);
+    }
     .linha-decorativa-1{
         top: 18%;
     }
-
     .container__decorativo{
         top: 14%;
+        left: 28%;
     }
-
     .meu-botao{
-        padding: 10px 20px;
+        padding: 13px 54px;
+        left: 17%;
     }
-
     .nome-card{
         font-size: 20px;
     }
 
-    .img-ult{
-        width: 70%;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
         height: auto;
     }
-
-
-    
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px){
-
-     .conteiner__cards{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    main{
+        padding-top: 100px;
     }
-
-    .card {
-        width: 221px;
-        height: 266px;
-        position: relative;
+    .container__box{
+        height: 100%;
+        overflow-y: auto;
     }
-
-    .nome-tela{
+    .titulo{
+        height: 10%;
+    }
+    .titulo h1{
+        font-size: 25px;
+    }
+    .conteiner__cards {
+        height: 90%;
+        justify-content: center;
+    }
+    .card{
+        height: 450px;
+    }
+    .card:hover{
+        transform: translateY(0px);
+    }
+    .meu-botao {
+        padding: 10px 67px;
+        left: 14%;
+    }
+    .container__decorativo{
+        left: 21%;
+        top: 12%;
+        transform: rotate(72deg);
+    }
+    .linha-decorativa-1 {
+        top: 5%;
+        transform: rotate(72deg);
+    }
+    .linha-decorativa-2 {
+        left: 6%;
         top: 0%;
     }
-
-    .nome-card{
-        font-size: 17px;
-        left: 37%;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
     }
-
-    .meu-botao {
-        padding: 6px 9px;
-        left: 26%;
-    }
-    .container__decorativo {
-        left: 43%;
-        top: -3%;
-        transform: rotate(72deg);
-    }
-    .linha-decorativa-1 {
-        top: 5%;
-        transform: rotate(72deg);
-    }
-    .linha-decorativa-2 {
-        left: 4%;
-        top: 13%;
-    }
-
-    .img-ult{
-        width: 60%;
+    .decorative__img1 img{
+        width: 50%;
         height: auto;
     }
-  
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
- 
  
 @media (min-width: 768px) and (max-width: 991.98px){
-
-    .tela-ult{
-        height: 95%;
+    main{
+        padding-top: 100px;
     }
-
-   .conteiner__cards{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .container__box{
+        overflow-y: auto;
     }
-
-    .card {
-        width: 221px;
-        height: 257px;
-        position: relative;
+    .titulo{
+        height: 10%;
     }
-
-    .nome-tela{
-        top: -5%;
+    .titulo h1{
+        font-size: 25px;
     }
-    .nome-card{
-        font-size: 17px;
-        left: 37%;
+    .conteiner__cards {
+        height: 90%;
+        justify-content: center;
     }
-
+    .card{
+        height: 450px;
+    }
+    .card:hover{
+        transform: translateY(0px);
+    }
     .meu-botao {
-        padding: 6px 9px;
-        left: 26%;
+        padding: 10px 55px;
+        left: 17%;
     }
     .container__decorativo {
-        left: 43%;
-        top: -3%;
+        left: 21%;
+        top: 12%;
         transform: rotate(72deg);
     }
     .linha-decorativa-1 {
-        top: 5%;
+        top: 7%;
         transform: rotate(72deg);
     }
     .linha-decorativa-2 {
-        left: 4%;
-        top: 13%;
+        left: 7%;
+        top: 0%;
     }
-
     .img-ult{
         width: 70%;
         height: auto;
     }
-  
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
- 
  
 @media (min-width: 992px) and (max-width: 1199.98px){
-
-    .tela-ult{
-        overflow: hidden;
+    main{
+        padding-top: 100px;
+    }
+    .container__box{
         overflow-y: auto;
-        height: 95%;
     }
-
-    .conteiner__cards{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .titulo{
+        height: 10%;
     }
-
-    .card {
-        width: 250px;
-        height: 350px;
-        position: relative;
-        position: relative;
-        top: 50%;
+    .titulo h1{
+        font-size: 25px;
     }
-
-    .nome-tela{
-        top: 11%;
+    .conteiner__cards {
+        height: 90%;
+        justify-content: center;
     }
-    .nome-card{
-        font-size: 17px;
-        left: 37%;
+    .card{
+        height: 450px;
     }
-
+    .card:hover{
+        transform: translateY(0px);
+    }
     .meu-botao {
-        padding: 6px 9px;
-        left: 26%;
+        padding: 10px 60px;
+        left: 16%;
     }
     .container__decorativo {
-        left: 43%;
-        top: -3%;
+        left: 20%;
+        top: 7%;
         transform: rotate(72deg);
     }
     .linha-decorativa-1 {
-        top: 5%;
+        top: 3%;
         transform: rotate(72deg);
     }
     .linha-decorativa-2 {
-        left: 4%;
-        top: 13%;
+        left: 6%;
+        top: -2%;
     }
-
     .img-ult{
         width: 70%;
         height: auto;
     }
-  
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
  
- 
 @media (min-width: 1200px) and (max-width: 1399.98px){
-
-    .conteiner__ult{
-        overflow: hidden;
+    /* main{
+        padding-top: 100px;
+    } */
+    .container__box{
+        overflow-y: auto;
     }
-
-    .conteiner__cards{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        overflow: hidden;
+    .titulo{
+        height: 10%;
     }
-
-    .card {
-        width: 223px;
-        height: 400px;
-        position: relative;
+    .titulo h1{
+        font-size: 25px;
     }
-
+    .conteiner__cards {
+        height: 90%;
+        justify-content: center;
+    }
+    .card{
+        height: 450px;
+    }
+    .card:hover{
+        transform: translateY(0px);
+    }
     .container__decorativo {
-        top: 32%;
+        top: 5%;
+        left: 25%;
     }
-
     .linha-decorativa-1{
-        top: 34%;
+        top: 5%;
     }
-
     .meu-botao {
-        left: 24%;
-        padding: 11px 17px;
+        left: 13%;
+        padding: 15px 70px;
     }
-
     .nome-card{
         left: 33%;
     }
-}
- 
- 
-@media (min-width: 1400px) and (max-height: 699.98px){
-    
 
-    .card {
-        width: 260px;
-        height: 400px;
-        position: relative;
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
     }
 }

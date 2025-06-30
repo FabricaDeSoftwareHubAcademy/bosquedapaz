@@ -240,13 +240,12 @@ main #title{
     width: 91.5%;
 }
 
-.area__cards{
-    width: 91.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
+.area__cards {
+  width: 91.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Cards  */
@@ -421,7 +420,6 @@ main #title{
     }
     .area__cards{
         width: 80%;
-        grid-template-columns: repeat(1, 1fr);
     }
 }
 

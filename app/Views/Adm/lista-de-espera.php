@@ -47,7 +47,7 @@
         <!-- Seta Voltar -->
         <div class="btn-v">
           <a href="Area-Adm.php" class="voltar">
-            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar" />
+            <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar" />
           </a>
         </div>
       </div>
