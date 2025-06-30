@@ -41,7 +41,7 @@
                         <input class="input-cb" name="nome" type="text" placeholder="Pesquisar nome do expositor">
                         <button type="submit" class="bola-cb" style="cursor: pointer;"></button>
                     </form>
-                    <form method="POST" action="../../../actions/actions-boletos/action-cadastrar-boleto.php" class="form-cb">
+                    <form method="POST" enctype="multipart/form-data" action="../../../actions/actions-boletos/action-cadastrar-boleto.php" class="form-cb">
                         <input type="hidden" class="input-cb" name="id_expositor" type="text" placeholder="Pesquisar nome do expositor">
                         <div class="area-div-1-cb">
                             <div class="form-group-cb">
@@ -55,7 +55,7 @@
                                     <span id="file-text">Selecionar Arquivo em PDF</span>
                                     <img class="img-cb" src="../../../Public/imgs/edicoes-passadas-img/Upload.svg" alt="">
                                 </label>
-                                <input type="file" name="arq-cb" id="arq-cb" accept=".pdf">
+                                <input type="file" name="arq-cb" id="arq-cb" accept="application/pdf">
                             </div>
 
                             <div class="form-group-cb">
