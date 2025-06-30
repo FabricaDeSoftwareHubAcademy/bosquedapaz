@@ -42,8 +42,8 @@
                     </div>
 
                     <div class="input">
-                        <label for="cnpj-cpf" class="label">CNPJ/CPF:</label>
-                        <input type="text" name="cnpj-cpf" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00  |  00.000.000/0000-00" required>
+                        <label for="cpf" class="label">CPF:</label>
+                        <input type="text" name="cpf" id="cpf" class="form-input" placeholder="000.000.000-00" required>
                     </div>
                     
                     <div class="input">
