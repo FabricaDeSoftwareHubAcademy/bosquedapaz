@@ -42,7 +42,7 @@
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
                                 <small id="contador-caracteres">500 caracteres restantes</small>
                             </div>
 

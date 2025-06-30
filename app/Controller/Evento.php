@@ -10,7 +10,7 @@ class Evento
     public int $id_evento;
     public string $nome_evento;
     public string $subtitulo_evento;
-    public string $descricao_eento;
+    public string $descricao_evento;
     public string  $data_evento;
     public string $hora_inicio;
     public string $hora_fim;
@@ -56,13 +56,13 @@ class Evento
 
     $valores = [
         'nome_evento' => $this->nome_evento,
-        'subtitulo' => $this->subtitulo,
-        'descricao' => $this->descricao,
+        'subtitulo_evento' => $this->subtitulo_evento,
+        'descricao_evento' => $this->descricao_evento,
         'data_evento' => $this->data_evento,
         'hora_inicio' => $this->hora_inicio,
         'hora_fim' => $this->hora_fim,
-        'endereco' => $this->endereco,
-        'banner' => $this->banner,
+        'endereco_evento' => $this->endereco_evento,
+        'banner_evento' => $this->banner_evento,
         'status' => $this->status
     ];
 

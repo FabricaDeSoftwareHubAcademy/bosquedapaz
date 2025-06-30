@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const descricaoInput = document.getElementById('descricao');
+    const descricaoInput = document.getElementById('descricaodoevento');
     const contador = document.getElementById('contador-caracteres');
 
     const atualizarContador = () => {
@@ -34,17 +34,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             document.getElementById('id_evento').value = evento.id_evento;
             document.getElementById('nomedoevento').value = evento.nome_evento;
-            document.getElementById('sutitulo').value = evento.subtitulo_evento;
-            document.getElementById('descricao').value = evento.descricao_evento;
+            document.getElementById('subtitulo').value = evento.subtitulo_evento;
+            document.getElementById('descricaodoevento').value = evento.descricao_evento;
             document.getElementById('dataevento').value = evento.data_evento;
             document.getElementById('hora_inicio').value = evento.hora_inicio;
             document.getElementById('hora_fim').value = evento.hora_fim;
-            document.getElementById('endereco').value = evento.endereco;
+            document.getElementById('endereco').value = evento.endereco_evento;
             document.getElementById('status').value = evento.status;
 
             const banner = document.getElementById('preview-image');
-            banner.src = `../../../Public/${evento.banner_evento}`;
-            banner.alt = evento.nome_evento ?? 'Imagem do evento';
+            if(evento.banner_evento){
+                banner.src = `../../../Public/${evento.banner_evento}`;
+                banner.alt = evento.nome_evento ?? 'Imagem do evento';
+            }
         } else {
             alert('Evento não encontrado.');
         }

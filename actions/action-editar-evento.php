@@ -45,6 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $evento->endereco_evento = $endereco;
     $evento->status = $status;
 
+
+
     // Upload de imagem (opcional)
     if (!empty($_FILES['banner']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
