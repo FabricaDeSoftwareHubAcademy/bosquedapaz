@@ -3,9 +3,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Preenche os campos com os parâmetros da URL
     document.querySelector('input[name="titulo"]').value = params.get('titulo') || '';
-    document.querySelector('textarea[name="descricaodoevento"]').value = params.get('descricao') || '';
-    document.querySelector('input[name="data-inicio"]').value = params.get('data_inicio') || '';
-    document.querySelector('input[name="data-fim"]').value = params.get('data_fim') || '';
+    document.querySelector('textarea[name="descricao"]').value = params.get('descricao') || '';
+    document.querySelector('input[name="data_inicio"]').value = params.get('data_inicio') || '';
+    document.querySelector('input[name="data_fim"]').value = params.get('data_fim') || '';
 
     // Não é possível setar valor de input file via JS por segurança, então removido
     // document.querySelector('input[type="file"]').value = params.get('imagem') || '';

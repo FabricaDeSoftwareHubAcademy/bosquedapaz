@@ -30,21 +30,21 @@
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
                         <div class="data">
                             <div class="input-group">
                                 <label>Data início</label>
-                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                                <input type="date" id="data_inicio" name="data_inicio" value="0000/00/00">
                             </div>
                             <div class="input-group">
                                 <label>Data fim</label>
-                                <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                                <input type="date" id="data_fim" name="data_fim" value="0000/00/00">
                             </div>
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="imagem" id="imagem" required>
                         </div>
                     </form>
                 </div>
@@ -61,6 +61,7 @@
 
                     <button id="botao_editar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
                         <a href="">Salvar</a>
+                    </button>
                 </div>
             </div>
         </div>

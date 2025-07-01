@@ -4,7 +4,6 @@ use app\Controller\UtilidadePublica;
 
 // Verifica se é uma requisição POST
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-    $id_utilidadePublica = $_POST['id_utilidadePublica'] ?? null;
     $titulo = $_POST['titulo'] ?? '';
     $descricao = $_POST['descricao'] ?? '';
     $data_inicio = $_POST['data_inicio'] ?? '';

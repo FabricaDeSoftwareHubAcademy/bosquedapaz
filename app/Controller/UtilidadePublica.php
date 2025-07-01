@@ -8,7 +8,7 @@ use app\Models\Database;
 
     Class UtilidadePublica
     {
-        public int $id_utilidadesPublica;
+        public int $id_utilidade_publica;
         public string $titulo;
         public string $descricao;
         public string $data_inicio;
@@ -42,12 +42,13 @@ use app\Models\Database;
 
         public function editar() {
             $db = new Database('utilidade_publica');
-            $res = $db->update("id =" . $id ,[
+            $res = $db->update("id_utilidade_publica =" . $this->id_utilidade_publica ,[
                 'titulo' => $this->titulo,
                 'descricao' => $this->descricao,
                 'data_inicio' => $this->data_inicio,
                 'data_fim' => $this->data_fim,
-                'imagem' => $this->imagem
+                'imagem' => $this->imagem,
+                'status_utilidade' => $this->status_utilidade
             ]);
     
             return $res;

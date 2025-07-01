@@ -35,7 +35,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricao" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
                         <div class="data">
                             <div class="input-group">
