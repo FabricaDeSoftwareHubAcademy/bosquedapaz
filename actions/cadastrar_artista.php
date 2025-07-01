@@ -1,5 +1,6 @@
 <?php
-require_once('../../../vendor/autoload.php');
+require_once('../vendor/autoload.php');
+
 
 use app\Controller\Artista;
 
@@ -10,7 +11,7 @@ try {
 
     $artista->setNome($_POST['nome']);
     $artista->setEmail($_POST['email']);
-    $artista->setWhats($_POST['whatsapp']);
+    $artista->setWhats($_POST['whats']);
     $artista->setLink_instagram($_POST['link_instagram']);
     $artista->setNome_artistico($_POST['nome_artistico']);
     $artista->setLinguagem_artistica($_POST['linguagem_artistica']);
@@ -21,11 +22,13 @@ try {
 
     $res = $artista->cadastrar();
 
-    if ($res) {
-        echo json_encode(['status' => 'success']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Falha ao cadastrar.']);
-    }
+    echo json_encode([
+        'status' => $res ? 'success' : 'error',
+        'message' => $res ? null : 'Erro ao cadastrar artista'
+    ]);
 } catch (Exception $e) {
-    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+    echo json_encode([
+        'status' => 'error',
+        'message' => $e->getMessage()
+    ]);
 }
