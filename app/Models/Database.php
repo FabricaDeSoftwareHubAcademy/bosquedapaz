@@ -374,7 +374,7 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function capturar_boleto_por_id($id)
+    public function capturar_boletos_por_usuario($id)
     {
         $query = "SELECT
         e.id_expositor, b.id_boleto,
@@ -384,9 +384,9 @@ class Database {
         FROM pessoa p
         INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
         INNER JOIN boleto b on e.id_expositor = b.id_expositor
-        WHERE e.id_expositor = :id_expositor;";
+        WHERE p.id_pessoa = :id;";
 
-        $binds = [":id_expositor" => "$id"];
+        $binds = [":id" => "$id"];
         return $this->execute($query, $binds);
     }
 }

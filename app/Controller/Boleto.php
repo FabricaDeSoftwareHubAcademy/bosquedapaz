@@ -58,16 +58,14 @@ class Boleto {
         return $banco->filtrar_boletos_por_data($data_inicial, $data_final)->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function CapturarBoletoPorId($id = null) {
-        if ($id === null && isset($_SESSION['id_expositor'])) {
-            $id = $_SESSION['id_expositor'];
-        }
-        if ($id !== null) {
+    public function CapturarBoletosPorUsuario($idPessoa) {
+        if ($idPessoa !== null) {
             $banco = new Database('boleto');
-            return $banco->capturar_boleto_por_id($id)->fetch(PDO::FETCH_ASSOC);
+            return $banco->capturar_boletos_por_usuario($idPessoa)->fetchAll(PDO::FETCH_ASSOC);
         }
-        return null;
+        return [];
     }
+    
     
 }
 ?>
