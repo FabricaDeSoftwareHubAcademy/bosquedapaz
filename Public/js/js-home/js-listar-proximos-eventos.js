@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (json.status === 'success') {
             eventos = json.dados;
+            console.log("Eventos:", eventos);
             montarCarrossel(eventos);
             atualizarDescricaoEEspacos(eventos[0]);
         } else {
@@ -73,10 +74,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function showSlide(index) {
         const items = document.querySelectorAll('.carousel-item');
-        items.forEach(item => item.style.display = 'none');
-        if (items[index]) {
-            items[index].style.display = 'block';
-        }
+
+        items.forEach((item, i) => {
+            item.classList.remove('active', 'prev', 'next', 'hidden');
+
+            if (i === index) {
+                item.classList.add('active');
+            } else if (i === index - 1 || (index === 0 && i === items.length - 1)) {
+                item.classList.add('prev');
+            } else if (i === index + 1 || (index === items.length - 1 && i === 0)) {
+                item.classList.add('next');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
 
         atualizarDescricaoEEspacos(eventos[index]);
     }

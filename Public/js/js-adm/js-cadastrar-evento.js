@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     descricaoInput.addEventListener('input', () => {
         const restante = 500 - descricaoInput.value.length;
         contador.textContent = `${restante} caracteres restantes`;
-        console.log(`Digitado: ${descricaoInput.value.length} caracteres`);
+        // console.log(`Digitado: ${descricaoInput.value.length} caracteres`);
     });
 
     const form = document.getElementById('form-evento');
