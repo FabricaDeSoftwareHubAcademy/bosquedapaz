@@ -1,19 +1,16 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const descricaoInput = document.getElementById('descricaodoevento');
     const contador = document.getElementById('contador-caracteres');
+    const btnEditar = document.getElementById('btn-salvar');
+    const form = document.getElementById('form-editar-evento');
 
     const atualizarContador = () => {
         const restante = 500 - descricaoInput.value.length;
         contador.textContent = `${restante} caracteres restantes`;
-        console.log(`Digitado: ${descricaoInput.value.length} caracteres`);
     };
 
     descricaoInput.addEventListener('input', atualizarContador);
-
-    setTimeout(() => {
-        atualizarContador();
-    }, 100);
-
+    setTimeout(atualizarContador, 100);
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
@@ -22,8 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert('ID do evento não fornecido.');
         return;
     }
-
-    const form = document.getElementById('form-editar-evento');
 
     try {
         const response = await fetch(`../../../actions/action-buscar-evento.php?id=${id}`);
@@ -43,17 +38,30 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('status').value = evento.status;
 
             const banner = document.getElementById('preview-image');
-            if(evento.banner_evento){
+            if (evento.banner_evento) {
                 banner.src = `../../../Public/${evento.banner_evento}`;
                 banner.alt = evento.nome_evento ?? 'Imagem do evento';
             }
         } else {
             alert('Evento não encontrado.');
+            return;
         }
 
-        
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
+    } catch (error) {
+        console.error('Erro ao buscar evento:', error);
+        alert('Erro ao buscar evento.');
+        return;
+    }
+
+    btnEditar.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        openModalAtualizar();
+        document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
+        document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
+
+        document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+            closeModalAtualizar();
 
             const formData = new FormData(form);
 
@@ -69,19 +77,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const data = JSON.parse(text);
 
                 if (data.status === 'success') {
-                    alert(data.mensagem);
-                    window.location.href = 'gerenciar-eventos.php';
+                    openModalSucesso();
+                    document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
+                    document.getElementById('msm-sucesso').innerHTML = data.mensagem ?? 'Evento atualizado com sucesso!';
+
+                    setTimeout(() => {
+                        window.location.href = 'gerenciar-eventos.php';
+                    }, 2000);
                 } else {
-                    alert('Erro ao atualizar evento: ' + data.mensagem);
+                    openModalError();
+                    document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
+                    console.error('Erro ao atualizar:', data.mensagem);
                 }
 
             } catch (error) {
                 console.error('Erro no envio do formulário:', error);
+                alert('Erro inesperado ao tentar editar o evento.');
             }
         });
 
-    } catch (error) {
-        console.error('Erro ao buscar evento:', error);
-        alert('Erro ao buscar evento.');
-    }
+    });    
+
 });

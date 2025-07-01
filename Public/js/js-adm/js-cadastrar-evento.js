@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
             closeModalAtualizar();
 
-            // Aqui já chamamos diretamente a função de envio
+            
             const nome = document.getElementById('nomedoevento').value.trim();
             const subtitulo = document.getElementById('subtitulo').value.trim();
             const descricao = document.getElementById('descricaodoevento').value.trim();
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const formData = new FormData();
+
             formData.append('nomedoevento', nome);
             formData.append('subtitulo', subtitulo);
             formData.append('descricaodoevento', descricao);
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
                     document.getElementById('msm-sucesso').innerHTML = 'Evento cadastrado com sucesso!';
 
-                    // Pequeno delay para o usuário ver o modal
+                    
                     setTimeout(() => {
                         window.location.href = './gerenciar-eventos.php';
                     }, 2000);
@@ -69,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } catch (error) {
                 console.error('Erro na requisição:', error);
-                alert('Erro inesperado. Tente novamente mais tarde.');
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
             }
         });
     });
