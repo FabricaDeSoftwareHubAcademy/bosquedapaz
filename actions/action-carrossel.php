@@ -6,11 +6,14 @@ use app\Controller\Carrossel;
 
 $car = new Carrossel();
 
+// ini_set('display_startup_errors', 1);
+// ini_set('display_errors', 1);
+// error_reporting(-1);
 
 // funcao para mover o arquivo para o pasta de uploads
 // o parametro $num serve para falar o  numero da img
 function update_carrossel($img,$num) {
-        chmod ("../Public/uploads/uploads-carrosel/", 0777);
+        // chmod ("../Public/uploads/uploads-carrosel/", 0777);
         $caminho = '../Public/uploads/uploads-carrosel/';
         $new_img = $img['name'];
         $new_name = 'img-carrossel-'.$num;

@@ -8,6 +8,8 @@ use app\Models\Env;
 use PDO;
 Env::load();
 
+// sudo chown -R root:www-data /var/www
+
 class Database {
     //atributos do database
     private $conn;

@@ -43,11 +43,6 @@ CREATE TABLE pessoa(
 
 insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
 
--- CREATE TABLE tipo_expositor(
--- 	id_tipo INT NOT NULL AUTO_INCREMENT,
---     
--- );
-
 
 CREATE TABLE expositor(
 	id_expositor INT NOT NULL AUTO_INCREMENT,
@@ -190,10 +185,6 @@ CREATE TABLE utilidade_publica (
     PRIMARY KEY(id_utilidade_publica)
 );
 
--- SELECT 
--- col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
--- FROM colaborador as col INNER JOIN pessoa as pes ON col.id_pessoa = pes.id_pessoa;
-
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 
 ("../Public/uploads/uploads-carrosel/img-carrossel-1.jpg", 1),
@@ -201,7 +192,6 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into imagem values (default,"A","A","A","A","A");
 
 
 
