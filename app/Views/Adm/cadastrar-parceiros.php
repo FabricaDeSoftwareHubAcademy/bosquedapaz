@@ -96,6 +96,7 @@
 
     <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
     <?php include "../../../Public/include/modais/modal-sucesso.html" ?>
+    <?php include "../../../Public/include/modais/modal-error.html" ?>
     
     <div class="bolas-fundo">
         <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">

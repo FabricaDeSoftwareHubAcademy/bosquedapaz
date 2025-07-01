@@ -1,5 +1,3 @@
-
-
 let btn_cadastrar = document.getElementById("btn-salvar");
 let formulario = document.getElementById("form_cadastrar_parceiro");
 
@@ -105,16 +103,22 @@ document.getElementById('btn-modal-salvar').addEventListener('click', async func
         let response = await dados_php.json();
 
         if(response.status == 200){
-            closeModalConfirmar();   // fecha modal de confirmação
-            openModalSucesso();      // abre modal sucesso
+            closeModalConfirmar();
+            openModalSucesso();
             formulario.reset();
         } else {
-            alert("Erro ao cadastrar!");
-        }        
-    } catch (error) {
-        alert("Erro ao enviar os dados.");
-        console.error(error);
-    }
+            document.getElementById('erro-title').textContent = "Erro ao cadastrar";
+            document.getElementById('erro-text').textContent = "Houve um problema ao salvar os dados. Tente novamente mais tarde.";
+            openModalError();
+        }
+               
+        } catch (error) {
+            document.getElementById('erro-title').textContent = "Erro inesperado";
+            document.getElementById('erro-text').textContent = "Erro ao enviar os dados. Verifique a conexão ou contate o suporte.";
+            openModalError();
+            console.error(error);
+        }
+        
 });
 
 // Botão "Cancelar" do modal
@@ -235,7 +239,6 @@ document.getElementById('cep').addEventListener('blur', async function () {
     }
 });
 
-// --- FUNÇÕES MODAL SUCESSO ---
 function openModalSucesso() {
     let modal = document.getElementById('modal-sucesso');
     if(modal) modal.showModal();
@@ -249,4 +252,8 @@ function closeModalSucesso() {
 // --- FECHAR MODAL SUCESSO PELO "X" ---
 document.getElementById('close-modal-sucesso').addEventListener('click', () => {
     closeModalSucesso();
+});
+
+document.getElementById('close-modal-confirmar').addEventListener('click', () => {
+    closeModalConfirmar();
 });
