@@ -1,10 +1,19 @@
-let btn_salvar = document.getElementById("btn_salvar");
-let modal = document.getElementById("modal_salvar");
+let modal = document.getElementById("modal-confirmar");
+let btnModalSalvar = document.getElementById("btn-modal-salvar");
+let btnModalCancelar = document.getElementById("btn-modal-cancelar");
+let btnFecharModal = document.getElementById("close-modal-confirmar");
 
-btn_salvar.addEventListener('click', async function(event) {
-    event.preventDefault();
+let modalErro = document.getElementById("modal-error");
+let btnFecharErro = document.getElementById("close-modal-erro");
 
-    let formulario = document.getElementById("form-artista");
+let formulario = document.getElementById("form-artista");
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    modal.showModal();     
+});
+
+btnModalSalvar.addEventListener('click', async function() {
     let dadosForms = new FormData(formulario);
 
     try {
@@ -19,19 +28,26 @@ btn_salvar.addEventListener('click', async function(event) {
 
         if (response.status === 200) {
             formulario.reset();
-            modal.classList.remove("oculta");
-            modal.classList.add("show_modal");
-
-            let fechar_modal = document.getElementById("fechar_modal");
-            fechar_modal.addEventListener('click', function(event) {
-                modal.classList.remove("show_modal");
-                modal.classList.add("oculta");
-            });
+            modal.close(); 
         } else {
-            alert("Erro ao cadastrar artista!");
+            modal.close();  
+            modalErro.showModal(); 
         }
 
     } catch (error) {
-        alert("Erro na requisição: " + error.message);
+        modal.close();       
+        modalErro.showModal(); 
     }
+});
+
+btnModalCancelar.addEventListener('click', function() {
+    modal.close();
+});
+
+btnFecharModal.addEventListener('click', function() {
+    modal.close();
+});
+
+ btnFecharErro.addEventListener('click', function() {
+    modalErro.close();
 });
