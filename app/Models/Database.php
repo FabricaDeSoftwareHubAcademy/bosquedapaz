@@ -2,7 +2,7 @@
 
 namespace app\Models;
 
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use app\Models\Env;
 use PDO;

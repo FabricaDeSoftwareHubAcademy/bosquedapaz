@@ -32,7 +32,7 @@
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whatsapp" id="whatsapp" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
+                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
                         </div>
                         <div class="input">
                             <label>E-mail:</label>

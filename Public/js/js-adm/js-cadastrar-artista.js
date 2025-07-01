@@ -1,49 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form-artista');
-    const btnSalvarForm = document.getElementById('btn-salvar'); // botão "Salvar" do formulário
-    const modalConfirmar = document.getElementById('modal-confirmar');
-    const btnConfirmarSalvar = document.getElementById('btn-modal-salvar'); // botão "Salvar" do modal
-    const btnCancelar = document.getElementById('btn-modal-cancelar');
-    const btnFechar = document.getElementById('close-modal-confirmar');
+let btn_salvar = document.getElementById("btn_salvar");
+let modal = document.getElementById("modal_salvar");
 
-    // Quando clicar no botão Salvar do formulário, mostra o modal
-    btnSalvarForm.addEventListener('click', function (e) {
-        e.preventDefault(); // impede envio do form
-        modalConfirmar.showModal();
-    });
+btn_salvar.addEventListener('click', async function(event) {
+    event.preventDefault();
 
-    // Quando confirmar no modal
-    btnConfirmarSalvar.addEventListener('click', function () {
-        const formData = new FormData(form);
+    let formulario = document.getElementById("form-artista");
+    let dadosForms = new FormData(formulario);
 
-        console.log("📋 Dados do formulário:");
-        for (const [campo, valor] of formData.entries()) {
-            console.log(`${campo}: ${valor}`); // <-- crase corrigida
-        }
-
-        // Envia os dados para o backend
-        fetch('../../../actions/cadastrar-artista.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(res => {
-            if (res.status === 'success') {
-                alert("Artista cadastrado com sucesso!");
-                form.reset(); // limpa o formulário
-            } else {
-                alert(" Erro ao cadastrar: " + res.message);
-            }
-        })
-        .catch(error => {
-            alert("Erro ao enviar dados.");
-            console.error(error);
+    try {
+        let dados_php = await fetch("../../../actions/cadastrar_artista.php", {
+            method: "POST",
+            body: dadosForms
         });
 
-        modalConfirmar.close();
-    });
+        let response = await dados_php.json();
 
-    // Cancelar ou fechar o modal
-    btnCancelar.addEventListener('click', () => modalConfirmar.close());
-    btnFechar.addEventListener('click', () => modalConfirmar.close());
+        console.log(response);
+
+        if (response.status === 200) {
+            formulario.reset();
+            modal.classList.remove("oculta");
+            modal.classList.add("show_modal");
+
+            let fechar_modal = document.getElementById("fechar_modal");
+            fechar_modal.addEventListener('click', function(event) {
+                modal.classList.remove("show_modal");
+                modal.classList.add("oculta");
+            });
+        } else {
+            alert("Erro ao cadastrar artista!");
+        }
+
+    } catch (error) {
+        alert("Erro na requisição: " + error.message);
+    }
 });
