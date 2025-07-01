@@ -1,17 +1,49 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form-artista');
+    const btnSalvarForm = document.getElementById('btn-salvar');
+    const modalConfirmar = document.getElementById('modal-confirmar');
+    const modalLoading = document.getElementById('modal-loading');
+    const modalSucesso = document.getElementById('modal-sucesso');
 
-    form.addEventListener('submit', function (e) {
+    const btnConfirmarSalvar = document.getElementById('btn-modal-salvar');
+    const btnCancelar = document.getElementById('btn-modal-cancelar');
+    const btnFechar = document.getElementById('close-modal-confirmar');
+    const btnFecharSucesso = document.getElementById('close-modal-sucesso');
+
+    btnSalvarForm.addEventListener('click', function (e) {
         e.preventDefault();
+        modalConfirmar.showModal();
+    });
+
+    btnConfirmarSalvar.addEventListener('click', function () {
+        modalConfirmar.close();
+        modalLoading.showModal();
 
         const formData = new FormData(form);
 
-        console.log("Dados do formulário:");
-        for (const [campo, valor] of formData.entries()) {
-            console.log(`${campo}: ${valor}`);
-        }
+        fetch('../../../actions/cadastrar-artista.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(resp => resp.json())
+        .then(res => {
+            modalLoading.close();
 
-        // Se quiser, aqui você poderia liberar o envio real depois de testar:
-        // form.submit();
+            if (res.status === 'success') {
+                modalSucesso.showModal();
+                form.reset(); // limpa o formulário
+            } else {
+                alert("Erro ao cadastrar: " + res.message);
+            }
+        })
+        .catch(error => {
+            modalLoading.close();
+            console.error("Erro:", error);
+            alert("Erro inesperado ao cadastrar.");
+        });
     });
+
+    btnCancelar.addEventListener('click', () => modalConfirmar.close());
+    btnFechar.addEventListener('click', () => modalConfirmar.close());
+    btnFecharSucesso.addEventListener('click', () => modalSucesso.close());
 });
