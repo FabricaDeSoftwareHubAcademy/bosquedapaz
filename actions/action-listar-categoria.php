@@ -1,19 +1,19 @@
 <?php
 require_once('../vendor/autoload.php');
-use app\Controller\Expositor;
+use app\Controller\Categoria;
 
 header('Content-Type: application/json');
 
 try {
-    $obj = new Expositor();
-    $dados = $obj->buscar(null, null, 10);
+    $categoria = new Categoria();
+    $dados = $categoria->listar();
 
     echo json_encode($dados);
 
 } catch (Exception $e) {
-    http_response_code(500);
+    http_response_code(500); 
     echo json_encode([
-        'status' => 'Erro ao buscar expositores',
+        'status' => 'Erro ao buscar categorias',
         'mensagem' => $e->getMessage()
     ]);
 }
