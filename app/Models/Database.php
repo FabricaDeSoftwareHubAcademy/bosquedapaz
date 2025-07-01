@@ -378,7 +378,7 @@ class Database {
     {
         $query = "SELECT
         e.id_expositor, b.id_boleto,
-        p.nome, b.vencimento,
+        p.nome, DATE_FORMAT(b.vencimento, '%d/%m/%Y') AS vencimento,
         b.mes_referencia,
         b.valor, b.status_boleto
         FROM pessoa p

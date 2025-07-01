@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    const botaoBuscar = document.querySelector(".bola-cb");
+    const botaoBuscar = document.querySelector(".botao-procurar");
 
     botaoBuscar.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const nome = document.querySelector("input[name='nome']").value.trim();
+        const nome = document.querySelector("input[name='pesquisar-nome']").value.trim();
 
         if (nome === "") {
             alert("Digite um nome para buscar.");
@@ -17,17 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ nome })
+            body: JSON.stringify({ "pesquisar-nome" : nome })
         })
         .then(response => response.json())
         .then(data => {
             if (data.status === "ok") {
                 
                 document.getElementById("nome-exp").value = data.expositor.nome;
-                document.getElementById("cpf-cb").value = data.expositor.cpf;
+                document.getElementById("cnpj-cpf").value = data.expositor.cpf;
 
 
-                const inputsHidden = document.querySelectorAll("input[name='id_expositor']");
+                const inputsHidden = document.querySelectorAll("input[name='id-expositor']");
                 inputsHidden.forEach(input => {
                     input.value = data.expositor.id;
                 });

@@ -7,7 +7,7 @@ header("Content-Type: application/json");
 $inputJSON = file_get_contents('php://input');
 $input = json_decode($inputJSON, true);
 
-if (!isset($input['nome-exp']) || empty(trim($input['nome-exp']))) {
+if (!isset($input['pesquisar-nome'])) {
     echo json_encode([
         "status" => "erro",
         "mensagem" => "Nome do expositor não informado."
@@ -15,7 +15,7 @@ if (!isset($input['nome-exp']) || empty(trim($input['nome-exp']))) {
     exit;
 }
 
-$nome = trim($input['nome-exp']);
+$nome = trim($input['pesquisar-nome']);
 
 $expositorModel = new Boleto();
 $resultado = $expositorModel->PesquisarExpositor($nome);
@@ -28,8 +28,8 @@ if ($resultado && count($resultado) > 0) {
         "status" => "ok",
         "expositor" => [
             "id"   => $expositor['id_expositor'],
-            "nome" => $expositor['nome-exp'],
-            "cpf"  => $expositor['cnpj-cpf']
+            "nome" => $expositor['nome'],
+            "cpf"  => $expositor['cpf']
         ]
     ]);
 

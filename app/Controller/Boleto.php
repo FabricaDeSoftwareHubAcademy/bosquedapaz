@@ -11,13 +11,13 @@ class Boleto {
     public ?string $nome = null;
     public ?string $vencimento = null;
     public ?string $mes_referencia = null;
-    public ?float $valor = null;
+    public ?float $valor = null;    
     public ?string $status = null;
     public ?string $pdf = null;
 
 
     public function PesquisarExpositor($nome) {
-        $banco = new Database('boleto');
+        $banco = new Database('pessoa');
         return $banco->listar_expositor_para_cadastro($nome)->fetchAll(PDO::FETCH_ASSOC);
     }
 
