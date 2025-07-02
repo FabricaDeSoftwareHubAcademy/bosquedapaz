@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <td class="usuario-col">${response[x].data_inicio}</td>
             <td class="usuario-col">${response[x].data_fim}</td>
             <td>
-                <button class="status ${response[x].status_utilidade == 1 ? 'active' : 'inactive'}" data-id="${response[x].id_utilidade_publica}">
+                <button id="ativoInativo" class="status ${response[x].status_utilidade == 1 ? 'active' : 'inactive'}" data-id="${response[x].id_utilidade_publica}">
                     ${response[x].status_utilidade == 1 ? 'Ativo' : 'Inativo'}
                 </button>
             </td>
@@ -26,18 +26,19 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </button>    
                 </a>
             </td>
-        </tr>
+        </tr>        
         `;
     }
 
     tabela.innerHTML = html;
 
 
-    tabela.addEventListener("click", function (event) {
-        const btn = event.target.closest('button.status');
+    tabela.addEventListener("click", async function (event) {
+        const btn = event.target;
         if (btn) {
             const idClicado = btn.dataset.id;
             const item = response.find(obj => obj.id_utilidade_publica == idClicado);
+            console.log(item)
 
             if (item) {
 
@@ -49,9 +50,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                 btn.classList.toggle('active', item.status_utilidade == 1);
                 btn.classList.toggle('inactive', item.status_utilidade == 0);
 
-                console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
+                // console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
             }
         }
     });
 
+    
+    
+    
 });
+
+
+if (window.performance && window.performance.navigation.type == 2) {
+    window.location.reload();
+}

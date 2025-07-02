@@ -120,6 +120,14 @@ class Database {
         return $this->execute($query);
     }
 
+    public function select_utilidades() {
+
+        $query = 'SELECT * FROM utilidade_publica ORDER BY status_utilidade = 1 DESC';
+
+        return $this->execute($query);
+    }
+
+
     public function select_all($tableP, $id_name, $where = null){
         $where = strlen($where) ? " WHERE ". $where : '';
         $query = "SELECT * FROM ". $this->table. " AS A INNER JOIN ". $tableP. " AS B ON ". "A.".$id_name. " = B.". $id_name. ' '. $where;

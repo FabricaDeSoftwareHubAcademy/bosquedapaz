@@ -32,9 +32,9 @@ use app\Models\Database;
         } 
 
 
-        public function listar($where = null, $order = null, $limit = null) {
+        public function listar() {
             $db = new Database('utilidade_publica');
-            $res = $db->select($where, $order, $limit)
+            $res = $db->select_utilidades()
                       ->fetchAll(PDO::FETCH_CLASS, self::class);
     
             return $res;
