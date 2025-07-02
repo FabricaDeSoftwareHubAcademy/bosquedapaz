@@ -94,8 +94,9 @@ CREATE TABLE artista(
     tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
-    tempo_apresentacao TIME NOT NULL,
+    tempo_apresentacao VARCHAR,
     valor_cache FLOAT NOT NULL,
+    publico_alvo VARCHAR(50) NOT NULL,
     PRIMARY KEY(id_artista),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );

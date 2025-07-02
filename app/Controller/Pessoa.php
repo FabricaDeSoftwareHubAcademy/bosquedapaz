@@ -2,6 +2,7 @@
 namespace app\Controller;
 
 require_once('../vendor/autoload.php');
+
 use PDO;
 use app\Models\Database;
 

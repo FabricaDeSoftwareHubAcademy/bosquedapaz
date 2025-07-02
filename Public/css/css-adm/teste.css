@@ -10,6 +10,16 @@
 
 }
 
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.principal {
+    width: 100vw;
+    height: 90vh;
+}
+
 .box {
     width: 90%;
     height: 90%;
@@ -22,7 +32,6 @@
     align-items: center;
     /* justify-content: space-between; */
     padding: 20px;
-    /* overflow-y: auto; */
 }
 
 .btn-editar {
@@ -36,28 +45,28 @@
     width: 100vw;
     height: 90vh;
     position: relative;
-    top: -60vh;
+    top: -90vh;
     z-index: -3;
 }
 
 .bolas-fundo .bola-verde1 {
     position: relative;
-    left: -30px;
-    top: 10%;
+    left: -40px;
+    top: -10%;
     z-index: -3;
 }
 
 .bolas-fundo .bola-verde2 {
     position: relative;
-    left: 89%;
-    top: 10%;
+    left: 87%;
+    top: 0;
     z-index: -3;
 }
 
 .bolas-fundo .bola-rosa {
     position: relative;
     left: 75%;
-    top: 80%;
+    top: 70%;
     z-index: -3;
 }
 
@@ -72,14 +81,13 @@
     align-items: center;
     border: none;
     position: relative;
-    top: 90px;
-    left: -13%;
+    top: 30px;
 }
 
 .formularios div {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    /* height: 80%; */
 }
 
 .formularios input {
@@ -94,6 +102,11 @@
     outline: none;
 }
 
+.formularios label{
+    position: relative;
+    left: 4%;
+    top: 10px;
+}
 
 
 .input-group input {
@@ -142,7 +155,9 @@
     text-decoration: none;
 }
 
-
+.carregar-src {
+    display: none;
+}
 
 .form-opc {
     position: relative;
@@ -169,6 +184,8 @@ label#salvar-btn {
     font-size: 23px;
     text-transform: uppercase;
 }
+
+
 
 
 .custom-dropdown input {
@@ -198,8 +215,8 @@ label#salvar-btn {
     width: 100px;
     height: 40px;
     position: relative;
-    top: 20vh;
-    left: -15%;
+    top:78px;
+    left: -80vh;
     transition: transform 0.3s ease;
     cursor: pointer;
     display: flex;
@@ -207,17 +224,8 @@ label#salvar-btn {
 
 
 .voltar:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efeito ao passar o mouse */
 }
-
-
-.form-pessoa,
-.form-loja,
-.form-expo {
-    position: relative;
-    left: 13%;
-}
-
 
 
 /********** novo botao de salvar/cancelar ******/
@@ -240,7 +248,7 @@ label#salvar-btn {
 }
 
 .btn-finalizar {
-    width: 117%;
+    width: 160%;
 }
 
 .btn-finalizar .btn-cancelar {
@@ -264,81 +272,28 @@ label#salvar-btn {
     font-weight: 600;
 }
 
-.btn-finalizar .btn-salvar:hover {
-    background-color: #0a645a;
-}
-
-
-/************ fim botao finalizar *************/
-
-/****************** modal teste ***********************/
-
-
-.oculta{
-    visibility: hidden;
-}
-
-
-.modal_conteudo{
-    height: 100px;
-    /* width: ; */
-    background-color: #58b1a6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-}
-
-.show_modal {
-    visibility: visible;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-/* 
-.modal-sucesso .modal-conteudo {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-} */
-
-
-/* fim modal */
-
-
-/************* RESPONSIVIDADE ***************/
-
+/* fim botao finalizar */
 
 
 @media (max-width: 430px) {
 
     .bolas-fundo .bola-verde1 {
+       
         display: none;
     }
 
     .bolas-fundo .bola-verde2 {
+       
         display: none;
     }
 
     .bolas-fundo .bola-rosa {
+        
         display: none;
     }
-    
-   
 
     .box {
-       overflow-y: auto;
-        background-color: #007E70;
+        overflow-y: auto;
     }
 
     .formularios {
@@ -346,22 +301,23 @@ label#salvar-btn {
         flex-direction: column;
         font-size: 14px;
         top: 20px;
-        
     }
-
-    .title-text {
-        font-size: 18px;
-    }
-
     .formularios label {
         position: relative;
         left: 5%;
+    }
+    .title-text {
+        font-size: 18px;
+    }
+    
+    div.btn-conf{
+        width: 70%;
+        left: 4%;
     }
 
     .btn-conf {
         top: 97%;
         left: 13%;
-        width: 100%;
     }
 
     button.btn.btn-cancelar {
@@ -378,21 +334,21 @@ label#salvar-btn {
 
     }
 
-    img.img-voltar {
-        width: 30%;
-        height: 30px;
-    }
-
-    .voltar {
+    .btn-voltar{
         position: relative;
-        left: 5px;
-        top: 51px;
+        left: 8px;
+        top: 10px;
     }
-}
 
+    
+    .voltar {
+        
+        height: 30px;
+        width: 30px;
+    }
+} 
 
-
-@media (max-width: 820px) {
+@media (max-width: 768px) {
 
     .bolas-fundo .bola-verde1 {
         width: 100px;
@@ -407,13 +363,18 @@ label#salvar-btn {
     }
     
     .bolas-fundo .bola-rosa {
-        width: 155px;
+        width: 120px;
         top: 82%;
-        left: 58%;
+        left: 60%;
+    }
+
+    body{
+        overflow-x: hidden;
     }
 
     .box {
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .formularios {
@@ -434,8 +395,8 @@ label#salvar-btn {
 
     .btn-conf {
         top: 97%;
-        left: 13%;
-        width: 100%;
+        left: -10%;
+        width: 85%;
     }
 
     button.btn.btn-cancelar {
@@ -459,29 +420,24 @@ label#salvar-btn {
 
     .voltar {
         position: relative;
-        left: 5px;
+        left: -10%;
         top: 51px;
     }
 } 
 
-@media (max-width: 1024px) {
-    .bolas-fundo .bola-verde1 {
-        width: 100px;
-        left: 0%;
-        top: 50px;
+@media (Max-width:820px) {
+    .btn-conf{
+        left: 16%;
+        top: 100%;
+        width: 50%;
     }
+    .voltar{
+        left: 0;
+    }
+}
 
-    .bolas-fundo .bola-verde2 {
-        width: 99px;
-        top: 90px;
-        left: 80%;
-    }
-
-    .bolas-fundo .bola-rosa {
-        width: 120px;
-        top: 88%;
-        left: 65%;
-    }
+ @media (max-width: 1024px) {
+    
 
     body {
         overflow-x: hidden;
@@ -508,36 +464,20 @@ label#salvar-btn {
         left: 5%;
     }
 
-    .btn-conf {
-        top: 97%;
-        left: 13%;
-        width: 100%;
+    .btn-conf{
+        left: 18%;
+        top: 100%;
+        width: 50%;
     }
-
-    button.btn.btn-cancelar {
-        position: relative;
-        width: 30%;
-        left: 12%;
-        font-size: 16px;
-
+    .voltar{
+        left: 0;
     }
-
-    button.btn.btn-salvar {
-        width: 30%;
-        font-size: 16px;
-
-    }
-
+    
     img.img-voltar {
         width: 30%;
         height: 30px;
     }
 
-    .voltar {
-        position: relative;
-        left: 5px;
-        top: 51px;
-    }
 } 
 
 @media (width: 1024px) and (height: 600px) {
@@ -555,7 +495,7 @@ label#salvar-btn {
 
     .bolas-fundo .bola-rosa {
         width: 120px;
-        top: 75%;
+        top: 70%;
         left: 68%;
     }
 
@@ -584,9 +524,10 @@ label#salvar-btn {
     }
 
     .btn-conf {
-        top: 97%;
-        left: 77%;
+        top: 90%;
+        left: 70%;
         width: 40%;
+
     }
 
     button.btn.btn-cancelar {
@@ -600,11 +541,16 @@ label#salvar-btn {
     button.btn.btn-salvar {
         width: 30%;
         font-size: 16px;
-
     }
 
+    .voltar{
+        top: 0;
+    }
+    
 
 }
+
+
 
 @media (width: 344px) and (height: 882px) {
     .formularios {
@@ -634,16 +580,45 @@ label#salvar-btn {
     .voltar {
         left: -4%;
     }
-}
+}  
 
 @media (min-width:1200px) {
     body{
         overflow-x: hidden;
         overflow-y: hidden;
     }
-   
+    
+    .bolas-fundo {
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+        top: -90vh;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-verde1 {
+        position: relative;
+        left: -40px;
+        top: -10%;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-verde2 {
+        position: relative;
+        left: 87%;
+        top: 0;
+        z-index: -3;
+    }
+    
+    .bolas-fundo .bola-rosa {
+        position: relative;
+        left: 75%;
+        top: 70%;
+        z-index: -3;
+    }
 
     .btn-conf {
+        /* background-color: red; */
         position: absolute;
         width: 24%;
         top: 110%;
@@ -655,8 +630,8 @@ label#salvar-btn {
         width: 100px;
         height: 40px;
         position: relative;
-        top: 20vh;
-        left: 0%;
+        top: 10vh;
+        left: -30%;
         transition: transform 0.3s ease;
         cursor: pointer;
         display: flex;
