@@ -1,5 +1,6 @@
 <?php
-session_start();
-session_destroy();
-header('Location: ./tela-login.php');
-exit;
+if($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['logout']) {
+    session_start();
+    session_destroy();
+    exit;
+}
