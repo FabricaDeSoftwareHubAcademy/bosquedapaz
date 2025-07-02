@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,7 +39,7 @@
                             <td class="listb-boleto-td"></td>
                             <td class="listb-boleto-td"></td>
                             <td class="listb-boleto-td"><button class="listb-btn-pago"></button></td>
-                            <td class="listb-boleto-td"><a href="#" class="listb-link"><i class="fa-solid fa-print"></i></a></td>
+                            <td class="listb-boleto-td"><a href="#" class="listb-link" ><i class="fa-solid fa-print"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -53,5 +55,6 @@
     <img class="listb-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
     <img class="listb-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
     <script src="../../../Public/js/js-home/main.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos_pessoais.js" defer></script>
 </body>
 </html>

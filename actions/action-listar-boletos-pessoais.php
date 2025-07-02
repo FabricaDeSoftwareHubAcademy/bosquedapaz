@@ -3,16 +3,14 @@ require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
 
 session_start();
-$_SESSION['idPessoa'] = 5;
 
-if (!isset($_SESSION['idPessoa'])) {
+if (!isset($_SESSION['login'])) {
     echo json_encode([]);
     exit;
 }
 
-$idPessoa = $_SESSION['idPessoa'];
+$idPessoa = $_SESSION['login']['id_pessoa'];
 $boletoObj = new Boleto();
 $boletos = $boletoObj->CapturarBoletosPorUsuario($idPessoa);
 
 echo json_encode($boletos);
-?>

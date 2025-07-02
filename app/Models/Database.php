@@ -1,13 +1,16 @@
 <?php
 
 namespace app\Models;
+
 require_once '../vendor/autoload.php';
 
 use app\Models\Env;
 use PDO;
+
 Env::load();
 
-class Database {
+class Database
+{
     //atributos do database
     private $conn;
     private string $local;
@@ -18,20 +21,23 @@ class Database {
 
 
     // metodo construtor que íncia chamando o médoto de conexão com o db 
-    function __construct($table = null){
+    function __construct($table = null)
+    {
         $this->table = $table;
         $this->conecta();
     }
 
-    function set_conn(){
+    function set_conn()
+    {
         $this->local = $_ENV['DB_HOST'];
         $this->db = $_ENV['DB_DATABASE'];
         $this->user = $_ENV['DB_USER'];
         $this->password = $_ENV['DB_PASSWORD'];
-    } 
+    }
 
     // se conecta com o db
-    private function conecta(){
+    private function conecta()
+    {
 
         try {
 
@@ -39,52 +45,49 @@ class Database {
 
             // echo $this->local;
 
-            $this->conn = new PDO("mysql:host=".$this->local.";dbname=".$this->db,$this->user,$this->password);
+            $this->conn = new PDO("mysql:host=" . $this->local . ";dbname=" . $this->db, $this->user, $this->password);
 
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (\PDOException $err) {
+            die("Conection Failed" . $err->getMessage());
         }
-
-        catch(\PDOException $err){
-            die("Conection Failed".$err->getMessage());
-        }
-
     }
 
     // médoto para executar o CRUD no db
     // recebe dois parametros, a query e os binds
-    public function execute($query, $binds = []){
+    public function execute($query, $binds = [])
+    {
         try {
 
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
             return $stmt;
-
-        }
-        catch (\PDOException $err){
-            die("Connection failed". $err->getMessage());
+        } catch (\PDOException $err) {
+            die("Connection failed" . $err->getMessage());
         }
     }
 
     // método para inserir no db, tem o parametro $values,
     // que recebe os valores do que serão inseridos
-    public function insert($values){
+    public function insert($values)
+    {
         $fields = array_keys($values);
 
         $binds = array_pad([], count($fields), '?');
 
-        $query = 'INSERT INTO '. $this->table. ' ('. implode(',', $fields).') VALUES ('. implode(',', $binds). ')';
+        $query = 'INSERT INTO ' . $this->table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
 
         $res = $this->execute($query, array_values($values));
 
-        if ($res){
+        if ($res) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
 
-    public function getConnection(){
+    public function getConnection()
+    {
         return $this->conn;
     }
 
@@ -109,58 +112,64 @@ class Database {
     }
 
     // método de select
-    public function select($where = null, $order = null, $limit = null, $fields = "*") {
-        $where = $where != null ? ' WHERE '.$where : '';
-        $order = $order != null ? ' ORDER BY '.$order : '';
-        $limit = $limit != null ? ' LIMIT '.$limit : '';
+    public function select($where = null, $order = null, $limit = null, $fields = "*")
+    {
+        $where = $where != null ? ' WHERE ' . $where : '';
+        $order = $order != null ? ' ORDER BY ' . $order : '';
+        $limit = $limit != null ? ' LIMIT ' . $limit : '';
 
-        $query = 'SELECT '. $fields. ' FROM '. $this->table . ' '. $where. ' '. $order. ' '. $limit;
+        $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
 
         return $this->execute($query);
     }
 
-    public function select_all($tableP, $id_name, $where = null){
-        $where = strlen($where) ? " WHERE ". $where : '';
-        $query = "SELECT * FROM ". $this->table. " AS A INNER JOIN ". $tableP. " AS B ON ". "A.".$id_name. " = B.". $id_name. ' '. $where;
+    public function select_all($tableP, $id_name, $where = null)
+    {
+        $where = strlen($where) ? " WHERE " . $where : '';
+        $query = "SELECT * FROM " . $this->table . " AS A INNER JOIN " . $tableP . " AS B ON " . "A." . $id_name . " = B." . $id_name . ' ' . $where;
         return $this->execute($query);
     }
 
     // método update, com parametros $where, $values
-    public function update($where, $values){
+    public function update($where, $values)
+    {
         $fields = array_keys($values);
         $param = array_values($values);
 
-        $query = "UPDATE ". $this->table. ' SET '. implode('=?,', $fields).'=? WHERE '. $where;
+        $query = "UPDATE " . $this->table . ' SET ' . implode('=?,', $fields) . '=? WHERE ' . $where;
 
         $res = $this->execute($query, $param);
 
-        if($res){
+        if ($res) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
-    public function update_all($values1, $values2, $tableP, $id_name, $where){
-        $where = strlen($where) ? " WHERE ". $where : '';
+    public function update_all($values1, $values2, $tableP, $id_name, $where)
+    {
+        $where = strlen($where) ? " WHERE " . $where : '';
         $fields = array_keys($values1);
         $fields2 = array_keys($values2);
         $masterArray = array_merge($values1, $values2);
         $param = array_values($masterArray);
 
-        $query = "UPDATE ". $this->table. " SET ". implode('=?,', $fields). "=? ". $where. "; UPDATE ". $tableP. " SET ". implode('=?,', $fields2). "=? WHERE ". $id_name. " = ( SELECT ". $id_name. " FROM ".$this->table. $where. ")";
-        
+        $query = "UPDATE " . $this->table . " SET " . implode('=?,', $fields) . "=? " . $where . "; UPDATE " . $tableP . " SET " . implode('=?,', $fields2) . "=? WHERE " . $id_name . " = ( SELECT " . $id_name . " FROM " . $this->table . $where . ")";
+
         $res = $this->execute($query, $param);
         return $res ? TRUE : FALSE;
     }
 
-    public function delete($where){
-        $query = "UPDATE ". $this->table. " SET status = 0 WHERE ". $where;
+    public function delete($where)
+    {
+        $query = "UPDATE " . $this->table . " SET status = 0 WHERE " . $where;
         return $this->execute($query) ? true : false;
     }
 
     //Funções do fluxo do ADM: 
-    public function listar_colaboradores() {
+    public function listar_colaboradores()
+    {
         $query = "SELECT
         c.id_colaborador,
         p.nome,
@@ -173,7 +182,8 @@ class Database {
         return $this->execute($query);
     }
 
-    public function filtrar_colaboradores($nome) {
+    public function filtrar_colaboradores($nome)
+    {
         $query = "SELECT
         c.id_colaborador,
         p.nome,
@@ -189,8 +199,9 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function filter_exp($filtro){
-        
+    public function filter_exp($filtro)
+    {
+
         $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
         pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
         cat.id_categoria, cat.descricao, cat.cor, cat.icone
@@ -210,9 +221,10 @@ class Database {
 
         return $res ? $res : FALSE;
     }
-    
-    public function select_exp($where = null){
-        $where = $where != null ? ' WHERE '.$where : '';
+
+    public function select_exp($where = null)
+    {
+        $where = $where != null ? ' WHERE ' . $where : '';
 
         $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
         pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
@@ -221,12 +233,13 @@ class Database {
         INNER JOIN categoria AS cat 
         ON cat.id_categoria = exp.id_categoria 
         INNER JOIN pessoa AS pes 
-        ON pes.id_pessoa = exp.id_pessoa ". $where;
+        ON pes.id_pessoa = exp.id_pessoa " . $where;
 
         return $this->execute($query);
     }
-    
-    public function select_exp_catgoria($cat){
+
+    public function select_exp_catgoria($cat)
+    {
 
         $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
         pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
@@ -240,24 +253,27 @@ class Database {
         return $this->execute($query);
     }
 
-    public function select_img($id = null){
-        if (!empty($id)){
+    public function select_img($id = null)
+    {
+        if (!empty($id)) {
 
-            $query = "SELECT * FROM imagem WHERE id_expositor = ". $id;
-    
+            $query = "SELECT * FROM imagem WHERE id_expositor = " . $id;
+
             return $this->execute($query);
-        }else {
+        } else {
             return false;
         }
     }
 
-    public function sts_adm($id_colaborador, $novoStatus) {
+    public function sts_adm($id_colaborador, $novoStatus)
+    {
         $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
     }
 
-    public function buscarPorIdPessoa($idPessoa) {
+    public function buscarPorIdPessoa($idPessoa)
+    {
         $query = "SELECT 
             c.id_colaborador,
             p.id_pessoa,
@@ -269,13 +285,13 @@ class Database {
         FROM colaborador c
         INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
         WHERE c.id_pessoa = ?";
-    
+
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$idPessoa]);
         return $stmt->fetch(PDO::FETCH_ASSOC);  // retorna 1 registro associativo
     }
 
-    
+
     // BLOCO DE CODIGOS PARA CLASSE BOLETO
     public function listar_expositor_para_cadastro($nome)
     {
@@ -363,7 +379,8 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function alterar_status($status, $id) {
+    public function alterar_status($status, $id)
+    {
         $query = "UPDATE boleto set status_boleto = :status_boleto
         WHERE id_boleto = :id_boleto";
 
@@ -389,6 +406,21 @@ class Database {
         $binds = [":id" => "$id"];
         return $this->execute($query, $binds);
     }
-}
 
-?>
+    public function capturar_boleto_por_id($idPessoa, $idBoleto)
+    {
+        $query = "SELECT
+        p.id_pessoa, b.id_boleto
+        FROM pessoa p
+        INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
+        INNER JOIN boleto b on e.id_expositor = b.id_expositor
+        WHERE p.id_pessoa = :id_pessoa AND b.id_boleto = :id_boleto";
+
+        $binds = [
+            ":id_pessoa" => $idPessoa,
+            ":id_boleto" => $idBoleto
+        ];
+
+        return $this->execute($query, $binds);
+    }
+}

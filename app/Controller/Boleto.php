@@ -66,6 +66,10 @@ class Boleto {
         return [];
     }
     
+    public function CapturarBoletoPorId($idPessoa, $idBoleto) {
+        $banco = new Database('pessoa');
+        return $banco->capturar_boleto_por_id($idPessoa, $idBoleto)->fetchAll(PDO::FETCH_ASSOC);
+    }
     
 }
 ?>

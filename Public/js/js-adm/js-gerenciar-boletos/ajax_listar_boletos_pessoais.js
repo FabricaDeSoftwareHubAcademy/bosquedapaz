@@ -16,9 +16,9 @@ async function carregarMeusBoletos() {
 
         let classeStatus = '';
         if (boleto.status_boleto === 'Pago') {
-          classeStatus = 'status-pago';
+          classeStatus = 'listb-btn-pago';
         } else if (boleto.status_boleto === 'Pendente') {
-          classeStatus = 'status-pendente';
+          classeStatus = 'listb-btn-pendente';
         }
 
         const row = `
