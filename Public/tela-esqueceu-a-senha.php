@@ -20,35 +20,34 @@ if (isset($_POST['enviar'])) {
         $verificarEmail->setEmail($email);
         $emailExiste = $verificarEmail->verificar_email();
 
-        print_r($verificarEmail);
+        // REMOVA o print_r para não atrapalhar o header
+        // print_r($verificarEmail);
 
         if (!$emailExiste) {
-        echo "<script>
+            echo "<script>
                 alert('Email não encontrado.');
                 window.location.href = './tela-esqueceu-a-senha.php';
             </script>";
             exit;
-        }else{
-            // Gerar código de 5 dígitos
+        } else {
             $codigo = rand(10000, 99999);
-            
-            // Armazenar o código e o e-mail na sessão
             $_SESSION['codigo_recuperacao'] = $codigo;
             $_SESSION['email_recuperacao'] = $email;
-            
-            // Chamar a função de envio de e-mail e capturar o retorno
+
             $emailService = new EmailService();
             $mensagem = $emailService->enviarEmail($email, $codigo);
-            
-            // Exibir a mensagem de retorno
-            echo $mensagem;
+
+            // Se quiser mostrar mensagem, use alert ou modal na próxima página
+            // echo $mensagem; // melhor retirar para não interferir no redirecionamento
+
             header('Location: ./tela-esqueceu-a-senha-codigo.php');
-            
+            exit; // importante terminar a execução após o header
         }
-        } else {
-            echo "E-mail inválido. Tente novamente.";
-        }
+    } else {
+        echo "E-mail inválido. Tente novamente.";
+    }
 }
+
 
 ?>
 
@@ -64,6 +63,8 @@ if (isset($_POST['enviar'])) {
     <link rel="shortcut icon" href="assets/icons/folha.ico">
 </head>
 <body class="body-recsenha">
+<?php include './include/modais/modal_carregando.html'; ?>
+
     <main>
         <section class="section-recsenha">
 
@@ -124,5 +125,6 @@ if (isset($_POST['enviar'])) {
     </main>
 
     <script src="./js/js-modais/js-abrir-modal.js"></script>
+    <script src="./js/js-modais/js-modal-confirmar.js"></script>
 </body>
 </html>

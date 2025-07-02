@@ -17,7 +17,7 @@ if(isset($_POST['enviar'])){
     }else{
         $pessoa = new Pessoa();
         $pessoa->setEmail($email);
-        $pessoa->setNovaSenha($nvSenha);
+        $pessoa->setNovaSenha(password_hash($nvSenha, PASSWORD_DEFAULT));
         $pessoa->novaSenha();
         
         if($pessoa){
