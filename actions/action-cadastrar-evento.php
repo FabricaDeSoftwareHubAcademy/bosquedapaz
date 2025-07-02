@@ -70,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar o arquivo."]);
             exit;
         }
-
         
         $evento->banner_evento = 'uploads/uploads-eventos/' . $nomeSeguro;
     } else {

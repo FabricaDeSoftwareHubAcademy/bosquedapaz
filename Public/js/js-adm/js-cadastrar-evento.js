@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     setTimeout(() => {
                         window.location.href = './gerenciar-eventos.php';
-                    }, 2000);
+                    }, 6000);
                 } else {
                     openModalError();
                     document.getElementById('close-modal-erro').addEventListener('click', closeModalError);

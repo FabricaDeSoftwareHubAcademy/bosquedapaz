@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     setTimeout(() => {
                         window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
-                    }, 2000);
+                    }, 6000);
 
                 } else {
                     openModalError();
