@@ -127,24 +127,16 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                             <input type="text" name="instagram" id="" placeholder="Link instagram" required>
                         </div>
                     </div>
-
-                    <div class="btn-conf">
-                        <div class="btn-finalizar">
-                            <button name="REQUEST_METHOD" class="btn btn-salvar">salvar</button>
-                            <button class="btn btn-cancelar">cancelar</button>
-                        </div>
-                    </div>
-
-
-                    <div class="btns">
-                        <a href="Area-Adm.php" class="voltar">
-                            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                        </a>
-                    </div>
+                    
                 </div>
-
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
 
             </form>
+            <div class="overlay" id="overlay"></div>
+            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+            <?php include "../../../Public/include/modais/modal-error.html"; ?>
+
 
         </div>
         </div>
@@ -153,9 +145,10 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
 
     <div class="bolas-fundo">
 
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+
     </div>
 
     <script src="../../../Public/js/js-modais/modal-cadastro-expositor"></script>

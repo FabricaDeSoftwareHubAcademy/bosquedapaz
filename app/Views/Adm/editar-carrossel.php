@@ -75,6 +75,7 @@
             <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
+            
         </div>
         
         <!-- bolas de fundo -->

@@ -39,7 +39,7 @@ main #title{
 }
 
 .carousel-track {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 80%;

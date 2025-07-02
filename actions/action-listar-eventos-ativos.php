@@ -7,13 +7,12 @@ header('Content-Type: application/json');
 
 try {
     $evento = new Evento();
-    $eventos = $evento->listar_evento(); // retorna array associativo
+    $eventos = $evento->listar_evento("status = 1");
 
     echo json_encode([
         'status' => 'success',
         'dados' => $eventos
     ], JSON_PRETTY_PRINT);
-
 } catch (Exception $e) {
     echo json_encode([
         'status' => 'error',

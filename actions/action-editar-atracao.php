@@ -50,12 +50,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (move_uploaded_file($caminhoTemporario, $destino)) {
             $atracaoExistente = $atracao->buscarPorId($id);
             if ($atracaoExistente) {
-                $caminhoAntigo = __DIR__ . '/../Public/' . $atracaoExistente->getBanner();
+                $caminhoAntigo = __DIR__ . '/../Public/' . $atracaoExistente->banner_atracao;
                 if (file_exists($caminhoAntigo)) {
                     unlink($caminhoAntigo);
                 }
             }
-            $atracao->banner = 'uploads/atracoes/' . $nomeSeguro;
+            $atracao->banner_atracao = 'uploads/atracoes/' . $nomeSeguro;
         } else {
             echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
             exit;

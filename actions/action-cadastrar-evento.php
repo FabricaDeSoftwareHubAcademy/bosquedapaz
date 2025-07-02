@@ -15,24 +15,32 @@ function validarData($data) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = sanitizarTexto($_POST['nomedoevento'] ?? '');
+    $subtitulo = sanitizarTexto($_POST['subtitulo'] ?? '');
     $descricao = sanitizarTexto($_POST['descricaodoevento'] ?? '');
     $data = $_POST['dataevento'] ?? '';
+    $hora_inicio = $_POST['hora_inicio'] ?? '';
+    $hora_fim = $_POST['hora_fim'] ?? '';
+    $endereco = sanitizarTexto($_POST['endereco'] ?? '');
 
-    if (strlen($descricao) > 250) {
+    if (strlen($descricao) > 500) {
         echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 250 caracteres."]);
         exit;
     }    
 
     
-    if (empty($nome) || empty($descricao) || empty($data) || !validarData($data)) {
+    if (empty($nome) || empty($descricao) || empty($data) || !validarData($data) || empty($subtitulo) || empty($hora_inicio) || empty($hora_fim) || empty($endereco)) {
        echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos corretamente."]);
         exit;
     }
 
     $evento = new Evento();
     $evento->nome_evento = $nome;
-    $evento->descricao = $descricao;
+    $evento->subtitulo_evento = $subtitulo;
+    $evento->descricao_evento = $descricao;
     $evento->data_evento = $data;
+    $evento->hora_inicio = $hora_inicio;
+    $evento->hora_fim = $hora_fim;
+    $evento->endereco_evento = $endereco;
 
    
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -64,14 +72,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         
-        $evento->banner = 'uploads/uploads-eventos/' . $nomeSeguro;
+        $evento->banner_evento = 'uploads/uploads-eventos/' . $nomeSeguro;
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
         exit;
     }
 
     
-    if ($evento->cadastrar()) {
+    if ($evento->cadastrar_evento()) {
         echo json_encode(["status" => "sucesso", "mensagem" => "Evento cadastrado com sucesso!"]);
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Erro ao cadastrar evento."]);

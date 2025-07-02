@@ -22,23 +22,50 @@
                 <div class="form-box">
                     <form method="POST" enctype="multipart/form-data" id="form-evento">
                         <div id="form1">
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                    <label>Nome:</label>
+                                    <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
+                                        required>
+                                </div>
 
-                            <div class="input-group">
-                                <label>Nome:</label>
-                                <input type="text" name="nomedoevento" id="nomedoevento" placeholder="Digite o nome do evento"
-                                    required>
+                                <div class="input-group">
+                                    <label>Subtítulo:</label>
+                                    <input type="text" name="subtitulo" id="subtitulo" placeholder="Digite o nome do evento"
+                                        required>
+                                </div>
                             </div>
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (250 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
-                                <small id="contador-caracteres">250 caracteres restantes</small>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" required cols="30" rows="5" maxlength="250" style="resize: none"></textarea>
+                                <small id="contador-caracteres">500 caracteres restantes</small>
                             </div>
-                            
+
                             <div class="data-imagem">
                                 <div class="input-group">
                                     <label>Data:</label>
                                     <input type="date" id="dataevento" name="dataevento" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Hora Início:</label>
+                                    <input type="time" name="hora_inicio" id="hora_inicio"
+                                        required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Hora Fim:</label>
+                                    <input type="time" name="hora_fim" id="hora_fim"
+                                        required>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                        <label>Local:</label>
+                                        <input type="text" name="endereco" id="endereco" placeholder="Digite o nome do evento"
+                                            required>
                                 </div>
                                 <div class="input-group">
                                     <label>Imagem:</label>
@@ -49,28 +76,19 @@
                             <img class="preview" src="" alt="" id="preview-image">
                         </div>
 
-                        <div class="btn-cancelar-salvar">
-                            <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
-                            <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
-                        </div>
-                        
+                        <?php include '../../../Public/include/Butons-forms.html';?>
+                       
                     </form>
                 </div>
 
-                    
-                <div class="btns">
-                    <a href="gerenciar-eventos.php" class="voltar">
-                        <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                    </a>                  
-                </div>
         </div>
         
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>

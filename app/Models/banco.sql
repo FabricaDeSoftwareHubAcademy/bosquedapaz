@@ -86,8 +86,9 @@ CREATE TABLE artista(
     tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
-    tempo_apresentacao TIME NOT NULL,
+    tempo_apresentacao VARCHAR,
     valor_cache FLOAT NOT NULL,
+    publico_alvo VARCHAR(50) NOT NULL,
     PRIMARY KEY(id_artista),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -95,9 +96,13 @@ CREATE TABLE artista(
 CREATE TABLE evento(
 	id_evento INT NOT NULL AUTO_INCREMENT,
     nome_evento VARCHAR(150) NOT NULL,
-    descricao VARCHAR(250) NOT NULL,
+    subtitulo_evento VARCHAR(150)NOT NULL,
+    descricao_evento VARCHAR(500) NOT NULL,
     data_evento DATE NOT NULL,
-    banner VARCHAR(255) NOT NULL,
+    hora_inicio TIME NOT NULL,
+    hora_fim TIME NOT NULL,
+    endereco_evento VARCHAR(150) NOT NULL,
+    banner_evento VARCHAR(255) NOT NULL,
     status BOOLEAN DEFAULT(1),
     PRIMARY KEY(id_evento)
 );
@@ -116,8 +121,8 @@ CREATE TABLE atracao(
 CREATE TABLE fotos_evento (
     id_foto INT AUTO_INCREMENT PRIMARY KEY,
     id_evento INT NOT NULL,
-    caminho VARCHAR(255) NOT NULL,
-    legenda VARCHAR(255),
+    caminho_foto_evento VARCHAR(255) NOT NULL,
+    legenda_foto_evento VARCHAR(255),
     FOREIGN KEY (id_evento) REFERENCES evento(id_evento) ON DELETE CASCADE
 );
 
