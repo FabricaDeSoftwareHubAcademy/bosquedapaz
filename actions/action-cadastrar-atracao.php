@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $atracao->descricao_atracao = $descricao;
     $atracao->id_evento = $id_evento;
 
-    // Upload da imagem
+    
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $tmp = $_FILES['file']['tmp_name'];
         $nomeOriginal = basename($_FILES['file']['name']);
@@ -38,17 +38,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     
-        $nomeFinal = uniqid('atracao_', true) . '.' . $extensao;
-        $pasta = '../Public/uploads/atracoes/';
+        $nomeSeguro = uniqid('atracao_', true) . '.' . $extensao;
+        $pastaDestino = '../Public/uploads/atracoes/';
+        $caminhoFinal = $pastaDestino . $nomeSeguro;
     
-    
-        if (!move_uploaded_file($tmp, $pasta . $nomeFinal)) {
+        if (!is_dir($pastaDestino)) {
+            mkdir($pastaDestino, 0755, true);
+        }
+
+        if (!move_uploaded_file($tmp, $caminhoFinal)) {
             echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar imagem."]);
             exit;
         }
     
-        $atracao->banner_atracao = "uploads/atracoes/" . $nomeFinal;
-        
+        $atracao->banner_atracao = "uploads/atracoes/" . $nomeSeguro;        
     } else {
         echo json_encode(["status" => "erro", "mensagem" => "Imagem obrigatória."]);
         exit;
