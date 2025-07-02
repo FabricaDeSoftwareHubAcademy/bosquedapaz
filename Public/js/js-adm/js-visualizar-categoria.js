@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         botaoNovaCategoria.dataset.modal = 'cadastro-categoria';
         botaoNovaCategoria.innerHTML = `
         <div class="bolota" id="b10">
-            <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="Adicionar nova categoria" class="icon-item">
+            <img src="../../../Public/assets/icons/Circulo-mais.png" alt="Adicionar nova categoria" class="icon-item">
         </div>
         <p class="nome-cat">Nova Categoria</p>
     `;

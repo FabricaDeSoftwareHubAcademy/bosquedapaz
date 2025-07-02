@@ -14,9 +14,9 @@
 <body class="corpo">
     <?php include "../../../Public/include/menu-adm.html" ?>
 
-    <img class="imagem-enzo-fundo" src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="">
-    <img class="imagem-enzo-fundo2" src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="">
-    <img class="imagem-enzo-fundo3" src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="">
+    <img class="imagem-enzo-fundo" src="../../../Public/assets/img-bolas/bola-verde1.png" alt="B1">
+    <img class="imagem-enzo-fundo2" src="../../../Public/assets/img-bolas/bola-rosa.png" alt="B2">
+    <img class="imagem-enzo-fundo3" src="../../../Public/assets/img-bolas/bola-verde2.png" alt="B3">
     <main class="principal">
         <div class="box">
             <h1 class="title">TODAS AS CATEGORIAS</h1>
@@ -103,7 +103,7 @@
             </div>
             <div class="btns">
                 <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                    <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
         </div>
