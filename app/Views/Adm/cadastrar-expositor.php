@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="form-files">
-                            <label>Escolher Imagens:</label>
+                            <label>Escolher foto de perfil:</label>
                             <input type="file" name="files[]" id="files" multiple="multiple">
                         </div>
                     </div>

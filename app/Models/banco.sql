@@ -41,9 +41,6 @@ CREATE TABLE pessoa(
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
 
-insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
-
-
 CREATE TABLE expositor(
 	id_expositor INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
@@ -59,7 +56,7 @@ CREATE TABLE expositor(
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
-    status_exp ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
+    status_exp ENUM('ativo', 'inativo', 'aguardando') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
     FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria)
@@ -192,6 +189,6 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-
+insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
 
 
