@@ -72,7 +72,7 @@
                     <div class="form-expo">
                         <div id="tipo_expo" class="form-group">
                             <label id="expo_label" for="tipo-expo">Tipo de exposição:</label>
-                            <select name="" id="tipo_expo" class="select">
+                            <select name="tipo" id="tipo_expo" class="select">
                                 <option value="">Selecione</option>
                                 <option value="trailer">Trailer</option>
                                 <option value="food-truck">Food truck</option>
@@ -100,7 +100,7 @@
 
                         <div class="form-files">
                             <label>Escolher foto de perfil:</label>
-                            <input type="file" name="files[]" id="files" multiple="multiple">
+                            <input type="file" name="img_perfil" id="files" multiple="multiple">
                         </div>
                     </div>
 

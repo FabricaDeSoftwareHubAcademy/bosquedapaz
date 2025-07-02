@@ -22,49 +22,6 @@ class Pessoa
     protected $perfil;
     protected $nvSenha;
 
-    public function getNome()
-    {
-        return $this->nome;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function getTelefone()   
-    {
-        return $this->telefone;
-    }
-
-    public function getWhats()
-    {
-        return $this->whats;
-    }
-    public function getLink_instagram()
-    {
-        return $this->link_instagram;
-    }
-
-    public function getLink_facebook()
-    {
-        return $this->link_facebook;
-    }
-
-    public function getLink_whats()
-    {
-        return $this->link_whats;
-    }
-
-    public function getData_nasc()
-    {
-        return $this->data_nasc;
-    }
-
-    public function getImg_perfil()
-    {
-        return $this->foto_perfil;
-    }
 
     public function setNome($nome){
         $this->nome = $nome;

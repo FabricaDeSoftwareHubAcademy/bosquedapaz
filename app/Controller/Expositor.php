@@ -16,10 +16,12 @@ class Expositor extends Pessoa
     protected $id_expositor;
     protected $id_pessoa;
     protected $id_categoria;
-    // protected $id_imagem;
     protected $nome_marca;
     protected $num_barraca;
     protected $voltagem;
+    protected $modalidade;
+    protected $tipo;
+    protected $idade;
     protected $energia;
     protected $contato2;
     protected $descricao;
@@ -27,7 +29,6 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
-    protected $imagens;
 
 
     public function setId_expositor($id_expositor)
@@ -90,61 +91,17 @@ class Expositor extends Pessoa
     {
         $this->produto = $produto;
     }
-
-    public function getId_expositor()
+    public function setTipo($tipo)
     {
-        return $this->id_expositor;
+        $this->tipo = $tipo;
     }
-
-    public function getd_pessoa()
+    public function setModalidade($modalidade)
     {
-        return $this->id_pessoa;
+        $this->modalidade = $modalidade;
     }
-    public function getId_categoria()
+    public function setIdade($idade)
     {
-        return $this->id_categoria;
-    }
-
-    public function getNome_marca()
-    {
-        return $this->nome_marca;
-    }
-
-    public function getEnergia()
-    {
-        return $this->energia;
-    }
-    public function getVoltagem()
-    {
-        return $this->voltagem;
-    }
-    public function getContato2()
-    {
-        return $this->contato2;
-    }
-    public function getNum_barraca()
-    {
-        return $this->num_barraca;
-    }
-    public function getDescricao()
-    {
-        return $this->descricao;
-    }
-    public function getMetodos_pgto()
-    {
-        return $this->metodos_pgto;
-    }
-    public function getCor_rua()
-    {
-        return $this->cor_rua;
-    }
-    public function getResponsavel()
-    {
-        return $this->responsavel;
-    }
-    public function getProduto()
-    {
-        return $this->produto;
+        $this->idade = $idade;
     }
 
 
@@ -157,31 +114,24 @@ class Expositor extends Pessoa
                 'nome' => $this->nome,
                 'email' => $this->email,
                 'telefone' => $this->whats,
+                'whats' => $this->whats,
+                'foto_perfil' => $this->foto_perfil,
                 'perfil' => 1,
             ]
         );
 
-        $db = new Database('imagem');
-        $img_id = $db->insert_lastid([
-            'imagem1' => $this->imagens[0] ?? '',
-            'imagem2' => $this->imagens[1] ?? '',
-            'imagem3' => $this->imagens[2] ?? '',
-            'imagem4' => $this->imagens[3] ?? '',
-            'imagem5' => $this->imagens[4] ?? ''
-        ]);
-
-
         $db = new Database('expositor');
         $res = $db->insert(
             [
-                'id_expositor' => $this->id_expositor,
                 'id_pessoa' => $pes_id,
                 'id_categoria' => $this->id_categoria,
-                'id_imagem' => $img_id,
                 'nome_marca' => $this->nome_marca,
                 'num_barraca' => $this->num_barraca,
                 'voltagem' => $this->voltagem,
                 'energia' => $this->energia,
+                'modalidade' => $this->modalidade,
+                'tipo' => $this->tipo,
+                'idade' => $this->idade,
                 'contato2' => $this->contato2,
                 'descricao' => $this->descricao,
                 'metodos_pgto' => $this->metodos_pgto,

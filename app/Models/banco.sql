@@ -1,6 +1,7 @@
 CREATE DATABASE bosquedapaz;
 use bosquedapaz;
 
+
 CREATE TABLE categoria(
 	id_categoria INT NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(200) NOT NULL,
@@ -49,7 +50,9 @@ CREATE TABLE expositor(
     num_barraca INT NULL,
     voltagem VARCHAR(45) NULL,
     energia VARCHAR(10) NULL,
+    modalidade ENUM('expositor', 'kids') NOT NULL DEFAULT 'expositor',
     tipo VARCHAR(255) NULL,
+    idade int NULL,
     contato2 CHAR(11) NULL,
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
@@ -86,7 +89,7 @@ CREATE TABLE artista(
     tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
-    tempo_apresentacao VARCHAR,
+    tempo_apresentacao VARCHAR(150),
     valor_cache FLOAT NOT NULL,
     publico_alvo VARCHAR(50) NOT NULL,
     PRIMARY KEY(id_artista),
@@ -183,7 +186,7 @@ CREATE TABLE utilidade_publica (
     data_inicio DATE NOT NULL,
     data_fim DATE NOT NULL,
     imagem VARCHAR(255),
-    status_utilidade TINYINT(1) DEFAULT 1,
+    status_utilidade char(1) DEFAULT 1,
     PRIMARY KEY(id_utilidade_publica)
 );
 
