@@ -24,21 +24,31 @@
                     <h1>CADASTRO DE BOLETO</h1>
                 </div>
 
-                <div class="search">
-                    <input type="text" id="searchInput" placeholder="Pesquisar por expositor...">
+                <form method="POST" action="../../../actions/action-procurar-expositor-boleto.php" class="search">
+                    <input type="text" name="pesquisar-nome" id="searchInput" placeholder="Pesquisar por expositor...">
                     <label for="searchInput" class="label">
-                        <span class="material-symbols-outlined" id="lupa"> search </span>
+                        <button type="submit" name="botao-procurar" class="botao-procurar material-symbols-outlined" id="lupa"> search </button>
                     </label>
-                </div>
+                </form>
             </div>
 
-            <form method="POST" class="form">
-
+            <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
                 <div class="form-content">
 
                     <div class="input">
                         <label class="label" for="expositor">Expositor:</label>
+                        <input type="hidden" name="id-expositor">
                         <input type="text" name="nome-exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="cnpj-cpf" class="label">CPF:</label>
+                        <input type="text" name="cpf_input" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="input">
+                        <label class="label" for="valor">Valor:</label>
+                        <input type="text" name="valor_input" id="valor" class="form-input" placeholder="R$ 0,00" autocomplete="off" required>
                     </div>
 
                     <div class="input">
@@ -47,40 +57,30 @@
                             <span id="file-text">Selecionar Arquivo em PDF</span>
                             <img src="../../../Public/imgs/Upload.svg" alt="">
                         </label>
-                        <input type="file" name="arquivo" id="arquivo" accept=".pdf" class="form-input" required>
-                    </div>
-
-                    <div class="input">
-                        <label class="label" for="valor">Valor:</label>
-                        <input type="text" name="valor" id="valor" class="form-input" placeholder="R$ 0,00" autocomplete="off" required>
-                    </div>
-
-                    <div class="input">
-                        <label for="cnpj-cpf" class="label">CNPJ/CPF:</label>
-                        <input type="text" name="cnpj-cpf" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00  |  00.000.000/0000-00" required>
+                        <input type="file" name="arquivo" id="arquivo" accept="application/pdf" class="form-input" required>
                     </div>
 
                     <div class="input">
                         <label for="referencia" class="label">Referência:</label>
-                        <select name="input_select" id="referencia_select" class="form-input" required>
-                            <option id="option-cb" value="">Janeiro</option>
-                            <option id="option-cb" value="">Fevereiro</option>
-                            <option id="option-cb" value="">Março</option>
-                            <option id="option-cb" value="">Abril</option>
-                            <option id="option-cb" value="">Maio</option>
-                            <option id="option-cb" value="">Junho</option>
-                            <option id="option-cb" value="">Julho</option>
-                            <option id="option-cb" value="">Agosto</option>
-                            <option id="option-cb" value="">Setembro</option>
-                            <option id="option-cb" value="">Outubro</option>
-                            <option id="option-cb" value="">Novembro</option>
-                            <option id="option-cb" value="">Dezembro</option>
+                        <select name="referencia_input" id="referencia_select" class="form-input" required>
+                            <option id="option-cb" value="Janeiro">Janeiro</option>
+                            <option id="option-cb" value="Fevereiro">Fevereiro</option>
+                            <option id="option-cb" value="Março">Março</option>
+                            <option id="option-cb" value="Abril">Abril</option>
+                            <option id="option-cb" value="Maio">Maio</option>
+                            <option id="option-cb" value="Junho">Junho</option>
+                            <option id="option-cb" value="Julho">Julho</option>
+                            <option id="option-cb" value="Agosto">Agosto</option>
+                            <option id="option-cb" value="Setembro">Setembro</option>
+                            <option id="option-cb" value="Outubro">Outubro</option>
+                            <option id="option-cb" value="Novembro">Novembro</option>
+                            <option id="option-cb" value="Dezembro">Dezembro</option>
                         </select>
                     </div>
 
                     <div class="input">
                         <label for="vencimento" class="label">Vencimento</label>
-                        <input type="date" name="val" id="val" class="form-input" placeholder="00/00/0000" required>
+                        <input type="date" name="vencimento_input" id="val" class="form-input" placeholder="00/00/0000" required>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
 
                     <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
                         <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
-                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="salvar" value="salvar">Salvar</button></div>
+                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="botao-cadastrar" value="salvar">Salvar</button></div>
                     </div>
                 </div>
             </form>
@@ -110,6 +110,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_buscar_expositor.js" defer></script>
     <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script>
         $('#valor').mask('000.000.000.000.000,00', {
