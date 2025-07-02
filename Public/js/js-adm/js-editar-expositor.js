@@ -1,4 +1,3 @@
-
 window.addEventListener("DOMContentLoaded", async () => {
     let btn_salvar = document.getElementById("btn_salvar");
     const params = new URLSearchParams(window.location.search);
@@ -19,7 +18,7 @@ window.addEventListener("DOMContentLoaded", async () => {
  
     
     let response = await dados_php.json();
-    console.log(response);
+    
 
     if(response.status == 200){
         input_id_expositor.value = response.data.id_expositor;
@@ -27,9 +26,11 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_desc.value = response.data.descricao_exp;
         input_email.value = response.data.email;
         input_insta.value = response.data.link_instagram;
-        input_whatsapp.value = response.data.link_whats;
+        input_whatsapp.value = response.data.whats;
         input_facebook.value = response.data.link_facebook;
     }
+
+    console.log(response);
 
     btn_salvar.addEventListener('click', async function(event){
 
@@ -45,11 +46,15 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         let response2 = await dados_php2.json();
         if (response2.status == 200) {
-            alert("atualiazado!!")
+            // alert("atualiazado!!")
+            // CHAMAR UM MODAL DE ATUALIZADO COM SUCESSO!!!
+            openModalSucesso();
         }
 
-        console.log("CLICOU")
-
     })
+
+    let button_close_perfilEdit = document.getElementById("close-modal-sucesso");
+
+    button_close_perfilEdit.addEventListener('click', closeModalSucesso);
 
 });

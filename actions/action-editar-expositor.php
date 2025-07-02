@@ -34,7 +34,7 @@ if(isset($_POST['nome']) && isset ($_POST['descricao'])){
     $objExpo->setDescricao($_POST['descricao']);
     $objExpo->setlink_instagram($_POST['instagram']);
     $objExpo->setLink_facebook($_POST['facebook']);
-    $objExpo->setLink_whats($_POST['whatsapp']);
+    $objExpo->setWhats($_POST['whatsapp']);
     $objExpo->setEmail($_POST['email']);
 
     $result = $objExpo->atualizar($id_expositor);

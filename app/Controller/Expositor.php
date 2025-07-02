@@ -266,13 +266,22 @@ class Expositor extends Pessoa
         $res = $db->update(
             'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
             [
-                'nome' => $this->nome,
                 'link_instagram' => $this->link_instagram,
                 'whats' => $this->whats,
                 'link_facebook' => $this->link_facebook,
                 'email' => $this->email
             ]
         );
-        return $res;
+
+        $db = new Database('expositor');
+        $res = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            [ 
+                'nome_marca' => $this->nome_marca, 
+                'descricao' => $this->descricao,
+                ]
+            );
+
+        return $res;    
     }
 }

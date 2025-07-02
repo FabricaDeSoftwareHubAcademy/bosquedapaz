@@ -1,3 +1,7 @@
+<?php
+    $urlLogo = "../../Models/banco.sql";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -113,12 +117,14 @@
 
                 <section class="perfilEdit-btns">
                     <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>
-                    <button id="btn_salvar" name="edit_expo" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
+                    <button id="btn_salvar" data-modal="perfilEdit-salvar" name="edit_expo" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
                 </section>
     
             </form>
             
             <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/assets/icons/voltar.svg" alt="" class="perfilEdit-img-voltar"></a>
+
+            <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
 
         </div>
         
