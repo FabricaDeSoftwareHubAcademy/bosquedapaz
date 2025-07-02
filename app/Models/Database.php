@@ -265,8 +265,21 @@ class Database
         }
     }
 
-    public function sts_adm($id_colaborador, $novoStatus)
-    {
+    public function select_pessoa_expositor($id = null){
+        if (!empty($id)){
+
+            $query = "SELECT expositor.id_expositor,pessoa.id_pessoa
+            FROM expositor INNER JOIN pessoa
+            ON pessoa.id_pessoa = expositor.id_pessoa AND expositor.id_expositor = ". $id;
+    
+            return $this->execute($query);
+        }else {
+            return false;
+        }
+    }
+
+
+    public function sts_adm($id_colaborador, $novoStatus) {
         $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
