@@ -9,9 +9,9 @@
 
 .cabecalho {
     position: fixed;
-    background-color: white;
+    background-color: #181A1B;
     width: 100%;
-    border-bottom: 1px solid rgba(161, 161, 161, 0.788);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.788);
     z-index: 5;
 }
 
@@ -70,7 +70,7 @@
 
 .link-ul {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .btn-login {
@@ -111,7 +111,7 @@
     gap: .5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: black;
+    color: white;
     transition: all .2s ease-in-out;
 }
 
@@ -133,6 +133,14 @@
     background-color: transparent;
     transition: all .2s ease-in-out;
 }
+
+.conteiner-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+}
+
 
 
 @media screen and (max-width: 678px) {

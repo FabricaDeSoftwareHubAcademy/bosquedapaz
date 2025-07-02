@@ -2,14 +2,13 @@
 const css = `
   body {
     background-color: #ffffff;
-    color: #202124;
+    color: #181A1B;
     transition: background-color 0.3s, color 0.3s;
     font-family: sans-serif;
-    padding: 2rem;
   }
 
   body.dark-mode {
-    background-color: #202124;
+    background-color: #181A1B;
     color: #e8eaed;
   }
 
@@ -25,8 +24,8 @@ const css = `
     padding: 0 8px;
     box-sizing: border-box;
     cursor: pointer;
-    margin-bottom: 2rem;
   }
+
 
   .toggle-switch .icon {
     font-size: 16px;
@@ -60,7 +59,7 @@ const css = `
   .toggle-switch {
     margin-left: auto;
   }
-  
+  a
 `;
 
 // Adiciona o CSS na página

@@ -130,6 +130,5 @@
     <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
     
         <script src="../../../Public/js/js-modais/modal-utilidades-publi.js"></script>
-        <script src="../../../Public/js/tema-dark.js"></script>
 </body>
 </html>
