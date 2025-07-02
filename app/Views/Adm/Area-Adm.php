@@ -263,7 +263,7 @@
                                 </div>
                             </div>    
                         </a>
-                        <a class="link-modais" href="../../../app/Views/Adm/gerenciar-boletos.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/tela-gerenciar-boletos.php">
                             <div class="action__title">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-stickies" viewBox="0 0 16 16">

@@ -36,14 +36,19 @@ class Evento
         return $res;
     }
 
-    public function listar_evento($termo = '') {
+    public function listar_evento($where = null,$order = null,$limit = null){
         $db = new Database('evento');
+        $res = $db->select($where,$order,$limit)->fetchAll(PDO::FETCH_ASSOC);
         
-        if (!empty($termo)) {
-            return $db->select('nome_evento LIKE ?', ["%$termo%"])->fetchAll(PDO::FETCH_ASSOC);
-        }
-    
-        return $db->select()->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+
+    public function buscarPorNome($nome)
+    {
+        $db = new Database('evento');  
+
+        return $db->select("nome_evento LIKE '%$nome%'", 'data_evento DESC')
+                ->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function buscarPorId_evento($id) {

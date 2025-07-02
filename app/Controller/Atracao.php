@@ -35,6 +35,14 @@ class Atracao
         return $res;
     }
 
+    public function buscarPorNome($nome) {
+        $db = new Database('atracao');
+        $res = $db->select("nome_atracao = {$nome}")
+                  ->fetchAll(PDO::FETCH_ASSOC);
+
+        return $res;
+    }
+
     public function buscarPorId($id) {
         $db = new Database('atracao');
         $res = $db->select("id_atracao = {$id}")

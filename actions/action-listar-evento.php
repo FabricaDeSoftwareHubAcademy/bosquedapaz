@@ -10,7 +10,7 @@ try {
 
     $termo = isset($_GET['termo']) ? trim($_GET['termo']) : '';
 
-    $eventos = $evento->listar_evento($termo);
+    $eventos = $evento->buscarPorNome($termo);
 
     echo json_encode([
         'status' => 'success',

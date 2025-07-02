@@ -30,11 +30,11 @@
                 <form action="../../../actions/actions-boletos/action-filtrar-data.php" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Inicial</label>
-                        <input type="date" name="data_inicial"" id="input-filtragem-de-data">
+                        <input type="date" name="data_inicial" id="input-filtragem-de-data">
                     </div>
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Final</label>
-                        <input type="date" name="data_final"" id="input-filtragem-de-data">
+                        <input type="date" name="data_final" id="input-filtragem-de-data">
                     </div>
                     <div class="botao-pesquisar">
                         <label for="" id="label-botao-de-filtragem">Ações</label>
