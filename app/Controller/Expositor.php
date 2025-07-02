@@ -263,9 +263,9 @@ class Expositor extends Pessoa
             imagem.imagem5
     
         FROM expositor
-        LEFT JOIN pessoa    ON expositor.id_pessoa    = pessoa.id_pessoa
-        LEFT JOIN categoria ON expositor.id_categoria = categoria.id_categoria
-        LEFT JOIN imagem    ON expositor.id_imagem    = imagem.id_imagem";
+        INNER JOIN pessoa    ON expositor.id_pessoa    = pessoa.id_pessoa
+        INNER JOIN categoria ON expositor.id_categoria = categoria.id_categoria
+        INNER JOIN imagem    ON expositor.id_imagem    = imagem.id_imagem";
     
         if ($where) {
             $sql .= " WHERE $where";
