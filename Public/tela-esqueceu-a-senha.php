@@ -61,6 +61,8 @@ if (isset($_POST['enviar'])) {
     <link rel="stylesheet" href="../Public/css/style-esqueceu-a-senha-recsenha.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
+    <script src="./js/js-recuperar-senha/recuperar-senha-email.js" defer></script>
+
 </head>
 <body class="body-recsenha">
 <?php include './include/modais/modal_carregando.html'; ?>
@@ -124,7 +126,7 @@ if (isset($_POST['enviar'])) {
         </section>
     </main>
 
-    <script src="./js/js-modais/js-abrir-modal.js"></script>
-    <script src="./js/js-modais/js-modal-confirmar.js"></script>
+    <!-- <script src="./js/js-modais/js-abrir-modal.js"></script> -->
+    <script src="./js/js-modais/js-modal-carregar.js"></script>
 </body>
 </html>

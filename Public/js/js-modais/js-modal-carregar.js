@@ -3,7 +3,7 @@ const linkLoading  = document.createElement('link');
 linkLoading.rel  = 'stylesheet';
 linkLoading.type = 'text/css';
 linkLoading.href = '../../../Public/css/css-modais/style-modal-carregar.css';
-headElementLoading.appendChild(link);
+headElementLoading.appendChild(linkLoading);
 
 function openModalLoading() {
     let modal = document.getElementById('modal-loading')
