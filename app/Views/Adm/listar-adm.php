@@ -1,6 +1,5 @@
 <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -49,7 +48,6 @@
       display: flex !important;
     }
   </style>
-
 </head>
 <body>
   <?php include "../../../Public/include/menu-adm.html" ?>
@@ -104,11 +102,10 @@
     </div>
   </div>
 
-  <div class="bolas-fundo">
-    <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-    <img src="../../../Public/assets/img-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-    <img src="../../../Public/assets/img-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
-  </div>
+    <!-- Imagens Decorativas -->
+    <div class="imgs__dec1"><img src="../../../Public/assets/img-bolas/bola-azul1.png" alt=""></div>
+    <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-azul2.png" alt=""></div>
+    <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>

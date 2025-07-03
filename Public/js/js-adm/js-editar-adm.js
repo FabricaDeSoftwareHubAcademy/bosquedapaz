@@ -41,19 +41,18 @@ async function carregarDadosADM() {
 carregarDadosADM();
 
 function previewImagem() {
-    const input = document.getElementById("uploadFoto");
-    const preview = document.getElementById("previewFoto");
+    const input = document.getElementById('uploadFoto');
+    const preview = document.getElementById('previewFoto');
 
     if (input.files && input.files[0]) {
         const reader = new FileReader();
-
         reader.onload = function (e) {
             preview.src = e.target.result;
         };
-
         reader.readAsDataURL(input.files[0]);
     }
 }
+
 
 const formulario = document.getElementById("formulario");
 
@@ -92,3 +91,5 @@ formulario.addEventListener("submit", async (e) => {
         alert("Ocorreu um erro ao tentar editar. Verifique o console.");
     }
 });
+
+// Matheus Manja 

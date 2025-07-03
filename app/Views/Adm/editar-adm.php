@@ -3,88 +3,103 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adm - Bosque da Paz</title>
-
-    <script src="../../../Public/js/js-adm/js-editar-adm.js" defer></script>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    />
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <title>Editar ADM</title>
 </head>
 <body>
-    <?php include "../../../Public/include/menu-adm.html" ?>
-    <!-- <div class="sandwich-menu" onclick="mostrarMenu()">
-        <img src="../../../Public/imgs/Proximos-Eventos-img/menu.png" alt="menu" class="menu" />
-    </div> -->
+    <?php include "../../../Public/include/menu-adm.html"; ?>
 
-    <main class="principal">
-        <div class="box">
-            <h2>Editar ADM</h2>
+    <main>
+        <section class="container_box">
+            <!-- Imagem decorativa -->
+            <div class="left-side">
+                <img src="../../../Public/assets/imagem-dec-editar.svg" alt="">
+            </div>
 
-            <form id="formulario" method="post" enctype="multipart/form-data" novalidate>
-                <div class="foto-container">
-                    <!-- input file dentro do form -->
-                    <input type="file" id="uploadFoto" name="imagem" accept="image/*" onchange="previewImagem()" />
-                    <label for="uploadFoto">
-                        <img id="previewFoto" src="" alt="Foto do Administrador" />
-                        <div class="icone-editar">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-                    </label>
-                </div>
+            <div class="div__linha_decorativa"></div>
 
-                <input type="hidden" name="id" id="id" value="" />
+            <!-- Formulário -->
+            <div class="right-side">
+                <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
+                
+                <h1>Editar ADM</h1>
 
-                <div class="form-box">
-                    <div id="form1">
-                        <div class="input-container">
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label for="nome">Nome:</label>
-                                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required />
+                <form id="formulario" method="post" enctype="multipart/form-data" novalidate class="form__cadastro">
+                    <!-- ID oculto -->
+                    <input type="hidden" name="id" id="id" value="" />
+
+                    <!-- Imagem de Perfil -->
+                    <div class="form__group">
+                        <label class="label__cad" for="uploadFoto"></label>
+                        <div class="foto__container">
+                            <input class="input2" type="file" name="imagem" id="uploadFoto" accept="image/*" onchange="previewImagem()" hidden>
+                            <label for="uploadFoto" class="foto__upload">
+                                <img id="previewFoto" src="../../../Public/assets/icons/user-default.png" alt="Foto do Administrador" />
+                                <div class="icone-editar">
+                                    <i class="fa-solid fa-pen-to-square"></i>
                                 </div>
-                                <div class="input-group">
-                                    <label for="telefone">Telefone:</label>
-                                    <input type="tel" name="tel" id="telefone" placeholder="Digite o seu número de telefone" required pattern="\d{10,11}" title="Digite apenas números com DDD" />
-                                </div>
-                            </div>
-
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label for="email">E-mail:</label>
-                                    <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required />
-                                </div>
-                                <div class="input-group">
-                                    <label for="cargo">Cargo:</label>
-                                    <input type="text" name="cargo" id="cargo" placeholder="Digite o seu cargo" required />
-                                </div>
-                            </div>
+                            </label>
                         </div>
                     </div>
-                </div>
 
-                <?php include '../../../Public/include/Butons-forms.html' ?>
-            </form>
-            <!-- <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar" />
-            </a> -->
-        </div>
+                    <!-- Nome -->
+                    <div class="form__group">
+                        <label class="label__cad" for="nome">Nome</label>
+                        <div class="area__input">
+                            <i class="bi bi-person"></i>
+                            <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+                        </div>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="form__group">
+                        <label class="label__cad" for="telefone">Telefone</label>
+                        <div class="area__input">
+                            <i class="bi bi-telephone"></i>
+                            <input class="input" type="tel" name="tel" id="telefone" placeholder="Digite o seu número de telefone" required pattern="\d{10,11}" title="Digite apenas números com DDD">
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form__group">
+                        <label class="label__cad" for="email">E-mail</label>
+                        <div class="area__input">
+                            <i class="bi bi-envelope"></i>
+                            <input class="input" type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
+                        </div>
+                    </div>
+
+                    <!-- Cargo -->
+                    <div class="form__group">
+                        <label class="label__cad" for="cargo">Cargo</label>
+                        <div class="area__input">
+                            <i class="bi bi-briefcase"></i>
+                            <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
+                        </div>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="form__actions">
+                        <button type="button" class="btn btn__rosa">Cancelar</button>
+                        <button type="submit" class="btn btn__azul">Salvar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Seta voltar1 -->
+            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
+        </section>
+
+        <!-- Imagens decorativas -->
+        <div class="imgs__dec1"><img src="../../../Public/assets/img-bolas/bola-1.png" alt=""></div>
+        <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-2.png" alt=""></div>
+        <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
     </main>
 
-    <!-- Imagens Decorativas  -->
-    <div class="decorative__img1"><img src="../../../Public/assets/img-bolas/bola-verde1.png" alt=""></div>
-    <div class="decorative__img2"><img src="../../../Public/assets/img-bolas/bola-verde2.png" alt=""></div>
-    <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
-
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-editar-adm.js" defer></script>
 </body>
 </html>

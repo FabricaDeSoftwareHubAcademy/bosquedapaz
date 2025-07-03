@@ -132,7 +132,7 @@ class Colaborador extends Pessoa
     public function buscarPorIdPessoa(int $idPessoa) {
         $db = new Database('colaborador');
         return $db->buscarPorIdPessoa($idPessoa);
-    }
-    
-    
+    }   
 }
+
+// Matheus Manja
