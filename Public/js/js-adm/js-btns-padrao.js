@@ -1,9 +1,9 @@
 const headElement  = document.getElementsByTagName('head')[0];
-const link  = document.createElement('link');
-link.rel  = 'stylesheet';
-link.type = 'text/css';
-link.href = '../../../Public/css/btn-padrao.css';
-headElement.appendChild(link);
+const linkBTNS  = document.createElement('link');
+linkBTNS.rel  = 'stylesheet';
+linkBTNS.type = 'text/css';
+linkBTNS.href = '../../../Public/css/btn-padrao.css';
+headElement.appendChild(linkBTNS);
 
 let btnVoltar = document.getElementById('btn-voltar')
 btnVoltar.addEventListener('mouseover', () => {
