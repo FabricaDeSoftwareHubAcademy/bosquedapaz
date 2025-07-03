@@ -44,10 +44,11 @@ main {
     overflow: hidden;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     background-color: var(--color-box);
 }
 
-/* Titulo:  */
+/* Titulo da Página:  */
 .title{
     width: 100%;
     height: 15%;
@@ -75,8 +76,8 @@ main {
 
 /* CARDS:  */
 .card {
-    width: 300px;             
-    height: 450px;
+    width: 320px;             
+    height: 490px;
     background-color: white;
     border-radius: 10px;
     border: 2px solid var(--color-rosa);
@@ -98,10 +99,43 @@ main {
     transform: translateY(-10px);
 }
 
-.nome-card {
-    position: absolute;
-    top: 4%;
-    left: 37%;
+.area_text{
+    width: 100%;
+    height: 120px;
+    max-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Titulo do Card:  */
+.titulo{
+    width: 260px;
+    max-width: 260px;
+    height: 30px;
+    max-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo h3{
+    font-weight: 600;
+}
+
+/* Texto (p) do Card:  */
+.text {
+    width: 260px;
+    height: 90px;
+    max-height: 90px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: justify;
+    word-break: break-word;
+    white-space: normal;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .por-cima-card{
@@ -136,17 +170,17 @@ main {
     position: absolute;
     border-radius: 10px 10px;
     transform: rotate(68deg);
-    top: 22%;
+    top: 41%;
     left: 21%;
 }
 
 .container__decorativo {
     width: 200px;
-    height: 22rem;
+    height: 26rem;
     background-color: var(--color-rosa);
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 30%;
+    left: 21%;
     transform: rotate(69deg);
 }
 
@@ -160,10 +194,11 @@ main {
     border-radius: 10px 10px;
 }
 
+/* Botão Saiba Mais:  */
 .meu-botao {
     background-color: white;
     color: var(--color-rosa);
-    padding: 14px 35px;
+    padding: 14px 45px;
     border: 1px solid var(--color-rosa);
     border-radius: 8px;
     font-size: 15px;
@@ -172,14 +207,29 @@ main {
     text-decoration: none;
     display: inline-block;
     z-index: 2;
-    top: 66%;
+    top: 26%;
     position: relative;
-    left: 24%;
+    left: 23%;
 }
 .meu-botao:hover {
     background-color: var(--color-rosa); 
     color: white;
     border: 2px solid white;
+}
+
+/* Seta Voltar:  */
+.seta_voltar {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    padding: 5px; 
+    z-index: 3; 
+    transition: transform 0.2s ease;
+}
+
+.seta_voltar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Imagens Decorativas:  */
@@ -223,11 +273,24 @@ main {
 /* Responsividades: */
 /* Celulares pequenos (smartphones compactos) */
 @media (max-width: 575.98px){
+    main{
+        padding-top: 100px;
+    }
     .container_box{
         gap: 10px;
     }
     .title h1{
         font-size: 25px;
+    }
+
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+        left: 5px;
+    }
+    .seta_voltar img{
+        width: 70%;
+        height: auto;
     }
 
     /* Imagens Decorativas:  */
@@ -245,10 +308,23 @@ main {
 
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
+    main{
+        padding-top: 120px;
+    }
     .container_box{
         gap: 10px;
     }
 
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+        left: 5px;
+    }
+    .seta_voltar img{
+        width: 70%;
+        height: auto;
+    }
+    
     /* Imagens Decorativas:  */
     .decorative__img1{
         top: 20vh;
@@ -264,10 +340,18 @@ main {
 
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
+    main{
+        padding-top: 130px;
+    }
     .container_box{
         gap: 15px;
     }
 
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+    }
+    
     /* Imagens Decorativas:  */
     .decorative__img1{
         top: 20vh;
@@ -287,6 +371,11 @@ main {
         gap: 15px;
     }
 
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+    }
+    
     /* Imagens Decorativas:  */
     .decorative__img1{
         top: 20vh;
@@ -319,4 +408,4 @@ main {
     }
 }
 
-
+/* Matheus Manja  */

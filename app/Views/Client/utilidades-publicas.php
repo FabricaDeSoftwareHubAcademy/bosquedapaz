@@ -78,6 +78,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Seta:  -->
+            <div class="seta_voltar"><a href="feira-bosque-da-paz.php#edit_pass"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
     </main>
 
@@ -132,3 +135,5 @@
     <script src="../../../Public/js/js-modais/modal-utilidades-publi.js"></script>
 </body>
 </html>
+
+<!-- Matheus Manja  -->
