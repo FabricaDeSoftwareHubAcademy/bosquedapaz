@@ -78,21 +78,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 if (data.status === 'success') {
                     openModalSucesso();
+                    document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Evento atualizado com sucesso!';
+                    openModalSucesso();
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
-                    document.getElementById('msm-sucesso').innerHTML = data.mensagem ?? 'Evento atualizado com sucesso!';
 
                     setTimeout(() => {
-                        window.location.href = 'gerenciar-eventos.php';
+                        window.location.href = './gerenciar-eventos.php';
                     }, 6000);
                 } else {
                     openModalError();
+                    document.getElementById('erro-title').innerText = 'Erro ao atualizar evento';
+                    document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+                    openModalError();
                     document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
-                    console.error('Erro ao atualizar:', data.mensagem);
                 }
 
             } catch (error) {
-                console.error('Erro no envio do formulário:', error);
-                alert('Erro inesperado ao tentar editar o evento.');
+                console.error('Erro na requisição:', error);
+                document.getElementById('erro-title').innerText = 'Falha de comunicação';
+                document.getElementById('erro-text').innerText = 'Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente.';
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
             }
         });
 

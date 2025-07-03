@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     const tabelaEventos = document.getElementById('lista-eventos');
     const inputBuscar = document.getElementById('buscar');
 
-    // Sanitize para evitar XSS
     function sanitize(str) {
         const div = document.createElement('div');
         div.textContent = str;
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                         <td>${sanitize(formatarDataBR(evento.data_evento))}</td>
                         <td>
                             <span class="${evento.status == 1 ? 'status-ativo' : 'status-inativo'}">
-                                ${evento.status == 1 ? 'Ativo' : 'Inativo'}
+                                ${evento.status == 1 ? 'Em Curso' : 'Finalizado'}
                             </span>
                         </td>
                         <td class="fone-col">
