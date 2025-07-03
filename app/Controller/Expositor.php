@@ -115,7 +115,8 @@ class Expositor extends Pessoa
                 'email' => $this->email,
                 'telefone' => $this->whats,
                 'whats' => $this->whats,
-                'foto_perfil' => $this->foto_perfil,
+                'img_perfil' => $this->foto_perfil,
+                'link_instagram' => $this->link_instagram,
                 'perfil' => 1,
             ]
         );

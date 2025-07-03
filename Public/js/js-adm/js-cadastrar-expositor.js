@@ -28,6 +28,7 @@ btn_salvar.addEventListener('click', async function(event){
     let formulario = document.getElementById("fomulario_cad_expositor");
 
     let dadosForms =  new FormData(formulario);
+    dadosForms.append('modalidade', 'expositor');
 
     let dados_php = await fetch('../../../actions/cadastrar_expositor.php', {
         method:'POST',

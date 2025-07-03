@@ -65,7 +65,7 @@
                         <div class="input">
                             <label>Link instagram:</label>
 
-                            <input type="text" name="" id="link_instagram" placeholder="link instagram" required>
+                            <input type="text" name="link_instagram" id="link_instagram" placeholder="link instagram" required>
                         </div>
                     </div>
 
