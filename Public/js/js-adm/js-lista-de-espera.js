@@ -15,7 +15,7 @@ async function carrega_expositor() {
         <td>${element.descricao}</td>
         <td>${element.telefone}</td>
         <td class="perfil">
-            <a href="validar-expositor.php?id=${element.id_expositor}">
+            <a href="validar-expositor.php?expositor=${encodeURIComponent(element.id_expositor)}">
             <i class="bi bi-person-badge"></i>
             </a>
         </td>

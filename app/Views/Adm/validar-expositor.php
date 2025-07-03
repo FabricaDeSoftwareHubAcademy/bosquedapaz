@@ -1,6 +1,4 @@
 <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,13 +23,13 @@
         <!-- Seção de dados da empresa -->
         <section class="secao-dados-empresa">
             <div class="area-superior">
-                <h1 class="area-superior-texto">Nome da Empresa</h1>
-                <img class="area-superior-imagem" src="../../../Public/imgs/imgs-validar-expositor/logomarca.png" alt="logo da empresa">
+                <h1 class="area-superior-texto" id="nomeEmpresa">Nome da Empresa</h1>
+                <img class="area-superior-imagem" src="" id="logoEmapresa">
             </div>
             <div class="area-inferior">
                 <h1 class="area-inferior-texto">Produtos</h1>
                 <div class="area-inferior-produtos">
-                    <div class="area-produtos">
+                    <!-- <div class="area-produtos">
                         <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto1.jpeg" alt="">
                         <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto2.jpeg" alt="">
                         <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto3.jpeg" alt="">
@@ -40,7 +38,7 @@
                         <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto4.jpeg" alt="">
                         <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto5.jpeg" alt="">
                         <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto6.jpeg" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -67,7 +65,7 @@
                             <label for="">Whatsapp</label>
                             <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
-                            <label for="">CPF</label>
+                            <label for="">Tipo de produto</label>
                             <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Cidade</label>
@@ -110,78 +108,10 @@
         </section>
     </main>
 
-    <!-- Modais - Recusar Expositor -->
-    <!-- ------------------------------ -->
-    <!-- modal 1 - recusar expositor -->
-    <div class="modal modal-recusar-expositor-1" id="modal_recusar_expositor_1">
-        <div class="modal-content-recusar-expositor">
-            <h1 class="modal-texto-recusar-expositor">Deseja recusar o expositor?</h1>
-            <div class="modal-botoes-recusar-expositor">
-                <button class="botoes-modal-recusar-expositor botao-cancelar" id="botao_cancelar_recusar_expositor_1">Cancelar</button>
-                <button class="botoes-modal-recusar-expositor botao-confirmar" id="botao_confirmar_recusar_expositor_1">Confirmar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal 2 - recusar expositor -->
-    <div class="modal modal-recusar-expositor-2" id="modal_recusar_expositor_2">
-        <div class="modal-content-recusar-expositor">
-            <h1 class="modal-texto-recusar-expositor">Justifique o Motivo</h1>
-            <form action="../Controller/Recusar_Usuario.php" method="post" class="motivo-recusar-formulario" id="formulario-recusar-expositor">
-                <input type="hidden" name="id_usuario" value="<?= $dados['id_usuario'] ?>">
-                <textarea name="textarea-modal-recusar-expositor" id="motivo_recusar_expositor" class="motivo-recusar-expositor" placeholder="Digite aqui o motivo"></textarea>
-
-                <div class="modal-botoes-recusar-expositor">
-                    <button type="button" class="botoes-modal-recusar-expositor botao-cancelar" id="botao_cancelar_recusar_expositor_2">Cancelar</button>
-                    <button type="submit" name="recusar-expositor" class="botoes-modal-recusar-expositor botao-confirmar" id="botao_confirmar_recusar_expositor_2">Confirmar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modais - Validar Expositor -->
-    <!-- ----------------------------- -->
-    <!-- modal 1 - validar expositor -->
-    <div class="modal modal-validar-expositor-1" id="modal_validar_expositor_1">
-        <div class="modal-content-validar-expositor">
-            <h1 class="modal-texto-validar-expositor">Deseja validar o expositor?</h1>
-            <div class="modal-botoes-validar-expositor">
-                <button class="botoes-modal-validar-expositor botao-cancelar" id="botao_cancelar_validar_expositor_1">Cancelar</button>
-                <button class="botoes-modal-validar-expositor botao-confirmar" id="botao_confirmar_validar_expositor_1">Confirmar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal 2 - validar expositor -->
-    <div class="modal modal-validar-expositor-2" id="modal_validar_expositor_2">
-        <div class="modal-content-validar-expositor">
-            <h1 class="modal-texto-validar-expositor">Preencha as Informações</h1>
-            <h2 class="modal-subtexto-validar-expositor">Informe numero da barraca e cor da rua em que o expositor ira atuar.</h2>
-            <form action="../Controller/Validar_Usuario.php" method="post" id="formulario-informacoes-validar-expositor" class="area-informacoes-validar-expositor">
-                <input type="hidden" name="id_usuario" value="<?= $dados['id_usuario'] ?>">
-                <label for="">Numero da Barraca</label>
-                <input type="text" name="numero_barraca" id="numero_barraca_expositor" class="campo-numero-barraca">
-
-                <label for="">Cor da Rua</label>
-                <select name="selecao-cores" id="selecionar-cor" class="campo-selecionar-cor">
-                    <option value="amarela">Amarela</option>
-                    <option value="laranja">Laranja</option>
-                    <option value="roxa">Roxa</option>
-                    <option value="verde">Verde</option>
-                </select>
-
-                <div class="modal-botoes-validar-expositor">
-                    <button type="button" class="botoes-modal-validar-expositor botao-cancelar" id="botao_cancelar_validar_expositor_2">Cancelar</button>
-                    <button type="submit" name="validar-expositor" class="botoes-modal-validar-expositor botao-confirmar" id="botao_confirmar_validar_expositor_2">Confirmar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <div class="decoracoes">
-        <img class="decoracao decoracao1" src="../../../Public/imgs/imgs-validar-expositor/decoracao1-validar-expositor.svg" alt="">
-        <img class="decoracao decoracao2" src="../../../Public/imgs/imgs-validar-expositor/decoracao2-validar-expositor.svg" alt="">
-        <img class="decoracao decoracao3" src="../../../Public/imgs/imgs-validar-expositor/decoracao3-validar-expositor.svg" alt="">
+        <img class="decoracao decoracao1" src="../../../Public/assets/img-bolas/bola-azul1.png" alt="">
+        <img class="decoracao decoracao2" src="../../../Public/assets/img-bolas/bola-azul2.png" alt="">
+        <img class="decoracao decoracao3" src="../../../Public/assets/img-bolas/bola-azul.png" alt="">
         <a href="../../../app/adm/Views/Area-Adm.php">
             <img class="decoracao botao-voltar" src="../../../Public/imgs/imgs-validar-expositor/botao-voltar-validar-expositor.svg" alt="">
         </a>
