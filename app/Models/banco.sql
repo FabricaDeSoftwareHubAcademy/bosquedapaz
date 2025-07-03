@@ -18,6 +18,7 @@ CREATE TABLE endereco(
     num_residencia INT NOT NULL,
     bairro VARCHAR(100) NOT NULL,
     cidade VARCHAR(100) NOT NULL,
+    estado VARCHAR(100) NOT NULL,
     PRIMARY KEY(id_endereco)
 );
 
