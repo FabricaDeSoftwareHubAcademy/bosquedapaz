@@ -13,18 +13,23 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         track.innerHTML = '';
 
+        // Defina a base do seu projeto no localhost (ajuste se seu projeto tiver outro caminho)
+        const basePath = '/AulaPHPDev33/bosquedapaz/';
+
         parceiros.forEach(parceiro => {
             const div = document.createElement('div');
             div.classList.add('div-logo-parceiro');
 
             const img = document.createElement('img');
-            img.src = parceiro.logo; 
+            // Monta a URL completa a partir do caminho salvo no banco
+            img.src = basePath + parceiro.logo;
             img.alt = `Logo ${parceiro.nome_parceiro}`;
 
             div.appendChild(img);
             track.appendChild(div);
         });
 
+        // Duplica os logos para efeito de carrossel infinito
         track.innerHTML += track.innerHTML;
 
     } catch (error) {

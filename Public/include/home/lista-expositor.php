@@ -30,4 +30,4 @@
 </section>
 
 
-<script src="../../../Public/js/js-home/lista-expositor.js"></script>
+<script src="../../../Public/js/js-home/js-listar-expositor.js"></script>

@@ -13,4 +13,4 @@
     <!-- Os cards de categorias serão inseridos aqui dinamicamente pelo JS -->
   </div>
 </section>
-<script src="../../../Public/js/js-home/lista-categorias.js"></script>
+<script src="../../../Public/js/js-home/js-listar-categorias.js"></script>
