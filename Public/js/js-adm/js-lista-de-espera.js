@@ -1,10 +1,10 @@
 async function carrega_expositor() {
     let tbody = document.getElementById('tbody')
-    let response = await fetch('../../../actions/actions-listar-expositor.php');
+    let response = await fetch('../../../actions/actions-listar-expositor.php?status=1');
     response = await response.json();
     console.log(response)
 
-    if (response.status == 201) {
+    if (response.status == 400) {
         tbody.innerHTML = '<td colspan="5" style="text-align: center;">Nenhum expositor encontrado.</td>'
     } else {
         let expositores = '';

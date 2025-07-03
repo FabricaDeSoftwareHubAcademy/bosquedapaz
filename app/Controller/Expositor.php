@@ -155,6 +155,7 @@ class Expositor extends Pessoa
             return FALSE;
         }
     }
+
     public function filtrar_exp_categoria($cat){
         if (!empty($cat)){
             $db = new Database('expositor');
@@ -167,15 +168,24 @@ class Expositor extends Pessoa
         }
     }
 
+    public function Listar_expositores_aguardando(){
+        $db = new Database('expositor');
+
+        $buscar_aguardando = $db->select_exp("exp.status_exp = 'aguardando'")->fetchAll(PDO::FETCH_ASSOC);
+
+        return $buscar_aguardando;
+    }
+
     public function listar($id = null)
     {
-        if (empty($id)){
+        if (empty($id) && empty($status)){
             $db = new Database('expositor');
 
-            $buscar = $db->select_exp()->fetchAll(PDO::FETCH_ASSOC);
+            $buscar = $db->select_exp("status_exp != 'aguardando'")->fetchAll(PDO::FETCH_ASSOC);
 
             return $buscar;
-        }else {
+        }
+        else {
             $db = new Database('expositor');
             $imagem = new Imagem();
 

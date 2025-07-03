@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         if(isset($_GET['filtro'])){
             $filtrar = $expositor->filtrar_exp($_GET['filtro']);
-            if ($filtrar) {
+            if (!empty($filtrar)) {
                 $response = [
                     'expositores' => $filtrar,
                     'status' => 200
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
         }
         else if (isset($_GET['buscar'])){
             $buscar_id = $expositor->listar($_GET['buscar']);
-            if ($buscar_id) {
+            if (!empty($buscar_id)) {
                 $response = [
                     'expositores' => $buscar_id,
                     'status' => 200
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             echo json_encode($response);
         }else if (isset($_GET['categoria'])){
             $buscar_cat = $expositor->filtrar_exp_categoria($_GET['categoria']);
-            if ($buscar_cat) {
+            if (!empty($buscar_cat)) {
                 $response = [
                     'expositores' => $buscar_cat,
                     'status' => 200
@@ -53,12 +53,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
                 ];
             }
             echo json_encode($response);
-        }else {
+
+
+
+        }else if (isset($_GET['status'])){
+
+            if (!empty($_GET['status'])) {
+                $buscar_status = $expositor->Listar_expositores_aguardando();
+                $response = [
+                    'expositores' => $buscar_status,
+                    'status' => 200,
+                ];
+            }else {
+                $response = [
+                    'status' => 400,
+                    'msg' => 'Nenhum expositor encontrado',
+                ];
+            }
+            echo json_encode($response);
+        }
+        
+
+
+
+        
+        else {
             $buscar = $expositor->listar();
-            if ($buscar) {
+            if (!empty($buscar)) {
                 $response = [
                     'expositores' => $buscar,
-                    'status' => 200
+                    'status' => 200,
                 ];
             }else {
                 $response = [
