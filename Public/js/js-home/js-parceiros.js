@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         track.innerHTML = '';
 
-        // Defina a base do seu projeto no localhost (ajuste se seu projeto tiver outro caminho)
         const basePath = '/AulaPHPDev33/bosquedapaz/';
 
         parceiros.forEach(parceiro => {
