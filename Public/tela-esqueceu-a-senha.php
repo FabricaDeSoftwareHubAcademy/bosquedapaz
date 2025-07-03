@@ -20,35 +20,32 @@ if (isset($_POST['enviar'])) {
         $verificarEmail->setEmail($email);
         $emailExiste = $verificarEmail->verificar_email();
 
-        print_r($verificarEmail);
+
 
         if (!$emailExiste) {
-        echo "<script>
+            echo "<script>
                 alert('Email não encontrado.');
                 window.location.href = './tela-esqueceu-a-senha.php';
             </script>";
             exit;
-        }else{
-            // Gerar código de 5 dígitos
+        } else {
             $codigo = rand(10000, 99999);
-            
-            // Armazenar o código e o e-mail na sessão
             $_SESSION['codigo_recuperacao'] = $codigo;
             $_SESSION['email_recuperacao'] = $email;
-            
-            // Chamar a função de envio de e-mail e capturar o retorno
+
             $emailService = new EmailService();
             $mensagem = $emailService->enviarEmail($email, $codigo);
-            
-            // Exibir a mensagem de retorno
-            echo $mensagem;
+
+
+
             header('Location: ./tela-esqueceu-a-senha-codigo.php');
-            
+            exit; 
         }
-        } else {
-            echo "E-mail inválido. Tente novamente.";
-        }
+    } else {
+        echo "E-mail inválido. Tente novamente.";
+    }
 }
+
 
 ?>
 
@@ -62,8 +59,12 @@ if (isset($_POST['enviar'])) {
     <link rel="stylesheet" href="../Public/css/style-esqueceu-a-senha-recsenha.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
+    <script src="./js/js-recuperar-senha/recuperar-senha-email.js" defer></script>
+
 </head>
 <body class="body-recsenha">
+<?php include './include/modais/modal_carregando.html'; ?>
+
     <main>
         <section class="section-recsenha">
 
@@ -123,6 +124,7 @@ if (isset($_POST['enviar'])) {
         </section>
     </main>
 
-    <script src="./js/js-modais/js-abrir-modal.js"></script>
+    <!-- <script src="./js/js-modais/js-abrir-modal.js"></script> -->
+    <script src="./js/js-modais/js-modal-carregar.js"></script>
 </body>
 </html>

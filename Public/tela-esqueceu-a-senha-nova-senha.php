@@ -9,24 +9,26 @@ use app\Controller\Pessoa;
 
 $email = $_SESSION['email_recuperacao'];
 
+$sucesso = false;
+
 if(isset($_POST['enviar'])){
     $nvSenha = $_POST['nvSenha'];
 
     if(empty($email)){
         echo "O campo de e-mail não pode estar vazio.";
-    }else{
+    } else {
         $pessoa = new Pessoa();
         $pessoa->setEmail($email);
-        $pessoa->setNovaSenha($nvSenha);
-        $pessoa->novaSenha();
+        $pessoa->setNovaSenha(password_hash($nvSenha, PASSWORD_DEFAULT));
         
-        if($pessoa){
-            header('Location: ./tela-login.php');
-        }else{
-            echo "Erro ao atualizar a senha.";
-        } 
-    }
+        $resultado = $pessoa->novaSenha(); 
 
+        if($resultado){
+            $sucesso = true;
+        } else {
+            echo "<script>alert('Erro ao atualizar a senha.');</script>";
+        }
+    }
 }
 
 
@@ -42,9 +44,11 @@ if(isset($_POST['enviar'])){
     <link rel="stylesheet" href="../Public/css/css-recuperar-senha/style-tela-esqueceu-a-senha-nova-senha.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
-    <script src="js/js-recuperar-senha/recuperar-senha-codigo.js" defer></script>
+    <script src="./js/js-recuperar-senha/recuperar-senha-nova-senha.js" defer></script>
 </head>
 <body class="body-recsenha">
+    <?php include './include/modais/modal-sucesso.html'; ?>
+
     <main>
         <section class="section-recsenha">
 
@@ -108,6 +112,19 @@ if(isset($_POST['enviar'])){
         </section>
     </main>
 
-    <script src="./js/js-modais/js-abrir-modal.js"></script>
+    <!-- <script src="./js/js-modais/js-abrir-modal.js"></script> -->
+    <script src="./js/js-modais/js-modal-sucesso.js"></script>
+
+<?php if ($sucesso): ?>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        openModalSucesso();
+        setTimeout(() => {
+            window.location.href = "./tela-login.php";
+        }, 1500);
+    });
+</script>
+<?php endif; ?>
 </body>
+
 </html>
