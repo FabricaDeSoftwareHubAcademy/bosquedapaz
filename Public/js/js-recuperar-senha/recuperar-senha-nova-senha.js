@@ -18,7 +18,7 @@ form.addEventListener('submit', function (e) {
         return;
     }
 
-    openModalSucesso(); // Mostra feedback visual
+    openModalSucesso();
     // window.location.href = "./tela-login.php"; 
 
     setTimeout(() => {

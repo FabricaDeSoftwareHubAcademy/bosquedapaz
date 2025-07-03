@@ -8,11 +8,9 @@ error_reporting(E_ALL);
 session_start();
 
 if (isset($_POST['validar'])) {
-    // Captura os 5 dígitos do código enviado no formulário
     $codigo_informado = $_POST['codigo1'] . $_POST['codigo2'] . $_POST['codigo3'] . $_POST['codigo4'] . $_POST['codigo5'];
     // echo($_SESSION['codigo_recuperacao']);
 
-    // Verifica se o código informado corresponde ao código armazenado na sessão
     if (empty($codigo_informado)) {
         echo "Por favor, insira o código.";
     } elseif ($codigo_informado == $_SESSION['codigo_recuperacao']) {

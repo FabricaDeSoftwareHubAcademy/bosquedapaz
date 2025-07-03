@@ -21,9 +21,9 @@ if(isset($_POST['enviar'])){
         $pessoa->setEmail($email);
         $pessoa->setNovaSenha(password_hash($nvSenha, PASSWORD_DEFAULT));
         
-        $resultado = $pessoa->novaSenha(); // Aqui o método deve retornar true ou false
+        $resultado = $pessoa->novaSenha(); 
 
-        if($resultado){ // Verifique o retorno do método novaSenha()
+        if($resultado){
             $sucesso = true;
         } else {
             echo "<script>alert('Erro ao atualizar a senha.');</script>";

@@ -20,8 +20,7 @@ if (isset($_POST['enviar'])) {
         $verificarEmail->setEmail($email);
         $emailExiste = $verificarEmail->verificar_email();
 
-        // REMOVA o print_r para não atrapalhar o header
-        // print_r($verificarEmail);
+
 
         if (!$emailExiste) {
             echo "<script>
@@ -37,11 +36,10 @@ if (isset($_POST['enviar'])) {
             $emailService = new EmailService();
             $mensagem = $emailService->enviarEmail($email, $codigo);
 
-            // Se quiser mostrar mensagem, use alert ou modal na próxima página
-            // echo $mensagem; // melhor retirar para não interferir no redirecionamento
+
 
             header('Location: ./tela-esqueceu-a-senha-codigo.php');
-            exit; // importante terminar a execução após o header
+            exit; 
         }
     } else {
         echo "E-mail inválido. Tente novamente.";
