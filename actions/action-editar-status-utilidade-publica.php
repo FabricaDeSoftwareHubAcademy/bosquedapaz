@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $data_inicio = $_POST['data_inicio'] ?? '';
     $data_fim = $_POST['data_fim'] ?? '';
     $imagem = $_POST['imagem'] ?? '';
-    $status = $_POST['REQUEST_METHOD'] ?? '';
+    $status = $_POST['status-utilidade'] ?? '';
 
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
         $arquivo = $_FILES['imagem'];
@@ -60,3 +60,4 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     }
 }
 ?>
+    
