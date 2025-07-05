@@ -7,7 +7,11 @@ form.addEventListener("submit", async (e) => {
   const confSenha = form.querySelector("#confSenha").value;
 
   if (senha !== confSenha) {
-    alert("Senha e confirmação de senha não conferem!");
+    openModalMensagem({
+      tipo: "erro",
+      titulo: "Senhas não conferem",
+      mensagem: "A senha e a confirmação devem ser iguais.",
+    });
     return;
   }
 
@@ -22,17 +26,29 @@ form.addEventListener("submit", async (e) => {
 
     const text = await response.text(); // 👈 pega como texto primeiro
     console.log("Resposta bruta:", text);
-  
+
     const data = JSON.parse(text);
 
     if (data.success) {
-      alert("Cadastro realizado com sucesso!");
+      openModalMensagem({
+        tipo: "sucesso",
+        titulo: "Cadastrado com Sucesso",
+        mensagem: "O ADM foi cadastrado corretamente."
+      });
       form.reset();
     } else {
-      alert("Erro: " + data.message);
+      openModalMensagem({
+        tipo: "erro",
+        titulo: "Erro no cadastro",
+        mensagem: data.message
+      });
     }
   } catch (error) {
     console.error("Erro na requisição:", error);
-    alert("Ocorreu um erro ao tentar cadastrar. Verifique o console.");
+    openModalMensagem({
+      tipo: "erro",
+      titulo: "Erro inesperado",
+      mensagem: "Ocorreu um erro ao tentar cadastrar. Verifique o console."
+    });
   }
 });
