@@ -192,68 +192,6 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function filter_exp($filtro){
-        
-        $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
-        pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
-        cat.id_categoria, cat.descricao, cat.cor, cat.icone
-        FROM expositor AS exp 
-        INNER JOIN categoria AS cat 
-        ON cat.id_categoria = exp.id_categoria 
-        INNER JOIN pessoa AS pes 
-        ON pes.id_pessoa = exp.id_pessoa
-        WHERE pes.nome LIKE '%$filtro%'
-        OR exp.nome_marca LIKE '%$filtro%'
-        OR exp.produto LIKE '%$filtro%' 
-        OR cat.descricao = '%$filtro%';
-        ";
-
-        $res = $this->execute($query);
-
-
-        return $res ? $res : FALSE;
-    }
-    
-    public function select_exp($where = null){
-        $where = $where != null ? ' WHERE '.$where : '';
-
-        $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
-        pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
-        cat.id_categoria, cat.descricao, cat.cor, cat.icone
-        FROM expositor AS exp 
-        INNER JOIN categoria AS cat 
-        ON cat.id_categoria = exp.id_categoria 
-        INNER JOIN pessoa AS pes 
-        ON pes.id_pessoa = exp.id_pessoa ". $where;
-
-        return $this->execute($query);
-    }
-    
-    public function select_exp_catgoria($cat){
-
-        $query = "SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp,
-        pes.cpf, pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
-        cat.id_categoria, cat.descricao, cat.cor, cat.icone
-        FROM expositor AS exp 
-        INNER JOIN categoria AS cat 
-        ON cat.id_categoria = exp.id_categoria 
-        INNER JOIN pessoa AS pes 
-        ON pes.id_pessoa = exp.id_pessoa WHERE cat.descricao = '$cat'";
-
-        return $this->execute($query);
-    }
-
-    public function select_img($id = null){
-        if (!empty($id)){
-
-            $query = "SELECT * FROM imagem WHERE id_expositor = ". $id;
-    
-            return $this->execute($query);
-        }else {
-            return false;
-        }
-    }
-
     public function sts_adm($id_colaborador, $novoStatus) {
         $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
         $stmt = $this->conn->prepare($query);
@@ -277,11 +215,6 @@ class Database {
         $stmt->execute([$idPessoa]);
         return $stmt->fetch(PDO::FETCH_ASSOC);  // retorna 1 registro associativo
     }
-
-    
-    
-    
-    
 }
 
 ?>

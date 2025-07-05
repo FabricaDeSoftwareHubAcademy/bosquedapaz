@@ -31,6 +31,77 @@ class Expositor extends Pessoa
     protected $produto;
 
 
+
+    //////////// MÉDOTO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
+
+
+    public function cadastrar()
+    {
+
+        ///// insert na tabela pessoa \\\\\
+
+        $db = new Database('pessoa');
+        $pes_id = $db->insert_lastid(
+            [
+                'nome' => $this->nome,
+                'email' => $this->email,
+                'telefone' => $this->whats,
+                'whats' => $this->whats,
+                'img_perfil' => $this->foto_perfil,
+                'link_instagram' => $this->link_instagram,
+                'perfil' => 1,
+            ]
+        );
+
+        ///// insert na tabela expostor \\\\\\
+
+        $db = new Database('expositor');
+        $res = $db->insert(
+            [
+                'id_pessoa' => $pes_id,
+                'id_categoria' => $this->id_categoria,
+                'nome_marca' => $this->nome_marca,
+                'num_barraca' => $this->num_barraca,
+                'voltagem' => $this->voltagem,
+                'energia' => $this->energia,
+                'modalidade' => $this->modalidade,
+                'tipo' => $this->tipo,
+                'idade' => $this->idade,
+                'contato2' => $this->contato2,
+                'descricao' => $this->descricao,
+                'metodos_pgto' => $this->metodos_pgto,
+                'cor_rua' => $this->cor_rua,
+                'responsavel' => $this->responsavel,
+                'produto' => $this->produto
+            ]
+        );
+
+        return $res;
+    }
+
+
+    ////////////// MÉTODOS DE BUSCAS \\\\\\\\\\\\\\\\\\\\
+
+
+    public function filtrar_exp(){
+
+    }
+
+    public function filtrar_exp_categoria(){
+
+    }
+
+    public function Listar_expositores_aguardando(){
+
+    }
+
+    public function listar(){
+
+    }
+
+
+    //////////////////// MÉDOTOS SETTERS \\\\\\\\\\\\\\\\\\\\\\\\\\
+
     public function setId_expositor($id_expositor)
     {
         $this->id_expositor = $id_expositor;
@@ -103,98 +174,16 @@ class Expositor extends Pessoa
     {
         $this->idade = $idade;
     }
-
-
-    public function cadastrar()
-    {
-
-        $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid(
-            [
-                'nome' => $this->nome,
-                'email' => $this->email,
-                'telefone' => $this->whats,
-                'whats' => $this->whats,
-                'img_perfil' => $this->foto_perfil,
-                'link_instagram' => $this->link_instagram,
-                'perfil' => 1,
-            ]
-        );
-
-        $db = new Database('expositor');
-        $res = $db->insert(
-            [
-                'id_pessoa' => $pes_id,
-                'id_categoria' => $this->id_categoria,
-                'nome_marca' => $this->nome_marca,
-                'num_barraca' => $this->num_barraca,
-                'voltagem' => $this->voltagem,
-                'energia' => $this->energia,
-                'modalidade' => $this->modalidade,
-                'tipo' => $this->tipo,
-                'idade' => $this->idade,
-                'contato2' => $this->contato2,
-                'descricao' => $this->descricao,
-                'metodos_pgto' => $this->metodos_pgto,
-                'cor_rua' => $this->cor_rua,
-                'responsavel' => $this->responsavel,
-                'produto' => $this->produto
-            ]
-        );
-        return $res;
-    }
-    
-    public function filtrar_exp($filtro){
-        if (!empty($filtro)){
-            $db = new Database('expositor');
-
-            $filtrar = $db->filter_exp($filtro)->fetchAll(PDO::FETCH_ASSOC);
-
-            return $filtrar;
-        }else {
-            return FALSE;
-        }
-    }
-
-    public function filtrar_exp_categoria($cat){
-        if (!empty($cat)){
-            $db = new Database('expositor');
-
-            $buscar_cat = $db->select_exp_catgoria($cat)->fetchAll(PDO::FETCH_ASSOC);
-
-            return $buscar_cat;
-        }else {
-            return FALSE;
-        }
-    }
-
-    public function Listar_expositores_aguardando(){
-        $db = new Database('expositor');
-
-        $buscar_aguardando = $db->select_exp("exp.status_exp = 'aguardando'")->fetchAll(PDO::FETCH_ASSOC);
-
-        return $buscar_aguardando;
-    }
-
-    public function listar($id = null)
-    {
-        if (empty($id) && empty($status)){
-            $db = new Database('expositor');
-
-            $buscar = $db->select_exp("status_exp != 'aguardando'")->fetchAll(PDO::FETCH_ASSOC);
-
-            return $buscar;
-        }
-        else {
-            $db = new Database('expositor');
-            $imagem = new Imagem();
-
-            $buscar_img = $imagem->listar($id)->fetchAll(PDO::FETCH_ASSOC);
-
-            $buscar_id = $db->select_exp('id_expositor = '.$id)->fetch(PDO::FETCH_ASSOC);
-
-            $buscar_id['imagens'] = $buscar_img;
-            return $buscar_id;
-        }
-    }
 }
+
+/*
+
+
+WHERE pes.nome LIKE '%$filtro%'
+OR exp.nome_marca LIKE '%$filtro%'
+OR exp.produto LIKE '%$filtro%' 
+OR cat.descricao = '%$filtro%';
+
+WHERE cat.descricao = '$cat'
+
+*/

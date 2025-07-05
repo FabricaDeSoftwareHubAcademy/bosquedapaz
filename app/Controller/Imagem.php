@@ -13,10 +13,10 @@ class Imagem {
     public int $posicao;
     public int $id_expositor;
 
-    public function listar($id){
+    public function listar($id_expositor){
         try {
             $db = new Database('imagem');
-            $imagens = $db->select_img($id);
+            $imagens = $db->select("id_expositor = ". $id_expositor);
             if ($imagens){
                 return $imagens;
             }else {
