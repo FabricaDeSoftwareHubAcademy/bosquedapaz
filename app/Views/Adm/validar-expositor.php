@@ -24,22 +24,7 @@
         <section class="secao-dados-empresa">
             <div class="area-superior">
                 <h1 class="area-superior-texto" id="nomeEmpresa">Nome da Empresa</h1>
-                <img class="area-superior-imagem" src="" id="logoEmapresa">
-            </div>
-            <div class="area-inferior">
-                <h1 class="area-inferior-texto">Produtos</h1>
-                <div class="area-inferior-produtos">
-                    <!-- <div class="area-produtos">
-                        <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto1.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto2.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto3.jpeg" alt="">
-                    </div>
-                    <div class="area-produtos">
-                        <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto4.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto5.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto6.jpeg" alt="">
-                    </div> -->
-                </div>
+                <img class="area-superior-imagem" src="" id="logoEmpresa">
             </div>
         </section>
 
@@ -80,7 +65,7 @@
                             <label for="">Marca</label>
                             <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
-                            <label for="">Tipo</label>
+                            <label for="">Modalidade</label>
                             <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
 
                             <label for="">Energia</label>
@@ -94,7 +79,7 @@
 
                             <label for="">Categoria</label>
                             <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
-                            <a href="">Alterar Categoria</a>
+                            <button class="alterar-categoria">Alterar Categoria</button>
                         </div>
                     </div>
 
@@ -117,7 +102,7 @@
         </a>
     </div>
 
-    <script src="../../../Public/js/js-adm/modal-validar-expositor.js" deffer></script>
+    <script src="../../../Public/js/js-adm/js-validar-expositor.js" deffer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 

@@ -16,7 +16,7 @@ class Imagem {
     public function listar($id_expositor){
         try {
             $db = new Database('imagem');
-            $imagens = $db->select("id_expositor = ". $id_expositor);
+            $imagens = $db->select("id_expositor = ". $id_expositor)->fetchAll(PDO::FETCH_ASSOC);
             if ($imagens){
                 return $imagens;
             }else {

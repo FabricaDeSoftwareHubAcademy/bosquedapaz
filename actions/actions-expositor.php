@@ -9,6 +9,7 @@ header('Content-Type: application/json');
 require_once('../vendor/autoload.php');
 
 use app\Controller\Expositor;
+use app\Controller\Imagem;
 
 
 /////////////////// MEDOTO POST ///////////////////
@@ -101,21 +102,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     try {
         $expositor = new Expositor();
+
+
+        ////  RETORNA TODOS OS EXPOSITORES EM ESPERA
         if (isset($_GET['emespera'])){
-            $emEspera = $expositor->listar("status_exp = 'aguardando'");
+            $emEspera = $expositor->listar("validacao = 'aguardando'");
             $response = $emEspera ? ['expositor' => $emEspera, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA OS EXPOSITOR DONO DO ID COM AS IMAGENS DELE
         }else if (isset($_GET['id'])){
+            $imagens = new Imagem();
+            //// busca imagens pelo id do expositor
+            $buscarImagem = $imagens->listar($_GET['id']);
             $buscarId = $expositor->listar("id_expositor = ". $_GET['id']);
+            //// faz append das imagens
+            $buscarId['imagens'] = $buscarImagem;
             $response = $buscarId ? ['expositor' => $buscarId, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA EXPOSITORES INATIVOS
         }else if (isset($_GET['inativo'])){
             $buscarInativo = $expositor->listar("status_exp = 'inativo'");
             $response = $buscarInativo ? ['expositor' => $buscarInativo, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA OS EXPOSITORES PERTENCENTE A CATEGORIA
         }else if (isset($_GET['categoria'])){
             $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
             $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? '=' : '!=');
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA TODOS OS EXPOITORES VALIDADOS
         }else {
             $buscar = $expositor->listar();
             $response = $buscar ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];

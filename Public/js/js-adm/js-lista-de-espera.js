@@ -1,3 +1,5 @@
+
+///////////// LISTA EXPOSITORES AGUARDANDO A VÁLIDAÇÃO \\\\\\\\\\\\\\\
 async function carrega_expositor() {
     let tbody = document.getElementById('tbody')
     try {
@@ -30,11 +32,16 @@ async function carrega_expositor() {
 
 }
 
+
+/////////// CARREGA OS EXPOSITORES NO LOAD DA PÁGINA
 carrega_expositor()
+
 
 
 let buscar_expositor = document.getElementById('buscar_expositor');
 
+
+//////// FILTRA OS EXPOSITORES PELO OQUE É DIGITADO NA BARRA DE PESQUISA
 buscar_expositor.addEventListener('keyup', async function(e) {
     try {
         let response = await fetch(`../../../actions/actions-expositor.php?filtrar=${buscar_expositor.value}&aguardando=1`);

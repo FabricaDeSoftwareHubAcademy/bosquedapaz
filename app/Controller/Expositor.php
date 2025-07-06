@@ -85,14 +85,20 @@ class Expositor extends Pessoa
     public function listar($where = null){
         try {
             $db = new Database('view_expositor');
+
+            //// RETORNA TODOS OS EXPOSITORES VALIDADOS
             if($where == null){
-                $expositores = $db->select('status_exp != "aguardando"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                $expositores = $db->select('validacao != "aguardando"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
                 return $expositores ? $expositores : FALSE;
             }
+
+            //// RETORNA OS EXPOITORES FILTRADOS COM WHERE
             else {
                 $expositores = $db->select($where, 'nome')->fetchAll(PDO::FETCH_ASSOC);
                 return $expositores ? $expositores : FALSE;
             }
+        
+        //// RETORNA FALSE NO CASO DE ERRO
         } catch (\Throwable $th) {
             return FALSE;
         }
@@ -101,14 +107,18 @@ class Expositor extends Pessoa
     public function filtrar($filtro, $status = '!='){
         try {
             $db = new Database('view_expositor');
+
+            //// RETORNA O EXPOSITOR PELO FILTRO
             $expositores = $db->select(
-                "nome_marca LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
-                OR nome LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
-                OR email LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
-                OR num_barraca LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
+                "nome_marca LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
+                OR nome LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
+                OR email LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
+                OR num_barraca LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
                 ", 'nome'
             )->fetchAll(PDO::FETCH_ASSOC);
             return $expositores ? $expositores : FALSE;
+        
+        //// RETORNA FALSE NO CASO DE ERRO
         } catch (\Throwable $th) {
             return FALSE;
         }
