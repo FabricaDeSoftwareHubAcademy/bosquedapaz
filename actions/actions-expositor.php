@@ -101,8 +101,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     try {
         $expositor = new Expositor();
+        if (isset($_GET['emespera'])){
+            $emEspera = $expositor->listar("status_exp = 'aguardando'");
+            $response = $emEspera ? ['expositor' => $emEspera, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        }else if (isset($_GET['id'])){
+            $buscarId = $expositor->listar("id_expositor = ". $_GET['id']);
+            $response = $buscarId ? ['expositor' => $buscarId, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        }else if (isset($_GET['inativo'])){
+            $buscarInativo = $expositor->listar("status_exp = 'inativo'");
+            $response = $buscarInativo ? ['expositor' => $buscarInativo, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        }else if (isset($_GET['categoria'])){
+            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "'");
+            $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        }else if (isset($_GET['filtrar'])){
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? '=' : '!=');
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        }else {
+            $buscar = $expositor->listar();
+            $response = $buscar ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        }
 
-
+        echo json_encode($response);
     } catch (\Throwable $th) {
         $response = [
             'status' => 500,

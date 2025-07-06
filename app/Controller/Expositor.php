@@ -82,21 +82,36 @@ class Expositor extends Pessoa
 
     ////////////// MÉTODOS DE BUSCAS \\\\\\\\\\\\\\\\\\\\
 
-
-    public function filtrar_exp(){
-
+    public function listar($where = null){
+        try {
+            $db = new Database('view_expositor');
+            if($where == null){
+                $expositores = $db->select('status_exp != "aguardando"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+            }
+            else {
+                $expositores = $db->select($where, 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+            }
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
     }
 
-    public function filtrar_exp_categoria(){
-
-    }
-
-    public function Listar_expositores_aguardando(){
-
-    }
-
-    public function listar(){
-
+    public function filtrar($filtro, $status = '!='){
+        try {
+            $db = new Database('view_expositor');
+            $expositores = $db->select(
+                "nome_marca LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
+                OR nome LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
+                OR email LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
+                OR num_barraca LIKE '%$filtro%' and status_exp ".$status." 'aguardando' 
+                ", 'nome'
+            )->fetchAll(PDO::FETCH_ASSOC);
+            return $expositores ? $expositores : FALSE;
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
     }
 
 
