@@ -59,7 +59,8 @@ CREATE TABLE expositor(
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
-    status_exp ENUM('ativo', 'inativo', 'aguardando') NOT NULL DEFAULT 'aguardando',
+    status_exp ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
+    validacao ENUM('aguardando', 'validado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
     FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria)
@@ -190,6 +191,16 @@ CREATE TABLE utilidade_publica (
     PRIMARY KEY(id_utilidade_publica)
 );
 
+CREATE VIEW view_expositor AS
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp, exp.validacao, 
+pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
+cat.id_categoria, cat.descricao, cat.cor, cat.icone
+FROM expositor AS exp 
+INNER JOIN categoria AS cat 
+ON cat.id_categoria = exp.id_categoria 
+INNER JOIN pessoa AS pes 
+ON pes.id_pessoa = exp.id_pessoa;
+
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 
 ("../Public/uploads/uploads-carrosel/img-carrossel-1.jpg", 1),
@@ -198,5 +209,3 @@ insert into carrossel (caminho, posicao) values
 
 
 insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
-
-

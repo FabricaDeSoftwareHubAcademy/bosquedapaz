@@ -42,43 +42,43 @@
                         <!-- Campos superior -->
                         <div class="campos-formulario">
                             <label for="">Nome</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="nome" class="formulario-campo-informacao" readonly>
 
                             <label for="">Email</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="email" class="formulario-campo-informacao" readonly>
 
                             <label for="">Whatsapp</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="whats" class="formulario-campo-informacao" readonly>
 
-                            <label for="">Tipo de produto</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <label for="">Produto</label>
+                            <input type="text" name="" id="produto" class="formulario-campo-informacao" readonly>
 
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="cidade" class="formulario-campo-informacao" readonly>
 
                             <label for="">Instagram</label>
-                            <a class="formulario-campo-informacao campo-link"> </a>
+                            <a class="formulario-campo-informacao campo-link" target="_blank" id="intagram"> </a>
                         </div>
 
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
-                            <label for="">Marca</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
-
                             <label for="">Modalidade</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="modalidade" class="formulario-campo-informacao" readonly>
+
+                            <label for="">Tipo de exposição</label>
+                            <input type="text" name="" id="exposicao" class="formulario-campo-informacao" readonly>
 
                             <label for="">Energia</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="energia" class="formulario-campo-informacao" readonly>
 
                             <label for="">Voltagem</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="voltagem" class="formulario-campo-informacao" readonly>
 
                             <label for="">Endereço</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="endereco" class="formulario-campo-informacao" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" class="formulario-campo-informacao" readonly>
+                            <input type="text" name="" id="categoria" class="formulario-campo-informacao" readonly>
                             <button class="alterar-categoria">Alterar Categoria</button>
                         </div>
                     </div>
@@ -93,13 +93,15 @@
         </section>
     </main>
 
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>
+
     <div class="decoracoes">
         <img class="decoracao decoracao1" src="../../../Public/assets/img-bolas/bola-azul1.png" alt="">
         <img class="decoracao decoracao2" src="../../../Public/assets/img-bolas/bola-azul2.png" alt="">
         <img class="decoracao decoracao3" src="../../../Public/assets/img-bolas/bola-azul.png" alt="">
-        <a href="../../../app/adm/Views/Area-Adm.php">
+        <!-- <a href="../../../app/adm/Views/Area-Adm.php">
             <img class="decoracao botao-voltar" src="../../../Public/imgs/imgs-validar-expositor/botao-voltar-validar-expositor.svg" alt="">
-        </a>
+        </a> -->
     </div>
 
     <script src="../../../Public/js/js-adm/js-validar-expositor.js" deffer></script>

@@ -123,13 +123,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA EXPOSITORES INATIVOS
         }else if (isset($_GET['inativo'])){
-            $buscarInativo = $expositor->listar("status_exp = 'inativo'");
+            $buscarInativo = $expositor->listar("status_exp = 'inativo' and validacao != 'aguardando'");
             $response = $buscarInativo ? ['expositor' => $buscarInativo, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
-        //// RETORNA OS EXPOSITORES PERTENCENTE A CATEGORIA
+        //// RETORNA OS EXPOSITORES APROVADOS PERTENCENTE A CATEGORIA ESCOLIDA
         }else if (isset($_GET['categoria'])){
-            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "'");
+            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "' and validacao != 'aguardando'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 

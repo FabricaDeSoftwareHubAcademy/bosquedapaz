@@ -3,15 +3,14 @@ async function getCategorias(){
 
     let categorias = document.getElementById("categorias");
     
-    let dados_php = await fetch('../../../actions/cadastrar_expositor.php?filtro=1');
+    let dados_php = await fetch('../../../actions/action-listar-categoria.php');
 
     let response = await dados_php.json();
 
-    console.log(response);
 
     html = '<option selected disabled>Selecione</option>';
-    for(let i=0;i <response.length; i++){
-        html += `<option value="${response[i].id_categoria}" > ${response[i].descricao} </option>`;
+    for(let i=0;i <response.dados.length; i++){
+        html += `<option value="${response.dados[i].id_categoria}" > ${response.dados[i].descricao} </option>`;
     }
 
     categorias.innerHTML = html;
@@ -30,7 +29,7 @@ btn_salvar.addEventListener('click', async function(event){
     let dadosForms =  new FormData(formulario);
     dadosForms.append('modalidade', 'expositor');
 
-    let dados_php = await fetch('../../../actions/cadastrar_expositor.php', {
+    let dados_php = await fetch('../../../actions/actions-expositor.php', {
         method:'POST',
         body: dadosForms
     });
