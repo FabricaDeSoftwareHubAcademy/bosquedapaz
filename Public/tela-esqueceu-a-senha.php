@@ -38,7 +38,7 @@ if (isset($_POST['enviar'])) {
             
             // Chamar a função de envio de e-mail e capturar o retorno
             $emailService = new EmailService();
-            $mensagem = $emailService->enviarEmail($email, $codigo);
+            $mensagem = $emailService->recoverSenha($email, $codigo);
             
             // Exibir a mensagem de retorno
             echo $mensagem;
