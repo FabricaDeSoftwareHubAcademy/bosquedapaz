@@ -19,3 +19,4 @@ try {
         'mensagem' => $e->getMessage()
     ]);
 }
+

@@ -79,6 +79,10 @@
                         <?php include '../../../Public/include/Butons-forms.html';?>
                        
                     </form>
+                    <div class="overlay" id="overlay"></div>
+                    <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+                    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+                    <?php include "../../../Public/include/modais/modal-error.html"; ?>
                 </div>
 
         </div>

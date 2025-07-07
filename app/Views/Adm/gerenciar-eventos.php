@@ -21,8 +21,8 @@
             <h2>Gerenciar Eventos</h2>
             <div class="container">
                 <div class="search-bar">
-                    <label for="status">Procurar</label>
-                    <input type="text" id="status" placeholder="" />
+                    <label>Procurar</label>
+                    <input type="text" id="buscar" placeholder="" />
                     <button class="search-button">BUSCAR</button>
                 </div>
                 <div class="table-container">
