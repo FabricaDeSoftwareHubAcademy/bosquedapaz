@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA EXPOSITORES INATIVOS
         }else if (isset($_GET['inativo'])){
-            $buscarInativo = $expositor->listar("status_exp = 'inativo' and validacao = 'aprovado'");
+            $buscarInativo = $expositor->listar("status_pes = 'inativo' and validacao = 'aprovado'");
             $response = $buscarInativo ? ['expositor' => $buscarInativo, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
