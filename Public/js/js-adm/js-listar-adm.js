@@ -45,3 +45,5 @@ listar();
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)
+
+// Matheus Manja

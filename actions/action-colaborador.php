@@ -284,3 +284,5 @@ if ($requestMethod === 'GET') {
         exit;
     }
 }
+
+// Matheus Manja

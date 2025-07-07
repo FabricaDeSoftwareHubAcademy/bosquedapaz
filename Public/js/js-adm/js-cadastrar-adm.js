@@ -20,7 +20,7 @@ form.addEventListener("submit", async (e) => {
       body: formData,
     });
 
-    const text = await response.text(); // 👈 pega como texto primeiro
+    const text = await response.text();
     console.log("Resposta bruta:", text);
   
     const data = JSON.parse(text);
@@ -36,3 +36,5 @@ form.addEventListener("submit", async (e) => {
     alert("Ocorreu um erro ao tentar cadastrar. Verifique o console.");
   }
 });
+
+// Matheus Manja

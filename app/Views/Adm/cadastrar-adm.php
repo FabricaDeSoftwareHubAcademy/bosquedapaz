@@ -20,7 +20,7 @@
         <section class="container_box">
             <!-- Area Esquerda: Imagem -->
             <div class="left-side">
-                <img src="../../../Public/assets/imagem-dec.svg" alt="">
+                <img src="../../../Public/assets/imagem-dec-cadastro.svg" alt="">
             </div>
            
             <!-- Linha Decorativa do Centro -->
