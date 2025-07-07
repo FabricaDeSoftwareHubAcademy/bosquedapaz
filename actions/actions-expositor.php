@@ -110,6 +110,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $response = $emEspera ? ['expositor' => $emEspera, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
+        //// RETORNA OS EXPOSITOR RECUSADOS
+        }else if (isset($_GET['recusado'])){
+            $emEspera = $expositor->listar("validacao = 'recusado'");
+            $response = $emEspera ? ['expositor' => $emEspera, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
         //// RETORNA OS EXPOSITOR DONO DO ID COM AS IMAGENS DELE
         }else if (isset($_GET['id'])){
             $imagens = new Imagem();
@@ -123,19 +129,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA EXPOSITORES INATIVOS
         }else if (isset($_GET['inativo'])){
-            $buscarInativo = $expositor->listar("status_exp = 'inativo' and validacao != 'aguardando'");
+            $buscarInativo = $expositor->listar("status_exp = 'inativo' and validacao = 'aprovado'");
             $response = $buscarInativo ? ['expositor' => $buscarInativo, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
         //// RETORNA OS EXPOSITORES APROVADOS PERTENCENTE A CATEGORIA ESCOLIDA
         }else if (isset($_GET['categoria'])){
-            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "' and validacao != 'aguardando'");
+            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "' and validacao = 'aprovado'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? '=' : '!=');
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? "!= 'aprovado'" : "= 'aprovado'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 

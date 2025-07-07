@@ -104,16 +104,16 @@ class Expositor extends Pessoa
         }
     }
 
-    public function filtrar($filtro, $status = '!='){
+    public function filtrar($filtro, $status = "= 'aprovado'"){
         try {
             $db = new Database('view_expositor');
 
             //// RETORNA O EXPOSITOR PELO FILTRO
             $expositores = $db->select(
-                "nome_marca LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
-                OR nome LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
-                OR email LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
-                OR num_barraca LIKE '%$filtro%' and validacao ".$status." 'aguardando' 
+                "nome_marca LIKE '%$filtro%' and validacao ".$status." 
+                OR nome LIKE '%$filtro%' and validacao ".$status." 
+                OR email LIKE '%$filtro%' and validacao ".$status." 
+                OR num_barraca LIKE '%$filtro%' and validacao ".$status." 
                 ", 'nome'
             )->fetchAll(PDO::FETCH_ASSOC);
             return $expositores ? $expositores : FALSE;
@@ -121,6 +121,35 @@ class Expositor extends Pessoa
         //// RETORNA FALSE NO CASO DE ERRO
         } catch (\Throwable $th) {
             return FALSE;
+        }
+    }
+
+
+    //////////////////// VÁLIDAR EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\\
+
+    public function validarExpositor($id, $status, $categoria = null, $newSenha = null){
+        $db = new Database('expositor');
+        if($status == 'aprovado'){
+            //// dados pessoa
+            $senha = ['senha' => $newSenha];
+
+            ///// dados expositor
+            $newStatus = [
+                'status_exp' => 'ativo',
+                'validacao' => 'aprovado',
+                'id_categoria' => $categoria
+            ];
+
+            $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = '. $id);
+            return $res;
+
+        }else if ($status == 'recusado'){
+            ///// dados expositor
+            $newStatus = [
+                'validacao' => 'recusado'
+            ];
+            $res = $db->update('id_expositor = '. $id, $newStatus);
+            return $res;
         }
     }
 
