@@ -2,8 +2,7 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
 
-// caminho da pasta onde será criada
-// não mexer no caminho, por favor
+// Caminho fixo da pasta
 $caminhoPasta = '../Public/uploads/uploads-boletos';
 
 if (isset($_POST['botao-cadastrar'])) {
@@ -14,7 +13,34 @@ if (isset($_POST['botao-cadastrar'])) {
             mkdir($caminhoPasta, 0755, true);
         }
 
-        $nomeArquivo = uniqid() . '-' . basename($_FILES['arquivo']['name']);
+        // Pegando o nome da pessoa do formulário (string)
+        $nomePessoa = $_POST['nome_exp'] ?? '';
+
+        // Limpa o nome: tira acento, espaços, caracteres especiais e deixa tudo minúsculo com _
+        $nomeLimpo = preg_replace('/[^a-z0-9]/', '_', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $nomePessoa)));
+
+        // Pega o mês de referência e deixa minúsculo
+        $mesReferencia = strtolower($_POST['referencia_input'] ?? '');
+
+        // Pega a data de vencimento e formata
+        $vencimento = $_POST['vencimento_input'] ?? ''; // formato esperado: YYYY-MM-DD
+
+        if ($vencimento) {
+            $data = DateTime::createFromFormat('Y-m-d', $vencimento);
+            if ($data) {
+                $dia = $data->format('d');
+                $mes = $data->format('m');
+                $ano = $data->format('Y');
+            } else {
+                $dia = $mes = $ano = 'data_invalida';
+            }
+        } else {
+            $dia = $mes = $ano = 'data_vazia';
+        }
+
+        // Monta o nome do arquivo conforme pedido
+        $nomeArquivo = "boleto_{$nomeLimpo}_{$mesReferencia}_{$dia}_{$mes}_{$ano}.pdf";
+
         $caminhoCompleto = $caminhoPasta . '/' . $nomeArquivo;
 
         if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $caminhoCompleto)) {
@@ -44,5 +70,4 @@ if (isset($_POST['botao-cadastrar'])) {
     echo "<script>alert('Falha no Cadastro.'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
     exit;
 }
-
 ?>

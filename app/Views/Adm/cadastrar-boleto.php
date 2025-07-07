@@ -38,7 +38,7 @@
                     <div class="input">
                         <label class="label" for="expositor">Expositor:</label>
                         <input type="hidden" name="id-expositor">
-                        <input type="text" name="nome-exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" required>
+                        <input type="text" name="nome_exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" required>
                     </div>
 
                     <div class="input">

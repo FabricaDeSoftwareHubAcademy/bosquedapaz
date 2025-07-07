@@ -423,7 +423,7 @@ class Database
     public function capturar_boleto_por_id($idPessoa, $idBoleto)
     {
         $query = "SELECT
-        p.id_pessoa, b.id_boleto
+        p.id_pessoa, b.id_boleto, b.pdf
         FROM pessoa p
         INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
         INNER JOIN boleto b on e.id_expositor = b.id_expositor
