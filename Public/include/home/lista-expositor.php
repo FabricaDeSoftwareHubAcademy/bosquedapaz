@@ -68,7 +68,7 @@ endfor;
             <p class="para-title-expo all-para">Veja como são nossos expositores e venha explorar, apoiar e compartilhar uma experiência inesquecível conosco!</p>
             <div class="content-seja-expositor">
                 <button class="btn-seja-expositor" id="btn-seja-expositor">
-                    <a href="" class="all-links link-seja-exposior">seja um expositor</a>
+                    <a href="./escolher-cadastro.php" class="all-links link-seja-exposior">seja um expositor</a>
                 </button>
             </div>
         </div>
@@ -85,7 +85,7 @@ endfor;
 
             <div class="content-seja-expositor content-mais-expositor">
                 <button class="btn-seja-expositor btn-mais-expositor" id="btn-seja-expositor">
-                    <a href="" class="all-links link-seja-exposior">ver outros expositoresr</a>
+                    <a href="./todos-expositores.php" class="all-links link-seja-exposior">ver outros expositoresr</a>
                 </button>
             </div>
         </div>

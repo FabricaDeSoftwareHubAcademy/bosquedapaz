@@ -65,14 +65,14 @@
                         <div class="input">
                             <label>Link instagram:</label>
 
-                            <input type="text" name="" id="link_instagram" placeholder="link instagram" required>
+                            <input type="text" name="link_instagram" id="link_instagram" placeholder="link instagram" required>
                         </div>
                     </div>
 
                     <div class="form-expo">
                         <div id="tipo_expo" class="form-group">
                             <label id="expo_label" for="tipo-expo">Tipo de exposição:</label>
-                            <select name="" id="tipo_expo" class="select">
+                            <select name="tipo" id="tipo_expo" class="select">
                                 <option value="">Selecione</option>
                                 <option value="trailer">Trailer</option>
                                 <option value="food-truck">Food truck</option>
@@ -99,8 +99,8 @@
                         </div>
 
                         <div class="form-files">
-                            <label>Escolher Imagens:</label>
-                            <input type="file" name="files[]" id="files" multiple="multiple">
+                            <label>Escolher foto de perfil:</label>
+                            <input type="file" name="img_perfil" id="files" multiple="multiple">
                         </div>
                     </div>
 

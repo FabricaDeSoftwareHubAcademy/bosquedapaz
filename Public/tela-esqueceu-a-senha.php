@@ -34,10 +34,10 @@ if (isset($_POST['enviar'])) {
             $_SESSION['email_recuperacao'] = $email;
 
             $emailService = new EmailService();
-            $mensagem = $emailService->enviarEmail($email, $codigo);
-
-
-
+            $mensagem = $emailService->recoverSenha($email, $codigo);
+            
+            // Exibir a mensagem de retorno
+            echo $mensagem;
             header('Location: ./tela-esqueceu-a-senha-codigo.php');
             exit; 
         }

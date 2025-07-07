@@ -1,3 +1,36 @@
+<?php
+require_once __DIR__ . '/../../../app/helpers/auth.php';
+
+// require_once '../Controller/Pessoa.php';
+// require_once '../Controller/Expositor.php';
+
+// if (isset($_POST['REQUEST_METHOD'])) {
+
+//     $expositor_kids = new Expositor();
+//     $expositor_kids->setNome($_POST['nome']);
+//     $expositor_kids->setResponsavel($_POST['responsavel']);
+//     $expositor_kids->setProduto($_POST['produto']);
+//     $expositor_kids->setNome_marca($_POST['marca']);
+//     $expositor_kids->setTelefone("7");
+//     $expositor_kids->setContato2("7");
+//     $expositor_kids->setId_categoria(1);
+
+
+
+//     $res = $expositor_kids->cadastrar();
+//     if ($res) {
+//         echo '<script> alert ("cadastrou") </script>';
+//     } else {
+//         echo '<script> alert (" nãocadastrou") </script>';
+//     }
+// }
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -70,7 +103,7 @@
                             <select name="id_categoria" id="categorias" class="select" require>
 
                                 <option value="">Selecione</option>
-                                <option value="<?= $categorias['$id_categoria'] ?>"></option>
+                                <option value=""></option>
 
                             </select>
                         </div>
