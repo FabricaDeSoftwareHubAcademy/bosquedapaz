@@ -1,467 +1,149 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('../css-home/style-menu.css');
+@import url('../style-menu.css');
+
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-
 }
 
-body {
-    overflow: hidden;
+.btns-forms-padrao  {
+    padding: .5rem .5rem .5rem .5rem !important;
 }
 
 .principal {
-    width: 100vw;
-    height: 90vh;
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    /* background-color: aquamarine; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    position: relative;
 }
 
-.box {
-    width: 90%;
+.form-cadastro {
+    min-width: 90%;
+    min-height: 90%;
+    border-radius: .5rem;
+    background-color: rgba(231, 231, 231, 0.65);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-cadastro {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0rem;
+}
+
+.conteiner_inputs {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    /* background-color: rgba(0, 255, 255, 0.253); */
+}
+
+.conteiner-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    width: 80%;
+}
+
+.content-input {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.input {
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.textarea {
     height: 100%;
-    background-color: rgba(249, 239, 239, 0.423);
-    margin: auto;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.title{
-    display: flex;
-    height: 20%;
-    justify-content: center;
-    position: relative;
-    top: 18%;
-}
-
-.btn-editar {
-    background-color: transparent;
-    border: none;
+    border-radius: 5px;
+    resize: none;
     outline: none;
-}
-
-
-.bolas-fundo {
-    width: 100vw;
-    height: 90vh;
-    position: relative;
-    top: -90vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-verde1 {
-    position: absolute;
-    left: -40px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-verde2 {
-    position: absolute;
-    right: -50px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-rosa {
-    position: absolute;
-    right: -100px;
-    bottom: -100px;
-    z-index: -3;
-}
-
-
-.formularios {
-    width: 100%;
-    height: 64%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
     border: none;
-    position: relative;
-    top: 20px;
-}
-
-.formularios div {
-    display: flex;
-    flex-direction: column;
-}
-
-.formularios input {
-    width: 40vh;
-    height: 5vh;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-    outline: none;
-}
-
-
-
-.input-group input {
-    width: 40vh;
-    height: 47px;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-.caixa-formulario label {
-    font-size: 14px;
-    margin-bottom: -10px;
-    margin-left: 10px;
-}
-
-.caixa-contato {
-    position: relative;
-    top: -25px;
-}
-
-.caixa-contato input {
-    width: 170px;
-    margin: 20px;
-}
-
-.caixa-contato label {
-    font-size: 14px;
-    margin-bottom: -20px;
-    margin-left: 20px;
-}
-
-.carregar-src {
-    background-color: rgb(126, 126, 126);
-    width: 120px;
-    height: 30px;
-    border: none;
-    border-radius: 10px;
-}
-
-.carregar-src a {
-    color: white;
-    text-decoration: none;
-}
-
-.carregar-src {
-    display: none;
-}
-
-.form-opc {
-    position: relative;
-    top: 5px;
-}
-
-.form-opc label {
-    font-size: 14px;
-    margin-bottom: -8px;
-    margin-left: 10px;
-}
-
-
-
-label#salvar-btn {
-    display: inline-block;
-    background-color: #FF3877;
-    color: white;
-    padding: 9px 50px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-}
-
-
-.custom-dropdown input {
-    width: 40vh;
-    height: 47px;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-
-.select {
-    width: 40vh;
-    height: 47px;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-.voltar {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    top:78px;
-    left: -80vh;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    display: flex;
-}
-
-
-.voltar:hover {
-    transform: scale(1.1); 
-}
-
-
-/********** novo botao de salvar/cancelar ******/
-
-
-.btn-finalizar{
-    /* background-color: red; */
-    position: relative;
-    top: 30vh;
-    left: -10%;
-    width: 100%;
-    display: flex;
-}
-.btn-cancelar{
-    width: 35%;
-    border: none;
-    height: 49px;    
-}
-.btn-salvar{
-    width: 35%;
-    position: relative;
-    left: 40%;
-    top: 48px;
-    padding: 12px 25px; 
-    border: none;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+    padding: 10px;
     font-size: 1rem;
-    text-transform: uppercase;
+    border-right: 1px solid rgba(44, 44, 44, 0.646);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.646);
 }
 
-.btn-finalizar a{
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
+.maior {
+    flex-grow: 2;
 }
 
+.bolas {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    flex: auto;
+}
 
-.btn-finalizar 
-.btn-cancelar {
-    background-color: #FF3877;
-    border-radius: 10px;
-    padding: 12px 16px;
+.bola-verde1 {
+    position: absolute;
+    top: 10rem;
+}
+
+.bola-verde2 {
+    position: absolute;
+    top: 10rem;
+    right: 0px;
+}
+
+.bola-rosa {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+}
+
+@media screen and (max-width: 500px) {
+    .content-input{
+        max-width: 100%;
+    }
+
+    .btns-forms-padrao  {
+        width: 90% !important;
+        margin: auto;
+    }
     
-}
-
-.btn-finalizar 
-.btn-salvar {
-    background-color: #007E70;
-    border-radius: 10px;    
-}
-
-
-
-/* fim botao finalizar */
-
-
-.form-pessoa,
-.form-loja,
-.form-expo{
-    position: relative;
-    left: 13%;
-}
-
-
-/*  celular pequeno: 480px
-    celular padrao: 767px
-    tablet: 768 a 1024px
-    desktop: acima de 1024px 
-*/
-
-/* celular pequeno */
-@media screen and (max-width: 650px) {
-    .bolas-fundo{
-        display: none;
-    }
-
-    .title-text{
-        font-size: 20px;
-    }
-
-    .principal{
-        overflow-y: auto;
-    }
-
-    .box{
-        /* background-color: red; */
-        display: flex;
-        flex-direction: column;
-        height: auto;        
-    }
-
-    .formularios{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        left: -13%;
-    }
-
-    .formularios label{
-        position: relative;
-        left: 10px;
-    }
-
-    .btn-finalizar{
-        width: 100%;
-        left: 25%;
-        top: -30px;
-        /* background-color: red; */
-    }
-
-    .select#todas_categorias.select{
-        height: 40px;
+    .form-cadastro {
         width: 95%;
     }
 
-
-    .voltar{
-        position: relative;
-        left: -15vh;
-        top: 5px;
+    .textarea {
+        height: 200px;
     }
 }
-    
-
-
-/* celular padrao */
-@media screen and (min-width: 651px) and (max-width:1023px) {
-    .bola-verde2{
-        width: 20%;
-        left: 80%;
-    }
-    .bola-rosa{
-        width: 30%;
-        top: 80%;
-        left: 70%;
-    }
-
-    .principal{
-        /* height: 100vh; */
-        overflow-y: auto;
-    }
-
-    .box{
-        height: auto;
-    }
-
-    .formularios{
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .formularios label{
-        position: relative;
-        left: 10px;
-    }
-
-    .btn-finalizar{
-        position: relative;
-        left: 0%;
-    }
-
-    .voltar{
-        position: relative;
-        left: 30px;
-    }
-
-    .voltar img{
-        /* background-color: red; */
-        position: relative;
-        top: -7vh;
-        left: -28vh;
-    }
-
-
-}
-
-@media screen and (min-width: 1024px) and (max-width:1250px) {
-    .formularios{
-        width: 100%;
-    }
-
-    .formularios label{
-        position: relative;
-        left: 5%;
-    }
-
-    .form-pessoa{
-        position: relative;
-        left: 5%;
-        top: 5px;
-    }
-
-    .form-pessoa input{
-        width: 110%;
-    }
-
-    .form-loja{
-        position: relative;
-        left: 10%;
-        top: 5px;
-    }
-
-    .form-expo{
-        /* background-color: red; */
-        position: relative;
-        left: 5%;
-    }
-    .form-loja input{
-        width: 76%;
-    }
-
-    .form-expo input{
-        width: 70%;
-    }
-
-    .select{
-        width: 70%;
-    }
-
-    #categorias{
-        /* background-color: red; */
-        width: 76%;
-    }
-
-    .btn-finalizar{
-        position: relative;
-        left: 70%;
-    }
-}
-
-/* @media screen and (min-width: 1251px){
-    .btn-finalizar{
-        position: relative;
-        left: 45vh;
-        top: 10vh;
-    }
-} */
