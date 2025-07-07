@@ -38,6 +38,14 @@ class Expositor extends Pessoa
     public function cadastrar()
     {
 
+        
+        $db = new Database('endereco');
+        $endereco_id = $db->insert_lastid(
+            [
+                'cidade' => $this->cidade,
+            ]
+        );
+
         ///// insert na tabela pessoa \\\\\
 
         $db = new Database('pessoa');
@@ -50,6 +58,7 @@ class Expositor extends Pessoa
                 'img_perfil' => $this->foto_perfil,
                 'link_instagram' => $this->link_instagram,
                 'perfil' => 1,
+                'id_endereco' => $endereco_id,
             ]
         );
 

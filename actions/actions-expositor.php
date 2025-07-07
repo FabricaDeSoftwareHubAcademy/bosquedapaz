@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
 
+        $expositor->setCidade(!empty($_POST['cidade']) ? filter_var($_POST['cidade'], FILTER_UNSAFE_RAW) : NULL);
+
         // DADOS PESSOA
         $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
         $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);

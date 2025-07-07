@@ -13,13 +13,13 @@ CREATE TABLE categoria(
 
 CREATE TABLE endereco(
 	id_endereco INT NOT NULL AUTO_INCREMENT,
-    cep CHAR(9) NOT NULL,
-    logradouro VARCHAR(150) NOT NULL,
+    cep CHAR(9) NULL,
+    logradouro VARCHAR(150) NULL,
     complemento VARCHAR(150) NULL,
-    num_residencia INT NOT NULL,
-    bairro VARCHAR(100) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    estado VARCHAR(100) NOT NULL,
+    num_residencia INT NULL,
+    bairro VARCHAR(100) NULL,
+    cidade VARCHAR(100) NULL,
+    estado VARCHAR(100) NULL,
     PRIMARY KEY(id_endereco)
 );
 
@@ -38,6 +38,7 @@ CREATE TABLE pessoa(
     link_whats VARCHAR(255) NULL,
     data_nasc DATE NULL,
     img_perfil VARCHAR(255) NULL,
+    status_pes ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
     id_endereco INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
@@ -60,7 +61,6 @@ CREATE TABLE expositor(
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
-    status_exp ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
     validacao ENUM('aguardando', 'validado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
@@ -80,7 +80,6 @@ CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
-    status_col ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );

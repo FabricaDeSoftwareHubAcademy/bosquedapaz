@@ -24,18 +24,41 @@ let modal = document.getElementById("modal_salvar");
 
 btn_salvar.addEventListener('click', async function(event){ 
     event.preventDefault();
-    let formulario = document.getElementById("fomulario_cad_expositor");
 
-    let dadosForms =  new FormData(formulario);
-    dadosForms.append('modalidade', 'expositor');
+    openModalConfirmar()
+    document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
+    document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
 
-    let dados_php = await fetch('../../../actions/actions-expositor.php', {
-        method:'POST',
-        body: dadosForms
-    });
+    document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+        closeModalAtualizar()
+        let formulario = document.getElementById("fomulario_cad_expositor");
+    
+        let dadosForms =  new FormData(formulario);
+        dadosForms.append('modalidade', 'expositor');
+    
+        let dados_php = await fetch('../../../actions/actions-expositor.php', {
+            method:'POST',
+            body: dadosForms
+        });
+    
+        let response = await dados_php.json()
+        
+        if(response.status == 200){
+            openModalSucesso()
+            document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
+            document.getElementById('msm-sucesso').innerHTML = 'Cadastro realizado com sucesso'
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+        }
 
-    let response = await dados_php.text()
-    console.log(response)
+        else if(response.status != 200){
+            openModalError()
+            document.getElementById('erro-title').innerHTML = response.msg
+            document.getElementById('erro-text').style.display = 'none'
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+        }
+
+    })
+
     
  })
 

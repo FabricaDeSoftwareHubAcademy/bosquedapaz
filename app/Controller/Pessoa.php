@@ -20,6 +20,7 @@ class Pessoa
     protected $data_nasc;
     protected $foto_perfil;
     protected $perfil;
+    protected $cidade;
     protected $nvSenha;
 
 
@@ -37,6 +38,10 @@ class Pessoa
 
     public function setTelefone($telefone){
         $this->telefone = $telefone;
+    }
+
+    public function setCidade($cidade){
+        $this->cidade = $cidade;
     }
 
     public function setlink_instagram($link_instagram){
