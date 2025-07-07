@@ -71,12 +71,12 @@
                     </div>
                 </div>
 
-                <div class="conteiner-input">
-                    <div class="content-input">
+                <div class="conteiner-input conteiner-area">
+                    <div class="content-input input-area">
                         <label class="label-input">Se precisa de energia, descreva quais voltagens e equipamentos: Importante</label>
                         <textarea class="textarea" name="" id="" placeholder="EX: 127v/220v, freezer, geladeira"></textarea>
                     </div>
-                    <div class="content-input">
+                    <div class="content-input input-area">
                         <label class="label-input">Se possui um trailer, foodtruck ou barraca de comida, quais as medidas exatas dele? Importante</label>
                         <textarea class="textarea" name="" id="" placeholder="EX: 2Ms X 3Ms"></textarea>
                     </div>

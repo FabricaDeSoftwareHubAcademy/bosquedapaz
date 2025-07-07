@@ -9,7 +9,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-.btns-forms-padrao  {
+.btns-forms-padrao {
     padding: .5rem .5rem .5rem .5rem !important;
 }
 
@@ -62,6 +62,10 @@
     width: 80%;
 }
 
+.conteiner-area {
+    justify-content: space-between;
+}
+
 .content-input {
     flex: auto;
     display: flex;
@@ -69,7 +73,7 @@
 }
 
 .label-input {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
@@ -79,7 +83,6 @@
     border-radius: 5px;
     background-color: #ffffff;
     outline: none;
-    margin-bottom: 20px;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
     font-size: 1rem;
@@ -87,15 +90,18 @@
 }
 
 .textarea {
-    height: 100%;
     border-radius: 5px;
     resize: none;
     outline: none;
     border: none;
-    padding: 10px;
+    padding: 5px;
     font-size: 1rem;
     border-right: 1px solid rgba(44, 44, 44, 0.646);
     border-bottom: 1px solid rgba(44, 44, 44, 0.646);
+}
+
+.input-area {
+    max-width: 48%;
 }
 
 .maior {
@@ -130,15 +136,15 @@
 }
 
 @media screen and (max-width: 500px) {
-    .content-input{
+    .content-input {
         max-width: 100%;
     }
 
-    .btns-forms-padrao  {
+    .btns-forms-padrao {
         width: 90% !important;
         margin: auto;
     }
-    
+
     .form-cadastro {
         width: 95%;
     }

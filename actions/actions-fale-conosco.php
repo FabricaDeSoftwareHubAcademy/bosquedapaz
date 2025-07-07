@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             </div>
         ";
 
-        $enviarEmail = $emailService->enviarEmail('halysondosreissilva@gmail.com', $corpoEmail, 'Fale conosco');
+        $enviarEmail = $emailService->enviarEmail('thiagonline.hc@gmail.com', $corpoEmail, 'Fale conosco');
 
         $response = array("msg" => 'E-mail enviardo com sucesso.', "status" => 200);
         echo json_encode($response);
