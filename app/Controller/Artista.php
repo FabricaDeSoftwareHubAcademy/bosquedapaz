@@ -5,6 +5,7 @@ namespace app\Controller;
 require_once('../vendor/autoload.php');
 use PDO;
 use app\Models\Database;     
+use app\Controller\Pessoa;
 
 
 class Artista extends Pessoa
