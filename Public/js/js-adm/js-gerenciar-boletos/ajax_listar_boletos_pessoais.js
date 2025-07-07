@@ -31,9 +31,9 @@ async function carregarMeusBoletos() {
               <button class="listb-btn-pago ${classeStatus}" disabled>${boleto.status_boleto}</button>
             </td>
             <td class="listb-boleto-td">
-              <a href="../../../actions/gerar-boleto.php?id=${boleto.id_boleto}" class="listb-link" target="_blank">
+              <button class="listb-link btn-boleto" data-id="${boleto.id_boleto}">
                 <i class="fa-solid fa-print"></i>
-              </a>
+              </button>
             </td>
           </tr>
         `;
@@ -52,5 +52,30 @@ async function carregarMeusBoletos() {
   }
 }
 
-// Carrega os boletos automaticamente ao abrir a tela
+document.addEventListener('click', function(e) {
+  if (e.target.closest('.btn-boleto')) {
+    const idBoleto = e.target.closest('.btn-boleto').dataset.id;
+
+    const formData = new FormData();
+    formData.append('id_boleto', idBoleto);
+
+    fetch('../../../actions/action-gerar-boleto.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Erro ao gerar boleto.');
+      return response.blob();
+    })
+    .then(blob => {
+      const url = window.URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    })
+    .catch(err => {
+      alert('Erro ao gerar boleto.');
+      console.error(err);
+    });
+  }
+});
+
 carregarMeusBoletos();
