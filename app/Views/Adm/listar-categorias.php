@@ -143,6 +143,12 @@
     <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script>
     <script src="../../../Public/js/js-adm/js-alterar-status-cat.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
+    <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>
+    <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+    <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+    <?php include '../../../Public/include/modais/modal-error.html'; ?>
 </body>
 
 </html>

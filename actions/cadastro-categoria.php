@@ -18,7 +18,7 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
 
     // --- Validações ---
     if (empty($descricao)) {
-        echo json_encode(['status' => 'error', 'message' => 'A descrição da categoria é obrigatória.']);
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria é obrigatório.']);
         exit;
     }
     if (empty($cor)) {

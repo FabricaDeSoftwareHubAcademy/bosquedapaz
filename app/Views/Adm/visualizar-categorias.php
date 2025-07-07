@@ -31,12 +31,12 @@
                     <p class="nome-cat">Nova Categoria</p>
                 </div> -->
 
-                <dialog class="cadastro-categoria" id="cadastro-categoria">
-                    <div class="modal-content">
-                        <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
-                        <h1 class="titulo">Cadastrar Categoria</h1>
+                <dialog class="dialog-categoria" id="cadastro-categoria">
+                    <div class="dialog-categoria-content">
+                        <span class="dialog-close close-modal" data-modal="cadastro-categoria">&times;</span>
+                        <h1 class="dialog-titulo">Cadastrar Categoria</h1>
                         <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
-                            <div class="form-box">
+                            <div class="dialog-form-box">
                                 <h3>Nome:</h3>
                                 <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
                                 <h3>Cor:</h3>
@@ -92,9 +92,9 @@
                                     </div>
                                     <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
-                                <div class="botoes">
-                                    <button type="button" class="cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
-                                    <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
+                                <div class="dialog-botoes">
+                                    <button type="button" class="dialog-cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
+                                    <button type="submit" id="btn_cadastrar_cat" class="dialog-salvar">Salvar</button>
                                 </div>
                             </div>
                         </form>
@@ -112,6 +112,12 @@
     <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-visualizar-categoria.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
+    <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>
+    <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+    <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+    <?php include '../../../Public/include/modais/modal-error.html'; ?>
 </body>
 
 </html>
