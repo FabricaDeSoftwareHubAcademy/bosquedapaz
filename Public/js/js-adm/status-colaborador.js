@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           acao: "alternarStatus",
           id_colaborador: idColaborador,
-          status_atual: currentButton.getAttribute("data-status"),
+          status_atual: currentButton.getAttribute("data-status").toLowerCase(), // força minúsculo aqui
         }),
       });
 

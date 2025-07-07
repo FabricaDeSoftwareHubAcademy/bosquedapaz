@@ -14,6 +14,7 @@ async function listar(){
 
         let linhas = '';
         json.data.forEach(colab => {
+            const statusLower = colab['status_col'].toLowerCase();
             linhas += `<tr>
                 <td class="usuario-col">${colab['id_colaborador']}</td>
                 <td>${colab['nome']}</td>
@@ -23,10 +24,10 @@ async function listar(){
                 <td>
                     <button 
                         type="button" 
-                        class="status ${colab['status_col'] === 'ativo' ? 'active' : 'inactive'}" 
+                        class="status ${statusLower === 'ativo' ? 'active' : 'inactive'}" 
                         data-id="${colab['id_colaborador']}" 
-                        data-status="${colab['status_col']}">
-                        ${colab['status_col'] === 'ativo' ? 'Ativo' : 'Inativo'}
+                        data-status="${statusLower}">
+                        ${statusLower === 'ativo' ? 'Ativo' : 'Inativo'}
                     </button>
                 </td>
             </tr>`;

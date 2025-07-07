@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.modal-loading {
+  width: 90%;
+  max-width: 400px;
+  border: none;
+  border-radius: 1rem;
+  margin: auto;
+  padding: 0;
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-loading::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.fechar-modal-loading {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.fechar-modal-loading:hover {
+  color: #FF3B6E;
+}
+
+.content-modal {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.deletar-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+
+.content-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.btn-modal-deletar {
+  flex: 1;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botão "Sim"/"OK" */
+.deletar-modal-salvar {
+  background-color: #ffffff;
+  color: #FF3B6E;
+  border: 2px solid #FF3B6E;
+}
+
+.deletar-modal-salvar:hover {
+  background-color: #FF3B6E;
+  color: white;
+}
+
+/* Botão "Cancelar" */
+.deletar-modal-cancelar {
+  background-color: #E74C3C;
+  color: white;
+  border: 2px solid #E74C3C;
+}
+
+.deletar-modal-cancelar:hover {
+  background-color: #c0392b;
+}
+
+/* Responsivo */
+@media screen and (max-width: 550px) {
+  .content-btns {
+      flex-direction: column;
+  }
+
+  .btn-modal-deletar {
+      width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.96);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}

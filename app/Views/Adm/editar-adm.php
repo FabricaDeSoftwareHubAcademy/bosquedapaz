@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" />
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-editar-adm.css" />
+    <link rel="stylesheet" href="../../../Public/css/css-modais/style-modal-sucesso.css">
+    <link rel="stylesheet" href="../../../Public/css/css-modais/style-modal-confirmar.css">
+    <link rel="stylesheet" href="../../../Public/css/css-modais/style-modal-confirmar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <title>Editar ADM</title>
 </head>
 <body>
     <?php include "../../../Public/include/menu-adm.html"; ?>
+    <?php include '../../../Public/include/modais/modal-confirmar.html'; include '../../../Public/include/modais/modal-sucesso.html'; ?>
 
     <main>
         <section class="container_box">
@@ -98,6 +102,23 @@
         <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-2.png" alt=""></div>
         <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
     </main>
+
+    <!-- Modal:  -->
+    <dialog id="modal-mensagem" class="modal-loading">
+        <div class="content-close">
+            <i class="bi bi-x-square-fill fechar-modal-loading" id="close-modal-mensagem"></i>
+        </div>
+        <div class="content-modal">
+            <i class="bi bi-exclamation-circle meta-quest" style="color:#FF3877; font-size:4rem;"></i>
+            <div class="content-text">
+                <h2 class="loading-text" id="modal-title">Erro</h2>
+                <p class="msm-modal" id="modal-message">Mensagem de erro</p>
+            </div>
+        </div>
+        <div class="content-btns">
+            <button class="btn-modal-confirmar" id="btn-modal-fechar" style="background-color:#FF3877;">Fechar</button>
+        </div>
+    </dialog>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-editar-adm.js" defer></script>
