@@ -1,9 +1,4 @@
-const headElement1  = document.getElementsByTagName('head')[0];
-const linkHome  = document.createElement('link');
-linkHome.rel  = 'stylesheet';
-linkHome.type = 'text/css';
-linkHome.href = '../../../Public/css/css-home/style-menu.css';
-headElement1.appendChild(linkHome);
+
 
 // abre o menu da home
 const sandwich = document.getElementById('sandwich')
