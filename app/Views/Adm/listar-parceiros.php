@@ -37,77 +37,13 @@
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="usuario-col">Shopping Bosque dos Ipês</td>
-                                <td>João</td>
-                                <td>(67)99999-9999</td>
-                                <td>bosquedosipes@bosque.com</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>                         
-                            <tr>
-                                <td class="usuario-col">Prefeitura de Campo Grande</td>
-                                <td>Rosângela</td>
-                                <td>(67)99999-9999</td>
-                                <td>prefeituracgr@prefeitura.com</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="usuario-col">Sebrae</td>
-                                <td>Greyce</td>
-                                <td>(67)99999-9999</td>
-                                <td>sebrae@sebrae.com</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="usuario-col">Senac</td>
-                                <td>Amaury</td>
-                                <td>(67)99999-9999</td>
-                                <td>senac@senac.com</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="usuario-col">Sectur</td>
-                                <td>Elizeu</td>
-                                <td>(67)99999-9999</td>
-                                <td>secur@sectur.com</td>
-                                <td><button class="status active">Ativo</button></td>
-                                <td>
-                                    <a href="#modal-editar" class="edit-icon">
-                                        <i class="fa-solid fa-pen-to-square open-modal" data-modal="edit-modal"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                        <tbody id="lista-parceiros">
+                            <!-- Preenchido por JS -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <!-- <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div> -->
     </main>
 
     <div class="bolas-fundo">
@@ -119,6 +55,7 @@
     <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-listar-parceiros.js" defer></script>
 </body>
 
 </html>
