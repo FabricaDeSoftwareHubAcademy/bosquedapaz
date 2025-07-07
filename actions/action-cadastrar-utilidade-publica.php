@@ -10,6 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $data_fim = $_POST['data_fim'] ?? '';
     $imagem = '';
 
+    if ($titulo === '') {
+        echo json_encode('Erro ao Cadastrar!');
+    }
+
     // Verifica se o arquivo foi enviado
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
         $arquivo = $_FILES['imagem'];
