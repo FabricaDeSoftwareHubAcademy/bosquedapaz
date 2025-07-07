@@ -26,6 +26,18 @@
                 <h1 class="area-superior-texto" id="nomeEmpresa">Nome da Empresa</h1>
                 <img class="area-superior-imagem" src="" id="logoEmpresa">
             </div>
+            <div class="area-inferior-produtos">
+                    <div class="area-produtos">
+                        <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto1.jpeg" alt="">
+                        <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto2.jpeg" alt="">
+                        <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto3.jpeg" alt="">
+                    </div>
+                    <div class="area-produtos">
+                        <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto4.jpeg" alt="">
+                        <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto5.jpeg" alt="">
+                        <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto6.jpeg" alt="">
+                    </div>
+                </div>
         </section>
 
         <!-- Seção divisão -->
