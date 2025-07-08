@@ -101,20 +101,18 @@ class Artista extends Pessoa
 
     public function cadastrar()
     {
-        // INSERE NA TABELA PESSOA
         $dbPessoa = new Database('pessoa');
         $pes_id = $dbPessoa->insert_lastid([
             'nome' => $this->nome,
             'email' => $this->email,
-            'telefone' => $this->whats,  // ou 'whats' se preferir
+            'telefone' => $this->whats,
             'link_instagram' => $this->link_instagram,
         ]);
 
         if (!$pes_id) {
-            return false; // falha ao inserir pessoa
+            return false;
         }
 
-        // INSERE NA TABELA ARTISTA
         $dbArtista = new Database('artista');
         $res = $dbArtista->insert([
             'id_pessoa' => $pes_id,
@@ -126,5 +124,30 @@ class Artista extends Pessoa
         ]);
 
         return $res ? true : false;
+    }
+
+    public function listar()
+    {
+        try {
+            $db = new Database('artista');
+
+            $query = "
+                SELECT 
+                    p.nome,
+                    p.email,
+                    p.telefone,
+                    a.linguagem_artistica,
+                    a.valor_cache,
+                    a.tempo_apresentacao
+                FROM artista a
+                INNER JOIN pessoa p ON p.id_pessoa = a.id_pessoa
+            ";
+
+            $stmt = $db->execute($query);
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\PDOException $e) {
+            return [];
+        }
     }
 }
