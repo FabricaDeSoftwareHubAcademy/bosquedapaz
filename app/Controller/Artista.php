@@ -3,8 +3,9 @@
 namespace app\Controller;
 
 require_once('../vendor/autoload.php');
+
 use PDO;
-use app\Models\Database;     
+use app\Models\Database;
 use app\Controller\Pessoa;
 
 
@@ -18,6 +19,8 @@ class Artista extends Pessoa
     protected $publico_alvo;
     protected $tempo_apresentacao;
     protected $valor_cache;
+    protected $tipo_artista;
+
 
 
     public function setId_artista($id_artista)
@@ -57,6 +60,17 @@ class Artista extends Pessoa
         $this->valor_cache = $valor_cache;
     }
 
+    public function setTipo_artista($tipo_artista)
+    {
+        $this->tipo_artista = $tipo_artista;
+    }
+
+    public function getTipo_artista()
+    {
+        return $this->tipo_artista;
+    }
+
+
     /////////////// get
 
 
@@ -77,7 +91,7 @@ class Artista extends Pessoa
     {
         return $this->nome_artistico;
     }
-    
+
     public function getEstilo_musica()
     {
         return $this->estilo_musica;
@@ -98,7 +112,7 @@ class Artista extends Pessoa
 
     public function cadastrar()
     {
-        
+
         $db = new Database('pessoa');
         $pes_id = $db->insert_lastid([
             'nome' => $this->nome,
@@ -106,11 +120,12 @@ class Artista extends Pessoa
             'telefone' => $this->whats,
             'link_instagram' => $this->link_instagram,
         ]);
-    
+
 
         $db = new Database('artista');
         $res = $db->insert([
-            'id_pessoa' => $pes_id, 
+            'id_pessoa' => $pes_id,
+            'tipo_artista' => $this->tipo_artista,
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
             'estilo_musica' => $this->estilo_musica,
@@ -118,10 +133,8 @@ class Artista extends Pessoa
             'tempo_apresentacao' => $this->tempo_apresentacao,
             'valor_cache' => $this->valor_cache,
         ]);
-    
-        return $res;
 
-        
+
+        return $res;
     }
-    
 }

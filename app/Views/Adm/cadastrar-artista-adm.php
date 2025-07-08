@@ -25,7 +25,7 @@
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <form method="POST" id="form-artista">
+            <form method="POST" id="form-artista"  action="../../../actions/actions-cadastrar-artista.php" enctype="multipart/form-data">
 
                 <div class="formularios">
                     <div class="form-pessoa">
