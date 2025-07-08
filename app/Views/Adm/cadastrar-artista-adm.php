@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,7 +25,7 @@
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <form method="POST" action="../../../actions/cadastrar_artista.php" id="form-artista">
+            <form method="POST" id="form-artista"  action="../../../actions/actions-cadastrar-artista.php" enctype="multipart/form-data">
 
                 <div class="formularios">
                     <div class="form-pessoa">

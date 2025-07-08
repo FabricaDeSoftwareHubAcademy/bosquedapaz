@@ -3,8 +3,10 @@
 namespace app\Controller;
 
 require_once('../vendor/autoload.php');
+
 use PDO;
-use app\Models\Database;     
+use app\Models\Database;
+use app\Controller\Pessoa;
 
 
 class Artista extends Pessoa
@@ -17,6 +19,7 @@ class Artista extends Pessoa
     protected $publico_alvo;
     protected $tempo_apresentacao;
     protected $valor_cache;
+
 
 
     public function setId_artista($id_artista)
@@ -56,6 +59,7 @@ class Artista extends Pessoa
         $this->valor_cache = $valor_cache;
     }
 
+
     /////////////// get
 
 
@@ -76,7 +80,7 @@ class Artista extends Pessoa
     {
         return $this->nome_artistico;
     }
-    
+
     public function getEstilo_musica()
     {
         return $this->estilo_musica;
@@ -97,30 +101,30 @@ class Artista extends Pessoa
 
     public function cadastrar()
     {
-        
-        $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid([
+        // INSERE NA TABELA PESSOA
+        $dbPessoa = new Database('pessoa');
+        $pes_id = $dbPessoa->insert_lastid([
             'nome' => $this->nome,
             'email' => $this->email,
-            'telefone' => $this->whats,
+            'telefone' => $this->whats,  // ou 'whats' se preferir
             'link_instagram' => $this->link_instagram,
         ]);
-    
 
-        $db = new Database('artista');
-        $res = $db->insert([
-            'id_pessoa' => $pes_id, 
+        if (!$pes_id) {
+            return false; // falha ao inserir pessoa
+        }
+
+        // INSERE NA TABELA ARTISTA
+        $dbArtista = new Database('artista');
+        $res = $dbArtista->insert([
+            'id_pessoa' => $pes_id,
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
-            'estilo_musica' => $this->estilo_musica,
             'publico_alvo' => $this->publico_alvo,
             'tempo_apresentacao' => $this->tempo_apresentacao,
             'valor_cache' => $this->valor_cache,
         ]);
-    
-        return $res;
 
-        
+        return $res ? true : false;
     }
-    
 }
