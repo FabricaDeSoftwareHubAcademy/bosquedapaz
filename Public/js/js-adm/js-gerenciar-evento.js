@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     const tr = document.createElement('tr');
 
                     tr.innerHTML = `
-                        <td class="nome-evento">${sanitize(evento.nome_evento)}</td>
+                        <td class="nome-evento">${evento.nome_evento}</td>
                         <td>${sanitize(formatarDataBR(evento.data_evento))}</td>
                         <td>
                             <span class="${evento.status == 1 ? 'status-ativo' : 'status-inativo'}">
