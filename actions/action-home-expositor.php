@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 
 try {
     $obj = new Expositor();
-    $dados = $obj->buscar(null, null, 10);
+    $dados = $obj->buscar(null, "RAND()", 10);
 
     echo json_encode($dados);
 
