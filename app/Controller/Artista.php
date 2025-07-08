@@ -19,7 +19,6 @@ class Artista extends Pessoa
     protected $publico_alvo;
     protected $tempo_apresentacao;
     protected $valor_cache;
-    protected $tipo_artista;
 
 
 
@@ -58,16 +57,6 @@ class Artista extends Pessoa
     public function setValor_cache($valor_cache)
     {
         $this->valor_cache = $valor_cache;
-    }
-
-    public function setTipo_artista($tipo_artista)
-    {
-        $this->tipo_artista = $tipo_artista;
-    }
-
-    public function getTipo_artista()
-    {
-        return $this->tipo_artista;
     }
 
 
@@ -112,29 +101,30 @@ class Artista extends Pessoa
 
     public function cadastrar()
     {
-
-        $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid([
+        // INSERE NA TABELA PESSOA
+        $dbPessoa = new Database('pessoa');
+        $pes_id = $dbPessoa->insert_lastid([
             'nome' => $this->nome,
             'email' => $this->email,
-            'telefone' => $this->whats,
+            'telefone' => $this->whats,  // ou 'whats' se preferir
             'link_instagram' => $this->link_instagram,
         ]);
 
+        if (!$pes_id) {
+            return false; // falha ao inserir pessoa
+        }
 
-        $db = new Database('artista');
-        $res = $db->insert([
+        // INSERE NA TABELA ARTISTA
+        $dbArtista = new Database('artista');
+        $res = $dbArtista->insert([
             'id_pessoa' => $pes_id,
-            'tipo_artista' => $this->tipo_artista,
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
-            'estilo_musica' => $this->estilo_musica,
             'publico_alvo' => $this->publico_alvo,
             'tempo_apresentacao' => $this->tempo_apresentacao,
             'valor_cache' => $this->valor_cache,
         ]);
 
-
-        return $res;
+        return $res ? true : false;
     }
 }

@@ -1,55 +1,40 @@
-// cadastro artista
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form-artista");
+    const btnSalvar = document.getElementById("btn-salvar");
+    const modalSucesso = document.getElementById("modal-sucesso");
+    const modalErro = document.getElementById("modal-error");
 
-let btnSalvar = document.getElementById("btn-modal-salvar");
-let modalConfirmar = document.getElementById("modal-confirmar");
-let modalSucesso = document.getElementById("modal-sucesso");
-let modalErro = document.getElementById("modal-erro");
+    btnSalvar.addEventListener("click", async (e) => {
+        e.preventDefault();
 
-btnSalvar.addEventListener('click', async function(event) {
-    event.preventDefault();
+        const formData = new FormData(form);
 
-    let formulario = document.getElementById("form-artista");
-    let dadosForms = new FormData(formulario);
-
-    try {
-        let dadosPhp = await fetch("../../../actions/actions-cadastrar-artista.php", {
-            method: 'POST',
-            body: dadosForms
-        });
-
-        let response = await dadosPhp.json();
-        console.log(response);
-
-        modalConfirmar.close();
-
-        if (response.status == 200) {
-            formulario.reset();
-
-            // mostra modal sucesso
-            modalSucesso.classList.remove("oculta");
-            modalSucesso.classList.add("show_modal");
-
-            // fechar modal sucesso
-            let fecharSucesso = document.getElementById("close-modal-sucesso");
-            fecharSucesso.addEventListener('click', function() {
-                modalSucesso.classList.remove("show_modal");
-                modalSucesso.classList.add("oculta");
+        try {
+            const resposta = await fetch("../../../actions/actions-cadastrar-artista.php", {
+                method: "POST",
+                body: formData
             });
 
-        } else {
-            // mostra modal erro
-            modalErro.classList.remove("oculta");
-            modalErro.classList.add("show_modal");
+            const resultado = await resposta.json();
+            console.log("Resultado:", resultado);
 
-            let fecharErro = document.getElementById("close-modal-erro");
-            fecharErro.addEventListener('click', function() {
-                modalErro.classList.remove("show_modal");
-                modalErro.classList.add("oculta");
-            });
+            if (resultado.status === 200 || resultado.status === "sucesso") {
+                form.reset();
+                modalSucesso.showModal();
+            } else {
+                modalErro.showModal();
+            }
+        } catch (erro) {
+            console.error("Erro na requisição:", erro);
+            modalErro.showModal();
         }
+    });
 
-    } catch (error) {
-        console.error("Erro na requisição:", error);
-        alert("Erro na comunicação com o servidor.");
-    }
+    const fecharModais = document.querySelectorAll(".fechar-modal-loading");
+    fecharModais.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const modal = btn.closest("dialog");
+            if (modal) modal.close();
+        });
+    });
 });
