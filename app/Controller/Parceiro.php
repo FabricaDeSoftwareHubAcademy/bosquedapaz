@@ -2,6 +2,7 @@
 
 namespace app\Controller;
 require_once('../vendor/autoload.php');
+use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
 
@@ -13,6 +14,7 @@ class Parceiro {
     public string $nome_contato;
     public string $tipo;
     public string $cpf_cnpj;
+    public string $status_parceiro;
     public string $logo;
     // public int $id_endereco;
 
@@ -43,6 +45,18 @@ class Parceiro {
             'id_endereco' => $id_endereco
         ]);
 
+        return $resParceiro;
+    }
+
+    public function ListarParceiros($nome) {
+        if(empty($nome)) {
+            $db = new Database("parceiro");
+            $resParceiro = $db->listar_parceiros()->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+            $db = new Database("parceiro");
+            $resParceiro = $db->buscar_parceiros($nome)->fetchAll(PDO::FETCH_ASSOC);
+        }
+        
         return $resParceiro;
     }
 }

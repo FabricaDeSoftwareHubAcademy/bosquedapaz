@@ -356,4 +356,19 @@ class Database {
 
         return $this->execute($query, $binds);
     }
+
+    // codigo listar parceiros
+    public function listar_parceiros() {
+        $query = "SELECT nome_parceiro, nome_contato, telefone
+        email, status_parceiro FROM parceiro";
+
+        return $this->execute($query);
+    }
+
+    public function buscar_parceiros($nome) {
+        $query = "SELECT nome_parceiro FROM parceiro WHERE nome_parceiro LIKE :nome_parceiro";
+
+        $binds = [":nome_parceiro" => "%$nome%"];
+        return $this->execute($query, $binds);
+    }
 }
