@@ -51,68 +51,84 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // quando clicar no btn salvar envia para o banco
         document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+
+            let formData = new FormData();
+
+            formData.append("id_utilidade_publica", response[0].id_utilidade_publica);
+            if (response[0].status_utilidade === 0) {
+                formData.append("status_utilidade", 1);
+            } else {
+                formData.append("status_utilidade", 0);
+            }
+
+            let status_utilidade = await fetch('../../../actions/action-editar-status-utilidade-publica.php', {
+                method: 'POST',
+                body: formData
+            });
+
+
             closeModalAtualizar()
 
-            let allInputs = document.getElementsByClassName('input')
+            let allInputs = document.getElementsByClassName('status_utilidade')
 
             // caso não seja feito nenhum upload cai nesse if que chama o modal erro
-            if (allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0) {
-                document.getElementById('erro-title').innerText = 'Por favor envie alguma imagem'
-                document.getElementById('erro-text').innerText = 'Nâo é possivel atualizar o carrossel, nenhuma imagem enviada'
-                openModalError()
+            // if (allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0) {
+            //     document.getElementById('erro-title').innerText = 'Por favor envie alguma imagem'
+            //     document.getElementById('erro-text').innerText = 'Nâo é possivel atualizar o carrossel, nenhuma imagem enviada'
+            //     openModalError()
 
-                document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-            }
+            //     document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            // }
 
             // caso evie algoma imagem cai no else
-            else {
-                let inputs = document.querySelectorAll('[type=file]')
-                let erro = ''
-                inputs.forEach(element => {
-                    if (element.files.length != 0) {
-                        var tamanho = (element.files[0].size / 1024) / 1024
-                        if (tamanho > 5) {
-                            erro += ` ${element.files[0].name} é muito grande. Por favor envie uma imagem menor.`
-                        }
-                    }
-                });
+            // else {
+            //     let inputs = document.querySelectorAll('[type=file]')
+            //     let erro = ''
+            //     inputs.forEach(element => {
+            //         if (element.files.length != 0) {
+            //             var tamanho = (element.files[0].size / 1024) / 1024
+            //             if (tamanho > 5) {
+            //                 erro += ` ${element.files[0].name} é muito grande. Por favor envie uma imagem menor.`
+            //             }
+            //         }
+            //     });
 
-                // caso de erro em uma imagem entra no if
-                if (erro.length > 0) {
-                    document.getElementById('erro-title').innerText = 'Erro, imagem fora do padrão'
-                    document.getElementById('erro-text').innerText = erro
-                    openModalError()
+            //     // caso de erro em uma imagem entra no if
+            //     if (erro.length > 0) {
+            //         document.getElementById('erro-title').innerText = 'Erro, imagem fora do padrão'
+            //         document.getElementById('erro-text').innerText = erro
+            //         openModalError()
 
-                    document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-                }
-                // caso nao tenha nenhum erro faz o fecth
-                else {
-                    let formCarrossel = document.getElementById('form-carrossel')
+            //         document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            //     }
+            //     // caso nao tenha nenhum erro faz o fecth
+            //     else {
+            //         let formCarrossel = document.getElementById('form-carrossel')
 
-                    const formData = new FormData(formCarrossel);
+            //         const formData = new FormData(formCarrossel);
 
-                    let dados_php = await fetch("../../../actions/action-carrossel.php", {
-                        method: "POST",
-                        body: formData
-                    });
+            //         let dados_php = await fetch("../../../actions/action-carrossel.php", {
+            //             method: "POST",
+            //             body: formData
+            //         });
 
-                    let response = await dados_php.json();
+            //         let response = await dados_php.json();
 
-                    if (response.erro == 0) {
-                        openModalSucesso()
-                        document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
-                        document.getElementById('msm-sucesso').innerHTML = 'Edição realizada com sucesso'
-                        document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-                    }
+            //         if (response.erro == 0) {
+            //             openModalSucesso()
+            //             document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
+            //             document.getElementById('msm-sucesso').innerHTML = 'Edição realizada com sucesso'
+            //             document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            //         }
 
-                    else if (response.erro != 0) {
-                        openModalError()
-                        document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-                    }
-                }
+            //         else if (response.erro != 0) {
+            //             openModalError()
+            //             document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            //         }
+            //     }
 
 
-            }
+            // }
         })
 
     })
@@ -127,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (item) {
 
-                item.status_utilidade = item.status_utilidade == 1 ? 0 : 1;
+                // item.status_utilidade = item.status_utilidade == 1 ? 0 : 1;
 
 
                 btn.textContent = item.status_utilidade == 1 ? 'Ativo' : 'Inativo';
@@ -135,7 +151,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 btn.classList.toggle('active', item.status_utilidade == 1);
                 btn.classList.toggle('inactive', item.status_utilidade == 0);
 
-                // console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
+                console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
             }
         }
     });

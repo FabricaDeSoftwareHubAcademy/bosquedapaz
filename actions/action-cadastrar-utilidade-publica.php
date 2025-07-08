@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $data_inicio = $_POST['data_inicio'] ?? '';
     $data_fim = $_POST['data_fim'] ?? '';
     $imagem = '';
-
+    
     if ($titulo === '') {
         echo json_encode('Erro ao Cadastrar!');
     }
@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $utilidadePublica->data_inicio = $data_inicio;
     $utilidadePublica->data_fim = $data_fim;
     $utilidadePublica->imagem = $imagem;
+    $utilidadePublica->status_utilidade = 1;
 
     if ($utilidadePublica->cadastrar()) {
         // Redirecionamento ou resposta de sucesso

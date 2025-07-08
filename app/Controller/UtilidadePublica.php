@@ -54,6 +54,15 @@ use app\Models\Database;
             return $res;
         }
 
+        public function editar_status() {
+            $db = new Database('utilidade_publica');
+            $res = $db->update("id_utilidade_publica =" . $this->id_utilidade_publica ,[
+                'status_utilidade' => $this->status_utilidade
+            ]);
+    
+            return $res;
+        }
+
         public function excluir($id) {
            try {
             $db = new Database('utilidade_publica');
