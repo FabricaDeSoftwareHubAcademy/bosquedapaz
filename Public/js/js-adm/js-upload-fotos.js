@@ -2,15 +2,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form-upload-fotos');
     const inputFotos = document.getElementById('fotos');
     const preview = document.getElementById('preview-galeria');
+    const contadorFotos = document.createElement('p');
     const maxFotos = 20;
 
-    /**
-     * Cria uma miniatura da imagem no preview
-     * @param {File} arquivo
-     */
-    const adicionarPreview = (arquivo) => {
+    let arquivosSelecionados = [];
+
+    // Adiciona contador na tela
+    contadorFotos.id = 'contador-fotos';
+    contadorFotos.style.fontWeight = 'bold';
+    preview.before(contadorFotos);
+    atualizarContador();
+
+    function atualizarContador() {
+        const restantes = maxFotos - arquivosSelecionados.length;
+        contadorFotos.textContent = `Você pode adicionar até ${restantes} foto(s).`;
+    }
+
+    function adicionarPreview(arquivo, index) {
         const reader = new FileReader();
         reader.onload = (e) => {
+            const div = document.createElement('div');
+            div.classList.add('preview-box');
+            div.style.position = 'relative';
+            div.style.display = 'inline-block';
+
             const img = document.createElement('img');
             img.src = e.target.result;
             img.alt = 'Preview';
@@ -20,58 +35,68 @@ document.addEventListener('DOMContentLoaded', () => {
                 borderRadius: '8px',
                 boxShadow: '0 0 5px rgba(0,0,0,0.3)'
             });
-            preview.appendChild(img);
+
+            const btnRemover = document.createElement('button');
+            btnRemover.textContent = '×';
+            Object.assign(btnRemover.style, {
+                position: 'absolute',
+                top: '0',
+                right: '5px',
+                background: '#e74c3c',
+                color: 'white',
+                border: 'none',
+                borderRadius: '50%',
+                width: '25px',
+                height: '25px',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                boxShadow: '0 0 3px rgba(0,0,0,0.5)'
+            });
+
+            btnRemover.addEventListener('click', () => {
+                arquivosSelecionados.splice(index, 1);
+                renderizarGaleria();
+            });
+
+            div.appendChild(img);
+            div.appendChild(btnRemover);
+            preview.appendChild(div);
         };
         reader.readAsDataURL(arquivo);
-    };
+    }
 
-    /**
-     * Atualiza a galeria com as imagens selecionadas
-     */
-    const atualizarPreview = () => {
+    function renderizarGaleria() {
         preview.innerHTML = '';
-        const arquivos = inputFotos.files;
+        arquivosSelecionados.forEach((arquivo, index) => adicionarPreview(arquivo, index));
+        atualizarContador();
+    }
 
-        if (!arquivos.length) {
-            preview.innerHTML = '<p>Nenhuma foto selecionada.</p>';
+    function atualizarPreview() {
+        const novosArquivos = Array.from(inputFotos.files);
+
+        if ((arquivosSelecionados.length + novosArquivos.length) > maxFotos) {
+            alert(`Limite de ${maxFotos} fotos atingido.`);
+            inputFotos.value = '';
             return;
         }
 
-        Array.from(arquivos).forEach(adicionarPreview);
-    };
+        arquivosSelecionados = arquivosSelecionados.concat(novosArquivos);
+        renderizarGaleria();
 
-    /**
-     * Verifica se o limite de fotos foi ultrapassado
-     * @returns {boolean}
-     */
-    const excedeuLimiteDeFotos = () => {
-        const fotosExistentes = document.querySelectorAll('#preview-galeria img').length;
-        const fotosSelecionadas = inputFotos.files.length;
-        return (fotosExistentes + fotosSelecionadas) > maxFotos;
-    };
+        inputFotos.value = '';
+    }
 
-    /**
-     * Envia as fotos via Fetch API
-     */
-    const enviarFotos = async () => {
-        const formData = new FormData();
-        const idEvento = document.getElementById('id_evento').value;
-
-        formData.append('id_evento', idEvento);
-
-        const arquivos = inputFotos.files;
-
-        if (!arquivos.length) {
+    async function enviarFotos() {
+        if (arquivosSelecionados.length === 0) {
             alert('Nenhuma foto selecionada!');
             return;
         }
 
-        if (excedeuLimiteDeFotos()) {
-            alert(`Você só pode cadastrar no máximo ${maxFotos} fotos por evento.`);
-            return;
-        }
+        const formData = new FormData();
+        const idEvento = document.getElementById('id_evento').value;
+        formData.append('id_evento', idEvento);
 
-        Array.from(arquivos).forEach((arquivo) => {
+        arquivosSelecionados.forEach((arquivo) => {
             formData.append('fotos[]', arquivo);
         });
 
@@ -95,17 +120,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.status === 'success') {
                 alert(data.mensagem);
-                window.location.href = `galeria-fotos.php?id_evento=${idEvento}`;
+                arquivosSelecionados = []; // Limpa array
+                renderizarGaleria();       // Limpa preview
+                window.location.href = `./gerenciar-eventos.php`;
             } else {
                 alert('Erro: ' + data.mensagem);
             }
+
         } catch (error) {
             console.error('Erro no upload:', error);
             alert('Erro no envio das fotos.');
         }
-    };
+    }
 
-    // Eventos
     inputFotos.addEventListener('change', atualizarPreview);
     form.addEventListener('submit', (e) => {
         e.preventDefault();
