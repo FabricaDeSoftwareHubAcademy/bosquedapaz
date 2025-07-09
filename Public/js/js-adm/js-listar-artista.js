@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         html += `
           <tr>
             <td>${artista.nome}</td>
-            <td class="email-col">${artista.email}</td>
+            <td class="email-col">${artista.email || ''}</td>
             <td class="fone-col">${formatarTelefone(artista.telefone)}</td>
             <td class="barraca-col">${artista.linguagem_artistica}</td>
             <td class="barraca-col">R$ ${parseFloat(artista.valor_cache).toFixed(2)}</td>
-            <td>${artista.tempo_apresentacao}</td>
+            <td>${artista.tempo_apresentacao || ''}</td>
             <td>
               <button class="status ${statusClasse}" data-id="${artista.id_artista}">
                 ${statusTexto}
@@ -52,7 +52,7 @@ function formatarTelefone(numero) {
   return numero;
 }
 
-// Event delegation para botões de status
+// Atualizar status ao clicar no botão
 document.getElementById('tbody-artistas').addEventListener('click', async (e) => {
   if (e.target.classList.contains('status')) {
     const botao = e.target;
@@ -63,7 +63,9 @@ document.getElementById('tbody-artistas').addEventListener('click', async (e) =>
     try {
       const response = await fetch('../../../actions/action-listar-artista.php', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
           id_artista: id,
           novo_status: novoStatus
@@ -73,17 +75,16 @@ document.getElementById('tbody-artistas').addEventListener('click', async (e) =>
       const resultado = await response.json();
 
       if (resultado.success) {
-        // Atualiza botão
         botao.textContent = resultado.novo_status === 'ativo' ? 'Ativo' : 'Inativo';
         botao.classList.toggle('active');
         botao.classList.toggle('inactive');
       } else {
-        console.error('Erro:', resultado.error);
+        console.error('Erro ao atualizar status:', resultado.error);
         alert('Erro ao atualizar status.');
       }
     } catch (err) {
       console.error('Erro na requisição:', err);
-      alert('Erro na requisição. Veja o console.');
+      alert('Erro ao atualizar. Verifique o console.');
     }
   }
 });

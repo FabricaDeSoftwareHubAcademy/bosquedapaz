@@ -117,9 +117,10 @@ class Artista extends Pessoa
             'publico_alvo' => $this->publico_alvo,
             'tempo_apresentacao' => $this->tempo_apresentacao,
             'valor_cache' => $this->valor_cache,
-            'status' => 'ativo'
+            'status' => 'ativo' // aqui já usa ENUM
         ]);
     }
+
 
     // --- Listar todos os artistas com status ---
     public function listar()
@@ -127,18 +128,18 @@ class Artista extends Pessoa
         try {
             $db = new Database('artista');
             $query = "
-                SELECT 
-                    a.id_artista,
-                    p.nome,
-                    p.email,
-                    p.telefone,
-                    a.linguagem_artistica,
-                    a.valor_cache,
-                    a.tempo_apresentacao,
-                    a.status
-                FROM artista a
-                INNER JOIN pessoa p ON p.id_pessoa = a.id_pessoa
-            ";
+            SELECT 
+                a.id_artista,
+                p.nome,
+                p.email,
+                p.telefone,
+                a.linguagem_artistica,
+                a.valor_cache,
+                a.tempo_apresentacao,
+                a.status
+            FROM artista a
+            INNER JOIN pessoa p ON p.id_pessoa = a.id_pessoa
+        ";
 
             $stmt = $db->execute($query);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -146,6 +147,7 @@ class Artista extends Pessoa
             return [];
         }
     }
+
 
     // --- Atualizar status do artista ---
     public function atualizarStatus($id_artista, $novo_status)
@@ -159,4 +161,5 @@ class Artista extends Pessoa
             return false;
         }
     }
+    
 }

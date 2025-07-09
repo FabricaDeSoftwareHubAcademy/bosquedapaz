@@ -8,7 +8,6 @@ header('Content-Type: application/json; charset=utf-8');
 try {
     $db = new Database('artista');
 
-    // Se for GET, apenas lista os artistas
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         $query = "
@@ -21,7 +20,7 @@ try {
                 a.linguagem_artistica,
                 a.tempo_apresentacao,
                 a.valor_cache,
-                IF(a.ativo = 1, 'ativo', 'inativo') AS status
+                a.status
             FROM artista a
             INNER JOIN pessoa p ON a.id_pessoa = p.id_pessoa
         ";
@@ -32,7 +31,6 @@ try {
         exit;
     }
 
-    // Se for POST, atualiza o status
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $data = json_decode(file_get_contents("php://input"), true);
 
@@ -43,16 +41,16 @@ try {
         }
 
         $id = (int) $data['id_artista'];
-        $status = $data['novo_status'] === 'ativo' ? 1 : 0;
+        $status = $data['novo_status'] === 'ativo' ? 'ativo' : 'inativo';
 
-        $query = "UPDATE artista SET ativo = :status WHERE id_artista = :id";
+        $query = "UPDATE artista SET status = :status WHERE id_artista = :id";
 
         $db->execute($query, [
             ':status' => $status,
             ':id' => $id
         ]);
 
-        echo json_encode(['success' => true, 'novo_status' => $status ? 'ativo' : 'inativo']);
+        echo json_encode(['success' => true, 'novo_status' => $status]);
         exit;
     }
 

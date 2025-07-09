@@ -97,7 +97,7 @@ CREATE TABLE artista (
     tempo_apresentacao VARCHAR(50),
     valor_cache FLOAT NOT NULL,
     publico_alvo VARCHAR(50) NOT NULL,
-    ativo TINYINT(1) NOT NULL DEFAULT 1, 
+    status ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_artista),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
