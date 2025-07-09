@@ -21,6 +21,16 @@ CREATE TABLE endereco(
     PRIMARY KEY(id_endereco)
 );
 
+CREATE TABLE endereco_evento(
+	id_endereco_evento INT NOT NULL AUTO_INCREMENT,
+    cep_evento CHAR(9) NULL,
+    logradouro_evento VARCHAR(150) NOT NULL,
+    complemento_evento VARCHAR(150) NULL,
+    numero_evento INT NOT NULL,
+    bairro_evento VARCHAR(100) NOT NULL,
+    cidade_evento VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id_endereco)
+);
 
 CREATE TABLE pessoa( 
 	id_pessoa INT NOT NULL AUTO_INCREMENT,

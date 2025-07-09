@@ -5,13 +5,13 @@ require_once('../vendor/autoload.php');
 use PDO;
 use app\Models\Database;
 
-class Evento
+class EnderecoEvento
 {
     public int $id_endereco_evento;
     public string $cep_evento;
     public string $logradouro_evento;
     public string $complemento_evento;
-    public int $numero_evento;
+    public string $numero_evento;
     public string $bairro_evento;
     public string $cidade_evento;
 
