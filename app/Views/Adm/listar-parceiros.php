@@ -1,5 +1,4 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
+<!-- require_once __DIR__ . '/../../../app/helpers/auth.php' -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,14 +42,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="usuario-col"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></button></td>
-                                <td> <a href="#" class="edit-icon"> <i class="fa-solid fa-pen-to-square open-modal"></i> </a> </td>
-                            </tr>
+                    
                         </tbody>
                         <!-- status active -->
                         <!-- status inactive -->
@@ -60,23 +52,24 @@
             </div>
         </div>
 
-        <div class="btns">
+        <!-- <div class="btns">
             <a href="Area-Adm.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
-        </div>
+        </div> -->
 
     </main>
 
-    <div class="bolas-fundo">
+    <!-- <div class="bolas-fundo">
         <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
-    </div>
+    </div> -->
 
     <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-listar-parceiros/listar_parceiros.js"></script>
 </body>
 
 </html>
