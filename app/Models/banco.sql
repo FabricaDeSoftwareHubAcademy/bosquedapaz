@@ -88,7 +88,7 @@ CREATE TABLE colaborador(
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
 
-CREATE TABLE artista(
+CREATE TABLE artista (
 	id_artista INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     tipo_artista VARCHAR(50) NOT NULL,
@@ -97,9 +97,11 @@ CREATE TABLE artista(
     tempo_apresentacao VARCHAR(50),
     valor_cache FLOAT NOT NULL,
     publico_alvo VARCHAR(50) NOT NULL,
+    ativo TINYINT(1) NOT NULL DEFAULT 1,
     PRIMARY KEY(id_artista),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
+
 
 CREATE TABLE evento(
 	id_evento INT NOT NULL AUTO_INCREMENT,
