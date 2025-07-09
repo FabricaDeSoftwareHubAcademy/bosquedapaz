@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const inputPesquisa = document.getElementById('status');
   let artistas = [];
 
-  // Função para formatar telefone
   function formatarTelefone(numero) {
     if (!numero) return '';
     const cleaned = numero.replace(/\D/g, '');
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     return numero;
   }
 
-  // Função para montar a tabela
   function renderizarTabela(lista) {
     let html = '';
     if (Array.isArray(lista) && lista.length > 0) {
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     tbody.innerHTML = html;
   }
 
-  // Requisição inicial para listar artistas
   try {
     const response = await fetch('../../../actions/action-listar-artista.php');
     artistas = await response.json();
@@ -55,7 +52,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     tbody.innerHTML = `<tr><td colspan="7">Erro ao carregar artistas.</td></tr>`;
   }
 
-  // Filtro ao digitar
   inputPesquisa.addEventListener('input', () => {
     const termo = inputPesquisa.value.toLowerCase();
     const filtrados = artistas.filter(artista =>
@@ -66,7 +62,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderizarTabela(filtrados);
   });
 
-  // Atualizar status (ativar/inativar)
   tbody.addEventListener('click', async (e) => {
     if (e.target.classList.contains('status')) {
       const botao = e.target;

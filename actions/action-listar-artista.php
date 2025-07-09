@@ -54,7 +54,6 @@ try {
         exit;
     }
 
-    // Se for outro método, não permitido
     http_response_code(405);
     echo json_encode(['error' => 'Método não permitido.']);
 

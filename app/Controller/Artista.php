@@ -117,12 +117,11 @@ class Artista extends Pessoa
             'publico_alvo' => $this->publico_alvo,
             'tempo_apresentacao' => $this->tempo_apresentacao,
             'valor_cache' => $this->valor_cache,
-            'status' => 'ativo' // aqui já usa ENUM
+            'status' => 'ativo' 
         ]);
     }
 
 
-    // --- Listar todos os artistas com status ---
     public function listar()
     {
         try {
@@ -149,7 +148,6 @@ class Artista extends Pessoa
     }
 
 
-    // --- Atualizar status do artista ---
     public function atualizarStatus($id_artista, $novo_status)
     {
         try {

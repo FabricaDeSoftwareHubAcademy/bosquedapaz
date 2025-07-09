@@ -42,8 +42,7 @@
               </tr>
             </thead>
             <tbody id="tbody-artistas">
-             
-
+             <!-- gerado por js -->
             </tbody>
           </table>
 
