@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody-artistas');
 
   try {
-    const response = await fetch('../../../actions/action-listar-artista.php'); // GET
+    const response = await fetch('../../../actions/action-listar-artista.php'); 
     const artistas = await response.json();
 
     let html = '';
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-// Função para formatar telefone
 function formatarTelefone(numero) {
   if (!numero) return '';
   const cleaned = numero.replace(/\D/g, '');
@@ -52,7 +51,6 @@ function formatarTelefone(numero) {
   return numero;
 }
 
-// Atualizar status ao clicar no botão
 document.getElementById('tbody-artistas').addEventListener('click', async (e) => {
   if (e.target.classList.contains('status')) {
     const botao = e.target;
