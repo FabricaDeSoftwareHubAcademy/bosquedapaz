@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <tr>
               <td>${artista.nome}</td>
               <td class="email-col">${artista.email}</td>
-              <td class="fone-col">${formatarTelefone(artista.whats)}</td>
+              <td class="fone-col">${formatarTelefone(artista.telefone)}</td>
               <td class="barraca-col">${artista.linguagem_artistica}</td>
               <td class="barraca-col">R$ ${parseFloat(artista.valor_cache).toFixed(2)}</td>
               <td>${artista.tempo_apresentacao}</td>
