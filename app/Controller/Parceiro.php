@@ -19,7 +19,6 @@ class Parceiro
     protected $logo;
     protected $id_endereco;
 
-    // ---------- SETTERS ----------
     public function setNome_parceiro($nome_parceiro) { $this->nome_parceiro = $nome_parceiro; }
     public function setTelefone($telefone) { $this->telefone = $telefone; }
     public function setEmail($email) { $this->email = $email; }
@@ -29,7 +28,7 @@ class Parceiro
     public function setLogo($logo) { $this->logo = $logo; }
     public function setId_endereco($id_endereco) { $this->id_endereco = $id_endereco; }
 
-    // ---------- CADASTRAR ----------
+
     public function cadastrar()
     {
         $db = new Database('parceiro');
@@ -45,7 +44,6 @@ class Parceiro
         ]);
     }
 
-    // ---------- ATUALIZAR ----------
     public function atualizar($id)
     {
         $db = new Database('parceiro');
@@ -61,7 +59,7 @@ class Parceiro
         ]);
     }
 
-    // ---------- BUSCAR POR ID ----------
+
     public function buscarPorId($id)
     {
         $db = new Database('parceiro');
@@ -69,7 +67,7 @@ class Parceiro
         return $res;
     }
 
-    // ---------- LISTAR ----------
+
     public function listar($busca = null)
     {
         $db = new Database('parceiro');
