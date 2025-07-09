@@ -52,21 +52,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                             <label>Imagem:</label>
                             <input type="file" name="imagem" id="imagem" required>
                         </div>
-                        <div id="btns-forms-padrao" class="btns-forms-padrao">
-                            <a href="./Area-Adm.php" class="link-area-adm">
-                                <div id="btn-voltar" class="btn-voltar">
-                                    <i id="seta" class="bi bi-arrow-left-short seta"></i>
-                                </div>
-                            </a>
-
-                            <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
-                                <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
-                                <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="salvar" value="salvar">Salvar</button></div>
-                            </div>
-                        </div>
-
-<script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
-
+                        <?php include "../../../Public/include/Butons-forms.html" ?>
                     </form>
                 </div>
             </div>
@@ -79,6 +65,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
         <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
+    <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
 </body>

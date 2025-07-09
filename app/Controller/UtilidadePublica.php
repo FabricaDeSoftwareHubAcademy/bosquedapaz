@@ -48,7 +48,7 @@ use app\Models\Database;
                 'data_inicio' => $this->data_inicio,
                 'data_fim' => $this->data_fim,
                 'imagem' => $this->imagem,
-                'status_utilidade' => $this->status_utilidade
+                // 'status_utilidade' => $this->status_utilidade
             ]);
     
             return $res;

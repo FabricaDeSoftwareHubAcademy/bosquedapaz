@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $utilidadePublica->data_inicio = $data_inicio;
     $utilidadePublica->data_fim = $data_fim;
     $utilidadePublica->imagem = $imagem;
-    $utilidadePublica->status_utilidade = $status;
+    // $utilidadePublica->status_utilidade = $status;
 
     if ($imagem !== '') {
         $utilidadePublica->imagem = $imagem;

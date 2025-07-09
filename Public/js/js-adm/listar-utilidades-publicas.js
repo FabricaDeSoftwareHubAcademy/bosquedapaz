@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             closeModalAtualizar()
 
-            let allInputs = document.getElementsByClassName('status_utilidade')
+            window.location.reload();
 
             // caso não seja feito nenhum upload cai nesse if que chama o modal erro
             // if (allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0) {
