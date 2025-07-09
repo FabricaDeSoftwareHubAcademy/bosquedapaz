@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             div.style.display = 'inline-block';
 
             const img = document.createElement('img');
-            img.src = `/Public/${foto.caminho_foto_evento}`;
+            img.src = `../../../Public/${foto.caminho_foto_evento}`;
             img.alt = 'Foto cadastrada';
             Object.assign(img.style, {
                 width: '150px',
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const res = await fetch('../../../actions/action-excluir-foto-evento.php', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: `id_foto=${foto.id_foto_evento}`
+                        body: `id_foto=${foto.id_foto}`
                     });
 
                     const resultado = await res.json();
