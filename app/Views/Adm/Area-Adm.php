@@ -29,7 +29,7 @@
                 <!-- botão -->
                 <div class="action__title open-modal"  data-modal="abrir-mais-parceiros">
                     <div class="action__content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                        <img src="../../../Public/assets/icons/Vector Parceiros.png" alt="">
                         <p>Parceiros</p>
                     </div> 
                 </div>
@@ -44,7 +44,7 @@
                         <a class="link-modais" href="../../../app/Views/Adm/cadastrar-parceiros.php">
                             <div class="action__title open-modal"  data-modal="abrir-mais-parceiros">
                                 <div class="action__content">
-                                    <img src="../../../Public/imgs/img-area-adm/Vector Parceiros.png" alt="">
+                                    <img src="../../../Public/assets/icons/Vector Parceiros.png" alt="">
                                     <p>Cadastrar Parceiros</p>
                                 </div> 
                              </div>
@@ -67,7 +67,7 @@
                 <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                     <div class="action__content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                        <img src="../../../Public/assets/icons/Vector Expositores.png" alt="">
                         <p>Expositores</p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         <a class="link-modais" href="../../../app/Views/Adm/cadastrar-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-expositor">
                                 <div class="action__content">
-                                    <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
+                                    <img src="../../../Public/assets/icons/Vector Expositores.png" alt="">
                                     <p>Cadastrar Expositores</p>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                 <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
                     <div class="action__content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                        <img src="../../../Public/assets/icons/Vector Relatorio.png" alt="">
                         <p>Relatórios</p>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <a class="link-modais" href="../../../app/Views/Adm/relatorio-expositor.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-relatorios">
                                 <div class="action__content">
-                                    <img src="../../../Public/imgs/img-area-adm/Vector Relatorio.png" alt="">
+                                    <img src="../../../Public/assets/icons/Vector Relatorio.png" alt="">
                                     <p>Relatório Expositor</p>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                 <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-categoria">
                     <div class="action__content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Categorias.png" alt="">
+                        <img src="../../../Public/assets/icons/Vector Categorias.png" alt="">
                         <p>Categorias</p>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                 <a id="action__carrossel" href="editar-carrossel.php">
                     <div class="action__title">
                         <div class="action__content">
-                            <img src="../../../Public/imgs/img-area-adm/Vector Carrossel.png" alt="">
+                            <img src="../../../Public/assets/icons/Vector Carrossel.png" alt="">
                             <p>Carrossel</p>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                 <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-evento">
                     <div class="action__content">
-                        <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                        <img src="../../../Public/assets/icons/Vector Eventos.png" alt="">
                         <p>Eventos</p>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                         <a class="link-modais" href="../../../app/Views/Adm/cadastrar-evento.php">
                             <div class="action__title">
                                 <div class="action__content">
-                                    <img src="../../../Public/imgs/img-area-adm/Vector Eventos.png" alt="">
+                                    <img src="../../../Public/assets/icons/Vector Eventos.png" alt="">
                                     <p>Cadastrar Eventos</p>
                                 </div>    
                             </div>
@@ -263,7 +263,7 @@
                                 </div>
                             </div>    
                         </a>
-                        <a class="link-modais" href="../../../app/Views/Adm/gerenciar-boletos.php">
+                        <a class="link-modais" href="../../../app/Views/Adm/tela-gerenciar-boletos.php">
                             <div class="action__title">
                                 <div class="action__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="#162868" class="bi bi-stickies" viewBox="0 0 16 16">
@@ -280,7 +280,7 @@
                 <!-- botão -->
                 <div class="action__title open-modal" data-modal="abrir-mais-gerancia">
                     <div class="action__content">
-                        <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                        <img src="../../../Public/assets/icons/Gerenciar ADM.png" alt="">
                         <p>Gerenciar ADM</p>
                     </div>
                 </div>
@@ -295,7 +295,7 @@
                         <a class="link-modais" href="../../../app/Views/Adm/cadastrar-adm.php">
                             <div class="action__title open-modal" data-modal="abrir-mais-gerancia">
                                 <div class="action__content">
-                                    <img src="../../../Public/imgs/img-area-adm/Gerenciar ADM.png" alt="">
+                                    <img src="../../../Public/assets/icons/Gerenciar ADM.png" alt="">
                                     <p>Cadastrar ADM</p>
                                 </div>
                             </div>
@@ -318,9 +318,9 @@
     </main>
 
     <!-- Imagens Decorativas  -->
-    <div class="decorative__img1"><img src="../../../Public/imgs/imagens-bolas/imagem-superior-esquerdo.svg" alt=""></div>
-    <div class="decorative__img2"><img src="../../../Public/imgs/imagens-bolas/imagem-superior-direito.svg" alt=""></div>
-    <div class="decorative__img3"><img src="../../../Public/imgs/imagens-bolas/imagem-inferior-direito.svg" alt=""></div>
+    <div class="decorative__img1"><img src="../../../Public/assets/img-bolas/imagem-superior-esquerdo.svg" alt=""></div>
+    <div class="decorative__img2"><img src="../../../Public/assets/img-bolas/imagem-superior-direito.svg" alt=""></div>
+    <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/imagem-inferior-direito.svg" alt=""></div>
 
     <!-- Scripts JS  -->
     <script src="../js/main.js"></script>
@@ -328,3 +328,5 @@
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
 </body>
 </html>
+
+<!-- Matheus Manja -->

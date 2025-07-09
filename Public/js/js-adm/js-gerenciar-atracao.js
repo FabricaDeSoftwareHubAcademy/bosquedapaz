@@ -1,11 +1,11 @@
+let botaoNovaAtracao = document.getElementById('nova-atracao');
+
 document.addEventListener('DOMContentLoaded', async () => {
     const tabelaAtracoes = document.getElementById('lista-atrações');
     const params = new URLSearchParams(window.location.search);
     const id_evento = params.get('id_evento');
     const nome_evento = params.get('nome_evento');
 
-    console.log("Nome do evento:", nome_evento);
-    console.log("Título encontrado:", document.getElementById('titulo-atracoes'));
 
     if (nome_evento) {
         const titulo = document.getElementById('titulo-atracoes');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`../../../actions/action-listar-atracoes.php?id_evento=${id_evento}`);
+        const response = await fetch(`../../../actions/action-listar-atracao.php?id_evento=${id_evento}`);
 
         if (!response.ok) {
             throw new Error(`Erro HTTP: ${response.status}`);
@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 tr.innerHTML = `
                     <td>${sanitize(atracao.nome_atracao)}</td>
-                    <td>${sanitize(atracao.nome_evento)}</td>
-                    <td>
+                    <td class="fone-col">
                         <a href="editar-atracao.php?id_atracao=${atracao.id_atracao}">
                             <i class="fas fa-edit"></i>
                         </a>
@@ -71,16 +70,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         div.textContent = str;
         return div.innerHTML;
     }
+});
 
-    const botaoNovaAtracao = document.getElementById('nova-atracao');
-    
-    if (botaoNovaAtracao) {
-        botaoNovaAtracao.addEventListener('click', () => {
-            if (id_evento && nome_evento) {
-                window.location.href = `cadastrar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}`;
-            } else {
-                alert("Não foi possível identificar o evento. Volte e selecione novamente.");
-            }
-        });
+   
+botaoNovaAtracao.addEventListener('click', async () => {
+    const params = new URLSearchParams(window.location.search);
+    let id_evento = params.get('id_evento');
+    console.log('clicked');
+
+    if (id_evento) {
+        window.location.href = `cadastrar-atracao.php?id_evento=${id_evento}`;
+    } else {
+        alert("Não foi possível identificar o evento. Volte e selecione novamente.");
     }
 });

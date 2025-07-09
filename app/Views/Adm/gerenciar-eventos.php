@@ -21,8 +21,8 @@
             <h2>Gerenciar Eventos</h2>
             <div class="container">
                 <div class="search-bar">
-                    <label for="status">Procurar</label>
-                    <input type="text" id="status" placeholder="" />
+                    <label>Procurar</label>
+                    <input type="text" id="buscar" placeholder="" />
                     <button class="search-button">BUSCAR</button>
                 </div>
                 <div class="table-container">
@@ -38,14 +38,14 @@
                             </tr>
                         </thead>
                             <tbody id="lista-eventos">
-        <!-- Eventos serão adicionados aqui via JS -->
+                            <!--JS -->
                             </tbody>
                     </table>
                 </div>
 
                 <button class="voltar">
                     <a href="Area-Adm.php" class="voltar-link">
-                        <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
+                        <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
                     </a>
                 </button>
                 <div class="b-voltar">
@@ -70,9 +70,9 @@
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-azul.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-adm/status-colaborador.js"></script>

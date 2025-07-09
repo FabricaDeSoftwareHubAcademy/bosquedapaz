@@ -1,6 +1,12 @@
-    @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@charset "UTF-8";
 @import url('../menu-adm.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Colors Variaveis */
+:root{
+    --color-box: #f4f4f4a2;
+    --color-border-e-letra: #162868;
+}
 
 /* Áreas Principais:  */
 *{
@@ -9,12 +15,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
-:root{
-    --color-box: #f4f4f4a2;
-    --color-border-e-letra: #162868;
-}
-
 body, html{
     overflow: hidden;
 }
@@ -25,7 +25,6 @@ body, html{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: aqua; */
 }
 
 /* Box dos Componente: */
@@ -206,28 +205,23 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .container__title{
         height: 10%;
     }
-
     .container__title h1{
         font-size: 18px;
         font-weight: 600;
     }
-
     .container__action__tile{
         width: 100%;
         height: 90%;
         position: relative;
         bottom: 5%;
     }
-
     .action__title{
         width: 130px;
         height: 130px;
     }
-
     .action__content p{
         font-size: 14px;
     }
@@ -257,28 +251,23 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .container__title{
         height: 10%;
     }
-
     .container__title h1{
         font-size: 22px;
         font-weight: 600;
     }
-
     .container__action__tile{
         width: 100%;
         height: 90%;
         position: relative;
         bottom: 5%;
     }
-
     .action__title{
         width: 180px;
         height: 180px;
     }
-
     .action__content p{
         font-size: 14px;
     }
@@ -308,28 +297,23 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .container__title{
         height: 10%;
     }
-
     .container__title h1{
         font-size: 22px;
         font-weight: 600;
     }
-
     .container__action__tile{
         width: 100%;
         height: 90%;
         position: relative;
         bottom: 5%;
     }
-
     .action__title{
         width: 180px;
         height: 180px;
     }
-
     .action__content p{
         font-size: 14px;
     }
@@ -359,28 +343,23 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .container__title{
         height: 10%;
     }
-
     .container__title h1{
         font-size: 22px;
         font-weight: 600;
     }
-
     .container__action__tile{
         width: 100%;
         height: 90%;
         position: relative;
         bottom: 5%;
     }
-
     .action__title{
         width: 180px;
         height: 180px;
     }
-
     .action__content p{
         font-size: 14px;
     }
@@ -410,28 +389,23 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .container__title{
         height: 10%;
     }
-
     .container__title h1{
         font-size: 22px;
         font-weight: 600;
     }
-
     .container__action__tile{
         width: 100%;
         height: 90%;
         position: relative;
         bottom: 5%;
     }
-
     .action__title{
         width: 210px;
         height: 210px;
     }
-
     .action__content p{
         font-size: 14px;
     }
@@ -461,28 +435,23 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .container__title{
         height: 10%;
     }
-
     .container__title h1{
         font-size: 22px;
         font-weight: 600;
     }
-
     .container__action__tile {
         width: 70%;
         height: 90%;
         position: relative;
         bottom: 5%;
     }
-
     .action__title{
         width: 180px;
         height: 180px;
     }
-
     .action__content p{
         font-size: 14px;
     }
@@ -513,12 +482,10 @@ dialog::backdrop{
         overflow: hidden;
         overflow-y: auto;
     }
-
     .action__title{
         width: 180px;
         height: 180px;
     }
-
 }
 @media (min-height: 844px) {
     .container__action__tile {
@@ -536,25 +503,23 @@ dialog::backdrop{
         width: 250px;
         height: 250px;
     }
-
     .container__action__tile {
         width: 71%;
     }
 }
-
 @media (max-height: 660px){
     .action__title{
         width: 180px;
         height: 180px;
     }
-
     .container__action__tile {
         width: 50%;
     }
 }
-
 @media (min-width: 1660px){
     .container__action__tile {
         width: 67%;
     }
 }
+
+/* Matheus Manja */

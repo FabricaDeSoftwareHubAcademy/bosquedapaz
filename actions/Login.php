@@ -23,8 +23,8 @@ class Login{
         // }
 
         // Validação com hash
-        if($login && password_verify($senha, $login->senha)){
-            return $login;
+        if($pessoa && password_verify($senha, $pessoa->senha)){
+            return $pessoa;
         } else {
             return null;
         }

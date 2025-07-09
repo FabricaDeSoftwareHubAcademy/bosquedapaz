@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Colors Variaveis */
 :root{
     --color-box-shadow: #cbcbcb;
@@ -31,7 +34,7 @@ overflow-x: hidden;
 
 /* Sombra de Fundo:  */
 dialog::backdrop {
-background-color: rgba(0, 0, 0, 0.6);
+background-color: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -57,7 +60,6 @@ background-color: rgba(0, 0, 0, 0.6);
     font-size: 30px;
     transition: all .2s ease-in-out;
 }
-
 #icon-sair:hover{
     color: #FF3877;
 }
@@ -110,11 +112,9 @@ background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0px 0px 15px var(--color-box-shadow);
     transition: all .2s ease-in-out;
 }
-
 .div__logo:hover{
     transform: scale(1.1);
 }
-
 .div__logo img{
     width: 100%;
     height: auto;
@@ -223,12 +223,10 @@ background-color: rgba(0, 0, 0, 0.6);
 .area__text::-webkit-scrollbar {
     width: 6px;
 }
-
 .area__text::-webkit-scrollbar-track {
     background-color: #555;
     border-radius: 10px;
 }
-
 .area__text::-webkit-scrollbar-thumb:hover {
     background-color: #FF3877;
     height: 1px;
@@ -373,7 +371,6 @@ background-color: rgba(0, 0, 0, 0.6);
         display: none;
     }
 
-
     /* Lado Esquerdo: */
     .left__side{
         width: 100%;
@@ -397,7 +394,6 @@ background-color: rgba(0, 0, 0, 0.6);
         width: calc(50% - 10px);
         height: 90px;
     }
-
 
     /* Lado Direito:  */
     .right__side{
@@ -442,7 +438,6 @@ background-color: rgba(0, 0, 0, 0.6);
         font-size: 14px;
     }
 
-
     /* Imagens Decorativas:  */
     .decorative__img1{
         z-index: -1;
@@ -467,7 +462,6 @@ background-color: rgba(0, 0, 0, 0.6);
         display: none;
     }
 
-
     /* Lado Esquerdo: */
     .left__side{
         width: 100%;
@@ -491,7 +485,6 @@ background-color: rgba(0, 0, 0, 0.6);
         width: calc(33.3% - 10px);
         height: 110px;
     }
-
 
     /* Lado Direito:  */
     .right__side{
@@ -536,7 +529,6 @@ background-color: rgba(0, 0, 0, 0.6);
         font-size: 14px;
     }
     
-
     /* Imagens Decorativas:  */
     .decorative__img1{
         z-index: -1;
@@ -559,7 +551,6 @@ background-color: rgba(0, 0, 0, 0.6);
     .decorative_line{
         display: none;
     }
-
 
     /* Lado Esquerdo: */
     .left__side{
@@ -587,7 +578,6 @@ background-color: rgba(0, 0, 0, 0.6);
         height: 120px;
     }
 
-
     /* Lado Direito:  */
     .right__side{
         width: 100%;
@@ -628,7 +618,6 @@ background-color: rgba(0, 0, 0, 0.6);
         font-size: 14px;
     }
     
-
     /* Imagens Decorativas:  */
     .decorative__img1{
         z-index: -1;
@@ -651,7 +640,6 @@ background-color: rgba(0, 0, 0, 0.6);
     .decorative_line{
         display: none;
     }
-
 
     /* Lado Esquerdo: */
     .left__side{
@@ -678,7 +666,6 @@ background-color: rgba(0, 0, 0, 0.6);
         left: 2%;
         height: 140px;
     }
-
 
     /* Lado Direito:  */
     .right__side{
@@ -723,7 +710,6 @@ background-color: rgba(0, 0, 0, 0.6);
         font-size: 18px;
     }
     
-
     /* Imagens Decorativas:  */
     .decorative__img1{
         z-index: -1;
@@ -746,7 +732,6 @@ background-color: rgba(0, 0, 0, 0.6);
     .decorative_line{
         display: none;
     }
-
 
     /* Lado Esquerdo: */
     .left__side{
@@ -773,7 +758,6 @@ background-color: rgba(0, 0, 0, 0.6);
         left: 10%;
         height: 150px;
     }
-
 
     /* Lado Direito:  */
     .right__side{
@@ -818,7 +802,6 @@ background-color: rgba(0, 0, 0, 0.6);
         font-size: 18px;
     }
     
-
     /* Imagens Decorativas:  */
     .decorative__img1{
         z-index: -1;
@@ -865,3 +848,5 @@ background-color: rgba(0, 0, 0, 0.6);
         max-height: 121px;
     }
 }
+
+/* Matheus Manja */

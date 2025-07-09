@@ -6,17 +6,19 @@ CREATE TABLE categoria(
     descricao VARCHAR(200) NOT NULL,
     cor VARCHAR(50) NOT NULL,
     icone VARCHAR(255) NOT NULL,
+    status_cat ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_categoria)
 );
 
 CREATE TABLE endereco(
 	id_endereco INT NOT NULL AUTO_INCREMENT,
-    cep CHAR(9) NOT NULL,
-    logradouro VARCHAR(150) NOT NULL,
+    cep CHAR(9) NULL,
+    logradouro VARCHAR(150) NULL,
     complemento VARCHAR(150) NULL,
-    num_residencia INT NOT NULL,
-    bairro VARCHAR(100) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
+    num_residencia INT NULL,
+    bairro VARCHAR(100) NULL,
+    cidade VARCHAR(100) NULL,
+    estado VARCHAR(100) NULL,
     PRIMARY KEY(id_endereco)
 );
 
@@ -25,7 +27,7 @@ CREATE TABLE pessoa(
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
-    email VARCHAR(200) NULL,
+    email VARCHAR(200) NULL UNIQUE,
     senha VARCHAR(200) NULL,
     perfil INT DEFAULT 0,
     whats CHAR(11) NULL,
@@ -35,57 +37,48 @@ CREATE TABLE pessoa(
     link_whats VARCHAR(255) NULL,
     data_nasc DATE NULL,
     img_perfil VARCHAR(255) NULL,
+    status_pes ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
     id_endereco INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
 
-insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "123456", 1);
-
-CREATE TABLE imagem(
-	id_imagem INT NOT NULL AUTO_INCREMENT,
-    imagem1 VARCHAR(255) NOT NULL,
-    imagem2 VARCHAR(255) NOT NULL,
-    imagem3 VARCHAR(255) NOT NULL,
-    imagem4 VARCHAR(255) NOT NULL,
-    imagem5 VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id_imagem)
-);
-
--- CREATE TABLE tipo_expositor(
--- 	id_tipo INT NOT NULL AUTO_INCREMENT,
---     
--- );
-
-
 CREATE TABLE expositor(
 	id_expositor INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     id_categoria INT NOT NULL,
-    id_imagem INT NOT NULL,
     nome_marca VARCHAR(100) NOT NULL,
     num_barraca INT NULL,
     voltagem VARCHAR(45) NULL,
     energia VARCHAR(10) NULL,
+    modalidade ENUM('expositor', 'kids') NOT NULL DEFAULT 'expositor',
     tipo VARCHAR(255) NULL,
+    idade int NULL,
     contato2 CHAR(11) NULL,
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
-    status_exp ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
+    validacao ENUM('aguardando', 'validado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
-    FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria),
-    FOREIGN KEY(id_imagem) REFERENCES imagem(id_imagem)
+    FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria)
+);
+
+CREATE TABLE imagem(
+	id_imagem INT NOT NULL AUTO_INCREMENT,
+    caminho varchar(255),
+    posicao int,
+    id_expositor int not null,
+    PRIMARY KEY(id_imagem),
+    FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
 );
 
 CREATE TABLE colaborador(
 	id_colaborador INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     cargo VARCHAR(100) NOT NULL,
-    status_col ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
     PRIMARY KEY(id_colaborador),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -96,8 +89,9 @@ CREATE TABLE artista(
     tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
-    tempo_apresentacao TIME NOT NULL,
+    tempo_apresentacao VARCHAR(50),
     valor_cache FLOAT NOT NULL,
+    publico_alvo VARCHAR(50) NOT NULL,
     PRIMARY KEY(id_artista),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
@@ -105,10 +99,14 @@ CREATE TABLE artista(
 CREATE TABLE evento(
 	id_evento INT NOT NULL AUTO_INCREMENT,
     nome_evento VARCHAR(150) NOT NULL,
-    descricao VARCHAR(250) NOT NULL,
+    subtitulo_evento VARCHAR(150)NOT NULL,
+    descricao_evento VARCHAR(500) NOT NULL,
     data_evento DATE NOT NULL,
-    banner VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(0),
+    hora_inicio TIME NOT NULL,
+    hora_fim TIME NOT NULL,
+    endereco_evento VARCHAR(150) NOT NULL,
+    banner_evento VARCHAR(255) NOT NULL,
+    status BOOLEAN DEFAULT(1),
     PRIMARY KEY(id_evento)
 );
 
@@ -116,11 +114,19 @@ CREATE TABLE atracao(
 	id_atracao INT NOT NULL AUTO_INCREMENT,
     nome_atracao VARCHAR(150) NOT NULL,
     descricao_atracao VARCHAR(250) NOT NULL,
-    foto_atracao VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(0),
+    banner_atracao VARCHAR(255) NOT NULL,
+    status BOOLEAN DEFAULT(1),
     id_evento INT NOT NULL,
     PRIMARY KEY(id_atracao),  
     FOREIGN KEY(id_evento) REFERENCES evento(id_evento)
+);
+
+CREATE TABLE fotos_evento (
+    id_foto INT AUTO_INCREMENT PRIMARY KEY,
+    id_evento INT NOT NULL,
+    caminho_foto_evento VARCHAR(255) NOT NULL,
+    legenda_foto_evento VARCHAR(255),
+    FOREIGN KEY (id_evento) REFERENCES evento(id_evento) ON DELETE CASCADE
 );
 
 
@@ -184,9 +190,16 @@ CREATE TABLE utilidade_publica (
     PRIMARY KEY(id_utilidade_publica)
 );
 
--- SELECT 
--- col.id_colaborador, col.cargo, pes.id_pessoa, pes.nome, pes.email, pes.telefone, pes.perfil, pes.img_perfil
--- FROM colaborador as col INNER JOIN pessoa as pes ON col.id_pessoa = pes.id_pessoa;
+
+CREATE VIEW view_expositor AS
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp, exp.validacao, 
+pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
+cat.id_categoria, cat.descricao, cat.cor, cat.icone
+FROM expositor AS exp 
+INNER JOIN categoria AS cat 
+ON cat.id_categoria = exp.id_categoria 
+INNER JOIN pessoa AS pes 
+ON pes.id_pessoa = exp.id_pessoa;
 
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 
@@ -195,7 +208,6 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into imagem values (default,"A","A","A","A","A");
-
+insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
 
 

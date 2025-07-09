@@ -11,7 +11,7 @@
 .body-validar-expositor {
     height: 100vh;
     width: 100%;
-    background-color: #e1e1e1;
+    /* background-color: #e1e1e1; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -32,9 +32,10 @@
 .secao-dados-empresa {
     flex: 1;
     height: 100%;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     /* background-color: grey; */
 }
@@ -42,6 +43,7 @@
 .area-superior {
     height: 40%;
     width: 100%;
+    gap: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,6 +157,7 @@
 .campos-formulario {
     width: 100%;
     height: 100%;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     /* background-color: green; */
@@ -180,6 +183,7 @@
 .campo-link {
     color: blue;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .area-botoes-formulario {
@@ -189,23 +193,41 @@
 }
 
 .botoes-formulario {
-    padding: 15px 45px;
+    padding: .5rem 1.5rem;
     border: none;
-    border-radius: 10px;
-    font-size: 1rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: white;
     cursor: pointer;
+    transition: all .2s ease-in;
 }
 
 .botao-recusar {
     background-color: #FF3877;
 }
 
+.botao-recusar:hover {
+    background-color: #8a1e40;
+    transition: all .2s ease-in;
+}
+
 .botao-validar {
     background-color: #007E70;
 }
 
-a {
+.botao-validar:hover {
+    background-color: #00443c;
+    transition: all .2s ease-in;
+}
+
+.alterar-categoria {
+    align-self: flex-start;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
     color: black;
 }
 
@@ -245,181 +267,6 @@ a {
     cursor: pointer;
 }
 
-.modal {
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-body.modal-aberto {
-    overflow: hidden;
-}
-
-/* ESTILIZAÇÃO MODAL 
-RECUSAR EXPOSITOR */
-
-.modal-content-recusar-expositor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: white;
-}
-
-.modal-texto-recusar-expositor {
-    font-size: 2rem;
-}
-
-.modal-botoes-recusar-expositor {
-    display: flex;
-    gap: 30px;
-    margin: 10px;
-    /* background-color: red; */
-}
-
-.botoes-modal-recusar-expositor {
-    border: none;
-    padding: 15px 40px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.motivo-recusar-formulario .modal-botoes-recusar-expositor {
-    margin-top: 10px;
-}
-
-.motivo-recusar-formulario {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.motivo-recusar-expositor {
-    resize: none;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid grey;
-}
-
-/* ESTILIZAÇÃO MODAL 
-RECUSAR EXPOSITOR */
-
-/* ESTILIZAÇÃO MODAL 
-VALIDAR EXPOSITOR */
-
-.modal-content-validar-expositor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: white;
-}
-
-.modal-texto-validar-expositor {
-    font-size: 2rem;
-}
-
-.modal-subtexto-validar-expositor {
-    font-size: 1rem;
-    font-weight: 500;
-    width: 60%;
-    text-align: center;
-    /* background-color: red; */
-}
-
-.modal-botoes-validar-expositor {
-    display: flex;
-    gap: 30px;
-    margin-top: 10px;
-    /* background-color: red; */
-}
-
-.botoes-modal-validar-expositor {
-    border: none;
-    padding: 15px 35px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.area-informacoes-validar-expositor .modal-botoes-validar-expositor {
-    margin-top: 10px;
-}
-
-.motivo-validar-expositor {
-    resize: none;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid grey;
-}
-
-.area-informacoes-validar-expositor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    padding: 20px;
-    flex-direction: column;
-    /* background-color: red; */
-}
-
-.area-informacoes-validar-expositor input {
-    width: 70%;
-    height: 50px;
-    border-radius: 10px;
-    border: 2px solid gray;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.area-informacoes-validar-expositor select {
-    width: 70%;
-    height: 50px;
-    border-radius: 10px;
-    border: 2px solid gray;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.area-informacoes-validar-expositor input,
-.area-informacoes-validar-expositor select {
-    display: flex;
-    margin: 10px;
-}
-
-/* ESTILIZAÇÃO MODAL 
-VALIDAR EXPOSITOR */
-
-.botao-cancelar {
-    background-color: #FF3877;
-    color: white;
-}
-
-.botao-confirmar {
-    background-color: #007E70;
-    color: white;
-}
-
-.botao-ok {
-    background-color: #007E70;
-    color: white;
-}
 
 
 @media (max-width: 576px) {

@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@charset "UTF-8";
 @import url('style-menu.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Colors variáveis */
+:root{
+    --color-selo: #0D592E;
+}
 
 /* Areas Principais:  */
 *{
@@ -15,6 +21,7 @@ main {
     margin: 0 auto;
 }
 
+/* Titulo da tela  */
 main #title{
     position: relative;
     text-align: center;
@@ -22,7 +29,7 @@ main #title{
 }
 
 
-/* Sections Carrossel:  */
+/* Section do Carrossel:  */
 .carousel-section {
     position: relative;
     height: 80vh;
@@ -33,7 +40,7 @@ main #title{
 }
 
 .carousel-track {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 80%;
@@ -105,11 +112,9 @@ main #title{
     padding: 10px;
     z-index: 4;
 }
-
 .nav.prev {
     left: calc(5% + 20px);
 }
-
 .nav.next {
     right: calc(5% + 20px);
 }
@@ -181,7 +186,6 @@ main #title{
     justify-content: center;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-
 .carousel-item .banner-right img {
     width: 100%;
     height: 100%;
@@ -223,7 +227,6 @@ main #title{
 }
 
 
-
 /* Section dos Cards do Evento:  */
 .container__cards{
     padding: 20px;
@@ -238,39 +241,44 @@ main #title{
     width: 91.5%;
 }
 
-.area__cards{
-    width: 91.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.area__cards {
+  width: 91.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Cards  */
 .card {
-  max-width: 100%;
-  width: 350px;
-  background: #fffdfa;
-  /* border-radius: 18px; */
-  box-shadow:
+    max-width: 100%;
+    width: 350px;
+    height: 450px;
+    background: #fffdfa;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1.5px solid transparent;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    box-shadow:
     0 10px 20px rgba(13,89,46, 0.15),
     0 4px 8px rgba(0, 0, 0, 0.07);
-  overflow: hidden;
-  transition: all 0.4s ease;
-  cursor: pointer;
-  position: relative;
-  border: 1.5px solid transparent;
-  background-image:
-    linear-gradient(white, white);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
 
+    background-image:
+    linear-gradient(white, white);
+}
 .card:hover {
   box-shadow:
     0 15px 30px rgba(13,89,46, 0.3),
     0 8px 16px rgba(0, 0, 0, 0.1);
   transform: translateY(-15px);
+
   background-image:
     linear-gradient(white, white);
 }
@@ -282,14 +290,12 @@ main #title{
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
-
 .card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
 .card:hover .card__image img {
   transform: scale(1.08);
 }
@@ -300,7 +306,7 @@ main #title{
   top: 15px;
   left: -45px;
   width: 140px;
-  background: #0D592E;
+  background: var(--color-selo);
   color: white;
   font-weight: 700;
   text-align: center;
@@ -314,23 +320,51 @@ main #title{
 }
 
 .card__content {
-  padding: 24px 28px 32px 28px;
-  position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 28px 32px 28px;
+    position: relative;
+    text-align: left;
 }
 
 .card__content h2 {
-  margin: 0 0 8px;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.2;
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center; 
+    padding-left: 10px; 
+    padding-right: 10px;
+    color: #0D592E;
 }
 
 .card__content h4 {
-  margin: 0 0 14px;
-  font-weight: 600;
-  font-size: 1rem;
-  font-style: italic;
-  letter-spacing: 0.03em;
+    margin: 0 0 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 0.03em;
+    max-height: 100px;
+    overflow-y: auto;
+    padding-left: 10px;  
+    padding-right: 8px; 
+    scrollbar-width: thin;
+    scrollbar-color: rgba(13,89,46,0.7) rgba(0,0,0,0.1);
+    text-align: left; 
+}
+
+/* Scrollbar para Webkit browsers */
+.card__content h4::-webkit-scrollbar {
+    width: 6px;
+}
+.card__content h4::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+.card__content h4::-webkit-scrollbar-thumb {
+    background-color: rgba(13,89,46,0.7);
+    border-radius: 3px;
 }
 
 .data {
@@ -338,13 +372,14 @@ main #title{
   align-items: center;
   font-size: 1rem;
   font-weight: 600;
+  gap: 5px ;
   margin-top: 12px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .data svg {
   flex-shrink: 0;
-  fill: black;
+  fill: #FF3877;
 }
 
 /* Responsividades:  */
@@ -422,7 +457,6 @@ main #title{
     }
     .area__cards{
         width: 80%;
-        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -465,11 +499,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 1.8rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 0.9rem;
     }
-
     .carousel-item .text-left p {
         font-size: 0.7rem;
     }
@@ -544,11 +576,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 2rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 1rem;
     }
-
     .carousel-item .text-left p {
         font-size: 0.8rem;
     }
@@ -586,7 +616,7 @@ main #title{
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
-        /* Areas Principais:  */
+    /* Areas Principais:  */
     main {
         padding-top: 85px;
     }
@@ -623,11 +653,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 2.2rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 1.2rem;
     }
-
     .carousel-item .text-left p {
         font-size: 1rem;
     }
@@ -684,11 +712,9 @@ main #title{
     .carousel-item .text-left h2 {
         font-size: 2.2rem;
     }
-
     .carousel-item .text-left h3 {
         font-size: 1.2rem;
     }
-
     .carousel-item .text-left p {
         font-size: 1rem;
     }
@@ -733,3 +759,5 @@ main #title{
         margin-left: 45px;
     }
 }
+
+/* Matheus Manja */

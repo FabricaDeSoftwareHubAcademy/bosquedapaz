@@ -1,6 +1,5 @@
 <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-adm.css">
+    <link rel="stylesheet" href="../../../Public/css/css-modais/style-modal-confirmar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Cadastrado ADM</title>
@@ -16,11 +16,12 @@
 <body>
     <!-- Includ Menu -->
     <?php include "../../../Public/include/menu-adm.html" ?>
+
     <main>
         <section class="container_box">
             <!-- Area Esquerda: Imagem -->
             <div class="left-side">
-                <img src="../../../Public/imgs/img-cadastro-adm/imagem-dec.svg" alt="">
+                <img src="../../../Public/assets/imagem-dec-cadastro.svg" alt="">
             </div>
            
             <!-- Linha Decorativa do Centro -->
@@ -29,7 +30,7 @@
             <!-- Area Direita: Form -->
             <div class="right-side">
                 <!-- Seta Voltar 2  -->
-                <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+                <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
                 
                 <!-- Titulo   -->
                 <h1>Cadastro ADM</h1>
@@ -83,21 +84,24 @@
                         </div>
                     </div>      
                 
-                    <!-- Senha -->
-                    <div class="form__group">
-                        <label class="label__cad" for="senha">Senha</label>
-                        <div class="area__input">
-                            <i class="bi bi-shield-lock"></i>
-                            <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    <!-- Senha e Confirmar Senha -->
+                    <div class="form__group senha__linha">
+                        <!-- Senha -->
+                        <div class="senha__coluna">
+                            <label class="label__cad" for="senha">Senha</label>
+                            <div class="area__input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Confirmar Senha -->
-                    <div class="form__group">
-                        <label class="label__cad" for="confSenha">Confirmar Senha</label>
-                        <div class="area__input">
-                            <i class="bi bi-shield-lock"></i>
-                            <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                        <!-- Confirmar Senha -->
+                        <div class="senha__coluna">
+                            <label class="label__cad" for="confSenha">Confirmar Senha</label>
+                            <div class="area__input">
+                                <i class="bi bi-shield-lock"></i>
+                                <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                            </div>
                         </div>
                     </div>
 
@@ -110,16 +114,38 @@
             </div> 
             
             <!-- Seta Voltar 1  -->
-            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/imgs/img-cadastro-adm/seta-cad.png" alt=""></a></div>
+            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
         
         <!-- Imagens Decorativas -->
-        <div class="imgs__dec1"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-01.png" alt=""></div>
-        <div class="imgs__dec2"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-03.svg" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/imgs/img-cadastro-adm/FormaCadastro-04.svg" alt=""></div>
+        <div class="imgs__dec1"><img src="../../../Public/assets/img-bolas/bola-1.png" alt=""></div>
+        <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-2.png" alt=""></div>
+        <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
     </main>
+
+    <!-- Modal:  -->
+    <dialog id="modal-mensagem" class="modal-loading">
+        <div class="content-close">
+            <i class="bi bi-x-square-fill fechar-modal-loading" id="close-modal-mensagem"></i>
+        </div>
+        <div class="content-modal">
+            <i id="modal-icon" class="bi bi-info-circle" style="font-size: 4rem;"></i>
+            <div class="content-text">
+                <h2 class="loading-text" id="modal-title"></h2>
+                <p class="msm-modal" id="modal-message"></p>
+            </div>
+        </div>
+        <div class="content-btns">
+            <button class="btn-modal-confirmar" id="btn-modal-fechar">Fechar</button>
+        </div>
+    </dialog>
+
+
     <!-- Scripts:  -->
-    <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
+    <script src="../../../Public/js/js-modais/modal-adm-mensagens.js"></script>
 </body>
 </html>
+
+<!-- Matheus Manja -->

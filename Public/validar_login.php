@@ -21,6 +21,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $_SESSION['login'] = [
             'nome' => $login->nome,
             'perfil' => $login->perfil,
+            'id_pessoa' => $login->id_pessoa,
         ];
 
         if($_SESSION['login']['perfil'] == 1){

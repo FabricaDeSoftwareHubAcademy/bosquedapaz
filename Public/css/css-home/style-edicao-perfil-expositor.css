@@ -1,12 +1,6 @@
 @charset "UTF-8";
+@import url('../css-home/style-menu-expositor.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 
 /* Colors variáveis */
 :root{
@@ -21,22 +15,27 @@
     --color-button2: #007E70;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 /* Corpo da Pagina */
 .container__main{
     width: 100%;
-    height: 100vh;
+    height: 88vh;
     align-items: center;
     justify-content: center;
     display: flex;
-    /* background-color: bisque */
 }
 
 /* Box Principal */
 .box__container{
     width: 90%;
-    height: 85%;
-    /* margin: 0 auto; */
-    margin-top: 6%;
+    height: 90%;
+    margin: 0 auto;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -62,7 +61,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background-color: #007E70; */
 }
 
 /* Container da logo: Upload da Logo */
@@ -78,8 +76,8 @@
 
 /* Upload da Logo */
 .uploads{
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     display: flex;
     cursor: pointer;
     border-radius: 50%;
@@ -393,6 +391,10 @@
     pointer-events: none;
     user-select: none;
 }
+.img__dec1 img{
+    width: 40%;
+    height: auto;
+}
 
 .img__dec2{
     position: fixed;
@@ -402,6 +404,10 @@
     z-index: 1;
     pointer-events: none;
     user-select: none;
+}
+.img__dec2 img{
+    width: 40%;
+    height: auto;
 }
 
 .img__dec3{
@@ -428,15 +434,13 @@
         height: 100%;
     }
     .box__container {
-        /* height: 100%; */
-        margin-top: 30%;
+        margin-top: 5%;
     }
     .form{
         gap: 10px;
         flex-direction: column;
     }
    
-
     /* Lado Esquerdo: */
     .lado__esquerdo{
         width: 100%;
@@ -467,7 +471,6 @@
     .galeria__imagens p{
         font-size: 12px;
     }
-
 
     /* Lado Direito: */
     .lado__direito{
@@ -523,7 +526,6 @@
         width: 120px;
         height: 35px;
         position: relative;
-        /* right: 4rem; */
         font-size: 16px;
     }
 
@@ -546,16 +548,13 @@
         height: 100%;
     }
     .box__container {
-        /* height: 100%; */
-        margin-top: 20%;
-        /* display: none; */
+        margin-top: 5%;
     }
     .form{
         gap: 10px;
         flex-direction: column;
     }
    
-
     /* Lado Esquerdo: */
     .lado__esquerdo{
         width: 100%;
@@ -586,7 +585,6 @@
     .galeria__imagens p{
         font-size: 12px;
     }
-
 
     /* Lado Direito: */
     .lado__direito{
@@ -646,7 +644,6 @@
         font-size: 18px;
     }
 
-
     /* Imagens Decorativas:  */
     .img__dec1 img{
         width: 50%;
@@ -667,14 +664,13 @@
     }
     .box__container {
         height: 100%;
-        margin-top: 15%;
+        margin-top: 5%;
     }
     .form{
         gap: 10px;
         flex-direction: column;
     }
    
-
     /* Lado Esquerdo: */
     .lado__esquerdo{
         width: 100%;
@@ -705,7 +701,6 @@
     .galeria__imagens p{
         font-size: 14px;
     }
-
 
     /* Lado Direito: */
     .lado__direito{
@@ -761,7 +756,6 @@
         font-size: 18px;
     }
 
-
     /* Imagens Decorativas:  */
     .img__dec1 img{
         width: 50%;
@@ -782,14 +776,13 @@
     }
     .box__container {
         height: 100%;
-        margin-top: 14%;
+        margin-top: 5%;
     }
     .form{
         gap: 10px;
         flex-direction: column;
     }
     
-
     /* Lado Esquerdo: */
     .lado__esquerdo{
         width: 100%;
@@ -820,7 +813,6 @@
     .galeria__imagens p{
         font-size: 14px;
     }
-
 
     /* Lado Direito: */
     .lado__direito{
@@ -876,7 +868,6 @@
         font-size: 18px;
     }
 
-
     /* Imagens Decorativas:  */
     .img__dec1 img{
         width: 50%;
@@ -897,13 +888,12 @@
     }
     .box__container {
         height: 100%;
-        margin-top: 12%;
+        margin-top: 3%;
     }
     .form{
         gap: 10px;
         flex-direction: column;
     }
-    
 
     /* Lado Esquerdo: */
     .lado__esquerdo{
@@ -935,7 +925,6 @@
     .galeria__imagens p{
         font-size: 16px;
     }
-
 
     /* Lado Direito: */
     .lado__direito{
@@ -991,7 +980,6 @@
         font-size: 18px;
     }
 
-
     /* Imagens Decorativas:  */
     .img__dec1 img{
         width: 50%;
@@ -1010,15 +998,10 @@
     .container__main {
         height: 100%;
     }
-    .box__container {
-        /* height: 100%; */
-        margin-top: 10%;
-    }
     .form{
         gap: 10px;
         flex-direction: column;
     }
-    
 
     /* Lado Esquerdo: */
     .lado__esquerdo{
@@ -1053,7 +1036,6 @@
     .galeria__imagens p{
         font-size: 14px;
     }
-
 
     /* Lado Direito: */
     .lado__direito{
@@ -1108,7 +1090,6 @@
         right: 8rem;
         font-size: 18px;
     }
-
 
     /* Imagens Decorativas:  */
     .img__dec1 img{
@@ -1236,6 +1217,11 @@
     }
 }
 @media (min-width: 1400px) and (max-height: 860px){
+    /* Box Principal */
+    .box__container{
+        height: 95%;
+    }
+
     /* Lado Esquerdo:  */
     .lado__esquerdo{
         margin-top: 2%;
@@ -1259,7 +1245,8 @@
 @media (min-width: 1400px) and (max-height: 760px){
     /* Box Principal */
     .box__container{
-        margin-top: 10%;
+        margin-top: 3%;
+        height: 95%;
     }
 
     /* Lado Esquerdo */
@@ -1339,3 +1326,5 @@
         right: -16vw;
     }
 }
+
+/* Matheus Manja */

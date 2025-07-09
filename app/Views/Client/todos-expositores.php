@@ -22,9 +22,11 @@
         <h1 class="title-all-expo">expositores</h1>
         <div class="select-area">
             <select name="selecao-categoria" id="select-cat" class="select-cat">
-                <option value="inicio" class="opcoes-cat">Todas as Categorias</option>
+                <option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>
                 <option value="artesanato" class="opcoes-cat">Artesanato</option>
-                <option value="antiguidade" class="opcoes-cat">Antiguidade</option>
+                <option value="tempora" class="opcoes-cat">tempora</option>
+                <option value="autem" class="opcoes-cat">autem</option>
+                <option value="iusto" class="opcoes-cat">iusto</option>
                 <option value="colecionismo" class="opcoes-cat">Colecionismo</option>
             </select>
             <div class="vir-aqui" id="artesanato"></div>

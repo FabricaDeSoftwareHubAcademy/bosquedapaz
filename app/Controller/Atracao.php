@@ -8,54 +8,19 @@ use app\Models\Database;
 
 class Atracao
 {
-    protected $id_atracao;
-    protected $nome_atracao;
-    protected $descricao_atracao;
-    protected $foto_atracao;
-    protected $id_evento;
-
-    public function getId() {
-        return $this->id_atracao;
-    }
-
-    public function getNome() {
-        return $this->nome_atracao;
-    }
-
-    public function getDescricao() {
-        return $this->descricao_atracao;
-    }
-
-    public function getFoto() {
-        return $this->foto_atracao;
-    }
-
-    public function getIdEvento() {
-        return $this->id_evento;
-    }
-
-    public function setNome($nome) {
-        $this->nome_atracao = $nome;
-    }
-
-    public function setDescricao($descricao) {
-        $this->descricao_atracao = $descricao;
-    }
-
-    public function setFoto($foto) {
-        $this->foto_atracao = $foto;
-    }
-
-    public function setIdEvento($id_evento) {
-        $this->id_evento = $id_evento;
-    }
+    public int $id_atracao;
+    public string $nome_atracao;
+    public string $descricao_atracao;
+    public string $banner_atracao;
+    public int $id_evento;
+    public int $status;
 
     public function cadastrar() {
         $db = new Database('atracao');
         $res = $db->insert([
             'nome_atracao' => $this->nome_atracao,
             'descricao_atracao' => $this->descricao_atracao,
-            'foto_atracao' => $this->foto_atracao,
+            'banner_atracao' => $this->banner_atracao,
             'id_evento' => $this->id_evento
         ]);
 
@@ -65,7 +30,15 @@ class Atracao
     public function listar($where = null, $order = null, $limit = null) {
         $db = new Database('atracao');
         $res = $db->select($where, $order, $limit)
-                  ->fetchAll(PDO::FETCH_CLASS, self::class);
+                    ->fetchAll(PDO::FETCH_ASSOC);
+
+        return $res;
+    }
+
+    public function buscarPorNome($nome) {
+        $db = new Database('atracao');
+        $res = $db->select("nome_atracao = {$nome}")
+                  ->fetchAll(PDO::FETCH_ASSOC);
 
         return $res;
     }
@@ -84,8 +57,9 @@ class Atracao
         $valores = [
             'nome_atracao' => $this->nome_atracao,
             'descricao_atracao' => $this->descricao_atracao,
-            'foto_atracao' => $this->foto_atracao,
-            'id_evento' => $this->id_evento
+            'banner_atracao' => $this->banner_atracao,
+            'id_evento' => $this->id_evento,
+            'status' => $this->status
         ];
 
         return $db->update("id_atracao = {$id}", $valores);

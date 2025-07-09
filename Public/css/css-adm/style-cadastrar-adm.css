@@ -19,7 +19,6 @@ body, html {
     overflow: hidden;
     font-family: "Poppins", sans-serif;
 }
-
 main{
     min-height: 100vh;
     width: 100%;
@@ -57,7 +56,6 @@ main{
     justify-content: center;
     flex-direction: column;
 }
-
 .left-side img{
     width: 70%;
     height: auto;
@@ -161,6 +159,19 @@ main{
     box-shadow: 3px 3px 2px var(--color-box-shadow-input);
 }
 
+/* Senha e Conf senha:  */
+.senha__linha {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.senha__coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Area dos Botões */
 .form__actions{
     width: 100%;
@@ -181,7 +192,6 @@ main{
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
-
 .btn:hover{
     transform: scale(1.1);
 }
@@ -190,7 +200,6 @@ main{
     background-color: var(--color-azul);
     box-shadow: 0px 3px 2px var(--color-rosa);
 }
-
 .btn__rosa{
     background-color: var(--color-rosa);
     box-shadow: 0px 3px 2px var(--color-azul);
@@ -241,7 +250,6 @@ main{
     pointer-events: none;
     user-select: none;
 }
-
 .imgs__dec3 img{
     width: 60%;
     height: auto;
@@ -260,6 +268,9 @@ main{
     .input2{
         font-size: 10px;
     }
+    .senha__linha {
+        flex-direction: column;
+    }
     .btn{
         font-size: 18px;
     }
@@ -282,7 +293,6 @@ main{
         bottom: -2vw;
     }
 }
-
 
 /* Celulares médios e grandes (smartphones modernos) */
 @media (min-width: 576px) and (max-width: 767.98px){
@@ -295,6 +305,9 @@ main{
     .input2{
         font-size: 10px;
     }
+    .senha__linha {
+        flex-direction: column;
+    }
     .btn{
         font-size: 18px;
     }
@@ -317,7 +330,6 @@ main{
         bottom: -2vw;
     }
 }
-
 
 /* Tablets e celulares em paisagem */
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -333,6 +345,9 @@ main{
     .input2{
         font-size: 10px;
     }
+    .senha__linha {
+        flex-direction: column;
+    }
     .btn{
         font-size: 18px;
     }
@@ -355,7 +370,6 @@ main{
         bottom: -2vw;
     }
 }
-
 
 /* Notebooks e desktops padrão */
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -394,7 +408,6 @@ main{
     }
 }
 
-
 /* Desktops grandes e telas Full HD */
 @media (min-width: 1200px) and (max-width: 1399.98px){
     /* Imagens Decorativas:  */
@@ -410,7 +423,6 @@ main{
     }
 }
 
-
 /* Pequenos Ajustes:  */
 @media (min-height: 1150px) {
     .container_box{
@@ -418,9 +430,10 @@ main{
         justify-content: center;
     }
 }
-
 @media (max-height: 600px) {
     main{
         padding-top: 10px;
     }
 }
+
+/* Matheus Manja */

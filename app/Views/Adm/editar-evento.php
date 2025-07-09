@@ -25,15 +25,25 @@
                         
                         <div id="form1">
                             <input type="hidden" name="id_evento" id="id_evento">
-                            <div class="input-group">
-                                <label>Nome:</label>
-                                <input type="text" name="nomedoevento" id="nomedoevento" required>
+
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                    <label>Nome:</label>
+                                    <input type="text" name="nomedoevento" id="nomedoevento" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Subtítulo:</label>
+                                    <input type="text" name="subtitulo" id="subtitulo" placeholder="Digite o nome do evento"
+                                        required>
+                                </div>
+
                             </div>
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição do evento (250 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
-                                <small id="contador-caracteres">250 caracteres restantes</small>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
+                                <small id="contador-caracteres">500 caracteres restantes</small>
                             </div>
 
                             <div class="data-imagem">
@@ -42,30 +52,50 @@
                                     <input type="date" name="dataevento" id="dataevento" required>
                                 </div>
 
+                                <div class="input-group">
+                                    <label>Hora Início:</label>
+                                    <input type="time" name="hora_inicio" id="hora_inicio"
+                                        required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Hora Fim:</label>
+                                    <input type="time" name="hora_fim" id="hora_fim"
+                                        required>
+                                </div>
+
                                 <select name="status" id="status">
                                     <option value="1">Ativo</option>
                                     <option value="0">Inativo</option>
                                 </select>
 
+                            </div>
+
+                            <div class="data-imagem">
+                                <div class="input-group">
+                                        <label>Local:</label>
+                                        <input type="text" name="endereco" id="endereco" placeholder="Digite o nome do evento"
+                                            required>
+                                </div>
                                 <div class="input-group">
                                     <label>Imagem:</label>
-                                    <input type="file" name="banner" id="file">
+                                    <input type="file" name="banner" id="file"
+                                        >
                                 </div>
                             </div>
+                            
                             <img class="preview" src="" alt="" id="preview-image">
                         </div>
 
-                        <div class="btn-cancelar-salvar">
-                            <a href="./Area-Adm.php" class="btn btn-cancelar">Cancelar</a>
-                            <button type="submit" class="btn btn-salvar" id="salvar">Salvar</button>
-                        </div>
-                    </form>
 
+                        <?php include '../../../Public/include/Butons-forms.html';?>
+
+                    </form>
+                    <div class="overlay" id="overlay"></div>
+                    <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+                    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+                    <?php include "../../../Public/include/modais/modal-error.html"; ?>
                 </div>
-            <div class="btns">
-                <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
 
                 
             </div>
@@ -74,9 +104,9 @@
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>

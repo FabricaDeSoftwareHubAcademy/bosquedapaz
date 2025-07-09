@@ -4,7 +4,6 @@ use app\Controller\Evento;
 
 header('Content-Type: application/json');
 
-// 🧼 Sanitização e validação
 function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
@@ -18,27 +17,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = (int) ($_POST['id_evento'] ?? 0);
 
     $nome = sanitizarTexto($_POST['nomedoevento'] ?? '');
-    $descricao = sanitizarTexto($_POST['descricao'] ?? '');
+    $subtitulo = sanitizarTexto($_POST['subtitulo'] ?? '');
+    $descricao = sanitizarTexto($_POST['descricaodoevento'] ?? '');
     $data = $_POST['dataevento'] ?? '';
+    $hora_inicio = $_POST['hora_inicio'] ?? '';
+    $hora_fim = $_POST['hora_fim'] ?? '';
+    $endereco = sanitizarTexto($_POST['endereco'] ?? '');
     $status = $_POST['status'] ?? '';
 
-    if (strlen($descricao) > 250) {
+    if (strlen($descricao) > 500) {
         echo json_encode(['status' => 'error', 'mensagem' => 'A descrição deve ter no máximo 250 caracteres.']);
         exit;
     }
 
-    if (empty($nome) || empty($descricao) || empty($data) || !isset($_POST['status']) || !in_array($status, ['0', '1']) || !validarData($data)) {
+    if (empty($nome) || empty($descricao) || empty($data) || empty($subtitulo) || empty($hora_inicio) || empty($hora_fim) || empty($endereco) || !isset($_POST['status']) || !in_array($status, ['0', '1']) || !validarData($data)) {
         echo json_encode(['status' => 'error', 'mensagem' => 'Preencha todos os campos corretamente.']);
         exit;
     }
 
     $evento = new Evento();
-    $evento->setNome($nome);
-    $evento->setDescricao($descricao);
-    $evento->setData($data);
-    $evento->setStatus($status);
+    $evento->nome_evento = $nome;
+    $evento->subtitulo_evento = $subtitulo;
+    $evento->descricao_evento = $descricao;
+    $evento->data_evento = $data;
+    $evento->hora_inicio = $hora_inicio;
+    $evento->hora_fim = $hora_fim;
+    $evento->endereco_evento = $endereco;
+    $evento->status = $status;
 
-    // 👇 Upload de imagem apenas se fornecido
+
+
+    // Upload de imagem (opcional)
     if (!empty($_FILES['banner']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
         $extensao = strtolower(pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION));
@@ -53,31 +62,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-eventos/';
         $destino = $diretorioDestino . $nomeSeguro;
 
-        if (!is_dir($diretorioDestino)) {
-            mkdir($diretorioDestino, 0777, true);
-        }
-
         if (move_uploaded_file($caminhoTemporario, $destino)) {
-            $eventoExistente = $evento->buscarPorId($id);
+            $eventoExistente = $evento->buscarPorId_evento($id);
             if ($eventoExistente) {
-                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->getBanner();
+                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner_evento;
                 if (file_exists($caminhoAntigo)) {
                     unlink($caminhoAntigo);
                 }
             }
-            $evento->setBanner('uploads/uploads-eventos/' . $nomeSeguro);
+            $evento->banner_evento = 'uploads/uploads-eventos/' . $nomeSeguro;
         } else {
             echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
             exit;
         }
     } else {
-        $eventoExistente = $evento->buscarPorId($id);
+        $eventoExistente = $evento->buscarPorId_evento($id);
         if ($eventoExistente) {
-            $evento->setBanner($eventoExistente->getBanner());
+            $evento->banner_evento = $eventoExistente->banner_evento;
         }
     }
 
-    $resultado = $evento->atualizar($id);
+    $resultado = $evento->atualizar_evento($id);
 
     echo json_encode([
         'status' => $resultado ? 'success' : 'error',

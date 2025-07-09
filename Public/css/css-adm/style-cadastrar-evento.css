@@ -172,6 +172,11 @@ h1 {
     gap: 30px;
     width: 100%;
     justify-content: flex-end;
+
+}
+.btn-cancelar-salvar .voltar{
+    margin-right: auto; 
+    z-index: 5;
 }
 
 /* Estilo base unificado para todos os botões */

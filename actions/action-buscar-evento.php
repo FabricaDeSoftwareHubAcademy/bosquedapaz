@@ -7,18 +7,22 @@ header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $id = (int) $_GET['id'];
     $evento = new Evento();
-    $eventoSelecionado = $evento->buscarPorId($id);
+    $eventoSelecionado = $evento->buscarPorId_evento($id);
 
     if ($eventoSelecionado) {
         echo json_encode([
             'status' => 'success',
             'evento' => [
-                'id_evento' => $eventoSelecionado->getId(),
-                'nome_evento' => $eventoSelecionado->getNome(),
-                'descricao' => $eventoSelecionado->getDescricao(),
-                'data_evento' => $eventoSelecionado->getData(),
-                'status' => $eventoSelecionado->getStatus(),
-                'banner' => $eventoSelecionado->getBanner()
+                'id_evento' => $eventoSelecionado->id_evento,
+                'nome_evento' => $eventoSelecionado->nome_evento,
+                'subtitulo_evento' => $eventoSelecionado->subtitulo_evento,
+                'descricao_evento' => $eventoSelecionado->descricao_evento,
+                'data_evento' => $eventoSelecionado->data_evento,
+                'hora_inicio' => $eventoSelecionado->hora_inicio,
+                'hora_fim' => $eventoSelecionado->hora_fim,
+                'endereco_evento' => $eventoSelecionado->endereco_evento,
+                'status' => $eventoSelecionado->status,
+                'banner_evento' => $eventoSelecionado->banner_evento
             ]
         ]);
     } else {

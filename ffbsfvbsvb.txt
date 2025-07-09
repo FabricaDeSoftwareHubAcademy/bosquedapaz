@@ -1,0 +1,6 @@
+fazer:
+
+-logout ->> 
+-area expositor
+-validar expositor
+

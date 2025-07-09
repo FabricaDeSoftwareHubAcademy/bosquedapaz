@@ -1,6 +1,3 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,132 +9,106 @@
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-parceiros.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-
 </head>
 
 <body>
+    
     <?php include "../../../Public/include/menu-adm.html" ?>
-
+   
     <main class="principal">
         <div class="box">
             <h1>CADASTRO DE PARCEIROS</h1>
             <div class="form-box">
-                <form action="#" method="POST">
-                    <div id="form1">
-                        <div class="data-imagem">
+                <form id="form_cadastrar_parceiro" method="POST">
+                    <div class="form-container">
+                        <div id="form1" class="form-grid">
                             <div class="input-group">
-                                <label>Parceiro:</label>
-                                <input type="text" id="data-inicio" placeholder="Digite o Nome" name="data-inicio" value="">
+                                <label for="nome_parceiro">Parceiro:</label>
+                                <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" required>
                             </div>
                             <div class="input-group">
-                                <label>Telefone:</label>
-                                <input type="text" placeholder="Digite seu Telefone" name="file" id="file"
-                                    required>
+                                <label for="telefone">Telefone:</label>
+                                <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
                             </div>
+                            <div class="input-group">
+                                <label for="logo">Logo:</label>
+                                <input type="file" id="logo" name="logo" required>
+                            </div>                                
+                            <div class="input-group">
+                                <label for="num_residencia">Número:</label>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
+                            </div>                          
+                            <div class="input-group">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+                            </div>                       
                         </div>
-                        <img class="preview" src="" alt="" id="preview-image">
-                    </div>
-                </form>
-                <form action="#" method="POST">
-                    <div id="form1">
-                        <div class="data-imagem">
+                        <div id="form2" class="form-grid">
                             <div class="input-group">
-                                <label>E-mail:</label>
-                                <input type="text" id="data-inicio" placeholder="Digite o e-mail" name="data-inicio" value="">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" placeholder="Digite o e-mail" required>
                             </div>
                             <div class="input-group">
-                                <label>Contato:</label>
-                                <input type="text" name="file" placeholder="Digite o Nome de Contato" id="file"
-                                    required>
+                                <label for="cpf_cnpj">CPF/CNPJ:</label>
+                                <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
                             </div>
+                            <div class="input-group">
+                                <label for="cep">CEP:</label>
+                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="cidade">Estado:</label>
+                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                            </div>  
                         </div>
-                        <img class="preview" src="" alt="" id="preview-image">
-                    </div>
-                </form>
-                <form action="#" method="POST">
-                    <div id="form1">
-                        <div class="data-imagem">
-                            <!-- <div class="input-group">
-                                <label>Tipo:</label>
-                                <input type="text" id="data-inicio" name="data-inicio" value="">
-                            </div> -->
+                        <div id="form3" class="form-grid">
                             <div class="input-group">
-                                <label for="tipo-parceiro">Tipo:</label>
-                                <select id="tipo-parceiro" name="tipo" required>
+                                <label for="nome_contato">Contato:</label>
+                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="tipo">Tipo:</label>
+                                <select id="tipo" name="tipo" required>
                                     <option value="" disabled selected>Selecione o tipo</option>
                                     <option value="juridica">Jurídica</option>
                                     <option value="fisica">Física</option>
                                 </select>
                             </div>
-
                             <div class="input-group">
-                                <label>CPF/CNPJ:</label>
-                                <input type="text" name="file" placeholder="Digite o CPF/CNPJ" id="file"
-                                    required>
-                            </div>
+                                <label for="logradouro">Logradouro:</label>
+                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
+                            </div>   
+                            <div class="input-group">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                            </div>  
                         </div>
-                        <img class="preview" src="" alt="" id="preview-image">
+                        <?php include "../../../Public/include/Butons-forms.html" ?>
                     </div>
                 </form>
-                <form action="#" method="POST">
-                    <div id="form1">
-                        <div class="data-imagem">
-                            <div class="input-group">
-                                <label>Logo:</label>
-                                <input type="file" name="file" id="file"
-                                    required>
-                            </div>
-                            <div class="input-group">
-                                <label>CEP:</label>
-                                <input type="text" placeholder="Digite o CEP" name="file" id="file"
-                                    required>
-                            </div>
-                        </div>
-                        <img class="preview" src="" alt="" id="preview-image">
-                    </div>
-                </form>
-
-            </div>
-            <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-                </a>
-
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="./Area-Adm.php">Cancelar</a>
-                    </button>
-
-                    <button class="open-modal" data-modal="modal-deleta">
-                        Salvar
-                    </button>
-
-                </div>
             </div>
         </div>
-        </div>
-
-        <dialog id="modal-deleta" class="modal-deleta">
-            <div class="acao-recusar">
-                <div class="acao-content-recusar">
-                    <h1 class="acao-texto-recusar">Salvo com sucesso</h1>
-                    <div class="acao-botoes-recusar">
-                        <button class="close-modal" data-modal="modal-deleta">confirmar</button>
-                    </div>
-                </div>
-            </div>
-        </dialog>
     </main>
 
+    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html" ?>
+    <?php include "../../../Public/include/modais/modal-error.html" ?>
+    
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <script src="../../../Public/js/js-adm/cadastrar-parceiro.js" defer></script>
+    
 </body>
 
 </html>

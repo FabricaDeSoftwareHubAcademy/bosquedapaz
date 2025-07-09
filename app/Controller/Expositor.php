@@ -7,6 +7,7 @@ require_once('../vendor/autoload.php');
 use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
+use app\Controller\Imagem;
 
 
 class Expositor extends Pessoa
@@ -15,10 +16,12 @@ class Expositor extends Pessoa
     protected $id_expositor;
     protected $id_pessoa;
     protected $id_categoria;
-    // protected $id_imagem;
     protected $nome_marca;
     protected $num_barraca;
     protected $voltagem;
+    protected $modalidade;
+    protected $tipo;
+    protected $idade;
     protected $energia;
     protected $contato2;
     protected $descricao;
@@ -26,8 +29,141 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
-    protected $imagens;
 
+
+
+    //////////// MÉDOTO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
+
+
+    public function cadastrar()
+    {
+
+        
+        $db = new Database('endereco');
+        $endereco_id = $db->insert_lastid(
+            [
+                'cidade' => $this->cidade,
+            ]
+        );
+
+        ///// insert na tabela pessoa \\\\\
+
+        $db = new Database('pessoa');
+        $pes_id = $db->insert_lastid(
+            [
+                'nome' => $this->nome,
+                'email' => $this->email,
+                'telefone' => $this->whats,
+                'whats' => $this->whats,
+                'img_perfil' => $this->foto_perfil,
+                'link_instagram' => $this->link_instagram,
+                'perfil' => 1,
+                'id_endereco' => $endereco_id,
+            ]
+        );
+
+        ///// insert na tabela expostor \\\\\\
+
+        $db = new Database('expositor');
+        $res = $db->insert(
+            [
+                'id_pessoa' => $pes_id,
+                'id_categoria' => $this->id_categoria,
+                'nome_marca' => $this->nome_marca,
+                'num_barraca' => $this->num_barraca,
+                'voltagem' => $this->voltagem,
+                'energia' => $this->energia,
+                'modalidade' => $this->modalidade,
+                'tipo' => $this->tipo,
+                'idade' => $this->idade,
+                'contato2' => $this->contato2,
+                'descricao' => $this->descricao,
+                'metodos_pgto' => $this->metodos_pgto,
+                'cor_rua' => $this->cor_rua,
+                'responsavel' => $this->responsavel,
+                'produto' => $this->produto
+            ]
+        );
+
+        return $res;
+    }
+
+
+    ////////////// MÉTODOS DE BUSCAS \\\\\\\\\\\\\\\\\\\\
+
+    public function listar($where = null){
+        try {
+            $db = new Database('view_expositor');
+
+            //// RETORNA TODOS OS EXPOSITORES VALIDADOS
+            if($where == null){
+                $expositores = $db->select('validacao != "aguardando"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+            }
+
+            //// RETORNA OS EXPOITORES FILTRADOS COM WHERE
+            else {
+                $expositores = $db->select($where, 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+            }
+        
+        //// RETORNA FALSE NO CASO DE ERRO
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
+    }
+
+    public function filtrar($filtro, $status = "= 'aprovado'"){
+        try {
+            $db = new Database('view_expositor');
+
+            //// RETORNA O EXPOSITOR PELO FILTRO
+            $expositores = $db->select(
+                "nome_marca LIKE '%$filtro%' and validacao ".$status." 
+                OR nome LIKE '%$filtro%' and validacao ".$status." 
+                OR email LIKE '%$filtro%' and validacao ".$status." 
+                OR num_barraca LIKE '%$filtro%' and validacao ".$status." 
+                ", 'nome'
+            )->fetchAll(PDO::FETCH_ASSOC);
+            return $expositores ? $expositores : FALSE;
+        
+        //// RETORNA FALSE NO CASO DE ERRO
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
+    }
+
+
+    //////////////////// VÁLIDAR EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\\
+
+    public function validarExpositor($id, $status, $categoria = null, $newSenha = null){
+        $db = new Database('expositor');
+        if($status == 'aprovado'){
+            //// dados pessoa
+            $senha = ['senha' => $newSenha];
+
+            ///// dados expositor
+            $newStatus = [
+                'status_exp' => 'ativo',
+                'validacao' => 'aprovado',
+                'id_categoria' => $categoria
+            ];
+
+            $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = '. $id);
+            return $res;
+
+        }else if ($status == 'recusado'){
+            ///// dados expositor
+            $newStatus = [
+                'validacao' => 'recusado'
+            ];
+            $res = $db->update('id_expositor = '. $id, $newStatus);
+            return $res;
+        }
+    }
+
+
+    //////////////////// MÉDOTOS SETTERS \\\\\\\\\\\\\\\\\\\\\\\\\\
 
     public function setId_expositor($id_expositor)
     {
@@ -89,197 +225,28 @@ class Expositor extends Pessoa
     {
         $this->produto = $produto;
     }
-
-    public function getId_expositor()
+    public function setTipo($tipo)
     {
-        return $this->id_expositor;
+        $this->tipo = $tipo;
     }
-
-    public function getd_pessoa()
+    public function setModalidade($modalidade)
     {
-        return $this->id_pessoa;
+        $this->modalidade = $modalidade;
     }
-    public function getId_categoria()
+    public function setIdade($idade)
     {
-        return $this->id_categoria;
+        $this->idade = $idade;
     }
-
-    public function getNome_marca()
-    {
-        return $this->nome_marca;
-    }
-
-    public function getEnergia()
-    {
-        return $this->energia;
-    }
-    public function getVoltagem()
-    {
-        return $this->voltagem;
-    }
-    public function getContato2()
-    {
-        return $this->contato2;
-    }
-    public function getNum_barraca()
-    {
-        return $this->num_barraca;
-    }
-    public function getDescricao()
-    {
-        return $this->descricao;
-    }
-    public function getMetodos_pgto()
-    {
-        return $this->metodos_pgto;
-    }
-    public function getCor_rua()
-    {
-        return $this->cor_rua;
-    }
-    public function getResponsavel()
-    {
-        return $this->responsavel;
-    }
-    public function getProduto()
-    {
-        return $this->produto;
-    }
-
-    public function geradorSenha(){
-        $tamanhoSenha = 10;
-     
-        $caracteresPermitidos = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-     
-        $senha = '';
-        for ($i = 0; $i < $tamanhoSenha; $i++) {
-        $senha .= $caracteresPermitidos[rand(0, strlen($caracteresPermitidos) - 1)];
-        }
-    
-        return $senha;
-    }
-
-    public function cadastrar()
-    {
-
-        $senha = $this->geradorSenha();
-        
-        $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid(
-            [
-                'nome' => $this->nome,
-                'email' => $this->email,
-                'telefone' => $this->whats,
-                'senha' => password_hash($senha, PASSWORD_DEFAULT),
-                'perfil' => 1,
-            ]
-        );
-
-
-
-        $db = new Database('imagem');
-        $img_id = $db->insert_lastid([
-            'imagem1' => $this->imagens[0] ?? '',
-            'imagem2' => $this->imagens[1] ?? '',
-            'imagem3' => $this->imagens[2] ?? '',
-            'imagem4' => $this->imagens[3] ?? '',
-            'imagem5' => $this->imagens[4] ?? ''
-        ]);
-
-
-        $db = new Database('expositor');
-        $res = $db->insert(
-            [
-                'id_expositor' => $this->id_expositor,
-                'id_pessoa' => $pes_id,
-                'id_categoria' => $this->id_categoria,
-                'id_imagem' => $img_id,
-                'nome_marca' => $this->nome_marca,
-                'num_barraca' => $this->num_barraca,
-                'voltagem' => $this->voltagem,
-                'energia' => $this->energia,
-                'contato2' => $this->contato2,
-                'descricao' => $this->descricao,
-                'metodos_pgto' => $this->metodos_pgto,
-                'cor_rua' => $this->cor_rua,
-                'responsavel' => $this->responsavel,
-                'produto' => $this->produto
-            ]
-        );
-        return $res;
-    }
-
-    public function listar($busca = null)
-    {
-        $db = new Database('expositor');
-        
-        if ($busca) {
-            $res = $db->filtrar_expositor($busca)->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
-        } else {
-            $res = $db->select_expositor()->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
-        }
-    }
-
-
-    public function buscar($where = null, $order = null, $limit = null)
-    {
-        $db = new Database('expositor');
-    
-        $sql = "SELECT 
-            expositor.id_expositor,
-            expositor.nome_marca,
-            expositor.num_barraca,
-            expositor.voltagem,
-            expositor.energia,
-            expositor.contato2,
-            expositor.descricao,
-            expositor.metodos_pgto,
-            expositor.cor_rua,
-            expositor.responsavel,
-            expositor.produto,
-    
-            pessoa.id_pessoa,
-            pessoa.nome AS nome_pessoa,
-            pessoa.email,
-            pessoa.whats,
-            pessoa.telefone,
-            pessoa.link_instagram,
-            pessoa.link_facebook,
-            pessoa.link_whats,
-            pessoa.data_nasc,
-            pessoa.img_perfil,
-    
-            categoria.id_categoria,
-            categoria.descricao AS categoria,
-            categoria.cor AS categoria_cor,
-            categoria.icone AS categoria_icone,
-    
-            imagem.imagem1,
-            imagem.imagem2,
-            imagem.imagem3,
-            imagem.imagem4,
-            imagem.imagem5
-    
-        FROM expositor
-        INNER JOIN pessoa    ON expositor.id_pessoa    = pessoa.id_pessoa
-        INNER JOIN categoria ON expositor.id_categoria = categoria.id_categoria
-        INNER JOIN imagem    ON expositor.id_imagem    = imagem.id_imagem";
-    
-        if ($where) {
-            $sql .= " WHERE $where";
-        }
-        if ($order) {
-            $sql .= " ORDER BY $order";
-        }
-        if ($limit) {
-            $sql .= " LIMIT $limit";
-        }
-    
-        $stmt = $db->execute($sql);
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-    }
-    
-
 }
+
+/*
+
+
+WHERE pes.nome LIKE '%$filtro%'
+OR exp.nome_marca LIKE '%$filtro%'
+OR exp.produto LIKE '%$filtro%' 
+OR cat.descricao = '%$filtro%';
+
+WHERE cat.descricao = '$cat'
+
+*/

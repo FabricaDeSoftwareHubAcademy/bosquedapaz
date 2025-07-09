@@ -49,7 +49,7 @@ class Colaborador extends Pessoa
             'telefone' => $this->telefone,
             'email' => $this->email,
             'senha' => $this->senha,
-            'perfil' => 'ADM',
+            'perfil' => '1',
             'img_perfil' => $this->foto_perfil
         ]);
 
@@ -77,9 +77,7 @@ class Colaborador extends Pessoa
             'nome' => $this->nome,
             'telefone' => $this->telefone,
             'email' => $this->email,
-            'senha' => $this->senha,
-            'perfil' => 'ADM',
-            'img_perfil' => $this->foto_perfil,
+            'img_perfil' => $this->foto_perfil
         ];
 
         $res = $db->update_all($values1, $values2, 'pessoa', 'id_pessoa', 'id_colaborador = '. $id);
@@ -122,10 +120,6 @@ class Colaborador extends Pessoa
         $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
         $filename = uniqid('img_', true) . '.' . $ext;
 
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
-        }
-
         $destination = $uploadDir . $filename;
 
         if (move_uploaded_file($file['tmp_name'], $destination)) {
@@ -134,4 +128,11 @@ class Colaborador extends Pessoa
             return false;
         }
     }
+
+    public function buscarPorIdPessoa(int $idPessoa) {
+        $db = new Database('colaborador');
+        return $db->buscarPorIdPessoa($idPessoa);
+    }   
 }
+
+// Matheus Manja

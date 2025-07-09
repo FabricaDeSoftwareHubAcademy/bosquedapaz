@@ -1,3 +1,9 @@
 .env
 /Public/uploads/uploads-eventos/
+/Public/uploads/uploads-expositor/
+/Public/uploads/uploads-ADM/
+/Public/uploads/uploads-utilidade/
+/Public/uploads/atracoes/
+/Public/uploads/fotos-eventos/
+
 # /vendor/

@@ -2,20 +2,24 @@
 
 namespace app\Controller;
 
+require_once('../vendor/autoload.php');
+
 use PDO;
-use app\Controller\Pessoa;
 use app\Models\Database;
+use app\Controller\Pessoa;
 
 
 class Artista extends Pessoa
 {
     protected $id_artista;
     protected $id_pessoa;
+    protected $nome_artistico;
     protected $linguagem_artistica;
     protected $estilo_musica;
     protected $publico_alvo;
     protected $tempo_apresentacao;
     protected $valor_cache;
+
 
 
     public function setId_artista($id_artista)
@@ -36,6 +40,10 @@ class Artista extends Pessoa
     {
         $this->estilo_musica = $estilo_musica;
     }
+    public function setNome_artistico($nome_artistico)
+    {
+        $this->nome_artistico = $nome_artistico;
+    }
 
     public function setPublico_alvo($publico_alvo)
     {
@@ -50,6 +58,7 @@ class Artista extends Pessoa
     {
         $this->valor_cache = $valor_cache;
     }
+
 
     /////////////// get
 
@@ -67,7 +76,11 @@ class Artista extends Pessoa
     {
         return $this->linguagem_artistica;
     }
-    
+    public function getNome_artistico()
+    {
+        return $this->nome_artistico;
+    }
+
     public function getEstilo_musica()
     {
         return $this->estilo_musica;
@@ -88,29 +101,30 @@ class Artista extends Pessoa
 
     public function cadastrar()
     {
-        $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid(
-            [
-                'nome' => $this->nome,
-                'email' => $this->email,
-                'telefone' => $this->whats,
-                'link_instagram' => $this->link_instagram,
+        // INSERE NA TABELA PESSOA
+        $dbPessoa = new Database('pessoa');
+        $pes_id = $dbPessoa->insert_lastid([
+            'nome' => $this->nome,
+            'email' => $this->email,
+            'telefone' => $this->whats,  // ou 'whats' se preferir
+            'link_instagram' => $this->link_instagram,
+        ]);
 
-            ]
-        );
+        if (!$pes_id) {
+            return false; // falha ao inserir pessoa
+        }
 
-        $db = new Database('artista');
-        $res = $db->insert(
-            [
-                'id_artista' => $this->id_artista,
-                'id_pessoa' => $this->id_pessoa,
-                'linguagem_artistica' => $this->linguagem_artistica,
-                'estilo_musica' => $this->estilo_musica,
-                'publico_alvo' => $this->publico_alvo,
-                'tempo_apresentacao' => $this->tempo_apresentacao,
-                'valor_cache' => $this->valor_cache,
-            ]
-            );
-            return $res;
+        // INSERE NA TABELA ARTISTA
+        $dbArtista = new Database('artista');
+        $res = $dbArtista->insert([
+            'id_pessoa' => $pes_id,
+            'nome_artistico' => $this->nome_artistico,
+            'linguagem_artistica' => $this->linguagem_artistica,
+            'publico_alvo' => $this->publico_alvo,
+            'tempo_apresentacao' => $this->tempo_apresentacao,
+            'valor_cache' => $this->valor_cache,
+        ]);
+
+        return $res ? true : false;
     }
 }
