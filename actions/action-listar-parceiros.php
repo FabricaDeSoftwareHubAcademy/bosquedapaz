@@ -2,7 +2,7 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Parceiro;
 
-$nome = $_GET['nome'];
+$nome = $_POST['nome'];
 
 $parceiro = new Parceiro();
 $dados = $parceiro->ListarParceiros($nome);

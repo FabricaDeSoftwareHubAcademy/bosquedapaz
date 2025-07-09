@@ -59,4 +59,9 @@ class Parceiro {
         
         return $resParceiro;
     }
+
+    public function AlterarStatusParceiro($status, $id) {
+        $banco = new Database('parceiro');
+        return $banco->alterar_status_parceiro($status, $id);
+    }
 }

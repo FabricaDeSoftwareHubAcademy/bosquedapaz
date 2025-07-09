@@ -17,9 +17,9 @@
 </head>
 
 <body>
-<?php include "../../../Public/include/menu-adm.html" ?>
+    <?php include "../../../Public/include/menu-adm.html" ?>
     <main class="principal">
-        
+
         <div class="box">
             <h2>PARCEIROS</h2>
             <div class="container">
@@ -42,13 +42,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                    
+
                         </tbody>
                         <!-- status active -->
                         <!-- status inactive -->
                     </table>
                 </div>
-                
+
             </div>
         </div>
 
@@ -66,10 +66,21 @@
         <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
     </div> -->
 
-    <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
+    <div id="modalConfirmacao" class="modal-confirmacao" style="display: none;">
+        <div class="modal-confirmacao-conteudo">
+            <p>Deseja realmente alterar o status?</p>
+            <div class="modal-confirmacao-botoes">
+                <button id="confirmarAlteracao" class="modal-confirmacao-botao botao-sim">Sim</button>
+                <button id="cancelarAlteracao" class="modal-confirmacao-botao botao-nao">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="../../../Public/js//js-adm/status-colaborador.js"></script> -->
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/listar_parceiros.js"></script>
+    <script src="../../../Public/js/js-adm/js-listar-parceiros/alterar_status.js"></script>
 </body>
 
 </html>
