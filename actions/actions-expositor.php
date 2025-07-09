@@ -11,6 +11,20 @@ require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
 use app\Controller\Imagem;
 
+function Update_imagem($img) {
+    // chmod ("../Public/uploads/uploads-carrosel/", 0777);
+    $caminho = '../Public/uploads/uploads-expositor/';
+    $new_img = $img['name'];
+    $new_name = uniqid();
+    $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
+
+    $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+        
+    $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
+
+    return $caminho_img;
+}
+
 
 /////////////////// MEDOTO POST ///////////////////
 
@@ -32,6 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         /// upload foto perfil
         if (isset($_FILES['img_perfil'])) {
 
+
+
+            echo json_encode([$var]);
+            exit;
+
             /// verifica quantos mb
             if( 5 < ($_FILES['img_perfil']['size'] / 1024) / 1024){
                 echo json_encode([
@@ -40,6 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ]);
                 exit;
             }
+
+
 
             ///////// MOVENDO A IMAGEM DE PERFIL ////////////
 
