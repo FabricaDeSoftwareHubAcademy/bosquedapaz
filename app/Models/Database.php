@@ -11,7 +11,8 @@ Env::load();
 
 // sudo chown -R root:www-data /var/www
 
-class Database {
+class Database
+{
     //atributos do database
     private $conn;
     private string $local;
@@ -200,7 +201,8 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function sts_adm($id_colaborador, $novoStatus) {
+    public function sts_adm($id_colaborador, $novoStatus)
+    {
         $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
@@ -358,14 +360,16 @@ class Database {
     }
 
     // codigo listar parceiros
-    public function listar_parceiros() {
+    public function listar_parceiros()
+    {
         $query = "SELECT id_parceiro, nome_parceiro, nome_contato, telefone,
         email, status_parceiro FROM parceiro";
 
         return $this->execute($query);
     }
 
-    public function buscar_parceiros($nome) {
+    public function buscar_parceiros($nome)
+    {
         $query = "SELECT id_parceiro, nome_parceiro, nome_contato, telefone,
         email, status_parceiro FROM parceiro WHERE nome_parceiro LIKE :nome_parceiro";
 
@@ -373,7 +377,8 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function alterar_status_parceiro($status, $id) {
+    public function alterar_status_parceiro($status, $id)
+    {
         $query = "UPDATE parceiro set status_parceiro = :status_parceiro
         WHERE id_parceiro = :id_parceiro";
 
@@ -381,6 +386,19 @@ class Database {
             ":status_parceiro" => $status,
             ":id_parceiro" => $id
         ];
+        return $this->execute($query, $binds);
+    }
+
+    public function obter_parceiros($id)
+    {
+        $query = "SELECT par.id_parceiro, par.nome_parceiro, par.telefone, par.logo, en.num_residencia,
+        en.cidade, par.email, par.cpf_cnpj, en.cep, en.complemento, en.estado,
+        par.nome_contato, par.tipo, en.logradouro, en.bairro, en.id_endereco
+        FROM parceiro par
+        INNER JOIN endereco en ON par.id_endereco = en.id_endereco
+        WHERE id_parceiro = :id_parceiro;";
+
+        $binds = [":id_parceiro" => $id];
         return $this->execute($query, $binds);
     }
 }

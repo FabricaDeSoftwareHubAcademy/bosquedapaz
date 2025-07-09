@@ -105,9 +105,9 @@
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
-    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <!-- <script src="../../../Public/js/js-adm/preview-img.js" defer></script> -->
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-    <script src="../../../Public/js/js-adm/cadastrar-parceiro.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-listar-parceiros/editar_parceiro.js" defer></script>
     
 </body>
 
