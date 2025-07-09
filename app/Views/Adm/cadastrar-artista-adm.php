@@ -60,10 +60,10 @@
                             <label>Qual sua linguagem artística?</label>
                             <select name="linguagem_artistica" id="linguagem_artistica" class="select">
                                 <option value="">Selecione</option>
-                                <option value="teatro">Teatro</option>
-                                <option value="danca">Dança</option>
-                                <option value="circo">Circo</option>
-                                <option value="musica">Música</option>
+                                <option value="Teatro">Teatro</option>
+                                <option value="Dança">Dança</option>
+                                <option value="Circo">Circo</option>
+                                <option value="Música">Música</option>
                             </select>
                         </div>
 
@@ -71,10 +71,10 @@
                             <label>Qual o estilo de música você segue?</label>
                             <select name="estilo_musica" id="estilo_musica" class="select">
                                 <option value="">Selecione</option>
-                                <option value="rock">Rock</option>
-                                <option value="pop">Pop</option>
-                                <option value="sertanejo">Sertanejo</option>
-                                <option value="eletronica">Eletrônica</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Sertanejo">Sertanejo</option>
+                                <option value="Eletrônica">Eletrônica</option>
                             </select>
                         </div>
 
@@ -83,9 +83,9 @@
 
                             <select name="publico_alvo" id="publico_alvo" class="select">
                                 <option value="">Selecione</option>
-                                <option value="adulto">Adulto</option>
-                                <option value="infantil">Infantil</option>
-                                <option value="misto">Misto</option>
+                                <option value="Adulto">Adulto</option>
+                                <option value="Infantil">Infantil</option>
+                                <option value="Misto">Misto</option>
 
                             </select>
                         </div>
