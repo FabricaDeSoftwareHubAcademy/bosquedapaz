@@ -140,11 +140,13 @@ class Expositor extends Pessoa
         $db = new Database('expositor');
         if($status == 'aprovado'){
             //// dados pessoa
-            $senha = ['senha' => $newSenha];
+            $senha = [
+                'senha' => $newSenha,
+                'status_pes' => 'ativo',
+            ];
 
             ///// dados expositor
             $newStatus = [
-                'status_exp' => 'ativo',
                 'validacao' => 'aprovado',
                 'id_categoria' => $categoria
             ];
