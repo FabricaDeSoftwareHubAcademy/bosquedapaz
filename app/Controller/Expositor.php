@@ -112,6 +112,24 @@ class Expositor extends Pessoa
             return FALSE;
         }
     }
+    
+    public function listarHome($busca = null){
+        try {
+            $db = new Database('view_expositor');
+
+            //// RETORNA TODOS OS EXPOSITORES VALIDADOS
+            if($busca != null){
+                $expositores = $db->select(null, "RAND()", 10)->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+            }else {
+                return FALSE;
+            }
+        
+        //// RETORNA FALSE NO CASO DE ERRO
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
+    }
 
     public function filtrar($filtro, $status = "= 'aprovado'"){
         try {

@@ -5,8 +5,8 @@ async function carregarCategorias() {
       const container = document.getElementById('categorias');
       container.innerHTML = ''; // limpa antes de inserir
   
-      categorias.forEach(categoria => {
-        const caminhoIcone = `../../../Public/assets/icons/${categoria.icone}`;
+      categorias.dados.forEach(categoria => {
+        const caminhoIcone = `../../../Public/${categoria.icone}`;
   
         const itemHTML = `
           <a href="todos-expositores.php#${categoria.descricao.toLowerCase()}" class="link-cat-expo">
