@@ -74,8 +74,8 @@
                                 <label for="tipo">Tipo:</label>
                                 <select id="tipo" name="tipo" required>
                                     <option value="" disabled selected>Selecione o tipo</option>
-                                    <option value="juridica">Jurídica</option>
-                                    <option value="fisica">Física</option>
+                                    <option value="Juridica">Jurídica</option>
+                                    <option value="Fisica">Física</option>
                                 </select>
                             </div>
                             <div class="input-group">

@@ -1,12 +1,15 @@
-<?php 
+<?php
 
 namespace app\Controller;
+
 require_once('../vendor/autoload.php');
+
 use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
 
-class Parceiro {
+class Parceiro
+{
     public int $id_parceiro;
     public string $nome_parceiro;
     public string $telefone;
@@ -18,7 +21,8 @@ class Parceiro {
     public string $logo;
     // public int $id_endereco;
 
-    public function cadastrar($endereco) {
+    public function cadastrar($endereco)
+    {
 
         // cadastro do endereco para pegar o id
         $db = new Database("endereco");
@@ -48,24 +52,36 @@ class Parceiro {
         return $resParceiro;
     }
 
-    public function ListarParceiros($nome) {
-        if(empty($nome)) {
+    public function ListarParceiros($nome)
+    {
+        if (empty($nome)) {
             $db = new Database("parceiro");
             $resParceiro = $db->listar_parceiros()->fetchAll(PDO::FETCH_ASSOC);
         } else {
             $db = new Database("parceiro");
             $resParceiro = $db->buscar_parceiros($nome)->fetchAll(PDO::FETCH_ASSOC);
         }
-        
         return $resParceiro;
     }
 
-    public function ObterParceiro($id) {
+    public function ObterParceiro($id)
+    {
         $banco = new Database('parceiro');
-        return $banco->obter_parceiros($id);
+        return $banco->obter_parceiros($id)->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function AlterarStatusParceiro($status, $id) {
+    public function AtualizarParceiro($id, $dados)
+    {
+        if (!isset($dados['logo'])) {
+            unset($dados['logo']);
+        }
+
+        $banco = new Database('parceiro');
+        return $banco->atualizar_parceiro($id, $dados);
+    }
+
+    public function AlterarStatusParceiro($status, $id)
+    {
         $banco = new Database('parceiro');
         return $banco->alterar_status_parceiro($status, $id);
     }

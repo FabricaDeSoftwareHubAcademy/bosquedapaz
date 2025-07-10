@@ -401,4 +401,47 @@ class Database
         $binds = [":id_parceiro" => $id];
         return $this->execute($query, $binds);
     }
+
+    public function atualizar_parceiro($id, $dados)
+    {
+        $query = "UPDATE parceiro par
+        JOIN endereco en ON par.id_endereco = en.id_endereco SET 
+        par.nome_parceiro = :nome_parceiro,
+        par.telefone = :telefone,
+        par.email = :email,
+        par.cpf_cnpj = :cpf_cnpj,
+        par.nome_contato = :nome_contato,
+        par.tipo = :tipo,
+        en.cep = :cep,
+        en.complemento = :complemento,
+        en.num_residencia = :num_residencia,
+        en.logradouro = :logradouro,
+        en.estado = :estado,
+        en.bairro = :bairro";
+
+        $binds = [
+            ":nome_parceiro" => $dados['nome_parceiro'],
+            ":telefone" => $dados['telefone'],
+            ":email" => $dados['email'],
+            ":cpf_cnpj" => $dados['cpf_cnpj'],
+            ":nome_contato" => $dados['nome_contato'],
+            ":tipo" => $dados['tipo'],
+            ":cep" => $dados['cep'],
+            ":complemento" => $dados['complemento'],
+            ":num_residencia" => $dados['num_residencia'],
+            ":logradouro" => $dados['logradouro'],
+            ":estado" => $dados['estado'],
+            ":bairro" => $dados['bairro'],
+            ":id_parceiro" => $id
+        ];
+
+        if (isset($dados['logo']) && $dados['logo'] !== '') {
+            $query .= ", par.logo = :logo";
+            $binds[":logo"] = $dados['logo'];
+        }
+
+        $query .= " WHERE par.id_parceiro = :id_parceiro;";
+
+        return $this->execute($query, $binds);
+    }
 }
