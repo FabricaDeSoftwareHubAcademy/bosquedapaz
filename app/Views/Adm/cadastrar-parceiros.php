@@ -87,40 +87,21 @@
                                 <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
                             </div>  
                         </div>
-                        <div class="btn-cancelar-salvar">
-                                <button type="button" class="btn btn-cancelar">
-                                    <a href="./Area-Adm.php">Cancelar</a>
-                                </button>
-                                <button type="submit" id="botao_cadastrar" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
-                        </div>
+                        <?php include "../../../Public/include/Butons-forms.html" ?>
                     </div>
                 </form>
             </div>
-
-            <div class="btns">
-                <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de Voltar" class="btn-voltar">
-                </a>
-            </div>
         </div>
-
-        <!-- Modal -->
-        <dialog id="modal-deleta" class="modal-deleta">
-            <div class="acao-recusar">
-                <div class="acao-content-recusar">
-                    <h1 class="acao-texto-recusar">Salvo com sucesso!</h1>
-                    <div class="acao-botoes-recusar">
-                        <button class="close-modal" data-modal="modal-deleta">Confirmar</button>
-                    </div>
-                </div>
-            </div>
-        </dialog>
     </main>
 
+    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html" ?>
+    <?php include "../../../Public/include/modais/modal-error.html" ?>
+    
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>

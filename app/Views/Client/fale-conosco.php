@@ -20,18 +20,18 @@
             <h1 class="suporte__titulo">Fale Conosco</h1>
             <h1 class="suporte__subtitulo">Contate nossa equipe em casos de sugestões, duvidas, reclamações ou problemas.</h1>
             <div class="suporte__box__formulario">
-                <form method="" action="" class="suporte__content__formulario">
+                <form id="form" class="suporte__content__formulario" enctype="multipart/form-data">
                     <div class="suporte__input__group">
                         <label>Nome</label>
-                        <input type="text" name="campo-nome" id="campo_nome" class="campo__nome" placeholder="Digite seu nome">
+                        <input type="text" name="nome" id="campo_nome" class="campo__nome" placeholder="Digite seu nome" required>
                     </div>
                     <div class="suporte__input__group">
                         <label>Email</label>
-                        <input type="email" name="campo-email" id="campo_email" class="campo__email" placeholder="exemplo@hotmail.com">
+                        <input type="email" name="email" id="campo_email" class="campo__email" placeholder="exemplo@hotmail.com" required>
                     </div>
                     <div class="suporte__textarea__group">
                         <label>Mensagem</label>
-                        <textarea name="campo-mensagem" id="campo_mensagem" class="campo__mensagem" placeholder="Escreva sua mensagem"></textarea>
+                        <textarea name="mensagem" id="campo_mensagem" class="campo__mensagem" placeholder="Escreva sua mensagem" required></textarea>
                     </div>
                     <button type="submit" name="botao-enviar" id="botao_enviar" class="botao__enviar">Enviar</button>
                 </form>
@@ -76,7 +76,12 @@
         <img src="../../../Public/assets/faleconosco-decoracao3.png" alt="" class="faleconosco__bola3">
     </div>
 
+    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>
+    <?php include "../../../Public/include/modais/modal_carregando.html"; ?>
+
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-home/js-fale-conosco.js"></script>
 </body>
 
 </html>

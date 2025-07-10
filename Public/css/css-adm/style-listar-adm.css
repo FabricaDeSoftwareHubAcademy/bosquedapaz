@@ -12,35 +12,6 @@ body{
     overflow-y: hidden;
 }
 
-.bolas-fundo {
-    width: 100vw;
-    height: 90vh;
-    position: relative;
-    top: -90vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-verde1 {
-    position: absolute;
-    left: 0px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-verde2 {
-    position: absolute;
-    right: 0px;
-    top: 6vh;
-    z-index: -3;
-}
-
-.bolas-fundo .bola-rosa {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    z-index: -3;
-}
-
 .principal {
     width: 100vw;
     height: 90vh;
@@ -312,7 +283,48 @@ button:hover {
     margin: auto;
 }
 
+/* Imagens Decorativas */
+.imgs__dec1{
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec1 img{
+    width: 30%;
+    height: auto;
+}
 
+.imgs__dec2{
+    position: fixed;
+    top: 20vh;
+    right: -14vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec2 img{
+    width: 30%;
+    height: auto;
+}
+
+.imgs__dec3{
+    position: fixed;
+    bottom: -2vh;
+    right: -10vw;
+    width: 20vw;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs__dec3 img{
+    width: 60%;
+    height: auto;
+}
 
 
 /* 📱 Ajustes para telas menores que 1200px */
@@ -431,7 +443,6 @@ button:hover {
     body {
         max-height: 50vh;
         overflow-y: auto;
-        /* background-color: aqua; */
     }
 
     .modal-content {
@@ -462,14 +473,22 @@ button:hover {
         font-size: 16px;
         padding: 10px 20px;
     }
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
 
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
-    /* body {
-        background-color: blue;
-    } */
-
     .titulo {
         font-size: 28px;
     }
@@ -580,14 +599,22 @@ button:hover {
     .botoes button {
         width: 70%;
     }
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
 
 /* 📱 Ajustes para telas menores que 768px */
 @media (max-width: 767.98px) {
-    /* body {
-        background-color: green;
-    } */
-
     .titulo {
         font-size: 24px;
     }
@@ -671,6 +698,18 @@ button:hover {
     .botoes button {
         width: 80%;
     }
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
+    }
 }
 
 /* 📱 Ajustes para telas menores que 576px */
@@ -678,7 +717,6 @@ button:hover {
     body {
         overflow-y: auto;
         max-height: 60vh;
-        /* background-color: red; */
     }
 
     .principal .box {
@@ -808,6 +846,18 @@ button:hover {
 
     .botoes .salvar {
         width: 100%;
+    }
+
+    /* Imagens Decorativas:  */
+    .decorative__img1{
+        top: 20vh;
+    }
+    .decorative__img1 img{
+        width: 50%;
+        height: auto;
+    }
+    .decorative__img3{
+        bottom: -2vw;
     }
 }   
 

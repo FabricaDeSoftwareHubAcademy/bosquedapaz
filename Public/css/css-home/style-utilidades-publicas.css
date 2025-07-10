@@ -15,10 +15,12 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 html, body {
     height: 100%;
     margin: 0;
 }
+
 main {
     width: 100%;
     height: 100vh;
@@ -38,6 +40,7 @@ main {
     flex-direction: column;
     border-radius: 10px;
     padding: 20px;
+    position: relative;
     overflow: hidden;
 }
 
@@ -311,6 +314,20 @@ main {
   height: auto;
 }
 
+/* Seta Voltar:  */
+.seta_voltar {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    padding: 5px; 
+    z-index: 3; 
+    transition: transform 0.2s ease;
+}
+
+.seta_voltar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 /* Imagens Decorativas:  */
 .decorative__img1 {
@@ -414,6 +431,16 @@ main {
         padding: 5px 5px;
     }
 
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+        left: 5px;
+    }
+    .seta_voltar img{
+        width: 70%;
+        height: auto;
+    }
+
     /* Imagens Decorativas:  */
     .decorative__img1{
         top: 20vh;
@@ -496,6 +523,11 @@ main {
     .btn-fechar {
         right: 6px;
         padding: 5px 5px;
+    }
+
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
     }
 
     /* Imagens Decorativas:  */
@@ -584,6 +616,12 @@ main {
         right: 6px;
     }
 
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+    }
+        
+
     /* Imagens Decorativas:  */
     .decorative__img1{
         top: 20vh;
@@ -642,6 +680,12 @@ main {
         width: 70%;
         height: auto;
     }
+
+    /* Seta Voltar:  */
+    .seta_voltar {
+        top: 10px;
+    }
+    
 
     /* Modal:  */
     .modal-decor.decor-bottom-right {
@@ -728,3 +772,5 @@ main {
         width: 250px;
     }
 }
+
+/* Matheus Manja  */

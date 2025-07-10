@@ -1,67 +1,63 @@
-
+// categorias
 async function getCategorias(){
 
     let categorias = document.getElementById("categorias");
     
-    let dados_php = await fetch('../../../actions/cadastrar_expositor.php?filtro=1');
+    let dados_php = await fetch('../../../actions/action-listar-categoria.php');
 
     let response = await dados_php.json();
 
-    console.log(response);
 
     html = '<option selected disabled>Selecione</option>';
-    for(let i=0;i <response.length; i++){
-        html += `<option value="${response[i].id_categoria}" > ${response[i].descricao} </option>`;
+    for(let i=0;i <response.dados.length; i++){
+        html += `<option value="${response.dados[i].id_categoria}" > ${response.dados[i].descricao} </option>`;
     }
 
     categorias.innerHTML = html;
 }
 
+// cadastro
 
-
-let btn_salvar = document.getElementById("btn_salvar");
+let btn_salvar = document.getElementById("btn-salvar");
 let modal = document.getElementById("modal_salvar");
 
 
 btn_salvar.addEventListener('click', async function(event){ 
-     
     event.preventDefault();
-    let formulario = document.getElementById("fomulario_cad_expositor");
 
+    openModalConfirmar()
+    document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
+    document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
 
-
-    let dadosForms =  new FormData(formulario);
-
-    let dados_php = await fetch('../../../actions/cadastrar_expositor.php', {
-        method:'POST',
-        body: dadosForms
-    });
-
-    let response = await dados_php.json();
-
-    ////////// abre modal ////////////
+    document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+        closeModalAtualizar()
+        let formulario = document.getElementById("fomulario_cad_expositor");
     
+        let dadosForms =  new FormData(formulario);
+        dadosForms.append('modalidade', 'expositor');
+    
+        let dados_php = await fetch('../../../actions/actions-expositor.php', {
+            method:'POST',
+            body: dadosForms
+        });
+    
+        let response = await dados_php.json()
+        
+        if(response.status == 200){
+            openModalSucesso()
+            document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
+            document.getElementById('msm-sucesso').innerHTML = 'Cadastro realizado com sucesso'
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+        }
 
-    console.log(response);
+        else if(response.status != 200){
+            openModalError()
+            document.getElementById('erro-title').innerHTML = response.msg
+            document.getElementById('erro-text').style.display = 'none'
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+        }
 
-    if(response.status == 200){
-
-        formulario.reset();
-        modal.classList.remove("oculta");
-        modal.classList.add("show_modal");
-
-        /////////////// botao fechar ///////////////
-
-        let fechar_modal = document.getElementById("fechar_modal");
-
-        fechar_modal.addEventListener('click', function(event){
-            modal.classList.remove("show_modal");
-            modal.classList.add("oculta");
-        })
-
-    }else{
-        alert("ERRROOOOOOO")
-    }
+    })
 
     
  })

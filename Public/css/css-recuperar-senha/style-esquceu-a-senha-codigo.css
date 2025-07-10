@@ -651,7 +651,7 @@ html,.body-recsenha{
     }
     
     .forms-recsenha{
-        height: 150px;
+        /* height: 150px; */
         width: 100%;
         display: flex;
         flex-direction: column;

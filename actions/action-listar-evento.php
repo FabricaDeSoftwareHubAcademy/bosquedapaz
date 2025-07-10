@@ -7,7 +7,10 @@ header('Content-Type: application/json');
 
 try {
     $evento = new Evento();
-    $eventos = $evento->listar_evento(); // retorna array associativo
+
+    $termo = isset($_GET['termo']) ? trim($_GET['termo']) : '';
+
+    $eventos = $evento->buscarPorNome($termo);
 
     echo json_encode([
         'status' => 'success',

@@ -24,7 +24,7 @@
                 <div class="card-conteiner">
                     <div class="card-content">
                         <img src="../../../Public/imgs/img-area-adm/Vector%20Relatorio.png" alt="">
-                        <p class="text-card">meus boletos</p>
+                        <p class="text-card">Meus Boletos</p>
                     </div>
                 </div>
             </a>
@@ -32,7 +32,7 @@
                 <div class="card-conteiner">
                     <div class="card-content">
                         <img src="../../../Public/imgs/img-area-adm/Vector Expositores.png" alt="">
-                        <p class="text-card">editar perfil</p>
+                        <p class="text-card">Editar Perfil</p>
                     </div>
                 </div>
             </a>

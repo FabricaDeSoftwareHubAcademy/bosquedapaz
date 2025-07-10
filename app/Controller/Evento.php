@@ -43,6 +43,14 @@ class Evento
         return $res;
     }
 
+    public function buscarPorNome($nome)
+    {
+        $db = new Database('evento');  
+
+        return $db->select("nome_evento LIKE '%$nome%'", 'data_evento DESC')
+                ->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function buscarPorId_evento($id) {
         $db = new Database('evento');
         $res = $db->select("id_evento = {$id}")

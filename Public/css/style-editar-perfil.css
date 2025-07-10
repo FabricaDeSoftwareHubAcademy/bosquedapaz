@@ -781,6 +781,10 @@ input[type="file"]{
         width: 70%;
     }
 
+    .perfilEdit-label-desc{
+        height: 15%;
+    }
+
     .perfilEdit-foto-info{
         min-height: unset;
         max-height: unset;
