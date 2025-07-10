@@ -59,7 +59,7 @@
     </div>
 
     <?php include "../../../Public/include/modais/modal-confirmar.html"?>
-    <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
+    <!-- <script src="../../../Public/js//js-adm/status-colaborador.js"></script> -->
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/listar-utilidades-publicas.js" defer></script>
 </body>

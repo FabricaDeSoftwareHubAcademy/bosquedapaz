@@ -34,131 +34,77 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     tabela.innerHTML = html;
 
-    btnAtivoInativo = document.getElementById('ativoInativo');
-
-    btnAtivoInativo.addEventListener('click', async function (event) {
-        event.preventDefault()
-
-        titulo = document.getElementById("confirmar-title");
-        subtitulo = document.getElementById("msm-confimar");
-
-        titulo.innerHTML = "<h2>Deseja editar o status desse registro?</h2>";
-        subtitulo.innerHTML = "<p>Clique em salvar para confirmar a alteração</p>";
-
-        openModalConfirmar()
-        document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
-        document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
-
-        // quando clicar no btn salvar envia para o banco
-        document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
-
-            let formData = new FormData();
-
-            formData.append("id_utilidade_publica", response[0].id_utilidade_publica);
-            if (response[0].status_utilidade === 0) {
-                formData.append("status_utilidade", 1);
-            } else {
-                formData.append("status_utilidade", 0);
-            }
-
-            let status_utilidade = await fetch('../../../actions/action-editar-status-utilidade-publica.php', {
-                method: 'POST',
-                body: formData
-            });
+    
 
 
-            closeModalAtualizar()
+    // tabela.addEventListener("click", async function (event) {
+    //     const btn = event.target;
+    //     if (btn) {
+    //         const idClicado = btn.dataset.id;
+    //         const item = response.find(obj => obj.id_utilidade_publica == idClicado);
+    //         console.log(item)
 
-            window.location.reload();
+    //         if (item) {
 
-            // caso não seja feito nenhum upload cai nesse if que chama o modal erro
-            // if (allInputs[0].files.length == 0 && allInputs[1].files.length == 0 && allInputs[2].files.length == 0) {
-            //     document.getElementById('erro-title').innerText = 'Por favor envie alguma imagem'
-            //     document.getElementById('erro-text').innerText = 'Nâo é possivel atualizar o carrossel, nenhuma imagem enviada'
-            //     openModalError()
-
-            //     document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-            // }
-
-            // caso evie algoma imagem cai no else
-            // else {
-            //     let inputs = document.querySelectorAll('[type=file]')
-            //     let erro = ''
-            //     inputs.forEach(element => {
-            //         if (element.files.length != 0) {
-            //             var tamanho = (element.files[0].size / 1024) / 1024
-            //             if (tamanho > 5) {
-            //                 erro += ` ${element.files[0].name} é muito grande. Por favor envie uma imagem menor.`
-            //             }
-            //         }
-            //     });
-
-            //     // caso de erro em uma imagem entra no if
-            //     if (erro.length > 0) {
-            //         document.getElementById('erro-title').innerText = 'Erro, imagem fora do padrão'
-            //         document.getElementById('erro-text').innerText = erro
-            //         openModalError()
-
-            //         document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-            //     }
-            //     // caso nao tenha nenhum erro faz o fecth
-            //     else {
-            //         let formCarrossel = document.getElementById('form-carrossel')
-
-            //         const formData = new FormData(formCarrossel);
-
-            //         let dados_php = await fetch("../../../actions/action-carrossel.php", {
-            //             method: "POST",
-            //             body: formData
-            //         });
-
-            //         let response = await dados_php.json();
-
-            //         if (response.erro == 0) {
-            //             openModalSucesso()
-            //             document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
-            //             document.getElementById('msm-sucesso').innerHTML = 'Edição realizada com sucesso'
-            //             document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-            //         }
-
-            //         else if (response.erro != 0) {
-            //             openModalError()
-            //             document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-            //         }
-            //     }
+    //             // item.status_utilidade = item.status_utilidade == 1 ? 0 : 1;
 
 
-            // }
+    //             btn.textContent = item.status_utilidade == 1 ? 'Ativo' : 'Inativo';
+
+    //             btn.classList.toggle('active', item.status_utilidade == 1);
+    //             btn.classList.toggle('inactive', item.status_utilidade == 0);
+
+    //             console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
+    //         }
+    //     }
+    // });
+
+
+    btnAtivoInativo = document.querySelectorAll('#ativoInativo');
+    
+    btnAtivoInativo.forEach((btn) => {
+        btn.addEventListener('click', async function (event) {
+            event.preventDefault()
+    
+            titulo = document.getElementById("confirmar-title");
+            subtitulo = document.getElementById("msm-confimar");
+    
+            titulo.innerHTML = "<h2>Deseja editar o status desse registro?</h2>";
+            subtitulo.innerHTML = "<p>Clique em salvar para confirmar a alteração</p>";
+    
+            openModalConfirmar()
+            document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
+            document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
+    
+            // quando clicar no btn salvar envia para o banco
+            document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+    
+                let formData = new FormData();
+    
+                formData.append("id_utilidade_publica", response[0].id_utilidade_publica);
+                if (response[0].status_utilidade === 0) {
+                    formData.append("status_utilidade", 1);
+                } else {
+                    formData.append("status_utilidade", 0);
+                }
+    
+                let status_utilidade = await fetch('../../../actions/action-editar-status-utilidade-publica.php', {
+                    method: 'POST',
+                    body: formData
+                });
+    
+                // let response = await status_utilidade.text()
+    
+                closeModalConfirmar()
+    
+                window.location.reload();
+            })
+    
         })
-
-    })
-
-
-    tabela.addEventListener("click", async function (event) {
-        const btn = event.target;
-        if (btn) {
-            const idClicado = btn.dataset.id;
-            const item = response.find(obj => obj.id_utilidade_publica == idClicado);
-            console.log(item)
-
-            if (item) {
-
-                // item.status_utilidade = item.status_utilidade == 1 ? 0 : 1;
-
-
-                btn.textContent = item.status_utilidade == 1 ? 'Ativo' : 'Inativo';
-
-                btn.classList.toggle('active', item.status_utilidade == 1);
-                btn.classList.toggle('inactive', item.status_utilidade == 0);
-
-                console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
-            }
-        }
-    });
-
-
+    }); 
 
 });
+
 
 
 if (window.performance && window.performance.navigation.type == 2) {
