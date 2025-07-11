@@ -36,6 +36,7 @@ if(isset($_POST['nome']) && isset ($_POST['descricao'])){
     $objExpo->setLink_facebook($_POST['facebook']);
     $objExpo->setWhats($_POST['whatsapp']);
     $objExpo->setEmail($_POST['email']);
+    $objExpo->setImagens($_POST['foto']);
 
     $result = $objExpo->atualizar($id_expositor);
     

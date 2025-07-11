@@ -152,7 +152,8 @@ class Expositor extends Pessoa
     {
 
         $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid([
+        $pes_id = $db->insert_lastid(
+            [
                 'nome' => $this->nome,
                 'email' => $this->email,
                 'telefone' => $this->whats,
@@ -180,63 +181,66 @@ class Expositor extends Pessoa
                 'produto' => $this->produto
             ]
         );
- 
+
 
         $db = new Database('imagem');
         $img_id = $db->insert_lastid([
             'caminho' => '../caminho/imagem.jpg',
             'posicao' => '',
-            'id_expositor' => $exp_id 
+            'id_expositor' => $exp_id
         ]);
 
         return $img_id;
     }
-    
-    public function filtrar_exp($filtro){
-        if (!empty($filtro)){
+
+    public function filtrar_exp($filtro)
+    {
+        if (!empty($filtro)) {
             $db = new Database('expositor');
 
             $filtrar = $db->filter_exp($filtro)->fetchAll(PDO::FETCH_ASSOC);
 
             return $filtrar;
-        }else {
+        } else {
             return FALSE;
         }
     }
-    public function filtrar_exp_categoria($cat){
-        if (!empty($cat)){
+    public function filtrar_exp_categoria($cat)
+    {
+        if (!empty($cat)) {
             $db = new Database('expositor');
 
             $buscar_cat = $db->select_exp_catgoria($cat)->fetchAll(PDO::FETCH_ASSOC);
 
             return $buscar_cat;
-        }else {
+        } else {
             return FALSE;
         }
     }
 
     public function listar($id = null)
     {
-        if (empty($id)){
+        if (empty($id)) {
             $db = new Database('expositor');
 
             $buscar = $db->select_exp()->fetchAll(PDO::FETCH_ASSOC);
 
             return $buscar;
-        }else {
+        } else {
             $db = new Database('expositor');
             $imagem = new Imagem();
 
             $buscar_img = $imagem->listar($id)->fetchAll(PDO::FETCH_ASSOC);
 
-            $buscar_id = $db->select_exp('id_expositor = '.$id)->fetch(PDO::FETCH_ASSOC);
+            $buscar_id = $db->select_exp('id_expositor = ' . $id)->fetch(PDO::FETCH_ASSOC);
 
             $buscar_id['imagens'] = $buscar_img;
             return $buscar_id;
         }
     }
 
-    public function getIdPessoaExpositor($id) {
+    public function getIdPessoaExpositor($id)
+    {
         $db = new Database('pessoa');
         $result = $db->select_exp_catgoria($id)->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -261,12 +265,24 @@ class Expositor extends Pessoa
         $db = new Database('expositor');
         $res = $db->update(
             'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
-            [ 
-                'nome_marca' => $this->nome_marca, 
+            [
+                'nome_marca' => $this->nome_marca,
                 'descricao' => $this->descricao,
-                ]
-            );
+            ]
+        );
 
-        return $res;    
+        // $ids_imagens = $db->select_img($id)->fetch(PDO::FETCH_ASSOC);
+
+        $db = new Database('imagem');
+        $res = $db->update(
+            'id_imagem = ' . 1,
+            [
+                'caminho' => '../caminho/imagem.jpg',
+                'posicao' => '',
+                'id_expo' => 1
+            ]
+        );
+
+        return $res;
     }
 }

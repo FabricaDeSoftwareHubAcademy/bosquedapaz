@@ -31,9 +31,10 @@
 
                         <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
                         <input type="file" name="foto" id="foto" class="perfilEdit-foto">
-                        <label for="foto" class="perfilEdit-upload">
+                        <img src="" alt="">
+                        <!-- <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
                             Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
-                        </label>
+                        </label> -->
 
                     </div>
 
@@ -78,37 +79,37 @@
                     <div class="perfilEdit-div-group">
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
-                            <label for="photo" class="perfilEdit-upload-label-square">
+                            <label for="photo" id="prod-foto-1" name="prod-foto-1" class="perfilEdit-upload-label-square">
                                 Carregar Foto 1 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
-                            <label for="photo" class="perfilEdit-upload-label-square">
+                            <label for="photo" id="prod-foto-2" name="prod-foto-2" class="perfilEdit-upload-label-square">
                                 Carregar Foto 2 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
-                            <label for="photo" class="perfilEdit-upload-label-square">
+                            <label for="photo" id="prod-foto-3" name="prod-foto-3" class="perfilEdit-upload-label-square">
                                 Carregar Foto 3 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
-                            <label for="photo" class="perfilEdit-upload-label-square">
+                            <label for="photo" id="prod-foto-4" name="prod-foto-4" class="perfilEdit-upload-label-square">
                                 Carregar Foto 4 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
-                            <label for="photo" class="perfilEdit-upload-label-square">
+                            <label for="photo" id="prod-foto-5" name="prod-foto-5" class="perfilEdit-upload-label-square">
                                 Carregar Foto 5 <i class="bi bi-upload"></i>
                             </label>
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="photo" name="foto" class="perfilEdit-input-foto">
-                            <label for="photo" class="perfilEdit-upload-label-square">
+                            <label for="photo" id="prod-foto-6" name="prod-foto-6" class="perfilEdit-upload-label-square">
                                 Carregar Foto 6 <i class="bi bi-upload"></i>
                             </label>
                         </div>

@@ -9,18 +9,19 @@ window.addEventListener("DOMContentLoaded", async () => {
     let input_whatsapp = document.getElementById("whatsapp");
     let input_facebook = document.getElementById("facebook");
     let input_id_expositor = document.getElementById("id_expositor");
+    let input_logo = document.getElementById("foto");
 
     // Pegando os dados da URL
     const id_expositor = params.get("id");
-  
 
-    let dados_php = await fetch('../../../actions/action-editar-expositor.php?id_expo='+id_expositor);
- 
-    
+
+    let dados_php = await fetch('../../../actions/action-editar-expositor.php?id_expo=' + id_expositor);
+
+
     let response = await dados_php.json();
-    
 
-    if(response.status == 200){
+
+    if (response.status == 200) {
         input_id_expositor.value = response.data.id_expositor;
         input_nome.value = response.data.nome_marca;
         input_desc.value = response.data.descricao_exp;
@@ -28,18 +29,19 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_insta.value = response.data.link_instagram;
         input_whatsapp.value = response.data.whats;
         input_facebook.value = response.data.link_facebook;
+        input_logo.value = response.data.foto;
     }
 
     console.log(response);
 
-    btn_salvar.addEventListener('click', async function(event){
+    btn_salvar.addEventListener('click', async function (event) {
 
         event.preventDefault();
 
         const editarperfil_form = document.getElementById("perfilEdit_form");
 
         let formdata = new FormData(editarperfil_form);
-        let dados_php2 = await fetch('../../../actions/action-editar-expositor.php',{
+        let dados_php2 = await fetch('../../../actions/action-editar-expositor.php', {
             method: 'POST',
             body: formdata
         });
