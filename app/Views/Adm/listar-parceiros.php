@@ -48,23 +48,15 @@
                         <!-- status inactive -->
                     </table>
                 </div>
-
             </div>
         </div>
-
-        <!-- <div class="btns">
-            <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-            </a>
-        </div> -->
-
     </main>
 
-    <!-- <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
-    </div> -->
+    <div class="bolas-fundo">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
+    </div>
 
     <div id="modalConfirmacao" class="modal-confirmacao" style="display: none;">
         <div class="modal-confirmacao-conteudo">
