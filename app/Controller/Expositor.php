@@ -29,6 +29,7 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
+    public $imagens;
 
 
 
@@ -37,7 +38,6 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
-
         
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
@@ -65,7 +65,7 @@ class Expositor extends Pessoa
         ///// insert na tabela expostor \\\\\\
 
         $db = new Database('expositor');
-        $res = $db->insert(
+        $idExpositor = $db->insert_lastid(
             [
                 'id_pessoa' => $pes_id,
                 'id_categoria' => $this->id_categoria,
@@ -82,8 +82,19 @@ class Expositor extends Pessoa
                 'cor_rua' => $this->cor_rua,
                 'responsavel' => $this->responsavel,
                 'produto' => $this->produto
-            ]
-        );
+                ]
+            );
+            
+        
+        //// insert das imagens do expositor \\\\\\
+        foreach ($this->imagens as $key => $value) {
+            // var_dump($imagens);
+            $imagem = new Imagem();
+            $imagem->id_expositor = 1;
+            $imagem->caminho = $value;
+            $res = $imagem->cadastro();
+        }
+
 
         return $res;
     }

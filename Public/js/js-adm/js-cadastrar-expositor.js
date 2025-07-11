@@ -44,7 +44,6 @@ btn_salvar.addEventListener('click', async function(event){
         let response = await dados_php.text()
 
         console.log(response)
-        console.log(formulario)
         return 0
         
         if(response.status == 200){
