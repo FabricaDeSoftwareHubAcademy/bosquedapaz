@@ -1,12 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const descricaoInput = document.getElementById('descricaodoevento');
-    const contador = document.getElementById('contador-caracteres');
     const btnSalvar = document.getElementById('btn-salvar');
-
-    descricaoInput.addEventListener('input', () => {
-        const restante = 500 - descricaoInput.value.length;
-        contador.textContent = `${restante} caracteres restantes`;
-    });
 
     btnSalvar.addEventListener('click', (event) => {
         event.preventDefault();
@@ -62,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     setTimeout(() => {
                         window.location.href = './gerenciar-eventos.php';
-                    }, 6000);
+                    }, 5000);
 
                 } else {
                     document.getElementById('erro-title').innerText = 'Erro ao cadastrar evento';
