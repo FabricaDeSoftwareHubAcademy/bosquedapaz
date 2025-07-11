@@ -228,7 +228,6 @@ document.getElementById('cep').addEventListener('blur', async function () {
                 document.getElementById('bairro').value = data.bairro;
                 document.getElementById('cidade').value = data.localidade;
                 document.getElementById('estado').value = data.uf;
-                document.getElementById('complemento').value = data.complemento || '';
             } else {
                 alert("CEP não encontrado!");
             }
