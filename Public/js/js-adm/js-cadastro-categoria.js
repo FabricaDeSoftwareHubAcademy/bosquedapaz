@@ -1,85 +1,5 @@
-// document.addEventListener('DOMContentLoaded', async () => {
-//     const listaCategorias = document.getElementById('lista-categoria');
-
-//     await carregarCategorias();
-
-//     async function carregarCategorias() {
-//         try {
-//             const response = await fetch('../../../actions/action-listar-categoria.php');
-
-//             if (!response.ok) {
-//                 throw new Error(`Erro HTTP: ${response.status}`);
-//             }
-
-//             const data = await response.json();
-
-//             if (data.status === 'success') {
-//                 const categorias = data.dados;
-
-//                 listaCategorias.innerHTML = '';
-
-//                 categorias.forEach(cat => {
-//                     const div = document.createElement('div');
-//                     div.classList.add('item');
-
-//                     div.innerHTML = `
-//                         <div style="background-color: ${sanitize(cat.cor)};" class="bolota">
-//                             <img src="../../../Public/${sanitize(cat.icone)}" alt="Ícone da categoria ${sanitize(cat.descricao)}" class="icon-item">
-//                         </div>
-//                         <p class="nome-cat">${sanitize(cat.descricao)}</p>
-//                     `;
-
-//                     listaCategorias.appendChild(div);
-//                 });
-
-//                 adicionarBotaoNovaCategoria();
-
-//             } else {
-//                 listaCategorias.innerHTML = '<p>❌ Erro ao carregar categorias.</p>';
-//             }
-//         } catch (error) {
-//             console.error('Erro na requisição:', error);
-//             listaCategorias.innerHTML = '<p>❌ Erro ao buscar dados.</p>';
-//         }
-//     }
-
-//     function adicionarBotaoNovaCategoria() {
-//         const botaoNovaCategoria = document.createElement('div');
-//         botaoNovaCategoria.className = 'item open-modal';
-//         botaoNovaCategoria.dataset.modal = 'cadastro-categoria';
-//         botaoNovaCategoria.innerHTML = `
-//         <div class="bolota" id="b10">
-//             <img src="../../../Public/assets/icons/icones-categorias/Circulo-mais.png" alt="Adicionar nova categoria" class="icon-item">
-//         </div>
-//         <p class="nome-cat">Nova Categoria</p>
-//     `;
-//         listaCategorias.appendChild(botaoNovaCategoria);
-
-//         const modalCadastro = document.getElementById("cadastro-categoria");
-//         botaoNovaCategoria.addEventListener("click", function (event) {
-//             event.preventDefault();
-//             modalCadastro?.showModal();
-//         });
-//     }
-
-//     document.addEventListener("click", function (event) {
-//         if (event.target.closest(".open-modal")) {
-//             const modalCadastro = document.getElementById("cadastro-categoria");
-//             modalCadastro?.showModal();
-//         }
-//     });
-
-
-//     function sanitize(str) {
-//         const div = document.createElement('div');
-//         div.textContent = str;
-//         return div.innerHTML;
-//     }
-// });
-
-
 let modalCadastro;
-// Função para exibir o nome da categoria (sem preview de imagem)
+
 var loadFile = function (event) {
     const nomeCategoria = document.getElementById('nome').value;
     const outputText = document.getElementById('output-text');
@@ -88,11 +8,9 @@ var loadFile = function (event) {
     }
 };
 
-// Ao carregar o DOM
 document.addEventListener("DOMContentLoaded", function () {
-    const modalCadastro = document.getElementById("cadastro-categoria");
+    modalCadastro = document.getElementById("cadastro-categoria");
 
-    // Botões de abrir e fechar modal
     const openModalButtons = document.querySelectorAll(".open-modal");
     const closeModalButtons = document.querySelectorAll(".close-modal");
 
@@ -110,14 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Fecha o modal se clicar fora do conteúdo
     modalCadastro.addEventListener("click", function (event) {
         if (event.target === modalCadastro) {
             modalCadastro.close();
         }
     });
 
-    // Select customizado de cor
     const selected = document.querySelector(".select-selected");
     const selectedText = document.getElementById("selectedText");
     const selectedColor = document.getElementById("selectedColor");
@@ -148,76 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Modal customizado de confirmação
-    const customModal = document.getElementById("custom-modal");
-    const cancelBtn = document.getElementById("custom-cancel");
-    const confirmBtn = document.getElementById("custom-confirm");
-    const openCustomButtons = document.querySelectorAll(".open-custom-modal");
-
-    openCustomButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            if (customModal) customModal.style.display = "flex";
-        });
-    });
-
-    cancelBtn?.addEventListener("click", () => {
-        if (customModal) customModal.style.display = "none";
-    });
-
-    confirmBtn?.addEventListener("click", () => {
-        alert("Ação confirmada!");
-        if (customModal) customModal.style.display = "none";
-    });
-
-    customModal?.addEventListener("click", (e) => {
-        if (e.target === customModal) {
-            customModal.style.display = "none";
-        }
-    });
-
-    // Botão de envio do formulário
-    const form_categoria = document.getElementById("form_categoria");
-    const botao_cadastrar = document.getElementById("btn_cadastrar_cat");
-
-    botao_cadastrar?.addEventListener("click", async function (event) {
-        event.preventDefault();
-
-        const formData = new FormData(form_categoria);
-
-        try {
-            const dados_php = await fetch('../../../actions/cadastro-categoria.php', {
-                method: 'POST',
-                body: formData
-            });
-
-            const response = await dados_php.json();
-            console.log(response);
-
-            if (response.status === "OK") {
-                alert("✅ " + response.message);
-                modalCadastro?.close();
-                window.location.reload();
-            } else if (response.status === "Error") {
-                // Exibe a mensagem de erro vinda do PHP
-                alert("❌ " + response.message);
-            } else {
-                // Caso alguma estrutura inesperada seja retornada
-                alert("❌ Ocorreu um erro desconhecido.");
-            }
-        } catch (error) {
-            console.error("Erro no envio:", error);
-            alert("❌ Erro inesperado ao enviar o formulário.");
-        }
-    });
-
-
-    // Botão de abrir modal (opcional duplicado)
     const bot_categoria = document.querySelector(".btn-cad");
     bot_categoria?.addEventListener("click", function () {
         modalCadastro?.showModal();
     });
 
-    // Seletor de cor alternativo
     const openModal = document.getElementById("openModal");
     const seletorCor = document.getElementById("seletor-cor");
     const corInput = document.getElementById("corInput");
@@ -237,12 +88,77 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    const formCategoria = document.getElementById('form_categoria');
+    const btnSalvarDialog = document.getElementById('btn_cadastrar_cat');
+
+    const modalConfirmar  = document.getElementById('modal-confirmar');
+    const btnCancelar = document.getElementById('btn-modal-cancelar');
+    const btnConfirmar = document.getElementById('btn-modal-salvar');
+
+    const modalSucesso = document.getElementById('modal-sucesso');
+
+    const modalErro = document.getElementById('modal-error');
+    const modalErroText = document.getElementById('erro-text');
+    const btnFecharErro = document.getElementById('close-modal-erro');
+
+    // 1️⃣ - CLICOU EM “SALVAR” → ABRE MODAL DE CONFIRMAR
+    btnSalvarDialog?.addEventListener("click", function (event) {
+        event.preventDefault();
+        openModalConfirmar();
+    });
+
+    // 2️⃣ - CANCELAR CONFIRMAÇÃO
+    btnCancelar?.addEventListener("click", closeModalConfirmar);
+
+    // 3️⃣ - CONFIRMAR ENVIO
+    btnConfirmar?.addEventListener("click", async function () {
+        closeModalConfirmar();
+
+        const formData = new FormData(formCategoria);
+
+        try {
+            const resposta = await fetch('../../../actions/cadastro-categoria.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const json = await resposta.json();
+            console.log(json);
+
+            if (json.status === "OK") {
+                modalCadastro?.close();
+                openModalSucesso();
+                setTimeout(() => window.location.reload(), 2000);
+            } else {
+                // Usar modal de erro com mensagem do PHP
+                modalErroText.textContent = json.message || 'Ocorreu um erro desconhecido.';
+                modalErro.showModal();
+            }
+        } catch (error) {
+            console.error("Erro no envio:", error);
+            modalErroText.textContent = 'Erro inesperado ao enviar o formulário.';
+            modalErro.showModal();
+        }
+    });
+
+    // Fechar modal erro
+    btnFecharErro?.addEventListener("click", () => {
+        modalErro.close();
+    });
+
+    // Fechar modal erro clicando fora do conteúdo
+    modalErro?.addEventListener("click", (e) => {
+        if (e.target === modalErro) {
+            modalErro.close();
+        }
+    });
 });
+
 function fecharModal(idModal) {
     const modal = document.getElementById(idModal);
     if (modal && typeof modal.close === 'function') {
         modal.close();
     }
 }
-
 

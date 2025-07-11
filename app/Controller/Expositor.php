@@ -165,6 +165,48 @@ class Expositor extends Pessoa
     }
 
 
+    public function atualizar($id) // Recebe o ID como parâmetro
+    {
+
+        $db = new Database('expositor');
+        $ids_pessoa_expositor = $db->select_pessoa_expositor($id)->fetch(PDO::FETCH_ASSOC);
+
+        $db = new Database('pessoa');
+        $res = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            [
+                'link_instagram' => $this->link_instagram,
+                'whats' => $this->whats,
+                'link_facebook' => $this->link_facebook,
+                'email' => $this->email
+            ]
+        );
+
+        $db = new Database('expositor');
+        $res = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            [
+                'nome_marca' => $this->nome_marca,
+                'descricao' => $this->descricao,
+            ]
+        );
+
+        // $ids_imagens = $db->select_img($id)->fetch(PDO::FETCH_ASSOC);
+
+        $db = new Database('imagem');
+        $res = $db->update(
+            'id_imagem = ' . 1,
+            [
+                'caminho' => '../caminho/imagem.jpg',
+                'posicao' => '',
+                'id_expo' => 1
+            ]
+        );
+
+        return $res;
+    }
+
+
     //////////////////// MÉDOTOS SETTERS \\\\\\\\\\\\\\\\\\\\\\\\\\
 
     public function setId_expositor($id_expositor)

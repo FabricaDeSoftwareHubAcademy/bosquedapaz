@@ -255,9 +255,9 @@
     color: #999999;
 }
 
-input[type="file"]{
+/* input[type="file"]{
     display: none;
-}
+} */
 
 .perfilEdit-upload-label-square{
     display: flex;
@@ -705,7 +705,7 @@ input[type="file"]{
     }
 
     .perfilEdit-label-desc{
-        height: 30%;
+        height: 29px; 
     }
 
     .perfilEdit-info{
