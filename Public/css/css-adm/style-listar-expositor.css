@@ -106,20 +106,7 @@ h2 {
 }
 
 
-/* .collaborators-table thead {
-    position: sticky;
-    top: 0;
-    background-color: rgb(32, 54, 139);
-    color: white;
-    z-index: 10;
-} */
 
-/* .collaborators-table th, .collaborators-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 20%;
-} */
 
 
 .collaborators-table tr {
@@ -251,56 +238,87 @@ table tbody tr:nth-child(even) {
     color: #007bff;
 }
 
-.modal {
-    display: none;
-    width: 400px;
+/* modal */
+
+/* Estilo base para o <dialog> */
+#modal-confirmar-status {
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1000;
-    overflow: hidden;
-}
-
-.modal h2 {
-    font-size: 20px;
+    z-index: 999;
+  }
+  
+  /* Fundo escurecido ao abrir o modal (opcional) */
+  #modal-confirmar-status::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Título da mensagem */
+  #mensagem-confirmar-status {
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #333;
+    text-align: center;
     margin-bottom: 20px;
-}
-.modal input[type="text"] {
+  }
+  
+  /* Botões */
+  .modal-confirmar-btns {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.modal-edit {
-    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #btn-confirmar-status,
+  #btn-cancelar-status {
+    flex: 1;
+    padding: 10px 0;
     border: none;
-    padding: 10px;
-    border-radius: 30px;
-}
-
-.modal-edit input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .content-btns button{
+    flex-direction: row;
+    background-color: red;
+    position: relative;
+    left: 3%;
+  }
+  
+  #btn-confirmar-status {
+    background-color: #007E70;
+    color: white;
+    width: 45%;
+  }
+  
+  #btn-confirmar-status:hover {
+    background-color: #013630;
+  }
+  
+  #btn-cancelar-status {
+    background-color: #FF3877;
+    color: white;
+    width: 45%;
+  }
+  
+  #btn-cancelar-status:hover {
+    background-color: #87042e;
+  }
+  
+
+/* fim modal */
 
 button {
     padding: 10px 20px;
