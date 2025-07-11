@@ -11,6 +11,36 @@ require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
 use app\Controller\Imagem;
 
+function uploadImagem($img) {
+    // chmod ("../Public/uploads/uploads-carrosel/", 0777);
+    $caminho = '../Public/uploads/uploads-expositor/';
+    $new_img = $img['name'];
+    $new_name = uniqid();
+    $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
+
+    $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
+        
+    $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
+
+    return $caminho_img;
+}
+
+function getImagens($imgs){
+    $arrayImagens = array();
+
+    foreach ($imgs as $key => $value) {
+    
+        $i = 0;
+        
+        do {
+            $arrayImagens['imagem'.$i+1][$key] = $imgs[$key][$i];
+            $i++;
+        } while ($i < count($imgs['name']));
+    }
+
+    return $arrayImagens;
+}
+
 
 /////////////////// MEDOTO POST ///////////////////
 
@@ -19,51 +49,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expositor = new Expositor();
 
     try {
-
         $expositor->setCidade(!empty($_POST['cidade']) ? filter_var($_POST['cidade'], FILTER_UNSAFE_RAW) : NULL);
 
-        // DADOS PESSOA
+        // // DADOS PESSOA
         $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
         $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
         $expositor->setEmail(           !empty($_POST['email'])         ? filter_var($_POST['email'],           FILTER_UNSAFE_RAW) : NULL);
         $expositor->setTelefone(        !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
         $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
 
-        /// upload foto perfil
-        if (isset($_FILES['img_perfil'])) {
+        /// verificando se exite imagens
+        if (isset($_FILES['imagens'])) {
+            if (count($_FILES['imagens']['name']) == 6){
+                ///////// MOVENDO A IMAGEM DE PERFIL ////////////
+                
+                // separa es imagens
+                $imagens = getImagens($_FILES['imagens']);
 
-            /// verifica quantos mb
-            if( 5 < ($_FILES['img_perfil']['size'] / 1024) / 1024){
-                echo json_encode([
-                    'status' => 400,
-                    'msg' => 'Imagem enviada muito grande', 
-                ]);
-                exit;
-            }
+                $caminhosImagens = array();
 
-            ///////// MOVENDO A IMAGEM DE PERFIL ////////////
+                // move as imagens
+                foreach ($imagens as $img) {
+                    // verifica quantos mb
+                    if( 5 < ($img['size'] / 1024) / 1024){
+                        echo json_encode([
+                            'status' => 400,
+                            'msg' => 'Imagem enviada muito grande', 
+                        ]);
+                        exit;
+                    }
 
-            $caminho            = '../Public/uploads/uploads-expositor/';
-            $name_img            = $_FILES['img_perfil']['name'];
-            $new_name           = uniqid();
-            $extencao_imagem    = strtolower(pathinfo($name_img, PATHINFO_EXTENSION));
+                    $extencao_imagem = strtolower(pathinfo($img['name'], PATHINFO_EXTENSION));
+                    
+                    // verifiva qual o tipo de extenção
+                    if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
+                        echo json_encode([
+                            'status' => 400, 
+                            'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
+                        ]);
+                        exit;
+                    }
+                    $caminhosImagens[] = uploadImagem($img);
+                }
 
-            /// verifiva qual o tipo de extenção
-            if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
+                // print_r($caminhosImagens);
+    
+                $expositor->imagens = $caminhosImagens;
+
+
+            }else {
                 echo json_encode([
                     'status' => 400, 
-                    'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
+                    'msg' => 'É necassário enviar 6 imagens para realizar o cadastro', 
                 ]);
                 exit;
             }
-
-            // monta caminho da img
-            $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
-            // move a img
-            $upload_img = move_uploaded_file($_FILES['img_perfil']['tmp_name'], $caminho_img);
-
-            $expositor->setImg_perfil($caminho_img);
+        }else {
+            echo json_encode([
+                'status' => 400, 
+                'msg' => 'É necassário enviar imagens para realizar o cadastro', 
+            ]);
+            exit;
         }
+
 
         // DADOS EXPOSITOR
         $expositor->setNome_marca(     !empty($_POST['marca'])          ? filter_var($_POST['marca'],         FILTER_UNSAFE_RAW) : NULL);
@@ -76,6 +124,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $expositor->setEnergia(        !empty($_POST['energia'])        ? filter_var($_POST['energia'],       FILTER_UNSAFE_RAW) : NULL);
         $expositor->setTipo(           !empty($_POST['tipo'])           ? filter_var($_POST['tipo'],          FILTER_UNSAFE_RAW) : NULL);
         $expositor->setId_categoria(   !empty($_POST['id_categoria'])   ? filter_var($_POST['id_categoria'],  FILTER_UNSAFE_RAW) : NULL);
+
+        // var_dump($expositor);
         
         $res = $expositor->cadastrar();
 
@@ -90,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'msg' => 'Não foi possível realizar o cadastro de expostor!'
             ]);
         }
+
     } catch (\Throwable $th) {
         //// no caso de erro
         echo json_encode([

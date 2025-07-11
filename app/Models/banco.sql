@@ -69,7 +69,6 @@ CREATE TABLE expositor(
 CREATE TABLE imagem(
 	id_imagem INT NOT NULL AUTO_INCREMENT,
     caminho varchar(255),
-    posicao int,
     id_expositor int not null,
     PRIMARY KEY(id_imagem),
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
