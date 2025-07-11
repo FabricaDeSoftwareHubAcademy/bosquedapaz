@@ -41,10 +41,8 @@ btn_salvar.addEventListener('click', async function(event){
             body: dadosForms
         });
     
-        let response = await dados_php.text()
+        let response = await dados_php.json()
 
-        console.log(response)
-        return 0
         
         if(response.status == 200){
             openModalSucesso()

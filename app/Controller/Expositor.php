@@ -87,10 +87,9 @@ class Expositor extends Pessoa
             
         
         //// insert das imagens do expositor \\\\\\
+        $imagem = new Imagem();
+        $imagem->id_expositor = $idExpositor;
         foreach ($this->imagens as $key => $value) {
-            // var_dump($imagens);
-            $imagem = new Imagem();
-            $imagem->id_expositor = 1;
             $imagem->caminho = $value;
             $res = $imagem->cadastro();
         }
