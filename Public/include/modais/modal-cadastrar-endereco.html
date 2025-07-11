@@ -1,20 +1,26 @@
-<dialog id="modal-confirmar" class="modal-loading">
+<dialog id="modal-cadastrar-endereco" class="modal-cadastrar-endereco">
     <div class="content-close">
-        <i class="bi bi-x-square-fill fechar-modal-loading" id="close-modal-confirmar"></i>
+      <i class="bi bi-x-square-fill fechar-modal" id="close-modal-endereco"></i>
     </div>
+  
     <div class="content-modal">
-
-        <i class="bi bi-question-circle meta-quest"></i>
-
-        <div class="content-text">
-            <h2 class="loading-text" id="confirmar-title">Deseja confirmar este cadastro?</h2>
-            <p class="msm-confimar" id="msm-confimar">Clique em salvar para confirmar o cadastro.</p>
-        </div>
+      <h2>Cadastrar Endereço</h2>
+  
+      <form id="form-endereco">
+        <input type="text" id="local_evento" placeholder="Nome do local" required>
+        <input type="text" id="cep_evento" placeholder="CEP" required>
+        <input type="text" id="logradouro_evento" placeholder="Logradouro" required>
+        <input type="text" id="complemento_evento" placeholder="Complemento">
+        <input type="text" id="numero_evento" placeholder="Número" required>
+        <input type="text" id="bairro_evento" placeholder="Bairro" required>
+        <input type="text" id="cidade_evento" placeholder="Cidade" required>
+      </form>
     </div>
-    <div class="content-btns">  
-        <button type="button" class="btn-modal-confirmar" id="btn-modal-cancelar">Cancelar</button>
-        <button class="btn-modal-confirmar" id="btn-modal-salvar">Salvar</button>
+  
+    <div class="content-btns">
+      <button type="button" id="btn-cancelar-endereco">Cancelar</button>
+      <button type="button" id="btn-salvar-endereco">Salvar</button>
     </div>
-</dialog>
+  </dialog>
 
-<script src="../../../Public/js/js-modais/js-modal-confirmar.js"></script>
+<script src="../../../Public/js/js-modais/js-modal-endereco-evento.js"></script>

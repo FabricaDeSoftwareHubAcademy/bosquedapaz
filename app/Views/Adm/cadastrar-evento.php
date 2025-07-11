@@ -63,9 +63,13 @@
                             
                             <div class="data-imagem">
                                 <div class="input-group">
-                                        <label>Local:</label>
-                                        <input type="text" name="endereco" id="endereco" placeholder="Digite o nome do evento"
-                                            required>
+                                    <label for="select-endereco">Endereço do evento:</label>
+                                    <div style="display: flex; gap: 8px;">
+                                        <select id="select-endereco" name="endereco" required>
+                                        <!-- Opções serão carregadas dinamicamente -->
+                                        </select>
+                                        <button type="button" id="btn-novo-endereco" title="Adicionar novo endereço">+</button>
+                                    </div>
                                 </div>
                                 <div class="input-group">
                                     <label>Imagem:</label>
@@ -80,6 +84,8 @@
                        
                     </form>
                     <div class="overlay" id="overlay"></div>
+
+                    <?php include "../../../Public/include/modais/modal-cadastrar-endereco.html"; ?>
                     <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
                     <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
                     <?php include "../../../Public/include/modais/modal-error.html"; ?>
