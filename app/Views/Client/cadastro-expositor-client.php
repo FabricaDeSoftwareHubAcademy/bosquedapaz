@@ -1,5 +1,3 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php'; ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor.css">
-    <!-- <link rel="stylesheet" href="../../../Public/css/css-adm/teste.css"> -->
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/btn-padrao.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
@@ -107,7 +105,18 @@
 
                 </div>
 
-                <?php include '../../../Public/include/Butons-forms.html'; ?>
+                <div id="btns-forms-padrao" class="btns-forms-padrao">
+                    <a href="./escolher-cadastro.php" class="link-area-adm">
+                        <div id="btn-voltar" class="btn-voltar">
+                            <i id="seta" class="bi bi-arrow-left-short seta"></i>
+                        </div>
+                    </a>
+
+                    <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
+                        <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
+                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="salvar" value="salvar">Salvar</button></div>
+                    </div>
+                </div>
 
             </form>
 
