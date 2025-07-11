@@ -76,8 +76,8 @@
         <div class="deletar-text" id="mensagem-confirmar-status"></div>
       </div>
       <div class="content-btns">
-        <button class="btn-modal-deletar deletar-modal-cancelar" id="btn-cancelar-status">Não</button>
         <button class="btn-modal-deletar deletar-modal-salvar" id="btn-confirmar-status">Sim</button>
+        <button class="btn-modal-deletar deletar-modal-cancelar" id="btn-cancelar-status">Não</button>
       </div>
     </div>
   </dialog>
