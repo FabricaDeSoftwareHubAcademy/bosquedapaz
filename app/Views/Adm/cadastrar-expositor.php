@@ -99,7 +99,7 @@
 
                         <div class="form-files">
                             <label>Escolha 6 fotos do seu produto para análise:</label>
-                            <input type="file" name="img_perfil" id="files" multiple>
+                            <input type="file" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 

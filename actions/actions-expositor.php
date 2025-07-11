@@ -11,7 +11,7 @@ require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
 use app\Controller\Imagem;
 
-function Update_imagem($img) {
+function uploadImagem($img) {
     // chmod ("../Public/uploads/uploads-carrosel/", 0777);
     $caminho = '../Public/uploads/uploads-expositor/';
     $new_img = $img['name'];
@@ -23,6 +23,18 @@ function Update_imagem($img) {
     $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
 
     return $caminho_img;
+}
+
+function getImagens($imgs){
+    $arrayImagens = array();
+    foreach ($imgs as $key => $dados) {
+        if ($key == 'error'){
+            continue;
+        }
+        foreach ($dados as $value) {
+            
+        }
+    }
 }
 
 
@@ -44,47 +56,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
 
         /// upload foto perfil
-        if (isset($_FILES['img_perfil'])) {
+        if (isset($_FILES['imagens'])) {
+            
+            getImagens($_FILES['imagens']);
 
-
-
-            echo json_encode([$var]);
-            exit;
+            
 
             /// verifica quantos mb
-            if( 5 < ($_FILES['img_perfil']['size'] / 1024) / 1024){
-                echo json_encode([
-                    'status' => 400,
-                    'msg' => 'Imagem enviada muito grande', 
-                ]);
-                exit;
-            }
+            // if( 5 < ($_FILES['img_perfil']['size'] / 1024) / 1024){
+            //     echo json_encode([
+            //         'status' => 400,
+            //         'msg' => 'Imagem enviada muito grande', 
+            //     ]);
+            //     exit;
+            // }
 
 
 
             ///////// MOVENDO A IMAGEM DE PERFIL ////////////
 
-            $caminho            = '../Public/uploads/uploads-expositor/';
-            $name_img            = $_FILES['img_perfil']['name'];
-            $new_name           = uniqid();
-            $extencao_imagem    = strtolower(pathinfo($name_img, PATHINFO_EXTENSION));
-
             /// verifiva qual o tipo de extenção
-            if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
-                echo json_encode([
-                    'status' => 400, 
-                    'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
-                ]);
-                exit;
-            }
+            // if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
+            //     echo json_encode([
+            //         'status' => 400, 
+            //         'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
+            //     ]);
+            //     exit;
+            // }
 
-            // monta caminho da img
-            $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
-            // move a img
-            $upload_img = move_uploaded_file($_FILES['img_perfil']['tmp_name'], $caminho_img);
-
-            $expositor->setImg_perfil($caminho_img);
+            // $expositor->setImg_perfil($caminho_img);
         }
+
+        exit;
 
         // DADOS EXPOSITOR
         $expositor->setNome_marca(     !empty($_POST['marca'])          ? filter_var($_POST['marca'],         FILTER_UNSAFE_RAW) : NULL);
