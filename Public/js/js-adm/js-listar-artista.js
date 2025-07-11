@@ -1,7 +1,14 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody-artistas');
   const inputPesquisa = document.getElementById('status');
+  const modalConfirmar = document.getElementById("modal-confirmar-status");
+  const mensagemConfirmar = document.getElementById("mensagem-confirmar-status");
+  const btnConfirmar = document.getElementById("btn-confirmar-status");
+  const btnCancelar = document.getElementById("btn-cancelar-status");
+
   let artistas = [];
+  let artistaSelecionadoId = null;
+  let artistaNovoStatus = null;
 
   function formatarTelefone(numero) {
     if (!numero) return '';
@@ -62,37 +69,55 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderizarTabela(filtrados);
   });
 
-  tbody.addEventListener('click', async (e) => {
+  // Quando clicar em Ativo/Inativo, exibe o modal de confirmação
+  tbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('status')) {
       const botao = e.target;
       const id = botao.getAttribute('data-id');
       const statusAtual = botao.classList.contains('active') ? 'ativo' : 'inativo';
       const novoStatus = statusAtual === 'ativo' ? 'inativo' : 'ativo';
 
-      try {
-        const response = await fetch('../../../actions/action-listar-artista.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            id_artista: id,
-            novo_status: novoStatus
-          })
-        });
+      artistaSelecionadoId = id;
+      artistaNovoStatus = novoStatus;
 
-        const resultado = await response.json();
-
-        if (resultado.success) {
-          const artistaEditado = artistas.find(a => a.id_artista == id);
-          if (artistaEditado) artistaEditado.status = resultado.novo_status;
-          renderizarTabela(artistas);
-        } else {
-          console.error('Erro ao atualizar status:', resultado.error);
-        }
-      } catch (err) {
-        console.error('Erro na requisição:', err);
-      }
+      mensagemConfirmar.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
+      modalConfirmar.showModal();
     }
+  });
+
+  btnConfirmar.addEventListener('click', async () => {
+    if (!artistaSelecionadoId || !artistaNovoStatus) return;
+
+    try {
+      const response = await fetch('../../../actions/action-listar-artista.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          id_artista: artistaSelecionadoId,
+          novo_status: artistaNovoStatus
+        })
+      });
+
+      const resultado = await response.json();
+
+      if (resultado.success) {
+        const artistaEditado = artistas.find(a => a.id_artista == artistaSelecionadoId);
+        if (artistaEditado) artistaEditado.status = resultado.novo_status;
+        renderizarTabela(artistas);
+      } else {
+        console.error('Erro ao atualizar status:', resultado.error);
+      }
+
+      modalConfirmar.close();
+    } catch (err) {
+      console.error('Erro na requisição:', err);
+      modalConfirmar.close();
+    }
+  });
+
+  btnCancelar.addEventListener('click', () => {
+    modalConfirmar.close();
   });
 });

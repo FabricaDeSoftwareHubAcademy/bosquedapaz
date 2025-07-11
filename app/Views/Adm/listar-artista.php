@@ -27,7 +27,7 @@
           <input type="text" id="status" placeholder="Artista" />
           <button class="search-button">BUSCAR</button>
         </div>
-      
+
         <div class="table-container">
           <table class="collaborators-table">
             <thead>
@@ -42,45 +42,46 @@
               </tr>
             </thead>
             <tbody id="tbody-artistas">
-             <!-- gerado por js -->
+              <!-- gerado por js -->
             </tbody>
           </table>
-
-
         </div>
+
         <div class="btns">
           <a href="Area-Adm.php" class="voltar">
-            <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
           </a>
         </div>
       </div>
-      <dialog id="edit-modal" class="modal-edit">
-        <h2>Confirmar Exclusão</h2>
-        <p>Tem certeza que deseja fazer isso?</p>
-        <div>
-          <button id="edit-cancel" class="cancel-btn close-modal" data-modal="edit-modal">Cancelar</button>
-          <button id="edit-confirm" class="confirm-btn close-modal" data-modal="edit-modal">Confirmar</button>
-        </div>
-      </dialog>
+
   </main>
 
   <td><button class="status inactive">Inativo</button></td>
   <td><button class="status active">Ativo</button></td>
 
 
-  <div class="btns">
-    <a href="gerenciar-expositores.php" class="voltar">
-      <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
-    </a>
-  </div>
+
   <div class="bolas-fundo">
-    <img src="../../../Public/imgs/imagens-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-    <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-    <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+    <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+    <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+    <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
   </div>
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/js-listar-artista.js"></script>
+
+  <dialog id="modal-confirmar-status" class="modal-loading">
+    <div class="content-modal">
+      <div class="content-text">
+        <div class="deletar-text" id="mensagem-confirmar-status"></div>
+      </div>
+      <div class="content-btns">
+        <button class="btn-modal-deletar deletar-modal-cancelar" id="btn-cancelar-status">Não</button>
+        <button class="btn-modal-deletar deletar-modal-salvar" id="btn-confirmar-status">Sim</button>
+      </div>
+    </div>
+  </dialog>
+
 
 </body>
 
