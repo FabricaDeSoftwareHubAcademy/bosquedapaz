@@ -962,6 +962,49 @@ table tbody tr:nth-child(even) {
     }
 }
 
+.modal-confirmacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+  }
+
+.modal-confirmacao-conteudo {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+.modal-confirmacao-botoes {
+    margin-top: 15px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+.modal-confirmacao-botao {
+    padding: 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+
+.botao-sim {
+    background-color: #28A745;
+    color: white;
+}
+
+.botao-nao {
+    background-color: #DC3545;
+    color: white;
+}
+
 /* 📱 Ajustes para telas menores que 992px */
 @media (max-width: 991.98px) {
     body {
