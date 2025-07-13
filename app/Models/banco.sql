@@ -194,14 +194,17 @@ CREATE TABLE utilidade_publica (
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp, exp.validacao, 
-pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
-cat.id_categoria, cat.descricao, cat.cor, cat.icone
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.validacao, 
+pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, pes.status_pes, 
+cat.id_categoria, cat.descricao, cat.cor, cat.icone,
+en.cidade
 FROM expositor AS exp 
 INNER JOIN categoria AS cat 
 ON cat.id_categoria = exp.id_categoria 
 INNER JOIN pessoa AS pes 
-ON pes.id_pessoa = exp.id_pessoa;
+ON pes.id_pessoa = exp.id_pessoa
+INNER JOIN endereco AS en 
+ON pes.id_endereco = en.id_endereco;
 
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 
