@@ -176,8 +176,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $buscarImagem = $imagens->listar($_GET['id']);
             $buscarId = $expositor->listar("id_expositor = ". $_GET['id']);
             //// faz append das imagens
-            $buscarId['imagens'] = $buscarImagem;
-            $response = $buscarId ? ['expositor' => $buscarId, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            $buscarId[0]['imagens'] = $buscarImagem;
+            $response = $buscarId ? ['expositor' => $buscarId[0], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
         //// RETORNA EXPOSITORES INATIVOS

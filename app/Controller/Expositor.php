@@ -148,7 +148,7 @@ class Expositor extends Pessoa
 
     public function validarExpositor($id, $status, $categoria = null, $newSenha = null){
         $db = new Database('expositor');
-        if($status == 'aprovado'){
+        if($status == 'validado'){
             //// dados pessoa
             $senha = [
                 'senha' => $newSenha,
@@ -157,11 +157,12 @@ class Expositor extends Pessoa
 
             ///// dados expositor
             $newStatus = [
-                'validacao' => 'aprovado',
+                'validacao' => 'validado',
                 'id_categoria' => $categoria
             ];
 
             $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = '. $id);
+
             return $res;
 
         }else if ($status == 'recusado'){

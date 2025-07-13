@@ -24,19 +24,9 @@
         <section class="secao-dados-empresa">
             <div class="area-superior">
                 <h1 class="area-superior-texto" id="nomeEmpresa">Nome da Empresa</h1>
-                <img class="area-superior-imagem" src="" id="logoEmpresa">
             </div>
-            <div class="area-inferior-produtos">
-                    <div class="area-produtos">
-                        <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto1.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto2.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto3.jpeg" alt="">
-                    </div>
-                    <div class="area-produtos">
-                        <img class="produtos-imagens produto-imagem1" src="../../../Public/imgs/imgs-validar-expositor/produto4.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem2" src="../../../Public/imgs/imgs-validar-expositor/produto5.jpeg" alt="">
-                        <img class="produtos-imagens produto-imagem3" src="../../../Public/imgs/imgs-validar-expositor/produto6.jpeg" alt="">
-                    </div>
+            <div class="area-inferior-produtos" id="areaFotos">
+                    
                 </div>
         </section>
 
@@ -104,7 +94,10 @@
             </div>
         </section>
     </main>
-
+    
+    <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
+    <?php include "../../../Public/include/modais/modal_carregando.html"; ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
     <?php include "../../../Public/include/modais/modal-error.html"; ?>
 
     <div class="decoracoes">
