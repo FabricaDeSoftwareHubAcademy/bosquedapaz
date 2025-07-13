@@ -60,7 +60,7 @@ CREATE TABLE expositor(
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
-    validacao ENUM('aguardando', 'validado') NOT NULL DEFAULT 'aguardando',
+    validacao ENUM('aguardando', 'validado', 'recusado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
     FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria)
