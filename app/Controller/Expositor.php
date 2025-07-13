@@ -107,7 +107,7 @@ class Expositor extends Pessoa
 
             //// RETORNA TODOS OS EXPOSITORES VALIDADOS
             if($where == null){
-                $expositores = $db->select('validacao != "aguardando"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
                 return $expositores ? $expositores : FALSE;
             }
 
