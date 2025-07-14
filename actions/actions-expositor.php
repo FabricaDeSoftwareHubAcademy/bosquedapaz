@@ -120,12 +120,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITOR DONO DO ID COM AS IMAGENS DELE
         }else if (isset($_GET['id'])){
+            $id = $_GET['id'];
             $imagens = new Imagem();
             //// busca imagens pelo id do expositor
             $buscarImagem = $imagens->listar($_GET['id']);
-            $buscarId = $expositor->listar("id_expositor = ". $_GET['id']);
+            $buscarId = $expositor->listar("id_expositor = ". $id);
             //// faz append das imagens
-            $buscarId['imagens'] = $buscarImagem;
+            // $buscarId['imagens'] = $buscarImagem;
             $response = $buscarId ? ['expositor' => $buscarId, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 

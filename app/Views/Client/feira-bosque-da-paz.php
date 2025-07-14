@@ -36,5 +36,6 @@
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>

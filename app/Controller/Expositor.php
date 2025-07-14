@@ -169,7 +169,7 @@ class Expositor extends Pessoa
     {
 
         $db = new Database('expositor');
-        $ids_pessoa_expositor = $db->select_pessoa_expositor($id)->fetch(PDO::FETCH_ASSOC);
+        $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
 
         $db = new Database('pessoa');
         $res = $db->update(
@@ -214,10 +214,10 @@ class Expositor extends Pessoa
         $this->id_expositor = $id_expositor;
     }
 
-    public function setImagens($imagens)
-    {
-        $this->imagens = $imagens;
-    }
+    // public function setImagens($imagens)
+    // {
+    //     $this->imagens = $imagens;
+    // }
 
     public function setId_pessoa($id_pessoa)
     {

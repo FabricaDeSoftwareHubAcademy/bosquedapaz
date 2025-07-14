@@ -15,21 +15,20 @@ window.addEventListener("DOMContentLoaded", async () => {
     const id_expositor = params.get("id");
 
 
-    let dados_php = await fetch('../../../actions/action-editar-expositor.php?id_expo=' + id_expositor);
+    let dados_php = await fetch('../../../actions/actions-expositor.php?id=' + id_expositor);
 
 
     let response = await dados_php.json();
 
-
     if (response.status == 200) {
-        input_id_expositor.value = response.data.id_expositor;
-        input_nome.value = response.data.nome_marca;
-        input_desc.value = response.data.descricao_exp;
-        input_email.value = response.data.email;
-        input_insta.value = response.data.link_instagram;
-        input_whatsapp.value = response.data.whats;
-        input_facebook.value = response.data.link_facebook;
-        input_logo.value = response.data.foto;
+        input_id_expositor.value = response.expositor['0'].id_expositor;
+        input_nome.value = response.expositor['0'].nome_marca;
+        input_desc.value = response.expositor['0'].descricao_exp;
+        input_email.value = response.expositor['0'].email;
+        input_insta.value = response.expositor['0'].link_instagram;
+        input_whatsapp.value = response.expositor['0'].whats;
+        input_facebook.value = response.expositor['0'].link_facebook;
+        input_logo.value = response.expositor['0'].foto;
     }
 
     console.log(response);
