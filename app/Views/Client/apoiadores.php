@@ -100,7 +100,6 @@
     
     <?php include "../../../Public/include/home/section-apoiadores.php"; ?>
     <?php include "../../../Public/include/home/rodape.html"; ?>
-    
-
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>
