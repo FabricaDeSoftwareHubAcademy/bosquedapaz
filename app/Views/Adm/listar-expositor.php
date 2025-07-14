@@ -49,8 +49,8 @@
                       </table>
                     </div>  
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/assets/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                <a href="./Area-Adm.php" class="voltar">
+                <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>  
             </div>
@@ -60,9 +60,9 @@
                 
   </main>
   <div class="bolas-fundo">
-        <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img class="bola-verde1" src="../../../Public/assets/img-bolas/bola-azul1.png" alt="">
+        <img class="bola-verde2" src="../../../Public/assets/img-bolas/bola-azul2.png" alt="">
+        <img class="bola-rosa" src="../../../Public/assets/img-bolas/bola-azul.png" alt="">
       </div>
   
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
