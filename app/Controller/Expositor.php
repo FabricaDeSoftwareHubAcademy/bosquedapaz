@@ -57,7 +57,7 @@ class Expositor extends Pessoa
                 'whats' => $this->whats,
                 'img_perfil' => $this->foto_perfil,
                 'link_instagram' => $this->link_instagram,
-                'perfil' => 1,
+                'perfil' => '0',
                 'id_endereco' => $endereco_id,
             ]
         );

@@ -6,31 +6,35 @@ async function getExpositor() {
 
     let expositores = await dados.json();
 
-    console.log(expositores)
+    if (expositores.status == 200){
+        tBody.innerHTML = ''
+    
+        expositores.expositor.forEach(expositor => {
+            let status = expositor.status_pes == 'ativo' ? 'active' : 'inactive';
+    
+            tBody.innerHTML += `
+            <tr>
+            <td class="usuario-col">${expositor.id_expositor}</td>
+            <td>${expositor.nome}</td>
+            <td class="email-col">${expositor.email}</td>
+            <td class="fone-col">${expositor.telefone}</td>
+            <td class="barraca-col">${expositor.num_barraca}</td>
+            <td><button class="status ${status}">${expositor.status_pes}</button></td>
+            <td>
+                <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+            
+            </td>
+            </tr> 
+            `;
+        });
+
+    }else {
+        tbody.innerHTML = '<td colspan="5" style="text-align: center; padding: .5rem 0rem;">Nenhum expositor encontrado.</td>'
+    }
 
 
-    tBody.innerHTML = ''
-
-    expositores.expositor.forEach(expositor => {
-        let status = expositor.status_pes == 'ativo' ? 'active' : 'inactive';
-
-        tBody.innerHTML = `
-        <tr>
-        <td class="usuario-col">${expositor.id_expositor}</td>
-        <td>${expositor.nome}</td>
-        <td class="email-col">${expositor.email}</td>
-        <td class="fone-col">${expositor.telefone}</td>
-        <td class="barraca-col">${expositor.num_barraca}</td>
-        <td><button class="status ${status}">${expositor.status_pes}</button></td>
-        <td>
-            <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </a>
-        
-        </td>
-        </tr> 
-        `;
-    });
 }
 
 getExpositor()
