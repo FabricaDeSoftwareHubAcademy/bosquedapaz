@@ -8,14 +8,14 @@
     font-family: "Poppins", sans-serif;
 }
 
-.cadastro-categoria {
+.dialog-categoria {
     width: 500px;
     margin: auto;
     border: none;
     border-radius: 8px;
 }
 
-.modal-content {
+.dialog-categoria-content {
     width: 100%;
     height: 70vh;
     background-color: white;
@@ -26,12 +26,12 @@
     position: relative;
 }
 
-.modal h2{
+.dialog-categoria-content h2 {
     flex-direction: row;
     font-size: 16px;
 }
 
-.close {
+.dialog-close {
     justify-content: end;
     display: flex;
     position: relative;
@@ -41,14 +41,14 @@
     color: #333;
 }
 
-.titulo {
+.dialog-titulo {
     text-transform: uppercase;
     font-size: 24px;
     text-align: center;
     margin-bottom: 15px;
 }
 
-.form-box {
+.dialog-form-box {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -56,19 +56,18 @@
     align-items: center;
 }
 
-.form-box .nome-cat{
+.dialog-form-box .nome-cat {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 65%;
-    /* margin-right: 10px; */
     font-size: 16px;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
     outline: none;
 }
 
-.form-box .botao-cor{
+.dialog-form-box .botao-cor {
     position: relative;
     display: flex;
     margin: 30px auto;
@@ -80,7 +79,7 @@
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
 
-.custum-file-upload{
+.custum-file-upload {
     width: 40%;
     margin: auto;
     flex-direction: column;
@@ -89,7 +88,7 @@
     align-items: center;
 }
 
-.icon{
+.icon {
     display: flex;
     width: 100%;
     align-items: center;
@@ -97,7 +96,7 @@
     flex-direction: column;
 }
 
-.icon svg{
+.icon svg {
     align-items: center;
     justify-content: center;
     width: 50%;
@@ -107,19 +106,19 @@
     cursor: pointer;
     height: 80px;
     fill: rgba(75, 85, 99, 1);
-  }
+}
 
-.separacao{
+.separacao {
     width: 30%;
     height: 5%;
 }
 
-.previa{
+.previa {
     width: 100%;
     height: 100%;
 }
 
-.previa img{
+.previa img {
     height: 100%;
     width: 100%;
     display: block;
@@ -143,7 +142,7 @@
     border-radius: 5px;
 }
 
-.botoes {
+.dialog-botoes {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -152,7 +151,7 @@
     gap: 20px;
 }
 
-.botoes button {
+.dialog-botoes button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -161,13 +160,13 @@
     width: 25%;
 }
 
-.cancelar {
+.dialog-cancelar {
     width: 48%;
     background-color: #FF3877;
     color: white;
 }
 
-.salvar {
+.dialog-salvar {
     width: 48%;
     background-color: #007E70;
     color: white;
@@ -189,7 +188,6 @@
 .color-preview {
     width: 30px;
     height: 20px;
-    /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #000;
 }
@@ -224,19 +222,20 @@
 select {
     color: gray;
     transition: color 0s 2147483647s;
-  }
+}
 
-  dialog::backdrop{
+dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.753);
-} 
-  select option {
-    color: #333;
-  }
-  
-  option[value=""][disabled] {
-    display: none;
-  }
+}
 
-.titulo-modal{
+select option {
+    color: #333;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+.titulo-modal {
     margin-top: 20px;
 }

@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
-            $res = $expositor->validarExpositor($idExpositor, 'aprovado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT));
+            $res = $expositor->validarExpositor($idExpositor, 'validado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT));
             
             if ($res){
                 $response = array("msg" => 'Expositor aprovado com sucesso', "status" => 200);

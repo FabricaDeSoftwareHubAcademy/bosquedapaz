@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
 
 <!DOCTYPE html>
@@ -98,8 +99,8 @@
                         </div>
 
                         <div class="form-files">
-                            <label>Escolher foto de perfil:</label>
-                            <input type="file" name="img_perfil" id="files" multiple="multiple">
+                            <label>Escolha 6 fotos do seu produto para análise:</label>
+                            <input type="file" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 
@@ -110,7 +111,7 @@
             </form>
 
             <div class="overlay" id="overlay"></div>
-            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
 

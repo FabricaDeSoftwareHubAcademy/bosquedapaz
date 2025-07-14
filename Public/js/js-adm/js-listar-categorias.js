@@ -32,34 +32,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function renderizarTabela(categorias) {
-        tabelaCategoria.innerHTML = '';
+function renderizarTabela(categorias) {
+    tabelaCategoria.innerHTML = '';
 
-        if (categorias.length === 0) {
-            tabelaCategoria.innerHTML = `<tr><td colspan="4">Nenhuma categoria encontrada</td></tr>`;
-            return;
-        }
-
-        categorias.forEach(cat => {
-            const tr = document.createElement('tr');
-
-            tr.innerHTML = `
-                <td class="usuario-col">${cat.id_categoria}</td>
-                <td>${sanitize(cat.descricao)}</td>
-                <td><button class="status active">Ativo</button></td>
-                <td>
-                    <a href="#" 
-                        class="edit-icon open-modal"
-                        data-id="${cat.id_categoria}"
-                        data-nome="${sanitize(cat.descricao)}"
-                        data-cor="${sanitize(cat.cor)}">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                </td>
-            `;
-            tabelaCategoria.appendChild(tr);
-        });
+    if (categorias.length === 0) {
+        tabelaCategoria.innerHTML = `<tr><td colspan="4">Nenhuma categoria encontrada</td></tr>`;
+        return;
     }
+
+    categorias.forEach(cat => {
+        const status = (cat.status_cat || '').trim().toLowerCase(); 
+        const statusClass = status === 'ativo' ? 'active' : 'inactive';
+        const statusLabel = status === 'ativo' ? 'Ativo' : 'Inativo';
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td class="usuario-col">${cat.id_categoria}</td>
+            <td>${sanitize(cat.descricao)}</td>
+            <td>
+                <button class="status ${statusClass}">${statusLabel}</button>
+            </td>
+            <td>
+                <a href="#"
+                    class="edit-icon open-modal"
+                    data-id="${cat.id_categoria}"
+                    data-nome="${sanitize(cat.descricao)}"
+                    data-cor="${sanitize(cat.cor)}">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+            </td>
+        `;
+        tabelaCategoria.appendChild(tr);
+    });
+}
+
+
 
     function filtrarTabela(termo) {
         const linhas = tabelaCategoria.querySelectorAll('tr');

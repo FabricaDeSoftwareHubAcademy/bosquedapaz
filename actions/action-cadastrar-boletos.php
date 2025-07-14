@@ -2,7 +2,6 @@
 require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
 
-// Caminho fixo da pasta
 $caminhoPasta = '../Public/uploads/uploads-boletos';
 
 if (isset($_POST['botao-cadastrar'])) {
@@ -13,17 +12,13 @@ if (isset($_POST['botao-cadastrar'])) {
             mkdir($caminhoPasta, 0755, true);
         }
 
-        // Pegando o nome da pessoa do formulário (string)
         $nomePessoa = $_POST['nome_exp'] ?? '';
 
-        // Limpa o nome: tira acento, espaços, caracteres especiais e deixa tudo minúsculo com _
         $nomeLimpo = preg_replace('/[^a-z0-9]/', '_', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $nomePessoa)));
 
-        // Pega o mês de referência e deixa minúsculo
         $mesReferencia = strtolower($_POST['referencia_input'] ?? '');
 
-        // Pega a data de vencimento e formata
-        $vencimento = $_POST['vencimento_input'] ?? ''; // formato esperado: YYYY-MM-DD
+        $vencimento = $_POST['vencimento_input'] ?? '';
 
         if ($vencimento) {
             $data = DateTime::createFromFormat('Y-m-d', $vencimento);
@@ -38,7 +33,6 @@ if (isset($_POST['botao-cadastrar'])) {
             $dia = $mes = $ano = 'data_vazia';
         }
 
-        // Monta o nome do arquivo conforme pedido
         $nomeArquivo = "boleto_{$nomeLimpo}_{$mesReferencia}_{$dia}_{$mes}_{$ano}.pdf";
 
         $caminhoCompleto = $caminhoPasta . '/' . $nomeArquivo;

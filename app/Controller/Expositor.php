@@ -29,6 +29,7 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
+    public $imagens;
 
 
 
@@ -37,7 +38,6 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
-
         
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
@@ -65,7 +65,7 @@ class Expositor extends Pessoa
         ///// insert na tabela expostor \\\\\\
 
         $db = new Database('expositor');
-        $res = $db->insert(
+        $idExpositor = $db->insert_lastid(
             [
                 'id_pessoa' => $pes_id,
                 'id_categoria' => $this->id_categoria,
@@ -82,8 +82,18 @@ class Expositor extends Pessoa
                 'cor_rua' => $this->cor_rua,
                 'responsavel' => $this->responsavel,
                 'produto' => $this->produto
-            ]
-        );
+                ]
+            );
+            
+        
+        //// insert das imagens do expositor \\\\\\
+        $imagem = new Imagem();
+        $imagem->id_expositor = $idExpositor;
+        foreach ($this->imagens as $key => $value) {
+            $imagem->caminho = $value;
+            $res = $imagem->cadastro();
+        }
+
 
         return $res;
     }
@@ -97,7 +107,7 @@ class Expositor extends Pessoa
 
             //// RETORNA TODOS OS EXPOSITORES VALIDADOS
             if($where == null){
-                $expositores = $db->select('validacao != "aguardando"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
                 return $expositores ? $expositores : FALSE;
             }
 
@@ -156,18 +166,21 @@ class Expositor extends Pessoa
 
     public function validarExpositor($id, $status, $categoria = null, $newSenha = null){
         $db = new Database('expositor');
-        if($status == 'aprovado'){
+        if($status == 'validado'){
             //// dados pessoa
-            $senha = ['senha' => $newSenha];
+            $senha = [
+                'senha' => $newSenha,
+                'status_pes' => 'ativo',
+            ];
 
             ///// dados expositor
             $newStatus = [
-                'status_exp' => 'ativo',
-                'validacao' => 'aprovado',
+                'validacao' => 'validado',
                 'id_categoria' => $categoria
             ];
 
             $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = '. $id);
+
             return $res;
 
         }else if ($status == 'recusado'){
@@ -178,6 +191,48 @@ class Expositor extends Pessoa
             $res = $db->update('id_expositor = '. $id, $newStatus);
             return $res;
         }
+    }
+
+
+    public function atualizar($id) // Recebe o ID como parâmetro
+    {
+
+        $db = new Database('expositor');
+        $ids_pessoa_expositor = $db->select_pessoa_expositor($id)->fetch(PDO::FETCH_ASSOC);
+
+        $db = new Database('pessoa');
+        $res = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            [
+                'link_instagram' => $this->link_instagram,
+                'whats' => $this->whats,
+                'link_facebook' => $this->link_facebook,
+                'email' => $this->email
+            ]
+        );
+
+        $db = new Database('expositor');
+        $res = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            [
+                'nome_marca' => $this->nome_marca,
+                'descricao' => $this->descricao,
+            ]
+        );
+
+        // $ids_imagens = $db->select_img($id)->fetch(PDO::FETCH_ASSOC);
+
+        $db = new Database('imagem');
+        $res = $db->update(
+            'id_imagem = ' . 1,
+            [
+                'caminho' => '../caminho/imagem.jpg',
+                'posicao' => '',
+                'id_expo' => 1
+            ]
+        );
+
+        return $res;
     }
 
 

@@ -25,8 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
 
                 if (data.status === 'success') {
+                    // Atualiza texto do botão
                     button.textContent = novoStatus.charAt(0).toUpperCase() + novoStatus.slice(1);
-                    button.classList.toggle('active');
+
+                    // Remove ambas as classes e adiciona a correta
+                    button.classList.remove('active', 'inactive');
+                    button.classList.add(novoStatus === 'ativo' ? 'active' : 'inactive');
                 } else {
                     alert('❌ ' + data.message);
                 }

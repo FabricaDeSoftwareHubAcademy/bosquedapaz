@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // 📋 Validação dos campos obrigatórios
     if (empty($id) || empty($descricao) || empty($cor)) {
-        echo json_encode(['status' => 'error', 'mensagem' => 'Preencha todos os campos obrigatórios.']);
+        echo json_encode(['status' => 'error', 'message' => 'Preencha todos os campos obrigatórios.']);
         exit;
     }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Busca a categoria existente para obter o caminho do ícone antigo
     $categoriaExistente = $categoriaController->buscarPorId($id);
     if (!$categoriaExistente) {
-        echo json_encode(['status' => 'error', 'mensagem' => 'Categoria não encontrada.']);
+        echo json_encode(['status' => 'error', 'message' => 'Categoria não encontrada.']);
         exit;
     }
     
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Valida a extensão do arquivo
         if (!in_array($extensao, $extensoesPermitidas)) {
-            echo json_encode(["status" => "error", "mensagem" => "Formato de ícone inválido. Use jpg, png, svg ou gif."]);
+            echo json_encode(["status" => "error", "message" => "Formato de ícone inválido. Use jpg, png, svg ou gif."]);
             exit;
         }
 
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Define o caminho do novo ícone para salvar no banco
             $categoriaController->setIcone('uploads/uploads-categorias/' . $nomeSeguro);
         } else {
-            echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao salvar o novo ícone.']);
+            echo json_encode(['status' => 'error', 'message' => 'Erro ao salvar o novo ícone.']);
             exit;
         }
     }
@@ -85,9 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retorna uma resposta JSON informando o sucesso ou a falha da operação
     echo json_encode([
         'status' => $resultado ? 'success' : 'error',
-        'mensagem' => $resultado ? 'Categoria atualizada com sucesso.' : 'Falha ao atualizar a categoria.'
+        'message' => $resultado ? 'Categoria atualizada com sucesso.' : 'Falha ao atualizar a categoria.'
     ]);
 } else {
     // Se a requisição não for POST, retorna um erro
-    echo json_encode(['status' => 'error', 'mensagem' => 'Requisição inválida.']);
+    echo json_encode(['status' => 'error', 'message' => 'Requisição inválida.']);
 }
