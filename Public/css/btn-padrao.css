@@ -95,7 +95,6 @@
     }
     .btns-salvar-cancelar {
         width: 100%;
-        flex-direction: column-reverse;
     }
     .envolta-btn {
         width: 80%;
