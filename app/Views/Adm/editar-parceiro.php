@@ -20,7 +20,7 @@
             <h1>EDITAR PARCEIRO</h1>
             <div class="form-box">
                 <form id="form_cadastrar_parceiro" method="POST">
-                    <div class="form-container">
+                <div class="form-container">
                         <div id="form1" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_parceiro">Parceiro:</label>
@@ -31,17 +31,17 @@
                                 <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
                             </div>
                             <div class="input-group">
-                                <label for="logo">Logo:</label>
-                                <input type="file" id="logo" name="logo" required>
-                            </div>                                
+                                <label for="cep">CEP:</label>
+                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+                            </div>
                             <div class="input-group">
-                                <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
-                            </div>                          
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+                            </div>                                             
                             <div class="input-group">
-                                <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
-                            </div>                       
+                                <label for="cidade">Estado:</label>
+                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                            </div>                    
                         </div>
                         <div id="form2" class="form-grid">
                             <div class="input-group">
@@ -53,16 +53,17 @@
                                 <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
                             </div>
                             <div class="input-group">
-                                <label for="cep">CEP:</label>
-                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
-                            </div>
+                                <label for="logradouro">Logradouro:</label>
+                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
+                            </div>                                        
                             <div class="input-group">
-                                <label for="complemento">Complemento:</label>
-                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
-                            </div>
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                            </div>                               
                             <div class="input-group">
-                                <label for="cidade">Estado:</label>
-                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                                <label for="logo">Logo:</label>
+                                <input type="file" id="logo" name="logo" accept="image/*" required>
+                                <img id="preview-logo" src="#" alt="Pré-visualização da logo" style="max-width: 150px; margin-top: 10px; display: none;" />
                             </div>  
                         </div>
                         <div id="form3" class="form-grid">
@@ -74,17 +75,17 @@
                                 <label for="tipo">Tipo:</label>
                                 <select id="tipo" name="tipo" required>
                                     <option value="" disabled selected>Selecione o tipo</option>
-                                    <option value="Juridica">Jurídica</option>
-                                    <option value="Fisica">Física</option>
+                                    <option value="juridica">Jurídica</option>
+                                    <option value="fisica">Física</option>
                                 </select>
                             </div>
                             <div class="input-group">
-                                <label for="logradouro">Logradouro:</label>
-                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
-                            </div>   
+                                <label for="num_residencia">Número:</label>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
+                            </div> 
                             <div class="input-group">
-                                <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
                             </div>  
                         </div>
                         <?php include "../../../Public/include/Butons-forms.html" ?>

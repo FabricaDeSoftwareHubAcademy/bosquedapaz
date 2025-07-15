@@ -142,7 +142,7 @@ CREATE TABLE desenvolvedor(
 );
 
 CREATE TABLE parceiro(
-	id_parceiro INT NOT NULL AUTO_INCREMENT,
+    id_parceiro INT NOT NULL AUTO_INCREMENT,
     nome_parceiro VARCHAR(150) NOT NULL,
     telefone CHAR(11) NOT NULL,
     email VARCHAR(150) NOT NULL,
@@ -151,6 +151,7 @@ CREATE TABLE parceiro(
     cpf_cnpj CHAR(18) NOT NULL,
     logo VARCHAR(255) NOT NULL,
     id_endereco INT NULL,
+    status_parceiro ENUM('Ativo', 'Inativo') NOT NULL DEFAULT 'Ativo',
     PRIMARY KEY(id_parceiro),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );

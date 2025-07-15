@@ -478,3 +478,13 @@ h1 {
   }
 }
 
+#preview-logo {
+  width: 100%;
+  height: 400px;
+  display: block;
+  margin: 10px auto 0 auto;
+  object-fit: contain;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
