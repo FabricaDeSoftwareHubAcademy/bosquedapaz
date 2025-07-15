@@ -18,9 +18,7 @@ async function carregarExpositores() {
                         <h3 class="nome-expo">${expo.nome_marca}</h3>
                         <div class="detalhes-expo">
                             <p class="para-cate">Categoria: <span class="span-cate">${expo.descricao}</span></p>
-                            <p class="para-color">Rua: <span class="span-color ${expo.cor_rua ? expo.cor_rua.toLowerCase(): ''}">
-                            ${expo.cor_rua ?? 'Sem informação'}
-                            </span>
+                            <p class="para-color">Rua: <span class="span-color ${expo.cor_rua }"> ${expo.cor_rua}</span>
                         </p>
                         </div>
                         <button class="btn-ver-info open-modal" data-modal="m-per-expo">Ver Mais</button>
