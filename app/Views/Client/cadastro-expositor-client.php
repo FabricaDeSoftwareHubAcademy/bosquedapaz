@@ -1,3 +1,5 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,12 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-expositor.css">
-    <link rel="stylesheet" href="../../../Public/css/btn-padrao.css">
+
+    <!-- <link rel="stylesheet" href="../../../Public/css/css-adm/teste.css"> -->
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 
 <body onload="getCategorias()">
-    <?php include "../../../Public/include/home/menu-home.html" ?>
+<?php include "../../../Public/include/home/menu-home.html" ?>
 
 
     <main class="principal">
@@ -98,30 +101,19 @@
                         </div>
 
                         <div class="form-files">
-                            <label>Escolher foto de perfil:</label>
-                            <input type="file" name="img_perfil" id="files" multiple="multiple">
+                            <label>Escolha 6 fotos do seu produto para análise:</label>
+                            <input type="file" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 
                 </div>
 
-                <div id="btns-forms-padrao" class="btns-forms-padrao">
-                    <a href="./escolher-cadastro.php" class="link-area-adm">
-                        <div id="btn-voltar" class="btn-voltar">
-                            <i id="seta" class="bi bi-arrow-left-short seta"></i>
-                        </div>
-                    </a>
-
-                    <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
-                        <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
-                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="salvar" value="salvar">Salvar</button></div>
-                    </div>
-                </div>
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
 
             </form>
 
             <div class="overlay" id="overlay"></div>
-            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
 
