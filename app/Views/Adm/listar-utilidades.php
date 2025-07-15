@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="btns">
-            <a href="gerenciar-parceiros.php" class="voltar">
+            <a href="Area-adm.php" class="voltar">
                 <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
@@ -59,7 +59,6 @@
     </div>
 
     <?php include "../../../Public/include/modais/modal-confirmar.html"?>
-    <!-- <script src="../../../Public/js//js-adm/status-colaborador.js"></script> -->
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/listar-utilidades-publicas.js" defer></script>
 </body>

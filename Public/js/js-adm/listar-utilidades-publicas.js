@@ -34,39 +34,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     tabela.innerHTML = html;
 
-    
-
-
-    // tabela.addEventListener("click", async function (event) {
-    //     const btn = event.target;
-    //     if (btn) {
-    //         const idClicado = btn.dataset.id;
-    //         const item = response.find(obj => obj.id_utilidade_publica == idClicado);
-    //         console.log(item)
-
-    //         if (item) {
-
-    //             // item.status_utilidade = item.status_utilidade == 1 ? 0 : 1;
-
-
-    //             btn.textContent = item.status_utilidade == 1 ? 'Ativo' : 'Inativo';
-
-    //             btn.classList.toggle('active', item.status_utilidade == 1);
-    //             btn.classList.toggle('inactive', item.status_utilidade == 0);
-
-    //             console.log(`ID: ${idClicado}, status atualizado para: ${item.status_utilidade}`);
-    //         }
-    //     }
-    // });
-
-
     btnAtivoInativo = document.querySelectorAll('#ativoInativo');
     
     btnAtivoInativo.forEach((btn) => {
         btn.addEventListener('click', async function (event) {
             event.preventDefault();
     
-            // Captura o botão clicado
             const id = this.getAttribute('data-id');
             const isActive = this.classList.contains('active');
     
@@ -80,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
             document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
     
-            // Remover eventos duplicados: clona o botão salvar
             const salvarBtn = document.getElementById('btn-modal-salvar');
             const novoSalvarBtn = salvarBtn.cloneNode(true);
             salvarBtn.parentNode.replaceChild(novoSalvarBtn, salvarBtn);
