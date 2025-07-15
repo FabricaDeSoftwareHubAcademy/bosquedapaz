@@ -9,6 +9,7 @@ function sanitizarTexto($input) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome_local = sanitizarTexto($_POST['local_evento'] ?? '');
     $cep_vento = sanitizarTexto($_POST['cep_evento'] ?? '');
     $logradouro_evento = sanitizarTexto($_POST['logradouro_evento'] ?? '');
     $complemento_evento = sanitizarTexto($_POST['complemento_evento'] ?? '');
@@ -22,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $endereco = new EnderecoEvento();
+
+    $endereco->nome_local = $nome_local;
     $endereco->cep_evento = $cep_evento;
     $endereco->logradouro_evento = $logradouro_evento;
     $endereco->complemento_evento = $complemento_evento;
