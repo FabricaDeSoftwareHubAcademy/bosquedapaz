@@ -64,7 +64,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     btnAtivoInativo.forEach((btn) => {
         btn.addEventListener('click', async function (event) {
-            event.preventDefault()
+            event.preventDefault();
+    
+            // Captura o botão clicado
+            const id = this.getAttribute('data-id');
+            const isActive = this.classList.contains('active');
     
             titulo = document.getElementById("confirmar-title");
             subtitulo = document.getElementById("msm-confimar");
@@ -72,36 +76,31 @@ document.addEventListener("DOMContentLoaded", async () => {
             titulo.innerHTML = "<h2>Deseja editar o status desse registro?</h2>";
             subtitulo.innerHTML = "<p>Clique em salvar para confirmar a alteração</p>";
     
-            openModalConfirmar()
-            document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
-            document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
+            openModalConfirmar();
+            document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
+            document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
     
-            // quando clicar no btn salvar envia para o banco
-            document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+            // Remover eventos duplicados: clona o botão salvar
+            const salvarBtn = document.getElementById('btn-modal-salvar');
+            const novoSalvarBtn = salvarBtn.cloneNode(true);
+            salvarBtn.parentNode.replaceChild(novoSalvarBtn, salvarBtn);
     
+            novoSalvarBtn.addEventListener('click', async () => {
                 let formData = new FormData();
+                formData.append("id_utilidade_publica", id);
+                formData.append("status_utilidade", isActive ? 0 : 1);
     
-                formData.append("id_utilidade_publica", response[0].id_utilidade_publica);
-                if (response[0].status_utilidade === 0) {
-                    formData.append("status_utilidade", 1);
-                } else {
-                    formData.append("status_utilidade", 0);
-                }
-    
-                let status_utilidade = await fetch('../../../actions/action-editar-status-utilidade-publica.php', {
+                await fetch('../../../actions/action-editar-status-utilidade-publica.php', {
                     method: 'POST',
                     body: formData
                 });
     
-                // let response = await status_utilidade.text()
-    
-                closeModalConfirmar()
-    
+                closeModalConfirmar();
                 window.location.reload();
-            })
+            });
+        });
+    });
     
-        })
-    }); 
 
 });
 
