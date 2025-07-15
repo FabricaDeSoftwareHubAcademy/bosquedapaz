@@ -30,17 +30,18 @@ body {
 
 .bola-verde1 {
     left: 0;
-    top: 6vh;
+    top: 14vh;
 }
 
 .bola-verde2 {
     right: 0;
-    top: 6vh;
+    top: 18vh;
 }
 
 .bola-rosa {
     right: 0;
     bottom: -100px;
+    top: 80vh;
 }
 
 .principal {
@@ -101,7 +102,7 @@ body {
 .form-pessoa,
 #estilo_musica_container,
 .form-expo {
-    width: 100%;
+    width: 90%;
     display: flex;
 }
 
@@ -111,7 +112,7 @@ body {
     position: relative;
     left: 15%;
     top: 4px;
-
+    
 }
 
 
