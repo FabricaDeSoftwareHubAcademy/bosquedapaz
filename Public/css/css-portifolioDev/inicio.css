@@ -1,0 +1,91 @@
+
+#inicio{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+background-image: linear-gradient(to top, #18181b, #171628, #181234, #1c0c3e, #250046);}
+
+.containerDesc{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+
+}
+.containerDesc > h1{
+
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5));
+}
+.containerDesc > h2{
+    font-size: 30px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+        display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.iconSeta{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.efeito-txt-topo{
+    visibility: hidden;
+}
+
+@media (min-width: 0px) and (max-width: 320px) {
+    .containerDesc > h1{
+        font-size: 30px;
+    }
+    .containerDesc > h2{
+        font-size: 20px;
+    }
+    .iconSeta{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 491px) {
+    .containerDesc > h1{
+        font-size: 30px;
+    }
+    .containerDesc > h2{
+        font-size: 20px;
+    }
+    .iconSeta{
+        font-size: 20px;
+    }
+}
