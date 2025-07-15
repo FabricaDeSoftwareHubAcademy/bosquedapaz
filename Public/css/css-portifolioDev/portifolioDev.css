@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#inicio{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.containerDesc{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+
+background-image: radial-gradient(circle, #18181b, #161525, #16112d, #180a34, #1e0039);
+
+
+}
+.containerDesc > h1{
+
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    filter: drop-shadow(0 0 10px rgba(231, 150, 0, 0.5));
+}
+.containerDesc > h2{
+    font-size: 30px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+        display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.particles-js{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
