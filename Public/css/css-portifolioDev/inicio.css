@@ -1,91 +1,193 @@
-
-#inicio{
-    width: 100%;
+#inicio {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    background-color: #050505;
+    color: white;
     height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-
-background-image: linear-gradient(to top, #18181b, #171628, #181234, #1c0c3e, #250046);}
-
-.containerDesc{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow-x: hidden;
-
-}
-.containerDesc > h1{
-
-    font-size: 50px;
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 600;
-
-    display: flex;
-    align-self: center;
-    justify-content: center;
-
-    filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5));
-}
-.containerDesc > h2{
-    font-size: 30px;
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 600;
-        display: flex;
-    align-self: center;
-    justify-content: center;
 }
 
-#particles-js{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.5;
+.content-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
 }
 
-.iconSeta{
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #acacac);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: linear-gradient(90deg, #ff3a82, #5233ff);
     color: white;
-    font-size: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    align-self: center;
-    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(255, 58, 130, 0.3);
 }
 
-.efeito-txt-topo{
-    visibility: hidden;
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 58, 130, 0.4);
 }
 
-@media (min-width: 0px) and (max-width: 320px) {
-    .containerDesc > h1{
-        font-size: 30px;
+.gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.gradient-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.sphere-1 {
+    width: 40vw;
+    height: 40vw;
+    background: linear-gradient(40deg, rgba(255, 0, 128, 0.8), rgba(255, 102, 0, 0.4));
+    top: -10%;
+    left: -10%;
+    animation: float-1 15s ease-in-out infinite alternate;
+}
+
+.sphere-2 {
+    width: 45vw;
+    height: 45vw;
+    background: linear-gradient(240deg, rgba(72, 0, 255, 0.8), rgba(0, 183, 255, 0.4));
+    bottom: -20%;
+    right: -10%;
+    animation: float-2 18s ease-in-out infinite alternate;
+}
+
+.sphere-3 {
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(120deg, rgba(133, 89, 255, 0.5), rgba(98, 216, 249, 0.3));
+    top: 60%;
+    left: 20%;
+    animation: float-3 20s ease-in-out infinite alternate;
+}
+
+.noise-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    z-index: 5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@keyframes float-1 {
+    0% {
+        transform: translate(0, 0) scale(1);
     }
-    .containerDesc > h2{
-        font-size: 20px;
-    }
-    .iconSeta{
-        font-size: 20px;
+    100% {
+        transform: translate(10%, 10%) scale(1.1);
     }
 }
 
-@media (min-width: 321px) and (max-width: 491px) {
-    .containerDesc > h1{
-        font-size: 30px;
+@keyframes float-2 {
+    0% {
+        transform: translate(0, 0) scale(1);
     }
-    .containerDesc > h2{
-        font-size: 20px;
+    100% {
+        transform: translate(-10%, -5%) scale(1.15);
     }
-    .iconSeta{
-        font-size: 20px;
+}
+
+@keyframes float-3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
     }
+    100% {
+        transform: translate(-5%, 10%) scale(1.05);    
+        opacity: 0.6;
+    }
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    z-index: 2;
+}
+
+.glow {
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    background: radial-gradient(circle, rgba(72, 0, 255, 0.15), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: pulse 8s infinite alternate;
+    filter: blur(30px);
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
 }
