@@ -224,6 +224,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
 
         //// RETORNA TODOS OS EXPOITORES VALIDADOS
+        }else if (isset($_GET['rand'])){
+            $filtrarExpositor = $expositor->listarHome(1);
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA TODOS OS EXPOITORES VALIDADOS
         }else {
             $buscar = $expositor->listar();
             $response = count($buscar) > 0 ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];

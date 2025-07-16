@@ -111,16 +111,17 @@
 }
 
 .content-listar-expositor {
-    height: 1000px;
+    height: auto; 
     margin-top: 50px;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row; 
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center; 
     gap: 50px;
 }
+
 
 .content-card-expo {
     width: 245px;
@@ -233,7 +234,7 @@
     border-radius: .5rem;
 }
 
-.amarela {
+.amarelo {
     background-color: var(--color-rua1);
 }
 

@@ -188,7 +188,7 @@ CREATE TABLE utilidade_publica (
     data_inicio DATE NOT NULL,
     data_fim DATE NOT NULL,
     imagem VARCHAR(255),
-    status_utilidade TINYINT(1) DEFAULT 1,
+    status_utilidade CHAR(1) DEFAULT 1,
     PRIMARY KEY(id_utilidade_publica)
 );
 

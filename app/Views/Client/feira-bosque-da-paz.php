@@ -23,13 +23,13 @@
     
     <?php include "../../../Public/include/home/lista-expositor.php"; ?>
 
-    <?php include "../../../Public/include/home/categoria.html"; ?>
+    <?php include "../../../Public/include/home/categorias-home.php"; ?>
 
     <?php include "../../../Public/include/home/avisos.html"; ?>
     
 
     <?php include "../../../Public/include/home/mapa.html"; ?>
-    <?php include "../../../Public/include/home/section-apoiadores.php"; ?>
+    <?php include "../../../Public/include/home/section-parceiros.php"; ?>
 
     <?php include "../../../Public/include/home/rodape.html"; ?> 
 
