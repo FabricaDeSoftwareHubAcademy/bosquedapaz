@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 a{
     text-decoration: none;
@@ -16,7 +17,7 @@ a{
   width: 100%;
   height: 400px;
 
-  background-image: url(../img/fotos/avatarIllustrator.jpeg);
+  background-image: url(../../imgs/turma.jpg);
 
   background-attachment: fixed;
   background-position: center;

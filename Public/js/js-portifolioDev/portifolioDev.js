@@ -112,3 +112,5 @@
                 sphere.style.transform = `translate(${moveX}px, ${moveY}px)`;
             });
         });
+
+AOS.init();

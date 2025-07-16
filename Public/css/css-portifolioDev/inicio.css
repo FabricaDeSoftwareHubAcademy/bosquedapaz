@@ -17,7 +17,7 @@
     padding: 2rem;
 }
 
-h1 {
+.titleSite{
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
@@ -27,7 +27,7 @@ h1 {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-p {
+.descSite{
     font-size: 1.2rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
