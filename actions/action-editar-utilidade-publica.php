@@ -52,9 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
         $utilidadePublica->imagem = $imagem;
     }
 
-    if (!empty($_FILES['imagem']['name'])) {
+    if (!empty($_FILES['imagem']['file'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
-        $extensao = strtolower(pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION));
+        $extensao = strtolower(pathinfo($_FILES['imagem']['file'], PATHINFO_EXTENSION));
 
         if (!in_array($extensao, $extensoesPermitidas)) {
             echo json_encode(["status" => "error", "mensagem" => "Formato de imagem inválido."]);

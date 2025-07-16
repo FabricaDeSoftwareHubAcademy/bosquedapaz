@@ -64,6 +64,7 @@
         <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
+    <?php include "../../../Public/include/modais/modal-confirmar.html"?>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-adm/js-editar-utilidade.js"></script>

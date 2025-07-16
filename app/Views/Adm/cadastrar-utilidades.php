@@ -52,7 +52,12 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                             <label>Imagem:</label>
                             <input type="file" name="imagem" id="imagem" required>
                         </div>
-                        <?php include "../../../Public/include/Butons-forms.html" ?>
+
+                        <img class="preview" src="" alt="" id="preview-image">
+
+                        <div class="btns">
+                            <?php include "../../../Public/include/Butons-forms.html" ?>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -68,6 +73,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
     <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
+    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
 </body>
 
 </html>
