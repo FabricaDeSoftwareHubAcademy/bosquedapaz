@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -49,8 +50,8 @@
                       </table>
                     </div>  
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                <img src="../../../Public/assets/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                <a href="./Area-Adm.php" class="voltar">
+                <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>  
             </div>
@@ -60,10 +61,14 @@
                 
   </main>
   <div class="bolas-fundo">
-        <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola azu.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img class="bola-verde1" src="../../../Public/assets/img-bolas/bola-azul1.png" alt="">
+        <img class="bola-verde2" src="../../../Public/assets/img-bolas/bola-azul2.png" alt="">
+        <img class="bola-rosa" src="../../../Public/assets/img-bolas/bola-azul.png" alt="">
       </div>
+
+    <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>
   
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/js-listar-expositor.js"></script>

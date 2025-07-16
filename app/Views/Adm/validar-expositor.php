@@ -100,13 +100,40 @@
     <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
     <?php include "../../../Public/include/modais/modal-error.html"; ?>
 
+    <dialog id="recusarExpositor" class="modal-recusar">
+        <div class="conteiner-modal">
+            <label class="title-recusar">Digite o motivo: </label>
+            <textarea name="mensagem" id="MotivoRecusa" class="textModal" placeholder="Digite aqui"></textarea>
+            <div class="content-btns">  
+                <button type="button" class="btn-modal-confirmar btn-validar-cancelar" id="btn-recusar-cancelar">Cancelar</button>
+                <button class="btn-modal-confirmar btn-validar-salvar" id="btn-recusar-salvar">Salvar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="BarracaRua" class="modal-recusar">
+        <div class="conteiner-modal">
+            <label class="title-recusar">Numero da barraca: </label>
+            <input type="number" name="num_barraca" class="input" id="numBarraca">
+            <label class="title-recusar">Cor da rua: </label>
+            <select name="cor_rua" class="input" id="corRua">
+                <option value="verde">verde</option>
+                <option value="azul">azul</option>
+                <option value="amarelo">amarelo</option>
+                <option value="laranja">laranja</option>
+                <option value="rosa">rosa</option>
+            </select>
+            <div class="content-btns">  
+                <button type="button" class="btn-modal-confirmar btn-validar-cancelar" id="btn-BarracaRua-cancelar">Cancelar</button>
+                <button class="btn-modal-confirmar btn-validar-salvar" id="btn-BarracaRua-salvar">Salvar</button>
+            </div>
+        </div>
+    </dialog>
+
     <div class="decoracoes">
         <img class="decoracao decoracao1" src="../../../Public/assets/img-bolas/bola-azul1.png" alt="">
         <img class="decoracao decoracao2" src="../../../Public/assets/img-bolas/bola-azul2.png" alt="">
         <img class="decoracao decoracao3" src="../../../Public/assets/img-bolas/bola-azul.png" alt="">
-        <!-- <a href="../../../app/adm/Views/Area-Adm.php">
-            <img class="decoracao botao-voltar" src="../../../Public/imgs/imgs-validar-expositor/botao-voltar-validar-expositor.svg" alt="">
-        </a> -->
     </div>
 
     <script src="../../../Public/js/js-adm/js-validar-expositor.js" deffer></script>
