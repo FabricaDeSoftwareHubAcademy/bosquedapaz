@@ -10,14 +10,14 @@ function sanitizarTexto($input) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome_local = sanitizarTexto($_POST['local_evento'] ?? '');
-    $cep_vento = sanitizarTexto($_POST['cep_evento'] ?? '');
+    $cep_evento = $_POST['cep_evento'] ?? '';
     $logradouro_evento = sanitizarTexto($_POST['logradouro_evento'] ?? '');
     $complemento_evento = sanitizarTexto($_POST['complemento_evento'] ?? '');
     $numero_evento = $_POST['numero_evento'] ?? '';
     $bairro_evento = sanitizarTexto($_POST['bairro_evento'] ?? '');
     $cidade_evento = sanitizarTexto($_POST['cidade_evento'] ?? '');
         
-    if (empty($logradouro_evento) || empty($numero_evento) || empty($bairro_evento) || !validarData($cidade_evento)) {
+    if (empty($logradouro_evento) || empty($numero_evento) || empty($bairro_evento) || empty($cidade_evento)) {
        echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos corretamente."]);
         exit;
     }

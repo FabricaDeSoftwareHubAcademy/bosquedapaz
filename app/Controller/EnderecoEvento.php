@@ -8,16 +8,18 @@ use app\Models\Database;
 class EnderecoEvento
 {
     public int $id_endereco_evento;
+    public string $nome_local;
     public string $cep_evento;
     public string $logradouro_evento;
     public string $complemento_evento;
-    public string $numero_evento;
+    public int $numero_evento;
     public string $bairro_evento;
     public string $cidade_evento;
 
     public function cadastrar_endereco_evento(){
         $db = new Database('endereco_evento');
         $res = $db->insert([
+            'nome_local' => $this->nome_local,
             'cep_evento' => $this->cep_evento,
             'logradouro_evento' => $this->logradouro_evento,
             'complemento_evento' => $this->complemento_evento,

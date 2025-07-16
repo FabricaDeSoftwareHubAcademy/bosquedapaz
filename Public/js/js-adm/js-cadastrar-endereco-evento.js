@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         openModalSucesso();
                         document.getElementById('modal-cadastrar-endereco').close();
 
-                        if (typeof atualizarSelectEndereco === 'function') {
-                            atualizarSelectEndereco();
-                        }
+                        // if (typeof atualizarSelectEndereco === 'function') {
+                        //     atualizarSelectEndereco();
+                        // }
                     } else {
                         document.getElementById('erro-title').innerText = 'Erro ao cadastrar endereço';
                         document.getElementById('erro-text').innerText = resultado.mensagem || 'Erro inesperado.';
