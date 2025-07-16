@@ -47,6 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //////////// PARA APROVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\
         if (isset($_POST['aprovado'])){
             $email = filter_var($_POST['email'], FILTER_UNSAFE_RAW);
+            $num_barraca = filter_var($_POST['num_barraca'], FILTER_UNSAFE_RAW);
+            $cor_rua = filter_var($_POST['cor_rua'], FILTER_UNSAFE_RAW);
 
             ///// captura expositor pelo email
             $getExpositor = $expositor->listar('email = "'. $email. '"');
@@ -62,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             
 
-            $res = $expositor->validarExpositor($idExpositor, 'validado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT));
+            $res = $expositor->validarExpositor($idExpositor, 'validado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT), $num_barraca, $cor_rua);
             
             if ($res){
                 ///// enviando a senha no email

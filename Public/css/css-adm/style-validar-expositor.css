@@ -281,8 +281,8 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+    gap: .5rem;
 }
 
 .title-recusar {
@@ -299,17 +299,29 @@
     border-radius: .5rem;
 }
 
-#btn-recusar-cancelar {
+.input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    border-right: 2px solid grey;
+    border-bottom: 2px solid grey;
+    color: #3f3f3f;
+    padding: 10px;
+}
+
+.btn-validar-cancelar {
     background-color: #FF3877;
 }
-#btn-recusar-cancelar:hover {
+.btn-validar-cancelar:hover {
     background-color: #8a1e40;
 }
 
-#btn-recusar-salvar {
+.btn-validar-salvar {
     background-color: #007E70;
 }
-#btn-recusar-salvar:hover {
+.btn-validar-salvar:hover {
     background-color: #00443c;
 }
 
