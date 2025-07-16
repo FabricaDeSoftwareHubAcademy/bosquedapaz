@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +7,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edicao-perfil-expositor.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-    <title>EDIÇÂO PERFIL DO EXPOSITOR</title>
+    <title>Expositor - Bosque da Paz</title>
 </head>
 <body>
     <!-- Include Menu de Navegação -->

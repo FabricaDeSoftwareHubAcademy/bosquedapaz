@@ -20,6 +20,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
       />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   </head>
   <body>
     <!-- Includs:  -->

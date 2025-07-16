@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-modais/style-modal-confirmar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Cadastrado ADM</title>
+    <title>Adm - Bosque da Paz</title>
 </head>
 <!-- Corpo da Página -->
 <body>

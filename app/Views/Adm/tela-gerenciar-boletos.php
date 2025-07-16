@@ -1,4 +1,4 @@
-
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bloco principal -->
-    <title>Gerenciamento de Boletos</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">

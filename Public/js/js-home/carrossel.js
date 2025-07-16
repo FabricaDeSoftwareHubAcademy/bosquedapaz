@@ -19,7 +19,6 @@ async function getImage() {
         let imagens = await fetch("../../../actions/action-carrossel.php")
     
         let resposta = await imagens.json()
-    
 
         const interval = setInterval(() => {
                 if (x == 0){

@@ -11,6 +11,7 @@
   <title>Adm - Bosque da Paz</title>
   <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
