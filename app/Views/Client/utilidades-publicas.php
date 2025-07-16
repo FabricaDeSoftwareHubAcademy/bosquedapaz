@@ -17,67 +17,9 @@
         <section class="container__box">
             <div class="titulo"><h1>Utilidades Publicas</h1></div>
             <div class="conteiner__cards">
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao open-modal" data-modal="modal-info">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao open-modal" data-modal="modal-info">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao open-modal" data-modal="modal-info">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="por-cima-card">
-                        <div class="parte-superior">
-                            <img class="img-ult" src="../../../Public/imgs/primavera.png" alt="">
-                        </div>
-                        <div class="parte-inferior">
-                            <h1 class="nome-card">Nome</h1>
-                            <button class="meu-botao open-modal" data-modal="modal-info">Saiba Mais</button>
-                            <div class="linha-decorativa-1"></div>
-                            <div class="container__decorativo">
-                                <div class="linha-decorativa-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Os cards serão inseridos aqui via JavaScript -->
+        </div>
+
 
             <!-- Seta:  -->
             <div class="seta_voltar"><a href="feira-bosque-da-paz.php#edit_pass"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
@@ -132,6 +74,7 @@
     <div class="decorative__img2"><img src="../../../Public/assets/img-bolas/bola-ult2.png" alt=""></div>
     <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
 
+    <script src="../../../Public/js/js-client/js-listar-cards-utilidades.js"></script>
     <script src="../../../Public/js/js-modais/modal-utilidades-publi.js"></script>
 </body>
 </html>
