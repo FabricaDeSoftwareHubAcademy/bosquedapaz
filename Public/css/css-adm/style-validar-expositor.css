@@ -267,6 +267,63 @@
     cursor: pointer;
 }
 
+/* Modal recusar expositor */
+
+.modal-recusar {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: .5rem;
+}
+
+.conteiner-modal {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: .5rem;
+}
+
+.title-recusar {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.textModal {
+    width: 300px;
+    height: 100px;
+    padding: .5rem;
+    resize: none;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-radius: .5rem;
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    border-right: 2px solid grey;
+    border-bottom: 2px solid grey;
+    color: #3f3f3f;
+    padding: 10px;
+}
+
+.btn-validar-cancelar {
+    background-color: #FF3877;
+}
+.btn-validar-cancelar:hover {
+    background-color: #8a1e40;
+}
+
+.btn-validar-salvar {
+    background-color: #007E70;
+}
+.btn-validar-salvar:hover {
+    background-color: #00443c;
+}
 
 
 @media (max-width: 576px) {

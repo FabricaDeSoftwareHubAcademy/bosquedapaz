@@ -45,9 +45,6 @@ async function getExpositor(){
         let dados_php = await fetch(`../../../actions/actions-expositor.php?id=${getIdExpositor()}`);
     
         let response = await dados_php.json()
-
-        console.log(response.expositor.imagens[1])
-
         nomeEmpresa.innerText = response.expositor.nome_marca
         nome.value = response.expositor.nome
         email.value = response.expositor.email
@@ -102,43 +99,63 @@ async function aprovarExpostor() {
 
     document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
         closeModalAtualizar()
-        openModalLoading()
-        document.getElementById('content-close').style.display = 'none'
-        document.getElementById('msm-modal').innerText = 'Espere um instante o expositor está sendo válidado'
 
 
-        const formData = new FormData()
-        formData.append('email', emailExpositor)
-        formData.append('aprovado', 1)
-
-    
-        let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
-            method: 'POST',
-            body: formData
+        document.getElementById('BarracaRua').showModal()
+        document.getElementById('btn-BarracaRua-cancelar').addEventListener('click', () => {
+            document.getElementById('BarracaRua').close()
         })
-    
-        let response = await aprovar.json()
 
-        closeModalLoading()
-
-        
-        if(response.status == 200){
-                openModalSucesso()
-                document.getElementById('msm-sucesso').innerHTML = 'O expositor foi aprovado'
-
-                document.getElementById('close-modal-sucesso').addEventListener('click', () => {
-                    closeModalSucesso
-                    window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
-                })
-                
-            }
-    
-        else if(response.status != 200){
+        document.getElementById('btn-BarracaRua-salvar').addEventListener('click', async () => {
+            if(document.getElementById('numBarraca').value == '') {
                 openModalError()
-                document.getElementById('erro-title').innerHTML = response.msg
+                document.getElementById('erro-title').innerHTML =  'Preencha todos os campos'
                 document.getElementById('erro-text').style.display = 'none'
                 document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-        }
+            }else{
+
+                openModalLoading()
+                document.getElementById('content-close').style.display = 'none'
+                document.getElementById('msm-modal').innerText = 'Espere um instante o expositor está sendo válidado'
+        
+        
+                const formData = new FormData()
+                formData.append('email', emailExpositor)
+                formData.append('aprovado', 1)
+                formData.append('num_barraca', document.getElementById('numBarraca').value)
+                formData.append('cor_rua', document.getElementById('corRua').value)
+        
+            
+                let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
+                    method: 'POST',
+                    body: formData
+                })
+            
+                let response = await aprovar.json()
+        
+                closeModalLoading()
+        
+                
+                if(response.status == 200){
+                        openModalSucesso()
+                        document.getElementById('msm-sucesso').innerHTML = 'O expositor foi aprovado'
+        
+                        document.getElementById('close-modal-sucesso').addEventListener('click', () => {
+                            closeModalSucesso
+                            window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+                        })
+                        
+                    }
+            
+                else if(response.status != 200){
+                        openModalError()
+                        document.getElementById('erro-title').innerHTML = response.msg
+                        document.getElementById('erro-text').style.display = 'none'
+                        document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+                }
+            }
+        })
+
     })
 
 }
@@ -157,36 +174,62 @@ async function recusarExpositor() {
     document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
         closeModalAtualizar()
 
-        const formData = new FormData()
-        formData.append('email', emailExpositor)
-        formData.append('recusado', 1)
-
-    
-        let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
-            method: 'POST',
-            body: formData
+        document.getElementById('recusarExpositor').showModal()
+        document.getElementById('btn-recusar-cancelar').addEventListener('click', () => {
+            document.getElementById('recusarExpositor').close()
         })
+
+        document.getElementById('btn-recusar-salvar').addEventListener('click', async () => {
+            document.getElementById('recusarExpositor').close()
+            if(document.getElementById('MotivoRecusa').value.length < 20){
+                openModalError()
+                document.getElementById('erro-text').innerText = 'Digite um texto miníno de 20 caracteres.'
+                document.getElementById('erro-title').innerText = 'Mensagem inválida'
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            }else{
+                openModalLoading()
+                document.getElementById('content-close').style.display = 'none'
+                document.getElementById('msm-modal').innerText = 'Espere um instante o expositor está sendo recusado'
     
-        let response = await aprovar.json()
-
-        if(response.status == 200){
-                openModalSucesso()
-                document.getElementById('msm-sucesso').innerHTML = 'O expositor foi recusado'
-
-                document.getElementById('close-modal-sucesso').addEventListener('click', () => {
-                    closeModalSucesso
-                    window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+                const formData = new FormData()
+                formData.append('email', emailExpositor)
+                formData.append('recusado', 1)
+                formData.append('mensagem', document.getElementById('MotivoRecusa').value)
+        
+                
+                let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
+                    method: 'POST',
+                    body: formData
                 })
                 
+                let response = await aprovar.json()
+                
+                closeModalLoading()
+                
+                if(response.status == 200){
+                        openModalSucesso()
+                        document.getElementById('msm-sucesso').innerHTML = 'O expositor foi recusado'
+        
+                        document.getElementById('close-modal-sucesso').addEventListener('click', () => {
+                            closeModalSucesso
+                            window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+                        })
+                        
+                    }
+            
+                else if(response.status != 200){
+                        openModalError()
+                        document.getElementById('erro-title').innerHTML = response.msg
+                        document.getElementById('erro-text').style.display = 'none'
+                        document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+                }
             }
-    
-        else if(response.status != 200){
-                openModalError()
-                document.getElementById('erro-title').innerHTML = response.msg
-                document.getElementById('erro-text').style.display = 'none'
-                document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
-        }
+
+        })
+
     })
 }
+
+
 
 document.getElementById('botao_recusar').addEventListener('click', recusarExpositor)

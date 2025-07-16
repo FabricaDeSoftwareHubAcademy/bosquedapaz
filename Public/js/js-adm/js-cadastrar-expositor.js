@@ -35,6 +35,7 @@ btn_salvar.addEventListener('click', async function(event){
     
         let dadosForms =  new FormData(formulario);
         dadosForms.append('modalidade', 'expositor');
+        dadosForms.append('cadastrar', 1);
     
         let dados_php = await fetch('../../../actions/actions-expositor.php', {
             method:'POST',
