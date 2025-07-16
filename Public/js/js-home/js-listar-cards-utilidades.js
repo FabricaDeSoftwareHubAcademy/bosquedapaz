@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const resposta = await fetch("../../../actions/listar-utilidades.php");
         const utilidades = await resposta.json();
 
-        container.innerHTML = "";
+        container.innerHTML = ""; // Limpa os cards estáticos
 
         utilidades.forEach((item, index) => {
             const card = document.createElement("div");
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             card.innerHTML = `
                 <div class="por-cima-card">
                     <div class="parte-superior">
-                        <img class="img-ult" src="${item.imagem || '../../../Public/assets/img-placeholder.png'}" alt="${item.titulo || 'Sem título'}">
+                        <img class="img-ult" src="${item.imagem}" alt="${item.titulo}">
                     </div>
                     <div class="parte-inferior">
-                        <h1 class="nome-card">${item.titulo || 'Sem título'}</h1>
+                        <h1 class="nome-card">${item.titulo}</h1>
                         <button class="meu-botao open-modal" data-modal="modal-${index}">Saiba Mais</button>
                         <div class="linha-decorativa-1"></div>
                         <div class="container__decorativo">
@@ -31,17 +31,18 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <button class="btn-fechar close-modal" data-modal="modal-${index}">
                             <i class="bi bi-x-circle"></i>
                         </button>
+
                         <img src="../../../Public/assets/img-decoracao-ult1.png" class="modal-decor decor-top-left">
                         <img src="../../../Public/assets/img-decoracao-ult2.png" class="modal-decor decor-bottom-right">
 
                         <div class="modal-content">
                             <div class="modal-left">
-                                <img src="${item.imagem || '../../../Public/assets/img-placeholder.png'}" alt="Imagem do Evento">
+                                <img src="${item.imagem}" alt="Imagem do Evento">
                             </div>
                             <div class="modal-right">
                                 <div class="modal-text-content">
-                                    <h2>${item.titulo || 'Sem título'}</h2>
-                                    <p>${item.descricao || 'Sem descrição disponível.'}</p>
+                                    <h2>${item.titulo}</h2>
+                                    <p>${item.descricao}</p>
                                     <p><strong>Data Início:</strong> ${item.data_inicio}</p>
                                     <p><strong>Data Fim:</strong> ${item.data_fim}</p>
                                 </div>
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             container.appendChild(card);
 
-            // Modal
+            // Ativa o modal
             const openModalBtn = card.querySelector(".open-modal");
             const modal = card.querySelector(`#modal-${index}`);
             const closeModalBtn = card.querySelector(".close-modal");
@@ -64,6 +65,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (error) {
         console.error("Erro ao carregar utilidades:", error);
-        container.innerHTML = "<p>Erro ao carregar os dados. Tente novamente mais tarde.</p>";
+        container.innerHTML = "<p>Erro ao carregar os dados.</p>";
     }
 });

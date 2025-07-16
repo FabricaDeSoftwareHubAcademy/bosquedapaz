@@ -74,7 +74,7 @@
     <div class="decorative__img2"><img src="../../../Public/assets/img-bolas/bola-ult2.png" alt=""></div>
     <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/bola-rosa.png" alt=""></div>
 
-    <script src="../../../Public/js/js-client/js-listar-cards-utilidades.js"></script>
+    <script src="../../../Public/js/js-home/js-listar-cards-utilidades.js"></script>
     <script src="../../../Public/js/js-modais/modal-utilidades-publi.js"></script>
 </body>
 </html>
