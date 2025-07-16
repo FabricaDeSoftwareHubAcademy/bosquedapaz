@@ -52,6 +52,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if(isset($_POST['deletar'])){
 
+            $id = filter_var($_POST['id'], FILTER_UNSAFE_RAW);
+            $status = filter_var($_POST['status'], FILTER_UNSAFE_RAW);
+
+            $mudarStatus = $expositor->alterarStatus($id, $status);
+
+            if ($mudarStatus){
+                echo json_encode([
+                    'status' => 200, 
+                    'msg' => 'Status alterado com sucesso', 
+                ]);
+                exit;
+            }else {
+                echo json_encode([
+                    'status' => 400, 
+                    'msg' => 'Erro ao alterar o status do expositor', 
+                ]);
+                exit;
+            }
+
         }else if (isset($_POST['cadastrar'])) {            
             $expositor->setCidade(!empty($_POST['cidade']) ? filter_var($_POST['cidade'], FILTER_UNSAFE_RAW) : NULL);
             

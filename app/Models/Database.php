@@ -163,9 +163,9 @@ class Database
         return $res ? TRUE : FALSE;
     }
 
-    public function delete($where)
+    public function delete($where, $status)
     {
-        $query = "UPDATE " . $this->table . " SET status = 0 WHERE " . $where;
+        $query = "UPDATE " . $this->table . " SET status_pes = '". $status. "' WHERE " . $where;
         return $this->execute($query) ? true : false;
     }
 
