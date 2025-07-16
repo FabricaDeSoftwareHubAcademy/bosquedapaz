@@ -173,16 +173,17 @@ class Database
     public function listar_colaboradores()
     {
         $query = "SELECT
-        c.id_colaborador,
-        p.nome,
-        p.email,
-        p.telefone,
-        c.cargo,
-        c.status_col
-        FROM colaborador c
-        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+            c.id_colaborador,
+            p.nome,
+            p.email,
+            p.telefone,
+            c.cargo,
+            p.status_pes
+            FROM colaborador c
+            INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
         return $this->execute($query);
     }
+    
 
     public function filtrar_colaboradores($nome)
     {
@@ -203,11 +204,16 @@ class Database
 
     public function sts_adm($id_colaborador, $novoStatus)
     {
-        $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
+        $query = "UPDATE pessoa 
+            SET status_pes = ?
+            WHERE id_pessoa = (
+            SELECT id_pessoa FROM colaborador WHERE id_colaborador = ?
+            )";
+
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
-    }
-
+    }       
+    
     public function buscarPorIdPessoa($idPessoa)
     {
         $query = "SELECT 
@@ -224,7 +230,7 @@ class Database
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$idPessoa]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);  // retorna 1 registro associativo
+        return $stmt->fetch(PDO::FETCH_ASSOC);  
     }
 
     // BLOCO DE CODIGOS PARA CLASSE BOLETO

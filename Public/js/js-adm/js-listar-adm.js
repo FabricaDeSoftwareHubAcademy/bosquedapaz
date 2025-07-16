@@ -5,7 +5,7 @@ async function listar(){
         const resposta = await fetch("../../../actions/action-colaborador.php");
         const json = await resposta.json();
 
-        console.log(json);
+        console.log(json.data);
 
         if (!json.data || json.data.length === 0) {
             document.getElementById('tbody-colaboradores').innerHTML = '<tr><td colspan="6">Nenhum ADM encontrado.</td></tr>';
@@ -14,7 +14,9 @@ async function listar(){
 
         let linhas = '';
         json.data.forEach(colab => {
-            const statusLower = colab['status_col'].toLowerCase();
+            const statusRaw = colab['status_col'] ?? colab['status_pes'] ?? '';
+            const statusLower = statusRaw.toLowerCase();
+
             linhas += `<tr>
                 <td class="usuario-col">${colab['id_colaborador']}</td>
                 <td>${colab['nome']}</td>
