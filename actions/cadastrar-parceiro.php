@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Gera nome único
         $nome_arquivo_unico = uniqid('logo_', true) . '.' . $extensao;
     
-        $destino = '../../../Public/uploads/logos/' . $nome_arquivo_unico;
+        $destino = '../../../Public/uploads/uploads-parceiros/' . $nome_arquivo_unico;
     
         // Cria a pasta se não existir
         if (!is_dir('../../../Public/uploads/uploads-parceiros')) {
