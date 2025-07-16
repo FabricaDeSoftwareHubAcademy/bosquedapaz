@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $destino = '../../../Public/uploads/logos/' . $nome_arquivo_unico;
     
         // Cria a pasta se não existir
-        if (!is_dir('../../../Public/uploads/logos')) {
-            mkdir('../../../Public/uploads/logos', 0755, true);
+        if (!is_dir('../../../Public/uploads/uploads-parceiros')) {
+            mkdir('../../../Public/uploads/uploads-parceiros', 0755, true);
         }
     
         if (move_uploaded_file($_FILES['logo']['tmp_name'], $destino)) {
