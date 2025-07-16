@@ -27,7 +27,7 @@
     </main>
 
     <!-- Modal:  -->
-    <dialog id="modal-info" class="custom-modal">
+    <!-- <dialog id="modal-info" class="custom-modal"> -->
         <div class="modal-wrapper">
 
             <!-- Botão fechar -->
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </div>
-    </dialog>
+    <!-- </dialog> -->
 
     <!-- Imagens Decorativas  -->
     <div class="decorative__img1"><img src="../../../Public/assets/img-bolas/bola-ult1.png" alt=""></div>
@@ -79,4 +79,3 @@
 </body>
 </html>
 
-<!-- Matheus Manja  -->
