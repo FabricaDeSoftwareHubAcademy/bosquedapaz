@@ -6,7 +6,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, #18181b, #1a1930, #201844, #2b1355, #3d0164);
+    flex-wrap: wrap;
+      background-image: linear-gradient(to bottom, #18181b, #1a1930, #201844, #2b1355, #3d0164);
+
 }
 .containerTitleSobre{
     width: 100%;
@@ -50,31 +52,22 @@
 }
 
 
-.containerSobre{
-    width: 90%;
-    height: auto;
 
-    display: flex;
-    /* align-items: center;
-    justify-content: center; */
-    
-
-    border: 1px solid red;
-}
 
 .containerPilarFabrica{
     width: 100%;
-
     height: auto;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card-container {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -97,7 +90,7 @@
 }
 
 .card .front-content p {
-  font-size: 32px;
+  /* font-size: 32px; */
   font-weight: 700;
   opacity: 1;
   background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
@@ -148,16 +141,251 @@
 
 
 
-.textSobre{
-    width: 40%;
-    height: auto;
 
-    background-color: #18181b;
-    border: 2px solid #464646;
+
+.containerSobre{
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  margin-top: 20px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.068);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.sobreFabrica{
+  width: 40%;
+  height: auto;
+  padding: 20px;
+
+
+background: rgba(0, 0, 0, 0.466);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.textSobre > span{
-    color: white;
-    font-size: 15px;
-    font-family: monospace;    
+.sobreFabrica > span{
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+
+
+.containerCubo{
+    width: 100px;
+    height: 100px;
+    perspective: 800px;
+    margin-left: 10px;
+}
+.cubo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    animation: none;
+}
+
+
+.face{
+    position: absolute;
+    box-sizing: border-box
+}
+
+
+.faceTop {
+    background-color: rgb(222, 222, 222);
+    transform: translateY(-50%) rotateX(-90deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    border: 2px solid black;
+    
+}
+
+.faceBot {
+    background-color: rgb(222, 222, 222);
+    transform: translateY(50%) rotateX(90deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    border: 2px solid black;
+
+}
+
+.faceBack {
+    background-color: rgb(222, 222, 222);
+    transform: translateZ(-50px) rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    border: 2px solid black;
+
+}
+
+.faceFront {
+    background-color: rgb(222, 222, 222);
+    transform: translateZ(50px);
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    border: 2px solid black;
+
+}
+
+.faceLeft {
+    background-color: rgb(222, 222, 222);
+    transform: translateX(-50%) rotateY(-90deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    border: 2px solid black;
+
+}
+
+.faceRight {
+    background-color: rgb(222, 222, 222);
+    transform: translateX(50%) rotateY(90deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    border: 2px solid black;
+
+}
+
+
+@keyframes rotation {
+    from{transform: rotateX(0deg);}
+    to{transform: rotateX(360deg);}
+}
+@keyframes rotationFinal {
+    from {
+        transform: rotateX(360deg); 
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+.cubo:hover{
+    animation: rotation 1s  alternate;
+}
+.cubo:not(:hover){
+    animation: rotationFinal 1s forwards;
+}
+
+
+
+
+
+.containerLogo{
+    width: 650px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: #18181b; */
+}
+.containerLineOne, .containerLineTwo,
+.containerLineTree, .containerLineFor,
+.containerLineFive {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLineOne, .containerLineFive{
+    gap: 100px;
+    margin: 10px ;
+}
+.containerLineTree{
+    margin: 10px ;
+}
+
+
+/* @media (min-width: 0px) and (max-width: 320px) {
+  #sobre{
+    width: 100%;
+  }
+  .containerSobre{
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .sobreFabrica{
+    width: 100%;
+    height: 460px;
+    padding: 10px;
+    overflow-y: auto;
+  }  
+} */
+
+.containerIcons{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icon{
+  font-size: 100px;
+  color: #ffffff;
+}
+
+@media (min-width: 0px) and (max-width: 960px) {
+  .containerLogo{
+    display: none;
+  }
+    #sobre{
+    width: 100%;
+  }
+  .containerSobre{
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .sobreFabrica{
+    width: 100%;
+    height: 460px;
+    padding: 10px;
+    overflow-y: auto;
+  }  
+}
+@media (min-width: 961px) and (max-width: 1200px) {
+  .sobreFabrica{
+    width: 100%;
+    height: 460px;
+    padding: 10px;
+    overflow-y: auto;
+  } 
+}
+
+@media (min-width: 0px) and (max-width: 950px){
+    .containerSobre{
+    width: 100%;
+    flex-direction: column;
+  }
 }
