@@ -20,6 +20,8 @@ async function getImage() {
     
         let resposta = await imagens.json()
 
+        slider.style.backgroundImage = `url('../../${resposta.imagens[0].caminho}')`
+
         const interval = setInterval(() => {
                 if (x == 0){
                     trocaImagem(resposta.imagens[1].caminho,1)
