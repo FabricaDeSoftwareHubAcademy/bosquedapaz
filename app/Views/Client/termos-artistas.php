@@ -21,6 +21,7 @@
             </div>
             <div class="regras-container">
                 <h1 class="title-edital">Termos de Condições</h1>
+                <h1 class="title-edital">ARTISTAS</h1>
                 <p class="lin-term"><strong class="cont-lin">1.0:</strong> O preenchimento desta ficha não garante a participação da feira, pois será feita uma curadoria (seleção) dos trabalhos que estejam de acordo com a proposta da Feira Bosque da Paz. Entraremos em contato com os selecionados por WhatsApp e passaremos todas as informações.</p>
                 <p class="lin-term"><strong class="cont-lin">1.1:</strong> Cada expositor é responsável pela sua estrutura, organização do seu espaço, venda e recebimento de seus produtos. (exceto gastronomia).</p>
                 <p class="lin-term"><strong class="cont-lin">1.2:</strong> Cada expositor é também responsável pelo recolhimento do LIXO gerado pela sua banca e pelos seus clientes.</p>

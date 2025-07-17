@@ -21,15 +21,15 @@
                 <!-- Div dos Buttons -->
                 <div class="button_group">
                 <!-- Botões: -->
-                    <a href="cadastro-expositor-kids.php" class="button" id="button1">
+                    <a href="termos-expositor-kids.php" class="button" id="button1">
                         <i class="bi bi-person-plus"></i>
                         <span>Cadstro de Expositor Kids</span>
                     </a>
-                    <a href="cadastro-expositor-client.php" class="button" id="button2">
+                    <a href="termos-expositor.php" class="button" id="button2">
                         <i class="bi bi-shop-window"></i>
                         <span>Cadastro de Expositor</span>
                     </a>
-                    <a href="cadastro-artista.php" class="button" id="button3">
+                    <a href="termos-artistas.php" class="button" id="button3">
                         <i class="bi bi-music-note-list"></i>
                         <span>Cadastro de Artista</span>
                     </a>
