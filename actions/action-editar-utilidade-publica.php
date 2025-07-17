@@ -48,43 +48,43 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $utilidadePublica->imagem = $imagem;
     // $utilidadePublica->status_utilidade = $status;
 
-    if ($imagem !== '') {
-        $utilidadePublica->imagem = $imagem;
-    }
+    // if ($imagem !== '') {
+    //     $utilidadePublica->imagem = $imagem;
+    // }
 
-    if (!empty($_FILES['imagem']['file'])) {
-        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
-        $extensao = strtolower(pathinfo($_FILES['imagem']['file'], PATHINFO_EXTENSION));
+    // if (!empty($_FILES['imagem']['file'])) {
+    //     $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+    //     $extensao = strtolower(pathinfo($_FILES['imagem']['file'], PATHINFO_EXTENSION));
 
-        if (!in_array($extensao, $extensoesPermitidas)) {
-            echo json_encode(["status" => "error", "mensagem" => "Formato de imagem inválido."]);
-            exit;
-        }
+    //     if (!in_array($extensao, $extensoesPermitidas)) {
+    //         echo json_encode(["status" => "error", "mensagem" => "Formato de imagem inválido."]);
+    //         exit;
+    //     }
 
-        $nomeSeguro = uniqid('evento_', true) . '.' . $extensao;
-        $caminhoTemporario = $_FILES['imagem']['tmp_name'];
-        $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-utilidade/';
-        $destino = $diretorioDestino . $nomeSeguro;
+    //     $nomeSeguro = uniqid('evento_', true) . '.' . $extensao;
+    //     $caminhoTemporario = $_FILES['imagem']['tmp_name'];
+    //     $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-utilidade/';
+    //     $destino = $diretorioDestino . $nomeSeguro;
 
-        if (move_uploaded_file($caminhoTemporario, $destino)) {
-            $eventoExistente = $evento->buscarPorId_evento($id);
-            if ($eventoExistente) {
-                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner_evento;
-                if (file_exists($caminhoAntigo)) {
-                    unlink($caminhoAntigo);
-                }
-            }
-            $evento->banner_evento = 'uploads/uploads-utilidade/' . $nomeSeguro;
-        } else {
-            echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
-            exit;
-        }
-    } else {
-        $eventoExistente = $evento->buscarPorId_evento($id);
-        if ($eventoExistente) {
-            $evento->banner_evento = $eventoExistente->banner_evento;
-        }
-    }
+    //     if (move_uploaded_file($caminhoTemporario, $destino)) {
+    //         $eventoExistente = $evento->buscarPorId_evento($id);
+    //         if ($eventoExistente) {
+    //             $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner_evento;
+    //             if (file_exists($caminhoAntigo)) {
+    //                 unlink($caminhoAntigo);
+    //             }
+    //         }
+    //         $evento->banner_evento = 'uploads/uploads-utilidade/' . $nomeSeguro;
+    //     } else {
+    //         echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
+    //         exit;
+    //     }
+    // } else {
+    //     $eventoExistente = $evento->buscarPorId_evento($id);
+    //     if ($eventoExistente) {
+    //         $evento->banner_evento = $eventoExistente->banner_evento;
+    //     }
+    // }
 
     if ($utilidadePublica->editar()) {
         echo json_encode(['status' => 200, 'msg' => 'Editado com sucesso!!']);

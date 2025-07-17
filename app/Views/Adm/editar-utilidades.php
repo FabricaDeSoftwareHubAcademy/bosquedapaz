@@ -44,10 +44,10 @@
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="imagem" id="imagem" required>
                         </div>
 
-                        <img class="preview" src="" alt="" id="preview-image">
+                        <img class="preview" src='' alt="" id="preview-image" name="preview-image">
 
                         <div class="btns">
                             <?php include "../../../Public/include/Butons-forms.html" ?>

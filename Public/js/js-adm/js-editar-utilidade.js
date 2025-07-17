@@ -6,6 +6,15 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('textarea[name="descricao"]').value = params.get('descricao') || '';
     document.querySelector('input[name="data_inicio"]').value = params.get('data_inicio') || '';
     document.querySelector('input[name="data_fim"]').value = params.get('data_fim') || '';
+    // document.querySelector('img[name="preview-image"]').src = params.get('imagem') || '';
+    document.querySelector('img[name="preview-image"]').src = `../../${params.get('imagem')}`;
+
+    // "/Public/uploads/uploads-utilidade/68796701aeac8.png";
+
+
+    let img = params.get('imagem');
+
+    console.log(img);
 
     // Não é possível setar valor de input file via JS por segurança, então removido
     // document.querySelector('input[type="file"]').value = params.get('imagem') || '';
@@ -27,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-const botao_editar_utilidade = document.getElementById('botao_editar_utilidade');
+const botao_editar_utilidade = document.getElementById('btn-salvar');
 
 if (botao_editar_utilidade) {
     botao_editar_utilidade.addEventListener('click', async function (event) {

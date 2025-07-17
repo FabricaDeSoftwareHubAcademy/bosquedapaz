@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 
         if (in_array($extensao, $permitidas)) {
             $novo_nome = uniqid();
-            $pasta = '../Public/imgs/uploads-utilidade/'; // Altere o caminho se necessário
+            $pasta = '../Public/uploads/uploads-utilidade/'; // Altere o caminho se necessário
             $caminho = $pasta . $novo_nome . '.' . $extensao;
 
             // Cria o diretório se não existir
