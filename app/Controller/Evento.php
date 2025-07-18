@@ -14,7 +14,7 @@ class Evento
     public string  $data_evento;
     public string $hora_inicio;
     public string $hora_fim;
-    public int $endereco_evento;
+    public string $endereco_evento;
     public int $status;
     public string $banner_evento;
 

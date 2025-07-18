@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (data.status === 'success') {
             const evento = data.evento;
 
+            // Antes: select ainda vazio
+            // document.getElementById('select-endereco').value = evento.endereco_evento;
+
+            // Agora: carregar com seleção automática
+            await carregarEnderecosSelecionando(evento.endereco_evento);
+
             document.getElementById('id_evento').value = evento.id_evento;
             document.getElementById('nomedoevento').value = evento.nome_evento;
             document.getElementById('subtitulo').value = evento.subtitulo_evento;
@@ -34,7 +40,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('dataevento').value = evento.data_evento;
             document.getElementById('hora_inicio').value = evento.hora_inicio;
             document.getElementById('hora_fim').value = evento.hora_fim;
-            document.getElementById('endereco').value = evento.endereco_evento;
             document.getElementById('status').value = evento.status;
 
             const banner = document.getElementById('preview-image');
@@ -105,3 +110,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     });    
 
 });
+
+async function carregarEnderecosSelecionando(enderecoSelecionadoId) {
+    const select = document.getElementById('endereco');
+
+    try {
+        const res = await fetch('../../../actions/action-buscar-enderecos.php');
+        const data = await res.json();
+
+        select.innerHTML = '<option value="">Selecione o endereço</option>';
+
+        data.forEach(endereco => {
+            const option = document.createElement('option');
+            option.value = endereco.id_endereco_evento;
+            option.textContent = `${endereco.nome_local} - ${endereco.cidade_evento}`;
+            if (parseInt(endereco.id_endereco_evento) === parseInt(enderecoSelecionadoId)) {
+                option.selected = true;
+            }
+            select.appendChild(option);
+        });
+    } catch (error) {
+        console.error('Erro ao carregar endereços:', error);
+    }
+}
