@@ -106,15 +106,8 @@ CREATE TABLE artista (
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
 
-<<<<<<< HEAD
-
-
-CREATE TABLE evento(
-	id_evento INT NOT NULL AUTO_INCREMENT,
-=======
 CREATE TABLE evento (
     id_evento INT NOT NULL AUTO_INCREMENT,
->>>>>>> task280
     nome_evento VARCHAR(150) NOT NULL,
     subtitulo_evento VARCHAR(150) NOT NULL,
     descricao_evento VARCHAR(500) NOT NULL,
