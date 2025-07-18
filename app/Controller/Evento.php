@@ -29,7 +29,7 @@ class Evento
             'data_evento' => $this->data_evento,
             'hora_inicio' => $this->hora_inicio,
             'hora_fim' => $this->hora_fim,
-            'endereco_evento' => $this->endereco_evento,
+            'id_endereco_evento' => $this->endereco_evento,
             'banner_evento' => $this->banner_evento
         ]);
 
@@ -69,7 +69,7 @@ class Evento
         'data_evento' => $this->data_evento,
         'hora_inicio' => $this->hora_inicio,
         'hora_fim' => $this->hora_fim,
-        'endereco_evento' => $this->endereco_evento,
+        'id_endereco_evento' => $this->endereco_evento,
         'banner_evento' => $this->banner_evento,
         'status' => $this->status
     ];

@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="overlay">
                     <div class="overlay-content">
                         <div class="text-left">
-                            <h2>${sanitize(evento.nome_evento)}</h2>
-                            <h3>${sanitize(evento.subtitulo_evento)}</h3>
+                            <h2>${evento.nome_evento}</h2>
+                            <h3>${evento.subtitulo_evento}</h3>
                             <p><i class="bi bi-calendar-event"></i> Data: ${formatarDataBR(evento.data_evento)}</p>
                             <p><i class="bi bi-clock"></i> Horário: ${evento.hora_inicio} às ${evento.hora_fim}</p>
-                            <p><i class="bi bi-geo-alt"></i> ${sanitize(evento.endereco_evento)}</p>
+                            <p><i class="bi bi-geo-alt"></i> ${evento.endereco_evento}</p>
                         </div>
                         <div class="banner-right">
                             <img src="../../../Public/${evento.banner_evento}" />
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function atualizarDescricaoEEspacos(evento) {
-        infoContainer.innerHTML = `<p>${sanitize(evento.descricao_evento)}</p>`;
+        infoContainer.innerHTML = `<p>${evento.descricao_evento}</p>`;
 
         try {
             const atracoesRes = await fetch(`../../../actions/action-listar-atracoes-por-evento.php?id_evento=${evento.id_evento}`);
@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <div class="selo">Atração</div>
                         </div>
                         <div class="card__content">
-                            <h2>${sanitize(atracao.nome_atracao)}</h2>
-                            <h4>${sanitize(atracao.descricao_atracao)}</h4>
+                            <h2>${atracao.nome_atracao}</h2>
+                            <h4>${atracao.descricao_atracao}</h4>
                             <div class="data">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#a67c52" viewBox="0 0 24 24" width="20" height="20">
                                     <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>

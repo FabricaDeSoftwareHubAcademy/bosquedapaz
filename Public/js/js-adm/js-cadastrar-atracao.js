@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnEditar.addEventListener('click', (event) => {
         event.preventDefault();
 
-        openModalAtualizar();    
+        openModalAtualizar(); 
         document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
         document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
     
@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const imagem = document.getElementById('file').files[0];
 
             if (!nome || !descricao || !imagem || !idEvento) {
-                alert('Preencha todos os campos obrigatórios e selecione uma imagem.');
+                document.getElementById('erro-title').innerText = 'Informações incompletas';
+                document.getElementById('erro-text').innerText = 'Todos os campos devem ser preenchidos antes de continuar.';
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
                 return;
             }
 
@@ -50,15 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Resposta JSON:', resultado);
 
                 if (resultado.status === 'sucesso') {
+                    document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Atração cadastrada com sucesso!';
                     openModalSucesso();
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
-                    document.getElementById('msm-sucesso').innerHTML = 'Atração cadastrada com sucesso!';
-                    
+
                     setTimeout(() => {
-                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
+                        window.location.href = './gerenciar-atracao.php';
                     }, 6000);
 
                 } else {
+                    document.getElementById('erro-title').innerText = 'Erro ao cadastrar atração';
+                    document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
                     openModalError();
                     document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
                 }
@@ -66,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } catch (error) {
                 console.error('Erro na requisição:', error);
+                document.getElementById('erro-title').innerText = 'Falha de comunicação';
+                document.getElementById('erro-text').innerText = 'Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente.';
                 openModalError();
                 document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
             }
