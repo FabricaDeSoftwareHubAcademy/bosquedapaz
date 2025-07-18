@@ -63,9 +63,13 @@
                             
                             <div class="data-imagem">
                                 <div class="input-group">
-                                        <label>Local:</label>
-                                        <input type="text" name="endereco" id="endereco" placeholder="Digite o nome do evento"
-                                            required>
+                                    <label for="select-endereco">Endereço do evento:</label>
+                                    <div style="display: flex; gap: 8px;">
+                                        <select id="select-endereco" name="endereco" required>
+                                        <!-- Opções serão carregadas dinamicamente -->
+                                        </select>
+                                        <button type="button" id="btn-novo-endereco" title="Adicionar novo endereço">+</button>
+                                    </div>
                                 </div>
                                 <div class="input-group">
                                     <label>Imagem:</label>
@@ -79,11 +83,20 @@
                         <?php include '../../../Public/include/Butons-forms.html';?>
                        
                     </form>
+
+                    <?php include "../../../Public/include/modais/modal-cadastrar-endereco.html"; ?>
+                    
                     <div class="overlay" id="overlay"></div>
+                    
                     <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
                     <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
                     <?php include "../../../Public/include/modais/modal-error.html"; ?>
+                    
                 </div>
+
+                
+
+                
 
         </div>
         
@@ -98,6 +111,8 @@
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-evento.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-cadastrar-endereco-evento.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-listar-enderecos.js" defer></script>
 </body>
 
 </html>

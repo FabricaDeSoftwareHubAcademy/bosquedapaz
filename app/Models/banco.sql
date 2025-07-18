@@ -22,6 +22,16 @@ CREATE TABLE endereco(
     PRIMARY KEY(id_endereco)
 );
 
+CREATE TABLE endereco_evento(
+	id_endereco_evento INT NOT NULL AUTO_INCREMENT,
+    cep_evento CHAR(9) NULL,
+    logradouro_evento VARCHAR(150) NOT NULL,
+    complemento_evento VARCHAR(150) NULL,
+    numero_evento INT NOT NULL,
+    bairro_evento VARCHAR(100) NOT NULL,
+    cidade_evento VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id_endereco)
+);
 
 CREATE TABLE pessoa( 
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
@@ -96,20 +106,26 @@ CREATE TABLE artista (
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
 
+<<<<<<< HEAD
 
 
 CREATE TABLE evento(
 	id_evento INT NOT NULL AUTO_INCREMENT,
+=======
+CREATE TABLE evento (
+    id_evento INT NOT NULL AUTO_INCREMENT,
+>>>>>>> task280
     nome_evento VARCHAR(150) NOT NULL,
-    subtitulo_evento VARCHAR(150)NOT NULL,
+    subtitulo_evento VARCHAR(150) NOT NULL,
     descricao_evento VARCHAR(500) NOT NULL,
     data_evento DATE NOT NULL,
     hora_inicio TIME NOT NULL,
     hora_fim TIME NOT NULL,
-    endereco_evento VARCHAR(150) NOT NULL,
+    id_endereco_evento INT NOT NULL,
     banner_evento VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(1),
-    PRIMARY KEY(id_evento)
+    status BOOLEAN DEFAULT 1,
+    PRIMARY KEY (id_evento),
+    FOREIGN KEY (id_endereco_evento) REFERENCES endereco_evento(id_endereco_evento)
 );
 
 CREATE TABLE atracao(
