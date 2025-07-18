@@ -140,8 +140,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $expositor->setNome_marca(     !empty($_POST['marca'])          ? filter_var($_POST['marca'],         FILTER_UNSAFE_RAW) : NULL);
             $expositor->setProduto(        !empty($_POST['produto'])        ? filter_var($_POST['produto'],       FILTER_UNSAFE_RAW) : NULL);
             $expositor->setContato2(       !empty($_POST['whats'])          ? filter_var($_POST['whats'],         FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setModalidade(     !empty($_POST['modalidade'])     ? filter_var($_POST['modalidade'],    FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setResponsavel(    !empty($_POST['responsavel'])    ? filter_var($_POST['responsavel'],   FILTER_UNSAFE_RAW) : NULL);
             $expositor->setIdade(          !empty($_POST['idade'])          ? filter_var($_POST['idade'],         FILTER_UNSAFE_RAW) : NULL);
             $expositor->setVoltagem(       !empty($_POST['voltagem'])       ? filter_var($_POST['voltagem'],      FILTER_UNSAFE_RAW) : NULL);
             $expositor->setEnergia(        !empty($_POST['energia'])        ? filter_var($_POST['energia'],       FILTER_UNSAFE_RAW) : NULL);

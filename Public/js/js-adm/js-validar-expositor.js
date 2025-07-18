@@ -4,11 +4,9 @@ let email = document.getElementById('email')
 let whats = document.getElementById('whats')
 let produto = document.getElementById('produto')
 let cidade = document.getElementById('cidade')
-let modalidade = document.getElementById('modalidade')
 let exposicao = document.getElementById('exposicao')
 let energia = document.getElementById('energia')
 let voltagem = document.getElementById('voltagem')
-let endereco = document.getElementById('endereco')
 let categoria = document.getElementById('categoria')
 let intagram = document.getElementById('intagram')
 
@@ -70,13 +68,11 @@ async function getExpositor(){
         email.value = response.expositor.email
         whats.value = response.expositor.telefone
         produto.value = response.expositor.produto
-        modalidade.value = response.expositor.modalidade
         intagram.href = response.expositor.link_instagram
         intagram.innerText = response.expositor.link_instagram
         exposicao.value = response.expositor.tipo
         energia.value = response.expositor.energia
         voltagem.value = response.expositor.voltagem
-        endereco.value = 'nao tem'
         cidade.value = response.expositor.cidade
         categoria.value = response.expositor.id_categoria
 

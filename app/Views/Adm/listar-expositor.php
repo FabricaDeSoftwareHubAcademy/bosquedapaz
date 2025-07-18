@@ -37,6 +37,7 @@
                           <tr>
                             <th class="usuario-col">Usuário</th>
                             <th>Nome</th>
+                            <th>marca</th>
                             <th class="email-col-th">E-mail</th>
                             <th class="fone-col">Telefone</th>
                             <th class="barraca-col">N. Barraca</th>

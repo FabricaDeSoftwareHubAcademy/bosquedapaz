@@ -34,7 +34,7 @@
               <tr>
                 <th class="nome">Nome</th>
                 <th class="email">Email</th>
-                <th class="cat">Categoria</th>
+                <th class="cat">Marca</th>
                 <th class="telefone">Telefone</th>
                 <th class="perfil">Validar</th>
               </tr>

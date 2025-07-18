@@ -58,27 +58,23 @@
                             <label for="">Cidade</label>
                             <input type="text" name="" id="cidade" class="formulario-campo-informacao" readonly>
 
-                            <label for="">Instagram</label>
-                            <a class="formulario-campo-informacao campo-link" target="_blank" id="intagram"> </a>
                         </div>
-
+                        
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
-                            <label for="">Modalidade</label>
-                            <input type="text" name="" id="modalidade" class="formulario-campo-informacao" readonly>
-
+                            
                             <label for="">Tipo de exposição</label>
                             <input type="text" name="" id="exposicao" class="formulario-campo-informacao" readonly>
-
+                            
                             <label for="">Energia</label>
                             <input type="text" name="" id="energia" class="formulario-campo-informacao" readonly>
-
+                            
                             <label for="">Voltagem</label>
                             <input type="text" name="" id="voltagem" class="formulario-campo-informacao" readonly>
-
-                            <label for="">Endereço</label>
-                            <input type="text" name="" id="endereco" class="formulario-campo-informacao" readonly>
-
+                            
+                            <label for="">Instagram</label>
+                            <a class="formulario-campo-informacao campo-link" target="_blank" id="intagram"> </a>
+                            
                             <label for="">Categoria</label>
                             <select name="categoria" id="categoria" class="formulario-campo-informacao"></select>
                         </div>
