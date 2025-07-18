@@ -11,10 +11,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             const card = document.createElement("div");
             card.classList.add("card");
 
+            const imagem = item.imagem
+                ? `../../../Public/imgs/${item.imagem}`
+                : "../../../Public/imgs/primavera.png";
+
             card.innerHTML = `
                 <div class="por-cima-card">
                     <div class="parte-superior">
-                        <img class="img-ult" src="${item.imagem}" alt="${item.titulo}">
+                        <img class="img-ult" src="${imagem}" alt="${item.titulo}">
                     </div>
                     <div class="parte-inferior">
                         <h1 class="nome-card">${item.titulo}</h1>
@@ -37,13 +41,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         <div class="modal-content">
                             <div class="modal-left">
-                                <img src="${item.imagem}" alt="Imagem do Evento">
+                                <img src="${imagem}" alt="Imagem da Utilidade Pública">
                             </div>
                             <div class="modal-right">
                                 <div class="modal-text-content">
                                     <h2>${item.titulo}</h2>
                                     <p>${item.descricao}</p>
-            
+                                    <p><strong>Início:</strong> ${item.data_inicio}</p>
+                                    <p><strong>Fim:</strong> ${item.data_fim}</p>
                                 </div>
                             </div>
                         </div>
