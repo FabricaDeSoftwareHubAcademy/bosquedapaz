@@ -26,48 +26,7 @@
         </section>
     </main>
 
-    <!-- Modal:  -->
-    <!-- <dialog id="modal-info" class="custom-modal"> -->
-        <div class="modal-wrapper">
 
-            <!-- Botão fechar -->
-            <button class="btn-fechar close-modal" data-modal="modal-info"><i class="bi bi-x-circle"></i></button>
-
-            <!-- Imagens decorativas posicionadas -->
-            <img src="../../../Public/assets/img-decoracao-ult1.png" alt="Decor 1" class="modal-decor decor-top-left">
-            <img src="../../../Public/assets/img-decoracao-ult2.png" alt="Decor 2" class="modal-decor decor-bottom-right">
-
-            <!-- Conteúdo -->
-            <div class="modal-content">
-                <div class="modal-left">
-                    <img src="../../../Public/imgs/primavera.png" alt="Imagem do Evento">
-                </div>
-                <div class="modal-right">
-                    <div class="modal-text-content">
-                    <h2>Primavera</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                        Lorem ipsum dolor sit amet consectetur. Fames metus ac egestas turpis ipsum.
-                    </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- </dialog> -->
 
     <!-- Imagens Decorativas  -->
     <div class="decorative__img1"><img src="../../../Public/assets/img-bolas/bola-ult1.png" alt=""></div>
