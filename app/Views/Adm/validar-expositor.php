@@ -80,8 +80,7 @@
                             <input type="text" name="" id="endereco" class="formulario-campo-informacao" readonly>
 
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="categoria" class="formulario-campo-informacao" readonly>
-                            <button class="alterar-categoria">Alterar Categoria</button>
+                            <select name="categoria" id="categoria" class="formulario-campo-informacao"></select>
                         </div>
                     </div>
 

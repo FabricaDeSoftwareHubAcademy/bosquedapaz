@@ -14,6 +14,26 @@ let intagram = document.getElementById('intagram')
 
 let emailExpositor = ''
 
+async function getCategoria(){ 
+    try {
+        let dados_php = await fetch(`../../../actions/action-listar-categoria.php`);
+    
+        let response = await dados_php.json()
+        
+        response.dados.forEach(element => {
+            categoria.innerHTML += `
+            <option value="${element.id_categoria}">${element.descricao}</option>
+            ` 
+        });
+
+
+    } catch (error) {
+    }
+    
+}
+
+getCategoria();
+
 
 ///////// SELECIONANDO O EXPOSITOR PELO ID QUE VEIO DA URL \\\\\\\\\\\  
 function getIdExpositor(){
@@ -25,7 +45,7 @@ function getIdExpositor(){
             document.getElementById('erro-title').innerText = 'Para válidar um Expositor é necessário escolher um antes'
             document.getElementById('erro-text').innerText = 'Você será redirecionado para lista de espera, certifique-se de selecionar um expositor.'
             document.getElementById('close-modal-erro').addEventListener('click', () => {
-                window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+                window.location.replace('./lista-de-espera.php')
             })
         }
         else {
@@ -36,7 +56,7 @@ function getIdExpositor(){
         document.getElementById('erro-title').innerText = 'Para válidar um Expositor é necessário escolher um antes'
         document.getElementById('erro-text').innerText = 'Você será redirecionado para lista de espera, certifique-se de selecionar um expositor.'
         document.getElementById('close-modal-erro').addEventListener('click', () => {
-            window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+            window.location.replace('./lista-de-espera.php')
         })
     }
 }
@@ -58,7 +78,7 @@ async function getExpositor(){
         voltagem.value = response.expositor.voltagem
         endereco.value = 'nao tem'
         cidade.value = response.expositor.cidade
-        categoria.value = response.expositor.descricao
+        categoria.value = response.expositor.id_categoria
 
         emailExpositor = response.expositor.email
 
@@ -82,7 +102,7 @@ async function getExpositor(){
         document.getElementById('erro-title').innerText = 'Ocorreu um erro ao carregar os dados do expositor'
         document.getElementById('erro-text').innerText = 'Você será redirecionado para lista de espera, certifique-se de selecionar um expositor.'
         document.getElementById('close-modal-erro').addEventListener('click', () => {
-            window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+            window.location.replace('./lista-de-espera.php')
         })
     }
     
@@ -124,6 +144,7 @@ async function aprovarExpostor() {
                 formData.append('aprovado', 1)
                 formData.append('num_barraca', document.getElementById('numBarraca').value)
                 formData.append('cor_rua', document.getElementById('corRua').value)
+                formData.append('categoria', categoria.value)
         
             
                 let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
@@ -142,7 +163,7 @@ async function aprovarExpostor() {
         
                         document.getElementById('close-modal-sucesso').addEventListener('click', () => {
                             closeModalSucesso
-                            window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+                            window.location.replace('./lista-de-espera.php')
                         })
                         
                     }
@@ -212,7 +233,7 @@ async function recusarExpositor() {
         
                         document.getElementById('close-modal-sucesso').addEventListener('click', () => {
                             closeModalSucesso
-                            window.location.replace('http://localhost/bosquedapaz/app/Views/Adm/lista-de-espera.php')
+                            window.location.replace('./lista-de-espera.php')
                         })
                         
                     }
