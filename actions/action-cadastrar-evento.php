@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = $_POST['dataevento'] ?? '';
     $hora_inicio = $_POST['hora_inicio'] ?? '';
     $hora_fim = $_POST['hora_fim'] ?? '';
-    $endereco = sanitizarTexto($_POST['endereco'] ?? '');
+    $endereco = $_POST['endereco'] ?? '';
 
     if (strlen($descricao) > 500) {
         echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 250 caracteres."]);
@@ -70,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar o arquivo."]);
             exit;
         }
-
         
         $evento->banner_evento = 'uploads/uploads-eventos/' . $nomeSeguro;
     } else {

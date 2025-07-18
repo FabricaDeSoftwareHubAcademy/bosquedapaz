@@ -17,27 +17,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $parceiro->tipo = $_POST["tipo"];
     $parceiro->cpf_cnpj = $_POST["cpf_cnpj"];
 
-    if (isset($_FILES['logo']) && $_FILES['logo']['error'] === 0) {
-        $nome_arquivo = $_FILES['logo']['name'];
-        $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
-    
-        // Gera nome único
-        $nome_arquivo_unico = uniqid('logo_', true) . '.' . $extensao;
-    
-        $destino = '../../../Public/uploads/logos/' . $nome_arquivo_unico;
-    
-        // Cria a pasta se não existir
-        if (!is_dir('../../../Public/uploads/logos')) {
-            mkdir('../../../Public/uploads/logos', 0755, true);
-        }
-    
-        if (move_uploaded_file($_FILES['logo']['tmp_name'], $destino)) {
-            $parceiro->logo = $destino;
-        } else {
-            echo json_encode(["status" => "erro", "msg" => "Erro ao salvar a logo!"]);
+    if (isset($_FILES['logo']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
+        chmod("../Public/uploads/uploads-parceiros/", 0777);
+        $arquivoTmp = $_FILES['logo']['tmp_name'];
+        $nomeOriginal = basename($_FILES['logo']['name']);
+        $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
+
+        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+
+        if (!in_array($extensao, $extensoesPermitidas)) {
+            echo json_encode(["status" => "erro", "mensagem" => "Formato de imagem inválido."]);
             exit;
         }
-    }        
+
+        $nomeSeguro = uniqid('parceiro_', true) . '.' . $extensao;
+        $pastaDestino = '../Public/uploads/uploads-parceiros/';
+        $caminhoFinal = $pastaDestino . $nomeSeguro;
+
+        
+
+        if (!is_dir($pastaDestino)) {
+            mkdir($pastaDestino, 0755, true);
+        }
+
+        if (!move_uploaded_file($arquivoTmp, $caminhoFinal)) {
+            echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar o arquivo."]);
+            exit;
+        }
+        
+        $parceiro->logo = 'uploads/uploads-parceiros/' . $nomeSeguro;
+    } else {
+        echo json_encode(["status" => "erro", "mensagem" => "Erro no upload do banner."]);
+        exit;
+    }
+}        
 
     $endereco->cep = $_POST["cep"];
     $endereco->logradouro = $_POST["logradouro"];
@@ -54,5 +67,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo json_encode(["status" => "erro", "msg" => "Erro ao cadastrar!"]);
     }
-}
+
 ?>

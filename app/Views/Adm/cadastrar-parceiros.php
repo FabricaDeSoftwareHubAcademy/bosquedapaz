@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página para gerenciar parceiros e suas informações.">
-    <title>Cadastrar Parceiros</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-parceiros.css">
     <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -31,17 +33,17 @@
                                 <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
                             </div>
                             <div class="input-group">
-                                <label for="logo">Logo:</label>
-                                <input type="file" id="logo" name="logo" required>
-                            </div>                                
+                                <label for="cep">CEP:</label>
+                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+                            </div>
                             <div class="input-group">
-                                <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
-                            </div>                          
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+                            </div>                                             
                             <div class="input-group">
-                                <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
-                            </div>                       
+                                <label for="cidade">Estado:</label>
+                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                            </div>                    
                         </div>
                         <div id="form2" class="form-grid">
                             <div class="input-group">
@@ -53,16 +55,17 @@
                                 <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
                             </div>
                             <div class="input-group">
-                                <label for="cep">CEP:</label>
-                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
-                            </div>
+                                <label for="logradouro">Logradouro:</label>
+                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
+                            </div>                                        
                             <div class="input-group">
-                                <label for="complemento">Complemento:</label>
-                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
-                            </div>
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                            </div>                               
                             <div class="input-group">
-                                <label for="cidade">Estado:</label>
-                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                                <label for="logo">Logo:</label>
+                                <input type="file" id="logo" name="logo" accept="image/*" required>
+                                <img id="preview-logo" src="#" alt="Pré-visualização da logo" style="max-width: 150px; margin-top: 10px; display: none;" />
                             </div>  
                         </div>
                         <div id="form3" class="form-grid">
@@ -79,48 +82,29 @@
                                 </select>
                             </div>
                             <div class="input-group">
-                                <label for="logradouro">Logradouro:</label>
-                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
-                            </div>   
+                                <label for="num_residencia">Número:</label>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
+                            </div> 
                             <div class="input-group">
-                                <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
                             </div>  
                         </div>
-                        <div class="btn-cancelar-salvar">
-                                <button type="button" class="btn btn-cancelar">
-                                    <a href="./Area-Adm.php">Cancelar</a>
-                                </button>
-                                <button type="submit" id="botao_cadastrar" name="REQUEST_METHOD" class="btn open-modal" data-modal="modal-deleta">Salvar</button>
-                        </div>
+                        <?php include "../../../Public/include/Butons-forms.html" ?>
                     </div>
                 </form>
             </div>
-
-            <div class="btns">
-                <a href="gerenciar-eventos.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de Voltar" class="btn-voltar">
-                </a>
-            </div>
         </div>
-
-        <!-- Modal -->
-        <dialog id="modal-deleta" class="modal-deleta">
-            <div class="acao-recusar">
-                <div class="acao-content-recusar">
-                    <h1 class="acao-texto-recusar">Salvo com sucesso!</h1>
-                    <div class="acao-botoes-recusar">
-                        <button class="close-modal" data-modal="modal-deleta">Confirmar</button>
-                    </div>
-                </div>
-            </div>
-        </dialog>
     </main>
 
+    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html" ?>
+    <?php include "../../../Public/include/modais/modal-error.html" ?>
+    
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
     </div>
 
     <script src="../../../Public/js/js-menu/js-menu.js" defer></script>

@@ -5,7 +5,7 @@ async function listar(){
         const resposta = await fetch("../../../actions/action-colaborador.php");
         const json = await resposta.json();
 
-        console.log(json);
+        console.log(json.data);
 
         if (!json.data || json.data.length === 0) {
             document.getElementById('tbody-colaboradores').innerHTML = '<tr><td colspan="6">Nenhum ADM encontrado.</td></tr>';
@@ -14,6 +14,9 @@ async function listar(){
 
         let linhas = '';
         json.data.forEach(colab => {
+            const statusRaw = colab['status_col'] ?? colab['status_pes'] ?? '';
+            const statusLower = statusRaw.toLowerCase();
+
             linhas += `<tr>
                 <td class="usuario-col">${colab['id_colaborador']}</td>
                 <td>${colab['nome']}</td>
@@ -23,10 +26,10 @@ async function listar(){
                 <td>
                     <button 
                         type="button" 
-                        class="status ${colab['status_col'] === 'ativo' ? 'active' : 'inactive'}" 
+                        class="status ${statusLower === 'ativo' ? 'active' : 'inactive'}" 
                         data-id="${colab['id_colaborador']}" 
-                        data-status="${colab['status_col']}">
-                        ${colab['status_col'] === 'ativo' ? 'Ativo' : 'Inativo'}
+                        data-status="${statusLower}">
+                        ${statusLower === 'ativo' ? 'Ativo' : 'Inativo'}
                     </button>
                 </td>
             </tr>`;
@@ -45,3 +48,5 @@ listar();
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)
+
+// Matheus Manja

@@ -18,8 +18,8 @@ class FotosEvento
         $db = new Database('fotos_evento');
         return $db->insert([
             'id_evento' => $this->id_evento,
-            'caminho' => $this->caminho,
-            'legenda' => $this->legenda
+            'caminho_foto_evento' => $this->caminho,
+            'legenda_foto_evento' => $this->legenda
         ]);
     }
 

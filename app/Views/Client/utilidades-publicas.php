@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-utilidades-publicas.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <title>utilidades Publicas</title>
+    <title>Bosque da Paz</title>
 </head>
 <body>
 
@@ -78,6 +78,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Seta:  -->
+            <div class="seta_voltar"><a href="feira-bosque-da-paz.php#edit_pass"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
     </main>
 
@@ -132,3 +135,5 @@
     <script src="../../../Public/js/js-modais/modal-utilidades-publi.js"></script>
 </body>
 </html>
+
+<!-- Matheus Manja  -->

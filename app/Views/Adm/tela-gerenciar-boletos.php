@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bloco principal -->
-    <title>Gerenciamento de Boletos</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-gerenciar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -27,14 +28,14 @@
             <div class="linha-de-separacao"></div>
 
             <div class="filtrar-por-data">
-                <form action="../../../actions/actions-boletos/action-filtrar-data.php" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
+                <form action="" method="POST" id="formulario-filtragem-de-data" class="formulario-filtragem-de-data">
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Inicial</label>
-                        <input type="date" name="data_inicial"" id="input-filtragem-de-data">
+                        <input type="date" name="data_inicial" id="input-filtragem-de-data">
                     </div>
                     <div class="campos-de-filtro">
                         <label for="" id="label-filtragem-de-data">Data Final</label>
-                        <input type="date" name="data_final"" id="input-filtragem-de-data">
+                        <input type="date" name="data_final" id="input-filtragem-de-data">
                     </div>
                     <div class="botao-pesquisar">
                         <label for="" id="label-botao-de-filtragem">Ações</label>
@@ -49,8 +50,8 @@
                 <label for="" id="label-filtragem-de-status">Pesquisar por Status</label>
                 <select name="campo-filtragem-de-status" id="campo-filtragem-de-status">
                     <option value="">Todos os Status</option>
-                    <option value="ativo">Ativo</option>
-                    <option value="inativo">Inativo</option>
+                    <option value="Pago">Pago</option>
+                    <option value="Pendente">Pendente</option>
                 </select>
             </div>
         </section>
@@ -73,26 +74,37 @@
             </table>
         </section>
 
+        <div id="modalConfirmacao" class="modal-confirmacao" style="display: none;">
+            <div class="modal-confirmacao-conteudo">
+                <p>Deseja realmente alterar o status?</p>
+                <div class="modal-confirmacao-botoes">
+                    <button id="confirmarAlteracao" class="modal-confirmacao-botao botao-sim">Sim</button>
+                    <button id="cancelarAlteracao" class="modal-confirmacao-botao botao-nao">Não</button>
+                </div>
+            </div>
+        </div>
+
 
         <!-- decorações -->
         <section class="area-decoracoes">
             <div>
-                <img src="../../../Public/imgs/imgs-validar-expositor/decoracao1-validar-expositor.svg" alt="" class="decoracao decoracao-1">
+                <img src="../../../Public/assets/faleconosco-decoracao3.png" alt="" class="decoracao decoracao-1">
             </div>
 
             <div>
-                <img src="../../../Public/imgs/imgs-validar-expositor/decoracao2-validar-expositor.svg" alt="" class="decoracao decoracao-2">
+                <img src="../../../Public/assets/faleconosco-decoracao1.png" alt="" class="decoracao decoracao-2">
             </div>
 
             <div>
-                <img src="../../../Public/imgs/imgs-validar-expositor/decoracao3-validar-expositor.svg" alt="" class="decoracao decoracao-3">
+                <img src="../../../Public/assets/faleconosco-decoracao2.png" alt="" class="decoracao decoracao-3">
             </div>
 
-            <a href="Area-adm.php">
-                <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="decoracao botao-voltar">
+            <a href="./">
+                <img src="../../../Public/assets/faleconosco-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_buscar_nome_tempo_real.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_alterar_status.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 

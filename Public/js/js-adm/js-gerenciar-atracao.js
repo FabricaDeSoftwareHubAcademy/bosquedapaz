@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const tr = document.createElement('tr');
 
                 tr.innerHTML = `
-                    <td>${sanitize(atracao.nome_atracao)}</td>
+                    <td>${atracao.nome_atracao}</td>
                     <td class="fone-col">
                         <a href="editar-atracao.php?id_atracao=${atracao.id_atracao}">
                             <i class="fas fa-edit"></i>

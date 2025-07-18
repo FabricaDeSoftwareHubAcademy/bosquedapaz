@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('../css-home/style-menu.css');
 
 * {
@@ -7,44 +7,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-
 }
 
 body {
     overflow: hidden;
 }
-
-.principal {
-    width: 100vw;
-    height: 90vh;
-}
-
-.box {
-    width: 90%;
-    height: 100%;
-    background-color: rgba(249, 239, 239, 0.423);
-    margin: auto;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.title{
-    display: flex;
-    height: 20%;
-    justify-content: center;
-    position: relative;
-    top: 15%;
-}
-
-.btn-editar {
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
 
 .bolas-fundo {
     width: 100vw;
@@ -54,417 +21,318 @@ body {
     z-index: -3;
 }
 
-.bolas-fundo .bola-verde1 {
+.bola-verde1,
+.bola-verde2,
+.bola-rosa {
     position: absolute;
-    left: -40px;
-    top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .bola-verde2 {
-    position: absolute;
-    right: -50px;
-    top: 6vh;
-    z-index: -3;
+.bola-verde1 {
+    left: 0;
+    top: 14vh;
 }
 
-.bolas-fundo .bola-rosa {
-    position: absolute;
-    right: -100px;
+.bola-verde2 {
+    right: 0;
+    top: 18vh;
+}
+
+.bola-rosa {
+    right: 0;
     bottom: -100px;
-    z-index: -3;
+    top: 80vh;
 }
 
+.principal {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box {
+    width: 100%;
+    max-width: 90%;
+    height: 90%;
+    background-color: rgba(248, 245, 246, 0.65);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    top: 80px;
+}
+
+.title {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.title-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .formularios {
     width: 100%;
-    height: 64%;
+    height: auto;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     justify-content: center;
     align-items: center;
-    border: none;
     position: relative;
-    top: 20px;
+    top: -30px;
+
 }
 
 .formularios div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-
-.formularios input {
-    width: 40vh;
-    height: 5vh;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-    outline: none;
-}
-
-
-
-.input-group input {
-    width: 40vh;
-    height: 47px;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-.caixa-formulario label {
-    font-size: 14px;
-    margin-bottom: -10px;
-    margin-left: 10px;
-}
-
-.caixa-contato {
-    position: relative;
-    top: -25px;
-}
-
-.caixa-contato input {
-    width: 170px;
-    margin: 20px;
-}
-
-.caixa-contato label {
-    font-size: 14px;
-    margin-bottom: -20px;
-    margin-left: 20px;
-}
-
-.carregar-src {
-    background-color: rgb(126, 126, 126);
-    width: 120px;
-    height: 30px;
-    border: none;
-    border-radius: 10px;
-}
-
-.carregar-src a {
-    color: white;
-    text-decoration: none;
-}
-
-.carregar-src {
-    display: none;
-}
-
-.form-opc {
-    position: relative;
-    top: 5px;
-}
-
-.form-opc label {
-    font-size: 14px;
-    margin-bottom: -8px;
-    margin-left: 10px;
-}
-
-
-
-label#salvar-btn {
-    display: inline-block;
-    background-color: #FF3877;
-    color: white;
-    padding: 9px 50px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    text-transform: uppercase;
-}
-
-
-.custom-dropdown input {
-    width: 40vh;
-    height: 47px;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-
-.select {
-    width: 40vh;
-    height: 47px;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-.voltar {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    top: -55px;
-    left: 7%;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    display: flex;
-}
-
-
-.voltar:hover {
-    transform: scale(1.1); 
-}
-
-
-/********** novo botao de salvar/cancelar ******/
-
-
-
-.btn-finalizar{
-    /* background-color: red; */
-    position: relative;
-    top: 30vh;
-    left: -10%;
-    width: 50%;
-    display: flex;
-}
-.btn-cancelar{
-    width: 20%;
-    border: none;
-    height: 49px;    
-    position: relative;
-    left: 37%;
-}
-.btn-salvar{
-    width:20%;
-    position: relative;
-    left: 60%;
-    top: 48px;
-    padding: 12px 25px; 
-    border: none;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.btn-finalizar a{
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-
-.btn-finalizar 
-.btn-cancelar {
-    background-color: #FF3877;
-    border-radius: 10px;
-    padding: 12px 16px;
-    
-}
-
-.btn-finalizar 
-.btn-salvar {
-    background-color: #007E70;
-    border-radius: 10px;    
-}
-
-
-
-/* fim botao finalizar */
-
 
 .form-pessoa,
-.form-loja,
-.form-expo{
+#estilo_musica_container,
+.form-expo {
+    width: 90%;
+    display: flex;
+}
+
+.form-expo {
+    width: 150%;
+    display: flex;
     position: relative;
-    left: 25%;
-}
-
-
-/*  celular pequeno: 480px
-    celular padrao: 767px
-    tablet: 768 a 1024px
-    desktop: acima de 1024px 
-*/
-
-/* celular pequeno */
-@media screen and (max-width: 650px) {
-    .bolas-fundo{
-        display: none;
-    }
-
-    .title-text{
-        font-size: 20px;
-    }
-
-    .principal{
-        overflow-y: auto;
-    }
-
-    .box{
-        /* background-color: red; */
-        display: flex;
-        flex-direction: column;
-        height: auto;        
-    }
-
-    .formularios{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        left: -13%;
-    }
-
-    .formularios label{
-        position: relative;
-        left: 10px;
-    }
-
-    .btn-finalizar{
-        width: 100%;
-        left: 25%;
-        top: -30px;
-        /* background-color: red; */
-    }
-
-    .select#todas_categorias.select{
-        height: 40px;
-        width: 95%;
-    }
-
-
-    .voltar{
-        position: relative;
-        left: -15vh;
-        top: 5px;
-    }
-}
+    left: 15%;
+    top: 4px;
     
+}
 
 
-/* celular padrao */
-@media screen and (min-width: 651px) and (max-width:1023px) {
-    .bola-verde2{
-        width: 20%;
-        left: 80%;
-    }
-    .bola-rosa{
-        width: 30%;
-        top: 80%;
-        left: 70%;
-    }
+.form-pessoa {
+    position: relative;
+    left: -22%;
+    top: -12px;
+}
 
-    .principal{
-        /* height: 100vh; */
-        overflow-y: auto;
-    }
+#estilo_musica_container {
+    width: 100%;
+}
 
-    .box{
-        height: auto;
-    }
 
-    .formularios{
-        display: flex;
-        flex-direction: column;
-        
-    }
 
-    .formularios label{
+.input,
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formularios label {
+    width: 120%;
+}
+
+.input input,
+.input-group input,
+.input-group textarea {
+    width: 170%;
+    height: 50px;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+
+
+#linguagem_artistica,
+#publico_alvo,
+#tempo_apresentacao,
+#valor_cache,
+#estilo_musica {
+    /* width: 120%; */
+    padding: 5px;
+    min-height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.select {
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.custom-dropdown {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btns-salvar-cancelar {
+    width: 0%;
+    gap: 10px;
+}
+
+.link-area-adm {
+    position: relative;
+    left: -35%;
+}
+
+@media (max-width:1500px) {
+    .formularios {
         position: relative;
-        left: 10px;
+        top: -40px;
+        left: 5%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .box{
+        overflow-x: hidden;
+    }
+    .formularios {
+        flex-direction: column;
+        top: 0;
     }
 
-    .btn-finalizar{
+    .form-pessoa,
+    .form-expo {
+        position: static;
+        width: 100%;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #linguagem_artistica {
+        width: 100% !important;
+    }
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: -20%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .title {
+        width: 100%;
+    }
+
+    .title-text {
+        font-size: 1.5rem;
+    }
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: -60%;
+    }
+
+    .link-area-adm{
+        position: relative;
+        left: -20%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .box{
+        overflow-x: hidden;
+    }
+    .title-text {
+        width: 116%;
+        position: relative;
+        left: -22px;
+        font-size: 1.1rem;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #linguagem_artistica {
+        width: 100%;
+        left: 8%;
+    }
+
+    .formularios {
         position: relative;
         left: 0%;
+        font-size: 14px;
     }
 
-    .voltar{
+    .formularios label {
+        left: 8%;
+    }
+
+    .btn-salvar{
+        left: 0%;
+        flex-direction: row-reverse;
+    }
+
+    .link-area-adm{
         position: relative;
-        left: 30px;
+        left: -55%;
     }
-
-    .voltar img{
-        /* background-color: red; */
-        position: relative;
-        top: -7vh;
-        left: -28vh;
+    .btns-salvar-cancelar{
+        left: 0;
     }
-
 
 }
 
-@media screen and (min-width: 1024px) and (max-width:1250px) {
+@media (width:344px) and (height:882px) {
+    .box{
+        overflow-x: hidden;
+    }
+    .form-pessoa .input{
+        width: 80%;
+    }
+    .form-expo .input{
+        width: 80%;
+    }
+
+    .form-expo .select{
+        width: 80%;
+    }
+
     .formularios{
+        left: 10%;
+    }
+    #publico_alvo{
         width: 100%;
     }
-
-    .formularios label{
+    .link-area-adm{
         position: relative;
-        left: 5%;
-    }
-
-    .form-pessoa{
-        position: relative;
-        left: 5%;
-        top: 5px;
-    }
-
-    .form-pessoa input{
-        width: 110%;
-    }
-
-    .form-loja{
-        position: relative;
-        left: 10%;
-        top: 5px;
-    }
-
-    .form-expo{
-        /* background-color: red; */
-        position: relative;
-        left: 5%;
-    }
-    .form-loja input{
-        width: 76%;
-    }
-
-    .form-expo input{
-        width: 70%;
-    }
-
-    .select{
-        width: 70%;
-    }
-
-    #categorias{
-        /* background-color: red; */
-        width: 76%;
-    }
-
-    .btn-finalizar{
-        position: relative;
-        left: 70%;
+        left: -50%;
     }
 }
-
-/* @media screen and (min-width: 1251px){
-    .btn-finalizar{
-        position: relative;
-        left: 45vh;
-        top: 10vh;
-    }
-} */

@@ -705,7 +705,7 @@ input[type="file"]{
     }
 
     .perfilEdit-label-desc{
-        height: 30%;
+        height: 29px; 
     }
 
     .perfilEdit-info{
@@ -779,6 +779,10 @@ input[type="file"]{
         height: 80%;
         /* background-color: purple; */
         width: 70%;
+    }
+
+    .perfilEdit-label-desc{
+        height: 15%;
     }
 
     .perfilEdit-foto-info{

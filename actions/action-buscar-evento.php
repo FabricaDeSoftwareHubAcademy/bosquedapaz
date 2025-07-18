@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
                 'data_evento' => $eventoSelecionado->data_evento,
                 'hora_inicio' => $eventoSelecionado->hora_inicio,
                 'hora_fim' => $eventoSelecionado->hora_fim,
-                'endereco_evento' => $eventoSelecionado->endereco_evento,
+                'endereco_evento' => $eventoSelecionado->id_endereco_evento,
                 'status' => $eventoSelecionado->status,
                 'banner_evento' => $eventoSelecionado->banner_evento
             ]

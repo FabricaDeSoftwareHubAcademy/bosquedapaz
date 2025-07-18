@@ -10,6 +10,7 @@
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-atracao.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
@@ -59,6 +60,10 @@
                     <?php include '../../../Public/include/Butons-forms.html';?>
 
                 </form>
+                <div class="overlay" id="overlay"></div>
+                <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+                <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+                <?php include "../../../Public/include/modais/modal-error.html"; ?>
 
             </div>
 

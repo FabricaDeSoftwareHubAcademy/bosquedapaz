@@ -229,7 +229,7 @@ if ($requestMethod === 'POST') {
                     'email' => $c['email'],
                     'telefone' => $c['telefone'],
                     'cargo' => $c['cargo'],
-                    'status_col' => $c['status_col'],
+                    'status_col' => $c['status_pes'],
                 ];
             }, $res);
 
@@ -284,3 +284,5 @@ if ($requestMethod === 'GET') {
         exit;
     }
 }
+
+// Matheus Manja

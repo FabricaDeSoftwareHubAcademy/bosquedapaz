@@ -38,12 +38,18 @@
         </div>
         <div class="imagens-flutuantes">
             <div class="carrossel-imagens">
-              <img class="fotos1" src="../../../Public/imgs/imagem20.png" alt="imagem1">
-              <img class="fotos1" src="../../../Public/imgs/imagem21.png" alt="imagem2">
-              <img class="fotos1" src="../../../Public/imgs/imagem22.png" alt="imagem3">
-              <img class="fotos1" src="../../../Public/imgs/imagem23.png" alt="imagem4">
-              <img class="fotos1" src="../../../Public/imgs/imagem24.png" alt="imagem5">  
-              <img class="fotos1" src="../../../Public/imgs/imagem25.png" alt="imagem6">  
+              <img class="fotos1" src="../../../Public/imgs/imagem20.webp
+              " alt="imagem1">
+              <img class="fotos1" src="../../../Public/imgs/imagem21.webp
+              " alt="imagem2">
+              <img class="fotos1" src="../../../Public/imgs/imagem22.webp
+              " alt="imagem3">
+              <img class="fotos1" src="../../../Public/imgs/imagem23.webp
+              " alt="imagem4">
+              <img class="fotos1" src="../../../Public/imgs/imagem24.webp
+              " alt="imagem5">  
+              <img class="fotos1" src="../../../Public/imgs/imagem25.webp
+              " alt="imagem6">  
             </div>
           </div>
           
@@ -64,9 +70,12 @@
 
     <section class="imagens-bosque-quem-somos">
         <div class="imagens2">
-            <!---<img class="img" src="../../../Public/imgs/img1.png" alt="">
-            <img class="img" src="../../../Public/imgs/img1.png" alt="">
-            <img class="img" src="../../../Public/imgs/img1.png" alt="">-->
+            <!---<img class="img" src="../../../Public/imgs/img1.webp
+            " alt="">
+            <img class="img" src="../../../Public/imgs/img1.webp
+            " alt="">
+            <img class="img" src="../../../Public/imgs/img1.webp
+            " alt="">-->
         </div>
     </section>
 
@@ -79,19 +88,22 @@
     <section class="section-colaboradoras-quem-somos">
            
         <div class="image-text-carina">
-            <img class="fotos" src="../../../Public/imgs/foto-carina.png" alt="">
+            <img class="fotos" src="../../../Public/imgs/foto-carina.webp
+            " alt="">
             <p class="carina">Carina Zamboni</p>
             <span class="profission"> Produtora Cultural</span>
         </div>
 
         <div class="image-text-denise">
-            <img class="fotos" src="../../../Public/imgs/foto-denize.png" alt="">
+            <img class="fotos" src="../../../Public/imgs/foto-denize.webp
+            " alt="">
             <p class="denise">Denise Zamboni</p>
             <span class="profission"> Produtora Cultural</span>
         </div>
 
         <div class="image-text-fernanda">
-            <img class="fotos" src="../../../Public/imgs/foto-fernanda.png" alt="">
+            <img class="fotos" src="../../../Public/imgs/foto-fernanda.webp
+            " alt="">
             <p class="fernanda">Fernanda Gutierrez</p>
             <span class="profission">Advogada</span>
         </div>
@@ -149,18 +161,30 @@
 
             <div class="imagens3">
                     <div class="galeria">
-                    <img src="../../../Public/imgs/imagem26.png" alt="">
-                    <img src="../../../Public/imgs/imagem27.png" alt="">
-                    <img src="../../../Public/imgs/imagem28.png" alt="">
-                    <img src="../../../Public/imgs/imagem29.png" alt="">
-                    <img src="../../../Public/imgs/imagem30.png" alt="">
-                    <img src="../../../Public/imgs/imagem31.png" alt="">
-                    <img src="../../../Public/imgs/imagem32.png" alt="">
-                    <img src="../../../Public/imgs/imagem33.png" alt="">
-                    <img src="../../../Public/imgs/imagem43.png" alt="">
-                    <img src="../../../Public/imgs/imagem44.png" alt="">
-                    <img src="../../../Public/imgs/imagem45.png" alt="">
-                    <img src="../../../Public/imgs/imagem46.png" alt="">
+                    <img src="../../../Public/imgs/imagem26.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem27.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem28.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem29.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem30.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem31.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem32.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagem33.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagemm43.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagemm44.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagemm45.webp
+                    " alt="">
+                    <img src="../../../Public/imgs/imagemm46.webp
+                    " alt="">
 
 
 
@@ -179,6 +203,6 @@
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
     <script src="../../../Public/js/js-home/main.js" defer></script>
-
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>

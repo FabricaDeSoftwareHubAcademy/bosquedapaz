@@ -1,13 +1,18 @@
-// Script para Mudar Status: 
 document.addEventListener("DOMContentLoaded", () => {
   const tbody = document.getElementById("tbody-colaboradores");
-  const modalConfirm = document.getElementById("modal-confirm");
-  const modalSuccess = document.getElementById("modal-success");
-  const modalConfirmMsg = document.getElementById("modal-confirm-msg");
-  const modalSuccessMsg = document.getElementById("modal-success-msg");
-  const btnSim = document.getElementById("modal-confirm-sim");
-  const btnNao = document.getElementById("modal-confirm-nao");
-  const btnOk = document.getElementById("modal-success-ok");
+
+  const modalConfirm = document.getElementById("modal-confirmacao");
+  const modalSuccess = document.getElementById("modal-sucesso");
+  const modalError = document.getElementById("modal-erro");
+
+  const confirmText = modalConfirm.querySelector(".deletar-text");
+  const successText = modalSuccess.querySelector(".deletar-text");
+  const errorText = modalError.querySelector(".deletar-text");
+
+  const btnNao = modalConfirm.querySelector(".deletar-modal-cancelar");
+  const btnSim = modalConfirm.querySelector(".deletar-modal-salvar");
+  const btnOk = modalSuccess.querySelector(".deletar-modal-salvar");
+  const btnFecharErro = modalError.querySelector(".deletar-modal-cancelar");
 
   let currentButton = null;
   let novoStatus = "";
@@ -20,19 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const statusAtual = currentButton.getAttribute("data-status");
       novoStatus = statusAtual === "ativo" ? "inativo" : "ativo";
 
-      modalConfirmMsg.textContent = `Deseja realmente ${novoStatus === "ativo" ? "ativar" : "inativar"} este ADM?`;
-      modalConfirm.style.display = "flex";
+      confirmText.textContent = `Deseja realmente ${novoStatus === "ativo" ? "ativar" : "inativar"} este ADM?`;
+      modalConfirm.showModal();
     }
   });
 
-  btnNao.addEventListener("click", () => {
-    modalConfirm.style.display = "none";
+  btnNao.onclick = () => {
+    modalConfirm.close();
     currentButton = null;
-  });
+  };
 
-  btnSim.addEventListener("click", async () => {
+  btnSim.onclick = async () => {
     if (!currentButton || !idColaborador) {
-      modalConfirm.style.display = "none";
+      modalConfirm.close();
       return;
     }
 
@@ -43,16 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           acao: "alternarStatus",
           id_colaborador: idColaborador,
-          status_atual: currentButton.getAttribute("data-status"),
+          status_atual: currentButton.getAttribute("data-status").toLowerCase(), // força minúsculo aqui
         }),
       });
 
       const text = await response.text();
-      console.log("Resposta do servidor:", text);
-
       const data = JSON.parse(text);
 
       if (response.ok && data.success) {
+        // Atualiza botão status
         currentButton.textContent = data.novoStatusTexto;
         currentButton.setAttribute("data-status", data.novoStatus);
         if (data.novoStatus === "ativo") {
@@ -63,23 +67,32 @@ document.addEventListener("DOMContentLoaded", () => {
           currentButton.classList.add("inactive");
         }
 
-        modalConfirm.style.display = "none";
+        modalConfirm.close();
 
-        modalSuccessMsg.textContent = data.message;
-        modalSuccess.style.display = "flex";
+        successText.textContent = data.message || "Status alterado com sucesso!";
+        modalSuccess.showModal();
       } else {
-        alert(data.message || "Erro ao tentar mudar o status.");
-        modalConfirm.style.display = "none";
+        modalConfirm.close();
+
+        errorText.textContent = data.message || "Erro ao tentar mudar o status.";
+        modalError.showModal();
       }
     } catch (error) {
-      alert("Erro na comunicação com o servidor.");
-      modalConfirm.style.display = "none";
+      modalConfirm.close();
+
+      errorText.textContent = "Erro na comunicação com o servidor.";
+      modalError.showModal();
+
       console.error("Erro no fetch/parse JSON:", error);
     }
-  });
+  };
 
-  btnOk.addEventListener("click", () => {
-    modalSuccess.style.display = "none";
+  btnOk.onclick = () => {
+    modalSuccess.close();
     currentButton = null;
-  });
+  };
+
+  btnFecharErro.onclick = () => {
+    modalError.close();
+  };
 });

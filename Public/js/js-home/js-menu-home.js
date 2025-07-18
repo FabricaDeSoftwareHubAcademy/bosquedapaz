@@ -1,3 +1,5 @@
+
+
 // abre o menu da home
 const sandwich = document.getElementById('sandwich')
 const navMenu = document.getElementById('nav-list')

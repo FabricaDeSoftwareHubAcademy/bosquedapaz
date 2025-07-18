@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,18 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
-    <title>Adm - Visualizar Categorias</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-visualizar-categoria.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body class="corpo">
     <?php include "../../../Public/include/menu-adm.html" ?>
 
-    <img class="imagem-enzo-fundo" src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="">
-    <img class="imagem-enzo-fundo2" src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="">
-    <img class="imagem-enzo-fundo3" src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="">
+    <img class="imagem-enzo-fundo" src="../../../Public/assets/img-bolas/bola-verde1.png" alt="B1">
+    <img class="imagem-enzo-fundo2" src="../../../Public/assets/img-bolas/bola-rosa.png" alt="B2">
+    <img class="imagem-enzo-fundo3" src="../../../Public/assets/img-bolas/bola-verde2.png" alt="B3">
     <main class="principal">
         <div class="box">
             <h1 class="title">TODAS AS CATEGORIAS</h1>
@@ -31,12 +33,12 @@
                     <p class="nome-cat">Nova Categoria</p>
                 </div> -->
 
-                <dialog class="cadastro-categoria" id="cadastro-categoria">
-                    <div class="modal-content">
-                        <span class="close close-modal" data-modal="cadastro-categoria">&times;</span>
-                        <h1 class="titulo">Cadastrar Categoria</h1>
+                <dialog class="dialog-categoria" id="cadastro-categoria">
+                    <div class="dialog-categoria-content">
+                        <span class="dialog-close close-modal" data-modal="cadastro-categoria">&times;</span>
+                        <h1 class="dialog-titulo">Cadastrar Categoria</h1>
                         <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
-                            <div class="form-box">
+                            <div class="dialog-form-box">
                                 <h3>Nome:</h3>
                                 <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
                                 <h3>Cor:</h3>
@@ -92,9 +94,9 @@
                                     </div>
                                     <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
-                                <div class="botoes">
-                                    <button type="button" class="cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
-                                    <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
+                                <div class="dialog-botoes">
+                                    <button type="button" class="dialog-cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
+                                    <button type="submit" id="btn_cadastrar_cat" class="dialog-salvar">Salvar</button>
                                 </div>
                             </div>
                         </form>
@@ -102,8 +104,8 @@
                 </dialog>
             </div>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                <a href="./" class="voltar">
+                    <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
         </div>
@@ -112,6 +114,12 @@
     <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-visualizar-categoria.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
+    <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>
+    <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+    <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+    <?php include '../../../Public/include/modais/modal-error.html'; ?>
 </body>
 
 </html>

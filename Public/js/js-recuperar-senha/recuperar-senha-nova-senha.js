@@ -1,16 +1,23 @@
-function validarConfSenha() {
+linkSuscess.href = '../Public/css/css-modais/style-modal-sucesso.css';
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
     const senha = document.getElementById("novaSenha").value.trim();
     const confSenha = document.getElementById("confirmSenha").value.trim();
 
     if (senha === "" || confSenha === "") {
         alert("Preencha todos os campos");
-        return false;
-    } else if (senha !== confSenha) {
-        alert("Senha e Confirmar Senha não conferem!");
-        return false;
+        e.preventDefault();
+        return;
     }
 
-    document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
+    if (senha !== confSenha) {
+        alert("Senha e confirmação não conferem");
+        e.preventDefault();
+        return;
+    }
 
-    return false;
-}
+    // Modal opcional
+    openModalSucesso();
+});
