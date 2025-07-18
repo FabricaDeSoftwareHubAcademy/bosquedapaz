@@ -19,36 +19,11 @@
 }
 .wave-text span {
     display: inline-block;
-    font-size: 4rem;
+    font-size: 40px;
     color: white;
     animation: wave 2s ease-in-out infinite;
 
     
-}
-
-.wave-text span:nth-child(1) {
-    animation-delay: 0s;
-}
-.wave-text span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.wave-text span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.wave-text span:nth-child(4) {
-    animation-delay: 0.6s;
-}
-.wave-text span:nth-child(5) {
-    animation-delay: 0.8s;
-}
-
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
 }
 
 
@@ -167,12 +142,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
 
 
-background: rgba(0, 0, 0, 0.466);
+/* background: rgba(0, 0, 0, 0.466);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .sobreFabrica > span{
@@ -353,6 +328,13 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .icon{
   font-size: 100px;
   color: #ffffff;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.icon:hover{
+  color: #9849ff;
 }
 
 @media (min-width: 0px) and (max-width: 960px) {

@@ -1,5 +1,7 @@
 @import url(inicio.css);
 @import url(sobre.css);
+@import url(desenvolvedores.css);
+@import url(footer.css);
 
 
 * {    
@@ -7,7 +9,8 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+
 }
 body{
   width: 100%;
@@ -32,4 +35,12 @@ a{
   
   border-top: 2px solid var(--text-color2);
   border-bottom: 2px solid var(--text-color2);
+}
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-thumb{
+  width: 10px;
+  background-color: #9849ff;
+  border-radius: 50px; 
 }

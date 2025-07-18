@@ -191,3 +191,9 @@
     opacity: 0;
     pointer-events: none;
 }
+
+#particles-js{
+    position: absolute;
+    /* z-index: 2; */
+    height: 100%;
+}
