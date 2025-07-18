@@ -19,7 +19,8 @@ async function getImage() {
         let imagens = await fetch("../../../actions/action-carrossel.php")
     
         let resposta = await imagens.json()
-    
+
+        slider.style.backgroundImage = `url('../../${resposta.imagens[0].caminho}')`
 
         const interval = setInterval(() => {
                 if (x == 0){

@@ -50,7 +50,7 @@
                       </table>
                     </div>  
             <div class="btns">
-                <a href="./Area-Adm.php" class="voltar">
+                <a href="./" class="voltar">
                 <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>  

@@ -11,7 +11,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-expositor-kids.css">
 
 
@@ -21,6 +21,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
 
 
     <script src="../Public/js/js-adm/js-cadastro-expositor.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <title>Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">

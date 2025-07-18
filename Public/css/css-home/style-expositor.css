@@ -152,6 +152,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    padding: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,7 +186,9 @@
 }
 
 .img-perfil-expo {
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .nome-expo {

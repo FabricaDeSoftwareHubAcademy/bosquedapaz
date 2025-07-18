@@ -10,7 +10,7 @@
         </p>
         <div class="content-seja-expositor">
             <button class="btn-seja-expositor" id="btn-seja-expositor">
-                <a href="" class="all-links link-seja-exposior">seja um expositor</a>
+                <a href="./escolher-cadastro.php" class="all-links link-seja-exposior">seja um expositor</a>
             </button>
         </div>
     </div>
@@ -23,7 +23,7 @@
 
         <div class="content-seja-expositor content-mais-expositor">
             <button class="btn-seja-expositor btn-mais-expositor" id="btn-seja-expositor">
-                <a href="" class="all-links link-seja-exposior">ver outros expositores</a>
+                <a href="./todos-expositores.php" class="all-links link-seja-exposior">ver outros expositores</a>
             </button>
         </div>
     </div>

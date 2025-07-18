@@ -42,15 +42,25 @@
 }
 
 .list-ul {
+    max-height: 300px;
     font-size: 1.1em;
     margin-top: 5px;
     padding-top: 20px;
+    text-align: center;
+    overflow-y: auto;
     list-style: none;
+    scrollbar-color: white transparent;
 }
 
 .link-rodape {
     color: #fff;
     text-decoration: none;
+    transition: var(--o-transition);
+}
+
+.link-rodape:hover {
+    text-decoration: underline;
+    transition: var(--o-transition);
 }
 
 .link-contato-rodape {
@@ -72,13 +82,22 @@
     padding-bottom: 15px;
     padding: 5px;
     color: #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.link-externo {
+    text-decoration: none;
 }
 
 .icon-r {
     font-size: 2rem;
-    margin-right: 5px;
     color: #fff;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: .5rem;
     border-radius: .5rem;
     transition: all .2s ease-in-out;
 }

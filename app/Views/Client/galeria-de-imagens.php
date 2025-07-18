@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link rel="stylesheet" href="../../../Public/css/css-home/style-galeria-de-imagens.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>Galeria DE IMAGENS</title>
+    <title>Imagens - Bosque da Paz</title>
 </head>
 <body>  
 
