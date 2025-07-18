@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,11 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Boletos</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-listar-boletos.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+    <title>Expositor - Bosque da Paz</title>
 </head>
 <body class="body-listb" >
     

@@ -34,7 +34,7 @@
               <tr>
                 <th class="nome">Nome</th>
                 <th class="email">Email</th>
-                <th class="cat">Categoria</th>
+                <th class="cat">Marca</th>
                 <th class="telefone">Telefone</th>
                 <th class="perfil">Validar</th>
               </tr>
@@ -45,7 +45,7 @@
         </div>
         <!-- Seta Voltar -->
         <div class="btn-v">
-          <a href="Area-Adm.php" class="voltar">
+          <a href="./" class="voltar">
             <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar" />
           </a>
         </div>

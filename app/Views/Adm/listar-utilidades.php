@@ -1,22 +1,23 @@
 <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
-<?php include "../../../Public/include/menu-adm.html" ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página para gerenciar parceiros e suas informações.">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-    <title>Adm - Bosque da Paz</title>
-    <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-utilidades.css">
-    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página para gerenciar parceiros e suas informações.">
+        <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
+        <title>Adm - Bosque da Paz</title>
+        <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-utilidades.css">
+        <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <?php include "../../../Public/include/menu-adm.html" ?>
     <main class="principal">
         <div class="box">
             <h2>UTILIDADES PÚBLICAS</h2>
@@ -46,8 +47,8 @@
             </div>
         </div>
         <div class="btns">
-            <a href="gerenciar-parceiros.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+            <a href="./" class="voltar">
+                <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
     </main>
