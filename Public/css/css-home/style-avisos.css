@@ -10,7 +10,7 @@
 
 .eventos {
     width: 100%;
-    height: 600px;
+    height: 500px;
     position: relative;
 }
 
@@ -40,13 +40,13 @@
 }
 
 .img_prox_event {
-    width: 40rem;
+    width: 35rem;
     border-radius: .5rem;
     transition: var(--o-transition);
 }
 
 .img_prox_event:hover {
-    width: 41rem;
+    width: 36rem;
     transition: var(--o-transition);
 }
 
