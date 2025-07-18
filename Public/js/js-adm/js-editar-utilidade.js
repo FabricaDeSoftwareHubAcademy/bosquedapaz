@@ -71,3 +71,27 @@ if (botao_editar_utilidade) {
         }
     });
 }
+
+btnSalvar = document.getElementById('#btn-salvar');
+
+    btn.addEventListener('click', async function (event) {
+        event.preventDefault();
+
+        titulo = document.getElementById("confirmar-title");
+        subtitulo = document.getElementById("msm-confimar");
+
+        titulo.innerHTML = "<h2>Deseja editar esse registro?</h2>";
+        subtitulo.innerHTML = "<p>Clique em salvar para confirmar a alteração</p>";
+
+        openModalConfirmar();
+        document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
+        document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
+
+        const salvarBtn = document.getElementById('btn-modal-salvar');
+        const novoSalvarBtn = salvarBtn.cloneNode(true);
+        salvarBtn.parentNode.replaceChild(novoSalvarBtn, salvarBtn);
+
+        closeModalConfirmar();
+        window.location.reload();
+    });
+
