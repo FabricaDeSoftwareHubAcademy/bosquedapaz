@@ -99,7 +99,7 @@
                 <img src="../../../Public/assets/faleconosco-decoracao2.png" alt="" class="decoracao decoracao-3">
             </div>
 
-            <a href="Area-adm.php">
+            <a href="./">
                 <img src="../../../Public/assets/faleconosco-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>

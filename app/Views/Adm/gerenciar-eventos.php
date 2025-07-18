@@ -45,7 +45,7 @@
                 </div>
 
                 <button class="voltar">
-                    <a href="Area-Adm.php" class="voltar-link">
+                    <a href="./" class="voltar-link">
                         <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
                     </a>
                 </button>

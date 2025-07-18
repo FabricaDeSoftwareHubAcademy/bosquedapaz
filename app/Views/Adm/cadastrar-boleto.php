@@ -87,7 +87,7 @@
                 </div>
 
                 <div id="btns-forms-padrao" class="btns-forms-padrao">
-                    <a href="./Area-Adm.php" class="link-area-adm">
+                    <a href="./" class="link-area-adm">
                         <div id="btn-voltar" class="btn-voltar">
                             <i id="seta" class="bi bi-arrow-left-short seta"></i>
                         </div>

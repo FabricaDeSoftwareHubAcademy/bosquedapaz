@@ -112,8 +112,8 @@
       </div>
     </div>
     <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                <a href="./" class="voltar">
+                    <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>
   </main>

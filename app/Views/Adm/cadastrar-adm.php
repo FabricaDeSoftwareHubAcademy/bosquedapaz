@@ -114,7 +114,7 @@
             </div> 
             
             <!-- Seta Voltar 1  -->
-            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
+            <div class="seta__voltar1"><a href="./"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
         
         <!-- Imagens Decorativas -->

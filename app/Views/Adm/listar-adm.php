@@ -31,7 +31,7 @@
       <div class="box">
         <h2>LISTAR ADM</h2>
         <!-- Seta Voltar  -->
-        <div class="seta__voltar"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png"  alt=""></a></div>
+        <div class="seta__voltar"><a href="./"><img src="../../../Public/assets/icons/voltar.png"  alt=""></a></div>
         <div class="container">
           <!-- Formulário de Busca -->
           <form method="POST" id="formBusca">
