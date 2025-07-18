@@ -37,5 +37,9 @@ class EnderecoEvento
 
     }
 
+    public function buscarPorId($id) {
+        return (new Database('endereco_evento'))->select('id_endereco_evento = '.$id)->fetchObject(self::class);
+    }
+
 }
 
