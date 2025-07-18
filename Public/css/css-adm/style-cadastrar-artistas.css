@@ -86,8 +86,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top:-30px;
-  
+    top: -30px;
+
 }
 
 .formularios div {
@@ -103,13 +103,13 @@ body {
     display: flex;
 }
 
-.form-expo{
+.form-expo {
     width: 150%;
     display: flex;
     position: relative;
     left: 15%;
     top: 4px;
-    
+
 }
 
 
@@ -161,7 +161,7 @@ body {
 #tempo_apresentacao,
 #valor_cache,
 #estilo_musica {
-    width: 120%;
+    /* width: 120%; */
     padding: 5px;
     min-height: 45px;
     border: none;
@@ -176,7 +176,7 @@ body {
 }
 
 .select {
-    width: 130%;
+    width: 100%;
     min-height: 45px;
     padding: 5px;
     border: none;
@@ -195,12 +195,12 @@ body {
     margin-bottom: 20px;
 }
 
-.btns-salvar-cancelar{
+.btns-salvar-cancelar {
     width: 0%;
     gap: 10px;
 }
 
-.link-area-adm{
+.link-area-adm {
     position: relative;
     left: -35%;
 }
@@ -213,141 +213,123 @@ body {
     }
 }
 
-@media (width: 1024px) and (height: 600px) {
-    .title-text {
-        font-size: 1.1rem;
-    }
-    .formularios {
-        width: 133%;
-        flex-direction: row !important;
-        gap: 30px;
-        position: relative;
-        left: 15%;
-    }
-    .select {
-        width: 70%;
-    }
-    .btn-conf {
-        position: relative;
-        top: 181px;
-        left: -35%;
-    }
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #linguagem_artistica {
-        height: 0px;
-    }
-    .select {
-        height: 0px;
-    }
-}
-
 @media (max-width: 1024px) {
+    .box{
+        overflow-x: hidden;
+    }
     .formularios {
         flex-direction: column;
         top: 0;
     }
+
     .form-pessoa,
     .form-expo {
         position: static;
         width: 100%;
     }
+
     .input input,
     .input-group input,
     .input-group textarea,
     #linguagem_artistica {
         width: 100% !important;
     }
-    .btn-finalizar {
-        top: 0;
-    }
-    .btn-conf {
-        width: 104%;
-        font-size: 0.8rem;
-        padding: 10px 189px;
-    }
-    .btn-salvar {
+
+    .btns-salvar-cancelar{
         position: relative;
-        left: 37%;
+        left: -20%;
     }
-    .btn-cancelar {
-        position: relative;
-        left: -72%;
-    }
+
 }
 
 @media (max-width: 768px) {
     .title {
         width: 100%;
     }
+
     .title-text {
         font-size: 1.5rem;
     }
-    .btn-conf {
-        width: 101%;
-        font-size: 0.8rem;
-        padding: 10px 160px;
-    }
-    .btn-salvar {
+
+    .btns-salvar-cancelar{
         position: relative;
-        left: 37%;
+        left: -60%;
     }
-    .btn-cancelar {
+
+    .link-area-adm{
         position: relative;
-        left: -72%;
+        left: -20%;
     }
-    .select {
-        width: 100%;
-    }
+
 }
 
 @media (max-width: 480px) {
+    .box{
+        overflow-x: hidden;
+    }
     .title-text {
         width: 116%;
         position: relative;
         left: -22px;
         font-size: 1.1rem;
     }
+
     .input input,
     .input-group input,
     .input-group textarea,
     #linguagem_artistica {
-        width: 80% !important;
+        width: 100%;
         left: 8%;
     }
+
     .formularios {
         position: relative;
-        left: 10%;
+        left: 0%;
+        font-size: 14px;
     }
-    .select {
-        width: 80%;
-    }
+
     .formularios label {
         left: 8%;
     }
-    .btn-conf {
-        font-size: 0.8rem;
-        padding: 10px 106px;
-        position: relative;
-        left: -10px;
+
+    .btn-salvar{
+        left: 0%;
+        flex-direction: row-reverse;
     }
-    .btn-salvar {
+
+    .link-area-adm{
         position: relative;
-        left: 20%;
+        left: -55%;
     }
-    .btn-cancelar {
-        position: relative;
-        left: -72%;
+    .btns-salvar-cancelar{
+        left: 0;
     }
-    .btns {
-        position: relative;
-        left: 3%;
-    }
+
 }
 
 @media (width:344px) and (height:882px) {
-    .btns {
+    .box{
+        overflow-x: hidden;
+    }
+    .form-pessoa .input{
+        width: 80%;
+    }
+    .form-expo .input{
+        width: 80%;
+    }
+
+    .form-expo .select{
+        width: 80%;
+    }
+
+    .formularios{
         left: 10%;
+    }
+    #publico_alvo{
+        width: 100%;
+    }
+    .link-area-adm{
+        position: relative;
+        left: -50%;
     }
 }

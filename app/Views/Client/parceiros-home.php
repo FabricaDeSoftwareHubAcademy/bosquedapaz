@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-apoiadores.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-parceiros-home.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-rodape.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <script src="../../../Public/js/js-home/slider-apoiadores.js" defer></script>
 
     <title>Bosque da Paz</title>
     
@@ -35,7 +34,7 @@
     <div class="card-apoio card1">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Handshake Heart.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Handshake Heart.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -51,7 +50,7 @@
     <div class="card-apoio card2">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Meal.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Meal.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -67,7 +66,7 @@
     <div class="card-apoio card3">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Theatre Mask.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Theatre Mask.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -83,7 +82,7 @@
     <div class="card-apoio card4">
         <div class="top-card">
             <div class="cabeca-card">
-                <img src="../../../Public/imgs/img-home/Sustainability.png" alt="" class="img-card">
+                <img src="../../../Public/assets/Sustainability.png" alt="" class="img-card">
             </div>
         </div>
         <div class="corpo-card">
@@ -98,9 +97,8 @@
 </section>
 
     
-    <?php include "../../../Public/include/home/section-apoiadores.php"; ?>
+    <?php include "../../../Public/include/home/section-parceiros.php"; ?>
     <?php include "../../../Public/include/home/rodape.html"; ?>
-    
-
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>

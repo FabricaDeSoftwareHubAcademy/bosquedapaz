@@ -82,6 +82,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-home/js-fale-conosco.js"></script>
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 
 </html>

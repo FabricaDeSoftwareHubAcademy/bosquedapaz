@@ -203,6 +203,6 @@
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
     <script src="../../../Public/js/js-home/main.js" defer></script>
-
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>

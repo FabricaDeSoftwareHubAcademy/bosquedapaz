@@ -1,3 +1,6 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-expositor.css">
+
     <!-- <link rel="stylesheet" href="../../../Public/css/css-adm/teste.css"> -->
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body onload="getCategorias()">
-    <?php include "../../../Public/include/home/menu-home.html" ?>
+<?php include "../../../Public/include/home/menu-home.html" ?>
+
 
     <main class="principal">
 
@@ -97,8 +101,8 @@
                         </div>
 
                         <div class="form-files">
-                            <label>Escolher foto de perfil:</label>
-                            <input type="file" name="img_perfil" id="files" multiple="multiple">
+                            <label>Escolha 6 fotos do seu produto para análise:</label>
+                            <input type="file" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 
@@ -109,7 +113,7 @@
             </form>
 
             <div class="overlay" id="overlay"></div>
-            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
 
@@ -123,7 +127,11 @@
         <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
 
     </div>
-    <script src="../../../Public/js/js-home/js-menu-home.js" defer></script>
+
+
+
+
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>

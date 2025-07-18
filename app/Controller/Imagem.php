@@ -27,4 +27,14 @@ class Imagem {
         }
 
     }
+
+    public function cadastro(){
+        $value = [
+            'caminho' => $this->caminho,
+            'id_expositor' => $this->id_expositor,
+        ];
+        $db = new Database('imagem');
+        $cadastro = $db->insert($value);
+        return $cadastro;
+    }
 }

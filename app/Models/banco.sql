@@ -60,7 +60,7 @@ CREATE TABLE expositor(
     cor_rua VARCHAR(150) NULL DEFAULT '',
     responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
-    validacao ENUM('aguardando', 'validado') NOT NULL DEFAULT 'aguardando',
+    validacao ENUM('aguardando', 'validado', 'recusado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
     FOREIGN KEY(id_categoria) REFERENCES categoria(id_categoria)
@@ -69,7 +69,6 @@ CREATE TABLE expositor(
 CREATE TABLE imagem(
 	id_imagem INT NOT NULL AUTO_INCREMENT,
     caminho varchar(255),
-    posicao int,
     id_expositor int not null,
     PRIMARY KEY(id_imagem),
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
@@ -189,20 +188,23 @@ CREATE TABLE utilidade_publica (
     data_inicio DATE NOT NULL,
     data_fim DATE NOT NULL,
     imagem VARCHAR(255),
-    status_utilidade TINYINT(1) DEFAULT 1,
+    status_utilidade CHAR(1) DEFAULT 1,
     PRIMARY KEY(id_utilidade_publica)
 );
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.status_exp, exp.validacao, 
-pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, 
-cat.id_categoria, cat.descricao, cat.cor, cat.icone
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.validacao, 
+pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, pes.status_pes, 
+cat.id_categoria, cat.descricao, cat.cor, cat.icone,
+en.cidade
 FROM expositor AS exp 
 INNER JOIN categoria AS cat 
 ON cat.id_categoria = exp.id_categoria 
 INNER JOIN pessoa AS pes 
-ON pes.id_pessoa = exp.id_pessoa;
+ON pes.id_pessoa = exp.id_pessoa
+INNER JOIN endereco AS en 
+ON pes.id_endereco = en.id_endereco;
 
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 

@@ -11,7 +11,8 @@ Env::load();
 
 // sudo chown -R root:www-data /var/www
 
-class Database {
+class Database
+{
     //atributos do database
     private $conn;
     private string $local;
@@ -162,9 +163,9 @@ class Database {
         return $res ? TRUE : FALSE;
     }
 
-    public function delete($where)
+    public function delete($where, $status)
     {
-        $query = "UPDATE " . $this->table . " SET status = 0 WHERE " . $where;
+        $query = "UPDATE " . $this->table . " SET status_pes = '". $status. "' WHERE " . $where;
         return $this->execute($query) ? true : false;
     }
 
@@ -172,16 +173,17 @@ class Database {
     public function listar_colaboradores()
     {
         $query = "SELECT
-        c.id_colaborador,
-        p.nome,
-        p.email,
-        p.telefone,
-        c.cargo,
-        c.status_col
-        FROM colaborador c
-        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+            c.id_colaborador,
+            p.nome,
+            p.email,
+            p.telefone,
+            c.cargo,
+            p.status_pes
+            FROM colaborador c
+            INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
         return $this->execute($query);
     }
+    
 
     public function filtrar_colaboradores($nome)
     {
@@ -200,12 +202,18 @@ class Database {
         return $this->execute($query, $binds);
     }
 
-    public function sts_adm($id_colaborador, $novoStatus) {
-        $query = "UPDATE colaborador SET status_col = ? WHERE id_colaborador = ?";
+    public function sts_adm($id_colaborador, $novoStatus)
+    {
+        $query = "UPDATE pessoa 
+            SET status_pes = ?
+            WHERE id_pessoa = (
+            SELECT id_pessoa FROM colaborador WHERE id_colaborador = ?
+            )";
+
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$novoStatus, $id_colaborador]);
-    }
-
+    }       
+    
     public function buscarPorIdPessoa($idPessoa)
     {
         $query = "SELECT 
@@ -222,7 +230,7 @@ class Database {
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$idPessoa]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);  // retorna 1 registro associativo
+        return $stmt->fetch(PDO::FETCH_ASSOC);  
     }
 
     // BLOCO DE CODIGOS PARA CLASSE BOLETO
@@ -353,6 +361,92 @@ class Database {
             ":id_pessoa" => $idPessoa,
             ":id_boleto" => $idBoleto
         ];
+
+        return $this->execute($query, $binds);
+    }
+
+    // codigo listar parceiros
+    public function listar_parceiros()
+    {
+        $query = "SELECT id_parceiro, nome_parceiro, nome_contato, telefone,
+        email, status_parceiro FROM parceiro";
+
+        return $this->execute($query);
+    }
+
+    public function buscar_parceiros($nome)
+    {
+        $query = "SELECT id_parceiro, nome_parceiro, nome_contato, telefone,
+        email, status_parceiro FROM parceiro WHERE nome_parceiro LIKE :nome_parceiro";
+
+        $binds = [":nome_parceiro" => "%$nome%"];
+        return $this->execute($query, $binds);
+    }
+
+    public function alterar_status_parceiro($status, $id)
+    {
+        $query = "UPDATE parceiro set status_parceiro = :status_parceiro
+        WHERE id_parceiro = :id_parceiro";
+
+        $binds = [
+            ":status_parceiro" => $status,
+            ":id_parceiro" => $id
+        ];
+        return $this->execute($query, $binds);
+    }
+
+    public function obter_parceiros($id)
+    {
+        $query = "SELECT par.id_parceiro, par.nome_parceiro, par.telefone, par.logo, en.num_residencia,
+        en.cidade, par.email, par.cpf_cnpj, en.cep, en.complemento, en.estado,
+        par.nome_contato, par.tipo, en.logradouro, en.bairro, en.id_endereco
+        FROM parceiro par
+        INNER JOIN endereco en ON par.id_endereco = en.id_endereco
+        WHERE id_parceiro = :id_parceiro;";
+
+        $binds = [":id_parceiro" => $id];
+        return $this->execute($query, $binds);
+    }
+
+    public function atualizar_parceiro($id, $dados)
+    {
+        $query = "UPDATE parceiro par
+        JOIN endereco en ON par.id_endereco = en.id_endereco SET 
+        par.nome_parceiro = :nome_parceiro,
+        par.telefone = :telefone,
+        par.email = :email,
+        par.cpf_cnpj = :cpf_cnpj,
+        par.nome_contato = :nome_contato,
+        par.tipo = :tipo,
+        en.cep = :cep,
+        en.complemento = :complemento,
+        en.num_residencia = :num_residencia,
+        en.logradouro = :logradouro,
+        en.estado = :estado,
+        en.bairro = :bairro";
+
+        $binds = [
+            ":nome_parceiro" => $dados['nome_parceiro'],
+            ":telefone" => $dados['telefone'],
+            ":email" => $dados['email'],
+            ":cpf_cnpj" => $dados['cpf_cnpj'],
+            ":nome_contato" => $dados['nome_contato'],
+            ":tipo" => $dados['tipo'],
+            ":cep" => $dados['cep'],
+            ":complemento" => $dados['complemento'],
+            ":num_residencia" => $dados['num_residencia'],
+            ":logradouro" => $dados['logradouro'],
+            ":estado" => $dados['estado'],
+            ":bairro" => $dados['bairro'],
+            ":id_parceiro" => $id
+        ];
+
+        if (isset($dados['logo']) && $dados['logo'] !== '') {
+            $query .= ", par.logo = :logo";
+            $binds[":logo"] = $dados['logo'];
+        }
+
+        $query .= " WHERE par.id_parceiro = :id_parceiro;";
 
         return $this->execute($query, $binds);
     }

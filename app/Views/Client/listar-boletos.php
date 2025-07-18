@@ -51,9 +51,9 @@
         
         <a href="../../adm/Views/Area-Adm.php" class="listb-voltar"><img src="../../../Public/imgs/img-login/arrow-circle-left.svg" alt=""></a>
     </div>
-    <img class="listb-superior-esquerda" src="../../../Public/imgs/img-listar-boletos/img-superior-esquerda.svg" alt="">
-    <img class="listb-superior-direita" src="../../../Public/imgs/img-listar-boletos/img-superior-direita.svg" alt="">
-    <img class="listb-inferior" src="../../../Public/imgs/img-listar-boletos/img-inferior-boleto.svg" alt="">
+    <img class="listb-superior-esquerda" src="../../../Public/assets/img-bolas/img-superior-esquerda.svg" alt="">
+    <img class="listb-superior-direita" src="../../../Public/assets/img-bolas/img-superior-direita.svg" alt="">
+    <img class="listb-inferior" src="../../../Public/assets/img-bolas/img-inferior-boleto.svg" alt="">
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos_pessoais.js" defer></script>
 </body>

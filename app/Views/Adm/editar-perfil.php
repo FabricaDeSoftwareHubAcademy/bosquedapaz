@@ -32,9 +32,9 @@
                         <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
                         <input type="file" name="foto" id="foto" class="perfilEdit-foto">
                         <img src="" alt="">
-                        <!-- <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
+                        <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
                             Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
-                        </label> -->
+                        </label>
 
                     </div>
 
@@ -135,6 +135,7 @@
     <img class="perfilEdit-superior-direita" src="../../../Public/assets/img-bolas/img-superior-direita.svg" alt="">
     <img class="perfilEdit-inferior" src="../../../Public/assets/img-bolas/img-inferior-boleto.svg" alt="">
     <script src="../../../Public/js/js-adm/js-editar-expositor.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>

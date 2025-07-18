@@ -35,6 +35,7 @@ btn_salvar.addEventListener('click', async function(event){
     
         let dadosForms =  new FormData(formulario);
         dadosForms.append('modalidade', 'expositor');
+        dadosForms.append('cadastrar', 1);
     
         let dados_php = await fetch('../../../actions/actions-expositor.php', {
             method:'POST',
@@ -42,12 +43,16 @@ btn_salvar.addEventListener('click', async function(event){
         });
     
         let response = await dados_php.json()
+
         
         if(response.status == 200){
             openModalSucesso()
             document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
             document.getElementById('msm-sucesso').innerHTML = 'Cadastro realizado com sucesso'
-            document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+            document.getElementById('close-modal-sucesso').addEventListener('click', () => {
+                    closeModalSucesso
+                    window.location.reload()
+                })
         }
 
         else if(response.status != 200){

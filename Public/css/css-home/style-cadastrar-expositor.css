@@ -30,17 +30,18 @@ body {
 
 .bola-verde1 {
     left: 0;
-    top: 6vh;
+    top: 14vh;
 }
 
 .bola-verde2 {
     right: 0;
-    top: 6vh;
+    top: 18vh;
 }
 
 .bola-rosa {
     right: 0;
     bottom: -100px;
+    top: 80vh;
 }
 
 .principal {
@@ -64,6 +65,8 @@ body {
     justify-content: space-between;
     padding: 20px;
     overflow-y: auto;
+    position: relative;
+    top: 100px;
 }
 
 .title {
@@ -71,7 +74,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
-    left:2%;
+    left: 2%;
 }
 
 .title-text {
@@ -96,6 +99,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .form-pessoa,
 .form-loja {
     width: 100%;
@@ -188,175 +192,91 @@ body {
     margin-bottom: 20px;
 }
 
-.btns-salvar-cancelar{
+.btns-salvar-cancelar {
     width: 0%;
     gap: 10px;
 }
 
-.link-area-adm{
+.link-area-adm {
     position: relative;
     left: -25%;
 }
 
 
 @media (max-width:1500px) {
-    .formularios{
+    .formularios {
         position: relative;
         top: -40px;
         left: 5%;
     }
 }
 
-
-@media (width: 1024px) and (height: 600px) {
-
-    .title-text{
-        font-size: 1.1rem;
-    }
-
-    .formularios {
-        width: 133%;
-        flex-direction: row !important;
-        gap: 30px;
-        position: relative;
-        left: 15%;
-    }
-
-    .select{
-        width: 70%;
-    }
-
-    .form-files{
-        position: relative;
-        top: -2 0px;
-    }
-
-    #tipo_expo{
-        position: relative;
-        top: -4px;
-    }
-
-    #energia{
-        position: relative;
-        top: -16px;
-    }
-
-    #voltagem{
-        position: relative;
-        top: -26px;
-    }
-
-    #volt_label{
-        position: relative;
-        top: -25px;
-    }
-
-    .form-group-energia label{
-        position: relative;
-        top: -16px;
-    }
-
-
-    
-    .input input,
-    .input-group input,
-    .input-group textarea,
-    #categorias {
-        height: 0px;
-        
-    }
-
-    .select{
-        height: 0px;
-    }
-
-    .btn-conf{
-        position: relative;
-        top: 181px;
-        left: -35%;
-    }
-    
-    
-}
-@media (max-width: 1024px) {
+@media (max-width: 1362px) {
     .formularios {
         flex-direction: column;
         top: 0;
-        }
-    
+    }
+
     .form-pessoa,
     .form-loja,
     .form-expo {
         position: static;
         width: 100%;
     }
-    
+
     .input input,
     .input-group input,
     .input-group textarea,
     #categorias {
         width: 100% !important;
     }
-    
-    .btn-finalizar{
-        top: 0;
-    }
-   
-    .btn-conf {
-        width: 104%;
-        font-size: 0.8rem;
-        padding: 10px 189px;
+
+    .btns-forms-padrao {
+        position: relative;
+        top: 30px;
     }
 
-    .btn-salvar{
+    .btns-salvar-cancelar {
         position: relative;
-        left: 37%;
+        left: -50%;
     }
 
-    .btn-cancelar{
-        position: relative;
-        left: -72%;
-    }   
-  
+
 }
 
 @media (max-width: 768px) {
     .title {
         width: 100%;
     }
-    
+
     .title-text {
         font-size: 1.5rem;
     }
 
-    .btn-conf {
-        width: 101%;
-        font-size: 0.8rem;
-        padding: 10px 160px;
+    .btns-salvar-cancelar {
+        position: relative;
+        left: -55%;
     }
 
-    .btn-salvar{
+    .link-area-adm {
         position: relative;
-        left: 37%;
+        left: -5%;
     }
 
-    .btn-cancelar{
-        position: relative;
-        left: -72%;
-    }
-    .select {
-        width: 100%;
-    }
 }
 
 @media (max-width: 480px) {
+    .box {
+        overflow-x: hidden;
+    }
+
     .title-text {
         width: 116%;
         position: relative;
         left: -22px;
         font-size: 1.1rem;
     }
-    
+
     .input input,
     .input-group input,
     .input-group textarea,
@@ -365,48 +285,47 @@ body {
         left: 8%;
     }
 
-    .formularios{
+    .formularios {
         position: relative;
-        left:10%;
+        left: 10%;
     }
 
-    .select{
+    .select {
         width: 80%;
     }
-    
+
     .formularios label {
         left: 8%;
     }
-    
-    .btn-conf {
-        font-size: 0.8rem;
-        padding: 10px 106px;
-        position: relative;
-        left: -10px;
+
+    .form-files {
+        width: 74%;
     }
 
-    .btn-salvar{
+    .btn-salvar {
         position: relative;
-        left: 20%;
+        left: 1%;
     }
 
-    .btn-cancelar{
+    .btns-salvar-cancelar {
         position: relative;
-        left: -72%;
+        left: 0%;
+        top: 10px;
     }
-    
-    .btns {
+
+    .link-area-adm {
         position: relative;
-        left: 3%;
+        left: -50%;
     }
 }
 
 @media (width:344px) and (height:882px) {
-    .btns {
-        left: 10%;
+    .btns-salvar-cancelar {
+        left: 0%;
+    }
+
+    .link-area-adm{
+        position: relative;
+        left: -40%;
     }
 }
-
-
-
-

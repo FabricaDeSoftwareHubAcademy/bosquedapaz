@@ -23,11 +23,13 @@ form.addEventListener('submit',async function email (e){
         document.getElementById('sucesso-title').innerText = 'A sua mensagem foi enviada para a feira bosque da paz.'
         document.getElementById('msm-sucesso').innerText = 'Agradacemos a sua colaboração'
         document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
+        window.location.reload()
     }else{
         closeModalLoading()
         openModalError()
         document.getElementById('erro-title').innerText = 'Ocorreu um erro ao enviar o E-mail'
         document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+        window.location.reload()
     }
 })
 
