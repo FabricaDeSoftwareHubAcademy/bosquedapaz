@@ -111,18 +111,19 @@ CREATE TABLE artista(
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
 
-CREATE TABLE evento(
-	id_evento INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE evento (
+    id_evento INT NOT NULL AUTO_INCREMENT,
     nome_evento VARCHAR(150) NOT NULL,
-    subtitulo_evento VARCHAR(150)NOT NULL,
+    subtitulo_evento VARCHAR(150) NOT NULL,
     descricao_evento VARCHAR(500) NOT NULL,
     data_evento DATE NOT NULL,
     hora_inicio TIME NOT NULL,
     hora_fim TIME NOT NULL,
-    endereco_evento VARCHAR(150) NOT NULL,
+    id_endereco_evento INT NOT NULL,
     banner_evento VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(1),
-    PRIMARY KEY(id_evento)
+    status BOOLEAN DEFAULT 1,
+    PRIMARY KEY (id_evento),
+    FOREIGN KEY (id_endereco_evento) REFERENCES endereco_evento(id_endereco_evento)
 );
 
 CREATE TABLE atracao(
