@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($endereco->cadastrar_endereco_evento()) {
         echo json_encode(["status" => "sucesso", "mensagem" => "Endereço cadastrado com sucesso!"]);
     } else {
-        echo json_encode(["status" => "erro", "mensagem" => "Erro ao cadastrar evento."]);
+        echo json_encode(["status" => "erro", "mensagem" => "Erro ao cadastrar."]);
     }
     exit;
 }

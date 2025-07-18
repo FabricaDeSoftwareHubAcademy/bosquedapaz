@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = document.getElementById('dataevento').value;
             const hora_inicio = document.getElementById('hora_inicio').value;
             const hora_fim = document.getElementById('hora_fim').value;
-            const endereco = document.getElementById('endereco').value.trim();
+            const endereco = document.getElementById('select-endereco').value.trim();
             const imagem = document.getElementById('file').files[0];
 
             if (!nome || !descricao || !data || !imagem || !subtitulo || !hora_inicio || !hora_fim || !endereco) {

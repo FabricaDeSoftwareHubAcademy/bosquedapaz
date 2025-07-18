@@ -27,6 +27,14 @@ class EnderecoEvento
             'bairro_evento' => $this->bairro_evento,
             'cidade_evento' => $this->cidade_evento
         ]);
+
+        return $res;
+    }
+
+    public function listar_enderecos() {
+        $db = new Database('endereco_evento');
+        return $db->select(null, 'id_endereco_evento DESC')->fetchAll(PDO::FETCH_ASSOC);
+
     }
 
 }

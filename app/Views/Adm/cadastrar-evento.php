@@ -112,6 +112,7 @@
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-evento.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-endereco-evento.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-listar-enderecos.js" defer></script>
 </body>
 
 </html>
