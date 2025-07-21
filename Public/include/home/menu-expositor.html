@@ -11,12 +11,12 @@
         <ul class="nav-list" id="nav-list">
 
             <li class="nav-item">
-                <a href="./">
+                <a href="./" class="dark">
                     inicío
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./listar-boletos.php">
+                <a href="./listar-boletos.php" class="dark">
                     meus boletos
                 </a>
             </li>
@@ -46,6 +46,14 @@
         <div class="content-outros btn-login-1">
                 <img src="" alt="Botão de login" id="img-login" class="img-login">
         </div>
+        <div class="switch-container">
+            <input type="checkbox" id="theme-toggle" />
+            <label for="theme-toggle" class="switch">
+              <span class="icon sun">☀️</span>
+              <span class="icon moon">🌙</span>
+              <span class="slider"></span>
+            </label>
+        </div>
         <div class="content-opcoes-menu" id="content-opcoes-menu">
             <a href="./edicao-perfil-expositor.php" class="link-login link-opcoes-menu">
                 <i class="bi bi-pencil-square icon-login icon-login-editar">editar perfil</i>
@@ -57,3 +65,4 @@
     </div>
 </header>
 
+<script src="../../../Public/js/theme-dark.js" defer></script>

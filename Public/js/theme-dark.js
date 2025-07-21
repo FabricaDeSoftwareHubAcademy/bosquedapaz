@@ -7,19 +7,22 @@ let dark = document.querySelectorAll('.dark')
 let white = document.querySelectorAll('.white')
 let theme = 0
 
+let btn = document.getElementById('theme-toggle')
+
+// Verifica tema salvo no localStorage
 if(localStorage.getItem('theme') === 'dark') {
     aplicarTemaEscuro()
     theme = 1
+    btn.checked = true // ativa o switch visualmente
 }
 
-let btn = document.getElementById('theme-toggle')
-btn.addEventListener('click', () => {
-    if(theme === 0){
+// Escuta a mudança do switch
+btn.addEventListener('change', () => {
+    if (btn.checked) {
         aplicarTemaEscuro()
         theme = 1
         localStorage.setItem('theme', 'dark')
-    }
-    else {
+    } else {
         aplicarTemaClaro()
         theme = 0
         localStorage.setItem('theme', 'light')
@@ -32,15 +35,14 @@ function aplicarTemaEscuro() {
 
     dark.forEach(element => {
         element.style.setProperty('color', 'white', 'important')
-        console.log(element)
     });
-   
 }
 
 function aplicarTemaClaro() {
     cabecalho.style.setProperty('background-color', 'white')
     body.style.setProperty('background-color', 'white')
 
+    dark.forEach(element => {
+        element.style.setProperty('color', 'black', 'important')
+    });
 }
-
-// e.style.setProperty('color', 'black', 'important')
