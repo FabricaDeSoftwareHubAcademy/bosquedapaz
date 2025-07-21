@@ -3,7 +3,7 @@
         
     <!-- logo da feira -->
     <div class="logo">
-        <a href="../../../app/Views/Adm/Area-Adm.php"> <img src="../../../Public/assets/logo-trans.png" alt="Logo da Feira" class="img-logo" href=""></a>
+        <a href="./"> <img src="../../../Public/assets/logo-trans.png" alt="Logo da Feira" class="img-logo" href=""></a>
     </div>
 
     <!-- itens de navegação -->
@@ -11,38 +11,49 @@
         <ul class="nav-list" id="nav-list">
 
             <li class="nav-item">
-                <a href="../../../app/Views/Client/area-expo.php">
-                    início
+                <a href="./">
+                    inicío
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../../../app/Views/Client/listar-boletos.php">
-                    Meus boletos
+                <a href="./listar-boletos.php">
+                    meus boletos
                 </a>
             </li>
-
             
             <div class="content-outros login-mobile">
-                <a href="../../../app/Views/Client/edicao-perfil-expositor.php" class="link-login">
-                    <img src="../../../Public/assets/MOCA.png" alt="Botão de login" class="img-login">
-                </a>
+                <img src="" alt="Botão de login" id="img-login" class="img-login">
+                <!-- <a href="../../../app/Views/Adm/editar-adm.php" class="link-login">
+                </a> -->
+                <div class="content-opcoes-menu1" id="content-opcoes-menu1">
+                    <a href="./edicao-perfil-expositor.php" class="link-login link-opcoes-menu">
+                        <i class="bi bi-pencil-square icon-login icon-login-editar">editar perfil</i>
+                    </a>
+                    <div class="link-login link-opcoes-menu">
+                        <i class="bi bi-box-arrow-left icon-login" id="logout">sair</i>
+                    </div>
+                </div>
             </div>
         </ul>
         
     </nav>
 
     <!-- exibir menu mobile -->
-    <div class="content conteiner-outros">
+    <div class="content conteiner-outros" id="conteiner-opcoes">
         <div class="content-outros">
             <i class="bi bi-list sandwich" id="sandwich"></i>
         </div>
         <div class="content-outros btn-login-1">
-            <a href="../../../app/Views/Client/edicao-perfil-expositor.php" class="link-login">
-                <img src="../../../Public/assets/MOCA.png" alt="Botão de login" class="img-login">
+                <img src="" alt="Botão de login" id="img-login" class="img-login">
+        </div>
+        <div class="content-opcoes-menu" id="content-opcoes-menu">
+            <a href="./edicao-perfil-expositor.php" class="link-login link-opcoes-menu">
+                <i class="bi bi-pencil-square icon-login icon-login-editar">editar perfil</i>
             </a>
+            <div class="link-login link-opcoes-menu">
+                <i class="bi bi-box-arrow-left icon-login" id="logout">sair</i>
+            </div>
         </div>
     </div>
 </header>
 
-
-<script src="../../../Public/js/js-menu/js-menu-expositor.js"></script>

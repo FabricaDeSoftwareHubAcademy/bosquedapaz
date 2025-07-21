@@ -18,7 +18,7 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
 
     // --- Validações ---
     if (empty($descricao)) {
-        echo json_encode(['status' => 'error', 'message' => 'A descrição da categoria é obrigatória.']);
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria é obrigatório.']);
         exit;
     }
     if (empty($cor)) {
@@ -47,10 +47,10 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
     // --- Tratamento de Caminhos e Upload ---
     
     // Caminho no sistema de arquivos para onde o arquivo será movido (com '../')
-    $diretorioDeUpload = __DIR__ . '/../Public/imgs/uploads-categoria/';
+    $diretorioDeUpload = __DIR__ . '/../Public/uploads/uploads-categoria/';
     
     // Caminho que será salvo no banco de dados (sem '../', relativo à pasta Public)
-    $caminhoParaBanco = 'imgs/uploads-categoria/';
+    $caminhoParaBanco = 'uploads/uploads-categoria/';
 
     // Cria o diretório se ele não existir
     if (!is_dir($diretorioDeUpload)) {

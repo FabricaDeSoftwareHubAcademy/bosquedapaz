@@ -7,7 +7,7 @@
 @import url('style-categorias.css');
 @import url('style-avisos.css');
 @import url('style-mapa.css');
-@import url('style-apoiadores.css');
+@import url('style-parceiros-home.css');
 @import url('style-rodape.css');
 /* @import url('style-modal-atracoes.css'); */
 
@@ -28,6 +28,8 @@
     --color-edit-pass: #FFFFFF;
     --color-ulti-publi: #5CB748;
     --color-fundo-verde: #5EB64A;
+
+    --o-transition: all .2s ease-in-out;
 }
 
 * {

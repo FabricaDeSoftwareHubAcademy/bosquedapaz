@@ -9,7 +9,8 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-$idPessoa = $_SESSION['login']['id_pessoa'];
+$idPessoa = $_SESSION['login']['perfil'];
+// $idPessoa = 5;
 $boletoObj = new Boleto();
 $boletos = $boletoObj->CapturarBoletosPorUsuario($idPessoa);
 

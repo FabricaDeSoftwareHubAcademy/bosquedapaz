@@ -705,7 +705,7 @@ input[type="file"]{
     }
 
     .perfilEdit-label-desc{
-        height: 30%;
+        height: 29px; 
     }
 
     .perfilEdit-info{

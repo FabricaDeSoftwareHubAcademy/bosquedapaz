@@ -8,9 +8,13 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icons/folha.ico">
+    <script src="./js/js-login/login.js" defer></script>
+
 </head>
 <body class="body-login">
     <main>
+    <?php include './include/modais/login-incorreto.html'; ?>
+
         <!-- Section Pricipal da Tela -->
         <section class="section-principal-login">
  
@@ -60,20 +64,11 @@
                     </form>
                    
                 </div>
-
-                <dialog id="modal-login" class="recsenha-modal">
-                    <div class="modal-recsenha">
-                        <div class="modal-recpass">
-                            <h1 class="modal-title">Dados incorretos</h1>
-                            <p class="modal-text">Verifique seu email e/ou senha e tente novamente!</p>
-                            <button id="fechar-modal" class="close-modal" data-modal="modal-login">Fechar</button>
-                        </div>
-                    </div>
-                </dialog>
-
-                <?php if (isset($_GET['erro']) && $_GET['erro'] == 1): ?>
-
-                <?php endif; ?>
+<!-- 
+                <?php if (isset($_GET['erro']) && $_GET['erro'] == 1):
+                    echo "<script>openModalError();</script>";
+                    endif;
+                ?> -->
 
 
                 <a href="../index.php" class="botao-voltar">
@@ -85,8 +80,8 @@
             </div>
         </section>
     </main>
-        <script src="./js/js-modais/js-abrir-modal.js"></script>
+    
+    
+    <script src="./js/js-modais/js-modal-deletar.js"></script>
     </body>
-
-
 </html>

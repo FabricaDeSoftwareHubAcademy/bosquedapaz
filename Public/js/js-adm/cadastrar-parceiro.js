@@ -228,7 +228,6 @@ document.getElementById('cep').addEventListener('blur', async function () {
                 document.getElementById('bairro').value = data.bairro;
                 document.getElementById('cidade').value = data.localidade;
                 document.getElementById('estado').value = data.uf;
-                document.getElementById('complemento').value = data.complemento || '';
             } else {
                 alert("CEP não encontrado!");
             }
@@ -257,3 +256,23 @@ document.getElementById('close-modal-sucesso').addEventListener('click', () => {
 document.getElementById('close-modal-confirmar').addEventListener('click', () => {
     closeModalConfirmar();
 });
+
+// Preview da logo ao selecionar imagem
+document.getElementById('logo').addEventListener('change', function () {
+    const file = this.files[0];
+    const preview = document.getElementById('preview-logo');
+
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = '#';
+        preview.style.display = 'none';
+    }
+}); 

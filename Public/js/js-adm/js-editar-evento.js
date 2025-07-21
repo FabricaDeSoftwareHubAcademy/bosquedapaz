@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (data.status === 'success') {
             const evento = data.evento;
 
+            // Antes: select ainda vazio
+            // document.getElementById('select-endereco').value = evento.endereco_evento;
+
+            // Agora: carregar com seleção automática
+            await carregarEnderecosSelecionando(evento.endereco_evento);
+
             document.getElementById('id_evento').value = evento.id_evento;
             document.getElementById('nomedoevento').value = evento.nome_evento;
             document.getElementById('subtitulo').value = evento.subtitulo_evento;
@@ -34,7 +40,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('dataevento').value = evento.data_evento;
             document.getElementById('hora_inicio').value = evento.hora_inicio;
             document.getElementById('hora_fim').value = evento.hora_fim;
-            document.getElementById('endereco').value = evento.endereco_evento;
             document.getElementById('status').value = evento.status;
 
             const banner = document.getElementById('preview-image');
@@ -66,36 +71,92 @@ document.addEventListener('DOMContentLoaded', async () => {
             const formData = new FormData(form);
 
             try {
-                const response = await fetch('../../../Actions/action-editar-evento.php', {
+                const resposta = await fetch('../../../actions/action-editar-evento.php', {
                     method: 'POST',
                     body: formData
                 });
 
-                const text = await response.text();
-                console.log('Resposta bruta do servidor:', text);
+                const resultado = await resposta.json();
+                console.log('Resposta JSON:', resultado);
 
-                const data = JSON.parse(text);
-
-                if (data.status === 'success') {
+                if (resultado.status === 'sucess') {
+                    document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Evento cadastrado com sucesso!';
                     openModalSucesso();
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
-                    document.getElementById('msm-sucesso').innerHTML = data.mensagem ?? 'Evento atualizado com sucesso!';
 
                     setTimeout(() => {
-                        window.location.href = 'gerenciar-eventos.php';
+                        window.location.href = './gerenciar-eventos.php';
                     }, 6000);
+
                 } else {
+                    document.getElementById('erro-title').innerText = 'Erro ao cadastrar evento';
+                    document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
                     openModalError();
                     document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
-                    console.error('Erro ao atualizar:', data.mensagem);
                 }
 
             } catch (error) {
-                console.error('Erro no envio do formulário:', error);
-                alert('Erro inesperado ao tentar editar o evento.');
+                console.error('Erro na requisição:', error);
+                document.getElementById('erro-title').innerText = 'Falha de comunicação';
+                document.getElementById('erro-text').innerText = 'Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente.';
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
             }
         });
 
     });    
 
 });
+
+const carregarEnderecosSelecionando = async (idSelecionado) => {
+    try {
+        const response = await fetch(`../../../actions/action-buscar-endereco.php?id=${idSelecionado}`);
+        const endereco = await response.json();
+
+        if (endereco.erro) {
+            throw new Error(endereco.erro);
+        }
+
+        const select = document.getElementById('select-endereco');
+        const options = select.options;
+
+        for (let i = 0; i < options.length; i++) {
+            if (parseInt(options[i].value) === parseInt(endereco.id_endereco_evento)) {
+                options[i].selected = true;
+                break;
+            }
+        }
+    } catch (erro) {
+        console.error('Erro ao carregar endereço por ID:', erro);
+        alert('Erro ao carregar endereço do evento. Tente novamente.');
+    }
+};
+
+// const preencherEnderecoSelecionado = async () => {
+//     const idEvento = document.getElementById('id_evento').value;
+//     const selectEndereco = document.getElementById('endereco_evento');
+
+//     try {
+//         const response = await fetch(`../../../actions/action-buscar-endereco.php?id=${idEvento}`);
+//         const endereco = await response.json();
+
+//         const enderecoId = endereco.id_endereco_evento.toString();
+
+//         // Aguardar um pequeno tempo para garantir que o select já tenha sido populado (se for dinâmico)
+//         setTimeout(() => {
+//             const optionExistente = selectEndereco.querySelector(`option[value="${enderecoId}"]`);
+//             if (optionExistente) {
+//                 optionExistente.selected = true;
+//             } else {
+//                 throw new Error('Endereço não encontrado no select');
+//             }
+//         }, 200); // tempo ajustável conforme a origem das opções
+
+//     } catch (error) {
+//         console.error('Erro ao carregar endereço existente:', error);
+//         const mensagemErro = document.createElement('p');
+//         mensagemErro.classList.add('mensagem-erro');
+//         mensagemErro.innerText = 'Erro ao carregar o endereço existente.';
+//         document.getElementById('campo-endereco').appendChild(mensagemErro);
+//     }
+// };

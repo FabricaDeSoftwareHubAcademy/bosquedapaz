@@ -13,10 +13,10 @@ class Imagem {
     public int $posicao;
     public int $id_expositor;
 
-    public function listar($id){
+    public function listar($id_expositor){
         try {
             $db = new Database('imagem');
-            $imagens = $db->select_img($id);
+            $imagens = $db->select("id_expositor = ". $id_expositor)->fetchAll(PDO::FETCH_ASSOC);
             if ($imagens){
                 return $imagens;
             }else {
@@ -26,5 +26,15 @@ class Imagem {
             return FALSE;
         }
 
+    }
+
+    public function cadastro(){
+        $value = [
+            'caminho' => $this->caminho,
+            'id_expositor' => $this->id_expositor,
+        ];
+        $db = new Database('imagem');
+        $cadastro = $db->insert($value);
+        return $cadastro;
     }
 }

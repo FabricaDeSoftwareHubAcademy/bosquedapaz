@@ -1,12 +1,13 @@
 <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-artistas.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
@@ -25,7 +26,7 @@
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <form method="POST" action="../../../actions/cadastrar_artista.php" id="form-artista">
+            <form method="POST" id="form-artista"  action="../../../actions/actions-cadastrar-artista.php" enctype="multipart/form-data">
 
                 <div class="formularios">
                     <div class="form-pessoa">
@@ -60,10 +61,10 @@
                             <label>Qual sua linguagem artística?</label>
                             <select name="linguagem_artistica" id="linguagem_artistica" class="select">
                                 <option value="">Selecione</option>
-                                <option value="teatro">Teatro</option>
-                                <option value="danca">Dança</option>
-                                <option value="circo">Circo</option>
-                                <option value="musica">Música</option>
+                                <option value="Teatro">Teatro</option>
+                                <option value="Dança">Dança</option>
+                                <option value="Circo">Circo</option>
+                                <option value="Música">Música</option>
                             </select>
                         </div>
 
@@ -71,10 +72,10 @@
                             <label>Qual o estilo de música você segue?</label>
                             <select name="estilo_musica" id="estilo_musica" class="select">
                                 <option value="">Selecione</option>
-                                <option value="rock">Rock</option>
-                                <option value="pop">Pop</option>
-                                <option value="sertanejo">Sertanejo</option>
-                                <option value="eletronica">Eletrônica</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Sertanejo">Sertanejo</option>
+                                <option value="Eletrônica">Eletrônica</option>
                             </select>
                         </div>
 
@@ -83,9 +84,9 @@
 
                             <select name="publico_alvo" id="publico_alvo" class="select">
                                 <option value="">Selecione</option>
-                                <option value="adulto">Adulto</option>
-                                <option value="infantil">Infantil</option>
-                                <option value="misto">Misto</option>
+                                <option value="Adulto">Adulto</option>
+                                <option value="Infantil">Infantil</option>
+                                <option value="Misto">Misto</option>
 
                             </select>
                         </div>

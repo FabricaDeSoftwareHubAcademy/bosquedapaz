@@ -73,7 +73,7 @@ if(isset($_POST['enviar'])){
 
                         <div class="containerNovaSenha">
                             <label for="" class="lblRecuperar">Insira a nova senha</label>
-                            <input id="novaSenha" name="nvSenha"type="password" class="inpRecuperar" placeholder="Nova Senha">
+<input id="novaSenha" name="nvSenha" type="password" class="inpRecuperar" placeholder="Nova Senha">
                             <i class="fas fa-eye" id="togglePasswordNv"></i>
                         </div>
                             

@@ -16,6 +16,11 @@
     outline: none;
 }
 
+.modal-loading::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+
 .content-close {
     width: 100%;
     display: flex;

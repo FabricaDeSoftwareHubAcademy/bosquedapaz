@@ -34,7 +34,7 @@
                         <h2 class="num">Imagem 1</h2>
                         <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img1" id="imagens-input" class="input">
+                            <input type="file" accept="image/*" name="img1" id="imagens-input" class="input">
                 
                             <img src="" alt="" id="img1" class="imagem">
                 
@@ -46,7 +46,7 @@
                         <h2 class="num">Imagem 2</h2>
                         <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img2" id="imagens-input2" class="input">
+                            <input type="file" accept="image/*" name="img2" id="imagens-input2" class="input">
                 
                             <img src="" alt="" id="img2" class="imagem">
                 
@@ -58,7 +58,7 @@
                         <h2 class="num">Imagem 3</h2>
                         <span class="tamanho_img">Tamanho permitido: 5 MB</span>
                         <label class="uploads" id="label">
-                            <input type="file" name="img3" id="imagens-input3" class="input">
+                            <input type="file" accept="image/*" name="img3" id="imagens-input3" class="input">
                 
                             <img src="" alt="" id="img3" class="imagem">
                 
@@ -72,7 +72,7 @@
                 <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
             <div class="overlay" id="overlay"></div>
-            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
             

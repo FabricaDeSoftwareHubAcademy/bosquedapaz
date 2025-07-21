@@ -1,0 +1,158 @@
+#desenvolvedores {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+      background-image: linear-gradient(to bottom, #18181b, #1a1930, #201844, #2b1355, #3d0164);
+}
+
+.containerTitleDevs{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wave-text2 span {
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.containerDesenvolvedores{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
+    ;
+
+}
+.containerDesenvolvedor {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-image-slice: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fotoDev{
+    width: 200px;
+    height: 300px;
+    /* border-radius: 50%; */
+    border: 3px solid #58C4DC;
+}
+.fotoDev > img{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    object-fit: cover;
+    
+}
+.ContainerDescDev{
+    width: 80%;
+    height: auto;
+ 
+    padding: 20px;
+
+}
+.containerDesc{
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    color: #58C4DC;
+
+}
+.containerDesc > span{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.containerSocial{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.iconSocial{
+    font-size: 60px;
+    color: #58C4DC;
+}
+
+.containerNome{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+
+}
+.containerNome > span{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.containerCargo{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+.containerCargo > span{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.ultimo{
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-image-slice: 1;
+}
+
+@media (min-width: 0px) and (max-width: 1200px){
+    .containerDesenvolvedores{
+        padding: 0;
+    }
+    .wave-text2 span {
+        display: inline-block;
+        font-size: 30px;
+        color: white;
+        animation: wave 2s ease-in-out infinite;
+    }
+    .ContainerDescDev{
+        width: 100%;
+    }
+}
+
+@media (min-width: 421pxpx) and (max-width: 1200px){
+    .containerDesenvolvedores{
+        padding: 0;
+    }
+    .wave-text2 span {
+        display: inline-block;
+        font-size: 30px;
+        color: white;
+        animation: wave 2s ease-in-out infinite;
+    }
+    .ContainerDescDev{
+        width: 100%;
+    }
+}

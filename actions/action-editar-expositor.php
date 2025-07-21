@@ -5,14 +5,13 @@ use app\Controller\Expositor;
 
 header('Content-Type: application/json');
 
-
 if(isset($_GET['id_expo'])){
 
     $id = $_GET['id_expo'];
 
     $objExpositor = new Expositor();
 
-    $dados = $objExpositor->listar($id);
+    $dados = $objExpositor->listar("id_expositor = ". $id);
 
     $array = [
         "status" => 200,
@@ -36,6 +35,7 @@ if(isset($_POST['nome']) && isset ($_POST['descricao'])){
     $objExpo->setLink_facebook($_POST['facebook']);
     $objExpo->setWhats($_POST['whatsapp']);
     $objExpo->setEmail($_POST['email']);
+    // $objExpo->setImagens($_POST['foto']);
 
     $result = $objExpo->atualizar($id_expositor);
     
@@ -48,6 +48,4 @@ if(isset($_POST['nome']) && isset ($_POST['descricao'])){
 
 
 }
-
-
 ?>

@@ -26,12 +26,21 @@ class Categoria
         return $res;
     }
 
+    // public function listar($where = null, $order = null, $limit = null)
+    // {
+    //     $db = new Database('categoria');
+    //     $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
+    //     return $res;
+    // }
+
     public function listar($where = null, $order = null, $limit = null)
-    {
-        $db = new Database('categoria');
-        $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
-        return $res;
-    }
+{
+    $db = new Database('categoria');
+    $res = $db->select($where, $order, $limit, 'id_categoria, descricao, cor, icone, status_cat') // <-- aqui inclui o campo
+              ->fetchAll(PDO::FETCH_ASSOC);
+    return $res;
+}
+
 
     public function buscarPorId($id)
     {

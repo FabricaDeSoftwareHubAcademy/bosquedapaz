@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../../Public/css/css-modais/style-modal-confirmar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Cadastrado ADM</title>
+    <title>Adm - Bosque da Paz</title>
 </head>
 <!-- Corpo da Página -->
 <body>
@@ -114,7 +114,7 @@
             </div> 
             
             <!-- Seta Voltar 1  -->
-            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
+            <div class="seta__voltar1"><a href="./"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
         
         <!-- Imagens Decorativas -->

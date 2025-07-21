@@ -3,7 +3,7 @@
         
         <!-- logo da feira -->
         <div class="logo">
-            <a href="../../../app/Views/Adm/Area-Adm.php"> <img src="../../../Public/assets/logo-trans.png" alt="Logo da Feira" class="img-logo" href=""></a>
+            <a href="./"> <img src="../../../Public/assets/logo-trans.png" alt="Logo da Feira" class="img-logo" href=""></a>
         </div>
 
         <!-- itens de navegação -->
@@ -35,11 +35,6 @@
                         <li class="sub-nav-item">
                             <a href="../../../app/Views/Adm/cadastrar-expositor.php" class="item-submenu">
                                 Expositor
-                            </a>
-                        </li>
-                        <li class="sub-nav-item">
-                            <a href="../../../app/Views/Adm/cadastrar-expositor-kids-adm.php" class="item-submenu">
-                                Expositor kids
                             </a>
                         </li>                    
                         <li class="sub-nav-item">
@@ -105,11 +100,6 @@
                                 Utilidades Públicas
                             </a>
                         </li>
-                        <li class="sub-nav-item">
-                            <a href="../../../app/client/Views/listar-boletos.php" class="item-submenu">
-                                Boletos
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
@@ -120,6 +110,11 @@
                         <li class="sub-nav-item">
                             <a href="../../../app/Views/Adm/listar-expositor.php" class="item-submenu">
                                 Expositores
+                            </a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a href="../../../app/Views/Adm/listar-artista.php" class="item-submenu">
+                                Artistas
                             </a>
                         </li>
                         <li class="sub-nav-item">
@@ -136,23 +131,37 @@
                 </li>
                 
                 <div class="content-outros login-mobile">
-                    <a href="../../../app/Views/Adm/editar-adm.php" class="link-login">
-                        <img src="" alt="Botão de login" id="img-login" class="img-login">
-                    </a>
+                    <img src="" alt="Botão de login" id="img-login" class="img-login">
+                    <!-- <a href="../../../app/Views/Adm/editar-adm.php" class="link-login">
+                    </a> -->
+                    <div class="content-opcoes-menu1" id="content-opcoes-menu1">
+                        <a href="../../../app/Views/Adm/editar-adm.php" class="link-login link-opcoes-menu">
+                            <i class="bi bi-pencil-square icon-login icon-login-editar">editar perfil</i>
+                        </a>
+                        <div class="link-login link-opcoes-menu">
+                            <i class="bi bi-box-arrow-left icon-login" id="logout">sair</i>
+                        </div>
+                    </div>
                 </div>
             </ul>
             
         </nav>
 
         <!-- exibir menu mobile -->
-        <div class="content conteiner-outros">
+        <div class="content conteiner-outros" id="conteiner-opcoes">
             <div class="content-outros">
                 <i class="bi bi-list sandwich" id="sandwich"></i>
             </div>
             <div class="content-outros btn-login-1">
-                <a href="../../../app/Views/Adm/editar-adm.php" class="link-login">
-                    <img src="../../../Public/assets/MOCA.png" alt="Botão de login" id="img-login" class="img-login">
+                    <img src="" alt="Botão de login" id="img-login" class="img-login">
+            </div>
+            <div class="content-opcoes-menu" id="content-opcoes-menu">
+                <a href="../../../app/Views/Adm/editar-adm.php" class="link-login link-opcoes-menu">
+                    <i class="bi bi-pencil-square icon-login icon-login-editar">editar perfil</i>
                 </a>
+                <div class="link-login link-opcoes-menu">
+                    <i class="bi bi-box-arrow-left icon-login" id="logout">sair</i>
+                </div>
             </div>
         </div>
 </header>

@@ -80,10 +80,15 @@
     transition: all .2s ease-in;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .btns-forms-padrao {
         flex-direction: column-reverse;
         gap: 1.5rem;
+        padding: 0px;
+    }
+
+    .btns-salvar-cancelar {
+        flex-direction: column;
     }
     .btn-voltar {
         width: 35px;
@@ -95,7 +100,6 @@
     }
     .btns-salvar-cancelar {
         width: 100%;
-        flex-direction: column-reverse;
     }
     .envolta-btn {
         width: 80%;

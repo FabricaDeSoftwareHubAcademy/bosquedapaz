@@ -7,7 +7,6 @@ if (isset($_POST['id'], $_POST['status'])) {
     $id = intval($_POST['id']);
     $status = ($_POST['status']);
 
-    // Validação básica
     if (!in_array($status, ['Pago', 'Pendente'])) {
         echo json_encode(['sucesso' => false, 'mensagem' => 'Status inválido.']);
         exit;

@@ -46,6 +46,7 @@
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
     <script src="../../../Public/js/js-home/todos-expositores.js"></script>
+    <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 
 </html>

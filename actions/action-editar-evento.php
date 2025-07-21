@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = $_POST['dataevento'] ?? '';
     $hora_inicio = $_POST['hora_inicio'] ?? '';
     $hora_fim = $_POST['hora_fim'] ?? '';
-    $endereco = sanitizarTexto($_POST['endereco'] ?? '');
+    $endereco = (int) ($_POST['endereco'] ?? 0);
     $status = $_POST['status'] ?? '';
 
     if (strlen($descricao) > 500) {
