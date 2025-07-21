@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const container = document.querySelector(".conteiner__cards");
 
     try {
-        const resposta = await fetch("../../../actions/listar-utilidades.php");
+        const resposta = await fetch("../../../actions/action-listar-utilidades.php");
         const utilidades = await resposta.json();
 
         container.innerHTML = ""; // Limpa os cards estáticos
