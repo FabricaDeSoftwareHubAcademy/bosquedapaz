@@ -229,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
         //// RETORNA TODOS OS EXPOITORES VALIDADOS
         }else {
             $buscar = $expositor->listar();
-            $response = count($buscar) > 0 ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            $response = !empty($buscar) ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
         }
 
         echo json_encode($response);

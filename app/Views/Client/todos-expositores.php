@@ -31,8 +31,10 @@
                 </select>
             </div>
 
-            <div class="all_cards" id="content-cards">
-                
+            <div class="all_cards" id="content_cards">
+
+                    
+
             </div>
         </div>
     </main>
