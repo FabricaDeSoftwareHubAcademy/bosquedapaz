@@ -21,21 +21,17 @@
                 <!-- Div dos Buttons -->
                 <div class="button_group">
                 <!-- Botões: -->
-                    <a href="termos-expositor-kids.php" class="button" id="button1">
-                        <i class="bi bi-person-plus"></i>
-                        <span>Cadstro de Expositor Kids</span>
-                    </a>
-                    <a href="termos-expositor.php" class="button" id="button2">
+                    <a href="termos-expositor.php" class="button" id="button1">
                         <i class="bi bi-shop-window"></i>
                         <span>Cadastro de Expositor</span>
                     </a>
-                    <a href="termos-artistas.php" class="button" id="button3">
+                    <a href="termos-artistas.php" class="button" id="button2">
                         <i class="bi bi-music-note-list"></i>
                         <span>Cadastro de Artista</span>
                     </a>
                 </div>
                 <!-- Seta Voltar -->
-                <div class="div__seta_voltar"> <a href="edital-expositor.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></div></a>
+                <div class="div__seta_voltar"> <a href="feira-bosque-da-paz.php#expositores"><img src="../../../Public/assets/icons/voltar.png" alt=""></div></a>
             </div>
             <!-- Lado Direito: Imagem -->
             <div class="conteiner__img">

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/css/css-home/style-edital-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-termos-expositores.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Bosque da Paz</title>
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
+
 <body>
     <?php include "../../../Public/include/home/menu-home.html"; ?>
 
@@ -16,7 +18,7 @@
             <div class="avisos-edital">
                 <h1 class="title-edital"><strong class="impotante">IMPORTANTE!!</strong> leia o texto abaixo.</h1>
                 <p class="text-ler">
-                É importante ler os termos e condições abaixo para participar da feira bosque da paz. Nele está descrito todas as obrigações que um feirante da feira deve comprir.
+                    É importante ler os termos e condições abaixo para participar da feira bosque da paz. Nele está descrito todas as obrigações que um feirante da feira deve comprir.
                 </p>
             </div>
             <div class="regras-container">
@@ -36,20 +38,37 @@
                 <p class="lin-term"><strong class="cont-lin">2.1:</strong> Pensando na organização geral da feira, é expressamente proibida a desmontagem do espaço antes do horário de término do evento.</p>
             </div>
 
-            <form action="" method="post" class="form-aceitar-edital">
+            <form action="../../../actions/action-termos.php" method="post" class="form-aceitar-edital">
+
+                <!-- arquivo de destino -->
+                <input type="hidden" name="destino" value="../app/views/client/cadastro-expositor-client.php">
+
+                <!-- arquivo de origem -->
+                <input type="hidden" name="origem" value="../app/views/client/termos-expositor.php">
+
                 <div class="div-input-check">
                     <input type="checkbox" name="aceito" id="aceito" class="input-check">
-                    <label for="" class="label-edital">Aceito os termos a condições acima.</label>
+                    <label for="aceito" class="label-edital">Aceito os termos das condições acima.</label>
                 </div>
                 <div class="btns">
-                    <button type="reset" class="btn-edital">
-                    <a href="feira-bosque-da-paz.php#expositores" class="link-edital">Cancelar</a>
-                    </button>
-                    <button type="submit" class="btn-edital btn-edital-conti"><a href="escolher-cadastro.php" class="link-edital">Continuar</a></button>
+                    <a href="escolher-cadastro.php" class="btn-edital link-edital">Cancelar</a>
+                    <button type="submit" name="botao-continuar" class="btn-edital btn-edital-conti">Continuar</button>
                 </div>
+                
+                <div id="modal-erro" class="modal-erro" style="display: none;">
+                    <div class="modal-conteudo">
+                        <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+                        <p>Você deve aceitar os termos antes de continuar.</p>
+                    </div>
+                </div>
+
             </form>
+
         </section>
     </main>
-    <script src="../../../Public/js/js-home/main.js" defer></script>
+
+    <!-- <script src="../../../Public/js/js-home/main.js" defer></script> -->
+    <script src="../../../Public/js/js-home/checkbox-termos.js" defer></script>
 </body>
+
 </html>

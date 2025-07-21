@@ -32,6 +32,7 @@ CREATE TABLE pessoa(
     perfil INT DEFAULT 0,
     whats CHAR(11) NULL,
     telefone CHAR(11) NULL,
+    termos ENUM("Sim", "Não") NOT NULL DEFAULT "Não",
     link_instagram VARCHAR(255) NULL,
     link_facebook VARCHAR(255) NULL,
     link_whats VARCHAR(255) NULL,
