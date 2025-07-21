@@ -99,7 +99,7 @@ body {
 .form-pessoa,
 #estilo_musica_container,
 .form-expo {
-    width: 100%;
+    width: 90%;
     display: flex;
 }
 
