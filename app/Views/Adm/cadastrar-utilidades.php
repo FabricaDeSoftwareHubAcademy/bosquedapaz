@@ -56,10 +56,10 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                 </div>
             </div>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                </a>
-
+                <!-- <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/assets/icons/voltar.svg" class="btn-voltar">
+                </a> -->
+<!-- 
                 <div class="btn-cancelar-salvar">
                     <button class="btn btn-cancelar">
                         <a href="">Cancelar</a>
@@ -67,18 +67,24 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
 
                     <button id="botao_cadastrar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
                         <a href="">Salvar</a>
-                </div>
+                </div> -->
             </div>
+            <?php include "../../../Public/include/Butons-forms.html" ?>
         </div>
     </main>
+    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html" ?>
+    <?php include "../../../Public/include/modais/modal-error.html" ?>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
     </div>
 
+
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
 </body>
 

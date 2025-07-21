@@ -9,11 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalSucesso = document.getElementById('modal-sucesso');
     const modalErro = document.getElementById('modal-error');
     const erroMensagem = document.getElementById('erro-mensagem');
+    const btnFecharErro = document.getElementById('close-modal-erro');
 
     if (!dialog || !form) {
         console.error('O dialog de edição ou o formulário não foram encontrados no HTML.');
         return;
     }
+
+    const inputDescricao = document.getElementById('descricao');
+
+    inputDescricao?.addEventListener('input', () => {
+        if (inputDescricao.value.length > 30) {
+            inputDescricao.value = inputDescricao.value.slice(0, 30);
+        }
+    });
+
+    form.addEventListener('input', (event) => {
+        if (event.target && event.target.id === 'descricao') {
+            const input = event.target;
+            if (input.value.length > 30) {
+                input.value = input.value.slice(0, 30);
+            }
+        }
+    });
 
     // --- ABRIR MODAL E PREENCHER COM DADOS DA CATEGORIA ---
     document.querySelectorAll('.open-modal').forEach(button => {
@@ -29,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.status === 'success' && data.categoria) {
                     const categoria = data.categoria;
                     form.querySelector('#id_categoria').value = categoria.id_categoria;
-                    form.querySelector('#descricao').value = categoria.descricao;
+                    form.querySelector('#descricao').value = categoria.descricao.slice(0, 30);
 
                     const corInput = form.querySelector('#corInput');
                     const selectedColorDiv = form.querySelector('#selectedColor');
@@ -74,11 +92,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    function validarFormularioCategoria() {
+        const descricao = document.getElementById('descricao')?.value.trim();
+        const cor = document.getElementById('corInput')?.value;
+
+        if (!descricao) {
+            exibirErro('A descrição da categoria é obrigatória.');
+            return false;
+        }
+
+        if (descricao.length > 30) {
+            exibirErro('A descrição deve ter no máximo 30 caracteres.');
+            return false;
+        }
+
+        if (!cor) {
+            exibirErro('Por favor, selecione uma cor.');
+            return false;
+        }
+
+        return true;
+    }
+
     // --- BOTÃO SALVAR (ABRE CONFIRMAR) ---
     const btnSalvar = document.getElementById('btn_cadastrar_cat');
     btnSalvar?.addEventListener('click', (e) => {
         e.preventDefault();
-        modalConfirmar?.showModal();
+        if (validarFormularioCategoria()) {
+            modalConfirmar?.showModal();
+        }
     });
 
     // --- BOTÃO CANCELAR CONFIRMAÇÃO ---
@@ -101,28 +143,46 @@ document.addEventListener('DOMContentLoaded', () => {
             const text = await response.text();
             console.log('Resposta:', text);
 
-            const data = JSON.parse(text);
+            let data;
+
+            try {
+                data = JSON.parse(text);
+            } catch (jsonError) {
+                exibirErro('Resposta inesperada do servidor.');
+                return;
+            }
 
             if (data.status === 'success') {
                 dialog.close();
                 modalSucesso?.showModal();
                 setTimeout(() => window.location.reload(), 2000);
             } else {
-                exibirErro(data.message || 'Erro ao editar.');
-                setTimeout(() => window.location.reload(), 2000);
+                exibirErro(data.message || 'Erro ao editar a categoria.');
             }
         } catch (error) {
             console.error('Erro ao salvar:', error);
-            exibirErro('Erro de comunicação ao salvar.');
+            exibirErro('Erro de comunicação com o servidor.');
         }
     });
 
-    // --- BOTÕES DE FECHAR ---
+    // --- BOTÕES DE FECHAR DO DIALOG DE CADASTRO ---
     dialog.querySelectorAll('.close-modal, .cancelar').forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             dialog.close();
         });
+    });
+
+    // --- BOTÃO FECHAR MODAL ERRO ---
+    btnFecharErro?.addEventListener('click', () => {
+        modalErro.close();
+    });
+
+    // --- FECHAR MODAL ERRO AO CLICAR FORA ---
+    modalErro?.addEventListener('click', (event) => {
+        if (event.target === modalErro) {
+            modalErro.close();
+        }
     });
 
     // --- BUSCA NA TABELA ---
