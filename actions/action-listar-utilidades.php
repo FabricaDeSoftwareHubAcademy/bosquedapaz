@@ -1,9 +1,22 @@
 <?php
-require_once('../vendor/autoload.php');
+require_once '../vendor/autoload.php';
+
 use app\Controller\UtilidadePublica;
 
-$util = new UtilidadePublica();
-$utilidades = $util->listar();
+header('Content-Type: application/json');
 
-echo json_encode($utilidades);
-?>
+try {
+    $util = new UtilidadePublica();
+    $utilidades = $util->listar();
+
+    echo json_encode([
+        'status' => 'success',
+        'dados' => $utilidades
+    ], JSON_PRETTY_PRINT);
+
+} catch (Exception $e) {
+    echo json_encode([
+        'status' => 'error',
+        'mensagem' => $e->getMessage()
+    ]);
+}
