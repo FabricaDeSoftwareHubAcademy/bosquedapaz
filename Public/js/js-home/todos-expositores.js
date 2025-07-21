@@ -92,156 +92,33 @@ async function chamarModalExpositor(id){
 
 }
 
-async function GetExpositores(){
-    let dados = await fetch('../../../actions/actions-listar-expositor.php')
-
-    let response = await dados.json()
-
-    contentCards.innerHTML = ''
-
-    if (response.status == 200) {
-        response.expositores.forEach(element => {
-            
-            contentCards.innerHTML += `
-            <div class="sobre_card">
-                 <div class="content-card-expo" id="card">
-                     <div class="card-per-expo">
-                         <div class="head-card">
-                             <img src="" alt="" class="img-perfil-expo">
-                         </div>
-                         <div class="body-card">
-                             <h3 class="nome-expo">${element.nome_marca}</h3>
-                             <div class="detalhes-expo">
-                                 <p class="para-cate">
-                                     Categoria:
-                                     <span class="span-cate">
-                                         ${element.descricao}
-                                     </span>
-                                 </p>
-                                 <p class="para-color">
-                                     Rua:
-                                     <span class="span-color" style="background-color: ${element.cor_rua};">
-                                     </span>
-                                 </p>
-                             </div>
-                             <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             `
-        });
-    }
-    else {
-        modal.showModal()
-        contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
-    }
-}
 
 
-document.addEventListener('DOMContentLoaded', GetExpositores)
-
-let inputPesquisar = document.getElementById('input_pesquisa')
-
-inputPesquisar.addEventListener('keyup', async () => {
-    if (inputPesquisar.value.length > 2){
-        let dados = await fetch(`../../../actions/actions-listar-expositor.php?filtro=${inputPesquisar.value}`)
-
-        let response = await dados.json()
-    
-        contentCards.innerHTML = ''
-    
-        if (response.status == 200) {
-            response.expositores.forEach(element => {
-                
-                contentCards.innerHTML += `
-                <div class="sobre_card">
-                     <div class="content-card-expo" id="card">
-                         <div class="card-per-expo">
-                             <div class="head-card">
-                                 <img src="" alt="" class="img-perfil-expo">
-                             </div>
-                             <div class="body-card">
-                                 <h3 class="nome-expo">${element.nome_marca}</h3>
-                                 <div class="detalhes-expo">
-                                     <p class="para-cate">
-                                         Categoria:
-                                         <span class="span-cate">
-                                             ${element.descricao}
-                                         </span>
-                                     </p>
-                                     <p class="para-color">
-                                         Rua:
-                                         <span class="span-color" style="background-color: ${element.cor_rua};">
-                                         </span>
-                                     </p>
-                                 </div>
-                                 <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 `
-            });
-        }
-        else {
-            contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
-        }
-    }
-    else {
-        GetExpositores()
-    }
-})
-
-let opcoesCategoria = document.getElementById('select-cat')
-
-opcoesCategoria.addEventListener('change', async () => {
-    if (opcoesCategoria.value == 'inicio'){
-        GetExpositores()
-    }
-    else {
-        let dados = await fetch(`../../../actions/actions-listar-expositor.php?categoria=${opcoesCategoria.value}`)
-    
-        let response = await dados.json()
-    
-        contentCards.innerHTML = ''
-    
-        if (response.status == 200) {
-            response.expositores.forEach(element => {
-                
-                contentCards.innerHTML += `
-                <div class="sobre_card">
-                     <div class="content-card-expo" id="card">
-                         <div class="card-per-expo">
-                             <div class="head-card">
-                                 <img src="" alt="" class="img-perfil-expo">
-                             </div>
-                             <div class="body-card">
-                                 <h3 class="nome-expo">${element.nome_marca}</h3>
-                                 <div class="detalhes-expo">
-                                     <p class="para-cate">
-                                         Categoria:
-                                         <span class="span-cate">
-                                             ${element.descricao}
-                                         </span>
-                                     </p>
-                                     <p class="para-color">
-                                         Rua:
-                                         <span class="span-color" style="background-color: ${element.cor_rua};">
-                                         </span>
-                                     </p>
-                                 </div>
-                                 <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 `
-            });
-        }
-        else {
-            contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
-        }
-    }
-}
-)
+// contentCards.innerHTML += `
+//             <div class="sobre_card">
+//                  <div class="content-card-expo" id="card">
+//                      <div class="card-per-expo">
+//                          <div class="head-card">
+//                              <img src="" alt="" class="img-perfil-expo">
+//                          </div>
+//                          <div class="body-card">
+//                              <h3 class="nome-expo">${element.nome_marca}</h3>
+//                              <div class="detalhes-expo">
+//                                  <p class="para-cate">
+//                                      Categoria:
+//                                      <span class="span-cate">
+//                                          ${element.descricao}
+//                                      </span>
+//                                  </p>
+//                                  <p class="para-color">
+//                                      Rua:
+//                                      <span class="span-color" style="background-color: ${element.cor_rua};">
+//                                      </span>
+//                                  </p>
+//                              </div>
+//                              <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
+//                          </div>
+//                      </div>
+//                  </div>
+//              </div>
+//              `
