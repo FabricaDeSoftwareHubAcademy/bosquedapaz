@@ -24,7 +24,7 @@
     <section class="section-introducao-quem-somos">
     <div class="titulo-descricao-principal">
         <h1 class="h1-primario">FEIRA BOSQUE DA PAZ</h1>
-        <p class="descricao">Somos uma equipe movida pela paixão de conectar pessoas, inspirar encontros e promover a troca genuína de ideias e experiências. Desde nossa fundação, buscamos ir além da organização de eventos — queremos criar espaços vivos e acolhedores, onde expositores e visitantes se reconhecem, compartilham histórias e constroem oportunidades juntos. Cada detalhe é pensado para incentivar o diálogo, despertar a criatividade e tornar cada edição uma experiência única.
+        <p class="descricao theme">Somos uma equipe movida pela paixão de conectar pessoas, inspirar encontros e promover a troca genuína de ideias e experiências. Desde nossa fundação, buscamos ir além da organização de eventos — queremos criar espaços vivos e acolhedores, onde expositores e visitantes se reconhecem, compartilham histórias e constroem oportunidades juntos. Cada detalhe é pensado para incentivar o diálogo, despertar a criatividade e tornar cada edição uma experiência única.
 
             Acreditamos que é na diversidade que surgem as conexões mais autênticas. Valorizamos cada voz e cada olhar, porque são essas diferenças que tornam nossos encontros verdadeiramente memoráveis.
             
