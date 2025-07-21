@@ -30,7 +30,7 @@ CREATE TABLE endereco_evento(
     numero_evento INT NOT NULL,
     bairro_evento VARCHAR(100) NOT NULL,
     cidade_evento VARCHAR(100) NOT NULL,
-    PRIMARY KEY(id_endereco)
+    PRIMARY KEY(id_endereco_evento)
 );
 
 CREATE TABLE pessoa( 
@@ -45,7 +45,6 @@ CREATE TABLE pessoa(
     link_instagram VARCHAR(255) NULL,
     link_facebook VARCHAR(255) NULL,
     link_whats VARCHAR(255) NULL,
-    data_nasc DATE NULL,
     img_perfil VARCHAR(255) NULL,
     status_pes ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
     id_endereco INT NULL,
@@ -201,8 +200,8 @@ CREATE TABLE utilidade_publica (
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.validacao, 
-pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, pes.status_pes, 
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.produto, exp.validacao, 
+pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, pes.status_pes, 
 cat.id_categoria, cat.descricao, cat.cor, cat.icone,
 en.cidade
 FROM expositor AS exp 
