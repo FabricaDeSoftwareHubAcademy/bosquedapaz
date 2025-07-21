@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderizarTabela(filtrados);
   });
 
-  // Quando clicar em Ativo/Inativo, exibe o modal de confirmação
+  
   tbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('status')) {
       const botao = e.target;

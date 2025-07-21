@@ -124,6 +124,7 @@
             <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
+            <?php include "../../../Public/include/modais/modal-error-email.html"; ?>
             
         </div>
 
