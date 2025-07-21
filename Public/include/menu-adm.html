@@ -10,7 +10,7 @@
         <nav class="nav-bar" id="nav-bar">
             <ul class="nav-list" id="nav-list">
 
-                <li class="nav-item" id="cadastro">Cadastro
+                <li class="nav-item dark" id="cadastro">Cadastro
                     <ul class="submenu" id="sub-cadastro">
                         
                         <li class="sub-nav-item">
@@ -50,13 +50,13 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="../../../app/Views/Adm/editar-carrossel.php">
+                <li class="nav-item ">
+                    <a href="../../../app/Views/Adm/editar-carrossel.php" class="dark">
                         Carrossel
                     </a>
                 </li>
 
-                <li class="nav-item" id="financeiro">Financeiro
+                <li class="nav-item dark" id="financeiro">Financeiro
                     <ul class="submenu">
                         <li class="sub-nav-item">
                             <a href="../../../app/Views/Adm/grafico-central.php" class="item-submenu">
@@ -76,7 +76,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item" id="lista">Listas
+                <li class="nav-item dark" id="lista">Listas
                     <ul class="submenu">
                         
                         
@@ -104,7 +104,7 @@
                 </li>
 
 
-                <li class="nav-item" id="relatorios">Relatórios
+                <li class="nav-item dark" id="relatorios">Relatórios
                     <ul class="submenu">
   
                         <li class="sub-nav-item">
@@ -155,6 +155,15 @@
             <div class="content-outros btn-login-1">
                     <img src="" alt="Botão de login" id="img-login" class="img-login">
             </div>
+            <div class="switch-container">
+                <input type="checkbox" id="theme-toggle" />
+                <label for="theme-toggle" class="switch">
+                  <span class="icon sun">☀️</span>
+                  <span class="icon moon">🌙</span>
+                  <span class="slider"></span>
+                </label>
+            </div>
+              
             <div class="content-opcoes-menu" id="content-opcoes-menu">
                 <a href="../../../app/Views/Adm/editar-adm.php" class="link-login link-opcoes-menu">
                     <i class="bi bi-pencil-square icon-login icon-login-editar">editar perfil</i>
@@ -165,4 +174,5 @@
             </div>
         </div>
 </header>
+<script src="../../../Public/js/theme-dark.js" defer></script>
 

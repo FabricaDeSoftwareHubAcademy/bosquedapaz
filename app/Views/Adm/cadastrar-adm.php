@@ -118,9 +118,9 @@
         </section>
         
         <!-- Imagens Decorativas -->
-        <div class="imgs__dec1"><img src="../../../Public/assets/img-bolas/bola-1.png" alt=""></div>
-        <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/bola-2.png" alt=""></div>
-        <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/bola-3.png" alt=""></div>
+        <div class="imgs__dec1"><img src="../../../Public/assets/img-bolas/imagem-superior-esquerdo.svg"  alt=""></div>
+        <div class="imgs__dec2"><img src="../../../Public/assets/img-bolas/imagem-superior-direito.svg"  alt=""></div>
+        <div class="imgs__dec3"><img src="../../../Public/assets/img-bolas/imagem-inferior-direito.svg" alt=""></div>
     </main>
 
     <!-- Modal:  -->
