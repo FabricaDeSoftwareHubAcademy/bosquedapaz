@@ -51,3 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// telefone
+const telefoneInput = document.getElementById('whats');
+telefoneInput.addEventListener('input', function (e) {
+    let valor = e.target.value;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    e.target.value = valor;
+});
+
+
