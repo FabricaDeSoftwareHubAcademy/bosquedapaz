@@ -55,4 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Erro de conexão com o servidor.');
         }
     });
+
+    document.getElementById('cep_evento').addEventListener('blur', async function () {
+        const cep = this.value.replace(/\D/g, '');
+        if (cep.length === 8) {
+            try {
+                const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const data = await response.json();
+                if (!data.erro) {
+                    document.getElementById('logradouro_evento').value = data.logradouro;
+                    document.getElementById('bairro_evento').value = data.bairro;
+                    document.getElementById('cidade_evento').value = `${data.localidade} - ${data.uf}`;
+                    // document.getElementById('estado').value = data.uf;
+                } else {
+                    alert("CEP não encontrado!");
+                }
+            } catch (error) {
+                alert("Erro ao buscar o endereço. Tente novamente.");
+                console.error(error);
+            }
+        }
+    });
 });
