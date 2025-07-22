@@ -112,11 +112,17 @@
             <input type="number" name="num_barraca" class="input" id="numBarraca">
             <label class="title-recusar">Cor da rua: </label>
             <select name="cor_rua" class="input" id="corRua">
-                <option value="verde">verde</option>
-                <option value="azul">azul</option>
                 <option value="amarelo">amarelo</option>
                 <option value="laranja">laranja</option>
-                <option value="rosa">rosa</option>
+                <option value="verde">verde</option>
+                <option value="roxo">roxo</option>
+                <option value="azul">azul</option>
+                <option value="cinza">cinza</option>
+                <option value="rosa_claro">rosa claro</option>
+                <option value="rosa_escuro">rosa escuro</option>
+                <option value="laranja_lima">laranja lima</option>
+                <option value="preto">preto</option>
+                <option value="vermelho">vermelho</option>
             </select>
             <div class="content-btns">  
                 <button type="button" class="btn-modal-confirmar btn-validar-cancelar" id="btn-BarracaRua-cancelar">Cancelar</button>
