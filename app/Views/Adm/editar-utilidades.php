@@ -31,50 +31,46 @@
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                         </div>
                         <div class="data">
                             <div class="input-group">
                                 <label>Data início</label>
-                                <input type="date" id="data-inicio" name="data-inicio" value="0000/00/00">
+                                <input type="date" id="data_inicio" name="data_inicio" value="0000/00/00">
                             </div>
                             <div class="input-group">
                                 <label>Data fim</label>
-                                <input type="date" id="data-fim" name="data-fim" value="0000/00/00">
+                                <input type="date" id="data_fim" name="data_fim" value="0000/00/00">
                             </div>
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
-                            <input type="file" name="file" id="file" required>
+                            <input type="file" name="imagem" id="imagem" required>
+                        </div>
+
+                        <img class="preview" src='' alt="" id="preview-image" name="preview-image">
+
+                        <div class="btns">
+                            <?php include "../../../Public/include/Butons-forms.html" ?>
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                </a>
-
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="">Cancelar</a>
-                    </button>
-
-                    <button id="botao_editar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
-                        <a href="">Salvar</a>
                 </div>
             </div>
         </div>
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+    <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
+    <?php include "../../../Public/include/modais/modal-confirmar.html"?>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-adm/js-editar-utilidade.js"></script>
+    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+
 </body>
 
 </html>

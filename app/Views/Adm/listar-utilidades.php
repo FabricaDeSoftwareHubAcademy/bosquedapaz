@@ -12,13 +12,12 @@
         <title>Adm - Bosque da Paz</title>
         <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-utilidades.css">
         <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-    <?php include "../../../Public/include/menu-adm.html" ?>
-    <main class="principal">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    
+    <body>
+        <?php include "../../../Public/include/menu-adm.html" ?>
+        <main class="principal">
         <div class="box">
             <h2>UTILIDADES PÚBLICAS</h2>
             <div class="container">
@@ -47,8 +46,8 @@
             </div>
         </div>
         <div class="btns">
-            <a href="./" class="voltar">
-                <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
+            <a href="Area-adm.php" class="voltar">
+                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
     </main>
@@ -59,8 +58,7 @@
         <img class="bola-azul3" src="../img/Elemento3.ElipseAzul.png" alt="">
     </div>
 
-    <script src="../../../Public/js//js-adm/status-colaborador.js"></script>
-    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
+    <?php include "../../../Public/include/modais/modal-confirmar.html"?>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/listar-utilidades-publicas.js" defer></script>
 </body>

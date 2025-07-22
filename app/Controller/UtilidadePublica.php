@@ -8,7 +8,7 @@ use app\Models\Database;
 
     Class UtilidadePublica
     {
-        public int $id_utilidadesPublica;
+        public int $id_utilidade_publica;
         public string $titulo;
         public string $descricao;
         public string $data_inicio;
@@ -32,9 +32,9 @@ use app\Models\Database;
         } 
 
 
-        public function listar($where = null, $order = null, $limit = null) {
+        public function listar() {
             $db = new Database('utilidade_publica');
-            $res = $db->select($where, $order, $limit)
+            $res = $db->select_utilidades()
                       ->fetchAll(PDO::FETCH_CLASS, self::class);
     
             return $res;
@@ -42,12 +42,22 @@ use app\Models\Database;
 
         public function editar() {
             $db = new Database('utilidade_publica');
-            $res = $db->update("id =" . $id ,[
+            $res = $db->update("id_utilidade_publica =" . $this->id_utilidade_publica ,[
                 'titulo' => $this->titulo,
                 'descricao' => $this->descricao,
                 'data_inicio' => $this->data_inicio,
                 'data_fim' => $this->data_fim,
-                'imagem' => $this->imagem
+                'imagem' => $this->imagem,
+                // 'status_utilidade' => $this->status_utilidade
+            ]);
+    
+            return $res;
+        }
+
+        public function editar_status() {
+            $db = new Database('utilidade_publica');
+            $res = $db->update("id_utilidade_publica =" . $this->id_utilidade_publica ,[
+                'status_utilidade' => $this->status_utilidade
             ]);
     
             return $res;

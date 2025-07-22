@@ -31,55 +31,50 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                     <form id="form_cadastrar_utilidade" method="POST">
                         <div class="input-group">
                             <label>Título:</label>
-                            <input type="text" name="titulo" id="titulo"
+                            <input required type="text" name="titulo" id="titulo"
                                 placeholder="Escreva o título da utilidade pública">
+                                <span id="titleErro" class="erro"></span>
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
-                            <textarea name="descricao" id="descricaodoevento" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
+                            <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição da utilidade" cols="30" rows="5" style="resize: none"></textarea>
                         </div>
                         <div class="data">
                             <div class="input-group">
                                 <label>Data início</label>
-                                <input name="data_inicio" type="date" id="data-inicio">
+                                <input name="data_inicio" type="date" id="data-inicio" required>
                             </div>
                             <div class="input-group">
                                 <label>Data fim</label>
-                                <input name="data_fim" type="date" id="data-fim">
+                                <input name="data_fim" type="date" id="data-fim" required>
                             </div>
                         </div>
                         <div class="input-group">
                             <label>Imagem:</label>
                             <input type="file" name="imagem" id="imagem" required>
                         </div>
+
+                        <img class="preview" src="" alt="" id="preview-image">
+
+                        <div class="btns">
+                            <?php include "../../../Public/include/Butons-forms.html" ?>
+                        </div>
                     </form>
-                </div>
-            </div>
-            <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
-                    <img src="../../../Public/imgs/img-area-contate/seta-voltar.png" class="btn-voltar">
-                </a>
-
-                <div class="btn-cancelar-salvar">
-                    <button class="btn btn-cancelar">
-                        <a href="">Cancelar</a>
-                    </button>
-
-                    <button id="botao_cadastrar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
-                        <a href="">Salvar</a>
                 </div>
             </div>
         </div>
     </main>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
+    <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
+    <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
 </body>
 
 </html>
