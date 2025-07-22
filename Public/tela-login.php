@@ -12,11 +12,11 @@
 
     </head>
     <body class="body-login">
-        <main>
+        <!-- <main> -->
         <?php include './include/modais/login-incorreto.html'; ?>
 
             <!-- Section Pricipal da Tela -->
-            <section class="section-principal-login">
+            <!-- <section class="section-principal-login"> -->
     
                 <!-- Imagens -->
                 
@@ -57,6 +57,10 @@
                             
                             <button id="botao-login" data-modal="modal-login" class="botao-login open-modal" type="submit">Login</button>
                         </form>
+
+                        <a href="../index.php" class="botao-voltar">
+                            <img src="assets/icons/voltar.svg" alt="">
+                        </a>
                     
                     </div>
     <!-- 
@@ -65,18 +69,13 @@
                         endif;
                     ?> -->
 
-
-                    <a href="../index.php" class="botao-voltar">
-                        <img src="assets/icons/voltar.svg" alt="">
-                    </a>
-
                     <div id="linha-login"></div>
     
                     <!-- Area da Imagem -->
                     <img class="img-dog" src="../Public/assets/dog-walking-79-12053-1.svg" alt="">
                 </div>
-            </section>
-        </main>
+            <!-- </section> -->
+        <!-- </main> -->
         
         
         <script src="./js/js-modais/js-modal-deletar.js"></script>
