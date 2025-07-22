@@ -97,12 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const cor = document.getElementById('corInput')?.value;
 
         if (!descricao) {
-            exibirErro('A descrição da categoria é obrigatória.');
+            exibirErro('O nome da categoria é obrigatório.');
             return false;
         }
 
         if (descricao.length > 30) {
-            exibirErro('A descrição deve ter no máximo 30 caracteres.');
+            exibirErro('O nome deve ter no máximo 30 caracteres.');
             return false;
         }
 

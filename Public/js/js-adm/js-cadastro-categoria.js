@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
-    // 1️⃣ - CLICOU EM “SALVAR” → ABRE MODAL DE CONFIRMAR
+    // CLICOU EM “SALVAR” → ABRE MODAL DE CONFIRMAR
     btnSalvarDialog?.addEventListener("click", function (event) {
         event.preventDefault();
         if (validarFormularioCategoria()) {
@@ -135,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 2️⃣ - CANCELAR CONFIRMAÇÃO
+    // CANCELAR CONFIRMAÇÃO
     btnCancelar?.addEventListener("click", closeModalConfirmar);
 
-    // 3️⃣ - CONFIRMAR ENVIO
+    // CONFIRMAR ENVIO
     btnConfirmar?.addEventListener("click", async function () {
         closeModalConfirmar();
 

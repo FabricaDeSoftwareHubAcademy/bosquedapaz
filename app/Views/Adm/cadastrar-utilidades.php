@@ -32,7 +32,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
-                                placeholder="Escreva o título da utilidade pública">
+                                placeholder="Escreva o título da utilidade pública" maxlength="30">
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
