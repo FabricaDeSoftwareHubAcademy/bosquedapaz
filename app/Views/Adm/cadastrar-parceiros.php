@@ -65,7 +65,7 @@
                             <div class="input-group">
                                 <label for="logo">Logo:</label>
                                 <input type="file" id="logo" name="logo" accept="image/*" required>
-                                <img id="preview-logo" src="#" alt="Pré-visualização da logo" style="max-width: 150px; margin-top: 10px; display: none;" />
+                                <img id="preview-logo" src="#" alt="Pré-visualização da logo" style="max-width: 300px; margin-top: 10px; display: none;" />
                             </div>  
                         </div>
                         <div id="form3" class="form-grid">
