@@ -222,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITORES FILTRADOS 2
         }else if (isset($_GET['filtrarHome'])){
-            $filtrarExpositor = $expositor->filtrar($_GET['filtrar2'], "= 'validado' and status_pes = 'ativo'");
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrarHome'], "= 'validado' and status_pes = 'ativo'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 

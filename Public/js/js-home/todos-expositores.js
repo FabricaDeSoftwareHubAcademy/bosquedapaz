@@ -153,8 +153,7 @@ inputFiltro.addEventListener('keyup', async () => {
     
         let content_cards = document.getElementById('content_cards')
     
-        let response = await dados_expositores.json();
-        console.log(response)
+        let response = await dados_expositores.text();
     
         if (response.status == 200) {
             content_cards.innerHTML = ''
@@ -199,4 +198,14 @@ inputFiltro.addEventListener('keyup', async () => {
         getExpositores()
     }
 })
+
+
+
+////////////// GARREGANDO CATEGORIA \\\\\\\\\\\\\\\\
+
+async function getCategoria(){
+    let dados_categoria = await fetch('../../../actions/action-listar-categoria.php')
+
+    let response = aw
+}
 
