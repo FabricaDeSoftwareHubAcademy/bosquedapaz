@@ -81,6 +81,34 @@ telefoneInput.addEventListener('input', function (e) {
     e.target.value = valor;
 });
 
+//////////// imgens expositor \\\\\\\\\\\\
 
 
+
+let input_fotos = document.getElementById('input_fotos')
+
+
+input_fotos.addEventListener('change', () => {
+    let imgs_files = input_fotos.files
+    let show_imgs = document.querySelectorAll('.imgs_produtos')
+    let conteiner_imgs = document.querySelectorAll('.content_fotos')
+    document.getElementById('conteiner_fotos').style.display = 'flex'
+
+
+    console.log(imgs_files[0])
+
+    if(imgs_files.length > 0) {
+        for (let i = 0; i < imgs_files.length; i++) {
+            const imagem = imgs_files[i];
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                show_imgs[i].src = e.target.result
+                conteiner_imgs[i].style.display = 'flex'
+            }
+            reader.readAsDataURL(imagem);
+        }
+    }
+})
+  
 

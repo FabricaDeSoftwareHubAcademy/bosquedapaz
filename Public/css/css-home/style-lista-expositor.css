@@ -27,103 +27,123 @@
     --color-branca: white;
 }
 
+.amarelo {
+    background-color: var(--color-rua1) !important;
+}
+.laranja {
+    background-color: var(--color-rua2) !important;
+}
+.verde {
+    background-color: var(--color-rua3) !important;
+}
+.roxo {
+    background-color: var(--color-rua4) !important;
+}
+.azul {
+    background-color: var(--color-rua5) !important;
+}
+.cinza {
+    background-color: var(--color-rua6) !important;
+}
+.rosa_escuro {
+    background-color: var(--color-ru7) !important;
+}
+.laranja_lima {
+    background-color: var(--color-rua8) !important;
+}
+.rosa_claro {
+    background-color: var(--color-rua9) !important;
+}
+.preto {
+    background-color: var(--color-rua10) !important;
+}
+.vermelho {
+    background-color: var(--color-rua11) !important;
+}
+
 .content-principal {
-    width: 80vw;
-    height: auto;
-    margin: auto;
-    padding: 10px;
-    padding-top: 150px;
+    min-height: 50vh;
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.select-area {
-    /* background-color: aquamarine; */
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    padding: 20px;
+    justify-content: center;
+    gap: .1rem;
 }
 
 .title-all-expo {
+    text-align: center;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: capitalize;
 }
 
-.select-cat {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-    font-weight: 500;
-    font-size: .8rem;
-    text-transform: capitalize;
-}
-
-.opcoes-cat {
-    font-weight: 400;
-    font-size: .8rem;
-    text-transform: capitalize;
-}
-
-.procurar {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    gap: 10px;
-    padding: 5px;
-}
-
-.title-pes  {
-    font-weight: 500;
-    font-size: 1rem;
-    width: 100%;
-    padding: 5px;
-    text-transform: capitalize;
-}
-
-.pesquisa-expo {
-    display: flex;
-    align-items: center;
-    width: auto;
-}
-
-.input-pes {
-    width: 500px;
-    height: 40px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 2px solid #9d9fa1;
-    border-right: 2px solid #9d9fa1;
-}
-
-.area-all-cards {
-    width: 100%;
-    background-color: #F8F8F8;
-    padding: 1rem;
+.conteiner-expositores {
+    background-color: rgba(244, 244, 244, 0.637);
+    width: 80%;
+    height: auto;
     border-radius: .5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.conteiner_filtros {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
     gap: 1rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    background-color: #e9e9e9;
+}
+
+.search_expositor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_here {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.input_filtro {
+    border-radius: .5rem;
+    border: none;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: .5rem;
+    width: 20rem;
+}
+
+.all_cards {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    gap: 1rem;
+}
+.all_cards p {
+    text-align: center;
 }
 
-.sobre_card {
-    width: 250px;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*  CARD EXPOSITOR */
+
+.content-card-expo {
+    width: 245px;
+    height: 435px;
 }
-
-
 
 .card-per-expo {
     background-color: #7CC4BF;
@@ -141,7 +161,7 @@
 }
 
 .card-per-expo:hover {
-    margin-top: -15px;
+    margin-top: -10px;
 }
 
 .head-card {
@@ -149,6 +169,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    padding: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,7 +192,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 15px;
-    padding: 0px 15px 10px 15px;
     height: 70%;
     position: absolute;
     top: 130px;
@@ -183,7 +203,9 @@
 }
 
 .img-perfil-expo {
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .nome-expo {
@@ -194,7 +216,7 @@
 }
 
 .detalhes-expo {
-    width: 95%;
+    width: 100%;
     padding: 5px;
     border-top: 1px solid rgba(0, 0, 0, 0.237);
     border-bottom: 1px solid rgba(0, 0, 0, 0.237);
@@ -211,6 +233,7 @@
 
 .span-cate {
     font-weight: 400;
+    color: #575757;
 }
 
 .para-color {
@@ -221,28 +244,29 @@
     align-items: center;
     justify-content: space-around;
     color: #575757;
+    text-transform: capitalize;
 }
 
 .span-color {
-    font-weight: 400;
+    font-weight: 500;
     padding: 2px 5px;
-    color: #494949;
+    color: white;
     border-radius: .5rem;
 }
 
-.color-amarela {
+.amarelo {
     background-color: var(--color-rua1);
 }
 
-.color-verde {
+.verde {
     background-color: var(--color-rua3);
 }
 
-.color-roxo {
+.roxo {
     background-color: var(--color-rua4);
 }
 
-.color-laranja {
+.laranja {
     background-color: var(--color-rua2);
 }
 
@@ -262,74 +286,23 @@
     color: white;
 }
 
-.link-edital {
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-}
+/* fim */
 
-.conteiner-outros-expo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.btn-outros-expo {
-  background-color: white;
-  border: 2px solid #f8621a;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: .5rem;
-  padding: 5px 10px;
-  transition: all .2s ease-in;
-}
-
-.btn-outros-expo:hover {
-  background-color: #f8621a;
-}
-
-@media (max-width: 1150px) {
-
-    .cards-perfis {
-        /* height: auto; */
-        gap: 50px;
-        width: 90%;
-    } 
-
-    .content-principal {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-    } 
-
-
-    .select-area {
-        width: 100%;
+@media screen and (max-width: 1050px) {
+    .conteiner_filtros {
         flex-direction: column;
+        height: auto;
+        align-items: flex-start;
     }
-
-    .procurar {
+    
+    .search_expositor {
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
     }
-
-    .pesquisa-expo {
+    
+    
+    .input_filtro {
         width: 100%;
-    }
-
-    .input-pes {
-        width: 100%;
-    }
-
-    .cards-perfis{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-
-    .para-cate {
-        flex-direction: column;
     }
 }

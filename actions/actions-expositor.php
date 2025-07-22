@@ -213,10 +213,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "' and validacao = 'aprovado'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
+        }else if (isset($_GET['categoriaHome'])){
+            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoriaHome']. "' and validacao = 'validado' and status_pes = 'ativo'");
+            $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? "!= 'aprovado'" : "= 'aprovado'");
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA OS EXPOSITORES FILTRADOS 2
+        }else if (isset($_GET['filtrarHome'])){
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrarHome'], "= 'validado' and status_pes = 'ativo'");
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA TODOS OS EXPOITORES PARA A HOME
+        }else if (isset($_GET['home'])){
+            $filtrarExpositor = $expositor->listar("validacao = 'validado' and status_pes = 'ativo'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
@@ -229,7 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
         //// RETORNA TODOS OS EXPOITORES VALIDADOS
         }else {
             $buscar = $expositor->listar();
-            $response = count($buscar) > 0 ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            $response = !empty($buscar) ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
         }
 
         echo json_encode($response);

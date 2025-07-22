@@ -338,7 +338,6 @@ background-color: rgba(0, 0, 0, 0.7);
 .div__cor{
     width: 120px;
     height: 35px;
-    background-color: var(--color-rua);
     font-size: 20px;
     color: white;
     border-radius: 10px;
