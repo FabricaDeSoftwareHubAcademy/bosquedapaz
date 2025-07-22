@@ -86,33 +86,17 @@
         </div>
     </section> 
     <section class="section-colaboradoras-quem-somos">
-           
-        <div class="image-text-carina">
-            <img class="fotos" src="../../../Public/imgs/foto-carina.webp
-            " alt="">
-            <p class="carina">Carina Zamboni</p>
-            <span class="profission"> Produtora Cultural</span>
-        </div>
+    <div id="colaboradoras-container" class="colaboradoras-container">
+        <!-- Os cards serão inseridos aqui dinamicamente pelo JavaScript -->
+    </div>
 
-        <div class="image-text-denise">
-            <img class="fotos" src="../../../Public/imgs/foto-denize.webp
-            " alt="">
-            <p class="denise">Denise Zamboni</p>
-            <span class="profission"> Produtora Cultural</span>
-        </div>
+    <div class="descricao-colaboradoras-quem-somos">
+        <p class="descricao3">
+            Apaixonadas por conectar pessoas e criar experiências transformadoras, dedicamos nosso trabalho a tornar cada encontro único e significativo. Desde o início, o objetivo sempre foi ir além de um simples evento — criar um espaço vivo, diverso e inspirador, onde ideias, histórias e oportunidades se cruzam naturalmente.
+        </p>
+    </div>
+</section>
 
-        <div class="image-text-fernanda">
-            <img class="fotos" src="../../../Public/imgs/foto-fernanda.webp
-            " alt="">
-            <p class="fernanda">Fernanda Gutierrez</p>
-            <span class="profission">Advogada</span>
-        </div>
-
-        <div class="descricao-colaboradoras-quem-somos">
-            <p class="descricao3">Apaixonadas por conectar pessoas e criar experiências transformadoras, dedicamos nosso trabalho a tornar cada encontro único e significativo. Desde o início, o objetivo sempre foi ir além de um simples evento — criar um espaço vivo, diverso e inspirador, onde ideias, histórias e oportunidades se cruzam naturalmente.</p>
-
-        </div>
-    </section>
         <section class="section-expositor-quem-somos">
             <div class="expositor-div">
                 <div class="expositor">
@@ -202,6 +186,7 @@
     
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
+    <script src="../../../Public/js/js-home/js-listar-colaborador.js"></script>
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <?php include "../../../Public/include/vlibras.html" ?>
 </body>
