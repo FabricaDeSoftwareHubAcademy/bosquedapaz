@@ -199,6 +199,47 @@ body {
     left: -25%;
 }
 
+/* AREA FOTOS */
+
+.conteiner_fotos {
+    width: 100%;
+    height: 150px;
+    display: none;
+    align-items: center;
+    gap: .5rem;
+}
+
+.content_fotos {
+    max-width: 170px;
+    height: 100%;
+    flex: auto;
+    background-color: #9d9fa1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.excluir {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem;
+    font-size: 1rem;
+    border-bottom-left-radius: 50%;
+}
+
+.imgs_produtos {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+
+}
+
 
 @media (max-width:1500px) {
     .formularios {

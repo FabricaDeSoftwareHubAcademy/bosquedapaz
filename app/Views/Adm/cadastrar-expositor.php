@@ -100,10 +100,36 @@
 
                         <div class="form-files">
                             <label>Escolha 6 fotos do seu produto para análise:</label>
-                            <input type="file" name="imagens[]" id="imagens[]" multiple>
+                            <input type="file" id="input_fotos" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 
+                </div>
+                <div class="conteiner_fotos" id="conteiner_fotos">
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div> 
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div> 
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div> 
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div> 
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div> 
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div> 
                 </div>
 
                 <?php include '../../../Public/include/Butons-forms.html'; ?>

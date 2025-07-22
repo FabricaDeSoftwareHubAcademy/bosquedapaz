@@ -2,7 +2,7 @@ let contentCards = document.getElementById('content-cards')
 
 async function chamarModalExpositor(id){
     
-    let dados = await fetch(`../../../actions/actions-listar-expositor.php?buscar=${id}`)
+    let dados = await fetch(`../../../actions/actions-expositor.php?id=${id}`)
     
     let response = await dados.json()
     
@@ -12,33 +12,35 @@ async function chamarModalExpositor(id){
     if (response.status == 200) {
         modal.showModal()
 
-        let ConteudoModal = `
+        let imgs_car_expositor = '';
+        response.expositor.imagens.forEach(imagem => {
+            imgs_car_expositor += `
+                <div class="div__img"><img src="../../${imagem.caminho}" alt="imagem do expositor"></div>
+            `
+        });
+
+        contentModal.innerHTML = `
         <div class="left__side">
             <div class="decorative__img1">
                 <img class="img-decoracao1" src="../../../Public/assets/img-decoracao1.png" alt="">
             </div>
             <div class="container__logo">
-                <div class="div__logo"><img src="${response.expositores.img_perfil}" alt=""></div>
-            </div>
+                <div class="div__logo"><img src="${response.expositor.img_perfil}" alt="image perfil "></div>
+            </div>  
             <div class="container__h1"><h1>Produtos</h1></div>
             <div class="container__imgs">
-                <div class="div__img"><img src="" alt=""></div>
-                <div class="div__img"><img src="${response.expositores.imagens[0].caminho}" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-3.jpeg" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-4.jpeg" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-5.jpeg" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-6.jpeg" alt=""></div>
+                ${imgs_car_expositor}
             </div>
         </div>
 
         <!-- Lado Direito -->
         <div class="right__side">
             <div class="container__sobre">
-                <h2>${response.expositores.nome_marca}</h2>
+                <h2>${response.expositor.nome_marca}</h2>
                 <h3>Sobre</h3>
                 <div class="area__text">
                     <p>
-                        ${response.expositores.descricao_exp}
+                        ${response.expositor.descricao_exp}
                     </p>
                 </div>
             </div>
@@ -46,35 +48,32 @@ async function chamarModalExpositor(id){
             <div class="container__infs">
                 <div class="div__categoria">
                     <h3>Categoria</h3>
-                    <p>${response.expositores.descricao}</p>
+                    <p>${response.expositor.descricao}</p>
                 </div>
 
                 <div class="div__num">
                     <h3>Número</h3>
-                    <p>${response.expositores.descricao}</p>
+                    <p>${response.expositor.num_barraca}</p>
                 </div>
             </div>
 
             <div class="container__contacts">
                 <div class="div__contacts">
                     <h3>Contacts</h3>
-                    <a href="${response.expositores.link_instagram}" target="_blank" class="icons" id="insta">
+                    <a href="${response.expositor.link_instagram}" target="_blank" class="icons" id="insta">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <a href="${response.expositores.link_whats}" target="_blank" class="icons" id="zap">
+                    <a href="${response.expositor.link_whats}" target="_blank" class="icons" id="zap">
                         <i class="bi bi-whatsapp"></i>
                     </a>
-                    <a href="${response.expositores.link_facebook}" target="_blank" class="icons" id="face">
+                    <a href="${response.expositor.link_facebook}" target="_blank" class="icons" id="face">
                         <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="${response.expositores.email}" class="icons" id="email">
-                        <i class="bi bi-envelope"></i>
                     </a>
                 </div>
 
                 <div class="div__cor__rua">
                     <h3>Cor da Rua</h3>
-                    <div class="div__cor"><p>${response.expositores.cor_rua}</p></div>
+                    <div class="div__cor ${response.expositor.cor_rua}"><p>${response.expositor.cor_rua}</p></div>
                 </div>
             </div>
 
@@ -82,9 +81,6 @@ async function chamarModalExpositor(id){
                 <img class="img-decoracao2" src="../../../Public/assets/img-decoracao2.png" alt="">
             </div>
         </div>`
-
-        contentModal.innerHTML = ''
-        contentModal.innerHTML = ConteudoModal
     }else {
         modal.showModal()
         contentModal.innerHTML = 'Expositor nâo encontrado'
@@ -92,74 +88,24 @@ async function chamarModalExpositor(id){
 
 }
 
-async function GetExpositores(){
-    let dados = await fetch('../../../actions/actions-listar-expositor.php')
+///////////////////  FUNCAO QUE CARREGA OS EXPOSITORES \\\\\\\\\\\\\\\
 
-    let response = await dados.json()
+async function getExpositores(){
+    let dados_expositores = await fetch('../../../actions/actions-expositor.php?home=1');
 
-    contentCards.innerHTML = ''
+    let content_cards = document.getElementById('content_cards')
+
+    let response = await dados_expositores.json();
 
     if (response.status == 200) {
-        response.expositores.forEach(element => {
-            
-            contentCards.innerHTML += `
-            <div class="sobre_card">
-                 <div class="content-card-expo" id="card">
-                     <div class="card-per-expo">
-                         <div class="head-card">
-                             <img src="" alt="" class="img-perfil-expo">
-                         </div>
-                         <div class="body-card">
-                             <h3 class="nome-expo">${element.nome_marca}</h3>
-                             <div class="detalhes-expo">
-                                 <p class="para-cate">
-                                     Categoria:
-                                     <span class="span-cate">
-                                         ${element.descricao}
-                                     </span>
-                                 </p>
-                                 <p class="para-color">
-                                     Rua:
-                                     <span class="span-color" style="background-color: ${element.cor_rua};">
-                                     </span>
-                                 </p>
-                             </div>
-                             <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             `
-        });
-    }
-    else {
-        modal.showModal()
-        contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
-    }
-}
-
-
-document.addEventListener('DOMContentLoaded', GetExpositores)
-
-let inputPesquisar = document.getElementById('input_pesquisa')
-
-inputPesquisar.addEventListener('keyup', async () => {
-    if (inputPesquisar.value.length > 2){
-        let dados = await fetch(`../../../actions/actions-listar-expositor.php?filtro=${inputPesquisar.value}`)
-
-        let response = await dados.json()
-    
-        contentCards.innerHTML = ''
-    
-        if (response.status == 200) {
-            response.expositores.forEach(element => {
-                
-                contentCards.innerHTML += `
+        content_cards.innerHTML = ''
+        response.expositor.forEach(element => {
+            content_cards.innerHTML += `
                 <div class="sobre_card">
                      <div class="content-card-expo" id="card">
                          <div class="card-per-expo">
                              <div class="head-card">
-                                 <img src="" alt="" class="img-perfil-expo">
+                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                              </div>
                              <div class="body-card">
                                  <h3 class="nome-expo">${element.nome_marca}</h3>
@@ -172,7 +118,8 @@ inputPesquisar.addEventListener('keyup', async () => {
                                      </p>
                                      <p class="para-color">
                                          Rua:
-                                         <span class="span-color" style="background-color: ${element.cor_rua};">
+                                         <span class="span-color ${element.cor_rua}">
+                                            ${element.cor_rua}
                                          </span>
                                      </p>
                                  </div>
@@ -182,39 +129,125 @@ inputPesquisar.addEventListener('keyup', async () => {
                      </div>
                  </div>
                  `
-            });
-        }
-        else {
-            contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
-        }
+            
+        });
+        
+    }else {
+        content_cards.innerHTML = '<p>Nenhum expositor encontrado</p>'
+
     }
-    else {
-        GetExpositores()
+}
+
+document.addEventListener('DOMContentLoaded', getExpositores)
+
+
+
+
+///////////// FILTROS EXPOSITOR \\\\\\\\\\\\\\\
+
+let inputFiltro = document.getElementById('input_pesquisa')
+
+inputFiltro.addEventListener('keyup', async () => {
+    if(inputFiltro.value.length > 2){
+        let dados_expositores = await fetch(`../../../actions/actions-expositor.php?filtrarHome=${inputFiltro.value}`);
+    
+        let content_cards = document.getElementById('content_cards')
+    
+        let response = await dados_expositores.json();
+    
+        if (response.status == 200) {
+            content_cards.innerHTML = ''
+            response.expositor.forEach(element => {
+                content_cards.innerHTML += `
+                    <div class="sobre_card">
+                         <div class="content-card-expo" id="card">
+                             <div class="card-per-expo">
+                                 <div class="head-card">
+                                     <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                 </div>
+                                 <div class="body-card">
+                                     <h3 class="nome-expo">${element.nome_marca}</h3>
+                                     <div class="detalhes-expo">
+                                         <p class="para-cate">
+                                             Categoria:
+                                             <span class="span-cate">
+                                                 ${element.descricao}
+                                             </span>
+                                         </p>
+                                         <p class="para-color">
+                                             Rua:
+                                             <span class="span-color ${element.cor_rua}">
+                                                ${element.cor_rua}
+                                             </span>
+                                         </p>
+                                     </div>
+                                     <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     `
+                
+            });
+            
+        }else {
+            content_cards.innerHTML = '<p>Nenhum expositor encontrado</p>'
+    
+        }
+    }else {
+        getExpositores()
     }
 })
 
-let opcoesCategoria = document.getElementById('select-cat')
 
-opcoesCategoria.addEventListener('change', async () => {
-    if (opcoesCategoria.value == 'inicio'){
-        GetExpositores()
+
+////////////// GARREGANDO CATEGORIA \\\\\\\\\\\\\\\\
+
+async function getCategoria(){
+    let dados_categoria = await fetch('../../../actions/action-listar-categoria.php')
+
+    let response = await dados_categoria.json();
+
+    let selectCat = document.getElementById('select-cat')
+
+    selectCat.innerHTML = '<option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>'
+    
+
+    response.dados.forEach(categoria => {
+        selectCat.innerHTML += `<option value="${categoria.descricao}" class="opcoes-cat" id="opcoes_categoria">${categoria.descricao}</option>`
+    });
+
+}
+
+document.addEventListener('DOMContentLoaded', getCategoria)
+
+
+
+////////////// FILTRANDO EXPOSITOR PELA CATAGORIA \\\\\\\\\\\\\
+
+
+let selectFiltro = document.getElementById('select-cat')
+
+selectFiltro.addEventListener('change', async () => {
+    if(selectFiltro.value == 'inicio'){
+        getExpositores()
     }
-    else {
-        let dados = await fetch(`../../../actions/actions-listar-expositor.php?categoria=${opcoesCategoria.value}`)
-    
-        let response = await dados.json()
-    
-        contentCards.innerHTML = ''
-    
-        if (response.status == 200) {
-            response.expositores.forEach(element => {
-                
-                contentCards.innerHTML += `
+
+    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${selectFiltro.value}`);
+
+    let content_cards = document.getElementById('content_cards')
+
+    let response = await dados_expositores.json();
+
+    if (response.status == 200) {
+        content_cards.innerHTML = ''
+        response.expositor.forEach(element => {
+            content_cards.innerHTML += `
                 <div class="sobre_card">
                      <div class="content-card-expo" id="card">
                          <div class="card-per-expo">
                              <div class="head-card">
-                                 <img src="" alt="" class="img-perfil-expo">
+                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                              </div>
                              <div class="body-card">
                                  <h3 class="nome-expo">${element.nome_marca}</h3>
@@ -227,7 +260,8 @@ opcoesCategoria.addEventListener('change', async () => {
                                      </p>
                                      <p class="para-color">
                                          Rua:
-                                         <span class="span-color" style="background-color: ${element.cor_rua};">
+                                         <span class="span-color ${element.cor_rua}">
+                                            ${element.cor_rua}
                                          </span>
                                      </p>
                                  </div>
@@ -237,11 +271,10 @@ opcoesCategoria.addEventListener('change', async () => {
                      </div>
                  </div>
                  `
-            });
-        }
-        else {
-            contentCards.innerHTML = "<p>Nenhum expositor encontrado</p>"
-        }
+            
+        });
+    }else {
+        content_cards.innerHTML = '<p>Nenhum expositor encontrado</p>'
+
     }
-}
-)
+})
