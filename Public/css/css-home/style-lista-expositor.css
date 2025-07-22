@@ -27,6 +27,40 @@
     --color-branca: white;
 }
 
+.amarelo {
+    background-color: var(--color-rua1) !important;
+}
+.laranja {
+    background-color: var(--color-rua2) !important;
+}
+.verde {
+    background-color: var(--color-rua3) !important;
+}
+.roxo {
+    background-color: var(--color-rua4) !important;
+}
+.azul {
+    background-color: var(--color-rua5) !important;
+}
+.cinza {
+    background-color: var(--color-rua6) !important;
+}
+.rosa_escuro {
+    background-color: var(--color-ru7) !important;
+}
+.laranja_lima {
+    background-color: var(--color-rua8) !important;
+}
+.rosa_claro {
+    background-color: var(--color-rua9) !important;
+}
+.preto {
+    background-color: var(--color-rua10) !important;
+}
+.vermelho {
+    background-color: var(--color-rua11) !important;
+}
+
 .content-principal {
     min-height: 50vh;
     padding-top: 10rem;
@@ -45,7 +79,7 @@
 }
 
 .conteiner-expositores {
-    background-color: #a1a1a16e;
+    background-color: rgba(244, 244, 244, 0.637);
     width: 80%;
     height: auto;
     border-radius: .5rem;
@@ -63,7 +97,28 @@
     gap: 1rem;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
-    background-color: #f5f5f5;
+    background-color: #e9e9e9;
+}
+
+.search_expositor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_here {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.input_filtro {
+    border-radius: .5rem;
+    border: none;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: .5rem;
+    width: 20rem;
 }
 
 .all_cards {

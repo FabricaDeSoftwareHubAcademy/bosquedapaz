@@ -216,7 +216,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? "!= 'aprovado'" : "= 'aprovado'");
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA OS EXPOSITORES FILTRADOS 2
+        }else if (isset($_GET['filtrarHome'])){
+            $filtrarExpositor = $expositor->filtrar($_GET['filtrar2'], "= 'validado' and status_pes = 'ativo'");
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
+
+        //// RETORNA TODOS OS EXPOITORES PARA A HOME
+        }else if (isset($_GET['home'])){
+            $filtrarExpositor = $expositor->listar("validacao = 'validado' and status_pes = 'ativo'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 

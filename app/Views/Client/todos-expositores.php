@@ -26,7 +26,7 @@
                     <label class="search_here">procure aqui:</label>
                     <input class="input_filtro" id="input_pesquisa" type="text" placeholder="Pesquisar por...">
                 </div>
-                <select name="input_filtro selecao-categoria" id="select-cat" class="">
+                <select name="selecao-categoria" id="select-cat" class="input_filtro">
                     <option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>
                 </select>
             </div>
