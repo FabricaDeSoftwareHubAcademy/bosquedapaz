@@ -213,6 +213,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "' and validacao = 'aprovado'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
+        }else if (isset($_GET['categoriaHome'])){
+            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoriaHome']. "' and validacao = 'validado' and status_pes = 'ativo'");
+            $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){

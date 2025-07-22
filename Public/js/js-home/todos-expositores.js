@@ -153,7 +153,7 @@ inputFiltro.addEventListener('keyup', async () => {
     
         let content_cards = document.getElementById('content_cards')
     
-        let response = await dados_expositores.text();
+        let response = await dados_expositores.json();
     
         if (response.status == 200) {
             content_cards.innerHTML = ''
@@ -206,6 +206,75 @@ inputFiltro.addEventListener('keyup', async () => {
 async function getCategoria(){
     let dados_categoria = await fetch('../../../actions/action-listar-categoria.php')
 
-    let response = aw
+    let response = await dados_categoria.json();
+
+    let selectCat = document.getElementById('select-cat')
+
+    selectCat.innerHTML = '<option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>'
+    
+
+    response.dados.forEach(categoria => {
+        selectCat.innerHTML += `<option value="${categoria.descricao}" class="opcoes-cat" id="opcoes_categoria">${categoria.descricao}</option>`
+    });
+
 }
 
+document.addEventListener('DOMContentLoaded', getCategoria)
+
+
+
+////////////// FILTRANDO EXPOSITOR PELA CATAGORIA \\\\\\\\\\\\\
+
+
+let selectFiltro = document.getElementById('select-cat')
+
+selectFiltro.addEventListener('change', async () => {
+    if(selectFiltro.value == 'inicio'){
+        getExpositores()
+    }
+
+    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${selectFiltro.value}`);
+
+    let content_cards = document.getElementById('content_cards')
+
+    let response = await dados_expositores.json();
+
+    if (response.status == 200) {
+        content_cards.innerHTML = ''
+        response.expositor.forEach(element => {
+            content_cards.innerHTML += `
+                <div class="sobre_card">
+                     <div class="content-card-expo" id="card">
+                         <div class="card-per-expo">
+                             <div class="head-card">
+                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                             </div>
+                             <div class="body-card">
+                                 <h3 class="nome-expo">${element.nome_marca}</h3>
+                                 <div class="detalhes-expo">
+                                     <p class="para-cate">
+                                         Categoria:
+                                         <span class="span-cate">
+                                             ${element.descricao}
+                                         </span>
+                                     </p>
+                                     <p class="para-color">
+                                         Rua:
+                                         <span class="span-color ${element.cor_rua}">
+                                            ${element.cor_rua}
+                                         </span>
+                                     </p>
+                                 </div>
+                                 <button class="btn-ver-info" data-modal="m-per-expo" id="saiba-mais" onClick="chamarModalExpositor(${element.id_expositor})">Ver Mais</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 `
+            
+        });
+    }else {
+        content_cards.innerHTML = '<p>Nenhum expositor encontrado</p>'
+
+    }
+})
