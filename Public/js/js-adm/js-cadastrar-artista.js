@@ -8,11 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnModalCancelar = document.getElementById("btn-modal-cancelar");
   const btnModalSalvar = document.getElementById("btn-modal-salvar");
 
-  // Quando clicar no botão salvar do formulário, só abre o modal de confirmação
   btnSalvar.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // Verificação básica dos campos obrigatórios (opcional repetir aqui)
     const nome = form.querySelector('[name="nome"]').value.trim();
     const email = form.querySelector('[name="email"]').value.trim();
     const telefone = form.querySelector('[name="whats"]').value.trim();
@@ -26,16 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Abre o modal de confirmação
     modalConfirmar.showModal();
   });
 
-  // Botão cancelar do modal confirmação: só fecha o modal
   btnModalCancelar.addEventListener("click", () => {
     modalConfirmar.close();
   });
 
-  // Botão salvar do modal confirmação: fecha modal e envia formulário
   btnModalSalvar.addEventListener("click", async () => {
     modalConfirmar.close();
 
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Fecha qualquer modal ao clicar no X
   const fecharModais = document.querySelectorAll(".fechar-modal-loading");
   fecharModais.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -72,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Máscara para telefone (fora do DOMContentLoaded para garantir execução)
 const telefoneInput = document.getElementById('whats');
 telefoneInput.addEventListener('input', function (e) {
   let valor = e.target.value;
