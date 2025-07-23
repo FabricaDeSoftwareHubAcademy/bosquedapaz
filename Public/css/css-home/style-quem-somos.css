@@ -283,34 +283,34 @@
     padding-right: 10%;
 }
 
-.botao-expositor {
-    width: 100%;
-}
-.div-botao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 150px;
-    padding-bottom: 10%;
-    margin-bottom: 100px;
-}
+  /*  .botao-expositor {
+        width: 100%;
+    }
+    .div-botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+        padding-bottom: 10%;
+        margin-bottom: 100px;
+    }
 
-.div-botao .botao-expositor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    height: 60px;
-    background-color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
-    border-radius: 10px;
-    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
-    background-size: 500% 100%;
-    animation: degrade-animado 10S infinite alternate;
-}
+    .div-botao .botao-expositor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        height: 60px;
+        background-color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+        border-radius: 10px;
+        background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
+        background-size: 500% 100%;
+        animation: degrade-animado 10S infinite alternate;
+    }
 
 
 
@@ -319,6 +319,40 @@
     background-clip: none;
     -webkit-background-clip: text;
     text-decoration: none;
+}*/
+
+.div-botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.div-botao .botao-expositor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    background-color: #ffffff;
+    text-decoration: none;
+   
+}
+.div-botao .botao-expositor .botao{
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    border-radius: 10px;
+    background-clip: none;
+    -webkit-background-clip: text;
+    
+    text-transform: uppercase;
+    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
+    background-size: 500% 100%;
+
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .galeria{
@@ -381,21 +415,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 110px;
+    margin-top: 10px;
   }
 
 
 
 
-  @media(max-width:1100px){
+  @media(max-width:1700px){
     .section-imagens-flutuantes-quem-somos{
-        padding-top: 0%;
+        padding-top: 20%;
     }
+
     
   }
   @media(max-width:850px){
     .section-imagens-flutuantes-quem-somos{
-        padding-top: 10%;
+        padding-top: 20%;
     }
 
   }
@@ -407,6 +442,7 @@
             margin-bottom: 0px;
             margin-top: 150px;
         }
+
 
         .carrossel-imagens {
             column-count: 2;
@@ -425,11 +461,12 @@
             
           }
           .section-fotos-expositor-quem-somos{
-            margin-top: 40%;
+            margin-top: 10%;
           }
           .section-imagens-flutuantes-quem-somos{
             padding-top: 10%;
           }
+         
         }
 
         @media(max-width:600px){
@@ -438,6 +475,7 @@
             }
             .section-introducao-quem-somos .titulo-descricao-principal .descricao{
                 font-size: 1.1rem;
+
             }
             .titulo-veja-mais-fotos .h1-quinto{
                 font-size: 2rem;
@@ -445,6 +483,7 @@
                 padding-right: 5%;
 
             }
+         
             .titulo-nossa-historia-quem-somos .h1-secundario{
                 font-size: 2.5rem;
                 display: flex;
@@ -452,7 +491,7 @@
                 align-items: center;
                 text-align: center;
                 margin-left: 10%;
-                margin-top: 20%;
+                margin-top: -10%;
                 margin-right: 10%;
             }
             .descricao-fluxo{
@@ -470,6 +509,7 @@
         @media(max-width:650px){
             .section-imagens-flutuantes-quem-somos{
                 padding-top: 30%;
+
             }
 
         }
@@ -546,18 +586,21 @@
             width: 100%;
             font-size: 12px;
         }
+        .section-fotos-expositor-quem-somos{
+            margin-top: -10%;
+        }
         .div-botao{
             width: 100%;
         }
     }
 
     @media(max-width:400px){
-        .titulo-descricao-principal h1{
-            font-size: 1.8rem; 
+        .section-introducao-quem-somos .titulo-descricao-principal h1{
+            font-size: 1.7rem; 
         }
         
         .section-imagens-flutuantes-quem-somos{
-            margin-top: 15%;
+            margin-top: 40%;
         }
         .titulo-nossa-historia-quem-somos .h1-secundario{
             font-size: 1.7rem;
@@ -590,7 +633,7 @@
             margin-top: 50px;
          }
          .galeria{
-            margin-top: 5%;
+            margin-top: -15%;
          }
          .titulo-veja-mais-fotos .h1-quinto{
             font-size: 1.5rem;
@@ -598,6 +641,10 @@
             margin-bottom: 50px;
 
         }
+        .section-fotos-expositor-quem-somos{
+            margin-top: 10%;
+        }
+        
          
             
     }

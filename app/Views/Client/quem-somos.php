@@ -113,7 +113,7 @@
 
         </div>
     </section>
-        <section class="section-expositor-quem-somos">
+    <section class="section-expositor-quem-somos">
             <div class="expositor-div">
                 <div class="expositor">
                     <h1 class="h1-quartenario">SEJA UM EXPOSITOR</h1>
@@ -130,24 +130,22 @@
                 </div>
                 </a>-->
             </div>
+            <div class="div-botao">
+                <a class="botao-expositor" href="#">
+                    <div class="botao">
+                        CLIQUE AQUI!
+           
+                    </div>
+            </a>
+        </div>
         </section>
+
 
         <section class="section-descricao-expositor-quem-somos">
                 <div class="expositor-p">
                     <p class="descricao4 dark">Mostre todo o seu talento na nossa feira e conquiste o reconhecimento que você merece! Acesse o botão abaixo, faça seu cadastro agora mesmo e aproveite essa oportunidade única de apresentar seu trabalho para um público engajado e animado. Não deixe essa chance passar, destaque-se e faça parte desse grande evento!</p>
                
                 </div>
-
-
-                <div class="div-botao">
-                        <a class="botao-expositor" href="#">
-                            <div class="botao">
-                                CLIQUE AQUI!
-                   
-                            </div>
-                    </a>
-                </div>
-
         </section>
 
         <section class="section-fotos-expositor-quem-somos">
