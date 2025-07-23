@@ -29,7 +29,7 @@
                 <form method="POST" action="../../../actions/action-procurar-expositor-boleto.php" class="search">
                     <input type="text" name="pesquisar-nome" id="searchInput" placeholder="Pesquisar por expositor...">
                     <label for="searchInput" class="label">
-                        <button type="submit" name="botao-procurar" class="botao-procurar material-symbols-outlined" id="lupa"> search </button>
+                        <button type="submit" name="botao-procurar" class="botao-procurar material-symbols-outlined" id="lupa"> Search </button>
                     </label>
                 </form>
             </div>
@@ -40,12 +40,12 @@
                     <div class="input">
                         <label class="label" for="expositor">Expositor:</label>
                         <input type="hidden" name="id-expositor">
-                        <input type="text" name="nome_exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" required>
+                        <input type="text" name="nome_exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" maxlength="50" required>
                     </div>
 
                     <div class="input">
                         <label for="cnpj-cpf" class="label">CPF:</label>
-                        <input type="text" name="cpf_input" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00" required>
+                        <input type="text" name="cpf_input" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00" maxlength="14" required>
                     </div>
 
                     <div class="input">
