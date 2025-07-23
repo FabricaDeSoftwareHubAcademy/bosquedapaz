@@ -130,14 +130,15 @@
                 </div>
                 </a>-->
             </div>
+            
             <div class="div-botao">
                 <a class="botao-expositor" href="#">
                     <div class="botao">
                         CLIQUE AQUI!
            
                     </div>
-            </a>
-        </div>
+                </a>
+            </div>
         </section>
 
 
