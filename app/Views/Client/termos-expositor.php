@@ -57,7 +57,7 @@
                 
                 <div id="modal-erro" class="modal-erro" style="display: none;">
                     <div class="modal-conteudo">
-                        <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+                        <span class="fechar-modal">&times;</span>
                         <p>Você deve aceitar os termos antes de continuar.</p>
                     </div>
                 </div>
