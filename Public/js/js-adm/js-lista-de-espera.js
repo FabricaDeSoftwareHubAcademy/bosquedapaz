@@ -12,9 +12,9 @@ async function carrega_expositor() {
             response.expositor.forEach(element => {
                 tbody.innerHTML += `
                 <tr>
-                    <td>${element.nome}</td>
+                    <td class="nome">${element.nome}</td>
                     <td class="email">${element.email}</td>
-                    <td>${element.descricao}</td>
+                    <td>${element.nome_marca}</td>
                     <td>${element.telefone}</td>
                     <td class="perfil">
                         <a href="validar-expositor.php?expositor=${encodeURIComponent(element.id_expositor)}">

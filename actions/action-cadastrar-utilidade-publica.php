@@ -4,12 +4,15 @@ use app\Controller\UtilidadePublica;
 
 // Verifica se é uma requisição POST
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-    $id_utilidadePublica = $_POST['id_utilidadePublica'] ?? null;
     $titulo = $_POST['titulo'] ?? '';
     $descricao = $_POST['descricao'] ?? '';
     $data_inicio = $_POST['data_inicio'] ?? '';
     $data_fim = $_POST['data_fim'] ?? '';
     $imagem = '';
+    
+    if ($titulo === '') {
+        echo json_encode('Erro ao Cadastrar!');
+    }
 
     // Verifica se o arquivo foi enviado
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
@@ -20,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 
         if (in_array($extensao, $permitidas)) {
             $novo_nome = uniqid();
-            $pasta = '../Public/imgs/uploads-utilidade/'; // Altere o caminho se necessário
+            $pasta = '../Public/uploads/uploads-utilidade/'; // Altere o caminho se necessário
             $caminho = $pasta . $novo_nome . '.' . $extensao;
 
             // Cria o diretório se não existir
@@ -47,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $utilidadePublica->data_inicio = $data_inicio;
     $utilidadePublica->data_fim = $data_fim;
     $utilidadePublica->imagem = $imagem;
+    $utilidadePublica->status_utilidade = 1;
 
     if ($utilidadePublica->cadastrar()) {
         // Redirecionamento ou resposta de sucesso

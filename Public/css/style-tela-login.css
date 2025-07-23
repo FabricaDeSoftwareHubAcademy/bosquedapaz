@@ -14,15 +14,17 @@
 .body-login,html{
     overflow: hidden;
     overflow-x: hidden;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #e1e1e1;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
  
-.section-principal-login{
+/* .section-principal-login{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -32,68 +34,62 @@
     padding: 0;
     overflow: hidden;
     position: relative;
-}
+} */
  
-.img-superior-direita{
+.img-superior-direita, .img-superior-esquerda, .img-inferior-direita, .img-inferior-esquerda{
     position: absolute;
-    right: 0%;
-    top: 8vw;
-}
-
-.img-superior-esquerda{
-    position: absolute;
-    left: 0vw;
-    top: 6vw;
 }
 
 .img-inferior-direita{
-    position: absolute;
-    right: 0%;
-    bottom: 0%;
-}
-
-.img-inferior-direita .imgg-inferior-direita{
-    display: flex;
+    right: 0;
+    bottom: 0;
 }
 
 .img-inferior-esquerda{
-    position: absolute;
-    left: 0vw;
-    bottom: 0%;
+    left: 0;
+    bottom: 0;
 }
 
-.img-inferior-esquerda .imgg-inferior-esquerda{
-    display: flex;
+.img-superior-direita{
+    right: 0;
+    top: 10%;
+}
+
+.img-superior-esquerda{
+    left: 0;
+    top: 20%;
 }
  
 .botao-voltar{
+    margin-left: 1%;
     display: flex;
-    position: relative;
-    top: 95%;
+    top: 100%;
+    position: sticky;
+    align-self: flex-start;
+    /* background-color: red; */
 }
  
 .box-login{
     width: 85%;
-    height: 800px;
+    height: 83%;
     backdrop-filter: blur(0px);
     background-color: rgba(248, 245, 246, 0.705);
     border-radius: 15px;
-    display: flex;
-    align-items: self-start;
-    justify-content: space-between;
     transition: all .5s ease;
-    will-change: transform;
-    box-sizing: border-box;
+    /* will-change: transform; */
+    /* box-sizing: border-box; */
     padding: 20px;
     z-index: 3;
-    #linha-login{
-        height: 82%;
-        position: fixed;
-        border-right: 1.5px solid #ec6a93;
-        left: 50%;
-        border-radius: 20px;
-        margin-top: 60px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#linha-login{
+    height: 82%;
+    position: fixed;
+    border-right: 1.5px solid #ec6a93;
+    border-radius: 20px;
 }
  
 .box-login:hover{
@@ -106,16 +102,18 @@
 }
  
 .area-form-login{
-    position: absolute;
-    left: 12%;
-    top: 20%;
-    width: 27%;
-    height: 65%;
+    right: 1%;
+    border-radius: 15px;
+    width: 50%;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 3em;
+    /* background-color: rgba(255, 0, 0,0.1); */
 }
 
 .recsenha-modal{
@@ -183,28 +181,31 @@
 }
  
 .forms-login{
-    width: 100%;
+    /* background-color: lime; */
+    height: 50%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms-login label{
+    display: flex;
+    align-self: flex-start;
+    text-align: left;
 }
  
 .forms-login input{
     height: 39px;
 }
- 
-.area-img-login{
-    width: 50%;
-    height: 800px;
-    background-color: #3fff3800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .img-dog{
+    display: flex;
+    justify-content: flex-end;
     transition: ease .5s;
     width: 49%;
-    top: 50%;
-    
+    /* background-color: red; */
 }
 
 .img-dog:hover{
@@ -213,9 +214,8 @@
 }
  
 .area-img-login-h1-tiago{
-    font-weight: 600;
+   font-weight: 600;
    font-size: 45px;
-   margin-bottom: 28%;
    position: relative;
 }
  
@@ -223,33 +223,38 @@
     width: 100%;
     height: 50px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 10px; */
+    /* box-sizing: border-box; */
 }
  
-.area-input-login i{
+.area-input-login .bi-envelope, .bi-lock{
     position: absolute;
-    left: 20px;
-    top: 45%;
-    transform: translateY(-50%);
+    left: 10px;
+}
+
+.area-input-login .fa-eye, .fa-eye-slash{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
 }
  
 .input-login {
-    width: 95%;
-    height: 35px;
+    width: 100%;
+    height: fit-content;
     border: none;    
     border-radius: 6px;
     padding-left: 35px;        
     padding-right: 50px;        
     box-shadow: 2px 2px 4px 1px #162868;
-    margin-top: 5px;  
     font-size: 14px;
-    margin-left: 8px;
     text-decoration: none;
     outline: none;
     border-width: 0 0.5px 0.5px 0;
     border-style: solid;
     border-color: #162868;
+    box-sizing: border-box;
 }
  
 .botao-login{
@@ -291,6 +296,7 @@
  
 .div-esqueceu-senha-login{
     position: relative;
+    align-self: flex-end;
 }
  
 .div-esqueceu-senha-login .esqueceu-a-senha-p{
@@ -309,39 +315,37 @@
 
 @media (max-width:575.98px){
 
+    .box-login{
+        height: 90%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     #linha-login{
         display: none;
     }
 
-    .area-img-login {
-        display: none;
-    }
-
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
-        display: flex;
         width: 120px;
         height: 120px;
-    }
-
-    .img-superior-direita{
+        display: flex;
         width: fit-content;
     }
 
-    .box-login{
-        justify-content: center;
-        display: flex;
-        height: 90%;
-        position: fixed;
+    .area-form-login{
+        height: 100%;
+        width: 100%;
+    }
+
+    .forms-login{
         width: 90%;
     }
 
-    .area-form-login{
-        left: 10%;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: 80%;
-        top: 3%;
+    .img-dog{
+        display: none;
     }
 
     .recsenha-modal{
@@ -365,231 +369,92 @@
         margin-right: 5%;
     }
 
-    .botao-login{
-        display: flex;
-        right: 2%;
-    }
-
-    .forms-login{
-        width: 100%;
-    }
-
-    .img-dog{
-        display: none;
-    }
-
-    .div-esqueceu-senha-login{
-        display: flex;
-        flex-direction: column;
-        width: 170px;
-        left: 22%;
-    }
-
     .botao-voltar{
-        display: flex;
-        right: 45%;
+        bottom: 2%;
+        left: 6%;
     }
 }
 
 @media (min-width:576px){
-
-    .area-form-login{
-        width: 43%;
-        position: absolute;
-        top: 11%;
-        left: 4%;
-        box-sizing: border-box;
-    }
-
-    .recsenha-modal{
-        width: 70vw;
-        height: 20vh;
-    }
-
-    .modal-text{
-        margin-left: 5%;
-        margin-right: 5%;
+    .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
+        width: 210px;
     }
 
     .forms-login{
-        width: 100%;
-    }
-
-    .div-esqueceu-senha-login{
-        left: 20%;
-    }
-
-    .img-dog{
-        top: 27%;
-        position: relative;
-        width: 50%;
-        left: 2%;
+        width: 90%;
     }
 }
 
 @media (min-width:768px){
-
     .img-inferior-direita, .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
-        width: 150px;
-        height: 150px;
-        height: fit-content;
-        width: fit-content;
-    }
-
-    .area-form-login{
-        top: 10%;
-        left: 4%;
-        position: fixed;
-        box-sizing: border-box;
-    }
-
-    .recsenha-modal{
-        width: 65vw;
-        height: 20vh;
-    }
-
-    .modal-text{
-        font-size: 17px;
-    }
-
-    .modal-title{
-        font-size: 20px;
+        width: 210px;
     }
 
     .forms-login{
-        width: 100%;
-    }
-
-    .box-login{
-        height: 80%;
+        width: 90%;
     }
 
     .img-dog{
-        left: 1%;
-        top: 26%;
-        position: relative;
         width: 50%;
-    }
-
-    .div-esqueceu-senha-login{
-        left: 20%;
     }
 }
 
 @media (min-width:992px){
-
-    .area-form-login{
-        width: 43%;
+    .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
+        width: 170px;
     }
 
-    .img-dog{
-        top: 27%;
+    .img-inferior-direita{
+        width: 210px;
     }
 
+    .forms-login{
+        width: 80%;
+    }
 }
 
 @media (width: 1024px) and (height: 600px){
 
-    #linha-login{
-        display: flex;
-        position: absolute;
-        height: 80%;
-        bottom: 9%;
-    }
-
-    .imgg-inferior-direita, .imgg-inferior-esquerda, .imgg-superior-direita, .imgg-superior-esquerda{
-        width: 150px;
-        height: auto;
-    }
-
-    .box-login{
-        height: 90%;
-    }
-
-    .recsenha-modal{
-        width: 60vw;
-        height: 40vh;
-    }
-
-    .img-dog{
-        top: 10%;
-    }
-
-    .area-img-login-h1-tiago{
-        margin-bottom: 14%;
-    }
-
-    .div-esqueceu-senha-login{
-        left: 26%;
-    }
+    
 }
 
 @media (min-width:1200px){
+    .img-inferior-esquerda, .img-superior-direita, .img-superior-esquerda{
+        width: 180px;
+    }
 
-    .area-form-login{
-        width: 40%;
-        left: 5%;
-        box-sizing: border-box;
+    .img-inferior-direita{
+        width: 220px;
     }
 
     .forms-login{
-        width: 100%;
-    }
-
-    .box-login{
-        height: 90%;
-    }
-
-    .recsenha-modal{
-        height: 30vh;
-        width: 50vw;
-    }
-
-    .recsenha-modal{
-        height: 30vh;
-        width: 50vw;
-    }
-
-    .img-dog{
-        top: 9%;
-    }
-
-    .div-esqueceu-senha-login{
-        left: 28%;
+        width: 70%;
     }
 }
 
 @media (min-width:1400px){
-    .box-login{
-        height: 83%;
+
+    .img-superior-direita{
+        width: 233px;
     }
 
-    .area-form-login{
-        top: 10%;
-        width: 30%;
-        left: 10%;
+    .img-superior-esquerda{
+        width: 189px;
     }
 
-    .recsenha-modal{
-        width: 30vw;
-        height: 25vh;
-    }
-    
-    .forms-recsenha{
-        height: 250px;
-        width: 100%;
+    .img-inferior-esquerda{
+        width: 193px;
     }
 
-    .recsenha-modal{
-        width: 30vw;
-        height: 25vh;
+    .img-inferior-direita{
+        width: 335px;
+    }
+
+    .forms-login{
+        width: 60%;
     }
 
     .img-dog{
-        top: 0%;
-    }
-
-    .div-esqueceu-senha-login{
-        left: 29%;
+        width: 49%;
     }
 }

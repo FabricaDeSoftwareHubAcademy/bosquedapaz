@@ -1,53 +1,84 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("form-artista");
-    const btnSalvar = document.getElementById("btn-salvar");
-    const modalSucesso = document.getElementById("modal-sucesso");
-    const modalErro = document.getElementById("modal-error");
+  const form = document.getElementById("form-artista");
+  const btnSalvar = document.getElementById("btn-salvar");
+  const modalConfirmar = document.getElementById("modal-confirmar");
+  const modalSucesso = document.getElementById("modal-sucesso");
+  const modalErro = document.getElementById("modal-error");
 
-    btnSalvar.addEventListener("click", async (e) => {
-        e.preventDefault();
+  const btnModalCancelar = document.getElementById("btn-modal-cancelar");
+  const btnModalSalvar = document.getElementById("btn-modal-salvar");
 
-        // Verificação básica dos campos obrigatórios
-        const nome = form.querySelector('[name="nome"]').value.trim();
-        const email = form.querySelector('[name="email"]').value.trim();
-        const telefone = form.querySelector('[name="whats"]').value.trim();
-        const nomeArtistico = form.querySelector('[name="nome_artistico"]').value.trim();
-        const linguagemArtistica = form.querySelector('[name="linguagem_artistica"]').value.trim();
-        const valorCache = form.querySelector('[name="valor_cache"]').value.trim();
-        const publicoAlvo = form.querySelector('[name="publico_alvo"]').value.trim();
+  btnSalvar.addEventListener("click", (e) => {
+    e.preventDefault();
 
-        if (!nome || !email || !telefone || !nomeArtistico || !linguagemArtistica || !valorCache || !publicoAlvo) {
-            return;
-        }
+    const nome = form.querySelector('[name="nome"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const telefone = form.querySelector('[name="whats"]').value.trim();
+    const nomeArtistico = form.querySelector('[name="nome_artistico"]').value.trim();
+    const linguagemArtistica = form.querySelector('[name="linguagem_artistica"]').value.trim();
+    const valorCache = form.querySelector('[name="valor_cache"]').value.trim();
+    const publicoAlvo = form.querySelector('[name="publico_alvo"]').value.trim();
 
-        const formData = new FormData(form);
+    if (!nome || !email || !telefone || !nomeArtistico || !linguagemArtistica || !valorCache || !publicoAlvo) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
 
-        try {
-            const resposta = await fetch("../../../actions/actions-cadastrar-artista.php", {
-                method: "POST",
-                body: formData
-            });
+    modalConfirmar.showModal();
+  });
 
-            const resultado = await resposta.json();
-            console.log("Resultado:", resultado);
+  btnModalCancelar.addEventListener("click", () => {
+    modalConfirmar.close();
+  });
 
-            if (resultado.status === 200 || resultado.status === "sucesso") {
-                form.reset();
-                modalSucesso.showModal();
-            } else {
-                modalErro.showModal();
-            }
-        } catch (erro) {
-            console.error("Erro na requisição:", erro);
-            modalErro.showModal();
-        }
+  btnModalSalvar.addEventListener("click", async () => {
+    modalConfirmar.close();
+
+    const formData = new FormData(form);
+
+    try {
+      const resposta = await fetch("../../../actions/actions-cadastrar-artista.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const resultado = await resposta.json();
+      console.log("Resultado:", resultado);
+
+      if (resultado.status === 200 || resultado.status === "sucesso") {
+        form.reset();
+        modalSucesso.showModal();
+      } else {
+        modalErro.showModal();
+      }
+    } catch (erro) {
+      console.error("Erro na requisição:", erro);
+      modalErro.showModal();
+    }
+  });
+
+  const fecharModais = document.querySelectorAll(".fechar-modal-loading");
+  fecharModais.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modal = btn.closest("dialog");
+      if (modal) modal.close();
     });
+  });
+});
 
-    const fecharModais = document.querySelectorAll(".fechar-modal-loading");
-    fecharModais.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const modal = btn.closest("dialog");
-            if (modal) modal.close();
-        });
-    });
+const telefoneInput = document.getElementById('whats');
+telefoneInput.addEventListener('input', function (e) {
+  let valor = e.target.value;
+  valor = valor.replace(/\D/g, '');
+  valor = valor.substring(0, 11);
+  if (valor.length > 0) {
+    valor = '(' + valor;
+  }
+  if (valor.length > 3) {
+    valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+  }
+  if (valor.length > 10) {
+    valor = valor.slice(0, 10) + '-' + valor.slice(10);
+  }
+  e.target.value = valor;
 });

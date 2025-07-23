@@ -18,6 +18,10 @@ try {
     if (!$dados) {
         echo json_encode(["erro" => "Parceiro não encontrado."]);
     } else {
+        // Ajusta caminho da logo para o front
+        if (!empty($dados['logo'])) {
+            $dados['logo'] = '../Public/uploads/uploads-parceiros/' . basename($dados['logo']);
+        }
         echo json_encode($dados);
     }
 

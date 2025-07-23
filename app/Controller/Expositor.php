@@ -73,14 +73,11 @@ class Expositor extends Pessoa
                 'num_barraca' => $this->num_barraca,
                 'voltagem' => $this->voltagem,
                 'energia' => $this->energia,
-                'modalidade' => $this->modalidade,
                 'tipo' => $this->tipo,
-                'idade' => $this->idade,
                 'contato2' => $this->contato2,
                 'descricao' => $this->descricao,
                 'metodos_pgto' => $this->metodos_pgto,
                 'cor_rua' => $this->cor_rua,
-                'responsavel' => $this->responsavel,
                 'produto' => $this->produto
                 ]
             );

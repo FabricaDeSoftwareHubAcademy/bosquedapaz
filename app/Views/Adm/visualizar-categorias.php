@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-categorias.css">
-    <title>Adm - Visualizar Categorias</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-visualizar-categoria.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body class="corpo">
@@ -102,7 +104,7 @@
                 </dialog>
             </div>
             <div class="btns">
-                <a href="Area-Adm.php" class="voltar">
+                <a href="./" class="voltar">
                     <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
                 </a>
             </div>

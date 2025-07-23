@@ -1,9 +1,8 @@
-const headElementConfirm  = document.getElementsByTagName('head')[0];
 const linkConfirm  = document.createElement('link');
 linkConfirm.rel  = 'stylesheet';
 linkConfirm.type = 'text/css';
 linkConfirm.href = '../../../Public/css/css-modais/style-modal-confirmar.css';
-headElementConfirm.appendChild(linkConfirm);
+document.getElementsByTagName('head')[0].appendChild(linkConfirm);
 
 function openModalConfirmar() {
     let modal = document.getElementById('modal-confirmar')

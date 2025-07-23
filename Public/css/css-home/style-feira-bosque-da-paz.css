@@ -28,6 +28,8 @@
     --color-edit-pass: #FFFFFF;
     --color-ulti-publi: #5CB748;
     --color-fundo-verde: #5EB64A;
+
+    --o-transition: all .2s ease-in-out;
 }
 
 * {

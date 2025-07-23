@@ -1,9 +1,8 @@
-const headElementSuscess  = document.getElementsByTagName('head')[0];
 const linkSuscess  = document.createElement('link');
 linkSuscess.rel  = 'stylesheet';
 linkSuscess.type = 'text/css';
 linkSuscess.href = '../../../Public/css/css-modais/style-modal-sucesso.css';
-headElementSuscess.appendChild(linkSuscess);
+document.getElementsByTagName('head')[0].appendChild(linkSuscess);
 
 
 function openModalSucesso() {

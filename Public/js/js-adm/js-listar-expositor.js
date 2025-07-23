@@ -5,6 +5,7 @@ async function getExpositor() {
     let dados = await fetch('../../../actions/actions-expositor.php');
 
     let expositores = await dados.json();
+    console.log(expositores)
 
     if (expositores.status == 200){
         tBody.innerHTML = ''
@@ -16,12 +17,13 @@ async function getExpositor() {
             <tr>
             <td class="usuario-col">${expositor.id_expositor}</td>
             <td>${expositor.nome}</td>
-            <td class="email-col">${expositor.email}</td>
+            <td>${expositor.nome_marca}</td>
+            <td class="email-col" style="overflow-x: auto;">${expositor.email}</td>
             <td class="fone-col">${expositor.telefone}</td>
             <td class="barraca-col">${expositor.num_barraca}</td>
             <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_pessoa}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
             <td>
-                <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
+                <a class="edit-icon" href="editar-expositor.php?id=${expositor.id_expositor}">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a>
             

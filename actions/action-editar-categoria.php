@@ -49,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Cria um nome de arquivo único e seguro para evitar conflitos
-        $nomeSeguro = uniqid('categoria_', true) . '.' . $extensao;
+        $nomeSeguro = uniqid('cat_', true) . '.' . $extensao;
         $caminhoTemporario = $_FILES['icone']['tmp_name'];
-        $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-categorias/';
+        $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-categoria/';
         $destino = $diretorioDestino . $nomeSeguro;
 
         // Cria o diretório de uploads se ele não existir
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             
             // Define o caminho do novo ícone para salvar no banco
-            $categoriaController->setIcone('uploads/uploads-categorias/' . $nomeSeguro);
+            $categoriaController->setIcone('uploads/uploads-categoria/' . $nomeSeguro);
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Erro ao salvar o novo ícone.']);
             exit;

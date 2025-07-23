@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +8,7 @@
     <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-fotos-evento.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">    
 </head>
 
 <body>
@@ -24,24 +25,17 @@
 
                         <div class="input-group">
                             <label for="fotos">Selecione as fotos (JPG, PNG, JPEG):</label>
-                            <input type="file" id="fotos" name="fotos[]" multiple accept=".jpg, .jpeg, .png" required>
+                            <input type="file" id="fotos" name="fotos[]" multiple >
                         </div>
 
                         <div class="preview-galeria" id="preview-galeria"></div>
 
-                        <div class="botoes">
-                            <a href="./gerenciar-evento.php" class="btn btn-cancelar">Cancelar</a>
-                            <button type="submit" class="btn btn-salvar">Enviar Fotos</button>
-                        </div>
+                        <?php include '../../../Public/include/Butons-forms.html';?>
                     </form>
                 </div>
 
                     
-                <div class="btns">
-                    <a href="gerenciar-eventos.php" class="voltar">
-                        <img src="../../../Public/assets/icons/voltar.png" alt="Botão de voltar" class="btn-voltar">
-                    </a>                  
-                </div>
+
         </div>
         
     </main>

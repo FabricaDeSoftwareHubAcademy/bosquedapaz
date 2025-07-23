@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bloco principal -->
-    <title>Gerenciar Expositor</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-validar-expositor.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -58,30 +58,25 @@
                             <label for="">Cidade</label>
                             <input type="text" name="" id="cidade" class="formulario-campo-informacao" readonly>
 
-                            <label for="">Instagram</label>
-                            <a class="formulario-campo-informacao campo-link" target="_blank" id="intagram"> </a>
                         </div>
-
+                        
                         <!-- Campos inferior -->
                         <div class="campos-formulario">
-                            <label for="">Modalidade</label>
-                            <input type="text" name="" id="modalidade" class="formulario-campo-informacao" readonly>
-
+                            
                             <label for="">Tipo de exposição</label>
                             <input type="text" name="" id="exposicao" class="formulario-campo-informacao" readonly>
-
+                            
                             <label for="">Energia</label>
                             <input type="text" name="" id="energia" class="formulario-campo-informacao" readonly>
-
+                            
                             <label for="">Voltagem</label>
                             <input type="text" name="" id="voltagem" class="formulario-campo-informacao" readonly>
-
-                            <label for="">Endereço</label>
-                            <input type="text" name="" id="endereco" class="formulario-campo-informacao" readonly>
-
+                            
+                            <label for="">Instagram</label>
+                            <a class="formulario-campo-informacao campo-link" target="_blank" id="intagram"> </a>
+                            
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="categoria" class="formulario-campo-informacao" readonly>
-                            <button class="alterar-categoria">Alterar Categoria</button>
+                            <select name="categoria" id="categoria" class="formulario-campo-informacao"></select>
                         </div>
                     </div>
 
@@ -117,11 +112,17 @@
             <input type="number" name="num_barraca" class="input" id="numBarraca">
             <label class="title-recusar">Cor da rua: </label>
             <select name="cor_rua" class="input" id="corRua">
-                <option value="verde">verde</option>
-                <option value="azul">azul</option>
                 <option value="amarelo">amarelo</option>
                 <option value="laranja">laranja</option>
-                <option value="rosa">rosa</option>
+                <option value="verde">verde</option>
+                <option value="roxo">roxo</option>
+                <option value="azul">azul</option>
+                <option value="cinza">cinza</option>
+                <option value="rosa_claro">rosa claro</option>
+                <option value="rosa_escuro">rosa escuro</option>
+                <option value="laranja_lima">laranja lima</option>
+                <option value="preto">preto</option>
+                <option value="vermelho">vermelho</option>
             </select>
             <div class="content-btns">  
                 <button type="button" class="btn-modal-confirmar btn-validar-cancelar" id="btn-BarracaRua-cancelar">Cancelar</button>

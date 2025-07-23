@@ -66,12 +66,15 @@ async function menuAdm() {
         });
         
         const text = await response.json();
-        // console.log('Resposta bruta do servidor:', text);
 
         let imgLogin = document.querySelectorAll('#img-login');
 
         imgLogin.forEach(element => {
-            element.src = '../../../' + text.data.img_perfil;
+            if (text.data.img_perfil == null){
+                element.src = '../../../Public/assets/MOCA.png';
+            }else {
+                element.src = '../../../' + text.data.img_perfil;
+            }
         });
 
 
@@ -124,5 +127,7 @@ issoMesmo.addEventListener('mouseleave', () => {
     contentOpcoesMenu.addEventListener('mouseover', () => {
         contentOpcoesMenu.classList.add('open-opcoes-menu')
     })
-    contentOpcoesMenu.classList.remove('open-opcoes-menu')    
+    setTimeout(() => {
+        contentOpcoesMenu.classList.remove('open-opcoes-menu')    
+    }, 1000)
 })

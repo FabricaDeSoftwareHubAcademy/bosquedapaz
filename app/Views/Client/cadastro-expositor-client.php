@@ -7,10 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adm - Bosque da Paz</title>
+    <title>Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-home/style-cadastrar-expositor.css">
-
-    <!-- <link rel="stylesheet" href="../../../Public/css/css-adm/teste.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 </head>
 

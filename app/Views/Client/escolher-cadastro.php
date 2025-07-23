@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link rel="stylesheet" href="../../../Public/css/css-home/style-escolher-cadastro.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Bosque da Paz</title>
 </head>
 <!-- Corpo da Tela -->
 <body>

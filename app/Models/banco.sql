@@ -22,6 +22,16 @@ CREATE TABLE endereco(
     PRIMARY KEY(id_endereco)
 );
 
+CREATE TABLE endereco_evento(
+	id_endereco_evento INT NOT NULL AUTO_INCREMENT,
+    cep_evento CHAR(9) NULL,
+    logradouro_evento VARCHAR(150) NOT NULL,
+    complemento_evento VARCHAR(150) NULL,
+    numero_evento INT NOT NULL,
+    bairro_evento VARCHAR(100) NOT NULL,
+    cidade_evento VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id_endereco_evento)
+);
 
 CREATE TABLE pessoa( 
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
@@ -35,7 +45,6 @@ CREATE TABLE pessoa(
     link_instagram VARCHAR(255) NULL,
     link_facebook VARCHAR(255) NULL,
     link_whats VARCHAR(255) NULL,
-    data_nasc DATE NULL,
     img_perfil VARCHAR(255) NULL,
     status_pes ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
     id_endereco INT NULL,
@@ -51,14 +60,11 @@ CREATE TABLE expositor(
     num_barraca INT NULL,
     voltagem VARCHAR(45) NULL,
     energia VARCHAR(10) NULL,
-    modalidade ENUM('expositor', 'kids') NOT NULL DEFAULT 'expositor',
     tipo VARCHAR(255) NULL,
-    idade int NULL,
     contato2 CHAR(11) NULL,
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
     cor_rua VARCHAR(150) NULL DEFAULT '',
-    responsavel VARCHAR(150) NULL,
     produto VARCHAR(100) NOT NULL,
     validacao ENUM('aguardando', 'validado', 'recusado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
@@ -96,20 +102,19 @@ CREATE TABLE artista (
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa)
 );
 
-
-
-CREATE TABLE evento(
-	id_evento INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE evento (
+    id_evento INT NOT NULL AUTO_INCREMENT,
     nome_evento VARCHAR(150) NOT NULL,
-    subtitulo_evento VARCHAR(150)NOT NULL,
+    subtitulo_evento VARCHAR(150) NOT NULL,
     descricao_evento VARCHAR(500) NOT NULL,
     data_evento DATE NOT NULL,
     hora_inicio TIME NOT NULL,
     hora_fim TIME NOT NULL,
-    endereco_evento VARCHAR(150) NOT NULL,
+    id_endereco_evento INT NOT NULL,
     banner_evento VARCHAR(255) NOT NULL,
-    status BOOLEAN DEFAULT(1),
-    PRIMARY KEY(id_evento)
+    status BOOLEAN DEFAULT 1,
+    PRIMARY KEY (id_evento),
+    FOREIGN KEY (id_endereco_evento) REFERENCES endereco_evento(id_endereco_evento)
 );
 
 CREATE TABLE atracao(
@@ -142,7 +147,7 @@ CREATE TABLE desenvolvedor(
 );
 
 CREATE TABLE parceiro(
-	id_parceiro INT NOT NULL AUTO_INCREMENT,
+    id_parceiro INT NOT NULL AUTO_INCREMENT,
     nome_parceiro VARCHAR(150) NOT NULL,
     telefone CHAR(11) NOT NULL,
     email VARCHAR(150) NOT NULL,
@@ -151,6 +156,7 @@ CREATE TABLE parceiro(
     cpf_cnpj CHAR(18) NOT NULL,
     logo VARCHAR(255) NOT NULL,
     id_endereco INT NULL,
+    status_parceiro ENUM('Ativo', 'Inativo') NOT NULL DEFAULT 'Ativo',
     PRIMARY KEY(id_parceiro),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
 );
@@ -194,8 +200,8 @@ CREATE TABLE utilidade_publica (
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.modalidade, exp.idade, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.responsavel, exp.produto, exp.validacao, 
-pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.data_nasc, pes.img_perfil, pes.status_pes, 
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.produto, exp.validacao, 
+pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, pes.status_pes, 
 cat.id_categoria, cat.descricao, cat.cor, cat.icone,
 en.cidade
 FROM expositor AS exp 

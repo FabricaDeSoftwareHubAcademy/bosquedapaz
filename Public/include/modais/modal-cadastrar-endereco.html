@@ -1,0 +1,26 @@
+<dialog id="modal-cadastrar-endereco" class="modal-cadastrar-endereco">
+    <div class="content-close">
+      <i class="bi bi-x-square-fill fechar-modal" id="close-modal-endereco"></i>
+    </div>
+  
+    <div class="content-modal">
+      <h2>Cadastrar Endereço</h2>
+  
+      <form id="form-endereco">
+        <input type="text" id="local_evento" placeholder="Nome do local" required>
+        <input type="text" id="cep_evento" placeholder="CEP" required>
+        <input type="text" id="logradouro_evento" placeholder="Logradouro" required>
+        <input type="text" id="complemento_evento" placeholder="Complemento">
+        <input type="text" id="numero_evento" placeholder="Número" required>
+        <input type="text" id="bairro_evento" placeholder="Bairro" required>
+        <input type="text" id="cidade_evento" placeholder="Cidade" required>
+      </form>
+    </div>
+  
+    <div class="content-btns">
+      <button type="button" id="btn-cancelar-endereco">Cancelar</button>
+      <button type="button" id="btn-salvar-endereco">Salvar</button>
+    </div>
+  </dialog>
+
+<script src="../../../Public/js/js-modais/js-modal-endereco-evento.js"></script>

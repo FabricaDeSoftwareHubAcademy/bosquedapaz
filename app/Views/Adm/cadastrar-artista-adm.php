@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque da paz</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastrar-artistas.css">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
 
@@ -45,9 +45,7 @@
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" id="whats" name="whats" placeholder="Número de whatsapp"
-                                pattern="[0-9]{10,11}" required
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            <input type="tel" id="whats" name="whats" placeholder="Número de whatsapp">
                         </div>
 
                         <div class="input">

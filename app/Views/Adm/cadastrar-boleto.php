@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,10 +8,11 @@
     <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-    <title>Cadastro de Boleto</title>
+    <title>Adm - Bosque da Paz</title>
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link rel="stylesheet" href="../../../Public/css/css-adm/style-cadastro-boleto.css">
     <script src="../../../Public/js/js-adm/input-cadastro-boleto.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
@@ -85,7 +87,7 @@
                 </div>
 
                 <div id="btns-forms-padrao" class="btns-forms-padrao">
-                    <a href="./Area-Adm.php" class="link-area-adm">
+                    <a href="./" class="link-area-adm">
                         <div id="btn-voltar" class="btn-voltar">
                             <i id="seta" class="bi bi-arrow-left-short seta"></i>
                         </div>
