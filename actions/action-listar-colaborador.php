@@ -19,7 +19,7 @@ try {
         return [
             'nome' => $colab['nome'],
             'cargo' => $colab['cargo'],
-            'imagem' => $colab['imagem'] ?? 'default.png'
+            'imagem' => $colab['img_perfil'] ?? 'default.png'
         ];
     }, $resultado));
 

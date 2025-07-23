@@ -82,7 +82,7 @@ if ($requestMethod === 'POST') {
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
+            $colab->setImagem('../../../Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
@@ -194,7 +194,7 @@ if ($requestMethod === 'POST') {
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
+            $colab->setImagem($imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter

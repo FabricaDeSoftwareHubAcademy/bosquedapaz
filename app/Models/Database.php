@@ -178,7 +178,8 @@ class Database
             p.email,
             p.telefone,
             c.cargo,
-            p.status_pes
+            p.status_pes,
+            p.img_perfil
             FROM colaborador c
             INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
         return $this->execute($query);

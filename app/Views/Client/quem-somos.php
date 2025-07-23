@@ -88,6 +88,7 @@
     <section class="section-colaboradoras-quem-somos">
     <div id="colaboradoras-container" class="colaboradoras-container">
         <!-- Os cards serão inseridos aqui dinamicamente pelo JavaScript -->
+
     </div>
 
     <div class="descricao-colaboradoras-quem-somos">
@@ -186,7 +187,7 @@
     
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
-    <script src="../../../Public/js/js-home/js-listar-colaborador.js"></script>
+    <script src="../../../Public/js/js-home/js-listar-colaborador.js" defer></script>
     <script src="../../../Public/js/js-home/main.js" defer></script>
     <?php include "../../../Public/include/vlibras.html" ?>
 </body>

@@ -5,15 +5,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch("../../../actions/action-listar-colaborador.php");
         const json = await response.json();
 
+        console.log(json);
+
         if (Array.isArray(json.data)) {
             json.data.forEach(colab => {
                 const card = document.createElement("div");
-                card.classList.add("image-text-colaborador");
+
+                // nome da classe para o container (fixa ou pode ser personalizada)
+                card.classList.add("image-text-" + colab.nome.toLowerCase().split(" ")[0]);
 
                 card.innerHTML = `
-                    <img class="fotos" src="../../../Public/imgs/img-colaboradores/${colab.imagem}" alt="${colab.nome}">
-                    <p class="nome">${colab.nome}</p>
-                    <span class="profission">${colab.cargo}</span>
+                    <img class="fotos" src="${colab.imagem}" alt="${colab.nome}">
+                    <p class="${colab.nome.toLowerCase().split(" ")[0]} dark">${colab.nome}</p>
+                    <span class="profission dark">${colab.cargo}</span>
                 `;
 
                 container.appendChild(card);
