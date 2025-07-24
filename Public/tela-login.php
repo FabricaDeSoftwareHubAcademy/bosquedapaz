@@ -7,9 +7,10 @@
         <link rel="shortcut icon" href="./assets/icons/folha.ico">
         <title>Login</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="assets/icons/folha.ico">
         <script src="./js/js-login/login.js" defer></script>
-
+        <script src="./js/js-login/js-mostrar-esconder-senha.js" defer></script>
     </head>
     <body class="body-login">
         <!-- <main> -->
@@ -48,6 +49,7 @@
                             <div class="area-input-login">
                                 <i class="bi bi-lock"></i>
                                 <input class="input-login" type="password" name="password" id="password" placeholder="Digite sua senha" required>
+                                <i class="fa-solid fa-eye" id="togglePassword"></i>
                             </div>
                         
                             <div class="div-esqueceu-senha-login">
