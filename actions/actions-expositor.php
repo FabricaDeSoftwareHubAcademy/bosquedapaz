@@ -154,11 +154,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'status' => 200, 
                     'msg' => 'Expositor cadastrado com sucesso!'
                 ]);
+                exit;
             }else{
                 echo json_encode([
                     'status' => 400, 
                     'msg' => 'Não foi possível realizar o cadastro de expostor!'
                 ]);
+                exit;
+
             }
         }
         
@@ -168,6 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'status' => 500, 
             'msg' => 'Falha no servidor.'
         ]);
+        exit;
     }
 }
 
