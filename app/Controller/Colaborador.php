@@ -43,13 +43,20 @@ class Colaborador extends Pessoa
 
     public function cadastrar() {
         // Insere na tabela pessoa
-        $dbPessoa = new Database('pessoa');
-        $idPessoa = $dbPessoa->insert_lastid([
-            'nome' => $this->nome,
-            'telefone' => $this->telefone,
+        $dbLogin = new Database('login');
+
+        $idLogin = $dbLogin->insert_lastid([
             'email' => $this->email,
             'senha' => $this->senha,
             'perfil' => '1',
+        ]);
+        
+        $dbPessoa = new Database('pessoa');
+        
+        $idPessoa = $dbPessoa->insert_lastid([
+            'nome' => $this->nome,
+            'telefone' => $this->telefone,
+            'id_login' => $idLogin,
             'img_perfil' => $this->foto_perfil
         ]);
 

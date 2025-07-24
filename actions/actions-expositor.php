@@ -48,127 +48,128 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $expositor = new Expositor();
 
-    try {
+    if(isset($_POST['deletar'])){
 
-        if(isset($_POST['deletar'])){
+        $id = filter_var($_POST['id'], FILTER_UNSAFE_RAW);
+        $status = filter_var($_POST['status'], FILTER_UNSAFE_RAW);
 
-            $id = filter_var($_POST['id'], FILTER_UNSAFE_RAW);
-            $status = filter_var($_POST['status'], FILTER_UNSAFE_RAW);
+        $mudarStatus = $expositor->alterarStatus($id, $status);
 
-            $mudarStatus = $expositor->alterarStatus($id, $status);
+        if ($mudarStatus){
+            echo json_encode([
+                'status' => 200, 
+                'msg' => 'Status alterado com sucesso', 
+            ]);
+            exit;
+        }else {
+            echo json_encode([
+                'status' => 400, 
+                'msg' => 'Erro ao alterar o status do expositor', 
+            ]);
+            exit;
+        }
 
-            if ($mudarStatus){
-                echo json_encode([
-                    'status' => 200, 
-                    'msg' => 'Status alterado com sucesso', 
-                ]);
-                exit;
-            }else {
-                echo json_encode([
-                    'status' => 400, 
-                    'msg' => 'Erro ao alterar o status do expositor', 
-                ]);
-                exit;
-            }
+    }else if (isset($_POST['cadastrar'])) {            
+        $expositor->setCidade(!empty($_POST['cidade']) ? filter_var($_POST['cidade'], FILTER_UNSAFE_RAW) : NULL);
 
-        }else if (isset($_POST['cadastrar'])) {            
-            $expositor->setCidade(!empty($_POST['cidade']) ? filter_var($_POST['cidade'], FILTER_UNSAFE_RAW) : NULL);
-            
-            // // DADOS PESSOA
-            $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setEmail(           !empty($_POST['email'])         ? filter_var($_POST['email'],           FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setTelefone(        !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
-            
-            /// verificando se exite imagens
-            if (isset($_FILES['imagens'])) {
-                if (count($_FILES['imagens']['name']) == 6){
-                    ///////// MOVENDO A IMAGEM DE PERFIL ////////////
-                    
-                    // separa es imagens
-                    $imagens = getImagens($_FILES['imagens']);
+        // // DADOS PESSOA
+        $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setEmail(           !empty($_POST['email'])         ? filter_var($_POST['email'],           FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setTelefone(        !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
+        
+        /// verificando se exite imagens
+        if (isset($_FILES['imagens'])) {
+            if (count($_FILES['imagens']['name']) == 6){
+                ///////// MOVENDO A IMAGEM DE PERFIL ////////////
+                
+                // separa es imagens
+                $imagens = getImagens($_FILES['imagens']);
 
-                    $caminhosImagens = array();
-                    
-                    // move as imagens
-                    foreach ($imagens as $img) {
-                        // verifica quantos mb
-                        if( 5 < ($img['size'] / 1024) / 1024){
-                            echo json_encode([
-                                'status' => 400,
-                                'msg' => 'Imagem enviada muito grande', 
-                            ]);
-                            exit;
-                        }
-
-                        $extencao_imagem = strtolower(pathinfo($img['name'], PATHINFO_EXTENSION));
-                        
-                        // verifiva qual o tipo de extenção
-                        if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
-                            echo json_encode([
-                                'status' => 400, 
-                                'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
-                            ]);
-                            exit;
-                        }
-                        $caminhosImagens[] = uploadImagem($img);
+                $caminhosImagens = array();
+                
+                // move as imagens
+                foreach ($imagens as $img) {
+                    // verifica quantos mb
+                    if( 5 < ($img['size'] / 1024) / 1024){
+                        echo json_encode([
+                            'status' => 400,
+                            'msg' => 'Imagem enviada muito grande', 
+                        ]);
+                        exit;
                     }
-                    
-                    // print_r($caminhosImagens);
-                    
-                    $expositor->imagens = $caminhosImagens;
 
+                    $extencao_imagem = strtolower(pathinfo($img['name'], PATHINFO_EXTENSION));
                     
-                }else {
-                    echo json_encode([
-                        'status' => 400, 
-                        'msg' => 'É necassário enviar 6 imagens para realizar o cadastro', 
-                    ]);
-                    exit;
+                    // verifiva qual o tipo de extenção
+                    if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
+                        echo json_encode([
+                            'status' => 400, 
+                            'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
+                        ]);
+                        exit;
+                    }
+                    $caminhosImagens[] = uploadImagem($img);
                 }
+                
+                // print_r($caminhosImagens);
+                
+                $expositor->imagens = $caminhosImagens;
+
+                
             }else {
                 echo json_encode([
                     'status' => 400, 
-                    'msg' => 'É necassário enviar imagens para realizar o cadastro', 
+                    'msg' => 'É necassário enviar 6 imagens para realizar o cadastro', 
                 ]);
                 exit;
             }
-            
-            
-            // DADOS EXPOSITOR
-            $expositor->setNome_marca(     !empty($_POST['marca'])          ? filter_var($_POST['marca'],         FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setProduto(        !empty($_POST['produto'])        ? filter_var($_POST['produto'],       FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setContato2(       !empty($_POST['whats'])          ? filter_var($_POST['whats'],         FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setVoltagem(       !empty($_POST['voltagem'])       ? filter_var($_POST['voltagem'],      FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setEnergia(        !empty($_POST['energia'])        ? filter_var($_POST['energia'],       FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setTipo(           !empty($_POST['tipo'])           ? filter_var($_POST['tipo'],          FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setId_categoria(   !empty($_POST['id_categoria'])   ? filter_var($_POST['id_categoria'],  FILTER_UNSAFE_RAW) : NULL);
-            
-            // var_dump($expositor);
-            
-            $res = $expositor->cadastrar();
-            
-            if($res){
-                echo json_encode([
-                    'status' => 200, 
-                    'msg' => 'Expositor cadastrado com sucesso!'
-                ]);
-            }else{
-                echo json_encode([
-                    'status' => 400, 
-                    'msg' => 'Não foi possível realizar o cadastro de expostor!'
-                ]);
-            }
+        }else {
+            echo json_encode([
+                'status' => 400, 
+                'msg' => 'É necassário enviar imagens para realizar o cadastro', 
+            ]);
+            exit;
         }
         
-    } catch (\Throwable $th) {
-        //// no caso de erro
+        
+        // DADOS EXPOSITOR
+        $expositor->setNome_marca(     !empty($_POST['marca'])          ? filter_var($_POST['marca'],         FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setProduto(        !empty($_POST['produto'])        ? filter_var($_POST['produto'],       FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setVoltagem(       !empty($_POST['voltagem'])       ? filter_var($_POST['voltagem'],      FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setEnergia(        !empty($_POST['energia'])        ? filter_var($_POST['energia'],       FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setTipo(           !empty($_POST['tipo'])           ? filter_var($_POST['tipo'],          FILTER_UNSAFE_RAW) : NULL);
+        $expositor->setId_categoria(   !empty($_POST['id_categoria'])   ? filter_var($_POST['id_categoria'],  FILTER_UNSAFE_RAW) : NULL);
+        
+        // var_dump($expositor);
+        
+        $res = $expositor->cadastrar();
+        
         echo json_encode([
-            'status' => 500, 
-            'msg' => 'Falha no servidor.'
+            'status' => 200, 
+            'msg' => 'Expositor cadastrado com sucesso!',
+            $res
         ]);
+        // if($res){
+        // }else{
+        //     echo json_encode([
+        //         'status' => 400, 
+        //         'msg' => 'Não foi possível realizar o cadastro de expostor!',
+        //         $res
+        //     ]);
+        // }
     }
+    // try {
+
+        
+    // } catch (\Throwable $th) {
+    //     //// no caso de erro
+    //     echo json_encode([
+    //         'status' => 500, 
+    //         'msg' => 'Falha no servidor.'
+    //     ]);
+    // }
 }
 
 /////////////////// MEDOTO GET ///////////////////

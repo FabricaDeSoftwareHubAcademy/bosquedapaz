@@ -60,11 +60,13 @@ class Database
     public function execute($query, $binds = [])
     {
         try {
-
+            $this->conn->beginTransaction();
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
+            $this->conn->commit();
             return $stmt;
         } catch (\PDOException $err) {
+            $this->conn->rollBack();
             die("Connection failed" . $err->getMessage());
         }
     }
