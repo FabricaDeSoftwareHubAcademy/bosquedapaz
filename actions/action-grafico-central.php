@@ -23,3 +23,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Se a requisição for inválida, retorna um erro
     echo json_encode(['status' => 'error', 'mensagem' => 'Requisição inválida ou ID não fornecido.']);
 }
+
+// if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+//     $expositorController = new Expositor();
+//     $expositor_espera = $expositorController->listar();
+
+//     if ($expositor) {
+//         echo json_encode([
+//             'status' => 'success',
+//             'qtdExpositorEspera' => count($expositor_espera),
+//         ]);
+//     } else {
+//         echo json_encode(['status' => 'error', 'mensagem' => 'Expositores não encontrados']);
+//     }
+// } else {
+//     echo json_encode(['status' => 'error', 'mensagem' => 'Requisição inválida ou ID não fornecido.']);
+// }
