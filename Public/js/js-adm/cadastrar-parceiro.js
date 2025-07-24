@@ -102,10 +102,12 @@ document.getElementById('btn-modal-salvar').addEventListener('click', async func
 
         let response = await dados_php.json();
 
-        if(response.status == 200){
+        if (response.status == 200) {
             closeModalConfirmar();
             openModalSucesso();
-            formulario.reset();
+            setTimeout(() => {
+                window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+            }, 2000); // Espera 2 segundos antes de redirecionar
         } else {
             document.getElementById('erro-title').textContent = "Erro ao cadastrar";
             document.getElementById('erro-text').textContent = "Houve um problema ao salvar os dados. Tente novamente mais tarde.";
