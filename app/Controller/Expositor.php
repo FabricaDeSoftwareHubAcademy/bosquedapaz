@@ -29,6 +29,7 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
+    protected $aceitou_termos;
     public $imagens;
 
 
@@ -59,6 +60,7 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'perfil' => '0',
                 'id_endereco' => $endereco_id,
+                'termos' => $this->aceitou_termos
             ]
         );
 
