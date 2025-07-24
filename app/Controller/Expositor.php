@@ -29,7 +29,7 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
-    protected $aceitou_termos;
+    protected $aceitou_termos; // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
     public $imagens;
 
 
@@ -60,7 +60,7 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'perfil' => '0',
                 'id_endereco' => $endereco_id,
-                'termos' => $this->aceitou_termos
+                'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
             ]
         );
 
@@ -323,6 +323,12 @@ class Expositor extends Pessoa
     {
         $this->idade = $idade;
     }
+
+    // NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+    public function setAceitou_termos($aceitou_termos)
+    {
+        $this->aceitou_termos = $aceitou_termos;
+    } 
 }
 
 /*
