@@ -1,0 +1,218 @@
+#professores{
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    background-color: #150020;
+    color: white;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+}
+
+.containerGeralCards{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+}
+
+
+/* ------------------------------ */
+
+.cardProfessor{
+    overflow: visible;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin-left: 10px
+  }
+  
+  .contentProfessor {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 50px;
+    
+  }
+  
+  .frontCardProfessor, .backCardProfessor {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 50px;
+    overflow: hidden;
+
+
+  }
+  .frontCardProfessor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .backCardProfessor {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .backCardProfessor::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #9849ff, #9849ff, #250949, #250949, transparent);
+    animation: rotation_481 5000ms infinite linear;
+  }
+  
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #151515;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .marginProfessor{
+    margin-left: 5%;
+    margin-top: 2rem;
+  }
+  
+  .cardProfessor:hover .contentProfessor{
+    transform: rotateY(-180deg); 
+}
+  
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .frontCardProfessor {
+    transform: rotateY(180deg);
+    color: white;
+  }
+  
+
+  
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+
+.containerInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.flipCardImg{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 30px;
+}
+.nomeProfessor{
+    width: 250px;
+    height: 150px;
+    margin-top: 2rem;
+
+    border-radius: 10px;
+
+    padding: 001px;
+
+    color: #fff;
+}
+.containerImgProfessor{
+    margin-top: 80px;
+    width: 150px;
+    height: 250px;
+}
+.containerImgProfessor img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.containerDescBack{
+    width: 100%;
+    height: 75%;
+
+    padding-top: 2rem;
+
+}
+.iconProjeto{
+    width: 95%;
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 15px;
+}
+.nomeProfessor > h1, h3{
+    margin-left: 10px;
+}
+.containerCards{
+    display: flex;
+    justify-content: center;
+    
+}
+.boxIcon{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+.inconProfessor{
+    color: #9849ff;
+}

@@ -2,6 +2,7 @@
 @import url(sobre.css);
 @import url(desenvolvedores.css);
 @import url(footer.css);
+@import url(professores.css);
 
 
 * {    
@@ -33,8 +34,8 @@ a{
   background-repeat: no-repeat;
   background-size: cover;
   
-  border-top: 2px solid var(--text-color2);
-  border-bottom: 2px solid var(--text-color2);
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 ::-webkit-scrollbar{
   width: 12px;
