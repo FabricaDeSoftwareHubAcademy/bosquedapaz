@@ -45,7 +45,7 @@ class Expositor extends Pessoa
             ]
         );
 
-        // return $endereco_id;
+        return $db->getConnection();
         
         ///// insert na tabela login \\\\\
         
@@ -69,8 +69,8 @@ class Expositor extends Pessoa
                 'whats' => $this->whats,
                 'img_perfil' => $this->foto_perfil,
                 'link_instagram' => $this->link_instagram,
-                'id_login' => $login_id,
-                'id_endereco' => $endereco_id,
+                'id_login' => 1,
+                'id_endereco' => 1,
             ]
         );
 
@@ -80,7 +80,7 @@ class Expositor extends Pessoa
         $db = new Database('expositor');
         $idExpositor = $db->insert_lastid(
             [
-                'id_pessoa' => $pes_id,
+                'id_pessoa' => 2,
                 'id_categoria' => $this->id_categoria,
                 'nome_marca' => $this->nome_marca,
                 'num_barraca' => $this->num_barraca,

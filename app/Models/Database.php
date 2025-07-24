@@ -26,7 +26,7 @@ class Database
     function __construct($table = null)
     {
         $this->table = $table;
-        $this->conecta();
+
     }
 
     function set_conn()
@@ -57,9 +57,15 @@ class Database
 
     // médoto para executar o CRUD no db
     // recebe dois parametros, a query e os binds
-    public function execute($query, $binds = [])
+    public function execute($query, $binds = [], $connection= null)
     {
         try {
+            if ($connection == null){
+                $this->conecta();
+                echo 'oi';
+            }else{
+                $this->conn = $connection;
+            }
             $this->conn->beginTransaction();
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
@@ -74,10 +80,6 @@ class Database
         }
     }
 
-    public function commitTransasion(){
-
-        $this->conn->commit();
-    }
 
     // método para inserir no db, tem o parametro $values,
     // que recebe os valores do que serão inseridos
