@@ -9,10 +9,8 @@ use app\Controller\Pessoa;
 use app\Models\Database;
 use app\Controller\Imagem;
 
-
 class Expositor extends Pessoa
 {
-
     protected $id_expositor;
     protected $id_pessoa;
     protected $id_categoria;
@@ -29,16 +27,13 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
+    protected $aceitou_termos; // <== NÃO REMOVER ISSO
     public $imagens;
 
-
-
-    //////////// MÉDOTO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
-
+    //////////// MÉTODO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
 
     public function cadastrar()
     {
-        
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
             [
@@ -59,10 +54,11 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'perfil' => 1,
                 'id_endereco' => $endereco_id,
+                'aceitou_termos' => $this->aceitou_termos, // <== NÃO MEXER AQUI
             ]
         );
 
-        ///// insert na tabela expostor \\\\\\
+        ///// insert na tabela expositor \\\\\\
 
         $db = new Database('expositor');
         $idExpositor = $db->insert_lastid(
@@ -82,73 +78,73 @@ class Expositor extends Pessoa
                 'cor_rua' => $this->cor_rua,
                 'responsavel' => $this->responsavel,
                 'produto' => $this->produto
-                ]
-            );
-            
-        
+            ]
+        );
+
         //// insert das imagens do expositor \\\\\\
         $imagem = new Imagem();
         $imagem->id_expositor = $idExpositor;
-        foreach ($this->imagens as $key => $value) {
-            $imagem->caminho = $value;
-            $res = $imagem->cadastro();
+        $res = false;
+        if (is_array($this->imagens)) {
+            foreach ($this->imagens as $value) {
+                $imagem->caminho = $value;
+                $res = $imagem->cadastro();
+            }
         }
-
 
         return $res;
     }
 
-
     ////////////// MÉTODOS DE BUSCAS \\\\\\\\\\\\\\\\\\\\
 
-    public function listar($where = null){
+    public function listar($where = null)
+    {
         try {
             $db = new Database('view_expositor');
 
             //// RETORNA TODOS OS EXPOSITORES VALIDADOS
-            if($where == null){
-                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
+            if ($where === null) {
+                $expositores = $db->select('validacao != "aguardando" AND validacao != "recusado"', 'nome')->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ?: false;
             }
 
-            //// RETORNA OS EXPOITORES FILTRADOS COM WHERE
-            else {
-                $expositores = $db->select($where, 'nome')->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
-            }
-        
-        //// RETORNA FALSE NO CASO DE ERRO
+            //// RETORNA OS EXPOSITORES FILTRADOS COM WHERE
+            $expositores = $db->select($where, 'nome')->fetchAll(PDO::FETCH_ASSOC);
+            return $expositores ?: false;
+
         } catch (\Throwable $th) {
-            return FALSE;
+            return false;
         }
     }
 
-    public function filtrar($filtro, $status = "= 'aprovado'"){
+    public function filtrar($filtro, $status = "= 'aprovado'")
+    {
         try {
             $db = new Database('view_expositor');
 
             //// RETORNA O EXPOSITOR PELO FILTRO
-            $expositores = $db->select(
-                "nome_marca LIKE '%$filtro%' and validacao ".$status." 
-                OR nome LIKE '%$filtro%' and validacao ".$status." 
-                OR email LIKE '%$filtro%' and validacao ".$status." 
-                OR num_barraca LIKE '%$filtro%' and validacao ".$status." 
-                ", 'nome'
-            )->fetchAll(PDO::FETCH_ASSOC);
-            return $expositores ? $expositores : FALSE;
-        
-        //// RETORNA FALSE NO CASO DE ERRO
+            $condition = "(
+                nome_marca LIKE '%$filtro%' OR
+                nome LIKE '%$filtro%' OR
+                email LIKE '%$filtro%' OR
+                num_barraca LIKE '%$filtro%'
+            ) AND validacao $status";
+
+            $expositores = $db->select($condition, 'nome')->fetchAll(PDO::FETCH_ASSOC);
+            return $expositores ?: false;
+
         } catch (\Throwable $th) {
-            return FALSE;
+            return false;
         }
     }
 
+    //////////////////// VALIDAR EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\\
 
-    //////////////////// VÁLIDAR EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\\
-
-    public function validarExpositor($id, $status, $categoria = null, $newSenha = null){
+    public function validarExpositor($id, $status, $categoria = null, $newSenha = null)
+    {
         $db = new Database('expositor');
-        if($status == 'validado'){
+
+        if ($status === 'validado') {
             //// dados pessoa
             $senha = [
                 'senha' => $newSenha,
@@ -161,30 +157,32 @@ class Expositor extends Pessoa
                 'id_categoria' => $categoria
             ];
 
-            $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = '. $id);
+            $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = ' . $id);
 
             return $res;
-
-        }else if ($status == 'recusado'){
+        } elseif ($status === 'recusado') {
             ///// dados expositor
             $newStatus = [
                 'validacao' => 'recusado'
             ];
-            $res = $db->update('id_expositor = '. $id, $newStatus);
+            $res = $db->update('id_expositor = ' . $id, $newStatus);
             return $res;
         }
+        return false;
     }
-
 
     public function atualizar($id) // Recebe o ID como parâmetro
     {
-
         $db = new Database('expositor');
         $ids_pessoa_expositor = $db->select_pessoa_expositor($id)->fetch(PDO::FETCH_ASSOC);
 
+        if (!$ids_pessoa_expositor) {
+            return false;
+        }
+
         $db = new Database('pessoa');
         $res = $db->update(
-            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
             [
                 'link_instagram' => $this->link_instagram,
                 'whats' => $this->whats,
@@ -195,18 +193,17 @@ class Expositor extends Pessoa
 
         $db = new Database('expositor');
         $res = $db->update(
-            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
             [
                 'nome_marca' => $this->nome_marca,
                 'descricao' => $this->descricao,
             ]
         );
 
-        // $ids_imagens = $db->select_img($id)->fetch(PDO::FETCH_ASSOC);
-
+        // Atualização das imagens, exemplo genérico
         $db = new Database('imagem');
         $res = $db->update(
-            'id_imagem = ' . 1,
+            'id_imagem = 1',
             [
                 'caminho' => '../caminho/imagem.jpg',
                 'posicao' => '',
@@ -217,8 +214,7 @@ class Expositor extends Pessoa
         return $res;
     }
 
-
-    //////////////////// MÉDOTOS SETTERS \\\\\\\\\\\\\\\\\\\\\\\\\\
+    //////////////////// MÉTODOS SETTERS \\\\\\\\\\\\\\\\\\\\\\\\\\
 
     public function setId_expositor($id_expositor)
     {
@@ -234,6 +230,7 @@ class Expositor extends Pessoa
     {
         $this->id_pessoa = $id_pessoa;
     }
+
     public function setId_categoria($id_categoria)
     {
         $this->id_categoria = $id_categoria;
@@ -248,49 +245,65 @@ class Expositor extends Pessoa
     {
         $this->energia = $energia;
     }
+
     public function setVoltagem($voltagem)
     {
         $this->voltagem = $voltagem;
     }
+
     public function setContato2($contato2)
     {
         $this->contato2 =  $contato2;
     }
+
     public function setNum_barraca($num_barraca)
     {
         $this->num_barraca = $num_barraca;
     }
+
     public function setDescricao($descricao)
     {
         $this->descricao = $descricao;
     }
+
     public function setMetodos_pgto($metodos_pgto)
     {
         $this->metodos_pgto =  $metodos_pgto;
     }
+
     public function setCor_rua($cor_rua)
     {
         $this->cor_rua = $cor_rua;
     }
+
     public function setResponsavel($responsavel)
     {
         $this->responsavel = $responsavel;
     }
+
     public function setProduto($produto)
     {
         $this->produto = $produto;
     }
+
     public function setTipo($tipo)
     {
         $this->tipo = $tipo;
     }
+
     public function setModalidade($modalidade)
     {
         $this->modalidade = $modalidade;
     }
+
     public function setIdade($idade)
     {
         $this->idade = $idade;
+    }
+
+    public function setAceitou_termos($aceitou_termos)
+    {
+        $this->aceitou_termos = $aceitou_termos;
     }
 }
 
