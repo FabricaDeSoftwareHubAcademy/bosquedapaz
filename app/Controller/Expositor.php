@@ -44,6 +44,8 @@ class Expositor extends Pessoa
                 'cidade' => $this->cidade,
             ]
         );
+
+        // return $endereco_id;
         
         ///// insert na tabela login \\\\\
         
@@ -54,7 +56,8 @@ class Expositor extends Pessoa
             'perfil' => '0',
             ]
         );
-        return $endereco_id;
+
+        // return $endereco_id;
             
         ///// insert na tabela pessoa \\\\\
 

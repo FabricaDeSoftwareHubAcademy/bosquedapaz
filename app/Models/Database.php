@@ -64,11 +64,19 @@ class Database
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
             $this->conn->commit();
+            
             return $stmt;
         } catch (\PDOException $err) {
+            error_log("Erro na query: " . $err->getMessage());
+
             $this->conn->rollBack();
             die("Connection failed" . $err->getMessage());
         }
+    }
+
+    public function commitTransasion(){
+
+        $this->conn->commit();
     }
 
     // método para inserir no db, tem o parametro $values,
