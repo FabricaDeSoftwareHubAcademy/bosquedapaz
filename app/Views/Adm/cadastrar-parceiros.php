@@ -26,41 +26,41 @@
                         <div id="form1" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_parceiro">Parceiro:</label>
-                                <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" required>
+                                <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" maxlength="30" required>
                             </div>
                             <div class="input-group">
                                 <label for="telefone">Telefone:</label>
-                                <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
+                                <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" maxlength="15" required>
                             </div>
                             <div class="input-group">
                                 <label for="cep">CEP:</label>
-                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+                                <input type="text" id="cep" name="cep" placeholder="Digite o CEP"  maxlength="9" required>
                             </div>
                             <div class="input-group">
                                 <label for="complemento">Complemento:</label>
-                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento"  maxlength="60" required>
                             </div>                                             
                             <div class="input-group">
                                 <label for="cidade">Estado:</label>
-                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                                <input type="text" id="estado" name="estado" placeholder="Digite o estado"  maxlength="2" required>
                             </div>                    
                         </div>
                         <div id="form2" class="form-grid">
                             <div class="input-group">
                                 <label for="email">E-mail:</label>
-                                <input type="email" id="email" name="email" placeholder="Digite o e-mail" required>
+                                <input type="email" id="email" name="email" placeholder="Digite o e-mail"  maxlength="60" required>
                             </div>
                             <div class="input-group">
                                 <label for="cpf_cnpj">CPF/CNPJ:</label>
-                                <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" required>
+                                <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite o CPF ou CNPJ" maxlength="18" required>
                             </div>
                             <div class="input-group">
                                 <label for="logradouro">Logradouro:</label>
-                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
+                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" maxlength="50" required>
                             </div>                                        
                             <div class="input-group">
                                 <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" maxlength="40" required>
                             </div>                               
                             <div class="input-group">
                                 <label for="logo">Logo:</label>
@@ -71,7 +71,7 @@
                         <div id="form3" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_contato">Contato:</label>
-                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" required>
+                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="50" required>
                             </div>
                             <div class="input-group">
                                 <label for="tipo">Tipo:</label>
@@ -83,11 +83,11 @@
                             </div>
                             <div class="input-group">
                                 <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" required>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="10" required>
                             </div> 
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="25" required>
                             </div>  
                         </div>
                         <?php include "../../../Public/include/Butons-forms.html" ?>
