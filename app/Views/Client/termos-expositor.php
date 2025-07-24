@@ -48,7 +48,7 @@
 
                 <div class="div-input-check">
                     <input type="checkbox" name="aceito" id="aceito" class="input-check">
-                    <label for="aceito" class="label-edital">Aceito os termos das condições acima.</label>
+                    <label for="aceito" class="label-edital">Aceito os termos de condições acima.</label>
                 </div>
                 <div class="btns">
                     <a href="escolher-cadastro.php" class="btn-edital link-edital">Cancelar</a>
