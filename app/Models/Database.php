@@ -26,7 +26,7 @@ class Database
     function __construct($table = null)
     {
         $this->table = $table;
-
+        $this->conecta();
     }
 
     function set_conn()
@@ -38,7 +38,7 @@ class Database
     }
 
     // se conecta com o db
-    private function conecta()
+    public function conecta()
     {
 
         try {
@@ -57,25 +57,15 @@ class Database
 
     // médoto para executar o CRUD no db
     // recebe dois parametros, a query e os binds
-    public function execute($query, $binds = [], $connection= null)
+    public function execute($query, $binds = [])
     {
         try {
-            if ($connection == null){
-                $this->conecta();
-                echo 'oi';
-            }else{
-                $this->conn = $connection;
-            }
-            $this->conn->beginTransaction();
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
-            $this->conn->commit();
             
             return $stmt;
         } catch (\PDOException $err) {
-            error_log("Erro na query: " . $err->getMessage());
 
-            $this->conn->rollBack();
             die("Connection failed" . $err->getMessage());
         }
     }

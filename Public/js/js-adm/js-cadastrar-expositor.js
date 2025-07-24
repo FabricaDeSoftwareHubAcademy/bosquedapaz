@@ -40,9 +40,7 @@ btn_salvar.addEventListener('click', async function (event) {
             body: dadosForms
         });
 
-        let response = await dados_php.text()
-        console.log(response)
-
+        let response = await dados_php.json()
 
         
         if(response.status == 200){

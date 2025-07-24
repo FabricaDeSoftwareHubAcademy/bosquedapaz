@@ -33,11 +33,16 @@ class Expositor extends Pessoa
 
 
     //////////// MÉDOTO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
+    public function emailExiste($email){
+        $db = new Database('login');
 
+        $email = $db->select("email = '$email'")->fetch(PDO::FETCH_ASSOC);
+
+        return $email;
+    }
 
     public function cadastrar()
     {
-        
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
             [
@@ -45,7 +50,6 @@ class Expositor extends Pessoa
             ]
         );
 
-        return $db->getConnection();
         
         ///// insert na tabela login \\\\\
         
@@ -57,7 +61,6 @@ class Expositor extends Pessoa
             ]
         );
 
-        // return $endereco_id;
             
         ///// insert na tabela pessoa \\\\\
 
@@ -69,8 +72,8 @@ class Expositor extends Pessoa
                 'whats' => $this->whats,
                 'img_perfil' => $this->foto_perfil,
                 'link_instagram' => $this->link_instagram,
-                'id_login' => 1,
-                'id_endereco' => 1,
+                'id_login' => $login_id,
+                'id_endereco' => $endereco_id,
             ]
         );
 
@@ -80,7 +83,7 @@ class Expositor extends Pessoa
         $db = new Database('expositor');
         $idExpositor = $db->insert_lastid(
             [
-                'id_pessoa' => 2,
+                'id_pessoa' => $pes_id,
                 'id_categoria' => $this->id_categoria,
                 'nome_marca' => $this->nome_marca,
                 'num_barraca' => $this->num_barraca,
