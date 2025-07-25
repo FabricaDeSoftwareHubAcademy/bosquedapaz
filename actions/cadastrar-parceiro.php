@@ -5,105 +5,89 @@ require_once('../vendor/autoload.php');
 use app\Controller\Parceiro;
 use app\Controller\Endereco;
 
-function sanitizarTexto($input) {
-    return htmlspecialchars(strip_tags(trim($input)));
+function respostaErro($mensagem) {
+    echo json_encode(["status" => "erro", "mensagem" => $mensagem]);
+    exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Validações básicas dos campos obrigatórios
+    $camposObrigatorios = [
+        'nome_parceiro', 'telefone', 'email', 'nome_contato',
+        'tipo', 'cpf_cnpj', 'cep', 'logradouro', 'num_residencia',
+        'bairro', 'cidade', 'estado'
+    ];
 
-    // Sanitização e validação básica
-    $nome = sanitizarTexto($_POST["nome_parceiro"] ?? '');
-    $telefone = sanitizarTexto($_POST["telefone"] ?? '');
-    $email = sanitizarTexto($_POST["email"] ?? '');
-    $nome_contato = sanitizarTexto($_POST["nome_contato"] ?? '');
-    $tipo = sanitizarTexto($_POST["tipo"] ?? '');
-    $cpf_cnpj = sanitizarTexto($_POST["cpf_cnpj"] ?? '');
+    foreach ($camposObrigatorios as $campo) {
+        if (empty($_POST[$campo])) {
+            respostaErro("O campo " . ucfirst(str_replace("_", " ", $campo)) . " é obrigatório.");
+        }
+    }
 
     // Validação de e-mail
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(["status" => "erro", "mensagem" => "E-mail inválido."]);
-        exit;
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        respostaErro("E-mail inválido.");
     }
 
-    // Validação de CPF/CNPJ (básica)
-    if (!preg_match('/^\d{11}$|^\d{14}$/', preg_replace('/\D/', '', $cpf_cnpj))) {
-        echo json_encode(["status" => "erro", "mensagem" => "CPF ou CNPJ inválido."]);
-        exit;
+    // Validação CPF ou CNPJ simples (só formato, não lógica de validação)
+    if (!preg_match('/^\d{11}$|^\d{14}$/', preg_replace('/\D/', '', $_POST['cpf_cnpj']))) {
+        respostaErro("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
     }
 
-    // Instanciando objetos
+    // Validação e upload da imagem
+    if (!isset($_FILES['logo']) || $_FILES['logo']['error'] !== UPLOAD_ERR_OK) {
+        respostaErro("Erro no upload da logo.");
+    }
+
+    $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+    $arquivoTmp = $_FILES['logo']['tmp_name'];
+    $nomeOriginal = basename($_FILES['logo']['name']);
+    $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
+
+    if (!in_array($extensao, $extensoesPermitidas)) {
+        respostaErro("Formato de imagem inválido. Permitidos: jpg, jpeg, png, gif.");
+    }
+
+    $nomeSeguro = uniqid('parceiro_', true) . '.' . $extensao;
+    $pastaDestino = '../Public/uploads/uploads-parceiros/';
+    $caminhoFinal = $pastaDestino . $nomeSeguro;
+
+    if (!is_dir($pastaDestino)) {
+        mkdir($pastaDestino, 0755, true);
+    }
+
+    if (!move_uploaded_file($arquivoTmp, $caminhoFinal)) {
+        respostaErro("Erro ao salvar a imagem.");
+    }
+
+    // Instancia os objetos
     $endereco = new Endereco();
     $parceiro = new Parceiro();
 
-    $parceiro->nome_parceiro = $nome;
-    $parceiro->telefone = $telefone;
-    $parceiro->email = $email;
-    $parceiro->nome_contato = $nome_contato;
-    $parceiro->tipo = $tipo;
-    $parceiro->cpf_cnpj = $cpf_cnpj;
+    // Atribui os dados
+    $parceiro->nome_parceiro = $_POST["nome_parceiro"];
+    $parceiro->telefone = $_POST["telefone"];
+    $parceiro->email = $_POST["email"];
+    $parceiro->nome_contato = $_POST["nome_contato"];
+    $parceiro->tipo = $_POST["tipo"];
+    $parceiro->cpf_cnpj = $_POST["cpf_cnpj"];
+    $parceiro->logo = 'uploads/uploads-parceiros/' . $nomeSeguro;
 
-    // Upload da logo
-    if (isset($_FILES['logo']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
+    $endereco->cep = $_POST["cep"];
+    $endereco->logradouro = $_POST["logradouro"];
+    $endereco->num_residencia = $_POST["num_residencia"];
+    $endereco->bairro = $_POST["bairro"];
+    $endereco->cidade = $_POST["cidade"];
+    $endereco->estado = $_POST["estado"];
+    $endereco->complemento = $_POST["complemento"] ?? '';
 
-        $pastaDestino = '../Public/uploads/uploads-parceiros/';
-        if (!is_dir($pastaDestino)) {
-            mkdir($pastaDestino, 0755, true);
-        }
-
-        chmod($pastaDestino, 0777);
-
-        $arquivoTmp = $_FILES['logo']['tmp_name'];
-        $nomeOriginal = basename($_FILES['logo']['name']);
-        $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
-
-        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
-
-        if (!in_array($extensao, $extensoesPermitidas)) {
-            echo json_encode(["status" => "erro", "mensagem" => "Formato de imagem inválido."]);
-            exit;
-        }
-
-        // Verificação de MIME real
-        $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = finfo_file($finfo, $arquivoTmp);
-        finfo_close($finfo);
-
-        $mimesPermitidos = ['image/jpeg', 'image/png', 'image/gif'];
-        if (!in_array($mime, $mimesPermitidos)) {
-            echo json_encode(["status" => "erro", "mensagem" => "Tipo de arquivo inválido (MIME)."]);
-            exit;
-        }
-
-        $nomeSeguro = uniqid('parceiro_', true) . '.' . $extensao;
-        $caminhoFinal = $pastaDestino . $nomeSeguro;
-
-        if (!move_uploaded_file($arquivoTmp, $caminhoFinal)) {
-            echo json_encode(["status" => "erro", "mensagem" => "Erro ao salvar a imagem."]);
-            exit;
-        }
-
-        $parceiro->logo = 'uploads/uploads-parceiros/' . $nomeSeguro;
-    } else {
-        echo json_encode(["status" => "erro", "mensagem" => "Erro no upload da logo."]);
-        exit;
-    }
-
-    // Endereço
-    $endereco->cep = sanitizarTexto($_POST["cep"] ?? '');
-    $endereco->logradouro = sanitizarTexto($_POST["logradouro"] ?? '');
-    $endereco->num_residencia = sanitizarTexto($_POST["num_residencia"] ?? '');
-    $endereco->bairro = sanitizarTexto($_POST["bairro"] ?? '');
-    $endereco->cidade = sanitizarTexto($_POST["cidade"] ?? '');
-    $endereco->estado = sanitizarTexto($_POST["estado"] ?? '');
-    $endereco->complemento = sanitizarTexto($_POST["complemento"] ?? '');
-
-    // Cadastro
+    // Tenta cadastrar
     $result = $parceiro->cadastrar($endereco);
 
     if ($result) {
-        echo json_encode(["status" => 200, "msg" => "Cadastrado com Sucesso!"]);
+        echo json_encode(["status" => 200, "msg" => "Cadastrado com sucesso!"]);
     } else {
-        echo json_encode(["status" => "erro", "msg" => "Erro ao cadastrar parceiro."]);
+        respostaErro("Erro ao cadastrar o parceiro.");
     }
 }
 ?>

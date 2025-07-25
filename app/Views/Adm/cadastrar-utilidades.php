@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 require_once __DIR__ . '/../../../app/helpers/auth.php';
 
 ?>
@@ -31,9 +31,8 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                     <form id="form_cadastrar_utilidade" method="POST">
                         <div class="input-group">
                             <label>Título:</label>
-                            <input required type="text" name="titulo" id="titulo"
-                                placeholder="Escreva o título da utilidade pública">
-                                <span id="titleErro" class="erro"></span>
+                            <input type="text" name="titulo" id="titulo"
+                                placeholder="Escreva o título da utilidade pública" maxlength="30">
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
@@ -62,17 +61,36 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                     </form>
                 </div>
             </div>
+            <div class="btns">
+                <!-- <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/assets/icons/voltar.svg" class="btn-voltar">
+                </a> -->
+<!-- 
+                <div class="btn-cancelar-salvar">
+                    <button class="btn btn-cancelar">
+                        <a href="">Cancelar</a>
+                    </button>
+
+                    <button id="botao_cadastrar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div> -->
+            </div>
+            <?php include "../../../Public/include/Butons-forms.html" ?>
         </div>
     </main>
+    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html" ?>
+    <?php include "../../../Public/include/modais/modal-error.html" ?>
 
     <div class="bolas-fundo">
-        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
-        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
-        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola de Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola de Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
+
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
 </body>

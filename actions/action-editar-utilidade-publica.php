@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     }
 
     $utilidadePublica = new UtilidadePublica();
-    $utilidadePublica->id_utilidade_publica = $id_utilidade_publica;
+    $utilidadePublica->id_utilidadesPublica = $id_utilidadePublica;
     $utilidadePublica->titulo = $titulo;
     $utilidadePublica->descricao = $descricao;
     $utilidadePublica->data_inicio = $data_inicio;
