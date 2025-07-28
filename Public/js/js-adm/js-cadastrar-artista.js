@@ -11,35 +11,65 @@ document.addEventListener("DOMContentLoaded", () => {
   const telefoneInput = form.querySelector('[name="whats"]');
 
   telefoneInput.addEventListener("input", (e) => {
-    // Guarda posição do cursor antes da formatação
-    let cursorPosition = telefoneInput.selectionStart;
-    // Guarda valor antes da formatação
-    const oldValue = telefoneInput.value;
+    const input = telefoneInput;
+    const inputValue = input.value;
+    const cursorPosition = input.selectionStart;
 
     // Remove tudo que não for número
-    let rawValue = oldValue.replace(/\D/g, "");
+    let digits = inputValue.replace(/\D/g, "");
 
-    // Formata conforme quantidade de dígitos
-    if (rawValue.length > 10) {
-      // (xx) xxxxx-xxxx para 11 dígitos
-      rawValue = rawValue.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
-    } else if (rawValue.length > 5) {
-      // (xx) xxxx-xxxx para 10 dígitos
-      rawValue = rawValue.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
-    } else if (rawValue.length > 2) {
-      // (xx) xxxx para menos dígitos
-      rawValue = rawValue.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
-    } else if (rawValue.length > 0) {
+    // Aplica a máscara baseada na quantidade de dígitos
+    let formatted = "";
+    if (digits.length > 10) {
+      // (xx) xxxxx-xxxx
+      formatted = digits.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (digits.length > 5) {
+      // (xx) xxxx-xxxx
+      formatted = digits.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (digits.length > 2) {
+      // (xx) xxxx
+      formatted = digits.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
+    } else if (digits.length > 0) {
       // (xx
-      rawValue = rawValue.replace(/^(\d{0,2})/, "($1");
+      formatted = digits.replace(/^(\d{0,2})/, "($1");
+    } else {
+      formatted = "";
     }
 
-    // Atualiza valor formatado
-    telefoneInput.value = rawValue;
+    // Função para contar caracteres não numéricos antes do cursor
+    const countNonDigitsBeforeCursor = (str, pos) => {
+      let count = 0;
+      for (let i = 0; i < pos; i++) {
+        if (/\D/.test(str[i])) count++;
+      }
+      return count;
+    };
 
-    // Ajusta cursor para o final do texto formatado
-    // Isso evita o cursor "travando" no meio da máscara ao apagar
-    telefoneInput.selectionStart = telefoneInput.selectionEnd = rawValue.length;
+    // Conta caracteres não numéricos antes do cursor na string antiga
+    const oldNonDigitsBefore = countNonDigitsBeforeCursor(inputValue, cursorPosition);
+
+    // Tentativa de cálculo da nova posição do cursor
+    // A posição do cursor pode variar; aqui fazemos uma aproximação:
+    let newCursorPos = cursorPosition;
+
+    // Atualiza o valor formatado
+    input.value = formatted;
+
+    // Ajusta a posição do cursor para que fique na posição correta depois da formatação
+    // Como a máscara adiciona caracteres, precisamos ajustar
+    let nonDigitsInFormattedBefore = 0;
+    let digitsCounted = 0;
+    for (let i = 0; i < formatted.length; i++) {
+      if (/\d/.test(formatted[i])) digitsCounted++;
+      if (digitsCounted >= (cursorPosition - oldNonDigitsBefore)) {
+        newCursorPos = i + 1;
+        break;
+      }
+    }
+
+    if (newCursorPos > formatted.length) newCursorPos = formatted.length;
+
+    input.setSelectionRange(newCursorPos, newCursorPos);
   });
 
   btnSalvar.addEventListener("click", (e) => {
@@ -70,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Remove a máscara do telefone antes de enviar
     const telefoneLimpo = telefoneInput.value.replace(/\D/g, "");
-    // Cria um novo FormData para evitar alterar diretamente o form original
     const formData = new FormData(form);
     formData.set("whats", telefoneLimpo);
 
