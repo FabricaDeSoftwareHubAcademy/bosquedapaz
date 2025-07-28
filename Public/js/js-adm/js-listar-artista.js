@@ -23,10 +23,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function ordenarArtistasPorStatus(lista) {
     return lista.slice().sort((a, b) => {
-      if (a.status === b.status) return 0;
-      return a.status === 'ativo' ? -1 : 1;
+      if (a.status !== b.status) {
+        return a.status === 'ativo' ? -1 : 1;
+      }
+      return b.id_artista - a.id_artista;
     });
   }
+
 
   function renderizarTabela(lista) {
     const listaOrdenada = ordenarArtistasPorStatus(lista);
