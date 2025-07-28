@@ -86,18 +86,7 @@
                     </div>
                 </div>
 
-                <div id="btns-forms-padrao" class="btns-forms-padrao">
-                    <a href="./" class="link-area-adm">
-                        <div id="btn-voltar" class="btn-voltar">
-                            <i id="seta" class="bi bi-arrow-left-short seta"></i>
-                        </div>
-                    </a>
-
-                    <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
-                        <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
-                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="botao-cadastrar" value="salvar">Salvar</button></div>
-                    </div>
-                </div>
+                <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
         </div>
 
