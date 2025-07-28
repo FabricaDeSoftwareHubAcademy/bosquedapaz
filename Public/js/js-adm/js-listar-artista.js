@@ -21,10 +21,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     return numero;
   }
 
+  function ordenarArtistasPorStatus(lista) {
+    return lista.slice().sort((a, b) => {
+      if (a.status === b.status) return 0;
+      return a.status === 'ativo' ? -1 : 1;
+    });
+  }
+
   function renderizarTabela(lista) {
+    const listaOrdenada = ordenarArtistasPorStatus(lista);
     let html = '';
-    if (Array.isArray(lista) && lista.length > 0) {
-      lista.forEach(artista => {
+    if (Array.isArray(listaOrdenada) && listaOrdenada.length > 0) {
+      listaOrdenada.forEach(artista => {
         const statusClasse = artista.status === 'ativo' ? 'active' : 'inactive';
         const statusTexto = artista.status === 'ativo' ? 'Ativo' : 'Inativo';
 
@@ -69,7 +77,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderizarTabela(filtrados);
   });
 
-  // Quando clicar em Ativo/Inativo, exibe o modal de confirmação
   tbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('status')) {
       const botao = e.target;
