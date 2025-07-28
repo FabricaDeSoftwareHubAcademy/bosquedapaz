@@ -7,18 +7,15 @@ let dark = document.querySelectorAll('.dark')
 let white = document.querySelectorAll('.white')
 let theme = 0
 
-let btn = document.getElementById('theme-toggle')
-
 // Verifica tema salvo no localStorage
 if(localStorage.getItem('theme') === 'dark') {
     aplicarTemaEscuro()
     theme = 1
-    btn.checked = true // ativa o switch visualmente
 }
 
-// Escuta a mudança do switch
-btn.addEventListener('change', () => {
-    if (btn.checked) {
+// Exemplo: você pode chamar essa função por outro botão manualmente
+function alternarTema() {
+    if (theme === 0) {
         aplicarTemaEscuro()
         theme = 1
         localStorage.setItem('theme', 'dark')
@@ -27,7 +24,7 @@ btn.addEventListener('change', () => {
         theme = 0
         localStorage.setItem('theme', 'light')
     }
-})
+}
 
 function aplicarTemaEscuro() {
     cabecalho.style.setProperty('background-color', 'black')

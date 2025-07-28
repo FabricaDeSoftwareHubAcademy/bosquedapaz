@@ -132,65 +132,7 @@
     /* background-color: #7CC4BF; */
     background-color: transparent;
     transition: all .2s ease-in-out;
-}
-
-.switch-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .switch {
-    position: relative;
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .switch .slider {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    z-index: 2;
-  }
-  
-  .switch .icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    z-index: 1;
-    pointer-events: none;
-  }
-  
-  .switch .sun {
-    left: 8px;
-  }
-  
-  .switch .moon {
-    right: 8px;
-  }
-  
-  input[type="checkbox"] {
-    display: none;
-  }
-  
-  input[type="checkbox"]:checked + .switch .slider {
-    transform: translateX(30px);
-  }
-  
-  input[type="checkbox"]:checked + .switch {
-    background-color: #333;
-  }
-  
+} 
 
 @media screen and (max-width: 900px) {
     .nav-list {
