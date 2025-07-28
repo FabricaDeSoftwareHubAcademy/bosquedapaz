@@ -27,7 +27,7 @@ async function listar(){
                     <button 
                         type="button" 
                         class="status ${statusLower === 'ativo' ? 'active' : 'inactive'}" 
-                        data-id="${colab['id_colaborador']}" 
+                        data-id="${colab['id_pessoa']}" 
                         data-status="${statusLower}">
                         ${statusLower === 'ativo' ? 'Ativo' : 'Inativo'}
                     </button>

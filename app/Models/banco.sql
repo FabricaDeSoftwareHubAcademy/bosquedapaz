@@ -99,6 +99,7 @@ CREATE TABLE colaborador(
 CREATE TABLE artista (
 	id_artista INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
+    email varchar(150) not null,
     tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
@@ -222,6 +223,16 @@ INNER JOIN endereco AS en
 ON pes.id_endereco = en.id_endereco
 INNER JOIN login as log
 ON log.id_login = pes.id_login;
+
+CREATE VIEW view_colaborador AS 
+SELECT c.cargo, c.id_colaborador, 
+p.id_pessoa, p.id_login, p.nome, p.telefone, p.img_perfil,
+l.email, l.perfil, l.status_pes
+FROM login AS l
+INNER JOIN pessoa AS p
+ON l.id_login = p.id_login
+INNER JOIN colaborador AS c
+ON p.id_pessoa = c.id_pessoa;
 
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 

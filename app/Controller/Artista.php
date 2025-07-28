@@ -102,16 +102,16 @@ class Artista extends Pessoa
         $dbPessoa = new Database('pessoa');
         $pes_id = $dbPessoa->insert_lastid([
             'nome' => $this->nome,
-            'email' => $this->email,
             'telefone' => $this->whats,
             'link_instagram' => $this->link_instagram,
         ]);
-
+        
         if (!$pes_id) return false;
-
+        
         $dbArtista = new Database('artista');
         return $dbArtista->insert([
             'id_pessoa' => $pes_id,
+            'email' => $this->email,
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
             'publico_alvo' => $this->publico_alvo,
