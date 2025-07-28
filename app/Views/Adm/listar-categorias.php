@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+<?php require_once __DIR__ . '/../../../app/helpers/auth.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -141,16 +141,23 @@
         <img src="../../../Public/assets/img-bolas/bola-azul.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-adm/js-editar-categoria.js" defer></script>
+    <!-- <script src="../../../Public/js/js-adm/js-editar-categoria.js" defer></script>
     <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script>
     <script src="../../../Public/js/js-adm/js-alterar-status-cat.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
     <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
-    <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>
-    <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
-    <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
-    <?php include '../../../Public/include/modais/modal-error.html'; ?>
+    <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script> -->
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script>
+    <script src="../../../Public/js/js-adm/js-categoria-manager.js" defer></script>
+
+</body>
+
+</html>
+<?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+<?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+<?php include '../../../Public/include/modais/modal-error.html'; ?>
 </body>
 
 </html>

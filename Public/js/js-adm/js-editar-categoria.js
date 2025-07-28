@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form_categoria');
 
     const modalConfirmar = document.getElementById('modal-confirmar');
-    const tituloModalConfirmar = document.getElementById('confirmar-title'); // Adicionei esta linha para consistência
-    const mensagemModalConfirmar = document.getElementById('msm-confimar'); // Adicionei esta linha para consistência
+    const tituloModalConfirmar = document.getElementById('confirmar-title');
+    const mensagemModalConfirmar = document.getElementById('msm-confimar');
     const btnCancelar = document.getElementById('btn-modal-cancelar');
     const btnConfirmar = document.getElementById('btn-modal-salvar');
 
     const modalSucesso = document.getElementById('modal-sucesso');
-    // const tituloModalSucesso = document.getElementById('sucesso-title'); // Você já tem 'Salvo com sucesso!' fixo, mas pode querer dynamic
+    // const tituloModalSucesso = document.getElementById('sucesso-title');
     const mensagemModalSucesso = document.getElementById('msm-sucesso');
-    const closeModalSucesso = document.getElementById('close-modal-sucesso'); // Adicionei para fechar o modal sucesso
+    const closeModalSucesso = document.getElementById('close-modal-sucesso');
 
     const modalErro = document.getElementById('modal-error');
     const erroMensagem = document.getElementById('erro-mensagem');
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                // Certifique-se de que este caminho está correto para buscar os dados de uma única categoria
                 const response = await fetch(`../../../actions/action-buscar-categoria.php?id=${id}`);
                 const data = await response.json();
 
@@ -65,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     corInput.value = categoria.cor;
                     selectedColorDiv.style.backgroundColor = categoria.cor;
-                    selectedTextSpan.textContent = 'Cor selecionada'; // Ou exiba a cor real se quiser
+                    selectedTextSpan.textContent = 'Cor selecionada';
 
                     dialog.showModal();
                 } else {
@@ -125,13 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- BOTÃO SALVAR (ABRE MODAL DE CONFIRMAÇÃO PARA EDIÇÃO) ---
-    // Se o btn_cadastrar_cat é usado para editar, o nome é um pouco confuso.
-    // Presumi que é o botão de "salvar" final no formulário de edição.
     const btnSalvarEdicao = document.getElementById('btn_cadastrar_cat');
     btnSalvarEdicao?.addEventListener('click', (e) => {
         e.preventDefault();
         if (validarFormularioCategoria()) {
-            // Personaliza o modal de confirmação para edição
             tituloModalConfirmar.textContent = 'Confirma a Edição?';
             mensagemModalConfirmar.textContent = 'Deseja realmente salvar as alterações desta categoria?';
             modalConfirmar?.showModal();
@@ -145,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- BOTÃO CONFIRMAR ENVIO DA EDIÇÃO ---
     btnConfirmar?.addEventListener('click', async () => {
-        modalConfirmar?.close(); // Fecha o modal de confirmação
+        modalConfirmar?.close();
 
         const formData = new FormData(form);
 
@@ -169,9 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (data.status === 'success') {
-                dialog.close(); // Fecha o modal de edição/cadastro
-                mensagemModalSucesso.textContent = data.message || 'Categoria editada com sucesso!'; // Usa a mensagem do PHP
-                modalSucesso?.showModal(); // Abre o modal de sucesso
+                dialog.close();
+                mensagemModalSucesso.textContent = data.message || 'Categoria editada com sucesso!';
+                modalSucesso?.showModal();
                 setTimeout(() => window.location.reload(), 2000); // Recarrega a página após 2 segundos
             } else {
                 // Se o status não for 'success', exibe o modal de erro
