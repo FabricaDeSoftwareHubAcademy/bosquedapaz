@@ -112,8 +112,6 @@ function mascaraTelefone(input, e) { /* ... */ }
 function mascaraCep(input, e) { /* ... */ }
 function mascaraCpfCnpj(input, e) { /* ... */ }
 
-// Preview da logo
-/* ... */
 
 // Funções de modais
 function abrirModalErro(titulo = "Erro", mensagem = "Ocorreu um erro") {
