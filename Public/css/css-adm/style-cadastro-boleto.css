@@ -16,6 +16,35 @@ body {
     overflow-x: hidden;
 }
 
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: 0px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: 0px;
+    top: 6vh;
+    z-index: -3;
+}
+
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    z-index: -3;
+}
+
 .principal {
     width: 100vw;
     height: 90vh;
@@ -31,7 +60,7 @@ body {
     border-radius: 10px;
     backdrop-filter: blur(0px);
     transition: all .5s ease-in-out;
-    background-color: #FCF8F8;
+    background-color: rgba(248, 245, 246, 0.65);
     z-index: 2;
 }
 

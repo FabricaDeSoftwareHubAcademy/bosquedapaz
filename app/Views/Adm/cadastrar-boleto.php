@@ -103,10 +103,10 @@
 
     </main>
 
-    <div class="formas">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Forma 1" class="forma1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Forma 2" class="forma2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Forma3" class="forma3">
+    <div class="bolas-fundo">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
