@@ -40,7 +40,7 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
-        $this->aceitou_termos = $_SESSION['aceitou_termos_expositor'] ?? 'Não';
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
 
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(

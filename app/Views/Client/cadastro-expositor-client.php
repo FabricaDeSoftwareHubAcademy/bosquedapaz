@@ -1,6 +1,6 @@
 <?php
 session_start();
-$aceitou = $_SESSION['aceitou_termos_expositor'] ?? false;
+$aceitou = $_SESSION['aceitou_termos'] ?? false;
 if (!$aceitou) {
     header("Location: termos-expositor.php");
     exit();
