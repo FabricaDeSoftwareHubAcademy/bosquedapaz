@@ -13,17 +13,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   function formatarTelefone(numero) {
     if (!numero || typeof numero !== 'string') return '';
 
-    // Remove tudo que não é dígito
     const cleaned = numero.replace(/\D/g, '');
 
-    // Verifica se tem tamanho suficiente para formatar
     if (cleaned.length === 11) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
     } else if (cleaned.length === 10) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 6)}-${cleaned.slice(6)}`;
     }
 
-    // Retorna o número original se não puder formatar
     return numero;
   }
 
