@@ -20,7 +20,7 @@
 
     <main class="principal">
         <div class="box">
-            <div class="container">
+            <div class="input-busca">
                 <div class="title">
                     <h1 class="title-text">CADASTRO DE BOLETOS</h1>
                 </div>
@@ -31,12 +31,12 @@
                         <button type="submit" name="botao-procurar" id="lupa" class="search-button">BUSCAR</button>
                     </div>
                 </form>
-
+            </div>
+            <div class="container">
                 <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
                     <div class="form-content">
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>
-                            <input type="hidden" name="id-expositor">
                             <input type="text" name="nome_exp" id="nome-exp" placeholder="Nome do Expositor" maxlength="50" required>
                         </div>
 
@@ -53,17 +53,13 @@
 
                     <div class="form-input">
                         <div class="input">
-                            <label class="label">Arquivo em PDF:</label>
-                            <label for="arquivo" class="custom-file-label">
-                                <span id="file-text">Selecionar Arquivo em PDF</span>
-                                <img src="../../../Public/imgs/Upload.svg" alt="">
-                            </label>
-                            <input type="file" name="arquivo" id="arquivo" accept="application/pdf" class="input-form" required>
+                            <label>Arquivo em PDF:</label>
+                            <input type="file" name="arquivo" id="arquivo" accept="application/pdf" required>
                         </div>
 
                         <div class="input">
                             <label for="referencia" class="label">Referência:</label>
-                            <select name="referencia_input" id="referencia_select" class="input-form" required>
+                            <select class="select" name="referencia_input" id="referencia_select" required>
                                 <option id="option-cb" value="Janeiro">Janeiro</option>
                                 <option id="option-cb" value="Fevereiro">Fevereiro</option>
                                 <option id="option-cb" value="Março">Março</option>
@@ -80,23 +76,13 @@
                         </div>
 
                         <div class="input">
-                            <label for="vencimento" class="label">Vencimento</label>
-                            <input type="date" name="vencimento_input" id="val" class="input-form" placeholder="00/00/0000" required>
+                            <label for="vencimento" class="label">Vencimento:</label>
+                            <input type="date" name="vencimento_input" id="val" placeholder="00/00/0000" required>
                         </div>
                     </div>
 
-                    <!-- <div id="btns-forms-padrao" class="btns-forms-padrao">
-                    <a href="./" class="link-area-adm">
-                        <div id="btn-voltar" class="btn-voltar">
-                            <i id="seta" class="bi bi-arrow-left-short seta"></i>
-                        </div>
-                    </a>
-
-                    <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
-                        <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
-                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="botao-cadastrar" value="salvar">Salvar</button></div>
-                    </div>
-                </div> -->
+                    <?php include '../../../Public/include/Butons-forms.html'; ?>
+                   
                 </form>
             </div>
         </div>

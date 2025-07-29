@@ -64,7 +64,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
     overflow-y: auto;
 }
@@ -102,6 +101,87 @@ body {
 
 .search-bar .search-button:hover {
     background-color: #00443c;
+}
+
+.container{
+    width: 65%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    top: 88px;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-content input{
+    width: 320%;
+    height: 50px;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.form-input{
+    position: relative;
+    left: 35%;
+}
+.select{
+    width: 175%;
+    height: 50px;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+.form-input input{
+    width: 175%;
+    height: 50px;
+    gap: 20px;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.btns-forms-padrao{
+    height: 50px;
+    position: relative;
+    top: 45vh;
+}
+
+.link-area-adm{
+    position: relative;
+    left: -130%;
+}
+
+.btns-salvar-cancelar{
+    position: relative;
+    left: 55%;
 }
 
 
