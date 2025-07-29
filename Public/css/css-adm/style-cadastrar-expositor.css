@@ -71,7 +71,6 @@ body {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
-    left: 2%;
 }
 
 .title-text {
@@ -79,16 +78,22 @@ body {
     font-weight: bold;
 }
 
+#formulario_cad_expositor{
+    width: 100%;
+    background-color: blueviolet;
+}
+
 .formularios {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -50px;
-    left: -3%;
+    /* align-items: center; */
+    /* position: relative; */
+    /* top: -30px; */
+    /* background-color: aquamarine; */
+    gap: 100px;
 }
 
 .formularios div {
