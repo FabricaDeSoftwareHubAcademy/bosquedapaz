@@ -21,75 +21,71 @@
     <main class="principal">
         <div class="box">
             <div class="container">
-               <div class="title">
+                <div class="title">
                     <h1 class="title-text">CADASTRO DE BOLETOS</h1>
                 </div>
 
                 <form method="POST" action="../../../actions/action-procurar-expositor-boleto.php" class="search">
-
                     <div class="search-bar">
-                        <input type="text" name="pesquisar-nome" id="searchInput" placeholder="Pesquisar por expositor"/>
+                        <input type="text" name="pesquisar-nome" id="searchInput" placeholder="Pesquisar por expositor" />
                         <button type="submit" name="botao-procurar" id="lupa" class="search-button">BUSCAR</button>
                     </div>
-
                 </form>
-            </div>
 
-            <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
-              <div class="form-content">
-                  <div class="input">
-                      <label class="label" for="expositor">Expositor:</label>
-                      <input type="hidden" name="id-expositor">
-                      <input type="text" name="nome_exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" maxlength="50" required>
-                  </div>
+                <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
+                    <div class="form-content">
+                        <div class="input">
+                            <label class="label" for="expositor">Expositor:</label>
+                            <input type="hidden" name="id-expositor">
+                            <input type="text" name="nome_exp" id="nome-exp" placeholder="Nome do Expositor" maxlength="50" required>
+                        </div>
 
-                  <div class="input">
-                      <label for="cnpj-cpf" class="label">CPF:</label>
-                      <input type="text" name="cpf_input" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00" maxlength="14" required>
-                  </div>
+                        <div class="input">
+                            <label for="cnpj-cpf" class="label">CPF:</label>
+                            <input type="text" name="cpf_input" id="cnpj-cpf" placeholder="000.000.000-00" maxlength="14" required>
+                        </div>
 
-                  <div class="input">
-                      <label class="label" for="valor">Valor:</label>
-                      <input type="text" name="valor_input" id="valor" class="form-input" placeholder="R$ 0,00" autocomplete="off" required>
-                  </div>
-              </div>
+                        <div class="input">
+                            <label class="label" for="valor">Valor:</label>
+                            <input type="text" name="valor_input" id="valor" placeholder="R$ 0,00" autocomplete="off" required>
+                        </div>
+                    </div>
 
-              <div class="form-input">
+                    <div class="form-input">
+                        <div class="input">
+                            <label class="label">Arquivo em PDF:</label>
+                            <label for="arquivo" class="custom-file-label">
+                                <span id="file-text">Selecionar Arquivo em PDF</span>
+                                <img src="../../../Public/imgs/Upload.svg" alt="">
+                            </label>
+                            <input type="file" name="arquivo" id="arquivo" accept="application/pdf" class="input-form" required>
+                        </div>
 
-                  <div class="input">
-                      <label class="label">Arquivo em PDF:</label>
-                      <label for="arquivo" class="custom-file-label">
-                          <span id="file-text">Selecionar Arquivo em PDF</span>
-                          <img src="../../../Public/imgs/Upload.svg" alt="">
-                      </label>
-                      <input type="file" name="arquivo" id="arquivo" accept="application/pdf" class="form-input" required>
-                  </div>
-    
-                  <div class="input">
-                      <label for="referencia" class="label">Referência:</label>
-                      <select name="referencia_input" id="referencia_select" class="form-input" required>
-                          <option id="option-cb" value="Janeiro">Janeiro</option>
-                          <option id="option-cb" value="Fevereiro">Fevereiro</option>
-                          <option id="option-cb" value="Março">Março</option>
-                          <option id="option-cb" value="Abril">Abril</option>
-                          <option id="option-cb" value="Maio">Maio</option>
-                          <option id="option-cb" value="Junho">Junho</option>
-                          <option id="option-cb" value="Julho">Julho</option>
-                          <option id="option-cb" value="Agosto">Agosto</option>
-                          <option id="option-cb" value="Setembro">Setembro</option>
-                          <option id="option-cb" value="Outubro">Outubro</option>
-                          <option id="option-cb" value="Novembro">Novembro</option>
-                          <option id="option-cb" value="Dezembro">Dezembro</option>
-                      </select>
-                  </div>
-    
-                  <div class="input">
-                      <label for="vencimento" class="label">Vencimento</label>
-                      <input type="date" name="vencimento_input" id="val" class="form-input" placeholder="00/00/0000" required>
-                  </div>
-              </div>
+                        <div class="input">
+                            <label for="referencia" class="label">Referência:</label>
+                            <select name="referencia_input" id="referencia_select" class="input-form" required>
+                                <option id="option-cb" value="Janeiro">Janeiro</option>
+                                <option id="option-cb" value="Fevereiro">Fevereiro</option>
+                                <option id="option-cb" value="Março">Março</option>
+                                <option id="option-cb" value="Abril">Abril</option>
+                                <option id="option-cb" value="Maio">Maio</option>
+                                <option id="option-cb" value="Junho">Junho</option>
+                                <option id="option-cb" value="Julho">Julho</option>
+                                <option id="option-cb" value="Agosto">Agosto</option>
+                                <option id="option-cb" value="Setembro">Setembro</option>
+                                <option id="option-cb" value="Outubro">Outubro</option>
+                                <option id="option-cb" value="Novembro">Novembro</option>
+                                <option id="option-cb" value="Dezembro">Dezembro</option>
+                            </select>
+                        </div>
 
-                <div id="btns-forms-padrao" class="btns-forms-padrao">
+                        <div class="input">
+                            <label for="vencimento" class="label">Vencimento</label>
+                            <input type="date" name="vencimento_input" id="val" class="input-form" placeholder="00/00/0000" required>
+                        </div>
+                    </div>
+
+                    <!-- <div id="btns-forms-padrao" class="btns-forms-padrao">
                     <a href="./" class="link-area-adm">
                         <div id="btn-voltar" class="btn-voltar">
                             <i id="seta" class="bi bi-arrow-left-short seta"></i>
@@ -100,10 +96,10 @@
                         <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
                         <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="botao-cadastrar" value="salvar">Salvar</button></div>
                     </div>
-                </div>
-            </form>
+                </div> -->
+                </form>
+            </div>
         </div>
-
     </main>
 
     <div class="bolas-fundo">
@@ -111,7 +107,7 @@
         <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
-    
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
