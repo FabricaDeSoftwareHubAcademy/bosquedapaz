@@ -3,9 +3,7 @@ require_once '../vendor/autoload.php';
 
 use app\Controller\Categoria;
 
-// Permitir acesso CORS (se precisar)
-// header("Access-Control-Allow-Origin: *");
-// header("Content-Type: application/json");
+header("Content-Type: application/json");
 
 $acao = $_GET['acao'] ?? $_POST['acao'] ?? '';
 
@@ -27,21 +25,25 @@ switch ($acao) {
             $cat = new Categoria();
             $res = $cat->alterarStatus($id, $novoStatus);
             if ($res) {
-                echo json_encode(['status' => 'success', 'mensagem' => 'Status alterado com sucesso']);
+                echo json_encode(['status' => 'success', 'message' => 'Status alterado com sucesso']);
             } else {
-                echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao alterar o status']);
+                echo json_encode(['status' => 'error', 'message' => 'Erro ao alterar o status']);
             }
         } else {
-            echo json_encode(['status' => 'error', 'mensagem' => 'Dados inválidos']);
+            echo json_encode(['status' => 'error', 'message' => 'Dados inválidos']);
         }
         break;
-
 
     case 'cadastrar':
         $descricao = $_POST['descricao'] ?? '';
         $cor = $_POST['cor'] ?? '';
         $icone = $_POST['icone'] ?? '';
         $status = $_POST['status_cat'] ?? 'ativo';
+
+        if (empty($descricao)) {
+            echo json_encode(['status' => 'error', 'message' => 'O nome da categoria não pode estar vazio']);
+            exit;
+        }
 
         $cat = new Categoria();
         $cat->setDescricao($descricao);
@@ -51,7 +53,7 @@ switch ($acao) {
 
         $res = $cat->cadastrar();
 
-        echo json_encode(['status' => 'success', 'mensagem' => 'Categoria cadastrada']);
+        echo json_encode(['status' => 'success', 'message' => 'Categoria cadastrada']);
         break;
 
     case 'atualizar':
@@ -61,6 +63,11 @@ switch ($acao) {
         $icone = $_POST['icone'] ?? '';
         $status = $_POST['status_cat'] ?? 'ativo';
 
+        if (empty($descricao)) {
+            echo json_encode(['status' => 'error', 'message' => 'O nome da categoria não pode estar vazio']);
+            exit;
+        }
+
         $cat = new Categoria();
         $cat->setDescricao($descricao);
         $cat->setCor($cor);
@@ -69,7 +76,7 @@ switch ($acao) {
 
         $res = $cat->atualizar($id);
 
-        echo json_encode(['status' => 'success', 'mensagem' => 'Categoria atualizada']);
+        echo json_encode(['status' => 'success', 'message' => 'Categoria atualizada']);
         break;
 
     case 'excluir':
@@ -79,13 +86,13 @@ switch ($acao) {
             $cat = new Categoria();
             $cat->setId($id);
             $res = $cat->excluir();
-            echo json_encode(['status' => 'success', 'mensagem' => 'Categoria excluída']);
+            echo json_encode(['status' => 'success', 'message' => 'Categoria excluída']);
         } else {
-            echo json_encode(['status' => 'error', 'mensagem' => 'ID não informado']);
+            echo json_encode(['status' => 'error', 'message' => 'ID não informado']);
         }
         break;
 
     default:
-        echo json_encode(['status' => 'error', 'mensagem' => 'Ação inválida']);
+        echo json_encode(['status' => 'error', 'message' => 'Ação inválida']);
         break;
 }

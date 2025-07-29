@@ -40,7 +40,7 @@
                         <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
                             <div class="dialog-form-box">
                                 <h3>Nome:</h3>
-                                <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria">
+                                <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria" maxlength="30">
                                 <h3>Cor:</h3>
                                 <div class="custom-select">
                                     <div class="select-selected" id="openModal">

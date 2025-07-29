@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <h3>${evento.subtitulo_evento}</h3>
                             <p><i class="bi bi-calendar-event"></i> Data: ${formatarDataBR(evento.data_evento)}</p>
                             <p><i class="bi bi-clock"></i> Horário: ${evento.hora_inicio} às ${evento.hora_fim}</p>
-                            <p><i class="bi bi-geo-alt"></i> ${evento.endereco_evento}</p>
+                            <p><i class="bi bi-geo-alt"></i> ${formatarEndereco(evento.endereco_completo)}</p>
                         </div>
                         <div class="banner-right">
                             <img src="../../../Public/${evento.banner_evento}" />
@@ -142,5 +142,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
+    }
+
+    function formatarEndereco(endereco) {
+        if (!endereco) return 'Endereço não informado';
+        
+        const {
+            nome_local,
+            logradouro_evento,
+            numero_evento,
+            bairro_evento,
+            cidade_evento
+        } = endereco;
+    
+        return `${nome_local} - ${logradouro_evento}, ${numero_evento} - ${bairro_evento}, ${cidade_evento}`;
     }
 });

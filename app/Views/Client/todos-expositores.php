@@ -19,7 +19,7 @@
     <?php include "../../../Public/include/home/menu-home.html"; ?>
 
     <main class="content-principal">
-        <h1 class="title-all-expo">expositores</h1>
+        <h1 class="title-all-expo dark">expositores</h1>
         <div class="conteiner-expositores">
             <div class="conteiner_filtros">
                 <div class="search_expositor">

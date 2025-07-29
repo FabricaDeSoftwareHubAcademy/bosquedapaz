@@ -43,13 +43,20 @@ class Colaborador extends Pessoa
 
     public function cadastrar() {
         // Insere na tabela pessoa
-        $dbPessoa = new Database('pessoa');
-        $idPessoa = $dbPessoa->insert_lastid([
-            'nome' => $this->nome,
-            'telefone' => $this->telefone,
+        $dbLogin = new Database('login');
+
+        $idLogin = $dbLogin->insert_lastid([
             'email' => $this->email,
             'senha' => $this->senha,
             'perfil' => '1',
+        ]);
+        
+        $dbPessoa = new Database('pessoa');
+        
+        $idPessoa = $dbPessoa->insert_lastid([
+            'nome' => $this->nome,
+            'telefone' => $this->telefone,
+            'id_login' => $idLogin,
             'img_perfil' => $this->foto_perfil
         ]);
 
@@ -67,31 +74,48 @@ class Colaborador extends Pessoa
     }
 
     public function atualizar($id){
-        $db = new Database('colaborador');
-
-        $values1 = [
-            'cargo' => $this->cargo
+        
+        $valuesLogin = [
+        'email' => $this->email
         ];
-
-        $values2 = [
+        
+        $valuesPessoa = [
             'nome' => $this->nome,
             'telefone' => $this->telefone,
-            'email' => $this->email,
             'img_perfil' => $this->foto_perfil
         ];
+        
+        $valuesColaborador = [
+            'cargo' => $this->cargo
+        ];
+        
+        
+        ////// updata login
+        $db = new Database('login');
+        $resLogin = $db->update("id_login = ". $id, $valuesLogin);
 
-        $res = $db->update_all($values1, $values2, 'pessoa', 'id_pessoa', 'id_colaborador = '. $id);
+        ////// updata pessoa
+        $db = new Database('pessoa');
+        $resPessoa = $db->update("id_login = ". $id, $valuesPessoa);
 
-        return $res ? TRUE : FALSE;
+        ////// updata colaborador
+        $db = new Database('colaborador');
+        $resColaborador = $db->updateColaborador("id_login = ". $id, $valuesColaborador, 'id_pessoa', 'pessoa');
+
+
+
+        return $resLogin && $resPessoa && $resColaborador ? TRUE : FALSE;
     }
 
     public function listarColaboradores(?string $nome = null){
-        $db = new Database('colaborador');
+        $db = new Database('view_colaborador');
         
         if (!empty($nome)) {
-            return $db->filtrar_colaboradores($nome)->fetchAll(PDO::FETCH_ASSOC);
+            return $db->select("
+                nome LIKE '%$nome%'
+            ")->fetchAll(PDO::FETCH_ASSOC);
         } else {
-            return $db->listar_colaboradores()->fetchAll(PDO::FETCH_ASSOC);
+            return $db->select()->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
@@ -130,8 +154,8 @@ class Colaborador extends Pessoa
     }
 
     public function buscarPorIdPessoa(int $idPessoa) {
-        $db = new Database('colaborador');
-        return $db->buscarPorIdPessoa($idPessoa);
+        $db = new Database('view_colaborador');
+        return $db->select('id_login = '.$idPessoa)->fetch(PDO::FETCH_ASSOC);
     }   
 }
 

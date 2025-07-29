@@ -42,7 +42,7 @@
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="500" style="resize: none">></textarea>
                                 <small id="contador-caracteres">500 caracteres restantes</small>
                             </div>
 
@@ -64,10 +64,13 @@
                                         required>
                                 </div>
 
-                                <select name="status" id="status">
-                                    <option value="1">Ativo</option>
-                                    <option value="0">Inativo</option>
-                                </select>
+                                <div class="input-group">
+                                    <label for="status">Status:</label>
+                                    <select name="status" id="status">
+                                        <option value="1">Ativo</option>
+                                        <option value="0">Inativo</option>
+                                    </select>
+                                </div>
 
                             </div>
 

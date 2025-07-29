@@ -1,4 +1,11 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+<?php
+session_start();
+$aceitou = $_SESSION['aceitou_termos'] ?? false;
+if (!$aceitou) {
+    header("Location: termos-expositor.php");
+    exit();
+}
+?>
 
 
 <!DOCTYPE html>

@@ -19,6 +19,7 @@ class Artista extends Pessoa
     protected $tempo_apresentacao;
     protected $valor_cache;
     protected $status;
+    protected $aceitou_termos; // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
 
     // --- Setters ---
     public function setId_artista($id_artista)
@@ -57,6 +58,14 @@ class Artista extends Pessoa
     {
         $this->status = $status;
     }
+
+    // NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+    public function setAceitou_termos($aceitou_termos)
+    {
+        $this->aceitou_termos = $aceitou_termos;
+    }
+
+
 
     // --- Getters ---
     public function getId_artista()
@@ -99,25 +108,28 @@ class Artista extends Pessoa
     // --- Cadastrar ---
     public function cadastrar()
     {
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
+
         $dbPessoa = new Database('pessoa');
         $pes_id = $dbPessoa->insert_lastid([
             'nome' => $this->nome,
-            'email' => $this->email,
             'telefone' => $this->whats,
             'link_instagram' => $this->link_instagram,
+            'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
         ]);
-
+        
         if (!$pes_id) return false;
-
+        
         $dbArtista = new Database('artista');
         return $dbArtista->insert([
             'id_pessoa' => $pes_id,
+            'email' => $this->email,
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
             'publico_alvo' => $this->publico_alvo,
             'tempo_apresentacao' => $this->tempo_apresentacao,
             'valor_cache' => $this->valor_cache,
-            'status' => 'ativo' 
+            'status' => 'ativo'
         ]);
     }
 
@@ -159,5 +171,4 @@ class Artista extends Pessoa
             return false;
         }
     }
-    
 }

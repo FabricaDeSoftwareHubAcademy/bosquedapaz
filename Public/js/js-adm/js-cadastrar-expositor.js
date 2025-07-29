@@ -42,7 +42,6 @@ btn_salvar.addEventListener('click', async function (event) {
 
         let response = await dados_php.json()
 
-
         
         if(response.status == 200){
             openModalSucesso()
