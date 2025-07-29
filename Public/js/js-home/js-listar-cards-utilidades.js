@@ -4,16 +4,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const resposta = await fetch("../../../actions/action-listar-utilidades-client.php");
         const utilidades = await resposta.json();
-
+        console.log(utilidades);
         container.innerHTML = ""; // Limpa os cards estáticos
-
+        
         utilidades.forEach((item, index) => {
             const card = document.createElement("div");
             card.classList.add("card");
 
-            const imagem = item.imagem
-                ? `../../../Public/imgs/${item.imagem}`
+            console.log(item.imagem);
+
+            const imagem = item.imagem && item.imagem.trim() !== ""
+                ? `../../${item.imagem}`
                 : "../../../Public/imgs/primavera.png";
+
 
             card.innerHTML = `
                 <div class="por-cima-card">
