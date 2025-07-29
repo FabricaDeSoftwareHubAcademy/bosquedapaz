@@ -158,10 +158,10 @@
                     <img src="../../../Public/imgs/imagem31.webp" alt="">
                     <img src="../../../Public/imgs/imagem32.webp" alt="">
                     <img src="../../../Public/imgs/imagem33.webp" alt="">
-                    <img src="../../../Public/imgs/imagem43.webp" alt="">
-                    <img src="../../../Public/imgs/imagem44.webp" alt="">
-                    <img src="../../../Public/imgs/imagem45.webp" alt="">
-                    <img src="../../../Public/imgs/imagem46.webp" alt="">
+                    <img src="../../../Public/imgs/imagemm43.webp" alt="">
+                    <img src="../../../Public/imgs/imagemm44.webp" alt="">
+                    <img src="../../../Public/imgs/imagemm45.webp" alt="">
+                    <img src="../../../Public/imgs/imagemm46.webp" alt="">
 
 
 
@@ -180,7 +180,7 @@
     
 
     <?php include "../../../Public/include/home/rodape.html"; ?>
-    <script src="../../../Public/js/js-home/main.js" defer></script>
+    <!-- <script src="../../../Public/js/js-home/main.js" defer></script> -->
     <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>
