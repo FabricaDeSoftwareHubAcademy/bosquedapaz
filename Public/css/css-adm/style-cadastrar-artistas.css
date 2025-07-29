@@ -82,18 +82,24 @@ body {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
-    top: -30px;
+    /* top: -30px; */
+    background-color: aquamarine;
+    gap: 100px;
 
+}
+#form-artista{
+    width: 100%;
+    background-color: blueviolet;
 }
 
 .formularios div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .form-pessoa,
@@ -104,19 +110,21 @@ body {
 }
 
 .form-expo {
-    width: 150%;
-    display: flex;
+    width: 40%;
+    /* display: flex; */
     position: relative;
-    left: 15%;
-    top: 4px;
+    /* left: 15%;
+    top: 4px; */
 
 }
 
 
 .form-pessoa {
+    width: 40%;
     position: relative;
-    left: -22%;
-    top: -12px;
+    /* left: -22%;
+    top: -12px; */
+    
 }
 
 #estilo_musica_container {
@@ -132,14 +140,14 @@ body {
     width: 100%;
 }
 
-.formularios label {
+/* .formularios label {
     width: 120%;
-}
+} */
 
 .input input,
 .input-group input,
 .input-group textarea {
-    width: 170%;
+    /* width: 170%; */
     height: 50px;
     min-height: 45px;
     padding: 5px;
@@ -163,6 +171,7 @@ body {
 #estilo_musica {
     /* width: 120%; */
     padding: 5px;
+    height: 50px;
     min-height: 45px;
     border: none;
     border-radius: 5px;
@@ -237,7 +246,7 @@ body {
 
     .btns-salvar-cancelar{
         position: relative;
-        left: -20%;
+        /* left: -20%; */
     }
 
 }
