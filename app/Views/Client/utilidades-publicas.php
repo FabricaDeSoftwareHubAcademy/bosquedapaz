@@ -22,7 +22,7 @@
 
 
             <!-- Seta:  -->
-            <div class="seta_voltar"><a href="feira-bosque-da-paz.php#edit_pass"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
+            <div class="seta_voltar"><a href="index.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
         </section>
     </main>
 
