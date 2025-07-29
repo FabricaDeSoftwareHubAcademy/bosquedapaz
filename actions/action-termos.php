@@ -2,12 +2,12 @@
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['botao-continuar'])) {
     
-    if (isset($_POST['aceito'])) {
+    if (isset($_POST['termos'])) {
 
-        $_SESSION['aceitou_termos_expositor'] = true;
+        $_SESSION['aceitou_termos'] = 'Sim';
 
         $destino = $_POST['destino'];
-
+        // var_dump($_SESSION);
         header("Location: $destino");
         exit();
 

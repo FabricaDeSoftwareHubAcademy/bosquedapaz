@@ -8,6 +8,7 @@ use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
 use app\Controller\Imagem;
+session_start();
 
 
 class Expositor extends Pessoa
@@ -39,7 +40,8 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
-        
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
+
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
             [
@@ -48,7 +50,6 @@ class Expositor extends Pessoa
         );
 
         ///// insert na tabela pessoa \\\\\
-
         $db = new Database('pessoa');
         $pes_id = $db->insert_lastid(
             [

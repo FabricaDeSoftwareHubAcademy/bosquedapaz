@@ -1,3 +1,13 @@
+<?php
+session_start();
+$aceitou = $_SESSION['aceitou_termos'] ?? false;
+if (!$aceitou) {
+    header("Location: termos-expositor.php");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,7 +24,7 @@
             </div>
             <div class="regras-container">
                 <h1 class="title-edital dark">Termos de Condições</h1>
-                <h1 class="title-edital dark">EXPOSITORES</h1>
+                <h1 class="title-edital dark">ARTISTAS</h1>
                 <p class="lin-term dark"><strong class="cont-lin dark">1.0:</strong> O preenchimento desta ficha não garante a participação da feira, pois será feita uma curadoria (seleção) dos trabalhos que estejam de acordo com a proposta da Feira Bosque da Paz. Entraremos em contato com os selecionados por WhatsApp e passaremos todas as informações.</p>
                 <p class="lin-term dark"><strong class="cont-lin dark">1.1:</strong> Cada expositor é responsável pela sua estrutura, organização do seu espaço, venda e recebimento de seus produtos. (exceto gastronomia).</p>
                 <p class="lin-term dark"><strong class="cont-lin dark">1.2:</strong> Cada expositor é também responsável pelo recolhimento do LIXO gerado pela sua banca e pelos seus clientes.</p>
@@ -41,13 +42,13 @@
             <form action="../../../actions/action-termos.php" method="post" class="form-aceitar-edital">
 
                 <!-- arquivo de destino -->
-                <input type="hidden" name="destino" value="../app/views/client/cadastro-expositor-client.php">
+                <input type="hidden" name="destino" value="../app/views/client/cadastro-artista.php">
 
                 <!-- arquivo de origem -->
-                <input type="hidden" name="origem" value="../app/views/client/termos-expositor.php">
+                <input type="hidden" name="origem" value="../app/views/client/termos-artistas.php">
 
                 <div class="div-input-check">
-                    <input type="checkbox" name="aceito" id="aceito" class="input-check">
+                    <input type="checkbox" value="Sim" name="termos" id="termos" class="input-check">
                     <label for="aceito" class="label-edital dark">Aceito os termos das condições acima.</label>
                 </div>
                 <div class="btns">
