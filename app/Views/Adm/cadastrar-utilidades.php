@@ -75,7 +75,6 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                         <a href="">Salvar</a>
                 </div> -->
             </div>
-            <?php include "../../../Public/include/Butons-forms.html" ?>
         </div>
     </main>
     <?php include "../../../Public/include/modais/modal-confirmar.html" ?>

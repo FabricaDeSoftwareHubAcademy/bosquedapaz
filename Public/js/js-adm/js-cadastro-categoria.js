@@ -186,3 +186,46 @@ function fecharModal(idModal) {
     }
 }
 
+const nomeInput = document.getElementById('nome');
+const fileInput = document.getElementById('file');
+const previewContainer = document.getElementById('preview-container');
+const previewCircle = document.getElementById('preview-circle');
+const previewImg = document.getElementById('preview-img');
+const previewLabel = document.getElementById('preview-label');
+const corInput = document.getElementById('corInput');
+const colorOptions = document.querySelectorAll('#seletor-cor div[data-value]');
+const uploadPlaceholder = document.getElementById('upload-placeholder');
+
+function atualizarPreview() {
+  const nome = nomeInput.value.trim();
+  if (nome) previewLabel.textContent = nome;
+}
+
+nomeInput.addEventListener('input', () => {
+  atualizarPreview();
+});
+
+colorOptions.forEach(item => {
+  item.addEventListener('click', () => {
+    const cor = item.getAttribute('data-value');
+    corInput.value = cor;
+    previewCircle.style.backgroundColor = cor;
+  });
+});
+
+
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      previewImg.src = e.target.result;
+      previewImg.style.display = 'block';
+      previewContainer.style.display = 'flex';
+      uploadPlaceholder.style.display = 'none'; // esconde o ícone padrão
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+
