@@ -12,7 +12,7 @@ class Login{
     private $db;
 
     public function autenticar($email, $senha){
-        $db = new Database('pessoa');
+        $db = new Database('login');
         $pessoa = $db->select("email = '$email'")->fetchObject();
 
         // Validação simples, sem hash

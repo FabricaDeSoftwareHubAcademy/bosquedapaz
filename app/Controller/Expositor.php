@@ -23,7 +23,6 @@ class Expositor extends Pessoa
     protected $tipo;
     protected $idade;
     protected $energia;
-    protected $contato2;
     protected $descricao;
     protected $metodos_pgto;
     protected $cor_rua;
@@ -34,11 +33,16 @@ class Expositor extends Pessoa
 
 
     //////////// MÉDOTO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
+    public function emailExiste($email){
+        $db = new Database('login');
 
+        $email = $db->select("email = '$email'")->fetch(PDO::FETCH_ASSOC);
+
+        return $email;
+    }
 
     public function cadastrar()
     {
-        
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
             [
@@ -46,21 +50,33 @@ class Expositor extends Pessoa
             ]
         );
 
+        
+        ///// insert na tabela login \\\\\
+        
+        $db = new Database('login');
+        $login_id = $db->insert_lastid(
+            [
+            'email' => $this->email,
+            'perfil' => '0',
+            ]
+        );
+
+            
         ///// insert na tabela pessoa \\\\\
 
         $db = new Database('pessoa');
         $pes_id = $db->insert_lastid(
             [
                 'nome' => $this->nome,
-                'email' => $this->email,
                 'telefone' => $this->whats,
                 'whats' => $this->whats,
                 'img_perfil' => $this->foto_perfil,
                 'link_instagram' => $this->link_instagram,
-                'perfil' => '0',
+                'id_login' => $login_id,
                 'id_endereco' => $endereco_id,
             ]
         );
+
 
         ///// insert na tabela expostor \\\\\\
 
@@ -74,7 +90,6 @@ class Expositor extends Pessoa
                 'voltagem' => $this->voltagem,
                 'energia' => $this->energia,
                 'tipo' => $this->tipo,
-                'contato2' => $this->contato2,
                 'descricao' => $this->descricao,
                 'metodos_pgto' => $this->metodos_pgto,
                 'cor_rua' => $this->cor_rua,
@@ -281,10 +296,7 @@ class Expositor extends Pessoa
     {
         $this->voltagem = $voltagem;
     }
-    public function setContato2($contato2)
-    {
-        $this->contato2 =  $contato2;
-    }
+
     public function setNum_barraca($num_barraca)
     {
         $this->num_barraca = $num_barraca;

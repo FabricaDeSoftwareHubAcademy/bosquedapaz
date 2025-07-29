@@ -1,18 +1,22 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 error_log("ID da sessão: " . ($_SESSION['login']['id_pessoa'] ?? 'não definido'));
 
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
 
-if (!isset($_SESSION['login']['id_pessoa'])) {
-    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
+if (!isset($_SESSION['login']['id_login'])) {
+    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado', $_SESSION]);
     exit;
 }
 
 function sanitizeString($str) {
-    return filter_var(trim($str), FILTER_SANITIZE_STRING);
+    return htmlspecialchars(strip_tags($str));
 }
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -138,17 +142,12 @@ if ($requestMethod === 'POST') {
 
     // Update = Edição dos dados <----------------------------------------------->
     else if (isset($_POST["atualizar"])) {
-        $id = filter_var($_POST['id'] ?? '', FILTER_VALIDATE_INT);
-        if (!$id) {
-            echo json_encode(['success' => false, 'message' => 'ID inválido']);
-            exit;
-        }
-
+        
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
         $telefone = sanitizeString($_POST['tel'] ?? '');
         $cargo = sanitizeString($_POST['cargo'] ?? '');
-
+        
         // Validações: 
         if (!$email) {
             echo json_encode(['success' => false, 'message' => 'Email inválido']);
@@ -166,7 +165,7 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Telefone inválido. Informe apenas números com DDD.']);
             exit;
         }
-
+        
         // Validação: Somente Letras no input de Nome e Cargo: 
         if (!Colaborador::validarSomenteLetra($nome)) {
             echo json_encode(['success' => false, 'message' => 'Nome inválido. Apenas letras são permitidas.']);
@@ -176,18 +175,18 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Cargo inválido. Apenas letras são permitidas.']);
             exit;
         }
-
+        
         
         $colab->setNome($nome);
         $colab->setTelefone($telefone);
         $colab->setEmail($email);
         $colab->setCargo($cargo);
-
-
+        
+        
         // Imagem: <----------------------------------------------->
         $uploadDir = '../Public/uploads/uploads-ADM/';
         $imagemSalva = null;
-
+        
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
             $imagemSalva = Colaborador::uploadImagem($_FILES['imagem'], $uploadDir);
             if ($imagemSalva === false) {
@@ -198,14 +197,14 @@ if ($requestMethod === 'POST') {
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
-            $colaboradorAtual = $colab->buscarPorIdPessoa($_SESSION['login']['id_pessoa']);
+            $colaboradorAtual = $colab->buscarPorIdPessoa($_SESSION['login']['id_login']);
             $colab->setImagem($colaboradorAtual['img_perfil'] ?? null);
         }
-
-        $res = $colab->atualizar($id);
+        
+        $res = $colab->atualizar($_SESSION['login']['id_login']);
         if ($res) {
 
-            $idSessao = $_SESSION['login']['id_pessoa'];
+            $idSessao = $_SESSION['login']['id_login'];
 
             $dadosAtualizados = $colab->buscarPorIdPessoa($idSessao);
             echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!', 'data' => $dadosAtualizados]);
@@ -250,11 +249,11 @@ if ($requestMethod === 'GET') {
     $colab = new Colaborador();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['meu_perfil']) && $_GET['meu_perfil'] === '1') {
-        if(!isset($_SESSION['login']['id_pessoa'])) {
+        if(!isset($_SESSION['login']['id_login'])) {
             echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
             exit;
         }
-        $idSessao = $_SESSION['login']['id_pessoa'];
+        $idSessao = $_SESSION['login']['id_login'];
         
         // Instancia seu controller
         $colab = new \app\Controller\Colaborador();
