@@ -26,12 +26,47 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     console.log(response.expositor["imagens"][0]["caminho"]);
 
-    img_expo_1.src = `../../${response.expositor["imagens"][0]["caminho"]}`;
-    img_expo_2.src = `../../${response.expositor["imagens"][1]["caminho"]}`;
-    img_expo_3.src = `../../${response.expositor["imagens"][2]["caminho"]}`;
-    img_expo_4.src = `../../${response.expositor["imagens"][3]["caminho"]}`;
-    img_expo_5.src = `../../${response.expositor["imagens"][4]["caminho"]}`;
-    img_expo_6.src = `../../${response.expositor["imagens"][5]["caminho"]}`;
+    // img_expo_1.src = `../../${response.expositor["imagens"][0]["caminho"]}`;
+    // img_expo_2.src = `../../${response.expositor["imagens"][1]["caminho"]}`;
+    // img_expo_3.src = `../../${response.expositor["imagens"][2]["caminho"]}`;
+    // img_expo_4.src = `../../${response.expositor["imagens"][3]["caminho"]}`;
+    // img_expo_5.src = `../../${response.expositor["imagens"][4]["caminho"]}`;
+    // img_expo_6.src = `../../${response.expositor["imagens"][5]["caminho"]}`;
+
+    for (let i = 1; i <= 6; i++) {
+        const img = document.getElementById(`perfilEdit-img-${i}`);
+        const label = document.getElementById(`prod-foto-${i}`);
+        const input = label.previousElementSibling;
+    
+        const caminhoImagem = response.expositor.imagens[i - 1]?.caminho;
+    
+        if (caminhoImagem) {
+            img.src = `../../${caminhoImagem}`;
+    
+            img.addEventListener('load', () => {
+                label.style.display = 'none';
+            });
+    
+            // Permite clicar na imagem para abrir o seletor de arquivos
+            img.addEventListener('click', () => {
+                input.click();
+            });
+        }
+    
+        // Atualiza a imagem assim que o usuário selecionar uma nova
+        input.addEventListener('change', () => {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    img.src = e.target.result;
+                    label.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+    
     
     response.expositor["imagens"][0]["caminho"];
 
