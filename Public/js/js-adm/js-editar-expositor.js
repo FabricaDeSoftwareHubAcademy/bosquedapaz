@@ -9,6 +9,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     let input_whatsapp = document.getElementById("whatsapp");
     let input_facebook = document.getElementById("facebook");
     let input_id_expositor = document.getElementById("id_expositor");
+    let img_expo_1 = document.getElementById("perfilEdit-img-1");
+    let img_expo_2 = document.getElementById("perfilEdit-img-2");
+    let img_expo_3 = document.getElementById("perfilEdit-img-3");
+    let img_expo_4 = document.getElementById("perfilEdit-img-4");
+    let img_expo_5 = document.getElementById("perfilEdit-img-5");
+    let img_expo_6 = document.getElementById("perfilEdit-img-6");
     // let input_logo = document.getElementById("foto");
 
     // Pegando os dados da URL
@@ -18,6 +24,17 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     let response = await dados_php.json();
 
+    console.log(response.expositor["imagens"][0]["caminho"]);
+
+    img_expo_1.src = `../../${response.expositor["imagens"][0]["caminho"]}`;
+    img_expo_2.src = `../../${response.expositor["imagens"][1]["caminho"]}`;
+    img_expo_3.src = `../../${response.expositor["imagens"][2]["caminho"]}`;
+    img_expo_4.src = `../../${response.expositor["imagens"][3]["caminho"]}`;
+    img_expo_5.src = `../../${response.expositor["imagens"][4]["caminho"]}`;
+    img_expo_6.src = `../../${response.expositor["imagens"][5]["caminho"]}`;
+    
+    response.expositor["imagens"][0]["caminho"];
+
     if (response.status == 200) {
         input_id_expositor.value = response.expositor.id_expositor;
         input_nome.value = response.expositor.nome_marca;
@@ -26,6 +43,12 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_insta.value = response.expositor.link_instagram;
         input_whatsapp.value = response.expositor.whats;
         input_facebook.value = response.expositor.link_facebook;
+        img_expo_1.value = response.expositor.imagens;
+        img_expo_2.value = response.expositor.imagens;
+        img_expo_3.value = response.expositor.imagens;
+        img_expo_4.value = response.expositor.imagens;
+        img_expo_5.value = response.expositor.imagens;
+        img_expo_6.value = response.expositor.imagens;
         // input_logo.value = response.expositor['0'].foto;
     }
 
