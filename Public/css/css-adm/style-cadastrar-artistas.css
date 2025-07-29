@@ -85,7 +85,7 @@ body {
     /* flex-direction: row; */
     justify-content: center;
     /* align-items: center; */
-    position: relative;
+    /* position: relative; */
     /* top: -30px; */
     background-color: aquamarine;
     gap: 100px;
@@ -102,12 +102,12 @@ body {
     /* justify-content: center; */
 }
 
-.form-pessoa,
+/* .form-pessoa,
 #estilo_musica_container,
 .form-expo {
     width: 90%;
     display: flex;
-}
+} */
 
 .form-expo {
     width: 40%;
@@ -199,26 +199,26 @@ body {
     color: #3d3d3d;
 }
 
-.custom-dropdown {
+/* .custom-dropdown {
     width: 100%;
     margin-bottom: 20px;
-}
+} */
 
-.btns-salvar-cancelar {
+/* .btns-salvar-cancelar {
     width: 0%;
     gap: 10px;
-}
+} */
 
-.link-area-adm {
+/* .link-area-adm {
     position: relative;
     left: -35%;
-}
+} */
 
 @media (max-width:1500px) {
     .formularios {
         position: relative;
-        top: -40px;
-        left: 5%;
+        /* top: -40px;
+        left: 5%; */
     }
 }
 
@@ -229,6 +229,7 @@ body {
     .formularios {
         flex-direction: column;
         top: 0;
+        gap: 0px;
     }
 
     .form-pessoa,
@@ -244,10 +245,10 @@ body {
         width: 100% !important;
     }
 
-    .btns-salvar-cancelar{
+    /* .btns-salvar-cancelar{
         position: relative;
         /* left: -20%; */
-    }
+    } */
 
 }
 
