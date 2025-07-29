@@ -87,13 +87,13 @@ body {
     /* align-items: center; */
     /* position: relative; */
     /* top: -30px; */
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     gap: 100px;
 
 }
 #form-artista{
     width: 100%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .formularios div {
