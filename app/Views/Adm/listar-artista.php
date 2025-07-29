@@ -27,7 +27,7 @@
 
         <div class="search-bar">
           <label for="status">Procurar</label>
-          <input type="text" id="status" placeholder="Artista" />
+          <input type="text" id="status" placeholder="Artista"/>
           <button class="search-button">BUSCAR</button>
         </div>
 

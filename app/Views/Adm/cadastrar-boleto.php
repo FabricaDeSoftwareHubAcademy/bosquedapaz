@@ -1,4 +1,3 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,15 +21,17 @@
     <main class="principal">
         <div class="box">
             <div class="container">
-                <div class="title">
-                    <h1>CADASTRO DE BOLETO</h1>
+               <div class="title">
+                    <h1 class="title-text">CADASTRO DE BOLETOS</h1>
                 </div>
 
                 <form method="POST" action="../../../actions/action-procurar-expositor-boleto.php" class="search">
-                    <input type="text" name="pesquisar-nome" id="searchInput" placeholder="Pesquisar por expositor...">
-                    <label for="searchInput" class="label">
-                        <button type="submit" name="botao-procurar" class="botao-procurar material-symbols-outlined" id="lupa"> Search </button>
-                    </label>
+
+                    <div class="search-bar">
+                        <input type="text" name="pesquisar-nome" id="searchInput" placeholder="Pesquisar por expositor"/>
+                        <button type="submit" name="botao-procurar" id="lupa" class="search-button">BUSCAR</button>
+                    </div>
+
                 </form>
             </div>
 
@@ -103,10 +104,12 @@
 
     </main>
 
-    <div class="formas">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde1.png" alt="Forma 1" class="forma1">
-        <img src="../../../Public/imgs/imagens-bolas/bola-verde2.png" alt="Forma 2" class="forma2">
-        <img src="../../../Public/imgs/imagens-bolas/bola-rosa.png" alt="Forma3" class="forma3">
+    <div class="bolas-fundo">
+
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+    
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
