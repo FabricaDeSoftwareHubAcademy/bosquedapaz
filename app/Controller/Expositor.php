@@ -8,6 +8,7 @@ use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
 use app\Controller\Imagem;
+session_start();
 
 
 class Expositor extends Pessoa
@@ -28,6 +29,7 @@ class Expositor extends Pessoa
     protected $cor_rua;
     protected $responsavel;
     protected $produto;
+    protected $aceitou_termos; // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
     public $imagens;
 
 
@@ -43,6 +45,8 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
+
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
             [
@@ -63,7 +67,6 @@ class Expositor extends Pessoa
 
             
         ///// insert na tabela pessoa \\\\\
-
         $db = new Database('pessoa');
         $pes_id = $db->insert_lastid(
             [
@@ -74,6 +77,7 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'id_login' => $login_id,
                 'id_endereco' => $endereco_id,
+                'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
             ]
         );
 
@@ -333,6 +337,12 @@ class Expositor extends Pessoa
     {
         $this->idade = $idade;
     }
+
+    // NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+    public function setAceitou_termos($aceitou_termos)
+    {
+        $this->aceitou_termos = $aceitou_termos;
+    } 
 }
 
 /*

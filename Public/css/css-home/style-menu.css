@@ -134,62 +134,37 @@
     transition: all .2s ease-in-out;
 }
 
-.switch-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .switch {
-    position: relative;
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .switch .slider {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-color: white;
+.icon-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    transition: transform 0.3s ease;
-    z-index: 2;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s;
+    z-index: 1000;
   }
   
-  .switch .icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    z-index: 1;
-    pointer-events: none;
+  .icon-toggle:hover {
+    background-color: #444;
+    transform: rotate(90deg);
   }
   
-  .switch .sun {
-    left: 8px;
+  body.light .icon-toggle {
+    background-color: #ddd;
+    color: #000;
   }
   
-  .switch .moon {
-    right: 8px;
+  body.light .icon-toggle:hover {
+    background-color: #bbb;
   }
   
-  input[type="checkbox"] {
-    display: none;
-  }
   
-  input[type="checkbox"]:checked + .switch .slider {
-    transform: translateX(30px);
-  }
-  
-  input[type="checkbox"]:checked + .switch {
-    background-color: #333;
-  }
   
 
 @media screen and (max-width: 900px) {

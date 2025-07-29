@@ -91,6 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
             $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
             $expositor->setTelefone(        !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
+            $expositor->setAceitou_termos(  $_SESSION['aceitou_termos'] ?? 'Não');
             $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
             
             /// verificando se exite imagens
@@ -165,6 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'msg' => 'Expositor cadastrado com sucesso!',
                     $res
                 ]);
+                exit;
             }else{
                 echo json_encode([
                     'status' => 400, 
@@ -180,6 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'status' => 500, 
             'msg' => 'Falha no servidor.'
         ]);
+        exit;
     }
 }
 
