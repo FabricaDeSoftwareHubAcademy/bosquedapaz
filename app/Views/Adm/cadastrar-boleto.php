@@ -36,56 +36,58 @@
             </div>
 
             <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
-                <div class="form-content">
+              <div class="form-content">
+                  <div class="input">
+                      <label class="label" for="expositor">Expositor:</label>
+                      <input type="hidden" name="id-expositor">
+                      <input type="text" name="nome_exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" maxlength="50" required>
+                  </div>
 
-                    <div class="input">
-                        <label class="label" for="expositor">Expositor:</label>
-                        <input type="hidden" name="id-expositor">
-                        <input type="text" name="nome_exp" id="nome-exp" class="form-input" placeholder="Nome do Expositor" maxlength="50" required>
-                    </div>
+                  <div class="input">
+                      <label for="cnpj-cpf" class="label">CPF:</label>
+                      <input type="text" name="cpf_input" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00" maxlength="14" required>
+                  </div>
 
-                    <div class="input">
-                        <label for="cnpj-cpf" class="label">CPF:</label>
-                        <input type="text" name="cpf_input" id="cnpj-cpf" class="form-input" placeholder="000.000.000-00" maxlength="14" required>
-                    </div>
+                  <div class="input">
+                      <label class="label" for="valor">Valor:</label>
+                      <input type="text" name="valor_input" id="valor" class="form-input" placeholder="R$ 0,00" autocomplete="off" required>
+                  </div>
+              </div>
 
-                    <div class="input">
-                        <label class="label" for="valor">Valor:</label>
-                        <input type="text" name="valor_input" id="valor" class="form-input" placeholder="R$ 0,00" autocomplete="off" required>
-                    </div>
+              <div class="form-input">
 
-                    <div class="input">
-                        <label class="label">Arquivo em PDF:</label>
-                        <label for="arquivo" class="custom-file-label">
-                            <span id="file-text">Selecionar Arquivo em PDF</span>
-                            <img src="../../../Public/imgs/Upload.svg" alt="">
-                        </label>
-                        <input type="file" name="arquivo" id="arquivo" accept="application/pdf" class="form-input" required>
-                    </div>
-
-                    <div class="input">
-                        <label for="referencia" class="label">Referência:</label>
-                        <select name="referencia_input" id="referencia_select" class="form-input" required>
-                            <option id="option-cb" value="Janeiro">Janeiro</option>
-                            <option id="option-cb" value="Fevereiro">Fevereiro</option>
-                            <option id="option-cb" value="Março">Março</option>
-                            <option id="option-cb" value="Abril">Abril</option>
-                            <option id="option-cb" value="Maio">Maio</option>
-                            <option id="option-cb" value="Junho">Junho</option>
-                            <option id="option-cb" value="Julho">Julho</option>
-                            <option id="option-cb" value="Agosto">Agosto</option>
-                            <option id="option-cb" value="Setembro">Setembro</option>
-                            <option id="option-cb" value="Outubro">Outubro</option>
-                            <option id="option-cb" value="Novembro">Novembro</option>
-                            <option id="option-cb" value="Dezembro">Dezembro</option>
-                        </select>
-                    </div>
-
-                    <div class="input">
-                        <label for="vencimento" class="label">Vencimento</label>
-                        <input type="date" name="vencimento_input" id="val" class="form-input" placeholder="00/00/0000" required>
-                    </div>
-                </div>
+                  <div class="input">
+                      <label class="label">Arquivo em PDF:</label>
+                      <label for="arquivo" class="custom-file-label">
+                          <span id="file-text">Selecionar Arquivo em PDF</span>
+                          <img src="../../../Public/imgs/Upload.svg" alt="">
+                      </label>
+                      <input type="file" name="arquivo" id="arquivo" accept="application/pdf" class="form-input" required>
+                  </div>
+    
+                  <div class="input">
+                      <label for="referencia" class="label">Referência:</label>
+                      <select name="referencia_input" id="referencia_select" class="form-input" required>
+                          <option id="option-cb" value="Janeiro">Janeiro</option>
+                          <option id="option-cb" value="Fevereiro">Fevereiro</option>
+                          <option id="option-cb" value="Março">Março</option>
+                          <option id="option-cb" value="Abril">Abril</option>
+                          <option id="option-cb" value="Maio">Maio</option>
+                          <option id="option-cb" value="Junho">Junho</option>
+                          <option id="option-cb" value="Julho">Julho</option>
+                          <option id="option-cb" value="Agosto">Agosto</option>
+                          <option id="option-cb" value="Setembro">Setembro</option>
+                          <option id="option-cb" value="Outubro">Outubro</option>
+                          <option id="option-cb" value="Novembro">Novembro</option>
+                          <option id="option-cb" value="Dezembro">Dezembro</option>
+                      </select>
+                  </div>
+    
+                  <div class="input">
+                      <label for="vencimento" class="label">Vencimento</label>
+                      <input type="date" name="vencimento_input" id="val" class="form-input" placeholder="00/00/0000" required>
+                  </div>
+              </div>
 
                 <div id="btns-forms-padrao" class="btns-forms-padrao">
                     <a href="./" class="link-area-adm">
