@@ -106,6 +106,7 @@
             reverse: true
         });
     </script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

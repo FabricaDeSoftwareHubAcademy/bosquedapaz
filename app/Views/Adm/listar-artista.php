@@ -1,5 +1,3 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -84,7 +82,7 @@
       </div>
     </div>
   </dialog>
-
+  <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 
 </body>
 

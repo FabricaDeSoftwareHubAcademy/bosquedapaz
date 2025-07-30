@@ -1,11 +1,3 @@
-<?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-require_once __DIR__ . '/../../../app/helpers/auth.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -93,6 +85,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>
