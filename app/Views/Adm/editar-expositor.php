@@ -1,5 +1,7 @@
 <?php
     $urlLogo = "../../Models/banco.sql";
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
 ?>
 
 <!DOCTYPE html>
@@ -115,6 +117,8 @@
                         </div>
                     </div>
                 </section>
+
+                <?php echo $tolken; ?>
 
                 <section class="perfilEdit-btns">
                     <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>

@@ -242,6 +242,6 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into login (email, senha, perfil) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
+insert into login (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
 

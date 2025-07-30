@@ -1,8 +1,9 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
+use app\suport\Csrf;
 
-if (isset($_POST['id'], $_POST['status'])) {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['id'], $_POST['status'])) {
     
     $id = intval($_POST['id']);
     $status = ($_POST['status']);

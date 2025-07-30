@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -84,6 +88,8 @@
                             <input class="input" type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" required>
                         </div>
                     </div>
+
+                    <?php echo $tolken; ?>
 
                     <!-- Botões -->
                     <div class="form__actions">
