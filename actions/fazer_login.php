@@ -29,7 +29,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             http_response_code(200);
         }
     }else{
-        echo json_encode(['msg' => $logar['msg']]);
+        echo json_encode(['msg' => $logar['msg'], $logar]);
         http_response_code(404);
     }
 }

@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -89,6 +93,9 @@
                                 <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="30" required>
                             </div>  
                         </div>
+
+                        <?php echo $tolken; ?>
+                        
                         <?php include "../../../Public/include/Butons-forms.html" ?>
                     </div>
                 </form>

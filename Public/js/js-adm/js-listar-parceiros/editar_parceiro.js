@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("estado").value = data.estado || "";
       document.getElementById("bairro").value = data.bairro || "";
       document.getElementById("cidade").value = data.cidade || "";
+
+      if (data.logo) {
+        const previewLogo = document.getElementById("preview-logo");
+        previewLogo.src = `../../../Public/uploads/uploads-parceiros/${data.logo}`;
+        previewLogo.style.display = "block";
+      }
     })
     .catch(err => {
       console.error("Erro ao carregar:", err);
@@ -96,6 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(result => {
         if (result.sucesso) {
           abrirModalSucesso(result.sucesso);
+
+          setTimeout(() => {
+            window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+          }, 2000);
+
         } else {
           abrirModalErro(result.erro || "Erro ao atualizar o parceiro.");
         }
@@ -107,78 +118,51 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Máscaras (iguais as anteriores, mantidas para funcionamento)
-function mascaraTelefone(input, e) { /* ... */ }
-function mascaraCep(input, e) { /* ... */ }
-function mascaraCpfCnpj(input, e) { /* ... */ }
+// Máscaras iguais cadastro
 
-// Preview da logo
-/* ... */
-
-// Funções de modais
-function abrirModalErro(titulo = "Erro", mensagem = "Ocorreu um erro") {
-  const modal = document.getElementById("modal-error");
-  const tituloEl = document.getElementById("erro-title");
-  const textoEl = document.getElementById("erro-text");
-
-  if (tituloEl && textoEl && modal) {
-    tituloEl.textContent = titulo;
-    textoEl.textContent = mensagem;
-    modal.showModal();
+function mascaraTelefone(input, e) {
+  if (e && e.inputType === "deleteContentBackward") return;
+  let v = input.value.replace(/\D/g, "").substring(0, 11);
+  if (v.length > 10) {
+    input.value = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7, 11)}`;
+  } else if (v.length > 5) {
+    input.value = `(${v.substring(0, 2)}) ${v.substring(2, 6)}-${v.substring(6, 10)}`;
+  } else if (v.length > 2) {
+    input.value = `(${v.substring(0, 2)}) ${v.substring(2)}`;
   } else {
-    console.error("Elementos do modal de erro não encontrados");
+    input.value = v;
   }
 }
 
-function abrirModalSucesso(titulo = "Sucesso!", mensagem = "Ação realizada com sucesso") {
-  const modal = document.getElementById("modal-sucesso");
-  const tituloEl = document.getElementById("sucesso-title");
-  const textoEl = document.getElementById("msm-sucesso");
-
-  if (tituloEl && textoEl && modal) {
-    tituloEl.textContent = titulo;
-    textoEl.textContent = mensagem;
-    modal.showModal();
+function mascaraCep(input, e) {
+  if (e && e.inputType === "deleteContentBackward") return;
+  let v = input.value.replace(/\D/g, "").substring(0, 8);
+  if (v.length > 5) {
+    input.value = v.substring(0, 5) + "-" + v.substring(5);
   } else {
-    console.error("Elementos do modal de sucesso não encontrados");
+    input.value = v;
   }
 }
 
-function abrirModalConfirmar(titulo = "Confirmação", mensagem = "Deseja confirmar esta ação?") {
-  const modal = document.getElementById("modal-confirmar");
-  const tituloEl = document.getElementById("confirmar-title");
-  const textoEl = document.getElementById("msm-confimar");
-
-  if (tituloEl && textoEl && modal) {
-    tituloEl.textContent = titulo;
-    textoEl.textContent = mensagem;
-    modal.showModal();
+function mascaraCpfCnpj(input, e) {
+  if (e && e.inputType === "deleteContentBackward") return;
+  let v = input.value.replace(/\D/g, "").substring(0, 14);
+  if (v.length <= 11) {
+    if (v.length > 9) {
+      input.value = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6, 9)}-${v.substring(9, 11)}`;
+    } else if (v.length > 6) {
+      input.value = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6)}`;
+    } else if (v.length > 3) {
+      input.value = `${v.substring(0, 3)}.${v.substring(3)}`;
+    } else {
+      input.value = v;
+    }
   } else {
-    console.error("Elementos do modal de confirmação não encontrados");
+    input.value = `${v.substring(0, 2)}.${v.substring(2, 5)}.${v.substring(5, 8)}/${v.substring(8, 12)}-${v.substring(12, 14)}`;
   }
 }
 
-// Botões de fechar
-document.getElementById("close-modal-erro")?.addEventListener("click", () => {
-  document.getElementById("modal-error")?.close();
-});
-
-document.getElementById("close-modal-sucesso")?.addEventListener("click", () => {
-  document.getElementById("modal-sucesso")?.close();
-});
-
-document.getElementById("close-modal-confirmar")?.addEventListener("click", () => {
-  document.getElementById("modal-confirmar")?.close();
-});
-
-// Botão "Cancelar" do modal de confirmação
-document.getElementById("btn-modal-cancelar")?.addEventListener("click", () => {
-  document.getElementById("modal-confirmar")?.close();
-});
-
-
-
-// Atualiza o preview da imagem ao selecionar nova logo
+// Preview da logo ao selecionar nova imagem
 document.getElementById('logo').addEventListener('change', function () {
   const file = this.files[0];
   const preview = document.getElementById('preview-logo');
@@ -194,4 +178,66 @@ document.getElementById('logo').addEventListener('change', function () {
     preview.src = '#';
     preview.style.display = 'none';
   }
+});
+
+// Funções de modais
+
+function abrirModalErro(mensagem = "Ocorreu um erro", titulo = "Erro") {
+  const modal = document.getElementById("modal-error");
+  const tituloEl = document.getElementById("erro-title");
+  const textoEl = document.getElementById("erro-text");
+
+  if (tituloEl && textoEl && modal) {
+    tituloEl.textContent = titulo;
+    textoEl.textContent = mensagem;
+    modal.showModal();
+  } else {
+    console.error("Elementos do modal de erro não encontrados");
+  }
+}
+
+function abrirModalSucesso(mensagem = "Ação realizada com sucesso", titulo = "Sucesso!") {
+  const modal = document.getElementById("modal-sucesso");
+  const tituloEl = document.getElementById("sucesso-title");
+  const textoEl = document.getElementById("msm-sucesso");
+
+  if (tituloEl && textoEl && modal) {
+    tituloEl.textContent = titulo;
+    textoEl.textContent = mensagem;
+    modal.showModal();
+  } else {
+    console.error("Elementos do modal de sucesso não encontrados");
+  }
+}
+
+function abrirModalConfirmar(mensagem = "Deseja confirmar esta ação?", titulo = "Confirmação") {
+  const modal = document.getElementById("modal-confirmar");
+  const tituloEl = document.getElementById("confirmar-title");
+  const textoEl = document.getElementById("msm-confimar");
+
+  if (tituloEl && textoEl && modal) {
+    tituloEl.textContent = titulo;
+    textoEl.textContent = mensagem;
+    modal.showModal();
+  } else {
+    console.error("Elementos do modal de confirmação não encontrados");
+  }
+}
+
+// Botões de fechar modais
+document.getElementById("close-modal-erro")?.addEventListener("click", () => {
+  document.getElementById("modal-error")?.close();
+});
+
+document.getElementById("close-modal-sucesso")?.addEventListener("click", () => {
+  document.getElementById("modal-sucesso")?.close();
+});
+
+document.getElementById("close-modal-confirmar")?.addEventListener("click", () => {
+  document.getElementById("modal-confirmar")?.close();
+});
+
+// Botão "Cancelar" do modal de confirmação
+document.getElementById("btn-modal-cancelar")?.addEventListener("click", () => {
+  document.getElementById("modal-confirmar")?.close();
 });

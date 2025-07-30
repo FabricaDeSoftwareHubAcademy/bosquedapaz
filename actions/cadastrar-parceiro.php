@@ -4,13 +4,14 @@ require_once('../vendor/autoload.php');
 
 use app\Controller\Parceiro;
 use app\Controller\Endereco;
+use app\suport\Csrf;
 
 function respostaErro($mensagem) {
     echo json_encode(["status" => "erro", "mensagem" => $mensagem]);
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     // Validações básicas dos campos obrigatórios
     $camposObrigatorios = [
         'nome_parceiro', 'telefone', 'email', 'nome_contato',
