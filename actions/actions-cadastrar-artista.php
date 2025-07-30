@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../vendor/autoload.php';
 
 use app\Controller\Artista;
@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $artista->setEmail($email);
         $artista->setWhats($_POST['whats']);
         $artista->setLink_instagram($_POST['link_instagram']);
+        $artista->setAceitou_termos($_SESSION['aceitou_termos' ?? 'Não']);
 
         $artista->setNome_artistico($_POST['nome_artistico']);
         $artista->setLinguagem_artistica($_POST['linguagem_artistica']);

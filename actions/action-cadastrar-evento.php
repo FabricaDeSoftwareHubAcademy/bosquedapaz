@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $endereco = $_POST['endereco'] ?? '';
 
     if (strlen($descricao) > 500) {
-        echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 250 caracteres."]);
+        echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 500 caracteres."]);
         exit;
     }    
 

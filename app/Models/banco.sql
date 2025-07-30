@@ -24,6 +24,7 @@ CREATE TABLE endereco(
 
 CREATE TABLE endereco_evento(
 	id_endereco_evento INT NOT NULL AUTO_INCREMENT,
+    nome_local VARCHAR(150) NOT NULL,
     cep_evento CHAR(9) NULL,
     logradouro_evento VARCHAR(150) NOT NULL,
     complemento_evento VARCHAR(150) NULL,
@@ -33,23 +34,31 @@ CREATE TABLE endereco_evento(
     PRIMARY KEY(id_endereco_evento)
 );
 
+CREATE TABLE login(
+	id_login int not null auto_increment,
+	email VARCHAR(200) NULL UNIQUE,
+    senha VARCHAR(200) NULL,
+	perfil INT DEFAULT 0,
+    status_pes ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
+    primeiro_acesso INT DEFAULT '0',
+	PRIMARY KEY	(id_login)
+);
+
 CREATE TABLE pessoa( 
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
-    email VARCHAR(200) NULL UNIQUE,
-    senha VARCHAR(200) NULL,
-    perfil INT DEFAULT 0,
-    whats CHAR(11) NULL,
-    telefone CHAR(11) NULL,
+    whats CHAR(16) NULL,
+    telefone CHAR(16) NULL,
     link_instagram VARCHAR(255) NULL,
     link_facebook VARCHAR(255) NULL,
     link_whats VARCHAR(255) NULL,
     img_perfil VARCHAR(255) NULL,
-    status_pes ENUM('ativo', 'inativo') NOT NULL DEFAULT 'inativo',
     id_endereco INT NULL,
+    id_login INT NULL,
     PRIMARY KEY(id_pessoa),
-    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco)
+    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
+    FOREIGN KEY(id_login) REFERENCES login(id_login)
 );
 
 CREATE TABLE expositor(
@@ -91,6 +100,7 @@ CREATE TABLE colaborador(
 CREATE TABLE artista (
 	id_artista INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
+    email varchar(150) not null,
     tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
@@ -200,17 +210,30 @@ CREATE TABLE utilidade_publica (
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.contato2, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.produto, exp.validacao, 
-pes.nome, pes.email, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, pes.status_pes, 
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.produto, exp.validacao, 
+pes.nome, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, 
 cat.id_categoria, cat.descricao, cat.cor, cat.icone,
-en.cidade
+en.cidade,
+log.email, log.status_pes
 FROM expositor AS exp 
 INNER JOIN categoria AS cat 
 ON cat.id_categoria = exp.id_categoria 
 INNER JOIN pessoa AS pes 
 ON pes.id_pessoa = exp.id_pessoa
 INNER JOIN endereco AS en 
-ON pes.id_endereco = en.id_endereco;
+ON pes.id_endereco = en.id_endereco
+INNER JOIN login as log
+ON log.id_login = pes.id_login;
+
+CREATE VIEW view_colaborador AS 
+SELECT c.cargo, c.id_colaborador, 
+p.id_pessoa, p.id_login, p.nome, p.telefone, p.img_perfil,
+l.email, l.perfil, l.status_pes
+FROM login AS l
+INNER JOIN pessoa AS p
+ON l.id_login = p.id_login
+INNER JOIN colaborador AS c
+ON p.id_pessoa = c.id_pessoa;
 
 -- Inserts: 
 insert into carrossel (caminho, posicao) values 
@@ -219,6 +242,6 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into pessoa (nome, email, senha, perfil) values ('ademir','admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
+insert into login (email, senha, perfil) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
 
 

@@ -71,7 +71,6 @@ body {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
-    left: 2%;
 }
 
 .title-text {
@@ -79,16 +78,22 @@ body {
     font-weight: bold;
 }
 
+#formulario_cad_expositor{
+    width: 100%;
+    background-color: blueviolet;
+}
+
 .formularios {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -50px;
-    left: -3%;
+    /* align-items: center; */
+    /* position: relative; */
+    /* top: -30px; */
+    background-color: aquamarine;
+    gap: 100px;
 }
 
 .formularios div {
@@ -106,13 +111,14 @@ body {
 
 .form-pessoa {
     position: relative;
-    left: -16%;
+    width: 100%;
+    background-color: chartreuse;
 }
 
 
 .form-loja {
     position: relative;
-    left: 6%;
+    /* left: 6%; */
 }
 
 .form-expo {
@@ -120,9 +126,9 @@ body {
     width: 100%;
     flex-wrap: wrap;
     position: relative;
-    left: 28%;
+    /* left: 28%; */
     top: -10px;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .input,
@@ -132,14 +138,14 @@ body {
     width: 100%;
 }
 
-.formularios label {
+/* .formularios label {
     width: 120%;
-}
+} */
 
 .input input,
 .input-group input,
 .input-group textarea {
-    width: 160%;
+    width: 100%;
     height: 50px;
     min-height: 45px;
     padding: 5px;
@@ -155,7 +161,7 @@ body {
 }
 
 #categorias {
-    width: 160%;
+    width: 100%;
     padding: 5px;
     min-height: 45px;
     border: none;
@@ -184,7 +190,7 @@ body {
     color: #3d3d3d;
 }
 
-.custom-dropdown {
+/* .custom-dropdown {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -197,7 +203,7 @@ body {
 .link-area-adm {
     position: relative;
     left: -25%;
-}
+} */
 
 /* AREA FOTOS */
 

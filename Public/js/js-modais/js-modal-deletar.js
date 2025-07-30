@@ -22,3 +22,5 @@ function closeModalError() {
     let modal = document.getElementById('modal-error')
     modal.close()
 }
+
+document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
