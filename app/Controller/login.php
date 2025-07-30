@@ -26,7 +26,8 @@ class Login {
                     if($user['status_pes'] !== 'ativo'){
                         return [
                             'sucess' => FALSE,
-                            'msg' => 'Login inválido'
+                            'msg' => 'Login inválido',
+                            $user
                         ];
                     }else {
                         $payload = [
