@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $expositorController = new Expositor();
     $expositor = $expositorController->listar();
     $expositor_espera = $expositorController->filtrar("", "= 'aguardando'");
+    // $expositor_pagou = $expositorController->filtrar("", "= 'aguardando'");
 
     if ($expositor) {
         // Se a categoria foi encontrada, retorna os dados
@@ -16,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             'status' => 'success',
             'qtdExpositor' => count($expositor),
             'qtdExpositorEspera' => count($expositor_espera)
+            // 'qtdExpositorPagante' => count($expositor_pagou)
         ]);
     } else {
         // Se não encontrou, retorna um erro

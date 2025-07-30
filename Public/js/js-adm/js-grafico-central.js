@@ -33,6 +33,30 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         card2.innerHTML = html2;
 
+        let qtdExpositorPagou = data.qtdExpositorPagou;
+        
+        let card3 = document.getElementById("QtdeExpositoresPagantes");
+        let html3 = '';
+
+        html3 += `
+            <p id="QtdExpositoresPagantes" class="numeros">${qtdExpositorPagou}</p>
+            <p class="feirantes">Expositores pagaram</p>
+        `;
+
+        card3.innerHTML = html3;
+
+        let qtdExpositorDevendo = data.qtdExpositorDevendo;
+        
+        let card4 = document.getElementById("QtdExpositoresDevendo");
+        let html4 = '';
+
+        html4 += `
+            <p id="QtdeExpositoresDevendo" class="numeros">${qtdExpositorDevendo}</p>
+            <p class="feirantes">Expositores em débito</p>
+        `;
+
+        card4.innerHTML = html4;
+
 
         // if (data.status === 'success') {
         //     renderizarTabela(data.dados);
