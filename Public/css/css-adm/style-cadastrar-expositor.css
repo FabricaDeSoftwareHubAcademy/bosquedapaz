@@ -75,11 +75,13 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 /* Área dos campos em 3 colunas */
 .formularios {
-    width: 100%;
+    width: 80%;
     height: 50vh;
     display: flex;
     justify-content: space-between;
