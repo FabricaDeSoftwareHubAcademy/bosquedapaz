@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
-
     // Preenche os campos com os parâmetros da URL
     document.querySelector('input[name="titulo"]').value = params.get('titulo') || '';
     document.querySelector('textarea[name="descricao"]').value = params.get('descricao') || '';
