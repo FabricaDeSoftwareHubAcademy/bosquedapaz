@@ -24,6 +24,7 @@ CREATE TABLE endereco(
 
 CREATE TABLE endereco_evento(
 	id_endereco_evento INT NOT NULL AUTO_INCREMENT,
+    nome_local VARCHAR(150) NOT NULL,
     cep_evento CHAR(9) NULL,
     logradouro_evento VARCHAR(150) NOT NULL,
     complemento_evento VARCHAR(150) NULL,
