@@ -10,6 +10,7 @@ require_once('../vendor/autoload.php');
 
 use app\Controller\Expositor;
 use app\Controller\Imagem;
+use app\suport\Csrf;
 
 function uploadImagem($img) {
     // chmod ("../Public/uploads/uploads-carrosel/", 0777);
@@ -44,7 +45,7 @@ function getImagens($imgs){
 
 /////////////////// MEDOTO POST ///////////////////
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     
     $expositor = new Expositor();
     

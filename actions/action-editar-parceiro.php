@@ -2,6 +2,7 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\Parceiro;
+use app\suport\Csrf;
 
 function validarCpfCnpj(string $valor): bool
 {
@@ -71,7 +72,7 @@ function validarCep(string $cep): bool
 }
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['salvar'])) {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['salvar'])) {
     if (!isset($_GET['id'])) {
         echo json_encode(['erro' => 'ID não informado']);
         exit;

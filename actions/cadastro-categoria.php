@@ -2,6 +2,7 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\Categoria;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -12,7 +13,7 @@ function sanitizarTexto($input)
 }
 
 // Verifica se todos os dados esperados foram recebidos via POST
-if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
     $descricao = sanitizarTexto($_POST['descricao']);
     $cor = $_POST['cor'];
     $arquivo = $_FILES['icone'];

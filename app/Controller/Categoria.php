@@ -63,14 +63,14 @@ class Categoria
         return $res;
     }
 
-    public function excluir()
-    {
-        $db = new Database('categoria');
-        $res = $db->delete('id_categoria = ' . $this->id_categoria);
-        return $res;
-    }
+    // public function excluir()
+    // {
+    //     $db = new Database('categoria');
+    //     $res = $db->delete('id_categoria = ' . $this->id_categoria);
+    //     return $res;
+    // }
 
-        public function alterarStatus($id, $novoStatus)
+    public function alterarStatus($id, $novoStatus)
     {
         $db = new Database('categoria');
         return $db->update(

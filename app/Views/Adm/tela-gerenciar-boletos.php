@@ -1,4 +1,7 @@
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -106,6 +109,7 @@
         <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js"></script>
         <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_alterar_status.js"></script>
         <script src="../../../Public/js/js-menu/js-menu.js"></script>
+        <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

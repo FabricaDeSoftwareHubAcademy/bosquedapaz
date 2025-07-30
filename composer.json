@@ -7,8 +7,8 @@
             "app\\": "app/"
         },
         "classmap": [
-            "app/Models/Database",
-            "actions/Login"
+            "app/Models",
+            "app/Controller"
         ]
     },
     "authors": [
@@ -19,7 +19,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "phpmailer/phpmailer": "*",
-        "setasign/fpdi": "*"
+        "firebase/php-jwt": "^6.11",
+        "phpmailer/phpmailer": "*"
     }
 }

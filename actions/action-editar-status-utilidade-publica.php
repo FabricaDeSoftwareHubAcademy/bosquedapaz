@@ -1,8 +1,9 @@
 <?php 
 require_once('../vendor/autoload.php');
 use app\Controller\UtilidadePublica;
+use app\suport\Csrf;
 
-if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
 
     // echo json_encode({"nome": "guiguiteste"});
     $id_utilidade_publica = $_POST['id_utilidade_publica'] ?? null;

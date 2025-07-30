@@ -1,5 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -62,6 +64,7 @@
                         <p>Limite de 5 Fotos por Evento</p>
                         <form method="POST" class="form-img">
                             <input type="file" multiple>
+                            <?php echo $tolken; ?>
                             <button class="submit-fotos">Adicionar Fotos</button>
                         </form>
                     </div>
@@ -81,6 +84,7 @@
     <script src="../../../Public/js/js-adm/status-evento.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
     <script src="../../../Public/js/js-adm/js-gerenciar-evento.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

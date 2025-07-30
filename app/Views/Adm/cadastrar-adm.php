@@ -1,5 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -104,6 +106,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php echo $tolken; ?>
 
                     <!-- Botões -->
                     <div class="form__actions">
@@ -145,6 +148,7 @@
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-adm.js"></script>
     <script src="../../../Public/js/js-modais/modal-adm-mensagens.js"></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 </html>
 

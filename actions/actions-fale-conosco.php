@@ -1,8 +1,12 @@
 <?php 
 
 require '../Public/sendEmail.php';
+require '../vendor/autoload.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+use app\controler\Login;
+use app\suport\Csrf;
+
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
         $emailService = new EmailService();
 

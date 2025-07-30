@@ -2,6 +2,7 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\Categoria;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -12,7 +13,7 @@ function sanitizarTexto($input)
 }
 
 // 🚦 Apenas requisições POST são permitidas
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     // Pega o ID e garante que seja um inteiro
     $id = (int) ($_POST['id_categoria'] ?? 0);
 
