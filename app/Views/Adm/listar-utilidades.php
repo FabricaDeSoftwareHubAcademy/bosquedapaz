@@ -44,15 +44,15 @@
         </div>
         <div class="btns">
             <a href="Area-adm.php" class="voltar">
-                <img src="../../../Public/imgs/img-listar-colaboradores/btn-voltar.png" alt="Botão de voltar" class="btn-voltar">
+                <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
             </a>
         </div>
     </main>
 
     <div class="bolas-fundo">
-        <img class="bola-azul1" src="../img/Elemento1.FolhaAzul.png" alt="">
-        <img class="bola-azul2" src="../img/Elemento2.FolhaAzul.png" alt="">
-        <img class="bola-azul3" src="../img/Elemento3.ElipseAzul.png" alt="">
+        <img src="../../../Public/assets/img-bolas/bola-azul1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-azul2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-azul.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
     <?php include "../../../Public/include/modais/modal-confirmar.html"?>

@@ -18,7 +18,7 @@ Env::load();
 class Login {
     public function logar($email, $senha){
         try {
-            $db = new Database('login');
+            $db = new Database('pessoa_user');
             $user = $db->select('email = "'.$email.'"')->fetch(PDO::FETCH_ASSOC);
             if ($user){
                 if(password_verify($senha, $user['senha'])){
