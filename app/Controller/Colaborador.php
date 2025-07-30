@@ -43,7 +43,7 @@ class Colaborador extends Pessoa
 
     public function cadastrar() {
         // Insere na tabela pessoa
-        $dbLogin = new Database('login');
+        $dbLogin = new Database('pessoa_user');
 
         $idLogin = $dbLogin->insert_lastid([
             'email' => $this->email,
@@ -91,7 +91,7 @@ class Colaborador extends Pessoa
         
         
         ////// updata login
-        $db = new Database('login');
+        $db = new Database('pessoa_user');
         $resLogin = $db->update("id_login = ". $id, $valuesLogin);
 
         ////// updata pessoa
