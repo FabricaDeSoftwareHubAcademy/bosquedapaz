@@ -22,34 +22,42 @@ class Login {
             $user = $db->select('email = "'.$email.'"')->fetch(PDO::FETCH_ASSOC);
             if ($user){
                 if(password_verify($senha, $user['senha'])){
-    
-                    $payload = [
-                        'iss' => 'bosquedapaz',
-                        'sub' => $user['id_login'],
-                        'exp' => time() + 30,
-                        'iat' => time(),
-                        'perfil' => $user['perfil'],
-                        'status_pes' => $user['status_pes'],
-                        'primeiro_acesso' => $user['primeiro_acesso'],
-                        'email' => $user['email'],
-                    ];
-    
-                    $createJWT = $this->encodejwt($payload);
 
-                    if(!$createJWT){
+                    if($user['status_pes'] !== 'ativo'){
                         return [
                             'sucess' => FALSE,
                             'msg' => 'Login inválido'
                         ];
-                    }else{
-                        return [
-                            'sucess' => TRUE,
+                    }else {
+                        $payload = [
+                            'iss' => 'bosquedapaz',
+                            'sub' => $user['id_login'],
+                            'exp' => time() + 30,
+                            'iat' => time(),
                             'perfil' => $user['perfil'],
                             'status_pes' => $user['status_pes'],
                             'primeiro_acesso' => $user['primeiro_acesso'],
-                            $createJWT
+                            'email' => $user['email'],
                         ];
+        
+                        $createJWT = $this->encodejwt($payload);
+    
+                        if(!$createJWT){
+                            return [
+                                'sucess' => FALSE,
+                                'msg' => 'Login inválido'
+                            ];
+                        }else{
+                            return [
+                                'sucess' => TRUE,
+                                'perfil' => $user['perfil'],
+                                'status_pes' => $user['status_pes'],
+                                'primeiro_acesso' => $user['primeiro_acesso'],
+                                $createJWT
+                            ];
+                        }
                     }
+    
                 }else{
                     return [
                         'sucess' => FALSE,
