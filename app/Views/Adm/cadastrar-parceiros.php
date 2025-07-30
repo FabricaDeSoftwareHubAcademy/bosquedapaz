@@ -1,4 +1,3 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -111,7 +110,7 @@
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-adm/cadastrar-parceiro.js" defer></script>
-    
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

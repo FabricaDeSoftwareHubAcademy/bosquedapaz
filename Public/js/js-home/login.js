@@ -22,10 +22,19 @@ document.getElementById('formLogin').addEventListener('submit', async (e) => {
         body: formData
     })
 
-    let response = await dados.json()
-    if('location' in response){
-        window.location.replace(response.location)
-    }else{
-        alert(response.msg)
+    if (dados.status == 404){
+        document.getElementById('erro-title').innerText = 'Os dados enviados são inválidos'
+        document.getElementById('erro-text').innerText = 'Os dados enviados são inválidos'
+        openModalError()
     }
+
+    console.log(dados)
+
+    let response = await dados.json()
+    console.log(response)
+    // if('location' in response){
+    //     window.location.replace(response.location)
+    // }else{
+    //     alert(response.msg)
+    // }
 })

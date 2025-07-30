@@ -332,9 +332,9 @@
     <div class="decorative__img3"><img src="../../../Public/assets/img-bolas/imagem-inferior-direito.svg" alt=""></div>
 
     <!-- Scripts JS  -->
-    <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 </html>
 

@@ -1,7 +1,6 @@
 <?php
     $urlLogo = "../../Models/banco.sql";
 ?>
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -137,6 +136,7 @@
     <img class="perfilEdit-inferior" src="../../../Public/assets/img-bolas/img-inferior-boleto.svg" alt="">
     <script src="../../../Public/js/js-adm/js-editar-expositor.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

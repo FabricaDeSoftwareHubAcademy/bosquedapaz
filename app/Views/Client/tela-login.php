@@ -72,6 +72,8 @@ include '../../helpers/csrf.php';
                 <!-- Area da Imagem -->
                 <img class="img-dog" src="../../../Public/assets/dog-walking-79-12053-1.svg" alt="">
             </div>
+
+            <?php include "../../../Public/include/modais/modal-error.html"; ?>
         <!-- </section> -->
     <!-- </main> -->
     </body>
