@@ -58,7 +58,7 @@ CREATE TABLE pessoa(
     id_login INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
-    FOREIGN KEY(id_login) REFERENCES login(id_login)
+    FOREIGN KEY(id_login) REFERENCES pessoa_user(id_login)
 );
 
 CREATE TABLE expositor(
