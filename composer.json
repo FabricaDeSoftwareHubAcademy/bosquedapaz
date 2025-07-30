@@ -19,6 +19,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "phpmailer/phpmailer": "*"
+        "phpmailer/phpmailer": "*",
+        "setasign/fpdi": "*"
     }
 }
