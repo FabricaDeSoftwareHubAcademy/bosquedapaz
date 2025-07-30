@@ -10,6 +10,7 @@ require_once('../vendor/autoload.php');
 require '../Public/sendEmail.php';
 
 use app\Controller\Expositor;
+use app\suport\Csrf;
 
 function gerar_senha($telefone, $nome){
 
@@ -17,7 +18,7 @@ function gerar_senha($telefone, $nome){
     return $telefone[2].''.$telefone[3].''.$telefone[4].''.$telefone[5].'@'.$nome[0].''.$nome[1].''.$nome[2].''.$nome[3];
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
         $expositor = new Expositor();
         //////////// PARA APROVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\

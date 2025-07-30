@@ -2,6 +2,7 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\FotosEvento;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -9,7 +10,7 @@ function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     $id_evento = (int) ($_POST['id_evento'] ?? 0);
 
     if ($id_evento === 0) {

@@ -2,6 +2,7 @@
 
 require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -23,7 +24,7 @@ if(isset($_GET['id_expo'])){
     echo json_encode( $array );
 }
 
-if(isset($_POST['nome']) && isset ($_POST['descricao'])){
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset ($_POST['descricao'])){
 
     $id_expositor = $_POST['id_expositor'];
 
