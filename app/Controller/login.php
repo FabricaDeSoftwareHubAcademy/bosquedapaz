@@ -32,7 +32,7 @@ class Login {
                         $payload = [
                             'iss' => 'bosquedapaz',
                             'sub' => $user['id_login'],
-                            'exp' => time() + 30,
+                            'exp' => time() + (60 * 30),
                             'iat' => time(),
                             'perfil' => $user['perfil'],
                             'status_pes' => $user['status_pes'],
