@@ -21,7 +21,7 @@
 
     <?php include "../../../Public/include/home/categorias-home.php"; ?>
 
-    <?php include "../../../Public/include/home/avisos.html"; ?>
+    <?php include "../../../Public/include/home/avisos.php"; ?>
     
 
     <?php include "../../../Public/include/home/mapa.html"; ?>

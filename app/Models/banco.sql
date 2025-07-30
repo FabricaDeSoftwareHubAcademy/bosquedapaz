@@ -24,6 +24,7 @@ CREATE TABLE endereco(
 
 CREATE TABLE endereco_evento(
 	id_endereco_evento INT NOT NULL AUTO_INCREMENT,
+    nome_local VARCHAR(150) NOT NULL,
     cep_evento CHAR(9) NULL,
     logradouro_evento VARCHAR(150) NOT NULL,
     complemento_evento VARCHAR(150) NULL,
@@ -241,6 +242,6 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into login (email, senha, perfil) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
+insert into login (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
 

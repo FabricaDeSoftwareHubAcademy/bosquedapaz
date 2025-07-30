@@ -1,6 +1,9 @@
 <?php
-session_start();
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['botao-continuar'])) {
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+require_once('../vendor/autoload.php');
+use app\suport\Csrf;
+
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['botao-continuar'])) {
     
     if (isset($_POST['termos'])) {
 

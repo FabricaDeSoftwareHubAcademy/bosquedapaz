@@ -1,29 +1,14 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-session_start();
-error_log("ID da sessão: " . ($_SESSION['login']['id_pessoa'] ?? 'não definido'));
-
 require_once('../vendor/autoload.php');
 use app\Controller\Colaborador;
-
-if (!isset($_SESSION['login']['id_login'])) {
-    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado', $_SESSION]);
-    exit;
-}
+use app\suport\Csrf;
 
 function sanitizeString($str) {
     return htmlspecialchars(strip_tags($str));
 }
 
-$requestMethod = $_SERVER['REQUEST_METHOD'];
-
-
-
-if ($requestMethod === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $colab = new Colaborador();
 
     $input = json_decode(file_get_contents('php://input'), true);
@@ -86,7 +71,7 @@ if ($requestMethod === 'POST') {
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
+            $colab->setImagem('../../../Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
@@ -193,7 +178,7 @@ if ($requestMethod === 'POST') {
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
+            $colab->setImagem($imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
@@ -245,7 +230,7 @@ if ($requestMethod === 'POST') {
 
 
 // Listagem <----------------------------------------------->
-if ($requestMethod === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $colab = new Colaborador();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['meu_perfil']) && $_GET['meu_perfil'] === '1') {

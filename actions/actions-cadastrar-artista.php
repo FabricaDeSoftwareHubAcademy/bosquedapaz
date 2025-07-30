@@ -1,13 +1,14 @@
 <?php
-session_start();
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once '../vendor/autoload.php';
 
 use app\Controller\Artista;
 use app\Models\Database;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
 
     $email = $_POST['email'];
 

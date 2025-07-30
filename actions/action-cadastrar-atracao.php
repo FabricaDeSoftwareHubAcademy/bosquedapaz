@@ -1,6 +1,7 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\Atracao;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -8,7 +9,7 @@ function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $nome = sanitizarTexto($_POST['nome_atracao'] ?? '');
     $descricao = sanitizarTexto($_POST['descricao_atracao'] ?? '');
     $id_evento = intval($_POST['id_evento'] ?? '');

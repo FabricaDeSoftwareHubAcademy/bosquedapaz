@@ -2,10 +2,11 @@
 require_once '../../../vendor/autoload.php';
 
 use app\Controller\Categoria;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $id = $_POST['id'] ?? null;
 
     if ($id) {

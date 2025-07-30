@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -71,7 +74,7 @@
                         <div id="form3" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_contato">Contato:</label>
-                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="100" required>
+                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="30" required>
                             </div>
                             <div class="input-group">
                                 <label for="tipo">Tipo:</label>
@@ -83,13 +86,16 @@
                             </div>
                             <div class="input-group">
                                 <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="10" required>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="5" required>
                             </div> 
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>
                                 <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="20" required>
                             </div>  
                         </div>
+
+                        <?php echo $tolken; ?>
+                        
                         <?php include "../../../Public/include/Butons-forms.html" ?>
                     </div>
                 </form>
@@ -111,6 +117,7 @@
     <!-- <script src="../../../Public/js/js-adm/preview-img.js" defer></script> -->
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/editar_parceiro.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
     
 </body>
 

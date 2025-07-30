@@ -1,11 +1,7 @@
-<?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-require_once __DIR__ . '/../../../app/helpers/auth.php';
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,6 +51,8 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
 
                         <img class="preview" src="" alt="" id="preview-image">
 
+                        <?php echo $tolken; ?>
+
                         <div class="btns">
                             <?php include "../../../Public/include/Butons-forms.html" ?>
                         </div>
@@ -75,7 +73,6 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
                         <a href="">Salvar</a>
                 </div> -->
             </div>
-            <?php include "../../../Public/include/Butons-forms.html" ?>
         </div>
     </main>
     <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
@@ -93,6 +90,7 @@ require_once __DIR__ . '/../../../app/helpers/auth.php';
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-utilidade.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,51 @@
+<section class="edicoes" id="edicoes">
+    <!-- eventos em andamento -->
+    <div class="eventos" id="eventos">
+        <div class="fundo_eventos"></div>
+        <div class="content_evento">
+            <div class="content_img_evento">
+                <img src="../../../Public/imgs/img-prox-event.png" class="img_prox_event">
+            </div>
+            <div class="content_info_evento">
+                <h3 class="all-titles title_evento">Próximos eventos</h3>
+                <p class="text_evento">Descubra como será nossos próximos eventos</p>
+                <img src="../../../Public/imgs/img-prox-event.png" class="img_prox_event_pequena">
+                <a href="proximos-eventos.php" target="_parent" class="all-links btn_mais_evento">Saiba Mais!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- edicoes passadas -->
+
+    <div class="edicoes_passadas" id="edicoesPassadas">
+        <div class="content_evento">
+            <div class="content_info_evento">
+                <h3 class="all-titles title_edicoes_passadas dark">edições passadas</h3>
+                <p class="text_edicoes_passadas dark">Confira como foram nossas edições anteriores</p>
+                <img src="../../../Public/imgs/img-edit-pass.png" class="img_prox_event_pequena">
+                <a href="edicoes-passadas.php" target="_parent" class="all-links btn_mais_edicoes_passadas">Saiba Mais!</a>
+            </div>
+            <div class="content_img_evento">
+                <img src="../../../Public/imgs/img-edit-pass.png" class="img_prox_event">
+            </div>
+        </div>
+    </div>
+
+    <!-- atracoes -->
+
+    <div class="atracoes" id="atracoes">
+        <div class="fundo_atracoes"></div>
+        <div class="content_evento">
+            <div class="content_img_evento">
+                <img src="../../../Public/imgs/primavera.png" class="img_prox_event">
+            </div>
+            <div class="content_info_evento">
+                <h3 class="all-titles title_evento">Utilidades públicas</h3>
+                <p class="text_evento">Nossas utilidades públicas são organizações para fins de interesse geral.</p>
+                <img src="../../../Public/imgs/primavera.png" class="img_prox_event_pequena">
+                <a href="utilidades-publicas.php" target="_parent" class="all-links btn_mais_atracoes">Saiba Mais!</a>
+            </div>
+        </div>
+    </div>
+
+</section>

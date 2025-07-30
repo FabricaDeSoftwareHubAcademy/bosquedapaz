@@ -1,6 +1,8 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -49,6 +51,8 @@
                         </div>
 
                         <img class="preview" src='' alt="" id="preview-image" name="preview-image">
+                        <?php echo $tolken; ?>
+                        
 
                         <div class="btns">
                             <?php include "../../../Public/include/Butons-forms.html" ?>
@@ -70,7 +74,7 @@
     <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-adm/js-editar-utilidade.js"></script>
     <script src="../../../Public/js/js-adm/preview-img.js" defer></script>
-
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>
