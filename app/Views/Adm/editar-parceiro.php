@@ -70,7 +70,7 @@
                         <div id="form3" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_contato">Contato:</label>
-                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="100" required>
+                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="30" required>
                             </div>
                             <div class="input-group">
                                 <label for="tipo">Tipo:</label>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="input-group">
                                 <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="10" required>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="5" required>
                             </div> 
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>

@@ -25,7 +25,7 @@
                         <div id="form1" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_parceiro">Parceiro:</label>
-                                <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" maxlength="100" required>
+                                <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" maxlength="20" required>
                             </div>
                             <div class="input-group">
                                 <label for="telefone">Telefone:</label>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="input-group">
                                 <label for="complemento">Complemento:</label>
-                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" maxlength="50" required>
+                                <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" maxlength="30" required>
                             </div>                                             
                             <div class="input-group">
                                 <label for="cidade">Estado:</label>
@@ -55,7 +55,7 @@
                             </div>
                             <div class="input-group">
                                 <label for="logradouro">Logradouro:</label>
-                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" maxlength="50" required>
+                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" maxlength="20" required>
                             </div>                                        
                             <div class="input-group">
                                 <label for="bairro">Bairro:</label>
@@ -86,7 +86,7 @@
                             </div> 
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="30" required>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="20" required>
                             </div>  
                         </div>
                         <?php include "../../../Public/include/Butons-forms.html" ?>
