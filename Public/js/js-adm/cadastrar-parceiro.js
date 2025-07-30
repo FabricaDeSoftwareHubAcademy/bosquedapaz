@@ -286,22 +286,30 @@ document.getElementById('close-modal-erro').addEventListener('click', () => {
     closeModalError();
 });
 
-// Preview da logo ao selecionar imagem
 document.getElementById('logo').addEventListener('change', function () {
     const file = this.files[0];
     const preview = document.getElementById('preview-logo');
 
-    if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            preview.src = e.target.result;
-            preview.style.display = 'block';
-        };
-
-        reader.readAsDataURL(file);
-    } else {
+    if (!file) {
         preview.src = '#';
         preview.style.display = 'none';
+        return;
     }
-}); 
+
+    const tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
+
+    if (!tiposPermitidos.includes(file.type)) {
+        exibirErroModal("Extensão de arquivo inválida. Por favor, envie uma imagem nos formatos: JPG, JPEG, PNG ou WEBP.");
+        this.value = ''; // limpa o campo file
+        preview.src = '#';
+        preview.style.display = 'none';
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+});
