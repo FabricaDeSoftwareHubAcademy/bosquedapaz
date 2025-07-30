@@ -40,10 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensagemModalErro = document.getElementById('erro-text'); // ID correto do seu HTML
     const closeModalErro = document.getElementById('close-modal-erro'); // ID correto do seu HTML
 
-    // Variável de controle para distinguir a ação do modal de confirmação
-    // Pode ser 'status' ou 'edicaoCompleta'
     let acaoModalConfirmar = null;
-    // Variável para armazenar o contexto da categoria ao alterar status
+
     let categoriaParaAlterarStatus = null;
 
 
@@ -52,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Event Listener para a Busca/Filtro ---
     formBusca.addEventListener('submit', function (e) {
-        e.preventDefault(); // Impede o recarregamento da página
+        e.preventDefault();
         const termo = inputBusca.value.trim().toLowerCase();
         filtrarTabela(termo);
     });
@@ -417,4 +415,67 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mensagemModalErro) mensagemModalErro.textContent = mensagem;
         modalErro?.showModal();
     }
+});
+
+const nomeInput = document.getElementById('descricao');
+const fileInput = document.getElementById('file');
+const previewContainer = document.getElementById('preview-container');
+const previewCircle = document.getElementById('preview-circle');
+const previewImg = document.getElementById('preview-img');
+const previewLabel = document.getElementById('preview-label');
+const corInput = document.getElementById('corInput');
+const colorOptions = document.querySelectorAll('#seletor-cor div[data-value]');
+const uploadPlaceholder = document.getElementById('upload-placeholder');
+const btnCancelar = document.getElementById('btn_cancelar_categoria');
+
+function atualizarPreview() {
+    const nome = nomeInput.value.trim();
+    if (nome) previewLabel.textContent = nome;
+}
+
+nomeInput.addEventListener('input', () => {
+    atualizarPreview();
+});
+
+colorOptions.forEach(item => {
+    item.addEventListener('click', () => {
+        const cor = item.getAttribute('data-value');
+        corInput.value = cor;
+        previewCircle.style.backgroundColor = cor;
+    });
+});
+
+
+fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+            previewImg.src = e.target.result;
+            previewImg.style.display = 'block';
+            previewContainer.style.display = 'flex';
+            uploadPlaceholder.style.display = 'none'; // esconde o ícone padrão
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+function limparPreviewCategoria() {
+    previewContainer.style.display = 'none';
+    previewImg.src = '';
+    previewImg.style.display = 'none';
+    previewCircle.style.backgroundColor = '#ccc';
+    previewLabel.textContent = '';
+    uploadPlaceholder.style.display = 'block';
+
+    fileInput.value = '';
+    nomeInput.value = '';
+    corInput.value = '';
+}
+
+// Evento do botão "Cancelar"
+btnCancelar.addEventListener('click', () => {
+    limparPreviewCategoria();
+    const dialog = document.getElementById('cadastro-categoria');
+    if (dialog) dialog.close(); // fecha o <dialog> se estiver aberto
 });

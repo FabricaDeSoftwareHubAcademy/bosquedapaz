@@ -114,7 +114,7 @@
                                     <input id="file" type="file" name="icone" style="display: none;">
                                 </label>
                                 <div class="dialog-botoes">
-                                    <button type="button" class="dialog-cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
+                                    <button type="button" id="btn_cancelar_categoria" class="dialog-cancelar" onclick="document.getElementById('cadastro-categoria').close()">Cancelar</button>
                                     <button type="submit" id="btn_cadastrar_cat" class="dialog-salvar">Salvar</button>
                                 </div>
                             </div>
