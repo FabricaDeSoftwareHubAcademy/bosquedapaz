@@ -34,7 +34,7 @@ CREATE TABLE endereco_evento(
     PRIMARY KEY(id_endereco_evento)
 );
 
-CREATE TABLE login(
+CREATE TABLE pessoa_user(
 	id_login int not null auto_increment,
 	email VARCHAR(200) NULL UNIQUE,
     senha VARCHAR(200) NULL,
