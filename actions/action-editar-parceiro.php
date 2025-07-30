@@ -4,6 +4,10 @@ require_once('../vendor/autoload.php');
 use app\Controller\Parceiro;
 use app\suport\Csrf;
 
+function sanitizarTexto($input) {
+    return htmlspecialchars(strip_tags(trim($input)));
+}
+
 function validarCpfCnpj(string $valor): bool
 {
     $valor = preg_replace('/\D/', '', $valor);
@@ -119,23 +123,24 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         }
     }
 
+    // Sanitizar todos os campos do $_POST usados
     $dados = [
-        'nome_parceiro' => $_POST['nome_parceiro'] ?? null,
-        'telefone' => $_POST['telefone'] ?? null,
+        'nome_parceiro' => isset($_POST['nome_parceiro']) ? sanitizarTexto($_POST['nome_parceiro']) : null,
+        'telefone' => isset($_POST['telefone']) ? sanitizarTexto($_POST['telefone']) : null,
         'logo' => $caminhoLogo,
-        'email' => $_POST['email'] ?? null,
-        'cpf_cnpj' => $_POST['cpf_cnpj'] ?? null,
-        'nome_contato' => $_POST['nome_contato'] ?? null,
-        'tipo' => $_POST['tipo'] ?? null,
-        'cep' => $_POST['cep'] ?? null,
-        'complemento' => $_POST['complemento'] ?? null,
-        'num_residencia' => $_POST['num_residencia'] ?? null,
-        'logradouro' => $_POST['logradouro'] ?? null,
-        'estado' => $_POST['estado'] ?? null,
-        'bairro' => $_POST['bairro'] ?? null
+        'email' => isset($_POST['email']) ? sanitizarTexto($_POST['email']) : null,
+        'cpf_cnpj' => isset($_POST['cpf_cnpj']) ? sanitizarTexto($_POST['cpf_cnpj']) : null,
+        'nome_contato' => isset($_POST['nome_contato']) ? sanitizarTexto($_POST['nome_contato']) : null,
+        'tipo' => isset($_POST['tipo']) ? sanitizarTexto($_POST['tipo']) : null,
+        'cep' => isset($_POST['cep']) ? sanitizarTexto($_POST['cep']) : null,
+        'complemento' => isset($_POST['complemento']) ? sanitizarTexto($_POST['complemento']) : null,
+        'num_residencia' => isset($_POST['num_residencia']) ? sanitizarTexto($_POST['num_residencia']) : null,
+        'logradouro' => isset($_POST['logradouro']) ? sanitizarTexto($_POST['logradouro']) : null,
+        'estado' => isset($_POST['estado']) ? sanitizarTexto($_POST['estado']) : null,
+        'bairro' => isset($_POST['bairro']) ? sanitizarTexto($_POST['bairro']) : null,
     ];
 
-    // Validação para campos nulos ou vazios
+    // Validação para campos nulos ou vazios (exceto logo)
     foreach ($dados as $key => $value) {
         if ($key !== 'logo' && (is_null($value) || trim($value) === '')) {
             echo json_encode(['erro' => "Campo $key não informado ou vazio"]);
@@ -171,13 +176,11 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     $parceiro = new Parceiro();
 
-    // se nenhuma logo for colocada aqui
-    // mantém mesma logo sem trocar
+    // Se nenhuma logo for enviada, não atualiza o campo logo
     if ($dados['logo'] === null) {
         unset($dados['logo']);
     }
 
-    $parceiro = new Parceiro();
     $resultado = $parceiro->AtualizarParceiro($id, $dados);
 
     if ($resultado) {

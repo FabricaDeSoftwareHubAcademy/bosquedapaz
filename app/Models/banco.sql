@@ -34,7 +34,7 @@ CREATE TABLE endereco_evento(
     PRIMARY KEY(id_endereco_evento)
 );
 
-CREATE TABLE login(
+CREATE TABLE pessoa_user(
 	id_login int not null auto_increment,
 	email VARCHAR(200) NULL UNIQUE,
     senha VARCHAR(200) NULL,
@@ -59,7 +59,7 @@ CREATE TABLE pessoa(
     id_login INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
-    FOREIGN KEY(id_login) REFERENCES login(id_login)
+    FOREIGN KEY(id_login) REFERENCES pessoa_user(id_login)
 );
 
 CREATE TABLE expositor(
