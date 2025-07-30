@@ -34,8 +34,8 @@ use app\Models\Database;
 
         public function listar() {
             $db = new Database('utilidade_publica');
-            $res = $db->select_utilidades()
-                      ->fetchAll(PDO::FETCH_CLASS, self::class);
+            $res = $db->select()
+                      ->fetchAll(PDO::FETCH_ASSOC);
     
             return $res;
         }
@@ -47,7 +47,7 @@ use app\Models\Database;
                 'descricao' => $this->descricao,
                 'data_inicio' => $this->data_inicio,
                 'data_fim' => $this->data_fim,
-                'imagem' => $this->imagem,
+                'imagem' => $this->imagem
                 // 'status_utilidade' => $this->status_utilidade
             ]);
     

@@ -40,8 +40,8 @@
                 <img src="../../../Public/imgs/primavera.png" class="img_prox_event">
             </div>
             <div class="content_info_evento">
-                <h3 class="all-titles title_evento">ultilidades publicas</h3>
-                <p class="text_evento">Nossas ultilidades públicas São organizações para fins de interesse geral.</p>
+                <h3 class="all-titles title_evento">Utilidades públicas</h3>
+                <p class="text_evento">Nossas utilidades públicas são organizações para fins de interesse geral.</p>
                 <img src="../../../Public/imgs/primavera.png" class="img_prox_event_pequena">
                 <a href="utilidades-publicas.php" target="_parent" class="all-links btn_mais_atracoes">Saiba Mais!</a>
             </div>

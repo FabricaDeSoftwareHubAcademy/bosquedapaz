@@ -171,6 +171,20 @@ class Database
     }
 
     //Funções do fluxo do ADM: 
+    public function listar_colaboradores()
+    {
+        $query = "SELECT
+            c.id_colaborador,
+            p.nome,
+            p.email,
+            p.telefone,
+            c.cargo,
+            p.status_pes,
+            p.img_perfil
+            FROM colaborador c
+            INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
+        return $this->execute($query);
+    }
     
 
     public function sts_adm($id_colaborador, $novoStatus)
