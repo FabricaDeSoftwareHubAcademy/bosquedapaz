@@ -1,6 +1,7 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\EnderecoEvento;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -8,7 +9,7 @@ function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $nome_local = sanitizarTexto($_POST['local_evento'] ?? '');
     $cep_evento = $_POST['cep_evento'] ?? '';
     $logradouro_evento = sanitizarTexto($_POST['logradouro_evento'] ?? '');

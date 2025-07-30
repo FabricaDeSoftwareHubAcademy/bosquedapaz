@@ -1,10 +1,11 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
+use app\suport\Csrf;
 
 $caminhoPasta = '../Public/uploads/uploads-boletos';
 
-if (isset($_POST['botao-cadastrar'])) {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['botao-cadastrar'])) {
     
     if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == 0) {
         

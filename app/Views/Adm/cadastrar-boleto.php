@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -80,6 +84,7 @@
                             <input type="date" name="vencimento_input" id="val" placeholder="00/00/0000" required>
                         </div>
                     </div>
+                    <?php echo $tolken; ?>
 
                     <?php include '../../../Public/include/Butons-forms.html'; ?>
                    

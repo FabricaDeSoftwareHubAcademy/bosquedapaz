@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -60,6 +64,7 @@
                         <p>Limite de 5 Fotos por Evento</p>
                         <form method="POST" class="form-img">
                             <input type="file" multiple>
+                            <?php echo $tolken; ?>
                             <button class="submit-fotos">Adicionar Fotos</button>
                         </form>
                     </div>
