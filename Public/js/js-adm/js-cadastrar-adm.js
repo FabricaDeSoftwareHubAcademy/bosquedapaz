@@ -25,7 +25,6 @@ form.addEventListener("submit", async (e) => {
     });
 
     const text = await response.text();
-    console.log("Resposta bruta:", text);
 
     const data = JSON.parse(text);
 

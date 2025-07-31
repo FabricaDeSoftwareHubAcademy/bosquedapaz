@@ -27,7 +27,6 @@ $tolken = getTolkenCsrf();
   <body>
     <!-- Includs:  -->
     <?php include "../../../Public/include/menu-adm.html" ?>
-    <?php include '../../../Public/include/modais/modal-status-adm.html'; ?>
 
     <main class="principal">
       <div class="box">
@@ -39,8 +38,6 @@ $tolken = getTolkenCsrf();
           <form method="POST" id="formBusca">
             <div class="search-bar">
               <input type="text" id="busca" name="palavra" placeholder="Pesquisar por Administrador" />
-
-              <?php echo $tolken; ?>
             </div>
           </form>
           <!-- Tabela de Colaboradores -->
@@ -64,6 +61,11 @@ $tolken = getTolkenCsrf();
       </div>  
     </main>
 
+    <?php include "../../../Public/include/modais/modal-deletar.html"; ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>
+
+
     <div class="bolas-fundo">
       <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
       <img src="../../../Public/assets/img-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
@@ -72,7 +74,6 @@ $tolken = getTolkenCsrf();
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>
-    <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
     <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
   </body>
