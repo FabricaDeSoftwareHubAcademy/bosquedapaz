@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    const botaoBuscar = document.querySelector(".botao-procurar");
+    const botaoBuscar = document.querySelector("#lupa");
 
     botaoBuscar.addEventListener("click", (e) => {
         e.preventDefault();
