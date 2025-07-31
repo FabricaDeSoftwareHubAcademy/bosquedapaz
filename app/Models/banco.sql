@@ -58,7 +58,7 @@ CREATE TABLE pessoa(
     id_login INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
-    FOREIGN KEY(id_login) REFERENCES login(id_login)
+    FOREIGN KEY(id_login) REFERENCES pessoa_user(id_login)
 );
 
 CREATE TABLE expositor(
@@ -222,14 +222,14 @@ INNER JOIN pessoa AS pes
 ON pes.id_pessoa = exp.id_pessoa
 INNER JOIN endereco AS en 
 ON pes.id_endereco = en.id_endereco
-INNER JOIN login as log
+INNER JOIN pessoa_user as log
 ON log.id_login = pes.id_login;
 
 CREATE VIEW view_colaborador AS 
 SELECT c.cargo, c.id_colaborador, 
 p.id_pessoa, p.id_login, p.nome, p.telefone, p.img_perfil,
 l.email, l.perfil, l.status_pes
-FROM login AS l
+FROM pessoa_user AS l
 INNER JOIN pessoa AS p
 ON l.id_login = p.id_login
 INNER JOIN colaborador AS c
