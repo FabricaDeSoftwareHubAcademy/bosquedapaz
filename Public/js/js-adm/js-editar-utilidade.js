@@ -1,29 +1,65 @@
+function sanitizeInput(input) {
+    const div = document.createElement('div');
+    div.innerText = input;
+    return div.innerHTML;
+}
+
+function openModalConfirmar() {
+    document.getElementById('modal-confirmar').showModal();
+}
+
+function closeModalConfirmar() {
+    document.getElementById('modal-confirmar').close();
+}
+
+function openModalSucesso() {
+    document.getElementById('modal-sucesso').showModal();
+}
+
+function closeModalSucesso() {
+    document.getElementById('modal-sucesso').close();
+}
+
+function openModalErro(mensagem) {
+    document.getElementById('erro-text').innerText = mensagem;
+    document.getElementById('modal-error').showModal();
+}
+
+function closeModalErro() {
+    document.getElementById('modal-error').close();
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
+    function openModalSucesso() {
+    const modal = document.getElementById('modal-sucesso');
+    modal.showModal();
+
+    const closeBtn = document.getElementById('close-modal-sucesso');
+    if (closeBtn) {
+        closeBtn.onclick = () => {
+            modal.close();
+            location.reload();
+        };
+    }
+}
+
     const params = new URLSearchParams(window.location.search);
-    // Preenche os campos com os parâmetros da URL
-    document.querySelector('input[name="titulo"]').value = params.get('titulo') || '';
-    document.querySelector('textarea[name="descricao"]').value = params.get('descricao') || '';
-    document.querySelector('input[name="data_inicio"]').value = params.get('data_inicio') || '';
-    document.querySelector('input[name="data_fim"]').value = params.get('data_fim') || '';
-    // document.querySelector('img[name="preview-image"]').src = params.get('imagem') || '';
-    document.querySelector('img[name="preview-image"]').src = `../../${params.get('imagem')}`;
 
-    // "/Public/uploads/uploads-utilidade/68796701aeac8.png";
+    const titulo = sanitizeInput(params.get('titulo') || '');
+    const descricao = sanitizeInput(params.get('descricao') || '');
+    const data_inicio = sanitizeInput(params.get('data_inicio') || '');
+    const data_fim = sanitizeInput(params.get('data_fim') || '');
+    const imagem = sanitizeInput(params.get('imagem') || '');
 
-
-    let img = params.get('imagem');
-
-    console.log(img);
-
-    // Não é possível setar valor de input file via JS por segurança, então removido
-    // document.querySelector('input[type="file"]').value = params.get('imagem') || '';
+    document.querySelector('input[name="titulo"]').value = titulo;
+    document.querySelector('textarea[name="descricao"]').value = descricao;
+    document.querySelector('input[name="data_inicio"]').value = data_inicio;
+    document.querySelector('input[name="data_fim"]').value = data_fim;
+    document.querySelector('img[name="preview-image"]').src = `../../${imagem}`;
 
     const form = document.getElementById('form_editar_utilidade');
     if (form && params.get('id')) {
-        const id = params.get('id');
-        form.dataset.id = id;
-
-        // Adiciona ou atualiza input hidden para enviar o id ao backend
         let inputId = form.querySelector('input[name="id"]');
         if (!inputId) {
             inputId = document.createElement('input');
@@ -31,66 +67,88 @@ window.addEventListener('DOMContentLoaded', () => {
             inputId.name = 'id';
             form.appendChild(inputId);
         }
-        inputId.value = id;
+        inputId.value = sanitizeInput(params.get('id'));
     }
 });
 
-const botao_editar_utilidade = document.getElementById('btn-salvar');
+document.getElementById('btn-salvar').addEventListener('click', function (event) {
+    event.preventDefault();
 
-if (botao_editar_utilidade) {
-    botao_editar_utilidade.addEventListener('click', async function (event) {
-        event.preventDefault();
+    const titulo = document.getElementById("confirmar-title");
+    const subtitulo = document.getElementById("msm-confimar");
 
-        const formulario = document.getElementById('form_editar_utilidade');
-        if (!formulario) {
-            alert("Formulário não encontrado.");
-            return;
+    titulo.innerHTML = "<h2>Deseja editar esse registro?</h2>";
+    subtitulo.innerHTML = "<p>Clique em salvar para confirmar a alteração</p>";
+
+    openModalConfirmar();
+
+    document.getElementById('close-modal-confirmar').onclick = closeModalConfirmar;
+    document.getElementById('btn-modal-cancelar').onclick = closeModalConfirmar;
+
+    const salvarBtn = document.getElementById('btn-modal-salvar');
+    const novoSalvarBtn = salvarBtn.cloneNode(true);
+    salvarBtn.parentNode.replaceChild(novoSalvarBtn, salvarBtn);
+
+    novoSalvarBtn.addEventListener('click', async function () {
+    closeModalConfirmar();
+
+    const form = document.getElementById('form_editar_utilidade');
+    if (!form) {
+        openModalErro("Formulário não encontrado.");
+        return;
+    }
+
+    // Pegando os valores
+    const titulo = form.querySelector('input[name="titulo"]').value.trim();
+    const descricao = form.querySelector('textarea[name="descricao"]').value.trim();
+    const data_inicio = form.querySelector('input[name="data_inicio"]').value;
+    const data_fim = form.querySelector('input[name="data_fim"]').value;
+
+    // Validações campo por campo
+    if (!titulo) {
+        openModalErro("O campo Título é obrigatório.");
+        return;
+    }
+
+    if (!descricao) {
+        openModalErro("O campo Descrição é obrigatório.");
+        return;
+    }
+
+    if (!data_inicio) {
+        openModalErro("O campo Data de Início é obrigatório.");
+        return;
+    }
+
+    if (!data_fim) {
+        openModalErro("O campo Data Final é obrigatório.");
+        return;
+    }
+
+    if (new Date(data_inicio) > new Date(data_fim)) {
+        openModalErro("A data de início não pode ser maior que a data final.");
+        return;
+    }
+
+    const formData = new FormData(form);
+
+    try {
+        const dados_php = await fetch('../../../actions/action-editar-utilidade-publica.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const response = await dados_php.json();
+
+        if (response.status == 200) {
+            openModalSucesso();
+        } else {
+            openModalErro(response.msg || "Erro ao editar.");
         }
+    } catch (error) {
+        console.error("Erro:", error);
+        openModalErro("Erro na comunicação com o servidor.");
+    }
+});
 
-        const formData = new FormData(formulario);
-
-        try {
-            const dados_php = await fetch('../../../actions/action-editar-utilidade-publica.php', {
-                method: 'POST',
-                body: formData
-            });
-
-            const response = await dados_php.json();
-
-            if (response.status == 200) {
-                console.log(response.msg);
-                alert("Editado com sucesso!"); // substituir pelo seu modal
-            } else {
-                console.error(response.msg);
-                alert("Erro ao Editar!");
-            }
-        } catch (error) {
-            console.error("Erro na requisição:", error);
-            alert("Erro na comunicação com o servidor.");
-        }
-    });
-}
-
-btnSalvar = document.getElementById('#btn-salvar');
-
-    btn.addEventListener('click', async function (event) {
-        event.preventDefault();
-
-        titulo = document.getElementById("confirmar-title");
-        subtitulo = document.getElementById("msm-confimar");
-
-        titulo.innerHTML = "<h2>Deseja editar esse registro?</h2>";
-        subtitulo.innerHTML = "<p>Clique em salvar para confirmar a alteração</p>";
-
-        openModalConfirmar();
-        document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
-        document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
-
-        const salvarBtn = document.getElementById('btn-modal-salvar');
-        const novoSalvarBtn = salvarBtn.cloneNode(true);
-        salvarBtn.parentNode.replaceChild(novoSalvarBtn, salvarBtn);
-
-        closeModalConfirmar();
-        window.location.reload();
-    });
-
+});

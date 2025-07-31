@@ -57,12 +57,17 @@
     </main>
 
     <div class="bolas-fundo">
-    <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <?php include "../../../Public/include/modais/modal-confirmar.html"?>
+    <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+    <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+    <?php include '../../../Public/include/modais/modal-error.html'; ?>
+    <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
+    <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
+    <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-btns-padrao.js"></script>
     <script src="../../../Public/js/js-adm/js-editar-utilidade.js"></script>
