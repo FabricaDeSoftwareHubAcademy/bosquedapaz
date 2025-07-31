@@ -8,12 +8,16 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
+function sanitizarTexto($texto) {
+    return htmlspecialchars(trim($texto), ENT_QUOTES, 'UTF-8');
+}
+
 function respostaErro($mensagem) {
     echo json_encode(["status" => "erro", "mensagem" => $mensagem]);
     exit;
 }
 
-if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     // Validações básicas dos campos obrigatórios
     $camposObrigatorios = [
         'nome_parceiro', 'telefone', 'email', 'nome_contato',
