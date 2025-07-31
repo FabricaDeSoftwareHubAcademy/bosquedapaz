@@ -66,14 +66,14 @@ async function menuAdm() {
         });
         
         const text = await response.json();
-
+        
         let imgLogin = document.querySelectorAll('#img-login');
 
         imgLogin.forEach(element => {
             if (text.data.img_perfil == null){
                 element.src = '../../../Public/assets/MOCA.png';
             }else {
-                element.src = '../../../' + text.data.img_perfil;
+                element.src = '../../../Public/uploads/uploads-ADM/' + text.data.img_perfil;
             }
         });
 
