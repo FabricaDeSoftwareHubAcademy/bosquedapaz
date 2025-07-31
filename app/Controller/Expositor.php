@@ -8,7 +8,6 @@ use PDO;
 use app\Controller\Pessoa;
 use app\Models\Database;
 use app\Controller\Imagem;
-session_start();
 
 
 class Expositor extends Pessoa
@@ -57,7 +56,7 @@ class Expositor extends Pessoa
         
         ///// insert na tabela login \\\\\
         
-        $db = new Database('login');
+        $db = new Database('pessoa_user');
         $login_id = $db->insert_lastid(
             [
             'email' => $this->email,
