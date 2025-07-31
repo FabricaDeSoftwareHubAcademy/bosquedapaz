@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           acao: "alternarStatus",
           id_colaborador: idColaborador,
           status_atual: currentButton.getAttribute("data-status").toLowerCase(), // força minúsculo aqui
+          tolkenCsrf: document.getElementById('tolkenCsrf')
         }),
       });
 

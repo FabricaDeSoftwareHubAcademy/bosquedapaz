@@ -8,7 +8,8 @@ function sanitizeString($str) {
     return htmlspecialchars(strip_tags($str));
 }
 
-if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+if (true) {
+    echo $_POST;
     $colab = new Colaborador();
 
     $input = json_decode(file_get_contents('php://input'), true);
@@ -234,16 +235,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $colab = new Colaborador();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['meu_perfil']) && $_GET['meu_perfil'] === '1') {
-        if(!isset($_SESSION['login']['id_login'])) {
-            echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
-            exit;
-        }
-        $idSessao = $_SESSION['login']['id_login'];
         
         // Instancia seu controller
         $colab = new \app\Controller\Colaborador();
         
-        $dados = $colab->buscarPorIdPessoa($idSessao);
+        // $dados = $colab->buscarPorIdPessoa($idSessao);
         
         // DEBUG: para garantir que só vem UM registro
         header('Content-Type: application/json');
