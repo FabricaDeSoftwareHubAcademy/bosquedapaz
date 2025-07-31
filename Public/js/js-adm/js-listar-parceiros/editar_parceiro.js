@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("telefone", document.getElementById("telefone").value.replace(/\D/g, ""));
     formData.append("cpf_cnpj", document.getElementById("cpf_cnpj").value.replace(/\D/g, ""));
     formData.append("cep", document.getElementById("cep").value.replace(/\D/g, ""));
+    formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"))
 
     const logoInput = document.getElementById("logo");
     if (logoInput && logoInput.files.length > 0) {
