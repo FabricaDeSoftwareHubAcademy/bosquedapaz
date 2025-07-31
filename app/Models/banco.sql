@@ -50,6 +50,7 @@ CREATE TABLE pessoa(
     nome VARCHAR(150) NOT NULL,
     whats CHAR(16) NULL,
     telefone CHAR(16) NULL,
+    termos ENUM("Sim", "Não") NOT NULL DEFAULT "Não",
     link_instagram VARCHAR(255) NULL,
     link_facebook VARCHAR(255) NULL,
     link_whats VARCHAR(255) NULL,
