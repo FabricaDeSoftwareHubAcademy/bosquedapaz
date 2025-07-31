@@ -189,12 +189,15 @@
 
 
 .section-colaboradoras-quem-somos .fotos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 7px solid #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-
 
 
 
@@ -215,15 +218,25 @@
 
 }
 
-.profission:hover {
-    color: #8338ec;
+.section-colaboradoras-quem-somos > div:hover .fotos {
+    border-color: #ff5029;
+    transform: scale(1.05);
+}
+
+.section-colaboradoras-quem-somos .carina,
+.section-colaboradoras-quem-somos .denise,
+.section-colaboradoras-quem-somos .fernanda {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
 }
 
 .section-colaboradoras-quem-somos .profission {
-    font-weight: bold;
-
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ff5029;
 }
-
 .descricao-colaboradoras-quem-somos p {
     display: flex;
     text-align: justify;
@@ -418,16 +431,91 @@
     margin-top: 10px;
   }
 
+/*RESPONSIVIDADE DA SECTION DAS COLABORADORAS*/
+@media (max-width: 992px) {
+    .section-colaboradoras-quem-somos .fotos {
+        width: 240px;
+        height: 240px;
+    }
 
+    .descricao-colaboradoras-quem-somos {
+        font-size: 1.3rem;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .section-colaboradoras-quem-somos .carina,
+    .section-colaboradoras-quem-somos .denise,
+    .section-colaboradoras-quem-somos .fernanda,
+    .section-colaboradoras-quem-somos .profission {
+        font-size: 1.1rem;
+    }
+}
+
+/* Telas pequenas: celulares grandes e tablets em pé */
+@media (max-width: 768px) {
+    .section-colaboradoras-quem-somos .fotos {
+        width: 180px;
+        height: 180px;
+    }
+
+    .descricao-colaboradoras-quem-somos {
+        font-size: 1.1rem;
+        padding-left: 4%;
+        padding-right: 4%;
+        flex-direction: column;
+    }
+
+    .section-colaboradoras-quem-somos .carina,
+    .section-colaboradoras-quem-somos .denise,
+    .section-colaboradoras-quem-somos .fernanda,
+    .section-colaboradoras-quem-somos .profission {
+        font-size: 1rem;
+    }
+}
+
+/* Telas muito pequenas: celulares compactos */
+@media (max-width: 480px) {
+    .section-colaboradoras-quem-somos .fotos {
+        width: 140px;
+        height: 140px;
+    }
+
+    .descricao-colaboradoras-quem-somos {
+        font-size: 1rem;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .section-colaboradoras-quem-somos .carina,
+    .section-colaboradoras-quem-somos .denise,
+    .section-colaboradoras-quem-somos .fernanda,
+    .section-colaboradoras-quem-somos .profission {
+        font-size: 0.9rem;
+    }
+}
 
 
   @media(max-width:1700px){
     .section-imagens-flutuantes-quem-somos{
-        padding-top: 20%;
+        padding-top: 12%;
     }
-
-    
   }
+  @media(max-width:1500px){
+    .section-imagens-flutuantes-quem-somos{
+        padding-top: 12%;
+    }}
+
+  @media(max-width:1400px){
+    .section-imagens-flutuantes-quem-somos{
+        padding-top: 12%;
+    }}
+
+    @media(max-width:1200px){
+        .section-imagens-flutuantes-quem-somos{
+            padding-top: 12%;
+        }}
+
   @media(max-width:850px){
     .section-imagens-flutuantes-quem-somos{
         padding-top: 20%;
@@ -506,13 +594,7 @@
             }
         }
 
-        @media(max-width:650px){
-            .section-imagens-flutuantes-quem-somos{
-                padding-top: 30%;
-
-            }
-
-        }
+        
 
 
 
@@ -545,6 +627,9 @@
 
             
         }
+        .section-imagens-flutuantes-quem-somos{
+            padding-top: 20%;
+        }
        
         .titulo-nossa-historia-quem-somos .h1-secundario{
             font-size: 2rem;
@@ -565,10 +650,7 @@
         .section-nosso-time-quem-somos .div-nt h1{
             font-size: 2rem;
         }
-        .section-colaboradoras-quem-somos .fotos{
-            width: 60%;
-            margin-left: 20%;
-        }
+      
         .descricao-colaboradoras-quem-somos .descricao3{
             font-size: 17px;
             width: 100%;
