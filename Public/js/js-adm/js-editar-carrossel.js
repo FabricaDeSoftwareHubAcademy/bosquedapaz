@@ -111,7 +111,12 @@ btnEditar.addEventListener('click', async function (event) {
         
                 else if(response.erro != 0){
                     openModalError()
-                    document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+                    document.getElementById('erro-title').innerHTML = response.message
+                    document.getElementById('erro-text').innerHTML = response.erro
+                    document.getElementById('close-modal-erro').addEventListener('click', () => {
+                        closeModalError
+                        window.location.reload()
+                    })
                 }
             }
     
