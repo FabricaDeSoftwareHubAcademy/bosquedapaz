@@ -15,6 +15,35 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         echo json_encode('Erro ao Cadastrar!');
     }
 
+    // if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
+    //     $arquivo = $_FILES['imagem'];
+    //     $nome_foto = $arquivo['name'];
+    //     $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
+    //     $permitidas = ['png', 'jpg', 'jpeg', 'jfif', 'svg'];
+
+    //     if (in_array($extensao, $permitidas)) {
+    //         $novo_nome = uniqid();
+    //         $pasta = '../Public/imgs/uploads-utilidade/'; 
+    //         $caminho = $pasta . $novo_nome . '.' . $extensao;
+
+    //         if (!is_dir($pasta)) {
+    //             mkdir($pasta, 0777, true);
+    //         }
+
+    //         if (move_uploaded_file($arquivo['tmp_name'], $caminho)) {
+    //             $imagem = $caminho;
+    //         } else {
+    //             echo json_encode(['status' => 400, 'msg' => 'Falha ao mover o arquivo.']);
+    //             exit;
+    //         }
+    //     } else {
+    //         echo json_encode(['status' => 400, 'msg' => 'Extensão de arquivo inválida.']);
+    //         exit;
+    //     }
+    // } else {
+    //     $imagem = "";
+    // }
+
     // Verifica se o arquivo foi enviado
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
         $arquivo = $_FILES['imagem'];
