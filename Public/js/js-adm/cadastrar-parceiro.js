@@ -110,7 +110,7 @@ document.getElementById('btn-modal-salvar').addEventListener('click', async func
             closeModalConfirmar();
             openModalSucesso();
             setTimeout(() => {
-                window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+                window.location.href = "/aulaphpdev33/bosquedapaz/app/Views/Adm/listar-parceiros.php";
             }, 2000); // Espera 2 segundos antes de redirecionar
         } else {
             closeModalConfirmar();
