@@ -26,7 +26,9 @@ $tolken = getTolkenCsrf();
                 <div class="search-bar">
                     <label>Procurar</label>
                     <input type="text" id="buscar" placeholder="" />
-                    <button class="search-button">BUSCAR</button>
+                    <div class="botoes">
+                    <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
+                </div>
                 </div>
                 <div class="table-container">
                     <table class="collaborators-table">
@@ -46,15 +48,11 @@ $tolken = getTolkenCsrf();
                     </table>
                 </div>
 
-                <button class="voltar">
-                    <a href="./" class="voltar-link">
-                        <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
-                    </a>
-                </button>
 
-                <div class="botoes">
+
+                <!-- <div class="botoes">
                     <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
-                </div>
+                </div> -->
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">
                         <span class="close-modal" data-modal="modal-fotos">&times;</span>
@@ -69,7 +67,15 @@ $tolken = getTolkenCsrf();
                     </div>
                 </div>
             </div>
+            <button class="voltar">
+            <a href="./" class="voltar-link">
+                <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
+            </a>
+            </button>
+
         </div>
+
+
     </main>
 
     <div class="bolas-fundo">
