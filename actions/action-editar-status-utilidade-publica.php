@@ -5,7 +5,6 @@ use app\suport\Csrf;
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
 
-    // echo json_encode({"nome": "guiguiteste"});
     $id_utilidade_publica = $_POST['id_utilidade_publica'] ?? null;
     $status = $_POST['status_utilidade'] ?? '';
 
