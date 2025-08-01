@@ -51,8 +51,7 @@ $tolken = getTolkenCsrf();
                         <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
                     </a>
                 </button>
-                <div class="b-voltar">
-                </div>
+
                 <div class="botoes">
                     <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
                 </div>
@@ -79,7 +78,6 @@ $tolken = getTolkenCsrf();
         <img src="../../../Public/assets/img-bolas/bola-azul.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
-    <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/status-evento.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>
