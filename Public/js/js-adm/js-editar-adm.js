@@ -7,7 +7,6 @@ async function carregarDadosADM() {
         });
 
         const text = await response.text();
-        console.log('Resposta bruta do servidor:', text);
 
         try {
             const data = JSON.parse(text);
@@ -22,7 +21,7 @@ async function carregarDadosADM() {
                 document.getElementById('cargo').value = usuario.cargo || '';
 
                 if (usuario.img_perfil) {
-                    document.getElementById('previewFoto').src = '../../../' + usuario.img_perfil;
+                    document.getElementById('previewFoto').src = '../../../Public/uploads/uploads-ADM/' + usuario.img_perfil;
                 }
             } else {
                 alert('Erro ao carregar dados do ADM: ' + (data.message || 'Resposta inválida'));
@@ -145,8 +144,9 @@ btnConfirmar.addEventListener("click", async () => {
             document.getElementById('email').value = data.data.email;
             document.getElementById('cargo').value = data.data.cargo;
 
+
             if (data.data.img_perfil) {
-                document.getElementById("previewFoto").src = '../../../' + data.data.img_perfil;
+                document.getElementById("previewFoto").src = '../../../Public/uploads/uploads-ADM/' + data.data.img_perfil;
             }
         } else {
             // Tratamento específico para erro de upload de imagem e outros

@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('hora_fim', hora_fim);
             formData.append('endereco', endereco);
             formData.append('file', imagem);
+            formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
             try {
                 const resposta = await fetch('../../../actions/action-cadastrar-evento.php', {

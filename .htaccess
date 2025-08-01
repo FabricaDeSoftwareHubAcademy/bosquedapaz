@@ -12,6 +12,7 @@ RewriteRule ^vendor/ - [F]
 RewriteRule ^app/Controller - [F]
 RewriteRule ^app/Models - [F]
 RewriteRule ^app/helpers - [F]
+RewriteRule ^app/suport - [F]
 
 
 
