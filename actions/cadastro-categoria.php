@@ -2,23 +2,29 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\Categoria;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
 // Função para sanitizar texto
-function sanitizarTexto($input) {
+function sanitizarTexto($input)
+{
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
 // Verifica se todos os dados esperados foram recebidos via POST
-if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
     $descricao = sanitizarTexto($_POST['descricao']);
-    $cor = $_POST['cor']; // Não precisa de sanitização complexa como texto
+    $cor = $_POST['cor'];
     $arquivo = $_FILES['icone'];
 
     // --- Validações ---
     if (empty($descricao)) {
         echo json_encode(['status' => 'error', 'message' => 'O nome da categoria é obrigatório.']);
+        exit;
+    }
+    if (strlen($descricao) > 30) {
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 50 caracteres.']);
         exit;
     }
     if (empty($cor)) {
@@ -29,6 +35,7 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
         echo json_encode(['status' => 'error', 'message' => 'Nenhum ícone foi enviado ou ocorreu um erro no upload.']);
         exit;
     }
+
 
     // --- Validação e Processamento do Arquivo ---
     $extensao = strtolower(pathinfo($arquivo['name'], PATHINFO_EXTENSION));
@@ -45,10 +52,10 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
     }
 
     // --- Tratamento de Caminhos e Upload ---
-    
+
     // Caminho no sistema de arquivos para onde o arquivo será movido (com '../')
     $diretorioDeUpload = __DIR__ . '/../Public/uploads/uploads-categoria/';
-    
+
     // Caminho que será salvo no banco de dados (sem '../', relativo à pasta Public)
     $caminhoParaBanco = 'uploads/uploads-categoria/';
 
@@ -64,14 +71,14 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
         echo json_encode(['status' => 'error', 'message' => 'Falha ao salvar o arquivo no servidor.']);
         exit;
     }
-    
+
     $caminhoFinalParaBanco = $caminhoParaBanco . $novo_nome;
 
     // --- Criação e Cadastro do Objeto ---
 
     // Cria uma nova instância da Categoria
     $cat = new Categoria();
-    
+
     // **CORREÇÃO PRINCIPAL:** Usa os métodos SETTERS para definir os valores
     $cat->setDescricao($descricao);
     $cat->setCor($cor);
@@ -87,7 +94,6 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
         unlink($caminhoCompletoParaMover);
         echo json_encode(['status' => 'error', 'message' => 'Erro ao cadastrar a categoria no banco de dados.']);
     }
-
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Dados do formulário incompletos ou inválidos.']);
 }

@@ -2,7 +2,7 @@ let btn_cadastrar = document.getElementById("btn-salvar");
 let formulario = document.getElementById("form_cadastrar_parceiro");
 
 // Evento botão principal
-btn_cadastrar.addEventListener('click', function(event){
+btn_cadastrar.addEventListener('click', function (event) {
     event.preventDefault();
 
     const camposObrigatorios = [
@@ -13,11 +13,12 @@ btn_cadastrar.addEventListener('click', function(event){
     for (let id of camposObrigatorios) {
         const campo = document.getElementById(id);
         if (!campo || campo.value.trim() === '') {
-            alert(`Por favor, preencha o campo: ${campo?.placeholder || campo?.name || id}`);
+            exibirErroModal(`Por favor, preencha o campo: ${campo?.placeholder || campo?.name || id}`);
             campo?.focus();
             return;
         }
     }
+
 
     let telefone = document.getElementById('telefone').value.trim();
     let email = document.getElementById('email').value.trim();
@@ -29,34 +30,37 @@ btn_cadastrar.addEventListener('click', function(event){
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const cepRegex = /^\d{5}-\d{3}$/;
 
-    if(!telefoneRegex.test(telefone)){
-        alert("Telefone inválido! Formato esperado: (99) 99999-9999");
+    if (!telefoneRegex.test(telefone)) {
+        exibirErroModal("Telefone inválido! Formato esperado: (99) 99999-9999");
         return;
     }
 
-    if(!emailRegex.test(email)){
-        alert("E-mail inválido!");
+    if (!emailRegex.test(email)) {
+        exibirErroModal("E-mail inválido!");
         return;
     }
 
-    if(!cepRegex.test(cep)){
-        alert("CEP inválido! Formato esperado: 99999-999");
+    if (!cepRegex.test(cep)) {
+        exibirErroModal("CEP inválido! Formato esperado: 99999-999");
         return;
     }
 
-    if(tipo !== "fisica" && tipo !== "juridica"){
-        alert("Selecione o tipo correto!");
+    if (tipo !== "fisica" && tipo !== "juridica") {
+        exibirErroModal("Selecione o tipo correto!");
         return;
     }
 
-    if(!validarCpfCnpj(cpf_cnpj)){
-        alert("CPF/CNPJ inválido!");
+    if (!validarCpfCnpj(cpf_cnpj)) {
+        exibirErroModal("CPF/CNPJ inválido!");
         return;
     }
 
     // Exibe modal após validações
     openModalConfirmar();
 });
+const modalErro = document.getElementById('modal-error');
+const modalErroText = document.getElementById('erro-text');
+const btnFecharErro = document.getElementById('close-modal-erro');
 
 // Botão "Salvar" do modal
 document.getElementById('btn-modal-salvar').addEventListener('click', async function () {
@@ -102,23 +106,28 @@ document.getElementById('btn-modal-salvar').addEventListener('click', async func
 
         let response = await dados_php.json();
 
-        if(response.status == 200){
+        if (response.status == 200) {
             closeModalConfirmar();
             openModalSucesso();
-            formulario.reset();
+            setTimeout(() => {
+                window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+            }, 2000); // Espera 2 segundos antes de redirecionar
         } else {
+            closeModalConfirmar();
             document.getElementById('erro-title').textContent = "Erro ao cadastrar";
-            document.getElementById('erro-text').textContent = "Houve um problema ao salvar os dados. Tente novamente mais tarde.";
+            document.getElementById('erro-text').textContent = response.msg || "Houve um problema ao salvar os dados. Tente novamente mais tarde.";
             openModalError();
         }
-               
-        } catch (error) {
-            document.getElementById('erro-title').textContent = "Erro inesperado";
-            document.getElementById('erro-text').textContent = "Erro ao enviar os dados. Verifique a conexão ou contate o suporte.";
-            openModalError();
-            console.error(error);
-        }
-        
+
+
+    } catch (error) {
+        closeModalConfirmar();
+        document.getElementById('erro-title').textContent = "Erro inesperado";
+        document.getElementById('erro-text').textContent = "Erro ao enviar os dados. Verifique a conexão ou contate o suporte.";
+        console.error(error);
+        openModalError();
+    }
+
 });
 
 // Botão "Cancelar" do modal
@@ -127,13 +136,13 @@ document.getElementById('btn-modal-cancelar').addEventListener('click', function
 });
 
 // Máscaras
-document.getElementById('telefone').addEventListener('input', function(e){
+document.getElementById('telefone').addEventListener('input', function (e) {
     mascaraTelefone(this, e);
 });
-document.getElementById('cep').addEventListener('input', function(e){
+document.getElementById('cep').addEventListener('input', function (e) {
     mascaraCep(this, e);
 });
-document.getElementById('cpf_cnpj').addEventListener('input', function(e){
+document.getElementById('cpf_cnpj').addEventListener('input', function (e) {
     mascaraCpfCnpj(this, e);
 });
 
@@ -141,74 +150,74 @@ function mascaraTelefone(input, e) {
     if (e.inputType === 'deleteContentBackward') return;
     let v = input.value.replace(/\D/g, '').substring(0, 11);
     if (v.length > 10)
-        input.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7,11)}`;
+        input.value = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7, 11)}`;
     else if (v.length > 5)
-        input.value = `(${v.substring(0,2)}) ${v.substring(2,6)}-${v.substring(6,10)}`;
+        input.value = `(${v.substring(0, 2)}) ${v.substring(2, 6)}-${v.substring(6, 10)}`;
     else if (v.length > 2)
-        input.value = `(${v.substring(0,2)}) ${v.substring(2)}`;
+        input.value = `(${v.substring(0, 2)}) ${v.substring(2)}`;
     else
         input.value = v;
 }
 
 function mascaraCep(input, e) {
     if (e.inputType === 'deleteContentBackward') return;
-    let v = input.value.replace(/\D/g, '').substring(0,8);
-    input.value = v.length > 5 ? v.substring(0,5) + '-' + v.substring(5) : v;
+    let v = input.value.replace(/\D/g, '').substring(0, 8);
+    input.value = v.length > 5 ? v.substring(0, 5) + '-' + v.substring(5) : v;
 }
 
 function mascaraCpfCnpj(input, e) {
     if (e.inputType === 'deleteContentBackward') return;
-    let v = input.value.replace(/\D/g, '').substring(0,14);
+    let v = input.value.replace(/\D/g, '').substring(0, 14);
     if (v.length <= 11) {
         if (v.length > 9)
-            input.value = `${v.substring(0,3)}.${v.substring(3,6)}.${v.substring(6,9)}-${v.substring(9,11)}`;
+            input.value = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6, 9)}-${v.substring(9, 11)}`;
         else if (v.length > 6)
-            input.value = `${v.substring(0,3)}.${v.substring(3,6)}.${v.substring(6)}`;
+            input.value = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6)}`;
         else if (v.length > 3)
-            input.value = `${v.substring(0,3)}.${v.substring(3)}`;
+            input.value = `${v.substring(0, 3)}.${v.substring(3)}`;
         else
             input.value = v;
     } else {
-        input.value = `${v.substring(0,2)}.${v.substring(2,5)}.${v.substring(5,8)}/${v.substring(8,12)}-${v.substring(12,14)}`;
+        input.value = `${v.substring(0, 2)}.${v.substring(2, 5)}.${v.substring(5, 8)}/${v.substring(8, 12)}-${v.substring(12, 14)}`;
     }
 }
 
 // Validação CPF/CNPJ
 function validarCpfCnpj(valor) {
-    valor = valor.replace(/[^\d]+/g,'');
-    if(valor.length === 11){
+    valor = valor.replace(/[^\d]+/g, '');
+    if (valor.length === 11) {
         if (/^(\d)\1+$/.test(valor)) return false;
         let soma = 0;
-        for(let i=0; i<9; i++) soma += parseInt(valor.charAt(i)) * (10 - i);
+        for (let i = 0; i < 9; i++) soma += parseInt(valor.charAt(i)) * (10 - i);
         let resto = (soma * 10) % 11;
-        if(resto === 10) resto = 0;
-        if(resto !== parseInt(valor.charAt(9))) return false;
+        if (resto === 10) resto = 0;
+        if (resto !== parseInt(valor.charAt(9))) return false;
         soma = 0;
-        for(let i=0; i<10; i++) soma += parseInt(valor.charAt(i)) * (11 - i);
+        for (let i = 0; i < 10; i++) soma += parseInt(valor.charAt(i)) * (11 - i);
         resto = (soma * 10) % 11;
-        if(resto === 10) resto = 0;
-        if(resto !== parseInt(valor.charAt(10))) return false;
+        if (resto === 10) resto = 0;
+        if (resto !== parseInt(valor.charAt(10))) return false;
         return true;
-    } else if (valor.length === 14){
+    } else if (valor.length === 14) {
         if (/^(\d)\1+$/.test(valor)) return false;
         let tamanho = valor.length - 2;
         let numeros = valor.substring(0, tamanho);
         let digitos = valor.substring(tamanho);
         let soma = 0;
         let pos = tamanho - 7;
-        for(let i = tamanho; i >= 1; i--) {
+        for (let i = tamanho; i >= 1; i--) {
             soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
-            if(pos < 2) pos = 9;
+            if (pos < 2) pos = 9;
         }
         let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-        if(resultado !== parseInt(digitos.charAt(0))) return false;
+        if (resultado !== parseInt(digitos.charAt(0))) return false;
         tamanho++;
         numeros = valor.substring(0, tamanho);
         soma = 0;
         pos = tamanho - 7;
-        for(let i = tamanho; i >= 1; i--) {
+        for (let i = tamanho; i >= 1; i--) {
             soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
-            if(pos < 2) pos = 9;
+            if (pos < 2) pos = 9;
         }
         resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
         return resultado === parseInt(digitos.charAt(1));
@@ -229,10 +238,10 @@ document.getElementById('cep').addEventListener('blur', async function () {
                 document.getElementById('cidade').value = data.localidade;
                 document.getElementById('estado').value = data.uf;
             } else {
-                alert("CEP não encontrado!");
+                exibirErroModal("CEP não encontrado!");
             }
         } catch (error) {
-            alert("Erro ao buscar o endereço. Tente novamente.");
+            exibirErroModal("Erro ao buscar o endereço. Tente novamente.");
             console.error(error);
         }
     }
@@ -240,12 +249,28 @@ document.getElementById('cep').addEventListener('blur', async function () {
 
 function openModalSucesso() {
     let modal = document.getElementById('modal-sucesso');
-    if(modal) modal.showModal();
+    if (modal) modal.showModal();
 }
 
 function closeModalSucesso() {
     let modal = document.getElementById('modal-sucesso');
-    if(modal) modal.close();
+    if (modal) modal.close();
+}
+
+function exibirErroModal(mensagem) {
+    document.getElementById('erro-title').textContent = "Erro de validação";
+    document.getElementById('erro-text').textContent = mensagem;
+    openModalError();
+}
+
+function openModalError() {
+    let modal = document.getElementById('modal-error');
+    if (modal) modal.showModal();
+}
+
+function closeModalError() {
+    let modal = document.getElementById('modal-error');
+    if (modal) modal.close();
 }
 
 // --- FECHAR MODAL SUCESSO PELO "X" ---
@@ -257,22 +282,35 @@ document.getElementById('close-modal-confirmar').addEventListener('click', () =>
     closeModalConfirmar();
 });
 
+document.getElementById('close-modal-erro').addEventListener('click', () => {
+    closeModalError();
+});
+
 // Preview da logo ao selecionar imagem
 document.getElementById('logo').addEventListener('change', function () {
     const file = this.files[0];
     const preview = document.getElementById('preview-logo');
-
-    if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            preview.src = e.target.result;
-            preview.style.display = 'block';
-        };
-
-        reader.readAsDataURL(file);
-    } else {
+ 
+    if (!file) {
         preview.src = '#';
         preview.style.display = 'none';
+        return;
     }
-}); 
+ 
+    const tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
+ 
+    if (!tiposPermitidos.includes(file.type)) {
+        exibirErroModal("Extensão de arquivo inválida. Por favor, envie uma imagem nos formatos: JPG, JPEG, PNG ou WEBP.");
+        this.value = ''; // limpa o campo file
+        preview.src = '#';
+        preview.style.display = 'none';
+        return;
+    }
+ 
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+});

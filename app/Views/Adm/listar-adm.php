@@ -1,5 +1,7 @@
-  <?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
   <!DOCTYPE html>
   <html lang="pt-br">
   <head>
@@ -25,7 +27,6 @@
   <body>
     <!-- Includs:  -->
     <?php include "../../../Public/include/menu-adm.html" ?>
-    <?php include '../../../Public/include/modais/modal-status-adm.html'; ?>
 
     <main class="principal">
       <div class="box">
@@ -60,6 +61,11 @@
       </div>  
     </main>
 
+    <?php include "../../../Public/include/modais/modal-deletar.html"; ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>
+
+
     <div class="bolas-fundo">
       <img src="../../../Public/assets/img-bolas/bola azul1.png" alt="Bola Fundo 1" class="bola-verde1">
       <img src="../../../Public/assets/img-bolas/bola azul2.png" alt="Bola Fundo 2" class="bola-verde2">
@@ -68,7 +74,7 @@
 
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-buscar-adm.js" defer></script>
-    <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
     <script type="text/javascript" src="../../../Public/js/js-adm/js-listar-adm.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
   </body>
   </html>

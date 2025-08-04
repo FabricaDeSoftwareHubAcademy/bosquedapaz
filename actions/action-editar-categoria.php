@@ -1,16 +1,19 @@
 <?php
 require_once('../vendor/autoload.php');
+
 use app\Controller\Categoria;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
 //  Função auxiliar para limpar os dados de texto
-function sanitizarTexto($input) {
+function sanitizarTexto($input)
+{
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
 // 🚦 Apenas requisições POST são permitidas
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     // Pega o ID e garante que seja um inteiro
     $id = (int) ($_POST['id_categoria'] ?? 0);
 
@@ -19,20 +22,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cor = $_POST['cor'] ?? ''; // Cores não precisam de sanitização complexa
 
     // 📋 Validação dos campos obrigatórios
+    if (strlen($descricao) > 30) {
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 30 caracteres.']);
+        exit;
+    }
     if (empty($id) || empty($descricao) || empty($cor)) {
         echo json_encode(['status' => 'error', 'message' => 'Preencha todos os campos obrigatórios.']);
         exit;
     }
 
     $categoriaController = new Categoria();
-    
+
     // Busca a categoria existente para obter o caminho do ícone antigo
     $categoriaExistente = $categoriaController->buscarPorId($id);
     if (!$categoriaExistente) {
         echo json_encode(['status' => 'error', 'message' => 'Categoria não encontrada.']);
         exit;
     }
-    
+
     // Define o caminho do ícone como o já existente por padrão
     $categoriaController->setIcone($categoriaExistente->getIcone());
 
@@ -66,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (file_exists($caminhoIconeAntigo) && is_file($caminhoIconeAntigo)) {
                 unlink($caminhoIconeAntigo);
             }
-            
+
             // Define o caminho do novo ícone para salvar no banco
             $categoriaController->setIcone('uploads/uploads-categoria/' . $nomeSeguro);
         } else {

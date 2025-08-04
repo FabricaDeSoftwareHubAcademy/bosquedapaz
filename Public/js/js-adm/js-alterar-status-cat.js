@@ -1,44 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const tabelaCategoria = document.getElementById('tabela-categoria');
+// Função que executa a requisição de alteração de status
+    async function salvarAlteracaoStatus() {
+        if (!categoriaParaAlterarStatus) return; // Garante que há uma categoria selecionada
 
-    tabelaCategoria.addEventListener('click', async (e) => {
-        if (e.target.classList.contains('status')) {
-            const button = e.target;
-            const linha = button.closest('tr');
-            const id = linha.querySelector('.usuario-col').textContent.trim();
+        const { button, id, statusAtual } = categoriaParaAlterarStatus;
 
-            const statusAtual = button.textContent.trim().toLowerCase();
-            const novoStatus = statusAtual === 'ativo' ? 'inativo' : 'ativo';
+        try {
+            // Prepara os dados para enviar como application/x-www-form-urlencoded
+            const params = new URLSearchParams();
+            params.append('acao', 'alterarStatus'); // Ação que seu PHP espera
+            params.append('id_categoria', id);
+            params.append('status_atual', statusAtual); // Envia o status ATUAL, o PHP irá alternar
 
-            try {
-                const response = await fetch('../../../actions/action-categoria.php?acao=alterarStatus', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        id_categoria: id,
-                        status_cat: novoStatus
-                    })
-                });
-
-                const data = await response.json();
-
-                if (data.status === 'success') {
-                    // Atualiza texto do botão
-                    button.textContent = novoStatus.charAt(0).toUpperCase() + novoStatus.slice(1);
-
-                    // Remove ambas as classes e adiciona a correta
-                    button.classList.remove('active', 'inactive');
-                    button.classList.add(novoStatus === 'ativo' ? 'active' : 'inactive');
-                } else {
-                    alert('❌ ' + data.message);
-                }
-
-            } catch (error) {
-                console.error('Erro:', error);
-                alert('❌ Erro na comunicação com o servidor');
+            console.log('Parâmetros enviados para alterarStatus:');
+            for (let pair of params.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
             }
+
+            const response = await fetch('../../../actions/action-categoria.php', {
+                method: 'POST',
+                body: params
+            });
+
+            const data = await response.json();
+
+            if (data.status === 'success') {
+                // Determine o NOVO status (baseado no que o PHP deveria ter feito)
+                const novoStatus = statusAtual === 'ativo' ? 'inativo' : 'ativo';
+
+                // Atualiza o DOM para refletir o novo status
+                button.textContent = novoStatus.charAt(0).toUpperCase() + novoStatus.slice(1);
+                button.classList.remove('active', 'inactive');
+                button.classList.add(novoStatus === 'ativo' ? 'active' : 'inactive');
+                button.dataset.status = novoStatus; // Atualiza o data-status para futuras interações
+
+                mensagemModalSucesso.textContent = data.message || 'Status alterado com sucesso!';
+                modalSucesso.showModal(); // Abre o modal de sucesso
+
+            } else {
+                mensagemModalErro.textContent = data.message || 'Erro desconhecido ao alterar status.';
+                modalErro.showModal(); // Abre o modal de erro
+            }
+        } catch (error) {
+            console.error('Erro na comunicação ao alterar status:', error);
+            mensagemModalErro.textContent = 'Erro de comunicação com o servidor ao alterar status. Tente novamente.';
+            modalErro.showModal(); // Abre o modal de erro para erros de rede
+        } finally {
+            categoriaParaAlterarStatus = null; // Limpa a referência após a operação
         }
-    });
-});
+    }

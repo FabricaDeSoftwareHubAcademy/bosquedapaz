@@ -38,7 +38,7 @@ class Database
     }
 
     // se conecta com o db
-    private function conecta()
+    public function conecta()
     {
 
         try {
@@ -60,14 +60,16 @@ class Database
     public function execute($query, $binds = [])
     {
         try {
-
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
+            
             return $stmt;
         } catch (\PDOException $err) {
+
             die("Connection failed" . $err->getMessage());
         }
     }
+
 
     // método para inserir no db, tem o parametro $values,
     // que recebe os valores do que serão inseridos
@@ -121,7 +123,6 @@ class Database
         $limit = $limit != null ? ' LIMIT ' . $limit : '';
 
         $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
-
         return $this->execute($query);
     }
 
@@ -169,69 +170,17 @@ class Database
         return $this->execute($query) ? true : false;
     }
 
-    //Funções do fluxo do ADM: 
-    public function listar_colaboradores()
-    {
-        $query = "SELECT
-            c.id_colaborador,
-            p.nome,
-            p.email,
-            p.telefone,
-            c.cargo,
-            p.status_pes
-            FROM colaborador c
-            INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
-        return $this->execute($query);
+    //Funções do fluxo do ADM:
+    
+    public function updateColaborador($where, $value, $id_name, $table){
+        $where = strlen($where) ? " WHERE " . $where : '';
+        $fields = array_keys($value);
+        $param = array_values($value);
+        $query = "UPDATE " . $this->table . " SET " . implode('=?,', $fields) . "=? WHERE " . $id_name . " = ( SELECT " . $id_name . " FROM " . $table . $where . ")";
+        $res = $this->execute($query, $param);
+        return $res ? TRUE : FALSE;
     }
     
-
-    public function filtrar_colaboradores($nome)
-    {
-        $query = "SELECT
-        c.id_colaborador,
-        p.nome,
-        p.email,
-        p.telefone,
-        c.cargo,
-        c.status_col
-        FROM colaborador c
-        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
-        WHERE p.nome LIKE :nome";
-
-        $binds = [":nome" => "%$nome%"];
-        return $this->execute($query, $binds);
-    }
-
-    public function sts_adm($id_colaborador, $novoStatus)
-    {
-        $query = "UPDATE pessoa 
-            SET status_pes = ?
-            WHERE id_pessoa = (
-            SELECT id_pessoa FROM colaborador WHERE id_colaborador = ?
-            )";
-
-        $stmt = $this->conn->prepare($query);
-        return $stmt->execute([$novoStatus, $id_colaborador]);
-    }       
-    
-    public function buscarPorIdPessoa($idPessoa)
-    {
-        $query = "SELECT 
-            c.id_colaborador,
-            p.id_pessoa,
-            p.nome,
-            p.email,
-            p.telefone,
-            c.cargo,
-            p.img_perfil
-        FROM colaborador c
-        INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa
-        WHERE c.id_pessoa = ?";
-
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute([$idPessoa]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);  
-    }
 
     // BLOCO DE CODIGOS PARA CLASSE BOLETO
     public function listar_expositor_para_cadastro($nome)

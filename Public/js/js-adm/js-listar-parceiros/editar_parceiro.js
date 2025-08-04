@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const idParceiro = urlParams.get("id");
 
   if (!idParceiro) {
-    alert("ID do parceiro não encontrado.");
+    abrirModalErro("ID do parceiro não encontrado.");
     return;
   }
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.json())
     .then(data => {
       if (data.erro) {
-        alert(data.erro);
+        abrirModalErro(data.erro);
         return;
       }
 
@@ -36,16 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("bairro").value = data.bairro || "";
       document.getElementById("cidade").value = data.cidade || "";
 
-      // Mostrar preview da logo salva
       if (data.logo) {
-        const preview = document.getElementById("preview-logo");
-        preview.src = data.logo.replace("../Public", "../../../Public");
-        preview.style.display = "block";
+        const previewLogo = document.getElementById("preview-logo");
+        previewLogo.src = `../../../Public/uploads/uploads-parceiros/${data.logo}`;
+        previewLogo.style.display = "block";
       }
     })
     .catch(err => {
       console.error("Erro ao carregar:", err);
-      alert("Erro ao carregar os dados do parceiro.");
+      abrirModalErro("Erro ao carregar os dados do parceiro.");
     });
 
   // Aplica máscaras reativas
@@ -65,7 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-salvar").addEventListener("click", e => {
     e.preventDefault();
     if (!idParceiro) {
-      alert("ID do parceiro não encontrado.");
+      abrirModalErro("ID do parceiro não encontrado.");
+      return;
+    }
+
+    if (!document.getElementById("nome_parceiro").value.trim()) {
+      abrirModalErro("O nome do parceiro é obrigatório.");
       return;
     }
 
@@ -75,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("telefone", document.getElementById("telefone").value.replace(/\D/g, ""));
     formData.append("cpf_cnpj", document.getElementById("cpf_cnpj").value.replace(/\D/g, ""));
     formData.append("cep", document.getElementById("cep").value.replace(/\D/g, ""));
+    formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"))
 
     const logoInput = document.getElementById("logo");
     if (logoInput && logoInput.files.length > 0) {
@@ -97,59 +102,68 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.json())
       .then(result => {
         if (result.sucesso) {
-          alert(result.sucesso);
-          window.location.href = "../../../app/Views/Adm/listar-parceiros.php";
+          abrirModalSucesso(result.sucesso);
+
+          setTimeout(() => {
+            window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+          }, 2000);
+
         } else {
-          alert(result.erro || "Erro ao atualizar o parceiro.");
+          abrirModalErro(result.erro || "Erro ao atualizar o parceiro.");
         }
       })
       .catch(err => {
         console.error("Erro no envio:", err);
-        alert("Erro ao enviar os dados.");
+        abrirModalErro("Erro ao enviar os dados.");
       });
   });
 });
 
-// --- Máscaras ---
+// Máscaras iguais cadastro
+
 function mascaraTelefone(input, e) {
-  if (e.inputType === "deleteContentBackward") return;
-  const v = input.value.replace(/\D/g, "").slice(0, 11);
+  if (e && e.inputType === "deleteContentBackward") return;
+  let v = input.value.replace(/\D/g, "").substring(0, 11);
   if (v.length > 10) {
-    input.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+    input.value = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7, 11)}`;
   } else if (v.length > 5) {
-    input.value = `(${v.slice(0, 2)}) ${v.slice(2, 6)}-${v.slice(6)}`;
+    input.value = `(${v.substring(0, 2)}) ${v.substring(2, 6)}-${v.substring(6, 10)}`;
   } else if (v.length > 2) {
-    input.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+    input.value = `(${v.substring(0, 2)}) ${v.substring(2)}`;
   } else {
     input.value = v;
   }
 }
 
 function mascaraCep(input, e) {
-  if (e.inputType === "deleteContentBackward") return;
-  const v = input.value.replace(/\D/g, "").slice(0, 8);
-  input.value = v.length > 5 ? `${v.slice(0, 5)}-${v.slice(5)}` : v;
+  if (e && e.inputType === "deleteContentBackward") return;
+  let v = input.value.replace(/\D/g, "").substring(0, 8);
+  if (v.length > 5) {
+    input.value = v.substring(0, 5) + "-" + v.substring(5);
+  } else {
+    input.value = v;
+  }
 }
 
 function mascaraCpfCnpj(input, e) {
-  if (e.inputType === "deleteContentBackward") return;
-  const v = input.value.replace(/\D/g, "").slice(0, 14);
+  if (e && e.inputType === "deleteContentBackward") return;
+  let v = input.value.replace(/\D/g, "").substring(0, 14);
   if (v.length <= 11) {
     if (v.length > 9) {
-      input.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6, 9)}-${v.slice(9)}`;
+      input.value = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6, 9)}-${v.substring(9, 11)}`;
     } else if (v.length > 6) {
-      input.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6)}`;
+      input.value = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6)}`;
     } else if (v.length > 3) {
-      input.value = `${v.slice(0, 3)}.${v.slice(3)}`;
+      input.value = `${v.substring(0, 3)}.${v.substring(3)}`;
     } else {
       input.value = v;
     }
   } else {
-    input.value = `${v.slice(0, 2)}.${v.slice(2, 5)}.${v.slice(5, 8)}/${v.slice(8, 12)}-${v.slice(12)}`;
+    input.value = `${v.substring(0, 2)}.${v.substring(2, 5)}.${v.substring(5, 8)}/${v.substring(8, 12)}-${v.substring(12, 14)}`;
   }
 }
 
-// Atualiza o preview da imagem ao selecionar nova logo
+// Preview da logo ao selecionar nova imagem
 document.getElementById('logo').addEventListener('change', function () {
   const file = this.files[0];
   const preview = document.getElementById('preview-logo');
@@ -165,4 +179,66 @@ document.getElementById('logo').addEventListener('change', function () {
     preview.src = '#';
     preview.style.display = 'none';
   }
+});
+
+// Funções de modais
+
+function abrirModalErro(mensagem = "Ocorreu um erro", titulo = "Erro") {
+  const modal = document.getElementById("modal-error");
+  const tituloEl = document.getElementById("erro-title");
+  const textoEl = document.getElementById("erro-text");
+
+  if (tituloEl && textoEl && modal) {
+    tituloEl.textContent = titulo;
+    textoEl.textContent = mensagem;
+    modal.showModal();
+  } else {
+    console.error("Elementos do modal de erro não encontrados");
+  }
+}
+
+function abrirModalSucesso(mensagem = "Ação realizada com sucesso", titulo = "Sucesso!") {
+  const modal = document.getElementById("modal-sucesso");
+  const tituloEl = document.getElementById("sucesso-title");
+  const textoEl = document.getElementById("msm-sucesso");
+
+  if (tituloEl && textoEl && modal) {
+    tituloEl.textContent = titulo;
+    textoEl.textContent = mensagem;
+    modal.showModal();
+  } else {
+    console.error("Elementos do modal de sucesso não encontrados");
+  }
+}
+
+function abrirModalConfirmar(mensagem = "Deseja confirmar esta ação?", titulo = "Confirmação") {
+  const modal = document.getElementById("modal-confirmar");
+  const tituloEl = document.getElementById("confirmar-title");
+  const textoEl = document.getElementById("msm-confimar");
+
+  if (tituloEl && textoEl && modal) {
+    tituloEl.textContent = titulo;
+    textoEl.textContent = mensagem;
+    modal.showModal();
+  } else {
+    console.error("Elementos do modal de confirmação não encontrados");
+  }
+}
+
+// Botões de fechar modais
+document.getElementById("close-modal-erro")?.addEventListener("click", () => {
+  document.getElementById("modal-error")?.close();
+});
+
+document.getElementById("close-modal-sucesso")?.addEventListener("click", () => {
+  document.getElementById("modal-sucesso")?.close();
+});
+
+document.getElementById("close-modal-confirmar")?.addEventListener("click", () => {
+  document.getElementById("modal-confirmar")?.close();
+});
+
+// Botão "Cancelar" do modal de confirmação
+document.getElementById("btn-modal-cancelar")?.addEventListener("click", () => {
+  document.getElementById("modal-confirmar")?.close();
 });

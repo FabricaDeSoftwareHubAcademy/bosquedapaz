@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('descricao_atracao', descricao);
             formData.append('id_evento', idEvento);
             formData.append('file', imagem);
+            formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
             try {
                 const resposta = await fetch('../../../actions/action-cadastrar-atracao.php', {

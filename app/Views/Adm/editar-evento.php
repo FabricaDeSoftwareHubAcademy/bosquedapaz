@@ -1,6 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -42,7 +43,7 @@
 
                             <div class="input-group">
                                 <label>Descrição:</label>
-                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="250" style="resize: none">></textarea>
+                                <textarea name="descricaodoevento" id="descricaodoevento" placeholder="Digite uma breve descrição do evento (500 caracteres)" rows="5" cols="30" maxlength="500" style="resize: none">></textarea>
                                 <small id="contador-caracteres">500 caracteres restantes</small>
                             </div>
 
@@ -64,10 +65,13 @@
                                         required>
                                 </div>
 
-                                <select name="status" id="status">
-                                    <option value="1">Ativo</option>
-                                    <option value="0">Inativo</option>
-                                </select>
+                                <div class="input-group">
+                                    <label for="status">Status:</label>
+                                    <select name="status" id="status">
+                                        <option value="1">Ativo</option>
+                                        <option value="0">Inativo</option>
+                                    </select>
+                                </div>
 
                             </div>
 
@@ -90,6 +94,8 @@
                             
                             <img class="preview" src="" alt="" id="preview-image">
                         </div>
+
+                        <?php echo $tolken; ?>
 
 
                         <?php include '../../../Public/include/Butons-forms.html';?>
@@ -120,6 +126,7 @@
     <script src="../../../Public/js/js-adm/js-editar-evento.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-endereco-evento.js" defer></script>
     <script src="../../../Public/js/js-adm/js-listar-enderecos.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

@@ -11,20 +11,34 @@ document.addEventListener('DOMContentLoaded', async () => {
   let artistaNovoStatus = null;
 
   function formatarTelefone(numero) {
-    if (!numero) return '';
+    if (!numero || typeof numero !== 'string') return '';
+
     const cleaned = numero.replace(/\D/g, '');
+
     if (cleaned.length === 11) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
     } else if (cleaned.length === 10) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 6)}-${cleaned.slice(6)}`;
     }
+
     return numero;
   }
 
+  function ordenarArtistasPorStatus(lista) {
+    return lista.slice().sort((a, b) => {
+      if (a.status !== b.status) {
+        return a.status === 'ativo' ? -1 : 1;
+      }
+      return b.id_artista - a.id_artista;
+    });
+  }
+
+
   function renderizarTabela(lista) {
+    const listaOrdenada = ordenarArtistasPorStatus(lista);
     let html = '';
-    if (Array.isArray(lista) && lista.length > 0) {
-      lista.forEach(artista => {
+    if (Array.isArray(listaOrdenada) && listaOrdenada.length > 0) {
+      listaOrdenada.forEach(artista => {
         const statusClasse = artista.status === 'ativo' ? 'active' : 'inactive';
         const statusTexto = artista.status === 'ativo' ? 'Ativo' : 'Inativo';
 
@@ -69,7 +83,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderizarTabela(filtrados);
   });
 
-  // Quando clicar em Ativo/Inativo, exibe o modal de confirmação
   tbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('status')) {
       const botao = e.target;

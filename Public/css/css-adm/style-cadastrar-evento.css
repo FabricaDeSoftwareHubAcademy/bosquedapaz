@@ -74,8 +74,8 @@ h1 {
 }
 
 .box .form-box {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -301,6 +301,10 @@ h1 {
 }
 
 @media (max-width: 650px) {
+    .data-imagem {
+        flex-direction: column;
+        gap: 15px;
+    }
     .principal .box {
         padding: 10px;
     }
@@ -308,10 +312,10 @@ h1 {
         width: 100%;
     }
     .btn-cancelar-salvar .btn {
-        width: clamp(80px, 25%, 120px); /* Ajuste proporcional em telas menores */
+        width: clamp(80px, 25%, 120px); 
     }
     .btn-cancelar-salvar .open-modal {
-        width: clamp(80px, 25%, 120px); /* Ajuste proporcional em telas menores */
+        width: clamp(80px, 25%, 120px); 
     }
 }
 
@@ -323,9 +327,9 @@ h1 {
         width: 100%;
     }
     .btn-cancelar-salvar .btn {
-        width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
+        width: clamp(60px, 40%, 100px); 
     }
     .open-modal {
-        width: clamp(60px, 40%, 100px); /* Ajuste mais agressivo em telas pequenas */
+        width: clamp(60px, 40%, 100px); 
     }
 }

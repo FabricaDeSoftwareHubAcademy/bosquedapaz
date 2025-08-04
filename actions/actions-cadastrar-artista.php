@@ -1,13 +1,14 @@
 <?php
-
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once '../vendor/autoload.php';
 
 use app\Controller\Artista;
 use app\Models\Database;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
 
     $email = $_POST['email'];
 
@@ -20,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $artista->setEmail($email);
         $artista->setWhats($_POST['whats']);
         $artista->setLink_instagram($_POST['link_instagram']);
+        $artista->setAceitou_termos($_SESSION['aceitou_termos' ?? 'Não']);
 
         $artista->setNome_artistico($_POST['nome_artistico']);
         $artista->setLinguagem_artistica($_POST['linguagem_artistica']);

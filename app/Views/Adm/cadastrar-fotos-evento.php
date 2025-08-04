@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,6 +33,8 @@
 
                         <div class="preview-galeria" id="preview-galeria"></div>
 
+                        <?php echo $tolken; ?>
+
                         <?php include '../../../Public/include/Butons-forms.html';?>
                     </form>
                 </div>
@@ -49,6 +54,7 @@
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <!-- <script src="../../../Public/js/js-adm/preview-img.js" defer></script> -->
     <script src="../../../Public/js/js-adm/js-upload-fotos.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

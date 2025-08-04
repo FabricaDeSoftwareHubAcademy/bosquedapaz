@@ -1,5 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +29,7 @@
 
         <div class="search-bar">
           <label for="status">Procurar</label>
-          <input type="text" id="status" placeholder="Artista" />
+          <input type="text" id="status" placeholder="Artista"/>
           <button class="search-button">BUSCAR</button>
         </div>
 
@@ -84,7 +86,7 @@
       </div>
     </div>
   </dialog>
-
+  <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 
 </body>
 

@@ -1,9 +1,10 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\UtilidadePublica;
+use app\suport\Csrf;
 
 // Verifica se é uma requisição POST
-if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $titulo = $_POST['titulo'] ?? '';
     $descricao = $_POST['descricao'] ?? '';
     $data_inicio = $_POST['data_inicio'] ?? '';
@@ -23,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 
         if (in_array($extensao, $permitidas)) {
             $novo_nome = uniqid();
-            $pasta = '../Public/uploads/uploads-utilidade/'; // Altere o caminho se necessário
+            $pasta = ('../Public/uploads/uploads-utilidade/'); // Altere o caminho se necessário
             $caminho = $pasta . $novo_nome . '.' . $extensao;
 
             // Cria o diretório se não existir

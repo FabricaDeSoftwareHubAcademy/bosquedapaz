@@ -41,6 +41,7 @@
 
 .img_prox_event {
     width: 35rem;
+    height: 20rem;
     border-radius: .5rem;
     transition: var(--o-transition);
 }

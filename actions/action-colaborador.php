@@ -1,28 +1,22 @@
 <?php
 
-session_start();
-error_log("ID da sessão: " . ($_SESSION['login']['id_pessoa'] ?? 'não definido'));
-
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
 use app\Controller\Colaborador;
-
-if (!isset($_SESSION['login']['id_pessoa'])) {
-    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
-    exit;
-}
+use app\suport\Csrf;
 
 function sanitizeString($str) {
-    return filter_var(trim($str), FILTER_SANITIZE_STRING);
+    return htmlspecialchars(strip_tags($str));
 }
 
-$requestMethod = $_SERVER['REQUEST_METHOD'];
+function obterAdm(){
+    return obterLogin();
+}
 
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+    $admLogado = obterAdm();
 
-
-if ($requestMethod === 'POST') {
     $colab = new Colaborador();
-
-    $input = json_decode(file_get_contents('php://input'), true);
 
     // Cadastro <----------------------------------------------->
     if (isset($_POST["cadastrar"])) {
@@ -82,7 +76,7 @@ if ($requestMethod === 'POST') {
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
+            $colab->setImagem('../../../Public/uploads/uploads-ADM/' . $imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
@@ -103,11 +97,11 @@ if ($requestMethod === 'POST') {
 
     
     // Alterar Status <----------------------------------------------->
-    else if ($input !== null && isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+    else if (isset($_POST['alternarStatus'])) {
         $colab = new Colaborador();
 
-        $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
-        $statusAtual = $input['status_atual'] ?? null;
+        $id = filter_var($_POST['id_login'], FILTER_VALIDATE_INT);
+        $statusAtual = $_POST['status_atual'] ?? null;
 
         if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
             echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
@@ -138,17 +132,12 @@ if ($requestMethod === 'POST') {
 
     // Update = Edição dos dados <----------------------------------------------->
     else if (isset($_POST["atualizar"])) {
-        $id = filter_var($_POST['id'] ?? '', FILTER_VALIDATE_INT);
-        if (!$id) {
-            echo json_encode(['success' => false, 'message' => 'ID inválido']);
-            exit;
-        }
-
+        
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
         $telefone = sanitizeString($_POST['tel'] ?? '');
         $cargo = sanitizeString($_POST['cargo'] ?? '');
-
+        
         // Validações: 
         if (!$email) {
             echo json_encode(['success' => false, 'message' => 'Email inválido']);
@@ -166,7 +155,7 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Telefone inválido. Informe apenas números com DDD.']);
             exit;
         }
-
+        
         // Validação: Somente Letras no input de Nome e Cargo: 
         if (!Colaborador::validarSomenteLetra($nome)) {
             echo json_encode(['success' => false, 'message' => 'Nome inválido. Apenas letras são permitidas.']);
@@ -176,38 +165,35 @@ if ($requestMethod === 'POST') {
             echo json_encode(['success' => false, 'message' => 'Cargo inválido. Apenas letras são permitidas.']);
             exit;
         }
-
+        
         
         $colab->setNome($nome);
         $colab->setTelefone($telefone);
         $colab->setEmail($email);
         $colab->setCargo($cargo);
-
-
+        
+        
         // Imagem: <----------------------------------------------->
         $uploadDir = '../Public/uploads/uploads-ADM/';
         $imagemSalva = null;
-
+        
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === 0) {
             $imagemSalva = Colaborador::uploadImagem($_FILES['imagem'], $uploadDir);
             if ($imagemSalva === false) {
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem('Public/uploads/uploads-ADM/' . $imagemSalva);
+            $colab->setImagem($imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
-            $colaboradorAtual = $colab->buscarPorIdPessoa($_SESSION['login']['id_pessoa']);
+            $colaboradorAtual = $colab->buscarPorIdPessoa($admLogado['jwt']->sub);
             $colab->setImagem($colaboradorAtual['img_perfil'] ?? null);
         }
-
-        $res = $colab->atualizar($id);
+        
+        $res = $colab->atualizar($admLogado['jwt']->sub);
         if ($res) {
-
-            $idSessao = $_SESSION['login']['id_pessoa'];
-
-            $dadosAtualizados = $colab->buscarPorIdPessoa($idSessao);
+            $dadosAtualizados = $colab->buscarPorIdPessoa($admLogado['jwt']->sub);
             echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!', 'data' => $dadosAtualizados]);
             exit;
         } else {
@@ -237,33 +223,28 @@ if ($requestMethod === 'POST') {
             exit;
         } else {
             echo json_encode(['data' => []]);
+            http_response_code(400);
             exit;
         }
     }
-    echo json_encode(['success' => false, 'message' => 'Requisição inválida']);
-    exit;
 }
 
 
 // Listagem <----------------------------------------------->
-if ($requestMethod === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $admLogado = obterAdm();
     $colab = new Colaborador();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['meu_perfil']) && $_GET['meu_perfil'] === '1') {
-        if(!isset($_SESSION['login']['id_pessoa'])) {
-            echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
-            exit;
-        }
-        $idSessao = $_SESSION['login']['id_pessoa'];
         
         // Instancia seu controller
         $colab = new \app\Controller\Colaborador();
         
-        $dados = $colab->buscarPorIdPessoa($idSessao);
+        $dados = $colab->buscarPorIdPessoa($admLogado['jwt']->sub);
         
         // DEBUG: para garantir que só vem UM registro
         header('Content-Type: application/json');
-        echo json_encode(['success' => true, 'data' => $dados, $idSessao]);
+        echo json_encode(['success' => true, 'data' => $dados]);
         exit;
     }
     

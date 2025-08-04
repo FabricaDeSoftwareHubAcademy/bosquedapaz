@@ -1,0 +1,38 @@
+# Habilitando RewriteEngine
+RewriteEngine On
+
+# BLOQUEIA PAGINAS INDEXES E REDIRECIONA
+
+ErrorDocument 403 http://localhost/
+
+Options -Indexes
+
+# BLOQUEANDO ACESSO A DIRETORIOS
+RewriteRule ^vendor/ - [F]
+RewriteRule ^app/Controller - [F]
+RewriteRule ^app/Models - [F]
+RewriteRule ^app/helpers - [F]
+RewriteRule ^app/suport - [F]
+
+
+
+# BLOQUEIA ACESSO A ESSES ARQUIVOS
+<Files .env>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files composer.json>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files composer.lock>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files .htaccessk>
+    Order Allow,Deny
+    Deny from all
+</Files>

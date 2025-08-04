@@ -1,6 +1,7 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\Evento;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -13,7 +14,7 @@ function validarData($data) {
     return $d && $d->format('Y-m-d') === $data;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $nome = sanitizarTexto($_POST['nomedoevento'] ?? '');
     $subtitulo = sanitizarTexto($_POST['subtitulo'] ?? '');
     $descricao = sanitizarTexto($_POST['descricaodoevento'] ?? '');
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $endereco = $_POST['endereco'] ?? '';
 
     if (strlen($descricao) > 500) {
-        echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 250 caracteres."]);
+        echo json_encode(["status" => "erro", "mensagem" => "A descrição deve ter no máximo 500 caracteres."]);
         exit;
     }    
 

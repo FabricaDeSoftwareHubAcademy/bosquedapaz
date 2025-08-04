@@ -1,8 +1,9 @@
 <?php 
 require_once('../vendor/autoload.php');
 use app\Controller\UtilidadePublica;
+use app\suport\Csrf;
 
-if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     $id_utilidade_publica = $_POST['id'] ?? null;
     $titulo = $_POST['titulo'] ?? '';
     $descricao = $_POST['descricao'] ?? ''; 
@@ -40,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     }
 
     $utilidadePublica = new UtilidadePublica();
-    $utilidadePublica->id_utilidade_publica = $id_utilidade_publica;
+    $utilidadePublica->id_utilidadesPublica = $id_utilidadePublica;
     $utilidadePublica->titulo = $titulo;
     $utilidadePublica->descricao = $descricao;
     $utilidadePublica->data_inicio = $data_inicio;

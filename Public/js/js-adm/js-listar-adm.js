@@ -5,7 +5,7 @@ async function listar(){
         const resposta = await fetch("../../../actions/action-colaborador.php");
         const json = await resposta.json();
 
-        console.log(json.data);
+        // console.log(json.data);
 
         if (!json.data || json.data.length === 0) {
             document.getElementById('tbody-colaboradores').innerHTML = '<tr><td colspan="6">Nenhum ADM encontrado.</td></tr>';
@@ -26,10 +26,9 @@ async function listar(){
                 <td>
                     <button 
                         type="button" 
-                        class="status ${statusLower === 'ativo' ? 'active' : 'inactive'}" 
-                        data-id="${colab['id_colaborador']}" 
-                        data-status="${statusLower}">
-                        ${statusLower === 'ativo' ? 'Ativo' : 'Inativo'}
+                        class="status ${colab['status_pes'] === 'ativo' ? 'active' : 'inactive'}" 
+                        onclick="mudarStatus(${colab['id_login']}, '${colab['status_pes']}')">
+                        ${colab['status_pes'] === 'ativo' ? 'Ativo' : 'Inativo'}
                     </button>
                 </td>
             </tr>`;
@@ -43,8 +42,6 @@ async function listar(){
 }
 listar();
 
-// -------------------------------------------------- 
-// Script para Mudar Status: No Arquivo (status-colaborador.js)
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)

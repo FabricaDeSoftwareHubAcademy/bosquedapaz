@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('numero_evento', numero_evento);
         formData.append('bairro_evento', bairro_evento);
         formData.append('cidade_evento', cidade_evento);
+        formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
         try {
             const resposta = await fetch('../../../actions/action-cadastrar-endereco-evento.php', {
@@ -53,6 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Erro na requisição:', error);
             alert('Erro de conexão com o servidor.');
+        }
+    });
+
+    document.getElementById('cep_evento').addEventListener('blur', async function () {
+        const cep = this.value.replace(/\D/g, '');
+        if (cep.length === 8) {
+            try {
+                const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const data = await response.json();
+                if (!data.erro) {
+                    document.getElementById('logradouro_evento').value = data.logradouro;
+                    document.getElementById('bairro_evento').value = data.bairro;
+                    document.getElementById('cidade_evento').value = `${data.localidade} - ${data.uf}`;
+                    // document.getElementById('estado').value = data.uf;
+                } else {
+                    alert("CEP não encontrado!");
+                }
+            } catch (error) {
+                alert("Erro ao buscar o endereço. Tente novamente.");
+                console.error(error);
+            }
         }
     });
 });

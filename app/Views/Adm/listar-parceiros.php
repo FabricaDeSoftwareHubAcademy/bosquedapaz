@@ -1,5 +1,7 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
-
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,6 +28,7 @@
                 <div class="search-bar">
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
+                    <?php echo $tolken;?>
                     <button class="search-button">BUSCAR</button>
                 </div>
 
@@ -73,6 +76,7 @@
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/listar_parceiros.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/alterar_status.js"></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

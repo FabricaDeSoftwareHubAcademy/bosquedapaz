@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (data.status === 'success') {
             const evento = data.evento;
 
-            // Antes: select ainda vazio
-            // document.getElementById('select-endereco').value = evento.endereco_evento;
 
-            // Agora: carregar com seleção automática
             await carregarEnderecosSelecionando(evento.endereco_evento);
 
             document.getElementById('id_evento').value = evento.id_evento;
@@ -79,7 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const resultado = await resposta.json();
                 console.log('Resposta JSON:', resultado);
 
-                if (resultado.status === 'sucess') {
+                if (resultado.status === 'success') {
                     document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Evento cadastrado com sucesso!';
                     openModalSucesso();
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
@@ -131,32 +128,3 @@ const carregarEnderecosSelecionando = async (idSelecionado) => {
         alert('Erro ao carregar endereço do evento. Tente novamente.');
     }
 };
-
-// const preencherEnderecoSelecionado = async () => {
-//     const idEvento = document.getElementById('id_evento').value;
-//     const selectEndereco = document.getElementById('endereco_evento');
-
-//     try {
-//         const response = await fetch(`../../../actions/action-buscar-endereco.php?id=${idEvento}`);
-//         const endereco = await response.json();
-
-//         const enderecoId = endereco.id_endereco_evento.toString();
-
-//         // Aguardar um pequeno tempo para garantir que o select já tenha sido populado (se for dinâmico)
-//         setTimeout(() => {
-//             const optionExistente = selectEndereco.querySelector(`option[value="${enderecoId}"]`);
-//             if (optionExistente) {
-//                 optionExistente.selected = true;
-//             } else {
-//                 throw new Error('Endereço não encontrado no select');
-//             }
-//         }, 200); // tempo ajustável conforme a origem das opções
-
-//     } catch (error) {
-//         console.error('Erro ao carregar endereço existente:', error);
-//         const mensagemErro = document.createElement('p');
-//         mensagemErro.classList.add('mensagem-erro');
-//         mensagemErro.innerText = 'Erro ao carregar o endereço existente.';
-//         document.getElementById('campo-endereco').appendChild(mensagemErro);
-//     }
-// };
