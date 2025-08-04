@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             novoSalvarBtn.addEventListener('click', async () => {
                 let formData = new FormData();
                 formData.append("id_utilidade_publica", id);
+                formData.append("tolkenCsrf", document.getElementById('tolkenCsrf'))
                 formData.append("status_utilidade", isActive ? 0 : 1);
     
                 await fetch('../../../actions/action-editar-status-utilidade-publica.php', {
