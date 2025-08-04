@@ -48,14 +48,36 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = "
-                    <div style='margin: auto; width: 500px; text-align: center; padding: 1rem; border-radius: .5rem;'>
+                $corpoEmail = '
+                <!DOCTYPE html>
+                <html lang="pt-br">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                        div {
+                            margin: auto;
+                            padding: .5rem;
+                            width: 30rem;
+                            text-align: center;
+                        }
+                
+                        h1 {
+                            background-color: blue;
+                            color: white;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div>
                         <h2>Olá $nome, o seu cadastro de expositor na feira bosque da paz foi aprovado</h2>
                         <p>Abaixo está a senha para acessar a sua área de expositor e, poder editar seu perfil</p>
-                        <h1 style='padding: .5rem; background-color: blue; color: white; margin: 2rem'>SUA SENHA: $newSenha</h1>
+                        <h1>SUA SENHA: $newSenha</h1>
                         <span>No caso desse e-mail ser ignorado a senha não vai ser resetada.</span>
                     </div>
-                ";
+                </body>
+                </html>
+                ';
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
@@ -83,13 +105,35 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = "
-                    <div style='margin: auto; width: 500px; text-align: center; padding: 1rem; border-radius: .5rem;'>
+                $corpoEmail = '
+                <!DOCTYPE html>
+                <html lang="pt-br">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title></title>
+                    <style>
+                        div {
+                            margin: auto;
+                            padding: .5rem;
+                            width: 30rem;
+                            text-align: center;
+                        }
+                
+                        p {
+                            text-align: justify;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div>
                         <h2>Olá $nome, o seu cadastro de expositor na feira bosque da paz foi recusado</h2>
                         <p>Motivo: $mensagem</p>
                         <span>Atenciosamente: Feira bosque da paz</span>
                     </div>
-                ";
+                </body>
+                </html>
+                ';
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
