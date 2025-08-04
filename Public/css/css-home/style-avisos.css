@@ -37,7 +37,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #5EBB50;
 }
 
 .img_prox_event {
@@ -183,7 +182,7 @@
     }
 
     .img_prox_event {
-        width: 25rem;
+        width: 20rem;
     }
 
     .img_prox_event:hover {
