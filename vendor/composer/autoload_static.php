@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
 {
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'setasign\\Fpdi\\' => 14,
+        ),
         'a' => 
         array (
             'app\\' => 4,
@@ -22,6 +26,10 @@ class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
     );
 
     public static $prefixDirsPsr4 = array (
+        'setasign\\Fpdi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -38,6 +46,7 @@ class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',
         'app\\Controller\\Artista' => __DIR__ . '/../..' . '/app/Controller/Artista.php',
         'app\\Controller\\Atracao' => __DIR__ . '/../..' . '/app/Controller/Atracao.php',
         'app\\Controller\\Boleto' => __DIR__ . '/../..' . '/app/Controller/Boleto.php',

@@ -1,4 +1,5 @@
-<?php 
+
+<?php
 include_once('../../helpers/csrf.php');
 $tolken = getTolkenCsrf();
 ?>
@@ -8,6 +9,8 @@ $tolken = getTolkenCsrf();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="<?= $tolken ?>">
+
 
     <!-- bloco principal -->
     <title>Adm - Bosque da Paz</title>

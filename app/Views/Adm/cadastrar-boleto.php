@@ -38,6 +38,9 @@ $tolken = getTolkenCsrf();
             </div>
             <div class="container">
                 <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
+
+                <input type="hidden" name="id-expositor" value="<?php echo htmlspecialchars($id_expositor); ?>">
+
                     <div class="form-content">
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>

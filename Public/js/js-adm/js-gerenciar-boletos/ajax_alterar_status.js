@@ -20,18 +20,14 @@ document.addEventListener('click', function (e) {
     }
 });
 
-document.getElementById('cancelarAlteracao').addEventListener('click', () => {
-    document.getElementById('modalConfirmacao').style.display = 'none';
-});
-
 document.getElementById('confirmarAlteracao').addEventListener('click', () => {
-    
     const novoStatus = (statusAtualSelecionado === 'Pago') ? 'Pendente' : 'Pago';
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
     fetch('../../../actions/action-alterar-status-boleto.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `id=${idBoletoSelecionado}&status=${novoStatus}`
+        body: `id=${idBoletoSelecionado}&status=${novoStatus}&tolkenCsrf=${encodeURIComponent(csrfToken)}`
     })
     .then(response => response.json())
     .then(data => {
@@ -40,7 +36,7 @@ document.getElementById('confirmarAlteracao').addEventListener('click', () => {
             botaoClicado.classList.remove('status-pago', 'status-pendente');
             botaoClicado.classList.add(novoStatus === 'Pago' ? 'status-pago' : 'status-pendente');
         } else {
-            alert('Erro ao alterar o status.');
+            alert(data.mensagem || 'Erro ao alterar o status.');
         }
     })
     .catch(err => {

@@ -3,6 +3,13 @@ const inputNome = document.querySelector('.filtrar-por-nome');
 const selectStatus = document.querySelector('.filtrar-por-status');
 const formDataFiltro = document.querySelector('.formulario-filtragem-de-data');
 
+function formatarValorBR(valor) {
+  return `R$ ${parseFloat(valor).toLocaleString('pt-BR', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  })}`;
+}
+
 async function carregarBoletos(filtros) {
   try {
     const formData = new FormData();
@@ -24,7 +31,6 @@ async function carregarBoletos(filtros) {
 
     if (data.length > 0) {
       data.forEach(boleto => {
-
         let classeStatus = '';
         if (boleto.status_boleto === 'Pago') {
           classeStatus = 'status-pago';
@@ -32,13 +38,12 @@ async function carregarBoletos(filtros) {
           classeStatus = 'status-pendente';
         }
 
-
         const row = `
           <tr class="tr-tabela-de-dados" data-id-boleto="${boleto.id_boleto}">
             <td class="td-tabela-de-dados">${boleto.nome}</td>
             <td class="td-tabela-de-dados">${boleto.vencimento}</td>
             <td class="td-tabela-de-dados">${boleto.mes_referencia}</td>
-            <td class="td-tabela-de-dados">R$ ${parseFloat(boleto.valor).toFixed(2)}</td>
+            <td class="td-tabela-de-dados">${formatarValorBR(boleto.valor)}</td>
             <td class="td-tabela-de-dados">
               <button class="botao-status ${classeStatus}">${boleto.status_boleto}</button>
             </td>
@@ -57,6 +62,7 @@ async function carregarBoletos(filtros) {
     console.error('Erro ao carregar boletos:', error);
   }
 }
+
 
 // armazenando o estado atual dos filtros
 // para realizar a ação de filtragem
