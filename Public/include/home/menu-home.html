@@ -12,13 +12,22 @@
             <li class="nav-item"><a href="./todos-expositores.php" class="link-ul dark">expositores</a></li>
             <li class="nav-item"><a href="./parceiros-home.php" class="link-ul dark">parceiros</a></li>
             <li class="nav-item"><a href="./fale-conosco.php" class="link-ul dark">fale conosco</a></li>
-            <li class="nav-item li-login">
-                <button id="btn-login" class="btn-mobile">
+            <li class="nav-item li-login" id="login">
+                <!-- <button id="btn-login" class="btn-mobile">
                     <a href="./tela-login.php" class="link-login dark">
                         <i class="bi bi-person-circle login"></i>
                         Entrar
                     </a>
-                </button>
+                </button> -->
+                <img src="../../../Public/assets/MOCA.png" alt="" class="img-perfil">
+                <div class="content-acoes" id="content-opcoes-menu">
+                    <a href="" class="link_login">
+                        <i class="bi bi-arrow-return-right"></i>Voltar
+                    </a>
+                    <a href="" class="link_login">
+                        <i class="bi bi-box-arrow-left icon-login" id="logout"></i>Sair
+                    </a>
+                </div>
             </li>
         </ul>
 
@@ -26,15 +35,29 @@
             <div class="content-outros">
                 <i class="bi bi-list sandwich dark" id="sandwich"></i>
             </div>
-            <button id="btn-login" class="btn-login">
-                <a href="./tela-login.php" class="link-login dark">
-                    <i class="bi bi-person-circle login"></i>
-                    Entrar
-                </a>
-            </button>
-                <button id="toggle-theme" class="icon-toggle" aria-label="Alternar tema">
+            
+            <div class="conteiner-login" id="login1">
+                <!-- <button id="btn-login" class="btn-login">
+                    <a href="./tela-login.php" class="link-login dark">
+                        <i class="bi bi-person-circle login"></i>
+                        Entrar
+                    </a>
+                </button> -->
+
+                <img src="../../../Public/assets/MOCA.png" alt="" class="img-perfil">
+                <div class="content-acoes" id="content-opcoes-menu">
+                    <a href="" class="link_login">
+                        <i class="bi bi-arrow-return-right"></i>Voltar
+                    </a>
+                    <a href="" class="link_login">
+                        <i class="bi bi-box-arrow-left icon-login" id="logout"></i>Sair
+                    </a>
+                </div>
+            </div>
+
+            <button id="toggle-theme" class="icon-toggle" aria-label="Alternar tema">
                 🌞
-                </button>              
+            </button>              
         </div>
     </nav>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

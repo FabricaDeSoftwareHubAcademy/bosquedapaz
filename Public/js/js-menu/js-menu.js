@@ -60,7 +60,7 @@ else if(document.body.clientWidth <= 1400){
 
 async function menuAdm() {
     try {
-        const response = await fetch('../../../actions/action-colaborador.php?meu_perfil=1', {
+        const response = await fetch('../../../actions/action-login.php?perfil=true', {
             method: 'GET',
             credentials: 'include'
         });
@@ -68,12 +68,13 @@ async function menuAdm() {
         const text = await response.json();
         
         let imgLogin = document.querySelectorAll('#img-login');
+        console.log(text.login.img_perfil)
 
         imgLogin.forEach(element => {
-            if (text.data.img_perfil == null){
+            if (text.login.img_perfil == null){
                 element.src = '../../../Public/assets/MOCA.png';
             }else {
-                element.src = '../../../Public/uploads/uploads-ADM/' + text.data.img_perfil;
+                element.src = text.login.img_perfil;
             }
         });
 
