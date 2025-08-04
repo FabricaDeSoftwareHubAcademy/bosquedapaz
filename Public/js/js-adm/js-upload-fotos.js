@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData();
         const idEvento = document.getElementById('id_evento').value;
         formData.append('id_evento', idEvento);
+        formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
         arquivosSelecionados.forEach((arquivo) => {
             formData.append('fotos[]', arquivo);

@@ -64,9 +64,7 @@ function validarEmail(string $email): bool
 
 function validarTelefone(string $telefone): bool
 {
-    // Remove tudo que não for número
     $numero = preg_replace('/\D/', '', $telefone);
-    // Deve ter 10 ou 11 dígitos (ex: 11999999999)
     return preg_match('/^\d{10,11}$/', $numero);
 }
 
@@ -74,7 +72,6 @@ function validarCep(string $cep): bool
 {
     return preg_match('/^\d{5}-?\d{3}$/', $cep);
 }
-
 
 if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['salvar'])) {
     if (!isset($_GET['id'])) {
@@ -102,7 +99,6 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
             exit;
         }
 
-        // Verificação de tipo MIME real (opcional, mas recomendado)
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         $mime = finfo_file($finfo, $nomeTemporario);
         finfo_close($finfo);
@@ -123,7 +119,6 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         }
     }
 
-    // Sanitizar todos os campos do $_POST usados
     $dados = [
         'nome_parceiro' => isset($_POST['nome_parceiro']) ? sanitizarTexto($_POST['nome_parceiro']) : null,
         'telefone' => isset($_POST['telefone']) ? sanitizarTexto($_POST['telefone']) : null,
@@ -140,15 +135,13 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         'bairro' => isset($_POST['bairro']) ? sanitizarTexto($_POST['bairro']) : null,
     ];
 
-    // Validação para campos nulos ou vazios (exceto logo)
     foreach ($dados as $key => $value) {
-        if ($key !== 'logo' && (is_null($value) || trim($value) === '')) {
+        if (!in_array($key, ['logo', 'complemento']) && (is_null($value) || trim($value) === '')) {
             echo json_encode(['erro' => "Campo $key não informado ou vazio"]);
             exit;
         }
     }
 
-    // Validações específicas
     if (!validarTelefone($dados['telefone'])) {
         echo json_encode(['erro' => 'Telefone inválido']);
         exit;
@@ -176,7 +169,6 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     $parceiro = new Parceiro();
 
-    // Se nenhuma logo for enviada, não atualiza o campo logo
     if ($dados['logo'] === null) {
         unset($dados['logo']);
     }

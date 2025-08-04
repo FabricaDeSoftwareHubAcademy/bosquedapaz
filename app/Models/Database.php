@@ -170,34 +170,7 @@ class Database
         return $this->execute($query) ? true : false;
     }
 
-    //Funções do fluxo do ADM: 
-    public function listar_colaboradores()
-    {
-        $query = "SELECT
-            c.id_colaborador,
-            p.nome,
-            p.email,
-            p.telefone,
-            c.cargo,
-            p.status_pes,
-            p.img_perfil
-            FROM colaborador c
-            INNER JOIN pessoa p ON c.id_pessoa = p.id_pessoa";
-        return $this->execute($query);
-    }
-    
-
-    public function sts_adm($id_colaborador, $novoStatus)
-    {
-        $query = "UPDATE login 
-            SET status_pes = ?
-            WHERE id_login = (
-            SELECT id_login FROM pessoa WHERE id_pessoa = ?
-            )";
-
-        $stmt = $this->conn->prepare($query);
-        return $stmt->execute([$novoStatus, $id_colaborador]);
-    } 
+    //Funções do fluxo do ADM:
     
     public function updateColaborador($where, $value, $id_name, $table){
         $where = strlen($where) ? " WHERE " . $where : '';

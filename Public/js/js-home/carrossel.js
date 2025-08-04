@@ -15,11 +15,12 @@ function trocaImagem (img, n){
 
 
 async function getImage() {
+  
     try {
         let imagens = await fetch("../../../actions/action-carrossel.php")
     
         let resposta = await imagens.json()
-
+    
         slider.style.backgroundImage = `url('../../${resposta.imagens[0].caminho}')`
 
         const interval = setInterval(() => {
@@ -59,6 +60,7 @@ async function getImage() {
             }
         })
     } catch (error) {
+        slider.style.backgroundImage = "url('../../../Public/uploads/uploads-carrosel/img-carrossel-1.jpg')"
 
         const interval = setInterval(() => {
                 if (x == 0){
@@ -95,7 +97,7 @@ async function getImage() {
             else if (x == 2){
                 trocaImagem('../Public/uploads/uploads-carrosel/img-carrossel-3.jpg' ,0)
             }
-        })     
+        }) 
     }
 
 }
