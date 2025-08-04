@@ -197,6 +197,24 @@
     z-index: 10;
     transition: all .2s ease-in;
 }
+.content-acoes {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    background-color: white;
+    width: 140px;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    overflow: hidden;
+    border-bottom-left-radius: .5rem;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.301);
+    z-index: 10;
+    transition: all .2s ease-in;
+}
 
 .link_login {
     width: 100%;
@@ -213,6 +231,11 @@
 .link_login:nth-child(2){
     color: #FF3877;
     border-top: 1px solid black;
+}
+
+.open-menu-login {
+    height: 100px;
+    transition: all .2s ease-in;
 }
 
 
@@ -239,6 +262,10 @@
     
     .btn-mobile {
         display: flex;
+    }
+
+    .conteiner-login {
+        display: none;
     }
 
     .li-login::after {

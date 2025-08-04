@@ -49,6 +49,22 @@ sandwich.addEventListener('click', function(){
 })
 
 let opcoes_menu1 = document.getElementById('login1')
+
+let opcoes_1 = document.getElementById('content-opcoes-menu')
 opcoes_menu1.addEventListener('click', () => {
-    document.getElementById('content-opcoes-menu').style.setProperty('height', '100px')
+    if(opcoes_1.classList.contains('open-menu-login')){
+        opcoes_1.classList.remove('open-menu-login')
+    }else{
+        opcoes_1.classList.add('open-menu-login')
+    }
+})
+let opcoes_menu2 = document.getElementById('login2')
+
+let opcoes_2 = document.getElementById('content-opcoes-menu2')
+opcoes_menu2.addEventListener('click', () => {
+    if(opcoes_2.classList.contains('open-menu-login')){
+        opcoes_2.classList.remove('open-menu-login')
+    }else{
+        opcoes_2.classList.add('open-menu-login')
+    }
 })
