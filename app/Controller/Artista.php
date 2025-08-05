@@ -19,7 +19,7 @@ class Artista extends Pessoa
     protected $tempo_apresentacao;
     protected $valor_cache;
     protected $status;
-    protected $aceitou_termos; // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+    protected $aceitou_termos; 
 
     // --- Setters ---
     public function setId_artista($id_artista)
@@ -59,7 +59,6 @@ class Artista extends Pessoa
         $this->status = $status;
     }
 
-    // NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
     public function setAceitou_termos($aceitou_termos)
     {
         $this->aceitou_termos = $aceitou_termos;
@@ -115,7 +114,7 @@ class Artista extends Pessoa
             'nome' => $this->nome,
             'telefone' => $this->whats,
             'link_instagram' => $this->link_instagram,
-            'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+            'termos' => $this->aceitou_termos 
         ]);
         
         if (!$pes_id) return false;
