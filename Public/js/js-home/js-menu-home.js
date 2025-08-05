@@ -9,29 +9,47 @@ async function menu() {
             const text = await response.json();
     
             
-            let login = document.querySelectorAll('#login');
-            console.log(login)
+            let login = document.querySelectorAll('.conteiner-login');
+
+            let img_perfil = text.login.img_perfil == null ? "../../../Public/assets/MOCA.png" : text.login.img_perfil
+            
 
             if(text.login){
-
-                // login.forEach(element => {
-                //     if (text.login.img_perfil == null){
-                //         element.innerHTML = `
-
-                //         `
-                //     }else {
-                //         element.innerHTML = `
-
-                //         `
-                //     }
-                // });
+                
+                login.forEach(element => {
+                    if (text.login.img_perfil == null){
+                        element.innerHTML = `
+                        <img src="${img_perfil}" alt="" class="img-perfil">
+                        <div class="content-acoes2" id="content-opcoes-menu2">
+                            <a href="" class="link_login">
+                                <i class="bi bi-arrow-return-right"></i>Voltar
+                            </a>
+                            <a href="" class="link_login">
+                                <i class="bi bi-box-arrow-left icon-login" id="logout"></i>Sair
+                            </a>
+                        </div>
+                        `
+                    }else {
+                        element.innerHTML = `
+                        <img src="${img_perfil}" alt="" class="img-perfil">
+                        <div class="content-acoes2" id="content-opcoes-menu2">
+                            <a href="" class="link_login">
+                                <i class="bi bi-arrow-return-right"></i>Voltar
+                            </a>
+                            <a href="" class="link_login">
+                                <i class="bi bi-box-arrow-left icon-login" id="logout"></i>Sair
+                            </a>
+                        </div>
+                        `
+                    }
+                });
             }
         }
     } catch (error) {       
     }
 }
 
-// menu();
+menu();
 
 // abre o menu da home
 const sandwich = document.getElementById('sandwich')

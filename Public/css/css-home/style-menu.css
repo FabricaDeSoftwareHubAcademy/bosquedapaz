@@ -197,10 +197,7 @@
     z-index: 10;
     transition: all .2s ease-in;
 }
-.content-acoes {
-    position: absolute;
-    top: 110px;
-    right: 0px;
+.content-acoes2 {
     background-color: white;
     width: 140px;
     height: 0px;
@@ -210,8 +207,6 @@
     justify-content: center;
     gap: .5rem;
     overflow: hidden;
-    border-bottom-left-radius: .5rem;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.301);
     z-index: 10;
     transition: all .2s ease-in;
 }
@@ -253,7 +248,8 @@
     }
 
     .li-login {
-        display: block;
+        display: flex;
+        align-items: center;
     }
 
     .btn-login {
