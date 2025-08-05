@@ -17,11 +17,11 @@ async function menu() {
             if(text.login){
                 
                 login.forEach(element => {
-                    if (text.login.img_perfil == null){
+                    if (text.login.perfil == 1){
                         element.innerHTML = `
                         <img src="${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes2" id="content-opcoes-menu2">
-                            <a href="" class="link_login">
+                            <a href="../app/Views/Adm/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
                             <a href="" class="link_login">
@@ -33,7 +33,7 @@ async function menu() {
                         element.innerHTML = `
                         <img src="${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes2" id="content-opcoes-menu2">
-                            <a href="" class="link_login">
+                            <a href="../app/Views/Expositor/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
                             <a href="" class="link_login">
