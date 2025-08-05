@@ -318,7 +318,7 @@ class Database
     public function listar_parceiros()
     {
         $query = "SELECT id_parceiro, nome_parceiro, nome_contato, telefone,
-        email, status_parceiro FROM parceiro";
+        email, status_parceiro, logo FROM parceiro";
 
         return $this->execute($query);
     }

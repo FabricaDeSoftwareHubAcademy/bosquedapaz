@@ -92,7 +92,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $parceiro->nome_contato = $dadosSanitizados["nome_contato"];
     $parceiro->tipo = $dadosSanitizados["tipo"];
     $parceiro->cpf_cnpj = $cpfCnpjNumerico;
-    $parceiro->logo = 'uploads/uploads-parceiros/' . $nomeSeguro;
+    $parceiro->logo = '../Public/uploads/uploads-parceiros/' . $nomeSeguro;
 
     // Atribui os dados ao objeto Endereco
     $endereco->cep = $dadosSanitizados["cep"];
