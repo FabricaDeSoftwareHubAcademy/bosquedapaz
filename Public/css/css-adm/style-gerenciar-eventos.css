@@ -94,7 +94,7 @@ h2 {
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
 }
 
-.search-bar .search-button {
+.search-bar .novo-evento {
     background-color: rgb(32, 54, 139);
     color: #fff;
     border: none;
@@ -319,7 +319,7 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
-.novo-evento {
+/* .novo-evento {
     width: clamp(150px, 15%, 150px);
     height: 34px;
     border-radius: 8px;
@@ -331,7 +331,7 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
     align-items: center;
     /* width: 150px; */
-}
+} */
 
 .botoes {
     border-radius: 20px;
