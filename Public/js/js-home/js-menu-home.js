@@ -30,23 +30,6 @@ async function menu() {
                             </a>
                         </div>
                         `
-                        let opcao_menu1 = document.querySelectorAll('#content-opcoes-menu2')
-                        let opcao_menu2 = document.querySelectorAll('#content-opcoes-menu1')
-                        let menus_login = document.querySelectorAll('#login')
-                        menus_login.forEach(menu => {
-                            menu.addEventListener('click', () => {
-                                if(opcao_menu1.classList.contains('open-menu-login')){
-                                    opcao_menu1.classList.remove('open-menu-login')
-                                }else (
-                                    opcao_menu1.classList.add('open-menu-login')
-                                )
-                                if(opcao_menu2.classList.contains('open-menu-login')){
-                                    opcao_menu2.classList.remove('open-menu-login')
-                                }else (
-                                    opcao_menu2.classList.add('open-menu-login')
-                                )
-                            })
-                        });
                     }else {
                         element.innerHTML = `
                         <img src="${img_perfil}" alt="" class="img-perfil">
@@ -62,6 +45,35 @@ async function menu() {
                     }
                     i++
                 });
+                let opcao1 = document.querySelector('.content-acoes2')
+                let opcao2 = document.querySelector('.content-acoes1')
+                let menu1 = document.querySelectorAll('.informacoes_login')[1]
+                let menu2 = document.querySelectorAll('.informacoes_login')[0]
+
+                menu1.addEventListener('click', () => {
+                    if(opcao1.classList.contains('open-menu-login')){
+                        opcao1.classList.remove('open-menu-login')
+                    }else{
+                        opcao1.classList.add('open-menu-login')
+                    }
+                })
+
+                menu2.addEventListener('click', () => {
+                    if(opcao2.classList.contains('open-menu-login')){
+                        opcao2.classList.remove('open-menu-login')
+                    }else{
+                        opcao2.classList.add('open-menu-login')
+                    }
+                })
+                menu1.addEventListener('mouseleave', () => {
+                    opcao1.addEventListener('mouseleave', () => {
+                        setTimeout(() => {
+                            opcao1.classList.remove('open-menu-login')
+
+                        }, 1000)
+
+                    })
+                })
             }
         }
     } catch (error) {       
