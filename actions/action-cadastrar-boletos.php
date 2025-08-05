@@ -1,67 +1,83 @@
 <?php
 require_once('../vendor/autoload.php');
+
 use app\Controller\Boleto;
 
-$caminhoPasta = '../Public/uploads/uploads-boletos';
+// Configurar o cabeçalho da resposta
+header('Content-Type: application/json');
 
-if (isset($_POST['botao-cadastrar'])) {
-    
-    if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == 0) {
-        
-        if (!is_dir($caminhoPasta)) {
-            mkdir($caminhoPasta, 0755, true);
-        }
-
-        $nomePessoa = $_POST['nome_exp'] ?? '';
-
-        $nomeLimpo = preg_replace('/[^a-z0-9]/', '_', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $nomePessoa)));
-
-        $mesReferencia = strtolower($_POST['referencia_input'] ?? '');
-
-        $vencimento = $_POST['vencimento_input'] ?? '';
-
-        if ($vencimento) {
-            $data = DateTime::createFromFormat('Y-m-d', $vencimento);
-            if ($data) {
-                $dia = $data->format('d');
-                $mes = $data->format('m');
-                $ano = $data->format('Y');
-            } else {
-                $dia = $mes = $ano = 'data_invalida';
-            }
-        } else {
-            $dia = $mes = $ano = 'data_vazia';
-        }
-
-        $nomeArquivo = "boleto_{$nomeLimpo}_{$mesReferencia}_{$dia}_{$mes}_{$ano}.pdf";
-
-        $caminhoCompleto = $caminhoPasta . '/' . $nomeArquivo;
-
-        if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $caminhoCompleto)) {
-            
-            $boleto = new Boleto();
-            $boleto->valor = floatval(str_replace(',', '.', $_POST['valor_input']));
-            $boleto->pdf = $nomeArquivo;
-            $boleto->mes_referencia = $_POST['referencia_input'];
-            $boleto->vencimento = $_POST['vencimento_input'];
-            $boleto->id_expositor = $_POST['id-expositor'];
-
-            if ($boleto->CadastrarBoletos()) {
-                echo "<script>alert('Boleto cadastrado com sucesso!'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
-            } else {
-                echo "<script>alert('Erro ao cadastrar boleto!'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
-            }
-
-        } else {
-            echo "<script>alert('Erro ao mover o arquivo PDF!'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
-        }
-
-    } else {
-        echo "<script>alert('Nenhum arquivo PDF enviado ou erro no upload!'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
-    }
-
-} else {
-    echo "<script>alert('Falha no Cadastro.'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
+// Verifica se a requisição é POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Método não permitido.'
+    ]);
     exit;
 }
-?>
+
+// Função para limpar os dados e evitar XSS
+function limpar($valor) {
+    return htmlspecialchars(trim($valor), ENT_QUOTES, 'UTF-8');
+}
+
+// Coleta e limpa os dados recebidos
+$id_expositor = isset($_POST['id_expositor']) ? (int) $_POST['id_expositor'] : null;
+$mes_referencia = isset($_POST['mes_referencia']) ? limpar($_POST['mes_referencia']) : null;
+$vencimento = isset($_POST['vencimento']) ? limpar($_POST['vencimento']) : null;
+$valor = isset($_POST['valor']) ? (float) str_replace(',', '.', $_POST['valor']) : null;
+$pdf = isset($_FILES['pdf']) ? $_FILES['pdf'] : null;
+
+// Verifica se todos os campos obrigatórios foram preenchidos
+if (!$id_expositor || !$mes_referencia || !$vencimento || !$valor || !$pdf) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Preencha todos os campos obrigatórios.'
+    ]);
+    exit;
+}
+
+// Valida o tipo de arquivo
+$extensao = strtolower(pathinfo($pdf['name'], PATHINFO_EXTENSION));
+$permitidos = ['pdf'];
+
+if (!in_array($extensao, $permitidos)) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Apenas arquivos PDF são permitidos.'
+    ]);
+    exit;
+}
+
+// Cria um nome único para o arquivo e move para a pasta desejada
+$nomeArquivo = uniqid('boleto_', true) . '.' . $extensao;
+$caminho = '../uploads/boletos/' . $nomeArquivo;
+
+if (!move_uploaded_file($pdf['tmp_name'], $caminho)) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Falha ao salvar o arquivo PDF.'
+    ]);
+    exit;
+}
+
+// Cadastra o boleto
+$boleto = new Boleto();
+$boleto->id_expositor = $id_expositor;
+$boleto->mes_referencia = $mes_referencia;
+$boleto->vencimento = $vencimento;
+$boleto->valor = $valor;
+$boleto->pdf = $nomeArquivo;
+
+$resultado = $boleto->CadastrarBoletos();
+
+if ($resultado) {
+    echo json_encode([
+        'status' => 'success',
+        'message' => 'Boleto cadastrado com sucesso.'
+    ]);
+} else {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Erro ao cadastrar o boleto.'
+    ]);
+}

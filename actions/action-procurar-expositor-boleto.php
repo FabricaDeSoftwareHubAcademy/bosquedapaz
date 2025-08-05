@@ -1,13 +1,16 @@
 <?php
 require_once('../vendor/autoload.php');
+
 use app\Controller\Boleto;
 
 header("Content-Type: application/json");
 
+// Recebe e decodifica JSON
 $inputJSON = file_get_contents('php://input');
 $input = json_decode($inputJSON, true);
 
-if (!isset($input['pesquisar-nome'])) {
+// Validação inicial
+if (!isset($input['pesquisar-nome']) || empty(trim($input['pesquisar-nome']))) {
     echo json_encode([
         "status" => "erro",
         "mensagem" => "Nome do expositor não informado."
@@ -15,28 +18,37 @@ if (!isset($input['pesquisar-nome'])) {
     exit;
 }
 
-$nome = trim($input['pesquisar-nome']);
+// Sanitiza o nome para evitar XSS
+$nome = htmlspecialchars(strip_tags(trim($input['pesquisar-nome'])));
 
+// Inicializa modelo
 $expositorModel = new Boleto();
-$resultado = $expositorModel->PesquisarExpositor($nome);
 
-if ($resultado && count($resultado) > 0) {
-    
-    $expositor = $resultado[0];
+try {
+    $resultado = $expositorModel->PesquisarExpositor($nome);
 
-    echo json_encode([
-        "status" => "ok",
-        "expositor" => [
-            "id"   => $expositor['id_expositor'],
-            "nome" => $expositor['nome'],
-            "cpf"  => $expositor['cpf']
-        ]
-    ]);
+    if ($resultado && count($resultado) > 0) {
+        $expositor = $resultado[0];
 
-} else {
+        echo json_encode([
+            "status" => "ok",
+            "expositor" => [
+                "id"   => (int)$expositor['id_expositor'],
+                "nome" => htmlspecialchars($expositor['nome']),
+                "cpf"  => htmlspecialchars($expositor['cpf'])
+            ]
+        ]);
+    } else {
+        echo json_encode([
+            "status" => "erro",
+            "mensagem" => "Expositor não encontrado."
+        ]);
+    }
+
+} catch (Exception $e) {
     echo json_encode([
         "status" => "erro",
-        "mensagem" => "Expositor não encontrado."
+        "mensagem" => "Erro ao buscar expositor."
     ]);
 }
 ?>
