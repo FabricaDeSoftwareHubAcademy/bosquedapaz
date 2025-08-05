@@ -102,7 +102,6 @@ CREATE TABLE artista (
 	id_artista INT NOT NULL AUTO_INCREMENT,
 	id_pessoa INT NOT NULL,
     email varchar(150) not null,
-    tipo_artista VARCHAR(50) NOT NULL,
     nome_artistico VARCHAR(100) NOT NULL,
     linguagem_artistica VARCHAR(100) NOT NULL,
     tempo_apresentacao VARCHAR(50),
