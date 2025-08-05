@@ -75,22 +75,30 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    modalConfirmar.showModal();
+    if (typeof modalConfirmar.showModal === "function") {
+      modalConfirmar.showModal();
+    } else {
+      alert("Seu navegador não suporta modal nativo.");
+    }
   });
 
   btnModalCancelar.addEventListener("click", () => {
-    modalConfirmar.close();
+    if (typeof modalConfirmar.close === "function") {
+      modalConfirmar.close();
+    }
   });
 
   btnModalSalvar.addEventListener("click", async () => {
-    modalConfirmar.close();
+    if (typeof modalConfirmar.close === "function") {
+      modalConfirmar.close();
+    }
 
     const telefoneLimpo = telefoneInput.value.replace(/\D/g, "");
     const formData = new FormData(form);
     formData.set("whats", telefoneLimpo);
 
     try {
-      const resposta = await fetch("../../../actions/actions-cadastrar-artista.php", {
+      const resposta = await fetch("../../../actions/action-cadastrar-artista.php", {
         method: "POST",
         body: formData
       });
@@ -100,13 +108,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (resultado.status === 200 || resultado.status === "sucesso") {
         form.reset();
-        modalSucesso.showModal();
+        if (typeof modalSucesso.showModal === "function") {
+          modalSucesso.showModal();
+        } else {
+          alert("Cadastro realizado com sucesso!");
+        }
       } else {
-        modalErro.showModal();
+        if (typeof modalErro.showModal === "function") {
+          modalErro.showModal();
+        } else {
+          alert("Erro ao cadastrar artista.");
+        }
       }
     } catch (erro) {
       console.error("Erro na requisição:", erro);
-      modalErro.showModal();
+      if (typeof modalErro.showModal === "function") {
+        modalErro.showModal();
+      } else {
+        alert("Erro na requisição.");
+      }
     }
   });
 
@@ -114,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fecharModais.forEach(btn => {
     btn.addEventListener("click", () => {
       const modal = btn.closest("dialog");
-      if (modal) modal.close();
+      if (modal && typeof modal.close === "function") modal.close();
     });
   });
 });

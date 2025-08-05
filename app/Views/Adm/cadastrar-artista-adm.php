@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once('../../helpers/csrf.php');
 $tolken = getTolkenCsrf();
 ?>
@@ -27,7 +27,7 @@ $tolken = getTolkenCsrf();
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <form method="POST" id="form-artista"  action="../../../actions/actions-cadastrar-artista.php" enctype="multipart/form-data">
+            <form method="POST" id="form-artista" action="../../../actions/action-cadastrar-artista.php" enctype="multipart/form-data">
 
                 <div class="formularios">
                     <div class="form-pessoa">
@@ -92,7 +92,7 @@ $tolken = getTolkenCsrf();
 
                         <label for="tipo-expo">Tempo médio da sua apresentação?</label>
                         <div class="custom-dropdown">
-                
+
                             <select name="tempo_apresentacao" id="tempo_apresentacao" class="select">
 
                                 <option value="">Selecione</option>
@@ -106,27 +106,26 @@ $tolken = getTolkenCsrf();
                         <label for="energia">Qual valor do cache?</label>
                         <div class="custom-dropdown">
                             <select name="valor_cache" id="valor_cache" class="select">
-
                                 <option value="">Selecione</option>
                                 <option value="200">Até R$200</option>
                                 <option value="500">Até R$500</option>
-                                <option value="1000">Até R$1.000</option>
-
+                                <option value="1000">Até R$1000</option>
                             </select>
+
                         </div>
                     </div>
 
                 </div>
                 <?php echo $tolken; ?>
 
-                <?php include '../../../Public/include/Butons-forms.html';?>
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
             </form>
 
             <div class="overlay" id="overlay"></div>
             <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
-            
+
         </div>
 
     </main>
@@ -136,9 +135,9 @@ $tolken = getTolkenCsrf();
         <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
         <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
         <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
-    
-    </div>
 
+    </div>
+    
     <script src="../../../Public/js/js-adm/js-cadastrar-artista.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>

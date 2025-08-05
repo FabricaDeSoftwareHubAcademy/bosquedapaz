@@ -4,32 +4,20 @@ namespace app\Controller;
 
 require_once('../vendor/autoload.php');
 
-use PDO;
 use app\Models\Database;
 use app\Controller\Pessoa;
 
 class Artista extends Pessoa
 {
-    protected $id_artista;
-    protected $id_pessoa;
     protected $nome_artistico;
     protected $linguagem_artistica;
     protected $estilo_musica;
     protected $publico_alvo;
     protected $tempo_apresentacao;
     protected $valor_cache;
-    protected $status;
-    protected $aceitou_termos; // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+    protected $email;
 
-    // --- Setters ---
-    public function setId_artista($id_artista)
-    {
-        $this->id_artista = $id_artista;
-    }
-    public function setId_pessoa($id_pessoa)
-    {
-        $this->id_pessoa = $id_pessoa;
-    }
+    // setters simples
     public function setNome_artistico($nome_artistico)
     {
         $this->nome_artistico = $nome_artistico;
@@ -54,121 +42,42 @@ class Artista extends Pessoa
     {
         $this->valor_cache = $valor_cache;
     }
-    public function setStatus($status)
+    public function setEmail($email)
     {
-        $this->status = $status;
+        $this->email = $email;
+    }
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
+    }
+    public function setWhats($whats)
+    {
+        $this->whats = $whats;
     }
 
-    // NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
-    public function setAceitou_termos($aceitou_termos)
-    {
-        $this->aceitou_termos = $aceitou_termos;
-    }
-
-
-
-    // --- Getters ---
-    public function getId_artista()
-    {
-        return $this->id_artista;
-    }
-    public function getId_pessoa()
-    {
-        return $this->id_pessoa;
-    }
-    public function getNome_artistico()
-    {
-        return $this->nome_artistico;
-    }
-    public function getLinguagem_artistica()
-    {
-        return $this->linguagem_artistica;
-    }
-    public function getEstilo_musica()
-    {
-        return $this->estilo_musica;
-    }
-    public function getPublico_alvo()
-    {
-        return $this->publico_alvo;
-    }
-    public function getTempo_apresentacao()
-    {
-        return $this->tempo_apresentacao;
-    }
-    public function getValor_cache()
-    {
-        return $this->valor_cache;
-    }
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    // --- Cadastrar ---
     public function cadastrar()
     {
-        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
-
+        // INSERIR PESSOA
         $dbPessoa = new Database('pessoa');
         $pes_id = $dbPessoa->insert_lastid([
             'nome' => $this->nome,
-            'telefone' => $this->whats,
-            'link_instagram' => $this->link_instagram,
-            'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+            'whats' => $this->whats,
+            'link_instagram' => $this->link_instagram ?? null,
+            'termos' => 'Sim'
         ]);
-        
         if (!$pes_id) return false;
-        
+
+        // INSERIR ARTISTA
         $dbArtista = new Database('artista');
         return $dbArtista->insert([
             'id_pessoa' => $pes_id,
             'email' => $this->email,
             'nome_artistico' => $this->nome_artistico,
             'linguagem_artistica' => $this->linguagem_artistica,
-            'publico_alvo' => $this->publico_alvo,
             'tempo_apresentacao' => $this->tempo_apresentacao,
-            'valor_cache' => $this->valor_cache,
+            'valor_cache' => floatval($this->valor_cache),
+            'publico_alvo' => $this->publico_alvo,
             'status' => 'ativo'
         ]);
-    }
-
-
-    public function listar()
-    {
-        try {
-            $db = new Database('artista');
-            $query = "
-            SELECT 
-                a.id_artista,
-                p.nome,
-                p.email,
-                p.telefone,
-                a.linguagem_artistica,
-                a.valor_cache,
-                a.tempo_apresentacao,
-                a.status
-            FROM artista a
-            INNER JOIN pessoa p ON p.id_pessoa = a.id_pessoa
-        ";
-
-            $stmt = $db->execute($query);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        } catch (\PDOException $e) {
-            return [];
-        }
-    }
-
-
-    public function atualizarStatus($id_artista, $novo_status)
-    {
-        try {
-            $db = new Database('artista');
-            return $db->update('id_artista = ' . intval($id_artista), [
-                'status' => $novo_status
-            ]);
-        } catch (\PDOException $e) {
-            return false;
-        }
     }
 }
