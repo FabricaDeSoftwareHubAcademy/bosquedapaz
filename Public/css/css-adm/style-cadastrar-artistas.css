@@ -150,13 +150,15 @@ body {
 
     .btns-salvar-cancelar {
         position: relative;
-        left: -60%;
+        left: 0%;
     }
 
     .link-area-adm {
         position: relative;
-        left: -20%;
+        left: -50%;
+        top: 0px;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -182,7 +184,7 @@ body {
 
     .link-area-adm {
         position: relative;
-        left: -55%;
+        left: -50%;
     }
 
     .btns-salvar-cancelar {
