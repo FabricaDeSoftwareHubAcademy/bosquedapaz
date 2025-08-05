@@ -31,7 +31,7 @@ document.getElementById('confirmarAlteracao').addEventListener('click', () => {
     fetch('../../../actions/action-alterar-status-parceiro.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `id=${idParceiroSelecionado}&status=${novoStatus}`
+        body: `id=${idParceiroSelecionado}&status=${novoStatus}&tolkenCsrf=${document.getElementById("tolkenCsrf")}`
     })
     .then(response => response.json())
     .then(data => {
