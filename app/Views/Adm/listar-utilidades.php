@@ -24,7 +24,7 @@ $tolken = getTolkenCsrf();
             <div class="container">
                 <div class="search-bar">
                     <label for="status">Procurar</label>
-                    <input type="text" id="status" placeholder="Parceiros" />
+                    <input type="text" id="status" placeholder="Utilidade pública" />
                     <?php echo $tolken; ?>
                     <button class="search-button">BUSCAR</button>
                     <div id="results-container"></div>
