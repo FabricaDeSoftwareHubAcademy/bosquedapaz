@@ -9,18 +9,19 @@ async function menu() {
             const text = await response.json();
     
             
-            let login = document.querySelectorAll('.conteiner-login');
-
+            let login = document.querySelectorAll('.informacoes_login');
+            
             let img_perfil = text.login.img_perfil == null ? "../../../Public/assets/MOCA.png" : text.login.img_perfil
             
-
+            
             if(text.login){
+                let i = 1
                 
                 login.forEach(element => {
                     if (text.login.perfil == 1){
                         element.innerHTML = `
                         <img src="${img_perfil}" alt="" class="img-perfil">
-                        <div class="content-acoes2" id="content-opcoes-menu2">
+                        <div class="content-acoes${i}" id="content-opcoes-menu${i}">
                             <a href="../app/Views/Adm/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
@@ -29,10 +30,27 @@ async function menu() {
                             </a>
                         </div>
                         `
+                        let opcao_menu1 = document.querySelectorAll('#content-opcoes-menu2')
+                        let opcao_menu2 = document.querySelectorAll('#content-opcoes-menu1')
+                        let menus_login = document.querySelectorAll('#login')
+                        menus_login.forEach(menu => {
+                            menu.addEventListener('click', () => {
+                                if(opcao_menu1.classList.contains('open-menu-login')){
+                                    opcao_menu1.classList.remove('open-menu-login')
+                                }else (
+                                    opcao_menu1.classList.add('open-menu-login')
+                                )
+                                if(opcao_menu2.classList.contains('open-menu-login')){
+                                    opcao_menu2.classList.remove('open-menu-login')
+                                }else (
+                                    opcao_menu2.classList.add('open-menu-login')
+                                )
+                            })
+                        });
                     }else {
                         element.innerHTML = `
                         <img src="${img_perfil}" alt="" class="img-perfil">
-                        <div class="content-acoes2" id="content-opcoes-menu2">
+                        <div class="content-acoes${i}" id="content-opcoes-menu${i}">
                             <a href="../app/Views/Expositor/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
@@ -42,14 +60,14 @@ async function menu() {
                         </div>
                         `
                     }
+                    i++
                 });
             }
         }
     } catch (error) {       
     }
 }
-
-menu();
+document.addEventListener('DOMContentLoaded', menu)
 
 // abre o menu da home
 const sandwich = document.getElementById('sandwich')
@@ -63,26 +81,5 @@ sandwich.addEventListener('click', function(){
         navMenu.classList.add('open')
         sandwich.classList.remove('bi-list')
         sandwich.classList.add('bi-x')
-    }
-})
-
-let opcoes_menu1 = document.getElementById('login1')
-
-let opcoes_1 = document.getElementById('content-opcoes-menu')
-opcoes_menu1.addEventListener('click', () => {
-    if(opcoes_1.classList.contains('open-menu-login')){
-        opcoes_1.classList.remove('open-menu-login')
-    }else{
-        opcoes_1.classList.add('open-menu-login')
-    }
-})
-let opcoes_menu2 = document.getElementById('login2')
-
-let opcoes_2 = document.getElementById('content-opcoes-menu2')
-opcoes_menu2.addEventListener('click', () => {
-    if(opcoes_2.classList.contains('open-menu-login')){
-        opcoes_2.classList.remove('open-menu-login')
-    }else{
-        opcoes_2.classList.add('open-menu-login')
     }
 })

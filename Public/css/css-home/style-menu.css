@@ -176,10 +176,11 @@
 
 .img-perfil {
     width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
-.content-acoes {
+.content-acoes2 {
     position: absolute;
     top: 110px;
     right: 0px;
@@ -197,7 +198,7 @@
     z-index: 10;
     transition: all .2s ease-in;
 }
-.content-acoes2 {
+.content-acoes1 {
     background-color: white;
     width: 140px;
     height: 0px;
