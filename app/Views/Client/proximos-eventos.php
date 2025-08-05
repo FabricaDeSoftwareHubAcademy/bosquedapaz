@@ -13,7 +13,7 @@
     <?php include "../../../Public/include/home/menu-home.html"?>
     
     <main>
-        <h1 id="title">PRÓXIMOS EVENTOS</h1>
+        <h1 class=" dark "  id="title">PRÓXIMOS EVENTOS</h1>
         <!-- Section Do Carrossel:  -->
         <section class="carousel-section">
             <!-- Seta-1 -->
@@ -28,8 +28,8 @@
         </section>
 
         <section class="container__informacao">
-            <h2>Descrição do Evento</h2>
-            <div class="div__info">
+            <h2 class=" dark ">Descrição do Evento</h2>
+            <div class="div__info ">
                 
             </div>
         </section>
