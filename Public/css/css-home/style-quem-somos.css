@@ -189,22 +189,19 @@
 
 
 .section-colaboradoras-quem-somos .fotos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 7px solid #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 
 
 
-.colaboradoras-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8rem;
-  }
-  
 
 .section-colaboradoras-quem-somos .carina,
 .profission,
@@ -221,15 +218,25 @@
 
 }
 
-.profission:hover {
-    color: #8338ec;
+.section-colaboradoras-quem-somos > div:hover .fotos {
+    border-color: #ff5029;
+    transform: scale(1.05);
+}
+
+.section-colaboradoras-quem-somos .carina,
+.section-colaboradoras-quem-somos .denise,
+.section-colaboradoras-quem-somos .fernanda {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
 }
 
 .section-colaboradoras-quem-somos .profission {
-    font-weight: bold;
-
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ff5029;
 }
-
 .descricao-colaboradoras-quem-somos p {
     display: flex;
     text-align: justify;
@@ -289,34 +296,34 @@
     padding-right: 10%;
 }
 
-.botao-expositor {
-    width: 100%;
-}
-.div-botao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 150px;
-    padding-bottom: 10%;
-    margin-bottom: 100px;
-}
+  /*  .botao-expositor {
+        width: 100%;
+    }
+    .div-botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+        padding-bottom: 10%;
+        margin-bottom: 100px;
+    }
 
-.div-botao .botao-expositor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    height: 60px;
-    background-color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
-    border-radius: 10px;
-    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
-    background-size: 500% 100%;
-    animation: degrade-animado 10S infinite alternate;
-}
+    .div-botao .botao-expositor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        height: 60px;
+        background-color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+        border-radius: 10px;
+        background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
+        background-size: 500% 100%;
+        animation: degrade-animado 10S infinite alternate;
+    }
 
 
 
@@ -325,6 +332,40 @@
     background-clip: none;
     -webkit-background-clip: text;
     text-decoration: none;
+}*/
+
+.div-botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.div-botao .botao-expositor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    background-color: #ffffff;
+    text-decoration: none;
+   
+}
+.div-botao .botao-expositor .botao{
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    border-radius: 10px;
+    background-clip: none;
+    -webkit-background-clip: text;
+    
+    text-transform: uppercase;
+    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
+    background-size: 500% 100%;
+
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .galeria{
@@ -387,21 +428,97 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 110px;
+    margin-top: 10px;
   }
 
-
-
-
-  @media(max-width:1100px){
-    .section-imagens-flutuantes-quem-somos{
-        padding-top: 0%;
+/*RESPONSIVIDADE DA SECTION DAS COLABORADORAS*/
+@media (max-width: 992px) {
+    .section-colaboradoras-quem-somos .fotos {
+        width: 240px;
+        height: 240px;
     }
-    
+
+    .descricao-colaboradoras-quem-somos {
+        font-size: 1.3rem;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .section-colaboradoras-quem-somos .carina,
+    .section-colaboradoras-quem-somos .denise,
+    .section-colaboradoras-quem-somos .fernanda,
+    .section-colaboradoras-quem-somos .profission {
+        font-size: 1.1rem;
+    }
+}
+
+/* Telas pequenas: celulares grandes e tablets em pé */
+@media (max-width: 768px) {
+    .section-colaboradoras-quem-somos .fotos {
+        width: 180px;
+        height: 180px;
+    }
+
+    .descricao-colaboradoras-quem-somos {
+        font-size: 1.1rem;
+        padding-left: 4%;
+        padding-right: 4%;
+        flex-direction: column;
+    }
+
+    .section-colaboradoras-quem-somos .carina,
+    .section-colaboradoras-quem-somos .denise,
+    .section-colaboradoras-quem-somos .fernanda,
+    .section-colaboradoras-quem-somos .profission {
+        font-size: 1rem;
+    }
+}
+
+/* Telas muito pequenas: celulares compactos */
+@media (max-width: 480px) {
+    .section-colaboradoras-quem-somos .fotos {
+        width: 140px;
+        height: 140px;
+    }
+
+    .descricao-colaboradoras-quem-somos {
+        font-size: 1rem;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .section-colaboradoras-quem-somos .carina,
+    .section-colaboradoras-quem-somos .denise,
+    .section-colaboradoras-quem-somos .fernanda,
+    .section-colaboradoras-quem-somos .profission {
+        font-size: 0.9rem;
+    }
+}
+
+
+  @media(max-width:1700px){
+    .section-imagens-flutuantes-quem-somos{
+        padding-top: 12%;
+    }
   }
+  @media(max-width:1500px){
+    .section-imagens-flutuantes-quem-somos{
+        padding-top: 12%;
+    }}
+
+  @media(max-width:1400px){
+    .section-imagens-flutuantes-quem-somos{
+        padding-top: 12%;
+    }}
+
+    @media(max-width:1200px){
+        .section-imagens-flutuantes-quem-somos{
+            padding-top: 12%;
+        }}
+
   @media(max-width:850px){
     .section-imagens-flutuantes-quem-somos{
-        padding-top: 10%;
+        padding-top: 20%;
     }
 
   }
@@ -413,6 +530,7 @@
             margin-bottom: 0px;
             margin-top: 150px;
         }
+
 
         .carrossel-imagens {
             column-count: 2;
@@ -431,11 +549,12 @@
             
           }
           .section-fotos-expositor-quem-somos{
-            margin-top: 40%;
+            margin-top: 10%;
           }
           .section-imagens-flutuantes-quem-somos{
             padding-top: 10%;
           }
+         
         }
 
         @media(max-width:600px){
@@ -444,6 +563,7 @@
             }
             .section-introducao-quem-somos .titulo-descricao-principal .descricao{
                 font-size: 1.1rem;
+
             }
             .titulo-veja-mais-fotos .h1-quinto{
                 font-size: 2rem;
@@ -451,6 +571,7 @@
                 padding-right: 5%;
 
             }
+         
             .titulo-nossa-historia-quem-somos .h1-secundario{
                 font-size: 2.5rem;
                 display: flex;
@@ -458,7 +579,7 @@
                 align-items: center;
                 text-align: center;
                 margin-left: 10%;
-                margin-top: 20%;
+                margin-top: -10%;
                 margin-right: 10%;
             }
             .descricao-fluxo{
@@ -473,12 +594,7 @@
             }
         }
 
-        @media(max-width:650px){
-            .section-imagens-flutuantes-quem-somos{
-                padding-top: 30%;
-            }
-
-        }
+        
 
 
 
@@ -511,6 +627,9 @@
 
             
         }
+        .section-imagens-flutuantes-quem-somos{
+            padding-top: 20%;
+        }
        
         .titulo-nossa-historia-quem-somos .h1-secundario{
             font-size: 2rem;
@@ -531,10 +650,7 @@
         .section-nosso-time-quem-somos .div-nt h1{
             font-size: 2rem;
         }
-        .section-colaboradoras-quem-somos .fotos{
-            width: 60%;
-            margin-left: 20%;
-        }
+      
         .descricao-colaboradoras-quem-somos .descricao3{
             font-size: 17px;
             width: 100%;
@@ -552,18 +668,21 @@
             width: 100%;
             font-size: 12px;
         }
+        .section-fotos-expositor-quem-somos{
+            margin-top: -10%;
+        }
         .div-botao{
             width: 100%;
         }
     }
 
     @media(max-width:400px){
-        .titulo-descricao-principal h1{
-            font-size: 1.8rem; 
+        .section-introducao-quem-somos .titulo-descricao-principal h1{
+            font-size: 1.7rem; 
         }
         
         .section-imagens-flutuantes-quem-somos{
-            margin-top: 15%;
+            margin-top: 40%;
         }
         .titulo-nossa-historia-quem-somos .h1-secundario{
             font-size: 1.7rem;
@@ -596,7 +715,7 @@
             margin-top: 50px;
          }
          .galeria{
-            margin-top: 5%;
+            margin-top: -15%;
          }
          .titulo-veja-mais-fotos .h1-quinto{
             font-size: 1.5rem;
@@ -604,6 +723,10 @@
             margin-bottom: 50px;
 
         }
+        .section-fotos-expositor-quem-somos{
+            margin-top: 10%;
+        }
+        
          
             
     }
