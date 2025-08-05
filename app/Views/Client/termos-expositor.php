@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php session_start();
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -62,6 +65,8 @@
                         <p>Você deve aceitar os termos antes de continuar.</p>
                     </div>
                 </div>
+
+                <?php echo $tolken; ?>
 
             </form>
 
