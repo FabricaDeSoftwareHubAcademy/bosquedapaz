@@ -223,15 +223,20 @@ class Expositor extends Pessoa
     }
 
 
-    public function atualizar($id) // Recebe o ID como parâmetro
-    {
-
+    public function atualizar($id){
+    try {
+        // Buscar dados do expositor
         $db = new Database('expositor');
         $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
-
+        
+        if (!$ids_pessoa_expositor) {
+            return false;
+        }
+        
+        // Atualizar dados da pessoa
         $db = new Database('pessoa');
-        $res = $db->update(
-            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+        $res_pessoa = $db->update(
+            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
             [
                 'link_instagram' => $this->link_instagram,
                 'whats' => $this->whats,
@@ -239,29 +244,53 @@ class Expositor extends Pessoa
                 'email' => $this->email
             ]
         );
-
+        
+        // Atualizar dados do expositor
         $db = new Database('expositor');
-        $res = $db->update(
-            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
+        $res_expositor = $db->update(
+            'id_expositor = ' . $id,
             [
                 'nome_marca' => $this->nome_marca,
                 'descricao' => $this->descricao,
             ]
         );
-
-        // $ids_imagens = $db->select_img($id)->fetch(PDO::FETCH_ASSOC);
-
-        $db = new Database('imagem');
-        $res = $db->update(
-            'id_imagem = ' . 1,
-            [
-                'caminho' => '../caminho/imagem.jpg',
-                'posicao' => '',
-                'id_expo' => 1
-            ]
-        );
-
-        return $res;
+        
+        // Processar imagens se foram definidas
+        if (!empty($this->imagens)) {
+            $db = new Database('imagem');
+            
+            foreach ($this->imagens as $imagem) {
+                // Verificar se já existe imagem nesta posição para este expositor
+                $imagemExistente = $db->select(
+                    "id_expositor = $id AND posicao = " . $imagem['posicao']
+                )->fetch(PDO::FETCH_ASSOC);
+                
+                if ($imagemExistente) {
+                    // Atualizar imagem existente
+                    $res_imagem = $db->update(
+                        'id_imagem = ' . $imagemExistente['id_imagem'],
+                        [
+                            'caminho' => $imagem['caminho'],
+                            'posicao' => $imagem['posicao']
+                        ]
+                    );
+                } else {
+                    // Inserir nova imagem
+                    $res_imagem = $db->insert([
+                        'caminho' => $imagem['caminho'],
+                        'posicao' => $imagem['posicao'],
+                        'id_expositor' => $id
+                    ]);
+                }
+            }
+        }
+        
+        return $res_pessoa && $res_expositor;
+        
+    } catch (\Exception $e) {
+        error_log("Erro ao atualizar expositor: " . $e->getMessage());
+        return false;
+    }
     }
 
 
@@ -272,10 +301,10 @@ class Expositor extends Pessoa
         $this->id_expositor = $id_expositor;
     }
 
-    // public function setImagens($imagens)
-    // {
-    //     $this->imagens = $imagens;
-    // }
+    public function setImagens($imagens)
+    {
+        $this->imagens = $imagens;
+    }
 
     public function setId_pessoa($id_pessoa)
     {

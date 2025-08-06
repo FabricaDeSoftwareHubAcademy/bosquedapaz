@@ -122,6 +122,12 @@
     font-size: 14px;
 }
 
+.perfilEdit-img-logo{
+    width: auto;
+    height: 35px;
+    padding-left: 50%;
+}
+
 .perfilEdit-upload .perfilEdit-upload-label{
     font-size: 22px;
 }
