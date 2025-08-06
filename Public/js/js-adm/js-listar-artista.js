@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody-artistas');
   const inputPesquisa = document.getElementById('status');
-  const modalConfirmar = document.getElementById("modal-confirmar-status");
-  const mensagemConfirmar = document.getElementById("mensagem-confirmar-status");
-  const btnConfirmar = document.getElementById("btn-confirmar-status");
-  const btnCancelar = document.getElementById("btn-cancelar-status");
+
+  const modalConfirmar = document.getElementById("modal-confirmar");
+  const tituloConfirmar = document.getElementById("confirmar-title");
+  const mensagemConfirmar = document.getElementById("msm-confimar");
+  const btnConfirmar = document.getElementById("btn-modal-salvar");
+  const btnCancelar = document.getElementById("btn-modal-cancelar");
 
   let artistas = [];
   let artistaSelecionadoId = null;
@@ -12,7 +14,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function formatarTelefone(numero) {
     if (!numero || typeof numero !== 'string') return '';
-
     const cleaned = numero.replace(/\D/g, '');
 
     if (cleaned.length === 11) {
@@ -32,7 +33,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       return b.id_artista - a.id_artista;
     });
   }
-
 
   function renderizarTabela(lista) {
     const listaOrdenada = ordenarArtistasPorStatus(lista);
@@ -93,7 +93,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       artistaSelecionadoId = id;
       artistaNovoStatus = novoStatus;
 
-      mensagemConfirmar.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
+      // Atualizar texto do modal
+      tituloConfirmar.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
+      mensagemConfirmar.textContent = `Clique salvar para ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} o artista.`;
+
       modalConfirmar.showModal();
     }
   });
@@ -133,4 +136,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   btnCancelar.addEventListener('click', () => {
     modalConfirmar.close();
   });
+  const btnFecharModal = document.getElementById('close-modal-confirmar');
+
+  btnFecharModal.addEventListener('click', () => {
+    modalConfirmar.close();
+  });
+
 });
