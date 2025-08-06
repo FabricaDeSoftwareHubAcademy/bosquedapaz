@@ -70,6 +70,11 @@ class Boleto {
         $banco = new Database('pessoa');
         return $banco->capturar_boleto_por_id($idPessoa, $idBoleto)->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function CapturarEmailExpositor($id) {
+        $banco = new Database('pessoa_user');
+        return $banco->capturar_email_expositor($id);
+    }
     
 }
 ?>
