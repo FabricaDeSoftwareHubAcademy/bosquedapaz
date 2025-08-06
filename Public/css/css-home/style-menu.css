@@ -61,7 +61,7 @@
     content: "";
     width: 10%;
     padding: 1.3px;
-    background-color: #FF3877;
+    background-color: #FB4616;
     transition: all .2s ease-in-out;
 }
 .nav-item:hover::after {
