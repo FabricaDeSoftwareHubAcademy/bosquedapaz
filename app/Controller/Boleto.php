@@ -73,7 +73,7 @@ class Boleto {
 
     public function CapturarEmailExpositor($id) {
         $banco = new Database('pessoa_user');
-        return $banco->capturar_email_expositor($id);
+        return $banco->capturar_email_expositor($id)->fetch(PDO::FETCH_ASSOC);
     }
     
 }

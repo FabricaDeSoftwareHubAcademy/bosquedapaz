@@ -187,7 +187,11 @@ class Database
 
     public function capturar_email_expositor($id)
     {
-        $query = "SELECT email FROM pessoa_user WHERE id_login = :id";
+        $query = "SELECT pu.email 
+        FROM expositor e
+        JOIN pessoa p ON p.id_pessoa = e.id_pessoa
+        JOIN pessoa_user pu ON pu.id_login = p.id_login
+        WHERE e.id_expositor = :id";
         $binds = [":id" => $id];
         return $this->execute($query, $binds);
     }

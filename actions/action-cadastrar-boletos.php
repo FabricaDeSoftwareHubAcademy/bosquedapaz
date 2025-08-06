@@ -42,14 +42,12 @@ if (
             exit;
         }
 
-        // CAPTURA O E-MAIL DO EXPOSITOR
         $idExpositor = $_POST['id-expositor'];
         $boletoController = new Boleto();
         $resultado = $boletoController->CapturarEmailExpositor($idExpositor);
-
         $emailExpositor = null;
-        if (!empty($resultado) && isset($resultado[0]['email'])) {
-            $emailExpositor = $resultado[0]['email'];
+        if (!empty($resultado) && isset($resultado['email'])) {
+            $emailExpositor = $resultado['email'];
         }
 
         if (!$emailExpositor) {
@@ -82,11 +80,9 @@ if (
                 $pdfIndividual->useTemplate($tplId);
                 $pdfIndividual->Output('F', $caminhoCompleto);
 
-                // FORMATA VALOR
                 $valorBr = $_POST['valor_input'];
                 $valorLimpo = str_replace(['.', ','], ['', '.'], $valorBr);
 
-                // SALVA NO BANCO
                 $boleto = new Boleto();
                 $boleto->valor = floatval($valorLimpo);
                 $boleto->pdf = $nomeArquivo;
@@ -99,7 +95,6 @@ if (
                     break;
                 }
 
-                // ENVIA E-MAIL
                 $mensagem = "
                     <div style='font-family: Arial; padding: 20px; background: #f9f9f9; border: 1px solid #ccc;'>
                         <h2 style='color: #333;'>Novo boleto gerado</h2>
@@ -115,15 +110,16 @@ if (
 
                 try {
                     $mail = new PHPMailer(true);
+                    $mail->CharSet = 'UTF-8';
                     $mail->isSMTP();
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'camargogdy@gmail.com'; // <--- coloque seu email aqui
-                    $mail->Password = 'esfg akxf funw kmtp'; // <--- coloque a senha de app aqui
+                    $mail->Username = 'camargogdy@gmail.com';
+                    $mail->Password = 'esfg akxf funw kmtp';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Host = 'smtp.gmail.com';
                     $mail->Port = 587;
 
-                    $mail->setFrom('camargogdy@gmail.com', 'Feira Bosque da Paz'); // <--- seu email
+                    $mail->setFrom('camargogdy@gmail.com', 'Feira Bosque da Paz');
                     $mail->addAddress($emailExpositor);
                     $mail->isHTML(true);
                     $mail->Subject = "Novo boleto disponível - " . ucfirst($mesReferencia);

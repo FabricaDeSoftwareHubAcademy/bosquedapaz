@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once('../../helpers/csrf.php');
 $tolken = getTolkenCsrf();
 ?>
@@ -38,6 +38,9 @@ $tolken = getTolkenCsrf();
             </div>
             <div class="container">
                 <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
+
+                    <input type="hidden" name="id-expositor" value="<?php echo htmlspecialchars($id_expositor); ?>">
+
                     <div class="form-content">
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>
@@ -87,7 +90,7 @@ $tolken = getTolkenCsrf();
                     <?php echo $tolken; ?>
 
                     <?php include '../../../Public/include/Butons-forms.html'; ?>
-                   
+
                 </form>
             </div>
         </div>
