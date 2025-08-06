@@ -45,18 +45,15 @@ class Evento
 
     public function buscarPorNome($nome)
     {
-        $db = new Database('evento');  
-
-        return $db->select("nome_evento LIKE '%$nome%'", 'data_evento DESC')
-                ->fetchAll(PDO::FETCH_ASSOC);
+        $db = new Database('evento');
+        $query = "SELECT * FROM evento WHERE nome_evento LIKE ? ORDER BY data_evento DESC";
+        return $db->execute($query, ["%$nome%"])->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function buscarPorId_evento($id) {
         $db = new Database('evento');
-        $res = $db->select("id_evento = {$id}")
-                        ->fetchObject(self::class);
-
-        return $res;
+        $query = "SELECT * FROM evento WHERE id_evento = ?";
+        return $db->execute($query, [$id])->fetchObject(self::class);
     }
 
     public function atualizar_evento($id){
