@@ -62,7 +62,7 @@ class Database
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
-            
+
             return $stmt;
         } catch (\PDOException $err) {
 
@@ -166,13 +166,14 @@ class Database
 
     public function delete($where, $status)
     {
-        $query = "UPDATE " . $this->table . " SET status_pes = '". $status. "' WHERE " . $where;
+        $query = "UPDATE " . $this->table . " SET status_pes = '" . $status . "' WHERE " . $where;
         return $this->execute($query) ? true : false;
     }
 
     //Funções do fluxo do ADM:
-    
-    public function updateColaborador($where, $value, $id_name, $table){
+
+    public function updateColaborador($where, $value, $id_name, $table)
+    {
         $where = strlen($where) ? " WHERE " . $where : '';
         $fields = array_keys($value);
         $param = array_values($value);
@@ -180,9 +181,17 @@ class Database
         $res = $this->execute($query, $param);
         return $res ? TRUE : FALSE;
     }
-    
+
 
     // BLOCO DE CODIGOS PARA CLASSE BOLETO
+
+    public function capturar_email_expositor($id)
+    {
+        $query = "SELECT email FROM pessoa_user WHERE id_login = :id";
+        $binds = [":id" => $id];
+        return $this->execute($query, $binds);
+    }
+
     public function listar_expositor_para_cadastro($nome)
     {
         $query = "SELECT
