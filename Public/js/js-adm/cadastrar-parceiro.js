@@ -19,7 +19,6 @@ btn_cadastrar.addEventListener('click', function (event) {
         }
     }
 
-
     let telefone = document.getElementById('telefone').value.trim();
     let email = document.getElementById('email').value.trim();
     let tipo = document.getElementById('tipo').value;
@@ -58,6 +57,7 @@ btn_cadastrar.addEventListener('click', function (event) {
     // Exibe modal após validações
     openModalConfirmar();
 });
+
 const modalErro = document.getElementById('modal-error');
 const modalErroText = document.getElementById('erro-text');
 const btnFecharErro = document.getElementById('close-modal-erro');
@@ -117,6 +117,11 @@ document.getElementById('btn-modal-salvar').addEventListener('click', async func
             document.getElementById('erro-title').textContent = "Erro ao cadastrar";
             document.getElementById('erro-text').textContent = response.msg || "Houve um problema ao salvar os dados. Tente novamente mais tarde.";
             openModalError();
+
+            // Foca no campo cpf_cnpj se for erro relacionado
+            if (response.msg && (response.msg.toLowerCase().includes("cpf") || response.msg.toLowerCase().includes("cnpj"))) {
+                document.getElementById('cpf_cnpj').focus();
+            }
         }
 
 

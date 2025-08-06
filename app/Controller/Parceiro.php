@@ -19,11 +19,9 @@ class Parceiro
     public string $cpf_cnpj;
     public string $status_parceiro;
     public string $logo;
-    // public int $id_endereco;
 
     public function cadastrar($endereco)
     {
-
         // cadastro do endereco para pegar o id
         $db = new Database("endereco");
         $id_endereco = $db->insert_lastid([
@@ -33,7 +31,7 @@ class Parceiro
             "num_residencia" => $endereco->num_residencia,
             "bairro" => $endereco->bairro,
             "cidade" => $endereco->cidade,
-            "estado" => $endereco->estado // ← Adicionado aqui
+            "estado" => $endereco->estado
         ]);
 
         // cadastro do parceiro
@@ -85,4 +83,19 @@ class Parceiro
         $banco = new Database('parceiro');
         return $banco->alterar_status_parceiro($status, $id);
     }
+
+    public function existeCpfCnpj(string $cpf_cnpj): bool
+    {
+        $db = new Database('parceiro');  
+        $conn = $db->getConnection();
+
+        $query = "SELECT COUNT(*) FROM parceiro WHERE cpf_cnpj = :cpf_cnpj";
+        $stmt = $conn->prepare($query);
+        $stmt->bindValue(':cpf_cnpj', $cpf_cnpj);
+        $stmt->execute();
+
+        return $stmt->fetchColumn() > 0;
+    }
+
+    
 }
