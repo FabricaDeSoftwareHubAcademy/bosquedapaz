@@ -165,6 +165,10 @@ h2 {
   .collaborators-table {
     min-width: 600px;
   }
+
+  .title{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -176,7 +180,12 @@ h2 {
     flex-direction: column;
     align-items: stretch;
   }
-
+  .container{
+    top: -30vh;
+  }
+  .title{
+    display: none;
+  }
   .search-bar input,
   .search-bar button {
     width: 100%;
@@ -192,6 +201,9 @@ h2 {
 @media (max-width: 480px) {
   .box {
     padding: 10px;
+  }
+  .title{
+    display: none;
   }
 
   h2 {
