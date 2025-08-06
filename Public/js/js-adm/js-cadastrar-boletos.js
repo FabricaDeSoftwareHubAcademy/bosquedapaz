@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (res.status === 'ok') {
                 document.getElementById('id_expositor').value = res.expositor.id;
-                document.getElementById('nome-exp').value = res.expositor.nome;     // corrigido
-                document.getElementById('cnpj-cpf').value = res.expositor.cpf;       // corrigido
+                document.getElementById('nome-exp').value = res.expositor.nome;
+                document.getElementById('cnpj-cpf').value = res.expositor.cpf;
             } else {
                 alert(res.mensagem || 'Expositor não encontrado.');
             }
@@ -46,16 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalSucesso = document.getElementById('modal-sucesso');
     const modalErro = document.getElementById('modal-erro');
 
-    const confirmarSim = document.getElementById('confirmar-sim');
-    const confirmarNao = document.getElementById('confirmar-nao');
-    const fecharSucesso = document.getElementById('fechar-sucesso');
-    const fecharErro = document.getElementById('fechar-erro');
+    const confirmarSim = document.getElementById('btn-modal-salvar');
+    const confirmarNao = document.getElementById('btn-modal-cancelar');
+    const fecharSucesso = document.getElementById('close-modal-sucesso');
+    const fecharErro = document.getElementById('close-modal-erro');
 
     const textoErro = document.getElementById('texto-erro');
 
+    const vencimentoInput = document.getElementById('val');
+    const referenciaSelect = document.getElementById('referencia_select');
     // Abre modal de confirmação
     btnSalvar.addEventListener('click', (e) => {
         e.preventDefault();
+
+        const data = new Date(vencimentoInput.value);
+        if (!isNaN(data)) {
+            const mesReferencia = data.toLocaleString('pt-BR', { month: 'long' });
+            referenciaSelect.value = mesReferencia.charAt(0).toUpperCase() + mesReferencia.slice(1); // formata primeira letra maiúscula
+        }
 
         if (validarCampos()) {
             modalConfirmar.showModal();
@@ -87,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Validação dos campos obrigatórios
     function validarCampos() {
         const idExpositor = document.getElementById('id_expositor').value.trim();
-        const mesReferencia = document.getElementById('referencia_select').value.trim();   // corrigido
-        const vencimento = document.getElementById('val').value.trim();                    // corrigido
+        const mesReferencia = document.getElementById('referencia_select').value.trim();
+        const vencimento = document.getElementById('val').value.trim();
         const valor = document.getElementById('valor').value.trim();
-        const pdf = document.getElementById('arquivo').files[0];                           // corrigido
+        const pdf = document.getElementById('arquivo').files[0];
 
         if (!idExpositor || !mesReferencia || !vencimento || !valor || !pdf) {
             textoErro.innerText = 'Preencha todos os campos obrigatórios.';
@@ -113,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function enviarFormulario() {
         const formData = new FormData(form);
 
-        fetch('action-cadastrar-boleto.php', {
+        fetch('../../../actions/action-cadastrar-boletos.php', {
             method: 'POST',
             body: formData
         })

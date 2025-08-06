@@ -23,7 +23,7 @@ if (isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
         exit;
     }
     if (strlen($descricao) > 30) {
-        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 50 caracteres.']);
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 30 caracteres.']);
         exit;
     }
     if (empty($cor)) {

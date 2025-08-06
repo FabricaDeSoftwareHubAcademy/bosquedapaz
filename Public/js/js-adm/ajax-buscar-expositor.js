@@ -1,43 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const btnLupa = document.getElementById('lupa');
-    const inputNome = document.getElementById('pesquisar-nome');
-    const campoNome = document.getElementById('nome-exp');
-    const campoCpf = document.getElementById('cnpj-cpf');
+document.addEventListener("DOMContentLoaded", function () {
+    const btnBuscar = document.getElementById("lupa");
+    const campoBusca = document.getElementById("pesquisar-nome");
 
-    if (btnLupa) {
-        btnLupa.addEventListener('click', async () => {
-            const nome = inputNome.value.trim();
-
-            if (nome === '') {
-                abrirModalErro("Digite um nome para pesquisar.");
-                return;
-            }
-
-            try {
-                const resposta = await fetch("../../../actions/action-procurar-expositor-boleto.php", {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ "pesquisar-nome": nome })
-                });
-
-                const dados = await resposta.json();
-
-                if (dados.status === 'ok') {
-                    campoNome.value = dados.expositor.nome || '';
-                    campoCpf.value = dados.expositor.cpf || '';
-                    console.log("Expositor encontrado:", dados.expositor);
-                } else {
-                    abrirModalErro(dados.mensagem || "Expositor não encontrado.");
-                }
-
-            } catch (erro) {
-                console.error("Erro ao buscar expositor:", erro);
-                abrirModalErro("Erro ao buscar expositor.");
-            }
-        });
-    } else {
-        console.error("Botão de busca não encontrado.");
+    if (!btnBuscar || !campoBusca) {
+        console.warn("Campo de busca ou botão de busca não encontrado.");
+        return;
     }
+
+    btnBuscar.addEventListener("click", function () {
+        const nomePesquisado = campoBusca.value.trim();
+
+        if (nomePesquisado === "") {
+            alert("Digite um nome para pesquisar.");
+            return;
+        }
+
+        fetch("../../../app/Http/Controllers/boletos/ControllerBuscarExpositor.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ "pesquisar-nome": nomePesquisado })
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === "ok" && data.expositor) {
+                    if (typeof window.preencherDadosExpositor === "function") {
+                        window.preencherDadosExpositor(data.expositor);
+                    }
+                } else {
+                    alert(data.mensagem || "Expositor não encontrado.");
+                }
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar expositor:", error);
+                alert("Erro ao buscar expositor.");
+            });
+    });
 });

@@ -49,9 +49,18 @@ if (!in_array($extensao, $permitidos)) {
 }
 
 // Cria um nome único para o arquivo e move para a pasta desejada
-$nomeArquivo = uniqid('boleto_', true) . '.' . $extensao;
-$caminho = '../uploads/boletos/' . $nomeArquivo;
+// Gera nome seguro do arquivo
+$nomeArquivo = 'boleto_' . bin2hex(random_bytes(8)) . '.' . $extensao;
 
+// Caminho final
+$caminho = '../Public/uploads/uploads-boletos/' . $nomeArquivo;
+
+// Verifica se a pasta existe
+if (!is_dir('../Public/uploads/uploads-boletos/')) {
+    mkdir('../Public/uploads/uploads-boletos/', 0777, true); // Cria a pasta com permissão
+}
+
+// Move o arquivo
 if (!move_uploaded_file($pdf['tmp_name'], $caminho)) {
     echo json_encode([
         'status' => 'error',
@@ -59,6 +68,7 @@ if (!move_uploaded_file($pdf['tmp_name'], $caminho)) {
     ]);
     exit;
 }
+
 
 // Cadastra o boleto
 $boleto = new Boleto();

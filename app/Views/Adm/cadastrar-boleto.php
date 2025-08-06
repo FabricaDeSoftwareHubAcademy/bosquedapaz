@@ -43,19 +43,19 @@
 
                         <div class="input">
                             <label class="label" for="valor">Valor:</label>
-                            <input type="text" name="valor_input" id="valor" placeholder="R$ 0,00" autocomplete="off" required>
+                            <input type="text" name="valor" id="valor" placeholder="R$ 0,00" autocomplete="off" required>
                         </div>
                     </div>
 
                     <div class="form-input">
                         <div class="input">
                             <label>Arquivo em PDF:</label>
-                            <input type="file" name="arquivo" id="arquivo" accept="application/pdf" required>
+                            <input type="file" name="pdf" id="arquivo" accept="application/pdf" required>
                         </div>
 
                         <div class="input">
                             <label for="referencia" class="label">Referência:</label>
-                            <select class="select" name="referencia_input" id="referencia_select" required>
+                            <select class="select" name="mes_referencia" id="referencia_select" required>
                                 <option value="Janeiro">Janeiro</option>
                                 <option value="Fevereiro">Fevereiro</option>
                                 <option value="Março">Março</option>
@@ -73,7 +73,7 @@
 
                         <div class="input">
                             <label for="vencimento" class="label">Vencimento:</label>
-                            <input type="date" name="vencimento_input" id="val" placeholder="00/00/0000" required>
+                            <input type="date" name="vencimento" id="val" placeholder="00/00/0000" required>
                         </div>
                     </div>
                     <input type="hidden" id="id_expositor" name="id_expositor" value="">

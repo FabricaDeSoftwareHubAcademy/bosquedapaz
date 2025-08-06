@@ -245,3 +245,6 @@ insert into carrossel (caminho, posicao) values
 insert into login (email, senha, perfil) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
 
 
+alter table boleto modify column mes_referencia varchar(20);
+ALTER TABLE boleto ADD COLUMN status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente';
+
