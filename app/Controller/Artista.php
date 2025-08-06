@@ -137,31 +137,22 @@ class Artista extends Pessoa
     {
         try {
             $db = new Database('artista');
-
-            $queryArtistas = "SELECT * FROM artista";
-            $artistas = $db->execute($queryArtistas)->fetchAll(PDO::FETCH_ASSOC);
-
+    
+            $query = "SELECT * FROM artista";
+            $artistas = $db->execute($query)->fetchAll(PDO::FETCH_ASSOC);
+    
             $resultado = [];
-
+    
             foreach ($artistas as $artista) {
-                $queryPessoa = "SELECT nome, telefone, id_login FROM pessoa WHERE id_pessoa = :id_pessoa";
-                $pessoa = $db->execute($queryPessoa, [
-                    ':id_pessoa' => $artista['id_pessoa']
-                ])->fetch(PDO::FETCH_ASSOC);
-
-                $email = '';
-                if (!empty($pessoa['id_login'])) {
-                    $queryUser = "SELECT email FROM pessoa_user WHERE id_login = :id_login";
-                    $usuario = $db->execute($queryUser, [
-                        ':id_login' => $pessoa['id_login']
-                    ])->fetch(PDO::FETCH_ASSOC);
-                    $email = $usuario['email'] ?? '';
-                }
-
+                $pessoa = $db->execute(
+                    "SELECT nome, telefone FROM pessoa WHERE id_pessoa = :id_pessoa",
+                    [':id_pessoa' => $artista['id_pessoa']]
+                )->fetch(PDO::FETCH_ASSOC);
+    
                 $resultado[] = [
                     'id_artista'          => $artista['id_artista'],
                     'nome'                => $pessoa['nome'] ?? '',
-                    'email'               => $email,
+                    'email'               => $artista['email'], 
                     'telefone'            => $pessoa['telefone'] ?? '',
                     'linguagem_artistica' => $artista['linguagem_artistica'],
                     'valor_cache'         => $artista['valor_cache'],
@@ -169,12 +160,13 @@ class Artista extends Pessoa
                     'status'              => $artista['status']
                 ];
             }
-
+    
             return $resultado;
         } catch (\PDOException $e) {
             return [];
         }
     }
+    
 
 
 

@@ -10,15 +10,14 @@ try {
     $controller = new Artista();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $artistas = $controller->listar();
-        echo json_encode($artistas);
+        echo json_encode($controller->listar());
         exit;
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $data = json_decode(file_get_contents("php://input"), true);
+        $data = json_decode(file_get_contents('php://input'), true);
 
-        if (!isset($data['id_artista']) || !isset($data['novo_status'])) {
+        if (empty($data['id_artista']) || empty($data['novo_status'])) {
             http_response_code(400);
             echo json_encode(['error' => 'Dados incompletos.']);
             exit;
@@ -28,10 +27,9 @@ try {
         $status = $data['novo_status'] === 'ativo' ? 'ativo' : 'inativo';
 
         $db = new \app\Models\Database('artista');
-        $query = "UPDATE artista SET status = :status WHERE id_artista = :id";
-        $db->execute($query, [
+        $db->execute("UPDATE artista SET status = :status WHERE id_artista = :id", [
             ':status' => $status,
-            ':id'     => $id
+            ':id' => $id,
         ]);
 
         echo json_encode(['success' => true, 'novo_status' => $status]);
@@ -40,7 +38,6 @@ try {
 
     http_response_code(405);
     echo json_encode(['error' => 'Método não permitido.']);
-
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode(['error' => 'Erro no servidor: ' . $e->getMessage()]);
