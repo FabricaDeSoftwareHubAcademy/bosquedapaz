@@ -84,18 +84,25 @@ class Parceiro
         return $banco->alterar_status_parceiro($status, $id);
     }
 
-    public function existeCpfCnpj(string $cpf_cnpj): bool
+    public function existeCpfCnpj(string $cpf_cnpj, ?int $id_ignorar = null): bool
     {
-        $db = new Database('parceiro');  
+        $db = new Database('parceiro');
         $conn = $db->getConnection();
-
+    
         $query = "SELECT COUNT(*) FROM parceiro WHERE cpf_cnpj = :cpf_cnpj";
+        if ($id_ignorar !== null) {
+            $query .= " AND id_parceiro != :id_ignorar";
+        }
+    
         $stmt = $conn->prepare($query);
         $stmt->bindValue(':cpf_cnpj', $cpf_cnpj);
+        if ($id_ignorar !== null) {
+            $stmt->bindValue(':id_ignorar', $id_ignorar, PDO::PARAM_INT);
+        }
+    
         $stmt->execute();
-
+    
         return $stmt->fetchColumn() > 0;
-    }
-
+    }    
     
 }
