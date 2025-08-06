@@ -13,6 +13,7 @@ $tolken = getTolkenCsrf();
   <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
   <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-expositor.css">
 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -63,6 +64,7 @@ $tolken = getTolkenCsrf();
   <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
   <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
   <?php include '../../../Public/include/modais/modal-error.html'; ?>
+  <?php include '../../../Public/include/modais/modal-deletar.html'; ?>
 
   <td><button class="status inactive">Inativo</button></td>
   <td><button class="status active">Ativo</button></td>

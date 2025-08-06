@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody-artistas');
   const inputPesquisa = document.getElementById('status');
 
-  const modalConfirmar = document.getElementById("modal-confirmar");
-  const tituloConfirmar = document.getElementById("confirmar-title");
-  const mensagemConfirmar = document.getElementById("msm-confimar");
-  const btnConfirmar = document.getElementById("btn-modal-salvar");
-  const btnCancelar = document.getElementById("btn-modal-cancelar");
+  // NOVOS ELEMENTOS DO MODAL DELETE
+  const modalDelete = document.getElementById("modal-delete");
+  const tituloDelete = modalDelete.querySelector("h2.deletar-text");
+  const mensagemDelete = modalDelete.querySelector("p.msm-modal");
+  const btnDeletar = document.getElementById("btn-modal-deletar");
+  const btnCancelarDelete = document.getElementById("btn-modal-cancelar");
+  const btnFecharDelete = document.getElementById("fechar-modal-deletar");
 
   let artistas = [];
   let artistaSelecionadoId = null;
@@ -93,15 +95,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       artistaSelecionadoId = id;
       artistaNovoStatus = novoStatus;
 
-      // Atualizar texto do modal
-      tituloConfirmar.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
-      mensagemConfirmar.textContent = `Clique salvar para ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} o artista.`;
+      // Atualizar conteúdo do modal-delete dinamicamente
+      tituloDelete.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
+      mensagemDelete.textContent = `Clique em confirmar para ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} o artista.`;
 
-      modalConfirmar.showModal();
+      modalDelete.showModal();
     }
   });
 
-  btnConfirmar.addEventListener('click', async () => {
+  // Botão "Confirmar" do modal-delete
+  btnDeletar.addEventListener('click', async () => {
     if (!artistaSelecionadoId || !artistaNovoStatus) return;
 
     try {
@@ -126,20 +129,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Erro ao atualizar status:', resultado.error);
       }
 
-      modalConfirmar.close();
+      modalDelete.close();
     } catch (err) {
       console.error('Erro na requisição:', err);
-      modalConfirmar.close();
+      modalDelete.close();
     }
   });
 
-  btnCancelar.addEventListener('click', () => {
-    modalConfirmar.close();
-  });
-  const btnFecharModal = document.getElementById('close-modal-confirmar');
-
-  btnFecharModal.addEventListener('click', () => {
-    modalConfirmar.close();
+  // Botão "Cancelar"
+  btnCancelarDelete.addEventListener('click', () => {
+    modalDelete.close();
   });
 
+  // Ícone de fechar (X)
+  btnFecharDelete.addEventListener('click', () => {
+    modalDelete.close();
+  });
 });
