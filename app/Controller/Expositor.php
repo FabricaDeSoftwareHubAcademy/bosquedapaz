@@ -35,7 +35,7 @@ class Expositor extends Pessoa
 
     //////////// MÉDOTO PARA CADASTRAR \\\\\\\\\\\\\\\\\\\\\
     public function emailExiste($email){
-        $db = new Database('login');
+        $db = new Database('pessoa_user');
 
         $email = $db->select("email = '$email'")->fetch(PDO::FETCH_ASSOC);
 
