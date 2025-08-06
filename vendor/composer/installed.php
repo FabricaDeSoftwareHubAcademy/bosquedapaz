@@ -3,7 +3,7 @@
         'name' => 'desenvolvedor/bosquedapaz',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '01438c631fddd6f74849e58d99a2e7e5a82fe145',
+        'reference' => 'df486a63fc6a6c420667862430cf4f7e8f641152',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'desenvolvedor/bosquedapaz' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '01438c631fddd6f74849e58d99a2e7e5a82fe145',
+            'reference' => 'df486a63fc6a6c420667862430cf4f7e8f641152',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -31,7 +31,7 @@
         'phpmailer/phpmailer' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '0ff2d3c8ead628df2493537d9f91db962aa47718',
+            'reference' => '52d0fe4916e65d1379f14ed49deb6743ca50a54f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
             'aliases' => array(

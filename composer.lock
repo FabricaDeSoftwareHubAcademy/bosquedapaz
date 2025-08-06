@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8eec87eceb8ad23d7eb2c6ba2881fc0",
+    "content-hash": "9f41fbd199340c783d0ff3f67be206d7",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -75,12 +75,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "0ff2d3c8ead628df2493537d9f91db962aa47718"
+                "reference": "52d0fe4916e65d1379f14ed49deb6743ca50a54f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/0ff2d3c8ead628df2493537d9f91db962aa47718",
-                "reference": "0ff2d3c8ead628df2493537d9f91db962aa47718",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/52d0fe4916e65d1379f14ed49deb6743ca50a54f",
+                "reference": "52d0fe4916e65d1379f14ed49deb6743ca50a54f",
                 "shasum": ""
             },
             "require": {
@@ -149,7 +149,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-18T21:02:11+00:00"
+            "time": "2025-08-04T16:26:34+00:00"
         },
         {
             "name": "setasign/fpdf",
@@ -271,6 +271,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "phpmailer/phpmailer": 20,
         "setasign/fpdi": 20
     },
     "prefer-stable": false,

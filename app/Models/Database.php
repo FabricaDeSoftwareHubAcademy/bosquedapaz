@@ -183,6 +183,13 @@ class Database
     
 
     // BLOCO DE CODIGOS PARA CLASSE BOLETO
+
+    public function capturar_email_expositor($id) {
+        $query = "SELECT email FROM pessoa_user WHERE id_login = :id";
+        $binds = [":id" => $id];
+        return $this->execute($query, $binds);
+    }
+
     public function listar_expositor_para_cadastro($nome)
     {
         $query = "SELECT
