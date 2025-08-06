@@ -254,7 +254,7 @@
     }
 
     .btn-login {
-        display: none;
+        display: flex;
     }
     
     .btn-mobile {
@@ -306,7 +306,11 @@
             height: 0px;
         }
         100% {
-            height: 275px;
+            height: 285px;
         }
+    }
+
+    .content-outros{
+        padding: 0px 1rem;
     }
 }

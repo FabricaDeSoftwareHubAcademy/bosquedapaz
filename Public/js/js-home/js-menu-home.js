@@ -20,9 +20,9 @@ async function menu() {
                 login.forEach(element => {
                     if (text.login.perfil == 1){
                         element.innerHTML = `
-                        <img src="${img_perfil}" alt="" class="img-perfil">
+                        <img src="../../../Public/uploads/uploads-ADM/${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes${i}" id="content-opcoes-menu${i}">
-                            <a href="../app/Views/Adm/" class="link_login">
+                            <a href="../Adm/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
                             <a href="" class="link_login">
@@ -32,9 +32,9 @@ async function menu() {
                         `
                     }else {
                         element.innerHTML = `
-                        <img src="${img_perfil}" alt="" class="img-perfil">
+                        <img src="../../../Public/uploads/uploads-ADM/${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes${i}" id="content-opcoes-menu${i}">
-                            <a href="../app/Views/Expositor/" class="link_login">
+                            <a href="../Expositor/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
                             <a href="" class="link_login">
@@ -95,3 +95,5 @@ sandwich.addEventListener('click', function(){
         sandwich.classList.add('bi-x')
     }
 })
+
+console.log(document.getElementById('login'))

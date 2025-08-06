@@ -51,6 +51,8 @@
     text-transform: capitalize;
 }
 
+/* style javascript */
+
 .novo_num_visitantes {
     border: 1px solid #FF3877;
     border-radius: .5rem;
@@ -88,6 +90,16 @@
     
     .content-numero {
         gap: 15px;
+    }
+
+    .novo_num_visitantes {
+        max-width: 8rem;
+        padding: .2rem;
+    }
+
+    .num_visitantes {
+        width: 100%;
+        padding: .5rem;
     }
 }
 

@@ -74,7 +74,7 @@ async function menuAdm() {
             if (text.login.img_perfil == null){
                 element.src = '../../../Public/assets/MOCA.png';
             }else {
-                element.src = text.login.img_perfil;
+                element.src = '../../../Public/uploads/uploads-ADM/' + text.login.img_perfil;
             }
         });
 
