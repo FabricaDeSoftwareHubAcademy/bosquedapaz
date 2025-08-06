@@ -19,7 +19,7 @@ class Artista extends Pessoa
     protected $tempo_apresentacao;
     protected $valor_cache;
     protected $status;
-    protected $aceitou_termos; 
+    protected $aceitou_termos;
 
     // --- Setters ---
     public function setId_artista($id_artista)
@@ -114,11 +114,11 @@ class Artista extends Pessoa
             'nome' => $this->nome,
             'telefone' => $this->whats,
             'link_instagram' => $this->link_instagram,
-            'termos' => $this->aceitou_termos 
+            'termos' => $this->aceitou_termos
         ]);
-        
+
         if (!$pes_id) return false;
-        
+
         $dbArtista = new Database('artista');
         return $dbArtista->insert([
             'id_pessoa' => $pes_id,
@@ -137,26 +137,45 @@ class Artista extends Pessoa
     {
         try {
             $db = new Database('artista');
-            $query = "
-            SELECT 
-                a.id_artista,
-                p.nome,
-                p.email,
-                p.telefone,
-                a.linguagem_artistica,
-                a.valor_cache,
-                a.tempo_apresentacao,
-                a.status
-            FROM artista a
-            INNER JOIN pessoa p ON p.id_pessoa = a.id_pessoa
-        ";
 
-            $stmt = $db->execute($query);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $queryArtistas = "SELECT * FROM artista";
+            $artistas = $db->execute($queryArtistas)->fetchAll(PDO::FETCH_ASSOC);
+
+            $resultado = [];
+
+            foreach ($artistas as $artista) {
+                $queryPessoa = "SELECT nome, telefone, id_login FROM pessoa WHERE id_pessoa = :id_pessoa";
+                $pessoa = $db->execute($queryPessoa, [
+                    ':id_pessoa' => $artista['id_pessoa']
+                ])->fetch(PDO::FETCH_ASSOC);
+
+                $email = '';
+                if (!empty($pessoa['id_login'])) {
+                    $queryUser = "SELECT email FROM pessoa_user WHERE id_login = :id_login";
+                    $usuario = $db->execute($queryUser, [
+                        ':id_login' => $pessoa['id_login']
+                    ])->fetch(PDO::FETCH_ASSOC);
+                    $email = $usuario['email'] ?? '';
+                }
+
+                $resultado[] = [
+                    'id_artista'          => $artista['id_artista'],
+                    'nome'                => $pessoa['nome'] ?? '',
+                    'email'               => $email,
+                    'telefone'            => $pessoa['telefone'] ?? '',
+                    'linguagem_artistica' => $artista['linguagem_artistica'],
+                    'valor_cache'         => $artista['valor_cache'],
+                    'tempo_apresentacao'  => $artista['tempo_apresentacao'],
+                    'status'              => $artista['status']
+                ];
+            }
+
+            return $resultado;
         } catch (\PDOException $e) {
             return [];
         }
     }
+
 
 
     public function atualizarStatus($id_artista, $novo_status)

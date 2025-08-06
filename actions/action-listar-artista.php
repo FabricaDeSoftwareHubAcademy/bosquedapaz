@@ -1,33 +1,17 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use app\Models\Database;
+use app\Controller\Artista;
+
 
 header('Content-Type: application/json; charset=utf-8');
 
 try {
-    $db = new Database('artista');
+    $controller = new Artista();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-
-        $query = "
-            SELECT 
-                a.id_artista,
-                p.nome,
-                p.email,
-                p.telefone,
-                a.nome_artistico,
-                a.linguagem_artistica,
-                a.tempo_apresentacao,
-                a.valor_cache,
-                a.status
-            FROM artista a
-            INNER JOIN pessoa p ON a.id_pessoa = p.id_pessoa
-        ";
-
-        $result = $db->execute($query)->fetchAll(PDO::FETCH_ASSOC);
-
-        echo json_encode($result);
+        $artistas = $controller->listar();
+        echo json_encode($artistas);
         exit;
     }
 
@@ -43,11 +27,11 @@ try {
         $id = (int) $data['id_artista'];
         $status = $data['novo_status'] === 'ativo' ? 'ativo' : 'inativo';
 
+        $db = new \app\Models\Database('artista');
         $query = "UPDATE artista SET status = :status WHERE id_artista = :id";
-
         $db->execute($query, [
             ':status' => $status,
-            ':id' => $id
+            ':id'     => $id
         ]);
 
         echo json_encode(['success' => true, 'novo_status' => $status]);
