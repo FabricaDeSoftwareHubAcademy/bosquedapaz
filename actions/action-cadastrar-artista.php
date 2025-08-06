@@ -1,6 +1,7 @@
 <?php
-if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once '../vendor/autoload.php';
+require_once('../app/helpers/login.php');
 
 use app\Controller\Artista;
 use app\Models\Database;
@@ -8,12 +9,15 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
 
     $email = $_POST['email'];
 
     try {
-        $db = new Database('pessoa');
+        // $db = new Database('pessoa');
+
+        $dadosUsuario = obterLogin();
+        $idAdmin = $dadosUsuario["jwt"]->perfil;
 
         $artista = new Artista();
 
@@ -21,8 +25,11 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
         $artista->setEmail($email);
         $artista->setWhats($_POST['whats']);
         $artista->setLink_instagram($_POST['link_instagram']);
-        $artista->setAceitou_termos($_SESSION['aceitou_termos' ?? 'Não']);
-
+        if ($idAdmin === 1) {
+            $artista->setAceitou_termos("Sim");
+        } else {
+            $artista->setAceitou_termos($_SESSION['aceitou_termos'] ?? 'Não');
+        }
         $artista->setNome_artistico($_POST['nome_artistico']);
         $artista->setLinguagem_artistica($_POST['linguagem_artistica']);
         $artista->setEstilo_musica($_POST['estilo_musica']);
@@ -43,14 +50,12 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 'mensagem' => 'Erro ao cadastrar artista.'
             ]);
         }
-
     } catch (Exception $e) {
         echo json_encode([
             'status' => 500,
             'mensagem' => 'Erro no servidor: ' . $e->getMessage()
         ]);
     }
-
 } else {
     echo json_encode([
         'status' => 405,
