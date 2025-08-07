@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = new Date(vencimentoInput.value);
         if (!isNaN(data)) {
             const mesReferencia = data.toLocaleString('pt-BR', { month: 'long' });
-            referenciaSelect.value = mesReferencia.charAt(0).toUpperCase() + mesReferencia.slice(1); // formata primeira letra maiúscula
+            referenciaSelect.value = mesReferencia.charAt(0).toUpperCase() + mesReferencia.slice(1);
         }
 
         if (validarCampos()) {
