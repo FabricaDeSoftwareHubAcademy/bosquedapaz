@@ -35,13 +35,17 @@ class Atracao
         return $res;
     }
 
-    public function buscarPorNome($nome) {
-        $db = new Database('atracao');
-        $res = $db->select("nome_atracao = {$nome}")
-                  ->fetchAll(PDO::FETCH_ASSOC);
-
-        return $res;
+    public function buscarPorNome($nome)
+    {
+        try {
+            $db = new Database('atracao');
+            $query = "SELECT * FROM atracao WHERE nome_atracao LIKE ? ORDER BY nome_atracao DESC";
+            return $db->execute($query, ["%$nome%"])->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
     }
+
 
     public function buscarPorId($id) {
         $db = new Database('atracao');
