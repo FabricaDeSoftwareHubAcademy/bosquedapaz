@@ -40,14 +40,14 @@
 }
 
 .img_prox_event {
-    width: 20rem;
-    height: 25rem;
+    width: 35rem;
+    height: 20rem;
     border-radius: .5rem;
     transition: var(--o-transition);
 }
 
 .img_prox_event:hover {
-    width: 20rem;
+    width: 36rem;
     transition: var(--o-transition);
 }
 
@@ -182,7 +182,7 @@
     }
 
     .img_prox_event {
-        width: 20rem;
+        width: 30rem;
     }
 
     .img_prox_event:hover {
@@ -214,7 +214,7 @@
     } */
 
     .content_info_evento {
-        width: 25rem;
+        width: 100%;
     }
 
     .img_prox_event_pequena {

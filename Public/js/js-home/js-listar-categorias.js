@@ -3,7 +3,7 @@ async function carregarCategorias() {
       const response = await fetch('../../../actions/action-listar-categoria.php');
       const categorias = await response.json();
       const container = document.getElementById('categorias');
-      container.innerHTML = ''; 
+      container.innerHTML = ''; // limpa antes de inserir
   
       categorias.dados.forEach(categoria => {
         const caminhoIcone = `../../../Public/${categoria.icone}`;

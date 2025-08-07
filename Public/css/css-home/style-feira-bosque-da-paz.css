@@ -38,40 +38,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-.amarelo {
-    background-color: var(--color-rua1) !important;
-}
-.laranja {
-    background-color: var(--color-rua2) !important;
-}
-.verde {
-    background-color: var(--color-rua3) !important;
-}
-.roxo {
-    background-color: var(--color-rua4) !important;
-}
-.azul {
-    background-color: var(--color-rua5) !important;
-}
-.cinza {
-    background-color: var(--color-rua6) !important;
-}
-.rosa_escuro {
-    background-color: var(--color-ru7) !important;
-}
-.laranja_lima {
-    background-color: var(--color-rua8) !important;
-}
-.rosa_claro {
-    background-color: var(--color-rua9) !important;
-}
-.preto {
-    background-color: var(--color-rua10) !important;
-}
-.vermelho {
-    background-color: var(--color-rua11) !important;
-}
-
 .home {
     overflow-x: hidden;
 }

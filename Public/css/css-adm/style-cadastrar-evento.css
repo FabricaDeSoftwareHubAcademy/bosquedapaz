@@ -287,18 +287,6 @@ h1 {
     transition: 0.3s;
 }
 
-@media (max-width: 1300px) {
-    .box .form-box {
-        width: 100%;
-    }
-    #form1 {
-        width: 100%;
-    }
-    .btn {
-        width: 100%;
-    }
-    
-}
 
 @media (max-width: 950px) {
     .box .form-box {

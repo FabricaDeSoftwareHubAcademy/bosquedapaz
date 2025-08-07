@@ -24,7 +24,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         exit;
     }
     if (strlen($descricao) > 30) {
-        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 30 caracteres.']);
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 50 caracteres.']);
         exit;
     }
     if (empty($cor)) {

@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
           abrirModalSucesso(result.sucesso);
 
           setTimeout(() => {
-            window.location.href = '../../../app/Views/Adm/listar-parceiros.php';
+            window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
           }, 2000);
 
         } else {

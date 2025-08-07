@@ -51,29 +51,6 @@
     text-transform: capitalize;
 }
 
-/* style javascript */
-
-.novo_num_visitantes {
-    border: 1px solid #FF3877;
-    border-radius: .5rem;
-}
-.num_visitantes {
-    display: block;
-    border-radius: .5rem;
-    border: none;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: .5rem;
-}
-.btn_visitantes {
-    padding: 0rem 1rem;
-    background-color: #007E70;
-    border: none;
-    color: white;
-    border-radius: .2rem;
-    font-weight: 500;
-}
-
 @media screen and (max-width: 1150px) {
     .content-intro-feira {
         width: 90%;
@@ -90,16 +67,6 @@
     
     .content-numero {
         gap: 15px;
-    }
-
-    .novo_num_visitantes {
-        max-width: 8rem;
-        padding: .2rem;
-    }
-
-    .num_visitantes {
-        width: 100%;
-        padding: .5rem;
     }
 }
 

@@ -84,5 +84,3 @@ botaoNovaAtracao.addEventListener('click', async () => {
         alert("Não foi possível identificar o evento. Volte e selecione novamente.");
     }
 });
-
-document.getElementById('btns-salvar-cancelar').style.display = 'none'

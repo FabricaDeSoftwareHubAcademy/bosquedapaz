@@ -93,15 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function atualizarDescricaoEEspacos(evento) {
-        infoContainer.innerHTML = `<p class="dark">${evento.descricao_evento}</p>`;
-
-        // Reaplica a cor se o tema estiver escuro
-        if (localStorage.getItem('theme') === 'dark') {
-            const novosDark = infoContainer.querySelectorAll('.dark');
-            novosDark.forEach(el => {
-                el.style.setProperty('color', 'white', 'important');
-            });
-}
+        infoContainer.innerHTML = `<p>${evento.descricao_evento}</p>`;
 
         try {
             const atracoesRes = await fetch(`../../../actions/action-listar-atracoes-por-evento.php?id_evento=${evento.id_evento}`);
