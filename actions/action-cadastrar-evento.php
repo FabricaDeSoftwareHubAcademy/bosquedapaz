@@ -41,7 +41,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $evento->data_evento = $data;
     $evento->hora_inicio = $hora_inicio;
     $evento->hora_fim = $hora_fim;
-    $evento->endereco_evento = $endereco;
+    $evento->id_endereco_evento = $endereco;
 
    
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {

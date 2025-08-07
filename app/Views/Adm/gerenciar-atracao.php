@@ -22,7 +22,7 @@
                 <div class="search-bar">
                     <label for="busca">Procurar</label>
                     <input type="text" id="busca" placeholder="Buscar por nome da atração" />
-                    <button class="search-button">BUSCAR</button>
+                    <button id="nova-atracao" class="novo-evento">Nova Atração</button>
                 </div>
                 <div class="table-container">
                     <table class="collaborators-table">
@@ -41,17 +41,10 @@
                     </table>
                 </div>
 
-                <button class="voltar">
-                    <a href="Area-Adm.php" class="voltar-link">
-                        <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
-                    </a>
-                </button>
-                <div class="b-voltar"></div>
-
-                <div class="botoes">
-                    <button id="nova-atracao" class="novo-evento">Nova Atração</button>
-                </div>
             </div>
+
+            <?php include '../../../Public/include/Butons-forms.html'; ?>
+
         </div>
     </main>
 
