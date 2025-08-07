@@ -70,6 +70,8 @@ if (botao_editar_utilidade) {
             alert("Erro na comunicação com o servidor.");
         }
     });
+
+    console.log(formulario)
 }
 
 btnSalvar = document.getElementById('#btn-salvar');

@@ -41,7 +41,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     }
 
     $utilidadePublica = new UtilidadePublica();
-    $utilidadePublica->id_utilidadesPublica = $id_utilidadePublica;
+    $utilidadePublica->id_utilidade_publica = $id_utilidade_publica;
     $utilidadePublica->titulo = $titulo;
     $utilidadePublica->descricao = $descricao;
     $utilidadePublica->data_inicio = $data_inicio;
