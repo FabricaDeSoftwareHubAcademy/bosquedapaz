@@ -224,6 +224,11 @@
     gap: .5rem;
 }
 
+.link_logout {
+    border: none;
+    background-color: transparent;
+}
+
 .link_login:nth-child(2){
     color: #FF3877;
     border-top: 1px solid black;

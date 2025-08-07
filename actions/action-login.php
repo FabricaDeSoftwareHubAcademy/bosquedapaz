@@ -75,7 +75,7 @@ if(isset($_GET['perfil'])){
 
 }
 
-if($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['logout']) {
+if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['logout'])) {
     session_start();
     session_destroy();
     exit;

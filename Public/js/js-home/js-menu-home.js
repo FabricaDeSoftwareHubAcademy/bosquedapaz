@@ -25,9 +25,9 @@ async function menu() {
                             <a href="../Adm/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
-                            <a href="" class="link_login">
-                                <i class="bi bi-box-arrow-left icon-login" id="logout"></i>Sair
-                            </a>
+                            <button class="link_login link_logout" id="logout">
+                                <i class="bi bi-box-arrow-left icon-login"></i>Sair
+                            </button>
                         </div>
                         `
                     }else {
@@ -37,9 +37,9 @@ async function menu() {
                             <a href="../Expositor/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
-                            <a href="" class="link_login">
-                                <i class="bi bi-box-arrow-left icon-login" id="logout"></i>Sair
-                            </a>
+                            <button class="link_login link_logout" id="logout">
+                                <i class="bi bi-box-arrow-left icon-login"></i>Sair
+                            </button>
                         </div>
                         `
                     }
@@ -87,6 +87,7 @@ async function menu() {
                 })
                 logout[1].addEventListener('click', async () => {
                     const response = await fetch('../../../actions/action-login.php?logout=true');
+                    console.log(response)
                     document.location.reload()
                 })
             }

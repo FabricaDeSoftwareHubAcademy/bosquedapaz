@@ -37,8 +37,10 @@ async function trocarDados (){
                     if(response.ok){
                         openModalSucesso()
                         document.getElementById('msm-sucesso').innerHTML = 'Número de visitantes atualizado com sucesso'
-                        document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
-                        window.location.reload()
+                        document.getElementById('close-modal-sucesso').addEventListener('click', () => {
+                            closeModalSucesso()
+                            window.location.reload()
+                        })
                     }else {
                         let resposta = await response.json()
                         document.getElementById('erro-title').innerText = resposta.menssage
