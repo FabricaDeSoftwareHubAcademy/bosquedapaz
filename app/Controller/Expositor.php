@@ -144,7 +144,7 @@ class Expositor extends Pessoa
 
             //// RETORNA TODOS OS EXPOSITORES VALIDADOS
             if($busca != null){
-                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado"', "RAND() and nome and status_pes", 10)->fetchAll(PDO::FETCH_ASSOC);
+                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado" and status_pes="ativo"' , "RAND() and nome and status_pes", 10)->fetchAll(PDO::FETCH_ASSOC);
                 return $expositores ? $expositores : FALSE;
             }else {
                 return FALSE;

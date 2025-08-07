@@ -7,13 +7,17 @@ async function chamarModalExpositor(id){
     let response = await dados.json()
     
     let contentModal = document.getElementById('conteiner__box')
-    console.log(contentModal)
-
-    console.log(response)
     
     let modal = document.getElementById('m-per-expo')
     if (response.status == 200) {
         modal.showModal()
+
+        let imgs_car_expositor = '';
+        response.expositor.imagens.forEach(imagem => {
+            imgs_car_expositor += `
+                <div class="div__img"><img src="../../${imagem.caminho}" alt="imagem do expositor"></div>
+            `
+        });
 
         contentModal.innerHTML = `
         <div class="left__side">
@@ -21,16 +25,11 @@ async function chamarModalExpositor(id){
                 <img class="img-decoracao1" src="../../../Public/assets/img-decoracao1.png" alt="">
             </div>
             <div class="container__logo">
-                <div class="div__logo"><img src="${response.expositor.img_perfil}" alt=""></div>
-            </div>
+                <div class="div__logo"><img src="${response.expositor.img_perfil}" alt="image perfil "></div>
+            </div>  
             <div class="container__h1"><h1>Produtos</h1></div>
             <div class="container__imgs">
-                <div class="div__img"><img src="" alt=""></div>
-                <div class="div__img"><img src="${response.expositor.imagens[0].caminho}" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-3.jpeg" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-4.jpeg" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-5.jpeg" alt=""></div>
-                <div class="div__img"><img src="../../../Public/imgs/foto-produto-6.jpeg" alt=""></div>
+                ${imgs_car_expositor}
             </div>
         </div>
 
@@ -74,7 +73,7 @@ async function chamarModalExpositor(id){
 
                 <div class="div__cor__rua">
                     <h3>Cor da Rua</h3>
-                    <div class="div__cor"><p>${response.expositor.cor_rua}</p></div>
+                    <div class="div__cor ${response.expositor.cor_rua}"><p>${response.expositor.cor_rua}</p></div>
                 </div>
             </div>
 
@@ -98,6 +97,7 @@ async function carregarExpositores() {
         const container = document.getElementById("expositores-container");
 
         data.expositor.forEach(expo => {
+            console.log(`EXPO =====> ${JSON.stringify(expo)}`);
             const card = document.createElement("div");
             card.classList.add("content-card-expo");
             card.innerHTML = `
