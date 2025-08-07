@@ -122,7 +122,7 @@ body {
     gap: .5rem;
     margin-top: 15px;
     position: relative;
-    left: 14%;
+    /* left: 14%; */
     top: 0px;
 }
 
@@ -206,6 +206,23 @@ body {
     .formularios{
         top: 0;
     }
+
+    @media (max-width: 768px) {
+        .conteiner_fotos {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+      
+        .content_fotos {
+          width: 70%;
+          /* max-width: 300px; */
+          display: flex; 
+          margin-bottom: 1rem;
+        }
+      }
+      
 }
 
 @media (max-width: 480px) {
