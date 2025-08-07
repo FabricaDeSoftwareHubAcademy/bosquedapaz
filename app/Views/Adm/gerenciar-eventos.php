@@ -26,9 +26,7 @@ $tolken = getTolkenCsrf();
                 <div class="search-bar">
                     <label>Procurar</label>
                     <input type="text" id="buscar" placeholder="" />
-                    <div class="botoes">
                     <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
-                </div>
                 </div>
                 <div class="table-container">
                     <table class="collaborators-table">
@@ -67,11 +65,7 @@ $tolken = getTolkenCsrf();
                     </div>
                 </div>
             </div>
-            <button class="voltar">
-            <a href="./" class="voltar-link">
-                <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
-            </a>
-            </button>
+            <?php include '../../../Public/include/Butons-forms.html'; ?>
 
         </div>
 
