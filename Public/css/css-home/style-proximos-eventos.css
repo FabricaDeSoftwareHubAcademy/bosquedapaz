@@ -214,7 +214,7 @@ main #title{
     width: 80%;
     max-height: 350px;
     margin-left: 80px;
-    background-color: white;
+    /* background-color: white; */
     color: black;
     font-size: 1rem;
     line-height: 1.5;

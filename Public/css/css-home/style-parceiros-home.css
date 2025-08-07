@@ -199,23 +199,22 @@
 
 @media(max-width:1669px){
    
-.section-nosso-time-quem-somos .div-descricao{
+    .section-nosso-time-quem-somos .div-descricao{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 80%;
-
-}
-.section-nosso-time-quem-somos .div-descricao{
+    }
+    .section-nosso-time-quem-somos .div-descricao{
     right: 0%;
     left: 0%;
     font-size: 1.25rem;
     font-weight: 200;
     padding-left: 10%;
     padding-right: 10%;
+    }
 }
-
 
 @media(max-width:1400px){
    
@@ -247,5 +246,4 @@
         margin-top: 70%;
 
     }
-}
 }

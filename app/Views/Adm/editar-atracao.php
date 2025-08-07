@@ -52,9 +52,9 @@ $tolken = getTolkenCsrf();
                             <input type="file" name="banner_atracao" id="file">
                         </div>
 
-                        <div class="preview-img">
-                            <img class="preview" src="" alt="" id="preview-image">
-                        </div>
+
+                        <img class="preview" src="" alt="" id="preview-image">
+
                     </div>
 
                     <?php echo $tolken; ?>

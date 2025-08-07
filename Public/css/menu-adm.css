@@ -65,7 +65,7 @@
 
 .nav-item:after{
     content: "";
-    background-color: #FF3877;
+    background-color: #FB4616;
     height: 3px;
     width: 0%;
     display: block;
@@ -192,7 +192,7 @@
 }
 
 .open-opcoes-menu {
-    height: 110px;
+    height: 130px;
     transition: all .2s ease-in;
 }
 
@@ -306,6 +306,11 @@
     cursor: pointer;
     transition: transform 0.4s ease, background-color 0.3s ease;
     z-index: 1000;
+  
+    /* 👇 Centraliza o conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .icon-toggle:hover {

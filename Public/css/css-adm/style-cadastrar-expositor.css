@@ -13,7 +13,6 @@ body {
     overflow: hidden;
 }
 
-/* Fundo */
 .bolas-fundo {
     width: 100vw;
     height: 90vh;
@@ -33,7 +32,6 @@ body {
 .bola-verde2 { right: 0; top: 6vh; }
 .bola-rosa    { right: 0; bottom: -100px; }
 
-/* Container principal */
 .principal {
     width: 100vw;
     height: 90vh;
@@ -52,16 +50,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 20px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* Título */
 .title {
     width: 70%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .title-text {
@@ -69,43 +68,30 @@ body {
     font-weight: bold;
 }
 
-/* Formulário */
 #fomulario_cad_expositor {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    /* justify-content: center; */
+    /* margin-top: 2rem; */
     align-items: center;
 }
 
-/* Área dos campos em 3 colunas */
 .formularios {
-    width: 80%;
-    height: 50vh;
+    width: 90%;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: -40px;
 }
 
 .form-pessoa,
 .form-loja,
 .form-expo {
-    width: 100%;
-    max-width: 33.3%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Inputs e selects */
-.input,
-.input-group,
-.form-group,
-.form-group-energia,
-.form-files {
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* max-width: 40%;  */
 }
 
 .input input,
@@ -116,7 +102,7 @@ body {
     width: 100%;
     height: 50px;
     min-height: 45px;
-    padding: 5px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #ffffff;
@@ -126,23 +112,24 @@ body {
     border-right: 2px solid #9d9fa1;
     font-size: 1rem;
     color: #3d3d3d;
+    align-self: center; 
 }
 
-/* Área das fotos */
 .conteiner_fotos {
     width: 100%;
-    height: 150px;
     display: none;
     align-items: center;
     gap: .5rem;
     margin-top: 15px;
+    position: relative;
+    /* left: 14%; */
+    top: 0px;
 }
 
 .content_fotos {
     max-width: 170px;
     height: 100%;
     flex: auto;
-    background-color: #9d9fa1;
     display: none;
     align-items: center;
     justify-content: center;
@@ -167,7 +154,14 @@ body {
     height: 100%;
 }
 
-/* Responsividade */
+/* ============ MEDIA QUERIES ============ */
+
+@media (max-width: 1500px) {
+    .formularios {
+        position: relative;
+    }
+}
+
 @media (max-width: 1362px) {
     .formularios {
         flex-direction: column;
@@ -181,14 +175,57 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    .box {
+        overflow-x: hidden;
+    }
+
+    .formularios {
+        flex-direction: column;
+        gap: 0;
+        top: 0;
+    }
+
+    .form-pessoa,
+    .form-loja,
+    .form-expo {
+        width: 100%;
+        position: static;
+    }
+}
+
 @media (max-width: 768px) {
     .title { width: 100%; }
     .title-text { font-size: 1.5rem; }
+
+    .btns-salvar-cancelar {
+        position: relative;
+        left: 0%;
+    }
+
+    .formularios{
+        top: 0;
+    }
+
+    @media (max-width: 768px) {
+        .conteiner_fotos {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+      
+        .content_fotos {
+          width: 70%;
+          /* max-width: 300px; */
+          display: flex; 
+          margin-bottom: 1rem;
+        }
+      }
+      
 }
 
 @media (max-width: 480px) {
-    .box { overflow-x: hidden; }
-
     .title-text {
         width: 116%;
         position: relative;
@@ -196,11 +233,48 @@ body {
         font-size: 1.1rem;
     }
 
+    .formularios {
+        font-size: 14px;
+        top: 0  ;
+    }
+
     .input input,
     .input-group input,
     .input-group textarea,
     #categorias,
     .select {
-        width: 100%;
+        width: 95%;
+        align-self: center;
+    }
+
+    .btn-salvar {
+        left: 0%;
+        flex-direction: row-reverse;
+    }
+
+    .link-area-adm {
+        position: relative;
+        left: -50%;
+    }
+
+    .btns-salvar-cancelar {
+        left: 0;
+    }
+}
+
+@media (width: 344px) and (height: 882px) {
+    .form-pessoa .input,
+    .form-expo .input,
+    .form-expo .select {
+        width: 80%;
+    }
+
+    .formularios {
+        left: 10%;
+    }
+
+    .link-area-adm {
+        position: relative;
+        left: -50%;
     }
 }

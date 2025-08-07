@@ -18,10 +18,10 @@ document.getElementById('formLogin').addEventListener('submit', async (e) => {
 
         const formData = new FormData(form)
 
-        let dados = await fetch('../../../actions/fazer_login.php', {
+        let dados = await fetch('../../../actions/action-login.php', {
             method: 'POST',
             body: formData
-        })
+        })  
 
         let response = await dados.json()
 

@@ -20,6 +20,8 @@
     "minimum-stability": "dev",
     "require": {
         "firebase/php-jwt": "^6.11",
-        "phpmailer/phpmailer": "*"
+        "phpmailer/phpmailer": "dev-master",
+        "setasign/fpdi": "dev-master",
+        "setasign/fpdf": "^1.8"
     }
 }
