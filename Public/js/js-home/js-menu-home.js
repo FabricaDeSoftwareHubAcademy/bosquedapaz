@@ -45,6 +45,8 @@ async function menu() {
                     }
                     i++
                 });
+
+                /////////////  abrir menu 
                 let opcao1 = document.querySelector('.content-acoes2')
                 let opcao2 = document.querySelector('.content-acoes1')
                 let menu1 = document.querySelectorAll('.informacoes_login')[1]
@@ -74,6 +76,19 @@ async function menu() {
 
                     })
                 })
+
+                ////////// fazer logout
+
+                let logout = document.querySelectorAll('#logout')
+                
+                logout[0].addEventListener('click', async () => {
+                    const response = await fetch('../../../actions/action-login.php?logout=true');
+                    document.location.reload()
+                })
+                logout[1].addEventListener('click', async () => {
+                    const response = await fetch('../../../actions/action-login.php?logout=true');
+                    document.location.reload()
+                })
             }
         }
     } catch (error) {       
@@ -82,8 +97,8 @@ async function menu() {
 document.addEventListener('DOMContentLoaded', menu)
 
 // abre o menu da home
-const sandwich = document.getElementById('sandwich')
-const navMenu = document.getElementById('nav-list')
+var sandwich = document.getElementById('sandwich')
+var navMenu = document.getElementById('nav-list')
 sandwich.addEventListener('click', function(){
     if (navMenu.classList.contains('open')) {
         navMenu.classList.remove('open')
@@ -96,4 +111,3 @@ sandwich.addEventListener('click', function(){
     }
 })
 
-console.log(document.getElementById('login'))

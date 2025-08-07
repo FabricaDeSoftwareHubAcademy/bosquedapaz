@@ -115,11 +115,11 @@ loginImg.forEach(element => {
 let logout = document.querySelectorAll('#logout')
 
 logout[0].addEventListener('click', async () => {
-    const response = await fetch('../../../Public/logout.php?logout=true');
+    const response = await fetch('../../../actions/action-login.php?logout=true');
     document.location.reload()
 })
 logout[1].addEventListener('click', async () => {
-    const response = await fetch('../../../Public/logout.php?logout=true');
+    const response = await fetch('../../../actions/action-login.php?logout=true');
     document.location.reload()
 })
 
