@@ -23,8 +23,18 @@ if (
         $nomeLimpo = preg_replace('/[^a-z0-9]/', '_', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $nomePessoa)));
 
         $meses = [
-            'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
-            'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+            'janeiro',
+            'fevereiro',
+            'março',
+            'abril',
+            'maio',
+            'junho',
+            'julho',
+            'agosto',
+            'setembro',
+            'outubro',
+            'novembro',
+            'dezembro'
         ];
 
         $referenciaOriginal = strtolower($_POST['referencia_input'] ?? '');
@@ -67,7 +77,7 @@ if (
                 $mesReferencia = $meses[$mesAtualIndex];
 
                 $dataVencimentoClone = clone $dataVencimento;
-                $dataVencimentoClone->modify("+".($pagina - 1)." months");
+                $dataVencimentoClone->modify("+" . ($pagina - 1) . " months");
                 $vencimento = $dataVencimentoClone->format('Y-m-d');
 
                 $nomeArquivo = "boleto_{$nomeLimpo}_{$mesReferencia}_pagina{$pagina}.pdf";
@@ -103,7 +113,11 @@ if (
                         <p><strong>Vencimento:</strong> " . date('d/m/Y', strtotime($vencimento)) . "</p>
                         <p><strong>Valor:</strong> R$ " . number_format($valorLimpo, 2, ',', '.') . "</p>
                         <p>O boleto está disponível para visualização no sistema.</p>
-                        <br>
+                        <br><br>
+                        
+                        <div style='text-align: center; margin-top: 40px;'>
+                        <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 150px;' />
+                        </div>
                         <p style='font-size: 12px; color: gray;'>Feira Bosque da Paz</p>
                     </div>
                 ";
@@ -125,9 +139,12 @@ if (
                     $mail->Subject = "Novo boleto disponível - " . ucfirst($mesReferencia);
                     $mail->Body = $mensagem;
                     $mail->AltBody = "Novo boleto de " . ucfirst($mesReferencia) . " disponível. Valor: R$ " . number_format($valorLimpo, 2, ',', '.') . ". Vencimento: " . date('d/m/Y', strtotime($vencimento));
+                    $mail->addAttachment($caminhoCompleto);
+                    $caminhoLogo = __DIR__ . '/../Public/imgs/logo-nova-bosque-da-paz.webp';
+                    $mail->addEmbeddedImage($caminhoLogo, 'logoEmpresa');
                     $mail->send();
                 } catch (Exception $e) {
-                    error_log("Erro ao enviar e-mail: {$mail->ErrorInfo}");
+                    echo ("<script>alert('Erro ao enviar e-mail: {$mail->ErrorInfo}')</script>");
                 }
             }
 
@@ -146,4 +163,3 @@ if (
     echo "<script>alert('Falha no Cadastro.'); window.location.href = '../app/Views/Adm/cadastrar-boleto.php';</script>";
     exit;
 }
-?>
