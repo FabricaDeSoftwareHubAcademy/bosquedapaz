@@ -115,10 +115,10 @@ if (
                         <p>O boleto está disponível para visualização no sistema.</p>
                         <br><br>
                         
+                        <p style='font-size: 12px; color: gray;'>Atenciosamente</p>
                         <div style='text-align: center; margin-top: 40px;'>
                         <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 150px;' />
                         </div>
-                        <p style='font-size: 12px; color: gray;'>Feira Bosque da Paz</p>
                     </div>
                 ";
 
