@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
 
                     setTimeout(() => {
-                        window.location.href = './gerenciar-atracao.php';
+                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
                     }, 6000);
 
                 } else {

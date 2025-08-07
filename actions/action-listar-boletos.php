@@ -10,10 +10,8 @@ $status = isset($_POST['status']) ? trim($_POST['status']) : null;
 $data_inicial = isset($_POST['data_inicial']) ? trim($_POST['data_inicial']) : null;
 $data_final = isset($_POST['data_final']) ? trim($_POST['data_final']) : null;
 
-
 function filtrarBoletos($boletos, $nome, $status, $data_inicial, $data_final)
 {
-
     if (!$nome && !$status && (!$data_inicial || !$data_final)) {
         return $boletos->ListarBoletos();
     }
@@ -39,19 +37,17 @@ function filtrarBoletos($boletos, $nome, $status, $data_inicial, $data_final)
             $fim = strtotime(str_replace('/', '-', $data_final));
             return $vencimento >= $inicio && $vencimento <= $fim;
         });
-    
+
         usort($todos, function ($a, $b) {
             $dataA = strtotime(str_replace('/', '-', $a['vencimento']));
             $dataB = strtotime(str_replace('/', '-', $b['vencimento']));
             return $dataA <=> $dataB;
         });
     }
-    
 
     return array_values($todos);
 }
 
-
 $resultado = filtrarBoletos($boletos, $nome, $status, $data_inicial, $data_final);
+
 echo json_encode($resultado);
-?>

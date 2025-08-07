@@ -28,7 +28,7 @@ $tolken = getTolkenCsrf();
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
-                                placeholder="Escreva o título da utilidade pública" maxlength="30">
+                                placeholder="Escreva o título da utilidade pública" maxlength="50">
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>

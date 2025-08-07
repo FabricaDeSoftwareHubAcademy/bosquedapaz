@@ -59,7 +59,7 @@ btnCadastrar?.addEventListener("click", function (event) {
     const imagem = formulario.querySelector('input[name="imagem"]')?.files[0];
 
     if (!titulo) return openModalErro("O campo Título é obrigatório.");
-    if (titulo.length > 100) return openModalErro("O Título deve ter no máximo 100 caracteres.");
+    if (titulo.length > 100) return openModalErro("O Título deve ter no máximo 50 caracteres.");
 
     if (!descricao) return openModalErro("A Descrição é obrigatória.");
     if (descricao.length > 500) return openModalErro("A Descrição deve ter no máximo 500 caracteres.");

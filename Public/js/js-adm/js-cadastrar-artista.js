@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.set("whats", telefoneLimpo);
 
     try {
-      const resposta = await fetch("../../../actions/actions-cadastrar-artista.php", {
+      const resposta = await fetch("../../../actions/action-cadastrar-artista.php", {
         method: "POST",
         body: formData
       });

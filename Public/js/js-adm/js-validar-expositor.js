@@ -141,6 +141,7 @@ async function aprovarExpostor() {
                 formData.append('num_barraca', document.getElementById('numBarraca').value)
                 formData.append('cor_rua', document.getElementById('corRua').value)
                 formData.append('categoria', categoria.value)
+                formData.append('tolkenCsrf', document.getElementById('tolkenCsrf').value)
         
             
                 let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
@@ -212,6 +213,7 @@ async function recusarExpositor() {
                 formData.append('email', emailExpositor)
                 formData.append('recusado', 1)
                 formData.append('mensagem', document.getElementById('MotivoRecusa').value)
+                formData.append('tolkenCsrf', document.getElementById('tolkenCsrf').value)
         
                 
                 let aprovar = await fetch('../../../actions/action-validar-expositor.php', {
