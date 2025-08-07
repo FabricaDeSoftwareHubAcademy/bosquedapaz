@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,6 +28,7 @@
                 <div class="search-bar">
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
+                    <?php echo $tolken;?>
                     <button class="search-button">BUSCAR</button>
                 </div>
 

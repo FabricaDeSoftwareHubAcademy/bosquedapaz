@@ -3,6 +3,7 @@
 require_once('../vendor/autoload.php');
 
 use app\Controller\Carrossel;
+use app\suport\Csrf;
 
 $car = new Carrossel();
 
@@ -27,7 +28,7 @@ function update_carrossel($img, $num) {
 }
 
 // quando chegar um POST sera feito uma atualizacao
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
         $response = array('status' => 200);
     
@@ -35,6 +36,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $i = 1; // contador para saber qual img
         // percorre todos os arquivos
         foreach ($_FILES as $chave => $dados) {
+            if($dados['name']){
+                $extencao_imagem = strtolower(pathinfo($dados['name'], PATHINFO_EXTENSION));
+                        
+                // verifiva qual o tipo de extenção
+                if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
+                    echo json_encode([
+                        'status' => 400, 
+                        'message' => 'Caminho '. $extencao_imagem. ' inválido.', 
+                        'erro' => 'Mande um imagem com os caminhos: .jpj, .jpeg, .png', 
+                    ]);
+                    exit;
+                }
+            }
             if(!empty($dados['name'])){
                 $caminho = update_carrossel($dados, $i);
                 $car->caminho = $caminho;

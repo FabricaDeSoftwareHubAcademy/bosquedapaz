@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 
-session_start();
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 class Csrf{
     public static function genereteCsrf(){
@@ -16,7 +16,7 @@ class Csrf{
 
         $_SESSION['tolkenCsrf'] = md5(uniqid(32));
 
-        return '<input type="hidden" name="tolkenCsrf" value="'.$_SESSION['tolkenCsrf'].'">';
+        return '<input type="hidden" id="tolkenCsrf" name="tolkenCsrf" value="'.$_SESSION['tolkenCsrf'].'">';
     }
 
     public static function validateTolkenCsrf($tolken){

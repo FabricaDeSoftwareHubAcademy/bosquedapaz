@@ -20,13 +20,14 @@ document.addEventListener("DOMContentLoaded", async function () {
             div.classList.add('div-logo-parceiro');
 
             const img = document.createElement('img');
-            // Monta a URL completa a partir do caminho salvo no banco
-            img.src = basePath + parceiro.logo;
+            const logoPath = parceiro.logo.replace('../', '');
+            img.src = basePath + logoPath;
             img.alt = `Logo ${parceiro.nome_parceiro}`;
 
             div.appendChild(img);
             track.appendChild(div);
         });
+
 
         // Duplica os logos para efeito de carrossel infinito
         track.innerHTML += track.innerHTML;

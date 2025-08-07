@@ -74,8 +74,8 @@ h1 {
 }
 
 .box .form-box {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -287,6 +287,18 @@ h1 {
     transition: 0.3s;
 }
 
+@media (max-width: 1300px) {
+    .box .form-box {
+        width: 100%;
+    }
+    #form1 {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+    
+}
 
 @media (max-width: 950px) {
     .box .form-box {

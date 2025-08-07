@@ -5,14 +5,15 @@
             <p class="paragrafo-intro all-paragrafos dark">Venha viver uma experiência única em meio à natureza, onde a cultura local,  artesanato autêntico, delícias gastronômicas e a alegria de nossa comunidade se encontram!</p>
         </div>
         <div class="conteiner-numeros" id="inc">
-            <div class="content-numero">
+            <div class="content-numero" id="novo_num_visitantes">
                 <div class="content-img">
                     <img src="../../../Public/assets/People.png" alt="" class="icon-info">
                 </div>
-                <div class="content-info">
+                <?php echo $tolken; ?>
+                <div class="content-info" id="info_num_visitante">
                     <!-- <p class="text-info" id="text-info" data-target="46">+46mil</p> -->
                     <p class="text-info dark">+<span class="ncs dark" id="num-visitante" data-target="46">0</span> mil</p>
-                    <span class="span-info dark">visitantes</span>
+                        <span class="span-info dark">visitantes</span>
                 </div>
             </div>
             <div class="content-numero">
@@ -39,3 +40,6 @@
         </div>
     </section>
     <script src="../../../Public/js/js-home/js-informacao-feira.js"></script>
+    <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
+    <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>

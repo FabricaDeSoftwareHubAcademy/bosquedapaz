@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,8 +32,8 @@
                                 <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" maxlength="20" required>
                             </div>
                             <div class="input-group">
-                                <label for="telefone">Telefone:</label>
-                                <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone"  maxlength="15" required>
+                                <label for="telefone">Celular:</label>
+                                <input type="text" id="telefone" name="telefone" placeholder="Digite o celular"  maxlength="15" required>
                             </div>
                             <div class="input-group">
                                 <label for="cep">CEP:</label>
@@ -70,7 +74,7 @@
                         <div id="form3" class="form-grid">
                             <div class="input-group">
                                 <label for="nome_contato">Contato:</label>
-                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="100" required>
+                                <input type="text" id="nome_contato" name="nome_contato" placeholder="Digite o nome do contato" maxlength="30" required>
                             </div>
                             <div class="input-group">
                                 <label for="tipo">Tipo:</label>
@@ -82,13 +86,16 @@
                             </div>
                             <div class="input-group">
                                 <label for="num_residencia">Número:</label>
-                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="10" required>
+                                <input type="text" id="num_residencia" name="num_residencia" placeholder="Digite o número da residência" maxlength="5" required>
                             </div> 
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>
                                 <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="20" required>
                             </div>  
                         </div>
+
+                        <?php echo $tolken; ?>
+                        
                         <?php include "../../../Public/include/Butons-forms.html" ?>
                     </div>
                 </form>

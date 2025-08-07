@@ -19,7 +19,6 @@ btn_cadastrar.addEventListener('click', function (event) {
         }
     }
 
-
     let telefone = document.getElementById('telefone').value.trim();
     let email = document.getElementById('email').value.trim();
     let tipo = document.getElementById('tipo').value;
@@ -58,6 +57,7 @@ btn_cadastrar.addEventListener('click', function (event) {
     // Exibe modal após validações
     openModalConfirmar();
 });
+
 const modalErro = document.getElementById('modal-error');
 const modalErroText = document.getElementById('erro-text');
 const btnFecharErro = document.getElementById('close-modal-erro');
@@ -110,13 +110,18 @@ document.getElementById('btn-modal-salvar').addEventListener('click', async func
             closeModalConfirmar();
             openModalSucesso();
             setTimeout(() => {
-                window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+                window.location.href = '../../../app/Views/Adm/listar-parceiros.php';
             }, 2000); // Espera 2 segundos antes de redirecionar
         } else {
             closeModalConfirmar();
             document.getElementById('erro-title').textContent = "Erro ao cadastrar";
             document.getElementById('erro-text').textContent = response.msg || "Houve um problema ao salvar os dados. Tente novamente mais tarde.";
             openModalError();
+
+            // Foca no campo cpf_cnpj se for erro relacionado
+            if (response.msg && (response.msg.toLowerCase().includes("cpf") || response.msg.toLowerCase().includes("cnpj"))) {
+                document.getElementById('cpf_cnpj').focus();
+            }
         }
 
 
@@ -290,18 +295,27 @@ document.getElementById('close-modal-erro').addEventListener('click', () => {
 document.getElementById('logo').addEventListener('change', function () {
     const file = this.files[0];
     const preview = document.getElementById('preview-logo');
-
-    if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            preview.src = e.target.result;
-            preview.style.display = 'block';
-        };
-
-        reader.readAsDataURL(file);
-    } else {
+ 
+    if (!file) {
         preview.src = '#';
         preview.style.display = 'none';
+        return;
     }
-}); 
+ 
+    const tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
+ 
+    if (!tiposPermitidos.includes(file.type)) {
+        exibirErroModal("Extensão de arquivo inválida. Por favor, envie uma imagem nos formatos: JPG, JPEG, PNG ou WEBP.");
+        this.value = ''; // limpa o campo file
+        preview.src = '#';
+        preview.style.display = 'none';
+        return;
+    }
+ 
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+});

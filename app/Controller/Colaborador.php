@@ -43,7 +43,7 @@ class Colaborador extends Pessoa
 
     public function cadastrar() {
         // Insere na tabela pessoa
-        $dbLogin = new Database('login');
+        $dbLogin = new Database('pessoa_user');
 
         $idLogin = $dbLogin->insert_lastid([
             'email' => $this->email,
@@ -91,7 +91,7 @@ class Colaborador extends Pessoa
         
         
         ////// updata login
-        $db = new Database('login');
+        $db = new Database('pessoa_user');
         $resLogin = $db->update("id_login = ". $id, $valuesLogin);
 
         ////// updata pessoa
@@ -107,21 +107,19 @@ class Colaborador extends Pessoa
         return $resLogin && $resPessoa && $resColaborador ? TRUE : FALSE;
     }
 
-    public function listarColaboradores(?string $nome = null){
+    public function listarColaboradores(?string $palavra = null){
         $db = new Database('view_colaborador');
         
-        if (!empty($nome)) {
-            return $db->select("
-                nome LIKE '%$nome%'
-            ")->fetchAll(PDO::FETCH_ASSOC);
+        if (!empty($palavra)) {
+            return $db->select("nome LIKE '%$palavra%' OR cargo LIKE '%$palavra%'")->fetchAll(PDO::FETCH_ASSOC);
         } else {
-            return $db->select()->fetchAll(PDO::FETCH_ASSOC);
+            return $db->select('', 'status_pes')->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
-    public function mudar_status($id_colaborador, $novoStatus) {
-        $db = new Database('colaborador');
-        return $db->sts_adm($id_colaborador, $novoStatus); // Retorna true ou false diretamente
+    public function mudar_status($id_login, $novoStatus) {
+        $db = new Database('pessoa_user');
+        return $db->delete('id_login = "'. $id_login. '"', $novoStatus); // Retorna true ou false diretamente
     }
 
     public static function validarSomenteLetra($texto) {

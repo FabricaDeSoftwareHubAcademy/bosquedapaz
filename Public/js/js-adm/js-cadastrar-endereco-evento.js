@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('numero_evento', numero_evento);
         formData.append('bairro_evento', bairro_evento);
         formData.append('cidade_evento', cidade_evento);
+        formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
         try {
             const resposta = await fetch('../../../actions/action-cadastrar-endereco-evento.php', {

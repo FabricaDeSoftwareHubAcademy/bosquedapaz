@@ -1,32 +1,22 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-session_start();
-error_log("ID da sessão: " . ($_SESSION['login']['id_pessoa'] ?? 'não definido'));
-
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
 use app\Controller\Colaborador;
-
-if (!isset($_SESSION['login']['id_login'])) {
-    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado', $_SESSION]);
-    exit;
-}
+use app\suport\Csrf;
 
 function sanitizeString($str) {
     return htmlspecialchars(strip_tags($str));
 }
 
-$requestMethod = $_SERVER['REQUEST_METHOD'];
+function obterAdm(){
+    return obterLogin();
+}
 
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+    $admLogado = obterAdm();
 
-
-if ($requestMethod === 'POST') {
     $colab = new Colaborador();
-
-    $input = json_decode(file_get_contents('php://input'), true);
 
     // Cadastro <----------------------------------------------->
     if (isset($_POST["cadastrar"])) {
@@ -107,11 +97,11 @@ if ($requestMethod === 'POST') {
 
     
     // Alterar Status <----------------------------------------------->
-    else if ($input !== null && isset($input['acao']) && $input['acao'] === 'alternarStatus') {
+    else if (isset($_POST['alternarStatus'])) {
         $colab = new Colaborador();
 
-        $id = filter_var($input['id_colaborador'], FILTER_VALIDATE_INT);
-        $statusAtual = $input['status_atual'] ?? null;
+        $id = filter_var($_POST['id_login'], FILTER_VALIDATE_INT);
+        $statusAtual = $_POST['status_atual'] ?? null;
 
         if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
             echo json_encode(['success' => false, 'message' => 'Dados inválidos']);
@@ -197,16 +187,13 @@ if ($requestMethod === 'POST') {
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter
-            $colaboradorAtual = $colab->buscarPorIdPessoa($_SESSION['login']['id_login']);
+            $colaboradorAtual = $colab->buscarPorIdPessoa($admLogado['jwt']->sub);
             $colab->setImagem($colaboradorAtual['img_perfil'] ?? null);
         }
         
-        $res = $colab->atualizar($_SESSION['login']['id_login']);
+        $res = $colab->atualizar($admLogado['jwt']->sub);
         if ($res) {
-
-            $idSessao = $_SESSION['login']['id_login'];
-
-            $dadosAtualizados = $colab->buscarPorIdPessoa($idSessao);
+            $dadosAtualizados = $colab->buscarPorIdPessoa($admLogado['jwt']->sub);
             echo json_encode(['success' => true, 'message' => 'ADM editado com sucesso!', 'data' => $dadosAtualizados]);
             exit;
         } else {
@@ -236,33 +223,28 @@ if ($requestMethod === 'POST') {
             exit;
         } else {
             echo json_encode(['data' => []]);
+            http_response_code(400);
             exit;
         }
     }
-    echo json_encode(['success' => false, 'message' => 'Requisição inválida']);
-    exit;
 }
 
 
 // Listagem <----------------------------------------------->
-if ($requestMethod === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $admLogado = obterAdm();
     $colab = new Colaborador();
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['meu_perfil']) && $_GET['meu_perfil'] === '1') {
-        if(!isset($_SESSION['login']['id_login'])) {
-            echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
-            exit;
-        }
-        $idSessao = $_SESSION['login']['id_login'];
         
         // Instancia seu controller
         $colab = new \app\Controller\Colaborador();
         
-        $dados = $colab->buscarPorIdPessoa($idSessao);
+        $dados = $colab->buscarPorIdPessoa($admLogado['jwt']->sub);
         
         // DEBUG: para garantir que só vem UM registro
         header('Content-Type: application/json');
-        echo json_encode(['success' => true, 'data' => $dados, $idSessao]);
+        echo json_encode(['success' => true, 'data' => $dados]);
         exit;
     }
     

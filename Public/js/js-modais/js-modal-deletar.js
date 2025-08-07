@@ -1,4 +1,4 @@
-const linkDel  = document.createElement('link');
+var linkDel  = document.createElement('link');
 linkDel.rel  = 'stylesheet';
 linkDel.type = 'text/css';
 linkDel.href = '../../../Public/css/css-modais/style-modal-deletar.css';
@@ -23,4 +23,10 @@ function closeModalError() {
     modal.close()
 }
 
-document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+try {
+    document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+    
+} catch (error) {
+    
+}
+

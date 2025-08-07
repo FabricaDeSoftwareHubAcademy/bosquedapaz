@@ -3,11 +3,6 @@ session_start();
 require_once('../vendor/autoload.php');
 use app\Controller\Boleto;
 
-if (!isset($_SESSION['login'])) {
-    die('Acesso negado.');
-}
-
-$idPessoa = $_SESSION['login']['id_pessoa'];
 $idBoleto = isset($_POST['id_boleto']) ? intval($_POST['id_boleto']) : 0;
 
 if ($idBoleto <= 0) {

@@ -1,3 +1,7 @@
+<?php
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +11,8 @@
   <title>Adm - Bosque da Paz</title>
   <script src="../../../Public/js/js-adm/status-colaborador.js" defer></script>
   <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
-  <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-expositor.css">
+  <link rel="stylesheet" href="../../../Public/css/css-adm/style-listar-artista.css">
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
@@ -24,8 +29,8 @@
       <div class="container">
 
         <div class="search-bar">
-          <label for="status">Procurar</label>
-          <input type="text" id="status" placeholder="Artista"/>
+          <label for="status" class="title">Procurar</label>
+          <input type="text" id="status" placeholder="Artista" />
           <button class="search-button">BUSCAR</button>
         </div>
 
@@ -56,9 +61,11 @@
       </div>
 
   </main>
+  <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+  <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+  <?php include '../../../Public/include/modais/modal-error.html'; ?>
+  <?php include '../../../Public/include/modais/modal-deletar.html'; ?>
 
-  <td><button class="status inactive">Inativo</button></td>
-  <td><button class="status active">Ativo</button></td>
 
 
 
@@ -70,18 +77,6 @@
 
   <script src="../../../Public/js/js-menu/js-menu.js"></script>
   <script src="../../../Public/js/js-adm/js-listar-artista.js"></script>
-
-  <dialog id="modal-confirmar-status" class="modal-loading">
-    <div class="content-modal">
-      <div class="content-text">
-        <div class="deletar-text" id="mensagem-confirmar-status"></div>
-      </div>
-      <div class="content-btns">
-        <button class="btn-modal-deletar deletar-modal-salvar" id="btn-confirmar-status">Sim</button>
-        <button class="btn-modal-deletar deletar-modal-cancelar" id="btn-cancelar-status">Não</button>
-      </div>
-    </div>
-  </dialog>
   <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 
 </body>

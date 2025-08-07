@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -102,6 +106,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php echo $tolken; ?>
 
                     <!-- Botões -->
                     <div class="form__actions">

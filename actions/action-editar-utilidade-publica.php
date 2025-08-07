@@ -1,6 +1,7 @@
 <?php 
 require_once('../vendor/autoload.php');
 use app\Controller\UtilidadePublica;
+use app\suport\Csrf;
 
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     // Função auxiliar para limpar strings
@@ -12,6 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     $id_utilidade_publica = isset($_POST['id']) && is_numeric($_POST['id']) ? (int)$_POST['id'] : null;
     $titulo = limparTexto($_POST['titulo'] ?? '');
     $descricao = limparTexto($_POST['descricao'] ?? ''); 
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
+    $id_utilidade_publica = $_POST['id'] ?? null;
+    $titulo = $_POST['titulo'] ?? '';
+    $descricao = $_POST['descricao'] ?? ''; 
     $data_inicio = $_POST['data_inicio'] ?? '';
     $data_fim = $_POST['data_fim'] ?? '';
     $imagem = '';
@@ -82,5 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     } else {
         echo json_encode(['status' => 400, 'msg' => 'Erro ao editar.']);
     }
+}
 }
 ?>

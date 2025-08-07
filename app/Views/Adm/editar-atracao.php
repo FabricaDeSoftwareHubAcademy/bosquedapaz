@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,10 +52,12 @@
                             <input type="file" name="banner_atracao" id="file">
                         </div>
 
-                        <div class="preview-img">
-                            <img class="preview" src="" alt="" id="preview-image">
-                        </div>
+
+                        <img class="preview" src="" alt="" id="preview-image">
+
                     </div>
+
+                    <?php echo $tolken; ?>
 
 
                     <?php include '../../../Public/include/Butons-forms.html';?>

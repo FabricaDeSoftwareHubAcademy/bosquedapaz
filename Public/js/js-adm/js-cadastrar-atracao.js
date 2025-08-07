@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('descricao_atracao', descricao);
             formData.append('id_evento', idEvento);
             formData.append('file', imagem);
+            formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
             try {
                 const resposta = await fetch('../../../actions/action-cadastrar-atracao.php', {
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
 
                     setTimeout(() => {
-                        window.location.href = './gerenciar-atracao.php';
+                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
                     }, 6000);
 
                 } else {

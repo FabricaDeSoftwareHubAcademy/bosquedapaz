@@ -1,6 +1,7 @@
 <?php
 require_once('../vendor/autoload.php');
 use app\Controller\Evento;
+use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
@@ -13,7 +14,7 @@ function validarData($data) {
     return $d && $d->format('Y-m-d') === $data;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $id = (int) ($_POST['id_evento'] ?? 0);
 
     $nome = sanitizarTexto($_POST['nomedoevento'] ?? '');
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $evento->data_evento = $data;
     $evento->hora_inicio = $hora_inicio;
     $evento->hora_fim = $hora_fim;
-    $evento->endereco_evento = $endereco;
+    $evento->id_endereco_evento = $endereco;
     $evento->status = $status;
 
 

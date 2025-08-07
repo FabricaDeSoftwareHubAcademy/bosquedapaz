@@ -4,13 +4,20 @@ require_once('../vendor/autoload.php');
 
 use app\Controller\Parceiro;
 use app\Controller\Endereco;
+use app\suport\Csrf;
+
+header('Content-Type: application/json');
+
+function sanitizarTexto($texto) {
+    return htmlspecialchars(trim($texto), ENT_QUOTES, 'UTF-8');
+}
 
 function respostaErro($mensagem) {
     echo json_encode(["status" => "erro", "mensagem" => $mensagem]);
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     // Validações básicas dos campos obrigatórios
     $camposObrigatorios = [
         'nome_parceiro', 'telefone', 'email', 'nome_contato',
@@ -18,20 +25,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'bairro', 'cidade', 'estado'
     ];
 
+    $dadosSanitizados = [];
+
     foreach ($camposObrigatorios as $campo) {
         if (empty($_POST[$campo])) {
             respostaErro("O campo " . ucfirst(str_replace("_", " ", $campo)) . " é obrigatório.");
         }
+        $dadosSanitizados[$campo] = sanitizarTexto($_POST[$campo]);
     }
 
+    // Sanitiza campo opcional
+    $dadosSanitizados['complemento'] = isset($_POST['complemento']) ? sanitizarTexto($_POST['complemento']) : '';
+
     // Validação de e-mail
-    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($dadosSanitizados['email'], FILTER_VALIDATE_EMAIL)) {
         respostaErro("E-mail inválido.");
     }
 
-    // Validação CPF ou CNPJ simples (só formato, não lógica de validação)
-    if (!preg_match('/^\d{11}$|^\d{14}$/', preg_replace('/\D/', '', $_POST['cpf_cnpj']))) {
+    // Validação de CPF ou CNPJ (apenas formato numérico)
+    $cpfCnpjNumerico = preg_replace('/\D/', '', $dadosSanitizados['cpf_cnpj']);
+    if (!preg_match('/^\d{11}$|^\d{14}$/', $cpfCnpjNumerico)) {
         respostaErro("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
+    }
+
+    // Verifica duplicidade de CPF/CNPJ
+    $parceiro = new Parceiro();
+    if ($parceiro->existeCpfCnpj($cpfCnpjNumerico)) {
+        respostaErro("Já existe um parceiro com esse CPF ou CNPJ.");
     }
 
     // Validação e upload da imagem
@@ -48,6 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         respostaErro("Formato de imagem inválido. Permitidos: jpg, jpeg, png, gif.");
     }
 
+    // Verificação de MIME real
+    $mime = mime_content_type($arquivoTmp);
+    $mimesPermitidos = ['image/jpeg', 'image/png', 'image/gif'];
+    if (!in_array($mime, $mimesPermitidos)) {
+        respostaErro("O arquivo enviado não é uma imagem válida.");
+    }
+
     $nomeSeguro = uniqid('parceiro_', true) . '.' . $extensao;
     $pastaDestino = '../Public/uploads/uploads-parceiros/';
     $caminhoFinal = $pastaDestino . $nomeSeguro;
@@ -60,28 +87,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         respostaErro("Erro ao salvar a imagem.");
     }
 
-    // Instancia os objetos
+    // Atribui os dados ao objeto Parceiro
+    $parceiro->nome_parceiro = $dadosSanitizados["nome_parceiro"];
+    $parceiro->telefone = $dadosSanitizados["telefone"];
+    $parceiro->email = $dadosSanitizados["email"];
+    $parceiro->nome_contato = $dadosSanitizados["nome_contato"];
+    $parceiro->tipo = $dadosSanitizados["tipo"];
+    $parceiro->cpf_cnpj = $cpfCnpjNumerico;
+    $parceiro->logo = '../Public/uploads/uploads-parceiros/' . $nomeSeguro;
+
+    // Atribui os dados ao objeto Endereco
     $endereco = new Endereco();
-    $parceiro = new Parceiro();
+    $endereco->cep = $dadosSanitizados["cep"];
+    $endereco->logradouro = $dadosSanitizados["logradouro"];
+    $endereco->num_residencia = $dadosSanitizados["num_residencia"];
+    $endereco->bairro = $dadosSanitizados["bairro"];
+    $endereco->cidade = $dadosSanitizados["cidade"];
+    $endereco->estado = $dadosSanitizados["estado"];
+    $endereco->complemento = $dadosSanitizados["complemento"];
 
-    // Atribui os dados
-    $parceiro->nome_parceiro = $_POST["nome_parceiro"];
-    $parceiro->telefone = $_POST["telefone"];
-    $parceiro->email = $_POST["email"];
-    $parceiro->nome_contato = $_POST["nome_contato"];
-    $parceiro->tipo = $_POST["tipo"];
-    $parceiro->cpf_cnpj = $_POST["cpf_cnpj"];
-    $parceiro->logo = 'uploads/uploads-parceiros/' . $nomeSeguro;
-
-    $endereco->cep = $_POST["cep"];
-    $endereco->logradouro = $_POST["logradouro"];
-    $endereco->num_residencia = $_POST["num_residencia"];
-    $endereco->bairro = $_POST["bairro"];
-    $endereco->cidade = $_POST["cidade"];
-    $endereco->estado = $_POST["estado"];
-    $endereco->complemento = $_POST["complemento"] ?? '';
-
-    // Tenta cadastrar
+    // Executa o cadastro
     $result = $parceiro->cadastrar($endereco);
 
     if ($result) {

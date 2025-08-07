@@ -34,7 +34,7 @@ CREATE TABLE endereco_evento(
     PRIMARY KEY(id_endereco_evento)
 );
 
-CREATE TABLE login(
+CREATE TABLE pessoa_user(
 	id_login int not null auto_increment,
 	email VARCHAR(200) NULL UNIQUE,
     senha VARCHAR(200) NULL,
@@ -50,6 +50,7 @@ CREATE TABLE pessoa(
     nome VARCHAR(150) NOT NULL,
     whats CHAR(16) NULL,
     telefone CHAR(16) NULL,
+    termos ENUM("Sim", "Não") NOT NULL DEFAULT "Não",
     link_instagram VARCHAR(255) NULL,
     link_facebook VARCHAR(255) NULL,
     link_whats VARCHAR(255) NULL,
@@ -58,7 +59,7 @@ CREATE TABLE pessoa(
     id_login INT NULL,
     PRIMARY KEY(id_pessoa),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
-    FOREIGN KEY(id_login) REFERENCES login(id_login)
+    FOREIGN KEY(id_login) REFERENCES pessoa_user(id_login)
 );
 
 CREATE TABLE expositor(
@@ -222,14 +223,14 @@ INNER JOIN pessoa AS pes
 ON pes.id_pessoa = exp.id_pessoa
 INNER JOIN endereco AS en 
 ON pes.id_endereco = en.id_endereco
-INNER JOIN login as log
+INNER JOIN pessoa_user as log
 ON log.id_login = pes.id_login;
 
 CREATE VIEW view_colaborador AS 
 SELECT c.cargo, c.id_colaborador, 
 p.id_pessoa, p.id_login, p.nome, p.telefone, p.img_perfil,
 l.email, l.perfil, l.status_pes
-FROM login AS l
+FROM pessoa_user AS l
 INNER JOIN pessoa AS p
 ON l.id_login = p.id_login
 INNER JOIN colaborador AS c
@@ -242,8 +243,9 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into login (email, senha, perfil) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1);
+insert into login (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
+insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('60', '566', '345');
 
 alter table boleto modify column mes_referencia varchar(20);
 ALTER TABLE boleto ADD COLUMN status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente';

@@ -1,3 +1,7 @@
+<?php 
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -40,9 +44,11 @@
                                         <input type="file" name="foto" id="file" required>
                                     </div>
                                 </div>
-                                <img class="preview" src="" alt="" id="preview-image">
+                            
+                            <img class="preview" src="" alt="" id="preview-image">
 
                         </div>
+                        <?php echo $tolken; ?>
 
                         <?php include '../../../Public/include/Butons-forms.html';?>
                         

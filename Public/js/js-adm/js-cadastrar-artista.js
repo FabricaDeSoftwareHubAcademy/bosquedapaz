@@ -15,28 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputValue = input.value;
     const cursorPosition = input.selectionStart;
 
-    // Remove tudo que não for número
     let digits = inputValue.replace(/\D/g, "");
 
-    // Aplica a máscara baseada na quantidade de dígitos
     let formatted = "";
     if (digits.length > 10) {
-      // (xx) xxxxx-xxxx
       formatted = digits.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
     } else if (digits.length > 5) {
-      // (xx) xxxx-xxxx
       formatted = digits.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
     } else if (digits.length > 2) {
-      // (xx) xxxx
       formatted = digits.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
     } else if (digits.length > 0) {
-      // (xx
       formatted = digits.replace(/^(\d{0,2})/, "($1");
     } else {
       formatted = "";
     }
 
-    // Função para contar caracteres não numéricos antes do cursor
     const countNonDigitsBeforeCursor = (str, pos) => {
       let count = 0;
       for (let i = 0; i < pos; i++) {
@@ -45,18 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return count;
     };
 
-    // Conta caracteres não numéricos antes do cursor na string antiga
     const oldNonDigitsBefore = countNonDigitsBeforeCursor(inputValue, cursorPosition);
 
-    // Tentativa de cálculo da nova posição do cursor
-    // A posição do cursor pode variar; aqui fazemos uma aproximação:
     let newCursorPos = cursorPosition;
 
-    // Atualiza o valor formatado
     input.value = formatted;
 
-    // Ajusta a posição do cursor para que fique na posição correta depois da formatação
-    // Como a máscara adiciona caracteres, precisamos ajustar
     let nonDigitsInFormattedBefore = 0;
     let digitsCounted = 0;
     for (let i = 0; i < formatted.length; i++) {
@@ -98,13 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
   btnModalSalvar.addEventListener("click", async () => {
     modalConfirmar.close();
 
-    // Remove a máscara do telefone antes de enviar
     const telefoneLimpo = telefoneInput.value.replace(/\D/g, "");
     const formData = new FormData(form);
     formData.set("whats", telefoneLimpo);
 
     try {
-      const resposta = await fetch("../../../actions/actions-cadastrar-artista.php", {
+      const resposta = await fetch("../../../actions/action-cadastrar-artista.php", {
         method: "POST",
         body: formData
       });
