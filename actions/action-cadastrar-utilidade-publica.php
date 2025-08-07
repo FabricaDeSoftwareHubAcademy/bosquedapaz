@@ -150,3 +150,4 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         echo json_encode( ['status' => 400, 'msg' => 'Erro ao Cadastrar!'] );
     }
 }
+}
