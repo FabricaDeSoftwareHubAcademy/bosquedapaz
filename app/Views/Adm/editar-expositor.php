@@ -33,10 +33,9 @@ $tolken = getTolkenCsrf();
 
                         <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
                         <input type="file" name="foto" id="foto" class="perfilEdit-foto">
-                        <img src="" alt="">
-                        <!-- <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
-                            Selecione sua logo <i class="bi bi-upload perfilEdit-upload-label"></i>
-                        </label> -->
+                        <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
+                            Selecione sua logo <img src="" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>
+                        </label>
 
                     </div>
 
@@ -62,7 +61,7 @@ $tolken = getTolkenCsrf();
                     </div>
                     <div>
                         <i class="fa-brands fa-square-whatsapp"></i>
-                        <input type="text" name="whatsapp" id="whatsapp" class="perfilEdit-input-info" placeholder="(99) 99999-9999">
+                        <input type="text" name="whatsapp" id="whatsapp" class="perfilEdit-input-info" placeholder="(99) 99999-9999" maxlength="15">
                     </div>
 
                     <div>
@@ -84,42 +83,42 @@ $tolken = getTolkenCsrf();
                             <label for="foto_produto_1" id="prod-foto-1" class="perfilEdit-upload-label-square">
                                 Carregar Foto 1 <i class="bi bi-upload"></i>
                             </label>
-                            <img src="" alt="" id="perfilEdit-img-1" class="perfilEdit-img" style="display: none;">
+                            <img src="" alt="" id="perfilEdit-img-1" class="perfilEdit-img">
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="foto_produto_2" name="foto_produto_2" class="perfilEdit-input-foto" accept="image/*">
                             <label for="foto_produto_2" id="prod-foto-2" class="perfilEdit-upload-label-square">
                                 Carregar Foto 2 <i class="bi bi-upload"></i>
                             </label>
-                            <img src="" alt="" id="perfilEdit-img-2" class="perfilEdit-img" style="display: none;">
+                            <img src="" alt="" id="perfilEdit-img-2" class="perfilEdit-img">
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="foto_produto_3" name="foto_produto_3" class="perfilEdit-input-foto" accept="image/*">
                             <label for="foto_produto_3" id="prod-foto-3" class="perfilEdit-upload-label-square">
                                 Carregar Foto 3 <i class="bi bi-upload"></i>
                             </label>
-                            <img src="" alt="" id="perfilEdit-img-3" class="perfilEdit-img" style="display: none;">
+                            <img src="" alt="" id="perfilEdit-img-3" class="perfilEdit-img">
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="foto_produto_4" name="foto_produto_4" class="perfilEdit-input-foto" accept="image/*">
                             <label for="foto_produto_4" id="prod-foto-4" class="perfilEdit-upload-label-square">
                                 Carregar Foto 4 <i class="bi bi-upload"></i>
                             </label>
-                            <img src="" alt="" id="perfilEdit-img-4" class="perfilEdit-img" style="display: none;">
+                            <img src="" alt="" id="perfilEdit-img-4" class="perfilEdit-img">
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="foto_produto_5" name="foto_produto_5" class="perfilEdit-input-foto" accept="image/*">
                             <label for="foto_produto_5" id="prod-foto-5" class="perfilEdit-upload-label-square">
                                 Carregar Foto 5 <i class="bi bi-upload"></i>
                             </label>
-                            <img src="" alt="" id="perfilEdit-img-5" class="perfilEdit-img" style="display: none;">
+                            <img src="" alt="" id="perfilEdit-img-5" class="perfilEdit-img">
                         </div>
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="foto_produto_6" name="foto_produto_6" class="perfilEdit-input-foto" accept="image/*">
                             <label for="foto_produto_6" id="prod-foto-6" class="perfilEdit-upload-label-square">
                                 Carregar Foto 6 <i class="bi bi-upload"></i>
                             </label>
-                            <img src="" alt="" id="perfilEdit-img-6" class="perfilEdit-img" style="display: none;">
+                            <img src="" alt="" id="perfilEdit-img-6" class="perfilEdit-img">
                         </div>
                     </div>
                 </section>

@@ -9,7 +9,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     let input_whatsapp = document.getElementById("whatsapp");
     let input_facebook = document.getElementById("facebook");
     let input_id_expositor = document.getElementById("id_expositor");
-    // let input_logo = document.getElementById("foto");
+    let icone_perfil = document.getElementById("icone-perfil");
+    let foto_prod1 = document.getElementById("perfilEdit-img-1");
+    let foto_prod2 = document.getElementById("perfilEdit-img-2");
+    let foto_prod3 = document.getElementById("perfilEdit-img-3");
+    let foto_prod4 = document.getElementById("perfilEdit-img-4");
+    let foto_prod5 = document.getElementById("perfilEdit-img-5");
+    let foto_prod6 = document.getElementById("perfilEdit-img-6");
 
     // Pegando os dados da URL
     const id_expositor = params.get("id");
@@ -17,6 +23,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     let dados_php = await fetch('../../../actions/actions-expositor.php?id=' + id_expositor);
 
     let response = await dados_php.json();
+
+    console.log(`../../${response.expositor.imagens[0].caminho}`);
 
     if (response.status == 200) {
         input_id_expositor.value = response.expositor.id_expositor;
@@ -26,6 +34,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_insta.value = response.expositor.link_instagram;
         input_whatsapp.value = response.expositor.whats;
         input_facebook.value = response.expositor.link_facebook;
+        icone_perfil.src = response.expositor.icone;
+        foto_prod1.src = `../../${response.expositor.imagens[0].caminho}`;
+        foto_prod2.src = `../../${response.expositor.imagens[1].caminho}`;
+        foto_prod3.src = `../../${response.expositor.imagens[2].caminho}`;
+        foto_prod4.src = `../../${response.expositor.imagens[3].caminho}`;
+        foto_prod5.src = `../../${response.expositor.imagens[4].caminho}`;
+        foto_prod6.src = `../../${response.expositor.imagens[5].caminho}`;
         // input_logo.value = response.expositor['0'].foto;
     }
 
