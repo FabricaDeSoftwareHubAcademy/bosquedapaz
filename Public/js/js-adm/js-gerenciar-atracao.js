@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     async function carregarEventos(termo = '') {
         try {
-            const response = await fetch(`../../../actions/action-listar-atracao.php?termo=${encodeURIComponent(termo)}`);
+            const response = await fetch(`../../../actions/action-listar-atracao.php?termo=${encodeURIComponent(termo)}&id_evento=${encodeURIComponent(id_evento)}`);
             const data = await response.json();
 
             tabelaAtracoes.innerHTML = '';

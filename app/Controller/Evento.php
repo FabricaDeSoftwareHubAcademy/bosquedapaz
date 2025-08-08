@@ -55,7 +55,12 @@ class Evento
     {
         try {
             $db = new Database('evento');
-            $query = "SELECT * FROM evento WHERE nome_evento LIKE ? ORDER BY data_evento DESC";
+            $query = "
+            SELECT * 
+            FROM evento 
+            WHERE nome_evento LIKE ? 
+            ORDER BY status DESC, data_evento ASC
+        ";
             return $db->execute($query, ["%$nome%"])->fetchAll(PDO::FETCH_ASSOC);
         } catch (\Throwable $th) {
             return FALSE;
