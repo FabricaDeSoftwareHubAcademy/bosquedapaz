@@ -157,12 +157,10 @@ try {
         throw new Exception("Erro ao cadastrar boletos.");
     }
     
-    // Resposta de sucesso em JSON
     echo json_encode(["status" => "success", "message" => "Boletos cadastrados com sucesso!"]);
     exit;
 
 } catch (Exception $e) {
-    // Resposta de erro em JSON
     echo json_encode([
         "status" => "error",
         "message" => $e->getMessage()

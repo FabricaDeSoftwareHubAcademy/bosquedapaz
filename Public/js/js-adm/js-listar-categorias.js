@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.status === 'success') {
                 renderizarTabela(data.dados);
-                aplicarEventosBotoes(); // Aplica eventos depois de gerar a tabela
+                aplicarEventosBotoes();
             } else {
                 tabelaCategoria.innerHTML = `<tr><td colspan="4">Erro ao carregar categorias</td></tr>`;
             }
@@ -40,7 +40,11 @@ function renderizarTabela(categorias) {
         return;
     }
 
-    categorias.forEach(cat => {
+    const categoriasAtivas = categorias.filter(cat => (cat.status_cat || '').trim().toLowerCase() === 'ativo');
+    const categoriasInativas = categorias.filter(cat => (cat.status_cat || '').trim().toLowerCase() !== 'ativo');
+    const categoriasOrdenadas = [...categoriasAtivas, ...categoriasInativas];
+    
+    categoriasOrdenadas.forEach(cat => {
         const status = (cat.status_cat || '').trim().toLowerCase(); 
         const statusClass = status === 'ativo' ? 'active' : 'inactive';
         const statusLabel = status === 'ativo' ? 'Ativo' : 'Inativo';
@@ -91,19 +95,16 @@ function renderizarTabela(categorias) {
                 const nome = botao.dataset.nome;
                 const cor = botao.dataset.cor;
 
-                // Preenche os campos do dialog
                 document.getElementById('id_categoria').value = id;
                 document.getElementById('descricao').value = nome;
                 document.getElementById('corInput').value = cor;
                 document.getElementById('selectedColor').style.backgroundColor = cor;
                 document.getElementById('selectedText').textContent = cor;
 
-                // Abre o dialog
                 dialog.showModal();
             });
         });
 
-        // Botões de fechar modal
         document.querySelectorAll('.close-modal').forEach(botao => {
             botao.addEventListener('click', (e) => {
                 e.preventDefault();

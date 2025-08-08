@@ -31,6 +31,7 @@ $tolken = getTolkenCsrf();
                         <button class="search-button">BUSCAR</button>
                     </div>
                 </form>
+                <input type="hidden" name="tolkenCsrf" id="tolken-csrf-input" value="<?php echo htmlspecialchars($tolken); ?>">
                 <div class="table-container">
                     <table class="collaborators-table">
                         <thead>
@@ -147,6 +148,7 @@ $tolken = getTolkenCsrf();
                                     <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                                 <input type="hidden" name="id_categoria" id="id_categoria">
+                                <?php echo $tolken; ?>
                             </div>
                         </form>
                     </div>
@@ -169,7 +171,7 @@ $tolken = getTolkenCsrf();
     <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
     <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script> -->
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script>
+    <!-- <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script> -->
     <script src="../../../Public/js/js-adm/js-categoria-manager.js" defer></script>
 
 </body>

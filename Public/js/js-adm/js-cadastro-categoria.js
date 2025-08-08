@@ -1,7 +1,7 @@
 let modalCadastro;
 
 var loadFile = function (event) {
-    const nomeCategoria = document.getElementById('nome').value;
+    const nomeCategoria = document.getElementById('nome')?.value;
     const outputText = document.getElementById('output-text');
     if (outputText) {
         outputText.textContent = nomeCategoria;
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnConfirmar = document.getElementById('btn-modal-salvar');
 
     const modalSucesso = document.getElementById('modal-sucesso');
+    const mensagemModalSucesso = document.getElementById('msm-sucesso'); // Obtem a referência para o elemento de mensagem
 
     const modalErro = document.getElementById('modal-error');
     const modalErroText = document.getElementById('erro-text');
@@ -131,16 +132,16 @@ document.addEventListener("DOMContentLoaded", function () {
     btnSalvarDialog?.addEventListener("click", function (event) {
         event.preventDefault();
         if (validarFormularioCategoria()) {
-            openModalConfirmar();
+            modalConfirmar?.showModal();
         }
     });
 
     // CANCELAR CONFIRMAÇÃO
-    btnCancelar?.addEventListener("click", closeModalConfirmar);
+    btnCancelar?.addEventListener("click", () => modalConfirmar?.close());
 
     // CONFIRMAR ENVIO
     btnConfirmar?.addEventListener("click", async function () {
-        closeModalConfirmar();
+        modalConfirmar?.close();
 
         const formData = new FormData(formCategoria);
 
@@ -153,9 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const json = await resposta.json();
             console.log(json);
 
-            if (json.status === "OK") {
+            if (json.status === "success") {
                 modalCadastro?.close();
-                openModalSucesso();
+                // ATUALIZANDO MENSAGEM PARA SER MAIS ESPECÍFICA
+                mensagemModalSucesso.textContent = 'Categoria cadastrada com sucesso!';
+                modalSucesso?.showModal();
                 setTimeout(() => window.location.reload(), 2000);
             } else {
                 modalErroText.textContent = json.message || 'Ocorreu um erro desconhecido.';
@@ -169,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     btnFecharErro?.addEventListener("click", () => {
-        modalErro.close();
+        modalErro?.close();
     });
 
     modalErro?.addEventListener("click", (e) => {
@@ -178,6 +181,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function openModalSucesso() {
+    const modal = document.getElementById('modal-sucesso');
+    if(modal) modal.showModal();
+}
 
 function fecharModal(idModal) {
     const modal = document.getElementById(idModal);
@@ -198,15 +206,15 @@ const uploadPlaceholder = document.getElementById('upload-placeholder');
 const btnCancelar = document.getElementById('btn_cancelar_categoria');
 
 function atualizarPreview() {
-    const nome = nomeInput.value.trim();
+    const nome = nomeInput?.value.trim();
     if (nome) previewLabel.textContent = nome;
 }
 
-nomeInput.addEventListener('input', () => {
+nomeInput?.addEventListener('input', () => {
     atualizarPreview();
 });
 
-colorOptions.forEach(item => {
+colorOptions?.forEach(item => {
     item.addEventListener('click', () => {
         const cor = item.getAttribute('data-value');
         corInput.value = cor;
@@ -215,15 +223,17 @@ colorOptions.forEach(item => {
 });
 
 
-fileInput.addEventListener('change', () => {
+fileInput?.addEventListener('change', () => {
     const file = fileInput.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = e => {
-            previewImg.src = e.target.result;
-            previewImg.style.display = 'block';
-            previewContainer.style.display = 'flex';
-            uploadPlaceholder.style.display = 'none';
+            if (previewImg) {
+                previewImg.src = e.target.result;
+                previewImg.style.display = 'block';
+            }
+            if (previewContainer) previewContainer.style.display = 'flex';
+            if (uploadPlaceholder) uploadPlaceholder.style.display = 'none';
         };
         reader.readAsDataURL(file);
     }
@@ -231,21 +241,20 @@ fileInput.addEventListener('change', () => {
 
 
 function limparPreviewCategoria() {
-    previewContainer.style.display = 'none';
-    previewImg.src = '';
-    previewImg.style.display = 'none';
-    previewCircle.style.backgroundColor = '#ccc';
-    previewLabel.textContent = '';
-    uploadPlaceholder.style.display = 'block';
+    if (previewContainer) previewContainer.style.display = 'none';
+    if (previewImg) { previewImg.src = ''; previewImg.style.display = 'none'; }
+    if (previewCircle) previewCircle.style.backgroundColor = '#ccc';
+    if (previewLabel) previewLabel.textContent = '';
+    if (uploadPlaceholder) uploadPlaceholder.style.display = 'block';
 
-    fileInput.value = '';
-    nomeInput.value = '';
-    corInput.value = '';
+    if (fileInput) fileInput.value = '';
+    if (nomeInput) nomeInput.value = '';
+    if (corInput) corInput.value = '';
 }
 
 // Evento do botão "Cancelar"
-btnCancelar.addEventListener('click', () => {
+btnCancelar?.addEventListener('click', () => {
     limparPreviewCategoria();
     const dialog = document.getElementById('cadastro-categoria');
-    if (dialog) dialog.close(); // fecha o <dialog> se estiver aberto
+    if (dialog) dialog.close();
 });
