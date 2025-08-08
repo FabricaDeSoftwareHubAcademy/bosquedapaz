@@ -141,7 +141,7 @@ async function aprovarExpostor() {
                 formData.append('num_barraca', document.getElementById('numBarraca').value)
                 formData.append('cor_rua', document.getElementById('corRua').value)
                 formData.append('categoria', categoria.value)
-                formData.append('tolkenCsrf', document.getElementById('tolkenCsrf').value)
+                formData.append('tolkenCsrf', document.getElementById('tolkenCsrf'))
         
             
                 let aprovar = await fetch('../../../actions/action-validar-expositor.php', {

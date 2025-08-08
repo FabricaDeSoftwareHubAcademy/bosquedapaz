@@ -31,6 +31,7 @@ $tolken = getTolkenCsrf();
                     <div class="search-bar">
                       <label for="status">Procurar</label>
                       <input type="text" id="buscar_expositor" placeholder="Buque o expositor aqui" />
+                      <?php echo $tolken; ?>
                     </div>
                     <div class="table-container">
                       <table class="collaborators-table">

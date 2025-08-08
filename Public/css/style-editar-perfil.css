@@ -122,6 +122,12 @@
     font-size: 14px;
 }
 
+.perfilEdit-img-logo{
+    width: auto;
+    height: 35px;
+    padding-left: 50%;
+}
+
 .perfilEdit-upload .perfilEdit-upload-label{
     font-size: 22px;
 }
@@ -271,6 +277,11 @@ input[type="file"]{
     border-radius: 10px;
 }
 
+.perfilEdit-img{
+    height: 100px;
+    width: auto;
+}
+
 .perfilEdit-btns{
     display: flex;
     align-self: flex-end;
@@ -300,9 +311,13 @@ input[type="file"]{
 }
 
 .perfilEdit-link-voltar{
-    position: relative;
-    bottom: 4%;
-    right: 45%;
+    position: absolute;
+    bottom: 0%;
+    right: 47%;
+}
+
+.perfilEdit-img-voltar{
+    height: fit-content;
 }
 
 @media (max-width: 575.98px){

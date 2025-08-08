@@ -44,7 +44,7 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
-        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
@@ -222,46 +222,61 @@ class Expositor extends Pessoa
         }
     }
 
-
-    public function atualizar($id) // Recebe o ID como parâmetro
-    {
-
-        $db = new Database('expositor');
-        $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
-
-        $db = new Database('pessoa');
-        $res = $db->update(
-            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
-            [
-                'link_instagram' => $this->link_instagram,
-                'whats' => $this->whats,
-                'link_facebook' => $this->link_facebook,
-                'email' => $this->email
-            ]
-        );
-
-        $db = new Database('expositor');
-        $res = $db->update(
-            'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'], // Usa o ID recebido
-            [
-                'nome_marca' => $this->nome_marca,
-                'descricao' => $this->descricao,
-            ]
-        );
-
-        // $ids_imagens = $db->select_img($id)->fetch(PDO::FETCH_ASSOC);
-
-        $db = new Database('imagem');
-        $res = $db->update(
-            'id_imagem = ' . 1,
-            [
-                'caminho' => '../caminho/imagem.jpg',
-                'posicao' => '',
-                'id_expo' => 1
-            ]
-        );
-
-        return $res;
+    public function atualizar($id){
+        try {
+            // Buscar dados do expositor
+            $db = new Database('expositor');
+            $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
+            
+            if (!$ids_pessoa_expositor) {
+                error_log("Expositor não encontrado com ID: " . $id);
+                return false;
+            }
+    
+            // Buscar dados da pessoa para obter id_login
+            $db = new Database('pessoa');
+            $dados_pessoa = $db->select("id_pessoa = " . $ids_pessoa_expositor['id_pessoa'])->fetch(PDO::FETCH_ASSOC);
+            
+            if (!$dados_pessoa) {
+                error_log("Pessoa não encontrada com ID: " . $ids_pessoa_expositor['id_pessoa']);
+                return false;
+            }
+    
+            // Atualizar tabela pessoa
+            $res_pessoa = $db->update(
+                'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
+                [
+                    'link_instagram' => $this->link_instagram,
+                    'whats' => $this->whats,
+                    'link_facebook' => $this->link_facebook,
+                ]
+            );
+    
+            // Atualizar tabela pessoa_user (email)
+            $db = new Database('pessoa_user');
+            $res_user = $db->update(
+                'id_login = ' . $dados_pessoa['id_login'], // Corrigido: usar dados_pessoa em vez de $id
+                [
+                    'email' => $this->email,
+                ]
+            );
+            
+            // Atualizar tabela expositor
+            $db = new Database('expositor');
+            $res_expositor = $db->update(
+                'id_expositor = ' . $id, // Corrigido: usar $id em vez de $ids_pessoa_expositor['expositor']
+                [
+                    'nome_marca' => $this->nome_marca,
+                    'descricao' => $this->descricao,
+                ]
+            );
+            
+            return $res_pessoa && $res_expositor && $res_user;
+            
+        } catch (\Exception $e) {
+            error_log("Erro ao atualizar expositor: " . $e->getMessage());
+            return false;
+        }
     }
 
 
@@ -272,10 +287,10 @@ class Expositor extends Pessoa
         $this->id_expositor = $id_expositor;
     }
 
-    // public function setImagens($imagens)
-    // {
-    //     $this->imagens = $imagens;
-    // }
+    public function setImagens($imagens)
+    {
+        $this->imagens = $imagens;
+    }
 
     public function setId_pessoa($id_pessoa)
     {

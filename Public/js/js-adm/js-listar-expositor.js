@@ -21,7 +21,7 @@ async function getExpositor() {
             <td class="email-col" style="overflow-x: auto;">${expositor.email}</td>
             <td class="fone-col">${expositor.telefone}</td>
             <td class="barraca-col">${expositor.num_barraca}</td>
-            <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_pessoa}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
+            <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
             <td>
                 <a class="edit-icon" href="editar-expositor.php?id=${expositor.id_expositor}">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -64,7 +64,7 @@ buscar_expositor.addEventListener('keyup', async function(e) {
                         <td class="email-col">${expositor.email}</td>
                         <td class="fone-col">${expositor.telefone}</td>
                         <td class="barraca-col">${expositor.num_barraca}</td>
-                        <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_pessoa}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
+                        <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
                         <td>
                             <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
                                 <i class="fa-solid fa-pen-to-square"></i>
@@ -105,6 +105,7 @@ async function mudarStatus(id, status) {
         dadosForms.append('deletar', 1);
         dadosForms.append('id', id);
         dadosForms.append('status', status);
+        dadosForms.append('tolkenCsrf', document.getElementById('tolkenCsrf'));
 
         let dados_php = await fetch('../../../actions/actions-expositor.php', {
             method:'POST',
