@@ -81,6 +81,49 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
         });
     });
+
+    buscar_utilidade.addEventListener('keyup', async function(e) {
+        try {
+            if(buscar_utilidade.value.length > 2){
+                let response = await fetch(`../../../actions/actions-expositor.php?filtrar=${buscar_expositor.value}&aguardando=1`);
+                response = await response.json();
+        
+                if (response.status == 400) {
+                    tbody.innerHTML = `<td colspan="5" style="text-align: center;">${response.msg}</td>`
+        
+                } else {
+                    tbody.innerHTML = ''
+                    response.expositor.forEach(expositor => {
+                        let status = expositor.status_pes == 'ativo' ? 'active' : 'inactive';
+                        tbody.innerHTML += `
+                            <tr>
+                            <td class="usuario-col">${expositor.id_expositor}</td>
+                            <td>${expositor.nome}</td>
+                            <td class="email-col">${expositor.email}</td>
+                            <td class="fone-col">${expositor.telefone}</td>
+                            <td class="barraca-col">${expositor.num_barraca}</td>
+                            <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
+                            <td>
+                                <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            
+                            </td>
+                            </tr>
+                            `
+                    });
+        
+                }
+            }
+            else {
+                tbody.innerHTML = ''
+                getExpositor()
+            }
+            
+        } catch (error) {
+            tbody.innerHTML = '<td colspan="5" style="text-align: center; padding: .5rem 0rem;">Nenhum expositor encontrado.</td>'
+        }
+    })
     
 
 });
