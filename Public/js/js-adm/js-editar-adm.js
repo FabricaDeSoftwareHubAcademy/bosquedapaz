@@ -16,7 +16,7 @@ async function carregarDadosADM() {
 
                 document.getElementById('id').value = usuario.id_colaborador;
                 document.getElementById('nome').value = usuario.nome || '';
-                document.getElementById('telefone').value = usuario.telefone || '';
+                document.getElementById('telefone').value = maskNumTelefone(usuario.telefone) || '';
                 document.getElementById('email').value = usuario.email || '';
                 document.getElementById('cargo').value = usuario.cargo || '';
 
@@ -140,7 +140,7 @@ btnConfirmar.addEventListener("click", async () => {
 
             // Atualiza os campos com os dados retornados
             document.getElementById('nome').value = data.data.nome;
-            document.getElementById('telefone').value = data.data.telefone;
+            document.getElementById('telefone').value = maskNumTelefone(data.data.telefone);
             document.getElementById('email').value = data.data.email;
             document.getElementById('cargo').value = data.data.cargo;
 
@@ -163,3 +163,20 @@ btnConfirmar.addEventListener("click", async () => {
         modalErro.showModal();
     }
 });
+
+function maskNumTelefone(num) {
+    let valor = num;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    
+    return valor;
+}

@@ -48,7 +48,7 @@ CREATE TABLE pessoa(
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
-    whats CHAR(16) NULL,
+    whats CHAR(29) NULL,
     telefone CHAR(16) NULL,
     termos ENUM("Sim", "Não") NOT NULL DEFAULT "Não",
     link_instagram VARCHAR(255) NULL,

@@ -5,7 +5,6 @@ async function getExpositor() {
     let dados = await fetch('../../../actions/actions-expositor.php');
 
     let expositores = await dados.json();
-    console.log(expositores)
 
     if (expositores.status == 200){
         tBody.innerHTML = ''
@@ -19,7 +18,7 @@ async function getExpositor() {
             <td>${expositor.nome}</td>
             <td>${expositor.nome_marca}</td>
             <td class="email-col" style="overflow-x: auto;">${expositor.email}</td>
-            <td class="fone-col">${expositor.telefone}</td>
+            <td class="fone-col">${maskNumTelefone(expositor.telefone)}</td>
             <td class="barraca-col">${expositor.num_barraca}</td>
             <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
             <td>
@@ -47,7 +46,7 @@ let buscar_expositor = document.getElementById('buscar_expositor');
 buscar_expositor.addEventListener('keyup', async function(e) {
     try {
         if(buscar_expositor.value.length > 2){
-            let response = await fetch(`../../../actions/actions-expositor.php?filtrar=${buscar_expositor.value}&aguardando=1`);
+            let response = await fetch(`../../../actions/actions-expositor.php?filtrarAtivos=${buscar_expositor.value}&aguardando=1`);
             response = await response.json();
     
             if (response.status == 400) {
@@ -61,8 +60,9 @@ buscar_expositor.addEventListener('keyup', async function(e) {
                         <tr>
                         <td class="usuario-col">${expositor.id_expositor}</td>
                         <td>${expositor.nome}</td>
+                        <td>${expositor.nome_marca}</td>
                         <td class="email-col">${expositor.email}</td>
-                        <td class="fone-col">${expositor.telefone}</td>
+                        <td class="fone-col">${maskNumTelefone(expositor.telefone)}</td>
                         <td class="barraca-col">${expositor.num_barraca}</td>
                         <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
                         <td>
@@ -94,18 +94,21 @@ async function mudarStatus(id, status) {
         status = 'ativo'
     }
 
-    openModalConfirmar()
-    document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
-    document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
+    openModalDelete()
+    document.getElementById('title-delete').innerText = `Tem certeza que deseja ${status == 'ativo' ? 'Inativar' : 'Ativar'}?`
+    document.getElementById('msm-modal').innerText = `Clique em  ${status == 'ativo' ? 'Inativar' : 'Ativar'} para confirmar.`
+    document.getElementById('btn-modal-deletar').innerText = `${status == 'ativo' ? 'Inativar' : 'Ativar'}`
+    document.getElementById('fechar-modal-deletar').addEventListener('click', closeModalDelete)
+    document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalDelete)
 
-    document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
-        closeModalAtualizar()
+    document.getElementById('btn-modal-deletar').addEventListener('click', async () => {
+        closeModalDelete()
     
         let dadosForms =  new FormData();
         dadosForms.append('deletar', 1);
         dadosForms.append('id', id);
         dadosForms.append('status', status);
-        dadosForms.append('tolkenCsrf', document.getElementById('tolkenCsrf'));
+        dadosForms.append('tolkenCsrf', document.getElementById('tolkenCsrf').value);
 
         let dados_php = await fetch('../../../actions/actions-expositor.php', {
             method:'POST',
@@ -118,7 +121,7 @@ async function mudarStatus(id, status) {
         if(response.status == 200){
             openModalSucesso()
             document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso)
-            document.getElementById('msm-sucesso').innerHTML = 'Cadastro realizado com sucesso'
+            document.getElementById('msm-sucesso').innerHTML = 'Status trocado com sucesso'
             document.getElementById('close-modal-sucesso').addEventListener('click', () => {
                 closeModalSucesso
                 window.location.reload()
@@ -135,4 +138,21 @@ async function mudarStatus(id, status) {
             })
         }
     })
+}
+
+function maskNumTelefone(num) {
+    let valor = num;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    
+    return valor;
 }

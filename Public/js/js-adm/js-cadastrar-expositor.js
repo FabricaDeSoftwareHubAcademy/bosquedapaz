@@ -28,6 +28,19 @@ btn_salvar.addEventListener('click', async function (event) {
     document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar)
     document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar)
 
+    const LinkInstagram = document.getElementById('link_instagram');
+
+    const texto = LinkInstagram.value;
+    const regex = /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)/;
+
+    if (regex.test(texto)) {
+        closeModalAtualizar()
+        openModalError()
+        document.getElementById('erro-title').innerHTML = 'Por favor, não insira links.'
+        document.getElementById('erro-text').style.display = 'none'
+        document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
+    }
+
     document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
         closeModalAtualizar()
         let formulario = document.getElementById("fomulario_cad_expositor");

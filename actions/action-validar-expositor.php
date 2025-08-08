@@ -42,18 +42,18 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             
             
 
-            $res = $expositor->validarExpositor($idExpositor, 'validado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT), $num_barraca, $cor_rua);
+            $res = $expositor->validarExpositor($idExpositor, 'validado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT), $num_barraca, $cor_rua, $getExpositor[0]['id_login']);
             
             if ($res){
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = '
+                $corpoEmail = "
                 <!DOCTYPE html>
-                <html lang="pt-br">
+                <html lang='pt-br'>
                 <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta charset='UTF-8'>
+                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                     <style>
                         div {
                             margin: auto;
@@ -77,7 +77,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                     </div>
                 </body>
                 </html>
-                ';
+                ";
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
@@ -88,7 +88,6 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 $response = array("msg" => 'Ocorreu um erro ao aprovar o expositor', "status" => 400);
                 echo json_encode($response);
             }
-
 
         //////////// PARA RECUSAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\
         }else if (isset($_POST['recusado'])) {
@@ -105,12 +104,12 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = '
+                $corpoEmail = "
                 <!DOCTYPE html>
-                <html lang="pt-br">
+                <html lang='pt-br'>
                 <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta charset='UTF-8'>
+                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                     <title></title>
                     <style>
                         div {
@@ -133,7 +132,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                     </div>
                 </body>
                 </html>
-                ';
+                ";
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 

@@ -71,7 +71,7 @@ if (!$aceitou) {
                         </div>
 
                         <div class="input">
-                            <label>Link instagram:</label>
+                            <label>Usuário do instagram:</label>
 
                             <input type="text" name="link_instagram" id="link_instagram" placeholder="link instagram" required>
                         </div>
