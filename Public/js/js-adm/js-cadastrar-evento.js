@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openModalAtualizar();
 
         document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
+
         document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
 
         document.getElementById('btn-modal-salvar').addEventListener('click', async () => {

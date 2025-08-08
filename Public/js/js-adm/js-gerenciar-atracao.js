@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                             </a>
                         </td>
                         <td>
-                            ${atracao.foto
-                                ? `<img src="../../../uploads/atracoes/${atracao.foto}" alt="Foto da atração" style="width: 50px; height: 50px; object-fit: cover;">`
-                                : 'Sem imagem'}
+                            <span class="${atracao.status == 1 ? 'status-ativo' : 'status-inativo'}">
+                                ${atracao.status == 1 ? 'Ativo' : 'Inativo'}
+                            </span>
                         </td>
                     `;
 

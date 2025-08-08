@@ -40,19 +40,21 @@ $tolken = getTolkenCsrf();
                             <small id="contador-caracteres">250 caracteres restantes</small>
                         </div>
 
-                        <div class="input-group">
-                            <label>Status:</label>
-                            <select name="status" id="status" required>
-                                <option value="1">Ativo</option>
-                                <option value="0">Inativo</option>
-                            </select>
-                        </div>
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Status:</label>
+                                <select name="status" id="status" required>
+                                    <option value="1">Ativo</option>
+                                    <option value="0">Inativo</option>
+                                </select>
+                            </div>
 
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="banner_atracao" id="file">
-                        </div>
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="banner_atracao" id="file">
+                            </div>                            
 
+                        </div>
 
                         <img class="preview" src="" alt="" id="preview-image">
 
