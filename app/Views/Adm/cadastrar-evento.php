@@ -60,8 +60,7 @@ $tolken = getTolkenCsrf();
                                         required>
                                 </div>
                             </div>
-                            
-                            
+                                                      
                             <div class="data-imagem">
                                 <div class="input-group">
                                     <label for="select-endereco">Endereço do evento:</label>
