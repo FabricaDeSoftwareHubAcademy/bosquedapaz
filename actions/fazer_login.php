@@ -5,7 +5,7 @@
 // error_reporting(-1);
 require '../vendor/autoload.php';
 
-use app\controler\Login;
+use app\Controller\Login;
 use app\suport\Csrf;
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
