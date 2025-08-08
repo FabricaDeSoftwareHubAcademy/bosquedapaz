@@ -28,7 +28,7 @@ $tolken = getTolkenCsrf();
                         <div class="input-group">
                             <label>Título:</label>
                             <input type="text" name="titulo" id="titulo"
-                                placeholder="Escreva o título da utilidade pública" maxlength="30">
+                                placeholder="Escreva o título da utilidade pública" maxlength="50">
                         </div>
                         <div class="input-group">
                             <label>Descrição:</label>
@@ -49,7 +49,8 @@ $tolken = getTolkenCsrf();
                             <input type="file" name="imagem" id="imagem" required>
                         </div>
 
-                        <img class="preview" src='' alt="" id="preview-image" name="preview-image">
+                        <img class="preview" src="" alt="" id="preview-image">
+
                         <?php echo $tolken; ?>
 
                         <div class="btns">
@@ -59,6 +60,18 @@ $tolken = getTolkenCsrf();
                 </div>
             </div>
             <div class="btns">
+                <!-- <a href="Area-Adm.php" class="voltar">
+                    <img src="../../../Public/assets/icons/voltar.svg" class="btn-voltar">
+                </a> -->
+<!-- 
+                <div class="btn-cancelar-salvar">
+                    <button class="btn btn-cancelar">
+                        <a href="">Cancelar</a>
+                    </button>
+
+                    <button id="botao_cadastrar_utilidade" name="REQUEST_METHOD" class="btn btn-salvar">
+                        <a href="">Salvar</a>
+                </div> -->
             </div>
         </div>
     </main>

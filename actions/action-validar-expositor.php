@@ -23,9 +23,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
         $expositor = new Expositor();
         //////////// PARA APROVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\
         if (isset($_POST['aprovado'])){
-            $email = filter_var($_POST['email'], FILTER_UNSAFE_RAW);
-            $num_barraca = filter_var($_POST['num_barraca'], FILTER_UNSAFE_RAW);
-            $cor_rua = filter_var($_POST['cor_rua'], FILTER_UNSAFE_RAW);
+            $email = htmlspecialchars(strip_tags($_POST['email']));
+            $num_barraca = htmlspecialchars(strip_tags($_POST['num_barraca']));
+            $cor_rua = htmlspecialchars(strip_tags($_POST['cor_rua']));
 
             ///// captura expositor pelo email
             $getExpositor = $expositor->listar('email = "'. $email. '"');
@@ -35,7 +35,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             
             
             ///// verifica se trocou a categoria
-            $categoria = isset($_POST['categoria']) ? filter_var($_POST['categoria'], FILTER_UNSAFE_RAW) : $getExpositor[0]['id_categoria'];
+            $categoria = isset($_POST['categoria']) ? htmlspecialchars(strip_tags($_POST['categoria'])) : $getExpositor[0]['id_categoria'];
 
             //// gerar senha
             $newSenha = gerar_senha($getExpositor[0]['telefone'], $getExpositor[0]['nome']);
@@ -48,14 +48,36 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = "
-                    <div style='margin: auto; width: 500px; text-align: center; padding: 1rem; border-radius: .5rem;'>
+                $corpoEmail = '
+                <!DOCTYPE html>
+                <html lang="pt-br">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                        div {
+                            margin: auto;
+                            padding: .5rem;
+                            width: 30rem;
+                            text-align: center;
+                        }
+                
+                        h1 {
+                            background-color: blue;
+                            color: white;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div>
                         <h2>Olá $nome, o seu cadastro de expositor na feira bosque da paz foi aprovado</h2>
                         <p>Abaixo está a senha para acessar a sua área de expositor e, poder editar seu perfil</p>
-                        <h1 style='padding: .5rem; background-color: blue; color: white; margin: 2rem'>SUA SENHA: $newSenha</h1>
+                        <h1>SUA SENHA: $newSenha</h1>
                         <span>No caso desse e-mail ser ignorado a senha não vai ser resetada.</span>
                     </div>
-                ";
+                </body>
+                </html>
+                ';
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
@@ -70,8 +92,8 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
         //////////// PARA RECUSAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\
         }else if (isset($_POST['recusado'])) {
-            $email = filter_var($_POST['email'], FILTER_UNSAFE_RAW);
-            $mensagem = filter_var($_POST['mensagem'], FILTER_UNSAFE_RAW);
+            $email = htmlspecialchars(strip_tags($_POST['email']));
+            $mensagem = htmlspecialchars(strip_tags($_POST['mensagem']));
 
             $getExpositor = $expositor->listar('email = "'. $email. '"');
 
@@ -83,13 +105,35 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = "
-                    <div style='margin: auto; width: 500px; text-align: center; padding: 1rem; border-radius: .5rem;'>
+                $corpoEmail = '
+                <!DOCTYPE html>
+                <html lang="pt-br">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title></title>
+                    <style>
+                        div {
+                            margin: auto;
+                            padding: .5rem;
+                            width: 30rem;
+                            text-align: center;
+                        }
+                
+                        p {
+                            text-align: justify;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div>
                         <h2>Olá $nome, o seu cadastro de expositor na feira bosque da paz foi recusado</h2>
                         <p>Motivo: $mensagem</p>
                         <span>Atenciosamente: Feira bosque da paz</span>
                     </div>
-                ";
+                </body>
+                </html>
+                ';
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 

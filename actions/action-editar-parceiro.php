@@ -169,6 +169,12 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     $parceiro = new Parceiro();
 
+    // VALIDAÇÃO ADICIONAL AQUI: verifica se CPF/CNPJ já existe para outro parceiro
+    if ($parceiro->existeCpfCnpj($dados['cpf_cnpj'], $id)) {
+        echo json_encode(['erro' => 'CPF ou CNPJ já cadastrado para outro parceiro.']);
+        exit;
+    }
+
     if ($dados['logo'] === null) {
         unset($dados['logo']);
     }

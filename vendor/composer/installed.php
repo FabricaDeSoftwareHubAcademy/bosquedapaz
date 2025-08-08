@@ -3,7 +3,7 @@
         'name' => 'desenvolvedor/bosquedapaz',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1384b4c8cc73551265ee5a592fc7b51551eb64ea',
+        'reference' => '0cec05a0fbe2595e2ccede868b323774918f5cb1',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'desenvolvedor/bosquedapaz' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1384b4c8cc73551265ee5a592fc7b51551eb64ea',
+            'reference' => '0cec05a0fbe2595e2ccede868b323774918f5cb1',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -31,9 +31,29 @@
         'phpmailer/phpmailer' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '0ff2d3c8ead628df2493537d9f91db962aa47718',
+            'reference' => '52d0fe4916e65d1379f14ed49deb6743ca50a54f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'setasign/fpdf' => array(
+            'pretty_version' => '1.8.2',
+            'version' => '1.8.2.0',
+            'reference' => 'd77904018090c17dc9f3ab6e944679a7a47e710a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../setasign/fpdf',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'setasign/fpdi' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '4b53852fde2734ec6a07e458a085db627c60eada',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../setasign/fpdi',
             'aliases' => array(
                 0 => '9999999-dev',
             ),

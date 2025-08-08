@@ -58,7 +58,7 @@ CREATE TABLE pessoa(
     id_endereco INT NULL,
     id_login INT NULL,
     PRIMARY KEY(id_pessoa),
-    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),    
+    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
     FOREIGN KEY(id_login) REFERENCES pessoa_user(id_login)
 );
 
@@ -242,6 +242,11 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-2.jpg", 2),
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
-insert into pessoa_user (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
+insert into login (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
+
+insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('60', '566', '345');
+
+alter table boleto modify column mes_referencia varchar(20);
+ALTER TABLE boleto ADD COLUMN status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente';
 

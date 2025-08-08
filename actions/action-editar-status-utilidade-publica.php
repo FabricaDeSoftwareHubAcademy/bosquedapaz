@@ -5,6 +5,7 @@ use app\suport\Csrf;
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
 
+    // echo json_encode({"nome": "guiguiteste"});
     $id_utilidade_publica = $_POST['id_utilidade_publica'] ?? null;
     $status = $_POST['status_utilidade'] ?? '';
 
@@ -13,9 +14,11 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     $utilidadePublica->status_utilidade = $status;
 
     if ($utilidadePublica->editar_status()) {
-        echo json_encode(['status' => 200, 'msg' => 'Editado com sucesso!!']);
+        http_response_code(200);
+        echo json_encode(['status' => 'success', 'message' => 'Editado com sucesso!!']);
     } else {
-        echo json_encode(['status' => 400, 'msg' => 'Erro ao Editar!']);
+        http_response_code(500);
+        echo json_encode(['status' => 'success', 'message' => 'Erro ao Editar!']);
     }
 }
 ?>
