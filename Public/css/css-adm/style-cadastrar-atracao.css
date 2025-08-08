@@ -105,6 +105,31 @@ h1 {
     /* background-color: chartreuse; */
 }
 
+.input-group select {
+    appearance: none; /* Remove estilo nativo */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 40px 12px 16px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M1 1l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group select:focus {
+    border-color: #007E70;
+    box-shadow: 0 0 0 3px rgba(0, 126, 112, 0.2);
+    outline: none;
+}
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -131,7 +156,8 @@ h1 {
 }
 
 .input-group input,
-.input-group textarea {
+.input-group textarea,
+.input-group select {
     width: 100%;
     min-height: 45px;
     padding: 5px;
@@ -142,11 +168,6 @@ h1 {
     margin-bottom: 20px;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
-}
-
-.data-imagem {
-    display: flex;
-    gap: 30px;
 }
 
 .box .btns {
@@ -259,6 +280,11 @@ h1 {
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.data-imagem {
+    display: flex;
+    gap: 30px;
 }
 
 

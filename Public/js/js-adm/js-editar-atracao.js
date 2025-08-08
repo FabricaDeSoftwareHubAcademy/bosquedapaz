@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const contador = document.getElementById('contador-caracteres');
     const form = document.getElementById('form-editar-atracao');
     const btnEditar = document.getElementById('btn-salvar');
-
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id_atracao');
+    const idEvento = params.get('id_evento');
+    const nomeEvento = params.get('nome_evento');
     const atualizarContador = () => {
         const restante = 250 - descricaoInput.value.length;
         contador.textContent = `${restante} caracteres restantes`;
@@ -12,8 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     descricaoInput.addEventListener('input', atualizarContador);
     setTimeout(atualizarContador, 100);
 
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id_atracao');
+
 
     if (!id) {
         alert('ID da atração não fornecido.');
@@ -82,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     document.getElementById('msm-sucesso').innerHTML = data.mensagem ?? 'Atração atualizada com sucesso!';
 
                     setTimeout(() => {
-                        window.location.href = `gerenciar-atracao.php?id_evento=${formData.get('id_evento')}`
+                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}&nome_evento=${encodeURIComponent(nomeEvento)}`;
                     }, 5000);
 
                 } else {

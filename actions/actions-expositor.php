@@ -113,8 +113,16 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             $expositor->setNome(            htmlspecialchars(strip_tags($_POST['nome'])));
             $expositor->setWhats(           'https://wa.me/55'.limparMaskTelefone(htmlspecialchars(strip_tags($_POST['whats']))));
             $expositor->setTelefone(        limparMaskTelefone(htmlspecialchars(strip_tags($_POST['whats']))));
-            $expositor->setAceitou_termos(  $_SESSION['aceitou_termos'] ?? 'Não');
             $expositor->setlink_instagram(  linkInstagram(htmlspecialchars(strip_tags($_POST['link_instagram']))));
+
+            $aceitou = '';
+
+            if (isset($_POST['aceitou_termos'])) {
+                $aceitou = $_POST['aceitou_termos']; // vem do input hidden do admin
+            } elseif (isset($_SESSION['aceitou_termos'])) {
+                $aceitou = $_SESSION['aceitou_termos']; // vem da sessão do visitante
+            }
+
             
 
             //////// IMAGENS \\\\\\\\

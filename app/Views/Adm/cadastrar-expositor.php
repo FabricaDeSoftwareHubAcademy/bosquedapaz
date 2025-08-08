@@ -25,6 +25,9 @@ $tolken = getTolkenCsrf();
             </div>
 
             <form id="fomulario_cad_expositor" method="POST">
+
+                <input type="hidden" name="aceitou_termos" value="Sim">
+
                 <div class="formularios">
                     <div class="form-pessoa">
                         <div class="input">
