@@ -75,6 +75,8 @@ h2 {
     justify-content: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     outline: none;
+    gap: 10px; /* Espaço entre input e botão */
+    flex-wrap: wrap; /* Só quebra se for inevitável */
 }
 
 
@@ -92,6 +94,8 @@ h2 {
     margin-right: 10px;
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+    flex: 1; /* O input cresce para ocupar espaço */
+    min-width: 200px; /* Mínimo para não esmagar */
 }
 
 .search-bar .search-button {
@@ -315,17 +319,17 @@ table tbody tr:nth-child(even) {
 }
 
 .novo-evento {
-    width: clamp(150px, 15%, 150px);
+    flex-shrink: 0; /* Impede encolhimento excessivo */
+    min-width: 150px;
     height: 34px;
     border-radius: 8px;
     color: white;
     background-color: rgb(32, 54, 139);
     font-size: 19px;
-    padding: 1px 8px 4px 8px;
+    padding: 1px 16px;
     border: none;
     cursor: pointer;
-    align-items: center;
-    /* width: 150px; */
+    white-space: nowrap; /* Mantém o texto em linha */
 }
 
 .botoes {

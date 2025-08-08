@@ -13,6 +13,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $nome = sanitizarTexto($_POST['nome_atracao'] ?? '');
     $descricao = sanitizarTexto($_POST['descricao_atracao'] ?? '');
     $id_evento = intval($_POST['id_evento'] ?? '');
+    $nome_evento = sanitizarTexto($_POST['nome_evento'] ?? '');
 
     if (!$nome || !$descricao || !$id_evento) {
         echo json_encode(["status" => "erro", "mensagem" => "Preencha todos os campos obrigatórios."]);

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     if (nome_evento) {
         const titulo = document.getElementById('titulo-atracoes');
-        titulo.textContent = `Gerenciar Atrações - ${nome_evento}`;
+        titulo.textContent = `Gerenciar Atrações - Evento: ${nome_evento}`;
     }
 
     if (!id_evento) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     tr.innerHTML = `
                         <td>${atracao.nome_atracao}</td>
                         <td class="fone-col">
-                            <a href="editar-atracao.php?id_atracao=${atracao.id_atracao}">
+                            <a href="editar-atracao.php?id_atracao=${atracao.id_atracao}&id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}" class="btn-editar">
                                 <i class="fas fa-edit"></i>
                             </a>
                         </td>
@@ -81,10 +81,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 botaoNovaAtracao.addEventListener('click', async () => {
     const params = new URLSearchParams(window.location.search);
     let id_evento = params.get('id_evento');
+    let nome_evento = params.get('nome_evento');
     console.log('clicked');
 
     if (id_evento) {
-        window.location.href = `cadastrar-atracao.php?id_evento=${id_evento}`;
+        window.location.href = `cadastrar-atracao.php?id_evento=${id_evento}&nome_evento=${encodeURIComponent(nome_evento)}`;
     } else {
         alert("Não foi possível identificar o evento. Volte e selecione novamente.");
     }

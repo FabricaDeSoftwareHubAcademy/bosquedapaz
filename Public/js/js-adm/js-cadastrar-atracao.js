@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form-atracao');
     const btnEditar = document.getElementById('btn-salvar');
     const idEvento = document.getElementById('id_evento').value;
+    const nomeEvento = document.getElementById('nome_evento').value;
 
     const atualizarContador = () => {
         const restante = 250 - descricaoInput.value.length;
@@ -59,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
 
                     setTimeout(() => {
-                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
-                    }, 6000);
+                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}&nome_evento=${encodeURIComponent(nomeEvento)}`;
+                    }, 5000);
 
                 } else {
                     document.getElementById('erro-title').innerText = 'Erro ao cadastrar atração';

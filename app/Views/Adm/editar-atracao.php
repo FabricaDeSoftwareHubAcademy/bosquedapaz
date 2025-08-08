@@ -27,6 +27,7 @@ $tolken = getTolkenCsrf();
                     <div id="form1">
                         <input type="hidden" name="id_evento" id="id_evento">
                         <input type="hidden" name="id_atracao" id="id_atracao">
+                        <input type="hidden" name="nome_evento" id="nome_evento">
                         <div class="input-group">
                             <label>Nome:</label>
                             <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome do evento"
