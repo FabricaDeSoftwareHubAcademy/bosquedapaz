@@ -223,7 +223,7 @@ fileInput.addEventListener('change', () => {
             previewImg.src = e.target.result;
             previewImg.style.display = 'block';
             previewContainer.style.display = 'flex';
-            uploadPlaceholder.style.display = 'none'; // esconde o ícone padrão
+            uploadPlaceholder.style.display = 'none';
         };
         reader.readAsDataURL(file);
     }

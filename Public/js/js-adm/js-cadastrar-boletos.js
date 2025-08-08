@@ -30,11 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('nome-exp').value = res.expositor.nome;
                 document.getElementById('cnpj-cpf').value = res.expositor.cpf;
             } else {
-                alert(res.mensagem || 'Expositor não encontrado.');
+                // SUBSTITUINDO O ALERT PELO MODAL DE ERRO
+                textoErro.innerText = res.mensagem || 'Expositor não encontrado.';
+                modalErro.showModal();
             }
 
         } catch (error) {
-            alert('Erro ao buscar expositor.');
+            textoErro.innerText = 'Erro ao buscar expositor.';
+            modalErro.showModal();
         }
     });
 
@@ -44,17 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Modais
     const modalConfirmar = document.getElementById('modal-confirmar');
     const modalSucesso = document.getElementById('modal-sucesso');
-    const modalErro = document.getElementById('modal-erro');
+    const modalErro = document.getElementById('modal-error');
+    const modalLoading = document.getElementById('modal-loading');
 
     const confirmarSim = document.getElementById('btn-modal-salvar');
     const confirmarNao = document.getElementById('btn-modal-cancelar');
     const fecharSucesso = document.getElementById('close-modal-sucesso');
     const fecharErro = document.getElementById('close-modal-erro');
 
-    const textoErro = document.getElementById('texto-erro');
+    const textoErro = document.getElementById('erro-text');
 
-    const vencimentoInput = document.getElementById('val');
-    const referenciaSelect = document.getElementById('referencia_select');
+    // OBTENDO REFERÊNCIAS DOS INPUTS
+    const vencimentoInput = document.getElementById('vencimento_input');
+    const referenciaSelect = document.getElementById('referencia_input');
+    const valorInput = document.getElementById('valor_input');
+    const arquivoInput = document.getElementById('arquivo');
+
+    // FUNÇÕES DO MODAL DE CARREGAMENTO
+    function openModalLoading() {
+        modalLoading.showModal();
+    }
+
+    function closeModalLoading() {
+        modalLoading.close();
+    }
+
     // Abre modal de confirmação
     btnSalvar.addEventListener('click', (e) => {
         e.preventDefault();
@@ -62,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = new Date(vencimentoInput.value);
         if (!isNaN(data)) {
             const mesReferencia = data.toLocaleString('pt-BR', { month: 'long' });
-            referenciaSelect.value = mesReferencia.charAt(0).toUpperCase() + mesReferencia.slice(1);
+            referenciaSelect.value = mesReferencia.toLowerCase();
         }
 
         if (validarCampos()) {
@@ -95,10 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Validação dos campos obrigatórios
     function validarCampos() {
         const idExpositor = document.getElementById('id_expositor').value.trim();
-        const mesReferencia = document.getElementById('referencia_select').value.trim();
-        const vencimento = document.getElementById('val').value.trim();
-        const valor = document.getElementById('valor').value.trim();
-        const pdf = document.getElementById('arquivo').files[0];
+        const mesReferencia = referenciaSelect.value.trim();
+        const vencimento = vencimentoInput.value.trim();
+        const valor = valorInput.value.trim();
+        const pdf = arquivoInput.files[0];
 
         if (!idExpositor || !mesReferencia || !vencimento || !valor || !pdf) {
             textoErro.innerText = 'Preencha todos os campos obrigatórios.';
@@ -121,12 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function enviarFormulario() {
         const formData = new FormData(form);
 
+        openModalLoading();
+
         fetch('../../../actions/action-cadastrar-boletos.php', {
-            method: 'POST',
-            body: formData
-        })
+                method: 'POST',
+                body: formData
+            })
             .then(res => res.json())
             .then(res => {
+                closeModalLoading();
                 if (res.status === 'success') {
                     modalSucesso.showModal();
                 } else {
@@ -135,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(() => {
+                closeModalLoading();
                 textoErro.innerText = 'Erro na comunicação com o servidor.';
                 modalErro.showModal();
             });
