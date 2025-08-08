@@ -102,6 +102,7 @@ $tolken = getTolkenCsrf();
         <div class="conteiner-modal">
             <label class="title-recusar">Digite o motivo: </label>
             <textarea name="mensagem" id="MotivoRecusa" class="textModal" placeholder="Digite aqui"></textarea>
+            <?php echo $tolken; ?>
             <div class="content-btns">  
                 <button type="button" class="btn-modal-confirmar btn-validar-cancelar" id="btn-recusar-cancelar">Cancelar</button>
                 <button class="btn-modal-confirmar btn-validar-salvar" id="btn-recusar-salvar">Salvar</button>
@@ -127,6 +128,7 @@ $tolken = getTolkenCsrf();
                 <option value="preto">preto</option>
                 <option value="vermelho">vermelho</option>
             </select>
+            <?php echo $tolken; ?>
             <div class="content-btns">  
                 <button type="button" class="btn-modal-confirmar btn-validar-cancelar" id="btn-BarracaRua-cancelar">Cancelar</button>
                 <button class="btn-modal-confirmar btn-validar-salvar" id="btn-BarracaRua-salvar">Salvar</button>

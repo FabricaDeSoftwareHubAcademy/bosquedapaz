@@ -92,7 +92,17 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
             $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
             $expositor->setTelefone(        !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setAceitou_termos(  $_SESSION['aceitou_termos'] ?? 'Não');
+
+            $aceitou = '';
+
+            if (isset($_POST['aceitou_termos'])) {
+                $aceitou = $_POST['aceitou_termos']; // vem do input hidden do admin
+            } elseif (isset($_SESSION['aceitou_termos'])) {
+                $aceitou = $_SESSION['aceitou_termos']; // vem da sessão do visitante
+            }
+
+            $expositor->setAceitou_termos($aceitou);
+
             $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
             
             /// verificando se exite imagens
@@ -212,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $imagens = new Imagem();
             //// busca imagens pelo id do expositor
             $buscarImagem = $imagens->listar($_GET['id']);
-            $buscarId = $expositor->listar("id_expositor = ". $id);
+            $buscarId = $expositor->listar("id_expositor = '$id'");
             //// faz append das imagens
             $buscarId[0]['imagens'] = $buscarImagem;
             $response = $buscarId ? ['expositor' => $buscarId[0], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];

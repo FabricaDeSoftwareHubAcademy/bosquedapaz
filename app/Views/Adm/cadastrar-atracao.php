@@ -27,6 +27,8 @@ $tolken = getTolkenCsrf();
 
                                 <input type="hidden" name="id_evento" id="id_evento" value="<?php echo $_GET['id_evento'] ?? 0; ?>">
 
+                                <input type="hidden" name="nome_evento" id="nome_evento" value="<?php echo $_GET['nome_evento'] ?? 0; ?>">
+
                                 <div class="input-group">
                                     <label>Nome:</label>
                                     <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome da atração" required>
@@ -44,7 +46,8 @@ $tolken = getTolkenCsrf();
                                         <input type="file" name="foto" id="file" required>
                                     </div>
                                 </div>
-                                <img class="preview" src="" alt="" id="preview-image">
+                            
+                            <img class="preview" src="" alt="" id="preview-image">
 
                         </div>
                         <?php echo $tolken; ?>

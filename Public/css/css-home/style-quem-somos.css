@@ -246,6 +246,7 @@
 
 }
 
+
 .section-expositor-quem-somos {
     width: 100%;
     height: 45vh;
@@ -340,6 +341,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+    transition: transform 0.3s ease;
 }
 .div-botao .botao-expositor {
     display: flex;
@@ -349,13 +351,15 @@
     height: 60px;
     background-color: #ffffff;
     text-decoration: none;
+    border-radius: 15px;
+
+
    
 }
 .div-botao .botao-expositor .botao{
     font-weight: bold;
     text-decoration: none;
     position: relative;
-    border-radius: 10px;
     background-clip: none;
     -webkit-background-clip: text;
     
@@ -366,8 +370,12 @@
     background-clip: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 
+.div-botao:hover {
+    transform: scale(1.05);
+}
 .galeria{
     column-count: 4;
     column-gap: 20px;
@@ -642,6 +650,7 @@
             margin-right: 10%;
            
         }
+      
         .texto-descricao-fluxo-quem-somos .descricao-fluxo{
             font-size: 17px;
             width: 100%;

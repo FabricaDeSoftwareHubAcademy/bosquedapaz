@@ -85,13 +85,14 @@
     cursor: pointer;
 }
 
-.deletar-modal-salvar {
-    border: 2px solid #FF3877;
-    background-color: transparent;
-    color: black;
+#btn-modal-deletar {
+    border: 2px solid #FF3877;   
+    background-color: white;     
+    color: #FF3877;             
 }
 
-.deletar-modal-salvar:hover {
+
+#btn-modal-deletar:hover {
     background-color: #8a1e40;
     border-color: #8a1e40;
     color: white;

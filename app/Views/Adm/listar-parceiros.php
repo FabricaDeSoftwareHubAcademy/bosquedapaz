@@ -38,7 +38,7 @@ $tolken = getTolkenCsrf();
                             <tr>
                                 <th class="usuario-col">Parceiro</th>
                                 <th>Contato</th>
-                                <th>Telefone</th>
+                                <th>Celular</th>
                                 <th>Email</th>
                                 <th>Status</th>
                                 <th>Ações</th>
@@ -70,13 +70,14 @@ $tolken = getTolkenCsrf();
             </div>
         </div>
     </div>
-
+    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
     <!-- <script src="../../../Public/js//js-adm/status-colaborador.js"></script> -->
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/listar_parceiros.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/alterar_status.js"></script>
     <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>

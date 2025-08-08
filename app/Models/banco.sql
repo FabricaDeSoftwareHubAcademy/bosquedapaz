@@ -245,4 +245,8 @@ insert into carrossel (caminho, posicao) values
 
 insert into login (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
+insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('60', '566', '345');
+
+alter table boleto modify column mes_referencia varchar(20);
+ALTER TABLE boleto ADD COLUMN status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente';
 
