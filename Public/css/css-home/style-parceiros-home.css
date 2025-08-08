@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('style-carrosel.css');
- *{
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +10,6 @@
 
 .section-nosso-time-quem-somos{
     width: 100%;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,27 +18,29 @@
 
 .sobre-a-feira{
     width: 80%;
+    height: 80px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .sobre-a-feira h1{
-    padding-top: 2.5rem;
-    padding-bottom: 3.125rem;
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: bold;   
 }
+
+.div-descricao{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .descricao-sobre-a-feira{
-    margin: 0 auto;
-    text-align: center;
+    text-align: justify;
     font-size: 1.50rem;
     font-weight: 400;
     
-}
-
-.subtitulo-feira{
-    color: darkgreen;
 }
 
 .section-cards-apoio {
@@ -126,7 +128,7 @@
     line-height: 1.3rem;
 }
 
- .section-apoiadores{
+.section-apoiadores{
     width: 100%;
     height: 45vh;
     padding: 2.5rem 1.25rem;
@@ -191,39 +193,49 @@
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+/* Responsividades:  */
+@media(max-width:400px){
+    .sobre-a-feira{
+        width: 100%;
+    }
+
+    .sobre-a-feira h1{
+        font-size: 1rem;
+    }
+
+    .descricao-sobre-a-feira{
+        font-size: 1rem;
+        width: 300px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 586px){
+    .sobre-a-feira{
+        width: 100%;
+    }
+
+    .sobre-a-feira h1{
+        font-size: 1.2rem;
+    }
+
+    .descricao-sobre-a-feira{
+        font-size: 1rem;
+        width: 300px;
+    }
+}
+
+@media (min-width: 587px) and (max-width: 768px) {
     .slider-parceiros {
         animation: none;
     }
-}
 
-@media(max-width:1669px){
-   
-    .section-nosso-time-quem-somos .div-descricao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+    .sobre-a-feira h1{
+        font-size: 1.5rem;
     }
-    .section-nosso-time-quem-somos .div-descricao{
-    right: 0%;
-    left: 0%;
-    font-size: 1.25rem;
-    font-weight: 200;
-    padding-left: 10%;
-    padding-right: 10%;
-    }
-}
 
-@media(max-width:1400px){
-   
-.section-nosso-time-quem-somos .div-descricao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    .descricao-sobre-a-feira{
+        width: 400px;
+    }
 }
 
 @media(max-width:768px){
@@ -234,16 +246,31 @@
     .section-nosso-time-quem-somos .div-descricao{
         font-size: 2rem;
     }
-
 }
 
-@media(max-width:400px){
-    
+@media(max-width:1400px){
     .section-nosso-time-quem-somos .div-descricao{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 70%;
+        justify-content: center;
+    }
+}
 
+@media(max-width:1669px){
+    .section-nosso-time-quem-somos .div-descricao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+    .section-nosso-time-quem-somos .div-descricao{
+        right: 0%;
+        left: 0%;
+        font-size: 1.25rem;
+        font-weight: 200;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
