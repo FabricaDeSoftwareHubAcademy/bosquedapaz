@@ -26,7 +26,7 @@ $tolken = getTolkenCsrf();
                 <div class="search-bar">
                     <label>Procurar</label>
                     <input type="text" id="buscar" placeholder="" />
-                    <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
+                    <button class="search-button">BUSCAR</button>
                 </div>
                 <div class="table-container">
                     <table class="collaborators-table">
@@ -46,11 +46,16 @@ $tolken = getTolkenCsrf();
                     </table>
                 </div>
 
-
-
-                <!-- <div class="botoes">
+                <button class="voltar">
+                    <a href="./" class="voltar-link">
+                        <img src="../../../Public/assets/icons/voltar.png" class="btn-voltar">
+                    </a>
+                </button>
+                <div class="b-voltar">
+                </div>
+                <div class="botoes">
                     <a href="../../../app/Views/adm/cadastrar-evento.php"><button class="novo-evento">Novo Evento</button></a>
-                </div> -->
+                </div>
                 <div class="modal" id="modal-fotos">
                     <div class="modal-content">
                         <span class="close-modal" data-modal="modal-fotos">&times;</span>
@@ -65,11 +70,7 @@ $tolken = getTolkenCsrf();
                     </div>
                 </div>
             </div>
-            <?php include '../../../Public/include/Butons-forms.html'; ?>
-
         </div>
-
-
     </main>
 
     <div class="bolas-fundo">
@@ -78,6 +79,7 @@ $tolken = getTolkenCsrf();
         <img src="../../../Public/assets/img-bolas/bola-azul.png" alt="Bola Fundo 3" class="bola-rosa">
     </div>
 
+    <script src="../../../Public/js/js-adm/status-colaborador.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/status-evento.js"></script>
     <script src="../../../Public/js/js-adm/modal-gerenciar-eventos.js" defer></script>

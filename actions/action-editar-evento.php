@@ -43,7 +43,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $evento->data_evento = $data;
     $evento->hora_inicio = $hora_inicio;
     $evento->hora_fim = $hora_fim;
-    $evento->id_endereco_evento = $endereco;
+    $evento->endereco_evento = $endereco;
     $evento->status = $status;
 
 

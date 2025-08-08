@@ -32,8 +32,8 @@ $tolken = getTolkenCsrf();
                                 <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" maxlength="100" required>
                             </div>
                             <div class="input-group">
-                                <label for="telefone">Celular:</label>
-                                <input type="text" id="telefone" name="telefone" placeholder="Digite o celular"  maxlength="15" required>
+                                <label for="telefone">Telefone:</label>
+                                <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone"  maxlength="15" required>
                             </div>
                             <div class="input-group">
                                 <label for="cep">CEP:</label>

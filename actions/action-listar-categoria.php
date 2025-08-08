@@ -7,7 +7,7 @@ header('Content-Type: application/json');
 
 try {
     $categoria = new Categoria();
-    $categorias = $categoria->listar(); 
+    $categorias = $categoria->listar(); // retorna array associativo
 
     echo json_encode([
         'status' => 'success',

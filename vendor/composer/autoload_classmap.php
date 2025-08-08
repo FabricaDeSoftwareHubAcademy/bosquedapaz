@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',
     'app\\Controller\\Artista' => $baseDir . '/app/Controller/Artista.php',
     'app\\Controller\\Atracao' => $baseDir . '/app/Controller/Atracao.php',
     'app\\Controller\\Boleto' => $baseDir . '/app/Controller/Boleto.php',

@@ -76,5 +76,3 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     await carregarEventos(); // chamada inicial
 });
-
-document.getElementById('btns-salvar-cancelar').style.display = 'none'

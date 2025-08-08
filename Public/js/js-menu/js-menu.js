@@ -60,7 +60,7 @@ else if(document.body.clientWidth <= 1400){
 
 async function menuAdm() {
     try {
-        const response = await fetch('../../../actions/action-login.php?perfil=true', {
+        const response = await fetch('../../../actions/action-colaborador.php?meu_perfil=1', {
             method: 'GET',
             credentials: 'include'
         });
@@ -68,13 +68,12 @@ async function menuAdm() {
         const text = await response.json();
         
         let imgLogin = document.querySelectorAll('#img-login');
-        console.log(text.login.img_perfil)
 
         imgLogin.forEach(element => {
-            if (text.login.img_perfil == null){
+            if (text.data.img_perfil == null){
                 element.src = '../../../Public/assets/MOCA.png';
             }else {
-                element.src = '../../../Public/uploads/uploads-ADM/' + text.login.img_perfil;
+                element.src = '../../../Public/uploads/uploads-ADM/' + text.data.img_perfil;
             }
         });
 
@@ -115,11 +114,11 @@ loginImg.forEach(element => {
 let logout = document.querySelectorAll('#logout')
 
 logout[0].addEventListener('click', async () => {
-    const response = await fetch('../../../actions/action-login.php?logout=true');
+    const response = await fetch('../../../Public/logout.php?logout=true');
     document.location.reload()
 })
 logout[1].addEventListener('click', async () => {
-    const response = await fetch('../../../actions/action-login.php?logout=true');
+    const response = await fetch('../../../Public/logout.php?logout=true');
     document.location.reload()
 })
 

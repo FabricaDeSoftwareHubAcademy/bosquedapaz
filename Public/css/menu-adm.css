@@ -65,7 +65,7 @@
 
 .nav-item:after{
     content: "";
-    background-color: #FB4616;
+    background-color: #FF3877;
     height: 3px;
     width: 0%;
     display: block;
@@ -192,7 +192,7 @@
 }
 
 .open-opcoes-menu {
-    height: 130px;
+    height: 110px;
     transition: all .2s ease-in;
 }
 
@@ -306,11 +306,6 @@
     cursor: pointer;
     transition: transform 0.4s ease, background-color 0.3s ease;
     z-index: 1000;
-  
-    /* 👇 Centraliza o conteúdo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   
   .icon-toggle:hover {
@@ -406,6 +401,7 @@
         display: flex;
         flex-direction: column;
         position: absolute;
+        padding: 15px 0px;
         top: 80px;
         left: 0px;
         width: 100vw;
@@ -430,7 +426,7 @@
             height: 0px;
         }
         100% {
-            height: 285px;
+            height: 315px;
         }
     }
 
