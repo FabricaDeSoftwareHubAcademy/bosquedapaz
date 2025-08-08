@@ -6,7 +6,7 @@
 require '../vendor/autoload.php';
 header('Content-Type: application/json');
 
-use app\controler\Login;
+use app\Controller\Login;
 use app\Controller\Colaborador;
 use app\Controller\Imagem;
 use app\Controller\Expositor;
