@@ -250,3 +250,20 @@ insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('6
 alter table boleto modify column mes_referencia varchar(20);
 ALTER TABLE boleto ADD COLUMN status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente';
 
+DELIMITER //
+
+create trigger trigger_qtd_expositor
+after update on expositor
+for each row
+begin
+	update dadosFeira set qtd_expositores = (select count(id_expositor) from expositor where validacao = 'validado') where id_dadosFeira = 1;
+end//
+
+create trigger trigger_qtd_artista
+after insert on artista
+for each row
+begin
+	update dadosFeira set qtd_artistas = (select count(id_artista) from artista where status = 'ativo') where id_dadosFeira = 1;
+end//
+
+DELIMITER ;
