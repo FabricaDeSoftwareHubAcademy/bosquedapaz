@@ -87,7 +87,6 @@ function validarCampos() {
     if (!nome) return "O nome é obrigatório.";
     if (!regexNome.test(nome)) return "Nome inválido. Apenas letras e espaços são permitidos.";
     if (!telefone) return "O telefone é obrigatório.";
-    if (!regexTelefone.test(telefone)) return "Telefone inválido. Informe apenas números com DDD.";
     if (!cargo) return "O cargo é obrigatório.";
     if (!regexNome.test(cargo)) return "Cargo inválido. Apenas letras e espaços são permitidos.";
     return null;
@@ -143,8 +142,7 @@ btnConfirmar.addEventListener("click", async () => {
             document.getElementById('telefone').value = maskNumTelefone(data.data.telefone);
             document.getElementById('email').value = data.data.email;
             document.getElementById('cargo').value = data.data.cargo;
-
-
+            
             if (data.data.img_perfil) {
                 document.getElementById("previewFoto").src = '../../../Public/uploads/uploads-ADM/' + data.data.img_perfil;
             }
@@ -157,6 +155,7 @@ btnConfirmar.addEventListener("click", async () => {
             msmErro.textContent = mensagemErro;
             modalErro.showModal();
         }
+        setTimeout(() => {window.location.reload()}, 500)
     } catch (error) {
         console.error("Erro na requisição:", error);
         msmErro.textContent = "Erro na comunicação com o servidor.";

@@ -88,11 +88,6 @@ buscar_expositor.addEventListener('keyup', async function(e) {
 })
 
 async function mudarStatus(id, status) {
-    if (status === 'ativo'){
-        status = 'inativo'
-    }else {
-        status = 'ativo'
-    }
 
     openModalDelete()
     document.getElementById('title-delete').innerText = `Tem certeza que deseja ${status == 'ativo' ? 'Inativar' : 'Ativar'}?`
@@ -100,6 +95,12 @@ async function mudarStatus(id, status) {
     document.getElementById('btn-modal-deletar').innerText = `${status == 'ativo' ? 'Inativar' : 'Ativar'}`
     document.getElementById('fechar-modal-deletar').addEventListener('click', closeModalDelete)
     document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalDelete)
+
+    if (status === 'ativo'){
+        status = 'inativo'
+    }else {
+        status = 'ativo'
+    }
 
     document.getElementById('btn-modal-deletar').addEventListener('click', async () => {
         closeModalDelete()

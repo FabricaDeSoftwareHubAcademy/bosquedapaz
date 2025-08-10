@@ -215,7 +215,7 @@ SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.vol
 pes.nome, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, 
 cat.id_categoria, cat.descricao, cat.cor, cat.icone,
 en.cidade,
-log.email, log.status_pes
+log.email, log.status_pes, log.id_login
 FROM expositor AS exp 
 INNER JOIN categoria AS cat 
 ON cat.id_categoria = exp.id_categoria 

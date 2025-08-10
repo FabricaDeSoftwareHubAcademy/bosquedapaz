@@ -17,6 +17,7 @@ function limparMaskTelefone($tel){
     return preg_replace('/[^0-9]/', '', $tel);
 }
 
+
 if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $admLogado = obterAdm();
 
@@ -136,10 +137,10 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     // Update = Edição dos dados <----------------------------------------------->
     else if (isset($_POST["atualizar"])) {
-        
+
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
-        $telefone = sanitizeString($_POST['tel'] ?? '');
+        $telefone = limparMaskTelefone(sanitizeString($_POST['tel'] ?? ''));
         $cargo = sanitizeString($_POST['cargo'] ?? '');
         
         // Validações: 
