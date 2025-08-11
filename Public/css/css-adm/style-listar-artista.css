@@ -32,7 +32,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   overflow-y: auto;
 }
 
@@ -42,10 +42,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.container{
-  position: relative;
-  top: -30vh;
-}
+
 
 .title{
   font-size: 20px;
@@ -169,6 +166,9 @@ h2 {
   .title{
     display: none;
   }
+  .container{
+    top: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -181,7 +181,7 @@ h2 {
     align-items: stretch;
   }
   .container{
-    top: -30vh;
+    top: 0;
   }
   .title{
     display: none;
@@ -219,4 +219,7 @@ h2 {
     font-size: 0.7rem;
     padding: 6px;
   }
+  .container{
+    top: 0;
+  } 
 }
