@@ -57,8 +57,8 @@ if (!$aceitou) {
 
                     <div class="form-loja">
                         <div class="input">
-                            <label>Produto:</label>
-                            <input type="text" name="produto" id="produto" placeholder="Digite seu produto" required>
+                            <label>CPF:</label>
+                            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required>
                         </div>
 
                         <div class="input">

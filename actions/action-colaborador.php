@@ -213,18 +213,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         $res = $colab->listarColaboradores($nome);
 
         if ($res) {
-            $dados = array_map(function($c) {
-                return [
-                    'id_colaborador' => $c['id_colaborador'],
-                    'nome' => $c['nome'],
-                    'email' => $c['email'],
-                    'telefone' => $c['telefone'],
-                    'cargo' => $c['cargo'],
-                    'status_col' => $c['status_pes'],
-                ];
-            }, $res);
-
-            echo json_encode(['data' => $dados]);
+            echo json_encode(['data' => $res]);
             exit;
         } else {
             echo json_encode(['data' => []]);
