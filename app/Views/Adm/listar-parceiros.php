@@ -50,9 +50,9 @@ $tolken = getTolkenCsrf();
                         <!-- status active -->
                         <!-- status inactive -->
                     </table>
-                </div>
-                <?php include '../../../Public/include/Butons-forms.html'; ?>
+                </div>              
             </div>
+            <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>
     </main>
 
