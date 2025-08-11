@@ -42,6 +42,9 @@ btnCadastrar?.addEventListener("click", function (event) {
 
     if (!data_inicio) return openModalErro("A Data de Início é obrigatória.");
     if (!data_fim) return openModalErro("A Data de Fim é obrigatória.");
+    if (data_inicio && data_fim && data_inicio > data_fim) {
+        return openModalErro("A Data de Início não pode ser maior que a Data de Fim.");
+    }
 
     if (!imagem) return openModalErro("Uma imagem é obrigatória.");
     const extensoesValidas = ['jpg', 'jpeg', 'png', 'jfif', 'svg'];

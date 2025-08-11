@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedColorWrapper = document.querySelector(".select-selected");
     const itemsColorList = document.querySelector(".select-items");
 
-    // Botões para salvar
     const btnSalvarEdicaoCompleta = document.getElementById('btn_cadastrar_cat');
     
     // --- Modais ---
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // --- CORREÇÃO AQUI: REORDENANDO AS CATEGORIAS ---
         const categoriasAtivas = categorias.filter(cat => (cat.status_cat || '').trim().toLowerCase() === 'ativo');
         const categoriasInativas = categorias.filter(cat => (cat.status_cat || '').trim().toLowerCase() !== 'ativo');
         const categoriasOrdenadas = [...categoriasAtivas, ...categoriasInativas];
@@ -175,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         idCategoriaInput.value = categoria.id_categoria;
                         descricaoInput.value = categoria.descricao.slice(0, 30);
                         
-                        // Atualiza o seletor de cores
                         corInput.value = categoria.cor;
                         selectedColorDiv.style.backgroundColor = categoria.cor;
                         selectedTextSpan.textContent = categoria.cor;

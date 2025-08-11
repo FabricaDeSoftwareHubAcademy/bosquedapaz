@@ -1,19 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoaded para garantir que todos os elementos estejam carregados
-    // --- Variáveis de Contexto Global ---
+document.addEventListener('DOMContentLoaded', function () {
     let idParceiroSelecionado = null;
     let statusAtualSelecionado = null;
     let botaoClicado = null;
-    let acaoModalConfirmar = null; // Para distinguir a ação no modal de confirmação
+    let acaoModalConfirmar = null;
 
-    // --- Referências aos Elementos do Modal de Confirmação (o compartilhado) ---
     const modalConfirmar = document.getElementById('modal-confirmar');
     const tituloModalConfirmar = document.getElementById('confirmar-title');
     const mensagemModalConfirmar = document.getElementById('msm-confimar');
-    const btnSalvarConfirmar = document.getElementById('btn-modal-salvar'); // Botão "Salvar" do modal de confirmação
-    const btnCancelarConfirmar = document.getElementById('btn-modal-cancelar'); // Botão "Cancelar" do modal de confirmação
-    const closeModalConfirmarIcon = document.getElementById('close-modal-confirmar'); // Ícone 'X' para fechar
+    const btnSalvarConfirmar = document.getElementById('btn-modal-salvar');
+    const btnCancelarConfirmar = document.getElementById('btn-modal-cancelar');
+    const closeModalConfirmarIcon = document.getElementById('close-modal-confirmar');
 
-    // --- Referências aos Modais de Sucesso e Erro (assumindo que existem no HTML) ---
     const modalSucesso = document.getElementById("modal-sucesso");
     const tituloModalSucesso = document.getElementById("sucesso-title");
     const textoModalSucesso = document.getElementById("msm-sucesso");
@@ -22,7 +19,10 @@ document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoa
     const tituloModalErro = document.getElementById("erro-title");
     const textoModalErro = document.getElementById("erro-text");
 
-    // --- Funções de Modal (para garantir que funcionem neste script) ---
+    const tbody = document.querySelector(".collaborators-table tbody");
+    const input = document.getElementById("status");
+    const botao = document.querySelector(".search-button");
+
     function abrirModalErro(mensagemTitulo, mensagemTexto) {
         if (tituloModalErro && textoModalErro && modalErro) {
             tituloModalErro.textContent = mensagemTitulo;
@@ -43,19 +43,79 @@ document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoa
         }
     }
 
-    // --- Event Listener para Cliques na Tabela (Delegação de Eventos) ---
-    // Este listener deve estar em um elemento pai que contém os botões de status,
-    // como a tabela ou o document.body, para capturar cliques em botões dinâmicos.
+    function carregarParceiros(nome = "") {
+        fetch(`../../../actions/action-listar-parceiros.php`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `nome=${encodeURIComponent(nome)}`
+        })
+            .then(res => res.json())
+            .then(parceiros => {
+                if (!tbody) {
+                    console.error("Elemento <tbody> não encontrado.");
+                    return;
+                }
+
+                tbody.innerHTML = "";
+
+                if (!parceiros || parceiros.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="6">Nenhum parceiro encontrado.</td></tr>`;
+                    return;
+                }
+
+                const parceirosAtivos = parceiros.filter(p => p.status_parceiro === 'Ativo');
+                const parceirosInativos = parceiros.filter(p => p.status_parceiro === 'Inativo');
+                const parceirosOrdenados = [...parceirosAtivos, ...parceirosInativos];
+
+                parceirosOrdenados.forEach(parceiro => {
+                    let classeStatus = '';
+                    if (parceiro.status_parceiro === 'Ativo') {
+                        classeStatus = 'active';
+                    } else if (parceiro.status_parceiro === 'Inativo') {
+                        classeStatus = 'inactive';
+                    }
+
+                    const tr = `
+                    <tr data-id-parceiro="${parceiro.id_parceiro}">
+                      <td class="usuario-col">${parceiro.nome_parceiro}</td>
+                      <td>${parceiro.nome_contato}</td>
+                      <td>${parceiro.telefone}</td>
+                      <td>${parceiro.email}</td>
+                      <td>
+                        <button id="muda_status" class="status ${classeStatus}">
+                          ${parceiro.status_parceiro}
+                        </button>
+                      </td>
+                      <td>
+                        <a href="editar-parceiro.php?id=${parceiro.id_parceiro}" class="edit-icon" data-id-parceiro="${parceiro.id_parceiro}">
+                          <i class="fa-solid fa-pen-to-square open-modal"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  `;
+                    tbody.innerHTML += tr;
+                });
+            })
+            .catch(err => {
+                console.error("Erro ao carregar parceiros:", err);
+                if (tbody) {
+                    tbody.innerHTML = `<tr><td colspan="6">Erro ao carregar dados.</td></tr>`;
+                }
+            });
+    }
+
+
     document.addEventListener('click', function (e) {
-        // Verifica se o clique foi em um botão com a classe 'status'
         if (e.target.classList.contains('status')) {
-            e.preventDefault(); // Previne o comportamento padrão do botão/link
+            e.preventDefault();
 
             botaoClicado = e.target;
-            statusAtualSelecionado = botaoClicado.textContent.trim(); // Pega "Ativo" ou "Inativo"
-            
+            statusAtualSelecionado = botaoClicado.textContent.trim();
+
             const tr = botaoClicado.closest('tr');
-            idParceiroSelecionado = tr.getAttribute('data-id-parceiro'); 
+            idParceiroSelecionado = tr.getAttribute('data-id-parceiro');
 
             if (!idParceiroSelecionado) {
                 console.error('ID do parceiro não encontrado na linha.');
@@ -63,63 +123,64 @@ document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoa
                 return;
             }
 
-            // Define o contexto para a ação de alteração de status do parceiro
             acaoModalConfirmar = 'alterarStatusParceiro';
 
-            // Preenche e abre o modal de confirmação compartilhado
             tituloModalConfirmar.textContent = 'Alterar Status?';
-            mensagemModalConfirmar.textContent = `Deseja mudar o status para "${statusAtualSelecionado === 'Ativo'? 'Inativo' : 'Ativo'}"?`;
+            mensagemModalConfirmar.textContent = `Deseja mudar o status para "${statusAtualSelecionado === 'Ativo' ? 'Inativo' : 'Ativo'}"?`;
             modalConfirmar.showModal();
         }
     });
 
-    // --- Event Listener para o Botão "Salvar" do Modal de Confirmação (o compartilhado) ---
     btnSalvarConfirmar.addEventListener('click', async () => {
-        modalConfirmar.close(); // Fecha o modal de confirmação
+        modalConfirmar.close();
 
         if (acaoModalConfirmar === 'alterarStatusParceiro') {
             await salvarAlteracaoStatusParceiro();
         }
-        // Limpa o contexto após a execução
         acaoModalConfirmar = null;
     });
 
     // --- Função para Salvar a Alteração de Status do Parceiro ---
     async function salvarAlteracaoStatusParceiro() {
-        if (!idParceiroSelecionado ||!botaoClicado) {
+        if (!idParceiroSelecionado || !botaoClicado) {
             abrirModalErro("Erro", "Dados do parceiro não disponíveis para alteração de status.");
             return;
         }
 
-        const novoStatus = (statusAtualSelecionado === 'Ativo')? 'Inativo' : 'Ativo';
-        const statusNumerico = (novoStatus === 'Ativo')? 1 : 0; // Se o backend espera 0 ou 1
+        const novoStatus = (statusAtualSelecionado === 'Ativo') ? 'Inativo' : 'Ativo';
+        const statusNumerico = (novoStatus === 'Ativo') ? 1 : 0;
 
-        // Prepara os dados para enviar via POST
-        const params = new URLSearchParams();
-        params.append('id', idParceiroSelecionado);
-        params.append('status', novoStatus); // Envia o status numérico
+        const formData = new FormData();
+        formData.append('id', idParceiroSelecionado);
+        formData.append('status', novoStatus);
+
+        const tolkenInput = document.getElementById('tolken-csrf-input');
+        if (tolkenInput) {
+            formData.append('tolkenCsrf', tolkenInput.value);
+        } else {
+            console.error('Campo do token CSRF não encontrado!');
+            abrirModalErro("Erro de Segurança", "Token de segurança não encontrado.");
+            return;
+        }
 
         try {
             const response = await fetch('../../../actions/action-alterar-status-parceiro.php', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: params // Envia os parâmetros
+                body: formData
             });
 
             const data = await response.json();
 
-            if (data.sucesso) { // Assumindo que o PHP retorna 'sucesso: true'
-                // Atualiza o botão na interface
+            if (data.sucesso) {
                 botaoClicado.textContent = novoStatus;
                 botaoClicado.classList.remove('active', 'inactive');
-                botaoClicado.classList.add(novoStatus === 'Ativo'? 'active' : 'inactive');
-                // IMPORTANTE: Atualiza o data-status se você o usa para pegar o status atual
-                // botaoClicado.setAttribute('data-status', novoStatus); // Se o data-status for string
-                // botaoClicado.setAttribute('data-status', statusNumerico); // Se o data-status for numérico
+                botaoClicado.classList.add(novoStatus === 'Ativo' ? 'active' : 'inactive');
+                botaoClicado.setAttribute('data-status', statusNumerico);
 
-                abrirModalSucesso("Sucesso!", data.sucesso); // Exibe modal de sucesso
-                // Opcional: Recarregar a página após o sucesso
-                // window.location.reload(); 
+                abrirModalSucesso("Sucesso!", data.sucesso);
+
+                carregarParceiros(input.value.trim());
+
             } else {
                 abrirModalErro("Erro", data.erro || 'Erro ao alterar o status do parceiro.');
             }
@@ -127,14 +188,12 @@ document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoa
             console.error('Erro na comunicação:', err);
             abrirModalErro("Erro de Comunicação", 'Erro inesperado ao alterar o status do parceiro.');
         } finally {
-            // Limpa as variáveis de contexto
             idParceiroSelecionado = null;
             statusAtualSelecionado = null;
             botaoClicado = null;
         }
     }
 
-    // --- Event Listeners para Fechar o Modal de Confirmação (o compartilhado) ---
     btnCancelarConfirmar.addEventListener('click', () => {
         modalConfirmar.close();
         acaoModalConfirmar = null;
@@ -151,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoa
         botaoClicado = null;
     });
 
-    // --- Event Listeners para Fechar Modais de Sucesso e Erro (se existirem) ---
     document.getElementById("close-modal-erro")?.addEventListener("click", () => {
         modalErro?.close();
     });
@@ -160,4 +218,84 @@ document.addEventListener('DOMContentLoaded', function () { // Use DOMContentLoa
         modalSucesso?.close();
     });
 
+    if (botao) {
+        botao.addEventListener("click", function () {
+            const valorBusca = input?.value.trim();
+            carregarParceiros(valorBusca);
+        });
+    }
+
+    if (input) {
+        input.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                if (botao) {
+                    botao.click();
+                }
+            }
+        });
+    }
+
+    carregarParceiros();
 });
+
+const input = document.getElementById("status");
+const botao = document.querySelector(".search-button");
+const tbody = document.querySelector(".collaborators-table tbody");
+
+function carregarParceiros(nome = "") {
+    fetch(`../../../actions/action-listar-parceiros.php`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `nome=${encodeURIComponent(nome)}`
+    })
+        .then(res => res.json())
+        .then(parceiros => {
+            tbody.innerHTML = "";
+
+
+            if (parceiros.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6">Nenhum parceiro encontrado.</td></tr>`;
+                return;
+            }
+
+            const parceirosAtivos = parceiros.filter(p => p.status_parceiro === 'Ativo');
+            const parceirosInativos = parceiros.filter(p => p.status_parceiro === 'Inativo');
+            const parceirosOrdenados = [...parceirosAtivos, ...parceirosInativos];
+
+            parceirosOrdenados.forEach(parceiro => {
+                let classeStatus = '';
+                if (parceiro.status_parceiro === 'Ativo') {
+                    classeStatus = 'active';
+                } else if (parceiro.status_parceiro === 'Inativo') {
+                    classeStatus = 'inactive';
+                }
+
+                const tr = `
+                  <tr data-id-parceiro="${parceiro.id_parceiro}">
+                    <td class="usuario-col">${parceiro.nome_parceiro}</td>
+                    <td>${parceiro.nome_contato}</td>
+                    <td>${parceiro.telefone}</td>
+                    <td>${parceiro.email}</td>
+                    <td>
+                      <button id="muda_status" class="status ${classeStatus}">
+                        ${parceiro.status_parceiro}
+                      </button>
+                    </td>
+                    <td>
+                      <a href="editar-parceiro.php?id=${parceiro.id_parceiro}" class="edit-icon" data-id-parceiro="${parceiro.id_parceiro}">
+                        <i class="fa-solid fa-pen-to-square open-modal"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  `;
+                tbody.innerHTML += tr;
+            });
+        })
+        .catch(err => {
+            console.error("Erro ao carregar parceiros:", err);
+            tbody.innerHTML = `<tr><td colspan="6">Erro ao carregar dados.</td></tr>`;
+        });
+}
