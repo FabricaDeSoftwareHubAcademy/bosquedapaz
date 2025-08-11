@@ -404,3 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dialogEdicao) dialogEdicao.close();
     });
 });
+document.getElementById('btns-salvar-cancelar').style.display = 'none';
+
+
+// YuridPaula

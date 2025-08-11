@@ -57,6 +57,7 @@ $tolken = getTolkenCsrf();
               </tbody>
             </table>
           </div>
+          <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>  
       </div>  
     </main>

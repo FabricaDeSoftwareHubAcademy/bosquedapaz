@@ -46,9 +46,10 @@ $tolken = getTolkenCsrf();
                         </tbody>
                     </table>
                 </div>
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
                 <div class="btns">
                     <a href="./" class="voltar">
-                        <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
+                        <!-- <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar"> -->
                     </a>
                 </div>
 
@@ -173,6 +174,7 @@ $tolken = getTolkenCsrf();
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <!-- <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script> -->
     <script src="../../../Public/js/js-adm/js-categoria-manager.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 
 </body>
 
@@ -180,3 +182,5 @@ $tolken = getTolkenCsrf();
 <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
 <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
 <?php include '../../../Public/include/modais/modal-error.html'; ?>
+
+<!-- YuridPaula -->

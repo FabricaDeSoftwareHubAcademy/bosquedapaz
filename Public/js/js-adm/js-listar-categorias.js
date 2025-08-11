@@ -119,3 +119,6 @@ function renderizarTabela(categorias) {
         return temp.innerHTML;
     }
 });
+
+
+// YuridPaula

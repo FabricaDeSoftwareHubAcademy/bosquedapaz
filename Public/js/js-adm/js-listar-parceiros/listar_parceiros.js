@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        // CORREÇÃO: Ordenação dos parceiros
         const parceirosAtivos = parceiros.filter(p => p.status_parceiro === 'Ativo');
         const parceirosInativos = parceiros.filter(p => p.status_parceiro === 'Inativo');
         const parceirosOrdenados = [...parceirosAtivos, ...parceirosInativos];
@@ -92,3 +91,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   carregarParceiros();
 });
+document.getElementById('btns-salvar-cancelar').style.display = 'none';

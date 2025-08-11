@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnConfirmar = document.getElementById('btn-modal-salvar');
 
     const modalSucesso = document.getElementById('modal-sucesso');
-    const mensagemModalSucesso = document.getElementById('msm-sucesso'); // Obtem a referência para o elemento de mensagem
+    const mensagemModalSucesso = document.getElementById('msm-sucesso');
 
     const modalErro = document.getElementById('modal-error');
     const modalErroText = document.getElementById('erro-text');
@@ -156,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (json.status === "success") {
                 modalCadastro?.close();
-                // ATUALIZANDO MENSAGEM PARA SER MAIS ESPECÍFICA
                 mensagemModalSucesso.textContent = 'Categoria cadastrada com sucesso!';
                 modalSucesso?.showModal();
                 setTimeout(() => window.location.reload(), 2000);
@@ -258,3 +257,6 @@ btnCancelar?.addEventListener('click', () => {
     const dialog = document.getElementById('cadastro-categoria');
     if (dialog) dialog.close();
 });
+
+
+// YuridPaula

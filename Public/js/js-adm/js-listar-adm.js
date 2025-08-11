@@ -41,7 +41,7 @@ async function listar(){
     } 
 }
 listar();
-
+document.getElementById('btns-salvar-cancelar').style.display = 'none';
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)

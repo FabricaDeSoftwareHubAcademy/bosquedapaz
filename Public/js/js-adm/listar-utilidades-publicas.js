@@ -233,3 +233,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     carregarUtilidades();
 });
+document.getElementById('btns-salvar-cancelar').style.display = 'none';
