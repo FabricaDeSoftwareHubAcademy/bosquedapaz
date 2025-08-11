@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const botao = document.querySelector(".search-button");
 
   function formatarTelefone(numero) {
+    if (!numero) return ""; 
+
     const nums = numero.replace(/\D/g, "");
     if (nums.length === 11) {
       return `(${nums.slice(0, 2)}) ${nums.slice(2, 7)}-${nums.slice(7)}`;
@@ -98,4 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.getElementById('btns-salvar-cancelar').style.display = 'none';
+const btnSalvarCancelar = document.getElementById("btns-salvar-cancelar");
+if (btnSalvarCancelar) {
+  btnSalvarCancelar.style.display = "none";
+}
