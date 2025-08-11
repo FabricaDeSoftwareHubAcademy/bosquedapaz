@@ -41,6 +41,7 @@ async function listar(){
     } 
 }
 listar();
+document.getElementById('btns-salvar-cancelar').style.display = 'none';
 
 function maskNumTelefone(num) {
     let valor = num;

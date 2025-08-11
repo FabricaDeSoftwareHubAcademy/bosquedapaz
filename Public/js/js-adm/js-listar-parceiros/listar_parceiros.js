@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("status");
-  const botao = document.querySelector(".search-button");
+  // --- Elementos da Tabela ---
   const tbody = document.querySelector(".collaborators-table tbody");
 
+  // --- Elementos de Busca ---
+  const input = document.getElementById("status");
+  const botao = document.querySelector(".search-button");
+
+  // --- Funções de Ordenação e Renderização ---
   // Função para formatar telefone brasileiro
   function formatarTelefone(numero) {
     const nums = numero.replace(/\D/g, '');
@@ -25,14 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then(res => res.json())
       .then(parceiros => {
+        if (!tbody) {
+          console.error("Elemento <tbody> não encontrado.");
+          return;
+        }
+
         tbody.innerHTML = "";
 
-        if (parceiros.length === 0) {
+        if (!parceiros || parceiros.length === 0) {
           tbody.innerHTML = `<tr><td colspan="6">Nenhum parceiro encontrado.</td></tr>`;
           return;
         }
 
-        parceiros.forEach(parceiro => {
+        const parceirosAtivos = parceiros.filter(p => p.status_parceiro === 'Ativo');
+        const parceirosInativos = parceiros.filter(p => p.status_parceiro === 'Inativo');
+        const parceirosOrdenados = [...parceirosAtivos, ...parceirosInativos];
+
+        parceirosOrdenados.forEach(parceiro => {
           let classeStatus = '';
           if (parceiro.status_parceiro === 'Ativo') {
             classeStatus = 'active';
@@ -47,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <td>${formatarTelefone(parceiro.telefone)}</td>
               <td>${parceiro.email}</td>
               <td>
-                <button id="muda_status" class="status ${classeStatus}">
+                <button id="muda_status" class="status ${classeStatus}" data-status="${parceiro.status_parceiro}">
                   ${parceiro.status_parceiro}
                 </button>
               </td>
@@ -63,20 +76,31 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch(err => {
         console.error("Erro ao carregar parceiros:", err);
-        tbody.innerHTML = `<tr><td colspan="6">Erro ao carregar dados.</td></tr>`;
+        if (tbody) {
+          tbody.innerHTML = `<tr><td colspan="6">Erro ao carregar dados.</td></tr>`;
+        }
       });
   }
 
-  botao.addEventListener("click", function () {
-    const valorBusca = input.value.trim();
-    carregarParceiros(valorBusca);
-  });
+  // --- Event Listeners para a Busca ---
+  if (botao) {
+    botao.addEventListener("click", function () {
+      const valorBusca = input?.value.trim();
+      carregarParceiros(valorBusca);
+    });
+  }
 
-  input.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      botao.click();
-    }
-  });
+  if (input) {
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (botao) {
+          botao.click();
+        }
+      }
+    });
+  }
 
   carregarParceiros();
 });
+document.getElementById('btns-salvar-cancelar').style.display = 'none';
