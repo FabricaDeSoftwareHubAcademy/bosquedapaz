@@ -145,7 +145,7 @@ try {
             $mail->Body = $mensagem;
             $mail->AltBody = strip_tags($mensagem);
             $mail->addAttachment($caminhoCompleto);
-            $mail->addEmbeddedImage(__DIR__ . '/../Public/imgs/logo-nova-bosque-da-paz.webp', 'logoEmpresa');
+            $mail->addEmbeddedImage(__DIR__ . '/../Public/imgs/logo-nova-bosque-da-paz.png', 'logoEmpresa');
             $mail->send();
 
         } catch (Exception $e) {
