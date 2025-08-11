@@ -70,6 +70,7 @@ class Expositor extends Pessoa
         $pes_id = $db->insert_lastid(
             [
                 'nome' => $this->nome,
+                'cpf' => $this->cpf,
                 'telefone' => $this->telefone,
                 'whats' => $this->whats,
                 'img_perfil' => $this->foto_perfil,
@@ -96,7 +97,6 @@ class Expositor extends Pessoa
                 'descricao' => $this->descricao,
                 'metodos_pgto' => $this->metodos_pgto,
                 'cor_rua' => $this->cor_rua,
-                'produto' => $this->produto
                 ]
             );
             

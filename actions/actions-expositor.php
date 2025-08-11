@@ -111,6 +111,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     
             ////// DADOS PESSOA \\\\\\\\\\\
             $expositor->setNome(            htmlspecialchars(strip_tags($_POST['nome'])));
+            $expositor->setCpf(             htmlspecialchars(strip_tags($_POST['cpf'])));
             $expositor->setWhats(           'https://wa.me/55'.limparMaskTelefone(htmlspecialchars(strip_tags($_POST['whats']))));
             $expositor->setTelefone(        limparMaskTelefone(htmlspecialchars(strip_tags($_POST['whats']))));
             $expositor->setlink_instagram(  linkInstagram(htmlspecialchars(strip_tags($_POST['link_instagram']))));
@@ -168,14 +169,14 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 }else {
                     echo json_encode([
                         'status' => 400, 
-                        'msg' => 'É necassário enviar 6 imagens para realizar o cadastro', 
+                        'msg' => 'É necessário enviar 6 imagens para realizar o cadastro', 
                     ]);
                     exit;
                 }
             }else {
                 echo json_encode([
                     'status' => 400, 
-                    'msg' => 'É necassário enviar imagens para realizar o cadastro', 
+                    'msg' => 'É necessário enviar imagens para realizar o cadastro', 
                 ]);
                 exit;
             }
@@ -183,7 +184,6 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             
             //////// DADOS EXPOSITOR \\\\\\\\\\\\\
             $expositor->setNome_marca(     htmlspecialchars(strip_tags($_POST['marca'])));
-            $expositor->setProduto(        htmlspecialchars(strip_tags($_POST['produto'])));
             $expositor->setVoltagem(       htmlspecialchars(strip_tags($_POST['voltagem'])));
             $expositor->setEnergia(        htmlspecialchars(strip_tags($_POST['energia'])));
             $expositor->setTipo(           htmlspecialchars(strip_tags($_POST['tipo'])));
@@ -251,7 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $buscarId = $expositor->listar("id_expositor = '$id'");
             //// faz append das imagens
             $buscarId[0]['imagens'] = $buscarImagem;
-            $response = $buscarId ? ['expositor' => $buscarId[0], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            $response = $buscarId ? ['expositor' => $buscarId[0],$_GET['id'], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
         //// RETORNA EXPOSITORES INATIVOS

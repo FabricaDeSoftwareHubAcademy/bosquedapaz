@@ -2,7 +2,7 @@ let nomeEmpresa = document.getElementById('nomeEmpresa')
 let nome = document.getElementById('nome')
 let email = document.getElementById('email')
 let whats = document.getElementById('whats')
-let produto = document.getElementById('produto')
+let cpf = document.getElementById('cpf')
 let cidade = document.getElementById('cidade')
 let exposicao = document.getElementById('exposicao')
 let energia = document.getElementById('energia')
@@ -67,7 +67,7 @@ async function getExpositor(){
         nome.value = response.expositor.nome
         email.value = response.expositor.email
         whats.value = maskNumTelefone(response.expositor.telefone)
-        produto.value = response.expositor.produto
+        cpf.value = response.expositor.cpf
         intagram.href = response.expositor.link_instagram
         intagram.innerText = response.expositor.link_instagram
         exposicao.value = response.expositor.tipo

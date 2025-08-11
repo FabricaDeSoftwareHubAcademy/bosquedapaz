@@ -9,6 +9,7 @@ use app\Models\Database;
 class Pessoa
 {
     protected $id_pessoa; 
+    protected $cpf; 
     protected $nome; 
     protected $email; 
     protected $senha; 
@@ -26,6 +27,9 @@ class Pessoa
 
     public function setNome($nome){
         $this->nome = $nome;
+    }
+    public function setCpf($cpf){
+        $this->cpf = $cpf;
     }
 
     public function setEmail($email){

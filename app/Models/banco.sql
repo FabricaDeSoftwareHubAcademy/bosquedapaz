@@ -211,8 +211,8 @@ CREATE TABLE utilidade_publica (
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.produto, exp.validacao, 
-pes.nome, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, 
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.validacao, 
+pes.nome, pes.cpf, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, 
 cat.id_categoria, cat.descricao, cat.cor, cat.icone,
 en.cidade,
 log.email, log.status_pes, log.id_login
