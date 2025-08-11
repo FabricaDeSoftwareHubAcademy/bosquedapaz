@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Colors Variaveis */
-:root{
+:root {
     --color-box-shadow: #cbcbcb;
 
     --color-linha: #e0e0e0;
@@ -102,9 +102,9 @@
 }
 
 .div__logo:hover {
-    width: 162px;
-    height: 162px;
-    transition: all .2s ease-in;
+    width: 170px;
+    height: 170px;
+    transition: all .2s ease-in-out;
 }
 
 .img_logo_expositor {
@@ -119,34 +119,37 @@
 
 
 .container__imgs {
-    width: 100%;
-    height: 60%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-auto-rows: auto;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 0px 4rem;
+    width: 95%;
+    height: 50%;
+    gap: 15px;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .div__img {
-    width: auto;
-    min-width: 120px;
-    min-height: 120px;
-    max-width: 240px;
-    max-height: 200px;
+    width: calc(33.33% - 10px);
+    height: 160px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    border-radius: .5rem;
-    box-shadow: 0px 0px 10px rgb(161, 161, 161);
+    border-radius: 10px;
+    position: relative;
+    bottom: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.div__img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.379);
 }
 
 .img_produto_expositor {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 
 .right__side {
     width: 50%;
@@ -278,12 +281,8 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .container__infs{
+    .container__infs {
         width: 100%;
-    }
-    .div__img {
-        max-width: 140px;
-        max-height: 140px;
     }
 
     .div__logo {
@@ -298,13 +297,10 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .conteiner__box{
+    .conteiner__box {
         flex-direction: column;
     }
-    .div__img {
-        max-width: 200px;
-        max-height: 200px;
-    }
+
 
     .div__logo {
         width: 140px;
@@ -324,13 +320,14 @@
         display: none;
     }
 
-    .left__side, .right__side {
+    .left__side,
+    .right__side {
         width: 100%;
         height: auto;
         padding: 2rem 1rem;
     }
 
-    .right__side{
+    .right__side {
         min-height: 600px;
     }
 
@@ -345,8 +342,8 @@
 }
 
 
-@media screen and (max-width: 600px){
-    .container__imgs{
+@media screen and (max-width: 600px) {
+    .container__imgs {
         grid-template-columns: repeat(2, auto);
     }
 
@@ -369,7 +366,7 @@
         height: 70%;
     }
 
-    .right__side{
+    .right__side {
         min-height: 900px;
     }
 
