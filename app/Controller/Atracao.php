@@ -67,23 +67,21 @@ class Atracao
 
     public function buscarPorId($id) {
         $db = new Database('atracao');
-        $res = $db->select("id_atracao = {$id}")
-                  ->fetchObject(self::class);
-
-        return $res;
+        $query = "SELECT * FROM atracao WHERE id_atracao = ?";
+        return $db->execute($query, [$id])->fetchObject(self::class);
     }
 
     public function atualizar($id) {
         $db = new Database('atracao');
-
-        $valores = [
-            'nome_atracao' => $this->nome_atracao,
-            'descricao_atracao' => $this->descricao_atracao,
-            'banner_atracao' => $this->banner_atracao,
-            'id_evento' => $this->id_evento,
-            'status' => $this->status
-        ];
-
-        return $db->update("id_atracao = {$id}", $valores);
+        $query = "UPDATE atracao SET nome_atracao = ?, descricao_atracao = ?, banner_atracao = ?, id_evento = ?, status = ? WHERE id_atracao = ?";
+        
+        return $db->execute($query, [
+            $this->nome_atracao,
+            $this->descricao_atracao, 
+            $this->banner_atracao,
+            $this->id_evento,
+            $this->status,
+            $id
+        ]);
     }
 }

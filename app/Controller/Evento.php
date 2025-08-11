@@ -21,6 +21,20 @@ class Evento
 
     public function cadastrar_evento()
     {
+        if (empty($this->nome_evento) || strlen($this->nome_evento) > 255) {
+            throw new \InvalidArgumentException("Nome do evento inválido");
+        }
+        
+        if (!filter_var($this->data_evento, FILTER_VALIDATE_REGEXP, [
+            'options' => ['regexp' => '/^\d{4}-\d{2}-\d{2}$/']
+        ])) {
+            throw new \InvalidArgumentException("Data inválida");
+        }
+        
+        // Sanitização
+        $this->nome_evento = htmlspecialchars(strip_tags(trim($this->nome_evento)));
+        $this->descricao_evento = htmlspecialchars(strip_tags(trim($this->descricao_evento)));
+        $this->subtitulo_evento = htmlspecialchars(strip_tags(trim($this->subtitulo_evento)));
         try {
             $db = new Database('evento');
             $res = $db->insert([
@@ -77,24 +91,23 @@ class Evento
         }
     }
 
-    public function atualizar_evento($id){
+    public function atualizar_evento($id) {
         try {
             $db = new Database('evento');
-
-            $valores = [
-                'nome_evento' => $this->nome_evento,
-                'subtitulo_evento' => $this->subtitulo_evento,
-                'descricao_evento' => $this->descricao_evento,
-                'data_evento' => $this->data_evento,
-                'hora_inicio' => $this->hora_inicio,
-                'hora_fim' => $this->hora_fim,
-                'id_endereco_evento' => $this->id_endereco_evento,
-                'banner_evento' => $this->banner_evento,
-                'status' => $this->status
-            ];
-        
-            return $db->update("id_evento = {$id}", $valores);
-
+            $query = "UPDATE evento SET nome_evento = ?, subtitulo_evento = ?, descricao_evento = ?, data_evento = ?, hora_inicio = ?, hora_fim = ?, id_endereco_evento = ?, banner_evento = ?, status = ? WHERE id_evento = ?";
+            
+            return $db->execute($query, [
+                $this->nome_evento,
+                $this->subtitulo_evento,
+                $this->descricao_evento,
+                $this->data_evento,
+                $this->hora_inicio,
+                $this->hora_fim,
+                $this->id_endereco_evento,
+                $this->banner_evento,
+                $this->status,
+                $id
+            ]);
         } catch (\Throwable $th) {
             return FALSE;
         }
