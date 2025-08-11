@@ -44,9 +44,19 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
+
         $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
+        
+        try {
+            
+        
 
         $db = new Database('endereco');
+
+        $rowback = $db->getConnection();
+
+        $rowback->beginTransaction();
+
         $endereco_id = $db->insert_lastid(
             [
                 'cidade' => $this->cidade,
@@ -64,6 +74,8 @@ class Expositor extends Pessoa
             ]
         );
 
+        echo $login_id;
+
             
         ///// insert na tabela pessoa \\\\\
         $db = new Database('pessoa');
@@ -77,7 +89,7 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'id_login' => $login_id,
                 'id_endereco' => $endereco_id,
-                'img_perfil' => '../Public/imgs/barraca-padrao.png',
+                'img_perfil' => '../../../Public/imgs/barraca-padrao.png',
                 'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
             ]
         );
@@ -110,8 +122,13 @@ class Expositor extends Pessoa
             $res = $imagem->cadastro();
         }
 
+        $rowback->commit();
+        return true;
 
-        return $res;
+    } catch (\Throwable $th) {
+        echo 'oi';
+        return false;
+    }
     }
 
 

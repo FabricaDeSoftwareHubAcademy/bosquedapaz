@@ -90,11 +90,13 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             ////////////////// VALIDANDO O EMAIL\\\\\\\\\\\\\
 
             $email = htmlspecialchars(strip_tags($_POST['email']));
+            
             $existe = $expositor->emailExiste($email);
             if($existe){
                 echo json_encode([
                     'status' => 400, 
                     'msg' => 'Não é possivel cadastrar, email existente',
+                    $existe
                 ]);
                 exit;
             }
