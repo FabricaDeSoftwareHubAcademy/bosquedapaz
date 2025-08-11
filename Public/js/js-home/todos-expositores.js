@@ -97,6 +97,7 @@ async function chamarModalExpositor(id){
 
 }
 
+
 ///////////////////  FUNCAO QUE CARREGA OS EXPOSITORES \\\\\\\\\\\\\\\
 
 async function getExpositores(){
@@ -146,11 +147,6 @@ async function getExpositores(){
 
     }
 }
-
-document.addEventListener('DOMContentLoaded', getExpositores)
-
-
-
 
 ///////////// FILTROS EXPOSITOR \\\\\\\\\\\\\\\
 
@@ -208,8 +204,6 @@ inputFiltro.addEventListener('keyup', async () => {
     }
 })
 
-
-
 ////////////// GARREGANDO CATEGORIA \\\\\\\\\\\\\\\\
 
 async function getCategoria(){
@@ -219,7 +213,7 @@ async function getCategoria(){
 
     let selectCat = document.getElementById('select-cat')
 
-    selectCat.innerHTML = '<option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>'
+    selectCat.innerHTML = '<option value="all" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>'
     
 
     response.dados.forEach(categoria => {
@@ -231,21 +225,19 @@ async function getCategoria(){
 document.addEventListener('DOMContentLoaded', getCategoria)
 
 
-
 ////////////// FILTRANDO EXPOSITOR PELA CATAGORIA \\\\\\\\\\\\\
 
 
-let selectFiltro = document.getElementById('select-cat')
 
-selectFiltro.addEventListener('change', async () => {
-    if(selectFiltro.value == 'inicio'){
+async function getExpositorCategoria(categoria) {
+    if(categoria == 'all'){
         getExpositores()
     }
-
-    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${selectFiltro.value}`);
-
+    
+    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${categoria}`);
+    
     let content_cards = document.getElementById('content_cards')
-
+    
     let response = await dados_expositores.json();
 
     if (response.status == 200) {
@@ -286,4 +278,22 @@ selectFiltro.addEventListener('change', async () => {
         content_cards.innerHTML = '<p>Nenhum expositor encontrado</p>'
 
     }
-})
+}
+
+
+let selectFiltro = document.getElementById('select-cat')
+
+selectFiltro.addEventListener('change', async () => {getExpositorCategoria(selectFiltro.value)})
+
+
+let url = document.location.href
+
+var paramUrl = new URLSearchParams(new URL(url).search).get('categoria')
+
+if (paramUrl != null){
+    getExpositorCategoria(paramUrl)
+}else{
+
+    document.addEventListener('DOMContentLoaded', getExpositores)
+
+}
