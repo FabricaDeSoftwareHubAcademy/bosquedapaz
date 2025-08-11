@@ -79,7 +79,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* background-color: #007E70; */
+    background-color: #007E70;
 }
 
 .form-box form {
