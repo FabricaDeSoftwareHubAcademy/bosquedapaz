@@ -30,10 +30,13 @@ class Artista extends Pessoa
     {
         $this->id_pessoa = $id_pessoa;
     }
-    public function setNome_artistico($nome_artistico)
-    {
-        $this->nome_artistico = $nome_artistico;
+    public function setNome_artistico($nome_artistico) {
+    $nome_artistico = trim($nome_artistico);
+    if (empty($nome_artistico) || strlen($nome_artistico) > 100) {
+        throw new \InvalidArgumentException("Nome artístico inválido");
     }
+    $this->nome_artistico = htmlspecialchars(strip_tags($nome_artistico));
+}
     public function setLinguagem_artistica($linguagem_artistica)
     {
         $this->linguagem_artistica = $linguagem_artistica;
@@ -50,10 +53,12 @@ class Artista extends Pessoa
     {
         $this->tempo_apresentacao = $tempo_apresentacao;
     }
-    public function setValor_cache($valor_cache)
-    {
-        $this->valor_cache = $valor_cache;
+    public function setValor_cache($valor_cache) {
+    if (!is_numeric($valor_cache) || $valor_cache < 0) {
+        throw new \InvalidArgumentException("Valor do cachê inválido");
     }
+    $this->valor_cache = (float)$valor_cache;
+}
     public function setStatus($status)
     {
         $this->status = $status;
@@ -63,6 +68,13 @@ class Artista extends Pessoa
     {
         $this->aceitou_termos = $aceitou_termos;
     }
+
+    public function setEmail($email) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        throw new \InvalidArgumentException("Email inválido");
+    }
+    $this->email = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
+}
 
 
 
@@ -105,8 +117,25 @@ class Artista extends Pessoa
     }
 
     // --- Cadastrar ---
-    public function cadastrar()
-    {
+    public function cadastrar() {
+        // Validações de entrada
+        if (empty($this->nome) || strlen($this->nome) > 100) {
+            throw new \InvalidArgumentException("Nome inválido");
+        }
+        
+        if (empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            throw new \InvalidArgumentException("Email inválido");
+        }
+        
+        if (empty($this->nome_artistico) || strlen($this->nome_artistico) > 100) {
+            throw new \InvalidArgumentException("Nome artístico inválido");
+        }
+        
+        // Sanitização
+        $this->nome = htmlspecialchars(strip_tags(trim($this->nome)));
+        $this->email = filter_var(trim($this->email), FILTER_SANITIZE_EMAIL);
+        $this->nome_artistico = htmlspecialchars(strip_tags(trim($this->nome_artistico)));
+        
         $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
 
         $dbPessoa = new Database('pessoa');
@@ -133,52 +162,52 @@ class Artista extends Pessoa
     }
 
 
-    public function listar()
-    {
-        try {
-            $db = new Database('artista');
-    
-            $query = "SELECT * FROM artista";
-            $artistas = $db->execute($query)->fetchAll(PDO::FETCH_ASSOC);
-    
-            $resultado = [];
-    
-            foreach ($artistas as $artista) {
-                $pessoa = $db->execute(
-                    "SELECT nome, telefone FROM pessoa WHERE id_pessoa = :id_pessoa",
-                    [':id_pessoa' => $artista['id_pessoa']]
-                )->fetch(PDO::FETCH_ASSOC);
-    
-                $resultado[] = [
-                    'id_artista'          => $artista['id_artista'],
-                    'nome'                => $pessoa['nome'] ?? '',
-                    'email'               => $artista['email'], 
-                    'telefone'            => $pessoa['telefone'] ?? '',
-                    'linguagem_artistica' => $artista['linguagem_artistica'],
-                    'valor_cache'         => $artista['valor_cache'],
-                    'tempo_apresentacao'  => $artista['tempo_apresentacao'],
-                    'status'              => $artista['status']
-                ];
-            }
-    
-            return $resultado;
-        } catch (\PDOException $e) {
-            return [];
+    public function listar() {
+        $db = new Database('artista');
+
+        $query = "SELECT * FROM artista";
+        $artistas = $db->execute($query)->fetchAll(PDO::FETCH_ASSOC);
+
+        $resultado = [];
+
+        foreach ($artistas as $artista) {
+            $pessoa = $db->execute(
+                "SELECT nome, telefone FROM pessoa WHERE id_pessoa = ?",
+                [$artista['id_pessoa']]
+            )->fetch(PDO::FETCH_ASSOC);
+
+            $resultado[] = [
+                'id_artista'          => $artista['id_artista'],
+                'nome'                => $pessoa['nome'] ?? '',
+                'email'               => $artista['email'], 
+                'telefone'            => $pessoa['telefone'] ?? '',
+                'linguagem_artistica' => $artista['linguagem_artistica'],
+                'valor_cache'         => $artista['valor_cache'],
+                'tempo_apresentacao'  => $artista['tempo_apresentacao'],
+                'status'              => $artista['status']
+            ];
         }
+
+        return $resultado;
     }
     
 
 
 
-    public function atualizarStatus($id_artista, $novo_status)
-    {
-        try {
-            $db = new Database('artista');
-            return $db->update('id_artista = ' . intval($id_artista), [
-                'status' => $novo_status
-            ]);
-        } catch (\PDOException $e) {
+    public function atualizarStatus($id_artista, $novo_status) {
+        // Validação de entrada
+        if (!is_numeric($id_artista) || $id_artista <= 0) {
             return false;
         }
+        
+        $statusPermitidos = ['ativo', 'inativo', 'pendente'];
+        if (!in_array($novo_status, $statusPermitidos)) {
+            return false;
+        }
+        
+        $db = new Database('artista');
+        $query = "UPDATE artista SET status = ? WHERE id_artista = ?";
+        $stmt = $db->execute($query, [$novo_status, (int)$id_artista]);
+        return $stmt->rowCount() > 0;
     }
 }
