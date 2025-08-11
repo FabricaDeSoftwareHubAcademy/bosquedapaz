@@ -13,7 +13,7 @@
     width: 95%;
     height: 80%;
     margin-top: 2%;
-    background-color: rgba(224, 224, 224, 0.473);
+    background-color: rgba(248, 245, 246, 0.65);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.281);
     border-radius: 10px;
     display: flex;
@@ -849,7 +849,7 @@
 
     .botao-voltar {
         top: 1580px;
-        width: 80px;
+        width: 50px;
         height: auto;
     }
 
@@ -882,9 +882,9 @@
 
 @media (min-width: 1201px) and (max-width: 1280px) {
     .botao-voltar {
-        top: 680px;
-        left: 30px;
-        width: 70px;
+        top: 650px;
+        left: 40px;
+        width: 50px;
         height: auto;
     }
 }
@@ -982,7 +982,7 @@
 
     .botao-voltar {
         top: 1610px;
-        width: 90px;
+        width: 60px;
         height: auto;
     }
 
