@@ -26,7 +26,6 @@ document.addEventListener('click', function (e) {
 
         if (!idBoletoSelecionado) {
             console.error('ID do boleto não encontrado na linha.');
-            // Usar o modal de erro em vez de alert
             mensagemModalErro.textContent = 'ID do boleto não encontrado na linha.';
             modalErro.showModal();
             return;
@@ -65,7 +64,6 @@ document.getElementById('btn-modal-cancelar').addEventListener('click', () => {
 document.getElementById('btn-modal-salvar').addEventListener('click', () => {
     if (modalConfirmacao) modalConfirmacao.close();
     
-    // A LÓGICA DE ALTERAÇÃO DE STATUS AGORA ESTÁ AQUI
     const novoStatus = (statusAtualSelecionado === 'Pago') ? 'Pendente' : 'Pago';
 
     const tolkenInput = document.getElementById('tolken-csrf-input');
@@ -150,7 +148,6 @@ async function carregarBoletos(filtros) {
     tbody.innerHTML = '';
 
     if (data.length > 0) {
-      // CORREÇÃO: Ordenação dos boletos para exibir pagos primeiro
       const boletosPagos = data.filter(boleto => boleto.status_boleto === 'Pago');
       const boletosPendentes = data.filter(boleto => boleto.status_boleto === 'Pendente');
       const boletosOrdenados = [...boletosPagos, ...boletosPendentes];

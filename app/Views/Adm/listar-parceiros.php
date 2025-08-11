@@ -38,7 +38,7 @@ $tolken = getTolkenCsrf();
                             <tr>
                                 <th class="usuario-col">Parceiro</th>
                                 <th>Contato</th>
-                                <th>Telefone</th>
+                                <th>Celular</th>
                                 <th>Email</th>
                                 <th>Status</th>
                                 <th>Ações</th>

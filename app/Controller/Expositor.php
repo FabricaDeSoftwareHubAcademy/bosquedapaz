@@ -44,7 +44,7 @@ class Expositor extends Pessoa
 
     public function cadastrar()
     {
-        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
         $db = new Database('endereco');
         $endereco_id = $db->insert_lastid(
@@ -70,7 +70,8 @@ class Expositor extends Pessoa
         $pes_id = $db->insert_lastid(
             [
                 'nome' => $this->nome,
-                'telefone' => $this->whats,
+                'cpf' => $this->cpf,
+                'telefone' => $this->telefone,
                 'whats' => $this->whats,
                 'img_perfil' => $this->foto_perfil,
                 'link_instagram' => $this->link_instagram,
@@ -96,7 +97,6 @@ class Expositor extends Pessoa
                 'descricao' => $this->descricao,
                 'metodos_pgto' => $this->metodos_pgto,
                 'cor_rua' => $this->cor_rua,
-                'produto' => $this->produto
                 ]
             );
             
@@ -122,7 +122,7 @@ class Expositor extends Pessoa
 
             //// RETORNA TODOS OS EXPOSITORES VALIDADOS
             if($where == null){
-                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado"', 'nome and status_pes')->fetchAll(PDO::FETCH_ASSOC);
+                $expositores = $db->select('validacao = "validado"', 'status_pes')->fetchAll(PDO::FETCH_ASSOC);
                 return $expositores ? $expositores : FALSE;
             }
 
@@ -156,19 +156,28 @@ class Expositor extends Pessoa
         }
     }
 
-    public function filtrar($filtro, $status = "= 'aprovado'"){
+    public function filtrar($filtro, $status = "= 'validado'", $valido = false){
         try {
             $db = new Database('view_expositor');
 
-            //// RETORNA O EXPOSITOR PELO FILTRO
-            $expositores = $db->select(
-                "nome_marca LIKE '%$filtro%' and validacao ".$status." 
-                OR nome LIKE '%$filtro%' and validacao ".$status." 
-                OR email LIKE '%$filtro%' and validacao ".$status." 
-                OR num_barraca LIKE '%$filtro%' and validacao ".$status." 
-                ", 'nome and status_pes'
-            )->fetchAll(PDO::FETCH_ASSOC);
-            return $expositores ? $expositores : FALSE;
+            if($valido){
+                //// RETORNA O EXPOSITOR PELO FILTRO
+                $expositores = $db->select(
+                    "nome_marca LIKE '%$filtro%' and validacao ='validado' OR nome LIKE '%$filtro%' and validacao ='validado' OR email LIKE '%$filtro%' and validacao ='validado' OR num_barraca LIKE '%$filtro%' and validacao ='validado'", 'nome and status_pes'
+                )->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+            }else {
+                //// RETORNA O EXPOSITOR PELO FILTRO
+                $expositores = $db->select(
+                    "nome_marca LIKE '%$filtro%' and validacao ".$status." 
+                    OR nome LIKE '%$filtro%' and validacao ".$status." 
+                    OR email LIKE '%$filtro%' and validacao ".$status." 
+                    OR num_barraca LIKE '%$filtro%' and validacao ".$status." 
+                    ", 'nome and status_pes'
+                )->fetchAll(PDO::FETCH_ASSOC);
+                return $expositores ? $expositores : FALSE;
+
+            }
         
         //// RETORNA FALSE NO CASO DE ERRO
         } catch (\Throwable $th) {
@@ -179,15 +188,14 @@ class Expositor extends Pessoa
 
     //////////////////// VÁLIDAR EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\\
 
-    public function validarExpositor($id, $status, $categoria = null, $newSenha = null, $num_barraca = null, $cor_rua = null){
-        $db = new Database('expositor');
+    public function validarExpositor($id_expositor, $status, $categoria = null, $newSenha = null, $num_barraca = null, $cor_rua = null, $id_login = null){
         if($status == 'validado'){
             //// dados pessoa
             $senha = [
                 'senha' => $newSenha,
                 'status_pes' => 'ativo',
             ];
-
+            
             ///// dados expositor
             $newStatus = [
                 'validacao' => 'validado',
@@ -195,17 +203,26 @@ class Expositor extends Pessoa
                 'num_barraca' => $num_barraca,
                 'cor_rua' => $cor_rua,
             ];
+            
+            
+            $db = new Database('pessoa_user');
 
-            $res = $db->update_all($newStatus, $senha, 'pessoa', 'id_pessoa', 'id_expositor = '. $id);
+            $updateSenha = $db->update('id_login = "'. $id_login. '"',$senha);
+            
+            if($updateSenha){
+                $db = new Database('expositor');
 
-            return $res;
+                $updateSenha = $db->update('id_expositor = "'. $id_expositor. '"',$newStatus);
+            }
+
+            return $updateSenha;
 
         }else if ($status == 'recusado'){
             ///// dados expositor
             $newStatus = [
                 'validacao' => 'recusado'
             ];
-            $res = $db->update('id_expositor = '. $id, $newStatus);
+            $res = $db->update('id_expositor = '. $id_expositor, $newStatus);
             return $res;
         }
     }
@@ -213,9 +230,9 @@ class Expositor extends Pessoa
     /////////////////// DELETAR EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\\\
 
     public function alterarStatus($id, $status){
-        $db = new Database('pessoa');
+        $db = new Database('pessoa_user');
         try {
-            $status = $db->delete('id_pessoa = '. $id, $status);
+            $status = $db->delete('id_login = '. $id, $status);
             return $status;
         } catch (\Throwable $th) {
             return FALSE;

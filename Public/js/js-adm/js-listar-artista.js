@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody-artistas');
   const inputPesquisa = document.getElementById('status');
 
-  // NOVOS ELEMENTOS DO MODAL DELETE
   const modalDelete = document.getElementById("modal-delete");
   const tituloDelete = modalDelete.querySelector("h2.deletar-text");
   const mensagemDelete = modalDelete.querySelector("p.msm-modal");
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else if (cleaned.length === 10) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 6)}-${cleaned.slice(6)}`;
     }
-
     return numero;
   }
 
@@ -95,15 +93,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       artistaSelecionadoId = id;
       artistaNovoStatus = novoStatus;
 
-      // Atualizar conteúdo do modal-delete dinamicamente
-      tituloDelete.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
-      mensagemDelete.textContent = `Clique em confirmar para ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} o artista.`;
+      const acaoTexto = novoStatus === 'ativo' ? 'ativar' : 'inativar';
+
+      tituloDelete.textContent = `Deseja ${acaoTexto} este artista?`;
+      mensagemDelete.textContent = `Clique em confirmar para ${acaoTexto} o artista.`;
+      btnDeletar.textContent = acaoTexto.charAt(0).toUpperCase() + acaoTexto.slice(1);
 
       modalDelete.showModal();
     }
   });
 
-  // Botão "Confirmar" do modal-delete
   btnDeletar.addEventListener('click', async () => {
     if (!artistaSelecionadoId || !artistaNovoStatus) return;
 
@@ -136,12 +135,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // Botão "Cancelar"
   btnCancelarDelete.addEventListener('click', () => {
     modalDelete.close();
   });
 
-  // Ícone de fechar (X)
   btnFecharDelete.addEventListener('click', () => {
     modalDelete.close();
   });

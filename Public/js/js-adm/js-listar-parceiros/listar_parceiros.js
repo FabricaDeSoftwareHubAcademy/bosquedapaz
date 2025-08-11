@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const botao = document.querySelector(".search-button");
 
   // --- Funções de Ordenação e Renderização ---
+  // Função para formatar telefone brasileiro
+  function formatarTelefone(numero) {
+    const nums = numero.replace(/\D/g, '');
+    if (nums.length === 11) {
+      return `(${nums.slice(0,2)}) ${nums.slice(2,7)}-${nums.slice(7)}`;
+    } else if (nums.length === 10) {
+      return `(${nums.slice(0,2)}) ${nums.slice(2,6)}-${nums.slice(6)}`;
+    } else {
+      return numero;
+    }
+  }
+
   function carregarParceiros(nome = "") {
     fetch(`../../../actions/action-listar-parceiros.php`, {
       method: "POST",
@@ -45,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <tr data-id-parceiro="${parceiro.id_parceiro}">
               <td class="usuario-col">${parceiro.nome_parceiro}</td>
               <td>${parceiro.nome_contato}</td>
-              <td>${parceiro.telefone}</td>
+              <td>${formatarTelefone(parceiro.telefone)}</td>
               <td>${parceiro.email}</td>
               <td>
                 <button id="muda_status" class="status ${classeStatus}" data-status="${parceiro.status_parceiro}">

@@ -2,7 +2,7 @@ let nomeEmpresa = document.getElementById('nomeEmpresa')
 let nome = document.getElementById('nome')
 let email = document.getElementById('email')
 let whats = document.getElementById('whats')
-let produto = document.getElementById('produto')
+let cpf = document.getElementById('cpf')
 let cidade = document.getElementById('cidade')
 let exposicao = document.getElementById('exposicao')
 let energia = document.getElementById('energia')
@@ -66,8 +66,8 @@ async function getExpositor(){
         nomeEmpresa.innerText = response.expositor.nome_marca
         nome.value = response.expositor.nome
         email.value = response.expositor.email
-        whats.value = response.expositor.telefone
-        produto.value = response.expositor.produto
+        whats.value = maskNumTelefone(response.expositor.telefone)
+        cpf.value = response.expositor.cpf
         intagram.href = response.expositor.link_instagram
         intagram.innerText = response.expositor.link_instagram
         exposicao.value = response.expositor.tipo
@@ -252,3 +252,21 @@ async function recusarExpositor() {
 
 
 document.getElementById('botao_recusar').addEventListener('click', recusarExpositor)
+
+
+function maskNumTelefone(num) {
+    let valor = num;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    
+    return valor;
+}

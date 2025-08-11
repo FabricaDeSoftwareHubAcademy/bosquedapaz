@@ -10,4 +10,5 @@ return array(
     'app\\' => array($baseDir . '/app'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
+    'Controller\\' => array($baseDir . '/app/Controller'),
 );

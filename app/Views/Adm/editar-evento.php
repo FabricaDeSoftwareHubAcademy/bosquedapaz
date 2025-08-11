@@ -68,8 +68,8 @@ $tolken = getTolkenCsrf();
                                 <div class="input-group">
                                     <label for="status">Status:</label>
                                     <select name="status" id="status">
-                                        <option value="1">Ativo</option>
-                                        <option value="0">Inativo</option>
+                                        <option value="1">Em curso</option>
+                                        <option value="0">Finalizado</option>
                                     </select>
                                 </div>
 

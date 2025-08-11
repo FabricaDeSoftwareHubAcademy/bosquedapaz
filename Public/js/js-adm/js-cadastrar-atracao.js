@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form-atracao');
     const btnEditar = document.getElementById('btn-salvar');
     const idEvento = document.getElementById('id_evento').value;
+    const nomeEvento = document.getElementById('nome_evento').value;
 
     const atualizarContador = () => {
         const restante = 250 - descricaoInput.value.length;
@@ -15,8 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnEditar.addEventListener('click', (event) => {
         event.preventDefault();
-
-        openModalAtualizar(); 
+    
+        openModalAtualizar();
+    
+        document.getElementById('confirmar-title').innerText = 'Deseja confirmar este cadastro?';
+        document.getElementById('msm-confimar').innerText = 'Clique em salvar para confirmar o cadastro.';
+    
         document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
         document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
     
@@ -41,7 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('descricao_atracao', descricao);
             formData.append('id_evento', idEvento);
             formData.append('file', imagem);
-            formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
+
+
+            const tokenElem = document.getElementById('tolkenCsrf') || document.querySelector('input[name="tolkenCsrf"]');
+            if (tokenElem) {
+                formData.append('tolkenCsrf', tokenElem.value);
+            }
 
             try {
                 const resposta = await fetch('../../../actions/action-cadastrar-atracao.php', {
@@ -59,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
 
                     setTimeout(() => {
-                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}`;
-                    }, 6000);
+                        window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}&nome_evento=${encodeURIComponent(nomeEvento)}`;
+                    }, 5000);
 
                 } else {
                     document.getElementById('erro-title').innerText = 'Erro ao cadastrar atração';

@@ -21,7 +21,7 @@ async function listar(){
                 <td class="usuario-col">${colab['id_colaborador']}</td>
                 <td>${colab['nome']}</td>
                 <td class="email-col">${colab['email']}</td>
-                <td class="fone-col">${colab['telefone']}</td>
+                <td class="fone-col">${maskNumTelefone(colab['telefone'])}</td>
                 <td class="cargo-col">${colab['cargo']}</td>
                 <td>
                     <button 
@@ -42,6 +42,23 @@ async function listar(){
 }
 listar();
 document.getElementById('btns-salvar-cancelar').style.display = 'none';
+
+function maskNumTelefone(num) {
+    let valor = num;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    
+    return valor;
+}
 
 // -------------------------------------------------- 
 // Script Para Buscar Colaborador: No Arquivo (js-buscar-adm.js)

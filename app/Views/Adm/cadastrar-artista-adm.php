@@ -63,7 +63,7 @@ $tolken = getTolkenCsrf();
                                 <option value="Teatro">Teatro</option>
                                 <option value="Dança">Dança</option>
                                 <option value="Circo">Circo</option>
-                                <option value="Música">Música</option>
+                                <option value="Musica">Musica</option>
                             </select>
                         </div>
 

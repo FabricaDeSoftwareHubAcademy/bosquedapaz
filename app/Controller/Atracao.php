@@ -35,13 +35,35 @@ class Atracao
         return $res;
     }
 
-    public function buscarPorNome($nome) {
-        $db = new Database('atracao');
-        $res = $db->select("nome_atracao = {$nome}")
-                  ->fetchAll(PDO::FETCH_ASSOC);
-
-        return $res;
+    public function buscarPorNome($nome, $id_evento = null)
+    {
+        try {
+            $db = new Database('atracao');
+            
+            $query = "SELECT * FROM atracao WHERE 1=1";
+            $params = [];
+    
+            // Filtra pelo evento se informado
+            if (!empty($id_evento)) {
+                $query .= " AND id_evento = ?";
+                $params[] = $id_evento;
+            }
+    
+            // Filtra pelo nome se informado
+            if (!empty($nome)) {
+                $query .= " AND nome_atracao LIKE ?";
+                $params[] = "%$nome%";
+            }
+    
+            $query .= " ORDER BY status DESC, nome_atracao DESC";
+    
+            return $db->execute($query, $params)->fetchAll(PDO::FETCH_ASSOC);
+    
+        } catch (\Throwable $th) {
+            return FALSE;
+        }
     }
+
 
     public function buscarPorId($id) {
         $db = new Database('atracao');
