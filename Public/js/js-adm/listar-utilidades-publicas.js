@@ -10,19 +10,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     const btnCancelarConfirmar = document.getElementById('btn-modal-cancelar');
     const closeModalConfirmarIcon = document.getElementById('close-modal-confirmar');
 
-    const modalSucesso = document.getElementById('modal-sucesso');
-    const mensagemModalSucesso = document.getElementById('msm-sucesso');
-    const modalErro = document.getElementById('modal-error');
-    const mensagemModalErro = document.getElementById('erro-text');
+    for (let x = 0; x < response.length; x++) {
+        html += `
+        <tr>
+        <td class="usuario-col" data-label="Nome">${response[x].titulo}</td>
+        <td class="usuario-col" data-label="Data Início">${response[x].data_inicio}</td>
+        <td class="usuario-col" data-label="Data Fim">${response[x].data_fim}</td>
+        <td data-label="Status">
+            <form method="POST">
+            <button name="REQUEST_METHOD" id="ativoInativo" class="status ${response[x].status_utilidade == 1 ? 'active' : 'inactive'}" data-id="${response[x].id_utilidade_publica}">
+                ${response[x].status_utilidade == 1 ? 'Ativo' : 'Inativo'}
+            </button>
+            </form>
+        </td>
+        <td class="celula-status" id="celula-status" data-label="Ações">
+            <a class="edit-icon" href="./editar-utilidades.php?titulo=${encodeURIComponent(response[x].titulo)}&descricao=${encodeURIComponent(response[x].descricao)}&data_inicio=${encodeURIComponent(response[x].data_inicio)}&data_fim=${encodeURIComponent(response[x].data_fim)}&imagem=${encodeURIComponent(response[x].imagem)}&id=${encodeURIComponent(response[x].id_utilidade_publica)}">
+            <!-- SVG do lápis -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00000" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+            </svg>
+            </a>
+        </td>
+        </tr>
+        `;
 
-    let utilidadeSelecionadaParaStatus = null;
-
-    function abrirModalConfirmar(titulo, mensagem) {
-        if (tituloModalConfirmar && mensagemModalConfirmar && modalConfirmar) {
-            tituloModalConfirmar.textContent = titulo;
-            mensagemModalConfirmar.textContent = mensagem;
-            modalConfirmar.showModal();
-        }
     }
 
     function abrirModalSucesso(mensagem) {
@@ -107,6 +119,50 @@ document.addEventListener("DOMContentLoaded", async () => {
             );
         }
     });
+
+    buscar_utilidade.addEventListener('keyup', async function(e) {
+        try {
+            if(buscar_utilidade.value.length > 2){
+                let response = await fetch(`../../../actions/actions-expositor.php?filtrar=${buscar_expositor.value}&aguardando=1`);
+                response = await response.json();
+        
+                if (response.status == 400) {
+                    tbody.innerHTML = `<td colspan="5" style="text-align: center;">${response.msg}</td>`
+        
+                } else {
+                    tbody.innerHTML = ''
+                    response.expositor.forEach(expositor => {
+                        let status = expositor.status_pes == 'ativo' ? 'active' : 'inactive';
+                        tbody.innerHTML += `
+                            <tr>
+                            <td class="usuario-col">${expositor.id_expositor}</td>
+                            <td>${expositor.nome}</td>
+                            <td class="email-col">${expositor.email}</td>
+                            <td class="fone-col">${expositor.telefone}</td>
+                            <td class="barraca-col">${expositor.num_barraca}</td>
+                            <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
+                            <td>
+                                <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            
+                            </td>
+                            </tr>
+                            `
+                    });
+        
+                }
+            }
+            else {
+                tbody.innerHTML = ''
+                getExpositor()
+            }
+            
+        } catch (error) {
+            tbody.innerHTML = '<td colspan="5" style="text-align: center; padding: .5rem 0rem;">Nenhum expositor encontrado.</td>'
+        }
+    })
+    
 
     // --- Evento ÚNICO para o Botão "Salvar" do Modal de Confirmação ---
     btnSalvarConfirmar.addEventListener('click', async () => {

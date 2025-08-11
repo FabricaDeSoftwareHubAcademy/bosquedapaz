@@ -719,6 +719,69 @@ table tbody tr:nth-child(even) {
     cursor: pointer;
 }
 
+/* Estilo padrão da tabela */
+.table-container {
+  overflow-x: auto; /* scroll horizontal em telas pequenas */
+}
+
+.collaborators-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.collaborators-table th, 
+.collaborators-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Estilo para telas pequenas */
+@media (max-width: 768px) {
+  .collaborators-table thead {
+    display: none; /* Esconde o cabeçalho da tabela */
+  }
+
+  .collaborators-table, 
+  .collaborators-table tbody, 
+  .collaborators-table tr, 
+  .collaborators-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .collaborators-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .collaborators-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .collaborators-table td:last-child {
+    border-bottom: 0;
+  }
+
+  /* Labels para os dados - use os mesmos textos do cabeçalho */
+  .collaborators-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+
 @media (max-width: 1042px) {
     .principal .box {
         padding: 15px;
