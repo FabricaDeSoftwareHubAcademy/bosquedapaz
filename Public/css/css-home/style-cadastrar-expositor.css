@@ -162,6 +162,10 @@ body {
     .formularios {
         position: relative;
     }
+
+    .content_fotos{
+        left: 0;
+    }
 }
 
 @media (max-width: 1362px) {
@@ -174,6 +178,10 @@ body {
     .form-loja,
     .form-expo {
         max-width: 100%;
+    }
+
+    .conteiner_fotos{
+        left: 0;
     }
 }
 
@@ -194,37 +202,47 @@ body {
         width: 100%;
         position: static;
     }
+
+    .conteiner_fotos{
+        left: 0;
+    }
 }
 
 @media (max-width: 768px) {
-    .title { width: 100%; }
-    .title-text { font-size: 1.5rem; }
+    .title {
+        width: 100%;
+    }
+
+    .title-text {
+        font-size: 1.5rem;
+    }
 
     .btns-salvar-cancelar {
         position: relative;
         left: 0%;
     }
 
-    .formularios{
+    .formularios {
         top: 0;
     }
 
-    @media (max-width: 768px) {
-        .conteiner_fotos {
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 1rem;
-        }
-      
-        .content_fotos {
-          width: 70%;
-          /* max-width: 300px; */
-          display: flex; 
-          margin-bottom: 1rem;
-        }
-      }
-      
+
+    .conteiner_fotos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        left: 0;
+    }
+
+    .content_fotos {
+        width: 70%;
+        /* max-width: 300px; */
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -237,7 +255,7 @@ body {
 
     .formularios {
         font-size: 14px;
-        top: 0  ;
+        top: 0;
     }
 
     .input input,
@@ -259,12 +277,14 @@ body {
         left: -50%;
     }
 
-    .btns-salvar-cancelar {
+    .btns-salvar-cancelar,
+    .conteiner_fotos {
         left: 0;
     }
 }
 
 @media (width: 344px) and (height: 882px) {
+
     .form-pessoa .input,
     .form-expo .input,
     .form-expo .select {
@@ -278,5 +298,9 @@ body {
     .link-area-adm {
         position: relative;
         left: -50%;
+    }
+
+    .conteiner_fotos{
+        left: 0;
     }
 }
