@@ -77,6 +77,7 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'id_login' => $login_id,
                 'id_endereco' => $endereco_id,
+                'img_perfil' => '../Public/imgs/barraca-padrao.png',
                 'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
             ]
         );
