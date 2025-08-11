@@ -84,7 +84,7 @@ if(isset($_POST['enviar'])){
                         </div>
 
                         <div class="botoes">
-                            <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
+                            <a href="../app/Views/Client/tela-login.php" class="botao-cancelar">Cancelar</a>
                             <button type="submit" name="enviar" id="abrir-modal recsenha-modal" class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
                         </div>
                     </form>
@@ -107,7 +107,7 @@ if(isset($_POST['enviar'])){
 
                 <div id="linha-bet-recsenha"></div>
 
-                <img src="imgs/img-login/message-sent.svg" alt="" class="img-letter">
+                <img src="assets/message-sent.svg" alt="" class="img-letter">
             </div>
         </section>
     </main>
@@ -120,7 +120,7 @@ if(isset($_POST['enviar'])){
     window.addEventListener('DOMContentLoaded', () => {
         openModalSucesso();
         setTimeout(() => {
-            window.location.href = "./tela-login.php";
+            window.location.href = "../app/Views/Client/tela-login.php";
         }, 1500);
     });
 </script>
