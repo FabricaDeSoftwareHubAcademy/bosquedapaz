@@ -21,7 +21,7 @@ if (!$aceitou) {
 </head>
 
 <body onload="getCategorias()">
-<?php include "../../../Public/include/home/menu-home.html" ?>
+    <?php include "../../../Public/include/home/menu-home.html" ?>
 
 
     <main class="principal">
@@ -32,6 +32,9 @@ if (!$aceitou) {
             </div>
 
             <form id="fomulario_cad_expositor" method="POST">
+
+                <input type="hidden" name="aceitou_termos" value="Sim">
+
                 <div class="formularios">
                     <div class="form-pessoa">
                         <div class="input">
@@ -40,7 +43,7 @@ if (!$aceitou) {
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
+                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp">
                         </div>
                         <div class="input">
                             <label>E-mail:</label>
@@ -72,7 +75,6 @@ if (!$aceitou) {
 
                         <div class="input">
                             <label>Usuário do instagram:</label>
-
                             <input type="text" name="link_instagram" id="link_instagram" placeholder="link instagram" required>
                         </div>
                     </div>
@@ -108,11 +110,38 @@ if (!$aceitou) {
 
                         <div class="form-files">
                             <label>Escolha 6 fotos do seu produto para análise:</label>
-                            <input type="file" name="imagens[]" id="imagens[]" multiple>
+                            <input type="file" id="input_fotos" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 
                 </div>
+                <div class="conteiner_fotos" id="conteiner_fotos">
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div>
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div>
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div>
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div>
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div>
+                    <div class="content_fotos">
+                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
+                        <img src="" alt="" class="imgs_produtos">
+                    </div>
+                </div>
+
 
                 <?php include '../../../Public/include/Butons-forms.html'; ?>
 
