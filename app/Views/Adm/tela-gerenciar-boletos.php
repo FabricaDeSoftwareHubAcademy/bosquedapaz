@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once('../../helpers/csrf.php');
 $tolken = getTolkenCsrf();
 ?>
@@ -19,6 +19,8 @@ $tolken = getTolkenCsrf();
 
 <body class="body-gerenciar-boletos">
     <?php include "../../../Public/include/menu-adm.html" ?>
+    <input type="hidden" id="tolkenCsrf" value="<?php echo htmlspecialchars($tolken); ?>">
+
     <div class="box-all">
         <h1 class="titulo-box">Gerenciamento de Boletos</h1>
         <!-- filtragem de dados -->
@@ -87,6 +89,12 @@ $tolken = getTolkenCsrf();
             </div>
         </div>
 
+        <div id="modalStatusAlterado" class="modal-status" style="display: none;">
+            <div class="modal-status-conteudo">
+                <p>Status alterado!</p>
+                <button id="btnOkStatus" class="modal-status-botao">OK</button>
+            </div>
+        </div>
 
         <!-- decorações -->
         <section class="area-decoracoes">

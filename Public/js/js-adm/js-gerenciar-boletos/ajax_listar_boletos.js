@@ -24,14 +24,12 @@ async function carregarBoletos(filtros) {
 
     if (data.length > 0) {
       data.forEach(boleto => {
-
         let classeStatus = '';
         if (boleto.status_boleto === 'Pago') {
           classeStatus = 'status-pago';
         } else if (boleto.status_boleto === 'Pendente') {
           classeStatus = 'status-pendente';
         }
-
 
         const row = `
           <tr class="tr-tabela-de-dados" data-id-boleto="${boleto.id_boleto}">
@@ -59,16 +57,23 @@ async function carregarBoletos(filtros) {
 }
 
 // armazenando o estado atual dos filtros
-// para realizar a ação de filtragem
 let filtroNomeAtual = '';
 let filtroStatusAtual = '';
 let filtroDataInicialAtual = '';
 let filtroDataFinalAtual = '';
 
-// bloco da estrutura da função de
-// filtragem por nome (em tempo real)
+// filtragem por nome com validação de input
 inputNome.addEventListener('input', (e) => {
-  filtroNomeAtual = e.target.value.trim();
+  let valorDigitado = e.target.value.trim();
+
+  const regexNome = /^[\p{L}\s]+$/u;
+  if (valorDigitado !== '' && !regexNome.test(valorDigitado)) {
+    console.warn("Nome inválido. Use apenas letras e espaços.");
+    return;
+  }
+
+  filtroNomeAtual = valorDigitado;
+
   carregarBoletos({
     nome: filtroNomeAtual,
     status: filtroStatusAtual,
@@ -77,7 +82,6 @@ inputNome.addEventListener('input', (e) => {
   });
 });
 
-// bloco da estrutura da função de
 // filtragem por status (em tempo real)
 selectStatus.addEventListener('change', (e) => {
   filtroStatusAtual = e.target.value;
@@ -89,8 +93,7 @@ selectStatus.addEventListener('change', (e) => {
   });
 });
 
-// bloco da estrutura da função de filtragem por
-// data inicial e final esperando um submit
+// filtragem por data inicial e final via submit
 formDataFiltro.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -105,6 +108,5 @@ formDataFiltro.addEventListener('submit', (e) => {
   });
 });
 
-// carregando a lista sem nenhum tipo de filtro
-// apenas para exibição de dados
+// carregando a lista sem filtros inicialmente
 carregarBoletos({});
