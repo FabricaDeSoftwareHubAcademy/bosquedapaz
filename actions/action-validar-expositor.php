@@ -81,7 +81,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
-                $response = array("msg" => 'Expositor aprovado com sucesso', "status" => 200, $getExpositor);
+                $response = array("msg" => 'Expositor aprovado com sucesso', "status" => 200);
                 echo json_encode($response);
 
             }else {
