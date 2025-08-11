@@ -34,7 +34,7 @@ if (!$aceitou) {
                 <h1 class="title-text">CADASTRO DE ARTISTAS</h1>
             </div>
 
-            <form method="POST" id="form-artista" action="../../../actions/actions-cadastrar-artista.php" enctype="multipart/form-data">
+            <form method="POST" id="form-artista"  action="../../../actions/action-cadastrar-artista.php" enctype="multipart/form-data">
 
                 <div class="formularios">
                     <div class="form-pessoa">
@@ -53,9 +53,7 @@ if (!$aceitou) {
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" id="whats" name="whats" placeholder="Número de whatsapp"
-                                pattern="[0-9]{10,11}" required
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            <input type="tel" id="whats" name="whats" placeholder="Número de whatsapp">
                         </div>
 
                         <div class="input">
@@ -101,7 +99,7 @@ if (!$aceitou) {
 
                         <label for="tipo-expo">Tempo médio da sua apresentação?</label>
                         <div class="custom-dropdown">
-
+                
                             <select name="tempo_apresentacao" id="tempo_apresentacao" class="select">
 
                                 <option value="">Selecione</option>
@@ -127,26 +125,14 @@ if (!$aceitou) {
 
                 </div>
 
-                <div id="btns-forms-padrao" class="btns-forms-padrao">
-                    <a href="./escolher-cadastro.php" class="link-area-adm">
-                        <div id="btn-voltar" class="btn-voltar">
-                            <i id="seta" class="bi bi-arrow-left-short seta"></i>
-                        </div>
-                    </a>
-
-                    <div id="btns-salvar-cancelar" class="btns-salvar-cancelar">
-                        <div class="envolta-btn"><button type="reset" class="btn-acoes btn-reset" id="btn-reset">Cancelar</button></div>
-                        <div class="envolta-btn"><button type="submit" class="btn-acoes btn-salvar" id="btn-salvar" name="salvar" value="salvar">Salvar</button></div>
-                    </div>
-                </div>
-                
+                <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
 
             <div class="overlay" id="overlay"></div>
             <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
-
+            
         </div>
 
     </main>
