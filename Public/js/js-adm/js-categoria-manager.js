@@ -285,7 +285,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 mensagemModalSucesso.textContent = data.message || 'Status alterado com sucesso!';
                 modalSucesso.showModal();
                 
-                // CORREÇÃO AQUI: RECARREGA A TABELA APÓS ALTERAÇÃO DE STATUS
                 carregarCategorias();
 
             } else {
