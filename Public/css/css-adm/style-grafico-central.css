@@ -38,10 +38,24 @@
     font-size: 20px;
     font-weight: 400;
 
-    border: 2px solid #0C592B;
     background-color: white;
 }
-
+.enfoVisitantes{
+  border: 2px solid #0C592B;
+    border-left: 10px solid #0C592B;
+}
+.enfoExpositores{
+  border: 2px solid #FF6687;
+  border-left: 10px solid #FF6687;
+}
+.enfoArtistas{
+  border: 2px solid #AD85FF;
+  border-left: 10px solid #AD85FF;
+}
+.enfoEventosAtivos{
+  border: 2px solid #5EB5EF;
+  border-left: 10px solid #5EB5EF;
+}
 .spnValorVisitantes, .spnValorExpositores,
 .spnValorArtistas, .spnValorEventosAtivos{
     font-weight: 700;
@@ -56,15 +70,12 @@
     border-radius: 10px;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr); /* 2 gráficos por linha */
+    grid-template-rows: auto auto; /* duas linhas */
     gap: 20px;
-    margin-top: 20px;
+    margin: 20px auto; /* centraliza */
 
-    border-radius: 10px;
-    background-color: #dad8d8 ;
-
-/* background-color: #cf8e389e; */
+    background-color: #dad8d8;
 }
 .grafico {
     padding: 20px;

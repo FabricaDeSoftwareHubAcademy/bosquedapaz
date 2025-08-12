@@ -498,7 +498,12 @@ public function getDadosGerais()
 {
     $sql = "
         SELECT 
-            (SELECT SUM(valor) FROM boleto WHERE status_boleto = 'Pago') AS total_pago,
+            (SELECT COALESCE(SUM(valor), 0) 
+             FROM boleto 
+             WHERE status_boleto = 'Pago' 
+               AND MONTH(vencimento) = MONTH(CURDATE()) 
+               AND YEAR(vencimento) = YEAR(CURDATE())
+            ) AS total_pago,
             (SELECT COUNT(*) FROM expositor) AS expositores,
             (SELECT COUNT(*) FROM artista WHERE status = 'ativo') AS artistas,
             (SELECT COUNT(*) FROM evento WHERE status = 1) AS eventos_ativos
@@ -506,8 +511,14 @@ public function getDadosGerais()
     
     $stmt = $this->conn->prepare($sql);
     $stmt->execute();
-    return $stmt->fetch(\PDO::FETCH_ASSOC);
+    $dados = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+    // Formata total_pago para 2 casas decimais com vírgula decimal e ponto milhar
+    $dados['total_pago'] = number_format($dados['total_pago'], 2, ',', '.');
+
+    return $dados;
 }
+
 
 
 
