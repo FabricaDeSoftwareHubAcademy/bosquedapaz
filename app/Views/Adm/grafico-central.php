@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   
   <link rel="stylesheet" href="../../../Public/css/css-adm/style-grafico-central.css">
-  <script src="../../../public/js/js-adm/js-grafico-central.js" defer></script>
+  <script src="../../../Public/js/js-adm/js-grafico-central.js" defer></script>
 </head>
 
 <body>

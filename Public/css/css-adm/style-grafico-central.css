@@ -18,7 +18,7 @@ body{
     gap: 20px; 
 
     border-radius: 10px;
-    background-color: #1e2a38 ;
+    background-color: #dad8d8 ;
 
     overflow-y: auto;
 }
@@ -62,7 +62,7 @@ body{
     margin-top: 20px;
 
     border-radius: 10px;
-    background-color: #1e2a38 ;
+    background-color: #dad8d8 ;
 
 /* background-color: #cf8e389e; */
 }
