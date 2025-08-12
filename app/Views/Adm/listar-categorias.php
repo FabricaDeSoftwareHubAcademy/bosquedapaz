@@ -31,6 +31,7 @@ $tolken = getTolkenCsrf();
                         <button class="search-button">BUSCAR</button>
                     </div>
                 </form>
+                <input type="hidden" name="tolkenCsrf" id="tolken-csrf-input" value="<?php echo htmlspecialchars($tolken); ?>">
                 <div class="table-container">
                     <table class="collaborators-table">
                         <thead>
@@ -45,9 +46,10 @@ $tolken = getTolkenCsrf();
                         </tbody>
                     </table>
                 </div>
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
                 <div class="btns">
                     <a href="./" class="voltar">
-                        <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
+                        <!-- <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar"> -->
                     </a>
                 </div>
 
@@ -147,6 +149,7 @@ $tolken = getTolkenCsrf();
                                     <button type="submit" id="btn_cadastrar_cat" class="salvar">Salvar</button>
                                 </div>
                                 <input type="hidden" name="id_categoria" id="id_categoria">
+                                <?php echo $tolken; ?>
                             </div>
                         </form>
                     </div>
@@ -169,8 +172,9 @@ $tolken = getTolkenCsrf();
     <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
     <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script> -->
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
-    <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script>
+    <!-- <script src="../../../Public/js/js-adm/js-listar-categorias.js" defer></script> -->
     <script src="../../../Public/js/js-adm/js-categoria-manager.js" defer></script>
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 
 </body>
 
@@ -178,6 +182,5 @@ $tolken = getTolkenCsrf();
 <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
 <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
 <?php include '../../../Public/include/modais/modal-error.html'; ?>
-</body>
 
-</html>
+<!-- YuridPaula -->

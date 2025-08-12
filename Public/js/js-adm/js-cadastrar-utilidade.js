@@ -23,30 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modalConfirmar?.addEventListener("click", (e) => { if (e.target === modalConfirmar) modalConfirmar.close(); });
 });
 
-// aqui estamos pegando o id da tag input para escutar que sempre que tiver uma alteracao,
-// vamos passar por parametro a imagem que foi escolhida, e a partir disso mostrar o preview na tela
-// com o previewImage.src.
-
-
-document.getElementById("imagem").addEventListener("change", function (event) {
-    const file = event.target.files[0];
-
-    const previewImage = document.getElementById('preview-image');
-
-    if (file) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            previewImage.src = e.target.result;
-            previewImage.style.display = 'block';
-        };
-
-        reader.readAsDataURL(file);
-    } else {
-        previewImage.style.display = 'none';
-    }
-});
-
 // Abrir modal de confirmação com validações
 btnCadastrar?.addEventListener("click", function (event) {
     event.preventDefault();
@@ -59,13 +35,16 @@ btnCadastrar?.addEventListener("click", function (event) {
     const imagem = formulario.querySelector('input[name="imagem"]')?.files[0];
 
     if (!titulo) return openModalErro("O campo Título é obrigatório.");
-    if (titulo.length > 100) return openModalErro("O Título deve ter no máximo 100 caracteres.");
+    if (titulo.length > 100) return openModalErro("O Título deve ter no máximo 50 caracteres.");
 
     if (!descricao) return openModalErro("A Descrição é obrigatória.");
     if (descricao.length > 500) return openModalErro("A Descrição deve ter no máximo 500 caracteres.");
 
     if (!data_inicio) return openModalErro("A Data de Início é obrigatória.");
     if (!data_fim) return openModalErro("A Data de Fim é obrigatória.");
+    if (data_inicio && data_fim && data_inicio > data_fim) {
+        return openModalErro("A Data de Início não pode ser maior que a Data de Fim.");
+    }
 
     if (!imagem) return openModalErro("Uma imagem é obrigatória.");
     const extensoesValidas = ['jpg', 'jpeg', 'png', 'jfif', 'svg'];

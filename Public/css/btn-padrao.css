@@ -107,11 +107,4 @@
     .btn-acoes {
         width: 100%;
     }
-
-}
-@media screen and (max-width: 425px){
-    .btns-salvar-cancelar {
-        flex-direction: column;
-        padding-top: 35px;
-    }
 }

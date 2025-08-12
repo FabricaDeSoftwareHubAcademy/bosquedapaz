@@ -60,6 +60,32 @@ document.addEventListener("DOMContentLoaded", () => {
     mascaraCpfCnpj(this, e);
   });
 
+  // ** NOVO: Atualiza endereço ao mudar CEP **
+  document.getElementById("cep").addEventListener("blur", function () {
+    const cep = this.value.replace(/\D/g, "");
+    if (cep.length === 8) {
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(res => res.json())
+        .then(data => {
+          if (!data.erro) {
+            document.getElementById("logradouro").value = data.logradouro || "";
+            document.getElementById("bairro").value = data.bairro || "";
+            document.getElementById("cidade").value = data.localidade || "";
+            document.getElementById("estado").value = data.uf || "";
+          } else {
+            abrirModalErro("CEP não encontrado.");
+            document.getElementById("logradouro").value = "";
+            document.getElementById("bairro").value = "";
+            document.getElementById("cidade").value = "";
+            document.getElementById("estado").value = "";
+          }
+        })
+        .catch(() => {
+          abrirModalErro("Erro ao consultar o CEP.");
+        });
+    }
+  });
+
   // Botão salvar
   document.getElementById("btn-salvar").addEventListener("click", e => {
     e.preventDefault();
@@ -79,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("telefone", document.getElementById("telefone").value.replace(/\D/g, ""));
     formData.append("cpf_cnpj", document.getElementById("cpf_cnpj").value.replace(/\D/g, ""));
     formData.append("cep", document.getElementById("cep").value.replace(/\D/g, ""));
-    formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"))
+    formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
 
     const logoInput = document.getElementById("logo");
     if (logoInput && logoInput.files.length > 0) {
@@ -105,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
           abrirModalSucesso(result.sucesso);
 
           setTimeout(() => {
-            window.location.href = "/aulaphpdev33.php/bosquedapaz/app/Views/Adm/listar-parceiros.php";
+            window.location.href = '../../../app/Views/Adm/listar-parceiros.php';
           }, 2000);
 
         } else {

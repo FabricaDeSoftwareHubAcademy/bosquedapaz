@@ -48,7 +48,7 @@ CREATE TABLE pessoa(
 	id_pessoa INT NOT NULL AUTO_INCREMENT,
     cpf CHAR(11) NULL UNIQUE,
     nome VARCHAR(150) NOT NULL,
-    whats CHAR(16) NULL,
+    whats CHAR(29) NULL,
     telefone CHAR(16) NULL,
     termos ENUM("Sim", "Não") NOT NULL DEFAULT "Não",
     link_instagram VARCHAR(255) NULL,
@@ -58,7 +58,7 @@ CREATE TABLE pessoa(
     id_endereco INT NULL,
     id_login INT NULL,
     PRIMARY KEY(id_pessoa),
-    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),    
+    FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco),
     FOREIGN KEY(id_login) REFERENCES pessoa_user(id_login)
 );
 
@@ -75,7 +75,6 @@ CREATE TABLE expositor(
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
     cor_rua VARCHAR(150) NULL DEFAULT '',
-    produto VARCHAR(100) NOT NULL,
     validacao ENUM('aguardando', 'validado', 'recusado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
@@ -190,9 +189,10 @@ CREATE TABLE dadosFeira(
 CREATE TABLE boleto(
 	id_boleto INT NOT NULL AUTO_INCREMENT,
     pdf VARCHAR(255) NOT NULL,
-    mes_referencia DATE NOT NULL,
+    mes_referencia varchar(20) NOT NULL,
     valor NUMERIC(10,2) NOT NULL,
     vencimento DATE NOT NULL,
+    status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente',
     id_expositor INT NOT NULL,
     PRIMARY KEY(id_boleto),
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
@@ -211,11 +211,11 @@ CREATE TABLE utilidade_publica (
 
 
 CREATE VIEW view_expositor AS
-SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.produto, exp.validacao, 
-pes.nome, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, 
+SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.validacao, 
+pes.nome, pes.cpf, pes.whats, pes.telefone, pes.link_instagram, pes.link_facebook, pes.link_whats, pes.img_perfil, 
 cat.id_categoria, cat.descricao, cat.cor, cat.icone,
 en.cidade,
-log.email, log.status_pes
+log.email, log.status_pes, log.id_login
 FROM expositor AS exp 
 INNER JOIN categoria AS cat 
 ON cat.id_categoria = exp.id_categoria 
@@ -242,6 +242,27 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-2.jpg", 2),
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
+
+-- insert into pessoa_user (email, senha, perfil, status_pes) values ('thiago.almeida@ms.senac.br', "$2y$10$l2Je0M8p1do8QrHMBbnukOYTXxqG/760G8DH5iQuoeLmK.FxMwmFy", 1, 'ativo');
+
 insert into pessoa_user (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
+insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('60', '566', '345');
 
+DELIMITER //
+
+create trigger trigger_qtd_expositor
+after update on expositor
+for each row
+begin
+	update dadosFeira set qtd_expositores = (select count(id_expositor) from expositor where validacao = 'validado') where id_dadosFeira = 1;
+end//
+
+create trigger trigger_qtd_artista
+after insert on artista
+for each row
+begin
+	update dadosFeira set qtd_artistas = (select count(id_artista) from artista where status = 'ativo') where id_dadosFeira = 1;
+end//
+
+DELIMITER ;

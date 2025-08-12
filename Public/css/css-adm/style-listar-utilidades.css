@@ -102,7 +102,7 @@ h2 {
     left: 0;
     background-color: rgba(0, 0, 0, 0.589);
     z-index: 2;
-}
+} */
 
 .acao-content-recusar {
     width: 30%;
@@ -402,14 +402,14 @@ h2 {
 
 
 /* Estilo do parágrafo dentro do modal */
-.modal-edit {
+/* .modal-edit {
     margin: auto;
     border: none;
     padding: 10px;
     border-radius: 30px;
-}
+} */
 
-.modal-edit input[type="text"] {
+/* .modal-edit input[type="text"] {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -418,10 +418,8 @@ h2 {
     margin-bottom: 20px;
     box-sizing: border-box;
     background-color: #f9f9f9;
-    /* Cor de fundo suave */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    /* Suaviza o foco */
-}
+} */
 
 /* Estilização dos botões dentro do modal */
 button {
@@ -657,29 +655,42 @@ table tbody tr:nth-child(even) {
     position: relative;
     top: -90vh;
     z-index: -3;
+    /* animation: bolaAnim 5s infinite; */
 }
 
-.bolas-fundo .folhaAzul1-yan {
+/* @keyframes bolaAnim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */
+
+.bolas-fundo .bola-verde1 {
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .folhaAzul2-yan {
+.bolas-fundo .bola-verde2 {
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: 6vh;
     z-index: -3;
 }
 
-.bolas-fundo .folhaRosa-yan {
+.bolas-fundo .bola-rosa {
     position: absolute;
-    right: -100px;
-    bottom: -100px;
+    right: 0px;
+    bottom: 0px;
     z-index: -3;
+    /* top: 55%; */
 }
-
 .btns {
     display: flex;
     align-items: center;

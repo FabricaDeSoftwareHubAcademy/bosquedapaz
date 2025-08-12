@@ -10,21 +10,42 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     try {
         $emailService = new EmailService();
 
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $mensagem = $_POST["mensagem"];
+        $nome = htmlspecialchars(strip_tags($_POST["nome"]));
+        $email = htmlspecialchars(strip_tags($_POST["email"]));
+        $mensagem = htmlspecialchars(strip_tags($_POST["mensagem"]));
 
-        $corpoEmail = "
-            <div style='margin: auto; width: 500px; box-shadow: 0px 0px 10px rgba(0,0,0.5); padding: 1rem; border-radius: .5rem;'>
-                <span>Nome: $nome</span>
-                <br>
-                <span>Email: $email</span>
-                <br>
-                <p>Mensagem: $mensagem</p>
-            </div>
-        ";
+        $corpoEmail = '
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title></title>
+                <style>
+                    div {
+                        padding: .5rem;
+                        width: 40rem;
+                    }
 
-        $enviarEmail = $emailService->enviarEmail('gui.m.neves.teste@gmail.com', $corpoEmail, 'Fale conosco');
+                    span {
+                        font-weight: 600;
+                    }
+                    .mensagen {
+                        text-align: justify;
+                    }
+                </style>
+            </head>
+            <body>
+                <div>
+                    <p><span>Nome:</span> '.$nome.'</p>
+                    <p><span>Email:</span> '.$email.'</p>
+                    <p class="mensagen"><span>Mensagem:</span> '.$mensagem.'</p>
+                </div>
+            </body>
+            </html>
+        ';
+
+        $enviarEmail = $emailService->enviarEmail('halysondasilvadosreis@gmail.com', $corpoEmail, 'Fale conosco');
 
         $response = array("msg" => 'E-mail enviardo com sucesso.', "status" => 200);
         echo json_encode($response);

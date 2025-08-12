@@ -1,5 +1,6 @@
 <?php
 require_once('../vendor/autoload.php');
+
 use app\Controller\Boleto;
 
 // Define o cabeçalho para resposta JSON
@@ -27,13 +28,13 @@ if (empty($input['pesquisar-nome'])) {
     exit;
 }
 
-$nome = trim($input['pesquisar-nome']);
+// Sanitiza o nome para evitar XSS
+$nome = htmlspecialchars(strip_tags(trim($input['pesquisar-nome'])));
 
 // Busca expositor
 $expositorModel = new Boleto();
 $resultado = $expositorModel->PesquisarExpositor($nome);
 
-// Retorna dados se encontrado
 if ($resultado && count($resultado) > 0) {
     $expositor = $resultado[0];
 
@@ -48,6 +49,7 @@ if ($resultado && count($resultado) > 0) {
 } else {
     echo json_encode([
         "status" => "erro",
-        "mensagem" => "Expositor não encontrado."
+        "mensagem" => "Erro ao buscar expositor."
     ]);
 }
+

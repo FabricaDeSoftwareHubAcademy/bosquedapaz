@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',
     'app\\Controller\\Artista' => $baseDir . '/app/Controller/Artista.php',
     'app\\Controller\\Atracao' => $baseDir . '/app/Controller/Atracao.php',
     'app\\Controller\\Boleto' => $baseDir . '/app/Controller/Boleto.php',
@@ -20,10 +21,10 @@ return array(
     'app\\Controller\\Expositor' => $baseDir . '/app/Controller/Expositor.php',
     'app\\Controller\\FotosEvento' => $baseDir . '/app/Controller/FotosEvento.php',
     'app\\Controller\\Imagem' => $baseDir . '/app/Controller/Imagem.php',
+    'app\\Controller\\Login' => $baseDir . '/app/Controller/login.php',
     'app\\Controller\\Parceiro' => $baseDir . '/app/Controller/Parceiro.php',
     'app\\Controller\\Pessoa' => $baseDir . '/app/Controller/Pessoa.php',
     'app\\Controller\\UtilidadePublica' => $baseDir . '/app/Controller/UtilidadePublica.php',
     'app\\Models\\Database' => $baseDir . '/app/Models/Database.php',
     'app\\Models\\Env' => $baseDir . '/app/Models/Env.php',
-    'app\\controler\\Login' => $baseDir . '/app/Controller/login.php',
 );

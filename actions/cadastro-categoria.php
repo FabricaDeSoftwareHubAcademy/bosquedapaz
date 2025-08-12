@@ -12,51 +12,49 @@ function sanitizarTexto($input)
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
-// Verifica se todos os dados esperados foram recebidos via POST
-if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['descricao'], $_POST['cor']) && isset($_FILES['icone'])) {
+try {
+    // Verifica se o token CSRF está presente e é válido antes de prosseguir
+    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+        throw new Exception("Token CSRF inválido.");
+    }
+    
+    // Verifica se os dados principais foram recebidos via POST
+    if (!isset($_POST['descricao'], $_POST['cor']) || !isset($_FILES['icone'])) {
+        throw new Exception("Dados do formulário incompletos.");
+    }
+
     $descricao = sanitizarTexto($_POST['descricao']);
     $cor = $_POST['cor'];
     $arquivo = $_FILES['icone'];
 
     // --- Validações ---
     if (empty($descricao)) {
-        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria é obrigatório.']);
-        exit;
+        throw new Exception('O nome da categoria é obrigatório.');
     }
     if (strlen($descricao) > 30) {
-        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 50 caracteres.']);
-        exit;
+        throw new Exception('O nome da categoria deve ter no máximo 30 caracteres.');
     }
     if (empty($cor)) {
-        echo json_encode(['status' => 'error', 'message' => 'A cor é obrigatória.']);
-        exit;
+        throw new Exception('A cor é obrigatória.');
     }
     if ($arquivo['error'] !== UPLOAD_ERR_OK) {
-        echo json_encode(['status' => 'error', 'message' => 'Nenhum ícone foi enviado ou ocorreu um erro no upload.']);
-        exit;
+        throw new Exception('Nenhum ícone foi enviado ou ocorreu um erro no upload.');
     }
-
 
     // --- Validação e Processamento do Arquivo ---
     $extensao = strtolower(pathinfo($arquivo['name'], PATHINFO_EXTENSION));
     $extensoesPermitidas = ['png', 'jpg', 'jpeg', 'jfif', 'svg'];
     if (!in_array($extensao, $extensoesPermitidas)) {
-        echo json_encode(['status' => 'error', 'message' => 'Formato de ícone inválido. Use jpg, png, svg ou gif.']);
-        exit;
+        throw new Exception('Formato de ícone inválido. Use jpg, png, svg, ou jfif.');
     }
 
     $tamanhoMaximo = 2 * 1024 * 1024; // 2MB
     if ($arquivo['size'] > $tamanhoMaximo) {
-        echo json_encode(['status' => 'error', 'message' => 'Arquivo muito grande. O máximo permitido é 2MB.']);
-        exit;
+        throw new Exception('Arquivo muito grande. O máximo permitido é 2MB.');
     }
 
     // --- Tratamento de Caminhos e Upload ---
-
-    // Caminho no sistema de arquivos para onde o arquivo será movido (com '../')
     $diretorioDeUpload = __DIR__ . '/../Public/uploads/uploads-categoria/';
-
-    // Caminho que será salvo no banco de dados (sem '../', relativo à pasta Public)
     $caminhoParaBanco = 'uploads/uploads-categoria/';
 
     // Cria o diretório se ele não existir
@@ -68,32 +66,28 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $caminhoCompletoParaMover = $diretorioDeUpload . $novo_nome;
 
     if (!move_uploaded_file($arquivo['tmp_name'], $caminhoCompletoParaMover)) {
-        echo json_encode(['status' => 'error', 'message' => 'Falha ao salvar o arquivo no servidor.']);
-        exit;
+        throw new Exception('Falha ao salvar o arquivo no servidor.');
     }
 
     $caminhoFinalParaBanco = $caminhoParaBanco . $novo_nome;
 
     // --- Criação e Cadastro do Objeto ---
-
-    // Cria uma nova instância da Categoria
     $cat = new Categoria();
-
-    // **CORREÇÃO PRINCIPAL:** Usa os métodos SETTERS para definir os valores
     $cat->setDescricao($descricao);
     $cat->setCor($cor);
-    $cat->setIcone($caminhoFinalParaBanco); // Salva o caminho limpo no objeto
+    $cat->setIcone($caminhoFinalParaBanco);
 
-    // Chama o método para cadastrar no banco
     $res = $cat->cadastrar();
 
     if ($res) {
-        echo json_encode(['status' => 'OK', 'message' => 'Categoria cadastrada com sucesso!']);
+        echo json_encode(['status' => 'success', 'message' => 'Categoria cadastrada com sucesso!']);
     } else {
-        // Em caso de falha, é uma boa prática remover o arquivo que foi salvo
+        // Em caso de falha no banco, remove o arquivo salvo
         unlink($caminhoCompletoParaMover);
-        echo json_encode(['status' => 'error', 'message' => 'Erro ao cadastrar a categoria no banco de dados.']);
+        throw new Exception('Erro ao cadastrar a categoria no banco de dados.');
     }
-} else {
-    echo json_encode(['status' => 'error', 'message' => 'Dados do formulário incompletos ou inválidos.']);
+
+} catch (Exception $e) {
+    // Retorna uma resposta de erro em formato JSON
+    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
 }

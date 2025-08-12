@@ -25,7 +25,7 @@ class DadosFeira {
     public function get_dados(){
     $db = new Database('dadosFeira');
 
-        $res = $db->select()->fetchAll(PDO::FETCH_CLASS,self::class);
+        $res = $db->select('id_dadosFeira = 1')->fetchAll(PDO::FETCH_CLASS,self::class);
         return $res;
     }
 }

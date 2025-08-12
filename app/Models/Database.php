@@ -37,6 +37,10 @@ class Database
         $this->password = $_ENV['DB_PASSWORD'];
     }
 
+    public function setTable($table){
+        $this->table = $table;
+    }
+
     // se conecta com o db
     public function conecta()
     {
@@ -62,7 +66,7 @@ class Database
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->execute($binds);
-            
+
             return $stmt;
         } catch (\PDOException $err) {
 
@@ -75,19 +79,24 @@ class Database
     // que recebe os valores do que serão inseridos
     public function insert($values)
     {
-        $fields = array_keys($values);
+        try {
+            $fields = array_keys($values);
 
-        $binds = array_pad([], count($fields), '?');
+            $binds = array_pad([], count($fields), '?');
 
-        $query = 'INSERT INTO ' . $this->table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
+            $query = 'INSERT INTO ' . $this->table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
 
-        $res = $this->execute($query, array_values($values));
+            $res = $this->execute($query, array_values($values));
 
-        if ($res) {
-            return true;
-        } else {
+            if ($res) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $th) {
             return false;
         }
+        
     }
 
     public function getConnection()
@@ -97,22 +106,27 @@ class Database
 
     public function insert_lastid($values)
     {
-        // quebrar o array associativo que veio como parametro
-        $fields = array_keys($values);
+        try {
+            // quebrar o array associativo que veio como parametro
+            $fields = array_keys($values);
 
-        $binds = array_pad([], count($fields), '?');
+            $binds = array_pad([], count($fields), '?');
 
-        $query = 'INSERT INTO ' . $this->table . '(' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
+            $query = 'INSERT INTO ' . $this->table . '(' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
 
-        $res = $this->execute($query, array_values($values));
+            $res = $this->execute($query, array_values($values));
 
-        $lastId = $this->conn->lastInsertId();
+            $lastId = $this->conn->lastInsertId();
 
-        if ($res) {
-            return $lastId;
-        } else {
+            if ($res) {
+                return $lastId;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $th) {
             return false;
         }
+        
     }
 
     // método de select
@@ -166,13 +180,14 @@ class Database
 
     public function delete($where, $status)
     {
-        $query = "UPDATE " . $this->table . " SET status_pes = '". $status. "' WHERE " . $where;
+        $query = "UPDATE " . $this->table . " SET status_pes = '" . $status . "' WHERE " . $where;
         return $this->execute($query) ? true : false;
     }
 
     //Funções do fluxo do ADM:
-    
-    public function updateColaborador($where, $value, $id_name, $table){
+
+    public function updateColaborador($where, $value, $id_name, $table)
+    {
         $where = strlen($where) ? " WHERE " . $where : '';
         $fields = array_keys($value);
         $param = array_values($value);
@@ -180,9 +195,21 @@ class Database
         $res = $this->execute($query, $param);
         return $res ? TRUE : FALSE;
     }
-    
+
 
     // BLOCO DE CODIGOS PARA CLASSE BOLETO
+
+    public function capturar_email_expositor($id)
+    {
+        $query = "SELECT pu.email 
+        FROM expositor e
+        JOIN pessoa p ON p.id_pessoa = e.id_pessoa
+        JOIN pessoa_user pu ON pu.id_login = p.id_login
+        WHERE e.id_expositor = :id";
+        $binds = [":id" => $id];
+        return $this->execute($query, $binds);
+    }
+
     public function listar_expositor_para_cadastro($nome)
     {
         $query = "SELECT
@@ -318,7 +345,7 @@ class Database
     public function listar_parceiros()
     {
         $query = "SELECT id_parceiro, nome_parceiro, nome_contato, telefone,
-        email, status_parceiro FROM parceiro";
+        email, status_parceiro, logo FROM parceiro";
 
         return $this->execute($query);
     }
@@ -399,4 +426,88 @@ class Database
 
         return $this->execute($query, $binds);
     }
+
+
+    public function getExpositorStatus() {
+        $query = "SELECT validacao, COUNT(id_expositor) AS total_expositores FROM expositor GROUP BY validacao;";
+        $stmt = $this->execute($query);
+        return $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
+    }
+
+
+    public function getExpositorCategoria()
+    {
+        $sql = "
+            SELECT c.descricao AS categoria, COUNT(e.id_expositor) AS total_expositores
+            FROM expositor e
+            INNER JOIN categoria c ON c.id_categoria = e.id_categoria
+            GROUP BY c.descricao
+            ORDER BY total_expositores DESC
+        ";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function getBoletoStatus()
+    {
+        $sql = "SELECT status_boleto AS status, COUNT(id_boleto) AS total_boletos FROM boleto GROUP BY status_boleto";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function getParceiroStatus()
+    {
+        $sql = "SELECT status_parceiro AS status, COUNT(id_parceiro) AS total_parceiros FROM parceiro GROUP BY status_parceiro";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+
+ public function getCidadesOrigem()
+{
+    $sql = "SELECT en.cidade, COUNT(exp.id_expositor) AS total_expositores
+            FROM expositor exp
+            JOIN pessoa p ON exp.id_pessoa = p.id_pessoa
+            JOIN endereco en ON p.id_endereco = en.id_endereco
+            GROUP BY en.cidade
+            ORDER BY total_expositores DESC";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+
+
+public function getAtracoesPorEvento()
+{
+    $sql = "SELECT ev.nome_evento, COUNT(at.id_atracao) AS total_atracoes
+            FROM evento ev
+            LEFT JOIN atracao at ON ev.id_evento = at.id_evento
+            GROUP BY ev.id_evento, ev.nome_evento
+            ORDER BY total_atracoes DESC";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+public function getDadosGerais()
+{
+    $sql = "
+        SELECT 
+            (SELECT qtd_visitantes FROM dadosFeira LIMIT 1) AS visitantes,
+            (SELECT COUNT(*) FROM expositor) AS expositores,
+            (SELECT COUNT(*) FROM artista WHERE status = 'ativo') AS artistas,
+            (SELECT COUNT(*) FROM evento WHERE status = 1) AS eventos_ativos
+    ";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+}
+
+
+
 }

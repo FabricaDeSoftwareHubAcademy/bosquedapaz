@@ -23,3 +23,9 @@ footer{
 .logoSenac{
     width: 400px;
 }
+
+@media (min-width: 0px) and (max-width: 430px) {
+    .logoSenac{
+        width: 300px;
+    }
+}

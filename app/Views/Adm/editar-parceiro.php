@@ -32,8 +32,8 @@ $tolken = getTolkenCsrf();
                                 <input type="text" id="nome_parceiro" name="nome_parceiro" placeholder="Digite o nome" maxlength="100" required>
                             </div>
                             <div class="input-group">
-                                <label for="telefone">Telefone:</label>
-                                <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone"  maxlength="15" required>
+                                <label for="telefone">Celular:</label>
+                                <input type="text" id="telefone" name="telefone" placeholder="Digite o celular"  maxlength="15" required>
                             </div>
                             <div class="input-group">
                                 <label for="cep">CEP:</label>
@@ -45,7 +45,7 @@ $tolken = getTolkenCsrf();
                             </div>                                             
                             <div class="input-group">
                                 <label for="cidade">Estado:</label>
-                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" maxlength="2" required>
+                                <input type="text" id="estado" name="estado" placeholder="Digite o estado" maxlength="2" required readonly>
                             </div>                    
                         </div>
                         <div id="form2" class="form-grid">
@@ -59,11 +59,11 @@ $tolken = getTolkenCsrf();
                             </div>
                             <div class="input-group">
                                 <label for="logradouro">Logradouro:</label>
-                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" maxlength="100" required>
+                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" maxlength="100" required readonly>
                             </div>                                        
                             <div class="input-group">
                                 <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" maxlength="50" required>
+                                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" maxlength="50" required readonly>
                             </div>                               
                             <div class="input-group">
                                 <label for="logo">Logo:</label>
@@ -90,7 +90,7 @@ $tolken = getTolkenCsrf();
                             </div> 
                             <div class="input-group">
                                 <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="50" required>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" maxlength="50" required readonly>
                             </div>  
                         </div>
 
