@@ -95,7 +95,7 @@ if (isset($_POST['enviar'])) {
                         </div>
 
                         <div class="botoes">
-                            <a href="../app/Views/Client/tela-login.php" class="botao-cancelar">Cancelar</a>
+                            <a href="tela-login.php" class="botao-cancelar">Cancelar</a>
                             <button type="submit" name="enviar" id="abrir-modal recsenha-modal" class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
                         </div>
 

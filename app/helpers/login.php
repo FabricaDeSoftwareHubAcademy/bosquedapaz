@@ -3,7 +3,7 @@
 
 require '../vendor/autoload.php';
 
-use app\Controller\Login;
+use app\controler\Login;
 
 function confirmaLogin($tipo){
     return Login::validaLogin($tipo);

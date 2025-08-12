@@ -200,14 +200,12 @@ table tbody tr:nth-child(even) {
 .status.active {
     background-color: #28a745;
     color: white;
-    text-transform: capitalize;
     border-radius: 8px;
 }
 
 .status.inactive {
     background-color: #dc3545;
     color: white;
-    text-transform: capitalize;
     border-radius: 8px;
 }
 

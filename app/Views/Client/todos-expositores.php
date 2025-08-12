@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
-<body id="corpo">
+<body>
 
     <?php include "../../../Public/include/home/menu-home.html"; ?>
 

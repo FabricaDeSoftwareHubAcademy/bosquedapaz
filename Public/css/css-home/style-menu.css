@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 0px 5px 20px;
+    padding: 5px 20px;
 }
 
 .content-logo{
@@ -61,7 +61,7 @@
     content: "";
     width: 10%;
     padding: 1.3px;
-    background-color: #FB4616;
+    background-color: #FF3877;
     transition: all .2s ease-in-out;
 }
 .nav-item:hover::after {
@@ -124,16 +124,6 @@
     display: none;
 }
 
-.conteiner-login {
-    height: 110px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    padding: 0px 20px;
-}
-
 .btn-mobile {
     display: none;
     padding: 0px 15px;
@@ -173,72 +163,9 @@
   body.light .icon-toggle:hover {
     background-color: #bbb;
   }
-
-.img-perfil {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-}
-
-.content-acoes2 {
-    position: absolute;
-    top: 110px;
-    right: 0px;
-    background-color: white;
-    width: 140px;
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    overflow: hidden;
-    border-bottom-left-radius: .5rem;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.301);
-    z-index: 10;
-    transition: all .2s ease-in;
-}
-.content-acoes1 {
-    background-color: white;
-    width: 140px;
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    overflow: hidden;
-    z-index: 10;
-    transition: all .2s ease-in;
-}
-
-.link_login {
-    width: 100%;
-    color: black;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-}
-
-.link_logout {
-    border: none;
-    background-color: transparent;
-}
-
-.link_login:nth-child(2){
-    color: #FF3877;
-    border-top: 1px solid black;
-}
-
-.open-menu-login {
-    height: 100px;
-    transition: all .2s ease-in;
-}
-
+  
+  
+  
 
 @media screen and (max-width: 900px) {
     .nav-list {
@@ -254,20 +181,15 @@
     }
 
     .li-login {
-        display: flex;
-        align-items: center;
+        display: block;
     }
 
     .btn-login {
-        display: flex;
+        display: none;
     }
     
     .btn-mobile {
         display: flex;
-    }
-
-    .conteiner-login {
-        display: none;
     }
 
     .li-login::after {
@@ -311,11 +233,7 @@
             height: 0px;
         }
         100% {
-            height: 285px;
+            height: 275px;
         }
-    }
-
-    .content-outros{
-        padding: 0px 1rem;
     }
 }

@@ -38,7 +38,6 @@ $tolken = getTolkenCsrf();
           <form method="POST" id="formBusca">
             <div class="search-bar">
               <input type="text" id="busca" name="palavra" placeholder="Pesquisar por Administrador" />
-              <?php echo $tolken; ?>
             </div>
           </form>
           <!-- Tabela de Colaboradores -->
@@ -58,7 +57,6 @@ $tolken = getTolkenCsrf();
               </tbody>
             </table>
           </div>
-          <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>  
       </div>  
     </main>

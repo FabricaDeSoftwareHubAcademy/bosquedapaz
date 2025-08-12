@@ -28,9 +28,21 @@ body {
     z-index: -3;
 }
 
-.bola-verde1 { left: 0; top: 6vh; }
-.bola-verde2 { right: 0; top: 6vh; }
-.bola-rosa    { right: 0; bottom: -100px; }
+.bola-verde1 {
+    left: 0;
+    top: 14vh;
+}
+
+.bola-verde2 {
+    right: 0;
+    top: 18vh;
+}
+
+.bola-rosa {
+    right: 0;
+    bottom: -100px;
+    top: 80vh;
+}
 
 .principal {
     width: 100vw;
@@ -54,7 +66,7 @@ body {
     padding: 20px;
     overflow-y: auto;
     position: relative;
-    top: 90px;
+    top: 80px;
 }
 
 .title {
@@ -69,31 +81,52 @@ body {
     font-weight: bold;
 }
 
-#form-artista {
-    width: 100%;
-}
-
 .formularios {
     width: 100%;
+    height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
+    position: relative;
+    top: -30px;
+
 }
 
 .formularios div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .form-pessoa,
+#estilo_musica_container,
 .form-expo {
-    width: 40%;
+    width: 90%;
+    display: flex;
+}
+
+.form-expo {
+    width: 150%;
+    display: flex;
     position: relative;
+    left: 15%;
+    top: 4px;
+    
+}
+
+
+.form-pessoa {
+    position: relative;
+    left: -22%;
+    top: -12px;
 }
 
 #estilo_musica_container {
     width: 100%;
 }
+
+
 
 .input,
 .input-group {
@@ -102,11 +135,14 @@ body {
     width: 100%;
 }
 
+.formularios label {
+    width: 120%;
+}
+
 .input input,
 .input-group input,
-.input-group textarea,
-.select {
-    width: 100%;
+.input-group textarea {
+    width: 170%;
     height: 50px;
     min-height: 45px;
     padding: 5px;
@@ -121,53 +157,119 @@ body {
     color: #3d3d3d;
 }
 
-/* ============ MEDIA QUERIES ============ */
 
-@media (max-width: 1500px) {
+
+#linguagem_artistica,
+#publico_alvo,
+#tempo_apresentacao,
+#valor_cache,
+#estilo_musica {
+    /* width: 120%; */
+    padding: 5px;
+    min-height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.select {
+    width: 100%;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.custom-dropdown {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btns-salvar-cancelar {
+    width: 0%;
+    gap: 10px;
+}
+
+.link-area-adm {
+    position: relative;
+    left: -35%;
+}
+
+@media (max-width:1500px) {
     .formularios {
         position: relative;
+        top: -40px;
+        left: 5%;
     }
 }
 
 @media (max-width: 1024px) {
-    .box {
+    .box{
         overflow-x: hidden;
     }
-
     .formularios {
         flex-direction: column;
-        gap: 0px;
+        top: 0;
     }
 
     .form-pessoa,
     .form-expo {
-        width: 100%;
         position: static;
+        width: 100%;
     }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #linguagem_artistica {
+        width: 100% !important;
+    }
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: -20%;
+    }
+
 }
 
 @media (max-width: 768px) {
-    .title { width: 100%; }
-    .title-text { font-size: 1.5rem; }
-
-    .btns-salvar-cancelar {
-        position: relative;
-        left: 0%;
+    .title {
+        width: 100%;
     }
 
-    .link-area-adm {
-        position: relative;
-        left: -50%;
-        top: 0px;
+    .title-text {
+        font-size: 1.5rem;
     }
-    
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: -60%;
+    }
+
+    .link-area-adm{
+        position: relative;
+        left: -20%;
+    }
+
 }
 
 @media (max-width: 480px) {
-    .box {
+    .box{
         overflow-x: hidden;
     }
-
     .title-text {
         width: 116%;
         position: relative;
@@ -175,37 +277,61 @@ body {
         font-size: 1.1rem;
     }
 
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #linguagem_artistica {
+        width: 100%;
+        left: 8%;
+    }
+
     .formularios {
+        position: relative;
+        left: 0%;
         font-size: 14px;
     }
 
-    .btn-salvar {
+    .formularios label {
+        left: 8%;
+    }
+
+    .btn-salvar{
         left: 0%;
         flex-direction: row-reverse;
     }
 
-    .link-area-adm {
+    .link-area-adm{
         position: relative;
-        left: -50%;
+        left: -55%;
     }
-
-    .btns-salvar-cancelar {
+    .btns-salvar-cancelar{
         left: 0;
     }
+
 }
 
-@media (width: 344px) and (height: 882px) {
-    .form-pessoa .input,
-    .form-expo .input,
-    .form-expo .select {
+@media (width:344px) and (height:882px) {
+    .box{
+        overflow-x: hidden;
+    }
+    .form-pessoa .input{
+        width: 80%;
+    }
+    .form-expo .input{
         width: 80%;
     }
 
-    .formularios {
-        left: 10%;
+    .form-expo .select{
+        width: 80%;
     }
 
-    .link-area-adm {
+    .formularios{
+        left: 10%;
+    }
+    #publico_alvo{
+        width: 100%;
+    }
+    .link-area-adm{
         position: relative;
         left: -50%;
     }

@@ -1,7 +1,3 @@
-<?php 
-include_once('../../helpers/csrf.php');
-$tolken = getTolkenCsrf();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,7 +29,6 @@ $tolken = getTolkenCsrf();
                         <label>Email</label>
                         <input type="email" name="email" id="campo_email" class="campo__email" placeholder="exemplo@hotmail.com" required>
                     </div>
-                    <?php echo $tolken; ?>
                     <div class="suporte__textarea__group">
                         <label>Mensagem</label>
                         <textarea name="mensagem" id="campo_mensagem" class="campo__mensagem" placeholder="Escreva sua mensagem" required></textarea>
@@ -85,6 +80,7 @@ $tolken = getTolkenCsrf();
     <?php include "../../../Public/include/modais/modal-error.html"; ?>
     <?php include "../../../Public/include/modais/modal_carregando.html"; ?>
 
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-home/js-fale-conosco.js"></script>
     <?php include "../../../Public/include/vlibras.html" ?>
 </body>

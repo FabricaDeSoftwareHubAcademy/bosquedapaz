@@ -69,7 +69,7 @@ $tolken = getTolkenCsrf();
         <img class="bola-rosa" src="../../../Public/assets/img-bolas/bola-azul.png" alt="">
       </div>
 
-    <?php include "../../../Public/include/modais/modal-deletar.html"; ?>
+    <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
     <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
     <?php include "../../../Public/include/modais/modal-error.html"; ?>
   

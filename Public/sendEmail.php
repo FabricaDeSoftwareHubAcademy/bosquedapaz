@@ -23,37 +23,14 @@ class EmailService {
             
             $mail->isHTML(true);
             $mail->Subject = 'REDEFINIR SENHA';
-            $mail->Body    = '
-            <!DOCTYPE html>
-            <html lang="pt-br">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title></title>
-                <style>
-                    div {
-                        margin: auto;
-                        padding: .5rem;
-                        width: 30rem;
-                        text-align: center;
-                    }
-            
-                    h1 {
-                        background-color: blue;
-                        color: white;
-                    }
-                </style>
-            </head>
-            <body>
-                <div>
-                    <h2>Código de recuperação</h2>
-                    <p>Abaixo está o código para recuperar a sua senha</p>
-                    <h1>SEU CÓDIGO: '.$codigo.'</h1>
-                    <span>No caso desse e-mail ser ignorado a senha não vai ser resetada.</span>
-                </div>
-            </body>
-            </html>
-                            ';
+            $mail->Body    = "
+                            <div style='margin: auto; width: 500px; text-align: center; padding: 1rem; border-radius: .5rem;'>
+                                <h2>Código de recuperação</h2>
+                                <p>Abaixo está o código para recuperar a sua senha</p>
+                                <h1 style='padding: .5rem; background-color: blue; color: white; margin: 2rem'>SEU CÓDIGO: $codigo</h1>
+                                <span>No caso desse e-mail ser ignorado a senha não vai ser resetada.</span>
+                            </div>
+                            ";
             $mail->AltBody = "O seu código para redefinir a sua senha é: ". $codigo;
             
             if($mail->send()){

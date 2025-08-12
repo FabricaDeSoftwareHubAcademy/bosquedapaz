@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // --- Elementos da Tabela e Busca ---
     const tabelaCategoria = document.getElementById('tabela-categoria');
     const inputBusca = document.getElementById('input-busca');
@@ -17,50 +16,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedTextSpan = document.getElementById('selectedText');
 
     // --- Elementos do Seletor de Cores (dentro do modal de edição) ---
-    const selectedColorWrapper = document.querySelector(".select-selected");
-    const itemsColorList = document.querySelector(".select-items");
+    const selectedColorWrapper = document.querySelector(".select-selected"); // Onde a cor selecionada é exibida
+    const itemsColorList = document.querySelector(".select-items"); // A lista de opções de cores
 
+    // Este botão abre o modal de confirmação para edição completa
     const btnSalvarEdicaoCompleta = document.getElementById('btn_cadastrar_cat');
-    
-    // --- Modais ---
+
+    // --- Modal de Confirmação (USADO PARA ALTERAR STATUS E SALVAR EDIÇÃO) ---
     const modalConfirmar = document.getElementById('modal-confirmar');
     const tituloModalConfirmar = document.getElementById('confirmar-title');
     const mensagemModalConfirmar = document.getElementById('msm-confimar');
     const btnCancelarConfirmar = document.getElementById('btn-modal-cancelar');
-    const btnSalvarConfirmar = document.getElementById('btn-modal-salvar');
-    const closeModalConfirmarIcon = document.getElementById('close-modal-confirmar');
+    const btnSalvarConfirmar = document.getElementById('btn-modal-salvar'); // Este é o botão "Salvar" no modal de confirmação
+    const closeModalConfirmarIcon = document.getElementById('close-modal-confirmar'); // O ícone 'X' para fechar
 
+    // --- Modal de Sucesso ---
     const modalSucesso = document.getElementById('modal-sucesso');
     const mensagemModalSucesso = document.getElementById('msm-sucesso');
     const closeModalSucesso = document.getElementById('close-modal-sucesso');
 
+    // --- Modal de Erro ---
     const modalErro = document.getElementById('modal-error');
-    const mensagemModalErro = document.getElementById('erro-text');
-    const closeModalErro = document.getElementById('close-modal-erro');
-
-    const modalLoading = document.getElementById('modal-loading');
+    const mensagemModalErro = document.getElementById('erro-text'); // ID correto do seu HTML
+    const closeModalErro = document.getElementById('close-modal-erro'); // ID correto do seu HTML
 
     let acaoModalConfirmar = null;
-    let categoriaParaAlterarStatus = null;
-    let categoriaParaEditar = null;
 
-    // --- Funções para controle de modais ---
-    function openModalLoading() { if (modalLoading) modalLoading.showModal(); }
-    function closeModalLoading() { if (modalLoading) modalLoading.close(); }
-    function exibirModalErro(mensagem) {
-        if (mensagemModalErro) mensagemModalErro.textContent = mensagem;
-        if (modalErro) modalErro.showModal();
-    }
-    
+    let categoriaParaAlterarStatus = null;
+
+
+    // --- Carrega as categorias ao carregar a página ---
     carregarCategorias();
 
-    // Evento de busca/filtro
-    formBusca?.addEventListener('submit', function (e) {
+    // --- Event Listener para a Busca/Filtro ---
+    formBusca.addEventListener('submit', function (e) {
         e.preventDefault();
-        const termo = inputBusca?.value.trim().toLowerCase();
+        const termo = inputBusca.value.trim().toLowerCase();
         filtrarTabela(termo);
     });
 
+    // --- Função Principal para Carregar Categorias ---
     async function carregarCategorias() {
         try {
             const response = await fetch('../../../actions/action-listar-categoria.php');
@@ -70,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.status === 'success') {
                 renderizarTabela(data.dados);
-                aplicarEventosBotoes();
+                aplicarEventosBotoesEdicao();
             } else {
                 tabelaCategoria.innerHTML = `<tr><td colspan="4">Erro ao carregar categorias: ${data.message || 'Erro desconhecido'}</td></tr>`;
                 exibirModalErro(data.message || 'Erro ao carregar categorias.');
@@ -82,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Função para Renderizar a Tabela de Categorias ---
     function renderizarTabela(categorias) {
         tabelaCategoria.innerHTML = '';
 
@@ -90,11 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const categoriasAtivas = categorias.filter(cat => (cat.status_cat || '').trim().toLowerCase() === 'ativo');
-        const categoriasInativas = categorias.filter(cat => (cat.status_cat || '').trim().toLowerCase() !== 'ativo');
-        const categoriasOrdenadas = [...categoriasAtivas, ...categoriasInativas];
-
-        categoriasOrdenadas.forEach(cat => {
+        categorias.forEach(cat => {
             const status = (cat.status_cat || '').trim().toLowerCase();
             const statusClass = status === 'ativo' ? 'active' : 'inactive';
             const statusLabel = status === 'ativo' ? 'Ativo' : 'Inativo';
@@ -109,7 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>
                     <a href="#"
                         class="edit-icon open-modal"
-                        data-id="${cat.id_categoria}">
+                        data-id="${cat.id_categoria}"
+                        data-nome="${sanitizeHTML(cat.descricao)}"
+                        data-cor="${sanitizeHTML(cat.cor)}">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
                 </td>
@@ -118,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Função para Filtrar a Tabela ---
     function filtrarTabela(termo) {
         const linhas = tabelaCategoria.querySelectorAll('tr');
         linhas.forEach(linha => {
@@ -132,31 +127,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Função para Sanitizar HTML (para evitar XSS ao exibir dados) ---
     function sanitizeHTML(str) {
         const temp = document.createElement('div');
         temp.textContent = str;
         return temp.innerHTML;
     }
 
-    function aplicarEventosBotoes() {
-        tabelaCategoria.addEventListener('click', async (e) => {
-            if (e.target.closest('.status')) {
-                const buttonStatus = e.target.closest('.status');
-                const id = buttonStatus.dataset.id;
-                const statusAtual = buttonStatus.dataset.status;
+    // --- Lógica do Modal de Edição Completa da Categoria ---
 
-                categoriaParaAlterarStatus = { button: buttonStatus, id, statusAtual };
-                acaoModalConfirmar = 'status';
-
-                tituloModalConfirmar.textContent = 'Alterar Status?';
-                mensagemModalConfirmar.textContent = `Deseja mudar o status para "${statusAtual === 'ativo' ? 'INATIVO' : 'ATIVO'}"?`;
-                modalConfirmar.showModal();
-            }
-
-            if (e.target.closest('.edit-icon')) {
+    // Eventos para abrir o modal de edição (ícones de caneta)
+    function aplicarEventosBotoesEdicao() {
+        document.querySelectorAll('.open-modal').forEach(button => {
+            button.addEventListener('click', async (e) => {
                 e.preventDefault();
-                const id = e.target.closest('.edit-icon').dataset.id;
-
+                const id = button.dataset.id;
                 if (!id) {
                     exibirModalErro('ID inválido para edição.');
                     return;
@@ -168,28 +153,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (data.status === 'success' && data.categoria) {
                         const categoria = data.categoria;
-                        categoriaParaEditar = categoria;
-                        
-                        idCategoriaInput.value = categoria.id_categoria;
-                        descricaoInput.value = categoria.descricao.slice(0, 30);
-                        
-                        corInput.value = categoria.cor;
-                        selectedColorDiv.style.backgroundColor = categoria.cor;
-                        selectedTextSpan.textContent = categoria.cor;
+                        // Preenche os campos do formulário de edição
+                        if (idCategoriaInput) idCategoriaInput.value = categoria.id_categoria;
+                        if (descricaoInput) descricaoInput.value = categoria.descricao.slice(0, 30);
+
+                        if (corInput && selectedColorDiv && selectedTextSpan) {
+                            corInput.value = categoria.cor;
+                            selectedColorDiv.style.backgroundColor = categoria.cor;
+                            selectedTextSpan.textContent = categoria.cor;
+                        }
 
                         dialogEdicao.showModal();
                     } else {
                         exibirModalErro(data.message || 'Erro ao buscar dados da categoria para edição.');
                     }
+
                 } catch (error) {
                     console.error('Erro na requisição de busca para edição:', error);
                     exibirModalErro('Erro de comunicação ao buscar os dados para edição.');
                 }
-            }
+            });
         });
     }
 
-    // --- Lógica do Formulário de Edição ---
+    // Evento de "input" para limitar a descrição em 30 caracteres (no formulário de edição)
     if (descricaoInput) {
         descricaoInput.addEventListener('input', () => {
             if (descricaoInput.value.length > 30) {
@@ -198,8 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Eventos para o seletor de cores (no formulário de edição)
     selectedColorWrapper?.addEventListener("click", () => {
-        if (itemsColorList) itemsColorList.style.display = itemsColorList.style.display === "block" ? "none" : "block";
+        if (itemsColorList) {
+            itemsColorList.style.display = itemsColorList.style.display === "block" ? "none" : "block";
+        }
     });
 
     document.querySelectorAll(".select-items div").forEach(item => {
@@ -213,17 +203,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Função de Validação do Formulário de Categoria (para edição ou cadastro)
     function validarFormularioCategoria() {
         const descricao = descricaoInput?.value.trim();
         const cor = corInput?.value;
 
-        if (!descricao) { exibirModalErro('O nome da categoria é obrigatório.'); return false; }
-        if (descricao.length > 30) { exibirModalErro('O nome deve ter no máximo 30 caracteres.'); return false; }
-        if (!cor) { exibirModalErro('Por favor, selecione uma cor.'); return false; }
-        
+        if (!descricao) {
+            exibirModalErro('O nome da categoria é obrigatório.');
+            return false;
+        }
+        if (descricao.length > 30) {
+            exibirModalErro('O nome deve ter no máximo 30 caracteres.');
+            return false;
+        }
+        if (!cor) {
+            exibirModalErro('Por favor, selecione uma cor.');
+            return false;
+        }
         return true;
     }
 
+    // Evento para o botão de "Salvar" dentro do modal de edição (abre modal de confirmação)
     btnSalvarEdicaoCompleta?.addEventListener('click', (e) => {
         e.preventDefault();
         if (validarFormularioCategoria()) {
@@ -234,7 +234,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Evento Único para o Botão "Salvar" do Modal de Confirmação ---
+    // --- Lógica para Alteração de Status (Botão Ativo/Inativo na Tabela) ---
+    tabelaCategoria.addEventListener('click', (e) => {
+        if (e.target.classList.contains('status')) {
+            const buttonStatus = e.target;
+            const id = buttonStatus.dataset.id;
+            const statusAtual = buttonStatus.dataset.status;
+
+            categoriaParaAlterarStatus = { button: buttonStatus, id, statusAtual };
+            acaoModalConfirmar = 'status';
+
+            tituloModalConfirmar.textContent = 'Alterar Status?';
+            mensagemModalConfirmar.textContent = `Deseja mudar o status para "${statusAtual === 'ativo' ? 'INATIVO' : 'ATIVO'}"?`;
+            modalConfirmar.showModal();
+        }
+    });
+
+    // --- Evento ÚNICO para o Botão "Salvar" do Modal de Confirmação ---
+    // Este é o coração da distinção entre alterar status e edição completa
     btnSalvarConfirmar?.addEventListener('click', async () => {
         modalConfirmar?.close();
 
@@ -246,30 +263,26 @@ document.addEventListener('DOMContentLoaded', () => {
         acaoModalConfirmar = null;
     });
 
-    // --- Funções de requisição ---
+    // Função que executa a requisição de alteração de status
     async function salvarAlteracaoStatus() {
         if (!categoriaParaAlterarStatus) return;
 
         const { button, id, statusAtual } = categoriaParaAlterarStatus;
 
         try {
-            const formData = new FormData();
-            formData.append('id_categoria', id);
-            formData.append('status_atual', statusAtual);
-            
-            const tolkenInput = document.getElementById('tolken-csrf-input');
-            if (tolkenInput) {
-                formData.append('tolkenCsrf', tolkenInput.value);
-            } else {
-                exibirModalErro('Erro interno: Token de segurança não encontrado.');
-                return;
+            const params = new URLSearchParams();
+            params.append('acao', 'alterarStatus');
+            params.append('id_categoria', id);
+            params.append('status_atual', statusAtual);
+
+            console.log('Parâmetros enviados para alterarStatus:');
+            for (let pair of params.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
             }
-            
-            openModalLoading();
 
             const response = await fetch('../../../actions/action-categoria.php', {
                 method: 'POST',
-                body: formData
+                body: params
             });
 
             const data = await response.json();
@@ -284,34 +297,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 mensagemModalSucesso.textContent = data.message || 'Status alterado com sucesso!';
                 modalSucesso.showModal();
-                
-                carregarCategorias();
 
             } else {
-                exibirModalErro(data.message || 'Erro desconhecido ao alterar status.');
+                mensagemModalErro.textContent = data.message || 'Erro desconhecido ao alterar status.';
+                modalErro.showModal();
             }
         } catch (error) {
             console.error('Erro na comunicação ao alterar status:', error);
-            exibirModalErro('Erro de comunicação com o servidor ao alterar status. Tente novamente.');
+            mensagemModalErro.textContent = 'Erro de comunicação com o servidor ao alterar status. Tente novamente.';
+            modalErro.showModal();
         } finally {
-            closeModalLoading();
             categoriaParaAlterarStatus = null;
         }
     }
 
     async function salvarEdicaoCompleta() {
         const formData = new FormData(formEdicaoCategoria);
-        formData.append('acao', 'atualizar');
 
-        const tolkenInput = document.getElementById('tolken-csrf-input');
-        if (tolkenInput) {
-            formData.append('tolkenCsrf', tolkenInput.value);
-        } else {
-            exibirModalErro('Erro interno: Token de segurança não encontrado.');
-            return;
+        console.log('--- Conteúdo do FormData (Edição Completa) antes do envio ---');
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
         }
-        
-        openModalLoading();
+        console.log('------------------------------------------');
 
         try {
             const response = await fetch('../../../actions/action-editar-categoria.php', {
@@ -319,7 +326,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: formData
             });
 
-            const data = await response.json();
+            const text = await response.text();
+            console.log('Resposta Bruta do Servidor (Edição Completa):', text);
+
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch (jsonError) {
+                console.error('Erro de JSON na resposta de edição completa:', jsonError);
+                exibirModalErro('Resposta inesperada do servidor ao tentar editar. Verifique o console.');
+                return;
+            }
 
             if (data.status === 'success') {
                 dialogEdicao.close();
@@ -332,78 +349,133 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Erro de comunicação ao salvar a edição completa:', error);
             exibirModalErro('Erro de comunicação com o servidor ao editar. Tente novamente.');
-        } finally {
-            closeModalLoading();
         }
     }
 
     // --- Eventos de Fechamento de Modais ---
-    btnCancelarConfirmar?.addEventListener('click', () => { modalConfirmar.close(); acaoModalConfirmar = null; categoriaParaAlterarStatus = null; });
-    if (closeModalConfirmarIcon) { closeModalConfirmarIcon.addEventListener('click', () => { modalConfirmar.close(); acaoModalConfirmar = null; categoriaParaAlterarStatus = null; }); }
-    dialogEdicao.querySelectorAll('.close-modal, .cancelar').forEach(button => { button.addEventListener('click', (e) => { e.preventDefault(); dialogEdicao.close(); }); });
-    if (closeModalSucesso) { closeModalSucesso.addEventListener('click', () => { modalSucesso.close(); }); }
-    if (modalSucesso) { modalSucesso.addEventListener('click', (event) => { if (event.target === modalSucesso) modalSucesso.close(); }); }
-    if (closeModalErro) { closeModalErro.addEventListener('click', () => { modalErro.close(); }); }
-    if (modalErro) { modalErro.addEventListener('click', (event) => { if (event.target === modalErro) modalErro.close(); }); }
-    
-    // --- Lógica para o ícone e cor do formulário de edição ---
-    const nomeInput = document.getElementById('descricao');
-    const fileInput = document.getElementById('file');
-    const previewContainer = document.getElementById('preview-container');
-    const previewCircle = document.getElementById('preview-circle');
-    const previewImg = document.getElementById('preview-img');
-    const previewLabel = document.getElementById('preview-label');
-    const colorOptions = document.querySelectorAll('#seletor-cor div[data-value]');
-    const uploadPlaceholder = document.getElementById('upload-placeholder');
-    const btnCancelar = document.getElementById('btn_cancelar_categoria');
 
-    function atualizarPreview() {
-        const nome = nomeInput.value.trim();
-        if (nome) previewLabel.textContent = nome;
+    // Botão Cancelar (do modal de confirmação)
+    btnCancelarConfirmar?.addEventListener('click', () => {
+        modalConfirmar.close();
+        acaoModalConfirmar = null;
+        categoriaParaAlterarStatus = null;
+    });
+
+    // Ícone de fechar do modal de confirmação
+    if (closeModalConfirmarIcon) {
+        closeModalConfirmarIcon.addEventListener('click', () => {
+            modalConfirmar.close();
+            acaoModalConfirmar = null;
+            categoriaParaAlterarStatus = null;
+        });
     }
 
-    nomeInput?.addEventListener('input', atualizarPreview);
-
-    colorOptions?.forEach(item => {
-        item.addEventListener('click', () => {
-            const cor = item.getAttribute('data-value');
-            corInput.value = cor;
-            previewCircle.style.backgroundColor = cor;
+    // Fechar o modal de edição/cadastro (X e botão Cancelar)
+    dialogEdicao.querySelectorAll('.close-modal, .cancelar').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            dialogEdicao.close();
         });
     });
 
-    fileInput?.addEventListener('change', () => {
-        const file = fileInput.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = e => {
-                previewImg.src = e.target.result;
-                previewImg.style.display = 'block';
-                previewContainer.style.display = 'flex';
-                uploadPlaceholder.style.display = 'none';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-
-    function limparPreviewCategoria() {
-        if (previewContainer) previewContainer.style.display = 'none';
-        if (previewImg) { previewImg.src = ''; previewImg.style.display = 'none'; }
-        if (previewCircle) previewCircle.style.backgroundColor = '#ccc';
-        if (previewLabel) previewLabel.textContent = '';
-        if (uploadPlaceholder) uploadPlaceholder.style.display = 'block';
-        
-        if (fileInput) fileInput.value = '';
-        if (nomeInput) nomeInput.value = '';
-        if (corInput) corInput.value = '';
+    // Fechar o modal de sucesso pelo X
+    if (closeModalSucesso) {
+        closeModalSucesso.addEventListener('click', () => {
+            modalSucesso.close();
+        });
     }
 
-    btnCancelar?.addEventListener('click', () => {
-        limparPreviewCategoria();
-        if (dialogEdicao) dialogEdicao.close();
+    // Fechar modal de sucesso ao clicar fora
+    if (modalSucesso) {
+        modalSucesso.addEventListener('click', (event) => {
+            if (event.target === modalSucesso) {
+                modalSucesso.close();
+            }
+        });
+    }
+
+    // Fechar o modal de erro pelo X
+    if (closeModalErro) {
+        closeModalErro.addEventListener('click', () => {
+            modalErro.close();
+        });
+    }
+
+    // Fechar modal de erro ao clicar fora
+    if (modalErro) {
+        modalErro.addEventListener('click', (event) => {
+            if (event.target === modalErro) {
+                modalErro.close();
+            }
+        });
+    }
+
+    // --- FUNÇÃO PARA EXIBIR MODAL DE ERRO (Reutilizável) ---
+    function exibirModalErro(mensagem) {
+        if (mensagemModalErro) mensagemModalErro.textContent = mensagem;
+        modalErro?.showModal();
+    }
+});
+
+const nomeInput = document.getElementById('descricao');
+const fileInput = document.getElementById('file');
+const previewContainer = document.getElementById('preview-container');
+const previewCircle = document.getElementById('preview-circle');
+const previewImg = document.getElementById('preview-img');
+const previewLabel = document.getElementById('preview-label');
+const corInput = document.getElementById('corInput');
+const colorOptions = document.querySelectorAll('#seletor-cor div[data-value]');
+const uploadPlaceholder = document.getElementById('upload-placeholder');
+const btnCancelar = document.getElementById('btn_cancelar_categoria');
+
+function atualizarPreview() {
+    const nome = nomeInput.value.trim();
+    if (nome) previewLabel.textContent = nome;
+}
+
+nomeInput.addEventListener('input', () => {
+    atualizarPreview();
+});
+
+colorOptions.forEach(item => {
+    item.addEventListener('click', () => {
+        const cor = item.getAttribute('data-value');
+        corInput.value = cor;
+        previewCircle.style.backgroundColor = cor;
     });
 });
-document.getElementById('btns-salvar-cancelar').style.display = 'none';
 
 
-// YuridPaula
+fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+            previewImg.src = e.target.result;
+            previewImg.style.display = 'block';
+            previewContainer.style.display = 'flex';
+            uploadPlaceholder.style.display = 'none'; // esconde o ícone padrão
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+function limparPreviewCategoria() {
+    previewContainer.style.display = 'none';
+    previewImg.src = '';
+    previewImg.style.display = 'none';
+    previewCircle.style.backgroundColor = '#ccc';
+    previewLabel.textContent = '';
+    uploadPlaceholder.style.display = 'block';
+
+    fileInput.value = '';
+    nomeInput.value = '';
+    corInput.value = '';
+}
+
+// Evento do botão "Cancelar"
+btnCancelar.addEventListener('click', () => {
+    limparPreviewCategoria();
+    const dialog = document.getElementById('cadastro-categoria');
+    if (dialog) dialog.close(); // fecha o <dialog> se estiver aberto
+});

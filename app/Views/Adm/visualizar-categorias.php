@@ -40,7 +40,7 @@ $tolken = getTolkenCsrf();
                     <div class="dialog-categoria-content">
                         <span class="dialog-close close-modal" data-modal="cadastro-categoria">&times;</span>
                         <h1 class="dialog-titulo">Cadastrar Categoria</h1>
-                        <form id="form_categoria" action="../../../actions/cadastro-categoria.php" method="post" enctype="multipart/form-data">
+                        <form id="form_categoria" action="../../../actionsADM/cadastro-categoria.php" method="post" enctype="multipart/form-data">
                             <div class="dialog-form-box">
                                 <h3>Nome:</h3>
                                 <input class="nome-cat" type="text" name="descricao" id="nome" placeholder="Digite o nome da categoria" maxlength="30">
@@ -137,7 +137,6 @@ $tolken = getTolkenCsrf();
     <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-visualizar-categoria.js" defer></script>
-    <script src="../../../Public/js/js-adm/js-cadastro-categoria.js" defer></script>
     <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
     <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
     <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>

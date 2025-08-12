@@ -15,7 +15,7 @@ async function carrega_expositor() {
                     <td class="nome">${element.nome}</td>
                     <td class="email">${element.email}</td>
                     <td>${element.nome_marca}</td>
-                    <td>${maskNumTelefone(element.telefone)}</td>
+                    <td>${element.telefone}</td>
                     <td class="perfil">
                         <a href="validar-expositor.php?expositor=${encodeURIComponent(element.id_expositor)}">
                             <i class="bi bi-person-badge"></i>
@@ -57,7 +57,7 @@ buscar_expositor.addEventListener('keyup', async function(e) {
                         <td>${element.nome}</td>
                         <td class="email">${element.email}</td>
                         <td>${element.descricao}</td>
-                        <td>${maskNumTelefone(element.telefone)}</td>
+                        <td>${element.telefone}</td>
                         <td class="perfil">
                             <a href="validar-expositor.php?expositor=${encodeURIComponent(element.id_expositor)}">
                                 <i class="bi bi-person-badge"></i>
@@ -75,20 +75,3 @@ buscar_expositor.addEventListener('keyup', async function(e) {
         tbody.innerHTML = '<td colspan="5" style="text-align: center;">Nenhum expositor encontrado.</td>'
     }
 })
-
-function maskNumTelefone(num) {
-    let valor = num;
-    valor = valor.replace(/\D/g, '');
-    valor = valor.substring(0, 11);
-    if (valor.length > 0) {
-        valor = '(' + valor;
-    }
-    if (valor.length > 3) {
-        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
-    }
-    if (valor.length > 10) {
-        valor = valor.slice(0, 10) + '-' + valor.slice(10);
-    }
-    
-    return valor;
-}

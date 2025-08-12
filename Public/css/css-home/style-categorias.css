@@ -47,7 +47,7 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 40px;
     justify-items: center;
-    align-items: center;
+    align-items: start;
 }
 
 .link-cat-expo {
@@ -109,6 +109,10 @@
     .img-fundo {
         width: 80px;
         height: 80px;
+    }
+
+    .img-categoria {
+        width: 65%;
     }
 
     .name-categoria {

@@ -36,7 +36,7 @@ $tolken = getTolkenCsrf();
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp">
+                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
                         </div>
                         <div class="input">
                             <label>E-mail:</label>
@@ -50,8 +50,8 @@ $tolken = getTolkenCsrf();
 
                     <div class="form-loja">
                         <div class="input">
-                            <label>CPF:</label>
-                            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required>
+                            <label>Produto:</label>
+                            <input type="text" name="produto" id="produto" placeholder="Digite seu produto" required>
                         </div>
 
                         <div class="input">
@@ -67,7 +67,8 @@ $tolken = getTolkenCsrf();
                         </div>
 
                         <div class="input">
-                            <label>Usuário do instagram:</label>
+                            <label>Link instagram:</label>
+
                             <input type="text" name="link_instagram" id="link_instagram" placeholder="link instagram" required>
                         </div>
                     </div>

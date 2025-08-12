@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalSucesso?.showModal();
                 setTimeout(() => window.location.reload(), 2000); // Recarrega a página após 2 segundos
             } else {
+                // Se o status não for 'success', exibe o modal de erro
                 exibirErro(data.message || 'Erro desconhecido ao editar a categoria.');
             }
         } catch (error) {
@@ -222,6 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let posicao in linhas) {
             if (isNaN(posicao)) continue;
+            // Ignorar a primeira linha (cabeçalho da tabela) se necessário
             // if (posicao == 0) continue; 
             const conteudo = linhas[posicao].innerHTML.toLowerCase();
             linhas[posicao].style.display = conteudo.includes(expressao) ? '' : 'none';
@@ -234,5 +236,3 @@ document.addEventListener('DOMContentLoaded', () => {
         modalErro?.showModal();
     }
 });
-
-// YuridPaula

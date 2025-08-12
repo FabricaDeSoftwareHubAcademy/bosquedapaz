@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('../css-home/style-menu.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.bolas-fundo {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    top: -90vh;
+    z-index: -3;
+}
+
+.bola-verde1,
+.bola-verde2,
+.bola-rosa {
+    position: absolute;
+    z-index: -3;
+}
+
+.bola-verde1 {
+    left: 0;
+    top: 13vh;
+}
+
+.bola-verde2 {
+    right: 0;
+    top: 18vh;
+}
+
+.bola-rosa {
+    right: 0;
+    bottom: -100px;
+    top: 80vh;
+}
+
+.principal {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box {
+    width: 100%;
+    max-width: 90%;
+    height: 90%;
+    background-color: rgba(248, 245, 246, 0.65);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    top: 90px;
+}
+
+.title {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.title-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.formularios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30px;
+}
+
+.formularios div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-pessoa,
+.form-loja {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-pessoa {
+    position: relative;
+    left: -3%;
+}
+
+.form-loja {
+    position: relative;
+    left: 3%;
+    top: 3px;
+}
+
+.input,
+.input-group {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formularios label {
+    width: 120%;
+}
+
+.input input,
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    height: 50px;
+    min-height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+#grauParentesco,
+#categorias,
+#file {
+    width: 100%;
+    padding: 5px;
+    min-height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9d9fa1;
+    border-right: 2px solid #9d9fa1;
+    font-size: 1rem;
+    color: #3d3d3d;
+}
+
+.btns-salvar-cancelar {
+    width: 0%;
+    gap: 10px;
+
+}
+
+.link-area-adm {
+    position: relative;
+    left: -25%;
+}
+
+
+@media (max-width: 1024px) {
+
+    .title-text{
+        font-size: 29px;
+    }
+    .formularios {
+        flex-direction: column;
+        top: 0;
+    }
+
+    .form-pessoa,
+    .form-loja {
+        position: static;
+        width: 100%;
+    }
+
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 100% !important;
+    }
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: -30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        width: 100%;
+    }
+
+    .title-text {
+        font-size: 1.5rem;
+    }
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: -60%;
+    }
+
+    .link-area-adm{
+        left: -10%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .title-text {
+        width: 100%;
+        position: relative;
+        left: 0;
+        font-size: 14px;
+    }
+    .input input,
+    .input-group input,
+    .input-group textarea,
+    #categorias {
+        width: 80% !important;
+        left: 10%;
+    }
+    .formularios {
+        position: relative;
+        left: 2%;
+    }
+    .form-pessoa .input {
+        width: 120%;
+    }
+    #grauParentesco {
+        width: 80%;
+    }
+    .form-loja .input {
+        width: 120%;
+    }
+    .formularios label {
+        left: 0;
+    }
+    .link-area-adm{
+        position: relative;
+        left: -50%;
+    }
+
+    .btns-salvar-cancelar{
+        position: relative;
+        left: 0;
+    }
+}
+
+@media (width:344px) and (height:882px) {
+    .form-pessoa .input{
+        width: 100%;
+    }
+    .form-loja .input{
+        width: 100%;
+    }
+
+    .formularios{
+        left: 10%;
+    }
+}

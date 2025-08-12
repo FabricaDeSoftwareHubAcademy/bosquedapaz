@@ -18,23 +18,29 @@ sandwich.addEventListener('click', function(){
 
 async function menuAdm() {
     try {
-        const response = await fetch('../../../actions/action-login.php?perfil=1', {
+        const response = await fetch('../../../actions/action-colaborador.php?meu_perfil=1', {
             method: 'GET',
             credentials: 'include'
         });
         
         const text = await response.json();
-        console.log('Resposta bruta do servidor:', text);
-    
+        // console.log('Resposta bruta do servidor:', text);
+
         let imgLogin = document.querySelectorAll('#img-login');
-    
+
         imgLogin.forEach(element => {
-            element.src = text.login[0].img_perfil;
+            element.src = '../../../' + text.data.img_perfil;
         });
 
 
     } catch (error) {
-        window.location.replace('../Client/')
+        let imgLogin = document.querySelectorAll('#img-login');
+
+        imgLogin.forEach(element => {
+            element.src = '../../../Public/assets/MOCA.png';
+        });
+
+        // console.log(imgLogin);
     }
 }
 
@@ -63,11 +69,11 @@ loginImg.forEach(element => {
 let logout = document.querySelectorAll('#logout')
 
 logout[0].addEventListener('click', async () => {
-    const response = await fetch('../../../actions/action-login.php?logout=true');
+    const response = await fetch('../../../Public/logout.php?logout=true');
     document.location.reload()
 })
 logout[1].addEventListener('click', async () => {
-    const response = await fetch('../../../actions/action-login.php?logout=true');
+    const response = await fetch('../../../Public/logout.php?logout=true');
     document.location.reload()
 })
 

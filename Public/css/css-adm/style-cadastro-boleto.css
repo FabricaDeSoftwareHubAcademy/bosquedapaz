@@ -70,38 +70,20 @@ body {
 
 .input-busca {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 10px;
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .search-bar {
+  width: 60%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  gap: 10px;
-  max-width: 700px;
-  width: 100%;
+  align-items: center;
 }
-.input-busca input[type="text"] {
-  padding: 10px;
-  flex: 1;
-  max-width: 500px;
-  box-shadow: 5px 3px 5px #00443ca2;
-  border: 1px solid #ccc;
-  outline: none;
-  
-}
-.search-button {
-  padding: 10px 20px;
-}
-
 
 input#searchInput {
   padding: 8px;
@@ -120,7 +102,7 @@ input#searchInput {
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
-  height: 45px;
+  height: 50px;
 }
 
 .search-button:hover {

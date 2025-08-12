@@ -1,6 +1,6 @@
 let cabecalho = document.querySelector('header')
 let body = document.querySelector('body')
-let nav = document.getElementById('nav-list')
+let nav = document.querySelectorAll('a')
 let conteiner = document.querySelectorAll('section')
 let title = document.getElementById('title-intro')
 let dark = document.querySelectorAll('.dark')
@@ -43,7 +43,6 @@ function alternarTema() {
 function aplicarTemaEscuro() {
     cabecalho.style.setProperty('background-color', '#23262D')
     body.style.setProperty('background-color', '#23262D')
-    nav.style.setProperty('background-color', '#23262D')
 
     dark.forEach(element => {
         element.style.setProperty('color', 'white', 'important')
@@ -53,7 +52,6 @@ function aplicarTemaEscuro() {
 function aplicarTemaClaro() {
     cabecalho.style.setProperty('background-color', 'white')
     body.style.setProperty('background-color', 'white')
-    nav.style.setProperty('background-color', 'white')
 
     dark.forEach(element => {
         element.style.setProperty('color', 'black', 'important')

@@ -16,7 +16,7 @@ async function carregarDadosADM() {
 
                 document.getElementById('id').value = usuario.id_colaborador;
                 document.getElementById('nome').value = usuario.nome || '';
-                document.getElementById('telefone').value = maskNumTelefone(usuario.telefone) || '';
+                document.getElementById('telefone').value = usuario.telefone || '';
                 document.getElementById('email').value = usuario.email || '';
                 document.getElementById('cargo').value = usuario.cargo || '';
 
@@ -87,6 +87,7 @@ function validarCampos() {
     if (!nome) return "O nome é obrigatório.";
     if (!regexNome.test(nome)) return "Nome inválido. Apenas letras e espaços são permitidos.";
     if (!telefone) return "O telefone é obrigatório.";
+    if (!regexTelefone.test(telefone)) return "Telefone inválido. Informe apenas números com DDD.";
     if (!cargo) return "O cargo é obrigatório.";
     if (!regexNome.test(cargo)) return "Cargo inválido. Apenas letras e espaços são permitidos.";
     return null;
@@ -139,10 +140,11 @@ btnConfirmar.addEventListener("click", async () => {
 
             // Atualiza os campos com os dados retornados
             document.getElementById('nome').value = data.data.nome;
-            document.getElementById('telefone').value = maskNumTelefone(data.data.telefone);
+            document.getElementById('telefone').value = data.data.telefone;
             document.getElementById('email').value = data.data.email;
             document.getElementById('cargo').value = data.data.cargo;
-            
+
+
             if (data.data.img_perfil) {
                 document.getElementById("previewFoto").src = '../../../Public/uploads/uploads-ADM/' + data.data.img_perfil;
             }
@@ -155,27 +157,9 @@ btnConfirmar.addEventListener("click", async () => {
             msmErro.textContent = mensagemErro;
             modalErro.showModal();
         }
-        setTimeout(() => {window.location.reload()}, 500)
     } catch (error) {
         console.error("Erro na requisição:", error);
         msmErro.textContent = "Erro na comunicação com o servidor.";
         modalErro.showModal();
     }
 });
-
-function maskNumTelefone(num) {
-    let valor = num;
-    valor = valor.replace(/\D/g, '');
-    valor = valor.substring(0, 11);
-    if (valor.length > 0) {
-        valor = '(' + valor;
-    }
-    if (valor.length > 3) {
-        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
-    }
-    if (valor.length > 10) {
-        valor = valor.slice(0, 10) + '-' + valor.slice(10);
-    }
-    
-    return valor;
-}

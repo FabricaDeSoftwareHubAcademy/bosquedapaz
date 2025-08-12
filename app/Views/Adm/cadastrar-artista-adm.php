@@ -63,7 +63,7 @@ $tolken = getTolkenCsrf();
                                 <option value="Teatro">Teatro</option>
                                 <option value="Dança">Dança</option>
                                 <option value="Circo">Circo</option>
-                                <option value="Musica">Musica</option>
+                                <option value="Música">Música</option>
                             </select>
                         </div>
 
@@ -119,11 +119,11 @@ $tolken = getTolkenCsrf();
                 </div>
                 <?php echo $tolken; ?>
 
-                <?php include "../../../Public/include/Butons-forms.html";?>
+                <?php include '../../../Public/include/Butons-forms.html';?>
             </form>
 
             <div class="overlay" id="overlay"></div>
-            <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
+            <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
             <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
             <?php include "../../../Public/include/modais/modal-error.html"; ?>
             

@@ -28,7 +28,7 @@ $tolken = getTolkenCsrf();
                 <div class="search-bar">
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
-                    <input type="hidden" name="tolkenCsrf" id="tolken-csrf-input" value="<?php echo htmlspecialchars($tolken); ?>">
+                    <?php echo $tolken;?>
                     <button class="search-button">BUSCAR</button>
                 </div>
 
@@ -50,9 +50,8 @@ $tolken = getTolkenCsrf();
                         <!-- status active -->
                         <!-- status inactive -->
                     </table>
-                </div>              
+                </div>
             </div>
-            <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>
     </main>
 
@@ -71,14 +70,13 @@ $tolken = getTolkenCsrf();
             </div>
         </div>
     </div>
-    <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
+
     <!-- <script src="../../../Public/js//js-adm/status-colaborador.js"></script> -->
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/listar_parceiros.js"></script>
     <script src="../../../Public/js/js-adm/js-listar-parceiros/alterar_status.js"></script>
     <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 </body>
 
 </html>

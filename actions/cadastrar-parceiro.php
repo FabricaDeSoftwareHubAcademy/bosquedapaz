@@ -48,12 +48,6 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         respostaErro("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
     }
 
-    // Verifica duplicidade de CPF/CNPJ
-    $parceiro = new Parceiro();
-    if ($parceiro->existeCpfCnpj($cpfCnpjNumerico)) {
-        respostaErro("Já existe um parceiro com esse CPF ou CNPJ.");
-    }
-
     // Validação e upload da imagem
     if (!isset($_FILES['logo']) || $_FILES['logo']['error'] !== UPLOAD_ERR_OK) {
         respostaErro("Erro no upload da logo.");
@@ -87,6 +81,10 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         respostaErro("Erro ao salvar a imagem.");
     }
 
+    // Instancia os objetos
+    $parceiro = new Parceiro();
+    $endereco = new Endereco();
+
     // Atribui os dados ao objeto Parceiro
     $parceiro->nome_parceiro = $dadosSanitizados["nome_parceiro"];
     $parceiro->telefone = $dadosSanitizados["telefone"];
@@ -94,10 +92,9 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $parceiro->nome_contato = $dadosSanitizados["nome_contato"];
     $parceiro->tipo = $dadosSanitizados["tipo"];
     $parceiro->cpf_cnpj = $cpfCnpjNumerico;
-    $parceiro->logo = '../Public/uploads/uploads-parceiros/' . $nomeSeguro;
+    $parceiro->logo = 'uploads/uploads-parceiros/' . $nomeSeguro;
 
     // Atribui os dados ao objeto Endereco
-    $endereco = new Endereco();
     $endereco->cep = $dadosSanitizados["cep"];
     $endereco->logradouro = $dadosSanitizados["logradouro"];
     $endereco->num_residencia = $dadosSanitizados["num_residencia"];

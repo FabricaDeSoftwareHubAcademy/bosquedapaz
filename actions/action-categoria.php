@@ -1,5 +1,4 @@
 <?php
-ob_start();
 require_once '../vendor/autoload.php';
 
 use app\Controller\Categoria;
@@ -7,37 +6,97 @@ use app\suport\Csrf;
 
 header("Content-Type: application/json");
 
-$response = ['status' => 'error', 'message' => 'Ocorreu um erro na execução desta ação.'];
+$acao = $_GET['acao'] ?? $_POST['acao'] ?? '';
 
-try {
-    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
-        throw new Exception("Token CSRF inválido. Ação bloqueada.");
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
+    switch ($acao) {
+        case 'listar':
+            $cat = new Categoria();
+            $categorias = $cat->listar();
+            echo json_encode(['status' => 'success', 'dados' => $categorias]);
+            break;
+    
+        case 'alterarStatus':
+            $json = file_get_contents('php://input');
+            $dados = json_decode($json, true);
+    
+            $id = $dados['id_categoria'] ?? null;
+            $novoStatus = $dados['status_cat'] ?? null;
+    
+            if ($id && in_array($novoStatus, ['ativo', 'inativo'])) {
+                $cat = new Categoria();
+                $res = $cat->alterarStatus($id, $novoStatus);
+                if ($res) {
+                    echo json_encode(['status' => 'success', 'message' => 'Status alterado com sucesso']);
+                } else {
+                    echo json_encode(['status' => 'error', 'message' => 'Erro ao alterar o status']);
+                }
+            } else {
+                echo json_encode(['status' => 'error', 'message' => 'Dados inválidos']);
+            }
+            break;
+    
+        case 'cadastrar':
+            $descricao = $_POST['descricao'] ?? '';
+            $cor = $_POST['cor'] ?? '';
+            $icone = $_POST['icone'] ?? '';
+            $status = $_POST['status_cat'] ?? 'ativo';
+    
+            if (empty($descricao)) {
+                echo json_encode(['status' => 'error', 'message' => 'O nome da categoria não pode estar vazio']);
+                exit;
+            }
+    
+            $cat = new Categoria();
+            $cat->setDescricao($descricao);
+            $cat->setCor($cor);
+            $cat->setIcone($icone);
+            $cat->setStatus($status);
+    
+            $res = $cat->cadastrar();
+    
+            echo json_encode(['status' => 'success', 'message' => 'Categoria cadastrada']);
+            break;
+    
+        case 'atualizar':
+            $id = $_POST['id_categoria'] ?? '';
+            $descricao = $_POST['descricao'] ?? '';
+            $cor = $_POST['cor'] ?? '';
+            $icone = $_POST['icone'] ?? '';
+            $status = $_POST['status_cat'] ?? 'ativo';
+    
+            if (empty($descricao)) {
+                echo json_encode(['status' => 'error', 'message' => 'O nome da categoria não pode estar vazio']);
+                exit;
+            }
+    
+            $cat = new Categoria();
+            $cat->setDescricao($descricao);
+            $cat->setCor($cor);
+            $cat->setIcone($icone);
+            $cat->setStatus($status);
+    
+            $res = $cat->atualizar($id);
+    
+            echo json_encode(['status' => 'success', 'message' => 'Categoria atualizada']);
+            break;
+    
+        case 'excluir':
+            $id = $_POST['id_categoria'] ?? null;
+    
+            if ($id) {
+                $cat = new Categoria();
+                $cat->setId($id);
+                $res = $cat->excluir();
+                echo json_encode(['status' => 'success', 'message' => 'Categoria excluída']);
+            } else {
+                echo json_encode(['status' => 'error', 'message' => 'ID não informado']);
+            }
+            break;
+    
+        default:
+            echo json_encode(['status' => 'error', 'message' => 'Ação inválida']);
+            break;
     }
-
-    $id = $_POST['id_categoria'] ?? null;
-    $statusAtual = $_POST['status_atual'] ?? null;
-
-    if (!$id || !in_array($statusAtual, ['ativo', 'inativo'])) {
-        throw new Exception("Dados inválidos para alterar o status.");
-    }
-
-    $novoStatus = ($statusAtual === 'ativo') ? 'inativo' : 'ativo';
-
-    $cat = new Categoria();
-    $res = $cat->alterarStatus($id, $novoStatus);
-
-
-    if ($res) {
-        $response = ['status' => 'success', 'message' => 'Status alterado com sucesso.'];
-    } else {
-        throw new Exception("Erro ao alterar o status.");
-    }
-
-} catch (Exception $e) {
-    $response = ['status' => 'error', 'message' => $e->getMessage()];
-
-} finally {
-    ob_clean();
-    echo json_encode($response);
-    exit;
 }
+

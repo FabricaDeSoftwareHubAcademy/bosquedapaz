@@ -4,8 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "app\\": "app/",
-            "Controller\\": "app/Controller"
+            "app\\": "app/"
         },
         "classmap": [
             "app/Models",
@@ -21,8 +20,6 @@
     "minimum-stability": "dev",
     "require": {
         "firebase/php-jwt": "^6.11",
-        "phpmailer/phpmailer": "dev-master",
-        "setasign/fpdi": "dev-master",
-        "setasign/fpdf": "^1.8"
+        "phpmailer/phpmailer": "*"
     }
 }

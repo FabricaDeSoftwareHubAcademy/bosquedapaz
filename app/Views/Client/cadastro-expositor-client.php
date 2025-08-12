@@ -5,9 +5,6 @@ if (!$aceitou) {
     header("Location: termos-expositor.php");
     exit();
 }
-
-include_once('../../helpers/csrf.php');
-$tolken = getTolkenCsrf();
 ?>
 
 
@@ -24,7 +21,7 @@ $tolken = getTolkenCsrf();
 </head>
 
 <body onload="getCategorias()">
-    <?php include "../../../Public/include/home/menu-home.html" ?>
+<?php include "../../../Public/include/home/menu-home.html" ?>
 
 
     <main class="principal">
@@ -35,9 +32,6 @@ $tolken = getTolkenCsrf();
             </div>
 
             <form id="fomulario_cad_expositor" method="POST">
-
-                <input type="hidden" name="aceitou_termos" value="Sim">
-
                 <div class="formularios">
                     <div class="form-pessoa">
                         <div class="input">
@@ -46,7 +40,7 @@ $tolken = getTolkenCsrf();
                         </div>
                         <div class="input">
                             <label>Whatsapp:</label>
-                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp">
+                            <input type="tel" name="whats" id="whats" placeholder="Número de whatsapp" oninput="formatWhatsAppNumber(this)">
                         </div>
                         <div class="input">
                             <label>E-mail:</label>
@@ -60,8 +54,8 @@ $tolken = getTolkenCsrf();
 
                     <div class="form-loja">
                         <div class="input">
-                            <label>CPF:</label>
-                            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required>
+                            <label>Produto:</label>
+                            <input type="text" name="produto" id="produto" placeholder="Digite seu produto" required>
                         </div>
 
                         <div class="input">
@@ -77,7 +71,8 @@ $tolken = getTolkenCsrf();
                         </div>
 
                         <div class="input">
-                            <label>Usuário do instagram:</label>
+                            <label>Link instagram:</label>
+
                             <input type="text" name="link_instagram" id="link_instagram" placeholder="link instagram" required>
                         </div>
                     </div>
@@ -113,40 +108,11 @@ $tolken = getTolkenCsrf();
 
                         <div class="form-files">
                             <label>Escolha 6 fotos do seu produto para análise:</label>
-                            <input type="file" id="input_fotos" name="imagens[]" id="imagens[]" multiple>
+                            <input type="file" name="imagens[]" id="imagens[]" multiple>
                         </div>
                     </div>
 
                 </div>
-                <div class="conteiner_fotos" id="conteiner_fotos">
-                    <div class="content_fotos">
-                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
-                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
-                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
-                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
-                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
-                        <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                </div>
-
-                <?php echo $tolken; ?>
-
 
                 <?php include '../../../Public/include/Butons-forms.html'; ?>
 
@@ -168,6 +134,10 @@ $tolken = getTolkenCsrf();
 
     </div>
 
+
+
+
+    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>

@@ -2,7 +2,7 @@ let nomeEmpresa = document.getElementById('nomeEmpresa')
 let nome = document.getElementById('nome')
 let email = document.getElementById('email')
 let whats = document.getElementById('whats')
-let cpf = document.getElementById('cpf')
+let produto = document.getElementById('produto')
 let cidade = document.getElementById('cidade')
 let exposicao = document.getElementById('exposicao')
 let energia = document.getElementById('energia')
@@ -66,8 +66,8 @@ async function getExpositor(){
         nomeEmpresa.innerText = response.expositor.nome_marca
         nome.value = response.expositor.nome
         email.value = response.expositor.email
-        whats.value = maskNumTelefone(response.expositor.telefone)
-        cpf.value = mascaraCpf(response.expositor.cpf)
+        whats.value = response.expositor.telefone
+        produto.value = response.expositor.produto
         intagram.href = response.expositor.link_instagram
         intagram.innerText = response.expositor.link_instagram
         exposicao.value = response.expositor.tipo
@@ -252,39 +252,3 @@ async function recusarExpositor() {
 
 
 document.getElementById('botao_recusar').addEventListener('click', recusarExpositor)
-
-
-function maskNumTelefone(num) {
-    let valor = num;
-    valor = valor.replace(/\D/g, '');
-    valor = valor.substring(0, 11);
-    if (valor.length > 0) {
-        valor = '(' + valor;
-    }
-    if (valor.length > 3) {
-        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
-    }
-    if (valor.length > 10) {
-        valor = valor.slice(0, 10) + '-' + valor.slice(10);
-    }
-    
-    return valor;
-}
-
-function mascaraCpf(text){
-    let v = text.replace(/\D/g, '').substring(0, 12);
-    let cpf = ''
-    if (v.length <= 11) {
-        if (v.length > 9)
-            cpf = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6, 9)}-${v.substring(9, 11)}`;
-        else if (v.length > 6)
-            cpf = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6)}`;
-        else if (v.length > 3)
-            cpf = `${v.substring(0, 3)}.${v.substring(3)}`;
-        else
-            cpf = v;
-        return cpf;
-    }else{
-        return cpf;
-    }
-}

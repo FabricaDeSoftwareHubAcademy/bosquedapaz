@@ -13,11 +13,6 @@ function obterAdm(){
     return obterLogin();
 }
 
-function limparMaskTelefone($tel){
-    return preg_replace('/[^0-9]/', '', $tel);
-}
-
-
 if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
     $admLogado = obterAdm();
 
@@ -27,7 +22,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     if (isset($_POST["cadastrar"])) {
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
-        $telefone = limparMaskTelefone(sanitizeString($_POST['tel'] ?? ''));
+        $telefone = sanitizeString($_POST['tel'] ?? '');
         $cargo = sanitizeString($_POST['cargo'] ?? '');
         $senha = $_POST['senha'] ?? '';
 
@@ -137,10 +132,10 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     // Update = Edição dos dados <----------------------------------------------->
     else if (isset($_POST["atualizar"])) {
-
+        
         $nome = sanitizeString($_POST['nome'] ?? '');
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
-        $telefone = limparMaskTelefone(sanitizeString($_POST['tel'] ?? ''));
+        $telefone = sanitizeString($_POST['tel'] ?? '');
         $cargo = sanitizeString($_POST['cargo'] ?? '');
         
         // Validações: 
@@ -213,7 +208,18 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         $res = $colab->listarColaboradores($nome);
 
         if ($res) {
-            echo json_encode(['data' => $res]);
+            $dados = array_map(function($c) {
+                return [
+                    'id_colaborador' => $c['id_colaborador'],
+                    'nome' => $c['nome'],
+                    'email' => $c['email'],
+                    'telefone' => $c['telefone'],
+                    'cargo' => $c['cargo'],
+                    'status_col' => $c['status_pes'],
+                ];
+            }, $res);
+
+            echo json_encode(['data' => $dados]);
             exit;
         } else {
             echo json_encode(['data' => []]);

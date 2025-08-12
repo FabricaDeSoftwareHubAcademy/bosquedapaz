@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody-artistas');
   const inputPesquisa = document.getElementById('status');
-
-  const modalDelete = document.getElementById("modal-delete");
-  const tituloDelete = modalDelete.querySelector("h2.deletar-text");
-  const mensagemDelete = modalDelete.querySelector("p.msm-modal");
-  const btnDeletar = document.getElementById("btn-modal-deletar");
-  const btnCancelarDelete = document.getElementById("btn-modal-cancelar");
-  const btnFecharDelete = document.getElementById("fechar-modal-deletar");
+  const modalConfirmar = document.getElementById("modal-confirmar-status");
+  const mensagemConfirmar = document.getElementById("mensagem-confirmar-status");
+  const btnConfirmar = document.getElementById("btn-confirmar-status");
+  const btnCancelar = document.getElementById("btn-cancelar-status");
 
   let artistas = [];
   let artistaSelecionadoId = null;
@@ -15,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function formatarTelefone(numero) {
     if (!numero || typeof numero !== 'string') return '';
+
     const cleaned = numero.replace(/\D/g, '');
 
     if (cleaned.length === 11) {
@@ -22,6 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else if (cleaned.length === 10) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 6)}-${cleaned.slice(6)}`;
     }
+
     return numero;
   }
 
@@ -33,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return b.id_artista - a.id_artista;
     });
   }
+
 
   function renderizarTabela(lista) {
     const listaOrdenada = ordenarArtistasPorStatus(lista);
@@ -93,17 +93,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       artistaSelecionadoId = id;
       artistaNovoStatus = novoStatus;
 
-      const acaoTexto = novoStatus === 'ativo' ? 'ativar' : 'inativar';
-
-      tituloDelete.textContent = `Deseja ${acaoTexto} este artista?`;
-      mensagemDelete.textContent = `Clique em confirmar para ${acaoTexto} o artista.`;
-      btnDeletar.textContent = acaoTexto.charAt(0).toUpperCase() + acaoTexto.slice(1);
-
-      modalDelete.showModal();
+      mensagemConfirmar.textContent = `Deseja ${novoStatus === 'ativo' ? 'ativar' : 'inativar'} este artista?`;
+      modalConfirmar.showModal();
     }
   });
 
-  btnDeletar.addEventListener('click', async () => {
+  btnConfirmar.addEventListener('click', async () => {
     if (!artistaSelecionadoId || !artistaNovoStatus) return;
 
     try {
@@ -128,18 +123,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Erro ao atualizar status:', resultado.error);
       }
 
-      modalDelete.close();
+      modalConfirmar.close();
     } catch (err) {
       console.error('Erro na requisição:', err);
-      modalDelete.close();
+      modalConfirmar.close();
     }
   });
 
-  btnCancelarDelete.addEventListener('click', () => {
-    modalDelete.close();
-  });
-
-  btnFecharDelete.addEventListener('click', () => {
-    modalDelete.close();
+  btnCancelar.addEventListener('click', () => {
+    modalConfirmar.close();
   });
 });

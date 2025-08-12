@@ -27,7 +27,7 @@ $tolken = getTolkenCsrf();
                 <label for="" id="label-filtragem-de-nome">Pesquisar por Nome</label>
                 <input type="text" name="campo-filtragem-de-nome" id="input-filtragem-de-nome" placeholder="Nome do Expositor">
             </div>
-            <input type="hidden" name="tolkenCsrf" id="tolken-csrf-input" value="<?php echo htmlspecialchars($tolken); ?>">
+
             <div class="linha-de-separacao"></div>
 
             <div class="filtrar-por-data">
@@ -76,7 +76,6 @@ $tolken = getTolkenCsrf();
                 </tbody>
             </table>
         </section>
-        <?php include '../../../Public/include/Butons-forms.html'; ?>
 
         <div id="modalConfirmacao" class="modal-confirmacao" style="display: none;">
             <div class="modal-confirmacao-conteudo">
@@ -104,15 +103,13 @@ $tolken = getTolkenCsrf();
             </div>
 
             <a href="./">
-                <!-- <img src="../../../Public/assets/faleconosco-voltar.png" class="decoracao botao-voltar"> -->
+                <img src="../../../Public/assets/faleconosco-voltar.png" class="decoracao botao-voltar">
             </a>
         </section>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js" defer></script>
-        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_alterar_status.js" defer></script>
-        <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
-        <script src="../../../Public/js/js-adm/varifica_login_adm.js" defer></script>
-        <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
-        <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_listar_boletos.js"></script>
+        <script src="../../../Public/js/js-adm/js-gerenciar-boletos/ajax_alterar_status.js"></script>
+        <script src="../../../Public/js/js-menu/js-menu.js"></script>
+        <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
 </body>
 
 </html>

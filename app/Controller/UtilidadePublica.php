@@ -34,7 +34,7 @@ use app\Models\Database;
 
         public function listar() {
             $db = new Database('utilidade_publica');
-            $res = $db->select()
+            $res = $db->select(null, "status_utilidade")
                       ->fetchAll(PDO::FETCH_ASSOC);
     
             return $res;

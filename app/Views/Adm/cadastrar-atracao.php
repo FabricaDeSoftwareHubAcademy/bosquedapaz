@@ -46,8 +46,7 @@ $tolken = getTolkenCsrf();
                                         <input type="file" name="foto" id="file" required>
                                     </div>
                                 </div>
-                            
-                            <img class="preview" src="" alt="" id="preview-image">
+                                <img class="preview" src="" alt="" id="preview-image">
 
                         </div>
                         <?php echo $tolken; ?>

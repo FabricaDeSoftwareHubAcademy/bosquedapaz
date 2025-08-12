@@ -55,8 +55,8 @@ $tolken = getTolkenCsrf();
                             <label for="">Whatsapp</label>
                             <input type="text" name="" id="whats" class="formulario-campo-informacao" readonly>
 
-                            <label for="">CPF</label>
-                            <input type="text" name="" id="cpf" class="formulario-campo-informacao" readonly>
+                            <label for="">Produto</label>
+                            <input type="text" name="" id="produto" class="formulario-campo-informacao" readonly>
 
                             <label for="">Cidade</label>
                             <input type="text" name="" id="cidade" class="formulario-campo-informacao" readonly>
