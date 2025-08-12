@@ -37,6 +37,7 @@ $tolken = getTolkenCsrf();
     <!-- <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script> -->
     <script src="../../../Public/js/js-modais/modal-proximo-evento.js"></script>
     <script src="../../../Public/js/js-home/js-evento-mais-proximo.js"></script>
+    <script src="../../../Public/js/js-home/js-utilidade-mais-proxima.js"></script>
     <?php include "../../../Public/include/vlibras.html" ?>
 </body>
 </html>

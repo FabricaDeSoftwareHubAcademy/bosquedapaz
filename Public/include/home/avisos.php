@@ -37,7 +37,7 @@
         <div class="fundo_atracoes"></div>
         <div class="content_evento">
             <div class="content_img_evento">
-                <img src="../../../Public/imgs/primavera.png" class="img_prox_event">
+                <img src="" class="img_prox_event" id="img_prox_utility"> 
             </div>
             <div class="content_info_evento">
                 <h3 class="all-titles title_evento">Utilidades públicas</h3>
