@@ -62,13 +62,6 @@ h2 {
     /* Remove o sublinhado */
 }
 
-/* Cor ao passar o mouse (hover) */
-.edit-icon:hover i,
-.delete-icon:hover i {
-    color: #007bff;
-    /* Cor de hover para os ícones (ajuste conforme necessário) */
-}
-
 #modal-validar,
 #modal-recusar,
 #recusado-sucesso,
@@ -693,6 +686,15 @@ table tbody tr:nth-child(even) {
     justify-content: center;
     margin-top: 20px;
 }
+.usuario-col{
+    text-align: center;
+}
+/* 
+.usuario-col {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+} */
 
 .btns .voltar {
     position: absolute;
@@ -722,13 +724,26 @@ table tbody tr:nth-child(even) {
 .collaborators-table td {
   padding: 12px 15px;
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
 }
 
-/* Estilo para telas pequenas */
+#icon-editar-utilidade{
+    background-color: #dc3545;
+}
+
+#icon-editar-utilidade:hover {
+    color: #000000;
+}
+
+
+/* .collaborators-table th{
+    align-items: center;
+    justify-content: center;
+} */
+
 @media (max-width: 768px) {
   .collaborators-table thead {
-    display: none; /* Esconde o cabeçalho da tabela */
+    display: none; 
   }
 
   .collaborators-table, 
@@ -758,7 +773,6 @@ table tbody tr:nth-child(even) {
     border-bottom: 0;
   }
 
-  /* Labels para os dados - use os mesmos textos do cabeçalho */
   .collaborators-table td::before {
     content: attr(data-label);
     position: absolute;
