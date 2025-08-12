@@ -161,3 +161,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 });
+
+const inputValor = document.getElementById('valor_input');
+
+inputValor.addEventListener('input', e => {
+  let valor = e.target.value;
+
+  valor = valor.replace(/\D/g, '');
+
+  if (valor === '') {
+    e.target.value = '';
+    return;
+  }
+
+  valor = (parseInt(valor, 10) / 100).toFixed(2) + '';
+  valor = valor.replace('.', ',');
+  valor = valor.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+  e.target.value = 'R$ ' + valor;
+});
