@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link rel="stylesheet" href="../../../Public/css/css-home/sobre-jogo.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <title>Document</title>
+    <title>Sobre o Jogo</title>
 </head>
 <body>
     <!-- Includ do Menu:  -->
@@ -54,6 +55,7 @@
 
         <!-- Section 4 (Cards) -->
         <section class="section cards_section">
+            <!-- Conatiner dos Cards  -->
             <div class="cards_box">
                 <!-- Cards -->
                 <div class="card">
@@ -209,10 +211,11 @@
         </section>
     </main>
 
-    <!-- Inclua o rodapé -->
+    <!-- Includ do Rodapé -->
     <?php include "../../../Public/include/home/rodape.html"; ?> 
 
     <script src="../../../Public/js/js-home/sobre-jogo.js"></script>
-    <link rel="stylesheet" href="style.css">
 </body>
 </html>
+
+<!-- /* Matheus Manja  */  -->

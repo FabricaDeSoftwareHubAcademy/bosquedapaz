@@ -2,6 +2,7 @@
 @import url('style-rodape.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Areas Principais:  */
 * {
     box-sizing: border-box;
 }
@@ -16,6 +17,7 @@ main {
     padding-top: 110px;
 }
 
+/* Section */
 .section {
     padding: 150px 50px;
     text-align: center;
@@ -32,6 +34,7 @@ main {
     background-color: rgba(233, 237, 201, 1);
 }
 
+/* Lado Esquerdo: Text  */
 #section_1 .left_text {
     width: 48%;
     min-height: 60vh;
@@ -57,6 +60,7 @@ main {
     margin: 0;
 }
 
+/* Lado Direito: Img e button  */
 #section_1 .right_logo {
     width: 52%;
     min-height: 60vh;
@@ -109,6 +113,8 @@ main {
     box-shadow: 0 8px 15px rgba(58, 76, 56, 0.4);
 }
 
+
+/* Section 2:  */
 #section_2{
     display: flex;
     align-items: center;
@@ -131,6 +137,7 @@ main {
     line-height: 1.6;
     margin: 0;
 }
+
 
 /*Section 3 */
 .filter_section{
@@ -203,17 +210,20 @@ main {
     background-color: #e7f0de;
 }
 
+
+/* Section 4: Cards */
 .cards_section {
     display: flex;
     justify-content: center;
     padding: 80px 20px;
 }
 
+/* Container dos Cards:  */
 .cards_box {
     background: #f2f2f2;
     padding: 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -226,9 +236,15 @@ main {
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     position: relative;
     justify-self: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
@@ -248,11 +264,6 @@ main {
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    transition: transform 0.3s ease;
-}
-
-.card-image:hover img {
-    transform: scale(1.05);
 }
 
 .card-content {
@@ -286,22 +297,38 @@ main {
 }
 
 .avatar {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid white;
     background-color: white;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
+    transition: transform 0.3s ease;
 }
 
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.avatar:hover img {
+    transform: rotate(5deg); 
+}
+
+/* Section 5:  */
 #section_5 {
     background-color: rgba(233, 237, 201, 1);
     display: flex;
@@ -362,6 +389,7 @@ main {
 .container_text p {
     font-size: clamp(14px, 2vw, 16px);
     width: 90%;
+    font-weight: 500;
     max-width: 400px;
     color: #39573F;
     line-height: 1.6;
@@ -395,20 +423,53 @@ main {
 
 
 /* Responsividades: */
-@media (max-width: 1024px) {
+@media (max-width: 320px) {
+    #section_1 .right_logo button,
+    .container_text button {
+        padding: 8px 30px;
+    }
+    
+    .filter_section button {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+@media (max-width: 480px) {
     .section {
-        padding: 100px 30px;
+        padding: 40px 15px;
     }
 
-    main {
-        padding-top: 100px;
+    #section_1 .left_text,
+    #section_1 .right_logo {
+        padding: 30px 15px;
+        min-height: 40vh;
+    }
+
+    .filter_section .buttons_container {
+        gap: 15px;
     }
 
     .cards_box {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .container_logo,
+    .container_text {
+        padding: 20px 15px;
+    }
+
+    .img_logo {
+        max-width: 250px;
     }
 }
+
 
 @media (max-width: 768px) {
     main {
@@ -466,48 +527,20 @@ main {
     }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 1024px) {
     .section {
-        padding: 40px 15px;
+        padding: 100px 30px;
     }
 
-    #section_1 .left_text,
-    #section_1 .right_logo {
-        padding: 30px 15px;
-        min-height: 40vh;
-    }
-
-    .filter_section .buttons_container {
-        gap: 15px;
+    main {
+        padding-top: 100px;
     }
 
     .cards_box {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .card {
-        max-width: 100%;
-    }
-
-    .container_logo,
-    .container_text {
-        padding: 20px 15px;
-    }
-
-    .img_logo {
-        max-width: 250px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
     }
 }
 
-@media (max-width: 320px) {
-    #section_1 .right_logo button,
-    .container_text button {
-        padding: 8px 30px;
-    }
-    
-    .filter_section button {
-        width: 45px;
-        height: 45px;
-    }
-}
+/* Matheus Manja  */
