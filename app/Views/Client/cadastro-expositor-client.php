@@ -5,6 +5,9 @@ if (!$aceitou) {
     header("Location: termos-expositor.php");
     exit();
 }
+
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
 ?>
 
 
@@ -57,8 +60,8 @@ if (!$aceitou) {
 
                     <div class="form-loja">
                         <div class="input">
-                            <label>Produto:</label>
-                            <input type="text" name="produto" id="produto" placeholder="Digite seu produto" required>
+                            <label>CPF:</label>
+                            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required>
                         </div>
 
                         <div class="input">
@@ -142,6 +145,8 @@ if (!$aceitou) {
                     </div>
                 </div>
 
+                <?php echo $tolken; ?>
+
 
                 <?php include '../../../Public/include/Butons-forms.html'; ?>
 
@@ -163,10 +168,6 @@ if (!$aceitou) {
 
     </div>
 
-
-
-
-    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>

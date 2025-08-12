@@ -22,8 +22,7 @@ async function chamarModalExpositor(id){
         contentModal.innerHTML = `
         <div class="left__side">
             <div class="container__logo">
-                <div class="div__logo"><img class="img_logo_expositor" src="../../../Public/assets/MOCA.png" alt="image perfil "></div>
-                <!--${response.expositor.img_perfil}-->
+                <div class="div__logo"><img class="img_logo_expositor" src="${response.expositor.img_perfil}" alt="image perfil "></div>
             </div>  
             <div class="container__h1"><h1>Produtos</h1></div>
             <div class="container__imgs">
@@ -106,7 +105,6 @@ async function carregarExpositores() {
         const container = document.getElementById("expositores-container");
 
         data.expositor.forEach(expo => {
-            console.log(`EXPO =====> ${JSON.stringify(expo)}`);
             const card = document.createElement("div");
             card.classList.add("content-card-expo");
             card.innerHTML = `

@@ -28,7 +28,7 @@ $tolken = getTolkenCsrf();
                 <div class="search-bar">
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
-                    <?php echo $tolken;?>
+                    <input type="hidden" name="tolkenCsrf" id="tolken-csrf-input" value="<?php echo htmlspecialchars($tolken); ?>">
                     <button class="search-button">BUSCAR</button>
                 </div>
 
@@ -50,7 +50,7 @@ $tolken = getTolkenCsrf();
                         <!-- status active -->
                         <!-- status inactive -->
                     </table>
-                </div>
+                </div>              
             </div>
             <div class="btns">
                 <a href="./" class="voltar">

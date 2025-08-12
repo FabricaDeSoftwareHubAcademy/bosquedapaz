@@ -21,22 +21,27 @@ $tolken = getTolkenCsrf();
         <div class="box">
             <h1>CADASTRAR FOTOS DO EVENTO</h1>
                 <div class="form-box">
-                <h2>Upload de Fotos do Evento</h2>
 
-                    <form id="form-upload-fotos" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="id_evento" id="id_evento" value="<?php echo $_GET['id']; ?>">
 
-                        <div class="input-group">
-                            <label for="fotos">Selecione as fotos (JPG, PNG, JPEG):</label>
-                            <input type="file" id="fotos" name="fotos[]" multiple >
-                        </div>
 
-                        <div class="preview-galeria" id="preview-galeria"></div>
+                        <form id="form-upload-fotos" method="POST" enctype="multipart/form-data">
+                            <div id="upload-fotos">
+                                <input type="hidden" name="id_evento" id="id_evento" value="<?php echo $_GET['id']; ?>">
 
-                        <?php echo $tolken; ?>
+                                <div class="input-group">
+                                    <label for="fotos">Selecione as fotos (JPG, PNG, JPEG):</label>
+                                    <input type="file" id="fotos" name="fotos[]" multiple >
+                                </div>
 
-                        <?php include '../../../Public/include/Butons-forms.html';?>
-                    </form>
+                                <div class="preview-galeria" id="preview-galeria"></div>
+
+                                <?php echo $tolken; ?>
+
+
+                            </div>
+                            <?php include '../../../Public/include/Butons-forms.html';?>
+                        </form>
+
                 </div>
 
                     
