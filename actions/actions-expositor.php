@@ -4,13 +4,17 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 
-header('Content-Type: application/json');
+
+//////// IMPORTS DE ARQUIVOS \\\\\\\\\\\\\\\\\
 
 require_once('../vendor/autoload.php');
 
 use app\Controller\Expositor;
 use app\Controller\Imagem;
 use app\suport\Csrf;
+
+
+/////////////////// FUNCOES \\\\\\\\\\\\\\\\
 
 function uploadImagem($img) {
     // chmod ("../Public/uploads/uploads-carrosel/", 0777);
@@ -42,19 +46,27 @@ function getImagens($imgs){
     return $arrayImagens;
 }
 
+function limparMaskTelefone($tel){
+    return preg_replace('/[^0-9]/', '', $tel);
+}
+
+function linkInstagram($ins){
+    return 'https://instagram.com/'.trim($ins, '@');
+}
 
 /////////////////// MEDOTO POST ///////////////////
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
+    try {
     
     $expositor = new Expositor();
     
-    try {
 
+    ///////////////  INATIVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\
     if(isset($_POST['deletar'])){
 
-        $id = filter_var($_POST['id'], FILTER_UNSAFE_RAW);
-        $status = filter_var($_POST['status'], FILTER_UNSAFE_RAW);
+        $id = htmlspecialchars(strip_tags($_POST['id']));
+        $status = htmlspecialchars(strip_tags($_POST['status']));
 
         $mudarStatus = $expositor->alterarStatus($id, $status);
 
@@ -72,29 +84,63 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             exit;
         }
 
-    }else if (isset($_POST['cadastrar'])) { 
+    //////////// CADASTRAR UM NOVO EXPOSITOR \\\\\\\\\\\\\\\\
+    }else if (isset($_POST['cadastrar'])) {
 
-            $email = !empty($_POST['email']) ? filter_var($_POST['email'],  FILTER_UNSAFE_RAW) : NULL;
-            $existe = $expositor->emailExiste($email);
-            if($existe){
+            ////////////////// VALIDANDO O EMAIL\\\\\\\\\\\\\
+
+            $email = htmlspecialchars(strip_tags($_POST['email']));
+            
+            $emailExiste = $expositor->emailExiste($email);
+            if($emailExiste){
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'Não é possivel cadastrar, email existente',
                 ]);
+                http_response_code(400);
                 exit;
             }
+
+            $cpf = htmlspecialchars(strip_tags($_POST['cpf']));
+            
+            $cpfExiste = $expositor->cpfExiste($cpf);
+            if($cpfExiste){
+                echo json_encode([
+                    'msg' => 'Não é possivel cadastrar, CPF existente',
+                ]);
+                http_response_code(400);
+                exit;
+            }
+
+            ////// SETANDO DADOS \\\\\\\\\\\\
+
+            /////// DADOS LOGIN \\\\\\\\\\\
             
             $expositor->setEmail($email);
+
+            /////// DADOS ENDEREÇO \\\\\\\\
     
-            $expositor->setCidade(!empty($_POST['cidade']) ? filter_var($_POST['cidade'], FILTER_UNSAFE_RAW) : NULL);
+            $expositor->setCidade(htmlspecialchars(strip_tags($_POST['cidade'])));
     
-            // // DADOS PESSOA
-            $expositor->setNome(            !empty($_POST['nome'])          ? filter_var($_POST['nome'],            FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setWhats(           !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setTelefone(        !empty($_POST['whats'])         ? filter_var($_POST['whats'],           FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setAceitou_termos(  $_SESSION['aceitou_termos'] ?? 'Não');
-            $expositor->setlink_instagram(  !empty($_POST['link_instagram'])? filter_var($_POST['link_instagram'],  FILTER_UNSAFE_RAW) : NULL);
+            ////// DADOS PESSOA \\\\\\\\\\\
+            $expositor->setNome(            htmlspecialchars(strip_tags($_POST['nome'])));
+            $expositor->setCpf(             htmlspecialchars(strip_tags($_POST['cpf'])));
+            $expositor->setWhats(           'https://wa.me/55'.limparMaskTelefone(htmlspecialchars(strip_tags($_POST['whats']))));
+            $expositor->setTelefone(        limparMaskTelefone(htmlspecialchars(strip_tags($_POST['whats']))));
+            $expositor->setlink_instagram(  linkInstagram(htmlspecialchars(strip_tags($_POST['link_instagram']))));
+
+            $aceitou = '';
+
+            if (isset($_POST['aceitou_termos'])) {
+                $aceitou = $_POST['aceitou_termos']; // vem do input hidden do admin
+            } elseif (isset($_SESSION['aceitou_termos'])) {
+                $aceitou = $_SESSION['aceitou_termos']; // vem da sessão do visitante
+            }
+
             
+
+            //////// IMAGENS \\\\\\\\
+
+
             /// verificando se exite imagens
             if (isset($_FILES['imagens'])) {
                 if (count($_FILES['imagens']['name']) == 6){
@@ -110,9 +156,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         // verifica quantos mb
                         if( 5 < ($img['size'] / 1024) / 1024){
                             echo json_encode([
-                                'status' => 400,
                                 'msg' => 'Imagem enviada muito grande', 
                             ]);
+                            http_response_code(400);
                             exit;
                         }
     
@@ -121,71 +167,72 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         // verifiva qual o tipo de extenção
                         if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
                             echo json_encode([
-                                'status' => 400, 
                                 'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
                             ]);
+                            http_response_code(400);
                             exit;
                         }
                         $caminhosImagens[] = uploadImagem($img);
                     }
-                    
-                    // print_r($caminhosImagens);
                     
                     $expositor->imagens = $caminhosImagens;
     
                     
                 }else {
                     echo json_encode([
-                        'status' => 400, 
-                        'msg' => 'É necassário enviar 6 imagens para realizar o cadastro', 
+                        'msg' => 'É necessário enviar 6 imagens para realizar o cadastro', 
                     ]);
+                    http_response_code(400);
                     exit;
                 }
             }else {
                 echo json_encode([
-                    'status' => 400, 
-                    'msg' => 'É necassário enviar imagens para realizar o cadastro', 
+                    'msg' => 'É necessário enviar imagens para realizar o cadastro', 
                 ]);
+                http_response_code(400);
                 exit;
             }
             
             
-            // DADOS EXPOSITOR
-            $expositor->setNome_marca(     !empty($_POST['marca'])          ? filter_var($_POST['marca'],         FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setProduto(        !empty($_POST['produto'])        ? filter_var($_POST['produto'],       FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setVoltagem(       !empty($_POST['voltagem'])       ? filter_var($_POST['voltagem'],      FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setEnergia(        !empty($_POST['energia'])        ? filter_var($_POST['energia'],       FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setTipo(           !empty($_POST['tipo'])           ? filter_var($_POST['tipo'],          FILTER_UNSAFE_RAW) : NULL);
-            $expositor->setId_categoria(   !empty($_POST['id_categoria'])   ? filter_var($_POST['id_categoria'],  FILTER_UNSAFE_RAW) : NULL);
+            //////// DADOS EXPOSITOR \\\\\\\\\\\\\
+            $expositor->setNome_marca(     htmlspecialchars(strip_tags($_POST['marca'])));
+            $expositor->setVoltagem(       htmlspecialchars(strip_tags($_POST['voltagem'])));
+            $expositor->setEnergia(        htmlspecialchars(strip_tags($_POST['energia'])));
+            $expositor->setTipo(           htmlspecialchars(strip_tags($_POST['tipo'])));
+            $expositor->setId_categoria(   htmlspecialchars(strip_tags($_POST['id_categoria'])));
             
             
+            ///////// CADASTRANDO NO BD \\\\\\\\\\\\\
             $res = $expositor->cadastrar();
             
+
+            ////////// ENVIANDO RESPOSTA \\\\\\\\\ 
             if($res){
                 echo json_encode([
-                    'status' => 200, 
                     'msg' => 'Expositor cadastrado com sucesso!',
-                    $res
                 ]);
+                http_response_code(200);
                 exit;
             }else{
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'Não foi possível realizar o cadastro de expostor!',
-                    $res
                 ]);
+                http_response_code(400);
+                exit;
             }   
 
     }
     } catch (\Throwable $th) {
-        //// no caso de erro
         echo json_encode([
-            'status' => 500, 
-            'msg' => 'Falha no servidor.'
+            'msg' => 'Falha no servidor!!'
         ]);
+        http_response_code(500);
         exit;
     }
 }
+
+
+header('Content-Type: application/json');
 
 /////////////////// MEDOTO GET ///////////////////
 
@@ -208,14 +255,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITOR DONO DO ID COM AS IMAGENS DELE
         }else if (isset($_GET['id'])){
-            $id = $_GET['id'];
+            $id = htmlspecialchars(strip_tags($_GET['id']));
             $imagens = new Imagem();
             //// busca imagens pelo id do expositor
-            $buscarImagem = $imagens->listar($_GET['id']);
+            $buscarImagem = $imagens->listar(htmlspecialchars(strip_tags($_GET['id'])));
             $buscarId = $expositor->listar("id_expositor = '$id'");
             //// faz append das imagens
             $buscarId[0]['imagens'] = $buscarImagem;
-            $response = $buscarId ? ['expositor' => $buscarId[0], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            $response = $buscarId ? ['expositor' => $buscarId[0],$_GET['id'], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
         //// RETORNA EXPOSITORES INATIVOS
@@ -226,23 +273,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITORES APROVADOS PERTENCENTE A CATEGORIA ESCOLIDA
         }else if (isset($_GET['categoria'])){
-            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoria']. "' and validacao = 'aprovado'");
+            $buscarCategoria = $expositor->listar("descricao = '". htmlspecialchars(strip_tags($_GET['categoria'])). "' and validacao = 'aprovado'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
         }else if (isset($_GET['categoriaHome'])){
-            $buscarCategoria = $expositor->listar("descricao = '". $_GET['categoriaHome']. "' and validacao = 'validado' and status_pes = 'ativo'");
+            $buscarCategoria = $expositor->listar("descricao = '". htmlspecialchars(strip_tags($_GET['categoriaHome'])). "' and validacao = 'validado' and status_pes = 'ativo'");
             $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar($_GET['filtrar'], isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        
+        //// RETORNA OS EXPOSITORES FILTRADOS 2
+        }else if (isset($_GET['filtrarAtivos'])){
+            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrarAtivos'])), isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'", true);
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
-        //// RETORNA OS EXPOSITORES FILTRADOS 2
+        //// RETORNA OS EXPOSITORES FILTRADOS 3
         }else if (isset($_GET['filtrarHome'])){
-            $filtrarExpositor = $expositor->filtrar($_GET['filtrarHome'], "= 'validado' and status_pes = 'ativo'");
+            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrarHome'])), "= 'validado' and status_pes = 'ativo'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
 
 
@@ -268,7 +320,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     } catch (\Throwable $th) {
         $response = [
             'status' => 500,
-            'msg' => 'Erro no servidor'. $th
+            'msg' => 'Erro no servidor'
         ];
         echo json_encode($response);
     }

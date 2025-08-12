@@ -7,10 +7,10 @@ header('Content-Type: application/json');
 try {
     $atracao = new Atracao();
 
-    $id_evento = isset($_GET['id_evento']) ? (int)$_GET['id_evento'] : null;
-    $where = $id_evento ? "id_evento = {$id_evento}" : null;
+    $termo = isset($_GET['termo']) ? trim($_GET['termo']) : '';
+    $id_evento = isset($_GET['id_evento']) ? intval($_GET['id_evento']) : 0;
 
-    $atracoes = $atracao->listar($where);
+    $atracoes = $atracao->buscarPorNome($termo, $id_evento);
 
     echo json_encode([
         'status' => 'success',

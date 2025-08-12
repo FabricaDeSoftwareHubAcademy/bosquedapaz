@@ -9,9 +9,9 @@ async function carregarCategorias() {
         const caminhoIcone = `../../../Public/${categoria.icone}`;
   
         const itemHTML = `
-          <a href="todos-expositores.php#${categoria.descricao.toLowerCase()}" class="link-cat-expo">
-            <div class="item">
-              <div class="img-fundo ${categoria.descricao.toLowerCase()}">
+          <a href="todos-expositores.php?categoria=${categoria.descricao.toLowerCase()}" class="link-cat-expo">
+            <div class="item" >
+              <div class="img-fundo ${categoria.descricao.toLowerCase()}" style="background-color: ${categoria.cor}">
                 <img src="${caminhoIcone}" alt="Ícone ${categoria.descricao}" class="img-categoria"></img>
               </div>
               <p class="name-categoria">${categoria.descricao.toUpperCase()}</p>

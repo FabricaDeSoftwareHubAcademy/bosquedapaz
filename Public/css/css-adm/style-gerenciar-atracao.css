@@ -75,6 +75,8 @@ h2 {
     justify-content: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     outline: none;
+    gap: 10px; /* Espaço entre input e botão */
+    flex-wrap: nowrap; /* Só quebra se for inevitável */
 }
 
 
@@ -92,6 +94,8 @@ h2 {
     margin-right: 10px;
     font-size: 16px;
     box-shadow: 5px 3px 5px rgba(32, 54, 139, 1);
+    /* flex: 1; O input cresce para ocupar espaço */
+    min-width: 200px; /* Mínimo para não esmagar */
 }
 
 .search-bar .search-button {
@@ -315,17 +319,17 @@ table tbody tr:nth-child(even) {
 }
 
 .novo-evento {
-    width: clamp(150px, 15%, 150px);
+    flex-shrink: 0; /* Impede encolhimento excessivo */
+    min-width: 150px;
     height: 34px;
     border-radius: 8px;
     color: white;
     background-color: rgb(32, 54, 139);
     font-size: 19px;
-    padding: 1px 8px 4px 8px;
+    padding: 1px 16px;
     border: none;
     cursor: pointer;
-    align-items: center;
-    /* width: 150px; */
+    white-space: nowrap; /* Mantém o texto em linha */
 }
 
 .botoes {
@@ -437,16 +441,16 @@ table tbody tr:nth-child(even) {
 
 /* 📱 Ajustes para telas menores que 1200px */
 @media (max-width: 1199.98px) {
-    body {
+    /* body {
         max-height: 50vh;
         overflow-y: auto;
-        /* background-color: aqua; */
-    }
+    
+    } */
 
-    .container {
+    /* .container {
         padding: 20px;
         height: auto;
-    }
+    } */
 
     .titulo {
         font-size: 32px;
@@ -506,16 +510,16 @@ table tbody tr:nth-child(even) {
         margin-bottom: 5px;
     }
 
-    .novo-evento {
+    /* .novo-evento {
         font-size: 16px;
         padding: 10px 20px;
-    }
+    } */
 
-    .principal .box{
+    /* .principal .box{
         margin-top: 0;
         justify-content: center;
         height: 92vh;
-    }
+    } */
 
     .bolas-fundo .bola-rosa{
         bottom: -8.5%;
@@ -586,14 +590,14 @@ table tbody tr:nth-child(even) {
         margin-top: 20px;
     }
 
-    .novo-evento {
+    /* .novo-evento {
         font-size: 14px;
         padding: 8px 18px;
-    }
+    } */
 
-    .principal .box{
+    /* .principal .box{
         height: 100%;
-    }
+    } */
 
     .voltar-link{
         bottom: -60px
@@ -668,10 +672,10 @@ table tbody tr:nth-child(even) {
         margin-top: 20px;
     }
 
-    .novo-evento {
+    /* .novo-evento {
         font-size: 12px;
         padding: 6px 16px;
-    }
+    } */
 }
 
 /* 📱 Ajustes para telas menores que 576px */
@@ -683,9 +687,13 @@ table tbody tr:nth-child(even) {
     }
 
     .principal .box{
-        height: 85vh;
-        padding: 0;
+        /* height: 85vh;
+        padding: 0; */
         width: 88%;
+    }
+
+    .container{
+        width: 95%;
     }
 
     .titulo {
@@ -739,25 +747,25 @@ table tbody tr:nth-child(even) {
         font-size: 8px;
     }
 
-    .botoes {
+    /* .botoes {
         width: 50%;
         bottom: 2rem;
         display: flex;
         justify-content: right;
         margin-top: 20px;
         left: 3rem;
-    }
+    } */
 
-    .novo-evento {
+    /* .novo-evento {
         font-size: 10px;
         padding: 6px 12px;
-    }
+    } */
 
-    .voltar-link{
+    /* .voltar-link{
         width: 50%;
         bottom: -2rem;
         left: -1rem;
-    }
+    } */
 
     .fone-col i{
         font-size: 15px;

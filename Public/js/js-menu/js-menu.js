@@ -68,7 +68,6 @@ async function menuAdm() {
         const text = await response.json();
         
         let imgLogin = document.querySelectorAll('#img-login');
-        console.log(text.login.img_perfil)
 
         imgLogin.forEach(element => {
             if (text.login.img_perfil == null){

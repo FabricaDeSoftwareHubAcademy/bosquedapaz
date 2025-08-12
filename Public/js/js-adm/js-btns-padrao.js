@@ -18,3 +18,7 @@ btnVoltar.addEventListener('mouseout', () => {
     seta.classList.remove('bi-arrow-left')
     seta.classList.add('bi-arrow-left-short')
 })
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+    window.location.reload()
+})

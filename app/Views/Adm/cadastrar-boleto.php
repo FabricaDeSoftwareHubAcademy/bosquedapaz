@@ -26,17 +26,14 @@ $tolken = getTolkenCsrf();
                     <h1 class="title-text">CADASTRO DE BOLETOS</h1>
                 </div>
                 <div class="search-bar">
-                    <input type="text" id="pesquisar-nome" placeholder="Pesquisar por expositor" />
+                    <input class="input-busca" type="text" id="pesquisar-nome" placeholder="Pesquisar por expositor" />
                     <button type="button" id="lupa" class="search-button">BUSCAR</button>
                 </div>
 
             </div>
 
             <div class="container">
-                <form method="POST" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
-
-                    <input type="hidden" name="id-expositor" value="<?php echo htmlspecialchars($id_expositor); ?>">
-
+                <form method="POST" id="form-cadastrar-boleto" action="../../../actions/action-cadastrar-boletos.php" class="form" enctype="multipart/form-data">
                     <div class="form-content">
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>
@@ -50,43 +47,43 @@ $tolken = getTolkenCsrf();
 
                         <div class="input">
                             <label class="label" for="valor">Valor:</label>
-                            <input type="text" name="valor" id="valor" placeholder="R$ 0,00" autocomplete="off" required>
+                            <input type="text" name="valor_input" id="valor_input" placeholder="R$ 0,00" autocomplete="off" required>
                         </div>
                     </div>
 
                     <div class="form-input">
                         <div class="input">
                             <label>Arquivo em PDF:</label>
-                            <input type="file" name="pdf" id="arquivo" accept="application/pdf" required>
+                            <input type="file" name="arquivo" id="arquivo" accept="application/pdf" required>
                         </div>
 
                         <div class="input">
                             <label for="referencia" class="label">Referência:</label>
-                            <select class="select" name="mes_referencia" id="referencia_select" required>
-                                <option value="Janeiro">Janeiro</option>
-                                <option value="Fevereiro">Fevereiro</option>
-                                <option value="Março">Março</option>
-                                <option value="Abril">Abril</option>
-                                <option value="Maio">Maio</option>
-                                <option value="Junho">Junho</option>
-                                <option value="Julho">Julho</option>
-                                <option value="Agosto">Agosto</option>
-                                <option value="Setembro">Setembro</option>
-                                <option value="Outubro">Outubro</option>
-                                <option value="Novembro">Novembro</option>
-                                <option value="Dezembro">Dezembro</option>
+                            <select class="select" name="referencia_input" id="referencia_input" required>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="março">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
                             </select>
                         </div>
 
                         <div class="input">
                             <label for="vencimento" class="label">Vencimento:</label>
-                            <input type="date" name="vencimento" id="val" placeholder="00/00/0000" required>
+                            <input type="date" name="vencimento_input" id="vencimento_input" placeholder="00/00/0000" required>
                         </div>
                     </div>
                     <input type="hidden" id="id_expositor" name="id_expositor" value="">
-                    <?php include '../../../Public/include/Butons-forms.html'; ?>
                     <?php echo $tolken; ?>
-
+                    <input type="hidden" name="salvar" value="1">
+                    <?php include '../../../Public/include/Butons-forms.html'; ?>
                 </form>
             </div>
         </div>
@@ -101,8 +98,10 @@ $tolken = getTolkenCsrf();
     <script src="../../../Public/js/js-modais/js-modal-confirmar.js" defer></script>
     <script src="../../../Public/js/js-modais/js-modal-sucesso.js"></script>
     <script src="../../../Public/js/js-modais/js-modal-deletar.js"></script>
+    <script src="../../../Public/js/js-modais/js-modal-carregar.js"></script>
     <?php include '../../../Public/include/modais/modal-confirmar.html'; ?>
     <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+    <?php include '../../../Public/include/modais/modal_carregando.html'; ?>
     <?php include '../../../Public/include/modais/modal-error.html'; ?>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

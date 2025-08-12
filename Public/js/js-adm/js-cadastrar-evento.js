@@ -10,15 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnSalvar.addEventListener('click', (event) => {
         event.preventDefault();
-        openModalAtualizar();
+
+        document.getElementById('confirmar-title').innerText = 'Deseja confirmar este cadastro?';
+        document.getElementById('msm-confimar').innerText = 'Clique em salvar para confirmar o cadastro.';
+
+        openModalConfirmar();
 
         document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
         document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
 
         document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
-            closeModalAtualizar();
 
-            
+            closeModalConfirmar();
+
             const nome = document.getElementById('nomedoevento').value.trim();
             const subtitulo = document.getElementById('subtitulo').value.trim();
             const descricao = document.getElementById('descricaodoevento').value.trim();
@@ -45,7 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('hora_fim', hora_fim);
             formData.append('endereco', endereco);
             formData.append('file', imagem);
-            formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
+
+            // ⚠️ Corrigi aqui: pegue o VALUE do input hidden do token; ajuste o seletor se necessário.
+            const tokenElem = document.getElementById('tolkenCsrf') || document.querySelector('input[name="tolkenCsrf"]');
+            if (tokenElem) {
+                formData.append('tolkenCsrf', tokenElem.value);
+            }
 
             try {
                 const resposta = await fetch('../../../actions/action-cadastrar-evento.php', {
@@ -79,6 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 openModalError();
                 document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
             }
-        });
+        }, { once: true });
     });
 });

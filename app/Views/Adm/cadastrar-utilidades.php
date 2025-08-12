@@ -49,9 +49,10 @@ $tolken = getTolkenCsrf();
                             <input type="file" name="imagem" id="imagem" required>
                         </div>
 
-                        <img class="preview" src="" alt="" id="preview-image">
-
-                        <?php echo $tolken; ?>
+                        <div class="img-preview-cadastro">
+                            <img class="preview" src='' alt="" id="preview-image" name="preview-image">
+                            <?php echo $tolken; ?>
+                        </div>
 
                         <div class="btns">
                             <?php include "../../../Public/include/Butons-forms.html" ?>

@@ -27,6 +27,7 @@ $tolken = getTolkenCsrf();
                     <div id="form1">
                         <input type="hidden" name="id_evento" id="id_evento">
                         <input type="hidden" name="id_atracao" id="id_atracao">
+                        <input type="hidden" name="nome_evento" id="nome_evento">
                         <div class="input-group">
                             <label>Nome:</label>
                             <input type="text" name="nome_atracao" id="nome_atracao" placeholder="Digite o nome do evento"
@@ -39,19 +40,21 @@ $tolken = getTolkenCsrf();
                             <small id="contador-caracteres">250 caracteres restantes</small>
                         </div>
 
-                        <div class="input-group">
-                            <label>Status:</label>
-                            <select name="status" id="status" required>
-                                <option value="1">Ativo</option>
-                                <option value="0">Inativo</option>
-                            </select>
-                        </div>
+                        <div class="data-imagem">
+                            <div class="input-group">
+                                <label>Status:</label>
+                                <select name="status" id="status" required>
+                                    <option value="1">Ativo</option>
+                                    <option value="0">Inativo</option>
+                                </select>
+                            </div>
 
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="banner_atracao" id="file">
-                        </div>
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="banner_atracao" id="file">
+                            </div>                            
 
+                        </div>
 
                         <img class="preview" src="" alt="" id="preview-image">
 

@@ -23,6 +23,10 @@ class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
         array (
             'Firebase\\JWT\\' => 13,
         ),
+        'C' => 
+        array (
+            'Controller\\' => 11,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -42,6 +46,10 @@ class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
+        'Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Controller',
+        ),
     );
 
     public static $classMap = array (
@@ -60,12 +68,12 @@ class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
         'app\\Controller\\Expositor' => __DIR__ . '/../..' . '/app/Controller/Expositor.php',
         'app\\Controller\\FotosEvento' => __DIR__ . '/../..' . '/app/Controller/FotosEvento.php',
         'app\\Controller\\Imagem' => __DIR__ . '/../..' . '/app/Controller/Imagem.php',
+        'app\\Controller\\Login' => __DIR__ . '/../..' . '/app/Controller/login.php',
         'app\\Controller\\Parceiro' => __DIR__ . '/../..' . '/app/Controller/Parceiro.php',
         'app\\Controller\\Pessoa' => __DIR__ . '/../..' . '/app/Controller/Pessoa.php',
         'app\\Controller\\UtilidadePublica' => __DIR__ . '/../..' . '/app/Controller/UtilidadePublica.php',
         'app\\Models\\Database' => __DIR__ . '/../..' . '/app/Models/Database.php',
         'app\\Models\\Env' => __DIR__ . '/../..' . '/app/Models/Env.php',
-        'app\\controler\\Login' => __DIR__ . '/../..' . '/app/Controller/login.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

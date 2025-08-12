@@ -26,13 +26,15 @@ buscar_adm.addEventListener('keyup', async function (e) {
     
             } else {
                 var response = await resposta.json();
+
+                console.log(response)
                 tBody.innerHTML = ''
                 response.data.forEach(colab => {
                     tBody.innerHTML += `<tr>
                         <td class="usuario-col">${colab['id_colaborador']}</td>
                         <td>${colab['nome']}</td>
                         <td class="email-col">${colab['email']}</td>
-                        <td class="fone-col">${colab['telefone']}</td>
+                        <td class="fone-col">${maskNumTelefone(colab['telefone'])}</td>
                         <td class="cargo-col">${colab['cargo']}</td>
                         <td>
                             <button 
@@ -52,7 +54,7 @@ buscar_adm.addEventListener('keyup', async function (e) {
         }
 
     } catch (error) {
-        tBody.innerHTML = '<td colspan="5" style="text-align: center; padding: .5rem 0rem;">Nenhum colaborador encontrado000000.</td>'
+        tBody.innerHTML = '<td colspan="5" style="text-align: center; padding: .5rem 0rem;">Nenhum colaborador encontrado.</td>'
     }
 })
 
@@ -61,7 +63,7 @@ buscar_adm.addEventListener('keyup', async function (e) {
 async function mudarStatus(id, status) {
     //////////////// Modal de mudar status /////
     openModalDelete()
-    document.getElementById('loading-text').innerText = `Tem certeza que deseja ${status == 'ativo' ? 'Inativar' : 'Ativar'}?`
+    document.getElementById('title-delete').innerText = `Tem certeza que deseja ${status == 'ativo' ? 'Inativar' : 'Ativar'}?`
     document.getElementById('msm-modal').innerText = `Clique em  ${status == 'ativo' ? 'Inativar' : 'Ativar'} para confirmar.`
     document.getElementById('btn-modal-deletar').innerText = `${status == 'ativo' ? 'Inativar' : 'Ativar'}`
     document.getElementById('fechar-modal-deletar').addEventListener('click', closeModalDelete)
@@ -74,7 +76,7 @@ async function mudarStatus(id, status) {
         closeModalDelete()
         let dadosForms = new FormData();
         dadosForms.append('alternarStatus', 'alternarStatus');
-        dadosForms.append('tolkenCsrf', document.getElementById('tolkenCsrf'));
+        dadosForms.append('tolkenCsrf', document.getElementById('tolkenCsrf').value);
         dadosForms.append('id_login', id);
         dadosForms.append('status_atual', status);
 
@@ -108,3 +110,19 @@ async function mudarStatus(id, status) {
     })
 }
 
+function maskNumTelefone(num) {
+    let valor = num;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    
+    return valor;
+}
