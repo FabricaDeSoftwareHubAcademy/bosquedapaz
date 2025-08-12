@@ -5,6 +5,8 @@ if (!$aceitou) {
     header("Location: termos-artistas.php");
     exit();
 }
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
 ?>
 
 <!DOCTYPE html>
@@ -122,6 +124,7 @@ if (!$aceitou) {
                             </select>
                         </div>
                     </div>
+                <?php echo $tolken; ?>
 
                 </div>
 

@@ -72,25 +72,45 @@ class Pessoa
         $this->nvSenha = $senha;
     }
 
-    public function verificar_email() {
-    $db = new Database('pessoa');
-    $res = $db->select("email = '{$this->email}'");
+public function verificar_email() {
+    try {
+        // Escapa corretamente para evitar problemas com caracteres especiais
+        $emailSeguro = addslashes($this->email);
 
-    $dados = $res->fetch(\PDO::FETCH_ASSOC); 
+        $db = new Database('pessoa_user');
+        $res = $db->select("email = '{$emailSeguro}'");
 
-    if ($dados) {
-        return true;
-    } else {
+        $dados = $res->fetch(\PDO::FETCH_ASSOC); 
+
+        return !empty($dados);
+    } catch (\Exception $e) {
         return false;
     }
 }
 
 
-    public function novaSenha() {
-        $db = new Database('pessoa');
-        $res = $db->update("email = '{$this->email}'", [
-            "senha" => $this->nvSenha,
-        ]);
+
+
+public function novaSenha() {
+    try {
+        $db = new Database('pessoa_user');
+        
+        // proteger contra caracteres especiais para não quebrar a query
+        $emailSeguro = addslashes($this->email);
+        
+        $res = $db->update(
+            "email = '{$emailSeguro}'", // WHERE já com email direto
+            [
+                "senha" => $this->nvSenha
+            ]
+        );
+        
         return $res;
+    } catch (Exception $e) {
+        echo '<script>alert("Erro: ' . addslashes($e->getMessage()) . '")</script>';
+        return false;
     }
+}
+
+
 }

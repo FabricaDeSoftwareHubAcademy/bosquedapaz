@@ -15,21 +15,27 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     try {
         // $db = new Database('pessoa');
+        $artista = new Artista();
 
         $dadosUsuario = obterLogin();
-        $idAdmin = $dadosUsuario["jwt"]->perfil;
+        if ($dadosUsuario['sucess']){
+            $idAdmin = $dadosUsuario["jwt"]->perfil;
+            if ($idAdmin === 1) {
+                $artista->setAceitou_termos("Sim");
+            }else {
+                $artista->setAceitou_termos($_SESSION['aceitou_termos'] ?? 'Não');
+            } 
+        }else {
+            $artista->setAceitou_termos($_SESSION['aceitou_termos'] ?? 'Não');
+        }
 
-        $artista = new Artista();
+       
 
         $artista->setNome($_POST['nome']);
         $artista->setEmail($email);
         $artista->setWhats($_POST['whats']);
         $artista->setLink_instagram($_POST['link_instagram']);
-        if ($idAdmin === 1) {
-            $artista->setAceitou_termos("Sim");
-        } else {
-            $artista->setAceitou_termos($_SESSION['aceitou_termos'] ?? 'Não');
-        }
+
         $artista->setNome_artistico($_POST['nome_artistico']);
         $artista->setLinguagem_artistica($_POST['linguagem_artistica']);
         $artista->setEstilo_musica($_POST['estilo_musica']);
