@@ -22,8 +22,7 @@ async function chamarModalExpositor(id){
         contentModal.innerHTML = `
         <div class="left__side">
             <div class="container__logo">
-                <div class="div__logo"><img class="img_logo_expositor" src="../../../Public/assets/MOCA.png" alt="image perfil "></div>
-                <!--${response.expositor.img_perfil}-->
+                <div class="div__logo"><img class="img_logo_expositor" src="${response.expositor.img_perfil}" alt="image perfil "></div>
             </div>  
             <div class="container__h1"><h1>Produtos</h1></div>
             <div class="container__imgs">
@@ -115,7 +114,7 @@ async function getExpositores(){
                      <div class="content-card-expo" id="card">
                          <div class="card-per-expo">
                              <div class="head-card">
-                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                 <img src="${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                              </div>
                              <div class="body-card">
                                  <h3 class="nome-expo">${element.nome_marca}</h3>
@@ -168,7 +167,7 @@ inputFiltro.addEventListener('keyup', async () => {
                          <div class="content-card-expo" id="card">
                              <div class="card-per-expo">
                                  <div class="head-card">
-                                     <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                     <img src="${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                                  </div>
                                  <div class="body-card">
                                      <h3 class="nome-expo">${element.nome_marca}</h3>

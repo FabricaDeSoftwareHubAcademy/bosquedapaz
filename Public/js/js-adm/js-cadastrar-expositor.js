@@ -25,8 +25,7 @@ btn_salvar.addEventListener('click', function (event) {
     try {
         event.preventDefault()
 
-        // if(!validaCPF(cpf.value)){
-        if(false){
+        if(!validaCPF(cpf.value)){
             openModalError()
             document.getElementById('erro-title').innerText = 'O CPF inserido é inválido'
             document.getElementById('erro-text').innerText = 'Por Favor, insira um cpf válido'
