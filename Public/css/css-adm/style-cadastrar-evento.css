@@ -79,7 +79,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: #007E70;
 }
 
 .form-box form {
@@ -89,7 +88,6 @@ h1 {
     margin-right: auto;
     gap: 20px;
     width:100%;
-    /* background-color: #FF3877; */
     flex-direction: column;
 }
 
@@ -99,7 +97,7 @@ h1 {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5%;
+
     gap: 10px;
     width: 50%;
     /* background-color: chartreuse; */
