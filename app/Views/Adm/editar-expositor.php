@@ -76,7 +76,7 @@ $tolken = getTolkenCsrf();
                 </section>
 
                 <section class="perfilEdit-foto-info">
-                    <label for="foto" class="perfilEdit-foto-info-label perfilEdit-important-label">Selecione fotos de seus produtos:</label>
+                    <label for="foto" class="perfilEdit-foto-info-label perfilEdit-important-label">Selecione novas fotos para seus produtos:</label>
                     <div class="perfilEdit-div-group">
                         <div class="perfilEdit-load-foto">
                             <input type="file" id="foto_produto_1" name="foto_produto_1" class="perfilEdit-input-foto">

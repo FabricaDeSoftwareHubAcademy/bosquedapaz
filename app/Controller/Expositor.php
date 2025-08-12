@@ -315,102 +315,7 @@ class Expositor extends Pessoa
     //     }
     // }
 
-    // public function atualizar($id, $novasImagens = null) {
-    //     try {
-    //         // Buscar dados do expositor
-    //         $db = new Database('expositor');
-    //         $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
-            
-    //         if (!$ids_pessoa_expositor) {
-    //             error_log("Expositor não encontrado com ID: " . $id);
-    //             return false;
-    //         }
-    
-    //         // Buscar dados da pessoa para obter id_login
-    //         $db = new Database('pessoa');
-    //         $dados_pessoa = $db->select("id_pessoa = " . $ids_pessoa_expositor['id_pessoa'])->fetch(PDO::FETCH_ASSOC);
-            
-    //         if (!$dados_pessoa) {
-    //             error_log("Pessoa não encontrada com ID: " . $ids_pessoa_expositor['id_pessoa']);
-    //             return false;
-    //         }
-    
-    //         // Atualizar tabela pessoa
-    //         $dadosPessoa = [
-    //             'link_instagram' => $this->link_instagram,
-    //             'whats' => $this->whats,
-    //             'link_facebook' => $this->link_facebook,
-    //         ];
-    
-    //         // Se há foto de perfil nova, adicionar
-    //         if (!empty($this->foto_perfil)) {
-    //             $dadosPessoa['img_perfil'] = $this->foto_perfil;
-    //         }
-    
-    //         $res_pessoa = $db->update(
-    //             'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
-    //             $dadosPessoa
-    //         );
-    
-    //         // Atualizar tabela pessoa_user (email)
-    //         $db = new Database('pessoa_user');
-    //         $res_user = $db->update(
-    //             'id_login = ' . $dados_pessoa['id_login'],
-    //             [
-    //                 'email' => $this->email,
-    //             ]
-    //         );
-            
-    //         // Atualizar tabela expositor
-    //         $db = new Database('expositor');
-    //         $res_expositor = $db->update(
-    //             'id_expositor = ' . $id,
-    //             [
-    //                 'nome_marca' => $this->nome_marca,
-    //                 'descricao' => $this->descricao,
-    //             ]
-    //         );
-    
-    //         // Processar imagens se foram fornecidas
-    //         $res_imagens = true;
-    //         if ($novasImagens && is_array($novasImagens)) {
-    //             $objImagem = new Imagem();
-                
-    //             // Buscar imagens existentes
-    //             $imagensExistentes = $objImagem->buscarPorExpositor($id);
-                
-    //             foreach ($novasImagens as $posicao => $dadosImagem) {
-    //                 if (isset($dadosImagem['novo_caminho']) && !empty($dadosImagem['novo_caminho'])) {
-    //                     // É uma imagem nova
-    //                     if (isset($imagensExistentes[$posicao - 1])) {
-    //                         // Atualizar imagem existente
-    //                         $id_imagem = $imagensExistentes[$posicao - 1]['id_imagem'];
-    //                         $res_imagens = $objImagem->atualizar($id_imagem, $dadosImagem['novo_caminho']) && $res_imagens;
-                            
-    //                         // Deletar arquivo antigo
-    //                         $caminhoAntigo = '../' . $imagensExistentes[$posicao - 1]['caminho'];
-    //                         if (file_exists($caminhoAntigo)) {
-    //                             unlink($caminhoAntigo);
-    //                         }
-    //                     } else {
-    //                         // Criar nova imagem
-    //                         $objImagem->id_expositor = $id;
-    //                         $objImagem->caminho = $dadosImagem['novo_caminho'];
-    //                         $res_imagens = $objImagem->cadastro() && $res_imagens;
-    //                     }
-    //                 }
-    //             }
-    //         }
-            
-    //         return $res_pessoa && $res_expositor && $res_user && $res_imagens;
-            
-    //     } catch (\Exception $e) {
-    //         error_log("Erro ao atualizar expositor: " . $e->getMessage());
-    //         return false;
-    //     }
-    // }
-
-    public function atualizar($id) {
+    public function atualizar($id){
         try {
             // Buscar dados do expositor
             $db = new Database('expositor');
@@ -430,21 +335,22 @@ class Expositor extends Pessoa
                 return false;
             }
     
-            // Atualizar tabela pessoa
-            $dadosPessoa = [
+            // Preparar dados para atualização da pessoa
+            $dados_pessoa_update = [
                 'link_instagram' => $this->link_instagram,
                 'whats' => $this->whats,
                 'link_facebook' => $this->link_facebook,
             ];
     
-            // Se há foto de perfil nova, adicionar
+            // Adicionar foto_perfil apenas se foi definida
             if (!empty($this->foto_perfil)) {
-                $dadosPessoa['img_perfil'] = $this->foto_perfil;
+                $dados_pessoa_update['img_perfil'] = $this->foto_perfil;
             }
     
+            // Atualizar tabela pessoa
             $res_pessoa = $db->update(
                 'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
-                $dadosPessoa
+                $dados_pessoa_update
             );
     
             // Atualizar tabela pessoa_user (email)
