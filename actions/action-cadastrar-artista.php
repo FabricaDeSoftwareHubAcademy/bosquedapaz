@@ -9,33 +9,34 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
+function linkInstagram($ins) {
+    return 'https://instagram.com/' . trim($ins, '@');
+}
+
 if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
 
     $email = $_POST['email'];
 
     try {
-        // $db = new Database('pessoa');
         $artista = new Artista();
 
         $dadosUsuario = obterLogin();
-        if ($dadosUsuario['sucess']){
+        if ($dadosUsuario['sucess']) {
             $idAdmin = $dadosUsuario["jwt"]->perfil;
             if ($idAdmin === 1) {
                 $artista->setAceitou_termos("Sim");
-            }else {
+            } else {
                 $artista->setAceitou_termos($_SESSION['aceitou_termos'] ?? 'Não');
-            } 
-        }else {
+            }
+        } else {
             $artista->setAceitou_termos($_SESSION['aceitou_termos'] ?? 'Não');
         }
-
-       
 
         $artista->setNome($_POST['nome']);
         $artista->setEmail($email);
         $artista->setWhats($_POST['whats']);
-        $artista->setLink_instagram($_POST['link_instagram']);
-
+        $linkInstaLimpo = htmlspecialchars(strip_tags($_POST['link_instagram']));
+        $artista->setLink_instagram(linkInstagram($linkInstaLimpo));
         $artista->setNome_artistico($_POST['nome_artistico']);
         $artista->setLinguagem_artistica($_POST['linguagem_artistica']);
         $artista->setEstilo_musica($_POST['estilo_musica']);

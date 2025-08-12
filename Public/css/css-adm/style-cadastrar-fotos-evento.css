@@ -73,24 +73,35 @@ h1 {
     font-size: 2rem;
 }
 
+
 .box .form-box {
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* background-color: #007E70; */
+
+}
+
+#upload-fotos {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    flex-direction: column;
 }
 
 .form-box form {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    
     margin-left: auto;
     margin-right: auto;
     gap: 20px;
     width:100%;
     /* background-color: #FF3877; */
     flex-direction: column;
+    align-items: center;
 }
 
 #form1 {
@@ -108,7 +119,8 @@ h1 {
 .input-group {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
+    align-items: center;
 }
 
 .input-group textarea { 
@@ -126,8 +138,10 @@ h1 {
 }
 
 .input-group label {
+
     font-weight: bold;
     color: #3d3d3d;
+
 }
 
 .input-group input,
@@ -179,6 +193,8 @@ h1 {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 

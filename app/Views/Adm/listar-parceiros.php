@@ -52,8 +52,13 @@ $tolken = getTolkenCsrf();
                     </table>
                 </div>              
             </div>
-            <?php include '../../../Public/include/Butons-forms.html'; ?>
+            <div class="btns">
+                <a href="./" class="voltar">
+                    <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
+                </a>
+            </div>
         </div>
+     
     </main>
 
     <div class="bolas-fundo">
@@ -62,15 +67,6 @@ $tolken = getTolkenCsrf();
         <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola de Fundo 3" class="bola-rosa">
     </div>
 
-    <div id="modalConfirmacao" class="modal-confirmacao" style="display: none;">
-        <div class="modal-confirmacao-conteudo">
-            <p>Deseja realmente alterar o status?</p>
-            <div class="modal-confirmacao-botoes">
-                <button id="confirmarAlteracao" class="modal-confirmacao-botao botao-sim">Sim</button>
-                <button id="cancelarAlteracao" class="modal-confirmacao-botao botao-nao">Não</button>
-            </div>
-        </div>
-    </div>
     <?php include "../../../Public/include/modais/modal-confirmar.html" ?>
     <!-- <script src="../../../Public/js//js-adm/status-colaborador.js"></script> -->
     <script src="../../../Public/js/js-modais/js-abrir-modal.js" defer></script>

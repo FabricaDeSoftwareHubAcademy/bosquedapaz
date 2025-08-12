@@ -426,4 +426,100 @@ class Database
 
         return $this->execute($query, $binds);
     }
+
+
+    public function getExpositorStatus() {
+        $query = "SELECT validacao, COUNT(id_expositor) AS total_expositores FROM expositor GROUP BY validacao;";
+        $stmt = $this->execute($query);
+        return $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
+    }
+
+
+    public function getExpositorCategoria()
+    {
+        $sql = "
+            SELECT c.descricao AS categoria, COUNT(e.id_expositor) AS total_expositores
+            FROM expositor e
+            INNER JOIN categoria c ON c.id_categoria = e.id_categoria
+            GROUP BY c.descricao
+            ORDER BY total_expositores DESC
+        ";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function getBoletoStatus()
+    {
+        $sql = "SELECT status_boleto AS status, COUNT(id_boleto) AS total_boletos FROM boleto GROUP BY status_boleto";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function getParceiroStatus()
+    {
+        $sql = "SELECT status_parceiro AS status, COUNT(id_parceiro) AS total_parceiros FROM parceiro GROUP BY status_parceiro";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+
+ public function getCidadesOrigem()
+{
+    $sql = "SELECT en.cidade, COUNT(exp.id_expositor) AS total_expositores
+            FROM expositor exp
+            JOIN pessoa p ON exp.id_pessoa = p.id_pessoa
+            JOIN endereco en ON p.id_endereco = en.id_endereco
+            GROUP BY en.cidade
+            ORDER BY total_expositores DESC";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+
+
+public function getAtracoesPorEvento()
+{
+    $sql = "SELECT ev.nome_evento, COUNT(at.id_atracao) AS total_atracoes
+            FROM evento ev
+            LEFT JOIN atracao at ON ev.id_evento = at.id_evento
+            GROUP BY ev.id_evento, ev.nome_evento
+            ORDER BY total_atracoes DESC";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+public function getDadosGerais()
+{
+    $sql = "
+        SELECT 
+            (SELECT COALESCE(SUM(valor), 0) 
+             FROM boleto 
+             WHERE status_boleto = 'Pago' 
+               AND MONTH(vencimento) = MONTH(CURDATE()) 
+               AND YEAR(vencimento) = YEAR(CURDATE())
+            ) AS total_pago,
+            (SELECT COUNT(*) FROM expositor) AS expositores,
+            (SELECT COUNT(*) FROM artista WHERE status = 'ativo') AS artistas,
+            (SELECT COUNT(*) FROM evento WHERE status = 1) AS eventos_ativos
+    ";
+    
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    $dados = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+    // Formata total_pago para 2 casas decimais com vírgula decimal e ponto milhar
+    $dados['total_pago'] = number_format($dados['total_pago'], 2, ',', '.');
+
+    return $dados;
+}
+
+
+
+
 }

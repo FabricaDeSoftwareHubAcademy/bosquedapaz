@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 h2 {
@@ -137,6 +137,8 @@ h2 {
 .btns .voltar img {
   width: 40px;
   cursor: pointer;
+  position: relative;
+  top: -29vh;
 }
 
 .bolas-fundo {
@@ -163,6 +165,10 @@ h2 {
     min-width: 600px;
   }
 
+  .box{
+    overflow-y: auto;
+  }
+
   .title{
     display: none;
   }
@@ -175,6 +181,7 @@ h2 {
   h2 {
     font-size: 1.5rem;
   }
+
 
   .search-bar {
     flex-direction: column;
@@ -191,6 +198,10 @@ h2 {
     width: 100%;
   }
 
+  .table-container{
+    height: 70%;
+  }
+
   .collaborators-table th,
   .collaborators-table td {
     font-size: 0.8rem;
@@ -201,6 +212,7 @@ h2 {
 @media (max-width: 480px) {
   .box {
     padding: 10px;
+   
   }
   .title{
     display: none;
@@ -210,10 +222,7 @@ h2 {
     font-size: 1.2rem;
   }
 
-  .collaborators-table {
-    min-width: 400px;
-  }
-
+  
   .collaborators-table th,
   .collaborators-table td {
     font-size: 0.7rem;

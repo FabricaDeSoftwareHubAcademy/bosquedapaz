@@ -23,30 +23,32 @@ class FotosEvento
         ]);
     }
 
-
     public function listarPorEvento($id_evento) {
+        if (!is_numeric($id_evento) || $id_evento <= 0) {
+            throw new \InvalidArgumentException("ID do evento inválido");
+        }
+        
         $db = new Database('fotos_evento');
-        return $db->select("id_evento = {$id_evento}")
-                  ->fetchAll(PDO::FETCH_ASSOC);
+        $query = "SELECT * FROM fotos_evento WHERE id_evento = ?";
+        return $db->execute($query, [(int)$id_evento])->fetchAll(PDO::FETCH_ASSOC);
     }
-
 
     public function buscarPorId($id) {
         $db = new Database('fotos_evento');
-        return $db->select("id_foto = {$id}")
-                  ->fetchObject(self::class);
+        $query = "SELECT * FROM fotos_evento WHERE id_foto = ?";
+        return $db->execute($query, [$id])->fetchObject(self::class);
     }
-
 
     public function atualizarLegenda($id) {
         $db = new Database('fotos_evento');
-        return $db->update("id_foto = {$id}", [
-            'legenda' => $this->legenda
-        ]);
+        $query = "UPDATE fotos_evento SET legenda_foto_evento = ? WHERE id_foto = ?";
+        return $db->execute($query, [$this->legenda, $id]);
     }
 
     public function excluir($id) {
         $db = new Database('fotos_evento');
-        return $db->delete("id_foto = {$id}");
+        $query = "DELETE FROM fotos_evento WHERE id_foto = ?";
+        $stmt = $db->execute($query, [$id]);
+        return $stmt->rowCount() > 0;
     }
 }
