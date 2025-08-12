@@ -83,6 +83,7 @@ $tolken = getTolkenCsrf();
                             <label for="imagem" class="uploads">
                                 <input class="input2" type="file" name="imagem" id="imagem" accept="image/*">
                             </label>
+                            <img src="" class="img_preview" id="img_preview" alt="">
                         </div>
                     </div>      
                 
@@ -103,6 +104,7 @@ $tolken = getTolkenCsrf();
                             <div class="area__input">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                                <i class="fa-solid fa-eye olho_pass" id="togglePassword"></i>
                             </div>
                         </div>
                     </div>

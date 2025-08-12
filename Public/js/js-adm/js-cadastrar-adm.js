@@ -6,6 +6,17 @@ form.addEventListener("submit", async (e) => {
   const senha = form.querySelector("#senha").value;
   const confSenha = form.querySelector("#confSenha").value;
 
+  let r = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$/;
+
+  if(!r.test(senha)){
+    openModalMensagem({
+      tipo: "erro",
+      titulo: "Senha não é segura",
+      mensagem: "Digite um senha forte",
+    });
+    return;
+  }
+
   if (senha !== confSenha) {
     openModalMensagem({
       tipo: "erro",
@@ -74,5 +85,20 @@ function maskNumTelefone(num) {
 }
 
 document.getElementById('cancelar_cadastro').addEventListener('click',() => {document.location.reload()})
+
+function readImage() {
+  if (this.files && this.files[0]) {
+      var file = new FileReader();
+      file.onload = function (e) {
+          document.getElementById("img_preview").src = e.target.result;
+      };
+      file.readAsDataURL(this.files[0]);
+  }
+}
+
+let inputimg = document.getElementById("imagem")
+
+inputimg.addEventListener("change", readImage, false);
+
 
 // Matheus Manja

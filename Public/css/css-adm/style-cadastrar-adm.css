@@ -141,7 +141,13 @@ main{
 .area__input2 {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.img_preview {
+    width: 150px;
+    padding: 1rem;
 }
 
 #icon__olho {
@@ -157,6 +163,12 @@ main{
     border: none;
     border-radius: 6px;
     box-shadow: 3px 3px 2px var(--color-box-shadow-input);
+}
+
+.area__input .olho_pass {
+    position: relative;
+    right: 0px;
+    color: black;
 }
 
 /* Senha e Conf senha:  */
@@ -253,6 +265,11 @@ main{
 .imgs__dec3 img{
     width: 60%;
     height: auto;
+}
+
+
+.content-btns .btn-modal-confirmar{
+    background-color: #007E70;
 }
 
 

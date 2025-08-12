@@ -40,6 +40,14 @@ class Colaborador extends Pessoa
         $this->foto_perfil = $imagem;
     }
 
+    public function emailExiste($email){
+        $db = new Database('pessoa_user');
+
+        $email = $db->select("email = '$email'")->fetch(PDO::FETCH_ASSOC);
+
+        return $email;
+    }
+
 
     public function cadastrar() {
         $conn;
@@ -58,6 +66,7 @@ class Colaborador extends Pessoa
                 'senha' => $this->senha,
                 'perfil' => '1',
             ]);
+
             
             $db->setTable('pessoa'); 
             $idPessoa = $db->insert_lastid([
@@ -73,6 +82,8 @@ class Colaborador extends Pessoa
                 'cargo' => $this->cargo,
                 'id_pessoa' => $idPessoa
             ]);
+
+            $conn->commit();
 
             return TRUE;
         } catch (\Throwable $th) {
