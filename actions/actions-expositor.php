@@ -85,19 +85,29 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
         }
 
     //////////// CADASTRAR UM NOVO EXPOSITOR \\\\\\\\\\\\\\\\
-    }else if (isset($_POST['cadastrar'])) { 
+    }else if (isset($_POST['cadastrar'])) {
 
             ////////////////// VALIDANDO O EMAIL\\\\\\\\\\\\\
 
             $email = htmlspecialchars(strip_tags($_POST['email']));
             
-            $existe = $expositor->emailExiste($email);
-            if($existe){
+            $emailExiste = $expositor->emailExiste($email);
+            if($emailExiste){
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'Não é possivel cadastrar, email existente',
-                    $existe
                 ]);
+                http_response_code(400);
+                exit;
+            }
+
+            $cpf = htmlspecialchars(strip_tags($_POST['cpf']));
+            
+            $cpfExiste = $expositor->cpfExiste($cpf);
+            if($cpfExiste){
+                echo json_encode([
+                    'msg' => 'Não é possivel cadastrar, CPF existente',
+                ]);
+                http_response_code(400);
                 exit;
             }
 
@@ -146,9 +156,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         // verifica quantos mb
                         if( 5 < ($img['size'] / 1024) / 1024){
                             echo json_encode([
-                                'status' => 400,
                                 'msg' => 'Imagem enviada muito grande', 
                             ]);
+                            http_response_code(400);
                             exit;
                         }
     
@@ -157,9 +167,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         // verifiva qual o tipo de extenção
                         if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
                             echo json_encode([
-                                'status' => 400, 
                                 'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
                             ]);
+                            http_response_code(400);
                             exit;
                         }
                         $caminhosImagens[] = uploadImagem($img);
@@ -170,16 +180,16 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                     
                 }else {
                     echo json_encode([
-                        'status' => 400, 
                         'msg' => 'É necessário enviar 6 imagens para realizar o cadastro', 
                     ]);
+                    http_response_code(400);
                     exit;
                 }
             }else {
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'É necessário enviar imagens para realizar o cadastro', 
                 ]);
+                http_response_code(400);
                 exit;
             }
             
@@ -199,25 +209,24 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             ////////// ENVIANDO RESPOSTA \\\\\\\\\ 
             if($res){
                 echo json_encode([
-                    'status' => 200, 
                     'msg' => 'Expositor cadastrado com sucesso!',
-                    $res
                 ]);
+                http_response_code(200);
                 exit;
             }else{
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'Não foi possível realizar o cadastro de expostor!',
-                    $res
                 ]);
+                http_response_code(400);
+                exit;
             }   
 
     }
     } catch (\Throwable $th) {
         echo json_encode([
-            'status' => 500, 
-            'msg' => 'Falha no servidor.'
+            'msg' => 'Falha no servidor!!'
         ]);
+        http_response_code(500);
         exit;
     }
 }

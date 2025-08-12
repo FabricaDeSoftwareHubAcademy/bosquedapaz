@@ -75,7 +75,6 @@ CREATE TABLE expositor(
     descricao VARCHAR(200) NULL,
     metodos_pgto VARCHAR(50) NULL,
     cor_rua VARCHAR(150) NULL DEFAULT '',
-    produto VARCHAR(100) NOT NULL,
     validacao ENUM('aguardando', 'validado', 'recusado') NOT NULL DEFAULT 'aguardando',
     PRIMARY KEY(id_expositor),
     FOREIGN KEY(id_pessoa) REFERENCES pessoa(id_pessoa),
@@ -190,9 +189,10 @@ CREATE TABLE dadosFeira(
 CREATE TABLE boleto(
 	id_boleto INT NOT NULL AUTO_INCREMENT,
     pdf VARCHAR(255) NOT NULL,
-    mes_referencia DATE NOT NULL,
+    mes_referencia varchar(20) NOT NULL,
     valor NUMERIC(10,2) NOT NULL,
     vencimento DATE NOT NULL,
+    status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente',
     id_expositor INT NOT NULL,
     PRIMARY KEY(id_boleto),
     FOREIGN KEY(id_expositor) REFERENCES expositor(id_expositor)
@@ -243,12 +243,11 @@ insert into carrossel (caminho, posicao) values
 ("../Public/uploads/uploads-carrosel/img-carrossel-3.jpg", 3);
 
 
-insert into pessoa_user (email, senha, perfil, status_pes) values ('thiago.almeida@ms.senac.br', "$2y$10$l2Je0M8p1do8QrHMBbnukOYTXxqG/760G8DH5iQuoeLmK.FxMwmFy", 1, 'ativo');
+-- insert into pessoa_user (email, senha, perfil, status_pes) values ('thiago.almeida@ms.senac.br', "$2y$10$l2Je0M8p1do8QrHMBbnukOYTXxqG/760G8DH5iQuoeLmK.FxMwmFy", 1, 'ativo');
+
+insert into pessoa_user (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
 insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('60', '566', '345');
-
-alter table boleto modify column mes_referencia varchar(20);
-ALTER TABLE boleto ADD COLUMN status_boleto VARCHAR(20) NOT NULL DEFAULT 'Pendente';
 
 DELIMITER //
 
