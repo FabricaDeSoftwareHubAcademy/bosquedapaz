@@ -17,19 +17,24 @@
 
     <!-- edicoes passadas -->
 
-    <div class="edicoes_passadas" id="edicoesPassadas">
-        <div class="content_evento">
-            <div class="content_info_evento">
-                <h3 class="all-titles title_edicoes_passadas dark">edições passadas</h3>
-                <p class="text_edicoes_passadas dark">Confira como foram nossas edições anteriores</p>
-                <img src="../../../Public/imgs/img-edit-pass.png" class="img_prox_event_pequena">
-                <a href="edicoes-passadas.php" target="_parent" class="all-links btn_mais_edicoes_passadas">Saiba Mais!</a>
-            </div>
-            <div class="content_img_evento">
-                <img src="../../../Public/imgs/img-edit-pass.png" class="img_prox_event">
-            </div>
-        </div>
+    <div class="card edicoes-passadas">
+  <div class="por-cima-card">
+    <div class="parte-superior">
+      <img class="img-ult" src="../../../Public/imgs/placeholder.png" alt="Banner do Evento">
     </div>
+    <div class="parte-inferior">
+      <div class="area_text">
+        <div class="titulo"><h3>Título do Evento</h3></div>
+        <div class="text"><p>Descrição do evento</p></div>
+      </div>
+      <a href="#" class="meu-botao">Saiba Mais</a>
+      <div class="linha-decorativa-1"></div>
+      <div class="container__decorativo">
+        <div class="linha-decorativa-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- atracoes -->
 
