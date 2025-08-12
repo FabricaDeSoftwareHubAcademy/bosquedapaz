@@ -72,4 +72,7 @@ function maskNumTelefone(num) {
   
   return valor;
 }
+
+document.getElementById('cancelar_cadastro').addEventListener('click',() => {document.location.reload()})
+
 // Matheus Manja

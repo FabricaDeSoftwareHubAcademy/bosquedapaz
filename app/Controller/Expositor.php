@@ -52,6 +52,7 @@ class Expositor extends Pessoa
 
 
     public function cadastrar(){
+        $conn;
         try {
             $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
@@ -128,6 +129,7 @@ class Expositor extends Pessoa
             return true;
 
         } catch (\Throwable $th) {
+            $conn->rollBack();
             return false;
         }
     }

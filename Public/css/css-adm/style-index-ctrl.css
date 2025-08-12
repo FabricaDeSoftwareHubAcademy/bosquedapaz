@@ -154,12 +154,12 @@
     margin-bottom: 10px;
     transition: all 0.3s ease;
 }
-.bi{
+/* .bi{
     width: 60px;
     height: 60px;
     margin-left: 15px;
     display: flex;
-}
+} */
 .btns{
     position: absolute;
     display: flex;
@@ -385,10 +385,10 @@
         font-size: 12px;
         font-weight: 400;
     }
-    .bi{
+    /* .bi{
         width: 40px;
         height: 40px;
-    }
+    } */
     .feirantes-espera{
         color: black;
         font-size: 12px;
