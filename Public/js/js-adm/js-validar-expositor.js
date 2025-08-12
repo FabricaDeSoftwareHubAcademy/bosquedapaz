@@ -2,7 +2,7 @@ let nomeEmpresa = document.getElementById('nomeEmpresa')
 let nome = document.getElementById('nome')
 let email = document.getElementById('email')
 let whats = document.getElementById('whats')
-let produto = document.getElementById('produto')
+let cpf = document.getElementById('cpf')
 let cidade = document.getElementById('cidade')
 let exposicao = document.getElementById('exposicao')
 let energia = document.getElementById('energia')
@@ -67,7 +67,7 @@ async function getExpositor(){
         nome.value = response.expositor.nome
         email.value = response.expositor.email
         whats.value = maskNumTelefone(response.expositor.telefone)
-        produto.value = response.expositor.produto
+        cpf.value = mascaraCpf(response.expositor.cpf)
         intagram.href = response.expositor.link_instagram
         intagram.innerText = response.expositor.link_instagram
         exposicao.value = response.expositor.tipo
@@ -269,4 +269,22 @@ function maskNumTelefone(num) {
     }
     
     return valor;
+}
+
+function mascaraCpf(text){
+    let v = text.replace(/\D/g, '').substring(0, 12);
+    let cpf = ''
+    if (v.length <= 11) {
+        if (v.length > 9)
+            cpf = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6, 9)}-${v.substring(9, 11)}`;
+        else if (v.length > 6)
+            cpf = `${v.substring(0, 3)}.${v.substring(3, 6)}.${v.substring(6)}`;
+        else if (v.length > 3)
+            cpf = `${v.substring(0, 3)}.${v.substring(3)}`;
+        else
+            cpf = v;
+        return cpf;
+    }else{
+        return cpf;
+    }
 }

@@ -15,31 +15,29 @@ async function chamarModalExpositor(id){
         let imgs_car_expositor = '';
         response.expositor.imagens.forEach(imagem => {
             imgs_car_expositor += `
-                <div class="div__img"><img src="../../${imagem.caminho}" alt="imagem do expositor"></div>
+                <div class="div__img"><img class="img_produto_expositor" src="../../${imagem.caminho}" alt="imagem do expositor"></div>
             `
         });
 
         contentModal.innerHTML = `
         <div class="left__side">
-            <div class="decorative__img1">
-                <img class="img-decoracao1" src="../../../Public/assets/img-decoracao1.png" alt="">
-            </div>
             <div class="container__logo">
-                <div class="div__logo"><img src="${response.expositor.img_perfil}" alt="image perfil "></div>
+                <div class="div__logo"><img class="img_logo_expositor" src="${response.expositor.img_perfil}" alt="image perfil "></div>
             </div>  
             <div class="container__h1"><h1>Produtos</h1></div>
             <div class="container__imgs">
                 ${imgs_car_expositor}
             </div>
         </div>
+        <div class="decorative_line"></div>
 
         <!-- Lado Direito -->
         <div class="right__side">
             <div class="container__sobre">
-                <h2>${response.expositor.nome_marca}</h2>
-                <h3>Sobre</h3>
+                <h2 class="nome_marca_expositor">${response.expositor.nome_marca}</h2>
+                <h3 class="title_sobre_expositor">Sobre</h3>
                 <div class="area__text">
-                    <p>
+                    <p class="descricao_expositor">
                         ${response.expositor.descricao_exp}
                     </p>
                 </div>
@@ -47,39 +45,49 @@ async function chamarModalExpositor(id){
 
             <div class="container__infs">
                 <div class="div__categoria">
-                    <h3>Categoria</h3>
+                    <h3 class="title_informacoes">Categoria</h3>
                     <p>${response.expositor.descricao}</p>
                 </div>
 
-                <div class="div__num">
-                    <h3>Número</h3>
+                <div class="div__categoria div__num">
+                    <h3 class="title_informacoes">Número</h3>
                     <p>${response.expositor.num_barraca}</p>
                 </div>
             </div>
 
-            <div class="container__contacts">
-                <div class="div__contacts">
-                    <h3>Contacts</h3>
-                    <a href="${response.expositor.link_instagram}" target="_blank" class="icons" id="insta">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="${response.expositor.link_whats}" target="_blank" class="icons" id="zap">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                    <a href="${response.expositor.link_facebook}" target="_blank" class="icons" id="face">
-                        <i class="bi bi-facebook"></i>
-                    </a>
+            <div class="container__infs container__contacts">
+                <div class="div__categoria div__contacts">
+                    <h3 class="title_informacoes">Contacts</h3>
+
+                    <div class="conteiner_links">
+                        <div class="content_link_expositor link_expositor1">
+                            <a class="link_btns_expositor" href="${response.expositor.link_instagram}" target="_blank" class="icons" id="insta">
+                                <i class="bi bi-instagram icon_link_expositor"></i>
+                            </a>
+                        </div>
+
+                        <div class="content_link_expositor link_expositor2">
+                            <a class="link_btns_expositor" href="${response.expositor.whats}" target="_blank" class="icons" id="zap">
+                                <i class="bi bi-whatsapp icon_link_expositor"></i>
+                            </a>
+                        </div>
+
+                        <div class="content_link_expositor link_expositor3">
+                            <a class="link_btns_expositor" href="${response.expositor.link_facebook}" target="_blank" class="icons" id="face">
+                                <i class="bi bi-facebook icon_link_expositor"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div class="div__cor__rua">
-                    <h3>Cor da Rua</h3>
+                <div class="div__categoria div__cor__rua">
+                    <h3 class="title_informacoes">Cor da Rua</h3>
                     <div class="div__cor ${response.expositor.cor_rua}"><p>${response.expositor.cor_rua}</p></div>
                 </div>
             </div>
-
-            <div class="decorative__img2">
-                <img class="img-decoracao2" src="../../../Public/assets/img-decoracao2.png" alt="">
-            </div>
+                
         </div>`
     }else {
         modal.showModal()
@@ -87,6 +95,7 @@ async function chamarModalExpositor(id){
     }
 
 }
+
 
 ///////////////////  FUNCAO QUE CARREGA OS EXPOSITORES \\\\\\\\\\\\\\\
 
@@ -105,7 +114,7 @@ async function getExpositores(){
                      <div class="content-card-expo" id="card">
                          <div class="card-per-expo">
                              <div class="head-card">
-                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                 <img src="${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                              </div>
                              <div class="body-card">
                                  <h3 class="nome-expo">${element.nome_marca}</h3>
@@ -138,11 +147,6 @@ async function getExpositores(){
     }
 }
 
-document.addEventListener('DOMContentLoaded', getExpositores)
-
-
-
-
 ///////////// FILTROS EXPOSITOR \\\\\\\\\\\\\\\
 
 let inputFiltro = document.getElementById('input_pesquisa')
@@ -163,7 +167,7 @@ inputFiltro.addEventListener('keyup', async () => {
                          <div class="content-card-expo" id="card">
                              <div class="card-per-expo">
                                  <div class="head-card">
-                                     <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                     <img src="${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                                  </div>
                                  <div class="body-card">
                                      <h3 class="nome-expo">${element.nome_marca}</h3>
@@ -199,8 +203,6 @@ inputFiltro.addEventListener('keyup', async () => {
     }
 })
 
-
-
 ////////////// GARREGANDO CATEGORIA \\\\\\\\\\\\\\\\
 
 async function getCategoria(){
@@ -210,7 +212,7 @@ async function getCategoria(){
 
     let selectCat = document.getElementById('select-cat')
 
-    selectCat.innerHTML = '<option value="inicio" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>'
+    selectCat.innerHTML = '<option value="all" class="opcoes-cat" id="opcoes_categoria">Todas as Categorias</option>'
     
 
     response.dados.forEach(categoria => {
@@ -222,21 +224,19 @@ async function getCategoria(){
 document.addEventListener('DOMContentLoaded', getCategoria)
 
 
-
 ////////////// FILTRANDO EXPOSITOR PELA CATAGORIA \\\\\\\\\\\\\
 
 
-let selectFiltro = document.getElementById('select-cat')
 
-selectFiltro.addEventListener('change', async () => {
-    if(selectFiltro.value == 'inicio'){
+async function getExpositorCategoria(categoria) {
+    if(categoria == 'all'){
         getExpositores()
     }
-
-    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${selectFiltro.value}`);
-
+    
+    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${categoria}`);
+    
     let content_cards = document.getElementById('content_cards')
-
+    
     let response = await dados_expositores.json();
 
     if (response.status == 200) {
@@ -277,4 +277,22 @@ selectFiltro.addEventListener('change', async () => {
         content_cards.innerHTML = '<p>Nenhum expositor encontrado</p>'
 
     }
-})
+}
+
+
+let selectFiltro = document.getElementById('select-cat')
+
+selectFiltro.addEventListener('change', async () => {getExpositorCategoria(selectFiltro.value)})
+
+
+let url = document.location.href
+
+var paramUrl = new URLSearchParams(new URL(url).search).get('categoria')
+
+if (paramUrl != null){
+    getExpositorCategoria(paramUrl)
+}else{
+
+    document.addEventListener('DOMContentLoaded', getExpositores)
+
+}

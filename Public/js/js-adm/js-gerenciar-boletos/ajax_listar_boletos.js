@@ -1,3 +1,128 @@
+let idBoletoSelecionado = null;
+let statusAtualSelecionado = null;
+let botaoClicado = null;
+
+// Referência ao modal de confirmação
+const modalConfirmacao = document.getElementById('modal-confirmar');
+const tituloConfirmacao = document.getElementById('confirmar-title');
+const mensagemConfirmacao = document.getElementById('msm-confimar');
+
+// Referências a outros modais (sucesso e erro)
+const modalSucesso = document.getElementById('modal-sucesso');
+const modalErro = document.getElementById('modal-error');
+const mensagemModalSucesso = document.getElementById('msm-sucesso');
+const mensagemModalErro = document.getElementById('erro-text');
+
+// Evento principal de delegação para os botões de status
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('botao-status')) {
+        e.preventDefault();
+        
+        botaoClicado = e.target;
+        statusAtualSelecionado = botaoClicado.textContent.trim();
+        
+        const tr = botaoClicado.closest('tr');
+        idBoletoSelecionado = tr.getAttribute('data-id-boleto'); 
+
+        if (!idBoletoSelecionado) {
+            console.error('ID do boleto não encontrado na linha.');
+            mensagemModalErro.textContent = 'ID do boleto não encontrado na linha.';
+            modalErro.showModal();
+            return;
+        }
+
+        // Preenche o modal de confirmação com a mensagem correta
+        const novoStatus = (statusAtualSelecionado === 'Pago') ? 'Pendente' : 'Pago';
+        if (tituloConfirmacao && mensagemConfirmacao) {
+            tituloConfirmacao.textContent = 'Alterar Status?';
+            mensagemConfirmacao.textContent = `Deseja alterar o status para "${novoStatus}"?`;
+        }
+        
+        // Exibe o modal de confirmação
+        if (modalConfirmacao) {
+            modalConfirmacao.showModal();
+        }
+    }
+});
+
+document.getElementById('close-modal-confirmar').addEventListener('click', () => {
+    if (modalConfirmacao) modalConfirmacao.close();
+    // Limpa as variáveis para a próxima interação
+    idBoletoSelecionado = null;
+    statusAtualSelecionado = null;
+    botaoClicado = null;
+});
+
+document.getElementById('btn-modal-cancelar').addEventListener('click', () => {
+    if (modalConfirmacao) modalConfirmacao.close();
+    // Limpa as variáveis para a próxima interação
+    idBoletoSelecionado = null;
+    statusAtualSelecionado = null;
+    botaoClicado = null;
+});
+
+document.getElementById('btn-modal-salvar').addEventListener('click', () => {
+    if (modalConfirmacao) modalConfirmacao.close();
+    
+    const novoStatus = (statusAtualSelecionado === 'Pago') ? 'Pendente' : 'Pago';
+
+    const tolkenInput = document.getElementById('tolken-csrf-input');
+    const tolkenCsrf = tolkenInput ? tolkenInput.value : '';
+
+    if (!tolkenCsrf) {
+        console.error('Campo do token CSRF não encontrado!');
+        if (mensagemModalErro && modalErro) {
+            mensagemModalErro.textContent = 'Erro interno: Token de segurança não encontrado.';
+            modalErro.showModal();
+        }
+        return;
+    }
+
+    const body = `id=${idBoletoSelecionado}&status=${novoStatus}&tolkenCsrf=${tolkenCsrf}`;
+
+    fetch('../../../actions/action-alterar-status-boleto.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.sucesso) {
+            // Se o status foi alterado com sucesso, recarrega a lista de boletos
+            carregarBoletos({});
+
+            if (botaoClicado) {
+                botaoClicado.textContent = novoStatus;
+                botaoClicado.classList.remove('status-pago', 'status-pendente');
+                botaoClicado.classList.add(novoStatus === 'Pago' ? 'status-pago' : 'status-pendente');
+            }
+             // Exibe o modal de sucesso
+            if (mensagemModalSucesso && modalSucesso) {
+                mensagemModalSucesso.textContent = 'Status alterado com sucesso.';
+                modalSucesso.showModal();
+            }
+        } else {
+            if (mensagemModalErro && modalErro) {
+                mensagemModalErro.textContent = 'Erro ao alterar o status.';
+                modalErro.showModal();
+            }
+        }
+    })
+    .catch(err => {
+        console.error('Erro:', err);
+        if (mensagemModalErro && modalErro) {
+            mensagemModalErro.textContent = 'Erro inesperado ao alterar o status.';
+            modalErro.showModal();
+        }
+    })
+    .finally(() => {
+        // Limpa as variáveis após a requisição
+        idBoletoSelecionado = null;
+        statusAtualSelecionado = null;
+        botaoClicado = null;
+    });
+});
+
 const tbody = document.querySelector('.tbody-tabela-de-dados');
 const inputNome = document.querySelector('.filtrar-por-nome');
 const selectStatus = document.querySelector('.filtrar-por-status');
@@ -23,7 +148,11 @@ async function carregarBoletos(filtros) {
     tbody.innerHTML = '';
 
     if (data.length > 0) {
-      data.forEach(boleto => {
+      const boletosPagos = data.filter(boleto => boleto.status_boleto === 'Pago');
+      const boletosPendentes = data.filter(boleto => boleto.status_boleto === 'Pendente');
+      const boletosOrdenados = [...boletosPagos, ...boletosPendentes];
+
+      boletosOrdenados.forEach(boleto => {
 
         let classeStatus = '';
         if (boleto.status_boleto === 'Pago') {
@@ -108,3 +237,5 @@ formDataFiltro.addEventListener('submit', (e) => {
 // carregando a lista sem nenhum tipo de filtro
 // apenas para exibição de dados
 carregarBoletos({});
+
+document.getElementById('btns-salvar-cancelar').style.display = 'none';

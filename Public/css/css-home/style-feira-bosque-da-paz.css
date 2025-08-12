@@ -40,36 +40,47 @@
 
 .amarelo {
     background-color: var(--color-rua1) !important;
+    color: black !important;
 }
 .laranja {
     background-color: var(--color-rua2) !important;
+    color: white !important;
 }
 .verde {
     background-color: var(--color-rua3) !important;
+    color: black !important;
 }
 .roxo {
     background-color: var(--color-rua4) !important;
+    color: white !important;
 }
 .azul {
     background-color: var(--color-rua5) !important;
+    color: black !important;
 }
 .cinza {
     background-color: var(--color-rua6) !important;
+    color: white !important;
 }
 .rosa_escuro {
-    background-color: var(--color-ru7) !important;
+    background-color: var(--color-rua7) !important;
+    color: white !important;
 }
 .laranja_lima {
     background-color: var(--color-rua8) !important;
+    color: black !important;
 }
 .rosa_claro {
     background-color: var(--color-rua9) !important;
+    color: white !important;
 }
 .preto {
     background-color: var(--color-rua10) !important;
+    color: white !important;
 }
 .vermelho {
     background-color: var(--color-rua11) !important;
+    color: white !important;
 }
 
 .home {

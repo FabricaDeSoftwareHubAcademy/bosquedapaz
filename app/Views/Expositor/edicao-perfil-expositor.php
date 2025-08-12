@@ -1,10 +1,10 @@
-<?php require_once __DIR__ . '/../../../app/helpers/auth.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-edicao-perfil-expositor.css">
+    <link rel="stylesheet" href="../../../Public/css/menu-adm.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <title>Expositor - Bosque da Paz</title>
@@ -28,7 +28,6 @@
                             <input type="file" name="logo" id="logo" class="img__input">
                             <img src="../../../Public/imgs/logo-marca.png" alt="Logo atual do expositor">
                         </label>
-                        <p>Clique na logo para alterar</p>
                     </div>
                     <!-- Area texto produto -->
                     <div class="text__produtos">
@@ -67,7 +66,6 @@
                                 <input type="file" name="produto6" id="produto6" class="input__img">
                                 <img src="../../../Public/imgs/foto-produto-6.jpeg" alt="Produto 6">
                             </label>
-                            <p>Clique na imagem para alterar</p>
                         </div>
                     </div>
                 </div>
@@ -75,14 +73,14 @@
                 <div class="lado__direito">
                     <!-- Título -->
                     <div class="area__h1">
-                        <h1>Edição Perfil Expositor</h1>
+                        <h1>Perfil Expositor</h1>
                     </div>
 
                     <!-- Sobre o Expositor -->
                     <div class="area__text">
                         <h2 class="title">Play Artesanato</h2>
                         <label for="descricao" class="sobre">Sobre a Empresa</label>
-                        <textarea name="descricao" id="descricao" class="input__text" placeholder="Edite o texto aqui..."></textarea>
+                        <textarea name="descricao" id="descricao" class="input__text" placeholder="" disabled></textarea>
                     </div>
 
                     <!-- Informações da Barraca -->
@@ -108,7 +106,7 @@
                                 <label for="insta">Link Instagram:</label>
                                 <div class="input__container">
                                     <i class="bi bi-instagram"></i>
-                                    <input class="input" type="text" name="insta" id="insta" placeholder="Digite o link do Instagram" required>
+                                    <input class="input" type="text" name="insta" id="insta" placeholder="" disabled>
                                 </div>
                             </div>
 
@@ -116,7 +114,7 @@
                                 <label for="whatsapp">Link WhatsApp:</label>
                                 <div class="input__container">
                                     <i class="bi bi-whatsapp"></i>
-                                    <input class="input" type="text" name="whatsapp" id="whatsapp" placeholder="Digite o link do WhatsApp" required>
+                                    <input class="input" type="text" name="whatsapp" id="whatsapp" placeholder="" disabled>
                                 </div>
                             </div>
 
@@ -124,7 +122,7 @@
                                 <label for="facebook">Link Facebook:</label>
                                 <div class="input__container">
                                     <i class="bi bi-facebook"></i>
-                                    <input class="input" type="text" name="facebook" id="facebook" placeholder="Digite o link do Facebook" required>
+                                    <input class="input" type="text" name="facebook" id="facebook" placeholder="" disabled>
                                 </div>
                             </div>
 
@@ -132,15 +130,10 @@
                                 <label for="email">E-mail:</label>
                                 <div class="input__container">
                                     <i class="bi bi-envelope"></i>
-                                    <input class="input" type="email" name="email" id="email" placeholder="Digite o e-mail" required>
+                                    <input class="input" type="email" name="email" id="email" placeholder="" disabled>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Botões -->
-                    <div class="area__buttons">
-                        <button type="button" class="buttons" id="button__cancelar">Cancelar</button>
-                        <button type="submit" class="buttons" id="button__salvar">Salvar</button>
                     </div>
                 </div>
             </form>
@@ -151,6 +144,9 @@
     <div class="img__dec1"><img src="../../../Public/assets/img-bolas/imagem-superior-esquerdo.svg" alt=""></div>
     <div class="img__dec2"><img src="../../../Public/assets/img-bolas/imagem-superior-direito.svg" alt=""></div>
     <div class="img__dec3"><img src="../../../Public/assets/img-bolas/imagem-inferior-direito.svg" alt=""></div>
+
+    <script src="../../../Public/js/js-adm/varifica_login_expositor.js"></script>
+    <script src="../../../Public/js/js-menu/js-menu-expositor.js"></script>
 </body>
 </html>
 

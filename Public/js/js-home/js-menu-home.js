@@ -11,7 +11,7 @@ async function menu() {
             
             let login = document.querySelectorAll('.informacoes_login');
             
-            let img_perfil = text.login.img_perfil == null ? "../../../Public/assets/MOCA.png" : text.login.img_perfil
+            let img_perfil = text.login.img_perfil == null ? null : text.login.img_perfil
             
             
             if(text.login){
@@ -32,7 +32,7 @@ async function menu() {
                         `
                     }else {
                         element.innerHTML = `
-                        <img src="../../../Public/uploads/uploads-ADM/${img_perfil}" alt="" class="img-perfil">
+                        <img src="${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes${i}" id="content-opcoes-menu${i}">
                             <a href="../Expositor/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar

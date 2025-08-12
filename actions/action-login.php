@@ -59,12 +59,10 @@ if(isset($_GET['perfil'])){
             http_response_code(200);
         }
         else if($jwt['jwt']->perfil == 0){
-            $imagens = new Imagem();
+            $expositor = new Expositor();
             //// busca imagens pelo id do expositor
-            $buscarImagem = $imagens->listar($_GET['id']);
             $buscarId = $expositor->listar("id_login = ". $jwt['jwt']->sub);
             //// faz append das imagens
-            $buscarId[0]['imagens'] = $buscarImagem;
             echo json_encode(["login" => $buscarId]);
             http_response_code(200);
         }else{

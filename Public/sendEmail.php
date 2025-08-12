@@ -48,7 +48,7 @@ class EmailService {
                 <div>
                     <h2>Código de recuperação</h2>
                     <p>Abaixo está o código para recuperar a sua senha</p>
-                    <h1>SEU CÓDIGO: $codigo</h1>
+                    <h1>SEU CÓDIGO: '.$codigo.'</h1>
                     <span>No caso desse e-mail ser ignorado a senha não vai ser resetada.</span>
                 </div>
             </body>

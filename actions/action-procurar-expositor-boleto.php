@@ -33,8 +33,8 @@ $nome = htmlspecialchars(strip_tags(trim($input['pesquisar-nome'])));
 
 // Busca expositor
 $expositorModel = new Boleto();
+$resultado = $expositorModel->PesquisarExpositor($nome);
 
-// Retorna dados se encontrado
 if ($resultado && count($resultado) > 0) {
     $expositor = $resultado[0];
 
@@ -52,3 +52,4 @@ if ($resultado && count($resultado) > 0) {
         "mensagem" => "Erro ao buscar expositor."
     ]);
 }
+
