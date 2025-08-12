@@ -306,7 +306,7 @@ class Database
         INNER JOIN boleto b on e.id_expositor = b.id_expositor
         WHERE p.id_pessoa = :id;";
 
-        $binds = [":id" => $id];
+        $binds = [":id" => "$id"];
         return $this->execute($query, $binds);
     }
 
