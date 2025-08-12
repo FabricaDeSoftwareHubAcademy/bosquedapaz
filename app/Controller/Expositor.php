@@ -42,75 +42,94 @@ class Expositor extends Pessoa
         return $email;
     }
 
-    public function cadastrar()
-    {
-        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
-
-        $db = new Database('endereco');
-        $endereco_id = $db->insert_lastid(
-            [
-                'cidade' => $this->cidade,
-            ]
-        );
-
-        
-        ///// insert na tabela login \\\\\
-        
-        $db = new Database('pessoa_user');
-        $login_id = $db->insert_lastid(
-            [
-            'email' => $this->email,
-            'perfil' => '0',
-            ]
-        );
-
-            
-        ///// insert na tabela pessoa \\\\\
+    public function cpfExiste($cpf){
         $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid(
-            [
-                'nome' => $this->nome,
-                'cpf' => $this->cpf,
-                'telefone' => $this->telefone,
-                'whats' => $this->whats,
-                'img_perfil' => $this->foto_perfil,
-                'link_instagram' => $this->link_instagram,
-                'id_login' => $login_id,
-                'id_endereco' => $endereco_id,
-                'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
-            ]
-        );
+
+        $email = $db->select("cpf = '$cpf'")->fetch(PDO::FETCH_ASSOC);
+
+        return $email;
+    }
 
 
-        ///// insert na tabela expostor \\\\\\
+    public function cadastrar(){
+        try {
+            $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
-        $db = new Database('expositor');
-        $idExpositor = $db->insert_lastid(
-            [
-                'id_pessoa' => $pes_id,
-                'id_categoria' => $this->id_categoria,
-                'nome_marca' => $this->nome_marca,
-                'num_barraca' => $this->num_barraca,
-                'voltagem' => $this->voltagem,
-                'energia' => $this->energia,
-                'tipo' => $this->tipo,
-                'descricao' => $this->descricao,
-                'metodos_pgto' => $this->metodos_pgto,
-                'cor_rua' => $this->cor_rua,
+            $db = new Database('endereco');
+    
+            $conn = $db->getConnection();
+    
+            $conn->beginTransaction();
+    
+            $endereco_id = $db->insert_lastid(
+                [
+                    'cidade' => $this->cidade,
                 ]
             );
             
-        
-        //// insert das imagens do expositor \\\\\\
-        $imagem = new Imagem();
-        $imagem->id_expositor = $idExpositor;
-        foreach ($this->imagens as $key => $value) {
-            $imagem->caminho = $value;
-            $res = $imagem->cadastro();
+            ///// insert na tabela login \\\\\
+            
+            $db->setTable('pessoa_user');
+            $login_id = $db->insert_lastid(
+                [
+                'email' => $this->email,
+                'perfil' => '0',
+                ]
+            );
+                
+    
+            
+    
+            ///// insert na tabela pessoa \\\\\
+            $db->setTable('pessoa');   
+            $pes_id = $db->insert_lastid(
+                [
+                    'nome' => $this->nome,
+                    'cpf' => $this->cpf,
+                    'telefone' => $this->telefone,
+                    'whats' => $this->whats,
+                    'img_perfil' => $this->foto_perfil,
+                    'link_instagram' => $this->link_instagram,
+                    'id_login' => $login_id,
+                    'id_endereco' => $endereco_id,
+                    'img_perfil' => '../../../Public/imgs/barraca-padrao.png',
+                    'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+                ]
+            );
+
+            ///// insert na tabela expostor \\\\\\
+
+            $db->setTable('expositor');
+            $idExpositor = $db->insert_lastid(
+                [
+                    'id_pessoa' => $pes_id,
+                    'id_categoria' => $this->id_categoria,
+                    'nome_marca' => $this->nome_marca,
+                    'num_barraca' => $this->num_barraca,
+                    'voltagem' => $this->voltagem,
+                    'energia' => $this->energia,
+                    'tipo' => $this->tipo,
+                    'descricao' => $this->descricao,
+                    'metodos_pgto' => $this->metodos_pgto,
+                    'cor_rua' => $this->cor_rua,
+                    ]
+            );
+
+            //// insert das imagens do expositor \\\\\\
+            
+            $conn->commit();
+
+            $imagem = new Imagem();
+            $imagem->id_expositor = $idExpositor;
+            foreach ($this->imagens as $key => $value) {
+                $imagem->caminho = $value;
+                $res = $imagem->cadastro();
+            }
+            return true;
+
+        } catch (\Throwable $th) {
+            return false;
         }
-
-
-        return $res;
     }
 
 

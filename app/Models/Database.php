@@ -37,6 +37,10 @@ class Database
         $this->password = $_ENV['DB_PASSWORD'];
     }
 
+    public function setTable($table){
+        $this->table = $table;
+    }
+
     // se conecta com o db
     public function conecta()
     {
@@ -75,19 +79,24 @@ class Database
     // que recebe os valores do que serão inseridos
     public function insert($values)
     {
-        $fields = array_keys($values);
+        try {
+            $fields = array_keys($values);
 
-        $binds = array_pad([], count($fields), '?');
+            $binds = array_pad([], count($fields), '?');
 
-        $query = 'INSERT INTO ' . $this->table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
+            $query = 'INSERT INTO ' . $this->table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
 
-        $res = $this->execute($query, array_values($values));
+            $res = $this->execute($query, array_values($values));
 
-        if ($res) {
-            return true;
-        } else {
+            if ($res) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $th) {
             return false;
         }
+        
     }
 
     public function getConnection()
@@ -97,22 +106,27 @@ class Database
 
     public function insert_lastid($values)
     {
-        // quebrar o array associativo que veio como parametro
-        $fields = array_keys($values);
+        try {
+            // quebrar o array associativo que veio como parametro
+            $fields = array_keys($values);
 
-        $binds = array_pad([], count($fields), '?');
+            $binds = array_pad([], count($fields), '?');
 
-        $query = 'INSERT INTO ' . $this->table . '(' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
+            $query = 'INSERT INTO ' . $this->table . '(' . implode(',', $fields) . ') VALUES (' . implode(',', $binds) . ')';
 
-        $res = $this->execute($query, array_values($values));
+            $res = $this->execute($query, array_values($values));
 
-        $lastId = $this->conn->lastInsertId();
+            $lastId = $this->conn->lastInsertId();
 
-        if ($res) {
-            return $lastId;
-        } else {
+            if ($res) {
+                return $lastId;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $th) {
             return false;
         }
+        
     }
 
     // método de select
