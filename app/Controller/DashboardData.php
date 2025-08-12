@@ -42,7 +42,7 @@ class DashboardData
                 default:
                     http_response_code(404);
                     header('Content-Type: application/json');
-                    echo json_encode(['error' => 'Ação não encontrada.']);
+                    echo json_encode(['error' => 'Ação não encontrada']);
                     break;
             }
         } else {
