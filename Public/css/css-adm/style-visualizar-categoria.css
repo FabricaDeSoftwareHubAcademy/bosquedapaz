@@ -249,7 +249,6 @@
     }
 
     .box {
-        height: auto;
         justify-content: space-around;
     }
 
@@ -284,7 +283,7 @@
 @media screen and (max-width: 1150px) {
 
     .box {
-        height: 85vh;
+        height: 80vh;
     }
 
     .btns {

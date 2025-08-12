@@ -76,3 +76,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         return div.innerHTML;
     }
 });
+
+document.getElementById('btns-salvar-cancelar').style.display = 'none';

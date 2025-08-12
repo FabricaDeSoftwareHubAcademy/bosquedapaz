@@ -16,7 +16,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     const mensagemModalErro = document.getElementById('erro-text');
 
     let utilidadeSelecionadaParaStatus = null;
+    let utilidadesCompletas = [];
 
+    // --- Elementos da Busca ---
+    const formBusca = document.getElementById('search-form');
+    const inputBusca = document.getElementById('search-term');
+    
+    // --- Funções dos Modais ---
     function abrirModalConfirmar(titulo, mensagem) {
         if (tituloModalConfirmar && mensagemModalConfirmar && modalConfirmar) {
             tituloModalConfirmar.textContent = titulo;
@@ -39,56 +45,90 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    try {
-        const dadosPhp = await fetch('../../../actions/listar-utilidades.php');
-        const response = await dadosPhp.json();
+    // --- Função para Renderizar a Tabela ---
+    function renderizarTabela(utilidades) {
+        if (!corpoTabela) return;
 
-        if (response.status === 'success' && Array.isArray(response.dados)) {
+        if (utilidades && utilidades.length > 0) {
             let html = '';
-            const utilidades = response.dados;
 
             const utilidadesAtivas = utilidades.filter(util => util.status_utilidade == 1);
             const utilidadesInativas = utilidades.filter(util => util.status_utilidade != 1);
             const utilidadesOrdenadas = [...utilidadesAtivas, ...utilidadesInativas];
 
-            for (let x = 0; x < utilidadesOrdenadas.length; x++) {
-                const status = utilidadesOrdenadas[x].status_utilidade == 1 ? 'Ativo' : 'Inativo';
-                const statusClass = utilidadesOrdenadas[x].status_utilidade == 1 ? 'active' : 'inactive';
-                const statusValue = utilidadesOrdenadas[x].status_utilidade;
+            for (const utilidade of utilidadesOrdenadas) {
+                const status = utilidade.status_utilidade == 1 ? 'Ativo' : 'Inativo';
+                const statusClass = utilidade.status_utilidade == 1 ? 'active' : 'inactive';
+                const statusValue = utilidade.status_utilidade;
 
                 html += `
-    <tr>
-    <td class="usuario-col">${utilidadesOrdenadas[x].titulo}</td>
-    <td class="usuario-col">${utilidadesOrdenadas[x].data_inicio}</td>
-    <td class="usuario-col">${utilidadesOrdenadas[x].data_fim}</td>
-    <td>
-    <form method="POST">
-    <button id="ativoInativo" class="status ${statusClass}" data-id="${utilidadesOrdenadas[x].id_utilidade_publica}" data-status="${statusValue}">
-    ${status}
-    </button>
-    </form>
-    </td>
-    <td>
-    <a class="edit-icon" href="./editar-utilidades.php?titulo=${encodeURIComponent(utilidadesOrdenadas[x].titulo)}&descricao=${encodeURIComponent(utilidadesOrdenadas[x].descricao)}&data_inicio=${encodeURIComponent(utilidadesOrdenadas[x].data_inicio)}&data_fim=${encodeURIComponent(utilidadesOrdenadas[x].data_fim)}&imagem=${encodeURIComponent(utilidadesOrdenadas[x].imagem)}&id=${encodeURIComponent(utilidadesOrdenadas[x].id_utilidade_publica)}">
-    <button>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-    </svg>
-    </button>
-    </a>
-    </td>
-    </tr>
-    `;
+                    <tr>
+                        <td class="usuario-col">${utilidade.titulo}</td>
+                        <td class="usuario-col">${utilidade.data_inicio}</td>
+                        <td class="usuario-col">${utilidade.data_fim}</td>
+                        <td>
+                            <form method="POST">
+                                <button id="ativoInativo" class="status ${statusClass}" data-id="${utilidade.id_utilidade_publica}" data-status="${statusValue}">
+                                    ${status}
+                                </button>
+                            </form>
+                        </td>
+                        <td>
+                            <a class="edit-icon" href="./editar-utilidades.php?titulo=${encodeURIComponent(utilidade.titulo)}&descricao=${encodeURIComponent(utilidade.descricao)}&data_inicio=${encodeURIComponent(utilidade.data_inicio)}&data_fim=${encodeURIComponent(utilidade.data_fim)}&imagem=${encodeURIComponent(utilidade.imagem)}&id=${encodeURIComponent(utilidade.id_utilidade_publica)}">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                    </svg>
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                `;
             }
             corpoTabela.innerHTML = html;
         } else {
             corpoTabela.innerHTML = '<tr><td colspan="5">Nenhuma utilidade pública encontrada.</td></tr>';
         }
-    } catch (error) {
-        console.error("Erro ao carregar utilidades públicas:", error);
-        abrirModalErro("Erro de comunicação", "Não foi possível carregar a lista de utilidades públicas.");
     }
+
+    // --- Função para carregar dados do servidor (chamada apenas uma vez) ---
+    async function carregarUtilidades() {
+        try {
+            const dadosPhp = await fetch('../../../actions/listar-utilidades.php');
+            const response = await dadosPhp.json();
+
+            if (response.status === 'success' && Array.isArray(response.dados)) {
+                utilidadesCompletas = response.dados;
+                renderizarTabela(utilidadesCompletas);
+            } else {
+                corpoTabela.innerHTML = '<tr><td colspan="5">Nenhuma utilidade pública encontrada.</td></tr>';
+            }
+        } catch (error) {
+            console.error("Erro ao carregar utilidades públicas:", error);
+            abrirModalErro("Erro de comunicação", "Não foi possível carregar a lista de utilidades públicas.");
+        }
+    }
+
+    // --- Lógica de Filtro da Tabela ---
+    function filtrarTabela(termo) {
+        if (termo === '') {
+            renderizarTabela(utilidadesCompletas);
+        } else {
+            const utilidadesFiltradas = utilidadesCompletas.filter(utilidade => {
+                return utilidade.titulo.toLowerCase().includes(termo);
+            });
+            renderizarTabela(utilidadesFiltradas);
+        }
+    }
+
+    formBusca?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const termo = inputBusca?.value.trim().toLowerCase();
+        if (termo !== undefined) {
+             filtrarTabela(termo);
+        }
+    });
 
     // --- Lógica para Alterar Status ---
     corpoTabela.addEventListener('click', async (e) => {
@@ -116,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         modalConfirmar.close();
-        const { btn, id, statusAtual } = utilidadeSelecionadaParaStatus;
+        const { id, statusAtual } = utilidadeSelecionadaParaStatus;
 
         try {
             const formData = new FormData();
@@ -141,7 +181,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (data.status === 'success') {
                 abrirModalSucesso(data.message || 'Status alterado com sucesso!');
-                corpoTabela.innerHTML = '';
                 await carregarUtilidades();
             } else {
                 abrirModalErro(data.message || 'Erro ao alterar o status.');
@@ -154,6 +193,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
+    // --- Eventos dos Botões e Ícones de Fechar dos Modais ---
     btnCancelarConfirmar?.addEventListener('click', () => {
         modalConfirmar.close();
         utilidadeSelecionadaParaStatus = null;
@@ -178,59 +218,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
-    async function carregarUtilidades() {
-        try {
-            const dadosPhp = await fetch('../../../actions/listar-utilidades.php');
-            const response = await dadosPhp.json();
-
-            if (response.status === 'success' && Array.isArray(response.dados)) {
-                let html = '';
-                const utilidades = response.dados;
-
-                const utilidadesAtivas = utilidades.filter(util => util.status_utilidade == 1);
-                const utilidadesInativas = utilidades.filter(util => util.status_utilidade != 1);
-                const utilidadesOrdenadas = [...utilidadesAtivas, ...utilidadesInativas];
-
-                for (let x = 0; x < utilidadesOrdenadas.length; x++) {
-                    const status = utilidadesOrdenadas[x].status_utilidade == 1 ? 'Ativo' : 'Inativo';
-                    const statusClass = utilidadesOrdenadas[x].status_utilidade == 1 ? 'active' : 'inactive';
-                    const statusValue = utilidadesOrdenadas[x].status_utilidade;
-
-                    html += `
-                            <tr>
-                                <td class="usuario-col">${utilidadesOrdenadas[x].titulo}</td>
-                                <td class="usuario-col">${utilidadesOrdenadas[x].data_inicio}</td>
-                                <td class="usuario-col">${utilidadesOrdenadas[x].data_fim}</td>
-                                <td>
-                                    <form method="POST">
-                                        <button id="ativoInativo" class="status ${statusClass}" data-id="${utilidadesOrdenadas[x].id_utilidade_publica}" data-status="${statusValue}">
-                                            ${status}
-                                        </button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <a class="edit-icon" href="./editar-utilidades.php?titulo=${encodeURIComponent(utilidadesOrdenadas[x].titulo)}&descricao=${encodeURIComponent(utilidadesOrdenadas[x].descricao)}&data_inicio=${encodeURIComponent(utilidadesOrdenadas[x].data_inicio)}&data_fim=${encodeURIComponent(utilidadesOrdenadas[x].data_fim)}&imagem=${encodeURIComponent(utilidadesOrdenadas[x].imagem)}&id=${encodeURIComponent(utilidadesOrdenadas[x].id_utilidade_publica)}">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                            </svg>
-                                        </button>
-                                    </a>
-                                </td>
-                            </tr>
-                        `;
-                }
-                corpoTabela.innerHTML = html;
-            } else {
-                corpoTabela.innerHTML = '<tr><td colspan="5">Nenhuma utilidade pública encontrada.</td></tr>';
-            }
-        } catch (error) {
-            console.error("Erro ao carregar utilidades públicas:", error);
-            abrirModalErro("Erro de comunicação", "Não foi possível carregar a lista de utilidades públicas.");
-        }
-    }
-
-    carregarUtilidades();
+    await carregarUtilidades();
 });
+
 document.getElementById('btns-salvar-cancelar').style.display = 'none';
