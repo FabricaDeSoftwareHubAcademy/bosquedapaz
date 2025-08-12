@@ -498,11 +498,12 @@ public function getDadosGerais()
 {
     $sql = "
         SELECT 
-            (SELECT qtd_visitantes FROM dadosFeira LIMIT 1) AS visitantes,
+            (SELECT SUM(valor) FROM boleto WHERE status_boleto = 'Pago') AS total_pago,
             (SELECT COUNT(*) FROM expositor) AS expositores,
             (SELECT COUNT(*) FROM artista WHERE status = 'ativo') AS artistas,
             (SELECT COUNT(*) FROM evento WHERE status = 1) AS eventos_ativos
     ";
+    
     $stmt = $this->conn->prepare($sql);
     $stmt->execute();
     return $stmt->fetch(\PDO::FETCH_ASSOC);

@@ -24,7 +24,7 @@
   <div class="containerInfo">
     <div class="enfoVisitantes">
       <span class="spnValorVisitantes"></span>
-      <span class="spnVisitantes">Visitantes</span>
+      <span class="spnVisitantes">$ mensal</span>
     </div>
 
     <div class="enfoExpositores">
@@ -73,14 +73,14 @@
       </div>
     </div>
 
-    <div class="grafico">
+    <!-- <div class="grafico">
       <div class="containerTitleGrafico">
         <span class="spnTitleGrafico">Parceiro por status</span>
       </div>
       <div class="containerGrafico">
           <canvas id="parceiroPorStatusChart"></canvas>
       </div>
-    </div>
+    </div> -->
 
     <div class="grafico">
       <div class="containerTitleGrafico">
@@ -91,14 +91,14 @@
       </div>
     </div>
 
-    <div class="grafico">
+    <!-- <div class="grafico">
       <div class="containerTitleGrafico">
         <span class="spnTitleGrafico">Número de atrações por evento</span>
       </div>
       <div class="containerGrafico">
           <canvas id="atracoesPorEventoChart"></canvas>
       </div>
-    </div>
+    </div> -->
 
   </div>
 

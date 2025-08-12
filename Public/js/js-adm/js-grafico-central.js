@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!response.ok) throw new Error('Erro ao buscar dados gerais');
     const data = await response.json();
 
-    document.querySelector('.spnValorVisitantes').textContent = data.visitantes || 0;
+    document.querySelector('.spnValorVisitantes').textContent = data.total_pago || 0;
     document.querySelector('.spnValorExpositores').textContent = data.expositores || 0;
     document.querySelector('.spnValorArtistas').textContent = data.artistas || 0;
     document.querySelector('.spnValorEventosAtivos').textContent = data.eventos_ativos || 0;
