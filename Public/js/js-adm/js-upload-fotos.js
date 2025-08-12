@@ -59,10 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!confirma) return;
 
                 try {
+                    const tokenCsrf = document.getElementById('tolkenCsrf').value;
+                    
                     const res = await fetch('../../../actions/action-excluir-foto-evento.php', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: `id_foto=${foto.id_foto}`
+                        body: `id_foto=${foto.id_foto}&tolkenCsrf=${tokenCsrf}`
                     });
 
                     const resultado = await res.json();
@@ -74,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } catch (err) {
                     console.error('Erro ao excluir:', err);
+                    alert('Erro de conexão ao excluir a foto.');
                 }
             });
 
