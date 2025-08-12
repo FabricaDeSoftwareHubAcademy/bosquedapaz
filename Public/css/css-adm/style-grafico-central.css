@@ -13,16 +13,19 @@ body{
 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* espaço entre os itens */
-    flex-wrap: nowrap; /* evita quebra de linha */
-    gap: 20px; /* espaçamento entre os 4 containers */
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    gap: 20px; 
+
+    border-radius: 10px;
+    background-color: #1e2a38 ;
 
     overflow-y: auto;
 }
 
 .enfoVisitantes, .enfoExpositores,
 .enfoArtistas, .enfoEventosAtivos {
-    flex: 0 0 23%; /* não cresce, não encolhe, largura base 23% */
+    flex: 0 0 23%;
     
     height: 100px;
     border-radius: 10px;
@@ -57,6 +60,9 @@ body{
     grid-template-rows: auto auto;
     gap: 20px;
     margin-top: 20px;
+
+    border-radius: 10px;
+    background-color: #1e2a38 ;
 
 /* background-color: #cf8e389e; */
 }

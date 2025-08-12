@@ -1,7 +1,5 @@
-// O uso do 'defer' no HTML já garante que o DOM está carregado antes da execução.
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Caminho para o arquivo PHP que funciona como controlador e retorna os dados da API
     const API_BASE_PATH = '../../../actions/dashboard-controller.php';
     
     const charts = {};
