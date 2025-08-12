@@ -25,6 +25,19 @@ btn_salvar.addEventListener('click', function (event) {
     try {
         event.preventDefault()
 
+        var inputs = document.querySelectorAll('input')
+
+        if(!validaInputs(inputs)){
+            openModalError()
+            document.getElementById('erro-title').innerText = 'Por Favor preencha todos os campos'
+            document.getElementById('erro-text').style.display = 'none'
+            document.getElementById('close-modal-erro').addEventListener('click',  () => {
+                closeModalError
+            })
+            return 0
+        }
+
+
         if(!validaCPF(cpf.value)){
             openModalError()
             document.getElementById('erro-title').innerText = 'O CPF inserido é inválido'
@@ -93,6 +106,9 @@ btn_salvar.addEventListener('click', function (event) {
 })
 
 
+///////////// VALIDACOES \\\\\\\\\\\\\\\\\\\
+
+
 // mascara de telefone
 const telefoneInput = document.getElementById('whats');
 telefoneInput.addEventListener('input', function (e) {
@@ -111,6 +127,21 @@ telefoneInput.addEventListener('input', function (e) {
     e.target.value = valor;
 });
 
+
+function validaInputs(inputs){
+    let i = 0
+    inputs.forEach(input => {
+        if(input.value == null || input.value == ''){
+            i++
+        }
+    });
+
+    if (i == 0){
+        return true
+    }else{
+        return false
+    }
+}
 
 // mascara cpf
 
@@ -207,8 +238,15 @@ input_fotos.addEventListener('change', () => {
     let conteiner_imgs = document.querySelectorAll('.content_fotos')
     document.getElementById('conteiner_fotos').style.display = 'flex'
 
-
-    console.log(imgs_files[0])
+    if(imgs_files.length > 6){
+        openModalError()
+        document.getElementById('erro-title').innerText = 'Envie no maximo 6 imagens'
+        document.getElementById('erro-text').style.display = 'none'
+        document.getElementById('close-modal-erro').addEventListener('click',  () => {
+            closeModalError
+            window.location.reload()
+        })
+    }
 
     if(imgs_files.length > 0) {
         for (let i = 0; i < imgs_files.length; i++) {
