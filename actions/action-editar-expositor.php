@@ -7,6 +7,13 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
+function linkInstagram($ins){
+    return 'https://instagram.com/'.trim($ins, '@');
+}
+function linkWhatsapp($whats){
+    return 'https://wa.me/55' . $whats;
+}
+
 // Função para upload de imagens
 function uploadImagem($img, $tipo = 'produto') {
     // Sempre usar a pasta uploads-expositor para ambos logo e produtos

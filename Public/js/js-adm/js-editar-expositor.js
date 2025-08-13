@@ -121,8 +121,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_desc.value = response.expositor.descricao_exp;
         input_email.value = response.expositor.email;
         input_insta.value = response.expositor.link_instagram;
-        input_whatsapp.value = response.expositor.whats;
         input_facebook.value = response.expositor.link_facebook;
+        let arrayWhats = response.expositor.whats.split('/')
+        input_whatsapp.value = arrayWhats[arrayWhats.length - 1].substr(2)
         
         // Configurar logo se existir
         if (response.expositor.img_perfil) {
