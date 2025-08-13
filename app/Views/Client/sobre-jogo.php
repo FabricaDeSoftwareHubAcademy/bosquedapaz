@@ -31,8 +31,8 @@
 
         <!-- Section 2 -->
         <section class="section" id="section_2">
-            <h2>Bem-vindo AO BOSQUE EXPLORE!</h2>
-            <p>Bosque Explore foi desenvolvido com criatividade para tornar sua 
+            <h2 class=" dark ">Bem-vindo AO BOSQUE EXPLORE!</h2>
+            <p class=" dark ">Bosque Explore foi desenvolvido com criatividade para tornar sua 
                 experiênc   ia na Feira mais divertida e informativa. Explore o mapa 
                 virtual, descubra expositores e conheça a diversidade cultural que 
                 faz da Feira um patrimônio de Mato Grosso do Sul. Tecnologia leve, 
