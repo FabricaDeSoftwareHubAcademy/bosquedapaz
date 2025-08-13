@@ -68,13 +68,13 @@ h2 {
     font-size: 2rem;
 }
 
-.box .form-box {
+/* .box .form-box {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     
-}
+} */
 
 .form-box form {
     display: flex;
@@ -119,8 +119,10 @@ h2 {
 .form-container {
     display: flex; 
     align-items: center; 
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     gap: 40px; 
+    /* background-color: #007E70; */
     width: 100%;
     /* max-width: 900px;  */
     margin: auto;
@@ -136,7 +138,10 @@ h2 {
     width: 40%;
 }
 
-
+.inputs-form-utilidade {
+    /* background-color: chocolate; */
+    width: 100%;
+}
 
 .box-img {
     flex: 1;
@@ -155,6 +160,11 @@ h2 {
     gap: 30px;
 }
 
+.btns {
+    width: 100%;
+    /* background-color: #FF3877; */
+}
+
 .box .btns {
     display: flex;
     justify-content: space-between;
@@ -168,16 +178,14 @@ h2 {
 }
 
 .btns {
-    width: 100%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
-    /* background-color: chartreuse; */
 }
 
 .btn-cancelar-salvar {
     display: flex;
     gap: 30px;
-    /* background-color: aquamarine; */
 }
 
 .btn {
@@ -231,6 +239,20 @@ h2 {
     text-align: center;
 }
 
+.inputs-form-utilidade{
+    /* background-color: chocolate; */
+    width: 60%;
+}
+
+#form_cadastrar_utilidade {
+    width: 100%;
+    /* background-color: aqua; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
 .img-preview-cadastro img.preview {
     width: 100%;
     max-width: 100%;
@@ -240,11 +262,13 @@ h2 {
     /* border-radius: 8px;   */
     box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
 }
-.form-container, .form-box {
+
+.form-box {
+    display: flex;
     width: 100%;
-    max-width: 100%; 
-    margin: 0 auto;
+    /* background-color: aqua; */
 }
+
 #btns-salvar-cancelar .btns-salvar-cancelar{
     display: flex;
 }
@@ -252,6 +276,18 @@ h2 {
     .img-preview {
         max-width: 90%;
         margin-bottom: 50px;
+    }
+    .inputs-form-utilidade {
+        width: 70%;
+    }
+    .form-container {
+        align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-box {
+        align-items: center;
     }
 }
 
@@ -283,6 +319,12 @@ h2 {
     }
     .btn-cancelar-salvar .btn {
         width: clamp(80px, 25%, 120px); /* Ajuste proporcional em telas menores */
+    }
+    .inputs-form-utilidade {
+        width: 70%;
+    }
+    .form-container {
+        align-items: center;
     }
 }
 

@@ -27,38 +27,40 @@ $tolken = getTolkenCsrf();
             <div class="form-container">
                 <div class="form-box">
                     <form id="form_editar_utilidade" method='POST'>
-                        <div class="input-group">
-                            <label>Título:</label>
-                            <input type="text" name="titulo" id="titulo"
-                                placeholder="Escreva o título da utilidade pública">
-                        </div>
-                        <div class="input-group">
-                            <label>Descrição:</label>
-                            <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
-                        </div>
-                        <div class="data">
+                        <div class="inputs-form-utilidade">     
                             <div class="input-group">
-                                <label>Data início</label>
-                                <input type="date" id="data_inicio" name="data_inicio" value="0000/00/00">
+                                <label>Título:</label>
+                                <input type="text" name="titulo" id="titulo"
+                                    placeholder="Escreva o título da utilidade pública">
                             </div>
                             <div class="input-group">
-                                <label>Data fim</label>
-                                <input type="date" id="data_fim" name="data_fim" value="0000/00/00">
+                                <label>Descrição:</label>
+                                <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição da utilidade" required cols="30" rows="5" style="resize: none"></textarea>
                             </div>
-                        </div>
-                        <div class="input-group">
-                            <label>Imagem:</label>
-                            <input type="file" name="imagem" id="imagem" required>
-                        </div>
+                            <div class="data">
+                                <div class="input-group">
+                                    <label>Data início</label>
+                                    <input type="date" id="data_inicio" name="data_inicio" value="0000/00/00">
+                                </div>
+                                <div class="input-group">
+                                    <label>Data fim</label>
+                                    <input type="date" id="data_fim" name="data_fim" value="0000/00/00">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Imagem:</label>
+                                <input type="file" name="imagem" id="imagem" required>
+                            </div>
 
-                        <div class="img-preview">
-                            <img class="preview" src='' alt="" id="preview-image" name="preview-image">
-                            <?php echo $tolken; ?>
-                        </div>
-                        
+                            <div class="img-preview">
+                                <img class="preview" src='' alt="" id="preview-image" name="preview-image">
+                                <?php echo $tolken; ?>
+                            </div>
+                            
 
-                        <div class="btns">
-                            <?php include "../../../Public/include/Butons-forms.html" ?>
+                            <div class="btns">
+                                <?php include "../../../Public/include/Butons-forms.html" ?>
+                            </div>
                         </div>
                     </form>
                 </div>
