@@ -247,7 +247,7 @@ async function getExpositorCategoria(categoria) {
                      <div class="content-card-expo" id="card">
                          <div class="card-per-expo">
                              <div class="head-card">
-                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                 <img src="${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                              </div>
                              <div class="body-card">
                                  <h3 class="nome-expo">${element.nome_marca}</h3>

@@ -245,7 +245,7 @@ insert into carrossel (caminho, posicao) values
 
 -- insert into pessoa_user (email, senha, perfil, status_pes) values ('thiago.almeida@ms.senac.br', "$2y$10$l2Je0M8p1do8QrHMBbnukOYTXxqG/760G8DH5iQuoeLmK.FxMwmFy", 1, 'ativo');
 
-insert into pessoa_user (email, senha, perfil, status_pes) values ('admin@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
+insert into pessoa_user (email, senha, perfil, status_pes) values ('admim@gmail.com', "$2y$10$Li32IyNjC.DaG3PQa/pDKuDEZpmMjgiDsPLCTQ9Yudk6fWgQZQuFW", 1, 'ativo');
 
 insert into dadosFeira(qtd_visitantes, qtd_expositores, qtd_artistas) values ('60', '566', '345');
 

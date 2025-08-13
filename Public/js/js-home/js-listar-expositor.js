@@ -100,7 +100,6 @@ async function carregarExpositores() {
     try {
         const response = await fetch("../../../actions/actions-expositor.php?rand=0");
         const data = await response.json();
-        console.log(data)
 
         const container = document.getElementById("expositores-container");
 
