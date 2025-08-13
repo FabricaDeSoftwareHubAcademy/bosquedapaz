@@ -6,16 +6,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (json.status === 'success') {
             const evento = json.evento;
 
-            // Suponha que o card tenha esses seletores no HTML:
-            const cardImagem = document.querySelector('.edicoes-passadas .card .img-ult');
-            const cardTitulo = document.querySelector('.edicoes-passadas .card .titulo h3');
-            const cardDescricao = document.querySelector('.edicoes-passadas .card .text p');
-            const cardLink = document.querySelector('.edicoes-passadas .card .meu-botao');
+            const imgPrincipal = document.querySelector('.img_ultimo_event');
+            const imgPequena = document.querySelector('.img_ultimo_evento_pequena');
+            const caminhoBanner = `../../../Public/${evento.banner_evento}`;
 
-            if (cardImagem) cardImagem.src = `../../../Public/${evento.banner_evento}`;
-            if (cardTitulo) cardTitulo.textContent = evento.nome_evento;
-            if (cardDescricao) cardDescricao.textContent = evento.descricao_evento;
-            if (cardLink) cardLink.href = `galeria-de-imagens.php?id_evento=${evento.id_evento}`;
+            if (imgPrincipal) imgPrincipal.src = caminhoBanner;
+            if (imgPequena) imgPequena.src = caminhoBanner;
             
         } else {
             console.warn('Nenhum evento finalizado encontrado');

@@ -8,7 +8,7 @@
 
 /* EVENTOS */
 
-.eventos {
+.eventos{
     width: 100%;
     height: 500px;
     position: relative;
@@ -108,7 +108,7 @@
     position: relative;
 }
 
-.title_edicoes_passadas {
+.titulo {
     color: black;
 }
 
