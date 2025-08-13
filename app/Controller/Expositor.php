@@ -239,6 +239,7 @@ class Expositor extends Pessoa
             return $updateSenha;
 
         }else if ($status == 'recusado'){
+            $db = new Database('expositor');
             ///// dados expositor
             $newStatus = [
                 'validacao' => 'recusado'

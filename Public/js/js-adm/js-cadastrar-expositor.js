@@ -1,3 +1,54 @@
+//////////// imgens expositor \\\\\\\\\\\\
+
+let input_fotos = document.getElementById('input_fotos')
+let conteiner_fotos = document.getElementById('conteiner_fotos')
+let content_imgs = document.querySelectorAll('#img_content')
+let imgs_tags = document.querySelectorAll('#imagens_produtos')
+const imagens = {'files': []}
+
+input_fotos.addEventListener('input', () => {
+    let files = input_fotos.files
+    for (let i = 0; i < files.length; i++) {
+        if(imagens.files.length >= 6){
+            openModalError()
+            document.getElementById('erro-title').innerText = 'Envie no maximo 6 imagens'
+            document.getElementById('erro-text').style.display = 'none'
+            document.getElementById('close-modal-erro').addEventListener('click',  () => {
+                closeModalError
+            })
+            return
+        }
+        imagens.files.push(files[i])
+    }
+
+    conteiner_fotos.style.display = 'flex'
+
+    for (let i = 0; i < imagens.files.length; i++) {
+
+        content_imgs[i].style.display = 'flex'
+
+        var objectUrl = URL.createObjectURL(imagens.files[i])
+        const reader = new FileReader()
+
+        reader.onloadend = function () {
+            var base64 = reader.result;
+            imgs_tags[i].src = base64
+            imgs_tags[i].style.display = 'block'
+        }
+
+        if (imagens.files[i]) {
+            reader.readAsDataURL(imagens.files[i]);
+        } else {
+            imgs_tags[i].src = "";
+        }
+    }
+
+
+})
+
+
+
+
 // categorias
 async function getCategorias() {
 
@@ -62,6 +113,12 @@ btn_salvar.addEventListener('click', function (event) {
             const formData = new FormData(form)
             formData.append('cadastrar', 'true')
             formData.append('tolkenCsrf', document.getElementById('tolkenCsrf').value)
+            for (let i = 0; i < imagens.files.length; i++) {
+                formData.append(`img-${i}`, imagens.files[i]);
+            }
+
+            formData.delete('imagens[]')
+
 
             document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
                 closeModalConfirmar()
@@ -227,37 +284,3 @@ function validaCPF(cpf) {
     return true
 }
 
-//////////// imgens expositor \\\\\\\\\\\\
-
-let input_fotos = document.getElementById('input_fotos')
-
-
-input_fotos.addEventListener('change', () => {
-    let imgs_files = input_fotos.files
-    let show_imgs = document.querySelectorAll('.imgs_produtos')
-    let conteiner_imgs = document.querySelectorAll('.content_fotos')
-    document.getElementById('conteiner_fotos').style.display = 'flex'
-
-    if(imgs_files.length > 6){
-        openModalError()
-        document.getElementById('erro-title').innerText = 'Envie no maximo 6 imagens'
-        document.getElementById('erro-text').style.display = 'none'
-        document.getElementById('close-modal-erro').addEventListener('click',  () => {
-            closeModalError
-            window.location.reload()
-        })
-    }
-
-    if(imgs_files.length > 0) {
-        for (let i = 0; i < imgs_files.length; i++) {
-            const imagem = imgs_files[i];
-
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                show_imgs[i].src = e.target.result
-                conteiner_imgs[i].style.display = 'flex'
-            }
-            reader.readAsDataURL(imagem);
-        }
-    }
-})

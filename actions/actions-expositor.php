@@ -142,12 +142,12 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
 
             /// verificando se exite imagens
-            if (isset($_FILES['imagens'])) {
-                if (count($_FILES['imagens']['name']) == 6){
+            if (isset($_FILES)) {
+                if (count($_FILES) == 6){
                     ///////// MOVENDO A IMAGEM DE PERFIL ////////////
                     
                     // separa es imagens
-                    $imagens = getImagens($_FILES['imagens']);
+                    $imagens = $_FILES;
     
                     $caminhosImagens = array();
                     
@@ -283,7 +283,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "= 'aguardando'" : "= 'validado'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
         
         //// RETORNA OS EXPOSITORES FILTRADOS 2
