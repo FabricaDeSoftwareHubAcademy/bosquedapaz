@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         track.innerHTML = '';
 
-        const basePath = '/AulaPHPDev33/bosquedapaz/';
+        const basePath = '../../../Public/';
 
         parceiros.forEach(parceiro => {
             const div = document.createElement('div');
