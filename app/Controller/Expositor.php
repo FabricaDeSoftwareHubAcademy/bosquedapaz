@@ -258,63 +258,6 @@ class Expositor extends Pessoa
         }
     }
 
-    // public function atualizar($id){
-    //     try {
-    //         // Buscar dados do expositor
-    //         $db = new Database('expositor');
-    //         $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
-            
-    //         if (!$ids_pessoa_expositor) {
-    //             error_log("Expositor não encontrado com ID: " . $id);
-    //             return false;
-    //         }
-    
-    //         // Buscar dados da pessoa para obter id_login
-    //         $db = new Database('pessoa');
-    //         $dados_pessoa = $db->select("id_pessoa = " . $ids_pessoa_expositor['id_pessoa'])->fetch(PDO::FETCH_ASSOC);
-            
-    //         if (!$dados_pessoa) {
-    //             error_log("Pessoa não encontrada com ID: " . $ids_pessoa_expositor['id_pessoa']);
-    //             return false;
-    //         }
-    
-    //         // Atualizar tabela pessoa
-    //         $res_pessoa = $db->update(
-    //             'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
-    //             [
-    //                 'link_instagram' => $this->link_instagram,
-    //                 'whats' => $this->whats,
-    //                 'link_facebook' => $this->link_facebook,
-    //             ]
-    //         );
-    
-    //         // Atualizar tabela pessoa_user (email)
-    //         $db = new Database('pessoa_user');
-    //         $res_user = $db->update(
-    //             'id_login = ' . $dados_pessoa['id_login'], // Corrigido: usar dados_pessoa em vez de $id
-    //             [
-    //                 'email' => $this->email,
-    //             ]
-    //         );
-            
-    //         // Atualizar tabela expositor
-    //         $db = new Database('expositor');
-    //         $res_expositor = $db->update(
-    //             'id_expositor = ' . $id, // Corrigido: usar $id em vez de $ids_pessoa_expositor['expositor']
-    //             [
-    //                 'nome_marca' => $this->nome_marca,
-    //                 'descricao' => $this->descricao,
-    //             ]
-    //         );
-            
-    //         return $res_pessoa && $res_expositor && $res_user;
-            
-    //     } catch (\Exception $e) {
-    //         error_log("Erro ao atualizar expositor: " . $e->getMessage());
-    //         return false;
-    //     }
-    // }
-
     public function atualizar($id){
         try {
             // Buscar dados do expositor

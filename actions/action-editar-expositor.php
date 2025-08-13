@@ -1,57 +1,4 @@
 <?php
-// require_once('../vendor/autoload.php');
-// use app\Controller\Expositor;
-// use app\suport\Csrf;
-
-// header('Content-Type: application/json');
-
-// if(isset($_GET['id_expo'])){
-//     $id = $_GET['id_expo'];
-//     $objExpositor = new Expositor();
-//     $dados = $objExpositor->listar("id_expositor = ". $id);
-    
-//     $array = [
-//         "status" => 200,
-//         "msg" => "Dados requisitados com sucesso!!",
-//         "data" => $dados
-//     ];
-    
-//     echo json_encode($array);
-// }
-
-// if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['descricao'])){
-    
-//     $id_expositor = $_POST['id_expositor'];
-//     $objExpo = new Expositor();
-    
-//     // Configurar dados básicos
-//     $objExpo->setNome_marca($_POST['nome']);
-//     $objExpo->setDescricao($_POST['descricao']);
-//     $objExpo->setlink_instagram($_POST['instagram']);
-//     $objExpo->setLink_facebook($_POST['facebook']);
-//     $objExpo->setWhats($_POST['whatsapp']);
-//     $objExpo->setEmail($_POST['email']);
-//     $imagensProcessadas = [];
-
-//     $result = $objExpo->atualizar($id_expositor);
-    
-//     if ($result) {
-//         $array = [
-//             "status" => 200,
-//             "msg" => "Perfil atualizado com sucesso!",
-//             "imagens_processadas" => count($imagensProcessadas)
-//         ];
-//     } else {
-//         $array = [
-//             "status" => 500,
-//             "msg" => "Erro ao atualizar perfil!"
-//         ];
-//     }
-    
-//     echo json_encode($array);
-// }
-
-// --------------------------------------- quebra de pagina -------------------------------------
 
 require_once('../vendor/autoload.php');
 use app\Controller\Expositor;
@@ -62,7 +9,8 @@ header('Content-Type: application/json');
 
 // Função para upload de imagens
 function uploadImagem($img, $tipo = 'produto') {
-    $caminho = $tipo === 'logo' ? '../Public/uploads/uploads-logos/' : '../Public/uploads/uploads-expositor/';
+    // Sempre usar a pasta uploads-expositor para ambos logo e produtos
+    $caminho = '../Public/uploads/uploads-expositor/';
     
     // Criar diretório se não existir
     if (!is_dir($caminho)) {
@@ -127,7 +75,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     try {
         // Processar logo da empresa
         if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
-            $logo_path = uploadImagem($_FILES['foto'], 'logo');
+            $logo_path = uploadImagem($_FILES['foto']);
             if ($logo_path) {
                 // Atualizar logo na tabela pessoa
                 $objExpo->setFoto_perfil($logo_path);
@@ -144,7 +92,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             $campo_imagem = "foto_produto_$i";
             
             if (isset($_FILES[$campo_imagem]) && $_FILES[$campo_imagem]['error'] === UPLOAD_ERR_OK) {
-                $novo_caminho = uploadImagem($_FILES[$campo_imagem], 'produto');
+                $novo_caminho = uploadImagem($_FILES[$campo_imagem]);
                 
                 if ($novo_caminho) {
                     // Verificar se já existe imagem nesta posição
