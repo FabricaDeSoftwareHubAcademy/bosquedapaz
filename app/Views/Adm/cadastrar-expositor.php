@@ -21,7 +21,7 @@ $tolken = getTolkenCsrf();
 
         <div class="box">
             <div class="title">
-                <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
+                <h1 class="title-text">CADASTRO DE EXPOSITOR</h1>
             </div>
 
             <form id="fomulario_cad_expositor" method="POST">

@@ -20,7 +20,7 @@ $tolken = getTolkenCsrf();
 <body class="body-gerenciar-boletos">
     <?php include "../../../Public/include/menu-adm.html" ?>
     <div class="box-all">
-        <h1 class="titulo-box">Gerenciamento de Boletos</h1>
+        <h1 class="titulo-box">GERENCIAMENTO DE BOLETOS</h1>
         <!-- filtragem de dados -->
         <section class="area-filtro-de-dados">
             <div class="filtrar-por-nome">

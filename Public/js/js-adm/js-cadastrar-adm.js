@@ -6,13 +6,13 @@ form.addEventListener("submit", async (e) => {
   const senha = form.querySelector("#senha").value;
   const confSenha = form.querySelector("#confSenha").value;
 
-  let r = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$/;
+  let r = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
 
   if(!r.test(senha)){
     openModalMensagem({
       tipo: "erro",
       titulo: "Senha não é segura",
-      mensagem: "Digite um senha forte",
+      mensagem: "Digite um senha com no mínimo 8 digitos, 1 letra maiúscula, 1 número e 1 símbolo.",
     });
     return;
   }
@@ -99,6 +99,30 @@ function readImage() {
 let inputimg = document.getElementById("imagem")
 
 inputimg.addEventListener("change", readImage, false);
+
+let togglePassword = document.getElementById('togglePassword')
+
+let inputPass1 = document.getElementById('senha')
+let inputPass2 = document.getElementById('confSenha')
+
+togglePassword.addEventListener('click', () => {  
+  if(togglePassword.classList.contains('fa-eye')){
+    togglePassword.classList.remove('fa-eye')
+    togglePassword.classList.add('fa-eye-slash')
+  }else{
+    togglePassword.classList.remove('fa-eye-slash')
+    togglePassword.classList.add('fa-eye')
+  }
+
+  if(inputPass1.type == 'password'){
+    inputPass1.type = 'text'
+    inputPass2.type = 'text'
+  }else{
+    inputPass1.type = 'password'
+    inputPass2.type = 'password'
+  }
+
+})
 
 
 // Matheus Manja

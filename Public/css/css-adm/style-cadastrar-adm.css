@@ -87,6 +87,7 @@ main{
 
 .right-side h1{
     text-align: center;
+    text-transform: uppercase;
 }
 
 /* Form:  */
@@ -112,6 +113,12 @@ main{
     position: relative;
     display: flex;
     align-items: center;
+}
+
+.area__input .olho_pass {
+    position: absolute;
+    left: 92%;
+    color: black;
 }
 
 .area__input i {
@@ -141,8 +148,8 @@ main{
 .area__input2 {
     position: relative;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .img_preview {
@@ -163,12 +170,6 @@ main{
     border: none;
     border-radius: 6px;
     box-shadow: 3px 3px 2px var(--color-box-shadow-input);
-}
-
-.area__input .olho_pass {
-    position: relative;
-    right: 0px;
-    color: black;
 }
 
 /* Senha e Conf senha:  */

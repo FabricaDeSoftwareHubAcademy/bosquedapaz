@@ -33,7 +33,7 @@ $tolken = getTolkenCsrf();
             <div class="right-side">
                 <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
                 
-                <h1>Editar ADM</h1>
+                <h1>EDITAR PERFIL</h1>
 
                 <form id="formulario" method="post" enctype="multipart/form-data" novalidate class="form__cadastro">
                     <!-- ID oculto -->

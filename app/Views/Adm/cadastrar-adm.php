@@ -35,7 +35,7 @@ $tolken = getTolkenCsrf();
                 <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
                 
                 <!-- Titulo   -->
-                <h1>Cadastro ADM</h1>
+                <h1>Cadastro colaborador</h1>
                 
                 <!-- Form -->
                 <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">

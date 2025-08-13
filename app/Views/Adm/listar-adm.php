@@ -30,7 +30,7 @@ $tolken = getTolkenCsrf();
 
     <main class="principal">
       <div class="box">
-        <h2>LISTAR ADM</h2>
+        <h2>LISTAR COLABORADOR</h2>
         <!-- Seta Voltar  -->
         <div class="container">
           <!-- Formulário de Busca -->
