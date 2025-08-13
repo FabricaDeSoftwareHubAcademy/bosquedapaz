@@ -63,8 +63,8 @@
                         <img src="../../../Public/assets/fotosDesenvolvedores/Matheus (1).jpg" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Matheus Manja</h3>
+                        <p class="card-subtitle">Desenvolvedor</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -78,8 +78,8 @@
                         <img src="../../../Public/assets/fotosDesenvolvedores/Raquel.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Raquel Marques</h3>
+                        <p class="card-subtitle">Designer</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -93,8 +93,8 @@
                         <img src="../../../Public/imgs/foto-carina.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Carina Zamboni</h3>
+                        <p class="card-subtitle">Idealizadora</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -108,8 +108,8 @@
                         <img src="../../../Public/imgs/foto-denize.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Denise Zamboni</h3>
+                        <p class="card-subtitle">Idealizadora</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -123,8 +123,8 @@
                         <img src="../../../Public/imgs/foto-fernanda.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Fernanda Steffen</h3>
+                        <p class="card-subtitle">Organizadora</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -138,8 +138,8 @@
                         <img src="../../../Public/assets/fotosDesenvolvedores/Enilda.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Enilda Cáceres</h3>
+                        <p class="card-subtitle">Professor</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -153,8 +153,8 @@
                         <img src="../../../Public/assets/fotosDesenvolvedores/Thiago.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Thiago Almeida</h3>
+                        <p class="card-subtitle">Professore</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -168,8 +168,8 @@
                         <img src="../../../Public/imgs/imgs-sobre-jogo/prof-mauricio.png" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Maurício de Souza</h3>
+                        <p class="card-subtitle">Professor</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -183,8 +183,8 @@
                         <img src="../../../Public/assets/fotosDesenvolvedores/Guilherme.webp" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Título do Card</h3>
-                        <p class="card-subtitle">Subtítulo ou descrição breve</p>
+                        <h3 class="card-title">Guilherme Vilani</h3>
+                        <p class="card-subtitle">Professor</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
