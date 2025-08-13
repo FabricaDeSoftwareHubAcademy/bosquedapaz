@@ -63,7 +63,7 @@ if(isset($_GET['perfil'])){
             //// busca imagens pelo id do expositor
             $buscarId = $expositor->listar("id_login = ". $jwt['jwt']->sub);
             //// faz append das imagens
-            echo json_encode(["login" => $buscarId]);
+            echo json_encode(["login" => $buscarId[0]]);
             http_response_code(200);
         }else{
             http_response_code(404);

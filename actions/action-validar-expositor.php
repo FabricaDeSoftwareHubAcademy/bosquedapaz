@@ -12,10 +12,8 @@ require '../Public/sendEmail.php';
 use app\Controller\Expositor;
 use app\suport\Csrf;
 
-function gerar_senha($telefone, $nome){
-
-    // retorna a senha embaralhada com "str_shuffle" com o tamanho definido pela variável $tamanho
-    return $telefone[2].''.$telefone[3].''.$telefone[4].''.$telefone[5].'@'.$nome[0].''.$nome[1].''.$nome[2].''.$nome[3];
+function gerarSenha($cpf, $nome){
+    return substr($cpf, 0, 6)."@".strtolower(explode(' ',$nome)[0]);
 }
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
@@ -38,8 +36,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             $categoria = isset($_POST['categoria']) ? htmlspecialchars(strip_tags($_POST['categoria'])) : $getExpositor[0]['id_categoria'];
 
             //// gerar senha
-            $newSenha = gerar_senha($getExpositor[0]['telefone'], $getExpositor[0]['nome']);
-            
+            $newSenha = gerarSenha($getExpositor[0]['cpf'], $getExpositor[0]['nome']);
             
 
             $res = $expositor->validarExpositor($idExpositor, 'validado', $categoria, password_hash($newSenha, PASSWORD_DEFAULT), $num_barraca, $cor_rua, $getExpositor[0]['id_login']);
@@ -147,7 +144,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
         //// no caso de erro
         echo json_encode([
             'status' => 500, 
-            'msg' => 'Falha no servidor.'
+            'msg' => 'Falha no servidor.'.$th
         ]);
     }
 }

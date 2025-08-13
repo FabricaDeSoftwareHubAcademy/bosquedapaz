@@ -22,7 +22,7 @@ $tolken = getTolkenCsrf();
   <main class="container__main">
     <!-- Box dos Elementos -->
     <div class="container__box">
-      <h2>Lista de Espera</h2>
+      <h2>LISTA DE ESPERA</h2>
       <!-- Área Barra de Pesquisa  -->
       <div class="container__area__pesquisa">
         <form method="GET" class="div-pesquisa">

@@ -26,9 +26,12 @@
                     <label class="search_here">procure aqui:</label>
                     <input class="input_filtro" id="input_pesquisa" type="text" placeholder="Pesquisar por...">
                 </div>
-                <select name="selecao-categoria" id="select-cat" class="input_filtro">
-                    
-                </select>
+                <div class="search_expositor">
+                    <label class="search_here">categoria:</label>
+                    <select name="selecao-categoria" id="select-cat" class="input_filtro">
+                        
+                    </select>
+                </div>
             </div>
 
             <div class="all_cards" id="content_cards">

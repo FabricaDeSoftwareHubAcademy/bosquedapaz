@@ -40,37 +40,56 @@ class Colaborador extends Pessoa
         $this->foto_perfil = $imagem;
     }
 
+    public function emailExiste($email){
+        $db = new Database('pessoa_user');
+
+        $email = $db->select("email = '$email'")->fetch(PDO::FETCH_ASSOC);
+
+        return $email;
+    }
+
 
     public function cadastrar() {
-        // Insere na tabela pessoa
-        $dbLogin = new Database('pessoa_user');
+        $conn;
+        try {
+            // Insere na tabela pessoa
+            $db = new Database('pessoa_user');
 
-        $idLogin = $dbLogin->insert_lastid([
-            'email' => $this->email,
-            'senha' => $this->senha,
-            'perfil' => '1',
-        ]);
-        
-        $dbPessoa = new Database('pessoa');
-        
-        $idPessoa = $dbPessoa->insert_lastid([
-            'nome' => $this->nome,
-            'telefone' => $this->telefone,
-            'id_login' => $idLogin,
-            'img_perfil' => $this->foto_perfil
-        ]);
+            $conn = $db->getConnection();
+    
+            $conn->beginTransaction();
 
-        if (!$idPessoa) {
+            $db->setTable('pessoa_user');
+
+            $idLogin = $db->insert_lastid([
+                'email' => $this->email,
+                'senha' => $this->senha,
+                'perfil' => '1',
+            ]);
+
+            
+            $db->setTable('pessoa'); 
+            $idPessoa = $db->insert_lastid([
+                'nome' => $this->nome,
+                'telefone' => $this->telefone,
+                'id_login' => $idLogin,
+                'img_perfil' => $this->foto_perfil
+            ]);
+
+
+            $db->setTable('colaborador'); 
+            $res = $db->insert([
+                'cargo' => $this->cargo,
+                'id_pessoa' => $idPessoa
+            ]);
+
+            $conn->commit();
+
+            return TRUE;
+        } catch (\Throwable $th) {
             return false;
         }
-
-        $dbColab = new Database('colaborador');
-        $res = $dbColab->insert([
-            'cargo' => $this->cargo,
-            'id_pessoa' => $idPessoa
-        ]);
-
-        return $res;
+        
     }
 
     public function atualizar($id){

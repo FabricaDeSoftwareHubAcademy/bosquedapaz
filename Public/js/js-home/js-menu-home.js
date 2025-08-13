@@ -5,20 +5,20 @@ async function menu() {
             credentials: 'include'
         });
 
-        if(response.ok){
+        if (response.ok) {
             const text = await response.json();
-    
+            
             
             let login = document.querySelectorAll('.informacoes_login');
             
             let img_perfil = text.login.img_perfil == null ? null : text.login.img_perfil
-            
-            
-            if(text.login){
+
+
+            if (text.login) {
                 let i = 1
-                
+
                 login.forEach(element => {
-                    if (text.login.perfil == 1){
+                    if (text.login.perfil == 1) {
                         element.innerHTML = `
                         <img src="../../../Public/uploads/uploads-ADM/${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes${i}" id="content-opcoes-menu${i}">
@@ -30,7 +30,7 @@ async function menu() {
                             </button>
                         </div>
                         `
-                    }else {
+                    } else {
                         element.innerHTML = `
                         <img src="${img_perfil}" alt="" class="img-perfil">
                         <div class="content-acoes${i}" id="content-opcoes-menu${i}">
@@ -53,17 +53,17 @@ async function menu() {
                 let menu2 = document.querySelectorAll('.informacoes_login')[0]
 
                 menu1.addEventListener('click', () => {
-                    if(opcao1.classList.contains('open-menu-login')){
+                    if (opcao1.classList.contains('open-menu-login')) {
                         opcao1.classList.remove('open-menu-login')
-                    }else{
+                    } else {
                         opcao1.classList.add('open-menu-login')
                     }
                 })
 
                 menu2.addEventListener('click', () => {
-                    if(opcao2.classList.contains('open-menu-login')){
+                    if (opcao2.classList.contains('open-menu-login')) {
                         opcao2.classList.remove('open-menu-login')
-                    }else{
+                    } else {
                         opcao2.classList.add('open-menu-login')
                     }
                 })
@@ -80,7 +80,7 @@ async function menu() {
                 ////////// fazer logout
 
                 let logout = document.querySelectorAll('#logout')
-                
+
                 logout[0].addEventListener('click', async () => {
                     const response = await fetch('../../../actions/action-login.php?logout=true');
                     document.location.reload()
@@ -92,7 +92,7 @@ async function menu() {
                 })
             }
         }
-    } catch (error) {       
+    } catch (error) {
     }
 }
 document.addEventListener('DOMContentLoaded', menu)
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', menu)
 // abre o menu da home
 var sandwich = document.getElementById('sandwich')
 var navMenu = document.getElementById('nav-list')
-sandwich.addEventListener('click', function(){
+sandwich.addEventListener('click', function () {
     if (navMenu.classList.contains('open')) {
         navMenu.classList.remove('open')
         sandwich.classList.remove('bi-x')

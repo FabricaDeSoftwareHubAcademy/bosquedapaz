@@ -21,7 +21,7 @@ $tolken = getTolkenCsrf();
 
     <main class="principal">
         <div class="box">
-            <h2>Gerenciar Eventos</h2>
+            <h2>GERENCIAR EVENTOS</h2>
             <div class="container">
                 <div class="search-bar">
                     <label>Procurar</label>

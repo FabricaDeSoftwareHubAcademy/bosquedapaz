@@ -35,7 +35,7 @@ $tolken = getTolkenCsrf();
                 <div class="seta__voltar2"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
                 
                 <!-- Titulo   -->
-                <h1>Cadastro ADM</h1>
+                <h1>Cadastro colaborador</h1>
                 
                 <!-- Form -->
                 <form class="form__cadastro" id="formCadastro" method="POST" enctype="multipart/form-data">
@@ -83,6 +83,7 @@ $tolken = getTolkenCsrf();
                             <label for="imagem" class="uploads">
                                 <input class="input2" type="file" name="imagem" id="imagem" accept="image/*">
                             </label>
+                            <img src="" class="img_preview" id="img_preview" alt="">
                         </div>
                     </div>      
                 
@@ -103,6 +104,7 @@ $tolken = getTolkenCsrf();
                             <div class="area__input">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua senha" required>
+                                <i class="fa-solid fa-eye olho_pass" id="togglePassword"></i>
                             </div>
                         </div>
                     </div>
@@ -110,7 +112,7 @@ $tolken = getTolkenCsrf();
 
                     <!-- Botões -->
                     <div class="form__actions">
-                        <button type="button" name="cancelar" class="btn btn__rosa">Cancelar</button>
+                        <button type="button" name="cancelar" id="cancelar_cadastro" class="btn btn__rosa">Cancelar</button>
                         <button type="submit" name="cadastrar" value="cadastrar" class="btn btn__azul">Cadastrar</button>
                     </div>
                 </form>
