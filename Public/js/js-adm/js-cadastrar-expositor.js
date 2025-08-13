@@ -16,7 +16,6 @@ input_fotos.addEventListener('input', () => {
             document.getElementById('close-modal-erro').addEventListener('click',  () => {
                 closeModalError
             })
-            return
         }
         imagens.files.push(files[i])
     }
