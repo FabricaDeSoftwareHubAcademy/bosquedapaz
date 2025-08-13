@@ -72,11 +72,28 @@ try {
         throw new Exception("E-mail do expositor não encontrado.");
     }
 
-    $valorBr = $_POST['valor_input'];
+    // === TRATAMENTO DO VALOR ===
+    $valorBr = $_POST['valor_input'] ?? '';
+    if ($valorBr === '') {
+        throw new Exception("Valor não informado.");
+    }
+
+    // Remove R$, espaços e qualquer caractere que não seja número, ponto ou vírgula
+    $valorBr = preg_replace('/[^\d,\.]/', '', $valorBr);
+
+    // Converte para padrão numérico do banco (ponto como separador decimal)
     $valorLimpo = str_replace(['.', ','], ['', '.'], $valorBr);
-    if (!is_numeric($valorLimpo)) {
+
+    // Converte para float
+    $valorFloat = (float) $valorLimpo;
+
+    // Garante formato compatível com numeric(10,2) no banco
+    $valorFormatadoBanco = number_format($valorFloat, 2, '.', '');
+
+    if (!is_numeric($valorFormatadoBanco)) {
         throw new Exception("Valor inválido.");
     }
+    // ===========================
 
     $arquivoTmp = $_FILES['arquivo']['tmp_name'];
     $pageCount = (new Fpdi())->setSourceFile($arquivoTmp);
@@ -106,7 +123,7 @@ try {
         $pdfIndividual->Output('F', $caminhoCompleto);
 
         $boleto = new Boleto();
-        $boleto->valor = floatval($valorLimpo);
+        $boleto->valor = $valorFormatadoBanco; // valor no formato do banco
         $boleto->pdf = $nomeArquivo;
         $boleto->mes_referencia = ucfirst($mesReferencia);
         $boleto->vencimento = $vencimento;
@@ -146,7 +163,7 @@ try {
                 color: #333333;
             '>
                 <h2 style='
-                    color: #4a90e2; 
+                    color: #FF4612; 
                     margin-bottom: 20px; 
                     font-weight: 700;
                     font-size: 24px;
@@ -154,7 +171,7 @@ try {
                 <p style='font-size: 16px; margin-bottom: 12px;'>Olá, <strong>{$nomePessoa}</strong>!</p>
                 <p style='font-size: 16px; margin-bottom: 12px;'>Foi gerado um boleto para você referente ao mês de <strong>" . ucfirst($mesReferencia) . "</strong>.</p>
                 <p style='font-size: 16px; margin-bottom: 8px;'><strong>Vencimento:</strong> " . date('d/m/Y', strtotime($vencimento)) . "</p>
-                <p style='font-size: 16px; margin-bottom: 20px;'><strong>Valor:</strong> R$ " . number_format($valorLimpo, 2, ',', '.') . "</p>
+                <p style='font-size: 16px; margin-bottom: 20px;'><strong>Valor:</strong> R$ " . number_format($valorFloat, 2, ',', '.') . "</p>
                 <p style='font-size: 16px;'>O boleto está disponível para visualização no sistema.</p>
                 <br>
                 <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 150px; margin-bottom: 20px;''>
@@ -165,7 +182,7 @@ try {
             $mail->Body = $mensagem;
             $mail->AltBody = strip_tags($mensagem);
             $mail->addAttachment($caminhoCompleto);
-            $mail->addEmbeddedImage('../Public\imgs\logo-nova-bosque-da-paz.png', 'logoEmpresa');
+            $mail->addEmbeddedImage('../Public/imgs/logo-nova-bosque-da-paz.png', 'logoEmpresa');
             $mail->send();
 
         } catch (Exception $e) {
