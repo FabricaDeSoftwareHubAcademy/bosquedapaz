@@ -173,10 +173,10 @@ main #title{
     opacity: 0.9;
     text-decoration: none;
 }
-/* Faz ícone e link ficarem na mesma linha */
+
 .text-left p i.bi-geo-alt {
-    margin-right: 6px; /* espaço entre ícone e texto */
-    vertical-align: middle; /* alinha com o meio do texto */
+    margin-right: 6px; 
+    vertical-align: middle; 
 }
 
 /* Estiliza o link do endereço */
@@ -193,27 +193,33 @@ main #title{
 
 /* Caixa do banner à direita */
 .carousel-item .banner-right {
-    width: 500px;
-    height: 350px;
+    /* width: 500px;                  largura fixa do container */
+    height: 500px;                 /* altura fixa */
     background-color: #222;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden;              /* evita vazamentos da imagem */
     flex-shrink: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;           /* centraliza verticalmente */
+    justify-content: center;       /* centraliza horizontalmente */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
+
 .carousel-item .banner-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    max-width: 100%;               /* não ultrapassa a largura */
+    max-height: 100%;              /* não ultrapassa a altura */
+    height: auto;                  /* mantém proporção */
+    width: auto;                   /* mantém proporção */
+    object-fit: contain;           /* sem cortes */
+    transition: transform 0.5s ease;
 }
 
 .carousel-item.active .overlay {
     opacity: 1;
 }
+.banner-right:hover img {
+    transform: scale(1.08);
+  }
 
 
 /* Section Informações do Evento:  */
@@ -271,7 +277,7 @@ main #title{
 .card {
     max-width: 100%;
     width: 350px;
-    height: 450px;
+    height: 600px;
     background: #fffdfa;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -304,7 +310,7 @@ main #title{
 .card__image {
   position: relative;
   overflow: hidden;
-  height: 210px;
+  height: 500px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
