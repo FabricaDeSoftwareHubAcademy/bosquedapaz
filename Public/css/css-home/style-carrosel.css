@@ -1,19 +1,35 @@
-.cabecalho .list-menu {
-    display: flex;
-}
-
 .carrossel {
     width: 100%;
-    height: auto;
-    background-color: #c1c1c1;
-    padding-top: 110px;
+    position: relative;
+    padding-top: 111px;
+    overflow: hidden;
 }
 
 .conteiner-slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+    height: 72vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1400px) {
+    .slider { height: 85vh; }
+}
+@media screen and (max-width: 1050px) {
+    .slider { height: 40vh; }
+}
+@media screen and (max-width: 500px) {
+    .slider { height: 30vh; }
 }
 
 .slider-swap {
@@ -23,64 +39,84 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 1rem;
-    z-index: 1;
-    /* background-color: rgba(255, 255, 255, 0.452); */
+    padding: 0 1rem;
+    z-index: 2;
 }
 
 .swap {
-    padding: 1rem;
-    cursor: pointer;
-}
-
-.arrow {
-    font-size: 2rem;
-    color: black;
-}
-
-.slider {
-    width: 100%;
-    height: 85vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.slider-balls {
-    width: 100%;
-    height: 3vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
-    background-color: #c1c1c1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px #00401ea2;
+}
+
+.swap:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0px 15px #00401ea2;
+}
+
+.swap:active {
+    transform: scale(0.95);
+}
+
+.arrow {
+    font-size: 1.3rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.swap:hover .arrow {
+    color: #00401E;
+}
+
+.swap:hover .arrow.bi-arrow-right {
+    transform: translateX(2px);
+}
+
+.swap:hover .arrow.bi-arrow-left {
+    transform: translateX(-2px);
+}
+
+.slider-balls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 8;
 }
 
 .ball {
-    width: 4rem;
-    height: .8rem;
-    border-radius: .3rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
     background-color: white;
+    position: relative;
+    perspective: 600px;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 1400px) {
-    .slider {
-        height: 85vh;
-    }
+.ball::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3); /* cor inativa */
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease, background-color 0.6s ease;
 }
 
-@media screen and (max-width: 1050px) {
-    .slider {
-        height: 40vh;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .slider {
-        height: 30vh;
-    }
+.ball.active::before {
+    transform: rotateY(0deg);
+    background-color: green; /* cor ativa */
 }
