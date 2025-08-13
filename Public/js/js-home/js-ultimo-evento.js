@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (json.status === 'success') {
             const evento = json.evento;
 
-            const imgPrincipal = document.querySelector('.img_ultimo_event');
-            const imgPequena = document.querySelector('.img_ultimo_evento_pequena');
+            const imgPrincipal = document.querySelector('.img_ultimo_evento');
+            const imgPequena = document.querySelector('.img_ultimo_evento_pequeno');
             const caminhoBanner = `../../../Public/${evento.banner_evento}`;
 
             if (imgPrincipal) imgPrincipal.src = caminhoBanner;

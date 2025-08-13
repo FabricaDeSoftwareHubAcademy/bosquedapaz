@@ -22,12 +22,13 @@
             <div class="content_info_evento">
                 <h3 class="all-titles title_edicoes_passadas dark">edições passadas</h3>
                 <p class="text_edicoes_passadas dark">Confira como foram nossas edições anteriores</p>
-                <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento_pequena">
+                <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento_pequeno">
                 <a href="edicoes-passadas.php" target="_parent" class="all-links btn_mais_edicoes_passadas">Saiba Mais!</a>
             </div>
             <div class="content_img_evento">
                 <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento">
             </div>
+        </div>
     </div>
 
     <!-- atracoes -->

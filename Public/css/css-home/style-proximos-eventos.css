@@ -164,13 +164,31 @@ main #title{
     opacity: 0.8;
 }
 
-.carousel-item .text-left p {
+.carousel-item .text-left p a{
     margin: 8px 0; 
     display: flex;
     align-items: center;
     gap: 12px; 
     font-size: 1rem;
     opacity: 0.9;
+    text-decoration: none;
+}
+/* Faz ícone e link ficarem na mesma linha */
+.text-left p i.bi-geo-alt {
+    margin-right: 6px; /* espaço entre ícone e texto */
+    vertical-align: middle; /* alinha com o meio do texto */
+}
+
+/* Estiliza o link do endereço */
+.text-left p a {
+    color: #ffffff; /* azul padrão do Bootstrap, você pode trocar */
+    text-decoration: none; /* remove underline */
+    font-weight: 500; /* deixa um pouco mais chamativo */
+}
+
+.text-left p a:hover {
+    text-decoration: underline; /* só mostra underline ao passar o mouse */
+    color: #ffffff; /* muda a cor ao passar o mouse */
 }
 
 /* Caixa do banner à direita */
