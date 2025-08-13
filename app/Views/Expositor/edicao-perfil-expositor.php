@@ -24,9 +24,8 @@
                 <div class="lado__esquerdo">
                     <!-- Upload da Logo -->
                     <div class="container__logo">
-                        <label for="logo" class="uploads">
-                            <input type="file" name="logo" id="logo" class="img__input">
-                            <img src="../../../Public/imgs/logo-marca.png" alt="Logo atual do expositor">
+                        <label for="logo" class="uploads" id="logo_expositor">
+                            
                         </label>
                     </div>
                     <!-- Area texto produto -->
@@ -36,36 +35,8 @@
                     <!-- Upload de Fotos dos Produtos -->
                     <div class="container__imgs">
                         <!-- Area das Imagens -->
-                        <div class="galeria__imagens">
-                            <label for="produto1" class="label__img__prod">
-                                <input type="file" name="produto1" id="produto1" class="input__img">
-                                <img src="../../../Public/imgs/foto-produto-1.jpeg" alt="Produto 1">
-                            </label>
-
-                            <label for="produto2" class="label__img__prod">
-                                <input type="file" name="produto2" id="produto2" class="input__img">
-                                <img src="../../../Public/imgs/foto-produto-2.jpeg" alt="Produto 2">
-                            </label>
-
-                            <label for="produto3" class="label__img__prod">
-                                <input type="file" name="produto3" id="produto3" class="input__img">
-                                <img src="../../../Public/imgs/foto-produto-3.jpeg" alt="Produto 3">
-                            </label>
-
-                            <label for="produto4" class="label__img__prod">
-                                <input type="file" name="produto4" id="produto4" class="input__img">
-                                <img src="../../../Public/imgs/foto-produto-4.jpeg" alt="Produto 4">
-                            </label>
-
-                            <label for="produto5" class="label__img__prod">
-                                <input type="file" name="produto5" id="produto5" class="input__img">
-                                <img src="../../../Public/imgs/foto-produto-5.jpeg" alt="Produto 5">
-                            </label>
-
-                            <label for="produto6" class="label__img__prod">
-                                <input type="file" name="produto6" id="produto6" class="input__img">
-                                <img src="../../../Public/imgs/foto-produto-6.jpeg" alt="Produto 6">
-                            </label>
+                        <div class="galeria__imagens" id="content_imgs">
+                            
                         </div>
                     </div>
                 </div>
@@ -78,7 +49,7 @@
 
                     <!-- Sobre o Expositor -->
                     <div class="area__text">
-                        <h2 class="title">Play Artesanato</h2>
+                        <h2 class="title" id="nome_marca">Play Artesanato</h2>
                         <label for="descricao" class="sobre">Sobre a Empresa</label>
                         <textarea name="descricao" id="descricao" class="input__text" placeholder="" disabled></textarea>
                     </div>
@@ -87,15 +58,15 @@
                     <div class="area__cat__num">
                         <div class="cat">
                             <h3>Categoria</h3>
-                            <p class="p__cat">Artesanato</p>
+                            <p class="p__cat" id="categoria">Artesanato</p>
                         </div>
                         <div class="num">
                             <h3>Número</h3>
-                            <p class="pp">89</p>
+                            <p class="pp" id="num_rua">89</p>
                         </div>
                         <div class="area__cor">
                             <h3>Cor da Rua</h3>
-                            <div class="cor__rua"><p>Verde</p></div>
+                            <div class="cor__rua" id="area_cor_rua"><p id="cor_rua"></p></div>
                         </div>
                     </div>
                     <!-- Contatos -->
@@ -140,12 +111,15 @@
         </div>
     </main>
 
+    <?php include "../../../Public/include/modais/modal-error.html"; ?>
+
     <!-- Imagens Decorativas -->
     <div class="img__dec1"><img src="../../../Public/assets/img-bolas/imagem-superior-esquerdo.svg" alt=""></div>
     <div class="img__dec2"><img src="../../../Public/assets/img-bolas/imagem-superior-direito.svg" alt=""></div>
     <div class="img__dec3"><img src="../../../Public/assets/img-bolas/imagem-inferior-direito.svg" alt=""></div>
 
     <script src="../../../Public/js/js-adm/varifica_login_expositor.js"></script>
+    <script src="../../../Public/js/js-adm/js_perfil_expositor.js"></script>
     <script src="../../../Public/js/js-menu/js-menu-expositor.js"></script>
 </body>
 </html>

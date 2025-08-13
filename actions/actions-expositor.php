@@ -258,11 +258,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $id = htmlspecialchars(strip_tags($_GET['id']));
             $imagens = new Imagem();
             //// busca imagens pelo id do expositor
-            $buscarImagem = $imagens->listar(htmlspecialchars(strip_tags($_GET['id'])));
+            $buscarImagem = $imagens->listar(htmlspecialchars(htmlspecialchars(strip_tags($_GET['id']))));
             $buscarId = $expositor->listar("id_expositor = '$id'");
             //// faz append das imagens
-            $buscarId[0]['imagens'] = $buscarImagem;
-            $response = $buscarId ? ['expositor' => $buscarId[0],$_GET['id'], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            if($buscarId){
+                $buscarId[0]['imagens'] = $buscarImagem;
+                $response = ['expositor' => $buscarId[0], 'status' => 200];
+
+            }else {
+                $response = ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            }
 
 
         //// RETORNA EXPOSITORES INATIVOS

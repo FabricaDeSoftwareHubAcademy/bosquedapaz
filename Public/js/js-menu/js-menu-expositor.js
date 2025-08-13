@@ -23,7 +23,10 @@ async function menuAdm() {
             credentials: 'include'
         });
 
+        
         const text = await response.json();
+        
+        localStorage.setItem('id_expositor', text.login.id_expositor)
 
         let imgLogin = document.querySelectorAll('#img-login');
 
@@ -63,10 +66,12 @@ let logout = document.querySelectorAll('#logout')
 
 logout[0].addEventListener('click', async () => {
     const response = await fetch('../../../actions/action-login.php?logout=true');
+    localStorage.clear()
     document.location.reload()
 })
 logout[1].addEventListener('click', async () => {
     const response = await fetch('../../../actions/action-login.php?logout=true');
+    localStorage.clear()
     document.location.reload()
 })
 

@@ -91,6 +91,7 @@ class Expositor extends Pessoa
                     'whats' => $this->whats,
                     'img_perfil' => $this->foto_perfil,
                     'link_instagram' => $this->link_instagram,
+                    'link_facebook' => 'https://www.facebook.com/',
                     'id_login' => $login_id,
                     'id_endereco' => $endereco_id,
                     'img_perfil' => '../../../Public/imgs/barraca-padrao.png',
