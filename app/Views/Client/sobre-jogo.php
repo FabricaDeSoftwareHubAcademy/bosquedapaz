@@ -60,7 +60,7 @@
                 <!-- Cards -->
                 <div class="card">
                     <div class="card-image">
-                        <img src="../../../Public/imgs/imgs-sobre-jogo/8c9c07197673ea349f1dbac6c276b927 2.png" alt="Imagem do Card" />
+                        <img src="../../../Public/assets/fotosDesenvolvedores/Matheus (1).jpg" alt="Imagem do Card" />
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Título do Card</h3>
