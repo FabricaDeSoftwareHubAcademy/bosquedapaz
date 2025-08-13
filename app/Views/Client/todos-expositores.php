@@ -23,11 +23,11 @@
         <div class="conteiner-expositores">
             <div class="conteiner_filtros">
                 <div class="search_expositor">
-                    <label class="search_here">procure aqui:</label>
+                    <label class="search_here">Pesquisar por nome:</label>
                     <input class="input_filtro" id="input_pesquisa" type="text" placeholder="Pesquisar por...">
                 </div>
                 <div class="search_expositor">
-                    <label class="search_here">categoria:</label>
+                    <label class="search_here">Filtar por categoria:</label>
                     <select name="selecao-categoria" id="select-cat" class="input_filtro">
                         
                     </select>
