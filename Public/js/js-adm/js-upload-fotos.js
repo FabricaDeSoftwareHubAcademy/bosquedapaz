@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderizarGaleria() {
         preview.innerHTML = '';
 
-        // Fotos do banco
+        // Fotos existentes do banco
         fotosExistentes.forEach((foto, index) => {
             const div = document.createElement('div');
             div.classList.add('preview-box');
@@ -54,30 +54,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 fontWeight: 'bold'
             });
 
-            btnRemover.addEventListener('click', async () => {
-                const confirma = confirm('Deseja excluir esta foto do evento?');
-                if (!confirma) return;
+            btnRemover.addEventListener('click', () => {
+                document.getElementById('confirmar-title').innerText = 'Excluir foto';
+                document.getElementById('msm-confimar').innerText = 'Tem certeza que deseja excluir esta foto do evento?';
+                openModalConfirmar();
 
-                try {
-                    const tokenCsrf = document.getElementById('tolkenCsrf').value;
-                    
-                    const res = await fetch('../../../actions/action-excluir-foto-evento.php', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: `id_foto=${foto.id_foto}&tolkenCsrf=${tokenCsrf}`
-                    });
+                document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar, { once: true });
+                document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar, { once: true });
 
-                    const resultado = await res.json();
-                    if (resultado.status === 'success') {
-                        fotosExistentes.splice(index, 1);
-                        renderizarGaleria();
-                    } else {
-                        alert('Erro ao excluir: ' + resultado.mensagem);
+                document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+                    closeModalConfirmar();
+                    try {
+                        const tokenCsrf = document.getElementById('tolkenCsrf').value;
+                        const res = await fetch('../../../actions/action-excluir-foto-evento.php', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: `id_foto=${foto.id_foto}&tolkenCsrf=${tokenCsrf}`
+                        });
+
+                        const resultado = await res.json();
+                        if (resultado.status === 'success') {
+                            fotosExistentes.splice(index, 1);
+                            renderizarGaleria();
+                            document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Foto excluída com sucesso!';
+                            openModalSucesso();
+                            document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso, { once: true });
+                        } else {
+                            document.getElementById('erro-title').innerText = 'Erro ao excluir';
+                            document.getElementById('erro-text').innerText = resultado.mensagem || 'Não foi possível excluir a foto.';
+                            openModalError();
+                            document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
+                        }
+                    } catch (err) {
+                        document.getElementById('erro-title').innerText = 'Falha de comunicação';
+                        document.getElementById('erro-text').innerText = 'Erro de conexão ao excluir a foto.';
+                        openModalError();
+                        document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
                     }
-                } catch (err) {
-                    console.error('Erro ao excluir:', err);
-                    alert('Erro de conexão ao excluir a foto.');
-                }
+                }, { once: true });
             });
 
             div.appendChild(img);
@@ -85,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             preview.appendChild(div);
         });
 
-        // Fotos novas
+        // Novas fotos selecionadas
         arquivosSelecionados.forEach((arquivo, index) => {
             const reader = new FileReader();
             reader.onload = (e) => {
@@ -140,7 +154,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const total = arquivosSelecionados.length + fotosExistentes.length + novosArquivos.length;
 
         if (total > maxFotos) {
-            alert(`Limite máximo de ${maxFotos} fotos atingido.`);
+            document.getElementById('erro-title').innerText = 'Limite de fotos atingido';
+            document.getElementById('erro-text').innerText = `Você só pode adicionar no máximo ${maxFotos} fotos no evento.`;
+            openModalError();
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
             inputFotos.value = '';
             return;
         }
@@ -161,56 +178,82 @@ document.addEventListener('DOMContentLoaded', () => {
                 fotosExistentes = resultado.dados;
                 renderizarGaleria();
             } else {
-                console.warn('Erro ao buscar fotos:', resultado.mensagem);
+                document.getElementById('erro-title').innerText = 'Erro ao buscar fotos';
+                document.getElementById('erro-text').innerText = resultado.mensagem || 'Não foi possível carregar as fotos do evento.';
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
             }
         } catch (error) {
-            console.error('Erro ao carregar fotos existentes:', error);
+            document.getElementById('erro-title').innerText = 'Falha de comunicação';
+            document.getElementById('erro-text').innerText = 'Erro ao carregar fotos existentes.';
+            openModalError();
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
         }
     };
 
     const enviarFotos = async () => {
-        if (arquivosSelecionados.length === 0) {
-            alert('Nenhuma nova foto para enviar.');
-            return;
-        }
+    if (arquivosSelecionados.length === 0 && fotosExistentes.length === 0) {
+        document.getElementById('erro-title').innerText = 'Nenhuma foto selecionada';
+        document.getElementById('erro-text').innerText = 'Selecione ao menos uma foto para enviar.';
+        openModalError();
+        document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
+        return;
+    }
 
-        const formData = new FormData();
-        const idEvento = document.getElementById('id_evento').value;
-        formData.append('id_evento', idEvento);
-        formData.append("tolkenCsrf", document.getElementById("tolkenCsrf"));
+    if (arquivosSelecionados.length === 0 && fotosExistentes.length > 0) {
+        
+        document.getElementById('msm-sucesso').innerText = 'Nenhuma nova foto enviada, mas as já existentes foram mantidas.';
+        openModalSucesso();
+        document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso, { once: true });
+        return;
+    }
 
-        arquivosSelecionados.forEach((arquivo) => {
-            formData.append('fotos[]', arquivo);
-        });
+        document.getElementById('confirmar-title').innerText = 'Enviar fotos';
+        document.getElementById('msm-confimar').innerText = 'Deseja confirmar o envio destas fotos para o evento?';
+        openModalConfirmar();
 
-        try {
-            const response = await fetch('../../../actions/action-upload-fotos.php', {
-                method: 'POST',
-                body: formData
+        document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar, { once: true });
+        document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar, { once: true });
+
+        document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
+            closeModalConfirmar();
+
+            const formData = new FormData();
+            const idEvento = document.getElementById('id_evento').value;
+            formData.append('id_evento', idEvento);
+            formData.append("tolkenCsrf", document.getElementById("tolkenCsrf").value);
+
+            arquivosSelecionados.forEach((arquivo) => {
+                formData.append('fotos[]', arquivo);
             });
 
-            const texto = await response.text();
-            let data;
-
             try {
-                data = JSON.parse(texto);
-            } catch (jsonError) {
-                alert(`Erro ao interpretar resposta do servidor:\n${texto}`);
-                return;
-            }
+                const response = await fetch('../../../actions/action-upload-fotos.php', {
+                    method: 'POST',
+                    body: formData
+                });
 
-            if (data.status === 'success') {
-                alert(data.mensagem);
-                arquivosSelecionados = [];
-                await carregarFotosExistentes();
-            } else {
-                alert('Erro: ' + data.mensagem);
-            }
+                const data = await response.json();
 
-        } catch (error) {
-            alert('Erro no envio das fotos.');
-            console.error('Erro no upload:', error);
-        }
+                if (data.status === 'success') {
+                    document.getElementById('msm-sucesso').innerText = data.mensagem || 'Fotos enviadas com sucesso!';
+                    openModalSucesso();
+                    document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso, { once: true });
+                    arquivosSelecionados = [];
+                    await carregarFotosExistentes();
+                } else {
+                    document.getElementById('erro-title').innerText = 'Erro no envio';
+                    document.getElementById('erro-text').innerText = data.mensagem || 'Ocorreu um erro ao enviar as fotos.';
+                    openModalError();
+                    document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
+                }
+            } catch (error) {
+                document.getElementById('erro-title').innerText = 'Falha de comunicação';
+                document.getElementById('erro-text').innerText = 'Erro no envio das fotos.';
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError, { once: true });
+            }
+        }, { once: true });
     };
 
     // Eventos
@@ -220,5 +263,5 @@ document.addEventListener('DOMContentLoaded', () => {
         enviarFotos();
     });
 
-    carregarFotosExistentes(); // 🧠
+    carregarFotosExistentes();
 });

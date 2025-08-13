@@ -8,7 +8,7 @@
 
 /* EVENTOS */
 
-.eventos {
+.eventos{
     width: 100%;
     height: 500px;
     position: relative;
@@ -108,7 +108,7 @@
     position: relative;
 }
 
-.title_edicoes_passadas {
+.titulo {
     color: black;
 }
 
@@ -118,6 +118,24 @@
     font-weight: 500;
     width: 25rem;
 }
+
+.img_ultimo_evento {
+    width: 20rem;
+    height: 25rem;
+    border-radius: .5rem;
+    transition: var(--o-transition);
+}
+
+.img_ultimo_evento:hover {
+    width: 20rem;
+    transition: var(--o-transition);
+}
+
+.img_ultimo_evento_pequeno {
+    width: 20rem;
+    display: none;
+}
+
 
 .btn_mais_edicoes_passadas{
     padding: .5rem 1rem;
@@ -135,10 +153,6 @@
     background-color: #5EBB50;
     transition: var(--o-transition);
 }
-
-
-
-
 /* ATRACOES */
 
 .atracoes {
@@ -157,7 +171,6 @@
     background-color: var(--color-ulti-publi);
     z-index: -2;
 }
-
 
 .btn_mais_atracoes{
     padding: .5rem 1rem;

@@ -72,7 +72,7 @@ CREATE TABLE expositor(
     energia VARCHAR(10) NULL,
     tipo VARCHAR(255) NULL,
     contato2 CHAR(11) NULL,
-    descricao VARCHAR(200) NULL,
+    descricao TEXT(1000) NULL,
     metodos_pgto VARCHAR(50) NULL,
     cor_rua VARCHAR(150) NULL DEFAULT '',
     validacao ENUM('aguardando', 'validado', 'recusado') NOT NULL DEFAULT 'aguardando',

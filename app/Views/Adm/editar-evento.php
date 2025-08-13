@@ -104,7 +104,7 @@ $tolken = getTolkenCsrf();
 
                     <?php include "../../../Public/include/modais/modal-cadastrar-endereco.html"; ?>
                     <div class="overlay" id="overlay"></div>
-                    <?php include "../../../Public/include/modais/modal-Confirmar.html"; ?>
+                    <?php include "../../../Public/include/modais/modal-confirmar.html"; ?>
                     <?php include "../../../Public/include/modais/modal-sucesso.html"; ?>
                     <?php include "../../../Public/include/modais/modal-error.html"; ?>
                 </div>

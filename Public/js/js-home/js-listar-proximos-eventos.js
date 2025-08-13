@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             item.className = 'carousel-item';
             item.style.backgroundImage = `url('../../../Public/${evento.banner_evento}')`;
             item.dataset.index = index;
-
+            console.log(evento.endereco_completo)
             item.innerHTML = `
                 <div class="overlay">
                     <div class="overlay-content">
@@ -39,7 +39,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <h3>${evento.subtitulo_evento}</h3>
                             <p><i class="bi bi-calendar-event"></i> Data: ${formatarDataBR(evento.data_evento)}</p>
                             <p><i class="bi bi-clock"></i> Horário: ${evento.hora_inicio} às ${evento.hora_fim}</p>
-                            <p><i class="bi bi-geo-alt"></i> ${formatarEndereco(evento.endereco_completo)}</p>
+                            <p>
+                                <i class="bi bi-geo-alt"></i>
+                                <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formatarEndereco(evento.endereco_completo))}" 
+                                target="_blank" 
+                                rel="noopener noreferrer">
+                                ${formatarEndereco(evento.endereco_completo)}
+                                </a>                               
+                            </p>
                         </div>
                         <div class="banner-right">
                             <img src="../../../Public/${evento.banner_evento}" />
