@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         track.innerHTML = '';
 
-        const basePath = '../../../Public/';
+        const basePath = '../../../';
 
         parceiros.forEach(parceiro => {
             const div = document.createElement('div');
