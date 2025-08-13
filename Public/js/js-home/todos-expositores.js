@@ -1,3 +1,11 @@
+function padraoCorRua(text){
+    let novoText = ''
+    text.split('_').forEach(str => {
+        novoText += ' '+str
+    });
+    return novoText
+}
+
 let contentCards = document.getElementById('content-cards')
 
 async function chamarModalExpositor(id){
@@ -84,7 +92,7 @@ async function chamarModalExpositor(id){
 
                 <div class="div__categoria div__cor__rua">
                     <h3 class="title_informacoes">Cor da Rua</h3>
-                    <div class="div__cor ${response.expositor.cor_rua}"><p>${response.expositor.cor_rua}</p></div>
+                    <div class="div__cor ${response.expositor.cor_rua}"><p>${padraoCorRua(response.expositor.cor_rua)}</p></div>
                 </div>
             </div>
                 
@@ -128,7 +136,7 @@ async function getExpositores(){
                                      <p class="para-color">
                                          Rua:
                                          <span class="span-color ${element.cor_rua}">
-                                            ${element.cor_rua}
+                                            ${padraoCorRua(element.cor_rua)}
                                          </span>
                                      </p>
                                  </div>
@@ -181,7 +189,7 @@ inputFiltro.addEventListener('keyup', async () => {
                                          <p class="para-color">
                                              Rua:
                                              <span class="span-color ${element.cor_rua}">
-                                                ${element.cor_rua}
+                                                ${padraoCorRua(element.cor_rua)}
                                              </span>
                                          </p>
                                      </div>
@@ -247,7 +255,7 @@ async function getExpositorCategoria(categoria) {
                      <div class="content-card-expo" id="card">
                          <div class="card-per-expo">
                              <div class="head-card">
-                                 <img src="../../${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
+                                 <img src="${element.img_perfil}" alt="imagem perfil" class="img-perfil-expo">
                              </div>
                              <div class="body-card">
                                  <h3 class="nome-expo">${element.nome_marca}</h3>
@@ -261,7 +269,7 @@ async function getExpositorCategoria(categoria) {
                                      <p class="para-color">
                                          Rua:
                                          <span class="span-color ${element.cor_rua}">
-                                            ${element.cor_rua}
+                                            ${padraoCorRua(element.cor_rua)}
                                          </span>
                                      </p>
                                  </div>

@@ -142,12 +142,12 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
 
             /// verificando se exite imagens
-            if (isset($_FILES['imagens'])) {
-                if (count($_FILES['imagens']['name']) == 6){
+            if (isset($_FILES)) {
+                if (count($_FILES) == 6){
                     ///////// MOVENDO A IMAGEM DE PERFIL ////////////
                     
                     // separa es imagens
-                    $imagens = getImagens($_FILES['imagens']);
+                    $imagens = $_FILES;
     
                     $caminhosImagens = array();
                     
@@ -258,11 +258,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $id = htmlspecialchars(strip_tags($_GET['id']));
             $imagens = new Imagem();
             //// busca imagens pelo id do expositor
-            $buscarImagem = $imagens->listar(htmlspecialchars(strip_tags($_GET['id'])));
+            $buscarImagem = $imagens->listar(htmlspecialchars(htmlspecialchars(strip_tags($_GET['id']))));
             $buscarId = $expositor->listar("id_expositor = '$id'");
             //// faz append das imagens
-            $buscarId[0]['imagens'] = $buscarImagem;
-            $response = $buscarId ? ['expositor' => $buscarId[0],$_GET['id'], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            if($buscarId){
+                $buscarId[0]['imagens'] = $buscarImagem;
+                $response = ['expositor' => $buscarId[0], 'status' => 200];
+
+            }else {
+                $response = ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            }
 
 
         //// RETORNA EXPOSITORES INATIVOS
@@ -283,7 +288,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "= 'aguardando'" : "= 'validado'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
         
         //// RETORNA OS EXPOSITORES FILTRADOS 2

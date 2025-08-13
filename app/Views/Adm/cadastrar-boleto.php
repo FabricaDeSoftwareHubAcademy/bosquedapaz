@@ -28,7 +28,9 @@ $tolken = getTolkenCsrf();
                 <div class="search-bar">
                     <input class="input-busca" type="text" id="pesquisar-nome" placeholder="Pesquisar por expositor" />
                     <button type="button" id="lupa" class="search-button">BUSCAR</button>
+                    <div id="sugestoes-expositor" class="sugestoes-container" style="display: none;"></div>
                 </div>
+
 
             </div>
 
@@ -37,12 +39,12 @@ $tolken = getTolkenCsrf();
                     <div class="form-content">
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>
-                            <input type="text" name="nome_exp" id="nome-exp" placeholder="Nome do Expositor" maxlength="50" required>
+                            <input type="text" name="nome_exp" id="nome-exp" placeholder="Nome do Expositor" maxlength="50" readonly>
                         </div>
 
                         <div class="input">
                             <label for="cnpj-cpf" class="label">CPF:</label>
-                            <input type="text" name="cpf_input" id="cnpj-cpf" placeholder="000.000.000-00" maxlength="14" required>
+                            <input type="text" name="cpf_input" id="cnpj-cpf" placeholder="000.000.000-00" maxlength="14" readonly>
                         </div>
 
                         <div class="input">
@@ -58,27 +60,17 @@ $tolken = getTolkenCsrf();
                         </div>
 
                         <div class="input">
-                            <label for="referencia" class="label">Referência:</label>
-                            <select class="select" name="referencia_input" id="referencia_input" required>
-                                <option value="janeiro">Janeiro</option>
-                                <option value="fevereiro">Fevereiro</option>
-                                <option value="março">Março</option>
-                                <option value="abril">Abril</option>
-                                <option value="maio">Maio</option>
-                                <option value="junho">Junho</option>
-                                <option value="julho">Julho</option>
-                                <option value="agosto">Agosto</option>
-                                <option value="setembro">Setembro</option>
-                                <option value="outubro">Outubro</option>
-                                <option value="novembro">Novembro</option>
-                                <option value="dezembro">Dezembro</option>
-                            </select>
-                        </div>
-
-                        <div class="input">
                             <label for="vencimento" class="label">Vencimento:</label>
                             <input type="date" name="vencimento_input" id="vencimento_input" placeholder="00/00/0000" required>
                         </div>
+
+                        <div class="input input-referencia">
+                            <label for="referencia_input" class="label">Referência:</label>
+                            <span class="input-prefix">Mês de Referência:</span>
+                            <input class="select" name="referencia_input" id="referencia_input" type="text" readonly>
+                        </div>
+
+
                     </div>
                     <input type="hidden" id="id_expositor" name="id_expositor" value="">
                     <?php echo $tolken; ?>

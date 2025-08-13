@@ -21,7 +21,7 @@ $tolken = getTolkenCsrf();
 
         <div class="box">
             <div class="title">
-                <h1 class="title-text">CADASTRO DE EXPOSITORES</h1>
+                <h1 class="title-text">CADASTRO DE EXPOSITOR</h1>
             </div>
 
             <form id="fomulario_cad_expositor" method="POST">
@@ -109,29 +109,29 @@ $tolken = getTolkenCsrf();
 
                 </div>
                 <div class="conteiner_fotos" id="conteiner_fotos">
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
+                        <img src="../../../Public/assets/logo-trans.png" alt="oi" class="imgs_produtos" id="imagens_produtos">
                     </div> 
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
                     </div> 
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
                     </div> 
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
                     </div> 
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
                     </div> 
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
                     </div> 
                 </div>
 

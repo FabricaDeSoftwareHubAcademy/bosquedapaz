@@ -13,7 +13,7 @@ body{
 }
 
 .principal {
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     z-index: 1;
 }
@@ -284,46 +284,26 @@ button:hover {
 }
 
 /* Imagens Decorativas */
-.imgs__dec1{
-    position: fixed;
-    top: 25vh;
-    left: 0;
-    width: 20vw;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-.imgs__dec1 img{
-    width: 30%;
-    height: auto;
+.bolas-fundo .bola-verde1 {
+    position: absolute;
+    left: 0px;
+    top: 6vh;
+    z-index: -3;
 }
 
-.imgs__dec2{
-    position: fixed;
-    top: 20vh;
-    right: -14vw;
-    width: 20vw;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-.imgs__dec2 img{
-    width: 30%;
-    height: auto;
+.bolas-fundo .bola-verde2 {
+    position: absolute;
+    right: 0px;
+    top: 6vh;
+    z-index: -3;
 }
 
-.imgs__dec3{
-    position: fixed;
-    bottom: -2vh;
-    right: -10vw;
-    width: 20vw;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-.imgs__dec3 img{
-    width: 60%;
-    height: auto;
+.bolas-fundo .bola-rosa {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -3;
+    /* top: 55%; */
 }
 
 
@@ -415,7 +395,7 @@ button:hover {
     }
 
     .bolas-fundo .bola-rosa {
-        bottom: -15%;
+        bottom: -1%;
     }
 
     .voltar-link {
@@ -472,18 +452,6 @@ button:hover {
     .botoes button {
         font-size: 16px;
         padding: 10px 20px;
-    }
-
-    /* Imagens Decorativas:  */
-    .decorative__img1{
-        top: 20vh;
-    }
-    .decorative__img1 img{
-        width: 50%;
-        height: auto;
-    }
-    .decorative__img3{
-        bottom: -2vw;
     }
 }
 
@@ -700,15 +668,15 @@ button:hover {
     }
 
     /* Imagens Decorativas:  */
-    .decorative__img1{
-        top: 20vh;
+    .bolas-fundo .bola-verde1 {
+        width: 70px;
     }
-    .decorative__img1 img{
-        width: 50%;
-        height: auto;
+    .bolas-fundo .bola-verde2 {
+        width: 80px;
     }
-    .decorative__img3{
-        bottom: -2vw;
+
+    .bolas-fundo .bola-rosa {
+        display: none;
     }
 }
 

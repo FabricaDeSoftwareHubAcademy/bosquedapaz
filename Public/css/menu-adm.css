@@ -65,7 +65,7 @@
 
 .nav-item:after{
     content: "";
-    background-color: #FB4616;
+    background-color: #FF4713;
     height: 3px;
     width: 0%;
     display: block;
@@ -111,7 +111,7 @@
 }
 
 .item-submenu:hover {
-    color: #FC1269;
+    color: #FF4713;
 }
 
 .btn-login {
@@ -119,7 +119,7 @@
     height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #FC1269;
+    background-color: #FF4713;
     box-shadow: 0px 0px 5px #FDF148;
     display: none;
 }
@@ -225,7 +225,7 @@
 }
 
 .icon-login:hover {
-    background-color: #FC1269;
+    background-color: #FF4713;
     color: white;
     transition: all .2s ease-in;
 }
