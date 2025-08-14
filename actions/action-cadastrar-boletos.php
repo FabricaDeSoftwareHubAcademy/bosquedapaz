@@ -139,13 +139,13 @@ try {
             $mail->CharSet = 'UTF-8';
             $mail->isSMTP();
             $mail->SMTPAuth = true;
-            $mail->Username = 'camargogdy@gmail.com';
-            $mail->Password = 'esfg akxf funw kmtp';
+            $mail->Username = 'contatofeirabosquedapaz@gmail.com';
+            $mail->Password = 'parw wwmm welz awot';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
 
-            $mail->setFrom('camargogdy@gmail.com', 'Feira Bosque da Paz');
+            $mail->setFrom('contatofeirabosquedapaz@gmail.com', 'Feira Bosque da Paz');
             $mail->addAddress($emailExpositor);
             $mail->isHTML(true);
             $mail->Subject = "Novo boleto gerado"; 
