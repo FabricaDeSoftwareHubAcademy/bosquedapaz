@@ -64,7 +64,7 @@
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Matheus Manja</h3>
-                        <p class="card-subtitle">Desenvolvedor</p>
+                        <p class="card-subtitle">Desenvolvedor Front-end, com conhecimentos em Back-end e experiência no desenvolvimento de jogos 2D com Unity.</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -79,7 +79,7 @@
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Raquel Marques</h3>
-                        <p class="card-subtitle">Designer</p>
+                        <p class="card-subtitle">Designer de interfaces e sites, com experiência em Pixel Art, ilustração e design de jogos 2D criativos e funcionais.</p>
                     </div>
                     <div class="card-footer">
                         <div class="avatar">
@@ -210,7 +210,7 @@
             </div>
         </section>
 
-        <!-- Seção do Jogo Unity -->
+        <!-- Section 6: Seção do Jogo Unity -->
         <section class="section" id="section_game">
             <button id="close-game" onclick="closeGame()">Fechar</button>
             <div id="unity-container" class="unity-desktop">
