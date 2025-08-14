@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
-    <link rel="stylesheet" href="../../../Public/css/css-home/sobre-jogo.css">
+    <link rel="stylesheet" href="../../../Public/css/css-home/style-sobre-jogo.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Sobre o Jogo</title>
@@ -25,7 +25,7 @@
             </div>
             <div class="right_logo">
                 <img src="../../../Public/imgs/imgs-sobre-jogo/logo_jogo.png" alt="Bosque Explore Logo" />
-                <button>JOGAR</button>
+                <button onclick="startGame()">JOGAR</button>
             </div>
         </section>
 
@@ -206,15 +206,37 @@
                 <p>Caminhe pela Feira Bosque da Paz de um jeito único com o Bosque Explore!
                     Clique em jogar e venha se aventurar.
                 </p>
-                <button>JOGAR</button>
+                <button onclick="startGame()">JOGAR</button>
             </div>
         </section>
+
+        <!-- Seção do Jogo Unity -->
+        <section class="section" id="section_game">
+            <button id="close-game" onclick="closeGame()">Fechar</button>
+            <div id="unity-container" class="unity-desktop">
+                <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+                <div id="unity-loading-bar">
+                    <div id="unity-logo"></div>
+                    <div id="unity-progress-bar-empty">
+                        <div id="unity-progress-bar-full"></div>
+                    </div>
+                </div>
+                <div id="unity-warning"></div>
+                <div id="unity-footer">
+                    <div id="unity-webgl-logo"></div>
+                    <div id="unity-fullscreen-button"></div>
+                    <div id="unity-build-title">mapa-feira</div>
+                </div>
+            </div>
+        </section>
+    </main>
     </main>
 
     <!-- Includ do Rodapé -->
     <?php include "../../../Public/include/home/rodape.html"; ?> 
 
     <script src="../../../Public/js/js-home/sobre-jogo.js"></script>
+    <script src="../../../Public/js/js-home/play-game.js"></script>
 </body>
 </html>
 

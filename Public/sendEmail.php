@@ -12,13 +12,13 @@ class EmailService {
         try {
             $mail->isSMTP();
             $mail->SMTPAuth = true;
-            $mail->Username = 'gui.m.neves.teste@gmail.com';  // Seu e-mail do Gmail
-            $mail->Password = 'elpb yivy xjhx qmgm';  // Senha de aplicativo (se a 2FA estiver habilitada)
+            $mail->Username = 'contatofeirabosquedapaz@gmail.com';  // Seu e-mail do Gmail
+            $mail->Password = 'parw wwmm welz awot';  // Senha de aplicativo (se a 2FA estiver habilitada)
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // Usando TLS
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
         
-            $mail->setFrom('gui.m.neves.teste@gmail.com', 'Feira bosque da paz');
+            $mail->setFrom('contatofeirabosquedapaz@gmail.com', 'Feira bosque da paz');
             $mail->addAddress($email);
             
             $mail->isHTML(true);
@@ -72,13 +72,13 @@ class EmailService {
         try {
             $mail->isSMTP();
             $mail->SMTPAuth = true;
-            $mail->Username = 'gui.m.neves.teste@gmail.com';  // Seu e-mail do Gmail
-            $mail->Password = 'elpb yivy xjhx qmgm';  // Senha de aplicativo (se a 2FA estiver habilitada)
+            $mail->Username = 'contatofeirabosquedapaz@gmail.com';  // Seu e-mail do Gmail
+            $mail->Password = 'parw wwmm welz awot';  // Senha de aplicativo (se a 2FA estiver habilitada)
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // Usando TLS
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
         
-            $mail->setFrom('gui.m.neves.teste@gmail.com', 'Feira bosque da paz');
+            $mail->setFrom('contatofeirabosquedapaz@gmail.com', 'Feira Bosque da Paz');
             $mail->addAddress($email);
             
             $mail->isHTML(true);
