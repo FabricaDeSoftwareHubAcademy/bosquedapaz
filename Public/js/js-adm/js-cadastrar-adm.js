@@ -54,11 +54,10 @@ form.addEventListener("submit", async (e) => {
       });
     }
   } catch (error) {
-    console.error("Erro na requisição:", error);
     openModalMensagem({
       tipo: "erro",
       titulo: "Erro inesperado",
-      mensagem: "Ocorreu um erro ao tentar cadastrar. Verifique o console."
+      mensagem: "Colaborador não pode ser cadastro"
     });
   }
 });

@@ -27,7 +27,6 @@ buscar_adm.addEventListener('keyup', async function (e) {
             } else {
                 var response = await resposta.json();
 
-                console.log(response)
                 tBody.innerHTML = ''
                 response.data.forEach(colab => {
                     tBody.innerHTML += `<tr>

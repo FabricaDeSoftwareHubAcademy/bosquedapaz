@@ -86,7 +86,6 @@ async function menuAdm() {
             element.src = '../../../Public/assets/MOCA.png';
         });
 
-        // console.log(imgLogin);
     }
 }
 

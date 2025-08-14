@@ -27,13 +27,10 @@ async function carregarDadosADM() {
                 alert('Erro ao carregar dados do ADM: ' + (data.message || 'Resposta inválida'));
             }
         } catch (err) {
-            console.error('Erro ao parsear JSON:', err);
-            console.log('Resposta recebida:', text);
-            alert('Resposta do servidor não é JSON válido.');
+            window.location.reload()
         }
     } catch (error) {
-        console.error('Erro no carregamento:', error);
-        alert('Erro na requisição dos dados');
+        window.location.reload()
     }
 }
 
@@ -156,7 +153,6 @@ btnConfirmar.addEventListener("click", async () => {
         }
         // setTimeout(() => {window.location.reload()}, 1000)
     } catch (error) {
-        console.error("Erro na requisição:", error);
         msmErro.textContent = "Erro na comunicação com o servidor.";
         modalErro.showModal();
     }
