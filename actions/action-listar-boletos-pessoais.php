@@ -1,17 +1,32 @@
 <?php
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
+
 use app\Controller\Boleto;
+use app\Controller\Expositor;
 
-session_start();
+header('Content-Type: application/json');
 
-if (!isset($_SESSION['login'])) {
-    echo json_encode([]);
-    exit;
+try {
+    $tokenLogin = obterLogin()['jwt'];
+    $id_login = $tokenLogin->sub;
+
+    $expositor = new Expositor();
+    $ex = $expositor->listar("id_login = '$id_login'");
+
+    if (empty($ex)) {
+        echo json_encode(["erro" => "Expositor não encontrado"]);
+        exit;
+    }
+
+    $id_expositor = $ex[0]['id_expositor'];
+
+    $boleto = new Boleto();
+
+    $boletos = $boleto->CapturarBoletosPorUsuario($id_expositor);
+
+    echo json_encode($boletos);
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode(["erro" => $e->getMessage()]);
 }
-
-$idPessoa = $_SESSION['login']['perfil'];
-// $idPessoa = 5;
-$boletoObj = new Boleto();
-$boletos = $boletoObj->CapturarBoletosPorUsuario($idPessoa);
-
-echo json_encode($boletos);

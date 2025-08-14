@@ -45,10 +45,10 @@ $tolken = getTolkenCsrf();
             <form action="../../../actions/action-termos.php" method="post" class="form-aceitar-edital">
 
                 <!-- arquivo de destino -->
-                <input type="hidden" name="destino" value="../app/views/client/cadastro-expositor-client.php">
+                <input type="hidden" name="destino" value="../app/Views/Client/cadastro-expositor-client.php">
 
                 <!-- arquivo de origem -->
-                <input type="hidden" name="origem" value="../app/views/client/termos-expositor.php">
+                <input type="hidden" name="origem" value="../app/Views/Client/termos-expositor.php">
 
                 <div class="div-input-check">
                     <input type="checkbox" value="Sim" name="termos" id="termos" class="input-check">
