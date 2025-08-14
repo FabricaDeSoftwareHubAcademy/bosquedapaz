@@ -421,6 +421,7 @@ main {
     box-shadow: 0 8px 15px rgba(58, 76, 56, 0.4);
 }
 
+/* Section 6: Jogo Unity */
 #section_game {
     display: none; /* Oculta a seção do jogo inicialmente */
     position: relative;
