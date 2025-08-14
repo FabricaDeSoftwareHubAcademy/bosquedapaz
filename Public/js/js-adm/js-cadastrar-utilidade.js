@@ -23,6 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
     modalConfirmar?.addEventListener("click", (e) => { if (e.target === modalConfirmar) modalConfirmar.close(); });
 });
 
+document.getElementById("imagem").addEventListener("change", function (event) {
+    const file = event.target.files[0];
+
+    const previewImage = document.getElementById('preview-image');
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            previewImage.src = e.target.result;
+            previewImage.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    } else {
+        previewImage.style.display = 'none';
+    }
+});
+
+
 // Abrir modal de confirmação com validações
 btnCadastrar?.addEventListener("click", function (event) {
     event.preventDefault();

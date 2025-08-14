@@ -46,7 +46,6 @@ $tolken = getTolkenCsrf();
                         </tbody>
                     </table>
                 </div>
-                <?php include '../../../Public/include/Butons-forms.html'; ?>
                 <div class="btns">
                     <a href="./" class="voltar">
                         <!-- <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar"> -->
@@ -155,6 +154,7 @@ $tolken = getTolkenCsrf();
                     </div>
                 </dialog>
             </div>
+            <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>
     </main>
 

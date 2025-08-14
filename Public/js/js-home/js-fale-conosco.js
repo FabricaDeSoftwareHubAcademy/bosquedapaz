@@ -15,7 +15,6 @@ form.addEventListener('submit',async function email (e){
     });
 
     let response = await dados_php.json()
-    console.log(response)
 
     if (response.status == 200){
         closeModalLoading()

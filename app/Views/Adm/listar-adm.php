@@ -32,6 +32,10 @@ $tolken = getTolkenCsrf();
       <div class="box">
         <h2>LISTAR COLABORADOR</h2>
         <!-- Seta Voltar  -->
+<<<<<<< HEAD
+        <!-- <div class="seta__voltar"><a href="./"><img src="../../../Public/assets/icons/voltar.png"  alt=""></a></div> -->
+=======
+>>>>>>> main-test
         <div class="container">
           <!-- Formulário de Busca -->
           <form method="POST" id="formBusca">
@@ -57,8 +61,8 @@ $tolken = getTolkenCsrf();
               </tbody>
             </table>
           </div>
-          <?php include '../../../Public/include/Butons-forms.html'; ?>
-        </div>  
+        </div>
+        <?php include '../../../Public/include/Butons-forms.html'; ?>  
       </div>  
     </main>
 

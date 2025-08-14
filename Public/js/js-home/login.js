@@ -33,7 +33,6 @@ document.getElementById('formLogin').addEventListener('submit', async (e) => {
         if ('location' in response) {
             window.location.replace(response.location)
         } else {
-            console.log(response)
             document.getElementById('erro-title').innerText = 'Login inválido'
             openModalError()
         }

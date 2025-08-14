@@ -12,7 +12,11 @@ async function carregarMeusBoletos() {
     tbody.innerHTML = '';
 
     if (data.length > 0) {
-      data.forEach(boleto => {
+      const boletosPagos = data.filter(boleto => boleto.status_boleto === 'Pago');
+      const boletosPendentes = data.filter(boleto => boleto.status_boleto === 'Pendente');
+      const boletosOrdenados = [...boletosPagos, ...boletosPendentes];
+
+      boletosOrdenados.forEach(boleto => {
 
         let classeStatus = '';
         if (boleto.status_boleto === 'Pago') {
@@ -21,23 +25,23 @@ async function carregarMeusBoletos() {
           classeStatus = 'listb-btn-pendente';
         }
 
+
         const row = `
-          <tr class="listb-tr">
-            <td class="listb-boleto-td">${boleto.id_boleto}</td>
+          <tr class="listb-tr" data-id-boleto="${boleto.id_boleto}">
+            <td class="listb-boleto-td">${boleto.nome}</td>
             <td class="listb-boleto-td">${boleto.vencimento}</td>
             <td class="listb-boleto-td">${boleto.mes_referencia}</td>
             <td class="listb-boleto-td">R$ ${parseFloat(boleto.valor).toFixed(2)}</td>
             <td class="listb-boleto-td">
-              <button class="listb-btn-pago ${classeStatus}" disabled>${boleto.status_boleto}</button>
+              <button class="botao-status ${classeStatus}">${boleto.status_boleto}</button>
             </td>
             <td class="listb-boleto-td">
-              <button class="listb-link btn-boleto" data-id="${boleto.id_boleto}">
-                <i class="fa-solid fa-print"></i>
-              </button>
+            <button class="listb-link btn-boleto" data-id="${boleto.id_boleto}">
+              <i class="fa-solid fa-print"></i>
+            </button>
             </td>
           </tr>
         `;
-
         tbody.innerHTML += row;
       });
     } else {
@@ -52,7 +56,7 @@ async function carregarMeusBoletos() {
   }
 }
 
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
   if (e.target.closest('.btn-boleto')) {
     const idBoleto = e.target.closest('.btn-boleto').dataset.id;
 
@@ -63,18 +67,18 @@ document.addEventListener('click', function(e) {
       method: 'POST',
       body: formData
     })
-    .then(response => {
-      if (!response.ok) throw new Error('Erro ao gerar boleto.');
-      return response.blob();
-    })
-    .then(blob => {
-      const url = window.URL.createObjectURL(blob);
-      window.open(url, '_blank');
-    })
-    .catch(err => {
-      alert('Erro ao gerar boleto.');
-      console.error(err);
-    });
+      .then(response => {
+        if (!response.ok) throw new Error('Erro ao gerar boleto.');
+        return response.blob();
+      })
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        window.open(url, '_blank');
+      })
+      .catch(err => {
+        alert('Erro ao gerar boleto.');
+        console.error(err);
+      });
   }
 });
 
