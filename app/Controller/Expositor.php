@@ -287,6 +287,7 @@ class Expositor extends Pessoa
                 'link_instagram' => $this->link_instagram,
                 'whats' => $this->whats,
                 'link_facebook' => $this->link_facebook,
+                'telefone' => $this->telefone,
             ];
     
             // Adicionar foto_perfil apenas se foi definida

@@ -124,8 +124,8 @@
 }
 
 .perfilEdit-icone{
-    max-width: auto;
-    max-height: 45px;
+    max-width: 12.9%;
+    max-height: auto;
     object-fit: cover;
     /* border-radius: 8px; */
     margin-left: 10%;
@@ -284,8 +284,8 @@ input[type="file"]{
 }
 
 .perfilEdit-img{
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 90%;
 }
 
 .perfilEdit-btns{
@@ -349,7 +349,7 @@ input[type="file"]{
     }
 
     .perfilEdit-form{
-        height: 1100px;
+        height: 90%;
         width: 90%;
         gap: 15px;
         justify-content: unset;
@@ -397,8 +397,7 @@ input[type="file"]{
 
     .perfilEdit-foto-info{
         margin-top: 8%;
-        
-        min-height: 205px;
+        min-height: 215px;
         max-height: 205px;
     }
 
@@ -409,6 +408,11 @@ input[type="file"]{
     .perfilEdit-load-foto{
         min-width: 165px;
         max-width: 165px;
+    }
+
+    .perfilEdit-icone{
+        max-width: 23%;
+        max-height: auto;
     }
 
     .perfilEdit-div-group{  
@@ -422,9 +426,10 @@ input[type="file"]{
 
     .perfilEdit-btns{
         width: 75%;
-        min-height: 50px;
-        max-height: 50px;
-        margin-top: 0%;
+        height: 4.5%;
+        /* min-height: 50px;
+        max-height: 50px; */
+        position: sticky;
     }
 
     .perfilEdit-btn{
@@ -433,7 +438,7 @@ input[type="file"]{
 
     .perfilEdit-link-voltar{
         position: relative;
-        bottom: 1%;
+        bottom: 4%;
         right: 38%;
     }
 }

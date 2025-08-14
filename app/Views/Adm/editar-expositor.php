@@ -126,15 +126,18 @@ $tolken = getTolkenCsrf();
                 <?php echo $tolken; ?>
 
                 <section class="perfilEdit-btns">
-                    <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>
-                    <button id="btn_salvar" data-modal="perfilEdit-salvar" name="edit_expo" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
+                    <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/assets/icons/voltar.svg" alt="" class="perfilEdit-img-voltar"></a>
+                    <div class="perfilEdit-div-btns">
+                        <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>
+                        <button id="btn_salvar" data-modal="perfilEdit-salvar" name="edit_expo" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
+                    </div>
                 </section>
     
             </form>
             
-            <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/assets/icons/voltar.svg" alt="" class="perfilEdit-img-voltar"></a>
 
             <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
+            <?php include '../../../Public/include/modais/modal-error.html'; ?>
 
         </div>
         

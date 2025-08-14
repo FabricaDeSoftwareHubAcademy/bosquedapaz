@@ -113,7 +113,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     let dados_php = await fetch('../../../actions/actions-expositor.php?id=' + id_expositor);
     let response = await dados_php.json();
 
-    console.log('Dados recebidos:', response);
+    // console.log('Dados recebidos:', response);
 
     if (response.status == 200) {
         input_id_expositor.value = response.expositor.id_expositor;
@@ -122,8 +122,19 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_email.value = response.expositor.email;
         input_insta.value = response.expositor.link_instagram;
         input_facebook.value = response.expositor.link_facebook;
-        let arrayWhats = response.expositor.whats.split('/')
-        input_whatsapp.value = arrayWhats[arrayWhats.length - 1].substr(2)
+
+        let arrayWhats = response.expositor.whats.split('/');
+        input_whatsapp.value = maskNumTelefone(arrayWhats[arrayWhats.length - 1].slice(2));
+
+        let arrayInsta = response.expositor.link_instagram.split('/');
+        input_insta.value = arrayInsta[arrayInsta.length - 1];
+
+        let arrayFacebook = response.expositor.link_facebook.split('/');
+        input_facebook.value = arrayFacebook[arrayFacebook.length - 1];
+
+        input_whatsapp.addEventListener("input", ()=> {
+            input_whatsapp.value = maskNumTelefone(input_whatsapp.value)
+        });
         
         // Configurar logo se existir
         if (response.expositor.img_perfil) {
@@ -169,6 +180,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         const editarperfil_form = document.getElementById("perfilEdit_form");
         let formdata = new FormData(editarperfil_form);
+        formdata.append('id_login', response.expositor.id_login)
 
         console.log('Dados sendo enviados:');
         for (const [key, value] of formdata.entries()) {
@@ -184,15 +196,15 @@ window.addEventListener("DOMContentLoaded", async () => {
             let result = await response.json();
             console.log('Resposta do servidor:', result);
 
-            if (response.status === 200 || result.status === 200) {
+            if (response.status === 200) {
                 openModalSucesso();
-                
-                // Opcional: recarregar a página após um tempo para mostrar as mudanças
-                setTimeout(() => {
-                    window.location.reload();
-                }, 2000);
-            } else {
-                alert('Erro ao salvar: ' + (result.msg || 'Erro desconhecido'));
+
+            } else if (response.status === 400) {
+                openModalError();
+                console.log(response)
+                document.getElementById('erro-title').innerHTML = result.msg
+                document.getElementById('erro-text').style.display = 'none'
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
             }
         } catch (error) {
             console.error('Erro na requisição:', error);
@@ -205,3 +217,21 @@ window.addEventListener("DOMContentLoaded", async () => {
         button_close_perfilEdit.addEventListener('click', closeModalSucesso);
     }
 });
+
+function maskNumTelefone(num) {
+    let valor = num;
+    valor = valor.replace(/\D/g, '');
+    valor = valor.substring(0, 11);
+    if (valor.length > 0) {
+        valor = '(' + valor;
+    }
+    if (valor.length > 3) {
+        valor = valor.slice(0, 3) + ') ' + valor.slice(3);
+    }
+    if (valor.length > 10) {
+        valor = valor.slice(0, 10) + '-' + valor.slice(10);
+    }
+    
+    return valor;
+}
+

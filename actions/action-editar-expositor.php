@@ -13,6 +13,12 @@ function linkInstagram($ins){
 function linkWhatsapp($whats){
     return 'https://wa.me/55' . $whats;
 }
+function linkFacebook($facebook){
+    return 'https://www.facebook.com/' . $facebook;
+}
+function limparMascaraTelefone($telefone) {
+    return preg_replace('/[^0-9]/', '', $telefone);
+}
 
 // Função para upload de imagens
 function uploadImagem($img, $tipo = 'produto') {
@@ -67,14 +73,29 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     $id_expositor = $_POST['id_expositor'];
     $objExpo = new Expositor();
     $objImagem = new Imagem();
+
+    $email = htmlspecialchars(strip_tags($_POST['email']));
+    $id = htmlspecialchars(strip_tags($_POST['id_login']));
+    $emailExiste = $objExpo->emailExiste($email);
+    if($emailExiste){
+        if ($emailExiste['id_login'] != $id) {
+            http_response_code(400);
+            echo json_encode([
+                'status' => 400,
+                'msg' => 'Não é possivel cadastrar, email existente',
+            ]);
+            exit;
+        }
+    }
     
     // Configurar dados básicos
-    $objExpo->setNome_marca($_POST['nome']);
-    $objExpo->setDescricao($_POST['descricao']);
-    $objExpo->setlink_instagram($_POST['instagram']);
-    $objExpo->setLink_facebook($_POST['facebook']);
-    $objExpo->setWhats($_POST['whatsapp']);
-    $objExpo->setEmail($_POST['email']);
+    $objExpo->setNome_marca(htmlspecialchars(strip_tags($_POST['nome'])));
+    $objExpo->setDescricao(htmlspecialchars(strip_tags($_POST['descricao'])));
+    $objExpo->setlink_instagram(linkInstagram(htmlspecialchars(strip_tags($_POST['instagram']))));
+    $objExpo->setLink_facebook(htmlspecialchars(strip_tags($_POST['facebook'])));
+    $objExpo->setWhats(linkWhatsapp(limparMascaraTelefone(htmlspecialchars(strip_tags($_POST['whatsapp'])))));
+    $objExpo->setTelefone(limparMascaraTelefone(htmlspecialchars(strip_tags($_POST['whatsapp']))));
+    $objExpo->setEmail($email);
     
     $imagensProcessadas = [];
     $erros = [];
