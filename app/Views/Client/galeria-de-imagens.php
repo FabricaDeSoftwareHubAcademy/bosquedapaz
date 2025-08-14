@@ -55,71 +55,7 @@
 
     <h2>Nome do Evento</h2>
     <!-- Area da Galeria de Imagens:  -->
-    <div class="container_galeria">
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem20.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem21.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem22.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem22.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem23.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem24.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem25.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem33.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem34.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem37.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem38.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem39.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem40.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem41.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem42.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem43.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem44.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem45.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem46.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem47.png" alt="">
-      </div>
-      <div class="item-galeria">
-        <img src="../../../Public/imgs/imagem20.png" alt="">
-      </div>
-    </div>
+    <div class="container_galeria"></div>
   </section>
 
   <!-- Modal: Ao clicar na Imagem:  -->
@@ -129,7 +65,8 @@
     </button>      
     <img id="img-dialog-view" src="" alt="">
   </dialog>
-  
+
+  <script src="../../../Public/js/js-home/js-listar-fotos-evento.js"></script>
   <script src="../../../Public/js/js-home/script-galeria.js"></script>
 
 </body>

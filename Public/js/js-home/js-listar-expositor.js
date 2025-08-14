@@ -1,3 +1,12 @@
+function padraoCorRua(text){
+    let novoText = ''
+    text.split('_').forEach(str => {
+        novoText += ' '+str
+    });
+    return novoText
+}
+
+
 let contentCards = document.getElementById('content-cards')
 
 async function chamarModalExpositor(id){
@@ -22,8 +31,7 @@ async function chamarModalExpositor(id){
         contentModal.innerHTML = `
         <div class="left__side">
             <div class="container__logo">
-                <div class="div__logo"><img class="img_logo_expositor" src="../../../Public/assets/MOCA.png" alt="image perfil "></div>
-                <!--${response.expositor.img_perfil}-->
+                <div class="div__logo"><img class="img_logo_expositor" src="${response.expositor.img_perfil}" alt="image perfil "></div>
             </div>  
             <div class="container__h1"><h1>Produtos</h1></div>
             <div class="container__imgs">
@@ -85,7 +93,7 @@ async function chamarModalExpositor(id){
 
                 <div class="div__categoria div__cor__rua">
                     <h3 class="title_informacoes">Cor da Rua</h3>
-                    <div class="div__cor ${response.expositor.cor_rua}"><p>${response.expositor.cor_rua}</p></div>
+                    <div class="div__cor ${response.expositor.cor_rua}"><p>${padraoCorRua(response.expositor.cor_rua)}</p></div>
                 </div>
             </div>
                 
@@ -101,12 +109,10 @@ async function carregarExpositores() {
     try {
         const response = await fetch("../../../actions/actions-expositor.php?rand=0");
         const data = await response.json();
-        console.log(data)
 
         const container = document.getElementById("expositores-container");
 
         data.expositor.forEach(expo => {
-            console.log(`EXPO =====> ${JSON.stringify(expo)}`);
             const card = document.createElement("div");
             card.classList.add("content-card-expo");
             card.innerHTML = `
@@ -118,7 +124,7 @@ async function carregarExpositores() {
                         <h3 class="nome-expo">${expo.nome_marca}</h3>
                         <div class="detalhes-expo">
                             <p class="para-cate">Categoria: <span class="span-cate">${expo.descricao}</span></p>
-                            <p class="para-color">Rua: <span class="span-color ${expo.cor_rua}">${expo.cor_rua}</span>
+                            <p class="para-color">Rua: <span class="span-color ${expo.cor_rua}">${padraoCorRua(expo.cor_rua)}</span>
                         </p>
                         </div>
                         <button class="btn-ver-info open-modal" data-modal="m-per-expo" onclick="chamarModalExpositor(${expo.id_expositor})">Ver Mais</button>

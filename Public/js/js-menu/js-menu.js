@@ -1,7 +1,7 @@
 const sandwich = document.getElementById('sandwich')
 const navMenu = document.getElementById('nav-bar')
 const navList = document.getElementById('nav-list')
-sandwich.addEventListener('click', function(){
+sandwich.addEventListener('click', function () {
     if (navMenu.classList.contains('open')) {
         navMenu.classList.remove('open')
         navList.style.display = 'none';
@@ -24,9 +24,9 @@ const relatorios = document.getElementById("relatorios");
 function showSubMenu(item) {
     let sub = item.children[0]
     item.addEventListener('mouseover', () => {
-    sub.style.display = 'block';
+        sub.style.display = 'block';
     })
-    
+
     item.addEventListener('mouseout', () => {
         sub.style.display = 'none';
     })
@@ -35,23 +35,23 @@ function showSubMenu(item) {
 function showSubMenuClick(item) {
     let sub = item.children[0]
     item.addEventListener('click', () => {
-        if(sub.style.display != 'block'){
+        if (sub.style.display != 'block') {
             sub.style.display = 'block';
         }
-        else if(sub.style.display != 'none'){
+        else if (sub.style.display != 'none') {
             sub.style.display = 'none';
         }
     })
 }
 
 
-if(document.body.clientWidth > 1400){
+if (document.body.clientWidth > 1400) {
     showSubMenu(cadastro)
     showSubMenu(financeiro)
     showSubMenu(lista)
     showSubMenu(relatorios)
 }
-else if(document.body.clientWidth <= 1400){
+else if (document.body.clientWidth <= 1400) {
     showSubMenuClick(cadastro)
     showSubMenuClick(financeiro)
     showSubMenuClick(lista)
@@ -64,16 +64,17 @@ async function menuAdm() {
             method: 'GET',
             credentials: 'include'
         });
-        
+
         const text = await response.json();
-        
+
+
         let imgLogin = document.querySelectorAll('#img-login');
 
         imgLogin.forEach(element => {
-            if (text.login.img_perfil == null){
+            if (text.login.img_perfil == null) {
                 element.src = '../../../Public/assets/MOCA.png';
-            }else {
-                element.src = '../../../Public/uploads/uploads-ADM/' + text.login.img_perfil;
+            } else {
+                element.src = text.login.img_perfil;
             }
         });
 
@@ -96,7 +97,7 @@ let contentOpcoesMenu = document.getElementById('content-opcoes-menu')
 let contentOpcoesMenu1 = document.getElementById('content-opcoes-menu1')
 
 loginImg.forEach(element => {
-    
+
     element.addEventListener('click', () => {
         if (contentOpcoesMenu.classList.contains('open-opcoes-menu')) {
             contentOpcoesMenu.classList.remove('open-opcoes-menu')
@@ -128,6 +129,6 @@ issoMesmo.addEventListener('mouseleave', () => {
         contentOpcoesMenu.classList.add('open-opcoes-menu')
     })
     setTimeout(() => {
-        contentOpcoesMenu.classList.remove('open-opcoes-menu')    
+        contentOpcoesMenu.classList.remove('open-opcoes-menu')
     }, 1000)
 })

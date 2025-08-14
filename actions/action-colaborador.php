@@ -25,8 +25,19 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     // Cadastro <----------------------------------------------->
     if (isset($_POST["cadastrar"])) {
-        $nome = sanitizeString($_POST['nome'] ?? '');
+        //////// VALIDANDO EMAIL /////////////
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+
+        $emailExiste = $colab->emailExiste($email);
+        if($emailExiste){
+            echo json_encode([
+                'success' => false,
+                'message' => 'Não é possivel cadastrar, email existente',
+            ]);
+            exit;
+        }
+
+        $nome = sanitizeString($_POST['nome'] ?? '');
         $telefone = limparMaskTelefone(sanitizeString($_POST['tel'] ?? ''));
         $cargo = sanitizeString($_POST['cargo'] ?? '');
         $senha = $_POST['senha'] ?? '';
@@ -137,9 +148,19 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     // Update = Edição dos dados <----------------------------------------------->
     else if (isset($_POST["atualizar"])) {
+        ////// validar email \\\\\\\\\\
+        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+
+        $emailExiste = $colab->emailExiste($email);
+        if($emailExiste){
+            echo json_encode([
+                'success' => false,
+                'message' => 'Não é possivel cadastrar, email existente',
+            ]);
+            exit;
+        }
 
         $nome = sanitizeString($_POST['nome'] ?? '');
-        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
         $telefone = limparMaskTelefone(sanitizeString($_POST['tel'] ?? ''));
         $cargo = sanitizeString($_POST['cargo'] ?? '');
         

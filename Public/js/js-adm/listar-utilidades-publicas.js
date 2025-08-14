@@ -21,7 +21,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     // --- Elementos da Busca ---
     const formBusca = document.getElementById('search-form');
     const inputBusca = document.getElementById('search-term');
-    
+
+    // --- Funções Auxiliares ---
+    function formatarDataBR(dataString) {
+        if (!dataString) return '';
+
+        const dataISO = dataString.split(' ')[0];
+        const partes = dataISO.split('-');
+
+        if (partes.length !== 3) return dataString;
+
+        return `${partes[2]}/${partes[1]}/${partes[0]}`;
+    }
+
     // --- Funções dos Modais ---
     function abrirModalConfirmar(titulo, mensagem) {
         if (tituloModalConfirmar && mensagemModalConfirmar && modalConfirmar) {
@@ -45,17 +57,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-        function formatarDataBR(dataString) {
-        if (!dataString) return '';
-    
-        const dataISO = dataString.split(' ')[0];
-    
-        const partes = dataISO.split('-');
-        if (partes.length !== 3) return dataString;
-    
-        return `${partes[2]}/${partes[1]}/${partes[0]}`;
-    }
-
     // --- Função para Renderizar a Tabela ---
     function renderizarTabela(utilidades) {
         if (!corpoTabela) return;
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const status = utilidade.status_utilidade == 1 ? 'Ativo' : 'Inativo';
                 const statusClass = utilidade.status_utilidade == 1 ? 'active' : 'inactive';
                 const statusValue = utilidade.status_utilidade;
-                
+
                 const dataInicioFormatada = formatarDataBR(utilidade.data_inicio);
                 const dataFimFormatada = formatarDataBR(utilidade.data_fim);
 
@@ -143,7 +144,7 @@ document.addEventListener("DOMContentLoaded", async () => {
              filtrarTabela(termo);
         }
     });
-
+    
     // --- Lógica para Alterar Status ---
     corpoTabela.addEventListener('click', async (e) => {
         const btn = e.target.closest('.status');

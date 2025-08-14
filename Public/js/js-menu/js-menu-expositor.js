@@ -1,7 +1,7 @@
 const sandwich = document.getElementById('sandwich')
 const navMenu = document.getElementById('nav-bar')
 const navList = document.getElementById('nav-list')
-sandwich.addEventListener('click', function(){
+sandwich.addEventListener('click', function () {
     if (navMenu.classList.contains('open')) {
         navMenu.classList.remove('open')
         navList.style.display = 'none';
@@ -22,14 +22,16 @@ async function menuAdm() {
             method: 'GET',
             credentials: 'include'
         });
+
         
         const text = await response.json();
-        console.log('Resposta bruta do servidor:', text);
-    
+        
+        localStorage.setItem('id_expositor', text.login.id_expositor)
+
         let imgLogin = document.querySelectorAll('#img-login');
-    
+
         imgLogin.forEach(element => {
-            element.src = text.login[0].img_perfil;
+            element.src = text.login.img_perfil;
         });
 
 
@@ -45,7 +47,7 @@ let contentOpcoesMenu = document.getElementById('content-opcoes-menu')
 let contentOpcoesMenu1 = document.getElementById('content-opcoes-menu1')
 
 loginImg.forEach(element => {
-    
+
     element.addEventListener('click', () => {
         if (contentOpcoesMenu.classList.contains('open-opcoes-menu')) {
             contentOpcoesMenu.classList.remove('open-opcoes-menu')
@@ -64,10 +66,12 @@ let logout = document.querySelectorAll('#logout')
 
 logout[0].addEventListener('click', async () => {
     const response = await fetch('../../../actions/action-login.php?logout=true');
+    localStorage.clear()
     document.location.reload()
 })
 logout[1].addEventListener('click', async () => {
     const response = await fetch('../../../actions/action-login.php?logout=true');
+    localStorage.clear()
     document.location.reload()
 })
 
@@ -76,5 +80,5 @@ issoMesmo.addEventListener('mouseleave', () => {
     contentOpcoesMenu.addEventListener('mouseover', () => {
         contentOpcoesMenu.classList.add('open-opcoes-menu')
     })
-    contentOpcoesMenu.classList.remove('open-opcoes-menu')    
+    contentOpcoesMenu.classList.remove('open-opcoes-menu')
 })

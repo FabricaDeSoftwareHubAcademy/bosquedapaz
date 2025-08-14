@@ -56,7 +56,7 @@ $tolken = getTolkenCsrf();
             <div class="section__box__contatos">
                 <div class="contato__email">
                     <img src="../../../Public/assets/img-email.png" alt="">
-                    <h1><a href="mailto:contato@feirabosque.com.br">feirabosquedapaz@gmail.com</a></h1>
+                    <h1><a href="mailto:contato@feirabosque.com.br">contatofeirabosquedapaz@gmail.com</a></h1>
                 </div>
                 <div class="contato__telefone">
                     <img src="../../../Public/assets/img-telefone.png" alt="">

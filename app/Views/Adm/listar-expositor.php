@@ -26,7 +26,7 @@ $tolken = getTolkenCsrf();
 
         <main class="principal">
             <div class="box">
-                <h2>LISTAR EXPOSITOR</h2>
+                <h2>LISTAR EXPOSITORES</h2>
                 <div class="container">
                     <div class="search-bar">
                       <label for="status">Procurar</label>

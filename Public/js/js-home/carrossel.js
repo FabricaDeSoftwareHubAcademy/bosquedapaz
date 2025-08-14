@@ -2,15 +2,16 @@ let slider = document.getElementById('slider')
 let arrowLeft = document.getElementById('arrow-left')
 let arrowRight = document.getElementById('arrow-right')
 let balls = document.querySelectorAll('.ball')
-balls[0].style.backgroundColor = 'green'
-
 
 let x = 0
-function trocaImagem (img, n){
-    slider.style.backgroundImage = `url('../../${img}')`
-    balls[n].style.backgroundColor = 'green'
-    balls[x].style.backgroundColor = 'white'
-    x = n
+function trocaImagem(img, n) {
+    slider.style.backgroundImage = `url('../../${img}')`;
+
+    balls.forEach((ball, i) => {
+        ball.classList.toggle('active', i === n);
+    });
+
+    x = n;
 }
 
 

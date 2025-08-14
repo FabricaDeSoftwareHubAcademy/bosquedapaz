@@ -85,17 +85,29 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
         }
 
     //////////// CADASTRAR UM NOVO EXPOSITOR \\\\\\\\\\\\\\\\
-    }else if (isset($_POST['cadastrar'])) { 
+    }else if (isset($_POST['cadastrar'])) {
 
             ////////////////// VALIDANDO O EMAIL\\\\\\\\\\\\\
 
             $email = htmlspecialchars(strip_tags($_POST['email']));
-            $existe = $expositor->emailExiste($email);
-            if($existe){
+            
+            $emailExiste = $expositor->emailExiste($email);
+            if($emailExiste){
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'Não é possivel cadastrar, email existente',
                 ]);
+                http_response_code(400);
+                exit;
+            }
+
+            $cpf = htmlspecialchars(strip_tags($_POST['cpf']));
+            
+            $cpfExiste = $expositor->cpfExiste($cpf);
+            if($cpfExiste){
+                echo json_encode([
+                    'msg' => 'Não é possivel cadastrar, CPF existente',
+                ]);
+                http_response_code(400);
                 exit;
             }
 
@@ -130,12 +142,12 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
 
             /// verificando se exite imagens
-            if (isset($_FILES['imagens'])) {
-                if (count($_FILES['imagens']['name']) == 6){
+            if (isset($_FILES)) {
+                if (count($_FILES) == 6){
                     ///////// MOVENDO A IMAGEM DE PERFIL ////////////
                     
                     // separa es imagens
-                    $imagens = getImagens($_FILES['imagens']);
+                    $imagens = $_FILES;
     
                     $caminhosImagens = array();
                     
@@ -144,9 +156,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         // verifica quantos mb
                         if( 5 < ($img['size'] / 1024) / 1024){
                             echo json_encode([
-                                'status' => 400,
                                 'msg' => 'Imagem enviada muito grande', 
                             ]);
+                            http_response_code(400);
                             exit;
                         }
     
@@ -155,9 +167,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         // verifiva qual o tipo de extenção
                         if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
                             echo json_encode([
-                                'status' => 400, 
                                 'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
                             ]);
+                            http_response_code(400);
                             exit;
                         }
                         $caminhosImagens[] = uploadImagem($img);
@@ -168,16 +180,16 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                     
                 }else {
                     echo json_encode([
-                        'status' => 400, 
                         'msg' => 'É necessário enviar 6 imagens para realizar o cadastro', 
                     ]);
+                    http_response_code(400);
                     exit;
                 }
             }else {
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'É necessário enviar imagens para realizar o cadastro', 
                 ]);
+                http_response_code(400);
                 exit;
             }
             
@@ -197,25 +209,24 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             ////////// ENVIANDO RESPOSTA \\\\\\\\\ 
             if($res){
                 echo json_encode([
-                    'status' => 200, 
                     'msg' => 'Expositor cadastrado com sucesso!',
-                    $res
                 ]);
+                http_response_code(200);
                 exit;
             }else{
                 echo json_encode([
-                    'status' => 400, 
                     'msg' => 'Não foi possível realizar o cadastro de expostor!',
-                    $res
                 ]);
+                http_response_code(400);
+                exit;
             }   
 
     }
     } catch (\Throwable $th) {
         echo json_encode([
-            'status' => 500, 
-            'msg' => 'Falha no servidor.'
+            'msg' => 'Falha no servidor!!'
         ]);
+        http_response_code(500);
         exit;
     }
 }
@@ -247,11 +258,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             $id = htmlspecialchars(strip_tags($_GET['id']));
             $imagens = new Imagem();
             //// busca imagens pelo id do expositor
-            $buscarImagem = $imagens->listar(htmlspecialchars(strip_tags($_GET['id'])));
+            $buscarImagem = $imagens->listar(htmlspecialchars(htmlspecialchars(strip_tags($_GET['id']))));
             $buscarId = $expositor->listar("id_expositor = '$id'");
             //// faz append das imagens
-            $buscarId[0]['imagens'] = $buscarImagem;
-            $response = $buscarId ? ['expositor' => $buscarId[0],$_GET['id'], 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            if($buscarId){
+                $buscarId[0]['imagens'] = $buscarImagem;
+                $response = ['expositor' => $buscarId[0], 'status' => 200];
+
+            }else {
+                $response = ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+            }
 
 
         //// RETORNA EXPOSITORES INATIVOS
@@ -272,7 +288,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         //// RETORNA OS EXPOSITORES FILTRADOS
         }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'");
+            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "= 'aguardando'" : "= 'validado'");
             $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
         
         //// RETORNA OS EXPOSITORES FILTRADOS 2

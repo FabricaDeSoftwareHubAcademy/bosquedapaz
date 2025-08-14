@@ -42,75 +42,97 @@ class Expositor extends Pessoa
         return $email;
     }
 
-    public function cadastrar()
-    {
-        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
-
-        $db = new Database('endereco');
-        $endereco_id = $db->insert_lastid(
-            [
-                'cidade' => $this->cidade,
-            ]
-        );
-
-        
-        ///// insert na tabela login \\\\\
-        
-        $db = new Database('pessoa_user');
-        $login_id = $db->insert_lastid(
-            [
-            'email' => $this->email,
-            'perfil' => '0',
-            ]
-        );
-
-            
-        ///// insert na tabela pessoa \\\\\
+    public function cpfExiste($cpf){
         $db = new Database('pessoa');
-        $pes_id = $db->insert_lastid(
-            [
-                'nome' => $this->nome,
-                'cpf' => $this->cpf,
-                'telefone' => $this->telefone,
-                'whats' => $this->whats,
-                'img_perfil' => $this->foto_perfil,
-                'link_instagram' => $this->link_instagram,
-                'id_login' => $login_id,
-                'id_endereco' => $endereco_id,
-                'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
-            ]
-        );
+
+        $email = $db->select("cpf = '$cpf'")->fetch(PDO::FETCH_ASSOC);
+
+        return $email;
+    }
 
 
-        ///// insert na tabela expostor \\\\\\
+    public function cadastrar(){
+        $conn;
+        try {
+            $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
-        $db = new Database('expositor');
-        $idExpositor = $db->insert_lastid(
-            [
-                'id_pessoa' => $pes_id,
-                'id_categoria' => $this->id_categoria,
-                'nome_marca' => $this->nome_marca,
-                'num_barraca' => $this->num_barraca,
-                'voltagem' => $this->voltagem,
-                'energia' => $this->energia,
-                'tipo' => $this->tipo,
-                'descricao' => $this->descricao,
-                'metodos_pgto' => $this->metodos_pgto,
-                'cor_rua' => $this->cor_rua,
+            $db = new Database('endereco');
+    
+            $conn = $db->getConnection();
+    
+            $conn->beginTransaction();
+    
+            $endereco_id = $db->insert_lastid(
+                [
+                    'cidade' => $this->cidade,
                 ]
             );
             
-        
-        //// insert das imagens do expositor \\\\\\
-        $imagem = new Imagem();
-        $imagem->id_expositor = $idExpositor;
-        foreach ($this->imagens as $key => $value) {
-            $imagem->caminho = $value;
-            $res = $imagem->cadastro();
+            ///// insert na tabela login \\\\\
+            
+            $db->setTable('pessoa_user');
+            $login_id = $db->insert_lastid(
+                [
+                'email' => $this->email,
+                'perfil' => '0',
+                ]
+            );
+                
+    
+            
+    
+            ///// insert na tabela pessoa \\\\\
+            $db->setTable('pessoa');   
+            $pes_id = $db->insert_lastid(
+                [
+                    'nome' => $this->nome,
+                    'cpf' => $this->cpf,
+                    'telefone' => $this->telefone,
+                    'whats' => $this->whats,
+                    'img_perfil' => $this->foto_perfil,
+                    'link_instagram' => $this->link_instagram,
+                    'link_facebook' => 'https://www.facebook.com/',
+                    'id_login' => $login_id,
+                    'id_endereco' => $endereco_id,
+                    'img_perfil' => '../../../Public/imgs/barraca-padrao.png',
+                    'termos' => $this->aceitou_termos // <== NÃO REMOVER ISSO (FUNCIONALIDADE DE ACEITAR TERMOS)
+                ]
+            );
+
+            ///// insert na tabela expostor \\\\\\
+
+            $db->setTable('expositor');
+            $idExpositor = $db->insert_lastid(
+                [
+                    'id_pessoa' => $pes_id,
+                    'id_categoria' => $this->id_categoria,
+                    'nome_marca' => $this->nome_marca,
+                    'num_barraca' => $this->num_barraca,
+                    'voltagem' => $this->voltagem,
+                    'energia' => $this->energia,
+                    'tipo' => $this->tipo,
+                    'descricao' => $this->descricao,
+                    'metodos_pgto' => $this->metodos_pgto,
+                    'cor_rua' => $this->cor_rua,
+                    ]
+            );
+
+            //// insert das imagens do expositor \\\\\\
+            
+            $conn->commit();
+
+            $imagem = new Imagem();
+            $imagem->id_expositor = $idExpositor;
+            foreach ($this->imagens as $key => $value) {
+                $imagem->caminho = $value;
+                $res = $imagem->cadastro();
+            }
+            return true;
+
+        } catch (\Throwable $th) {
+            $conn->rollBack();
+            return false;
         }
-
-
-        return $res;
     }
 
 
@@ -218,6 +240,7 @@ class Expositor extends Pessoa
             return $updateSenha;
 
         }else if ($status == 'recusado'){
+            $db = new Database('expositor');
             ///// dados expositor
             $newStatus = [
                 'validacao' => 'recusado'
@@ -239,6 +262,63 @@ class Expositor extends Pessoa
         }
     }
 
+    // public function atualizar($id){
+    //     try {
+    //         // Buscar dados do expositor
+    //         $db = new Database('expositor');
+    //         $ids_pessoa_expositor = $db->select("id_expositor = " . $id)->fetch(PDO::FETCH_ASSOC);
+            
+    //         if (!$ids_pessoa_expositor) {
+    //             error_log("Expositor não encontrado com ID: " . $id);
+    //             return false;
+    //         }
+    
+    //         // Buscar dados da pessoa para obter id_login
+    //         $db = new Database('pessoa');
+    //         $dados_pessoa = $db->select("id_pessoa = " . $ids_pessoa_expositor['id_pessoa'])->fetch(PDO::FETCH_ASSOC);
+            
+    //         if (!$dados_pessoa) {
+    //             error_log("Pessoa não encontrada com ID: " . $ids_pessoa_expositor['id_pessoa']);
+    //             return false;
+    //         }
+    
+    //         // Atualizar tabela pessoa
+    //         $res_pessoa = $db->update(
+    //             'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
+    //             [
+    //                 'link_instagram' => $this->link_instagram,
+    //                 'whats' => $this->whats,
+    //                 'link_facebook' => $this->link_facebook,
+    //             ]
+    //         );
+    
+    //         // Atualizar tabela pessoa_user (email)
+    //         $db = new Database('pessoa_user');
+    //         $res_user = $db->update(
+    //             'id_login = ' . $dados_pessoa['id_login'], // Corrigido: usar dados_pessoa em vez de $id
+    //             [
+    //                 'email' => $this->email,
+    //             ]
+    //         );
+            
+    //         // Atualizar tabela expositor
+    //         $db = new Database('expositor');
+    //         $res_expositor = $db->update(
+    //             'id_expositor = ' . $id, // Corrigido: usar $id em vez de $ids_pessoa_expositor['expositor']
+    //             [
+    //                 'nome_marca' => $this->nome_marca,
+    //                 'descricao' => $this->descricao,
+    //             ]
+    //         );
+            
+    //         return $res_pessoa && $res_expositor && $res_user;
+            
+    //     } catch (\Exception $e) {
+    //         error_log("Erro ao atualizar expositor: " . $e->getMessage());
+    //         return false;
+    //     }
+    // }
+
     public function atualizar($id){
         try {
             // Buscar dados do expositor
@@ -259,20 +339,28 @@ class Expositor extends Pessoa
                 return false;
             }
     
+            // Preparar dados para atualização da pessoa
+            $dados_pessoa_update = [
+                'link_instagram' => $this->link_instagram,
+                'whats' => $this->whats,
+                'link_facebook' => $this->link_facebook,
+            ];
+    
+            // Adicionar foto_perfil apenas se foi definida
+            if (!empty($this->foto_perfil)) {
+                $dados_pessoa_update['img_perfil'] = $this->foto_perfil;
+            }
+    
             // Atualizar tabela pessoa
             $res_pessoa = $db->update(
                 'id_pessoa = ' . $ids_pessoa_expositor['id_pessoa'],
-                [
-                    'link_instagram' => $this->link_instagram,
-                    'whats' => $this->whats,
-                    'link_facebook' => $this->link_facebook,
-                ]
+                $dados_pessoa_update
             );
     
             // Atualizar tabela pessoa_user (email)
             $db = new Database('pessoa_user');
             $res_user = $db->update(
-                'id_login = ' . $dados_pessoa['id_login'], // Corrigido: usar dados_pessoa em vez de $id
+                'id_login = ' . $dados_pessoa['id_login'],
                 [
                     'email' => $this->email,
                 ]
@@ -281,7 +369,7 @@ class Expositor extends Pessoa
             // Atualizar tabela expositor
             $db = new Database('expositor');
             $res_expositor = $db->update(
-                'id_expositor = ' . $id, // Corrigido: usar $id em vez de $ids_pessoa_expositor['expositor']
+                'id_expositor = ' . $id,
                 [
                     'nome_marca' => $this->nome_marca,
                     'descricao' => $this->descricao,
@@ -307,6 +395,11 @@ class Expositor extends Pessoa
     public function setImagens($imagens)
     {
         $this->imagens = $imagens;
+    }
+
+    public function setFoto_perfil($foto_perfil)
+    {
+        $this->foto_perfil = $foto_perfil;
     }
 
     public function setId_pessoa($id_pessoa)

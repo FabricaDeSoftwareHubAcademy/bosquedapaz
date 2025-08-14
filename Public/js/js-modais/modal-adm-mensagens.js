@@ -24,4 +24,5 @@ function openModalMensagem({ tipo = "info", titulo = "", mensagem = "" }) {
 document.getElementById("btn-modal-fechar").onclick =
 document.getElementById("close-modal-mensagem").onclick = () => {
   document.getElementById("modal-mensagem").close();
+  document.location.reload()
 };

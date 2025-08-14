@@ -45,7 +45,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             </html>
         ';
 
-        $enviarEmail = $emailService->enviarEmail('halysondasilvadosreis@gmail.com', $corpoEmail, 'Fale conosco');
+        $enviarEmail = $emailService->enviarEmail('contatofeirabosquedapaz@gmail.com', $corpoEmail, 'Fale conosco');
 
         $response = array("msg" => 'E-mail enviardo com sucesso.', "status" => 200);
         echo json_encode($response);

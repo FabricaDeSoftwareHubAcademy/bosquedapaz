@@ -40,6 +40,17 @@ use app\Models\Database;
             return $res;
         }
 
+        public function listar_mais_proximo($where = null, $order = null, $limit = null) {
+            try {
+                $db = new Database('utilidade_publica');
+                $res = $db->select($where,$order,$limit)->fetchAll(PDO::FETCH_ASSOC);
+
+                return $res;
+            } catch (\Throwable $th) {
+                return FALSE;
+            }
+        }
+
         public function editar() {
             $db = new Database('utilidade_publica');
             $res = $db->update("id_utilidade_publica =" . $this->id_utilidade_publica ,[

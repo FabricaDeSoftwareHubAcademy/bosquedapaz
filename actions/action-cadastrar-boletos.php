@@ -133,19 +133,43 @@ try {
             $mail->isHTML(true);
             $mail->Subject = "Novo boleto gerado"; 
             
-            // Corpo do e-mail com a nova estrutura
             $mensagem = "
-                <p>Olá, ". ucfirst($nomePessoa) . "!</p>
-                <p>Foi gerado um boleto para você referente ao mês de " . ucfirst($mesReferencia) . ".</p>
-                <p>Vencimento: " . $dataVencimentoClone->format('d/m/Y') . "</p>
-                <p>Valor: R$ " . $valorBr . "</p>
-                <p>O boleto está disponível para visualização no sistema.</p>
-            ";
+            <div style='
+                font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; 
+                padding: 25px; 
+                background: #ffffff; 
+                border: 1px solid #e0e0e0; 
+                border-radius: 8px; 
+                max-width: 480px; 
+                margin: auto; 
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                color: #333333;
+            '>
+                <h2 style='
+                    color: #4a90e2; 
+                    margin-bottom: 20px; 
+                    font-weight: 700;
+                    font-size: 24px;
+                '>Novo boleto gerado</h2>
+                <p style='font-size: 16px; margin-bottom: 12px;'>Olá, <strong>{$nomePessoa}</strong>!</p>
+                <p style='font-size: 16px; margin-bottom: 12px;'>Foi gerado um boleto para você referente ao mês de <strong>" . ucfirst($mesReferencia) . "</strong>.</p>
+                <p style='font-size: 16px; margin-bottom: 8px;'><strong>Vencimento:</strong> " . date('d/m/Y', strtotime($vencimento)) . "</p>
+                <p style='font-size: 16px; margin-bottom: 20px;'><strong>Valor:</strong> R$ " . number_format($valorLimpo, 2, ',', '.') . "</p>
+                <p style='font-size: 16px;'>O boleto está disponível para visualização no sistema.</p>
+                <br>
+                <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 150px; margin-bottom: 20px;''>
+                <p style='font-size: 12px; color: #888888; text-align: center;'>Feira Bosque da Paz</p>
+            </div>
+            ";            
 
             $mail->Body = $mensagem;
             $mail->AltBody = strip_tags($mensagem);
             $mail->addAttachment($caminhoCompleto);
+<<<<<<< HEAD
             $mail->addEmbeddedImage(__DIR__ . '/../Public/imgs/logo-nova-bosque-da-paz.png', 'logoEmpresa');
+=======
+            $mail->addEmbeddedImage('../Public\imgs\logo-nova-bosque-da-paz.png', 'logoEmpresa');
+>>>>>>> main-test
             $mail->send();
 
         } catch (Exception $e) {

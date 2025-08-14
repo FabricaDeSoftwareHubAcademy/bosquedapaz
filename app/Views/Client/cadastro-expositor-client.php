@@ -5,6 +5,9 @@ if (!$aceitou) {
     header("Location: termos-expositor.php");
     exit();
 }
+
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
 ?>
 
 
@@ -116,31 +119,33 @@ if (!$aceitou) {
 
                 </div>
                 <div class="conteiner_fotos" id="conteiner_fotos">
-                    <div class="content_fotos">
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
+                        <img src="../../../Public/assets/logo-trans.png" alt="oi" class="imgs_produtos" id="imagens_produtos">
+                    </div> 
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
+                    </div> 
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
+                    </div> 
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
+                    </div> 
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
-                    <div class="content_fotos">
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
+                    </div> 
+                    <div class="content_fotos" id="img_content">
                         <!-- <i class="bi bi-pencil-square excluir"></i> -->
-                        <img src="" alt="" class="imgs_produtos">
-                    </div>
+                        <img src="" alt="oi" class="imgs_produtos" id="imagens_produtos">
+                    </div> 
                 </div>
+
+                <?php echo $tolken; ?>
 
 
                 <?php include '../../../Public/include/Butons-forms.html'; ?>
@@ -163,10 +168,6 @@ if (!$aceitou) {
 
     </div>
 
-
-
-
-    <script src="../../../Public/js/js-menu/js-menu.js" defer></script>
     <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
 
 </body>
