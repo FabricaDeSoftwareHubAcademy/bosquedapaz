@@ -66,14 +66,7 @@ body{
 
 h2 {
     font-size: 2rem;
-}
-
-.box .form-box {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    
+    text-align: center;
 }
 
 .form-box form {
@@ -102,6 +95,8 @@ h2 {
     
 }
 
+
+
 .input-group input,
 .input-group textarea {
     width: 100%;
@@ -119,8 +114,10 @@ h2 {
 .form-container {
     display: flex; 
     align-items: center; 
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     gap: 40px; 
+    /* background-color: #007E70; */
     width: 100%;
     /* max-width: 900px;  */
     margin: auto;
@@ -159,8 +156,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 8%;
-    padding-right: 50px;
 }
 
 .voltar .btn-voltar {
@@ -178,6 +173,12 @@ h2 {
     display: flex;
     gap: 30px;
     /* background-color: aquamarine; */
+}
+
+.btns {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn {
@@ -217,6 +218,16 @@ h2 {
     box-shadow: 0px 5px 10px 0px rgba(0, 126, 111, 0.50);
 }
 
+.inputs-form-utilidade {
+    /* background-color: chocolate; */
+    width: 100%;
+}
+
+.inputs-form-utilidade{
+    /* background-color: chocolate; */
+    width: 60%;
+}
+
 .btn-cancelar-salvar .btn a {
     text-decoration: none;
     color: white;
@@ -240,11 +251,21 @@ h2 {
     /* border-radius: 8px;   */
     box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
 }
-.form-container, .form-box {
+
+#form_cadastrar_utilidade {
     width: 100%;
-    max-width: 100%; 
-    margin: 0 auto;
+    /* background-color: aqua; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
+
+.form-box {
+    display: flex;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
 #btns-salvar-cancelar .btns-salvar-cancelar{
     display: flex;
 }
@@ -268,6 +289,9 @@ h2 {
     }
     #btns-salvar-cancelar .btns-salvar-cancelar{
         padding: 20px;
+    }
+    .inputs-form-utilidade {
+        width: 100%;
     }
 }
 
