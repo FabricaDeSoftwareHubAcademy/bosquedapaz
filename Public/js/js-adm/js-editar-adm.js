@@ -132,7 +132,6 @@ btnConfirmar.addEventListener("click", async () => {
         });
 
         const data = await response.json();
-        console.log("Resposta do servidor:", data);
 
         if (data.success) {
             modalSucesso.showModal();
@@ -155,7 +154,7 @@ btnConfirmar.addEventListener("click", async () => {
             msmErro.textContent = mensagemErro;
             modalErro.showModal();
         }
-        setTimeout(() => {window.location.reload()}, 1000)
+        // setTimeout(() => {window.location.reload()}, 1000)
     } catch (error) {
         console.error("Erro na requisição:", error);
         msmErro.textContent = "Erro na comunicação com o servidor.";
