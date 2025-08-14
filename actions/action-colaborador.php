@@ -152,18 +152,17 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         
         ////// validar email \\\\\\\\\\
         $email = filter_var(trim(htmlspecialchars(strip_tags($_POST['email'])) ?? ''), FILTER_VALIDATE_EMAIL);
+        $id = htmlspecialchars(strip_tags($_POST['id']));
 
         $emailExiste = $colab->emailExiste($email);
         if($emailExiste){
-            if($emailExiste["email"] == $email){
+            if($emailExiste["id_login"] != $id){
                 echo json_encode([
                     'success' => false,
                     'message' => 'Não é possivel cadastrar, email existente',
                 ]);
                 exit;
             }
-            echo "oi";
-            return;
         }
 
         $nome = sanitizeString($_POST['nome'] ?? '');

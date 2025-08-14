@@ -14,7 +14,7 @@ async function carregarDadosADM() {
             if (data.success && data.data) {
                 const usuario = data.data;
 
-                document.getElementById('id').value = usuario.id_colaborador;
+                document.getElementById('id').value = usuario.id_login;
                 document.getElementById('nome').value = usuario.nome || '';
                 document.getElementById('telefone').value = maskNumTelefone(usuario.telefone) || '';
                 document.getElementById('email').value = usuario.email || '';
