@@ -14,7 +14,7 @@ async function carregarDadosADM() {
             if (data.success && data.data) {
                 const usuario = data.data;
 
-                document.getElementById('id').value = usuario.id_colaborador;
+                document.getElementById('id').value = usuario.id_login;
                 document.getElementById('nome').value = usuario.nome || '';
                 document.getElementById('telefone').value = maskNumTelefone(usuario.telefone) || '';
                 document.getElementById('email').value = usuario.email || '';
@@ -27,13 +27,10 @@ async function carregarDadosADM() {
                 alert('Erro ao carregar dados do ADM: ' + (data.message || 'Resposta inválida'));
             }
         } catch (err) {
-            console.error('Erro ao parsear JSON:', err);
-            console.log('Resposta recebida:', text);
-            alert('Resposta do servidor não é JSON válido.');
+            window.location.reload()
         }
     } catch (error) {
-        console.error('Erro no carregamento:', error);
-        alert('Erro na requisição dos dados');
+        window.location.reload()
     }
 }
 
@@ -132,7 +129,6 @@ btnConfirmar.addEventListener("click", async () => {
         });
 
         const data = await response.json();
-        console.log("Resposta do servidor:", data);
 
         if (data.success) {
             modalSucesso.showModal();
@@ -155,9 +151,8 @@ btnConfirmar.addEventListener("click", async () => {
             msmErro.textContent = mensagemErro;
             modalErro.showModal();
         }
-        setTimeout(() => {window.location.reload()}, 1000)
+        // setTimeout(() => {window.location.reload()}, 1000)
     } catch (error) {
-        console.error("Erro na requisição:", error);
         msmErro.textContent = "Erro na comunicação com o servidor.";
         modalErro.showModal();
     }

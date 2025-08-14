@@ -87,7 +87,6 @@ async function menu() {
                 })
                 logout[1].addEventListener('click', async () => {
                     const response = await fetch('../../../actions/action-login.php?logout=true');
-                    console.log(response)
                     document.location.reload()
                 })
             }

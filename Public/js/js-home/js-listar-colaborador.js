@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch("../../../actions/action-listar-colaborador.php");
         const json = await response.json();
 
-        console.log(json);
 
         if (Array.isArray(json.data)) {
             json.data.forEach(colab => {

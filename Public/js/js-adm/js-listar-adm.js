@@ -5,7 +5,6 @@ async function listar(){
         const resposta = await fetch("../../../actions/action-colaborador.php");
         const json = await resposta.json();
 
-        // console.log(json.data);
 
         if (!json.data || json.data.length === 0) {
             document.getElementById('tbody-colaboradores').innerHTML = '<tr><td colspan="6">Nenhum ADM encontrado.</td></tr>';
@@ -37,7 +36,7 @@ async function listar(){
         document.getElementById('tbody-colaboradores').innerHTML = linhas;
 
     } catch (e){
-        console.error("Erro ao listar colaboradores:", e);
+        document.getElementById('tbody-colaboradores').innerHTML = '<tr><td colspan="6">Nenhum ADM encontrado.</td></tr>';
     } 
 }
 listar();
