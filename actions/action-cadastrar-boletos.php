@@ -165,11 +165,7 @@ try {
             $mail->Body = $mensagem;
             $mail->AltBody = strip_tags($mensagem);
             $mail->addAttachment($caminhoCompleto);
-<<<<<<< HEAD
             $mail->addEmbeddedImage(__DIR__ . '/../Public/imgs/logo-nova-bosque-da-paz.png', 'logoEmpresa');
-=======
-            $mail->addEmbeddedImage('../Public\imgs\logo-nova-bosque-da-paz.png', 'logoEmpresa');
->>>>>>> main-test
             $mail->send();
 
         } catch (Exception $e) {
