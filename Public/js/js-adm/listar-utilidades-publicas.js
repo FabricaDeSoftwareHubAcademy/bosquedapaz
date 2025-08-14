@@ -45,6 +45,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
+        function formatarDataBR(dataString) {
+        if (!dataString) return '';
+    
+        const dataISO = dataString.split(' ')[0];
+    
+        const partes = dataISO.split('-');
+        if (partes.length !== 3) return dataString;
+    
+        return `${partes[2]}/${partes[1]}/${partes[0]}`;
+    }
+
     // --- Função para Renderizar a Tabela ---
     function renderizarTabela(utilidades) {
         if (!corpoTabela) return;
@@ -60,12 +71,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const status = utilidade.status_utilidade == 1 ? 'Ativo' : 'Inativo';
                 const statusClass = utilidade.status_utilidade == 1 ? 'active' : 'inactive';
                 const statusValue = utilidade.status_utilidade;
+                
+                const dataInicioFormatada = formatarDataBR(utilidade.data_inicio);
+                const dataFimFormatada = formatarDataBR(utilidade.data_fim);
 
                 html += `
                     <tr>
                         <td class="usuario-col">${utilidade.titulo}</td>
-                        <td class="usuario-col">${utilidade.data_inicio}</td>
-                        <td class="usuario-col">${utilidade.data_fim}</td>
+                        <td class="usuario-col">${dataInicioFormatada}</td>
+                        <td class="usuario-col">${dataFimFormatada}</td>
                         <td>
                             <form method="POST">
                                 <button id="ativoInativo" class="status ${statusClass}" data-id="${utilidade.id_utilidade_publica}" data-status="${statusValue}">
