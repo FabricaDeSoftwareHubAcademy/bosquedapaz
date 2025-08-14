@@ -58,9 +58,9 @@ $tolken = getTolkenCsrf();
                             </div>
                             
 
-                            <div class="btns">
-                                <?php include "../../../Public/include/Butons-forms.html" ?>
-                            </div>
+                        </div>
+                        <div class="btns">
+                            <?php include "../../../Public/include/Butons-forms.html" ?>
                         </div>
                     </form>
                 </div>
