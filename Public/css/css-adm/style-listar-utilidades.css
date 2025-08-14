@@ -62,14 +62,7 @@ h2 {
     /* Remove o sublinhado */
 }
 
-/* Cor ao passar o mouse (hover) */
-.edit-icon:hover i,
-.delete-icon:hover i {
-    color: #007bff;
-    /* Cor de hover para os ícones (ajuste conforme necessário) */
-}
-
-/* #modal-validar,
+#modal-validar,
 #modal-recusar,
 #recusado-sucesso,
 #validacao-sucesso {
@@ -109,7 +102,7 @@ h2 {
     left: 0;
     background-color: rgba(0, 0, 0, 0.589);
     z-index: 2;
-} */
+}
 
 .acao-content-recusar {
     width: 30%;
@@ -409,14 +402,14 @@ h2 {
 
 
 /* Estilo do parágrafo dentro do modal */
-/* .modal-edit {
+.modal-edit {
     margin: auto;
     border: none;
     padding: 10px;
     border-radius: 30px;
-} */
+}
 
-/* .modal-edit input[type="text"] {
+.modal-edit input[type="text"] {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -425,8 +418,10 @@ h2 {
     margin-bottom: 20px;
     box-sizing: border-box;
     background-color: #f9f9f9;
+    /* Cor de fundo suave */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-} */
+    /* Suaviza o foco */
+}
 
 /* Estilização dos botões dentro do modal */
 button {
@@ -656,34 +651,12 @@ table tbody tr:nth-child(even) {
     color: #003d8c;
 }
 
-.bolas-fundo {
-    width: 100vw;
-    height: 90vh;
-    position: relative;
-    top: -90vh;
-    z-index: -3;
-    /* animation: bolaAnim 5s infinite; */
-}
-
-/* @keyframes bolaAnim {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-} */
-
 .bolas-fundo .bola-verde1 {
     position: absolute;
     left: 0px;
     top: 6vh;
     z-index: -3;
 }
-
 .bolas-fundo .bola-verde2 {
     position: absolute;
     right: 0px;
@@ -698,12 +671,22 @@ table tbody tr:nth-child(even) {
     z-index: -3;
     /* top: 55%; */
 }
+
 .btns {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
+.usuario-col{
+    text-align: center;
+}
+/* 
+.usuario-col {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+} */
 
 .btns .voltar {
     position: absolute;
@@ -733,13 +716,26 @@ table tbody tr:nth-child(even) {
 .collaborators-table td {
   padding: 12px 15px;
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
 }
 
-/* Estilo para telas pequenas */
+#icon-editar-utilidade{
+    background-color: #dc3545;
+}
+
+#icon-editar-utilidade:hover {
+    color: #000000;
+}
+
+
+/* .collaborators-table th{
+    align-items: center;
+    justify-content: center;
+} */
+
 @media (max-width: 768px) {
   .collaborators-table thead {
-    display: none; /* Esconde o cabeçalho da tabela */
+    display: none; 
   }
 
   .collaborators-table, 
@@ -769,7 +765,6 @@ table tbody tr:nth-child(even) {
     border-bottom: 0;
   }
 
-  /* Labels para os dados - use os mesmos textos do cabeçalho */
   .collaborators-table td::before {
     content: attr(data-label);
     position: absolute;
