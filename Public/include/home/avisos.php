@@ -4,12 +4,12 @@
         <div class="fundo_eventos"></div>
         <div class="content_evento">
             <div class="content_img_evento">
-                <img src="../../../Public/imgs/img-prox-event.png" class="img_prox_event">
+                <img src="../../../Public/imgs/img-prox-event.png" class="img_prox_event" alt="Imagem referente aos próximos eventos">
             </div>
             <div class="content_info_evento">
                 <h3 class="all-titles title_evento">Próximos eventos</h3>
                 <p class="text_evento">Descubra como será nossos próximos eventos</p>
-                <img src="../../../Public/imgs/img-prox-event.png" class="img_prox_event_pequena">
+                <img src="../../../Public/imgs/img-prox-event.png" class="img_prox_event_pequena" alt="Imagem pequena referente aos próximos eventos">
                 <a href="proximos-eventos.php" target="_parent" class="all-links btn_mais_evento">Saiba Mais!</a>
             </div>
         </div>
@@ -24,11 +24,11 @@
             <div class="content_info_evento">
                 <h3 class="all-titles title_edicoes_passadas dark">Edições passadas</h3>
                 <p class="text_edicoes_passadas dark">Confira como foram nossas edições anteriores</p>
-                <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento_pequeno">
+                <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento_pequeno" alt="Imagem pequena referente as edições passadas">
                 <a href="edicoes-passadas.php" target="_parent" class="all-links btn_mais_edicoes_passadas">Saiba Mais!</a>
             </div>
             <div class="content_img_evento">
-                <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento">
+                <img src="../../../Public/imgs/img-edit-pass.png" class="img_ultimo_evento" alt="Imagem referente as edições passadas">
             </div>
         </div>
     </div>
