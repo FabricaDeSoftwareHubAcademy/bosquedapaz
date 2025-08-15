@@ -39,12 +39,12 @@ $tolken = getTolkenCsrf();
                     <div class="form-content">
                         <div class="input">
                             <label class="label" for="expositor">Expositor:</label>
-                            <input type="text" name="nome_exp" id="nome-exp" placeholder="Nome do Expositor" maxlength="50" readonly>
+                            <input type="text" name="nome_exp" id="nome-exp" placeholder="Preenchido pela pesquisa" maxlength="50" readonly>
                         </div>
 
                         <div class="input">
                             <label for="cnpj-cpf" class="label">CPF:</label>
-                            <input type="text" name="cpf_input" id="cnpj-cpf" placeholder="000.000.000-00" maxlength="14" readonly>
+                            <input type="text" name="cpf_input" id="cnpj-cpf" placeholder="Preenchido pela pesquisa" maxlength="14" readonly>
                         </div>
 
                         <div class="input">
