@@ -48,6 +48,33 @@ $tolken = getTolkenCsrf();
 
                 </section>
 
+                <section class="PerfilEdit-info-tec">
+                    <div class="novos_inputs">
+                        <label for="">cor rua</label>
+                        <select name="" class="input-info-tec select-cor-rua" id="">
+                            <option value="amarelo">amarelo</option>
+                            <option value="laranja">laranja</option>
+                            <option value="verde">verde</option>
+                            <option value="roxo">roxo</option>
+                            <option value="azul">azul</option>
+                            <option value="cinza">cinza</option>
+                            <option value="rosa_claro">rosa claro</option>
+                            <option value="rosa_escuro">rosa escuro</option>
+                            <option value="laranja_lima">laranja lima</option>
+                            <option value="preto">preto</option>
+                            <option value="vermelho">vermelho</option>
+                        </select>
+                    </div>
+                    <div class="novos_inputs">
+                        <label for="">Numero barraca</label>
+                        <input class="input-info-tec input-num-barraca" type="text" placeholder="Altere o número da barraca">
+                    </div class="novos_inputs">
+                    <div class="novos_inputs">
+                        <label for="">Categoria</label>
+                        <select name="id_categoria" id="categorias" class="input-info-tec select-categoria"></select>
+                    </div>
+                </section>
+
                 <section class="perfilEdit-desc">
                     <label class="perfilEdit-label-desc perfilEdit-important-label" for="descricao">Sobre a Empresa: </label>
                     <textarea name="descricao" id="descricao" class="perfilEdit-text-desc" placeholder="Digite uma breve descrição sobre sua empresa"></textarea>
@@ -124,17 +151,16 @@ $tolken = getTolkenCsrf();
                 </section>
 
                 <?php echo $tolken; ?>
+                <?php include '../../../Public/include/Butons-forms.html'; ?>
 
-                <section class="perfilEdit-btns">
-                    <a href="" class="perfilEdit-link-voltar"><img src="../../../Public/assets/icons/voltar.svg" alt="" class="perfilEdit-img-voltar"></a>
-                    <div class="perfilEdit-div-btns">
-                        <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>
-                        <button id="btn_salvar" data-modal="perfilEdit-salvar" name="edit_expo" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
-                    </div>
-                </section>
+                <!-- <a href="../../Views/Adm/listar-expositor.php" class="perfilEdit-link-voltar"><img src="../../../Public/assets/icons/voltar.svg" alt="" class="perfilEdit-img-voltar"></a> -->
+
+                <!-- <section class="perfilEdit-btns">
+                    <button class="perfilEdit-btn-cancel perfilEdit-btn">Cancelar</button>
+                    <button id="btn_salvar" data-modal="perfilEdit-salvar" name="edit_expo" class="perfilEdit-btn-save perfilEdit-btn">Salvar</button>
+                </section> -->
     
             </form>
-            
 
             <?php include '../../../Public/include/modais/modal-sucesso.html'; ?>
             <?php include '../../../Public/include/modais/modal-error.html'; ?>
