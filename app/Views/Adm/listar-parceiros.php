@@ -52,11 +52,7 @@ $tolken = getTolkenCsrf();
                     </table>
                 </div>              
             </div>
-            <div class="btns">
-                <a href="./" class="voltar">
-                    <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
-                </a>
-            </div>
+            <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>
      
     </main>
