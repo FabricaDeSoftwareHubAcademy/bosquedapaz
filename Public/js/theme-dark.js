@@ -8,6 +8,9 @@ let white = document.querySelectorAll('.white')
 let theme = 0
 let botaoTema = document.getElementById('toggle-theme')
 
+// Pega a logo
+let logo = document.querySelector('.img-logo')
+
 // Verifica tema salvo no localStorage
 if (localStorage.getItem('theme') === 'dark') {
     aplicarTemaEscuro()
@@ -48,6 +51,11 @@ function aplicarTemaEscuro() {
     dark.forEach(element => {
         element.style.setProperty('color', 'white', 'important')
     });
+
+    // Troca a imagem para o tema escuro usando data-attribute
+    if (logo && logo.hasAttribute('data-img-dark')) {
+        logo.src = logo.getAttribute('data-img-dark')
+    }
 }
 
 function aplicarTemaClaro() {
@@ -58,4 +66,9 @@ function aplicarTemaClaro() {
     dark.forEach(element => {
         element.style.setProperty('color', 'black', 'important')
     });
+
+    // Troca a imagem para o tema claro usando data-attribute
+    if (logo && logo.hasAttribute('data-img-light')) {
+        logo.src = logo.getAttribute('data-img-light')
+    }
 }
