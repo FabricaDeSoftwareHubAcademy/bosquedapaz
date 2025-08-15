@@ -6,19 +6,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         const utilidades = await resposta.json();
         console.log(utilidades);
         container.innerHTML = ""; // Limpa os cards estáticos
-        
-        utilidades.forEach((item, index) => {
+        const dados = utilidades.dados || [];
+
+        dados.forEach((item, index) => {
             const card = document.createElement("div");
             card.classList.add("card");
-
-            console.log(item.imagem);
 
             const imagem = item.imagem && item.imagem.trim() !== ""
                 ? `../../${item.imagem}`
                 : "../../../Public/imgs/primavera.png";
 
-
-            card.innerHTML = `
+                card.innerHTML = `
                 <div class="por-cima-card">
                     <div class="parte-superior">
                         <img class="img-ult" src="${imagem}" alt="${item.titulo}">
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             container.appendChild(card);
 
-            // Ativa o modal
+            // Modal
             const openModalBtn = card.querySelector(".open-modal");
             const modal = card.querySelector(`#modal-${index}`);
             const closeModalBtn = card.querySelector(".close-modal");

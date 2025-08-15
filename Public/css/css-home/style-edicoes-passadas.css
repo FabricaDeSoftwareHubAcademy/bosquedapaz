@@ -76,9 +76,11 @@ main {
 
 /* CARDS:  */
 .card {
+    max-width: 100%;
     width: 320px;             
-    height: 490px;
+    height: 600px;
     background-color: white;
+    overflow: hidden;
     border-radius: 10px;
     border: 2px solid var(--color-rosa);
     transition: transform 0.9s ease-in-out, box-shadow 0.9s ease-in-out;
@@ -90,9 +92,11 @@ main {
 }
 
 .img-ult{
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .card:hover {
@@ -147,7 +151,7 @@ main {
 
 .parte-superior{
     width: 100%;
-    height: 50%;
+    height: 75%;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -157,7 +161,7 @@ main {
 
 .parte-inferior {
     width: 100%;
-    height: 50%;
+    height: 25%;
     position: relative; 
     overflow: hidden;
     background-color: transparent ;

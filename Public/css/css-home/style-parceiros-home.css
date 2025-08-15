@@ -65,10 +65,11 @@
 }
 
 .card-apoio:hover {
-    margin-top:  -15px;
+    transform: translateY(-15px); /* sobe o card sem empurrar a section */
+    transition: transform 0.2s ease-in;
 }
 
-.card-apoio:hover .cabeca-card{
+.card-apoio:hover .cabeca-card {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
