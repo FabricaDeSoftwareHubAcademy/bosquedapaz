@@ -8,6 +8,7 @@ const imagens = {'files': []}
 
 input_fotos.addEventListener('input', () => {
     let files = input_fotos.files
+    console.log(files)
     for (let i = 0; i < files.length; i++) {
         if(imagens.files.length >= 6){
             openModalError()
@@ -15,6 +16,7 @@ input_fotos.addEventListener('input', () => {
             document.getElementById('erro-text').style.display = 'none'
             document.getElementById('close-modal-erro').addEventListener('click',  () => {
                 closeModalError
+                window.location.reload()
             })
         }
         imagens.files.push(files[i])
@@ -112,6 +114,17 @@ btn_salvar.addEventListener('click', function (event) {
             const formData = new FormData(form)
             formData.append('cadastrar', 'true')
             formData.append('tolkenCsrf', document.getElementById('tolkenCsrf').value)
+
+            if(imagens.files.length != 6){
+                closeModalConfirmar()
+                openModalError()
+                document.getElementById('erro-title').innerText = "Envie todas as imagens"
+                document.getElementById('erro-text').style.display = 'none'
+                document.getElementById('close-modal-erro').addEventListener('click', () => {
+                    closeModalError
+                    window.location.reload()
+                })
+            }
             for (let i = 0; i < imagens.files.length; i++) {
                 formData.append(`img-${i}`, imagens.files[i]);
             }
