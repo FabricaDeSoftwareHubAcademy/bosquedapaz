@@ -20,8 +20,8 @@ async function menu() {
                 login.forEach(element => {
                     if (text.login.perfil == 1) {
                         element.innerHTML = `
-                        <img src="../../../Public/uploads/uploads-ADM/${img_perfil}" alt="" class="img-perfil">
-                        <div class="content-acoes${i}" id="content-opcoes-menu${i}">
+                        <img src="../../../Public/uploads/uploads-ADM/${img_perfil}" alt="foto-login" class="img-perfil">
+                        <div class="content-acoes${i} dark" id="content-opcoes-menu${i}">
                             <a href="../Adm/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
@@ -32,8 +32,8 @@ async function menu() {
                         `
                     } else {
                         element.innerHTML = `
-                        <img src="${img_perfil}" alt="" class="img-perfil">
-                        <div class="content-acoes${i}" id="content-opcoes-menu${i}">
+                        <img src="${img_perfil}" alt="foto-login" class="img-perfil">
+                        <div class="content-acoes${i} dark" id="content-opcoes-menu${i}">
                             <a href="../Expositor/" class="link_login">
                                 <i class="bi bi-arrow-return-right"></i>Voltar
                             </a>
