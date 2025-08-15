@@ -6,26 +6,29 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
-    $id_foto = $_POST['id_foto'] ?? null;
-
-    if (!$id_foto || !is_numeric($id_foto)) {
-        echo json_encode(['status' => 'error', 'mensagem' => 'ID da foto inválido.']);
-        exit;
+try {
+    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+        throw new Exception('Token CSRF inválido.');
     }
 
-    try {
-        $foto = new FotosEvento();
-        $resultado = $foto->excluir($id_foto);
-        
-        if ($resultado) {
-            echo json_encode(['status' => 'success', 'mensagem' => 'Foto excluída com sucesso.']);
-        } else {
-            echo json_encode(['status' => 'error', 'mensagem' => 'Foto não encontrada ou já foi excluída.']);
-        }
-    } catch (Exception $e) {
-        echo json_encode(['status' => 'error', 'mensagem' => $e->getMessage()]);
+    $id_foto = filter_input(INPUT_POST, 'id_foto', FILTER_VALIDATE_INT);
+    if (!$id_foto) {
+        throw new Exception('ID da foto inválido.');
     }
-} else {
-    echo json_encode(['status' => 'error', 'mensagem' => 'Token CSRF inválido.']);
+
+    $foto = new FotosEvento();
+    $resultado = $foto->excluir($id_foto);
+
+    if ($resultado) {
+        echo json_encode(['status' => 'success', 'mensagem' => 'Foto excluída com sucesso.']);
+    } else {
+        echo json_encode(['status' => 'error', 'mensagem' => 'Foto não encontrada ou já foi excluída.']);
+    }
+
+} catch (Exception $e) {
+    // Log interno para debugging
+    error_log("[" . date('Y-m-d H:i:s') . "] Erro ao excluir foto: " . $e->getMessage());
+
+    // Resposta segura para o usuário
+    echo json_encode(['status' => 'error', 'mensagem' => 'Erro interno ao processar a requisição.']);
 }

@@ -1,5 +1,6 @@
 <?php
 require_once('../vendor/autoload.php');
+
 use app\Controller\Evento;
 use app\suport\Csrf;
 
@@ -9,13 +10,18 @@ function sanitizarTexto($input) {
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
-function validarData($data) {
-    $d = DateTime::createFromFormat('Y-m-d', $data);
-    return $d && $d->format('Y-m-d') === $data;
-}
+try {
+    // Validação CSRF
+    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+        throw new Exception('Requisição inválida.');
+    }
 
-if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
-    $id = (int) ($_POST['id_evento'] ?? 0);
+    // Validação dos inputs com filter_input
+    $id = filter_input(INPUT_POST, 'id_evento', FILTER_VALIDATE_INT);
+    $endereco = filter_input(INPUT_POST, 'endereco', FILTER_VALIDATE_INT);
+    $status = filter_input(INPUT_POST, 'status', FILTER_VALIDATE_INT, [
+        'options' => ['min_range' => 0, 'max_range' => 1]
+    ]);
 
     $nome = sanitizarTexto($_POST['nomedoevento'] ?? '');
     $subtitulo = sanitizarTexto($_POST['subtitulo'] ?? '');
@@ -23,17 +29,27 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $data = $_POST['dataevento'] ?? '';
     $hora_inicio = $_POST['hora_inicio'] ?? '';
     $hora_fim = $_POST['hora_fim'] ?? '';
-    $endereco = (int) ($_POST['endereco'] ?? 0);
-    $status = $_POST['status'] ?? '';
 
-    if (strlen($descricao) > 500) {
-        echo json_encode(['status' => 'error', 'mensagem' => 'A descrição deve ter no máximo 250 caracteres.']);
-        exit;
+    // Validações básicas
+    if (!$id || !$endereco || $status === false) {
+        throw new Exception('Campos numéricos inválidos.');
     }
 
-    if (empty($nome) || empty($descricao) || empty($data) || empty($subtitulo) || empty($hora_inicio) || empty($hora_fim) || empty($endereco) || !isset($_POST['status']) || !in_array($status, ['0', '1']) || !validarData($data)) {
-        echo json_encode(['status' => 'error', 'mensagem' => 'Preencha todos os campos corretamente.']);
-        exit;
+    if (empty($nome) || empty($subtitulo) || empty($descricao) || empty($data) || empty($hora_inicio) || empty($hora_fim)) {
+        throw new Exception('Preencha todos os campos corretamente.');
+    }
+
+    // Limites de caracteres
+    if (strlen($nome) > 150) {
+        throw new Exception('O nome do evento deve ter no máximo 150 caracteres.');
+    }
+
+    if (strlen($subtitulo) > 150) {
+        throw new Exception('O subtítulo do evento deve ter no máximo 150 caracteres.');
+    }
+
+    if (strlen($descricao) > 500) {
+        throw new Exception('A descrição deve ter no máximo 500 caracteres.');
     }
 
     $evento = new Evento();
@@ -46,16 +62,13 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $evento->id_endereco_evento = $endereco;
     $evento->status = $status;
 
-
-
-    // Upload de imagem (opcional)
+    // Upload de banner (opcional)
     if (!empty($_FILES['banner']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
         $extensao = strtolower(pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION));
 
         if (!in_array($extensao, $extensoesPermitidas)) {
-            echo json_encode(["status" => "error", "mensagem" => "Formato de imagem inválido."]);
-            exit;
+            throw new Exception('Formato de imagem inválido.');
         }
 
         $nomeSeguro = uniqid('evento_', true) . '.' . $extensao;
@@ -63,32 +76,43 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-eventos/';
         $destino = $diretorioDestino . $nomeSeguro;
 
-        if (move_uploaded_file($caminhoTemporario, $destino)) {
-            $eventoExistente = $evento->buscarPorId_evento($id);
-            if ($eventoExistente) {
-                $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner_evento;
-                if (file_exists($caminhoAntigo)) {
-                    unlink($caminhoAntigo);
-                }
-            }
-            $evento->banner_evento = 'uploads/uploads-eventos/' . $nomeSeguro;
-        } else {
-            echo json_encode(['status' => 'error', 'mensagem' => 'Erro ao mover a nova imagem.']);
-            exit;
+        if (!move_uploaded_file($caminhoTemporario, $destino)) {
+            throw new Exception('Erro ao mover a nova imagem.');
         }
+
+        // Remove banner antigo se existir
+        $eventoExistente = $evento->buscarPorId_evento($id);
+        if ($eventoExistente && !empty($eventoExistente->banner_evento)) {
+            $caminhoAntigo = __DIR__ . '/../Public/' . $eventoExistente->banner_evento;
+            if (file_exists($caminhoAntigo)) {
+                unlink($caminhoAntigo);
+            }
+        }
+
+        $evento->banner_evento = 'uploads/uploads-eventos/' . $nomeSeguro;
     } else {
+        // Mantém banner existente
         $eventoExistente = $evento->buscarPorId_evento($id);
         if ($eventoExistente) {
             $evento->banner_evento = $eventoExistente->banner_evento;
         }
     }
 
+    // Atualização
     $resultado = $evento->atualizar_evento($id);
 
     echo json_encode([
         'status' => $resultado ? 'success' : 'error',
         'mensagem' => $resultado ? 'Evento atualizado com sucesso.' : 'Falha ao atualizar evento.'
     ]);
-} else {
-    echo json_encode(['status' => 'error', 'mensagem' => 'Requisição inválida.']);
+
+} catch (Exception $e) {
+    // Log interno
+    error_log("[" . date('Y-m-d H:i:s') . "] Erro ao atualizar evento: " . $e->getMessage());
+
+    // Retorno seguro
+    echo json_encode([
+        'status' => 'error',
+        'mensagem' => $e->getMessage() // Em produção, pode ser genérica
+    ]);
 }
