@@ -15,10 +15,20 @@ function linkInstagram($ins) {
 
 if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
 
-    $email = $_POST['email'];
+    $email = htmlspecialchars(strip_tags($_POST['email']));
 
     try {
         $artista = new Artista();
+
+        $emailExiste = $artista->emailExiste($email); 
+        if ($emailExiste) {
+            echo json_encode([
+                'status' => 400,
+                'mensagem' => 'Não é possível cadastrar, e-mail existente.'
+            ]);
+            http_response_code(400);
+            exit;
+        }
 
         $dadosUsuario = obterLogin();
         if ($dadosUsuario['sucess']) {
