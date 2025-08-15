@@ -8,29 +8,17 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-// 🔹 Função para sanitizar texto
 function sanitizarTexto($texto) {
     return htmlspecialchars(trim($texto), ENT_QUOTES, 'UTF-8');
 }
 
-// 🔹 Funções para padronizar respostas
 function respostaErro($mensagem) {
-    echo json_encode(["status" => "error", "mensagem" => $mensagem]);
+    echo json_encode(["status" => "erro", "mensagem" => $mensagem]);
     exit;
 }
 
-function respostaSucesso($mensagem, $extra = []) {
-    echo json_encode(array_merge(["status" => "success", "mensagem" => $mensagem], $extra));
-    exit;
-}
-
-try {
-    // 🔹 Valida CSRF
-    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
-        throw new Exception("Requisição inválida.");
-    }
-
-    // 🔹 Campos obrigatórios
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+    // Validações básicas dos campos obrigatórios
     $camposObrigatorios = [
         'nome_parceiro', 'telefone', 'email', 'nome_contato',
         'tipo', 'cpf_cnpj', 'cep', 'logradouro', 'num_residencia',
@@ -41,47 +29,34 @@ try {
 
     foreach ($camposObrigatorios as $campo) {
         if (empty($_POST[$campo])) {
-            throw new Exception("O campo " . ucfirst(str_replace("_", " ", $campo)) . " é obrigatório.");
+            respostaErro("O campo " . ucfirst(str_replace("_", " ", $campo)) . " é obrigatório.");
         }
         $dadosSanitizados[$campo] = sanitizarTexto($_POST[$campo]);
     }
 
-    // 🔹 Campo opcional
+    // Sanitiza campo opcional
     $dadosSanitizados['complemento'] = isset($_POST['complemento']) ? sanitizarTexto($_POST['complemento']) : '';
 
-    // 🔹 Validação de tamanho
-    if (strlen($dadosSanitizados['nome_parceiro']) > 150) {
-        throw new Exception("O nome do parceiro deve ter no máximo 150 caracteres.");
-    }
-    if (strlen($dadosSanitizados['email']) > 150) {
-        throw new Exception("O e-mail deve ter no máximo 150 caracteres.");
-    }
-
-    // 🔹 Validação de e-mail
+    // Validação de e-mail
     if (!filter_var($dadosSanitizados['email'], FILTER_VALIDATE_EMAIL)) {
-        throw new Exception("E-mail inválido.");
+        respostaErro("E-mail inválido.");
     }
 
-    // 🔹 Validação de telefone
-    if (!preg_match('/^\d{10,11}$/', $dadosSanitizados['telefone'])) {
-        throw new Exception("O telefone deve ter 10 ou 11 dígitos numéricos.");
-    }
-
-    // 🔹 Validação de CPF/CNPJ
+    // Validação de CPF ou CNPJ (apenas formato numérico)
     $cpfCnpjNumerico = preg_replace('/\D/', '', $dadosSanitizados['cpf_cnpj']);
     if (!preg_match('/^\d{11}$|^\d{14}$/', $cpfCnpjNumerico)) {
-        throw new Exception("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
+        respostaErro("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
     }
 
-    // 🔹 Checa duplicidade
+    // Verifica duplicidade de CPF/CNPJ
     $parceiro = new Parceiro();
     if ($parceiro->existeCpfCnpj($cpfCnpjNumerico)) {
-        throw new Exception("Já existe um parceiro com esse CPF ou CNPJ.");
+        respostaErro("Já existe um parceiro com esse CPF ou CNPJ.");
     }
 
-    // 🔹 Upload da logo
+    // Validação e upload da imagem
     if (!isset($_FILES['logo']) || $_FILES['logo']['error'] !== UPLOAD_ERR_OK) {
-        throw new Exception("Erro no upload da logo.");
+        respostaErro("Erro no upload da logo.");
     }
 
     $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
@@ -90,17 +65,14 @@ try {
     $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
 
     if (!in_array($extensao, $extensoesPermitidas)) {
-        throw new Exception("Formato de imagem inválido. Permitidos: jpg, jpeg, png, gif.");
+        respostaErro("Formato de imagem inválido. Permitidos: jpg, jpeg, png, gif.");
     }
 
+    // Verificação de MIME real
     $mime = mime_content_type($arquivoTmp);
     $mimesPermitidos = ['image/jpeg', 'image/png', 'image/gif'];
     if (!in_array($mime, $mimesPermitidos)) {
-        throw new Exception("O arquivo enviado não é uma imagem válida.");
-    }
-
-    if ($_FILES['logo']['size'] > 2 * 1024 * 1024) {
-        throw new Exception("A logo não pode ultrapassar 2MB.");
+        respostaErro("O arquivo enviado não é uma imagem válida.");
     }
 
     $nomeSeguro = uniqid('parceiro_', true) . '.' . $extensao;
@@ -112,10 +84,10 @@ try {
     }
 
     if (!move_uploaded_file($arquivoTmp, $caminhoFinal)) {
-        throw new Exception("Erro ao salvar a imagem.");
+        respostaErro("Erro ao salvar a imagem.");
     }
 
-    // 🔹 Preenche objeto Parceiro
+    // Atribui os dados ao objeto Parceiro
     $parceiro->nome_parceiro = $dadosSanitizados["nome_parceiro"];
     $parceiro->telefone = $dadosSanitizados["telefone"];
     $parceiro->email = $dadosSanitizados["email"];
@@ -124,7 +96,7 @@ try {
     $parceiro->cpf_cnpj = $cpfCnpjNumerico;
     $parceiro->logo = '../Public/uploads/uploads-parceiros/' . $nomeSeguro;
 
-    // 🔹 Preenche objeto Endereco
+    // Atribui os dados ao objeto Endereco
     $endereco = new Endereco();
     $endereco->cep = $dadosSanitizados["cep"];
     $endereco->logradouro = $dadosSanitizados["logradouro"];
@@ -134,15 +106,13 @@ try {
     $endereco->estado = $dadosSanitizados["estado"];
     $endereco->complemento = $dadosSanitizados["complemento"];
 
-    // 🔹 Executa o cadastro
-    if (!$parceiro->cadastrar($endereco)) {
-        throw new Exception("Erro ao cadastrar o parceiro.");
+    // Executa o cadastro
+    $result = $parceiro->cadastrar($endereco);
+
+    if ($result) {
+        echo json_encode(["status" => 200, "msg" => "Cadastrado com sucesso!"]);
+    } else {
+        respostaErro("Erro ao cadastrar o parceiro.");
     }
-
-    respostaSucesso("Cadastrado com sucesso!");
-
-} catch (Exception $e) {
-    respostaErro($e->getMessage());
 }
-
 ?>
