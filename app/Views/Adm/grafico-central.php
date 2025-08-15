@@ -25,18 +25,18 @@
 
     <div class="enfoVisitantes">
       <div class="containerIconGrafico">
-
+        <i class="bi bi-currency-dollar iconGrafico iconMensal"></i>
       </div>
       <div class="containerInfoGrafico">
 
         <span class="spnValorVisitantes"></span>
-        <span class="spnVisitantes">$ Mensal</span>
+        <span class="spnVisitantes">Mensal</span>
       </div>
     </div>
 
     <div class="enfoExpositores">
       <div class="containerIconGrafico">
-
+        <i class="bi bi-people-fill iconGrafico iconExpositor"></i>
       </div>
       <div class="containerInfoGrafico">
         <span class="spnValorExpositores"></span>
@@ -46,7 +46,7 @@
 
     <div class="enfoArtistas">
       <div class="containerIconGrafico">
-
+        <i class="bi bi-music-note-beamed iconGrafico iconArtista"></i>
       </div>
 
       <div class="containerInfoGrafico">
@@ -58,7 +58,7 @@
 
     <div class="enfoEventosAtivos">
       <div class="containerIconGrafico">
-
+        <i class="bi bi-calendar-check iconGrafico iconEventosAtivos"></i>
       </div>
       <div class="containerInfoGrafico">
 

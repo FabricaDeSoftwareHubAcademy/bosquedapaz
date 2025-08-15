@@ -46,21 +46,45 @@
   /* border: 2px solid #0C592B; */
     border-left: 10px solid #0C592B;
 }
+.iconMensal{
+  color: #0C592B;
+}
 .enfoExpositores{
   /* border: 2px solid #FF6687; */
   border-left: 10px solid #FF6687;
+}
+.iconExpositor{
+  color: #FF6687;
 }
 .enfoArtistas{
   /* border: 2px solid #AD85FF; */
   border-left: 10px solid #AD85FF;
 }
+.iconArtista{
+  color: #AD85FF;
+}
 .enfoEventosAtivos{
   /* border: 2px solid #5EB5EF; */
   border-left: 10px solid #5EB5EF;
 }
+.iconEventosAtivos{
+  color: #5EB5EF;
+}
 .spnValorVisitantes, .spnValorExpositores,
 .spnValorArtistas, .spnValorEventosAtivos{
     font-weight: 700;
+}
+.spnVisitantes{
+  border-bottom: 3px solid #0C592B;
+}
+.spnExpositores{
+  border-bottom: 3px solid #FF6687;
+}
+.spnArtistas{
+  border-bottom: 3px solid #AD85FF;
+}
+.spnEventosAtivos{
+  border-bottom: 3px solid #5EB5EF;
 }
 
 
@@ -116,11 +140,13 @@
 }
 
 .containerIconGrafico{
-  width: 30%;
-
+  width: 20%;
+}
+.iconGrafico{
+  font-size: 30px;
 }
 .containerInfoGrafico{
-  width: 70%;
+  width: 80%;
 }
 .containerInfoGrafico,.containerIconGrafico{
 
@@ -131,7 +157,7 @@
   justify-content: center;
   flex-direction: column;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* Tablet (largura menor que 900px) */
