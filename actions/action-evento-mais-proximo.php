@@ -5,37 +5,20 @@ use app\Controller\Evento;
 
 header('Content-Type: application/json');
 
-try {
-    $eventoController = new Evento();
+$eventoController = new Evento();
 
-    // Data de hoje formatada
-    $hoje = (new DateTime())->format('Y-m-d');
+// Pega eventos com status ativo e data futura
+$hoje = (new DateTime())->format('Y-m-d');
+$eventos = $eventoController->listar_evento("status = 1 AND data_evento >= '$hoje'", "data_evento ASC", "1");
 
-    // Filtra eventos ativos com data futura
-    $eventos = $eventoController->listar_evento(
-        "status = 1 AND data_evento >= :hoje",
-        "data_evento ASC",
-        "1",
-        [':hoje' => $hoje] // Evita injeção, se listar_evento aceitar bind params
-    );
-
-    if (!empty($eventos)) {
-        echo json_encode([
-            'status' => 'success',
-            'evento' => $eventos[0]
-        ]);
-    } else {
-        echo json_encode([
-            'status' => 'error',
-            'mensagem' => 'Nenhum evento encontrado'
-        ]);
-    }
-
-} catch (Exception $e) {
-    error_log("[" . date('Y-m-d H:i:s') . "] Erro ao buscar próximo evento: " . $e->getMessage());
-
+if (!empty($eventos)) {
+    echo json_encode([
+        'status' => 'success',
+        'evento' => $eventos[0]
+    ]);
+} else {
     echo json_encode([
         'status' => 'error',
-        'mensagem' => 'Erro interno ao buscar evento.'
+        'mensagem' => 'Nenhum evento encontrado'
     ]);
 }
