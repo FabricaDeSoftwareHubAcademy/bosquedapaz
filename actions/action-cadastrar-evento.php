@@ -44,7 +44,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         $evento->id_endereco_evento = $endereco;
 
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
-            chmod("../Public/uploads/uploads-eventos/", 0777);
+            chmod("../Public/uploads/uploads-eventos/", 0755);
             $arquivoTmp = $_FILES['file']['tmp_name'];
             $nomeOriginal = basename($_FILES['file']['name']);
             $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
