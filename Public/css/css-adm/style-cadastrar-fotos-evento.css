@@ -156,6 +156,7 @@ h1 {
     margin-bottom: 20px;
     border-bottom: 2px solid #9d9fa1;
     border-right: 2px solid #9d9fa1;
+  
 }
 
 .data-imagem {
@@ -166,6 +167,7 @@ h1 {
 .preview-box {
     display: inline-block;
     position: relative;
+
 }
 .preview-box img {
     width: 150px;
@@ -177,7 +179,7 @@ h1 {
     position: absolute;
     top: 0;
     right: 5px;
-    background: #e74c3c;
+
     color: white;
     border: none;
     border-radius: 50%;
@@ -195,6 +197,8 @@ h1 {
     margin-top: 10px;
     align-items: center;
     justify-content: center;
+    padding-bottom: 10%;
+
 }
 
 
