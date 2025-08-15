@@ -89,6 +89,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
             ////////////////// VALIDANDO O EMAIL\\\\\\\\\\\\\
 
+
             $email = htmlspecialchars(strip_tags($_POST['email']));
             
             $emailExiste = $expositor->emailExiste($email);

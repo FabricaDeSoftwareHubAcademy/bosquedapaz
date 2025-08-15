@@ -27,7 +27,7 @@
 
             <!-- Botão Voltar -->
             <div class="seta_voltar">
-                <a href="feira-bosque-da-paz.php#edit_pass">
+                <a href="./">
                     <img src="../../../Public/assets/icons/voltar.png" alt="Voltar">
                 </a>
             </div>
@@ -45,5 +45,3 @@
 </html>
 
 <!-- Matheus Manja  -->
-
-<div class="seta_voltar"><a href="feira-bosque-da-paz.php#edit_pass"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
