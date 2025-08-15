@@ -284,6 +284,7 @@ main #title{
     cursor: pointer;
     position: relative;
     border: 1.5px solid transparent;
+    border-radius: 10px;
     background-origin: border-box;
     background-clip: padding-box, border-box;
     display: flex;
