@@ -66,10 +66,8 @@
 }
 
 .perfilEdit-title{
-    /* background-color: red; */
     font-size: 40px;
     text-align: center;
-    bottom: 5%;
     position: relative;
 }
 
@@ -77,28 +75,71 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
-    /* gap: 12px; */
     justify-content: space-between;
     align-items: center;
-    height: 80%;
-    /* background-color: purple; */
+    height: 85%;
     width: 70%;
 }
 
 .perfilEdit-empresas{
     display: flex;
-    /* background-color: yellow; */
     width: 100%;
-    height: 15%;
+    height: 12%;
     justify-content: space-between;
 }
+
+.PerfilEdit-info-tec{
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: .5rem;
+    justify-content: space-between;
+}
+
+.num-barraca{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: red;
+}
+
+.novos_inputs {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    height: 100%;
+}
+
+/* .num-barraca .fa-store{
+    position: absolute;
+} */
+
+.input-info-tec{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(143, 143, 143, 0.71);
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-size: 12.9px;
+}
+
+/* .input-num-barraca{
+    padding-left: 1%;
+} */
 
 .perfilEdit-logo, .perfilEdit-important-input{
     display: flex;
     flex-direction: column;
     /* background-color: green; */
     width: 48%;
-    height: 90%;
+    height: 100%;
 }
 
 .perfilEdit-important-label{
@@ -162,13 +203,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 30%;
-    /* background-color: aqua; */
+    height: 25%;
 }
 
 .perfilEdit-label-desc{
     overflow-y: hidden;
-    height: 16%;
+    height: 18%;
 }
 
 .perfilEdit-text-desc{
@@ -289,14 +329,23 @@ input[type="file"]{
 }
 
 .perfilEdit-btns{
+    right: 0%;
+    background-color: red;
     display: flex;
     align-self: flex-end;
-    /* background-color: #f4f80e; */
-    justify-content: space-between;
-    width: 30%;
-    height: 9%;
-    top: 4%;
-    position: relative;
+}
+
+.perfilEdit-link-voltar{
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+
+.perfilEdit-btn{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 19px;
 }
 
 .perfilEdit-btn-cancel{
@@ -305,21 +354,6 @@ input[type="file"]{
 
 .perfilEdit-btn-save{
     background-color: #007E70;
-}
-
-.perfilEdit-btn{
-    border: none;
-    border-radius: 10px;
-    height: 100%;
-    width: 40%;
-    color: white;
-    font-size: 19px;
-}
-
-.perfilEdit-link-voltar{
-    position: absolute;
-    bottom: 0%;
-    right: 47%;
 }
 
 .perfilEdit-img-voltar{
@@ -340,7 +374,7 @@ input[type="file"]{
     }
 
     .perfilEdit-box{
-        height: 140vh;
+        height: 130vh;
         width: 92%;
     }
 
@@ -425,11 +459,7 @@ input[type="file"]{
     }
 
     .perfilEdit-btns{
-        width: 75%;
-        height: 4.5%;
-        /* min-height: 50px;
-        max-height: 50px; */
-        position: sticky;
+        
     }
 
     .perfilEdit-btn{
@@ -437,9 +467,7 @@ input[type="file"]{
     }
 
     .perfilEdit-link-voltar{
-        position: relative;
-        bottom: 4%;
-        right: 38%;
+        
     }
 }
 
@@ -661,7 +689,14 @@ input[type="file"]{
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .PerfilEdit-info-tec{
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 992px) and (min-height: 600px) and (orientation: landscape) {
+
 
 
     .perfilEdit-main{
@@ -799,11 +834,9 @@ input[type="file"]{
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
-        /* gap: 12px; */
         justify-content: space-between;
         align-items: center;
         height: 80%;
-        /* background-color: purple; */
         width: 70%;
     }
 
