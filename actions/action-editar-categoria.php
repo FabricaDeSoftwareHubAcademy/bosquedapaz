@@ -6,83 +6,95 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-function sanitizarTexto($input) {
+//  Função auxiliar para limpar os dados de texto
+function sanitizarTexto($input)
+{
     return htmlspecialchars(strip_tags(trim($input)));
 }
 
-try {
-    // Validação CSRF
-    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
-        throw new Exception('Token CSRF inválido.');
-    }
-
+// 🚦 Apenas requisições POST são permitidas
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+    // Pega o ID e garante que seja um inteiro
     $id = (int) ($_POST['id_categoria'] ?? 0);
-    $descricao = sanitizarTexto($_POST['descricao'] ?? '');
-    $cor = $_POST['cor'] ?? '';
 
+    // Sanitiza e pega os outros campos do formulário
+    $descricao = sanitizarTexto($_POST['descricao'] ?? '');
+    $cor = $_POST['cor'] ?? ''; // Cores não precisam de sanitização complexa
+
+    // 📋 Validação dos campos obrigatórios
     if (strlen($descricao) > 30) {
-        throw new Exception('O nome da categoria deve ter no máximo 30 caracteres.');
+        echo json_encode(['status' => 'error', 'message' => 'O nome da categoria deve ter no máximo 30 caracteres.']);
+        exit;
     }
     if (empty($id) || empty($descricao) || empty($cor)) {
-        throw new Exception('Preencha todos os campos obrigatórios.');
+        echo json_encode(['status' => 'error', 'message' => 'Preencha todos os campos obrigatórios.']);
+        exit;
     }
 
     $categoriaController = new Categoria();
-    $categoriaExistente = $categoriaController->buscarPorId($id);
 
+    // Busca a categoria existente para obter o caminho do ícone antigo
+    $categoriaExistente = $categoriaController->buscarPorId($id);
     if (!$categoriaExistente) {
-        throw new Exception('Categoria não encontrada.');
+        echo json_encode(['status' => 'error', 'message' => 'Categoria não encontrada.']);
+        exit;
     }
 
-    // Mantém ícone antigo por padrão
+    // Define o caminho do ícone como o já existente por padrão
     $categoriaController->setIcone($categoriaExistente->getIcone());
 
-    // Upload de novo ícone
+    // 👇 Verifica se um novo ícone foi enviado
     if (!empty($_FILES['icone']['name'])) {
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'svg', 'gif'];
-        $extensao = strtolower(pathinfo($_FILES['icone']['name'], PATHINFO_EXTENSION));
+        $nomeArquivo = $_FILES['icone']['name'];
+        $extensao = strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
 
+        // Valida a extensão do arquivo
         if (!in_array($extensao, $extensoesPermitidas)) {
-            throw new Exception('Formato de ícone inválido. Use jpg, png, svg ou gif.');
+            echo json_encode(["status" => "error", "message" => "Formato de ícone inválido. Use jpg, png, svg ou gif."]);
+            exit;
         }
 
+        // Cria um nome de arquivo único e seguro para evitar conflitos
         $nomeSeguro = uniqid('cat_', true) . '.' . $extensao;
+        $caminhoTemporario = $_FILES['icone']['tmp_name'];
         $diretorioDestino = __DIR__ . '/../Public/uploads/uploads-categoria/';
         $destino = $diretorioDestino . $nomeSeguro;
 
+        // Cria o diretório de uploads se ele não existir
         if (!is_dir($diretorioDestino)) {
-            mkdir($diretorioDestino, 0755, true);
+            mkdir($diretorioDestino, 0777, true);
         }
 
-        if (!move_uploaded_file($_FILES['icone']['tmp_name'], $destino)) {
-            throw new Exception('Erro ao salvar o novo ícone.');
-        }
+        // Move o arquivo enviado para o diretório de destino
+        if (move_uploaded_file($caminhoTemporario, $destino)) {
+            // Se o upload foi bem-sucedido, remove o ícone antigo
+            $caminhoIconeAntigo = __DIR__ . '/../Public/' . $categoriaExistente->getIcone();
+            if (file_exists($caminhoIconeAntigo) && is_file($caminhoIconeAntigo)) {
+                unlink($caminhoIconeAntigo);
+            }
 
-        // Remove ícone antigo
-        $caminhoIconeAntigo = __DIR__ . '/../Public/' . $categoriaExistente->getIcone();
-        if (file_exists($caminhoIconeAntigo) && is_file($caminhoIconeAntigo)) {
-            unlink($caminhoIconeAntigo);
+            // Define o caminho do novo ícone para salvar no banco
+            $categoriaController->setIcone('uploads/uploads-categoria/' . $nomeSeguro);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Erro ao salvar o novo ícone.']);
+            exit;
         }
-
-        $categoriaController->setIcone('uploads/uploads-categoria/' . $nomeSeguro);
     }
 
-    // Atualiza categoria
+    // Define os demais dados no objeto
     $categoriaController->setDescricao($descricao);
     $categoriaController->setCor($cor);
 
-    if (!$categoriaController->atualizar($id)) {
-        throw new Exception('Falha ao atualizar a categoria.');
-    }
+    // Tenta atualizar a categoria no banco de dados
+    $resultado = $categoriaController->atualizar($id);
 
+    // Retorna uma resposta JSON informando o sucesso ou a falha da operação
     echo json_encode([
-        'status' => 'success',
-        'message' => 'Categoria atualizada com sucesso.'
+        'status' => $resultado ? 'success' : 'error',
+        'message' => $resultado ? 'Categoria atualizada com sucesso.' : 'Falha ao atualizar a categoria.'
     ]);
-} catch (Exception $e) {
-    error_log("[" . date('Y-m-d H:i:s') . "] Erro ao atualizar categoria: " . $e->getMessage());
-    echo json_encode([
-        'status' => 'error',
-        'message' => $e->getMessage()
-    ]);
+} else {
+    // Se a requisição não for POST, retorna um erro
+    echo json_encode(['status' => 'error', 'message' => 'Requisição inválida.']);
 }

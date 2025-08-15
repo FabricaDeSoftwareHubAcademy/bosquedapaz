@@ -6,40 +6,47 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
-if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
-    echo json_encode(['status' => 'error', 'message' => 'Requisição inválida.']);
-    exit;
-}
+if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+    $id = $_POST['id'] ?? null;
 
-$id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
+    if ($id) {
+        $catController = new Categoria();
+        $categoria = $catController->buscarPorId($id);
 
-if (!$id) {
-    echo json_encode(['status' => 'error', 'message' => 'ID inválido.']);
-    exit;
-}
+        if ($categoria) {
+            $novoStatus = $categoria->getStatus() === 'ativo' ? 'inativo' : 'ativo';
+            $categoria->setStatus($novoStatus);
 
-try {
-    $catController = new Categoria();
-    $categoria = $catController->buscarPorId($id);
-
-    if (!$categoria) {
-        echo json_encode(['status' => 'error', 'message' => 'Categoria não encontrada.']);
-        exit;
+            if ($catController->atualizar($categoria)) {
+                echo json_encode([
+                    'status' => 'success',
+                    'message' => 'Status alterado com sucesso.',
+                    'novoStatus' => $novoStatus
+                ]);
+                exit;
+            } else {
+                echo json_encode([
+                    'status' => 'error',
+                    'message' => 'Falha ao atualizar o status.'
+                ]);
+                exit;
+            }
+        } else {
+            echo json_encode([
+                'status' => 'error',
+                'message' => 'Categoria não encontrada.'
+            ]);
+            exit;
+        }
     }
 
-    $novoStatus = $categoria->getStatus() === 'ativo' ? 'inativo' : 'ativo';
-    $categoria->setStatus($novoStatus);
-
-    if ($catController->atualizar($categoria)) {
-        echo json_encode([
-            'status' => 'success',
-            'message' => 'Status alterado com sucesso.',
-            'novoStatus' => $novoStatus
-        ]);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Falha ao atualizar o status.']);
-    }
-} catch (\Exception $e) {
-    error_log("Erro ao alterar status da categoria: " . $e->getMessage());
-    echo json_encode(['status' => 'error', 'message' => 'Erro interno do sistema.']);
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'ID inválido.'
+    ]);
+} else {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Requisição inválida.'
+    ]);
 }
