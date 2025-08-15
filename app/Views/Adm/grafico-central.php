@@ -22,24 +22,49 @@
   <main class="box-ctrl">
 
   <div class="containerInfo">
+
     <div class="enfoVisitantes">
-      <span class="spnValorVisitantes"></span>
-      <span class="spnVisitantes">$ mensal</span>
+      <div class="containerIconGrafico">
+
+      </div>
+      <div class="containerInfoGrafico">
+
+        <span class="spnValorVisitantes"></span>
+        <span class="spnVisitantes">$ Mensal</span>
+      </div>
     </div>
 
     <div class="enfoExpositores">
-      <span class="spnValorExpositores"></span>
-      <span class="spnExpositores">Expositores</span>
+      <div class="containerIconGrafico">
+
+      </div>
+      <div class="containerInfoGrafico">
+        <span class="spnValorExpositores"></span>
+        <span class="spnExpositores">Expositores</span>
+      </div>
     </div>
 
     <div class="enfoArtistas">
-      <span class="spnValorArtistas"></span>
-      <span class="spnArtistas">Artistas</span>
+      <div class="containerIconGrafico">
+
+      </div>
+
+      <div class="containerInfoGrafico">
+        <span class="spnValorArtistas"></span>
+        <span class="spnArtistas">Artistas</span>
+      </div>
+
     </div>
 
     <div class="enfoEventosAtivos">
-      <span class="spnValorEventosAtivos"></span>
-      <span class="spnEventosAtivos">Eventos Ativos</span>
+      <div class="containerIconGrafico">
+
+      </div>
+      <div class="containerInfoGrafico">
+
+        <span class="spnValorEventosAtivos"></span>
+        <span class="spnEventosAtivos">Eventos Ativos</span>
+      </div>
     </div>
 
   </div>

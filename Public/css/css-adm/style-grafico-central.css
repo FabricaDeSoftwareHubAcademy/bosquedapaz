@@ -33,27 +33,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
 
     font-size: 20px;
     font-weight: 400;
 
     background-color: white;
+        box-shadow: 10px 13px 12px 0px rgba(165, 163, 163, 0.75);
+
 }
 .enfoVisitantes{
-  border: 2px solid #0C592B;
+  /* border: 2px solid #0C592B; */
     border-left: 10px solid #0C592B;
 }
 .enfoExpositores{
-  border: 2px solid #FF6687;
+  /* border: 2px solid #FF6687; */
   border-left: 10px solid #FF6687;
 }
 .enfoArtistas{
-  border: 2px solid #AD85FF;
+  /* border: 2px solid #AD85FF; */
   border-left: 10px solid #AD85FF;
 }
 .enfoEventosAtivos{
-  border: 2px solid #5EB5EF;
+  /* border: 2px solid #5EB5EF; */
   border-left: 10px solid #5EB5EF;
 }
 .spnValorVisitantes, .spnValorExpositores,
@@ -91,7 +93,9 @@
     background-color: white;
     font-weight: bold;
     color: #333;
-    border: 2px solid #ce8b36;
+    /* border: 2px solid #ce8b36; */
+    box-shadow: 10px 13px 12px 0px rgba(165, 163, 163, 0.75);
+
 }
 .containerTitleGrafico{
     width: 100%;
@@ -111,6 +115,25 @@
     /* border: 1px solid blue; */
 }
 
+.containerIconGrafico{
+  width: 30%;
+
+}
+.containerInfoGrafico{
+  width: 70%;
+}
+.containerInfoGrafico,.containerIconGrafico{
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border: 1px solid red;
+}
+
 /* Tablet (largura menor que 900px) */
 @media (max-width: 900px) {
   .grid-graficos {
@@ -124,6 +147,9 @@
   .enfoArtistas, .enfoEventosAtivos {
     flex: 0 0 45%;
     margin-bottom: 20px;
+  }
+  .spnValorVisitantes{
+    font-size: 20px;
   }
 }
 
@@ -139,5 +165,8 @@
   .enfoArtistas, .enfoEventosAtivos {
     flex: 0 0 90%;
     margin-bottom: 20px;
+  }
+  .spnValorVisitantes{
+    font-size: 20px;
   }
 }

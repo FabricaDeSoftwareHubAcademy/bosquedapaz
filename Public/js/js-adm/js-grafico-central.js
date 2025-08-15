@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         datasets: [{
             label: 'Boletos por Status',
             data: apiData.map(item => item.total_boletos || 0),
-            backgroundColor: ['rgba(255, 159, 64, 0.8)', 'rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'],
+            backgroundColor: ['rgba(99, 202, 2, 1)', 'rgba(255, 166, 0, 0.91)', 'rgba(255, 99, 132, 0.8)'],
             borderColor: ['rgba(255, 159, 64, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
             borderWidth: 1,
             hoverOffset: 4
