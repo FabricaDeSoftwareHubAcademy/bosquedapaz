@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 label: 'Expositores por Status',
                 data: labelsStatus.map(label => chartData[label]),
                 backgroundColor: ['rgba(255, 205, 86, 0.8)', 'rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'],
-                borderColor: ['rgba(255, 205, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+                // borderColor: ['rgba(255, 205, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
                 borderWidth: 1,
                 hoverOffset: 4
             }]
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             label: 'Número de Expositores',
             data: apiData.map(item => item.total_expositores || 0),
             backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            // borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1
         }]
     }));
@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
         datasets: [{
             label: 'Boletos por Status',
             data: apiData.map(item => item.total_boletos || 0),
-            backgroundColor: ['rgba(255, 159, 64, 0.8)', 'rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'],
-            borderColor: ['rgba(255, 159, 64, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+            backgroundColor: ['rgba(99, 202, 2, 1)', 'rgba(255, 166, 0, 0.91)', 'rgba(255, 99, 132, 0.8)'],
+            // borderColor: ['rgba(255, 159, 64, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
             borderWidth: 1,
             hoverOffset: 4
         }]
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             label: 'Número de Parceiros',
             data: apiData.map(item => item.total_parceiros || 0),
             backgroundColor: ['rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'],
-            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+            // borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
             borderWidth: 1
         }]
     }));
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             label: 'Número de Expositores',
             data: apiData.map(item => item.total_expositores || 0),
             backgroundColor: 'rgba(153, 102, 255, 0.8)',
-            borderColor: 'rgba(153, 102, 255, 1)',
+            // borderColor: 'rgba(153, 102, 255, 1)',
             borderWidth: 1
         }]
     }));
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             label: 'Número de Atrações',
             data: apiData.map(item => item.total_atracoes || 0),
             backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            // borderColor: 'rgba(255, 99, 132, 1)',
             borderWidth: 1
         }]
     }));
