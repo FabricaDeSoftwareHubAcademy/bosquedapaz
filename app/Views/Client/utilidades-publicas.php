@@ -15,7 +15,7 @@
 
     <main>
         <section class="container__box">
-            <div class="titulo"><h1>Utilidades Publicas</h1></div>
+            <div class="titulo"><h1>Utilidade Pública</h1></div>
             <div class="conteiner__cards">
     <!-- Os cards serão inseridos aqui via JavaScript -->
         </div>

@@ -92,7 +92,7 @@
     display: flex;
     justify-content: center;
     gap: 8px;
-    z-index: 8;
+    z-index: 2;
 }
 
 .ball {
