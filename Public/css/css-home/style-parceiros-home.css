@@ -194,84 +194,142 @@
     transform: scale(1.05);
 }
 
-/* Responsividades:  */
-@media(max-width:400px){
+
+/* Responsividade */
+
+
+/* Celulares pequenos (até 575.98px) */
+@media (max-width: 575.98px){
+    /* Título centralizado */
     .sobre-a-feira{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
     }
-
-    .sobre-a-feira h1{
-        font-size: 1rem;
-    }
-
-    .descricao-sobre-a-feira{
-        font-size: 1rem;
-        width: 300px;
-    }
-}
-
-@media (min-width: 401px) and (max-width: 586px){
-    .sobre-a-feira{
-        width: 100%;
-    }
-
-    .sobre-a-feira h1{
-        font-size: 1.2rem;
-    }
-
-    .descricao-sobre-a-feira{
-        font-size: 1rem;
-        width: 300px;
-    }
-}
-
-@media (min-width: 587px) and (max-width: 768px) {
-    .slider-parceiros {
-        animation: none;
-    }
-
     .sobre-a-feira h1{
         font-size: 1.5rem;
+        text-align: center;
+        word-wrap: break-word;
     }
 
+    /* Texto abaixo do título */
     .descricao-sobre-a-feira{
-        width: 400px;
+        font-size: 0.9rem;
+        max-width: 90%;
+        text-align: center;
     }
-}
 
-@media(max-width:768px){
-    .div-text-sobre .titulo{
-        font-size: 2rem;
-        left: 0%;
-    }
-    .section-nosso-time-quem-somos .div-descricao{
-        font-size: 2rem;
-    }
-}
-
-@media(max-width:1400px){
-    .section-nosso-time-quem-somos .div-descricao{
-        display: flex;
+    /* Cards */
+    .section-cards-apoio{
+        gap: 2rem;
+        padding: 2rem 0;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+    }
+    .card-apoio{
+        width: 90%;
+    }
+
+    /* Ajustes finos dos cards */
+    .card-apoio .top-card{
+        padding: 1rem 0;
+    }
+    .cabeca-card{
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    .img-card{
+        width: 65%;
+    }
+    .corpo-card{
+        padding: 0.8rem;
+    }
+    .nome-expo{
+        font-size: 1rem;
+    }
+    .texto-card{
+        font-size: 0.85rem;
+        line-height: 1.2rem;
     }
 }
 
-@media(max-width:1669px){
-    .section-nosso-time-quem-somos .div-descricao{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+/* Celulares médios (576px até 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    .sobre-a-feira h1{
+        font-size: 1.7rem;
+        text-align: center;
     }
-    .section-nosso-time-quem-somos .div-descricao{
-        right: 0%;
-        left: 0%;
-        font-size: 1.25rem;
-        font-weight: 200;
-        padding-left: 10%;
-        padding-right: 10%;
+    .descricao-sobre-a-feira{
+        font-size: 1rem;
+        max-width: 95%;
+        text-align: center;
+    }
+    .section-cards-apoio{
+        gap: 2.5rem;
+        padding: 3rem 0;
+    }
+    .card-apoio{
+        width: 11rem;
+    }
+}
+
+/* Tablets / celulares em paisagem (768px até 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .sobre-a-feira h1{
+        font-size: 1.9rem;
+        text-align: center;
+    }
+    .descricao-sobre-a-feira{
+        font-size: 1rem;
+        max-width: 85%;
+        text-align: center;
+    }
+    .section-cards-apoio{
+        gap: 3rem;
+    }
+    .card-apoio{
+        width: 11.5rem;
+    }
+}
+
+/* Notebooks / telas médias (992px até 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .sobre-a-feira h1{
+        font-size: 2rem;
+    }
+    .descricao-sobre-a-feira{
+        font-size: 1.1rem;
+        max-width: 80%;
+        text-align: center;
+    }
+    .section-cards-apoio{
+        gap: 3.5rem;
+    }
+}
+
+/* Desktops grandes / Full HD (1200px até 1399.98px) */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    .sobre-a-feira h1{
+        font-size: 2.2rem;
+    }
+    .descricao-sobre-a-feira{
+        font-size: 1.2rem;
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+/* Telas extra grandes (1400px+) */
+@media (min-width: 1400px){
+    .sobre-a-feira h1{
+        font-size: 2.5rem;
+    }
+    .descricao-sobre-a-feira{
+        font-size: 1.3rem;
+        max-width: 70%;
+        text-align: center;
     }
 }
