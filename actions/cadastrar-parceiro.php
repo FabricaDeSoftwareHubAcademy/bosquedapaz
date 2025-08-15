@@ -8,17 +8,29 @@ use app\suport\Csrf;
 
 header('Content-Type: application/json');
 
+// 🔹 Função para sanitizar texto
 function sanitizarTexto($texto) {
     return htmlspecialchars(trim($texto), ENT_QUOTES, 'UTF-8');
 }
 
+// 🔹 Funções para padronizar respostas
 function respostaErro($mensagem) {
-    echo json_encode(["status" => "erro", "mensagem" => $mensagem]);
+    echo json_encode(["status" => "error", "mensagem" => $mensagem]);
     exit;
 }
 
-if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
-    // Validações básicas dos campos obrigatórios
+function respostaSucesso($mensagem, $extra = []) {
+    echo json_encode(array_merge(["status" => "success", "mensagem" => $mensagem], $extra));
+    exit;
+}
+
+try {
+    // 🔹 Valida CSRF
+    if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
+        throw new Exception("Requisição inválida.");
+    }
+
+    // 🔹 Campos obrigatórios
     $camposObrigatorios = [
         'nome_parceiro', 'telefone', 'email', 'nome_contato',
         'tipo', 'cpf_cnpj', 'cep', 'logradouro', 'num_residencia',
@@ -29,34 +41,47 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     foreach ($camposObrigatorios as $campo) {
         if (empty($_POST[$campo])) {
-            respostaErro("O campo " . ucfirst(str_replace("_", " ", $campo)) . " é obrigatório.");
+            throw new Exception("O campo " . ucfirst(str_replace("_", " ", $campo)) . " é obrigatório.");
         }
         $dadosSanitizados[$campo] = sanitizarTexto($_POST[$campo]);
     }
 
-    // Sanitiza campo opcional
+    // 🔹 Campo opcional
     $dadosSanitizados['complemento'] = isset($_POST['complemento']) ? sanitizarTexto($_POST['complemento']) : '';
 
-    // Validação de e-mail
-    if (!filter_var($dadosSanitizados['email'], FILTER_VALIDATE_EMAIL)) {
-        respostaErro("E-mail inválido.");
+    // 🔹 Validação de tamanho
+    if (strlen($dadosSanitizados['nome_parceiro']) > 150) {
+        throw new Exception("O nome do parceiro deve ter no máximo 150 caracteres.");
+    }
+    if (strlen($dadosSanitizados['email']) > 150) {
+        throw new Exception("O e-mail deve ter no máximo 150 caracteres.");
     }
 
-    // Validação de CPF ou CNPJ (apenas formato numérico)
+    // 🔹 Validação de e-mail
+    if (!filter_var($dadosSanitizados['email'], FILTER_VALIDATE_EMAIL)) {
+        throw new Exception("E-mail inválido.");
+    }
+
+    // 🔹 Validação de telefone
+    if (!preg_match('/^\d{10,11}$/', $dadosSanitizados['telefone'])) {
+        throw new Exception("O telefone deve ter 10 ou 11 dígitos numéricos.");
+    }
+
+    // 🔹 Validação de CPF/CNPJ
     $cpfCnpjNumerico = preg_replace('/\D/', '', $dadosSanitizados['cpf_cnpj']);
     if (!preg_match('/^\d{11}$|^\d{14}$/', $cpfCnpjNumerico)) {
-        respostaErro("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
+        throw new Exception("CPF ou CNPJ inválido (apenas números, 11 ou 14 dígitos).");
     }
 
-    // Verifica duplicidade de CPF/CNPJ
+    // 🔹 Checa duplicidade
     $parceiro = new Parceiro();
     if ($parceiro->existeCpfCnpj($cpfCnpjNumerico)) {
-        respostaErro("Já existe um parceiro com esse CPF ou CNPJ.");
+        throw new Exception("Já existe um parceiro com esse CPF ou CNPJ.");
     }
 
-    // Validação e upload da imagem
+    // 🔹 Upload da logo
     if (!isset($_FILES['logo']) || $_FILES['logo']['error'] !== UPLOAD_ERR_OK) {
-        respostaErro("Erro no upload da logo.");
+        throw new Exception("Erro no upload da logo.");
     }
 
     $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
@@ -65,14 +90,17 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
 
     if (!in_array($extensao, $extensoesPermitidas)) {
-        respostaErro("Formato de imagem inválido. Permitidos: jpg, jpeg, png, gif.");
+        throw new Exception("Formato de imagem inválido. Permitidos: jpg, jpeg, png, gif.");
     }
 
-    // Verificação de MIME real
     $mime = mime_content_type($arquivoTmp);
     $mimesPermitidos = ['image/jpeg', 'image/png', 'image/gif'];
     if (!in_array($mime, $mimesPermitidos)) {
-        respostaErro("O arquivo enviado não é uma imagem válida.");
+        throw new Exception("O arquivo enviado não é uma imagem válida.");
+    }
+
+    if ($_FILES['logo']['size'] > 2 * 1024 * 1024) {
+        throw new Exception("A logo não pode ultrapassar 2MB.");
     }
 
     $nomeSeguro = uniqid('parceiro_', true) . '.' . $extensao;
@@ -84,10 +112,10 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     }
 
     if (!move_uploaded_file($arquivoTmp, $caminhoFinal)) {
-        respostaErro("Erro ao salvar a imagem.");
+        throw new Exception("Erro ao salvar a imagem.");
     }
 
-    // Atribui os dados ao objeto Parceiro
+    // 🔹 Preenche objeto Parceiro
     $parceiro->nome_parceiro = $dadosSanitizados["nome_parceiro"];
     $parceiro->telefone = $dadosSanitizados["telefone"];
     $parceiro->email = $dadosSanitizados["email"];
@@ -96,7 +124,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $parceiro->cpf_cnpj = $cpfCnpjNumerico;
     $parceiro->logo = '../Public/uploads/uploads-parceiros/' . $nomeSeguro;
 
-    // Atribui os dados ao objeto Endereco
+    // 🔹 Preenche objeto Endereco
     $endereco = new Endereco();
     $endereco->cep = $dadosSanitizados["cep"];
     $endereco->logradouro = $dadosSanitizados["logradouro"];
@@ -106,13 +134,15 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $endereco->estado = $dadosSanitizados["estado"];
     $endereco->complemento = $dadosSanitizados["complemento"];
 
-    // Executa o cadastro
-    $result = $parceiro->cadastrar($endereco);
-
-    if ($result) {
-        echo json_encode(["status" => 200, "msg" => "Cadastrado com sucesso!"]);
-    } else {
-        respostaErro("Erro ao cadastrar o parceiro.");
+    // 🔹 Executa o cadastro
+    if (!$parceiro->cadastrar($endereco)) {
+        throw new Exception("Erro ao cadastrar o parceiro.");
     }
+
+    respostaSucesso("Cadastrado com sucesso!");
+
+} catch (Exception $e) {
+    respostaErro($e->getMessage());
 }
+
 ?>
