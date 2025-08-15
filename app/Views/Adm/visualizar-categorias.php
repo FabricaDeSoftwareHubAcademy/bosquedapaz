@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once('../../helpers/csrf.php');
 $tolken = getTolkenCsrf();
 ?>
@@ -19,9 +19,6 @@ $tolken = getTolkenCsrf();
 <body class="corpo">
     <?php include "../../../Public/include/menu-adm.html" ?>
 
-    <img class="imagem-enzo-fundo" src="../../../Public/assets/img-bolas/bola-verde1.png" alt="B1">
-    <img class="imagem-enzo-fundo2" src="../../../Public/assets/img-bolas/bola-rosa.png" alt="B2">
-    <img class="imagem-enzo-fundo3" src="../../../Public/assets/img-bolas/bola-verde2.png" alt="B3">
     <main class="principal">
         <div class="box">
             <h1 class="title">TODAS AS CATEGORIAS</h1>
@@ -134,6 +131,11 @@ $tolken = getTolkenCsrf();
             <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>
     </main>
+    <div class="bolas-fundo">
+        <img src="../../../Public/assets/img-bolas/bola-verde1.png" alt="Bola Fundo 1" class="bola-verde1">
+        <img src="../../../Public/assets/img-bolas/bola-verde2.png" alt="Bola Fundo 2" class="bola-verde2">
+        <img src="../../../Public/assets/img-bolas/bola-rosa.png" alt="Bola Fundo 3" class="bola-rosa">
+    </div>
     <script src="../../../Public/js/js-modais/js-abrir-modal.js"></script>
     <script src="../js/main.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
