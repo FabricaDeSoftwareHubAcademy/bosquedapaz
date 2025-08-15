@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const publicoAlvo = form.querySelector('[name="publico_alvo"]').value.trim();
 
     if (!nome || !email || !telefone || !nomeArtistico || !linguagemArtistica || !valorCache || !publicoAlvo) {
-      alert("Por favor, preencha todos os campos obrigatórios.");
+      document.getElementById("erro-title").textContent = "Formulário incompleto";
+      document.getElementById("erro-text").textContent = "Por favor, preencha todos os campos obrigatórios antes de salvar.";
+      modalErro.showModal();
       return;
     }
 
@@ -102,10 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
         modalSucesso.showModal();
       } else {
+        document.getElementById("erro-title").textContent = "Erro ao cadastrar";
+        document.getElementById("erro-text").textContent = "Ocorreu um erro no cadastro. Verifique os dados e tente novamente.";
         modalErro.showModal();
       }
     } catch (erro) {
       console.error("Erro na requisição:", erro);
+      document.getElementById("erro-title").textContent = "Erro de conexão";
+      document.getElementById("erro-text").textContent = "Não foi possível se conectar ao servidor. Tente novamente mais tarde.";
       modalErro.showModal();
     }
   });
@@ -118,3 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+''
