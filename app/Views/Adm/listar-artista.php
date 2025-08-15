@@ -31,7 +31,6 @@ $tolken = getTolkenCsrf();
         <div class="search-bar">
           <label for="status" class="title">Procurar</label>
           <input type="text" id="status" placeholder="Artista" />
-          <button class="search-button">BUSCAR</button>
         </div>
 
         <div class="table-container">
