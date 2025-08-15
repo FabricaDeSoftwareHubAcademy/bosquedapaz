@@ -318,7 +318,8 @@ class Database
         FROM pessoa p
         INNER JOIN expositor e ON p.id_pessoa = e.id_pessoa
         INNER JOIN boleto b on e.id_expositor = b.id_expositor
-        WHERE e.id_expositor = :id;";
+        WHERE e.id_expositor = :id
+        ORDER BY b.id_boleto DESC;";
 
         $binds = [":id" => "$id"];
         return $this->execute($query, $binds);

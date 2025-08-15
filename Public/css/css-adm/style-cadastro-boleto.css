@@ -219,6 +219,11 @@ input#searchInput {
   cursor: pointer;
 }
 
+
+#nome-exp, #cnpj-cpf {
+  cursor: not-allowed;
+}
+
 #referencia_input:read-only {
   border: 2px solid rgb(170, 170, 170);
   border-radius: 10px;

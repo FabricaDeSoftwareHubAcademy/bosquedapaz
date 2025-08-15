@@ -162,7 +162,6 @@
     height: 45px;
     width: 100px;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .listb-btn-pendente{
@@ -175,7 +174,6 @@
     height: 45px;
     width: 100px;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 /* .listb-btn{
