@@ -1,7 +1,10 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+require '../vendor/autoload.php';
+use app\suport\Csrf;
+
+function getTolkenCsrf(){
+    return Csrf::genereteCsrf();
+}
 
 session_start();
 require_once '../app/Controller/Pessoa.php';
@@ -11,8 +14,8 @@ $email = $_SESSION['email_recuperacao'];
 
 $sucesso = false;
 
-if(isset($_POST['enviar'])){
-    $nvSenha = $_POST['nvSenha'];
+if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']) && isset($_POST['enviar'])){
+    $nvSenha = htmlspecialchars(strip_tags($_POST['nvSenha']));
 
     if(empty($email)){
         echo "O campo de e-mail não pode estar vazio.";
@@ -87,6 +90,10 @@ if(isset($_POST['enviar'])){
                             <a href="../app/Views/Client/tela-login.php" class="botao-cancelar">Cancelar</a>
                             <button type="submit" name="enviar" id="abrir-modal recsenha-modal" class="botao-redefinir open-modal" data-modal="recsenha-modal">Redefinir</button>
                         </div>
+
+                        <?php
+                            echo getTolkenCsrf();
+                        ?>
                     </form>
 
                     

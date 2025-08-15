@@ -1,8 +1,6 @@
 
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 session_start();
 require './sendEmail.php';
@@ -10,41 +8,42 @@ require_once '../app/Controller/Pessoa.php';
 use app\Controller\Pessoa;
 
 if (isset($_POST['enviar'])) {
-    $email = $_POST['email'];
+    $email = htmlspecialchars(strip_tags($_POST['email']));
     
 
-    if (empty($email)) {
-        echo "O campo de e-mail não pode estar vazio.";
-    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (empty($email)) {
+    echo "<script>alert('O campo de e-mail não pode estar vazio.'); window.history.back();</script>";
+    exit;
+}
 
-        $verificarEmail = new Pessoa();
-        $verificarEmail->setEmail($email);
-        $emailExiste = $verificarEmail->verificar_email();
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "<script>alert('E-mail inválido.'); window.history.back();</script>";
+    exit;
+}
 
 
+$verificarEmail = new Pessoa();
+$verificarEmail->setEmail($email);
+$emailExiste = $verificarEmail->verificar_email();
 
-        if (!$emailExiste) {
-            echo "<script>
-                alert('Email não encontrado.');
-                window.location.href = './tela-esqueceu-a-senha.php';
-            </script>";
-            exit;
-        } else {
-            $codigo = rand(10000, 99999);
-            $_SESSION['codigo_recuperacao'] = $codigo;
-            $_SESSION['email_recuperacao'] = $email;
+if (!$emailExiste) {
+    echo "<script>
+        alert('Email não encontrado.');
+        window.location.href = './tela-esqueceu-a-senha.php';
+    </script>";
+    exit;
+} else {
+    $codigo = rand(10000, 99999);
+    $_SESSION['codigo_recuperacao'] = $codigo;
+    $_SESSION['email_recuperacao'] = $email;
 
-            $emailService = new EmailService();
-            $mensagem = $emailService->recoverSenha($email, $codigo);
-            
-            // Exibir a mensagem de retorno
-            echo $mensagem;
-            header('Location: ./tela-esqueceu-a-senha-codigo.php');
-            exit; 
-        }
-    } else {
-        echo "E-mail inválido. Tente novamente.";
-    }
+    $emailService = new EmailService();
+    $mensagem = $emailService->recoverSenha($email, $codigo);
+
+    header('Location: ./tela-esqueceu-a-senha-codigo.php');
+    exit; 
+}
+
 }
 
 

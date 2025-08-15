@@ -147,6 +147,17 @@ class Database
         return $this->execute($query);
     }
 
+    public function selectComBindes($where = null, $params = [], $order = null, $limit = null, $fields = "*")
+    {
+        $whereSql = $where ? ' WHERE ' . $where : '';
+        $orderSql = $order ? ' ORDER BY ' . $order : '';
+        $limitSql = $limit ? ' LIMIT ' . $limit : '';
+
+        $query = 'SELECT ' . $fields . ' FROM ' . $this->table . $whereSql . $orderSql . $limitSql;
+
+        return $this->execute($query, $params);
+    }
+
     // método update, com parametros $where, $values
     public function update($where, $values)
     {
@@ -162,6 +173,21 @@ class Database
         } else {
             return false;
         }
+    }
+
+    public function updateComBinds($where, $values, $whereParams = [])
+    {
+        $fields = array_keys($values);
+        $params = array_values($values);
+
+        $query = "UPDATE " . $this->table . ' SET ' . implode('=?,', $fields) . '=? WHERE ' . $where;
+
+        // Junta os parâmetros dos valores + os do where
+        $allParams = array_merge($params, $whereParams);
+
+        $res = $this->execute($query, $allParams);
+
+        return $res ? true : false;
     }
 
     public function update_all($values1, $values2, $tableP, $id_name, $where)

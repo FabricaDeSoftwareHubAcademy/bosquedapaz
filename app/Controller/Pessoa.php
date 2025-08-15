@@ -74,12 +74,8 @@ class Pessoa
 
 public function verificar_email() {
     try {
-        // Escapa corretamente para evitar problemas com caracteres especiais
-        $emailSeguro = addslashes($this->email);
-
         $db = new Database('pessoa_user');
-        $res = $db->select("email = '{$emailSeguro}'");
-
+        $res = $db->selectComBindes("email = :email", [':email' => $this->email]);
         $dados = $res->fetch(\PDO::FETCH_ASSOC); 
 
         return !empty($dados);
@@ -91,19 +87,19 @@ public function verificar_email() {
 
 
 
+
 public function novaSenha() {
     try {
         $db = new Database('pessoa_user');
         
-        // proteger contra caracteres especiais para não quebrar a query
-        $emailSeguro = addslashes($this->email);
+        $where = "email = ?";
+        $whereParams = [$this->email]; // passa o email como parâmetro bind
         
-        $res = $db->update(
-            "email = '{$emailSeguro}'", // WHERE já com email direto
-            [
-                "senha" => $this->nvSenha
-            ]
-        );
+        $values = [
+            "senha" => $this->nvSenha
+        ];
+        
+        $res = $db->updateComBinds($where, $values, $whereParams);
         
         return $res;
     } catch (Exception $e) {
@@ -111,6 +107,7 @@ public function novaSenha() {
         return false;
     }
 }
+
 
 
 }
