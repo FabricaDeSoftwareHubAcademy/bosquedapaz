@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
 
                 const text = await response.text();
-                console.log('Resposta bruta do servidor:', text);
 
                 const data = JSON.parse(text);
 

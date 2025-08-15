@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const res = await fetch('../../../actions/action-utilidade-mais-proxima.php');
         const json = await res.json();
 
-        console.log("antes do if");
-
-
         if (json.status_utilidade === 'success') {
             const utilidade = json.utilidade;
 
