@@ -215,6 +215,9 @@
     .img_prox_event_pequena {
         display: block;
     }
+    .img_ultimo_evento_pequeno {
+        display: block;
+    }
 
     .text_edicoes_passadas, .text_evento {
         font-size: .9rem;

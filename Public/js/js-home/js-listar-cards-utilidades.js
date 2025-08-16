@@ -48,8 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <div class="modal-text-content">
                                     <h2>${item.titulo}</h2>
                                     <p>${item.descricao}</p>
-                                    <p><strong>Início:</strong> ${item.data_inicio}</p>
-                                    <p><strong>Fim:</strong> ${item.data_fim}</p>
+
                                 </div>
                             </div>
                         </div>
