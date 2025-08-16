@@ -78,7 +78,7 @@ main {
 .card {
     max-width: 100%;
     width: 320px;             
-    height: 600px;
+    height: 500px;
     background-color: white;
     overflow: hidden;
     border-radius: 10px;
@@ -105,12 +105,13 @@ main {
 
 .area_text{
     width: 100%;
-    height: 120px;
+    height: 200px;
     max-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* padding-top: 10px; */
 }
 
 /* Titulo do Card:  */
@@ -140,6 +141,7 @@ main {
     white-space: normal;
     padding: 5px;
     box-sizing: border-box;
+
 }
 
 .por-cima-card{
@@ -151,7 +153,7 @@ main {
 
 .parte-superior{
     width: 100%;
-    height: 75%;
+    height: 50%;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -161,10 +163,11 @@ main {
 
 .parte-inferior {
     width: 100%;
-    height: 25%;
+    height: 50%;
     position: relative; 
     overflow: hidden;
     background-color: transparent ;
+
 }
 
 .linha-decorativa-1 {
@@ -211,7 +214,7 @@ main {
     text-decoration: none;
     display: inline-block;
     z-index: 2;
-    top: 26%;
+    top: 10%;
     position: relative;
     left: 23%;
 }
