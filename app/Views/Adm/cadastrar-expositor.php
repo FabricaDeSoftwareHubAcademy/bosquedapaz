@@ -17,7 +17,7 @@ $tolken = getTolkenCsrf();
 </head>
 
 <body onload="getCategorias()">
-    <?php include "../../../Public/include/home/menu-home.html" ?>
+    <?php include "../../../Public/include/menu-adm.html" ?>
 
 
     <main class="principal">
@@ -202,6 +202,8 @@ $tolken = getTolkenCsrf();
 
 
     <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
+
+    <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>
 
