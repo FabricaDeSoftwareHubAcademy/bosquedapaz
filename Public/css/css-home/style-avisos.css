@@ -153,6 +153,8 @@
     background-color: #5EBB50;
     transition: var(--o-transition);
 }
+
+
 /* ATRACOES */
 
 .atracoes {
@@ -234,6 +236,9 @@
     }
 
     .img_prox_event_pequena {
+        width: 15rem;
+    }
+    .img_ultimo_evento_pequeno {
         width: 15rem;
     }
 
