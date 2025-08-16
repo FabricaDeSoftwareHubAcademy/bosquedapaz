@@ -141,44 +141,44 @@ $tolken = getTolkenCsrf();
                 <div class="conteiner_fotos">
                     <div class="content_img">
                         <label class="area_input_foto">
-                            <input type="file" class="input_img" name="img1" id="img1" accept="image/jpeg, image/png, image/jpg">
+                            <input type="file" class="input_img" name="img1" accept="image/jpeg, image/png, image/jpg">
                             <i class="bi bi-upload icon-uploads"></i>
-                            <img src="../../../Public/imgs/logo-nova-bosque-da-paz.png" class="img_produto">
+                            <img src="" id="img1" class="img_produto">
                         </label>
                     </div>
                     <div class="content_img">
                         <label class="area_input_foto">
-                            <input type="file" class="input_img" name="img2" id="img2" accept="image/jpeg, image/png, image/jpg">
+                            <input type="file" class="input_img" name="img2" accept="image/jpeg, image/png, image/jpg">
                             <i class="bi bi-upload icon-uploads"></i>
-                            <img src="../../../Public/imgs/primavera.png" class="img_produto">
+                            <img src="" id="img2" class="img_produto">
                         </label>
                     </div>
                     <div class="content_img">
                         <label class="area_input_foto">
-                            <input type="file" class="input_img" name="img2" id="img2" accept="image/jpeg, image/png, image/jpg">
+                            <input type="file" class="input_img" name="img3" accept="image/jpeg, image/png, image/jpg">
                             <i class="bi bi-upload icon-uploads"></i>
-                            <img src="../../../Public/imgs/img-teste-2.jpg" class="img_produto">
+                            <img src="" id="img3" class="img_produto">
                         </label>
                     </div>
                     <div class="content_img">
                         <label class="area_input_foto">
-                            <input type="file" class="input_img" name="img4" id="img4" accept="image/jpeg, image/png, image/jpg">
+                            <input type="file" class="input_img" name="img4" accept="image/jpeg, image/png, image/jpg">
                             <i class="bi bi-upload icon-uploads"></i>
-                            <img src="../../../Public/imgs/logo-marca.png" class="img_produto">
+                            <img src="" id="img4" class="img_produto">
                         </label>
                     </div>
                     <div class="content_img">
                         <label class="area_input_foto">
-                            <input type="file" class="input_img" name="img5" id="img5" accept="image/jpeg, image/png, image/jpg">
+                            <input type="file" class="input_img" name="img5" accept="image/jpeg, image/png, image/jpg">
                             <i class="bi bi-upload icon-uploads"></i>
-                            <img src="../../../Public/imgs/logo-marca.png" class="img_produto">
+                            <img src="" id="img5" class="img_produto">
                         </label>
                     </div>
                     <div class="content_img">
                         <label class="area_input_foto">
-                            <input type="file" class="input_img" name="img6" id="img6" accept="image/jpeg, image/png, image/jpg">
+                            <input type="file" class="input_img" name="img6" accept="image/jpeg, image/png, image/jpg">
                             <i class="bi bi-upload icon-uploads"></i>
-                            <img src="../../../Public/imgs/logo-marca.png" class="img_produto">
+                            <img src="" id="img6" class="img_produto">
                         </label>
                     </div>
                 </div>
