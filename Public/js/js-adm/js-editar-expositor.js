@@ -157,9 +157,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         
         // Configurar logo se existir
         if (response.expositor.img_perfil) {
-            icone_perfil.src = `../../${response.expositor.img_perfil}`;
+            icone_perfil.src = `${response.expositor.img_perfil}`;
             icone_perfil.style.display = 'block';
-            label_logo.innerHTML = 'Alterar logo <img src="../../' + response.expositor.img_perfil + '" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>';
+            label_logo.innerHTML = 'Alterar logo <img src="' + response.expositor.img_perfil + '" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>';
         }
         
         // Configurar imagens de produtos

@@ -66,7 +66,7 @@ buscar_expositor.addEventListener('keyup', async function(e) {
                         <td class="barraca-col">${expositor.num_barraca}</td>
                         <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
                         <td>
-                            <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
+                            <a class="edit-icon" href="editar-expositor.php?id=${expositor.id_expositor}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                         

@@ -106,7 +106,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             $logo_path = uploadImagem($_FILES['foto']);
             if ($logo_path) {
                 // Atualizar logo na tabela pessoa
-                $objExpo->setFoto_perfil($logo_path);
+                $objExpo->setFoto_perfil('../../'.$logo_path);
                 $imagensProcessadas[] = 'logo';
             } else {
                 $erros[] = 'Erro ao fazer upload da logo';
