@@ -202,7 +202,7 @@ $tolken = getTolkenCsrf();
 
 
     <script src="../../../Public/js/js-adm/js-cadastrar-expositor.js" defer></script>
-
+    <script src="../../../Public/js/js-adm/varifica_login_adm.js"></script>
     <script src="../../../Public/js/js-menu/js-menu.js"></script>
 
 </body>
