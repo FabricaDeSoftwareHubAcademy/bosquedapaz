@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
 
-        console.log("entrei em cima do action");
+
         const res = await fetch('../../../actions/action-utilidade-mais-proxima.php');
         const json = await res.json();
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             const caminhoImg = `../../${utilidade.imagem}`;
 
-            console.log("imagem === > "+ caminhoImg);
+
             if (imgPrincipal) imgPrincipal.src = caminhoImg;
             if (imgPequena) imgPequena.src = caminhoImg;
 
