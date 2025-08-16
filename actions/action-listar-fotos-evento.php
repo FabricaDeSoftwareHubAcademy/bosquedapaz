@@ -1,11 +1,12 @@
 <?php
 require_once '../vendor/autoload.php';
-
 use app\Controller\FotosEvento;
 
 header('Content-Type: application/json');
 
-$id_evento = $_GET['id_evento'] ?? null;
+// Pega dados do POST JSON
+$input = json_decode(file_get_contents('php://input'), true);
+$id_evento = $input['id_evento'] ?? null;
 
 if (!$id_evento || !is_numeric($id_evento)) {
     echo json_encode([
