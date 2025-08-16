@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (json.status === 'success') {
             eventos = json.dados;
-            console.log("Eventos:", eventos);
+
             montarCarrossel(eventos);
             atualizarDescricaoEEspacos(eventos[0]);
         } else {
