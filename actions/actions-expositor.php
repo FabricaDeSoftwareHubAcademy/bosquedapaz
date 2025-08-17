@@ -201,6 +201,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             $expositor->setEnergia(        htmlspecialchars(strip_tags($_POST['energia'])));
             $expositor->setTipo(           htmlspecialchars(strip_tags($_POST['tipo'])));
             $expositor->setId_categoria(   htmlspecialchars(strip_tags($_POST['id_categoria'])));
+            $expositor->setDescricao('');
             
             
             ///////// CADASTRANDO NO BD \\\\\\\\\\\\\
@@ -238,91 +239,139 @@ header('Content-Type: application/json');
 /////////////////// MEDOTO GET ///////////////////
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
-    try {
+    try{
         $expositor = new Expositor();
-
-
-        ////  RETORNA TODOS OS EXPOSITORES EM ESPERA
-        if (isset($_GET['emespera'])){
-            $emEspera = $expositor->listar("validacao = 'aguardando'");
-            $response = $emEspera ? ['expositor' => $emEspera, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA OS EXPOSITOR RECUSADOS
-        }else if (isset($_GET['recusado'])){
-            $emEspera = $expositor->listar("validacao = 'recusado'");
-            $response = $emEspera ? ['expositor' => $emEspera, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA OS EXPOSITOR DONO DO ID COM AS IMAGENS DELE
-        }else if (isset($_GET['id'])){
-            $id = htmlspecialchars(strip_tags($_GET['id']));
-            $imagens = new Imagem();
-            //// busca imagens pelo id do expositor
-            $buscarImagem = $imagens->listar(htmlspecialchars(htmlspecialchars(strip_tags($_GET['id']))));
-            $buscarId = $expositor->listar("id_expositor = '$id'");
-            //// faz append das imagens
-            if($buscarId){
-                $buscarId[0]['imagens'] = $buscarImagem;
-                $response = ['expositor' => $buscarId[0], 'status' => 200];
-
-            }else {
-                $response = ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-            }
-
-
-        //// RETORNA EXPOSITORES INATIVOS
-        }else if (isset($_GET['inativo'])){
-            $buscarInativo = $expositor->listar("status_pes = 'inativo' and validacao = 'aprovado'");
-            $response = $buscarInativo ? ['expositor' => $buscarInativo, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA OS EXPOSITORES APROVADOS PERTENCENTE A CATEGORIA ESCOLIDA
-        }else if (isset($_GET['categoria'])){
-            $buscarCategoria = $expositor->listar("descricao = '". htmlspecialchars(strip_tags($_GET['categoria'])). "' and validacao = 'aprovado'");
-            $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-        }else if (isset($_GET['categoriaHome'])){
-            $buscarCategoria = $expositor->listar("descricao = '". htmlspecialchars(strip_tags($_GET['categoriaHome'])). "' and validacao = 'validado' and status_pes = 'ativo'");
-            $response = $buscarCategoria ? ['expositor' => $buscarCategoria, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA OS EXPOSITORES FILTRADOS
-        }else if (isset($_GET['filtrar'])){
-            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrar'])), isset($_GET['aguardando']) ? "= 'aguardando'" : "= 'validado'");
-            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        $imagem = new Imagem();
         
-        //// RETORNA OS EXPOSITORES FILTRADOS 2
-        }else if (isset($_GET['filtrarAtivos'])){
-            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrarAtivos'])), isset($_GET['aguardando']) ? "!= 'validado'" : "= 'validado'", true);
-            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA OS EXPOSITORES FILTRADOS 3
-        }else if (isset($_GET['filtrarHome'])){
-            $filtrarExpositor = $expositor->filtrar(htmlspecialchars(strip_tags($_GET['filtrarHome'])), "= 'validado' and status_pes = 'ativo'");
-            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA TODOS OS EXPOITORES PARA A HOME
-        }else if (isset($_GET['home'])){
-            $filtrarExpositor = $expositor->listar("validacao = 'validado' and status_pes = 'ativo'");
-            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA TODOS OS EXPOITORES VALIDADOS
-        }else if (isset($_GET['rand'])){
-            $filtrarExpositor = $expositor->listarHome(1);
-            $response = $filtrarExpositor ? ['expositor' => $filtrarExpositor, 'status' => 200, $_GET] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
-
-
-        //// RETORNA TODOS OS EXPOITORES VALIDADOS
-        }else {
-            $buscar = $expositor->listar();
-            $response = !empty($buscar) ? ['expositor' => $buscar, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
+        function returnResponse($dados){
+            return $dados ? ['expositor' => $dados, 'status' => 200] : ['msg' => 'Nenhum expositor foi encontrado.', 'status' => 400];
         }
 
-        echo json_encode($response);
+        function litarCategoria($expositor){
+            if(isset($_GET['categoria'])){
+                $dados = $expositor->listar(
+                    "descricao = '".htmlspecialchars(strip_tags($_GET['categoria']))."'and status_pes = 'ativo'", 
+                    "status_pes", 
+                    null, 
+                    'home'
+                );
+                return $dados;
+            }else {
+                return [];
+            }
+        }
+
+        function filtrarExpositor($expositor,$tipo, $dados = 'adm'){
+            $where = [
+                'filtrarValidos' => "validacao = 'validado'",
+                'filtrarAguardando' => "validacao = 'aguardando'",
+                'filtrarHome' => "status_pes = 'ativo'",
+            ];
+            if(isset($_GET[$tipo])){
+                $dados = $expositor->filtrar(
+                    htmlspecialchars(strip_tags($_GET[$tipo])), 
+                    $where[$tipo],
+                    $dados
+                );
+                return $dados;
+            }else {
+                return [];
+            }
+        }
+
+        function buscarExpositorPorId($expositor, $imagem, $tipo){
+            $where = [
+                'idHome' => 'home',
+                'idAdm' => 'adm',
+            ];
+
+            if(isset($_GET[$tipo])){
+                $dados = $expositor->listar(
+                    "id_expositor = '".htmlspecialchars(strip_tags($_GET[$tipo]))."'", 
+                    null, 
+                    null,
+                    $where[$tipo]
+                );
+                $dados[0]['imagens'] = $imagem->listar(htmlspecialchars(strip_tags($_GET[$tipo])));
+                return $dados;
+            }else {
+                return [];
+            }
+        }
+
+        $rotas = [
+            // filtrar expositores em espera
+            'emEspera' => fn() => $expositor->listar(
+                "validacao = 'aguardando'", 
+                "status_pes"
+            ),
+
+            // filtra expositorers recusados
+            'recusado' => fn() => $expositor->listar(
+                "validacao = 'recusado'", 
+                "status_pes"
+            ),
+
+            //filtar expositor pelo id o retorna as fotos home
+            'idHome' => fn() => buscarExpositorPorId($expositor, $imagem,'idHome')[0],
+
+            //filtar expositor pelo id o retorna as fotos, adm
+            'idAdm' => fn() => buscarExpositorPorId($expositor, $imagem, 'idAdm')[0],
+
+            // filtrar expositor inativos
+            'inativo' => fn() => $expositor->listar(
+                "status_pes = 'inativo'", 
+                "status_pes"
+            ),
+
+            //filtra expositor por categoria na home
+            'categoria' => fn() => litarCategoria($expositor),
+
+            //filtra expositor validos pelo input 
+            'filtrarValidos' => fn() => filtrarExpositor($expositor, 'filtrarValidos'),
+
+            //filtra expositor aguardando pelo input 
+            'filtrarAguardando' => fn() => filtrarExpositor($expositor, 'filtrarAguardando'),
+
+            //filtra expositor ativos pelo input 
+            'filtrarHome' => fn() => filtrarExpositor($expositor, 'filtrarHome', 'home'),
+
+            //filtra todos expositor ativos
+            'home' => fn() => $expositor->listar(
+                "status_pes = 'ativo'", 
+                "RAND()", 
+                null, 
+                'home'
+            ),
+
+            //filtrar todos os expositor validados
+            'adm' => fn() => $expositor->listar(
+                "validacao = 'validado'", 
+                "status_pes", 
+                null, 
+                'adm'
+            ),
+
+            //filta 10 expositor aleatorios ativos
+            'rand' => fn() => $expositor->listar(
+                "status_pes = 'ativo'", 
+                "RAND()", 
+                '10', 
+                'home'
+            ),
+        ];
+
+        foreach ($rotas as $rota => $listar) {
+            if(isset($_GET[$rota])){
+                $response = returnResponse($listar());
+                echo json_encode($response);
+                exit;
+            }
+        }
+
+        echo json_encode($response ?? ['msg' => 'Nenhum parâmetro válido', 'status' => 400]);
+
+
     } catch (\Throwable $th) {
         $response = [
             'status' => 500,

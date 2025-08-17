@@ -10,7 +10,7 @@ let contentCards = document.getElementById('content-cards')
 
 async function chamarModalExpositor(id){
     
-    let dados = await fetch(`../../../actions/actions-expositor.php?id=${id}`)
+    let dados = await fetch(`../../../actions/actions-expositor.php?idHome=${id}`)
     
     let response = await dados.json()
     
@@ -241,7 +241,7 @@ async function getExpositorCategoria(categoria) {
         getExpositores()
     }
     
-    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoriaHome=${categoria}`);
+    let dados_expositores = await fetch(`../../../actions/actions-expositor.php?categoria=${categoria}`);
     
     let content_cards = document.getElementById('content_cards')
     

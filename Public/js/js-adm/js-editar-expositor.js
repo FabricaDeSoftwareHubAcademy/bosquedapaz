@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Pegando os dados da URL
     const id_expositor = params.get("id");
 
-    let dados_php = await fetch('../../../actions/actions-expositor.php?id=' + id_expositor);
+    let dados_php = await fetch('../../../actions/actions-expositor.php?idAdm=' + id_expositor);
     let response = await dados_php.json();
 
     // console.log('Dados recebidos:', response);
