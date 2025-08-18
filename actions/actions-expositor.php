@@ -8,10 +8,12 @@ error_reporting(-1);
 //////// IMPORTS DE ARQUIVOS \\\\\\\\\\\\\\\\\
 
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
 
 use app\Controller\Expositor;
 use app\Controller\Imagem;
 use app\suport\Csrf;
+
 
 
 /////////////////// FUNCOES \\\\\\\\\\\\\\\\
@@ -22,17 +24,17 @@ function uploadImagem($img) {
     $new_img = $img['name'];
     $new_name = uniqid();
     $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
-
+    
     $caminho_img = $caminho . $new_name. '.'. $extencao_imagem;
-        
+    
     $upload_img = move_uploaded_file($img['tmp_name'], $caminho_img);
-
+    
     return $caminho_img;
 }
 
 function getImagens($imgs){
     $arrayImagens = array();
-
+    
     foreach ($imgs as $key => $value) {
     
         $i = 0;
@@ -42,7 +44,7 @@ function getImagens($imgs){
             $i++;
         } while ($i < count($imgs['name']));
     }
-
+    
     return $arrayImagens;
 }
 
@@ -58,6 +60,13 @@ function linkInstagram($ins){
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
+        if(!confirmaLogin(1)){
+            echo json_encode([
+                'msg' => 'Login Inválido',
+            ]);
+            http_response_code(400);
+            exit;
+        }
     
     $expositor = new Expositor();
     

@@ -1,8 +1,17 @@
 <?php
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
 
 use app\Controller\Categoria;
 use app\suport\Csrf;
+
+if(!confirmaLogin(1)){
+    echo json_encode([
+        'msg' => 'Login Inválido',
+    ]);
+    http_response_code(400);
+    exit;
+}
 
 header('Content-Type: application/json');
 
