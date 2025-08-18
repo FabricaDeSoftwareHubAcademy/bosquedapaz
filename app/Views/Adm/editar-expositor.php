@@ -43,7 +43,6 @@ $tolken = getTolkenCsrf();
                         <input type="hidden" name="id_expositor" id="id_expositor">
                         <label for="nome" class="perfilEdit-nameEmpresa perfilEdit-important-label">Nome da empresa: </label>
                         <input type="text" name="nome" id="nome" class="perfilEdit-nome" placeholder="Digite seu nome" required>
-
                     </div>
 
                 </section>
@@ -68,7 +67,7 @@ $tolken = getTolkenCsrf();
                     <div class="novos_inputs">
                         <label for="">Numero barraca</label>
                         <input class="input-info-tec input-num-barraca" type="text" placeholder="Altere o número da barraca">
-                    </div class="novos_inputs">
+                    </div>
                     <div class="novos_inputs">
                         <label for="">Categoria</label>
                         <select name="id_categoria" id="categorias" class="input-info-tec select-categoria"></select>
