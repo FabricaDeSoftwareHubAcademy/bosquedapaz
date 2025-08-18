@@ -338,7 +338,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
             //filtra todos expositor ativos
             'home' => fn() => $expositor->listar(
-                "status_pes = 'ativo'", 
+                "status_pes = 'ativo' and validacao = 'validado'", 
                 "RAND()", 
                 null, 
                 'home'
@@ -354,7 +354,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
             //filta 10 expositor aleatorios ativos
             'rand' => fn() => $expositor->listar(
-                "status_pes = 'ativo'", 
+                "status_pes = 'ativo' and validacao = 'validado'", 
                 "RAND()", 
                 '10', 
                 'home'
