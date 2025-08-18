@@ -19,6 +19,24 @@ inputs_imgs.forEach(input_img => {
 });
 
 
+let input_energia = document.getElementById('energia')
+let input_voltagem = document.getElementById('voltagem')
+input_voltagem.disabled = true
+
+
+input_energia.addEventListener('change', () => {
+    if(input_energia.value == "sim"){
+        input_voltagem.disabled = false
+    }else {
+        input_voltagem.disabled = true
+        input_voltagem.value = ''
+    }
+})
+
+
+
+
+
 
 // categorias
 async function getCategorias() {
