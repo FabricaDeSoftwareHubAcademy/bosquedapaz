@@ -22,24 +22,49 @@
   <main class="box-ctrl">
 
   <div class="containerInfo">
+
     <div class="enfoVisitantes">
-      <span class="spnValorVisitantes"></span>
-      <span class="spnVisitantes">$ mensal</span>
+      <div class="containerIconGrafico">
+        <i class="bi bi-currency-dollar iconGrafico iconMensal"></i>
+      </div>
+      <div class="containerInfoGrafico">
+
+        <span class="spnValorVisitantes"></span>
+        <span class="spnVisitantes">Mensal</span>
+      </div>
     </div>
 
     <div class="enfoExpositores">
-      <span class="spnValorExpositores"></span>
-      <span class="spnExpositores">Expositores</span>
+      <div class="containerIconGrafico">
+        <i class="bi bi-people-fill iconGrafico iconExpositor"></i>
+      </div>
+      <div class="containerInfoGrafico">
+        <span class="spnValorExpositores"></span>
+        <span class="spnExpositores">Expositores</span>
+      </div>
     </div>
 
     <div class="enfoArtistas">
-      <span class="spnValorArtistas"></span>
-      <span class="spnArtistas">Artistas</span>
+      <div class="containerIconGrafico">
+        <i class="bi bi-music-note-beamed iconGrafico iconArtista"></i>
+      </div>
+
+      <div class="containerInfoGrafico">
+        <span class="spnValorArtistas"></span>
+        <span class="spnArtistas">Artistas</span>
+      </div>
+
     </div>
 
     <div class="enfoEventosAtivos">
-      <span class="spnValorEventosAtivos"></span>
-      <span class="spnEventosAtivos">Eventos Ativos</span>
+      <div class="containerIconGrafico">
+        <i class="bi bi-calendar-check iconGrafico iconEventosAtivos"></i>
+      </div>
+      <div class="containerInfoGrafico">
+
+        <span class="spnValorEventosAtivos"></span>
+        <span class="spnEventosAtivos">Eventos Ativos</span>
+      </div>
     </div>
 
   </div>

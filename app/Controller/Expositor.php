@@ -138,69 +138,40 @@ class Expositor extends Pessoa
 
     ////////////// MÉTODOS DE BUSCAS \\\\\\\\\\\\\\\\\\\\
 
-    public function listar($where = null){
+    public function listar($where = null, $order = null, $limit = null, $dados = 'adm'){
         try {
+            $fields = [
+                'home' => 'id_expositor, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook',
+                'adm' => 'id_expositor, id_login, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook, id_categoria, cpf, validacao, voltagem, energia, nome, email, cidade, status_pes, tipo, telefone',
+            ];
+
             $db = new Database('view_expositor');
+            $expositores = $db->select($where, $order, $limit, $fields[$dados])->fetchAll(PDO::FETCH_ASSOC);
 
-            //// RETORNA TODOS OS EXPOSITORES VALIDADOS
-            if($where == null){
-                $expositores = $db->select('validacao = "validado"', 'status_pes')->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
-            }
-
-            //// RETORNA OS EXPOITORES FILTRADOS COM WHERE
-            else {
-                $expositores = $db->select($where, 'nome')->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
-            }
+            return $expositores;
         
-        //// RETORNA FALSE NO CASO DE ERRO
-        } catch (\Throwable $th) {
-            return FALSE;
-        }
-    }
-    
-    public function listarHome($busca = null){
-        try {
-            $db = new Database('view_expositor');
-
-            //// RETORNA TODOS OS EXPOSITORES VALIDADOS
-            if($busca != null){
-                $expositores = $db->select('validacao != "aguardando" and validacao != "recusado" and status_pes="ativo"' , "RAND() and nome and status_pes", 10)->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
-            }else {
-                return FALSE;
-            }
-        
-        //// RETORNA FALSE NO CASO DE ERRO
         } catch (\Throwable $th) {
             return FALSE;
         }
     }
 
-    public function filtrar($filtro, $status = "= 'validado'", $valido = false){
+    public function filtrar($filtro, $status = "", $dados = 'adm'){
         try {
             $db = new Database('view_expositor');
 
-            if($valido){
-                //// RETORNA O EXPOSITOR PELO FILTRO
-                $expositores = $db->select(
-                    "nome_marca LIKE '%$filtro%' and validacao ='validado' OR nome LIKE '%$filtro%' and validacao ='validado' OR email LIKE '%$filtro%' and validacao ='validado' OR num_barraca LIKE '%$filtro%' and validacao ='validado'", 'nome and status_pes'
-                )->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
-            }else {
-                //// RETORNA O EXPOSITOR PELO FILTRO
-                $expositores = $db->select(
-                    "nome_marca LIKE '%$filtro%' and validacao ".$status." 
-                    OR nome LIKE '%$filtro%' and validacao ".$status." 
-                    OR email LIKE '%$filtro%' and validacao ".$status." 
-                    OR num_barraca LIKE '%$filtro%' and validacao ".$status." 
-                    ", 'nome and status_pes'
-                )->fetchAll(PDO::FETCH_ASSOC);
-                return $expositores ? $expositores : FALSE;
+            $fields = [
+                'home' => 'id_expositor, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook',
+                'adm' => 'id_expositor, id_login, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook, id_categoria, cpf, validacao, voltagem, energia, nome, email, cidade, status_pes, tipo, telefone',
+            ];
 
-            }
-        
+            $expositores = $db->select(
+                "nome_marca LIKE '%$filtro%' and $status OR nome LIKE '%$filtro%' and $status OR email LIKE '%$filtro%' and $status OR num_barraca LIKE '%$filtro%' and $status", 
+                'status_pes',
+                null,
+                $fields[$dados]
+            )->fetchAll(PDO::FETCH_ASSOC);
+            return $expositores ? $expositores : FALSE;
+            
         //// RETORNA FALSE NO CASO DE ERRO
         } catch (\Throwable $th) {
             return FALSE;

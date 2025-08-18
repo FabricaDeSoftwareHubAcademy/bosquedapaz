@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const texto = await resposta.text();
                 const resultado = JSON.parse(texto);
-                console.log('Resposta JSON:', resultado);
+
 
                 if (resultado.status === 'sucesso') {
                     document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Atração cadastrada com sucesso!';

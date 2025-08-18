@@ -5,11 +5,34 @@ $tolken = getTolkenCsrf();
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Configuração básica -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Feira Bosque da Paz: artesanato, gastronomia, artistas e expositores reunidos em um evento cultural imperdível. Explore, apoie e viva essa experiência!">
+    <meta name="keywords" content="Feira Bosque da Paz, artesanato, gastronomia, expositores, evento cultural, artistas, natureza, cultura, feira">
+    <meta name="author" content="Bosque da Paz">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Feira Bosque da Paz">
+    <meta property="og:description" content="Descubra a Feira Bosque da Paz: cultura, artesanato, gastronomia e artistas reunidos em um evento único no coração da natureza.">
+    <meta property="og:image" content="https://www.feirabosquedapaz.com.br/Public/assets/logo-trans.png">
+    <meta property="og:url" content="https://www.feirabosquedapaz.com.br/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Feira Bosque da Paz">
+    <meta name="twitter:description" content="Participe da Feira Bosque da Paz e viva um encontro único com cultura, arte e gastronomia.">
+    <meta name="twitter:image" content="https://www.feirabosquedapaz.com.br/Public/assets/logo-trans.png">
+
+    <!-- Título -->
     <title>Bosque da Paz</title>
+
+    <!-- Favicon e CSS -->
+    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico">
     <link rel="stylesheet" href="../../../Public/css/css-modais/perfil-expositor.css">
-    <link rel="shortcut icon" href="../../../Public/assets/icons/folha.ico" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../Public/css/css-home/style-feira-bosque-da-paz.css">
 </head>

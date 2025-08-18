@@ -113,7 +113,7 @@ $tolken = getTolkenCsrf();
     <dialog id="BarracaRua" class="modal-recusar">
         <div class="conteiner-modal">
             <label class="title-recusar">Numero da barraca: </label>
-            <input type="number" name="num_barraca" class="input" id="numBarraca">
+            <input type="text" name="num_barraca" class="input" id="numBarraca">
             <label class="title-recusar">Cor da rua: </label>
             <select name="cor_rua" class="input" id="corRua">
                 <option value="amarelo">amarelo</option>

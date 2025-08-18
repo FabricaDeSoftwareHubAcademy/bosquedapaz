@@ -29,7 +29,6 @@ $tolken = getTolkenCsrf();
                     <label for="status">Procurar</label>
                     <input type="text" id="status" placeholder="Parceiros" />
                     <input type="hidden" name="tolkenCsrf" id="tolken-csrf-input" value="<?php echo htmlspecialchars($tolken); ?>">
-                    <button class="search-button">BUSCAR</button>
                 </div>
 
                 <div class="table-container">
@@ -52,11 +51,7 @@ $tolken = getTolkenCsrf();
                     </table>
                 </div>              
             </div>
-            <div class="btns">
-                <a href="./" class="voltar">
-                    <img src="../../../Public/assets/icons/voltar.svg" alt="Botão de voltar" class="btn-voltar">
-                </a>
-            </div>
+            <?php include '../../../Public/include/Butons-forms.html'; ?>
         </div>
      
     </main>

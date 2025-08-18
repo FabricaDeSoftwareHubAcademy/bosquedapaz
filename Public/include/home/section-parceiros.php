@@ -1,6 +1,6 @@
     <section class="section-apoiadores">
         <div class="sobre-apoiadores">
-            <h1 class="dark">Nossos apoiadores</h3>
+            <h1 class="dark">Nossos Apoiadores</h3>
         </div>
     
     <div class="carrossel-apoiadores">

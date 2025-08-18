@@ -115,6 +115,22 @@ main{
     align-items: center;
 }
 
+.area__input_senha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* .content_senha {
+    
+} */
+
+.senha_segura {
+    font-size: 14px;
+    color: #FF3877;
+    transition: all .2s ease-in-out;
+}
+
 .area__input .olho_pass {
     position: absolute;
     left: 92%;

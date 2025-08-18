@@ -62,6 +62,7 @@ class ComposerStaticInit38572b14b55e486e2d98f07e8d4827ae
         'app\\Controller\\Categoria' => __DIR__ . '/../..' . '/app/Controller/Categoria.php',
         'app\\Controller\\Colaborador' => __DIR__ . '/../..' . '/app/Controller/Colaborador.php',
         'app\\Controller\\DadosFeira' => __DIR__ . '/../..' . '/app/Controller/DadosFeira.php',
+        'app\\Controller\\DashboardData' => __DIR__ . '/../..' . '/app/Controller/DashboardData.php',
         'app\\Controller\\Endereco' => __DIR__ . '/../..' . '/app/Controller/Endereco.php',
         'app\\Controller\\EnderecoEvento' => __DIR__ . '/../..' . '/app/Controller/EnderecoEvento.php',
         'app\\Controller\\Evento' => __DIR__ . '/../..' . '/app/Controller/Evento.php',

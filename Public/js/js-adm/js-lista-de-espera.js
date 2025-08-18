@@ -3,7 +3,7 @@
 async function carrega_expositor() {
     let tbody = document.getElementById('tbody')
     try {
-        let response = await fetch('../../../actions/actions-expositor.php?emespera=1');
+        let response = await fetch('../../../actions/actions-expositor.php?emEspera=1');
         response = await response.json();
     
         if (response.status == 400) {
@@ -44,7 +44,7 @@ let buscar_expositor = document.getElementById('buscar_expositor');
 //////// FILTRA OS EXPOSITORES PELO OQUE É DIGITADO NA BARRA DE PESQUISA
 buscar_expositor.addEventListener('keyup', async function(e) {
     try {
-        let response = await fetch(`../../../actions/actions-expositor.php?filtrar=${buscar_expositor.value}&aguardando=1`);
+        let response = await fetch(`../../../actions/actions-expositor.php?filtrarAguardando=${buscar_expositor.value}`);
         response = await response.json();
         if(buscar_expositor.value.length > 1){
             if (response.status == 400) {

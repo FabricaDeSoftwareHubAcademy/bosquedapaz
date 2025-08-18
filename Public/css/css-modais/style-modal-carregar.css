@@ -9,6 +9,7 @@
 }
 
 .modal-loading {
+    min-width: 15rem;
     padding: 1rem 0rem;
     border: none;
     border-radius: .5rem;

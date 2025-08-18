@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Pegando os dados da URL
     const id_expositor = params.get("id");
 
-    let dados_php = await fetch('../../../actions/actions-expositor.php?id=' + id_expositor);
+    let dados_php = await fetch('../../../actions/actions-expositor.php?idAdm=' + id_expositor);
     let response = await dados_php.json();
 
     // console.log('Dados recebidos:', response);
@@ -157,9 +157,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         
         // Configurar logo se existir
         if (response.expositor.img_perfil) {
-            icone_perfil.src = `../../${response.expositor.img_perfil}`;
+            icone_perfil.src = `${response.expositor.img_perfil}`;
             icone_perfil.style.display = 'block';
-            label_logo.innerHTML = 'Alterar logo <img src="../../' + response.expositor.img_perfil + '" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>';
+            label_logo.innerHTML = 'Alterar logo <img src="' + response.expositor.img_perfil + '" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>';
         }
         
         // Configurar imagens de produtos

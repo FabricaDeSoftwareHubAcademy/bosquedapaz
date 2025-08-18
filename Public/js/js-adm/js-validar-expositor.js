@@ -60,7 +60,7 @@ function getIdExpositor(){
 }
 async function getExpositor(){ 
     try {
-        let dados_php = await fetch(`../../../actions/actions-expositor.php?id=${getIdExpositor()}`);
+        let dados_php = await fetch(`../../../actions/actions-expositor.php?idAdm=${getIdExpositor()}`);
     
         let response = await dados_php.json()
         nomeEmpresa.innerText = response.expositor.nome_marca
