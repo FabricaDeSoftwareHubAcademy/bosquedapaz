@@ -3,6 +3,10 @@ session_start();
 require_once('../vendor/autoload.php');
 require_once('../app/helpers/login.php');
 
+if(!confirmaLogin(1)){
+    die('Login Inválido');
+}
+
 use app\Controller\Boleto;
 use app\Controller\Expositor;
 

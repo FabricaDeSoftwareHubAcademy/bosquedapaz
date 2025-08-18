@@ -2,8 +2,16 @@
 
 require_once('../vendor/autoload.php');
 require_once('../app/helpers/login.php');
+
 use app\Controller\Colaborador;
 use app\suport\Csrf;
+if(!confirmaLogin(1)){
+    echo json_encode([
+        'success' => false,
+        'message' => 'Login Inválido',
+    ]);
+    exit;
+}
 
 function sanitizeString($str) {
     return htmlspecialchars(strip_tags($str));
