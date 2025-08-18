@@ -7,10 +7,10 @@ async function menu() {
 
         if (response.ok) {
             const text = await response.json();
-            
-            
+
+
             let login = document.querySelectorAll('.informacoes_login');
-            
+
             let img_perfil = text.login.img_perfil == null ? null : text.login.img_perfil
 
 

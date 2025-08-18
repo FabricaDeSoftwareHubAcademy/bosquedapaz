@@ -45,7 +45,7 @@
         </section>
     </main>
 
-    <script src="../../../Public/js/js-menu/js-menu.js"></script>
+    <script src="../../../Public/js/js-home/js-menu-home.js"></script>
     <script src="../../../Public/js/js-home/js-listar-proximos-eventos.js" defer></script>
     
 </body>

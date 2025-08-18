@@ -34,7 +34,7 @@
 .principal {
     width: 100%;
     min-height: 100vh;
-    padding-top: 130px;
+    padding-top: 125px;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
