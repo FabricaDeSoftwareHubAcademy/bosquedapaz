@@ -92,9 +92,15 @@ $tolken = getTolkenCsrf();
                         <!-- Senha -->
                         <div class="senha__coluna">
                             <label class="label__cad" for="senha">Senha</label>
-                            <div class="area__input">
+                            <div class="area__input area__input_senha">
                                 <i class="bi bi-shield-lock"></i>
                                 <input class="input" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                                <p class="content_senha">
+                                    <span class="senha_segura" id="digitos">8 dígitos</span>, 
+                                    <span class="senha_segura" id="numero">1 número</span>, 
+                                    <span class="senha_segura" id="simbolo">1 simbolo</span>, 
+                                    <span class="senha_segura" id="maiuscula">1 letra maiúscula</span>.
+                                </p>
                             </div>
                         </div>
 
