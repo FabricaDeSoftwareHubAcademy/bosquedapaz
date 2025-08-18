@@ -429,7 +429,12 @@ class Database
 
 
     public function getExpositorStatus() {
-        $query = "SELECT validacao, COUNT(id_expositor) AS total_expositores FROM expositor GROUP BY validacao;";
+        $query = "SELECT 'aguardando' AS validacao, COUNT(CASE WHEN validacao = 'aguardando' THEN 1 END) AS total_expositores FROM expositor
+        UNION ALL
+        SELECT 'validado', COUNT(CASE WHEN validacao = 'validado' THEN 1 END) FROM expositor
+        UNION ALL
+        SELECT 'recusado', COUNT(CASE WHEN validacao = 'recusado' THEN 1 END) FROM expositor;
+        ";
         $stmt = $this->execute($query);
         return $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
     }

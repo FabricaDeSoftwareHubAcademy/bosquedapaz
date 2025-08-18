@@ -49,7 +49,20 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchDataAndRenderChart('expositorStatusChart', 'expositorStatus', chartConfigStatus, (apiData) => {
         const chartData = { 'Aguardando': 0, 'Validado': 0, 'Recusado': 0 };
         apiData.forEach(item => {
-            const status = item.validacao === "1" ? 'Validado' : (item.validacao === "0" ? 'Aguardando' : 'Recusado');
+let status;
+switch(item.validacao.toLowerCase()) {
+    case 'validado':
+        status = 'Validado';
+        break;
+    case 'aguardando':
+        status = 'Aguardando';
+        break;
+    case 'recusado':
+        status = 'Recusado';
+        break;
+    default:
+        status = 'Recusado'; // fallback seguro
+}
             chartData[status] = parseInt(item.total_expositores || 0);
         });
         return {
