@@ -4,6 +4,7 @@ require_once('../vendor/autoload.php');
 use app\Controller\Categoria;
 use app\suport\Csrf;
 
+
 header('Content-Type: application/json');
 
 //  Função auxiliar para limpar os dados de texto

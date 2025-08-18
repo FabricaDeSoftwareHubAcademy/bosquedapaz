@@ -1,10 +1,7 @@
 <?php
 
-ini_set('display_startup_errors', 1);
-ini_set('display_errors', 1);
-error_reporting(-1);
-
 header('Content-Type: application/json');
+require_once('../app/helpers/login.php');
 
 require_once('../vendor/autoload.php');
 require '../Public/sendEmail.php';
@@ -18,6 +15,13 @@ function gerarSenha($cpf, $nome){
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
+        if(!confirmaLogin(1)){
+            echo json_encode([
+                'msg' => 'Login Inválido',
+            ]);
+            http_response_code(400);
+            exit;
+        }
         $expositor = new Expositor();
         //////////// PARA APROVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\\\
         if (isset($_POST['aprovado'])){

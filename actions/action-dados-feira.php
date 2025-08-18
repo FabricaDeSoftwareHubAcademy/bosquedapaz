@@ -1,6 +1,7 @@
 <?php
 
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
 
 use app\Controller\DadosFeira;
 use app\suport\Csrf;
@@ -11,6 +12,13 @@ $dadosFeira = new DadosFeira();
 // quando chegar um POST sera feito uma atualizacao
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
+        if(!confirmaLogin(1)){
+            echo json_encode([
+                'msg' => 'Login Inválido',
+            ]);
+            http_response_code(400);
+            exit;
+        }
         $dados = array();
 
         if(filter_var($_POST["num_visitantes"], FILTER_VALIDATE_INT) !== FALSE){
