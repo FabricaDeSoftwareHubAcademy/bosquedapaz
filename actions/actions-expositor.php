@@ -60,6 +60,12 @@ function linkInstagram($ins){
 
 if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])){
     try {
+    
+    $expositor = new Expositor();
+    
+
+    ///////////////  INATIVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\
+    if(isset($_POST['deletar'])){
         if(!confirmaLogin(1)){
             echo json_encode([
                 'msg' => 'Login Inválido',
@@ -67,12 +73,6 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             http_response_code(400);
             exit;
         }
-    
-    $expositor = new Expositor();
-    
-
-    ///////////////  INATIVAR UM EXPOSITOR \\\\\\\\\\\\\\\\\\\\\
-    if(isset($_POST['deletar'])){
 
         $id = htmlspecialchars(strip_tags($_POST['id']));
         $status = htmlspecialchars(strip_tags($_POST['status']));

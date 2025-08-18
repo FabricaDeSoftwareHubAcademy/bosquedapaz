@@ -4,6 +4,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
+
+
 
 use setasign\Fpdi\Fpdi;
 use app\Controller\Boleto;
@@ -14,6 +17,9 @@ use PHPMailer\PHPMailer\Exception;
 header('Content-Type: application/json');
 
 try {
+    if(!confirmaLogin(1)){
+        throw new Exception('Login Inválido');
+    }
     if (!isset($_POST['tolkenCsrf']) || !Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])) {
         throw new Exception("Token CSRF inválido.");
     }

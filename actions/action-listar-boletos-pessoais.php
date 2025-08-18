@@ -4,6 +4,13 @@ require_once('../app/helpers/login.php');
 
 use app\Controller\Boleto;
 use app\Controller\Expositor;
+if(!confirmaLogin(1)){
+    echo json_encode([
+        'erro' => 'Login Inválido',
+    ]);
+    http_response_code(400);
+    exit;
+}
 
 header('Content-Type: application/json');
 
