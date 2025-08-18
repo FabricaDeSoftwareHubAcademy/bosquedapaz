@@ -214,7 +214,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem($imagemSalva);
+            $colab->setImagem('../../../Public/uploads/uploads-ADM/'.$imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter

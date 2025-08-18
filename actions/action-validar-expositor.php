@@ -48,31 +48,58 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 $corpoEmail = "
                 <!DOCTYPE html>
                 <html lang='pt-br'>
+
                 <head>
                     <meta charset='UTF-8'>
                     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                    <title></title>
                     <style>
-                        div {
+                        body {
                             margin: auto;
-                            padding: .5rem;
-                            width: 30rem;
+                            max-width: 30rem;
                             text-align: center;
                         }
-                
                         h1 {
-                            background-color: blue;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                        }
+                        p {
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                        }
+                        h2{
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: .5rem;
+                        }
+                        a{
+                            display: block;
+                            background-color: #007E70;
+                            width: 6rem;
+                            padding: .5rem;
+                            border-radius: .5rem;
                             color: white;
+                            text-decoration: none;
+                            font-weight: 500;
                         }
                     </style>
                 </head>
+
                 <body>
-                    <div>
-                        <h2>Olá $nome, o seu cadastro de expositor na feira bosque da paz foi aprovado</h2>
-                        <p>Abaixo está a senha para acessar a sua área de expositor e, poder editar seu perfil</p>
-                        <h1>SUA SENHA: $newSenha</h1>
-                        <span>No caso desse e-mail ser ignorado a senha não vai ser resetada.</span>
-                    </div>
+                    <h1>Olá $nome, o seu cadastro na feria bosque da paz foi aprovado, abaixo estão as seus informações para acessar o
+                        seu perfil.</h1>
+                    <p>O E-mail para acesso é: $email</p>
+                    <p>A sua senha para acesso é: $newSenha</p>
+                    <h2>Clique no botão abaixo para acessar o seu login</h2>
+                    <div><a href='https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php'>Clique Aqui!!</a></div>
+                    <span>Atenciosamente Feira Bosque Da Paz!!</span>
                 </body>
+
                 </html>
                 ";
 
@@ -104,30 +131,55 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 $corpoEmail = "
                 <!DOCTYPE html>
                 <html lang='pt-br'>
+
                 <head>
                     <meta charset='UTF-8'>
                     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                     <title></title>
                     <style>
-                        div {
+                        body {
                             margin: auto;
-                            padding: .5rem;
-                            width: 30rem;
-                            text-align: center;
-                        }
-                
-                        p {
+                            max-width: 30rem;
                             text-align: justify;
+                        }
+                        h1 {
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                        }
+                        p {
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            text-align: justify;
+                        }
+                        h2{
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: .5rem;
+                        }
+                        a{
+                            display: block;
+                            background-color: #007E70;
+                            width: 6rem;
+                            padding: .5rem;
+                            border-radius: .5rem;
+                            color: white;
+                            text-decoration: none;
+                            font-weight: 500;
                         }
                     </style>
                 </head>
+
                 <body>
-                    <div>
-                        <h2>Olá $nome, o seu cadastro de expositor na feira bosque da paz foi recusado</h2>
-                        <p>Motivo: $mensagem</p>
-                        <span>Atenciosamente: Feira bosque da paz</span>
-                    </div>
+                    <h1>Olá $nome, o seu cadastro na feria bosque da paz foi recusado, abaixo está o motivo.</h1>
+                    <p>Motivo: $mensagem</p>
+                    <span>Atenciosamente Feira Bosque Da Paz!!</span>
                 </body>
+
                 </html>
                 ";
 

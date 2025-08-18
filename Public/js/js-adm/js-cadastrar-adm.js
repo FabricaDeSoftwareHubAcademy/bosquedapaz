@@ -1,3 +1,34 @@
+var senha = document.getElementById("senha");
+
+senha.addEventListener('keyup', () => {
+  console.log(senha.value)
+  if (senha.value.match(/[A-Z]/g) != null) {
+    document.getElementById('maiuscula').style.color = 'green'
+  }else {
+    document.getElementById('maiuscula').style.color = '#FF3877'
+  }
+  
+  if (senha.value.match(/[\W|_]/g) != null) {
+    document.getElementById('simbolo').style.color = 'green'
+  }else {
+    document.getElementById('simbolo').style.color = '#FF3877'
+  }
+  
+  if(senha.value.length > 8){
+    document.getElementById('digitos').style.color = 'green'
+  }else{
+    document.getElementById('digitos').style.color = '#FF3877'
+  }
+
+  if(senha.value.match(/[0-9]/g)  == null){
+    document.getElementById('numero').style.color = '#FF3877'
+  }else {
+    document.getElementById('numero').style.color = 'green'
+  }
+
+
+})
+
 const form = document.getElementById("formCadastro");
 
 form.addEventListener("submit", async (e) => {
@@ -12,7 +43,7 @@ form.addEventListener("submit", async (e) => {
     openModalMensagem({
       tipo: "erro",
       titulo: "Senha não é segura",
-      mensagem: "Digite um senha com no mínimo 8 digitos, 1 letra maiúscula, 1 número e 1 símbolo.",
+      mensagem: "Insira uma senha forte",
     });
     return;
   }

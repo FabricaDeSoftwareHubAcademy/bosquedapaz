@@ -112,7 +112,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         $caminhoFinal = $pastaDestino . '/' . $novoNome;
 
         if (move_uploaded_file($nomeTemporario, $caminhoFinal)) {
-            $caminhoLogo = 'uploads/uploads-parceiros/' . $novoNome;
+            $caminhoLogo = 'Public/uploads/uploads-parceiros/' . $novoNome;
         } else {
             echo json_encode(['erro' => 'Falha ao salvar o arquivo da logo']);
             exit;

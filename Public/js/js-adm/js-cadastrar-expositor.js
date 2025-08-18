@@ -1,49 +1,39 @@
-//////////// imgens expositor \\\\\\\\\\\\
+// imagens expositor
 
-let input_fotos = document.getElementById('input_fotos')
-let conteiner_fotos = document.getElementById('conteiner_fotos')
-let content_imgs = document.querySelectorAll('#img_content')
-let imgs_tags = document.querySelectorAll('#imagens_produtos')
-const imagens = {'files': []}
+let inputs_imgs = document.querySelectorAll("input.input_img")
 
-input_fotos.addEventListener('input', () => {
-    let files = input_fotos.files
-    for (let i = 0; i < files.length; i++) {
-        if(imagens.files.length >= 6){
-            openModalError()
-            document.getElementById('erro-title').innerText = 'Envie no maximo 6 imagens'
-            document.getElementById('erro-text').style.display = 'none'
-            document.getElementById('close-modal-erro').addEventListener('click',  () => {
-                closeModalError
-            })
+inputs_imgs.forEach(input_img => {
+    input_img.addEventListener('change', () => {
+        let file_img = input_img.files[0]
+        let reader = new FileReader()
+
+        let img = document.getElementById(input_img.name)
+
+        reader.onload = (e) => {
+            img.src = e.target.result
+            img.style.display = 'block'
         }
-        imagens.files.push(files[i])
+
+        reader.readAsDataURL(file_img)
+    })
+});
+
+
+let input_energia = document.getElementById('energia')
+let input_voltagem = document.getElementById('voltagem')
+input_voltagem.disabled = true
+
+
+input_energia.addEventListener('change', () => {
+    if(input_energia.value == "sim"){
+        input_voltagem.disabled = false
+    }else {
+        input_voltagem.disabled = true
+        input_voltagem.value = ''
     }
-
-    conteiner_fotos.style.display = 'flex'
-
-    for (let i = 0; i < imagens.files.length; i++) {
-
-        content_imgs[i].style.display = 'flex'
-
-        var objectUrl = URL.createObjectURL(imagens.files[i])
-        const reader = new FileReader()
-
-        reader.onloadend = function () {
-            var base64 = reader.result;
-            imgs_tags[i].src = base64
-            imgs_tags[i].style.display = 'block'
-        }
-
-        if (imagens.files[i]) {
-            reader.readAsDataURL(imagens.files[i]);
-        } else {
-            imgs_tags[i].src = "";
-        }
-    }
-
-
 })
+
+
 
 
 
@@ -112,11 +102,7 @@ btn_salvar.addEventListener('click', function (event) {
             const formData = new FormData(form)
             formData.append('cadastrar', 'true')
             formData.append('tolkenCsrf', document.getElementById('tolkenCsrf').value)
-            for (let i = 0; i < imagens.files.length; i++) {
-                formData.append(`img-${i}`, imagens.files[i]);
-            }
 
-            formData.delete('imagens[]')
 
 
             document.getElementById('btn-modal-salvar').addEventListener('click', async () => {

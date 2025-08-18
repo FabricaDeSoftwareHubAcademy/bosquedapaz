@@ -11,6 +11,7 @@ use app\Controller\Pessoa;
 
 if (isset($_POST['enviar'])) {
     $email = $_POST['email'];
+    
 
     if (empty($email)) {
         echo "O campo de e-mail não pode estar vazio.";

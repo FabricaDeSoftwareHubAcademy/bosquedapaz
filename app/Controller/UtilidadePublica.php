@@ -32,11 +32,11 @@ use app\Models\Database;
         } 
 
 
-        public function listar() {
+        public function listar($where = null) {
             $db = new Database('utilidade_publica');
-            $res = $db->select()
+            $res = $db->select($where)
                       ->fetchAll(PDO::FETCH_ASSOC);
-    
+        
             return $res;
         }
 

@@ -21,7 +21,92 @@ class Artista extends Pessoa
     protected $status;
     protected $aceitou_termos;
 
-    // --- Setters ---
+
+
+    public function cadastrar()
+    {
+        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
+
+        $dbPessoa = new Database('pessoa');
+        $pes_id = $dbPessoa->insert_lastid([
+            'nome' => $this->nome,
+            'telefone' => $this->whats,
+            'link_instagram' => $this->link_instagram,
+            'termos' => $this->aceitou_termos
+        ]);
+
+        if (!$pes_id) return false;
+
+        $dbArtista = new Database('artista');
+        return $dbArtista->insert([
+            'id_pessoa' => $pes_id,
+            'email' => $this->email,
+            'nome_artistico' => $this->nome_artistico,
+            'linguagem_artistica' => $this->linguagem_artistica,
+            'publico_alvo' => $this->publico_alvo,
+            'tempo_apresentacao' => $this->tempo_apresentacao,
+            'valor_cache' => $this->valor_cache,
+            'status' => 'ativo'
+        ]);
+    }
+
+    public function listar()
+    {
+        try {
+            $db = new Database('artista');
+
+            $query = "SELECT * FROM artista";
+            $artistas = $db->execute($query)->fetchAll(PDO::FETCH_ASSOC);
+
+            $resultado = [];
+
+            foreach ($artistas as $artista) {
+                $pessoa = $db->execute(
+                    "SELECT nome, telefone FROM pessoa WHERE id_pessoa = :id_pessoa",
+                    [':id_pessoa' => $artista['id_pessoa']]
+                )->fetch(PDO::FETCH_ASSOC);
+
+                $resultado[] = [
+                    'id_artista'          => $artista['id_artista'],
+                    'nome'                => $pessoa['nome'],
+                    'email'               => $artista['email'],
+                    'telefone'            => $pessoa['telefone'],
+                    'linguagem_artistica' => $artista['linguagem_artistica'],
+                    'valor_cache'         => $artista['valor_cache'],
+                    'tempo_apresentacao'  => $artista['tempo_apresentacao'],
+                    'status'              => $artista['status']
+                ];
+            }
+
+            return $resultado;
+        } catch (\PDOException $e) {
+            return [];
+        }
+    }
+
+    public function atualizarStatus($id_artista, $novo_status)
+    {
+        try {
+            $db = new Database('artista');
+            return $db->update('id_artista = ' . intval($id_artista), [
+                'status' => $novo_status
+            ]);
+        } catch (\PDOException $e) {
+            return false;
+        }
+    }
+
+    // verificar email
+    public function emailExiste($email)
+    {
+        $db = new Database('artista');
+
+        $email = $db->select("email = '$email'")->fetch(PDO::FETCH_ASSOC);
+
+        return !empty($email);
+    }
+
+    // --- Setters e Gatters---
     public function setId_artista($id_artista)
     {
         $this->id_artista = $id_artista;
@@ -64,9 +149,6 @@ class Artista extends Pessoa
         $this->aceitou_termos = $aceitou_termos;
     }
 
-
-
-    // --- Getters ---
     public function getId_artista()
     {
         return $this->id_artista;
@@ -102,83 +184,5 @@ class Artista extends Pessoa
     public function getStatus()
     {
         return $this->status;
-    }
-
-    // --- Cadastrar ---
-    public function cadastrar()
-    {
-        $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? 'Não';
-
-        $dbPessoa = new Database('pessoa');
-        $pes_id = $dbPessoa->insert_lastid([
-            'nome' => $this->nome,
-            'telefone' => $this->whats,
-            'link_instagram' => $this->link_instagram,
-            'termos' => $this->aceitou_termos
-        ]);
-
-        if (!$pes_id) return false;
-
-        $dbArtista = new Database('artista');
-        return $dbArtista->insert([
-            'id_pessoa' => $pes_id,
-            'email' => $this->email,
-            'nome_artistico' => $this->nome_artistico,
-            'linguagem_artistica' => $this->linguagem_artistica,
-            'publico_alvo' => $this->publico_alvo,
-            'tempo_apresentacao' => $this->tempo_apresentacao,
-            'valor_cache' => $this->valor_cache,
-            'status' => 'ativo'
-        ]);
-    }
-
-
-    public function listar()
-    {
-        try {
-            $db = new Database('artista');
-    
-            $query = "SELECT * FROM artista";
-            $artistas = $db->execute($query)->fetchAll(PDO::FETCH_ASSOC);
-    
-            $resultado = [];
-    
-            foreach ($artistas as $artista) {
-                $pessoa = $db->execute(
-                    "SELECT nome, telefone FROM pessoa WHERE id_pessoa = :id_pessoa",
-                    [':id_pessoa' => $artista['id_pessoa']]
-                )->fetch(PDO::FETCH_ASSOC);
-    
-                $resultado[] = [
-                    'id_artista'          => $artista['id_artista'],
-                    'nome'                => $pessoa['nome'] ?? '',
-                    'email'               => $artista['email'], 
-                    'telefone'            => $pessoa['telefone'] ?? '',
-                    'linguagem_artistica' => $artista['linguagem_artistica'],
-                    'valor_cache'         => $artista['valor_cache'],
-                    'tempo_apresentacao'  => $artista['tempo_apresentacao'],
-                    'status'              => $artista['status']
-                ];
-            }
-    
-            return $resultado;
-        } catch (\PDOException $e) {
-            return [];
-        }
-    }
-    
-
-
-
-    public function atualizarStatus($id_artista, $novo_status)
-    {
-        try {
-            $db = new Database('artista');
-            return $db->update('id_artista = ' . intval($id_artista), [
-                'status' => $novo_status
-            ]);
-        } catch (\PDOException $e) {
-            return false;
-        }
     }
 }

@@ -2,7 +2,7 @@
 let tBody = document.getElementById('tbody')
 
 async function getExpositor() {
-    let dados = await fetch('../../../actions/actions-expositor.php');
+    let dados = await fetch('../../../actions/actions-expositor.php?adm=true');
 
     let expositores = await dados.json();
 
@@ -46,7 +46,7 @@ let buscar_expositor = document.getElementById('buscar_expositor');
 buscar_expositor.addEventListener('keyup', async function(e) {
     try {
         if(buscar_expositor.value.length > 2){
-            let response = await fetch(`../../../actions/actions-expositor.php?filtrarAtivos=${buscar_expositor.value}&aguardando=1`);
+            let response = await fetch(`../../../actions/actions-expositor.php?filtrarValidos=${buscar_expositor.value}`);
             response = await response.json();
     
             if (response.status == 400) {
@@ -66,7 +66,7 @@ buscar_expositor.addEventListener('keyup', async function(e) {
                         <td class="barraca-col">${expositor.num_barraca}</td>
                         <td><button id="ativarInavitar" class="status ${status}" onclick="mudarStatus(${expositor.id_login}, '${expositor.status_pes}')">${expositor.status_pes}</button></td>
                         <td>
-                            <a class="edit-icon" href="editar-perfil-expositor.php?id=${expositor.id_expositor}">
+                            <a class="edit-icon" href="editar-expositor.php?id=${expositor.id_expositor}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                         
