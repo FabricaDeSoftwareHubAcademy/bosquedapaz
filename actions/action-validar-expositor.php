@@ -94,7 +94,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                     <h1>Olá $nome, o seu cadastro na feria bosque da paz foi aprovado, abaixo estão as seus informações para acessar o
                         seu perfil.</h1>
                     <p>O E-mail para acesso é: $email</p>
-                    <p>A sua senha para acesso é: $senha</p>
+                    <p>A sua senha para acesso é: $newSenha</p>
                     <h2>Clique no botão abaixo para acessar o seu login</h2>
                     <div><a href='https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php'>Clique Aqui!!</a></div>
                     <span>Atenciosamente Feira Bosque Da Paz!!</span>
@@ -176,7 +176,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
                 <body>
                     <h1>Olá $nome, o seu cadastro na feria bosque da paz foi recusado, abaixo está o motivo.</h1>
-                    <p>Motivo: $motivo</p>
+                    <p>Motivo: $mensagem</p>
                     <span>Atenciosamente Feira Bosque Da Paz!!</span>
                 </body>
 
