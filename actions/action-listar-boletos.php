@@ -1,9 +1,13 @@
 <?php
 require_once('../vendor/autoload.php');
+require_once('../app/helpers/login.php');
 use app\Controller\Boleto;
 
 header('Content-Type: application/json');
 $boletos = new Boleto();
+if(!confirmaLogin(1)){
+    return('Login Inválido');
+}
 
 $nome = isset($_POST['nome']) ? trim($_POST['nome']) : null;
 $status = isset($_POST['status']) ? trim($_POST['status']) : null;

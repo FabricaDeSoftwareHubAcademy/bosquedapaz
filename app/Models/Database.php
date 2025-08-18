@@ -55,7 +55,7 @@ class Database
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (\PDOException $err) {
-            die("Conection Failed" . $err->getMessage());
+            return false;
         }
     }
 
@@ -69,8 +69,7 @@ class Database
 
             return $stmt;
         } catch (\PDOException $err) {
-
-            die("Connection failed" . $err->getMessage());
+            return false;
         }
     }
 

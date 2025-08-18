@@ -11,6 +11,7 @@ class EmailService {
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
+            $mail->CharSet = 'UTF-8';
             $mail->SMTPAuth = true;
             $mail->Username = 'contatofeirabosquedapaz@gmail.com';  // Seu e-mail do Gmail
             $mail->Password = 'parw wwmm welz awot';  // Senha de aplicativo (se a 2FA estiver habilitada)
@@ -71,6 +72,7 @@ class EmailService {
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
+            $mail->CharSet = 'UTF-8';
             $mail->SMTPAuth = true;
             $mail->Username = 'contatofeirabosquedapaz@gmail.com';  // Seu e-mail do Gmail
             $mail->Password = 'parw wwmm welz awot';  // Senha de aplicativo (se a 2FA estiver habilitada)

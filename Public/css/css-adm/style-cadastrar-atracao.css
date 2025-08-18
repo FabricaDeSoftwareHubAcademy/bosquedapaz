@@ -287,6 +287,13 @@ h1 {
     gap: 30px;
 }
 
+.preview{  
+    display: block;          
+    margin: 0 auto;          
+    max-height: 25rem;    
+    width: auto;             
+}
+
 
 @media (max-width: 950px) {
     .box .form-box {

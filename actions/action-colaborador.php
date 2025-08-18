@@ -2,8 +2,16 @@
 
 require_once('../vendor/autoload.php');
 require_once('../app/helpers/login.php');
+
 use app\Controller\Colaborador;
 use app\suport\Csrf;
+if(!confirmaLogin(1)){
+    echo json_encode([
+        'success' => false,
+        'message' => 'Login Inválido',
+    ]);
+    exit;
+}
 
 function sanitizeString($str) {
     return htmlspecialchars(strip_tags($str));
@@ -214,7 +222,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
                 echo json_encode(['success' => false, 'message' => 'Erro no upload da imagem. Verifique o tipo e tamanho do arquivo.']);
                 exit;
             }
-            $colab->setImagem($imagemSalva);
+            $colab->setImagem('../../../Public/uploads/uploads-ADM/'.$imagemSalva);
         } else {
             // Se não enviou nova imagem, mantenha a atual
             // Buscar a imagem atual para manter

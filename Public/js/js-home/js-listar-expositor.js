@@ -11,7 +11,7 @@ let contentCards = document.getElementById('content-cards')
 
 async function chamarModalExpositor(id){
     
-    let dados = await fetch(`../../../actions/actions-expositor.php?id=${id}`)
+    let dados = await fetch(`../../../actions/actions-expositor.php?idHome=${id}`)
     
     let response = await dados.json()
     
@@ -20,6 +20,8 @@ async function chamarModalExpositor(id){
     let modal = document.getElementById('m-per-expo')
     if (response.status == 200) {
         modal.showModal()
+
+        console.log(response.expositor)
 
         let imgs_car_expositor = '';
         response.expositor.imagens.forEach(imagem => {

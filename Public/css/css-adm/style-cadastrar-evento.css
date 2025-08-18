@@ -285,6 +285,13 @@ h1 {
     transition: 0.3s;
 }
 
+.preview{  
+    display: block;          
+    margin: 0 auto;          
+    max-height: 25rem;    
+    width: auto;             
+}
+
 @media (max-width: 1300px) {
     .box .form-box {
         width: 100%;

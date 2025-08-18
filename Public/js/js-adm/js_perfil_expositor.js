@@ -35,10 +35,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             })
         }
 
-        let response = await fetch(`../../../actions/actions-expositor.php?id=${id_expositor}`)
+        let response = await fetch(`../../../actions/actions-expositor.php?idHome=${id_expositor}`)
 
         let expositor = await response.json()
-        console.log(expositor)
 
         if(expositor.status == 200){
             logo_img.innerHTML = `<img src="${expositor.expositor.img_perfil}" alt="Logo atual do expositor">`

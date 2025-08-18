@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 const resultado = await resposta.json();
-                console.log('Resposta JSON:', resultado);
 
                 if (resultado.status === 'sucesso') {
                     document.getElementById('msm-sucesso').innerText = resultado.mensagem || 'Evento cadastrado com sucesso!';
