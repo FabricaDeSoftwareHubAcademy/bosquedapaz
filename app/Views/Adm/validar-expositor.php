@@ -116,17 +116,17 @@ $tolken = getTolkenCsrf();
             <input type="text" name="num_barraca" class="input" id="numBarraca">
             <label class="title-recusar">Cor da rua: </label>
             <select name="cor_rua" class="input" id="corRua">
-                <option value="amarelo">amarelo</option>
-                <option value="laranja">laranja</option>
-                <option value="verde">verde</option>
-                <option value="roxo">roxo</option>
-                <option value="azul">azul</option>
-                <option value="cinza">cinza</option>
-                <option value="rosa_claro">rosa claro</option>
-                <option value="rosa_escuro">rosa escuro</option>
-                <option value="laranja_lima">laranja lima</option>
-                <option value="preto">preto</option>
-                <option value="vermelho">vermelho</option>
+                <option value="amarelo">Amarelo</option>
+                <option value="laranja">Laranja</option>
+                <option value="verde">Verde</option>
+                <option value="roxo">Roxo</option>
+                <option value="azul">Azul</option>
+                <option value="cinza">Cinza</option>
+                <option value="rosa_claro">Rosa Claro</option>
+                <option value="lilas">Lílas</option>
+                <option value="laranja_lima">Laranja Lima</option>
+                <option value="preto">Preto</option>
+                <option value="vermelho">Vermelho</option>
             </select>
             <?php echo $tolken; ?>
             <div class="content-btns">  

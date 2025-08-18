@@ -49,63 +49,41 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = "
-                <!DOCTYPE html>
-                <html lang='pt-br'>
-
-                <head>
-                    <meta charset='UTF-8'>
-                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-                    <title></title>
-                    <style>
-                        body {
-                            margin: auto;
-                            max-width: 30rem;
-                            text-align: center;
-                        }
-                        h1 {
-                            font-size: 1.2rem;
-                            font-weight: 600;
-                        }
-                        p {
-                            font-size: 1.1rem;
-                            font-weight: 500;
-                        }
-                        h2{
-                            font-size: 1.1rem;
-                            font-weight: 600;
-                        }
-                        div {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            padding: .5rem;
-                        }
-                        a{
-                            display: block;
+                $corpoEmail = '
+                <body style="margin: auto;
+                max-width: 30rem;
+                text-align: center;">
+                    <h1 style="font-size: 1.2rem;
+                    font-weight: 600;">Olá '.$nome.', o seu cadastro na feria bosque da paz foi aprovado, abaixo estão as seus informações para acessar o
+                    seu perfil.</h1>
+                    <p style="font-size: 1.1rem;
+                    font-weight: 500;">O E-mail para acesso é: '.$email.'</p>
+                    <p style="font-size: 1.1rem;
+                    font-weight: 500;">A sua senha para acesso é: '.$newSenha.'</p>
+                    <h2 style="font-size: 1.1rem;
+                    font-weight: 600;">Clique no botão abaixo para acessar o seu login</h2>
+                    <div style="display: flex;
+                    width:100%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: .5rem;">
+                    <a style="display: block;
                             background-color: #007E70;
                             width: 6rem;
                             padding: .5rem;
                             border-radius: .5rem;
                             color: white;
                             text-decoration: none;
-                            font-weight: 500;
-                        }
-                    </style>
-                </head>
-
-                <body>
-                    <h1>Olá $nome, o seu cadastro na feria bosque da paz foi aprovado, abaixo estão as seus informações para acessar o
-                        seu perfil.</h1>
-                    <p>O E-mail para acesso é: $email</p>
-                    <p>A sua senha para acesso é: $newSenha</p>
-                    <h2>Clique no botão abaixo para acessar o seu login</h2>
-                    <div><a href='https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php'>Clique Aqui!!</a></div>
+                            position: relative;
+                            left: 0;
+                            right: 0;
+                            font-weight: 500;" href="https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php">Clique Aqui!!</a>
+                            </div>
                     <span>Atenciosamente Feira Bosque Da Paz!!</span>
                 </body>
-
+                
                 </html>
-                ";
+                ';
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
