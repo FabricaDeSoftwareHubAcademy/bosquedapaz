@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const res = await fetch('../../../actions/action-evento-mais-proximo.php');
         const json = await res.json();
