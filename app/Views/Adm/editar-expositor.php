@@ -34,7 +34,7 @@ $tolken = getTolkenCsrf();
                         <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
                         <input type="file" name="foto" id="foto" class="perfilEdit-foto">
                         <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
-                            Selecione sua logo <img src="" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>
+                            Selecione sua logo <img src="" alt="" class="perfilEdit-icone" id="icone-perfil"> <i class="bi bi-upload perfilEdit-upload-label"></i>
                         </label>
 
                     </div>
@@ -43,14 +43,13 @@ $tolken = getTolkenCsrf();
                         <input type="hidden" name="id_expositor" id="id_expositor">
                         <label for="nome" class="perfilEdit-nameEmpresa perfilEdit-important-label">Nome da empresa: </label>
                         <input type="text" name="nome" id="nome" class="perfilEdit-nome" placeholder="Digite seu nome" required>
-
                     </div>
 
                 </section>
 
                 <section class="PerfilEdit-info-tec">
                     <div class="novos_inputs">
-                        <label for="">cor rua</label>
+                        <label for="">Cor da rua</label>
                         <select name="" class="input-info-tec select-cor-rua" id="">
                             <option value="amarelo">amarelo</option>
                             <option value="laranja">laranja</option>
@@ -68,7 +67,7 @@ $tolken = getTolkenCsrf();
                     <div class="novos_inputs">
                         <label for="">Numero barraca</label>
                         <input class="input-info-tec input-num-barraca" type="text" placeholder="Altere o número da barraca">
-                    </div class="novos_inputs">
+                    </div>
                     <div class="novos_inputs">
                         <label for="">Categoria</label>
                         <select name="id_categoria" id="categorias" class="input-info-tec select-categoria"></select>
