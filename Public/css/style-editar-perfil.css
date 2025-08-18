@@ -348,7 +348,7 @@ input[type="file"]{
     height: fit-content;
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 575.98px) and (max-height: 740px){
     
     .perfilEdit-main{
         position: static;
@@ -362,33 +362,44 @@ input[type="file"]{
     }
 
     .perfilEdit-box{
-        height: 150vh;
+        height: 190vh;
         width: 92%;
     }
 
     .perfilEdit-title{
-        bottom: 0%;
+        bottom: unset;
+    }
+
+    .perfilEdit-icone{
+        max-width: 10%;
+        max-height: auto;
     }
 
     .perfilEdit-form{
         height: 90%;
         width: 90%;
         justify-content: unset;
-        gap: unset;
     }
 
     .perfilEdit-empresas{
         flex-direction: column;
-        
         height: 18%;
     }
 
+    .PerfilEdit-info-tec{
+        gap: unset;
+    }
+
     .perfilEdit-desc{
-        gap: 1%;
+        height: 35vh;
     }
 
     .perfilEdit-label-desc{
         height: unset;
+    }
+
+    .perfilEdit-text-desc{
+        padding: 5px 5px 0px 5px;
     }
 
     .perfilEdit-important-input{
@@ -446,16 +457,116 @@ input[type="file"]{
         padding-bottom: 4%;
     }
 
-    .perfilEdit-btns{
-        
+    .perfilEdit-btn{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575.98px) and (min-height: 760px){
+    .perfilEdit-main{
+        position: static;
+        overflow-y: auto;
+        margin-top: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .perfilEdit-box{
+        height: 150vh;
+        width: 92%;
+    }
+
+    .perfilEdit-title{
+        bottom: unset;
+    }
+
+    .perfilEdit-form{
+        height: 90%;
+        width: 90%;
+        justify-content: unset;
+    }
+
+    .perfilEdit-empresas{
+        flex-direction: column;
+        height: 18%;
+    }
+
+    .PerfilEdit-info-tec{
+        gap: unset;
+    }
+
+    .perfilEdit-desc{
+        height: 20vh;
+    }
+
+    .perfilEdit-label-desc{
+        height: unset;
+    }
+
+    .perfilEdit-text-desc{
+        padding: 5px 5px 0px 5px;
+    }
+
+    .perfilEdit-important-input{
+        width: 100%;
+    }
+
+    .perfilEdit-nome, .perfilEdit-upload{
+        height: 50px;
+    }
+
+    .perfilEdit-input-info{
+        height: 45px;
+    }
+
+    .perfilEdit-info{
+        flex-direction: column;
+        height: 25%;
+        gap: 3%;
+    }
+
+    .fa-envelope{
+        font-size: 18px;
+    }
+
+    .perfilEdit-info div{
+        width: 100%;
+    }
+
+    .perfilEdit-foto-info{
+        margin-top: 8%;
+        min-height: 215px;
+        max-height: 205px;
+    }
+
+    .perfilEdit-foto-info-label{
+        position: relative;
+    }
+
+    .perfilEdit-load-foto{
+        min-width: 165px;
+        max-width: 165px;
+    }
+
+    .perfilEdit-icone{
+        max-width: 23%;
+        max-height: auto;
+    }
+
+    .perfilEdit-div-group{  
+        max-width: 140vh;
+        position: relative;
+        overflow-x: auto;
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-bottom: 4%;
     }
 
     .perfilEdit-btn{
         font-size: 16px;
-    }
-
-    .perfilEdit-link-voltar{
-        
     }
 }
 
@@ -529,6 +640,16 @@ input[type="file"]{
 }
 
 @media (min-width: 768px){
+    .perfilEdit-main{
+        position: static;
+        overflow-y: auto;
+        margin-top: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 30px 0px;
+    }
 
     .perfilEdit-title{
         position: relative;
@@ -536,26 +657,30 @@ input[type="file"]{
     }
 
     .perfilEdit-box{
-        height: 85%;
+        height: 105vh;
     }
 
     .perfilEdit-form{
         width: 90%;
-        height: 90%;
+        height: 95%;
         justify-content: space-between;
-        
     }
 
     .perfilEdit-empresas{
-        height: 85px;
+        height: 100px;
+    }
+
+    .PerfilEdit-info-tec{
+        gap: unset;
     }
 
     .perfilEdit-desc{
-        padding-bottom: 0%;
+        height: 20%;
+        padding-bottom: unset;
     }
 
     .perfilEdit-label-desc{
-        height: 30%;
+        height: 25%;
     }
 
     .perfilEdit-info{
@@ -608,13 +733,23 @@ input[type="file"]{
 }
 
 @media (min-width: 820px){
+    .perfilEdit-main{
+        position: static;
+        overflow-y: auto;
+        margin-top: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 30px 0px;
+    }
 
     .perfilEdit-box{
-        height: 90%;
+        height: 90vh;
     }
 
     .perfilEdit-form{
-        height: 80%;
+        height: 95%;
         justify-content: space-between;
     }
 
@@ -624,7 +759,7 @@ input[type="file"]{
 
     .perfilEdit-desc{
         height: 50%;
-        margin-bottom: 2%;
+        margin-bottom: unset;
     }
 
     .perfilEdit-label-desc{
@@ -653,22 +788,97 @@ input[type="file"]{
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 912px){
+    
+
+    .perfilEdit-box{
+        height: 80vh;
+    }
 
     .perfilEdit-form{
-        height: 85%;
+        height: 95%;
+        justify-content: space-between;
+    }
+
+    .perfilEdit-upload, .perfilEdit-nome{
+        height: 50px;
+    }
+
+    .perfilEdit-desc{
+        height: 20%;
+        margin-bottom: unset;
+    }
+
+    .perfilEdit-label-desc{
+        height: unset;
+    }
+
+    .perfilEdit-info{
+        height: 30%;
+        margin-bottom: -3%;
+    }
+
+    .perfilEdit-input-info{
+        height: 45px;
+    }
+
+    .perfilEdit-foto-info{
+        min-height: 185px;
+        max-height: 185px;
+        position: relative;
+        top: 1%;
+    }
+
+    .perfilEdit-btns{
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
+
+@media (min-width: 992px){
+    .perfilEdit-main{
+        position: static;
+        overflow-y: auto;
+        margin-top: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .perfilEdit-box{
+        height: 90vh;
+    }
+
+    .perfilEdit-form{
+        height: 90%;
     }
 
     .perfilEdit-empresas{
         height: 96px;
     }
 
+    .perfilEdit-desc{
+        height: 35%;
+        margin-bottom: unset;
+    }
+
     .perfilEdit-label-desc{
-        height: 32px;
+        height: 28px;
+    }
+
+    .perfilEdit-info{
+        height: 40%;
+        margin-bottom: unset;
+    }
+
+    .perfilEdit-info div{
+        height: 100%;
     }
 
     .perfilEdit-input-info{
-        height: 60px;
+        height: 100%;
     }
 
     .perfilEdit-foto-info{
@@ -684,17 +894,14 @@ input[type="file"]{
 }
 
 @media (min-width: 992px) and (min-height: 600px) and (orientation: landscape) {
-
-
-
     .perfilEdit-main{
         overflow-y: auto;
-        height: 165vh;
+        height: 220vh;
         position: static;
     }
 
     .perfilEdit-box{
-        height: 85%;
+        height: 210vh;
         margin-top: 2%;
     }
 
@@ -727,11 +934,11 @@ input[type="file"]{
 @media (min-width: 1200px){
     
     .perfilEdit-main{
-        height: 100vh;
+        height: 110vh;
     }
 
     .perfilEdit-box{
-        height: 90%;
+        height: 100vh;
         margin-top: 1%;
     }
 
@@ -747,6 +954,10 @@ input[type="file"]{
 
     .perfilEdit-empresas{
         height: 85px;
+    }
+
+    .PerfilEdit-info-tec{
+        gap: 1rem;
     }
 
     .perfilEdit-desc{
@@ -805,7 +1016,7 @@ input[type="file"]{
 
     .perfilEdit-box{
         width: 95%;
-        height: 89%;
+        height: 100%;
         justify-content: center;
         align-items: center;
         margin-top: 2%;
@@ -828,13 +1039,9 @@ input[type="file"]{
     }
 
     .perfilEdit-desc{
-        height: 75%;
+        height: 80%;
         margin-bottom: unset;
     }
-
-    /* .perfilEdit-label-desc{
-        height: 30%;
-    } */
 
     .perfilEdit-text-desc{
         height: 100%;
@@ -848,7 +1055,7 @@ input[type="file"]{
         min-height: unset;
         max-height: unset;
         top: unset;
-        height: 90%;
+        height: 100%;
         position: relative;
         margin-top: unset;
     }

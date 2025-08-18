@@ -34,7 +34,7 @@ $tolken = getTolkenCsrf();
                         <label class="perfilEdit-logoEmpresa perfilEdit-important-label">Logo da empresa: </label>
                         <input type="file" name="foto" id="foto" class="perfilEdit-foto">
                         <label for="foto" id="logo" name="logo" class="perfilEdit-upload">
-                            Selecione sua logo <img src="" alt="" id="icone-perfil" class="perfilEdit-icone"> <i class="bi bi-upload perfilEdit-upload-label"></i>
+                            Selecione sua logo <img src="" alt="" class="perfilEdit-icone" id="icone-perfil"> <i class="bi bi-upload perfilEdit-upload-label"></i>
                         </label>
 
                     </div>
@@ -49,7 +49,7 @@ $tolken = getTolkenCsrf();
 
                 <section class="PerfilEdit-info-tec">
                     <div class="novos_inputs">
-                        <label for="">cor rua</label>
+                        <label for="">Cor da rua</label>
                         <select name="" class="input-info-tec select-cor-rua" id="">
                             <option value="amarelo">amarelo</option>
                             <option value="laranja">laranja</option>
