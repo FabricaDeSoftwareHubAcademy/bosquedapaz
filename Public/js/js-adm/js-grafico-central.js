@@ -1,3 +1,7 @@
+let currentDate = new Date();
+let currentMonth = currentDate.getMonth(); // 0 a 11
+let currentYear = currentDate.getFullYear();
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const API_BASE_PATH = '../../../actions/dashboard-controller.php';
@@ -202,4 +206,43 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (error) {
     console.error('Erro ao atualizar dados gerais:', error);
   }
+});
+
+const nomesMeses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+async function atualizarDadosMensais(mes, ano) {
+  try {
+    const response = await fetch(`../../../actions/dashboard-controller.php?action=dadosGerais&mes=${mes + 1}&ano=${ano}`);
+    if (!response.ok) throw new Error('Erro ao buscar dados mensais');
+
+    const data = await response.json();
+
+    document.querySelector('.spnValorVisitantes').textContent = data.total_pago || '0,00';
+    document.querySelector('.spnVisitantes').textContent = `${nomesMeses[mes]} ${ano}`;
+  } catch (error) {
+    console.error('Erro ao atualizar dados mensais:', error);
+  }
+}
+
+// Inicializa com o mês atual
+atualizarDadosMensais(currentMonth, currentYear);
+
+// Navegação com setas
+document.querySelector('.btnMes.tras').addEventListener('click', () => {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  atualizarDadosMensais(currentMonth, currentYear);
+});
+
+document.querySelector('.btnMes.frente').addEventListener('click', () => {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  atualizarDadosMensais(currentMonth, currentYear);
 });

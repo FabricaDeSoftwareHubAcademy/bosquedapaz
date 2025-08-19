@@ -23,16 +23,24 @@
 
   <div class="containerInfo">
 
-    <div class="enfoVisitantes">
-      <div class="containerIconGrafico">
-        <i class="bi bi-currency-dollar iconGrafico iconMensal"></i>
-      </div>
-      <div class="containerInfoGrafico">
+<div class="enfoVisitantes">
+  <div class="containerIconGrafico">
+    <i class="bi bi-currency-dollar iconGrafico iconMensal"></i>
+  </div>
+  <div class="containerInfoGrafico">
+    <span class="spnValorVisitantes"></span>
 
-        <span class="spnValorVisitantes"></span>
-        <span class="spnVisitantes">Mensal</span>
-      </div>
+    <div class="containerMensal">
+      <button class="btnMes tras">
+        <i class="bi bi-arrow-right-circle iconArrowMes iconArrowMesTras"></i>
+      </button>
+      <span class="spnVisitantes">Mensal</span>
+      <button class="btnMes frente">
+        <i class="bi bi-arrow-right-circle iconArrowMes"></i>
+      </button>
     </div>
+  </div>
+</div>
 
     <div class="enfoExpositores">
       <div class="containerIconGrafico">
