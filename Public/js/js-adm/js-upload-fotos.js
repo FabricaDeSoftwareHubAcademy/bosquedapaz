@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const idEvento = document.getElementById('id_evento').value;
 
         try {
-            const response = await fetch(`../../../actions/action-listar-fotos-evento.php?id_evento=${idEvento}`);
+            const response = await fetch(`../../../actions/action-buscar-fotos.php?id_evento=${idEvento}`);
             const resultado = await response.json();
 
             if (resultado.status === 'success') {

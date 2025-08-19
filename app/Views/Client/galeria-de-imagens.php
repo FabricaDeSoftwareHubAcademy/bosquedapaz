@@ -53,7 +53,7 @@
       </a>
     </div>
 
-    <h2>Nome do Evento</h2>
+    <h2 id="titulo">Nome do Evento</h2>
     <!-- Area da Galeria de Imagens:  -->
     <div class="container_galeria"></div>
   </section>

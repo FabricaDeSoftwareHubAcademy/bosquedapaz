@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
         if (Array.isArray(json.data)) {
+
             json.data.forEach(colab => {
                 const card = document.createElement("div");
 
