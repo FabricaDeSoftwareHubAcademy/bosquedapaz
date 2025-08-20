@@ -27,7 +27,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $status = $_POST['status'] ?? '';
 
     if (strlen($descricao) > 500) {
-        echo json_encode(['status' => 'error', 'mensagem' => 'A descrição deve ter no máximo 250 caracteres.']);
+        echo json_encode(['status' => 'error', 'mensagem' => 'A descrição deve ter no máximo 500 caracteres.']);
         exit;
     }
 

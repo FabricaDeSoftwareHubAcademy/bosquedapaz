@@ -50,7 +50,7 @@ $tolken = getTolkenCsrf();
                 <section class="PerfilEdit-info-tec">
                     <div class="novos_inputs">
                         <label for="">Cor da rua</label>
-                        <select name="" class="input-info-tec select-cor-rua" id="">
+                        <select name="" class="input-info-tec select-cor-rua" id="select-rua">
                             <option value="amarelo">amarelo</option>
                             <option value="laranja">laranja</option>
                             <option value="verde">verde</option>
@@ -58,7 +58,7 @@ $tolken = getTolkenCsrf();
                             <option value="azul">azul</option>
                             <option value="cinza">cinza</option>
                             <option value="rosa_claro">rosa claro</option>
-                            <option value="rosa_escuro">rosa escuro</option>
+                            <option value="lilas">lilás</option>
                             <option value="laranja_lima">laranja lima</option>
                             <option value="preto">preto</option>
                             <option value="vermelho">vermelho</option>
@@ -66,7 +66,7 @@ $tolken = getTolkenCsrf();
                     </div>
                     <div class="novos_inputs">
                         <label for="">Numero barraca</label>
-                        <input class="input-info-tec input-num-barraca" type="text" placeholder="Altere o número da barraca">
+                        <input class="input-info-tec input-num-barraca" id="select-num-barraca" type="text" placeholder="Altere o número da barraca">
                     </div>
                     <div class="novos_inputs">
                         <label for="">Categoria</label>

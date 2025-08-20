@@ -39,12 +39,22 @@ function uploadImagem($img, $tipo = 'produto') {
     // Validar extensão
     $extensoes_permitidas = ['jpg', 'jpeg', 'png', 'gif'];
     if (!in_array($extencao_imagem, $extensoes_permitidas)) {
-        return false;
+        http_response_code(400);
+        echo json_encode([
+            'status' => 400,
+            'msg' => ucfirst($extencao_imagem).', não é permitido.',
+        ]);
+        exit;
     }
     
     // Validar tamanho (5MB)
-    if (($img['size'] / 1024 / 1024) > 5) {
-        return false;
+    if (($img['size'] / 1024 / 1024) > 2) {
+        http_response_code(400);
+        echo json_encode([
+            'status' => 400,
+            'msg' => ucfirst($extencao_imagem).', imagem muito grande',
+        ]);
+        exit;
     }
     
     $caminho_img = $caminho . $new_name . '.' . $extencao_imagem;
@@ -105,6 +115,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     $objExpo->setWhats(linkWhatsapp(limparMascaraTelefone(htmlspecialchars(strip_tags($_POST['whatsapp'])))));
     $objExpo->setTelefone(limparMascaraTelefone(htmlspecialchars(strip_tags($_POST['whatsapp']))));
     $objExpo->setEmail($email);
+    $objExpo->setNum_barraca(htmlspecialchars(strip_tags($_POST['num-barraca'])));
+    $objExpo->setCor_rua(htmlspecialchars(strip_tags($_POST['cor-rua'])));
+    $objExpo->setId_categoria(htmlspecialchars(strip_tags($_POST['categoria'])));
     
     $imagensProcessadas = [];
     $erros = [];

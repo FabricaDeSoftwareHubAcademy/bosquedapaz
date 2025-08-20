@@ -193,7 +193,7 @@
 
 @media screen and (max-width: 1500px) {
     .eventos, .atracoes, .edicoes_passadas {
-        height: 500px;
+        height: 600px;
     }
 
     .img_prox_event {
@@ -206,9 +206,9 @@
 }
 
 @media screen and (max-width: 1100px) {
-    /* .eventos, .atracoes, .edicoes_passadas {
-        height: 500px;
-    } */
+    .eventos, .atracoes, .edicoes_passadas {
+        height: 600px;
+    }
 
     .content_img_evento {
         display: none;

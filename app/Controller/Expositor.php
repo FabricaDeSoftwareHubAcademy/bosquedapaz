@@ -52,13 +52,12 @@ class Expositor extends Pessoa
 
 
     public function cadastrar(){
-        $conn;
+        $db = new Database('endereco');
+
+        $conn = $db->getConnection();
         try {
             $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
-            $db = new Database('endereco');
-    
-            $conn = $db->getConnection();
     
             $conn->beginTransaction();
     
@@ -141,8 +140,8 @@ class Expositor extends Pessoa
     public function listar($where = null, $order = null, $limit = null, $dados = 'adm'){
         try {
             $fields = [
-                'home' => 'id_expositor, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook',
-                'adm' => 'id_expositor, id_login, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook, id_categoria, cpf, validacao, voltagem, energia, nome, email, cidade, status_pes, tipo, telefone',
+                'home' => 'id_expositor, id_pessoa , img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook',
+                'adm' => 'id_expositor, id_pessoa , id_login, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook, id_categoria, cpf, validacao, voltagem, energia, nome, email, cidade, status_pes, tipo, telefone',
             ];
 
             $db = new Database('view_expositor');
@@ -160,8 +159,8 @@ class Expositor extends Pessoa
             $db = new Database('view_expositor');
 
             $fields = [
-                'home' => 'id_expositor, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook',
-                'adm' => 'id_expositor, id_login, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook, id_categoria, cpf, validacao, voltagem, energia, nome, email, cidade, status_pes, tipo, telefone',
+                'home' => 'id_expositor, id_pessoa, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook',
+                'adm' => 'id_expositor, id_pessoa , id_login, img_perfil, nome_marca, num_barraca, descricao, descricao_exp, cor_rua, link_instagram, whats, link_facebook, id_categoria, cpf, validacao, voltagem, energia, nome, email, cidade, status_pes, tipo, telefone',
             ];
 
             $expositores = $db->select(
@@ -185,8 +184,7 @@ class Expositor extends Pessoa
         if($status == 'validado'){
             //// dados pessoa
             $senha = [
-                'senha' => $newSenha,
-                'status_pes' => 'ativo',
+                'senha' => $newSenha
             ];
             
             ///// dados expositor
@@ -278,6 +276,7 @@ class Expositor extends Pessoa
                 'id_login = ' . $dados_pessoa['id_login'],
                 [
                     'email' => $this->email,
+                    'status_pes' => 'ativo'
                 ]
             );
             
@@ -288,6 +287,9 @@ class Expositor extends Pessoa
                 [
                     'nome_marca' => $this->nome_marca,
                     'descricao' => $this->descricao,
+                    'id_categoria' => $this->id_categoria,
+                    'cor_rua' => $this->cor_rua,
+                    'num_barraca' => $this->num_barraca,
                 ]
             );
             

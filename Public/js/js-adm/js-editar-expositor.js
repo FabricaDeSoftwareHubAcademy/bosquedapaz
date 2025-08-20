@@ -11,6 +11,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     let input_id_expositor = document.getElementById("id_expositor");
     let icone_perfil = document.getElementById("icone-perfil");
     let label_logo = document.getElementById("logo");
+    let select_rua = document.getElementById("select-rua");
+    let select_barraca = document.getElementById("select-num-barraca");
+    let categorias = document.getElementById("categorias");
 
     // Elementos das imagens de produtos
     const imagensProdutos = [];
@@ -24,13 +27,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     await getCategorias();
 
     async function getCategorias() {
-
-        let categorias = document.getElementById("categorias");
     
         let dados_php = await fetch('../../../actions/action-listar-categoria.php');
     
         let response = await dados_php.json();
-    
     
         html = '<option selected disabled>Selecione</option>';
         for (let i = 0; i < response.dados.length; i++) {
@@ -141,6 +141,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         input_email.value = response.expositor.email;
         input_insta.value = response.expositor.link_instagram;
         input_facebook.value = response.expositor.link_facebook;
+        select_barraca.value = response.expositor.num_barraca
+        select_rua.value = response.expositor.cor_rua;
+        categorias.value = response.expositor.id_categoria;
 
         let arrayWhats = response.expositor.whats.split('/');
         input_whatsapp.value = maskNumTelefone(arrayWhats[arrayWhats.length - 1].slice(2));
@@ -199,7 +202,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         const editarperfil_form = document.getElementById("perfilEdit_form");
         let formdata = new FormData(editarperfil_form);
-        formdata.append('id_login', response.expositor.id_login)
+        formdata.append('id_login', response.expositor.id_login);
+        formdata.append('categoria', categorias.value);
+        formdata.append('num-barraca', select_barraca.value);
+        formdata.append('cor-rua', select_rua.value);
 
         console.log('Dados sendo enviados:');
         for (const [key, value] of formdata.entries()) {

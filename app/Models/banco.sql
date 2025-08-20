@@ -210,6 +210,7 @@ CREATE TABLE utilidade_publica (
 );
 
 SELECT * FROM boleto;
+
 ALTER TABLE boleto
 ADD data_status_pago DATE;
 

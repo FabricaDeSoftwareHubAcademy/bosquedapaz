@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const id = params.get('id');
 
     if (!id) {
-        alert('ID do evento não fornecido.');
-        return;
+        document.getElementById('erro-title').innerText = 'Erro ao cadastrar evento';
+        document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+        openModalError();
+        document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
     }
 
     try {
@@ -45,14 +47,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 banner.alt = evento.nome_evento ?? 'Imagem do evento';
             }
         } else {
-            alert('Evento não encontrado.');
-            return;
+            document.getElementById('erro-title').innerText = 'Erro ao cadastrar evento';
+            document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+            openModalError();
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
         }
 
     } catch (error) {
-        console.error('Erro ao buscar evento:', error);
-        alert('Erro ao buscar evento.');
-        return;
+        document.getElementById('erro-title').innerText = 'Erro ao cadastrar evento';
+        document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+        openModalError();
+        document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
     }
 
     btnEditar.addEventListener('click', (event) => {
