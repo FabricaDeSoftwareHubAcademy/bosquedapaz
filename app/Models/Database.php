@@ -297,16 +297,25 @@ class Database
 
     public function alterar_status($status, $id)
     {
-        $query = "UPDATE boleto set status_boleto = :status_boleto
-        WHERE id_boleto = :id_boleto";
-
+        $query = "
+            UPDATE boleto SET
+                data_status_pago = CASE
+                    WHEN status_boleto = 'Pendente' AND :status_boleto = 'Pago' THEN CURDATE()  -- Pendente -> Pago: grava data de hoje
+                    WHEN status_boleto = 'Pago' AND :status_boleto = 'Pendente' THEN NULL       -- Pago -> Pendente: zera a data
+                    ELSE data_status_pago                                                       -- demais casos: mantém
+                END,
+                status_boleto = :status_boleto
+            WHERE id_boleto = :id_boleto
+        ";
+    
         $binds = [
-            ":status_boleto" => $status,
-            ":id_boleto" => $id
+            ':status_boleto' => $status,
+            ':id_boleto' => $id
         ];
+    
         return $this->execute($query, $binds);
     }
-
+    
     public function capturar_boletos_por_usuario($id)
     {
         $query = "SELECT
