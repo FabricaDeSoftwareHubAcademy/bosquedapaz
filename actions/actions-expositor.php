@@ -164,7 +164,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                     // move as imagens
                     foreach ($imagens as $img) {
                         // verifica quantos mb
-                        if( 5 < ($img['size'] / 1024) / 1024){
+                        if( 2 < ($img['size'] / 1024) / 1024){
                             echo json_encode([
                                 'msg' => 'Imagem enviada muito grande', 
                             ]);

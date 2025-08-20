@@ -39,12 +39,22 @@ function uploadImagem($img, $tipo = 'produto') {
     // Validar extensão
     $extensoes_permitidas = ['jpg', 'jpeg', 'png', 'gif'];
     if (!in_array($extencao_imagem, $extensoes_permitidas)) {
-        return false;
+        http_response_code(400);
+        echo json_encode([
+            'status' => 400,
+            'msg' => ucfirst($extencao_imagem).', não é permitido.',
+        ]);
+        exit;
     }
     
     // Validar tamanho (5MB)
-    if (($img['size'] / 1024 / 1024) > 5) {
-        return false;
+    if (($img['size'] / 1024 / 1024) > 2) {
+        http_response_code(400);
+        echo json_encode([
+            'status' => 400,
+            'msg' => ucfirst($extencao_imagem).', imagem muito grande',
+        ]);
+        exit;
     }
     
     $caminho_img = $caminho . $new_name . '.' . $extencao_imagem;
