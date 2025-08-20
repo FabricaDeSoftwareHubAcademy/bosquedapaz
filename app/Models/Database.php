@@ -297,16 +297,25 @@ class Database
 
     public function alterar_status($status, $id)
     {
-        $query = "UPDATE boleto set status_boleto = :status_boleto
-        WHERE id_boleto = :id_boleto";
-
+        $query = "
+            UPDATE boleto SET
+                data_status_pago = CASE
+                    WHEN status_boleto = 'Pendente' AND :status_boleto = 'Pago' THEN CURDATE()  -- Pendente -> Pago: grava data de hoje
+                    WHEN status_boleto = 'Pago' AND :status_boleto = 'Pendente' THEN NULL       -- Pago -> Pendente: zera a data
+                    ELSE data_status_pago                                                       -- demais casos: mantém
+                END,
+                status_boleto = :status_boleto
+            WHERE id_boleto = :id_boleto
+        ";
+    
         $binds = [
-            ":status_boleto" => $status,
-            ":id_boleto" => $id
+            ':status_boleto' => $status,
+            ':id_boleto' => $id
         ];
+    
         return $this->execute($query, $binds);
     }
-
+    
     public function capturar_boletos_por_usuario($id)
     {
         $query = "SELECT
@@ -501,28 +510,35 @@ public function getAtracoesPorEvento()
 
 public function getDadosGerais()
 {
+    $mes = $_GET['mes'] ?? date('m');
+    $ano = $_GET['ano'] ?? date('Y');
+
     $sql = "
         SELECT 
             (SELECT COALESCE(SUM(valor), 0) 
              FROM boleto 
              WHERE status_boleto = 'Pago' 
-               AND MONTH(vencimento) = MONTH(CURDATE()) 
-               AND YEAR(vencimento) = YEAR(CURDATE())
+               AND MONTH(data_status_pago) = :mes 
+               AND YEAR(data_status_pago) = :ano
             ) AS total_pago,
             (SELECT COUNT(*) FROM expositor) AS expositores,
             (SELECT COUNT(*) FROM artista WHERE status = 'ativo') AS artistas,
             (SELECT COUNT(*) FROM evento WHERE status = 1) AS eventos_ativos
     ";
-    
+
     $stmt = $this->conn->prepare($sql);
+    $stmt->bindParam(':mes', $mes);
+    $stmt->bindParam(':ano', $ano);
     $stmt->execute();
     $dados = $stmt->fetch(\PDO::FETCH_ASSOC);
 
-    // Formata total_pago para 2 casas decimais com vírgula decimal e ponto milhar
     $dados['total_pago'] = number_format($dados['total_pago'], 2, ',', '.');
+    $dados['mes'] = $mes;
+    $dados['ano'] = $ano;
 
     return $dados;
 }
+
 
 
 

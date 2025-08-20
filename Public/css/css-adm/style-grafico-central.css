@@ -88,6 +88,36 @@
 }
 
 
+.containerMensal{
+  width: 90%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  /* border: 1px solid red; */
+}
+.btnMes{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  background: none;
+  border: none;
+}
+.iconArrowMes{
+  font-size: 20px;
+  cursor: pointer;
+}
+.iconArrowMesTras{
+  transform: scaleX(-1);
+    display: inline-block;
+
+}
+
 .grid-graficos {
     width: 95%;
     height: auto;
@@ -179,10 +209,13 @@
   }
 }
 
+
+
 /* Celular (largura menor que 600px) */
 @media (max-width: 600px) {
   .grid-graficos {
     grid-template-columns: 1fr;
+    font-size: 15px;
   }
   .containerInfo {
     justify-content: center;
@@ -192,7 +225,7 @@
     flex: 0 0 90%;
     margin-bottom: 20px;
   }
-  .spnValorVisitantes{
-    font-size: 20px;
+  .spnVisitantes{
+    font-size: 15px;
   }
 }
