@@ -49,41 +49,19 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 ///// enviando a senha no email
                 $emailService = new EmailService();
 
-                $corpoEmail = '
-                <body style="margin: auto;
-                max-width: 30rem;
-                text-align: center;">
-                    <h1 style="font-size: 1.2rem;
-                    font-weight: 600;">Olá '.$nome.', o seu cadastro na feria bosque da paz foi aprovado, abaixo estão as seus informações para acessar o
-                    seu perfil.</h1>
-                    <p style="font-size: 1.1rem;
-                    font-weight: 500;">O E-mail para acesso é: '.$email.'</p>
-                    <p style="font-size: 1.1rem;
-                    font-weight: 500;">A sua senha para acesso é: '.$newSenha.'</p>
-                    <h2 style="font-size: 1.1rem;
-                    font-weight: 600;">Clique no botão abaixo para acessar o seu login</h2>
-                    <div style="display: flex;
-                    width:100%;
-                    align-items: center;
-                    justify-content: center;
-                    padding: .5rem;">
-                    <a style="display: block;
-                            background-color: #007E70;
-                            width: 6rem;
-                            padding: .5rem;
-                            border-radius: .5rem;
-                            color: white;
-                            text-decoration: none;
-                            position: relative;
-                            left: 0;
-                            right: 0;
-                            font-weight: 500;" href="https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php">Clique Aqui!!</a>
-                            </div>
-                    <span>Atenciosamente Feira Bosque Da Paz!!</span>
-                </body>
-                
-                </html>
-                ';
+                $corpoEmail = "
+                <div style='font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; padding: 25px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; max-width: 480px; margin: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.05); color: #333333;'>
+    <h2 style='color: #FF4612; margin-bottom: 20px; font-weight: 700; font-size: 24px;'>Seu cadastro foi Aprovado!!</h2>
+    <p style='font-size: 16px; margin-bottom: 12px;'>Olá, <strong>{$nome}</strong>!</p>
+    <p style='font-size: 16px; margin-bottom: 20px;'><strong>Seu email para acesso:</strong> " . $email . "</p>
+    <p style='font-size: 16px; margin-bottom: 20px;'><strong>Sua senha para acesso:</strong> " . $newSenha . "</p>
+    <p style='font-size: 16px;'>Clique aqui para ser redirecionado para a sua área de acesso:</p>
+    <p style='text-align: center; margin: 25px 0;'>
+        <a href='https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php' target='_blank' style='display: inline-block; padding: 14px 24px; background-color: #ef233c; color: white; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 6px;'>Clique Aqui!!</a>
+        </p>
+        <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 100%; margin-top: 20px;'>
+    <p style='font-size: 12px; color: #888888; text-align: center;'>Feira Bosque da Paz</p>
+</div>";
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
@@ -109,61 +87,15 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
             if ($res){
                 ///// enviando a senha no email
                 $emailService = new EmailService();
-
                 $corpoEmail = "
-                <!DOCTYPE html>
-                <html lang='pt-br'>
+                <div style='font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; padding: 25px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; max-width: 480px; margin: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.05); color: #333333;'>
+    <h2 style='color: #FF4612; margin-bottom: 20px; font-weight: 700; font-size: 24px;'>Seu cadastro foi Recusado!!</h2>
+    <p style='font-size: 16px; margin-bottom: 12px;'>Olá, <strong>{$nome}</strong>!</p>
+    <p style='font-size: 16px; margin-bottom: 20px;'>" . $mensagem . "</p>
+        <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 100%; margin-top: 20px;'>
+    <p style='font-size: 12px; color: #888888; text-align: center;'>Feira Bosque da Paz</p>
+</div>";
 
-                <head>
-                    <meta charset='UTF-8'>
-                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-                    <title></title>
-                    <style>
-                        body {
-                            margin: auto;
-                            max-width: 30rem;
-                            text-align: justify;
-                        }
-                        h1 {
-                            font-size: 1.2rem;
-                            font-weight: 600;
-                        }
-                        p {
-                            font-size: 1.1rem;
-                            font-weight: 500;
-                            text-align: justify;
-                        }
-                        h2{
-                            font-size: 1.1rem;
-                            font-weight: 600;
-                        }
-                        div {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            padding: .5rem;
-                        }
-                        a{
-                            display: block;
-                            background-color: #007E70;
-                            width: 6rem;
-                            padding: .5rem;
-                            border-radius: .5rem;
-                            color: white;
-                            text-decoration: none;
-                            font-weight: 500;
-                        }
-                    </style>
-                </head>
-
-                <body>
-                    <h1>Olá $nome, o seu cadastro na feria bosque da paz foi recusado, abaixo está o motivo.</h1>
-                    <p>Motivo: $mensagem</p>
-                    <span>Atenciosamente Feira Bosque Da Paz!!</span>
-                </body>
-
-                </html>
-                ";
 
                 $enviarEmail = $emailService->enviarEmail($email, $corpoEmail);
 
