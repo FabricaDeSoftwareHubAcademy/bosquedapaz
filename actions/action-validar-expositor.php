@@ -51,13 +51,13 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
 
                 $corpoEmail = "
                 <div style='font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; padding: 25px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; max-width: 480px; margin: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.05); color: #333333;'>
-    <h2 style='color: #FF4612; margin-bottom: 20px; font-weight: 700; font-size: 24px;'>Seu cadastro foi Aprovado!!</h2>
+    <h2 style='color: #FF4612; margin-bottom: 20px; font-weight: 700; font-size: 24px;'>Seu cadastro foi aprovado!</h2>
     <p style='font-size: 16px; margin-bottom: 12px;'>Olá, <strong>{$nome}</strong>!</p>
     <p style='font-size: 16px; margin-bottom: 20px;'><strong>Seu email para acesso:</strong> " . $email . "</p>
     <p style='font-size: 16px; margin-bottom: 20px;'><strong>Sua senha para acesso:</strong> " . $newSenha . "</p>
     <p style='font-size: 16px;'>Clique aqui para ser redirecionado para a sua área de acesso:</p>
     <p style='text-align: center; margin: 25px 0;'>
-        <a href='https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php' target='_blank' style='display: inline-block; padding: 14px 24px; background-color: #ef233c; color: white; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 6px;'>Clique Aqui!!</a>
+        <a href='https://feirabosquedapaz.com.br/app/Views/Client/tela-login.php' target='_blank' style='display: inline-block; padding: 14px 24px; background-color: #ef233c; color: white; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 6px;'>Clique Aqui!</a>
         </p>
         <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 100%; margin-top: 20px;'>
     <p style='font-size: 12px; color: #888888; text-align: center;'>Feira Bosque da Paz</p>
@@ -89,7 +89,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                 $emailService = new EmailService();
                 $corpoEmail = "
                 <div style='font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; padding: 25px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; max-width: 480px; margin: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.05); color: #333333;'>
-    <h2 style='color: #FF4612; margin-bottom: 20px; font-weight: 700; font-size: 24px;'>Seu cadastro foi Recusado!!</h2>
+    <h2 style='color: #FF4612; margin-bottom: 20px; font-weight: 700; font-size: 24px;'>Seu cadastro foi recusado!</h2>
     <p style='font-size: 16px; margin-bottom: 12px;'>Olá, <strong>{$nome}</strong>!</p>
     <p style='font-size: 16px; margin-bottom: 20px;'>" . $mensagem . "</p>
         <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 100%; margin-top: 20px;'>
