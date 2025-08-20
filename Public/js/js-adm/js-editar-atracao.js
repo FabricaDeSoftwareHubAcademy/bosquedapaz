@@ -18,8 +18,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     if (!id) {
-        alert('ID da atração não fornecido.');
-        return;
+        document.getElementById('erro-title').innerText = 'Erro ao cadastrar atração';
+        document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+        openModalError();
+        document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
     }
 
     
@@ -47,52 +49,70 @@ document.addEventListener('DOMContentLoaded', async () => {
                 imagem.alt = atracao.nome_atracao ?? 'Imagem da atração';
             }
         } else {
-            alert('Atração não encontrada.');
+            document.getElementById('erro-title').innerText = 'Erro ao cadastrar atração';
+            document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+            openModalError();
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
         }
 
     } catch (error) {
-        console.error('Erro ao buscar atração:', error);
-        alert('Erro ao buscar atração.');
+        document.getElementById('erro-title').innerText = 'Erro ao cadastrar atração';
+        document.getElementById('erro-text').innerText = resultado.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+        openModalError();
+        document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
     }
 
     btnEditar.addEventListener('click', (event) => {
         event.preventDefault();
-
+    
+        // VALIDAÇÃO DOS CAMPOS
+        if (!descricaoInput.value.trim()) {
+            document.getElementById('erro-title').innerText = 'Erro de validação';
+            document.getElementById('erro-text').innerText = 'O campo descrição não pode ficar vazio!';
+            openModalError();
+            document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
+            return; // impede que continue
+        }
+    
+        // Se passou pela validação, abre modal de confirmação
         openModalAtualizar();
         document.getElementById('close-modal-confirmar').addEventListener('click', closeModalConfirmar);
         document.getElementById('btn-modal-cancelar').addEventListener('click', closeModalConfirmar);
-
+    
         document.getElementById('btn-modal-salvar').addEventListener('click', async () => {
             closeModalAtualizar();
-
+    
             const formData = new FormData(form);
-
+    
             try {
                 const response = await fetch('../../../actions/action-editar-atracao.php', {
                     method: 'POST',
                     body: formData
                 });
-
-                const text = await response.text();
-
-                const data = JSON.parse(text);
-
+    
+                const data = await response.json();
+    
                 if (data.status === 'success') {
                     openModalSucesso();
                     document.getElementById('close-modal-sucesso').addEventListener('click', closeModalSucesso);
                     document.getElementById('msm-sucesso').innerHTML = data.mensagem ?? 'Atração atualizada com sucesso!';
-
+    
                     setTimeout(() => {
                         window.location.href = `./gerenciar-atracao.php?id_evento=${idEvento}&nome_evento=${encodeURIComponent(nomeEvento)}`;
                     }, 5000);
-
+    
                 } else {
+                    document.getElementById('erro-title').innerText = 'Erro ao editar atração';
+                    document.getElementById('erro-text').innerText = data.mensagem || 'Ocorreu um erro inesperado ao processar os dados.';
+                    openModalError();
                     document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
-                    console.error('Erro ao atualizar:', data.mensagem);
                 }
-
+    
             } catch (error) {
-                console.error('Erro no envio do formulário:', error);
+                document.getElementById('erro-title').innerText = 'Erro ao editar atração';
+                document.getElementById('erro-text').innerText = 'Ocorreu um erro inesperado ao processar os dados.';
+                openModalError();
+                document.getElementById('close-modal-erro').addEventListener('click', closeModalError);
             }
         });
     });
