@@ -1069,6 +1069,10 @@ input[type="file"]{
         margin-bottom: 0;
     }
 
+    .perfilEdit-upload, .perfilEdit-nome{
+        padding-left: 2%;
+    }
+
     .perfilEdit-foto-info{
         min-height: unset;
         max-height: unset;
