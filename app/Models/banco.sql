@@ -209,6 +209,9 @@ CREATE TABLE utilidade_publica (
     PRIMARY KEY(id_utilidade_publica)
 );
 
+SELECT * FROM boleto;
+ALTER TABLE boleto
+ADD data_status_pago DATE;
 
 CREATE VIEW view_expositor AS
 SELECT exp.id_expositor, exp.id_pessoa, exp.nome_marca, exp.num_barraca, exp.voltagem, exp.energia, exp.tipo, exp.descricao as descricao_exp, exp.metodos_pgto, exp.cor_rua, exp.validacao, 
