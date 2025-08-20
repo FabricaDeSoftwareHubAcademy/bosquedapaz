@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -7,229 +7,179 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
 
-
-.titulo-descricao-principal {
+/* SECTIONS PRINCIPAIS */
+section {
     width: 100%;
-    height: 50vh;
+    padding: 65px 5%;   
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
-    margin-bottom: 0%;
+    justify-content: center;
+}
+
+.section-introducao-quem-somos{
+    padding-top: 180px;
+}
+
+/* INTRODUÇÃO */
+.titulo-descricao-principal {
+    text-align: center;
 }
 
 .h1-primario {
     font-size: 3rem;
-    margin-bottom: 5%;
     color: #ff5029;
-    background-clip: none;
-    -webkit-background-clip: text;
-    text-decoration: none;
-
     text-transform: uppercase;
     background: linear-gradient(to left, #ff5029, rgb(255, 51, 0), rgb(222, 190, 5), rgb(255, 85, 0));
     background-size: 500% 100%;
-    animation: degrade-animado 10S infinite alternate;
-    background-clip: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-radius: 8px;
-
-
-
+    animation: degrade-animado 10s infinite alternate;
+    margin-bottom: 20px;
 }
 
 .descricao {
-    display: flex;
     text-align: justify;
     font-size: 1.5rem;
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 1250px;
 }
 
-
-
-.titulo-nossa-historia-quem-somos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 150px;
-}
-
-.h1-secundario {
-    display: flex;
+/* HISTÓRIA */
+.titulo-nossa-historia-quem-somos h1 {
     font-size: 2.5rem;
     color: #8338ec;
-    background-clip: none;
-    -webkit-background-clip: text;
-    text-decoration: none;
-    
     text-transform: uppercase;
+    text-align: center;
     background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
     background-size: 500% 100%;
-
-    background-clip: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-radius: 8px;
+    animation: degrade-animado 10s infinite alternate;
+    margin-bottom: 40px;
+}
 
+.carrossel-imagens,
+.galeria {
+    column-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .carrossel-imagens {
     column-count: 3;
-    column-gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-    margin-top: 100px;
-  }
-  
-  .carrossel-imagens img {
-    width: 100%;  /* largura fixa menor */
+}
+
+.galeria {
+    column-count: 4;
+}
+
+.carrossel-imagens img,
+.galeria img {
+    width: 100%;
     height: auto;
-    margin-bottom: 15px;
     border-radius: 10px;
     break-inside: avoid;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
     display: block;
-  }
-  
-  .carrossel-imagens img:hover {
+}
+
+.carrossel-imagens img:hover,
+.galeria img:hover {
     transform: scale(1.03);
-  }
-
-@keyframes degrade-animado {
-    0% {
-        background-position-x: 0%;
-    }
-
-    100% {
-        background-position-x: 100%;
-    }
 }
 
-
-@keyframes flutuar {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        top: 20px;
-    }
-}
-
+/* FLUXO */
 .descricao-fluxo {
-    margin-top: 100px;
-    display: flex;
+    max-width: 900px;
     text-align: justify;
     font-size: 1.5rem;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 .descricao-fluxo span {
-    font-weight: bold
+    font-weight: bold;
 }
 
-.imagens-bosque-quem-somos .imagens2 {
+/* NOSSO TIME E EXPOSITOR: mesma altura */
+.section-nosso-time-quem-somos,
+.section-expositor-quem-somos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 150px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
+    min-height: 400px;       /* altura mínima igual */
+    width: 100%;
+    padding: 80px 20px;      /* padding padronizado */
+    box-sizing: border-box;
 }
 
+/* cores e animações específicas */
 .section-nosso-time-quem-somos {
-    width: 100%;
-    height: 45vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ff5029;
-    margin-bottom: 10%;
     background: linear-gradient(to left, #ff5029, rgb(255, 51, 0), rgb(222, 190, 5), rgb(255, 85, 0));
     background-size: 500% 100%;
-    animation: degrade-animado 10S infinite alternate;
-
+    animation: degrade-animado 10s infinite alternate;
+    color: #fff;
 }
 
-.div-nt {
-    width: 100%;
+.section-expositor-quem-somos {
+    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
+    background-size: 500% 100%;
+    animation: degrade-animado 10s infinite alternate;
+    color: #fff;
+    text-align: center;
+}
+
+.div-nt h1,
+.section-expositor-quem-somos h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* COLABORADORAS */
+.section-colaboradoras-quem-somos {
+    display: flex;           
+    flex-wrap: wrap;          
+    justify-content: center;  
+    gap: 60px 40px;   
+    flex-direction: row;       
+}
+
+/* Cada card */
+.section-colaboradoras-quem-somos .image-text-carina,
+.section-colaboradoras-quem-somos .image-text-denise,
+.section-colaboradoras-quem-somos .image-text-fernanda {
+    flex: 1 1 250px;          
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 175px;
-
 }
-
-.div-nt h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    justify-content: center;
-}
-
-.section-colaboradoras-quem-somos {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-    gap: 140px;
-
-
-}
-
-
 
 .section-colaboradoras-quem-somos .fotos {
-    width: 300px;
-    height: 300px;
+    width: 100%;              
+    height: auto;            
+    aspect-ratio: 1/1;        
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
     border: 7px solid #f8f9fa;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-
-
-
-
-.section-colaboradoras-quem-somos .carina,
-.profission,
-.denise,
-.fernanda,
-.nájila {
-    color: #565358;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.40rem;
-    transition: all;
-
-
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .section-colaboradoras-quem-somos > div:hover .fotos {
-    border-color: #ff5029;
     transform: scale(1.05);
+    border-color: #ff5029;
 }
 
-.section-colaboradoras-quem-somos .carina,
-.section-colaboradoras-quem-somos .denise,
-.section-colaboradoras-quem-somos .fernanda {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 0.5rem;
+.section-colaboradoras-quem-somos p {
+    text-align: justify;
+    margin-top: 10px;
 }
 
 .section-colaboradoras-quem-somos .profission {
@@ -237,506 +187,113 @@
     font-weight: 500;
     color: #ff5029;
 }
-.descricao-colaboradoras-quem-somos p {
-    display: flex;
+
+/* DESCRIÇÃO COLABORADORAS */
+.descricao-colaboradoras-quem-somos {
+    width: 100%;
+    max-width: 1250px;
     text-align: justify;
     font-size: 1.5rem;
-    padding-left: 10%;
-    padding-right: 10%;
-
+    margin-top: 40px;
+    display: block;      
 }
 
+/* BOTÃO EXPOSITOR */
+.div-botao {
+    margin-top: 40px;
+}
 
-.section-expositor-quem-somos {
-    width: 100%;
-    height: 45vh;
-    display: flex;
+.botao-expositor {
+    display: inline-flex;
     align-items: center;
-    flex-direction: column;
-    margin-top: 5%;
-    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
-    background-size: 500% 100%;
-    animation: degrade-animado 10S infinite alternate;
-
-
-}
-
-.expositor-div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 170px;
-    
-}
-
-
-.expositor h1 {
-    font-size: 3rem;
-    color: #ffffff;
     justify-content: center;
-}
-
-.section-descricao-expositor-quem-somos {
-    height: 40vh;
-}
-
-.expositor-p {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.expositor-p .descricao4 {
-    display: flex;
-    text-align: justify;
-    font-size: 1.5rem;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-  /*  .botao-expositor {
-        width: 100%;
-    }
-    .div-botao{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 150px;
-        padding-bottom: 10%;
-        margin-bottom: 100px;
-    }
-
-    .div-botao .botao-expositor {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 25%;
-        height: 60px;
-        background-color: #ffffff;
-        font-weight: bold;
-        text-decoration: none;
-        position: relative;
-        border-radius: 10px;
-        background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
-        background-size: 500% 100%;
-        animation: degrade-animado 10S infinite alternate;
-    }
-
-
-
-.botao-expositor .botao {
-    color: #ffffff;
-    background-clip: none;
-    -webkit-background-clip: text;
+    width: 220px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: #fff;
     text-decoration: none;
-}*/
-
-.div-botao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
     transition: transform 0.3s ease;
 }
-.div-botao .botao-expositor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 60px;
-    background-color: #ffffff;
-    text-decoration: none;
-    border-radius: 15px;
 
-
-   
-}
-.div-botao .botao-expositor .botao{
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
-    background-clip: none;
-    -webkit-background-clip: text;
-    
-    text-transform: uppercase;
-    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
-    background-size: 500% 100%;
-
-    background-clip: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-}
-
-.div-botao:hover {
+.botao-expositor:hover {
     transform: scale(1.05);
 }
-.galeria{
-    column-count: 4;
-    column-gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-    margin-top: 10px;
-  }
-  
-  .galeria img {
-    width: 100%;  /* largura fixa menor */
-    height: auto;
-    margin-bottom: 30px;
-    border-radius: 30px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: block;
-  }
-  
-  
-  
-  
-  .galeria img:hover {
-    transform: scale(1.03);
-  }
- 
-  
-  .imagens3{
-    display: flex;
-    margin-top: 100px;
-    padding-bottom: 200px;
-  }
-  .h1-quinto{
-    
-    font-size: 2.5rem;
-    margin-bottom: 5%;
-    color: #ff5029;
-    background-clip: none;
-    -webkit-background-clip: text;
-    text-decoration: none;
+
+.botao-expositor .botao {
+    font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(to left, #c93e1f, rgb(255, 51, 0), rgb(222, 190, 5), rgb(253, 102, 26));
-    background-size: 500% 100%;
-    background-clip: none;
+    background: linear-gradient(to left, rgb(81, 25, 171), rgb(238, 0, 255), rgb(92, 9, 134));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    
-    
-  }
-  .titulo-veja-mais-fotos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-/*RESPONSIVIDADE DA SECTION DAS COLABORADORAS*/
-@media (max-width: 992px) {
-    .section-colaboradoras-quem-somos .fotos {
-        width: 240px;
-        height: 240px;
-    }
-
-    .descricao-colaboradoras-quem-somos {
-        font-size: 1.3rem;
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-    .section-colaboradoras-quem-somos .carina,
-    .section-colaboradoras-quem-somos .denise,
-    .section-colaboradoras-quem-somos .fernanda,
-    .section-colaboradoras-quem-somos .profission {
-        font-size: 1.1rem;
-    }
 }
 
-/* Telas pequenas: celulares grandes e tablets em pé */
+.expositor-p p{
+    font-size: 1.5rem;
+    max-width: 1250px;
+}
+
+/* H1 QUINTO */
+.h1-quinto {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ff5029;
+    background: linear-gradient(to left, #c93e1f, rgb(255,51,0), rgb(222,190,5), rgb(253,102,26));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+/* ANIMAÇÕES */
+@keyframes degrade-animado {
+    0% { background-position-x: 0%; }
+    100% { background-position-x: 100%; }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .carrossel-imagens { column-count: 2; }
+    .galeria { column-count: 2; }
+}
+
 @media (max-width: 768px) {
+    .carrossel-imagens, .galeria { column-count: 1; }
+    .descricao, .descricao-fluxo, .descricao-colaboradoras-quem-somos, .descricao4 {
+        font-size: 1.2rem;
+        padding: 0 5%;
+    }
     .section-colaboradoras-quem-somos .fotos {
         width: 180px;
         height: 180px;
     }
-
-    .descricao-colaboradoras-quem-somos {
-        font-size: 1.1rem;
-        padding-left: 4%;
-        padding-right: 4%;
-        flex-direction: column;
+    .div-nt h1, .section-expositor-quem-somos h1, .h1-quinto, .titulo-nossa-historia-quem-somos h1 {
+        font-size: 2rem;
     }
-
-    .section-colaboradoras-quem-somos .carina,
-    .section-colaboradoras-quem-somos .denise,
-    .section-colaboradoras-quem-somos .fernanda,
-    .section-colaboradoras-quem-somos .profission {
-        font-size: 1rem;
+    .section-colaboradoras-quem-somos .image-text-carina,
+    .section-colaboradoras-quem-somos .image-text-denise,
+    .section-colaboradoras-quem-somos .image-text-fernanda {
+        flex: 1 1 100%;   /* cards ficam um embaixo do outro */
+        max-width: 300px;
+    }
+    .expositor-p p{
+        font-size: 1.2rem;
     }
 }
 
-/* Telas muito pequenas: celulares compactos */
 @media (max-width: 480px) {
-    .section-colaboradoras-quem-somos .fotos {
-        width: 140px;
-        height: 140px;
-    }
-
-    .descricao-colaboradoras-quem-somos {
+    .section-colaboradoras-quem-somos .fotos { width: 140px; height: 140px; }
+    .descricao, .descricao-fluxo, .descricao-colaboradoras-quem-somos, .descricao4 {
         font-size: 1rem;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding: 0 3%;
     }
-
-    .section-colaboradoras-quem-somos .carina,
-    .section-colaboradoras-quem-somos .denise,
-    .section-colaboradoras-quem-somos .fernanda,
-    .section-colaboradoras-quem-somos .profission {
-        font-size: 0.9rem;
+    .h1-primario { font-size: 1.7rem; }
+    .h1-quinto, .titulo-nossa-historia-quem-somos h1 { font-size: 1.5rem; }
+    .botao-expositor { width: 150px; font-size: 12px; height: 50px; }
+    .expositor-p p{
+        font-size: 1rem;
     }
 }
 
 
-  @media(max-width:1700px){
-    .section-imagens-flutuantes-quem-somos{
-        padding-top: 12%;
-    }
-  }
-  @media(max-width:1500px){
-    .section-imagens-flutuantes-quem-somos{
-        padding-top: 12%;
-    }}
-
-  @media(max-width:1400px){
-    .section-imagens-flutuantes-quem-somos{
-        padding-top: 12%;
-    }}
-
-    @media(max-width:1200px){
-        .section-imagens-flutuantes-quem-somos{
-            padding-top: 12%;
-        }}
-
-  @media(max-width:850px){
-    .section-imagens-flutuantes-quem-somos{
-        padding-top: 20%;
-    }
-
-  }
-
-    @media(max-width:786px){
-     .section-imagens-flutuantes-quem-somos .titulo-nossa-historia-quem-somos{
-            display: flex;
-            justify-content: center;
-            margin-bottom: 0px;
-            margin-top: 150px;
-        }
-
-
-        .carrossel-imagens {
-            column-count: 2;
-            column-gap: 20px;
-            max-width: 80%;
-            margin: 0 auto;
-            margin-top: 100px;
-          }
-          .galeria{
-            column-count: 2;
-            
-          }
-          .botao-expositor{
-            background-color: #565358;
-            height: 100px;
-            
-          }
-          .section-fotos-expositor-quem-somos{
-            margin-top: 10%;
-          }
-          .section-imagens-flutuantes-quem-somos{
-            padding-top: 10%;
-          }
-         
-        }
-
-        @media(max-width:600px){
-            .section-introducao-quem-somos .titulo-descricao-principal h1{
-                font-size: 2rem;
-            }
-            .section-introducao-quem-somos .titulo-descricao-principal .descricao{
-                font-size: 1.1rem;
-
-            }
-            .titulo-veja-mais-fotos .h1-quinto{
-                font-size: 2rem;
-                padding-left: 5%;
-                padding-right: 5%;
-
-            }
-         
-            .titulo-nossa-historia-quem-somos .h1-secundario{
-                font-size: 2.5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                margin-left: 10%;
-                margin-top: -10%;
-                margin-right: 10%;
-            }
-            .descricao-fluxo{
-                font-size: 1.3rem;
-            }
-            .descricao-colaboradoras-quem-somos p{
-                font-size: 1.3rem;
-
-            }
-            .section-descricao-expositor-quem-somos .descricao4{
-                font-size: 1.3rem;
-            }
-        }
-
-        
-
-
-
-    
-  
-    @media(max-width:500px){
-       .section-introducao-quem-somos {
-            display: flex;
-                  
-        }
-        .section-imagens-flutuantes-quem-somos{
-            padding-top: 30%;
-        }
-        .titulo-descricao-principal .h1-primario{
-            font-size: 2rem;
-            margin-top: 50px;
-            margin-bottom: 50px;
-
-        }
-        .titulo-veja-mais-fotos .h1-quinto{
-            font-size: 2rem;
-            margin-top: 50px;
-            margin-bottom: 50px;
-
-        }
-         .titulo-descricao-principal .descricao{
-            width: 100%;
-            align-items: center;
-            padding-bottom: 300px;
-
-            
-        }
-        .section-imagens-flutuantes-quem-somos{
-            padding-top: 20%;
-        }
-       
-        .titulo-nossa-historia-quem-somos .h1-secundario{
-            font-size: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-left: 10%;
-            margin-top: 5%;
-            margin-right: 10%;
-           
-        }
-      
-        .texto-descricao-fluxo-quem-somos .descricao-fluxo{
-            font-size: 17px;
-            width: 100%;
-            align-items: center;
-        }
-        .section-nosso-time-quem-somos .div-nt h1{
-            font-size: 2rem;
-        }
-      
-        .descricao-colaboradoras-quem-somos .descricao3{
-            font-size: 17px;
-            width: 100%;
-            align-items: center;
-        }
-        .section-expositor-quem-somos .expositor h1{
-            font-size: 2rem;
-        }
-        .section-descricao-expositor-quem-somos .expositor-p .descricao4{
-            font-size: 17px;
-            width: 100%;
-            align-items: center;
-        }
-        .botao-expositor {
-            width: 100%;
-            font-size: 12px;
-        }
-        .section-fotos-expositor-quem-somos{
-            margin-top: -10%;
-        }
-        .div-botao{
-            width: 100%;
-        }
-    }
-
-    @media(max-width:400px){
-        .section-introducao-quem-somos .titulo-descricao-principal h1{
-            font-size: 1.7rem; 
-        }
-        
-        .section-imagens-flutuantes-quem-somos{
-            margin-top: 40%;
-        }
-        .titulo-nossa-historia-quem-somos .h1-secundario{
-            font-size: 1.7rem;
-        }
-        .section-colaboradoras-quem-somos .descricao3{
-            margin-top: -10%;
-            
-        }
-        
-
-        .section-introducao-quem-somos .descricao{
-            margin-bottom: 70%; 
-            
-              
-        }
-        .section-imagens-flutuantes-quem-somos  .titulo-nossa-historia-quem-somos h1 {
-            margin-top: 60%;
-        }
-         .section-imagens-flutuantes-quem-somos .imagens-flutuantes{
-            padding-top: 10%;
-         }
-         .section-nosso-time-quem-somos .div-nt{
-            margin-top: 80px;
-         }
-         .section-expositor-quem-somos .expositor-div {
-            margin-top: 80px;
-
-         }
-         .div-botao{
-            margin-top: 50px;
-         }
-         .galeria{
-            margin-top: -15%;
-         }
-         .titulo-veja-mais-fotos .h1-quinto{
-            font-size: 1.5rem;
-            margin-top: 50px;
-            margin-bottom: 50px;
-
-        }
-        .section-fotos-expositor-quem-somos{
-            margin-top: 10%;
-        }
-        
-         
-            
-    }
-  
+.descricao-fluxo{
+    max-width: 1250px;
+}
