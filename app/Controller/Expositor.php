@@ -52,13 +52,12 @@ class Expositor extends Pessoa
 
 
     public function cadastrar(){
-        $conn;
+        $db = new Database('endereco');
+
+        $conn = $db->getConnection();
         try {
             $this->aceitou_termos = $_SESSION['aceitou_termos'] ?? $_POST['aceitou_termos'];
 
-            $db = new Database('endereco');
-    
-            $conn = $db->getConnection();
     
             $conn->beginTransaction();
     
@@ -288,6 +287,9 @@ class Expositor extends Pessoa
                 [
                     'nome_marca' => $this->nome_marca,
                     'descricao' => $this->descricao,
+                    'id_categoria' => $this->id_categoria,
+                    'cor_rua' => $this->cor_rua,
+                    'num_barraca' => $this->num_barraca,
                 ]
             );
             

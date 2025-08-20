@@ -50,12 +50,11 @@ class Colaborador extends Pessoa
 
 
     public function cadastrar() {
-        $conn;
+        $db = new Database('pessoa_user');
+
+        $conn = $db->getConnection();
         try {
             // Insere na tabela pessoa
-            $db = new Database('pessoa_user');
-
-            $conn = $db->getConnection();
     
             $conn->beginTransaction();
 

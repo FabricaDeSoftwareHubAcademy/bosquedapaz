@@ -105,6 +105,9 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     $objExpo->setWhats(linkWhatsapp(limparMascaraTelefone(htmlspecialchars(strip_tags($_POST['whatsapp'])))));
     $objExpo->setTelefone(limparMascaraTelefone(htmlspecialchars(strip_tags($_POST['whatsapp']))));
     $objExpo->setEmail($email);
+    $objExpo->setNum_barraca(htmlspecialchars(strip_tags($_POST['num-barraca'])));
+    $objExpo->setCor_rua(htmlspecialchars(strip_tags($_POST['cor-rua'])));
+    $objExpo->setId_categoria(htmlspecialchars(strip_tags($_POST['categoria'])));
     
     $imagensProcessadas = [];
     $erros = [];
