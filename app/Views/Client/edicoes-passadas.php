@@ -1,3 +1,8 @@
+<?php session_start();
+include_once('../../helpers/csrf.php');
+$tolken = getTolkenCsrf();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,6 +36,8 @@
                     <img src="../../../Public/assets/icons/voltar.png" alt="Voltar">
                 </a>
             </div>
+            
+            <input type="hidden" id="tolkenCsrf" value="<?php echo htmlspecialchars($tolken, ENT_QUOTES, 'UTF-8'); ?>">
         </section>
     </main>
 

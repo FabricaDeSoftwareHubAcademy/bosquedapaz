@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const resposta = await fetch("../../../actions/action-listar-utilidades-client.php");
         const utilidades = await resposta.json();
-        console.log(utilidades);
         container.innerHTML = ""; // Limpa os cards estáticos
         const dados = utilidades.dados || [];
 

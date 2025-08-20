@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const response = await fetch('../../../actions/action-listar-parceiros.php');
         if (!response.ok) throw new Error(`Erro na resposta: ${response.status}`);
         const parceiros = await response.json();
+        console.log(parceiros);
 
         if (parceiros.length === 0) {
             track.innerHTML = "<p>Nenhum parceiro encontrado.</p>";

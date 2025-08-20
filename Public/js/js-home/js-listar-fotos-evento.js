@@ -1,51 +1,55 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.querySelector('.container_galeria');
+    const titulo = document.getElementById('titulo');
 
-    // Função para pegar o parâmetro da URL
-    function getParametroURL(nome) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(nome);
-    }
+    // Função para renderizar as fotos
+    function renderizarFotos(fotos) {
+        container.innerHTML = ''; // limpa conteúdo inicial
 
-    const idEvento = getParametroURL('id_evento');
+        fotos.forEach(foto => {
+            const caminhoFoto = `../../../Public/${foto.caminho_foto_evento}`;
+            const item = document.createElement('div');
+            item.classList.add('item-galeria');
 
-    if (!idEvento) {
-        container.innerHTML = '<p>ID do evento não informado.</p>';
-        return;
+            item.innerHTML = `<img src="${caminhoFoto}" alt="Foto do evento">`;
+
+            // Abrir modal ao clicar na imagem
+            item.querySelector('img').addEventListener('click', () => {
+                document.getElementById('img-dialog-view').src = caminhoFoto;
+                document.getElementById('dialog-img').showModal();
+            });
+
+            container.appendChild(item);
+
+            // Efeito reveal
+            setTimeout(() => item.classList.add('reveal'), 50);
+        });
     }
 
     try {
-        const response = await fetch(`../../../actions/action-listar-fotos-evento.php?id_evento=${idEvento}`);
-        const data = await response.json();
-        
-        console.log("🔍 Retorno da API:", data); // <-- aqui, data e não dados
-        
-        if (data.status === 'success' && Array.isArray(data.dados) && data.dados.length > 0) {
-            container.innerHTML = ''; // limpa qualquer conteúdo inicial
-        
-            data.dados.forEach(foto => {
-                const caminhoFoto = `../../../Public/${foto.caminho_foto_evento}`;
-                console.log("📷 Caminho da foto:", caminhoFoto);
-            
-                const item = document.createElement('div');
-                item.classList.add('item-galeria');
-            
-                item.innerHTML = `
-                    <img src="${caminhoFoto}" alt="Foto do evento">
-                `;
-            
-                item.querySelector('img').addEventListener('click', () => {
-                    document.getElementById('img-dialog-view').src = caminhoFoto;
-                    document.getElementById('dialog-img').showModal();
-                });
-            
-                container.appendChild(item);
-            
-                setTimeout(() => {
-                  item.classList.add('reveal');
-                }, 50);
-            });
-        
+        // 1️⃣ Pegar ID e nome do evento do backend (sessionStorage / action-obter-evento.php)
+        const respEvento = await fetch('../../../actions/action-obter-evento.php');
+        const dataEvento = await respEvento.json();
+
+        if (dataEvento.status !== 'success') throw new Error(dataEvento.mensagem);
+
+        const idEvento = dataEvento.id_evento;
+        const nomeEvento = dataEvento.nome_evento;
+
+        // Atualiza o título da página
+        if (titulo) titulo.textContent = nomeEvento;
+
+        // 2️⃣ Buscar fotos do evento via POST
+        const respFotos = await fetch('../../../actions/action-listar-fotos-evento.php', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id_evento: idEvento })
+        });
+
+        const dataFotos = await respFotos.json();
+
+        if (dataFotos.status === 'success' && Array.isArray(dataFotos.dados) && dataFotos.dados.length > 0) {
+            renderizarFotos(dataFotos.dados);
         } else {
             container.innerHTML = '<p>Nenhuma foto encontrada para este evento.</p>';
         }
@@ -56,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// Função para fechar modal (mantém compatível com seu HTML)
+// Função para fechar modal
 function fecharDialog() {
     document.getElementById('dialog-img').close();
 }
