@@ -239,6 +239,15 @@ document.querySelector('.btnMes.tras').addEventListener('click', () => {
 });
 
 document.querySelector('.btnMes.frente').addEventListener('click', () => {
+  const hoje = new Date();
+  const mesAtual = hoje.getMonth();
+  const anoAtual = hoje.getFullYear();
+
+  if (currentYear === anoAtual && currentMonth === mesAtual) {
+    // Bloqueia o clique, não faz nada
+    return;
+  }
+
   currentMonth++;
   if (currentMonth > 11) {
     currentMonth = 0;

@@ -518,8 +518,8 @@ public function getDadosGerais()
             (SELECT COALESCE(SUM(valor), 0) 
              FROM boleto 
              WHERE status_boleto = 'Pago' 
-               AND MONTH(vencimento) = :mes 
-               AND YEAR(vencimento) = :ano
+               AND MONTH(data_status_pago) = :mes 
+               AND YEAR(data_status_pago) = :ano
             ) AS total_pago,
             (SELECT COUNT(*) FROM expositor) AS expositores,
             (SELECT COUNT(*) FROM artista WHERE status = 'ativo') AS artistas,
