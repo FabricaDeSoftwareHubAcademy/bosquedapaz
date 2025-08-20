@@ -308,6 +308,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             }
         }
 
+
+
         $rotas = [
             // filtrar expositores em espera
             'emEspera' => fn() => $expositor->listar(
@@ -371,6 +373,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
         ];
 
         foreach ($rotas as $rota => $listar) {
+            if(isset($_GET['adm']) || isset($_GET['emEspera']) || isset($_GET['recusado']) || isset($_GET['idAdm']) || isset($_GET['inativo']) || isset($_GET['filtrarAguardando']) || isset($_GET['filtrarAguardando']) || isset($_GET['filtrarAguardando'])){
+                if(!confirmaLogin(1)){
+                    echo json_encode([
+                        'msg' => 'Login Inválido',
+                    ]);
+                    http_response_code(400);
+                    exit;
+                }
+            }
             if(isset($_GET[$rota])){
                 $response = returnResponse($listar());
                 echo json_encode($response);

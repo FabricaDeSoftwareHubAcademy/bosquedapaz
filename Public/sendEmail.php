@@ -87,6 +87,7 @@ class EmailService {
             $mail->Subject = $subject;
             $mail->Body    = $corpoEmail;
             $mail->AltBody = $corpoEmail;
+            $mail->addEmbeddedImage('../Public/imgs/logo-nova-bosque-da-paz.png' , 'logoEmpresa');
             
             if($mail->send()){
                 return "mensagem foi enviada com sucesso";
@@ -99,3 +100,21 @@ class EmailService {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// HALYSON, SELECIONE COM O BOTAO DIREITO DO MOUSE A LINHA POR INTEIRA EXCETO OS '//', COM O A 
+// SELECIONADA APERTE AS TECLAS DO TECLADO CTRL+C E VÁ PARA A PAGINA ONDE DESEJA COLAR, APETE 
+// CTRL+V NA LINHA ONDE DESEJA COLAR 
+// <img src='cid:logoEmpresa' alt='Logo da Empresa' style='max-width: 150px; margin-top: 20px;'>

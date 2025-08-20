@@ -91,16 +91,12 @@ $tolken = getTolkenCsrf();
 
                     <?php echo $tolken; ?>
 
-                    <!-- Botões -->
-                    <div class="form__actions">
-                        <button type="button" class="btn btn__rosa">Cancelar</button>
-                        <button type="submit" class="btn btn__azul">Salvar</button>
-                    </div>
+                    <?php include '../../../Public/include/Butons-forms.html';?>
+
                 </form>
             </div>
 
-            <!-- Seta voltar1 -->
-            <div class="seta__voltar1"><a href="Area-Adm.php"><img src="../../../Public/assets/icons/voltar.png" alt=""></a></div>
+
         </section>
 
         <!-- Imagens decorativas -->
