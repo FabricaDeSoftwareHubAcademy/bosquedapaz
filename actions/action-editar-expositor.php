@@ -37,7 +37,7 @@ function uploadImagem($img, $tipo = 'produto') {
     $extencao_imagem = strtolower(pathinfo($new_img, PATHINFO_EXTENSION));
     
     // Validar extensão
-    $extensoes_permitidas = ['jpg', 'jpeg', 'png', 'gif'];
+    $extensoes_permitidas = ['jpg', 'jpeg', 'png', 'jfif', 'webp'];
     if (!in_array($extencao_imagem, $extensoes_permitidas)) {
         http_response_code(400);
         echo json_encode([

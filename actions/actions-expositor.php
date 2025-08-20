@@ -175,7 +175,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
                         $extencao_imagem = strtolower(pathinfo($img['name'], PATHINFO_EXTENSION));
                         
                         // verifiva qual o tipo de extenção
-                        if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png'){
+                        if($extencao_imagem != 'jpg' && $extencao_imagem != 'jpeg' && $extencao_imagem != 'png' && $extencao_imagem != 'jfif' && $extencao_imagem != 'webp'){
                             echo json_encode([
                                 'msg' => 'Caminho '. $extencao_imagem. ' inválido.', 
                             ]);

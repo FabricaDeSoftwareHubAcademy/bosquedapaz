@@ -132,8 +132,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     let dados_php = await fetch('../../../actions/actions-expositor.php?idAdm=' + id_expositor);
     let response = await dados_php.json();
 
-    // console.log('Dados recebidos:', response);
-
     if (response.status == 200) {
         input_id_expositor.value = response.expositor.id_expositor;
         input_nome.value = response.expositor.nome_marca;
@@ -207,10 +205,6 @@ window.addEventListener("DOMContentLoaded", async () => {
         formdata.append('num-barraca', select_barraca.value);
         formdata.append('cor-rua', select_rua.value);
 
-        console.log('Dados sendo enviados:');
-        for (const [key, value] of formdata.entries()) {
-            console.log(key, value);
-        }
 
         try {
             let response = await fetch('../../../actions/action-editar-expositor.php', {
@@ -219,21 +213,18 @@ window.addEventListener("DOMContentLoaded", async () => {
             });
 
             let result = await response.json();
-            console.log('Resposta do servidor:', result);
 
             if (response.status === 200) {
                 openModalSucesso();
 
             } else if (response.status === 400) {
                 openModalError();
-                console.log(response)
                 document.getElementById('erro-title').innerHTML = result.msg
                 document.getElementById('erro-text').style.display = 'none'
                 document.getElementById('close-modal-erro').addEventListener('click', closeModalError)
             }
         } catch (error) {
-            console.error('Erro na requisição:', error);
-            alert('Erro ao salvar as alterações');
+            openModalError();
         }
     });
 
