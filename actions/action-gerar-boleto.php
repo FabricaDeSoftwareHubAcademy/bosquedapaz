@@ -19,7 +19,7 @@ $ex = $expositor->listar("id_login = '$id_login'");
 if (empty($ex)) {
     die('Expositor não encontrado.');
 }
-var_dump($ex);
+
 $id_pessoa = $ex[0]['id_pessoa'];
 
 $idBoleto = isset($_POST['id_boleto']) ? intval($_POST['id_boleto']) : 0;
