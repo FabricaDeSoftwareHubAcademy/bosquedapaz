@@ -50,7 +50,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
 
     // Upload de imagem (opcional)
     if (!empty($_FILES['banner']['name'])) {
-        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'webp', 'jfif'];
         $extensao = strtolower(pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION));
 
         if (!in_array($extensao, $extensoesPermitidas)) {

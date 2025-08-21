@@ -26,7 +26,7 @@ if(isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf'])
     $arquivos = $_FILES['fotos'];
     $quantidade = count($arquivos['name']);
 
-    $extensoesPermitidas = ['jpg', 'jpeg', 'png'];
+    $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'webp', 'jfif'];
 
     $diretorioDestino = __DIR__ . '/../Public/uploads/fotos-eventos/';
 

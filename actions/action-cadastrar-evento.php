@@ -49,7 +49,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
             $nomeOriginal = basename($_FILES['file']['name']);
             $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
 
-            $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+            $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'webp', 'jfif'];
 
             if (!in_array($extensao, $extensoesPermitidas)) {
                 echo json_encode(["status" => "erro", "mensagem" => "Formato de imagem inválido."]);

@@ -4,12 +4,12 @@
         <div class="fundo_eventos"></div>
         <div class="content_evento">
             <div class="content_img_evento">
-                <img src="" alt="Banner Evento" class="img_prox_event">
+                <img src="../../../Public/imgs/banner-padrao.png" alt="Banner Evento" class="img_prox_event">
             </div>
             <div class="content_info_evento">
                 <h3 class="all-titles title_evento">Próximos eventos</h3>
                 <p class="text_evento">Descubra como será nossos próximos eventos</p>
-                <img src="" alt="Banner Evento" class="img_prox_event_pequena">
+                <img src="../../../Public/imgs/banner-padrao.png" alt="Banner Evento" class="img_prox_event_pequena">
                 <a href="proximos-eventos.php" target="_parent" class="all-links btn_mais_evento">Saiba Mais!</a>
             </div>
         </div>
@@ -39,12 +39,12 @@
         <div class="fundo_atracoes"></div>
         <div class="content_evento">
             <div class="content_img_evento">
-                <img src="" alt="Banner Utilidades Públicas" class="img_prox_event" id="img_prox_utility"> 
+                <img src="../../../Public/imgs/banner-utilidades-padrao.jpg" alt="Banner Utilidades Públicas" class="img_prox_event" id="img_prox_utility"> 
             </div>
             <div class="content_info_evento">
                 <h3 class="all-titles title_evento">Utilidades públicas</h3>
                 <p class="text_evento">Nossas utilidades públicas são organizações para fins de interesse geral.</p>
-                <img src="" alt="Banner Utilidades Públicas" class="img_prox_event_pequena">
+                <img src="../../../Public/imgs/banner-utilidades-padrao.jpg" alt="Banner Utilidades Públicas" class="img_prox_event_pequena">
                 <a href="utilidades-publicas.php" target="_parent" class="all-links btn_mais_atracoes">Saiba Mais!</a>
             </div>
         </div>

@@ -32,7 +32,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
         $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
         $mime = mime_content_type($tmp);
     
-        $permitidas = ['jpg', 'jpeg', 'png', 'gif'];
+        $permitidas = ['jpg', 'jpeg', 'png', 'webp', 'jfif'];
         $mimePermitidos = ['image/jpeg', 'image/png', 'image/gif'];
     
         if (!in_array($extensao, $permitidas) || !in_array($mime, $mimePermitidos)) {

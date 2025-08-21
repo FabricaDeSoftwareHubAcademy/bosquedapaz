@@ -33,7 +33,7 @@ if (isset($_POST['tolkenCsrf']) && Csrf::validateTolkenCsrf($_POST['tolkenCsrf']
     $atracao->id_evento = $id_evento;
 
     if (!empty($_FILES['banner_atracao']['name'])) {
-        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+        $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'webp', 'jfif'];
         $extensao = strtolower(pathinfo($_FILES['banner_atracao']['name'], PATHINFO_EXTENSION));
 
         if (!in_array($extensao, $extensoesPermitidas)) {
