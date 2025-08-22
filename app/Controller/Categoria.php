@@ -41,6 +41,15 @@ class Categoria
     return $res;
 }
 
+    public function listarAtivos($where = null, $order = null, $limit = null)
+{
+    $db = new Database('categoria');
+    $res = $db->select('status_cat = "ativo"', $order, $limit, 'id_categoria, descricao, cor, icone, status_cat') // <-- aqui inclui o campo
+              ->fetchAll(PDO::FETCH_ASSOC);
+    return $res;
+}
+
+
 
     public function buscarPorId($id)
     {

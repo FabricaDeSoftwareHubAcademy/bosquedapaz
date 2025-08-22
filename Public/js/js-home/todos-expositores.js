@@ -214,7 +214,7 @@ inputFiltro.addEventListener('keyup', async () => {
 ////////////// GARREGANDO CATEGORIA \\\\\\\\\\\\\\\\
 
 async function getCategoria(){
-    let dados_categoria = await fetch('../../../actions/action-listar-categoria.php')
+    let dados_categoria = await fetch('../../../actions/action-listar-categoria.php?ativos=true')
 
     let response = await dados_categoria.json();
 

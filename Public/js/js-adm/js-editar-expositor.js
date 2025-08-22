@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     async function getCategorias() {
     
-        let dados_php = await fetch('../../../actions/action-listar-categoria.php');
+        let dados_php = await fetch('../../../actions/action-listar-categoria.php?ativos=true');
     
         let response = await dados_php.json();
     

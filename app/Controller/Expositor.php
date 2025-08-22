@@ -185,7 +185,6 @@ class Expositor extends Pessoa
             //// dados pessoa
             $senha = [
                 'senha' => $newSenha,
-                'status_pes' => 'ativo',
             ];
             
             ///// dados expositor
@@ -277,6 +276,7 @@ class Expositor extends Pessoa
                 'id_login = ' . $dados_pessoa['id_login'],
                 [
                     'email' => $this->email,
+                    'status_pes' => 'ativo',
                 ]
             );
             
@@ -287,6 +287,9 @@ class Expositor extends Pessoa
                 [
                     'nome_marca' => $this->nome_marca,
                     'descricao' => $this->descricao,
+                    'id_categoria' => $this->id_categoria,
+                    'cor_rua' => $this->cor_rua,
+                    'num_barraca' => $this->num_barraca
                 ]
             );
             

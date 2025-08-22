@@ -1,6 +1,6 @@
 async function carregarCategorias() {
     try {
-      const response = await fetch('../../../actions/action-listar-categoria.php');
+      const response = await fetch('../../../actions/action-listar-categoria.php?ativos=true');
       const categorias = await response.json();
       const container = document.getElementById('categorias');
       container.innerHTML = ''; 
